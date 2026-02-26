@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가톨릭 다국어 매일미사 - Ordo Missae</title>
+    <style>
+        :root { --primary-color: #c0392b; --rubric-color: #721c24; --sub-txt: #6c757d; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Noto Sans CJK KR", "Noto Sans KR", sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding-bottom: 80px; }
+        header { background: #2c3e50; color: white; padding: 15px 20px; text-align: center; }
+        .header-top { margin-bottom: 10px; }
+        .header-title { font-size: 1.4rem; font-weight: 900; letter-spacing: 1px; }
+        .date-display { font-size: 0.9rem; color: #ecf0f1; margin-top: 5px; }
+        .liturgy-name { font-size: 0.85rem; color: #bdc3c7; margin-top: 8px; }
+        
+        .controls-container { max-width: 1100px; margin: 15px auto 0; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .btn-group { display: flex; background: rgba(0,0,0,0.2); border-radius: 20px; padding: 2px; }
+        .btn-group button { background: transparent; border: none; color: white; padding: 6px 12px; border-radius: 18px; cursor: pointer; font-size: 0.75rem; transition: 0.3s; }
+        .btn-group button.active { background: white; color: var(--primary-color); font-weight: 800; }
+        .btn-single { background: rgba(255,255,255,0.2); border: 1px solid white; color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; cursor: pointer; }
+
+        .section-bar { background: #e9ecef; color: var(--primary-color); padding: 12px; text-align: center; font-weight: 900; border-bottom: 2px solid var(--primary-color); font-size: 1rem; margin-top: 20px; }
+        .missal-container { max-width: 1100px; margin: 0 auto; background: white; min-height: 80vh; padding-bottom: 20px; }
+        
+        .row { display: flex; border-bottom: 1px solid #eee; align-items: stretch; }
+        .col { flex: 1; padding: 20px; position: relative; transition: background 0.3s; }
+        .col-sub { background: #fafafa; border-left: 1px solid #f0f0f0; }
+        
+        .ai-active { background-color: #fffff0; }
+
+        .part-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 10px; }
+        .part-title-group { display: flex; align-items: center; gap: 10px; }
+        .part-title { color: var(--rubric-color); font-weight: 900; font-size: 1.05rem; }
+        .citation { color: var(--sub-txt); font-size: 0.8rem; font-weight: 700; background: #eee; padding: 2px 6px; border-radius: 4px; }
+        
+        .select-inline { padding: 3px 6px; border: 1px solid var(--rubric-color); color: var(--rubric-color); border-radius: 4px; font-size: 0.75rem; background: white; outline: none; cursor: pointer; font-weight: bold; }
+
+        .dialogue { display: grid; grid-template-columns: 85px 1fr; gap: 5px; margin-bottom: 8px; line-height: 1.6; }
+        .speaker { font-weight: 800; font-size: 0.8rem; color: #555; text-align: left; align-self: baseline; margin-top: 2px; }
+        .text { font-size: 1rem; word-break: keep-all; }
+        
+        .text-ai { color: #5d4037; font-style: normal; }
+        .ai-badge { display: inline-block; font-size: 0.7rem; background: #ffe082; color: #5d4037; padding: 1px 4px; border-radius: 3px; margin-right: 5px; font-weight: bold; vertical-align: middle; }
+
+        .layout-stacked .row { flex-direction: column; }
+        .layout-stacked .is-sub { color: var(--sub-txt); margin-top: -5px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #eee; }
+        .layout-stacked .is-sub .speaker { color: #adb5bd; }
+
+        footer { background: #222; color: #777; padding: 20px; text-align: center; font-size: 0.7rem; position: fixed; bottom: 0; width: 100%; z-index: 999; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <div id="header-main-title" class="header-title">오늘의 미사독서</div>
+        <div id="header-date" class="date-display"></div>
+    </div>
+    <div id="header-liturgy-name" class="liturgy-name"></div>
+    
+    <div class="controls-container">
+        <div class="btn-group">
+            <button id="mode-AUTO" onclick="setLocMode('AUTO')">GPS</button>
+            <button id="mode-KR" onclick="setLocMode('KR')">KR</button>
+            <button id="mode-VN" onclick="setLocMode('VN')">VN</button>
+        </div>
+        <button class="btn-single" onclick="toggleLayout()">📱 보기</button>
+        <button class="btn-single" id="btn-trans" onclick="toggleTrans()">🔄 AI 번역</button>
+    </div>
+</header>
+
+<div id="missal-root" class="missal-container"></div>
+
+<footer>
+    Korean: © CBCK / Vietnamese: © HĐGM Việt Nam
+</footer>
+
+<script>
+    let state = {
+        locMode: 'AUTO',
+        currentLoc: 'VN',
+        layout: 'split',
+        transMode: 'official',
+        isSunday: false, 
+        options: { entrance: 'A', greeting: 'A', penitential: 'A', eucharist: '2', eucharist_song: 'none' }
+    };
+
+    function getTargetDate() {
+        let d = new Date();
+        if (d.getDay() === 6 && d.getHours() >= 16) {
+            d.setDate(d.getDate() + 1);
+        }
+        return d;
+    }
+
+    function computeEasterSunday(year) {
+        const a = year % 19;
+        const b = Math.floor(year / 100);
+        const c = year % 100;
+        const d = Math.floor(b / 4);
+        const e = b % 4;
+        const f = Math.floor((b + 8) / 25);
+        const g = Math.floor((b - f + 1) / 3);
+        const h = (19 * a + b - d - g + 15) % 30;
+        const i = Math.floor(c / 4);
+        const k = c % 4;
+        const l = (32 + 2 * e + 2 * i - h - k) % 7;
+        const m = Math.floor((a + 11 * h + 22 * l) / 451);
+        const month = Math.floor((h + l - 7 * m + 114) / 31);
+        const day = ((h + l - 7 * m + 114) % 31) + 1;
+        return new Date(year, month - 1, day);
+    }
+
+    function isEasterOrPentecost(date) {
+        const y = date.getFullYear();
+        const easter = computeEasterSunday(y);
+        const pentecost = new Date(easter);
+        pentecost.setDate(easter.getDate() + 49); 
+        return (date.getFullYear() === easter.getFullYear() && date.getMonth() === easter.getMonth() && date.getDate() === easter.getDate()) ||
+               (date.getFullYear() === pentecost.getFullYear() && date.getMonth() === pentecost.getMonth() && date.getDate() === pentecost.getDate());
+    }
+
+    function updateLocation() {
+        if (state.locMode === 'AUTO') {
+            navigator.geolocation.getCurrentPosition(pos => {
+                const lat = pos.coords.latitude;
+                const lon = pos.coords.longitude;
+                state.currentLoc = (lat > 33 && lat < 39 && lon > 124 && lon < 132) ? 'KR' : 'VN';
+                render();
+            }, () => {
+                state.currentLoc = 'VN';
+                render();
+            });
+        } else {
+            state.currentLoc = state.locMode;
+            render();
+        }
+    }
+
+    const bibleMap = {
+        "창세": "St", "탈출": "Xh", "레위": "Lv", "민수": "Ds", "신명": "Đnl",
+        "여호": "Gs", "판관": "Tl", "룻": "R", "1사무": "1 Sm", "2사무": "2 Sm",
+        "1열왕": "1 Vua", "2열왕": "2 Vua", "1역대": "1 Sử ký", "2역대": "2 Sử ký",
+        "에즈": "Ez", "느헤": "Nh", "토빗": "Tb", "유딧": "Gdt", "에스": "Es",
+        "1마카": "1 Mc", "2마카": "2 Mc", "욥": "Gióp", "시편": "Tv", "잠언": "Cn",
+        "코헬": "Gv", "아가": "Dc", "지혜": "Kn", "집회": "Hc", "이사": "Is",
+        "예레": "Gr", "애가": "Ac", "바룩": "Br", "에제": "Ed", "다니": "Đn",
+        "호세": "Hs", "요엘": "Ge", "아모": "Am", "오바": "Ob", "요나": "Gn",
+        "미카": "Mk", "나훔": "Na", "하바": "Hb", "스파": "Xp", "학개": "Hg",
+        "즈카": "Zc", "말라": "Ml",
+        "마태": "Mt", "마르": "Mc", "루카": "Lc", "요한": "Ga",
+        "사도": "Cv", "로마": "Rm", "1코린": "1 Cr", "2코린": "2 Cr", "갈라": "Gl",
+        "에페": "Ep", "필리": "Pl", "콜로": "Cl", "1테살": "1 Tx", "2테살": "2 Tx",
+        "1티모": "1 Tm", "2티모": "2 Tm", "티토": "Tt", "필레": "Plm", "히브": "Hr",
+        "야고": "Gc", "1베드": "1 Pr", "2베드": "2 Pr", "1요한": "1 Ga", "2요한": "2 Ga",
+        "3요한": "3 Ga", "유다": "Gđ", "묵시": "Kh"
+    };
+
+    const suffixMap = { 'ㄱ': 'a', 'ㄴ': 'b', 'ㄷ': 'c', 'ㄹ': 'd', 'ㅁ': 'e', 'ㅂ': 'f', 'ㅅ': 'g', 'ㅇ': 'h', 'ㅈ': 'i', 'ㅊ': 'j', 'ㅋ': 'k', 'ㅌ': 'l', 'ㅍ': 'm', 'ㅎ': 'n'};
+
+    function formatBibleCit(cit, toVN) {
+        if (!cit || !toVN) return cit;
+        let converted = cit;
+        
+        // 1. 성경 권 이름 변환 (긴 명칭부터 처리하여 1요한/요한 중복 방지)
+        const sortedKeys = Object.keys(bibleMap).sort((a, b) => b.length - a.length);
+        for (let kr of sortedKeys) {
+            if (converted.includes(kr)) {
+                converted = converted.replace(kr, bibleMap[kr]);
+                break; 
+            }
+        }
+
+        // 2. 한국어 첨자 변환 (ㄱ->a, ㄴ->b 등)
+        for (let krChar in suffixMap) {
+            if (converted.includes(krChar)) {
+                converted = converted.split(krChar).join(suffixMap[krChar]);
+            }
+        }
+        return converted;
+    }
+
+    function formatCit(cit, toVN) {
+        return formatBibleCit(cit, toVN);
+    }
+
+    // 전례명에 따른 헤더 색상 결정 함수
+    function getLiturgicalColor(name) {
+        if (name.includes("순교자") || name.includes("십자가") || name.includes("수난") || name.includes("성령")) {
+            return "#c0392b"; // 홍색
+        } else if (name.includes("부활") || name.includes("성탄") || name.includes("대축일") || name.includes("축일")) {
+            return "#d4af37"; // 백색/금색
+        } else if (name.includes("대림") || name.includes("사순")) {
+            return "#8e44ad"; // 자색
+        } else if (name.includes("연중")) {
+            return "#27ae60"; // 녹색
+        }
+        return "#2c3e50"; 
+    }
+
+
+    const massData = [
+        { type: 'section', kr: 'I. 시작 예식', vn: 'I. Nghi thức đầu lễ' },
+        {
+            id: 'entrance', 
+            type: 'selectable',
+            header: { kr: '입당송', vn: 'Ca Nhập Lễ' },
+            variants: {
+                'A': {
+                    label: '성녀 아가타',
+                    header: { cit: '고유 입당송' },
+                    lines: [{ 
+                        sp_kr: '', 
+                        text_kr: '동정 순교자 아가타의 축일을 맞아 주님 안에서 기뻐하자...',
+                        sp_vn: '', 
+                        text_vn: 'Đây là một trong số các trinh nữ khôn ngoan, đã cầm đèn sáng ra đón Đức Ki-tô.' 
+                    }]
+                },
+                'B': {
+                    label: '순교자 공통',
+                    header: { cit: '시편 33,1' },
+                    lines: [{ 
+                        sp_kr: '', 
+                        text_kr: '의인들아, 주님 안에서 환호하여라. 올곧은 이들에게는 찬양이 어울린다.',
+                        sp_vn: '', 
+                        text_vn: 'Người công chính, hãy reo hò mừng Chúa...' 
+                    }]
+                }
+            }
+        },
+        {
+            id: 'greeting', 
+            type: 'selectable',
+            header: { kr: '인사', vn: 'Lời Chào' },
+            variants: {
+                'A': { label: '1양식', lines: [{ sp_kr: '✚', text_kr: '성부와 성자와 성령의 이름으로.', sp_vn: 'Linh mục', text_vn: 'Nhân danh Cha và Con và Thánh Thần.' },
+                                                { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' },
+                                                { sp_kr: '✚', text_kr: '우리 주 예수 그리스도의 은총과 하느님의 사랑과 성령의 친교가 여러분 모두와 함께.', sp_vn: 'Linh mục', text_vn: 'Nguyện xin ân sủng Ðức Giêsu Kitô, Chúa chúng ta, tình yêu của Chúa Cha và ơn thông hiệp của Chúa Thánh Thần ở cùng tất cả anh (chị) em' },
+                                                { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' } ]},
+                'B': { label: '2양식', lines: [{ sp_kr: '✚', text_kr: '성부와 성자와 성령의 이름으로.', sp_vn: 'Linh mục', text_vn: 'Nhân danh Cha và Con và Thánh Thần.' },
+                                                { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' },
+                                                { sp_kr: '✚', text_kr: '하느님 우리 아버지와 주 예수 그리스도께서 내리시는 은총과 평화가 여러분과 함께.', sp_vn: 'Linh mục', text_vn: ' ', text_vn_ai: 'Nguyện xin ân sủng của Thiên Chúa, Cha chúng ta, và bình an của Chúa Giêsu Kitô ở cùng anh chị em.' },
+                                                { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: ' ', text_vn_ai: 'Và ở cùng cha.' } ]},
+                'C': { label: '3양식', lines: [{ sp_kr: '✚', text_kr: '성부와 성자와 성령의 이름으로.', sp_vn: 'Linh mục', text_vn: 'Nhân danh Cha và Con và Thánh Thần.' },
+                                                { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' },
+                                                { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa cùng anh (chị) em.' },
+                                                { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' } ]} 
+                       }
+        },
+        {
+            id: 'penitential', 
+            type: 'selectable',
+            header: { kr: '참회', vn: 'Sám Hối' },
+            variants: {
+                'A': { label: '1양식', lines: [{ sp_kr: '✚', text_kr: '형제여러분, 구원의 신비를 합당하게 거행하기 위하여 우리 죄를 반성합시다.', sp_vn: 'Linh mục', text_vn: 'Anh (chị) em, chúng ta hãy nhìn nhận tội lỗi chúng ta, để xứng đáng cử hành mầu nhiệm thánh.' },
+                                                { sp_kr: '', rubric_kr: '잠깐 침묵한다.', sp_vn: '', rubric_vn: 'Thinh lặng giây lát.'},
+                                                { sp_kr: '✚', text_kr: '전능하신 하느님과', sp_vn: 'Linh mục', text_vn: 'Tôi thú nhận cùng Thiên Chúa toàn năng' },
+                                                { sp_kr: '◎', text_kr: '형제들에게 고백하오니', sp_vn: 'Cộng đoàn', text_vn: 'và cùng anh (chị) em:' },
+                                                { sp_kr: '', text_kr: '생각과 말과 행위로 죄를 많이 지었으며', sp_vn: '', text_vn: 'tôi đã phạm tội nhiều trong tư tưởng, lời nói, việc làm,' },
+                                                { sp_kr: '', text_kr: '자주 의무를 소홀히 하였나이다.', sp_vn: '', text_vn: 'và những điều thiếu sót.' },
+                                                { sp_kr: '', rubric_kr: '가슴을 치며 말한다.', text_kr: '제 탓이오, 제 탓이오, 저의 큰 탓이옵니다.', sp_vn: '', rubric_vn: 'Đấm ngực và đọc.', text_vn: 'Lỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng.'},
+                                                { sp_kr: '', text_kr: '그러므로 간절히 바라오니', sp_vn: '', text_vn: 'Vì vậy tôi xin Ðức Bà Maria trọn đời đồng trinh,' },
+                                                { sp_kr: '', text_kr: '평생 동정이신 성모 마리아와 모든 천사와 성인과 형제들은', sp_vn: '', text_vn: 'các Thiên Thần, các Thánh và anh (chị) em,' },
+                                                { sp_kr: '', text_kr: '저를 위하여 하느님께 빌어 주소서.', sp_vn: '', text_vn: 'khẩn cầu cho tôi trước tòa Thiên Chúa, Chúa chúng ta.' },
+                                                { sp_kr: '✚', text_kr: '전능하신 하느님, 저희에게 자비를 베푸시어 죄를 용서하시고', sp_vn: 'Linh mục', text_vn: 'Xin Thiên Chúa toàn năng thương xót, tha tội,' },
+                                                { sp_kr: '', text_kr: '영원한 생명으로 이끌어 주소서.', sp_vn: '', text_vn: 'và dẫn đưa chúng ta đến sự sống muôn đời.' },
+                                                { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' }] },
+                'B': { label: '2양식', lines: [{ sp_kr: '✚', text_kr: '형제여러분, 구원의 신비를 합당하게 거행하기 위하여 우리 죄를 반성합시다.', sp_vn: 'Linh mục', text_vn: 'Anh (chị) em, chúng ta hãy nhìn nhận tội lỗi chúng ta, để xứng đáng cử hành mầu nhiệm thánh.' },
+                                                 { sp_kr: '', rubric_kr: '잠깐 침묵한다.', sp_vn: '', rubric_vn: 'Thinh lặng giây lát.'},
+                                                 { sp_kr: '✚', text_kr: '주님, 저희를 불쌍히 여기소서.', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa, xin thương xót chúng con.' }, 
+                                                 { sp_kr: '◎', text_kr: '저희는 주님께 죄를 지었나이다.', sp_vn: 'Cộng đoàn', text_vn: 'Vì chúng con đã xúc phạm đến Chúa.' },
+                                                 { sp_kr: '✚', text_kr: '주님, 저희에게 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa , xin tỏ lòng từ bi Chúa cho chúng con.' }, 
+                                                 { sp_kr: '◎', text_kr: '또한 저희를 구원하여 주소서.', sp_vn: 'Cộng đoàn', text_vn: 'Và ban ơn cứu độ cho chúng con.' },
+                                                 { sp_kr: '✚', text_kr: '전능하신 하느님, 저희에게 자비를 베푸시어 죄를 용서하시고', sp_vn: 'Linh mục', text_vn: 'Xin Thiên Chúa toàn năng thương xót, tha tội,' },
+                                                 { sp_kr: '', text_kr: '영원한 생명으로 이끌어 주소서.', sp_vn: '', text_vn: 'và dẫn đưa chúng ta đến sự sống muôn đời.' },
+                                                 { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' }] },
+                'C': { label: '3양식', lines: [{ sp_kr: '✚', text_kr: '형제여러분, 구원의 신비를 합당하게 거행하기 위하여 우리 죄를 반성합시다.', sp_vn: 'Linh mục', text_vn: 'Anh (chị) em, chúng ta hãy nhìn nhận tội lỗi chúng ta, để xứng đáng cử hành mầu nhiệm thánh.' },
+                                                 { sp_kr: '', rubric_kr: '잠깐 침묵한다.', sp_vn: '', rubric_vn: 'Thinh lặng giây lát.'},
+                                                 { sp_kr: '✚', text_kr: '진심으로 뉘우치는 사람을 용서하러 오신 주님, 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa , Chúa đã được sai đến để cứu chữa những tâm hồn thống hối: Xin Chúa thương xót chúng con.' }, 
+                                                 { sp_kr: '◎', text_kr: '주님, 자비를 베푸소서.', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa thương xót chúng con.' },
+                                                 { sp_kr: '✚', text_kr: '죄인을 부르러 오신 그리스도님, 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa Kitô, Chúa đã đến kêu gọi những người tội lỗi: Xin Chúa Kitô thương xót chúng con.' }, 
+                                                 { sp_kr: '◎', text_kr: '그리스도님, 자비를 베푸소서.', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa Kitô thương xót chúng con.' },
+                                                 { sp_kr: '✚', text_kr: '성부 오른편에 중개자로 계신 주님, 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa, Chúa ngự bên hữu Ðức Chúa Cha để chuyển cầu cho chúng con: Xin Chúa thương xót chúng con.' }, 
+                                                 { sp_kr: '◎', text_kr: '주님, 자비를 베푸소서.', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa thương xót chúng con.' },
+                                                 { sp_kr: '✚', text_kr: '전능하신 하느님, 저희에게 자비를 베푸시어 죄를 용서하시고', sp_vn: 'Linh mục', text_vn: 'Xin Thiên Chúa toàn năng thương xót, tha tội,' },
+                                                 { sp_kr: '', text_kr: '영원한 생명으로 이끌어 주소서.', sp_vn: '', text_vn: 'và dẫn đưa chúng ta đến sự sống muôn đời.' },
+                                                 { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' }] }
+                       }
+        },
+        {
+            id: 'kyrie', 
+            type: 'part', 
+            if: 'not_penitential_C', 
+            header: { kr: '자비송', vn: 'Kinh Thương Xót' },
+            lines: [
+                { sp_kr: '✚', text_kr: '주님, 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Xin Chúa thương xót chúng con.' },
+                { sp_kr: '◎', text_kr: '주님, 자비를 베푸소서.', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa thương xót chúng con.' },
+                { sp_kr: '✚', text_kr: '그리스도님, 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Xin Chúa Kitô thương xót chúng con.' },
+                { sp_kr: '◎', text_kr: '그리스도님, 자비를 베푸소서.', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa Kitô thương xót chúng con.' },
+                { sp_kr: '✚', text_kr: '주님, 자비를 베푸소서.', sp_vn: 'Linh mục', text_vn: 'Xin Chúa thương xót chúng con.' },
+                { sp_kr: '◎', text_kr: '주님, 자비를 베푸소서.', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa thương xót chúng con.' }
+            ]
+        },
+        {
+            id: 'gloria', type: 'part', if: 'sunday',
+            header: { kr: '대영광송', vn: 'Kinh Vinh Danh' },
+            lines: [
+                { sp_kr: '✚', text_kr: '하늘 높은 데서는 하느님께 영광.', sp_vn: 'Linh mục', text_vn: 'Vinh danh Thiên Chúa trên các tầng trời,' },
+                { sp_kr: '◎', text_kr: '땅에서는 주님께서 사랑하시는 사람들에게 평화.', sp_vn: 'Cộng đoàn', text_vn: 'và bình an dưới thế cho người thiện tâm.' },
+                { sp_kr: '○', text_kr: '주 하느님 하늘의 임금님', sp_vn: 'Xướng', text_vn: 'Chúng con ca ngợi Chúa, chúng con chúc tụng Chúa,' },
+                { sp_kr: '●', text_kr: '전능하신 아버지 하느님', sp_vn: 'Đáp', text_vn: 'chúng con thờ lạy Chúa, chúng con tôn vinh Chúa,' },
+                { sp_kr: '○', text_kr: '주님을 기리나이다, 찬미하나이다', sp_vn: 'Đáp', text_vn: 'chúng con thờ lạy Chúa, chúng con tôn vinh Chúa,' }
+            ]
+        },
+        {
+            id: 'collect', 
+            type: 'part', 
+            header: { kr: '본기도', vn: 'Lời Nguyện Nhập Lễ' },
+            lines: [{ sp_kr: '✚', text_kr: '기도합시다.', sp_vn: 'Linh mục', text_vn: 'Chúng ta dâng lời cầu nguyện.' },
+                    { sp_kr: '', text_kr: '주님, 복된 아가타는 동정과 순교의....', sp_vn: '', text_vn: 'Lạy Chúa, thánh nữ A-ga-ta đã luôn luôn làm đẹp lòng Chúa…' },
+                    { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' }]
+        },
+
+        { type: 'section', kr: 'II. 말씀 전례', vn: 'II. Phụng vụ Lời Chúa' },
+        {
+            id: 'reading1', type: 'part',
+            header: { kr: '제1독서', vn: 'Bài Đọc I', cit: '1열왕 2,1-4.10-12' },
+            lines: [
+                { sp_kr: '○', text_kr: '열왕기 상권의 말씀입니다.', sp_vn: 'Người đọc', text_vn: 'Lời Chúa trong sách Các Vua quyển thứ nhất.' },
+                { 
+                    sp_kr: '', 
+                    text_kr: '다윗이 죽을 때가 다가오자 아들 솔로몬에게 유언하였다. "나는 이제 세상 모든 사람이 가는 길을 간다. 너는 사나이답게 힘을 내어라..."',
+                    text_kr_ai: '다윗은 임종을 앞두고 솔로몬에게 하느님의 명령을 지키고 용감하게 통치하라는 유언을 남깁니다.',
+                    sp_vn: '', 
+                    text_vn: 'Khi sắp qua đời, vua Đa-vít truyền dạy cho con là Sa-lô-môn rằng...',
+                    text_vn_ai: 'Vua Đa-vít, trước khi qua đời, dặn dò Sa-lô-môn hãy giữ gìn luật Chúa và cai trị một cách can đảm.'                 },
+                { sp_kr: '○', text_kr: '주님의 말씀입니다.', sp_vn: 'Người đọc', text_vn: 'Đó là Lời Chúa.' },
+                { sp_kr: '◎', text_kr: '하느님 감사합니다.', sp_vn: 'Cộng đoàn', text_vn: 'Tạ ơn Chúa.' }
+            ]
+        },
+        {
+            id: 'psalm', type: 'part',
+            header: { kr: '화답송', vn: 'Đáp Ca', cit: '1역대 29,10ㄴㄷ.11ㄱㄴㄷ.11ㄹ-12ㄱ.12ㄴㄷㄹㅁ' },
+            lines: [
+                { sp_kr: '◎', text_kr: '주님, 당신은 만물을 다스리시나이다.', sp_vn: 'Cộng đoàn', text_vn: 'Chúa thống trị trên tất cả mọi loài.' },
+                { sp_kr: '○', text_kr: '주님, 저희 조상 이스라애의 하느님, 영원에서 영원까지 찬미받으소서. ◎', sp_vn: 'Xướng', text_vn: 'Ðavít đã chúc tụng Chúa trước mặt toàn thể cộng đồng, người thưa: “Lạy Chúa là Thiên Chúa Israel cha ông chúng con, Chúa đáng chúc tụng, từ đời đời tới muôn muôn thuở. – Đáp.' },
+                { sp_kr: '○', text_kr: '주님, 위대함과 권능과 영화가, 영예와 위엄이 당신의 것이옵니다. 하늘과 땅의 모든 것이 당신의 것이옵니다. ◎', sp_vn: 'Xướng', text_vn: 'Lạy Chúa, cao sang, quyền bính và vinh quang, chiến thắng, lời ca khen đều thuộc về Chúa, vì tất cả những gì trên trời dưới đất là của Chúa. – Ðáp.' }]
+        },
+        {
+            id: 'reading2', type: 'part', if: 'sunday',
+            header: { kr: '제2독서', vn: 'Bài Đọc II', cit: '1코린 13,4-13' },
+            lines: [
+                { sp_kr: '○', text_kr: '사도 바오로의 코린토 1서 말씀입니다...', sp_vn: 'Người đọc', text_vn: 'Lời Chúa trong thư thứ nhất...' },
+                {
+                    sp_kr: '', 
+                    text_kr: '사랑은 참고 기다립니다...',
+                    text_kr_ai: '바오로 사도는 사랑의 속성과 그 영원함에 대해 설명합니다.',
+                    sp_vn: '', 
+                    text_vn: 'Đức mến thì nhẫn nhục...',
+                    text_vn_ai: 'Thánh Phao-lô giải thích về đặc tính và sự trường tồn của đức mến.' 
+                },
+                { sp_kr: '○', text_kr: '주님의 말씀입니다.', sp_vn: 'Người đọc', text_vn: 'Đó là Lời Chúa.' },
+                { sp_kr: '◎', text_kr: '하느님 감사합니다.', sp_vn: 'Cộng đoàn', text_vn: 'Tạ ơn Chúa.' }
+            ]
+        },
+        {
+            id: 'Sequence', type: 'part', if: 'easter_or_pentecost', header: { kr: '부속가', vn: 'Ca Tiếp Liên' },
+            lines: [
+                { sp_kr: '○', text_kr: '파스카 희생제물 우리모두 찬미하세', sp_vn: 'Cộng đoàn', text_vn: 'Các Kitô hữu hãy tiến dâng' },
+                { sp_kr: '', text_kr: '그리스도 죄인들을 아버지께 화해시켜', sp_vn: '', text_vn: 'lời khen ngợi hy lễ Vượt Qua.' },
+                { sp_kr: '', text_kr: '무죄하신 어린양이 양떼들을 구하셨네', sp_vn: '', text_vn: 'Chiên con đã cứu chuộc đoàn chiên mẹ:' }
+            ]
+        },
+        {
+            id: 'gospel_accl', type: 'part', header: { kr: '복음 환호송', vn: 'Tung Hô Tin Mừng', cit: '마르 1,15' },
+            lines: [
+                { sp_kr: '○', text_kr: '알렐루야.', sp_vn: 'Xướng', text_vn: 'Alleluia.' },
+                { sp_kr: '●', text_kr: '알렐루야. 하느님 나라가 가까이 왔다. 회개하고 복음을 믿어라.', sp_vn: 'Đáp', text_vn: 'Alleluia. Chúa nói : Triều đại Thiên Chúa đã đến gần. Anh em hãy sám hối và tin vào Tin Mừng.' },
+                { sp_kr: '○', text_kr: '알렐루야.', sp_vn: 'Xướng', text_vn: 'Alleluia.' }
+            ]
+        },
+        {
+            id: 'gospel', type: 'part',
+            header: { kr: '복음', vn: 'Tin Mừng', cit: '마르 6,7-13' },
+            lines: [
+                { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa ở cùng anh chị em.' },
+                { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                { sp_kr: '✚', text_kr: '마르코가 전한 거룩한 복음입니다.', sp_vn: 'Linh mục', text_vn: 'Tin Mừng Chúa Giêsu Kitô theo thánh Mác-cô.' },
+                { sp_kr: '◎', text_kr: '주님 영광 받으소서.', sp_vn: 'Cộng đoàn', text_vn: 'Lạy Chúa, vinh danh Chúa.' },
+                { 
+                    sp_kr: '', 
+                    text_kr: '그때에 예수님께서 열두 제자를 부르시어 더러운 영들에 대한 권한을 주시고, 둘씩 짝지어 파견하기 시작하셨다...',
+                    text_kr_ai: '예수님께서 열두 제자를 파견하시며, 지팡이 외에는 아무것도 가져가지 말고 어디서든 환대받는 곳에 머물라고 당부하십니다.',
+                    sp_vn: '', 
+                    text_vn: 'Khi ấy, Đức Giêsu gọi Nhóm Mười Hai lại và bắt đầu sai đi từng hai người một...',
+                    text_vn_ai: 'Đức Giêsu sai Nhóm Mười Hai đi, dặn họ không mang gì ngoài cây gậy và hãy ở lại nơi nào đón tiếp họ.' 
+                },
+                { sp_kr: '✚', text_kr: '주님의 말씀입니다.', sp_vn: 'Linh mục', text_vn: 'Đó là Lời Chúa.' },
+                { sp_kr: '◎', text_kr: '그리스도님 찬미합니다.', sp_vn: 'Cộng đoàn', text_vn: 'Lạy Chúa Kitô, ngợi khen Chúa.' }
+            ]
+        },
+        {
+            id: 'homily', type: 'part', header: { kr: '강론', vn: 'Bài Giảng' },
+            lines: [{ sp_kr: '', text_kr: '(사제 강론)', sp_vn: '', text_vn: '(Linh mục giảng)' }]
+        },
+        {
+            id: 'creed', type: 'selectable', if: 'sunday',
+            header: { kr: '신앙 고백', vn: 'Kinh Tin Kính' },
+            variants: {
+                'A': { label: '사도신경', lines: [
+                        { sp_kr: '◎', text_kr: '전능하신 천주 성부', sp_vn: 'Cộng đoàn', text_vn: 'Tôi tin kính Thiên Chúa là Chúa toàn năng...' }
+                    ] },
+                'B': { label: '니케아-콘스탄티노플 신경', lines: [
+                        { sp_kr: '◎', text_kr: '한 분이신 하느님을', sp_vn: 'Cộng đoàn', text_vn: 'Chúng tôi tin kính một Thiên Chúa, Đức Chúa Cha toàn năng...' }
+                    ] }
+            }
+        },
+        {
+            id: 'universal', type: 'part', if: 'sunday',
+            header: { kr: '보편 지향 기도', vn: 'Lời Nguyện Tín Hữu' },
+            lines: [{ sp_kr: '✚', text_kr: '형제 여러분...', sp_vn: 'Linh mục', text_vn: 'Anh chị em thân mến...' }]
+        },
+
+        { type: 'section', kr: 'III. 성찬 전례', vn: 'III. Phụng vụ Thánh Thể' },
+        {
+            id: 'offertory', type: 'part', header: { kr: '봉헌 성가 / 예물 준비', vn: 'Dâng Lễ' },
+            lines: [{ sp_kr: '✚', text_kr: '온 누리의 주 하느님, 찬미받으소서...', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa là Chúa Cả trời đất...' }]
+        },
+        {
+            id: 'prayer_offerings', type: 'part', header: { kr: '예물 기도', vn: 'Lời Nguyện Tiến Lễ' },
+            lines: [
+                { sp_kr: '✚', text_kr: '형제 여러분, 우리가 바치는 이 제사를...', sp_vn: 'Linh mục', text_vn: 'Anh chị em hãy cầu nguyện...' },
+                { sp_kr: '◎', text_kr: '사제의 손으로 바치는 이 제사가...', sp_vn: 'Cộng đoàn', text_vn: 'Xin Chúa nhận hy lễ...' }
+            ]
+        },
+        {
+            id: 'eucharist',
+            type: 'selectable',
+            header: { kr: '감사 기도', vn: 'Kinh Nguyện Thánh Thể' },
+            variants: {
+                '1': { label: '1양식', lines: [
+                            { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa ở cùng anh chị em.' },
+                            { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                            { sp_kr: '✚', text_kr: '마음을 드높이.', sp_vn: 'Linh mục', text_vn: 'Hãy nâng tâm hồn lên.' },
+                            { sp_kr: '◎', text_kr: '주님께 올립니다.', sp_vn: 'Cộng đoàn', text_vn: 'Chúng con đang hướng về Chúa.' },
+                            { sp_kr: '✚', text_kr: '우리 주 하느님께 감사합시다.', sp_vn: 'Linh mục', text_vn: 'Hãy tạ ơn Chúa là Thiên Chúa chúng ta.' },
+                            { sp_kr: '◎', text_kr: '마땅하고 옳은일입니다.', sp_vn: 'Cộng đoàn', text_vn: 'Thật là chính đáng.' }
+                            ] },
+                '2': { label: '2양식', lines: [
+                            { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa ở cùng anh chị em.' },
+                            { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                            { sp_kr: '✚', text_kr: '마음을 드높이.', sp_vn: 'Linh mục', text_vn: 'Hãy nâng tâm hồn lên.' },
+                            { sp_kr: '◎', text_kr: '주님께 올립니다.', sp_vn: 'Cộng đoàn', text_vn: 'Chúng con đang hướng về Chúa.' },
+                            { sp_kr: '✚', text_kr: '우리 주 하느님께 감사합시다.', sp_vn: 'Linh mục', text_vn: 'Hãy tạ ơn Chúa là Thiên Chúa chúng ta.' },
+                            { sp_kr: '◎', text_kr: '마땅하고 옳은일입니다.', sp_vn: 'Cộng đoàn', text_vn: 'Thật là chính đáng.' }
+                            ] },
+                '3': { label: '3양식', lines: [
+                            { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa ở cùng anh chị em.' },
+                            { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                            { sp_kr: '✚', text_kr: '마음을 드높이.', sp_vn: 'Linh mục', text_vn: 'Hãy nâng tâm hồn lên.' },
+                            { sp_kr: '◎', text_kr: '주님께 올립니다.', sp_vn: 'Cộng đoàn', text_vn: 'Chúng con đang hướng về Chúa.' },
+                            { sp_kr: '✚', text_kr: '우리 주 하느님께 감사합시다.', sp_vn: 'Linh mục', text_vn: 'Hãy tạ ơn Chúa là Thiên Chúa chúng ta.' },
+                            { sp_kr: '◎', text_kr: '마땅하고 옳은일입니다.', sp_vn: 'Cộng đoàn', text_vn: 'Thật là chính đáng.' }
+                            ] },
+                '4': { label: '4양식', lines: [
+                            { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa ở cùng anh chị em.' },
+                            { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                            { sp_kr: '✚', text_kr: '마음을 드높이.', sp_vn: 'Linh mục', text_vn: 'Hãy nâng tâm hồn lên.' },
+                            { sp_kr: '◎', text_kr: '주님께 올립니다.', sp_vn: 'Cộng đoàn', text_vn: 'Chúng con đang hướng về Chúa.' },
+                            { sp_kr: '✚', text_kr: '우리 주 하느님께 감사합시다.', sp_vn: 'Linh mục', text_vn: 'Hãy tạ ơn Chúa là Thiên Chúa chúng ta.' },
+                            { sp_kr: '◎', text_kr: '마땅하고 옳은일입니다.', sp_vn: 'Cộng đoàn', text_vn: 'Thật là chính đáng.' }
+                            ] }
+            }
+        },
+        {
+            id: 'lords_prayer', type: 'part', header: { kr: '주님의 기도', vn: 'Kinh Lạy Cha' },
+            lines: [
+                { sp_kr: '✚', text_kr: '하느님의 자녀 되어, 구세주의 분부대로...', sp_vn: 'Linh mục', text_vn: 'Vâng lệnh Chúa Cứu Thế...' },
+                { sp_kr: '◎', text_kr: '하늘에 계신 우리 아버지...', sp_vn: 'Cộng đoàn', text_vn: 'Lạy Cha chúng con ở trên trời...' }
+            ]
+        },
+        {
+            id: 'peace', type: 'part', header: { kr: '평화 예식', vn: 'Nghi Thức Bình An' },
+            lines: [
+                { sp_kr: '✚', text_kr: '주님의 평화가 항상 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Bình an của Chúa hằng ở cùng anh chị em.' },
+                { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                { sp_kr: '✚', text_kr: '평화의 인사를 나누십시오.', sp_vn: 'Linh mục', text_vn: 'Anh chị em hãy chúc bình an cho nhau.' }
+            ]
+        },
+        {
+            id: 'lamb', type: 'part', header: { kr: '하느님의 어린양', vn: 'Chiên Thiên Chúa' },
+            lines: [{ sp_kr: '◎', text_kr: '하느님의 어린양, 세상의 죄를 없애시는 주님...', sp_vn: 'Cộng đoàn', text_vn: 'Lạy Chiên Thiên Chúa, Đấng xóa tội trần gian...' }]
+        },
+        {
+            id: 'communion_rite', type: 'part', header: { kr: '영성체', vn: 'Hiệp Lễ' },
+            lines: [
+                { sp_kr: '✚', text_kr: '보라! 하느님의 어린양...', sp_vn: 'Linh mục', text_vn: 'Đây Chiên Thiên Chúa...' },
+                { sp_kr: '◎', text_kr: '주님, 제 안에 주님을 모시기에 합당치 않사오나...', sp_vn: 'Cộng đoàn', text_vn: 'Lạy Chúa, con chẳng đáng Chúa ngự vào nhà con...' }
+            ]
+        },
+        {
+            id: 'communion', type: 'part', header: { kr: '영성체송', vn: 'Ca Hiệp Lễ', cit: '시편 31(30),17-18' },
+            lines: [{ sp_kr: '', text_kr: '주님, 당신 얼굴을 당신 종에게 비추시고, 당신 자애로 저를 구원하소서.', sp_vn: '', text_vn: 'Xin toả ánh tôn nhan rạng ngời trên tôi tớ Chúa...' }]
+        },
+        {
+            id: 'prayer_after', type: 'part', header: { kr: '영성체 후 기도', vn: 'Lời Nguyện Hiệp Lễ' },
+            lines: [{ sp_kr: '✚', text_kr: '주님, 저희가 천상 양식을 받아 모시고 비오니...', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa, Chúa đã ban cho chúng con Mình và Máu Thánh...' }]
+        },
+
+        { type: 'section', kr: 'IV. 마침 예식', vn: 'IV. Nghi thức kết thúc' },
+        {
+            id: 'announcement', type: 'part', header: { kr: '공지사항', vn: 'Thông Báo' },
+            lines: [{ sp_kr: '', text_kr: '(공지사항)', sp_vn: '', text_vn: '(Thông báo)' }]
+        },
+        {
+            id: 'blessing', type: 'part', header: { kr: '강복', vn: 'Phép Lành' },
+            lines: [
+                { sp_kr: '✚', text_kr: '주님께서 여러분과 함께.', sp_vn: 'Linh mục', text_vn: 'Chúa ở cùng anh chị em.' },
+                { sp_kr: '◎', text_kr: '또한 사제의 영과 함께.', sp_vn: 'Cộng đoàn', text_vn: 'Và ở cùng cha.' },
+                { sp_kr: '✚', text_kr: '전능하신 천주 성부와 성자와 성령께서는...', sp_vn: 'Linh mục', text_vn: 'Xin Thiên Chúa toàn năng là Cha và Con và Thánh Thần...' },
+                { sp_kr: '◎', text_kr: '아멘.', sp_vn: 'Cộng đoàn', text_vn: 'Amen.' }
+            ]
+        },
+        {
+            id: 'dismissal', type: 'part', header: { kr: '파견', vn: 'Giải Tán' },
+            lines: [
+                { sp_kr: '✚', text_kr: '미사가 끝났으니 가서 복음을 전합시다.', sp_vn: 'Linh mục', text_vn: 'Lễ xong, chúc anh chị em đi bình an.' },
+                { sp_kr: '◎', text_kr: '하느님 감사합니다.', sp_vn: 'Cộng đoàn', text_vn: 'Tạ ơn Chúa.' }
+            ]
+        },
+        {
+            id: 'final_song', type: 'part', header: { kr: '파견 성가', vn: 'Ca Kết Lễ' },
+            lines: [{ sp_kr: '', text_kr: '(파견 성가)', sp_vn: '', text_vn: '(Hát ca kết lễ)' }]
+        }
+    ];
+
+    const showCitIds = ['entrance', 'reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel', 'communion'];
+
+    function render() {
+        const root = document.getElementById('missal-root');
+        const isKR = state.currentLoc === 'KR';
+        const d = new Date();
+        
+        // 전례 정보 설정 (먼저 정의)
+        const litKR = "연중 제4주간 목요일 (성녀 아가타)";
+        const litVN = "Thứ Năm Tuần IV - MTN (Thánh A-ga-ta)";
+
+        // 헤더 색상
+        const themeColor = getLiturgicalColor(litKR);
+        document.documentElement.style.setProperty('--primary-color', themeColor);
+        document.getElementById('header-main-title').textContent = isKR ? 'Bài Đọc Trong Thánh Lễ' : '오늘의 미사독서';
+        const dayNames = isKR ? ['CN','T2','T3','T4','T5','T6','T7'] : ['일','월','화','수','목','금','토'];
+        const dayStr = dayNames[d.getDay()];
+        const dateTxt = isKR ? 
+            `${String(d.getDate()).padStart(2,'0')}.${String(d.getMonth()+1).padStart(2,'0')}.${d.getFullYear()} (${dayStr})` :
+            `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')} (${dayStr})`;
+        document.getElementById('header-date').textContent = dateTxt;
+        
+        document.getElementById('header-liturgy-name').textContent = isKR ? `${litVN} | ${litKR}` : `${litKR} | ${litVN}`;
+
+        // 선택아이콘
+        root.innerHTML = '';
+        root.className = `missal-container ${state.layout === 'stacked' ? 'layout-stacked' : ''}`;
+        document.getElementById('btn-trans').textContent = `🔄 AI 번역: ${state.transMode === 'official' ? 'OFF' : 'ON'}`;
+        document.getElementById('btn-trans').style.background = state.transMode === 'ai' ? '#ffd700' : 'rgba(255,255,255,0.2)';
+        document.getElementById('btn-trans').style.color = state.transMode === 'ai' ? '#212529' : 'white';
+
+        root.innerHTML = '';
+        root.className = `missal-container ${state.layout === 'stacked' ? 'layout-stacked' : ''}`;
+
+        massData.forEach(item => {
+           // 1. 기존 주일 전용(sunday) 체크
+              if (item.if === 'sunday' && !state.isSunday) return;
+          // 2. 부활절/성령강림 전용 체크
+              if (item.if === 'easter_or_pentecost' && !isEasterOrPentecost(new Date())) return;
+          // 3. 참회 3(C)양식 선택 시 자비송 숨기기 로직 
+              if (item.if === 'not_penitential_C' && state.options.penitential === 'C') return;                      
+            if (item.type === 'section') {
+                const bar = document.createElement('div');
+                bar.className = 'section-bar';
+                bar.textContent = isKR ? `${item.vn} | ${item.kr}` : `${item.kr} | ${item.vn}`;
+                root.appendChild(bar);
+                return;
+            }
+
+            let data;
+            if (item.type === 'selectable') {
+                const sel = item.variants[state.options[item.id]] || {};
+                data = Object.assign({}, item);
+                data.header = Object.assign({}, item.header || {}, sel.header || {});
+                data.lines = sel.lines ? JSON.parse(JSON.stringify(sel.lines)) : (item.lines ? JSON.parse(JSON.stringify(item.lines)) : []);
+                data.label = sel.label || item.label;
+            } else {
+                data = item;
+            }
+
+            // 추가 처리: `eucharist`의 경우 감사송 선택에 따라 lines를 동적으로 구성
+            if (item.id === 'eucharist') {
+                const selectedForm = state.options.eucharist || '2';
+                const songChoice = state.options.eucharist_song || 'songA';
+                const baseLines = JSON.parse(JSON.stringify(data.lines || []));
+                
+                // 감사송
+                if (selectedForm !== '4') {
+                    if (songChoice === 'songA') {
+                        baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu,'});
+                        baseLines.push({ sp_kr: '', text_kr: '우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이', sp_vn: '', text_vn: 'chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Ðức Ki-tô, Chúa chúng con,'});
+                        baseLines.push({ sp_kr: '', text_kr: '참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_vn: '', text_vn: 'thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.'});
+                        baseLines.push({ sp_kr: '', text_kr: '저희는 죄와 죽음에서 벗어나', sp_vn: '', text_vn: 'Nhờ mầu nhiệm Vượt Qua, Người đã thực hiện một công trình kỳ diệu này'});
+                        baseLines.push({ sp_kr: '', text_kr: '선택된 겨례, 임금의 사제단, 거룩한 민족, 하느님의 백성이 되었고', sp_vn: '', text_vn: 'là kêu gọi chúng con bỏ đàng tội lỗi, thoát ách sự chết, tới ánh vinh quang.'});
+                        baseLines.push({ sp_kr: '', text_kr: '저희를 어둠에서 놀라운 빛으로 부르신 주님의 권능을', sp_vn: '', text_vn: 'Nhờ đó, giờ đây chúng con được gọi là giống nòi được tuyển chọn, hàng tư tế vương giả, chủng tộc thánh thiện, dân riêng của Chúa,'});
+                        baseLines.push({ sp_kr: '', text_kr: '온 세상에 전하게 되었나이다.', sp_vn: '', text_vn: 'để chúng con loan truyền khắp nơi quyền năng Chúa là Ðấng đã kêu gọi chúng con' });
+                        baseLines.push({ sp_kr: '', text_kr: '이는 파스카의 신비로 이루어진 주님의 위대한 업적이옵니다.', sp_vn: '', text_vn: 'từ chốn tối tăm tới nơi sáng láng diệu kỳ của Chúa.' });
+                    } 
+                    else if (songChoice === 'songB') {
+                        baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님,', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu,' });
+                        baseLines.push({ sp_kr: '', text_kr: '우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이', sp_vn: '', text_vn: 'chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Ðức Ki-tô, Chúa chúng con,' });
+                        baseLines.push({ sp_kr: '', text_kr: '참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_vn: '', text_vn: 'thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.' });
+                        baseLines.push({ sp_kr: '', text_kr: '그리스도께서는 죄 많은 인류를 가엾이 여기시어', sp_vn: '', text_vn: 'Vì thương xót nhân loại lỗi lầm,' });
+                    }
+                    else if (songChoice === 'songC') {
+                        baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님,', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu,' });
+                        baseLines.push({ sp_kr: '', text_kr: '우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이', sp_vn: '', text_vn: 'chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Ðức Ki-tô, Chúa chúng con,' });
+                        baseLines.push({ sp_kr: '', text_kr: '참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_vn: '', text_vn: 'thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.' });
+                        baseLines.push({ sp_kr: '', text_kr: '아버지께서는 우리 주 그리스도를 통하여', sp_vn: '', text_vn: 'Chúng con biết rằng: vì vinh quang vô biên của Chúa,' });
+                    }
+                    else if (songChoice === 'songD') {
+                        baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님,', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu,' });
+                        baseLines.push({ sp_kr: '', text_kr: '우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이', sp_vn: '', text_vn: 'chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Ðức Ki-tô, Chúa chúng con,' });
+                        baseLines.push({ sp_kr: '', text_kr: '참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_vn: '', text_vn: 'thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.' });
+                        baseLines.push({ sp_kr: '', text_kr: '아버지께서는 우리 주 그리스도를 통하여', sp_vn: '', text_vn: 'Chúng con biết rằng: vì vinh quang vô biên của Chúa,' });
+                    }
+                }
+                
+                if (selectedForm === '1') {
+                    baseLines.push({ sp_kr: '◎', text_kr: '거룩하시도다! 거룩하시도다! 거룩하시도다!', sp_vn: 'Cộng đoàn', text_vn: 'Thánh! Thánh! Thánh!' });
+                    baseLines.push({ sp_kr: '', text_kr: '온누리의 주 하느님!', sp_vn: '', text_vn: 'Chúa là Thiên Chúa các đạo binh.' });
+                    baseLines.push({ sp_kr: '', text_kr: '하늘과 땅에 가득찬 그 영광!', sp_vn: '', text_vn: 'Trời đất đầy vinh quang Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '', text_kr: '주님의 이름으로 오시는 분, 찬미 받으소서.', sp_vn: '', text_vn: 'Chúc tụng Ðấng ngự đến nhân danh Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지,', sp_vn: 'Linh mục', text_vn: 'Lạy Cha rất nhân từ,' });
+                    baseLines.push({ sp_kr: '', text_kr: '성자 우리 주 예수그리스도를 통하여 간절히 청하오니,', sp_vn: '', text_vn: 'nhờ Ðức Giêsu Ki-tô, Con Cha Chúa chúng con,' });
+                } else if (selectedForm === '2') {
+                    baseLines.push({ sp_kr: '◎', text_kr: '거룩하시도다! 거룩하시도다! 거룩하시도다!', sp_vn: 'Cộng đoàn', text_vn: 'Thánh! Thánh! Thánh!' });
+                    baseLines.push({ sp_kr: '', text_kr: '온누리의 주 하느님!', sp_vn: '', text_vn: 'Chúa là Thiên Chúa các đạo binh.' });
+                    baseLines.push({ sp_kr: '', text_kr: '하늘과 땅에 가득찬 그 영광!', sp_vn: '', text_vn: 'Trời đất đầy vinh quang Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '', text_kr: '주님의 이름으로 오시는 분, 찬미 받으소서.', sp_vn: '', text_vn: 'Chúc tụng Ðấng ngự đến nhân danh Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '✚', text_kr: '인자하신 아버지,', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa,' });
+                    baseLines.push({ sp_kr: '', text_kr: '아버지께서는 모든 거룩함의 샘이시옵니다.', sp_vn: '', text_vn: 'Chúa thật là Ðấng Thánh, là nguồn mọi sự thánh thiện.' });
+                } else if (selectedForm === '3') {
+                    baseLines.push({ sp_kr: '◎', text_kr: '거룩하시도다! 거룩하시도다! 거룩하시도다!', sp_vn: 'Cộng đoàn', text_vn: 'Thánh! Thánh! Thánh!' });
+                    baseLines.push({ sp_kr: '', text_kr: '온누리의 주 하느님!', sp_vn: '', text_vn: 'Chúa là Thiên Chúa các đạo binh.' });
+                    baseLines.push({ sp_kr: '', text_kr: '하늘과 땅에 가득찬 그 영광!', sp_vn: '', text_vn: 'Trời đất đầy vinh quang Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '', text_kr: '주님의 이름으로 오시는 분, 찬미 받으소서.', sp_vn: '', text_vn: 'Chúc tụng Ðấng ngự đến nhân danh Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 몸소 창조하신 만물이 아버지를 찬미하나이다.', sp_vn: 'Linh mục', text_vn: 'Lạy Chúa, Chúa thật là Ðấng Thánh, và muôn vật Chúa đã tạo thành đều phải ca ngợi Chúa,' });
+                    baseLines.push({ sp_kr: '', text_kr: '아버지께서는 성자 우리 주 예수 그리스도를 통하여', sp_vn: '', text_vn: 'vì nhờ Ðức Giê-su Ki-tô, Con Chúa, Chúa chúng con,' });
+                } else if (selectedForm === '4') {
+                    baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 아버지께 감사와 영광을 드림은', sp_vn: 'Linh mục', text_vn: 'Lạy Cha chí thánh, tạ ơn Cha thật là chính đáng,' });
+                    baseLines.push({ sp_kr: '', text_kr: '참으로 마땅하고 옳은 일이옵니다.', sp_vn: '', text_vn: 'tôn vinh Cha thật là phải đạo,' });
+                    baseLines.push({ sp_kr: '', text_kr: '아버지 홀로 살아 계신 참하느님이시고', sp_vn: '', text_vn: 'vì Cha là Thiên Chúa thật, duy nhất và hằng sống,' });
+                    baseLines.push({ sp_kr: '', text_kr: '영원으로부터 무궁히 계시며', sp_vn: '', text_vn: 'hiện hữu từ trước muôn thuở và tồn tại đến muôn đời,' });
+                    baseLines.push({ sp_kr: '', text_kr: '가까이 할 수 없는 빛 속에 머무시나이다.', sp_vn: '', text_vn: 'ngự trị trong ánh sáng siêu phàm.' });
+                    baseLines.push({ sp_kr: '', text_kr: '또한 생명의 샘이시며 지선하신 아버지께서는 만물을 창조하시어', sp_vn: '', text_vn: 'Nhưng Cha cũng là Đấng duy nhất tốt lành và là nguồn mạch sự sống,' });
+                    baseLines.push({ sp_kr: '', text_kr: '온갖 복을 가득히 내려 주시고 밝은 빛으로 기쁨을 주시나이다.', sp_vn: '', text_vn: 'đã tác tạo mọi loài để ban cho chúng đầy tràn ơn phúc, và cho nhiều thụ tạo vui hưởng ánh sáng huy hoàng của Cha.' });
+                    baseLines.push({ sp_kr: '', text_kr: '그러므로 무수한 천사가 밤낮으로 아버지를 섬기고', sp_vn: '', text_vn: 'Vì thế, có vô số Thiên thần hầu cận trước nhan Cha,' });
+                    baseLines.push({ sp_kr: '', text_kr: '그 빛나는 얼굴을 뵈오며 끊임없이 찬양하오니', sp_vn: '', text_vn: 'đêm ngày phụng sự Cha,' });
+                    baseLines.push({ sp_kr: '', text_kr: '저희도 그들과 함께 하늘 아래 모든 조물과 더불어 기뻐하며', sp_vn: '', text_vn: 'chiêm ngưỡng Thánh Nhan Cha vinh hiển' });
+                    baseLines.push({ sp_kr: '', text_kr: '아버지의 이름을 찬송하나이다.', sp_vn: '', text_vn: 'và không ngớt tôn vinh Cha.' });
+                    baseLines.push({ sp_kr: '◎', text_kr: '거룩하시도다! 거룩하시도다! 거룩하시도다!', sp_vn: 'Cộng đoàn', text_vn: 'Thánh! Thánh! Thánh!' });
+                    baseLines.push({ sp_kr: '', text_kr: '온누리의 주 하느님!', sp_vn: '', text_vn: 'Chúa là Thiên Chúa các đạo binh.' });
+                    baseLines.push({ sp_kr: '', text_kr: '하늘과 땅에 가득찬 그 영광!', sp_vn: '', text_vn: 'Trời đất đầy vinh quang Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '', text_kr: '주님의 이름으로 오시는 분, 찬미 받으소서.', sp_vn: '', text_vn: 'Chúc tụng Ðấng ngự đến nhân danh Chúa.' });
+                    baseLines.push({ sp_kr: '', text_kr: '높은데서 호산나!', sp_vn: '', text_vn: 'Hoan hô Chúa trên các tầng trời.' });
+                    baseLines.push({ sp_kr: '✚', text_kr: '거룩하신 아버지, 아버지께서는 위대하시며', sp_vn: 'Linh mục', text_vn: 'Lạy Cha chí thánh, chúng con tuyên xưng Cha là Ðấng cao cả,' });
+                    baseLines.push({ sp_kr: '', text_kr: '지혜와 사랑으로 모든 일을 이루셨으니 찬미받으소서.', sp_vn: '', text_vn: 'đã tác tạo mọi sự theo thượng trí và tình thương.' });
+                }
+                baseLines.push({ sp_kr: '◎', text_kr: '아멘', sp_vn: 'Cộng đoàn', text_vn: 'Amen' });
+                data.lines = baseLines;
+            }
+
+            const row = document.createElement('div');
+            row.className = 'row';
+
+            if (state.layout === 'stacked') {
+                const col = document.createElement('div');
+                col.className = 'col';
+                col.innerHTML = genHeader(item, data, isKR, true);
+                data.lines.forEach(line => {
+                    col.innerHTML += genLine(line, isKR, true);
+                    col.innerHTML += genLine(line, !isKR, false);
+                });
+                row.appendChild(col);
+            } else {
+                const colL = document.createElement('div');
+                const colR = document.createElement('div');
+                colL.className = 'col'; colR.className = 'col col-sub';
+                if (state.transMode === 'ai') colR.classList.add('ai-active');
+
+                colL.innerHTML = genHeader(item, data, isKR, true);
+                data.lines.forEach(line => colL.innerHTML += genLine(line, isKR, true));
+
+                colR.innerHTML = genHeader(item, data, !isKR, false);
+                data.lines.forEach(line => colR.innerHTML += genLine(line, !isKR, false));
+
+                row.appendChild(colL); row.appendChild(colR);
+            }
+            root.appendChild(row);
+        });
+    }
+
+    function genHeader(orig, data, isKR, isMain) {
+        const title = isKR ? data.header.kr : data.header.vn;
+        let cit = '';
+        if (showCitIds.includes(orig.id) || orig.id === 'entrance') {
+            cit = data.header.cit || '';
+            cit = formatCit(cit, !isKR);
+        }
+        
+        let selectHtml = '';
+        if (orig.type === 'selectable' && isMain) {
+            selectHtml = `<select class="select-inline" onchange="optChange('${orig.id}', this.value)">`;
+            for (let k in orig.variants) selectHtml += `<option value="${k}" ${state.options[orig.id]===k?'selected':''}>${orig.variants[k].label}</option>`;
+            selectHtml += `</select>`;
+        }
+        if (orig.id === 'eucharist' && isMain) {
+            const disabled = state.options[orig.id] === '4' ? 'disabled' : '';
+            selectHtml += ` <select class="select-inline" onchange="optChange('eucharist_song', this.value)" ${disabled}>
+                                <option value="songA" ${state.options.eucharist_song==='songA'?'selected':''}>연중주일 감사송 1 : 파스카 신비와 하느님 백성</option>
+                                <option value="songB" ${state.options.eucharist_song==='songB'?'selected':''}>연중주일 감사송 2 : 구원의 신비</option>
+                                <option value="songC" ${state.options.eucharist_song==='songC'?'selected':''}>연중주일 감사송 3 : 사람이신 그리스도를 통한 인류 구원</option>
+                                <option value="songD" ${state.options.eucharist_song==='songD'?'selected':''}>사순 감사송 1 : 사순 시기의 영성적 의미</option>
+                                <option value="songE" ${state.options.eucharist_song==='songE'?'selected':''}>....</option>
+                                <option value="songF" ${state.options.eucharist_song==='songF'?'selected':''}>....</option>
+                            </select>`;
+        }
+
+        return `<div class="part-header">
+                    <div class="part-title-group"><span class="part-title">${title}</span> ${selectHtml}</div>
+                    ${cit ? `<span class="citation">${cit}</span>` : ''}
+                </div>`;
+    }
+
+    function genLine(line, isLineKR, isMainSide) {
+        let sp = isLineKR ? line.sp_kr : line.sp_vn;
+        let txt = isLineKR ? line.text_kr : line.text_vn;
+        const isTargetLang = (state.currentLoc === 'KR' && !isLineKR) || (state.currentLoc === 'VN' && isLineKR);
+        let isAIApplied = false;
+
+        if ((!txt || txt.trim() === '') && ((isLineKR && line.text_kr_ai) || (!isLineKR && line.text_vn_ai))) {
+            txt = isLineKR ? line.text_kr_ai : line.text_vn_ai;
+            isAIApplied = true;
+        }
+
+        if (state.transMode === 'ai' && isTargetLang) {
+            if (isLineKR && line.text_kr_ai) { txt = line.text_kr_ai; isAIApplied = true; }
+            if (!isLineKR && line.text_vn_ai) { txt = line.text_vn_ai; isAIApplied = true; }
+        }
+        
+        if (!txt && !sp) return '';
+
+        const aiBadge = isAIApplied ? `<span class="ai-badge">AI</span>` : '';
+        const txtClass = isAIApplied ? 'text text-ai' : 'text';
+
+        return `<div class="dialogue ${isMainSide?'':'is-sub'}">
+                    <div class="speaker">${sp}</div>
+                    <div class="${txtClass}">${aiBadge}${txt}</div>
+                </div>`;
+    }
+
+    window.setLocMode = (m) => {
+        state.locMode = m;
+        document.querySelectorAll('.btn-group button').forEach(b => b.classList.remove('active'));
+        const btn = document.getElementById(`mode-${m}`);
+        if(btn) btn.classList.add('active');
+        if (m==='AUTO') {
+            navigator.geolocation.getCurrentPosition(p => { state.currentLoc = p.coords.latitude > 30 ? 'KR':'VN'; render(); }, 
+            () => { state.currentLoc='VN'; render(); });
+        } else { state.currentLoc = m; render(); }
+    };
+    window.toggleLayout = () => { state.layout = state.layout === 'split' ? 'stacked' : 'split'; render(); };
+    window.toggleTrans = () => { state.transMode = state.transMode === 'official' ? 'ai' : 'official'; render(); };
+    window.optChange = (id, val) => { state.options[id] = val; render(); };
+
+    setLocMode('AUTO');
+</script>
+</body>
+</html>
