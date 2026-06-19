@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>가톨릭 다국어 매일미사 - Ordo Missae</title>
-    <link rel="icon" href="assets/app-logo.svg" type="image/svg+xml">
+    <link rel="icon" href="app-logo.svg" type="image/svg+xml">
 
     <style>
         /* 앱 전체에서 함께 쓰는 색상과 기본 글자 크기입니다. */
@@ -259,7 +259,7 @@
     <button type="button" class="settings-btn" aria-label="설정 열기" onclick="openSettings()">⚙️</button>
     <div class="header-top">
         <div class="header-brand">
-            <img id="header-logo" class="header-logo" src="assets/app-logo.svg" alt="" aria-hidden="true">
+            <img id="header-logo" class="header-logo" src="app-logo.svg" alt="" aria-hidden="true">
             <div id="header-main-title" class="header-title">오늘의 미사</div>
         </div>
         <div id="header-date" class="date-display">로딩중...</div>
@@ -394,7 +394,7 @@
 <footer id="main-footer">
     </footer>
 
-<script src="mass-data/missa_data.js"></script>
+<script src="missa_data.js"></script>
 
 <script>
     // Firebase 프로젝트 연결 정보입니다.
@@ -3284,12 +3284,12 @@
     };
 
     const specialMassFiles = {
-        ash_wednesday: { file: 'special-mass-data/ash-wednesday.js', names: { KR: '재의 수요일', EN: 'Ash Wednesday' } },
-        palm_sunday: { file: 'special-mass-data/palm-sunday.js', names: { KR: '주님 수난 성지 주일', EN: 'Palm Sunday of the Passion of the Lord' } },
-        holy_thursday: { file: 'special-mass-data/holy-thursday.js', names: { KR: '주님 만찬 성목요일', EN: 'Holy Thursday - Evening Mass of the Lord’s Supper' } },
-        good_friday: { file: 'special-mass-data/good-friday.js', names: { KR: '주님 수난 성금요일', EN: 'Friday of the Passion of the Lord' } },
-        easter_vigil: { file: 'special-mass-data/easter-vigil.js', names: { KR: '주님 부활 대축일 파스카 성야', EN: 'Easter Vigil in the Holy Night' } },
-        christmas_vigil: { file: 'special-mass-data/christmas-vigil.js', names: { KR: '주님 성탄 대축일 - 성야 미사', EN: 'The Nativity of the Lord - Vigil Mass' } }
+        ash_wednesday: { file: 'ash-wednesday.js', names: { KR: '재의 수요일', EN: 'Ash Wednesday' } },
+        palm_sunday: { file: 'palm-sunday.js', names: { KR: '주님 수난 성지 주일', EN: 'Palm Sunday of the Passion of the Lord' } },
+        holy_thursday: { file: 'holy-thursday.js', names: { KR: '주님 만찬 성목요일', EN: 'Holy Thursday - Evening Mass of the Lord’s Supper' } },
+        good_friday: { file: 'good-friday.js', names: { KR: '주님 수난 성금요일', EN: 'Friday of the Passion of the Lord' } },
+        easter_vigil: { file: 'easter-vigil.js', names: { KR: '주님 부활 대축일 파스카 성야', EN: 'Easter Vigil in the Holy Night' } },
+        christmas_vigil: { file: 'christmas-vigil.js', names: { KR: '주님 성탄 대축일 - 성야 미사', EN: 'The Nativity of the Lord - Vigil Mass' } }
     };
     const loadedSpecialMassScripts = {};
 
@@ -5408,7 +5408,7 @@
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
     const STRICT_PARSER_CACHE_VERSION = 'strict54';
-    const ALL_SOULS_CONFIG_FILE = 'special-mass-data/all-souls-config.js';
+    const ALL_SOULS_CONFIG_FILE = 'all-souls-config.js';
 
     function cloneDateOnly(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate());
