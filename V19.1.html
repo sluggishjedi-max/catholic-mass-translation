@@ -3077,7 +3077,7 @@
             return;
         }
         if (previousTargetLang !== state.targetLang) {
-            fetchDailyReadings().then(render);
+            fetchMassData();
             return;
         }
         render();
@@ -3393,40 +3393,31 @@
     }
 
     function ktcgkpvFormBody(date) {
-        return new URLSearchParams({
+        return {
             day: String(date.getDate()),
             month: String(date.getMonth() + 1),
-            year: String(date.getFullYear()),
-            seldate: ''
-        }).toString();
+            year: String(date.getFullYear())
+        };
     }
+
+    const KTCG_PROXY_ENDPOINT = window.ORDO_KTCG_PROXY_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/ktcgProxy';
 
     async function fetchKtcgkpvMassReadingJson(date) {
         const body = ktcgkpvFormBody(date);
-        const candidates = ['/ktcgkpv/mass-reading', 'https://ktcgkpv.org/readings/mass-reading'];
-        let lastError = null;
-        for (const url of candidates) {
-            try {
-                const response = await fetchWithTimeout(url, {
-                    method: 'POST',
-                    cache: 'no-cache',
-                    timeoutMs: 12000,
-                    headers: {
-                        'Accept': 'application/json, text/javascript, */*; q=0.01',
-                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-                        'X-Requested-With': 'XMLHttpRequest'
-                    },
-                    body
-                });
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                const payload = await response.json();
-                if (!payload || !payload.success || !payload.data) throw new Error('KTCG mass-reading JSON is empty');
-                return payload.data;
-            } catch (error) {
-                lastError = error;
-            }
-        }
-        throw lastError || new Error('KTCG mass-reading JSON unavailable');
+        const response = await fetchWithTimeout(KTCG_PROXY_ENDPOINT, {
+            method: 'POST',
+            cache: 'no-cache',
+            timeoutMs: 12000,
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const payload = await response.json();
+        if (!payload || !payload.success || !payload.data) throw new Error('KTCG mass-reading JSON is empty');
+        return payload.data;
     }
 
     function ktcgkpvReadingChoice(data) {
@@ -4223,7 +4214,7 @@
     }
 
     function isVietnameseSectionAfterIntroLine(line) {
-        return /^(Lời nguyện nhập lễ|Bài [ĐÐ]ọc I|[ĐÐ]áp Ca|Bài [ĐÐ]ọc II|Alleluia|Tung hô Tin Mừng|Phúc Âm|Tin Mừng|Lời nguyện tiến lễ|Lời tiền tụng|Kinh Tiền Tụng|Ca hiệp lễ|Lời nguyện hiệp lễ)/i.test(cleanNodeText(line));
+        return /^(Ca nhập lễ|Lời nguyện nhập lễ|Bài [ĐÐ]ọc I|[ĐÐ]áp Ca|Bài [ĐÐ]ọc II|Alleluia|Tung hô Tin Mừng|Phúc Âm|Tin Mừng|Lời nguyện tiến lễ|Lời tiền tụng|Kinh Tiền Tụng|Ca hiệp lễ|Lời nguyện hiệp lễ)/i.test(cleanNodeText(line));
     }
 
     function stripVietnameseIntroductoryLines(lines) {
@@ -5407,7 +5398,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict54';
+    const STRICT_PARSER_CACHE_VERSION = 'strict59';
     const ALL_SOULS_CONFIG_FILE = 'all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -5874,7 +5865,7 @@
             ['reading2', /^Bài\s*(?:đọc|Ðọc|Đọc)\s*II(?:\s|$|[:：])/iu],
             ['Sequence', /^Ca tiếp liên(?:\s|$|[:：])/iu],
             ['gospel_accl', /^(Alleluia|Tung hô Tin Mừng)(?:\s|$|[:：])/iu],
-            ['gospel', /^(Phúc Âm|Tin Mừng)(?:\s|$|[:：])/iu],
+            ['gospel', /^(?:Phúc Âm(?:\s|$|[:：])|Tin Mừng(?:$|[:：]))/iu],
             ['prayer_offerings', /^Lời nguyện tiến lễ(?:\s|$|[:：])/iu],
             ['communion', /^Ca hiệp lễ(?:\s|$|[:：])/iu],
             ['prayer_after', /^Lời nguyện hiệp lễ(?:\s|$|[:：])/iu]
@@ -6895,7 +6886,7 @@
         const metadataTitle = sourceMetadataTitle(source, lang);
         let lines = strictSourceLines(source);
         if (lang === 'VN') {
-            lines = stripVietnameseIntroductoryLines(strictScopeVietnameseByCalendarReading(lines, date));
+            lines = strictScopeVietnameseByCalendarReading(getVietnameseBodyLines(lines), date);
         }
         const rawSections = strictExtractRawSections(lines, lang, selector);
         if (lang === 'JP') strictSplitJapaneseInlineAcclamation(rawSections);
@@ -7908,20 +7899,40 @@
                 const key = normalizeBibleAliasForCompare(alias);
                 if (key) entries.push({ key, kr });
             });
+            const englishAlias = bibleMap[kr] && bibleMap[kr][1];
+            const englishName = englishAlias && englishBookNameMap.concat(englishGospelNameMap)
+                .find(item => item[0].test(englishAlias));
+            if (englishName && englishName[1]) {
+                const key = normalizeBibleAliasForCompare(englishName[1]);
+                if (key) entries.push({ key, kr });
+            }
         });
-        return entries.sort((a, b) => b.key.length - a.key.length);
+        return entries
+            .filter((entry, index, list) => list.findIndex(candidate => candidate.key === entry.key && candidate.kr === entry.kr) === index)
+            .sort((a, b) => b.key.length - a.key.length);
     }
 
     function normalizedCitationForCompare(value) {
-        let text = normalizeBibleAliasForCompare(value)
+        let text = normalizeBibleAliasForCompare(String(value || '').replace(/\s*(?:참고|참조)$/u, ''))
             .replace(/^(?:x|cf|cfr|see)\s+/, '')
-            .replace(/\s*(?:참고|참조)$/u, '')
             .trim();
         const entry = bibleAliasEntriesForCompare().find(item =>
             text === item.key || text.startsWith(`${item.key} `)
         );
         if (entry) text = `${entry.kr}${text.slice(entry.key.length)}`;
         return text.replace(/[^\p{L}\p{N}]+/gu, '');
+    }
+
+    function citationStartForCompare(value) {
+        const source = String(value || '')
+            .replace(/\s*(?:참고|참조)$/u, '')
+            .replace(/^(?:x\.?|cf\.?|cfr\.?|see)\s+/i, '')
+            .trim();
+        const match = source.match(/^(.*?)\s*(\d+)\s*[,.:]\s*(\d+)/u);
+        if (!match) return '';
+        const bookKey = normalizeBibleAliasForCompare(match[1]);
+        const entry = bibleAliasEntriesForCompare().find(item => item.key === bookKey);
+        return entry ? `${entry.kr}:${match[2]}:${match[3]}` : '';
     }
 
     function directCitationForLower(section, lower) {
@@ -7935,6 +7946,9 @@
     function citationsAreDifferent(leftCitation, rightCitation) {
         const left = normalizedCitationForCompare(leftCitation);
         const right = normalizedCitationForCompare(rightCitation);
+        const leftStart = citationStartForCompare(leftCitation);
+        const rightStart = citationStartForCompare(rightCitation);
+        if (leftStart && rightStart && leftStart === rightStart) return false;
         return !!(left && right && left !== right);
     }
 
