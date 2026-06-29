@@ -535,7 +535,8 @@
 <footer id="main-footer">
     </footer>
 
-<script src="missa_data.js"></script>
+<script src="JS%20file/missa_data.js"></script>
+<script src="JS%20file/prayer_data.js"></script>
 
 <script>
     // Firebase 프로젝트 연결 정보입니다.
@@ -1591,10 +1592,12 @@
         "2026-07-03": {
                 "names": {
                         "EN": "Saint Thomas, Apostle",
+                        "VN": "Thánh Tô-ma, Tông Đồ",
                         "JP": "聖トマス使徒"
                 },
                 "colors": {
                         "EN": "red",
+                        "VN": "red",
                         "JP": "red"
                 }
     },
@@ -2550,6 +2553,7 @@
             '06-11': { color: 'red', names: { KR: '성 바르나바 사도 기념일', VN: 'Thánh Ba-na-ba - Tông đồ', EN: 'Memorial of Saint Barnabas, Apostle', JP: '聖バルナバ使徒', LA: 'Sancti Barnabae, Apostoli' }, meta: { rank: 'memorial' } },
             '06-24': { color: 'white', names: { KR: '성 요한 세례자 탄생 대축일', VN: 'Lễ Sinh Nhật Thánh Gioan Tẩy Giả', EN: 'The Nativity of Saint John the Baptist', JP: '洗礼者聖ヨハネの誕生', LA: 'In Nativitate Sancti Ioannis Baptistae' } },
             '06-29': { color: 'red', names: { KR: '성 베드로와 성 바오로 사도 대축일', VN: 'Lễ Thánh Phêrô và Thánh Phaolô, Tông Đồ', EN: 'Solemnity of Saints Peter and Paul, Apostles', JP: '聖ペトロ聖パウロ使徒', LA: 'Sanctorum Petri et Pauli, Apostolorum' } },
+            '07-03': { color: 'red', names: { KR: '성 토마스 사도 축일', VN: 'Lễ Thánh Tô-ma, Tông Đồ', EN: 'Feast of Saint Thomas, Apostle', JP: '聖トマス使徒', LA: 'Sancti Thomae, Apostoli' } },
             '08-06': { color: 'white', names: { KR: '주님 변모 축일', VN: 'Lễ Chúa Hiển Dung', EN: 'The Transfiguration of the Lord', JP: '主の変容', LA: 'In Transfiguratione Domini' } },
             '08-15': { color: 'white', names: { KR: '성모 승천 대축일', VN: 'Lễ Đức Mẹ Hồn Xác Lên Trời', EN: 'The Assumption of the Blessed Virgin Mary', JP: '聖母の被昇天', LA: 'In Assumptione Beatae Mariae Virginis' } },
             '09-14': { color: 'red', names: { KR: '성 십자가 현양 축일', VN: 'Lễ Suy Tôn Thánh Giá', EN: 'The Exaltation of the Holy Cross', JP: '十字架称賛', LA: 'In Exaltatione Sanctae Crucis' } },
@@ -3064,7 +3068,7 @@
 
     function colorFromSourceTitle(raw, fallbackColor) {
         const title = primaryLiturgyTitle(raw);
-        if (/\[홍\]|순교|성령|수난|성지|Passion|Pentecost|Martyr|殉教|聖霊|tử đạo|Đỏ/i.test(title)) return liturgyColorMap.red;
+        if (/\[홍\]|순교|성령|수난|성지|사도|Passion|Pentecost|Martyr|Apostle|Apostoli|殉教|聖霊|使徒|tử đạo|Tông\s*Đồ|Đỏ/i.test(title)) return liturgyColorMap.red;
         if (/\[자\]|대림|사순|Advent|Lent|待降|四旬|Mùa Vọng|Mùa Chay/i.test(title)) return liturgyColorMap.purple;
         if (/\[백\]|대축일|축일|부활|성탄|Solemnity|Feast|Easter|Christmas|主日|Phục Sinh|Giáng Sinh|Trắng/i.test(title)) return liturgyColorMap.white;
         if (/\[녹\]|연중|Ordinary Time|年間|Thường Niên|Xanh/i.test(title)) return liturgyColorMap.green;
@@ -3110,10 +3114,24 @@
         return '';
     }
 
+    function stripSeasonalTitleAnnotation(value) {
+        return String(value || '')
+            .replace(/\s*[（(][^()（）]*[）)]\s*/g, ' ')
+            .replace(/\s+\b(?:cycle|year|năm|annus)\s+[abc]\b\s*$/i, ' ')
+            .replace(/\s*[-–—]\s*(?:cycle|year|năm|annus)\s+[abc]\s*$/i, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function isGeneratedSeasonalNameForInfo(langCode, value, info = state.liturgyInfo) {
+        const meta = info && info.meta ? info.meta : {};
+        if (!['ordinary', 'advent', 'lent', 'easter'].includes(meta.season) || !meta.week) return false;
+        const generated = formatSeasonalName(langCode, meta.season, meta.week, meta.day, meta.sundayCycle);
+        return normalizeCalendarNameForCompare(stripSeasonalTitleAnnotation(value)) === normalizeCalendarNameForCompare(generated);
+    }
+
     function isGeneratedSeasonalName(langCode, value) {
-        const meta = state.liturgyInfo.meta || {};
-        if (!meta.season || meta.season === 'special' || !meta.week) return false;
-        return normalizeCalendarNameForCompare(value) === normalizeCalendarNameForCompare(formatSeasonalName(langCode, meta.season, meta.week, meta.day, meta.sundayCycle));
+        return isGeneratedSeasonalNameForInfo(langCode, value, state.liturgyInfo);
     }
 
     const liturgyLoadingMessages = {
@@ -3238,6 +3256,9 @@
     let churchMapLoadPromise = null;
     let churchIdleTimer = null;
     let churchMapInitialized = false;
+    let churchMapsApiKey = '';
+    let churchMapsApiKeyPromise = null;
+    const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
 
     const prayerSeedData = [
         {
@@ -3497,7 +3518,29 @@
     }
 
     function googleMapsApiKey() {
-        return String(window.ORDO_GOOGLE_MAPS_API_KEY || window.GOOGLE_MAPS_API_KEY || '').trim();
+        return String(window.ORDO_GOOGLE_MAPS_API_KEY || window.GOOGLE_MAPS_API_KEY || churchMapsApiKey || '').trim();
+    }
+
+    async function fetchGoogleMapsApiKey() {
+        const inlineKey = String(window.ORDO_GOOGLE_MAPS_API_KEY || window.GOOGLE_MAPS_API_KEY || '').trim();
+        if (inlineKey) return inlineKey;
+        if (churchMapsApiKey) return churchMapsApiKey;
+        if (!GOOGLE_MAPS_CONFIG_ENDPOINT || /YOUR_|example\.com/i.test(GOOGLE_MAPS_CONFIG_ENDPOINT)) return '';
+        if (!churchMapsApiKeyPromise) {
+            churchMapsApiKeyPromise = fetchWithTimeout(GOOGLE_MAPS_CONFIG_ENDPOINT, {
+                method: 'GET',
+                headers: { 'Accept': 'application/json' }
+            }, 8000).then(async response => {
+                if (!response.ok) throw new Error(`mapsConfig HTTP ${response.status}`);
+                const payload = await response.json();
+                churchMapsApiKey = String(payload && (payload.apiKey || payload.key) || '').trim();
+                return churchMapsApiKey;
+            }).catch(error => {
+                console.warn('Google Maps 설정을 불러오지 못해 iframe 지도로 대체합니다.', error);
+                return '';
+            });
+        }
+        return churchMapsApiKeyPromise;
     }
 
     function googleMapsEmbedUrl(query) {
@@ -3545,9 +3588,9 @@
         setChurchCaption(fallbackQuery);
     }
 
-    function loadGoogleMapsForChurches() {
+    async function loadGoogleMapsForChurches() {
         if (window.google && google.maps && google.maps.places) return Promise.resolve();
-        const key = googleMapsApiKey();
+        const key = await fetchGoogleMapsApiKey();
         if (!key) return Promise.reject(new Error('Google Maps API key is not configured.'));
         if (churchMapLoadPromise) return churchMapLoadPromise;
         churchMapLoadPromise = new Promise((resolve, reject) => {
@@ -3701,9 +3744,10 @@
         searchChurchesInCurrentView();
     }
 
-    function renderChurchPanel() {
+    async function renderChurchPanel() {
         localizeAuxPanels();
-        if (!googleMapsApiKey()) {
+        const key = googleMapsApiKey() || await fetchGoogleMapsApiKey();
+        if (!key) {
             showChurchFallback();
             return;
         }
@@ -4155,12 +4199,12 @@
     };
 
     const specialMassFiles = {
-        ash_wednesday: { file: 'ash-wednesday.js', names: { KR: '재의 수요일', EN: 'Ash Wednesday' } },
-        palm_sunday: { file: 'palm-sunday.js', names: { KR: '주님 수난 성지 주일', EN: 'Palm Sunday of the Passion of the Lord' } },
-        holy_thursday: { file: 'holy-thursday.js', names: { KR: '주님 만찬 성목요일', EN: 'Holy Thursday - Evening Mass of the Lord’s Supper' } },
-        good_friday: { file: 'good-friday.js', names: { KR: '주님 수난 성금요일', EN: 'Friday of the Passion of the Lord' } },
-        easter_vigil: { file: 'easter-vigil.js', names: { KR: '주님 부활 대축일 파스카 성야', EN: 'Easter Vigil in the Holy Night' } },
-        christmas_vigil: { file: 'christmas-vigil.js', names: { KR: '주님 성탄 대축일 - 성야 미사', EN: 'The Nativity of the Lord - Vigil Mass' } }
+        ash_wednesday: { file: 'JS%20file/ash-wednesday.js', names: { KR: '재의 수요일', EN: 'Ash Wednesday' } },
+        palm_sunday: { file: 'JS%20file/palm-sunday.js', names: { KR: '주님 수난 성지 주일', EN: 'Palm Sunday of the Passion of the Lord' } },
+        holy_thursday: { file: 'JS%20file/holy-thursday.js', names: { KR: '주님 만찬 성목요일', EN: 'Holy Thursday - Evening Mass of the Lord’s Supper' } },
+        good_friday: { file: 'JS%20file/good-friday.js', names: { KR: '주님 수난 성금요일', EN: 'Friday of the Passion of the Lord' } },
+        easter_vigil: { file: 'JS%20file/easter-vigil.js', names: { KR: '주님 부활 대축일 파스카 성야', EN: 'Easter Vigil in the Holy Night' } },
+        christmas_vigil: { file: 'JS%20file/christmas-vigil.js', names: { KR: '주님 성탄 대축일 - 성야 미사', EN: 'The Nativity of the Lord - Vigil Mass' } }
     };
     const loadedSpecialMassScripts = {};
 
@@ -5590,6 +5634,18 @@
         return properLocalDailySectionIds.has(key) && shouldSuppressMismatchedLocalProperLanguage(lang);
     }
 
+    function localCalendarOverrideForDate(date) {
+        return mergeCalendarOverrideEntries(
+            localCalendarOverrides[formatDateIso(date)],
+            getKoreanVietnameseCalendarOverride2026(date)
+        );
+    }
+
+    function isLocalOnlyCalendarOverrideDate(date) {
+        const override = localCalendarOverrideForDate(date);
+        return !!(override && override.meta && override.meta.localOnly);
+    }
+
     function isNonLeftLocalProperSource(lang, title) {
         if (normalizeSelectableLang(lang, '') === normalizeSelectableLang(state.currentLoc, '')) return false;
         const activeOverride = localCalendarOverrides[formatDateIso(getActiveLiturgicalSourceDate())];
@@ -5611,6 +5667,8 @@
         if (!currentTitle) return;
         const fixedSharedTitle = strictFixedDailyTitle(lang, getActiveLiturgicalSourceDate());
         if (fixedSharedTitle && normalizeCalendarNameForCompare(cleanTitle) === normalizeCalendarNameForCompare(fixedSharedTitle)) return;
+        const activeDate = getActiveLiturgicalSourceDate();
+        if (!isLocalOnlyCalendarOverrideDate(activeDate) && hasNonSeasonalLiturgyNameForLookup(state.liturgyInfo, activeDate)) return;
         if (normalizeCalendarNameForCompare(cleanTitle) === normalizeCalendarNameForCompare(currentTitle)) return;
         state.liturgyInfo.localCalendar = {
             lang,
@@ -5801,6 +5859,7 @@
         const expected = vietnameseLookupTitle(date);
         const info = buildGeneratedLiturgyInfo(date);
         const meta = info.meta || getSeasonMeta(date);
+        const lookupNames = lookupLiturgyNamesForDate(date, info);
         const candidates = [];
         if (expected && meta.sundayCycle) {
             candidates.push(`${expected} Năm ${meta.sundayCycle}`);
@@ -5810,20 +5869,36 @@
         if (hasPriorityCelebrationForLookup(date, info)) {
             candidates.push(vietnameseDatedSlug(date, expected));
             candidates.push(`ngay ${date.getDate()} ${date.getMonth() + 1} ${expected}`);
+            Object.entries(lookupNames || {}).forEach(([lang, title]) => {
+                if (title && !isGeneratedSeasonalNameForInfo(lang, title, info)) candidates.push(title);
+            });
         }
         return candidates.filter((candidate, index, list) => candidate && list.indexOf(candidate) === index);
+    }
+
+    function lookupLiturgyNamesForDate(date, info) {
+        const override = localCalendarOverrideForDate(date);
+        return Object.assign({}, (info && info.names) || {}, (override && override.names) || {});
+    }
+
+    function hasNonSeasonalLiturgyNameForLookup(info, date = null) {
+        const names = date ? lookupLiturgyNamesForDate(date, info) : ((info && info.names) || {});
+        return Object.entries(names).some(([lang, title]) =>
+            title && !isGeneratedSeasonalNameForInfo(lang, title, info)
+        );
     }
 
     function hasPriorityCelebrationForLookup(date, info = null) {
         const lookupInfo = info || buildGeneratedLiturgyInfo(date);
         const meta = lookupInfo.meta || {};
-        return !!(meta.special || lookupInfo.localCalendar);
+        return !!(meta.special || lookupInfo.localCalendar || hasNonSeasonalLiturgyNameForLookup(lookupInfo, date));
     }
 
     function vietnameseLookupTitle(date) {
         const info = buildGeneratedLiturgyInfo(date);
         const meta = info.meta || getSeasonMeta(date);
-        const priorityName = info.names && info.names.VN;
+        const lookupNames = lookupLiturgyNamesForDate(date, info);
+        const priorityName = lookupNames && lookupNames.VN;
         if (hasPriorityCelebrationForLookup(date, info) && priorityName && !isGeneratedSeasonalName('VN', priorityName)) {
             return priorityName;
         }
@@ -6002,6 +6077,28 @@
         return extractVietnameseCalendarReadingUrl(monthHtml, date, monthUrl);
     }
 
+    function vietnameseProperLinkMatchesDate(link, date) {
+        if (!link || !date) return false;
+        const key = normalizeSearchText(`${link.text || ''} ${decodeURIComponent(link.href || '')}`);
+        return new RegExp(`\\bngay\\s+0?${date.getDate()}\\s+0?${date.getMonth() + 1}\\b`, 'i').test(key);
+    }
+
+    async function resolveVietnameseIndexUrl(date, expectedCandidates, preferProperDate = false) {
+        const indexHtml = await fetchTextWithFallbacks(sourceUrls.VN_INDEX());
+        const links = extractSourceLinks(indexHtml, sourceUrls.VN_INDEX());
+        if (preferProperDate) {
+            const dateMatched = links.find(link => vietnameseProperLinkMatchesDate(link, date));
+            if (dateMatched) return dateMatched.href;
+        }
+        const normalizedCandidates = (expectedCandidates || []).map(normalizeSearchText).filter(Boolean);
+        const matched = links.find(link => {
+            const textKey = normalizeSearchText(link.text);
+            const hrefKey = normalizeSearchText(link.href);
+            return normalizedCandidates.some(expectedKey => textKey.includes(expectedKey) || hrefKey.includes(expectedKey));
+        });
+        return matched ? matched.href : '';
+    }
+
     function vietnameseFixedDailyUrls(date) {
         if (date.getMonth() === 5 && date.getDate() === 13) {
             return ['https://www.tonggiaophanhanoi.org/le-trai-tim-vo-nhiem-duc-me-maria-thu-bay-sau-chua-nhat-ii-sau-le-hien-xuong/'];
@@ -6015,6 +6112,9 @@
         if (date.getMonth() === 5 && date.getDate() === 29) {
             return ['https://www.tonggiaophanhanoi.org/ngay-29-6-thanh-phero-va-phaolo-tong-do/'];
         }
+        if (date.getMonth() === 6 && date.getDate() === 3) {
+            return ['https://www.tonggiaophanhanoi.org/ngay-03-7-thanh-toma-tong-do/'];
+        }
         return [];
     }
 
@@ -6022,6 +6122,7 @@
         if (date.getMonth() === 5 && date.getDate() === 13) return 'Lễ Trái Tim Vô Nhiễm Đức Mẹ Ma-ri-a';
         if (date.getMonth() === 5 && date.getDate() === 24) return 'Lễ Sinh Nhật Thánh Gioan Tẩy Giả';
         if (date.getMonth() === 5 && date.getDate() === 29) return 'Lễ Thánh Phêrô và Thánh Phaolô, Tông Đồ';
+        if (date.getMonth() === 6 && date.getDate() === 3) return 'Lễ Thánh Tô-ma, Tông Đồ';
         return '';
     }
 
@@ -6039,6 +6140,8 @@
     async function resolveVietnameseDailyUrls(date) {
         const fixedUrls = vietnameseFixedDailyUrls(date);
         if (fixedUrls.length) return fixedUrls;
+        const info = buildGeneratedLiturgyInfo(date);
+        const preferProperDate = hasPriorityCelebrationForLookup(date, info);
         const expectedCandidates = vietnameseLookupCandidates(date);
         const titleSlug = slugifyVietnamese(vietnameseLookupTitle(date));
         const datedSlug = vietnameseDatedSlug(date, vietnameseLookupTitle(date));
@@ -6051,6 +6154,15 @@
             `https://www.tonggiaophanhanoi.org/${datedSlug}-1/`
         ]).filter((url, index, list) => url && list.indexOf(url) === index);
 
+        if (preferProperDate) {
+            try {
+                const matchedIndexUrl = await resolveVietnameseIndexUrl(date, expectedCandidates, true);
+                if (matchedIndexUrl) return [matchedIndexUrl].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+            } catch (error) {
+                console.warn('베트남어 고유미사 목록 파싱 실패, 전례력 기반 링크로 재시도합니다.', error);
+            }
+        }
+
         try {
             const calendarReadingUrl = await resolveVietnameseCalendarReadingUrl(date);
             if (calendarReadingUrl) return [calendarReadingUrl].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
@@ -6059,14 +6171,8 @@
         }
 
         try {
-            const indexHtml = await fetchTextWithFallbacks(sourceUrls.VN_INDEX());
-            const normalizedCandidates = expectedCandidates.map(normalizeSearchText).filter(Boolean);
-            const matched = extractSourceLinks(indexHtml, sourceUrls.VN_INDEX()).find(link => {
-                const textKey = normalizeSearchText(link.text);
-                const hrefKey = normalizeSearchText(link.href);
-                return normalizedCandidates.some(expectedKey => textKey.includes(expectedKey) || hrefKey.includes(expectedKey));
-            });
-            if (matched) return [matched.href].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+            const matchedIndexUrl = await resolveVietnameseIndexUrl(date, expectedCandidates, preferProperDate);
+            if (matchedIndexUrl) return [matchedIndexUrl].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
         } catch (error) {
             console.warn('베트남어 미사 목록 파싱 실패, slug URL로 재시도합니다.', error);
         }
@@ -6288,7 +6394,7 @@
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
     const STRICT_PARSER_CACHE_VERSION = 'strict62';
-    const ALL_SOULS_CONFIG_FILE = 'all-souls-config.js';
+    const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
         return new Date(date.getFullYear(), date.getMonth(), date.getDate());
@@ -7793,22 +7899,50 @@
         }, lang);
     }
 
+    const vietnameseProperOverrideSectionKeys = new Set(['entrance', 'collect', 'prayer_offerings', 'preface', 'communion', 'prayer_after']);
+
+    function hasAnyParsedDailySection(parsed) {
+        return Object.values((parsed && parsed.data) || {}).some(sourceSectionHasContent);
+    }
+
+    function mergeVietnameseProperPartialWithReadings(readingParsed, properParsed) {
+        if (!properParsed || !properParsed.data) return readingParsed;
+        const merged = Object.assign({}, readingParsed, {
+            title: cleanLiturgyTitle(properParsed.title) || readingParsed.title,
+            color: properParsed.color || readingParsed.color,
+            data: Object.assign({}, readingParsed.data || {})
+        });
+        Object.keys(properParsed.data || {}).forEach(key => {
+            if (vietnameseProperOverrideSectionKeys.has(key) && sourceSectionHasContent(properParsed.data[key])) {
+                merged.data[key] = properParsed.data[key];
+            }
+        });
+        return merged;
+    }
+
     async function fetchStrictDailyMass(lang, date) {
         await loadAllSoulsMassConfigIfNeeded(date);
         if (lang === 'VN') {
             const urls = await resolveVietnameseDailyUrls(date);
             let lastError = null;
-            for (const url of urls) {
+            let properPartialParsed = null;
+            const preferProperDate = hasPriorityCelebrationForLookup(date, buildGeneratedLiturgyInfo(date));
+            for (let index = 0; index < urls.length; index += 1) {
+                const url = urls[index];
                 try {
                     const source = await fetchTextWithFallbacks(url);
                     const parsed = strictParseDailyMass(lang, source, date);
                     const fixedTitle = strictFixedDailyTitle(lang, date);
                     if (fixedTitle) parsed.title = fixedTitle;
                     if (hasVietnameseParsedMass(parsed)) {
+                        const mergedParsed = properPartialParsed ? mergeVietnameseProperPartialWithReadings(parsed, properPartialParsed) : parsed;
                         if (!strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
                             throw new Error('VN source did not match calendar reading hints');
                         }
-                        return await applyKtcgkpvCitationSource(parsed, date);
+                        return await applyKtcgkpvCitationSource(mergedParsed, date);
+                    }
+                    if (preferProperDate && hasAnyParsedDailySection(parsed) && (index === 0 || vietnameseProperLinkMatchesDate({ href: url, text: '' }, date))) {
+                        properPartialParsed = parsed;
                     }
                     throw new Error('No strict VN readings found');
                 } catch (error) {
