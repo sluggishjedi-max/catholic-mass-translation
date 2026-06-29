@@ -189,7 +189,19 @@
         .voice-toggle-btn { border: 1px solid var(--primary-color); border-radius: 6px; background: white; color: var(--primary-color); padding: 4px 9px; font-weight: 900; cursor: pointer; line-height: 1.2; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
         .voice-toggle-btn:hover { background: #f7f7f7; }
         .voice-toggle-btn.is-recording { background: #c0392b; border-color: #c0392b; color: white; }
-        .voice-highlight-active { background: #fff3cd !important; border-radius: 6px; box-shadow: inset 0 0 0 2px rgba(212, 175, 55, 0.45); transition: background-color 0.25s ease, box-shadow 0.25s ease; }
+        .voice-highlight-active,
+        .voice-listening-anchor { background: rgba(108, 117, 125, 0.16) !important; border-radius: 8px; box-shadow: inset 4px 0 0 rgba(108, 117, 125, 0.58), inset 0 0 0 1px rgba(108, 117, 125, 0.22); transition: background-color 0.25s ease, box-shadow 0.25s ease; }
+        .voice-listening-anchor { background: rgba(108, 117, 125, 0.10) !important; box-shadow: inset 4px 0 0 rgba(108, 117, 125, 0.36), inset 0 0 0 1px rgba(108, 117, 125, 0.14); }
+        .voice-status-bar { position: fixed; left: 50%; bottom: calc(58px + env(safe-area-inset-bottom, 0px)); z-index: 1200; display: flex; align-items: center; gap: 9px; width: min(680px, calc(100% - 24px)); min-height: 38px; padding: 9px 13px; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 999px; background: rgba(73, 80, 87, 0.78); color: white; font-size: 0.86rem; font-weight: 900; line-height: 1.35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24); backdrop-filter: blur(7px); transform: translate(-50%, 14px); opacity: 0; pointer-events: none; transition: opacity 0.18s ease, transform 0.18s ease, background 0.18s ease; }
+        .voice-status-bar.is-visible { transform: translate(-50%, 0); opacity: 1; }
+        .voice-status-bar.is-error { background: rgba(90, 90, 90, 0.86); }
+        .voice-status-dot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: #d1d5db; box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12); }
+        .voice-status-bar.is-recording .voice-status-dot { background: #ef4444; animation: voicePulse 1s ease-in-out infinite; }
+        .voice-status-message { min-width: 0; overflow-wrap: anywhere; }
+        @keyframes voicePulse {
+            0%, 100% { transform: scale(1); opacity: 0.72; }
+            50% { transform: scale(1.36); opacity: 1; }
+        }
         .setting-help { margin: -8px 0 15px; color: var(--sub-txt); font-size: 0.84rem; line-height: 1.45; text-align: right; }
         #lbl-set-voice-note { margin-top: -10px; padding-left: 1.95em; text-align: left; }
 
@@ -9045,6 +9057,7 @@
     let voiceStream = null;
     let isRecordingVoice = false;
     let voiceHighlightTimer = null;
+    let voiceStatusHideTimer = null;
 
     function blobToBase64(blob) {
         return new Promise((resolve, reject) => {
@@ -9058,7 +9071,78 @@
         });
     }
 
-    function setVoiceStatus(text, recording = false) {
+    function ensureVoiceStatusBar() {
+        let bar = document.getElementById('voice-status-bar');
+        if (bar) return bar;
+        bar = document.createElement('div');
+        bar.id = 'voice-status-bar';
+        bar.className = 'voice-status-bar';
+        bar.setAttribute('role', 'status');
+        bar.setAttribute('aria-live', 'polite');
+        bar.innerHTML = '<span class="voice-status-dot" aria-hidden="true"></span><span id="voice-status-message" class="voice-status-message"></span>';
+        document.body.appendChild(bar);
+        return bar;
+    }
+
+    function updateVoiceStatusBar(text, options = {}) {
+        const bar = ensureVoiceStatusBar();
+        const message = document.getElementById('voice-status-message');
+        const cleanText = cleanNodeText(text);
+        if (message) message.textContent = cleanText;
+        bar.classList.toggle('is-visible', !!cleanText);
+        bar.classList.toggle('is-recording', !!options.recording);
+        bar.classList.toggle('is-error', !!options.error);
+        if (voiceStatusHideTimer) clearTimeout(voiceStatusHideTimer);
+        voiceStatusHideTimer = null;
+        if (cleanText && options.autoHideMs) {
+            voiceStatusHideTimer = setTimeout(() => {
+                bar.classList.remove('is-visible', 'is-recording', 'is-error');
+                voiceStatusHideTimer = null;
+            }, options.autoHideMs);
+        }
+    }
+
+    function hideVoiceStatusBar(delay = 0) {
+        if (voiceStatusHideTimer) clearTimeout(voiceStatusHideTimer);
+        voiceStatusHideTimer = null;
+        const hide = () => {
+            const bar = document.getElementById('voice-status-bar');
+            if (bar) bar.classList.remove('is-visible', 'is-recording', 'is-error');
+        };
+        if (delay > 0) voiceStatusHideTimer = setTimeout(hide, delay);
+        else hide();
+    }
+
+    function clearVoiceListeningAnchor() {
+        document.querySelectorAll('.voice-listening-anchor').forEach(node => node.classList.remove('voice-listening-anchor'));
+    }
+
+    function markVoiceListeningAnchor() {
+        clearVoiceListeningAnchor();
+        if ((state.activeTab || 'mass') !== 'mass') return false;
+        const candidates = Array.from(document.querySelectorAll('#missal-root .pair-block, #missal-root .pc-line-row:not(.pc-header-row), #missal-root .part-header'))
+            .filter(node => {
+                if (!cleanNodeText(node.textContent || '')) return false;
+                const rect = node.getBoundingClientRect();
+                return rect.height > 0 && rect.bottom > 74 && rect.top < window.innerHeight - 92;
+            })
+            .sort((a, b) => {
+                const target = window.innerHeight * 0.42;
+                const aRect = a.getBoundingClientRect();
+                const bRect = b.getBoundingClientRect();
+                return Math.abs((aRect.top + aRect.bottom) / 2 - target) - Math.abs((bRect.top + bRect.bottom) / 2 - target);
+            });
+        const anchor = candidates[0];
+        if (!anchor) return false;
+        anchor.classList.add('voice-listening-anchor');
+        return true;
+    }
+
+    function voiceStatusIsError(text) {
+        return /실패|권한|미지원|마이크|네트워크|찾지 못/i.test(cleanNodeText(text));
+    }
+
+    function setVoiceStatus(text, recording = false, options = {}) {
         const status = document.getElementById('set-ai-voice-status');
         const button = document.getElementById('btn-ai-voice');
         if (status) status.textContent = text;
@@ -9066,6 +9150,17 @@
             button.textContent = recording ? '정지' : '시작';
             button.classList.toggle('is-recording', recording);
             button.disabled = text === '인식 중...';
+        }
+        const normalized = cleanNodeText(text);
+        if (!normalized || normalized === '꺼짐') {
+            hideVoiceStatusBar();
+        } else {
+            updateVoiceStatusBar(normalized, {
+                recording,
+                error: options.error || voiceStatusIsError(normalized),
+                autoHideMs: options.autoHideMs
+            });
+            if (recording) markVoiceListeningAnchor();
         }
     }
 
@@ -9084,7 +9179,12 @@
             button.textContent = isRecordingVoice ? '정지' : '시작';
         }
         const status = document.getElementById('set-ai-voice-status');
-        if (status) status.textContent = statusText || (state.aiVoiceOn ? '준비됨' : '꺼짐');
+        const nextStatus = statusText || (state.aiVoiceOn ? '준비됨' : '꺼짐');
+        if (status) status.textContent = nextStatus;
+        if (!state.aiVoiceOn && !isRecordingVoice) {
+            hideVoiceStatusBar();
+            clearVoiceListeningAnchor();
+        }
     }
 
     async function requestVoicePermission() {
@@ -9101,6 +9201,7 @@
             state.aiVoiceOn = false;
             stopVoiceStream();
             syncVoiceControls('꺼짐');
+            clearVoiceHighlight();
             return;
         }
         try {
@@ -9115,8 +9216,7 @@
             console.error('Microphone permission check failed', error);
             state.aiVoiceOn = false;
             stopVoiceStream();
-            syncVoiceControls('권한 필요');
-            alert('AI 음성 인식을 켜려면 마이크 권한이 필요합니다.');
+            setVoiceStatus('마이크 권한 필요', false, { error: true, autoHideMs: 8000 });
         }
     };
 
@@ -9140,6 +9240,7 @@
 
     function clearVoiceHighlight() {
         document.querySelectorAll('.voice-highlight-active').forEach(node => node.classList.remove('voice-highlight-active'));
+        clearVoiceListeningAnchor();
         if (voiceHighlightTimer) clearTimeout(voiceHighlightTimer);
         voiceHighlightTimer = null;
     }
@@ -9148,15 +9249,16 @@
         const needles = voiceSearchNeedles(aiText);
         if (!needles.length) return false;
         clearVoiceHighlight();
-        const candidates = Array.from(document.querySelectorAll('#missal-root .pair-line, #missal-root .part-header, #missal-root .section-bar'));
+        const candidates = Array.from(document.querySelectorAll('#missal-root .pair-line, #missal-root .pair-block, #missal-root .pc-line-row:not(.pc-header-row), #missal-root .part-header, #missal-root .section-bar'));
         const matched = candidates.find(node => {
             const haystack = normalizeVoiceSearchText(node.textContent || '');
             return needles.some(needle => haystack.includes(needle));
         });
         if (!matched) return false;
-        matched.classList.add('voice-highlight-active');
-        matched.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        voiceHighlightTimer = setTimeout(() => matched.classList.remove('voice-highlight-active'), 4500);
+        const target = matched.closest('.pair-block') || matched.closest('.pc-line-row') || matched;
+        target.classList.add('voice-highlight-active');
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        voiceHighlightTimer = setTimeout(() => target.classList.remove('voice-highlight-active'), 6500);
         return true;
     }
 
@@ -9191,20 +9293,20 @@
     window.toggleVoiceRecognition = async function() {
         if (!state.aiVoiceOn) {
             state.aiVoiceOn = true;
-            syncVoiceControls('준비됨');
+            setVoiceStatus('음성 인식 준비 중', false);
         }
         if (isRecordingVoice && voiceMediaRecorder) {
-            setVoiceStatus('인식 중...', false);
+            setVoiceStatus('분석 중...', false);
             voiceMediaRecorder.stop();
             return;
         }
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || typeof MediaRecorder === 'undefined') {
             state.aiVoiceOn = false;
-            setVoiceStatus('미지원', false);
-            alert('이 브라우저에서는 마이크 녹음을 사용할 수 없습니다.');
+            setVoiceStatus('이 브라우저에서는 마이크 녹음을 사용할 수 없습니다.', false, { error: true, autoHideMs: 9000 });
             return;
         }
         try {
+            setVoiceStatus('마이크 권한 확인 중', false);
             voiceStream = await navigator.mediaDevices.getUserMedia({ audio: true });
             const mimeType = MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
                 ? 'audio/webm;codecs=opus'
@@ -9225,26 +9327,27 @@
                 const audioBlob = new Blob(voiceAudioChunks, { type: voiceMediaRecorder.mimeType || 'audio/webm' });
                 stopVoiceStream();
                 try {
+                    setVoiceStatus('AI가 음성을 분석 중입니다...', false);
                     const transcribedText = await transcribeVoiceBlob(audioBlob);
                     if (!transcribedText) throw new Error('No speech text returned.');
                     const found = highlightSpokenText(transcribedText);
-                    setVoiceStatus(found ? '표시됨' : '못 찾음', false);
+                    if (!found) markVoiceListeningAnchor();
+                    setVoiceStatus(found ? '본문 위치를 표시했습니다' : '음성은 인식했지만 본문 위치를 찾지 못했습니다', false, { autoHideMs: found ? 6500 : 9000 });
                 } catch (error) {
                     console.error('AI voice recognition failed', error);
-                    setVoiceStatus('실패', false);
-                    alert('AI 음성 인식에 실패했습니다. 마이크 권한과 네트워크 상태를 확인해 주세요.');
+                    markVoiceListeningAnchor();
+                    setVoiceStatus('음성 인식 실패 · 마이크 권한과 네트워크를 확인해 주세요', false, { error: true, autoHideMs: 9000 });
                 }
             };
             voiceMediaRecorder.start();
             isRecordingVoice = true;
-            setVoiceStatus('녹음 중', true);
+            setVoiceStatus('녹음 중 · 말씀을 들려 주세요', true);
         } catch (error) {
             console.error('Microphone access failed', error);
             stopVoiceStream();
             isRecordingVoice = false;
             state.aiVoiceOn = false;
-            setVoiceStatus('권한 필요', false);
-            alert('마이크를 사용할 수 없습니다. 브라우저 권한을 확인해 주세요.');
+            setVoiceStatus('마이크를 사용할 수 없습니다 · 브라우저 권한을 확인해 주세요', false, { error: true, autoHideMs: 9000 });
         }
     };
 
