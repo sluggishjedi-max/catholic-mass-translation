@@ -140,6 +140,7 @@
         .aux-results { display: grid; gap: 12px; }
         .aux-result-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; color: var(--sub-txt); font-size: 0.84rem; font-weight: 800; }
         .aux-pill { display: inline-flex; align-items: center; border-radius: 999px; background: #eef2f6; padding: 3px 8px; }
+        .aux-prayer-tag { display: inline-flex; align-items: center; margin-left: 6px; border-radius: 999px; background: #f4efe8; color: #8a5a2b; padding: 2px 7px; font-size: 0.75rem; font-weight: 800; vertical-align: middle; }
         .aux-title-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; margin-bottom: 8px; }
         .aux-title-row strong { color: var(--primary-color); font-size: 1.05rem; }
         .aux-muted { color: var(--sub-txt); }
@@ -391,13 +392,7 @@
 <section id="prayer-panel" class="aux-panel" aria-labelledby="prayer-panel-title">
     <div class="aux-card">
         <h2 id="prayer-panel-title">다국어 기도문</h2>
-        <div class="aux-dev-warning" role="status" aria-live="polite">⚠ 개발중인 페이지 입니다.</div>
-        <p id="prayer-panel-note" class="aux-note">한국어 GoodNews 기도문과 Vatican News 영어·베트남어 기도문 목록 구조를 참고한 자리입니다. 미사통상문처럼 왼쪽/오른쪽 두 언어를 나란히 보여 주며, 나중에 업로드된 기도문 파일이 연결되면 이 검색창과 결과 영역이 그대로 실제 데이터 검색에 쓰입니다.</p>
-        <div class="aux-source-links" aria-label="기도문 참고 링크">
-            <a href="https://maria.catholic.or.kr/mobile/prayer/prayer.asp?pgubun=3&ingId=1" target="_blank" rel="noopener">한국어 GoodNews 기도문</a>
-            <a href="https://www.vaticannews.va/vi/kinh-nguyen.html" target="_blank" rel="noopener">베트남어 Vatican News 기도문</a>
-            <a href="https://www.vaticannews.va/en/prayers.html" target="_blank" rel="noopener">영어 Vatican News Prayers</a>
-        </div>
+        <div class="aux-dev-warning" role="status" aria-live="polite">⚠ 개발중으로, 정확하지 않을 수 있습니다.</div>
         <div class="aux-controls">
             <div class="aux-search-row aux-prayer-row">
                 <select id="prayer-category" class="aux-select" aria-label="기도문 분류" onchange="renderPrayerPanel()">
@@ -3335,7 +3330,7 @@
     const auxUiText = {
         KR: {
             prayerTitle: '다국어 기도문',
-            prayerNote: '한국어 GoodNews 기도문과 Vatican News 영어·베트남어 기도문 목록 구조를 참고한 자리입니다. 미사통상문처럼 왼쪽/오른쪽 두 언어를 나란히 보여 주며, 나중에 업로드된 기도문 파일이 연결되면 이 검색창과 결과 영역이 그대로 실제 데이터 검색에 쓰입니다.',
+            prayerNote: '',
             prayerPlaceholder: '기도문 제목 검색',
             prayerEmpty: '기도문 검색 결과가 없습니다. 업로드 기도문 파일을 연결하면 이 영역에서 제목과 본문을 검색합니다.',
             prayerBodyPlaceholder: '기도문 본문은 업로드 파일이 연결되면 이 자리에 표시됩니다.',
@@ -3348,12 +3343,12 @@
             churchNote: '아래 검색창에서 성당 이름을 검색하시면 성당 위치를 표시하며, GPS를 활성화 할 경우 인근의 성당이 표출됩니다.',
             churchPlaceholder: '성당 이름 검색',
             churchReady: '성당 이름을 입력하거나 지도를 움직이면 현재 지도 영역의 성당을 다시 검색합니다.',
-            churchFallback: 'Google Maps API 키가 없어 검색 지도로 표시합니다. 성당 이름을 검색하면 해당 위치 지도로 이동합니다.',
+            churchFallback: '',
             search: '검색'
         },
         VN: {
             prayerTitle: 'Kinh nguyện đa ngôn ngữ',
-            prayerNote: 'Khu vực này tham khảo cấu trúc danh mục kinh nguyện GoodNews tiếng Hàn và Vatican News tiếng Anh, tiếng Việt. Sau này khi nối tệp kinh nguyện đã tải lên, ô tìm kiếm này sẽ dùng để tìm trong dữ liệu thật.',
+            prayerNote: '',
             prayerPlaceholder: 'Tìm tên kinh nguyện',
             prayerEmpty: 'Không có kết quả tìm kiếm kinh nguyện. Khi nối tệp đã tải lên, bạn có thể tìm theo tên và nội dung tại đây.',
             prayerBodyPlaceholder: 'Nội dung kinh nguyện sẽ hiển thị ở đây sau khi nối tệp đã tải lên.',
@@ -3366,12 +3361,12 @@
             churchNote: 'Hãy tìm tên nhà thờ trong ô bên dưới để hiển thị vị trí. Nếu bật GPS, các nhà thờ gần bạn sẽ được hiển thị.',
             churchPlaceholder: 'Tìm tên nhà thờ',
             churchReady: 'Nhập tên nhà thờ hoặc di chuyển bản đồ để tìm lại các nhà thờ trong vùng đang hiển thị.',
-            churchFallback: 'Chưa có khóa Google Maps API nên đang dùng bản đồ tìm kiếm. Khi tìm tên nhà thờ, bản đồ sẽ chuyển đến vị trí đó.',
+            churchFallback: '',
             search: 'Tìm'
         },
         EN: {
             prayerTitle: 'Multilingual Prayers',
-            prayerNote: 'This area follows the structure of Korean GoodNews prayers and Vatican News English/Vietnamese prayer lists. Once uploaded prayer files are connected, this search box will search the actual data.',
+            prayerNote: '',
             prayerPlaceholder: 'Search prayer title',
             prayerEmpty: 'No prayer results. Connect uploaded prayer files to search by title and body here.',
             prayerBodyPlaceholder: 'Prayer text will appear here once an uploaded file is connected.',
@@ -3384,12 +3379,12 @@
             churchNote: 'Search for a church name below to display its location. If GPS is enabled, nearby churches will be shown.',
             churchPlaceholder: 'Search church name',
             churchReady: 'Type a church name or move the map to search churches in the visible area again.',
-            churchFallback: 'A Google Maps API key is not configured, so a search map is shown. Searching a church name will move the map to that location.',
+            churchFallback: '',
             search: 'Search'
         },
         JP: {
             prayerTitle: '多言語の祈り',
-            prayerNote: '韓国語 GoodNews の祈りと Vatican News の英語・ベトナム語の祈り一覧を参考にした領域です。後でアップロードされた祈りファイルを接続すると、この検索欄で実データを検索できます。',
+            prayerNote: '',
             prayerPlaceholder: '祈りの題名を検索',
             prayerEmpty: '祈りの検索結果がありません。アップロードファイルを接続すると題名と本文を検索できます。',
             prayerBodyPlaceholder: 'アップロードファイルを接続すると祈りの本文がここに表示されます。',
@@ -3402,12 +3397,12 @@
             churchNote: '下の検索欄で教会名を検索すると位置を表示します。GPSを有効にすると近くの教会が表示されます。',
             churchPlaceholder: '教会名を検索',
             churchReady: '教会名を入力するか地図を動かすと、表示範囲内の教会を再検索します。',
-            churchFallback: 'Google Maps API キーが未設定のため検索地図を表示しています。教会名を検索するとその位置へ移動します。',
+            churchFallback: '',
             search: '検索'
         },
         LA: {
             prayerTitle: 'Preces multilingues',
-            prayerNote: 'Hic locus indicem precum imitatur. Cum fasciculi precum additi coniungentur, haec arca quaestionis ipsa data requiret.',
+            prayerNote: '',
             prayerPlaceholder: 'Quaere titulum precis',
             prayerEmpty: 'Nullus exitus precum inventus est. Fasciculis additis coniunctis titulum et textum quaerere poteris.',
             prayerBodyPlaceholder: 'Textus precis hic apparebit cum fasciculus additus coniungetur.',
@@ -3420,7 +3415,7 @@
             churchNote: 'Nomen ecclesiae infra quaere ut locus eius ostendatur. Si GPS activum est, ecclesiae proximae monstrabuntur.',
             churchPlaceholder: 'Quaere nomen ecclesiae',
             churchReady: 'Nomen ecclesiae scribe vel tabulam move ut ecclesiae intra conspectum iterum quaerantur.',
-            churchFallback: 'Clavis Google Maps API non configurata est; tabula quaestionis ostenditur. Nomen ecclesiae quaerens tabulam ad locum movebit.',
+            churchFallback: '',
             search: 'Quaerere'
         }
     };
@@ -3584,7 +3579,7 @@
             frame.hidden = false;
             frame.src = googleMapsEmbedUrl(fallbackQuery);
         }
-        setChurchStatus(auxText().churchFallback);
+        setChurchStatus('');
         setChurchCaption(fallbackQuery);
     }
 
@@ -3658,12 +3653,16 @@
 
     function searchChurchesInCurrentView() {
         if (!churchPlacesService || !churchMap || !churchMap.getBounds()) return;
+        setChurchStatus(auxText().churchReady);
         churchPlacesService.textSearch({
             query: 'Catholic church',
             bounds: churchMap.getBounds()
         }, (results, status) => {
             if (status === google.maps.places.PlacesServiceStatus.OK && Array.isArray(results)) {
                 renderChurchPlaces(results);
+            } else if (status === google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
+                clearChurchMarkers();
+                setChurchCaption(churchFoundText(0));
             }
         });
     }
@@ -3725,6 +3724,8 @@
             churchPlacesService = new google.maps.places.PlacesService(churchMap);
             churchInfoWindow = new google.maps.InfoWindow();
             churchMap.addListener('idle', scheduleChurchViewportSearch);
+            churchMap.addListener('dragend', scheduleChurchViewportSearch);
+            churchMap.addListener('zoom_changed', scheduleChurchViewportSearch);
             const input = document.getElementById('church-search');
             if (input && !churchAutocomplete) {
                 churchAutocomplete = new google.maps.places.Autocomplete(input, {
@@ -3746,6 +3747,7 @@
 
     async function renderChurchPanel() {
         localizeAuxPanels();
+        updateFooterCopyright();
         const key = googleMapsApiKey() || await fetchGoogleMapsApiKey();
         if (!key) {
             showChurchFallback();
@@ -3773,10 +3775,13 @@
         const data = Array.isArray(window.uploadedPrayerData) ? window.uploadedPrayerData : (Array.isArray(window.prayerData) ? window.prayerData : []);
         return data.map(entry => ({
             id: cleanNodeText(entry.id || entry.key || ''),
-            category: cleanNodeText(entry.category || ''),
+            category: cleanNodeText(entry.category || entry.appCategory || ''),
             titles: entry.titles || entry.title || {},
             texts: entry.texts || entry.text || {},
-            source: cleanNodeText(entry.source || entry.fileName || '업로드 기도문 파일')
+            sourceCategory: entry.sourceCategory || entry.sourceCategories || {},
+            source: entry.source || entry.sources || entry.fileName || '업로드 기도문 파일',
+            sourceUrl: entry.sourceUrl || entry.sourceUrls || entry.url || {},
+            tags: Array.isArray(entry.tags) ? entry.tags : []
         })).filter(entry => entry.id || Object.keys(entry.titles || {}).length || Object.keys(entry.texts || {}).length);
     }
 
@@ -3785,38 +3790,158 @@
         return uploaded.length ? uploaded : prayerSeedData;
     }
 
-    function localizedPrayerValue(value, langCode) {
+    function localizedPrayerValueStrict(value, langCode) {
         if (!value) return '';
         if (typeof value === 'string') return value;
         const lang = normalizeSelectableLang(langCode, 'KR');
-        return cleanNodeText(value[lang] || value[lang.toLowerCase()] || value.KR || value.kr || value.EN || value.en || '');
+        return cleanNodeText(value[lang] || value[lang.toLowerCase()] || '');
+    }
+
+    function localizedPrayerValue(value, langCode) {
+        if (!value) return '';
+        if (typeof value === 'string') return value;
+        return localizedPrayerValueStrict(value, langCode)
+            || cleanNodeText(value.KR || value.kr || value.EN || value.en || Object.values(value).find(Boolean) || '');
+    }
+
+    function allPrayerFieldValues(value) {
+        if (!value) return [];
+        if (typeof value === 'string') return [value];
+        return Object.values(value).filter(Boolean).map(cleanNodeText);
+    }
+
+    const fallbackPrayerCategoryLabels = {
+        common: { KR: '공통기도문', VN: 'Kinh nguyện chung', EN: 'Common Prayers', JP: '共通の祈り', LA: 'Preces communes' },
+        rosary: { KR: '묵주기도', VN: 'Kinh Mân Côi', EN: 'Rosary', JP: 'ロザリオ', LA: 'Rosarium' },
+        litany: { KR: '호칭기도', VN: 'Kinh cầu', EN: 'Litanies', JP: '連祷', LA: 'Litaniae' },
+        monthly: { KR: '성월기도', VN: 'Kinh theo tháng kính', EN: 'Monthly Devotions', JP: '信心月の祈り', LA: 'Preces mensium' },
+        sacrament: { KR: '성사·예식', VN: 'Bí tích và nghi thức', EN: 'Sacraments and Rites', JP: '秘跡・式次第', LA: 'Sacramenta et ritus' },
+        blessing_household: { KR: '축복·가정기도', VN: 'Lời chúc lành và gia đình', EN: 'Blessings and Household Prayers', JP: '祝福と家庭の祈り', LA: 'Benedictiones et familia' },
+        funeral: { KR: '위령·장례기도', VN: 'Kinh cầu cho người qua đời', EN: 'Funeral and Prayers for the Dead', JP: '死者・葬儀の祈り', LA: 'Preces pro defunctis' },
+        national: { KR: '국가별·기타 기도문', VN: 'Kinh theo từng nước và kinh khác', EN: 'Local and Other Prayers', JP: '各国・その他の祈り', LA: 'Preces locales et aliae' }
+    };
+
+    function prayerCategoryDefinitions() {
+        return Object.assign({}, fallbackPrayerCategoryLabels, window.prayerCategoryLabels || {});
+    }
+
+    function prayerCategoryLabel(categoryKey, langCode = state.uiLang || 'KR') {
+        const key = cleanNodeText(categoryKey || 'national') || 'national';
+        const definitions = prayerCategoryDefinitions();
+        return localizedPrayerValue(definitions[key], langCode) || key;
+    }
+
+    function prayerAllCategoryLabel(categoryKey) {
+        const labels = prayerCategoryDefinitions()[categoryKey] || {};
+        return [categoryKey].concat(allPrayerFieldValues(labels));
+    }
+
+    function prayerOfficialCategory(entry, langCode) {
+        return localizedPrayerValueStrict(entry && entry.sourceCategory, langCode);
+    }
+
+    function prayerSourceText(entry, langCode) {
+        return localizedPrayerValue(entry && entry.source, langCode) || '기도문';
+    }
+
+    function prayerEntrySearchText(entry, leftLang, rightLang) {
+        return [
+            entry.id,
+            entry.category,
+            prayerAllCategoryLabel(entry.category).join(' '),
+            allPrayerFieldValues(entry.titles).join(' '),
+            allPrayerFieldValues(entry.texts).join(' '),
+            allPrayerFieldValues(entry.sourceCategory).join(' '),
+            allPrayerFieldValues(entry.source).join(' '),
+            (entry.tags || []).join(' '),
+            localizedPrayerValue(entry.titles, leftLang),
+            localizedPrayerValue(entry.titles, rightLang),
+            localizedPrayerValue(entry.texts, leftLang),
+            localizedPrayerValue(entry.texts, rightLang)
+        ].join(' ');
+    }
+
+    function prayerCategoryAllLabel(langCode) {
+        const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
+        if (lang === 'VN') return 'Tất cả';
+        if (lang === 'EN') return 'All categories';
+        if (lang === 'JP') return 'すべての分類';
+        if (lang === 'LA') return 'Omnia genera';
+        return '전체 분류';
+    }
+
+    function populatePrayerCategoryOptions(selectedValue = '') {
+        const select = document.getElementById('prayer-category');
+        if (!select) return;
+        const current = cleanNodeText(selectedValue || select.value || '');
+        const data = getPrayerData();
+        const definitions = prayerCategoryDefinitions();
+        const keys = [];
+        data.forEach(entry => {
+            const key = cleanNodeText(entry.category || 'national') || 'national';
+            if (!keys.includes(key)) keys.push(key);
+        });
+        Object.keys(definitions).forEach(key => {
+            if (keys.includes(key)) return;
+            if (data.some(entry => cleanNodeText(entry.category || '') === key)) keys.push(key);
+        });
+        select.innerHTML = [
+            `<option value="">${escapeHtml(prayerCategoryAllLabel(state.uiLang || 'KR'))}</option>`,
+            ...keys.map(key => `<option value="${escapeHtml(key)}">${escapeHtml(prayerCategoryLabel(key, state.uiLang || 'KR'))}</option>`)
+        ].join('');
+        if (Array.from(select.options).some(option => option.value === current)) select.value = current;
     }
 
     function prayerPlaceholder(entry, langCode) {
         return `${appLanguageName(langCode)} ${auxText().prayerBodyPlaceholder}`;
     }
 
+    function prayerTitleHtml(entry, langCode, otherLangCode) {
+        const directTitle = localizedPrayerValueStrict(entry.titles, langCode);
+        const fallbackTitle = localizedPrayerValue(entry.titles, langCode) || localizedPrayerValue(entry.titles, otherLangCode) || '기도문';
+        const category = prayerOfficialCategory(entry, langCode);
+        const missingTag = directTitle ? '' : '<span class="aux-prayer-tag">AI 번역</span>';
+        const officialTag = category ? `<span class="aux-prayer-tag">${escapeHtml(category)}</span>` : '';
+        return `${escapeHtml(directTitle || fallbackTitle)}${officialTag}${missingTag}`;
+    }
+
+    function prayerBodyHtml(entry, langCode, otherLangCode) {
+        const directBody = localizedPrayerValueStrict(entry.texts, langCode);
+        if (directBody) return escapeHtml(directBody);
+        const sourceText = normalizeSelectableLang(langCode, 'KR') !== normalizeSelectableLang(otherLangCode, 'KR')
+            ? (localizedPrayerValueStrict(entry.texts, otherLangCode) || localizedPrayerValueStrict(entry.titles, otherLangCode))
+            : '';
+        if (sourceText) return makeAIButton(sourceText, '', langCode);
+        return escapeHtml(prayerPlaceholder(entry, langCode));
+    }
+
+    function prayerMetaHtml(entry, leftLang, rightLang) {
+        const pills = [];
+        const categoryLabel = prayerCategoryLabel(entry.category, state.uiLang || 'KR');
+        if (categoryLabel) pills.push(categoryLabel);
+        [leftLang, rightLang].forEach(lang => {
+            const source = prayerSourceText(entry, lang);
+            if (source && !pills.includes(source)) pills.push(source);
+        });
+        return pills.map(value => `<span class="aux-pill">${escapeHtml(value)}</span>`).join('');
+    }
+
     function renderPrayerPanel() {
         localizeAuxPanels();
+        updateFooterCopyright();
         const leftLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
         const rightLang = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
+        populatePrayerCategoryOptions((document.getElementById('prayer-category') || {}).value || '');
         const category = cleanNodeText((document.getElementById('prayer-category') || {}).value || '');
         const query = normalizeAuxSearch((document.getElementById('prayer-search') || {}).value || '');
         const root = document.getElementById('prayer-results');
         const dict = auxText();
         if (!root) return;
         const rows = getPrayerData()
-            .filter(entry => !category || cleanNodeText(entry.category) === category)
+            .filter(entry => !category || cleanNodeText(entry.category || 'national') === category)
             .filter(entry => {
                 if (!query) return true;
-                const haystack = [
-                    entry.id,
-                    entry.category,
-                    localizedPrayerValue(entry.titles, leftLang),
-                    localizedPrayerValue(entry.titles, rightLang),
-                    localizedPrayerValue(entry.texts, leftLang),
-                    localizedPrayerValue(entry.texts, rightLang)
-                ].join(' ');
+                const haystack = prayerEntrySearchText(entry, leftLang, rightLang);
                 return normalizeAuxSearch(haystack).includes(query);
             });
         if (!rows.length) {
@@ -3824,16 +3949,16 @@
             return;
         }
         root.innerHTML = rows.map(entry => {
-            const leftTitle = localizedPrayerValue(entry.titles, leftLang) || '기도문';
-            const rightTitle = localizedPrayerValue(entry.titles, rightLang) || leftTitle;
-            const leftBody = localizedPrayerValue(entry.texts, leftLang) || prayerPlaceholder(entry, leftLang);
-            const rightBody = localizedPrayerValue(entry.texts, rightLang) || prayerPlaceholder(entry, rightLang);
+            const leftTitle = prayerTitleHtml(entry, leftLang, rightLang);
+            const rightTitle = prayerTitleHtml(entry, rightLang, leftLang);
+            const leftBody = prayerBodyHtml(entry, leftLang, rightLang);
+            const rightBody = prayerBodyHtml(entry, rightLang, leftLang);
             return [
                 '<article class="aux-card">',
-                `<div class="aux-result-meta"><span class="aux-pill">${escapeHtml(entry.source || '기도문')}</span><span class="aux-pill">${escapeHtml(entry.category || '분류 미지정')}</span></div>`,
+                `<div class="aux-result-meta">${prayerMetaHtml(entry, leftLang, rightLang)}</div>`,
                 '<div class="aux-two-column">',
-                `<div class="aux-language-block"><div class="aux-language-label">${escapeHtml(appLanguageName(leftLang))}</div><div class="aux-prayer-title">${escapeHtml(leftTitle)}</div><div class="aux-prayer-body">${escapeHtml(leftBody)}</div></div>`,
-                `<div class="aux-language-block"><div class="aux-language-label">${escapeHtml(appLanguageName(rightLang))}</div><div class="aux-prayer-title">${escapeHtml(rightTitle)}</div><div class="aux-prayer-body">${escapeHtml(rightBody)}</div></div>`,
+                `<div class="aux-language-block"><div class="aux-language-label">${escapeHtml(appLanguageName(leftLang))}</div><div class="aux-prayer-title">${leftTitle}</div><div class="aux-prayer-body">${leftBody}</div></div>`,
+                `<div class="aux-language-block"><div class="aux-language-label">${escapeHtml(appLanguageName(rightLang))}</div><div class="aux-prayer-title">${rightTitle}</div><div class="aux-prayer-body">${rightBody}</div></div>`,
                 '</div>',
                 '</article>'
             ].join('');
@@ -3894,6 +4019,7 @@
         if (tab === 'prayers') renderPrayerPanel();
         if (tab === 'hymns') renderHymnPanel();
         if (tab === 'churches') renderChurchPanel(state.churchCountry || churchCountryFromLocation());
+        updateFooterCopyright();
         syncFloatingLiturgyBannerVisibility();
     }
 
@@ -5626,6 +5752,13 @@
 
     function shouldSuppressMismatchedLocalProperLanguage(lang) {
         if (!isLeftLocalProperLiturgyActive()) return false;
+        const activeDate = getActiveLiturgicalSourceDate();
+        if (!isLocalOnlyCalendarOverrideDate(activeDate)
+            && state.liturgyInfo
+            && state.liturgyInfo.meta
+            && state.liturgyInfo.meta.special) return false;
+        if (!isLocalOnlyCalendarOverrideDate(activeDate)
+            && hasNonSeasonalLiturgyNameForLookup(state.liturgyInfo, activeDate)) return false;
         const localLang = normalizeSelectableLang(state.liturgyInfo.localCalendar.lang, '');
         return normalizeSelectableLang(lang, '') !== localLang;
     }
@@ -9414,9 +9547,37 @@
         });
     }
 
+    function localizedPrayerCopyrightText(langCode) {
+        const lang = normalizeSelectableLang(langCode || state.uiLang || 'KR', 'KR');
+        const vnNotice = 'Copyright © 2017-2026 Dicasterium pro Communicatione - Giữ bản quyền';
+        const enNotice = '©2026 United States Conference of Catholic Bishops';
+        if (lang === 'VN') return `Nguồn kinh nguyện: tiếng Việt — Vatican News (${vnNotice})<br>tiếng Anh — Hội đồng Giám mục Công giáo Hoa Kỳ (${enNotice})`;
+        if (lang === 'EN') return `Prayer sources: Vietnamese — Vatican News (${vnNotice})<br>English — United States Conference of Catholic Bishops (${enNotice})`;
+        if (lang === 'JP') return `祈りの出典: ベトナム語 — バチカンニュース (${vnNotice})<br>英語 — 米国カトリック司教協議会 (${enNotice})`;
+        if (lang === 'LA') return `Fontes precum: Vietnamice — Nuntii Vaticani (${vnNotice})<br>Anglice — Conferentia Episcoporum Catholicorum Civitatum Foederatarum (${enNotice})`;
+        return `기도문 출처: 베트남어 — 바티칸뉴스 (${vnNotice})<br>영어 — 미국가톨릭주교회의 (${enNotice})`;
+    }
+
+    function localizedChurchMapCopyrightText(langCode) {
+        const lang = normalizeSelectableLang(langCode || state.uiLang || 'KR', 'KR');
+        if (lang === 'VN') return 'Nguồn bản đồ: Google Maps. Vui lòng theo ghi nhận bản quyền của Google và nhà cung cấp dữ liệu hiển thị trên bản đồ.';
+        if (lang === 'EN') return 'Map source: Google Maps. Follow the Google and map-data provider attribution shown on the map.';
+        if (lang === 'JP') return '地図出典: Google マップ。地図上に表示される Google および地図データ提供者の著作権表示に従います。';
+        if (lang === 'LA') return 'Fons tabulae: Google Maps. Attributiones Google et datorum tabulae in ipsa tabula ostensas sequimur.';
+        return '지도 출처: 구글지도. 지도 안에 표시되는 Google 및 지도 데이터 제공자의 저작권 표기를 따릅니다.';
+    }
+
     function updateFooterCopyright() {
         const footer = document.getElementById('main-footer');
         if (!footer) return;
+        if (state.activeTab === 'prayers') {
+            footer.innerHTML = localizedPrayerCopyrightText(state.uiLang);
+            return;
+        }
+        if (state.activeTab === 'churches') {
+            footer.innerHTML = localizedChurchMapCopyrightText(state.uiLang);
+            return;
+        }
         let copyright = '';
         if(state.currentLoc === 'KR' || state.targetLang === 'KR') copyright += `ⓒ 한국천주교주교회의, 2017. All Rights Reserved.<br>`;
         if(state.currentLoc === 'VN' || state.targetLang === 'VN') copyright += `2024 © - Hội đồng Giám mục Việt Nam<br>`;
