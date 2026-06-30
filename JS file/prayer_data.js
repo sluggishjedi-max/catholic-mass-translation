@@ -14,6 +14,13 @@
     "JP": "ロザリオ",
     "LA": "Rosarium"
   },
+  "stations_of_cross": {
+    "KR": "십자가의 길",
+    "VN": "Đàng Thánh Giá",
+    "EN": "Stations of the Cross",
+    "JP": "十字架の道行き",
+    "LA": "Via Crucis"
+  },
   "litany": {
     "KR": "호칭기도",
     "VN": "Kinh cầu",
@@ -35,20 +42,6 @@
     "JP": "秘跡・式次第",
     "LA": "Sacramenta et ritus"
   },
-  "blessing_household": {
-    "KR": "축복·가정기도",
-    "VN": "Lời chúc lành và gia đình",
-    "EN": "Blessings and Household Prayers",
-    "JP": "祝福と家庭の祈り",
-    "LA": "Benedictiones et familia"
-  },
-  "funeral": {
-    "KR": "위령·장례기도",
-    "VN": "Kinh cầu cho người qua đời",
-    "EN": "Funeral and Prayers for the Dead",
-    "JP": "死者・葬儀の祈り",
-    "LA": "Preces pro defunctis"
-  },
   "national": {
     "KR": "국가별·기타 기도문",
     "VN": "Kinh theo từng nước và kinh khác",
@@ -57,8 +50,847 @@
     "LA": "Preces locales et aliae"
   }
 };
-
   const prayers = [
+  {
+    "id": "001.sign_of_cross",
+    "category": "common",
+    "titles": {
+      "KR": "성호경",
+      "VN": "Dấu Thánh Giá",
+      "EN": "Sign of the Cross",
+      "JP": "十字架のしるし",
+      "LA": "Signum Crucis"
+    },
+    "texts": {
+      "KR": "십자성호를 그으며\n\n성부와 성자와 성령의 이름으로.\n\n아멘.",
+      "VN": "Nhân danh Cha và Con và Thánh Thần. Amen.",
+      "EN": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen.",
+      "JP": "父と子と聖霊のみ名によって。アーメン。",
+      "LA": "In nomine Patris, et Filii, et Spiritus Sancti. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Generalia"
+    },
+    "tags": [
+      "001.sign_of_cross",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "성호경",
+      "Dấu Thánh Giá",
+      "Sign of the Cross",
+      "十字架のしるし",
+      "Signum Crucis",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Generalia"
+    ]
+  },
+  {
+    "id": "002.lords_prayer",
+    "category": "common",
+    "titles": {
+      "KR": "주님의 기도",
+      "VN": "Kinh L?y Cha",
+      "EN": "Our Father",
+      "JP": "????",
+      "LA": "Pater Noster"
+    },
+    "texts": {
+      "KR": "하늘에 계신 우리 아버지,\n\n아버지의 이름이 거룩히 빛나시며\n\n아버지의 나라가 오시며\n\n아버지의 뜻이 하늘에서와 같이\n\n땅에서도 이루어지소서!\n\n오늘 저희에게 일용할 양식을 주시고\n\n저희에게 잘못한 이를 저희가 용서하오니\n\n저희 죄를 용서하시고\n\n저희를 유혹에 빠지지 않게 하시고\n\n악에서 구하소서.\n\n아멘.",
+      "VN": "Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng, nước Cha trị đến, ý Cha thể hiện dưới đất cũng như trên trời. Xin Cha cho chúng con hôm nay lương thực hằng ngày, và tha nợ chúng con, như chúng con cũng tha kẻ có nợ chúng con, xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ. Amen.",
+      "EN": "Our Father, who art in heaven,\n\nhallowed be thy name;\n\nthy kingdom come,\n\nthy will be done\n\non earth as it is in heaven.\n\nGive us this day our daily bread,\n\nand forgive us our trespasses,\n\nas we forgive those who trespass against us;\n\nand lead us not into temptation,\n\nbut deliver us from evil.\n\nAmen.",
+      "JP": "天におられるわたしたちの父よ、\n\nみ名が聖とされますように。\n\nみ国が来ますように。\n\nみこころが天に行われるとおり地にも行われますように。\n\nわたしたちの日ごとの糧を今日も お与えください。\n\nわたしたちの罪をおゆるしください。わたしたちも人をゆるします。\n\nわたしたちを誘惑におちいらせず、\n\n悪からお救いください。\n\n（エキュメニカルな集いなどで、頌栄を続けて唱える場合）\n\n国と力と栄光は、永遠にあなたのものです。\n\nアーメン",
+      "LA": "Pater noster, qui es in caelis, sanctificetur nomen tuum. Adveniat regnum tuum. Fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie, et dimitte nobis debita nostra sicut et nos dimittimus debitoribus nostris. Et ne nos inducas in tentationem, sed libera nos a malo. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Generalia"
+    },
+    "tags": [
+      "002.lords_prayer",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "주님의 기도",
+      "Kinh L?y Cha",
+      "Our Father",
+      "????",
+      "Pater Noster",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Generalia"
+    ]
+  },
+  {
+    "id": "003.hail_mary",
+    "category": "common",
+    "titles": {
+      "KR": "성모송",
+      "VN": "Kinh K?nh M?ng",
+      "EN": "Hail Mary",
+      "JP": "???????",
+      "LA": "Ave Maria"
+    },
+    "texts": {
+      "KR": "은총이 가득하신 마리아님, 기뻐하소서!\n\n주님께서 함께 계시니 여인 중에 복되시며\n\n태중의 아들 예수님 또한 복되시나이다.\n\n천주의 성모 마리아님,\n\n이제와 저희 죽을 때에\n\n저희 죄인을 위하여 빌어주소서.\n\n아멘.",
+      "VN": "Kính mừng Maria đầy ơn phúc, Đức Chúa Trời ở cùng Bà, Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ. Thánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen.",
+      "EN": "Hail, Mary, full of grace,\n\nthe Lord is with thee.\n\nBlessed art thou among women\n\nand blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God,\n\npray for us sinners,\n\nnow and at the hour of our death.\n\nAmen.",
+      "JP": "アヴェ、マリア、恵みに満ちた方、\n\n主はあなたとともにおられます。\n\nあなたは女のうちで祝福され、\n\nご胎内の御子イエスも祝福されています。\n\n神の母聖マリア、\n\nわたしたち罪びとのために、\n\n今も、死を迎える時も、お祈りください。\n\nアーメン。",
+      "LA": "Ave Maria, gratia plena, Dominus tecum. Benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc, et in hora mortis nostrae. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Generalia"
+    },
+    "tags": [
+      "003.hail_mary",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "성모송",
+      "Kinh K?nh M?ng",
+      "Hail Mary",
+      "???????",
+      "Ave Maria",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Generalia"
+    ]
+  },
+  {
+    "id": "004.glory_be",
+    "category": "common",
+    "titles": {
+      "KR": "영광송",
+      "VN": "Kinh S?ng Danh",
+      "EN": "Glory Be",
+      "JP": "??",
+      "LA": "Gloria Patri"
+    },
+    "texts": {
+      "KR": "밑줄 부분에서 고개를 숙이며\n영광이 성부와 성자와 성령께\n처음과 같이\n이제와 항상 영원히.\n아멘.",
+      "VN": "Sáng danh Đức Chúa Cha và Đức Chúa Con và Đức Chúa Thánh Thần. Như đã có trước vô cùng và bây giờ và hằng có và đời đời chẳng cùng. Amen.",
+      "EN": "Glory be to the Father, and to the Son, and to the Holy Spirit, as it was in the beginning, is now, and ever shall be, world without end. Amen.",
+      "JP": "栄光は父と子と聖霊に。初めのように、今もいつも世々に。アーメン。",
+      "LA": "Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Generalia"
+    },
+    "tags": [
+      "004.glory_be",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "영광송",
+      "Kinh S?ng Danh",
+      "Glory Be",
+      "??",
+      "Gloria Patri",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Generalia"
+    ]
+  },
+  {
+    "id": "005.apostles_creed",
+    "category": "common",
+    "titles": {
+      "KR": "사도 신경",
+      "VN": "Kinh Tin K?nh C?c Th?nh T?ng ??",
+      "EN": "Apostles' Creed",
+      "JP": "????",
+      "LA": "Symbolum Apostolorum"
+    },
+    "texts": {
+      "KR": "전능하신 천주 성부\n천지의 창조주를 저는 믿나이다.\n그 외아들 우리 주 예수 그리스도님\n\n밑줄 부분에서 모두 깊은 절을 한다.\n\n성령으로 인하여 동정 마리아께 잉태되어 나시고\n\n본시오 빌라도 통치 아래서 고난을 받으시고\n십자가에 못 박혀 돌아가시고 묻히셨으며\n\n저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고\n하늘에 올라 전능하신 천주 성부 오른편에 앉으시며\n\n그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다.\n성령을 믿으며\n거룩하고 보편된 교회와 모든 성인의 통공을 믿으며\n\n죄의 용서와 육신의 부활을 믿으며\n영원한 삶을 믿나이다.\n\n아멘.",
+      "VN": "Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất. Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha cùng là Chúa chúng tôi; bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria Đồng Trinh; chịu nạn đời quan Phongxiô Philatô, chịu đóng đinh trên cây Thánh Giá, chết và táng xác; xuống ngục tổ tông, ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết. Tôi tin kính Đức Chúa Thánh Thần. Tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công. Tôi tin phép tha tội. Tôi tin xác loài người ngày sau sống lại. Tôi tin hằng sống vậy. Amen.",
+      "EN": "I believe in God,\n\nthe Father almighty,\n\nCreator of heaven and earth,\n\nand in Jesus Christ, his only Son, our Lord,\n\nwho was conceived by the Holy Spirit,\n\nborn of the Virgin Mary,\n\nsuffered under Pontius Pilate,\n\nwas crucified, died and was buried;\n\nhe descended into hell;\n\non the third day he rose again from the dead;\n\nhe ascended into heaven,\n\nand is seated at the right hand of God the Father almighty;\n\nfrom there he will come to judge the living and the dead.\n\nI believe in the Holy Spirit,\n\nthe holy catholic Church,\n\nthe communion of saints,\n\nthe forgiveness of sins,\n\nthe resurrection of the body,\n\nand life everlasting.\n\nAmen.",
+      "JP": "天地の創造主、\n\n全能の父である神を信じます。\n\n父のひとり子、わたしたちの主\n\nイエス・キリストを信じます。\n\n主は聖霊によってやどり、\n\nおとめマリアから生まれ、\n\nポンティオ・ピラトのもとで苦しみを受け、\n\n十字架につけられて死に、葬られ、\n\n陰府（よみ）に下り、\n\n三日目に死者のうちから復活し、\n\n天に昇って、\n\n全能の父である神の右の座に着き、\n\n生者（せいしゃ）と死者を裁くために来られます。\n\n聖霊を信じ、\n\n聖なる普遍の教会、\n\n聖徒の交わり、\n\n罪のゆるし、\n\nからだの復活、\n\n永遠のいのちを信じます。アーメン。\n\n（2004年2月18日 日本カトリック司教協議会認可）\n\n### ニケア・コンスタンチノープル信条\n\nこの「ニケア・コンスタンチノープル信条」は、第1回コンスタンチノーブル公会議（381年）後に作られた。\n\nわたしは信じます。唯一の神、\n\n全能の父、\n\n天と地、\n\n見えるもの、見えないもの、すべてのものの造り主を。\n\nわたしは信じます。唯一の主イエス・キリストを。\n\n主は神のひとり子、\n\nすべてに先立って父より生まれ、\n\n神よりの神、光よりの光、まことの神よりのまことの神、\n\n造られることなく生まれ、父と一体。\n\nすべては主によって造られました。\n\n主は、わたしたち人類のため、\n\nわたしたちの救いのために天からくだり、\n\n聖霊によって、おとめマリアよりからだを受け、\n\n人となられました。\n\nポンティオ・ピラトのもとで、わたしたちのために十字架につけられ、\n\n苦しみを受け、葬られ、\n\n聖書にあるとおり三日目に復活し、\n\n天に昇り、父の右の座に着いておられます。\n\n主は、生者（せいしゃ）と死者を裁くために栄光のうちに再び来られます。\n\nその国は終わることがありません。\n\nわたしは信じます。主であり、いのちの与え主である聖霊を。\n\n聖霊は、父と子から出て、\n\n父と子とともに礼拝され、栄光を受け、\n\nまた預言者をとおして語られました。\n\nわたしは、聖なる、普遍の、使徒的、唯一の教会を信じます。\n\n罪のゆるしをもたらす唯一の洗礼を認め、\n\n死者の復活と\n\n来世のいのちを待ち望みます。アーメン。\n\n（2004年2月18日 日本カトリック司教協議会認可）\n\n### 洗礼式の信仰宣言\n\n天地の創造主、\n\n全能の、神である父を信じます。\n\n父のひとり子、おとめマリアから生まれ、\n\n苦しみを受けて葬られ、\n\n死者のうちから復活して、\n\n父の右におられる主イエス・キリストを信じます。\n\n聖霊を信じ、聖なる普遍の教会、\n\n聖徒の交わり、罪のゆるし、\n\nからだの復活、永遠のいのちを信じます。",
+      "LA": "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad infernos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Symbolum fidei"
+    },
+    "tags": [
+      "005.apostles_creed",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "사도 신경",
+      "Kinh Tin K?nh C?c Th?nh T?ng ??",
+      "Apostles' Creed",
+      "????",
+      "Symbolum Apostolorum",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Symbolum fidei"
+    ]
+  },
+  {
+    "id": "006.nicene_creed",
+    "category": "common",
+    "titles": {
+      "KR": "니케아-콘스탄티노폴리스 신경",
+      "VN": "",
+      "EN": "Nicene Creed",
+      "JP": "????????????????",
+      "LA": "Symbolum Nicaenum"
+    },
+    "texts": {
+      "KR": "╋ 한 분이신 하느님을\n\n◎ 저는 믿나이다.\n\n전능하신 아버지,\n\n하늘과 땅과 유형무형한 만물의 창조주를 믿나이다.\n\n또한 한 분이신 주 예수 그리스도, 하느님의 외아들\n\n영원으로부터 성부에게서 나신 분을 믿나이다.\n\n하느님에게서 나신 하느님, 빛에서 나신 빛\n\n참 하느님에게서 나신 참 하느님으로서,\n\n창조되지 않고 나시어\n\n성부와 한 본체로서 만물을 창조하셨음을 믿나이다.\n\n성자께서는 저희 인간을 위하여, 저희 구원을 위하여\n\n하늘에서 내려오셨음을 믿나이다.\n\n(밑줄 부분에서 모두 고개를 깊이 숙인다.)\n\n또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어 사람이 되셨음을 믿나이다.\n\n본시오 빌라도 통치 아래서 저희를 위하여\n\n십자가에 못박혀 수난하고 묻히셨으며\n\n성서 말씀대로 사흗날에 부활하시어\n\n하늘에 올라 성부 오른편에 앉아계심을 믿나이다.\n\n그분께서는 산 이와 죽은 이를 심판하러\n\n영광 속에 다시 오시리니\n\n그분의 나라는 끝이 없으리이다.\n\n또한 주님이시며 생명을 주시는 성령을 믿나이다.\n\n성령께서는 성부와 성자에게서 발하시고\n\n성부와 성자와 더불어 영광과 흠숭을 받으시며\n\n예언자들을 통하여 말씀하셨나이다.\n\n하나이고 거룩하고 보편되며\n\n사도로부터 이어오는 교회를 믿나이다.\n\n죄를 씻는 유일한 세례를 믿으며\n\n죽은 이들의 부활과 내세의 삶을 기다리나이다.\n\n아멘.",
+      "VN": "",
+      "EN": "I believe in one God,\n\nthe Father almighty,\n\nmaker of heaven and earth,\n\nof all things visible and invisible.\n\nI believe in one Lord Jesus Christ,\n\nthe Only Begotten Son of God,\n\nborn of the Father before all ages.\n\nGod from God, Light from Light,\n\ntrue God from true God,\n\nbegotten, not made, consubstantial with the Father;\n\nthrough him all things were made.\n\nFor us men and for our salvation\n\nhe came down from heaven,\n\nand by the Holy Spirit was incarnate of the Virgin Mary,\n\nand became man.\n\nFor our sake he was crucified under Pontius Pilate,\n\nhe suffered death and was buried,\n\nand rose again on the third day\n\nin accordance with the Scriptures.\n\nHe ascended into heaven\n\nand is seated at the right hand of the Father.\n\nHe will come again in glory\n\nto judge the living and the dead\n\nand his kingdom will have no end.\n\nI believe in the Holy Spirit, the Lord, the giver of life,\n\nwho proceeds from the Father and the Son,\n\nwho with the Father and the Son is adored and glorified,\n\nwho has spoken through the prophets.\n\nI believe in one, holy, catholic and apostolic Church.\n\nI confess one Baptism for the forgiveness of sins\n\nand I look forward to the resurrection of the dead\n\nand the life of the world to come.\n\nAmen.",
+      "JP": "わたしは信じます。唯一の神、\n\n全能の父、\n\n天と地、\n\n見えるもの、見えないもの、すべてのものの造り主を。\n\nわたしは信じます。唯一の主イエス・キリストを。\n\n主は神のひとり子、\n\nすべてに先立って父より生まれ、\n\n神よりの神、光よりの光、まことの神よりのまことの神、\n\n造られることなく生まれ、父と一体。\n\nすべては主によって造られました。\n\n主は、わたしたち人類のため、\n\nわたしたちの救いのために天からくだり、\n\n聖霊によって、おとめマリアよりからだを受け、\n\n人となられました。\n\nポンティオ・ピラトのもとで、わたしたちのために十字架につけられ、\n\n苦しみを受け、葬られ、\n\n聖書にあるとおり三日目に復活し、\n\n天に昇り、父の右の座に着いておられます。\n\n主は、生者（せいしゃ）と死者を裁くために栄光のうちに再び来られます。\n\nその国は終わることがありません。\n\nわたしは信じます。主であり、いのちの与え主である聖霊を。\n\n聖霊は、父と子から出て、\n\n父と子とともに礼拝され、栄光を受け、\n\nまた預言者をとおして語られました。\n\nわたしは、聖なる、普遍の、使徒的、唯一の教会を信じます。\n\n罪のゆるしをもたらす唯一の洗礼を認め、\n\n死者の復活と\n\n来世のいのちを待ち望みます。アーメン。\n\n（2004年2月18日 日本カトリック司教協議会認可）\n\n### 洗礼式の信仰宣言\n\n天地の創造主、\n\n全能の、神である父を信じます。\n\n父のひとり子、おとめマリアから生まれ、\n\n苦しみを受けて葬られ、\n\n死者のうちから復活して、\n\n父の右におられる主イエス・キリストを信じます。\n\n聖霊を信じ、聖なる普遍の教会、\n\n聖徒の交わり、罪のゆるし、\n\nからだの復活、永遠のいのちを信じます。",
+      "LA": "Credo in unum Deum, Patrem omnipotentem, factorem caeli et terrae, visibilium omnium et invisibilium.\n\nEt in unum Dominum Iesum Christum, Filium Dei unigenitum, et ex Patre natum ante omnia saecula. Deum de Deo, Lumen de Lumine, Deum verum de Deo vero, genitum non factum, consubstantialem Patri; per quem omnia facta sunt. Qui propter nos homines et propter nostram salutem descendit de caelis. [kneel] Et incarnatus est de Spiritu Sancto ex Maria Virgine, et homo factus est. [stand] Crucifixus etiam pro nobis sub Pontio Pilato, passus et sepultus est, et resurrexit tertia die, secundum Scripturas, et ascendit in caelum, sedet ad dexteram Patris. Et iterum venturus est cum gloria, iudicare vivos et mortuos, cuius regni non erit finis.\n\nEt in Spiritum Sanctum, Dominum et vivificantem, qui ex Patre Filioque procedit. Qui cum Patre et Filio simul adoratur et conglorificatur: qui locutus est per prophetas.\n\nEt unam, sanctam, catholicam et apostolicam Ecclesiam. Confiteor unum baptisma in remissionem peccatorum. Et expecto resurrectionem mortuorum, et vitam venturi saeculi. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Symbolum fidei"
+    },
+    "tags": [
+      "006.nicene_creed",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "니케아-콘스탄티노폴리스 신경",
+      "Nicene Creed",
+      "????????????????",
+      "Symbolum Nicaenum",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Symbolum fidei"
+    ]
+  },
+  {
+    "id": "007.examination_of_conscience",
+    "category": "common",
+    "titles": {
+      "KR": "반성 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "주님, 오늘 생각과 말과 행위로 지은 죄와\n의무를 소홀히 한 죄를 자세히 살피고\n\n그 가운데 버릇이 된 죄를 깨닫게 하소서.\n\n아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "007.examination_of_conscience",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "반성 기도",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "008.ten_commandments",
+    "category": "common",
+    "titles": {
+      "KR": "십계명",
+      "VN": "",
+      "EN": "Ten Commandments",
+      "JP": "",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "일. 한 분이신 하느님을 흠숭하여라.\n\n이. 하느님의 이름을 함부로 부르지 마라.\n\n삼. 주일을 거룩히 지내라.\n\n사. 부모에게 효도하여라.\n\n오. 사람을 죽이지 마라.\n\n육. 간음하지 마라.\n\n칠. 도둑질을 하지 마라.\n\n팔. 거짓 증언을 하지 마라.\n\n구. 남의 아내를 탐내지 마라.\n\n십. 남의 재물을 탐내지 마라.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "008.ten_commandments",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "십계명",
+      "Ten Commandments",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "009.confiteor",
+    "category": "common",
+    "titles": {
+      "KR": "고백 기도",
+      "VN": "",
+      "EN": "Confiteor",
+      "JP": "",
+      "LA": "Confiteor"
+    },
+    "texts": {
+      "KR": "전능하신 하느님과 형제들에게 고백하오니\n\n생각과 말과 행위로 죄를 많이 지었으며\n\n자주 의무를 소홀히 하였나이다.\n\n가슴을 치며 제 탓이요\n\n가슴을 치며 제 탓이요\n\n가슴을 치며 저의 큰 탓이옵니다.\n\n그러므로 간절히 바라오니\n\n평생 동정이신 성모 마리아와\n\n모든 천사와 성인과 형제들은\n\n저를 위하여 하느님께 빌어 주소서.\n\n(┼전능하신 하느님, 저희에게 자비를 베푸시어\n죄를 용서하시고\n영원한 생명으로 이끌어 주소서.)\n\n아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "009.confiteor",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "고백 기도",
+      "Confiteor",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "010.act_of_contrition",
+    "category": "common",
+    "titles": {
+      "KR": "통회 기도",
+      "VN": "",
+      "EN": "Act of Contrition",
+      "JP": "???????",
+      "LA": "Actus Contritionis"
+    },
+    "texts": {
+      "KR": "하느님,\n\n제가 죄를 지어\n\n참으로 사랑받으셔야 할 하느님의 마음을 아프게 하였기에\n\n악을 저지르고 선을 멀리한 모든 잘못을\n\n진심으로 뉘우치나이다.\n\n하느님의 은총으로 속죄하고\n\n다시는 죄를 짓지 않으며\n\n죄지을 기회를 피하기로 굳게 다짐하오니\n\n우리 구세주 예수 그리스도의 수난 공로를 보시고\n\n저에게 자비를 베풀어 주소서.\n\n아멘.",
+      "VN": "",
+      "EN": "### Act of Contrition\n\nO my God,\n\nI am heartily sorry for having offended you,\n\nand I detest all my sins because of your just punishments,\n\nbut most of all because they offend you, my God,\n\nwho are all good and deserving of all my love.\n\nI firmly resolve, with the help of your grace,\n\nto sin no more\n\nand to avoid the near occasions of sin.\n\nAmen.\n\n* * *\n\n_or:_\n\nO my God,\n\nI am sorry and repent with all my heart\n\nfor all the wrong I have done\n\nand for the good I have failed to do,\n\nbecause by sinning I have offended you,\n\nwho are all good and worthy to be loved above all things.\n\nI firmly resolve, with the help of your grace,\n\nto do penance,\n\nto sin no more,\n\nand to avoid the occasions of sin.\n\nThrough the merits of the Passion of our Savior Jesus Christ,\n\nLord, have mercy.\n\n* * *\n\n_or:_\n\n_Lord Jesus, Son of God,_\n\nhave mercy on me, a sinner.\n\n_*From the_ Order of Penance _, nos. 45 and 92._",
+      "JP": "いつくしみ深いイエスよ、あなたの尊いみ足のもとにひれ伏して、\n\n心の底から罪のゆるしを願います。\n\n特に自分の罪を、あなたの限りない愛に背くものとして悔やみ憎みます。\n\n再び罪を犯してあなたに背くより、むしろ死ぬことを望み、\n\n生涯、すべてに超えてあなたを愛することを決心します。",
+      "LA": "Deus meus, ex toto corde poenitet me omnium meorum peccatorum, eaque detestor, quia peccando, non solum poenas a Te iuste statutas promeritus sum, sed praesertim quia offendi Te, summum bonum, ac dignum qui super omnia diligaris. Ideo firmiter propono, adiuvante gratia Tua, de cetero me non peccaturum peccandique occasiones proximas fugiturum. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Generalia"
+    },
+    "tags": [
+      "010.act_of_contrition",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "통회 기도",
+      "Act of Contrition",
+      "???????",
+      "Actus Contritionis",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Generalia"
+    ]
+  },
+  {
+    "id": "011.acts_of_faith_hope_love",
+    "category": "common",
+    "titles": {
+      "KR": "삼덕송",
+      "VN": "Kinh Tin - C?y - M?n",
+      "EN": "Acts of Faith, Hope, and Love",
+      "JP": "",
+      "LA": "Actus Fidei, Spei et Caritatis"
+    },
+    "texts": {
+      "KR": "신덕송\n\n하느님, 하느님께서는 진리의 근원이시며\n\n그르침이 없으시므로\n\n계시하신 진리를\n\n교회가 가르치는 대로 굳게 믿나이다.\n\n망덕송\n\n하느님, 하느님께서는 자비의 근원이시며\n\n저버림이 없으시므로\n\n예수 그리스도의 공로를 통하여 주실\n\n구원의 은총과 영원한 생명을 바라나이다.\n\n애덕송\n\n하느님, 하느님께서는 사랑의 근원이시며\n\n한없이 좋으시므로\n\n마음을 다하여 주님을 사랑하며\n\n이웃을 제 몸같이 사랑하나이다.",
+      "VN": "**Kinh Tin**\n\nLạy Chúa, con tin thật có một Đức Chúa Trời là Đấng thưởng phạt vô cùng. Con lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm Người, chịu nạn chịu chết mà chuộc tội cho thiên hạ. Bấy nhiêu điều ấy cùng các điều Hội Thánh dạy thì con tin vững vàng, vì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh. Amen\n\n**Kinh Cậy**Lạy Chúa , con trông cậy vững vàng, vì công nghiệp Đức Chúa Giêsu thì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này, cho ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời, vì Chúa là đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy chẳng có lẽ nào sai được. Amen.\n\n**Kinh Mến**\n\nLạy Chúa , con kính mến Chúa hết lòng hết sức trên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lạy vì Chúa, thì con thương yêu người ta như mình con vậy. Amen.",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "011.acts_of_faith_hope_love",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "삼덕송",
+      "Kinh Tin - C?y - M?n",
+      "Acts of Faith, Hope, and Love",
+      "Actus Fidei, Spei et Caritatis",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "012.offering_prayer",
+    "category": "common",
+    "titles": {
+      "KR": "봉헌 기도",
+      "VN": "",
+      "EN": "Offering Prayer",
+      "JP": "",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "하느님, 저를 사랑으로 내시고\n\n저에게 영혼 육신을 주시어\n\n주님만을 섬기고 사람을 도우라 하셨나이다.\n\n저는 비록 죄가 많사오나\n\n주님께 받은 몸과 마음을 오롯이 도로 바쳐\n\n찬미와 봉사의 제물로 드리오니\n\n어여삐 여기시어 받아 주소서.\n\n아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "012.offering_prayer",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "봉헌 기도",
+      "Offering Prayer",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "013.angelus",
+    "category": "common",
+    "titles": {
+      "KR": "삼종 기도",
+      "VN": "",
+      "EN": "Angelus",
+      "JP": "??????",
+      "LA": "Angelus"
+    },
+    "texts": {
+      "KR": "○ 주님의 천사가 마리아께 아뢰니\n\n● 성령으로 잉태하셨나이다.\n\n성모송\n\n○ “주님의 종이오니\n\n● 그대로 제게 이루어지소서!”\n\n성모송\n\n○ 이에 말씀이 사람이 되시어\n\n● 저희 가운데 계시나이다.\n\n성모송\n\n○ 천주의 성모님, 저희를 위하여 빌어주시어\n\n● 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n\n╋ 기도합시다.\n\n하느님, 천사의 아룀으로\n\n성자께서 사람이 되심을 알았으니\n\n성자의 수난과 십자가로\n\n부활의 영광에 이르는 은총을\n\n저희에게 내려 주소서.\n\n우리 주 그리스도를 통하여 비나이다.\n\n◎ 아멘.",
+      "VN": "",
+      "EN": "**V/.** The Angel of the Lord declared unto Mary,\n\n**R/.** And she conceived of the Holy Spirit.\n\nHail Mary, full of grace, the Lord is with you;\n\nblessed are you among women,\n\nand blessed is the fruit of your womb, Jesus.\n\nHoly Mary, Mother of God,\n\npray for us sinners\n\nnow and at the hour of our death.\n\nAmen.\n\n**V/.** Behold the handmaid of the Lord,\n\n**R/.** Be it done unto me according to your Word.\n\nHail Mary…\n\n**V/.** And the Word was made flesh,\n\n**R/.** And dwelt among us.\n\nHail Mary…\n\n**V/.** Pray for us, O holy Mother of God,\n\n**R/.** That we may be made worthy of the promises of Christ.\n\n**Let us pray.** Pour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.\n\nExcerpted from _Catholic Household Blessings and Prayers_, _revised edition_ © 2007 United States Conference of Catholic Bishops. All rights reserved.",
+      "JP": "主のみ使いのお告げを受けて、\n\nマリアは聖霊によって神の御子を宿された。\n\n〔アヴェ･マリアの祈り〕\n\nアヴェ、マリア、恵みに満ちた方、\n\n主はあなたとともにおられます。\n\nあなたは女のうちで祝福され、\n\nご胎内の御子イエスも祝福されています。\n\n神の母聖マリア、\n\nわたしたち罪びとのために、\n\n今も、死を迎える時も、お祈りください。\n\nアーメン。\n\nわたしは主のはしため、\n\nおことばどおりになりますように。\n\n（引き続き、上記の〔アヴェ･マリアの祈り〕を唱えます。）\n\nみことばは人となり、\n\nわたしたちのうちに住まわれた。\n\n（ここでも〔アヴェ･マリアの祈り〕を唱えます。）\n\n神の母聖マリア、わたしたちのために祈ってください。\n\nキリストの約束にかなうものとなりますように。\n\n祈願\n\n神よ、み使いのお告げによって、御子が人となられたことを\n\n知ったわたしたちが、キリストの受難と十字架をとおして、\n\n復活の栄光に達することができるよう、恵みを注いでください。\n\nわたしたちの主イエス・キリストによって。 アーメン。",
+      "LA": "Alma Redemptoris Mater, quae pervia caeli Porta manes, et stella maris, succurre cadenti, Surgere qui curat, populo: tu quae genuisti, Natura mirante, tuum sanctum Genitorem Virgo prius ac posterius, Gabrielis ab ore Sumens illud Ave, peccatorum miserere.\n\nTempus Adventus:\n\nV. Angelus Domini nuntiavit Mariae.\n\nR. Et concepit de Spiritu Sancto.\n\nOremus:\n\nGratiam tuam, quaesumus, Domine, mentibus nostris infunde: ut qui, Angelo nuntiante, Christi Filii tui incarnationem cognovimus; per passionem eius et crucem, ad resurrectionis gloriam perducamur. Per eundem Christum Dominum nostrum. Amen.\n\nDonec Purificatio:\n\nV. Post partum, Virgo, inviolata permansisti.\n\nR. Dei Genetrix, intercede pro nobis.\n\nOremus:\n\nDeus, qui salutis aeternae, beatae Mariae virginitate fecunda, humano generi praemia praestitisti: tribue, quaesumus; ut ipsam pro nobis intercedere sentiamus, per quam meruimus auctorem vitae suscipere, Dominum nostrum Iesum Christum, Filium tuum. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Maria"
+    },
+    "tags": [
+      "013.angelus",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "삼종 기도",
+      "Angelus",
+      "??????",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Maria"
+    ]
+  },
+  {
+    "id": "014.regina_caeli",
+    "category": "common",
+    "titles": {
+      "KR": "부활 삼종 기도",
+      "VN": "",
+      "EN": "Regina Caeli",
+      "JP": "???????",
+      "LA": "Regina Caeli"
+    },
+    "texts": {
+      "KR": "(주님 부활 대축일부터 성령 강림 대축일까지)\n\n○ 하늘의 모후님, 기뻐하소서. 알렐루야.\n\n● 태중에 모시던 아드님께서, 알렐루야.\n○ 말씀하신 대로 부활하셨나이다. 알렐루야.\n\n● 저희를 위하여 하느님께 빌어 주소서. 알렐루야.\n○ 동정 마리아님, 기뻐하시며 즐거워하소서. 알렐루야.\n\n● 주님께서 참으로 부활하셨나이다. 알렐루야.\n\n╋ 기도합시다.\n\n하느님, 성자 우리 주 예수 그리스도의 부활로\n\n온 세상을 기쁘게 하셨으니\n\n성자의 어머니 동정 마리아의 도움으로\n\n영생의 즐거움을 얻게 하소서.\n\n우리 주 그리스도를 통하여 비나이다.\n\n◎ 아멘.",
+      "VN": "",
+      "EN": "Queen of heaven, rejoice, alleluia.\n\nThe Son whom you merited to bear, alleluia,\n\nhas risen as he said, alleluia.\n\nPray for us to God, alleluia.\n\n**V.** Rejoice and be glad, O Virgin Mary, alleluia.\n\n**R.** For the Lord has truly risen, alleluia.\n\nLet us pray.\n\nO God, who have been pleased to gladden the world\n\nby the Resurrection of your Son our Lord Jesus Christ,\n\ngrant, we pray,\n\nthat through his Mother, the Virgin Mary,\n\nwe may receive the joys of everlasting life.\n\nThrough Christ our Lord. Amen.",
+      "JP": "神の母聖マリア、お喜びください。アレルヤ。\n\nあなたに宿られた方は。アレルヤ。\n\nおことばどおりに復活されました。アレルヤ。\n\nわたしたちのためにお祈りください。アレルヤ。\n\n聖マリア、お喜びください。アレルヤ。\n\n主はまことに復活されました。アレルヤ。\n\n祈願\n\n神よ、あなたは御子キリストの復活によって、\n\n世界に喜びをお与えになりました。\n\nキリストの母、聖マリアにならい、\n\nわたしたちも永遠のいのちの喜びを得ることができますように。\n\nわたしたちの主イエス・キリストによって。アーメン。",
+      "LA": "Regina coeli, laetare, alleluia: Quia quem meruisti portare, alleluia. Resurrexit sicut dixit, alleluia. Ora pro nobis Deum, alleluia.\n\nV. Gaude et laetare, Virgo Maria, alleluia.\n\nR. Quia surrexit Dominus vere, alleluia.\n\nOremus:\n\nDeus qui per resurrectionem Filii tui, Domini nostri Iesu Christi, mundum laetificare dignatus es: praesta, quaesumus, ut per eius Genetricem Virginem Mariam, perpetuae capiamus gaudia vitae. Per eundem Christum Dominum nostrum.\n\nR. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Maria"
+    },
+    "tags": [
+      "014.regina_caeli",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "부활 삼종 기도",
+      "Regina Caeli",
+      "???????",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Maria"
+    ]
+  },
+  {
+    "id": "015.fatima_prayer",
+    "category": "common",
+    "titles": {
+      "KR": "구원을 비는 기도",
+      "VN": "",
+      "EN": "Fatima Prayer",
+      "JP": "",
+      "LA": "Oratio Fatimae"
+    },
+    "texts": {
+      "KR": "예수님, 저희 죄를 용서하시며\n\n저희를 지옥 불에서 구하시고\n\n연옥 영혼을 돌보시며\n\n가장 버림받은 영혼을 돌보소서.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": "O mi Iesu, dimitte nobis debita nostra, libera nos ab igne inferni, conduc in caelum omnes animas, praeseritim illas quae maxime indigent misericordia tua."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Rosarium"
+    },
+    "tags": [
+      "015.fatima_prayer",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "구원을 비는 기도",
+      "Fatima Prayer",
+      "Oratio Fatimae",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Rosarium"
+    ]
+  },
+  {
+    "id": "016.prayer_before_meals",
+    "category": "common",
+    "titles": {
+      "KR": "식사 전 기도",
+      "VN": "",
+      "EN": "Prayer Before Meals",
+      "JP": "?????",
+      "LA": "Benedic, Domine"
+    },
+    "texts": {
+      "KR": "╋ 주님, 은혜로이 내려 주신 이 음식과\n\n저희에게 강복하소서.\n\n우리 주 그리스도를 통하여 비나이다.\n\n◎ 아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": "Benedic, Domine, nos et haec tua dona quae de tua largitate sumus sumpturi, per Christum Dominum nostrum. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Preces ad mensam"
+    },
+    "tags": [
+      "016.prayer_before_meals",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "식사 전 기도",
+      "Prayer Before Meals",
+      "?????",
+      "Benedic, Domine",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Preces ad mensam"
+    ]
+  },
+  {
+    "id": "017.prayer_after_meals",
+    "category": "common",
+    "titles": {
+      "KR": "식사 후 기도",
+      "VN": "",
+      "EN": "Prayer After Meals",
+      "JP": "?????",
+      "LA": "Agimus Tibi Gratias"
+    },
+    "texts": {
+      "KR": "╋ 전능하신 하느님,\n\n저희에게 베풀어 주신\n\n모든 은혜에 감사하나이다.\n\n◎ 아멘.\n\n╋ 주님의 이름은 찬미를 받으소서.\n\n◎ 이제와 영원히 받으소서.\n\n╋ 세상을 떠난 모든 이가\n\n하느님의 자비로 평화의 안식을 얻게 하소서.\n\n◎ 아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": "Agimus tibi gratias, omnipotens Deus, pro universis beneficiis tuis, qui vivis et regnas in saecula saeculorum. Fidelium animae, per misericordiam Dei, requiescant in pace. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "Basic Prayers",
+      "JP": "日々の祈り",
+      "LA": "Preces ad mensam"
+    },
+    "tags": [
+      "017.prayer_after_meals",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "식사 후 기도",
+      "Prayer After Meals",
+      "?????",
+      "Agimus Tibi Gratias",
+      "주요 기도",
+      "Basic Prayers",
+      "日々の祈り",
+      "Preces ad mensam"
+    ]
+  },
+  {
+    "id": "018.prayer_before_work",
+    "category": "common",
+    "titles": {
+      "KR": "일을 시작하며 바치는 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "○ 오소서, 성령님.\n\n저희 마음을 성령으로 가득 채우시어\n\n저희 안에 사랑의 불이 타오르게 하소서.\n\n● 주님의 성령을 보내소서. 저희가 새로워지리이다.\n\n또한 온 누리가 새롭게 되리이다.\n\n╋ 기도합시다.\n\n하느님, 성령의 빛으로 저희 마음을 이끄시어\n\n바르게 생각하고\n\n언제나 성령의 위로를 받아 누리게 하소서.\n\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "018.prayer_before_work",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "일을 시작하며 바치는 기도",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "019.prayer_after_work",
+    "category": "common",
+    "titles": {
+      "KR": "일을 마치고 바치는 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "(성모님께 보호를 청하는 기도)\n\n천주의 성모님, 당신의 보호에 저희를 맡기오니\n\n어려울 때에 저희의 간절한 기도를 외면하지 마시고\n\n항상 모든 위험에서 저희를 구하소서.\n\n영화롭고 복되신 동정녀시여.",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "019.prayer_after_work",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "일을 마치고 바치는 기도",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "020.morning_prayer",
+    "category": "common",
+    "titles": {
+      "KR": "아침 기도",
+      "VN": "",
+      "EN": "Morning Prayer",
+      "JP": "????",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "십자 성호를 그으며\n\n╋ 성부와 성자와 성령의 이름으로.\n◎ 아멘.\n\n○ 하늘에 계신 우리 아버지,\n\n아버지의 이름이 거룩히 빛나시며\n\n아버지의 나라가 오시며\n\n아버지의 뜻이 하늘에서와 같이\n\n땅에서도 이루어지소서!\n● 오늘 저희에게 일용할 양식을 주시고\n\n저희에게 잘못한 이를 저희가 용서하오니\n\n저희 죄를 용서하시고\n\n저희를 유혹에 빠지지 않게 하시고\n\n악에서 구하소서.\n◎ 아멘.\n\n◎ 하느님, 저를 사랑으로 내시고\n\n저에게 영혼 육신을 주시어\n\n주님만을 섬기고 사람을 도우라 하셨나이다.\n\n저는 비록 죄가 많사오나\n\n주님께 받은 몸과 마음을 오롯이 도로 바쳐\n\n찬미와 봉사의 제물로 드리오니\n\n어여삐 여기시어 받아 주소서.\n\n아멘.\n\n╋ 우리 주 하느님께 권능과 영광\n\n지혜와 굳셈이 있사오니\n\n찬미와 감사와 흠숭을 영원히 받으소서.\n◎ 아멘.\n\n╋ 전능하신 하느님,\n\n오늘도 저희 생각과 말과 행위를\n\n주님의 평화로 이끌어 주소서.\n\n◎ 아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "「神よ、あなたを礼拝します」\n\n神よ、あなたを礼拝し、心を尽くして愛します。\n\nわたしを造り、キリスト者とし、（パウロ家族に導いて、）\n\n昨夜も守ってくださった恵みに感謝します。\n\nきょうの働きをあなたにささげます。\n\nすべてがみ心にかない、より大いなるみ栄えとなりますように。\n\nわたしを罪と悪から守ってください。\n\nあなたの恵みが、常に、わたしと、\n\nわたしの愛するすべての人の上にありますように。アーメン。",
+      "LA": "Domine Iesu Christe, in unione illius divinae intentionis, quia in terris, per sanctissimum Cor tuum, laudes Deo persolvisti, et nunc in Eucharistiae Sacramento ubique terrarum persolvis, usque ad consummationem saeculi: ego, per hanc diem integram, ad imitationem sanctissimi Cordis beatae Mariae semper Virginis immaculatae, tibi libentissime offero meos intentiones et cogitationes, omnes meos affectus et desideria, omnia mea opera et verba. Amen."
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "020.morning_prayer",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "아침 기도",
+      "Morning Prayer",
+      "????",
+      "주요 기도"
+    ]
+  },
+  {
+    "id": "021.evening_prayer",
+    "category": "common",
+    "titles": {
+      "KR": "저녁 기도",
+      "VN": "",
+      "EN": "Evening Prayer",
+      "JP": "????",
+      "LA": ""
+    },
+    "texts": {
+      "KR": "십자 성호를 그으며\n\n╋ 성부와 성자와 성령의 이름으로.\n◎ 아멘.\n\n╋ 주님, 오늘 생각과 말과 행위로 지은 죄와\n\n의무를 소홀히 한 죄를 자세히 살피고\n\n그 가운데 버릇이 된 죄를 깨닫게 하소서.\n\n잠깐 반성한다.\n\n◎ 하느님,\n\n제가 죄를 지어\n\n참으로 사랑받으셔야 할\n\n하느님의 마음을 아프게 하였기에\n\n악을 저지르고 선을 멀리한 모든 잘못을\n\n진심으로 뉘우치나이다.\n\n하느님의 은총으로 속죄하고\n\n다시는 죄를 짓지 않으며\n\n죄지을 기회를 피하기로 굳게 다짐하오니\n\n우리 구세주 예수 그리스도의 수난 공로를 보시고\n\n저에게 자비를 베풀어 주소서.\n\n아멘.\n\n○ 하느님, 하느님께서는 진리의 근원이시며\n\n그르침이 없으시므로\n\n계시하신 진리를\n\n교회가 가르치는 대로 굳게 믿나이다.\n\n● 하느님, 하느님께서는 자비의 근원이시며\n\n저버림이 없으시므로\n\n예수 그리스도의 공로를 통하여 주실\n\n구원의 은총과 영원한 생명을 바라나이다.\n\n○ 하느님, 하느님께서는 사랑의 근원이시며\n\n한없이 좋으시므로\n\n마음을 다하여 주님을 사랑하며\n\n이웃을 제 몸같이 사랑하나이다.\n\n╋ 하늘에 계신 우리 아버지,\n\n오늘 하루도 이미 저물었나이다.\n\n이제 저희는 구세주 예수 그리스도를 통하여\n\n모든 천사와 성인과 함께 주님을 흠숭하며\n\n지금 이 순간까지 베풀어 주신\n\n주님의 사랑에 감사하나이다.\n◎ 아멘.\n\n╋ 전능하신 천주\n\n십자 성호를 그으며\n\n성부와 성자와 성령께서는\n\n저희에게 강복하시고 지켜 주소서.\n\n◎ 아멘.",
+      "VN": "",
+      "EN": "",
+      "JP": "「神よ、あなたを礼拝します」\n\n神よ、あなたを礼拝し、心を尽くして愛します。\n\nわたしを造り、キリスト者とし、\n\nきょうも守ってくださった恵みに感謝します。\n\nきょう犯したわたしの過ちをゆるし、行った善を受け入れてください。\n\n眠っている間もわたしを守り、危険から救ってください。\n\nあなたの恵みが、常に、わたしと、\n\nわたしの愛するすべての人の上にありますように。アーメン。",
+      "LA": ""
+    },
+    "sourceCategory": {
+      "KR": "주요 기도",
+      "VN": "",
+      "EN": "",
+      "JP": "",
+      "LA": ""
+    },
+    "tags": [
+      "021.evening_prayer",
+      "common",
+      "공통기도문",
+      "Kinh nguyện chung",
+      "Common Prayers",
+      "共通の祈り",
+      "Preces communes",
+      "저녁 기도",
+      "Evening Prayer",
+      "????",
+      "주요 기도"
+    ]
+  },
   {
     "id": "anima_christi",
     "category": "common",
@@ -81,21 +913,7 @@
       "VN": "",
       "EN": "Basic Prayers",
       "JP": "日々の祈り",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/the-anima-christi.html",
-      "EN": "https://www.usccb.org/prayers/anima-christi",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#11",
-      "LA": "https://prayoremus.com/prayers#anima-christi"
+      "LA": "Christus"
     },
     "tags": [
       "anima_christi",
@@ -110,11 +928,7 @@
       "キリストの魂",
       "Basic Prayers",
       "日々の祈り",
-      "christ",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -139,21 +953,7 @@
       "VN": "",
       "EN": "",
       "JP": "日々の祈り",
-      "LA": "holy spirit"
-    },
-    "source": {
-      "KR": "",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/come--holy-spirit.html",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#9",
-      "LA": "https://prayoremus.com/prayers#veni-sancte-spiritus-long"
+      "LA": "Spiritus Sanctus"
     },
     "tags": [
       "come_holy_spirit",
@@ -167,10 +967,7 @@
       "聖霊への祈り",
       "Veni Sancte Spiritus (long version)",
       "日々の祈り",
-      "holy spirit",
-      "Vatican News - Kinh nguyện",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
+      "Spiritus Sanctus"
     ]
   },
   {
@@ -195,21 +992,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "creed"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#professio-fidei-tridentina"
+      "LA": "Symbolum fidei"
     },
     "tags": [
       "la_professio_fidei_tridentina",
@@ -220,8 +1003,7 @@
       "共通の祈り",
       "Preces communes",
       "Professio Fidei Tridentina",
-      "creed",
-      "Pray Orémus"
+      "Symbolum fidei"
     ]
   },
   {
@@ -246,21 +1028,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "creed"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#quicunque-vult"
+      "LA": "Symbolum fidei"
     },
     "tags": [
       "la_quicunque_vult",
@@ -271,627 +1039,7 @@
       "共通の祈り",
       "Preces communes",
       "Quicunque Vult",
-      "creed",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "kr_3_8",
-    "category": "common",
-    "titles": {
-      "KR": "고백 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=8&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_8",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "고백 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "kr_3_127",
-    "category": "common",
-    "titles": {
-      "KR": "구원을 비는 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=127&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_127",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "구원을 비는 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "nicene_creed",
-    "category": "common",
-    "titles": {
-      "KR": "니케아-콘스탄티노폴리스 신경",
-      "VN": "",
-      "EN": "Nicene Creed",
-      "JP": "ニケア信条",
-      "LA": "Symbolum Nicaenum"
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "creed"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=126&sgubun=w",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/nicene-creed",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#4",
-      "LA": "https://prayoremus.com/prayers#symbolum-nicaenum"
-    },
-    "tags": [
-      "nicene_creed",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "니케아-콘스탄티노폴리스 신경",
-      "Nicene Creed",
-      "ニケア信条",
-      "Symbolum Nicaenum",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "creed",
-      "가톨릭 기도서",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "kr_3_6",
-    "category": "common",
-    "titles": {
-      "KR": "반성 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=6&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_6",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "반성 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "kr_3_11",
-    "category": "common",
-    "titles": {
-      "KR": "봉헌 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=11&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_11",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "봉헌 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "regina_caeli",
-    "category": "common",
-    "titles": {
-      "KR": "부활 삼종 기도",
-      "VN": "",
-      "EN": "Regina Caeli",
-      "JP": "アレルヤの祈り",
-      "LA": "Regina Caeli"
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=13&sgubun=w",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/regina-caeli",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#7",
-      "LA": "https://prayoremus.com/prayers#regina-caeli"
-    },
-    "tags": [
-      "regina_caeli",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "부활 삼종 기도",
-      "Regina Caeli",
-      "アレルヤの祈り",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "mary",
-      "가톨릭 기도서",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "apostles_creed",
-    "category": "common",
-    "titles": {
-      "KR": "사도 신경",
-      "VN": "Kinh Tin Kính Các Thánh Tông Đồ",
-      "EN": "Apostles' Creed",
-      "JP": "使徒信条",
-      "LA": "Symbolum Apostolorum"
-    },
-    "texts": {
-      "KR": "전능하신 천주 성부, 천지의 창조주를 저는 믿나이다. 그 외아들 우리 주 예수 그리스도님 성령으로 인하여 동정 마리아께 잉태되어 나시고 본시오 빌라도 통치 아래서 고난을 받으시고 십자가에 못박혀 돌아가시고 묻히셨으며 저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고 하늘에 올라 전능하신 천주 성부 오른편에 앉으시며 그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다. 성령을 믿으며 거룩하고 보편된 교회와 모든 성인의 통공을 믿으며 죄의 용서와 육신의 부활을 믿으며 영원한 삶을 믿나이다. 아멘.",
-      "VN": "Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất. Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha cùng là Chúa chúng tôi; bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria Đồng Trinh; chịu nạn đời quan Phongxiô Philatô, chịu đóng đinh trên cây Thánh Giá, chết và táng xác; xuống ngục tổ tông, ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết. Tôi tin kính Đức Chúa Thánh Thần. Tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công. Tôi tin phép tha tội. Tôi tin xác loài người ngày sau sống lại. Tôi tin hằng sống vậy. Amen.",
-      "EN": "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended into hell; on the third day he rose again from the dead; he ascended into heaven, and is seated at the right hand of God the Father almighty; from there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.",
-      "JP": "天地の創造主、全能の父である神を信じます。 父のひとり子、わたしたちの主イエス・キリストを信じます。 主は聖霊によってやどり、おとめマリアから生まれ、 ポンティオ・ピラトのもとで苦しみを受け、十字架につけられて死に、葬られ、 陰府に下り、三日目に死者のうちから復活し、 天に昇って、全能の父である神の右の座に着き、 生者と死者を裁くために来られます。 聖霊を信じ、聖なる普遍の教会、聖徒の交わり、罪のゆるし、 からだの復活、永遠のいのちを信じます。アーメン。",
-      "LA": "Credo in Deum, Patrem omnipotentem, Creatorem caeli et terrae, et in Iesum Christum, Filium eius unicum, Dominum nostrum, qui conceptus est de Spiritu Sancto, natus ex Maria Virgine, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus; descendit ad inferos; tertia die resurrexit a mortuis; ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis; inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen."
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "rosary, creed, general, divine mercy chaplet"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=5&sgubun=w",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/the-apostles_-creed.html",
-      "EN": "https://www.usccb.org/prayers/apostles-creed",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#5",
-      "LA": "https://prayoremus.com/prayers#symbolum-apostolorum"
-    },
-    "tags": [
-      "apostles_creed",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "사도 신경",
-      "Kinh Tin Kính Các Thánh Tông Đồ",
-      "Apostles' Creed",
-      "使徒信条",
-      "Symbolum Apostolorum",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "rosary, creed, general, divine mercy chaplet",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "kr_3_10",
-    "category": "common",
-    "titles": {
-      "KR": "삼덕송",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=10&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_10",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "삼덕송",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "angelus",
-    "category": "common",
-    "titles": {
-      "KR": "삼종 기도",
-      "VN": "",
-      "EN": "Angelus",
-      "JP": "お告げの祈り",
-      "LA": "Angelus"
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "mary, general"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=12&sgubun=w",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/angelus",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#6",
-      "LA": "https://prayoremus.com/prayers#angelus"
-    },
-    "tags": [
-      "angelus",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "삼종 기도",
-      "Angelus",
-      "お告げの祈り",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "mary, general",
-      "가톨릭 기도서",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "hail_mary",
-    "category": "common",
-    "titles": {
-      "KR": "성모송",
-      "VN": "Kinh Kính Mừng",
-      "EN": "Hail Mary",
-      "JP": "アヴェ・マリア",
-      "LA": "Ave Maria"
-    },
-    "texts": {
-      "KR": "은총이 가득하신 마리아님, 기뻐하소서. 주님께서 함께 계시니 여인 중에 복되시며 태중의 아들 예수님 또한 복되시나이다. 천주의 성모 마리아님, 이제와 저희 죽을 때에 저희 죄인을 위하여 빌어주소서. 아멘.",
-      "VN": "Kính mừng Maria đầy ơn phúc, Đức Chúa Trời ở cùng Bà, Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ. Thánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen.",
-      "EN": "Hail Mary, full of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
-      "JP": "アヴェ・マリア、恵みに満ちた方、主はあなたとともにおられます。 あなたは女のうちで祝福され、ご胎内の御子イエスも祝福されています。 神の母聖マリア、罪深いわたしたちのために、 今も死を迎える時もお祈りください。アーメン。",
-      "LA": "Ave Maria, gratia plena, Dominus tecum; benedicta tu in mulieribus, et benedictus fructus ventris tui, Iesus. Sancta Maria, Mater Dei, ora pro nobis peccatoribus, nunc et in hora mortis nostrae. Amen."
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "rosary, mary, general, divine mercy chaplet"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=3&sgubun=w",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/the-hail-mary.html",
-      "EN": "https://www.usccb.org/prayers/hail-mary",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#2",
-      "LA": "https://prayoremus.com/prayers#ave-maria"
-    },
-    "tags": [
-      "hail_mary",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "성모송",
-      "Kinh Kính Mừng",
-      "Hail Mary",
-      "アヴェ・マリア",
-      "Ave Maria",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "rosary, mary, general, divine mercy chaplet",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "sign_of_cross",
-    "category": "common",
-    "titles": {
-      "KR": "성호경",
-      "VN": "Dấu Thánh Giá",
-      "EN": "Sign of the Cross",
-      "JP": "十字架のしるし",
-      "LA": "Signum Crucis"
-    },
-    "texts": {
-      "KR": "성부와 성자와 성령의 이름으로. 아멘.",
-      "VN": "Nhân danh Cha và Con và Thánh Thần. Amen.",
-      "EN": "In the name of the Father, and of the Son, and of the Holy Spirit. Amen.",
-      "JP": "父と子と聖霊のみ名によって。アーメン。",
-      "LA": "In nomine Patris, et Filii, et Spiritus Sancti. Amen."
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "general, rosary, divine mercy chaplet"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=1&sgubun=w",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen.html",
-      "EN": "https://www.usccb.org/prayers",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": "https://prayoremus.com/prayers#signum-crucis"
-    },
-    "tags": [
-      "sign_of_cross",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "성호경",
-      "Dấu Thánh Giá",
-      "Sign of the Cross",
-      "十字架のしるし",
-      "Signum Crucis",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "general, rosary, divine mercy chaplet",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
+      "Symbolum fidei"
     ]
   },
   {
@@ -916,21 +1064,7 @@
       "VN": "",
       "EN": "Basic Prayers",
       "JP": "日々の祈り",
-      "LA": "angel, general"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/angel-of-god.html",
-      "EN": "https://www.usccb.org/prayers",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": "https://prayoremus.com/prayers#angele-dei"
+      "LA": "Angeli"
     },
     "tags": [
       "guardian_angel",
@@ -948,565 +1082,7 @@
       "주요 기도",
       "Basic Prayers",
       "日々の祈り",
-      "angel, general",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "prayer_before_meals",
-    "category": "common",
-    "titles": {
-      "KR": "식사 전 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "食前の祈り",
-      "LA": "Benedic, Domine"
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "日々の祈り",
-      "LA": "meal"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=14&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#16",
-      "LA": "https://prayoremus.com/prayers#benedic-domine"
-    },
-    "tags": [
-      "prayer_before_meals",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "식사 전 기도",
-      "食前の祈り",
-      "Benedic, Domine",
-      "주요 기도",
-      "日々の祈り",
-      "meal",
-      "가톨릭 기도서",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "prayer_after_meals",
-    "category": "common",
-    "titles": {
-      "KR": "식사 후 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "食後の祈り",
-      "LA": "Agimus Tibi Gratias"
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "日々の祈り",
-      "LA": "meal"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=15&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#17",
-      "LA": "https://prayoremus.com/prayers#agimus-tibi-gratias"
-    },
-    "tags": [
-      "prayer_after_meals",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "식사 후 기도",
-      "食後の祈り",
-      "Agimus Tibi Gratias",
-      "주요 기도",
-      "日々の祈り",
-      "meal",
-      "가톨릭 기도서",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "kr_3_7",
-    "category": "common",
-    "titles": {
-      "KR": "십계명",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=7&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_7",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "십계명",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "kr_3_18",
-    "category": "common",
-    "titles": {
-      "KR": "아침 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=18&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_18",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "아침 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "glory_be",
-    "category": "common",
-    "titles": {
-      "KR": "영광송",
-      "VN": "Kinh Sáng Danh",
-      "EN": "Glory Be (Doxology)",
-      "JP": "栄唱",
-      "LA": "Gloria Patri"
-    },
-    "texts": {
-      "KR": "영광이 성부와 성자와 성령께 처음과 같이 이제와 항상 영원히. 아멘.",
-      "VN": "Sáng danh Đức Chúa Cha và Đức Chúa Con và Đức Chúa Thánh Thần. Như đã có trước vô cùng và bây giờ và hằng có và đời đời chẳng cùng. Amen.",
-      "EN": "Glory be to the Father, and to the Son, and to the Holy Spirit, as it was in the beginning, is now, and ever shall be, world without end. Amen.",
-      "JP": "栄光は父と子と聖霊に。初めのように、今もいつも世々に。アーメン。",
-      "LA": "Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "rosary, general"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=4&sgubun=w",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/glory-be-to-the-father.html",
-      "EN": "https://www.usccb.org/prayers/glory-be-doxology",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#3",
-      "LA": "https://prayoremus.com/prayers#gloria-patri"
-    },
-    "tags": [
-      "glory_be",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "영광송",
-      "Kinh Sáng Danh",
-      "Glory Be (Doxology)",
-      "栄唱",
-      "Gloria Patri",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "rosary, general",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "kr_3_17",
-    "category": "common",
-    "titles": {
-      "KR": "일을 마치고 바치는 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=17&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_17",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "일을 마치고 바치는 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "kr_3_16",
-    "category": "common",
-    "titles": {
-      "KR": "일을 시작하며 바치는 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=16&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_16",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "일을 시작하며 바치는 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "kr_3_19",
-    "category": "common",
-    "titles": {
-      "KR": "저녁 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=19&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "tags": [
-      "kr_3_19",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "저녁 기도",
-      "주요 기도",
-      "가톨릭 기도서"
-    ]
-  },
-  {
-    "id": "lords_prayer",
-    "category": "common",
-    "titles": {
-      "KR": "주님의 기도",
-      "VN": "Kinh Lạy Cha",
-      "EN": "Our Father",
-      "JP": "主の祈り",
-      "LA": "Pater Noster"
-    },
-    "texts": {
-      "KR": "하늘에 계신 우리 아버지, 아버지의 이름이 거룩히 빛나시며 아버지의 나라가 오시며 아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지소서. 오늘 저희에게 일용할 양식을 주시고 저희에게 잘못한 이를 저희가 용서하오니 저희 죄를 용서하시고 저희를 유혹에 빠지지 않게 하시고 악에서 구하소서. 아멘.",
-      "VN": "Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng, nước Cha trị đến, ý Cha thể hiện dưới đất cũng như trên trời. Xin Cha cho chúng con hôm nay lương thực hằng ngày, và tha nợ chúng con, như chúng con cũng tha kẻ có nợ chúng con, xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ. Amen.",
-      "EN": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.",
-      "JP": "天におられるわたしたちの父よ、み名が聖とされますように。 み国が来ますように。 みこころが天に行われるとおり地にも行われますように。 わたしたちの日ごとの糧を今日もお与えください。 わたしたちの罪をおゆるしください。 わたしたちも人をゆるします。 わたしたちを誘惑におちいらせず、悪からお救いください。アーメン。",
-      "LA": "Pater noster, qui es in caelis, sanctificetur nomen tuum; adveniat regnum tuum; fiat voluntas tua, sicut in caelo et in terra. Panem nostrum quotidianum da nobis hodie; et dimitte nobis debita nostra, sicut et nos dimittimus debitoribus nostris; et ne nos inducas in tentationem, sed libera nos a malo. Amen."
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "rosary, general, divine mercy chaplet"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=2&sgubun=w",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/our-father.html",
-      "EN": "https://www.usccb.org/prayers/our-father",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#1",
-      "LA": "https://prayoremus.com/prayers#pater-noster"
-    },
-    "tags": [
-      "lords_prayer",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "주님의 기도",
-      "Kinh Lạy Cha",
-      "Our Father",
-      "主の祈り",
-      "Pater Noster",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "rosary, general, divine mercy chaplet",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
-    ]
-  },
-  {
-    "id": "act_of_contrition",
-    "category": "common",
-    "titles": {
-      "KR": "통회 기도",
-      "VN": "",
-      "EN": "Act of Contrition",
-      "JP": "悔い改めの祈り",
-      "LA": "Actus Contritionis"
-    },
-    "texts": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceCategory": {
-      "KR": "주요 기도",
-      "VN": "",
-      "EN": "Basic Prayers",
-      "JP": "日々の祈り",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=3&ingId=9&sgubun=w",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/act-contrition",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#38",
-      "LA": "https://prayoremus.com/prayers#actus-contritionis"
-    },
-    "tags": [
-      "act_of_contrition",
-      "common",
-      "공통기도문",
-      "Kinh nguyện chung",
-      "Common Prayers",
-      "共通の祈り",
-      "Preces communes",
-      "통회 기도",
-      "Act of Contrition",
-      "悔い改めの祈り",
-      "Actus Contritionis",
-      "주요 기도",
-      "Basic Prayers",
-      "日々の祈り",
-      "general",
-      "가톨릭 기도서",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -1533,20 +1109,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/rosary-life-glorious-mysteries",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_rosary_for_life_the_glorious_mysteries",
       "rosary",
@@ -1555,8 +1117,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "A Rosary for Life: The Glorious Mysteries",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Rosary for Life: The Glorious Mysteries"
     ]
   },
   {
@@ -1583,20 +1144,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/rosary-life-joyful-mysteries",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_rosary_for_life_the_joyful_mysteries",
       "rosary",
@@ -1605,8 +1152,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "A Rosary for Life: The Joyful Mysteries",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Rosary for Life: The Joyful Mysteries"
     ]
   },
   {
@@ -1633,20 +1179,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/rosary-life-luminous-mysteries",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_rosary_for_life_the_luminous_mysteries",
       "rosary",
@@ -1655,8 +1187,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "A Rosary for Life: The Luminous Mysteries",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Rosary for Life: The Luminous Mysteries"
     ]
   },
   {
@@ -1683,20 +1214,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/rosary-life-sorrowful-mysteries",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_rosary_for_life_the_sorrowful_mysteries",
       "rosary",
@@ -1705,8 +1222,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "A Rosary for Life: The Sorrowful Mysteries",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Rosary for Life: The Sorrowful Mysteries"
     ]
   },
   {
@@ -1731,21 +1247,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "rosary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-fatima"
+      "LA": "Rosarium"
     },
     "tags": [
       "la_oratio_fatima",
@@ -1755,8 +1257,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "Oratio Fatima",
-      "Pray Orémus"
+      "Oratio Fatima"
     ]
   },
   {
@@ -1781,21 +1282,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "rosary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-ad-finem-rosarii-dicenda"
+      "LA": "Rosarium"
     },
     "tags": [
       "la_oratio_ad_finem_rosarii_dicenda",
@@ -1805,8 +1292,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "Oratio ad Finem Rosarii Dicenda",
-      "Pray Orémus"
+      "Oratio ad Finem Rosarii Dicenda"
     ]
   },
   {
@@ -1833,20 +1319,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-st-joseph-after-rosary",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_st_joseph_after_the_rosary",
       "rosary",
@@ -1855,8 +1327,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "Prayer to St. Joseph after the Rosary",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to St. Joseph after the Rosary"
     ]
   },
   {
@@ -1883,20 +1354,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-rosary",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_of_the_rosary",
       "rosary",
@@ -1905,8 +1362,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "Prayers of the Rosary",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers of the Rosary"
     ]
   },
   {
@@ -1933,20 +1389,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pro-life-rosary-prayer-intentions",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pro_life_rosary_prayer_intentions",
       "rosary",
@@ -1955,8 +1397,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "Pro-Life Rosary Prayer Intentions",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pro-Life Rosary Prayer Intentions"
     ]
   },
   {
@@ -1981,21 +1422,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "rosary, mary, general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#salve-regina"
+      "LA": "Maria"
     },
     "tags": [
       "la_salve_regina",
@@ -2006,8 +1433,7 @@
       "ロザリオ",
       "Rosarium",
       "Salve Regina",
-      "rosary, mary, general",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -2034,20 +1460,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/scriptural-rosary-sorrowful-mysteries",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_scriptural_rosary_the_sorrowful_mysteries",
       "rosary",
@@ -2056,8 +1468,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "Scriptural Rosary: The Sorrowful Mysteries",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Scriptural Rosary: The Sorrowful Mysteries"
     ]
   },
   {
@@ -2084,20 +1495,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_ロサリオの祈り_https_inoruhana_com_ja_rosary_pray",
       "rosary",
@@ -2107,8 +1504,7 @@
       "ロザリオ",
       "Rosarium",
       "[ロザリオの祈り](https://inoruhana.com/ja/rosary-pray/)",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -2135,20 +1531,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#42",
-      "LA": ""
-    },
     "tags": [
       "jp_ロサリオ",
       "rosary",
@@ -2157,8 +1539,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -2185,20 +1566,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=8&ingId=67&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_8_67",
       "rosary",
@@ -2207,8 +1574,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "묵주 기도",
-      "가톨릭 기도서"
+      "묵주 기도"
     ]
   },
   {
@@ -2235,20 +1601,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=213&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_213",
       "rosary",
@@ -2258,8 +1610,7 @@
       "ロザリオ",
       "Rosarium",
       "묵주 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -2286,20 +1637,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=8&ingId=70&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_8_70",
       "rosary",
@@ -2308,8 +1645,7 @@
       "Rosary",
       "ロザリオ",
       "Rosarium",
-      "묵주기도 바치는 방법",
-      "가톨릭 기도서"
+      "묵주기도 바치는 방법"
     ]
   },
   {
@@ -2336,20 +1672,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=5&ingId=30&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_5_30",
       "litany",
@@ -2359,8 +1681,7 @@
       "連祷",
       "Litaniae",
       "103위 한국 성인 호칭 기도",
-      "호칭 기도",
-      "가톨릭 기도서"
+      "호칭 기도"
     ]
   },
   {
@@ -2387,20 +1708,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=5&ingId=128&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_5_128",
       "litany",
@@ -2410,8 +1717,7 @@
       "連祷",
       "Litaniae",
       "124위 한국 순교 복자 호칭 기도",
-      "호칭 기도",
-      "가톨릭 기도서"
+      "호칭 기도"
     ]
   },
   {
@@ -2438,20 +1744,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-life",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_litany_for_life",
       "litany",
@@ -2460,8 +1752,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "A Litany for Life",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Litany for Life"
     ]
   },
   {
@@ -2486,21 +1777,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#litaniae-lauretanae"
+      "LA": "Maria"
     },
     "tags": [
       "la_litaniae_lauretanae",
@@ -2511,8 +1788,7 @@
       "連祷",
       "Litaniae",
       "Litaniae Lauretanae",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -2537,21 +1813,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ, litany"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#litaniae-pretiosissimi-sanguinis-domini-nostri-iesu-christi"
+      "LA": "Litaniae"
     },
     "tags": [
       "la_litaniae_pretiosissimi_sanguinis_domini_nostri_iesu_christi",
@@ -2561,9 +1823,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litaniae Pretiosissimi Sanguinis Domini Nostri Iesu Christi",
-      "christ, litany",
-      "Pray Orémus"
+      "Litaniae Pretiosissimi Sanguinis Domini Nostri Iesu Christi"
     ]
   },
   {
@@ -2588,21 +1848,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#litaniae-sancti-ioseph"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_litaniae_sancti_ioseph",
@@ -2613,8 +1859,7 @@
       "連祷",
       "Litaniae",
       "Litaniae Sancti Ioseph",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -2639,21 +1884,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ, litany"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#litaniae-sanctissimi-nominis-iesu"
+      "LA": "Litaniae"
     },
     "tags": [
       "la_litaniae_sanctissimi_nominis_iesu",
@@ -2663,9 +1894,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litaniae Sanctissimi Nominis Iesu",
-      "christ, litany",
-      "Pray Orémus"
+      "Litaniae Sanctissimi Nominis Iesu"
     ]
   },
   {
@@ -2690,21 +1919,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ, litany"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#litaniae-de-sacro-corde-iesu"
+      "LA": "Litaniae"
     },
     "tags": [
       "la_litaniae_de_sacro_corde_iesu",
@@ -2714,9 +1929,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litaniae de Sacro Corde Iesu",
-      "christ, litany",
-      "Pray Orémus"
+      "Litaniae de Sacro Corde Iesu"
     ]
   },
   {
@@ -2743,20 +1956,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-liberty",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_for_liberty",
       "litany",
@@ -2765,8 +1964,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany for Liberty",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany for Liberty"
     ]
   },
   {
@@ -2793,20 +1991,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-saint-joseph",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_of_saint_joseph",
       "litany",
@@ -2815,8 +1999,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany of Saint Joseph",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany of Saint Joseph"
     ]
   },
   {
@@ -2843,20 +2026,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-blessed-virgin-mary-mother-life",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_of_the_blessed_virgin_mary_mother_of_life",
       "litany",
@@ -2865,8 +2034,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany of the Blessed Virgin Mary, Mother of Life",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany of the Blessed Virgin Mary, Mother of Life"
     ]
   },
   {
@@ -2893,20 +2061,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-holy-name-jesus",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_of_the_holy_name_of_jesus",
       "litany",
@@ -2915,8 +2069,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany of the Holy Name of Jesus",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany of the Holy Name of Jesus"
     ]
   },
   {
@@ -2943,20 +2096,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-most-precious-blood",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_of_the_most_precious_blood",
       "litany",
@@ -2965,8 +2104,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany of the Most Precious Blood",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany of the Most Precious Blood"
     ]
   },
   {
@@ -2993,20 +2131,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-sacred-heart-jesus",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_of_the_sacred_heart_of_jesus",
       "litany",
@@ -3015,8 +2139,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany of the Sacred Heart of Jesus",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany of the Sacred Heart of Jesus"
     ]
   },
   {
@@ -3043,20 +2166,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/litany-way-prayer-journey",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_litany_of_the_way_prayer_for_the_journey",
       "litany",
@@ -3065,8 +2174,7 @@
       "Litanies",
       "連祷",
       "Litaniae",
-      "Litany of the Way, Prayer for the Journey",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Litany of the Way, Prayer for the Journey"
     ]
   },
   {
@@ -3093,20 +2201,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=5&ingId=29&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_5_29",
       "litany",
@@ -3116,8 +2210,7 @@
       "連祷",
       "Litaniae",
       "복되신 동정 마리아의 배필 성 요셉 호칭 기도",
-      "호칭 기도",
-      "가톨릭 기도서"
+      "호칭 기도"
     ]
   },
   {
@@ -3144,20 +2237,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=5&ingId=28&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_5_28",
       "litany",
@@ -3167,8 +2246,7 @@
       "連祷",
       "Litaniae",
       "성모 호칭 기도",
-      "호칭 기도",
-      "가톨릭 기도서"
+      "호칭 기도"
     ]
   },
   {
@@ -3195,20 +2273,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=5&ingId=27&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_5_27",
       "litany",
@@ -3218,8 +2282,7 @@
       "連祷",
       "Litaniae",
       "예수 성심 호칭 기도",
-      "호칭 기도",
-      "가톨릭 기도서"
+      "호칭 기도"
     ]
   },
   {
@@ -3246,20 +2309,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=5&ingId=31&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_5_31",
       "litany",
@@ -3269,8 +2318,7 @@
       "連祷",
       "Litaniae",
       "일상적으로 바치는 성인 호칭 기도",
-      "호칭 기도",
-      "가톨릭 기도서"
+      "호칭 기도"
     ]
   },
   {
@@ -3297,20 +2345,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=4&ingId=25&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_4_25",
       "monthly",
@@ -3320,8 +2354,7 @@
       "信心月の祈り",
       "Preces mensium",
       "묵주 기도 성월",
-      "성월 기도",
-      "가톨릭 기도서"
+      "성월 기도"
     ]
   },
   {
@@ -3348,20 +2381,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=4&ingId=21&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_4_21",
       "monthly",
@@ -3371,8 +2390,7 @@
       "信心月の祈り",
       "Preces mensium",
       "성 요셉 성월",
-      "성월 기도",
-      "가톨릭 기도서"
+      "성월 기도"
     ]
   },
   {
@@ -3399,20 +2417,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=4&ingId=22&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_4_22",
       "monthly",
@@ -3422,8 +2426,7 @@
       "信心月の祈り",
       "Preces mensium",
       "성모 성월",
-      "성월 기도",
-      "가톨릭 기도서"
+      "성월 기도"
     ]
   },
   {
@@ -3450,20 +2453,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=4&ingId=24&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_4_24",
       "monthly",
@@ -3473,8 +2462,7 @@
       "信心月の祈り",
       "Preces mensium",
       "순교자 성월",
-      "성월 기도",
-      "가톨릭 기도서"
+      "성월 기도"
     ]
   },
   {
@@ -3501,20 +2489,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=4&ingId=23&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_4_23",
       "monthly",
@@ -3524,8 +2498,7 @@
       "信心月の祈り",
       "Preces mensium",
       "예수 성심 성월",
-      "성월 기도",
-      "가톨릭 기도서"
+      "성월 기도"
     ]
   },
   {
@@ -3552,20 +2525,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=4&ingId=26&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_4_26",
       "monthly",
@@ -3575,8 +2534,7 @@
       "信心月の祈り",
       "Preces mensium",
       "위령 성월",
-      "성월 기도",
-      "가톨릭 기도서"
+      "성월 기도"
     ]
   },
   {
@@ -3603,20 +2561,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/may-sacraments-move-us-love-and-serve",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_may_the_sacraments_move_us_to_love_and_serve",
       "sacrament",
@@ -3625,8 +2569,7 @@
       "Sacraments and Rites",
       "秘跡・式次第",
       "Sacramenta et ritus",
-      "May the Sacraments Move Us to Love and Serve",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "May the Sacraments Move Us to Love and Serve"
     ]
   },
   {
@@ -3653,20 +2596,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=214&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_214",
       "sacrament",
@@ -3676,8 +2605,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "THE RITE OF PENANCE",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -3704,20 +2632,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#43",
-      "LA": ""
-    },
     "tags": [
       "jp_赦しの秘跡",
       "sacrament",
@@ -3727,8 +2641,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "赦しの秘跡",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -3755,20 +2668,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=7&ingId=20&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_7_20",
       "sacrament",
@@ -3778,8 +2677,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "고해 성사",
-      "고해성사",
-      "가톨릭 기도서"
+      "고해성사"
     ]
   },
   {
@@ -3806,20 +2704,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=185&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_185",
       "sacrament",
@@ -3829,8 +2713,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "고해성사",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -3857,20 +2740,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=11&ingId=68&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_11_68",
       "sacrament",
@@ -3880,8 +2749,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "공소 예식",
-      "공소 예절",
-      "가톨릭 기도서"
+      "공소 예절"
     ]
   },
   {
@@ -3908,20 +2776,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=186&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_186",
       "sacrament",
@@ -3931,8 +2785,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "병자 영성체 짧은 예식",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -3959,20 +2812,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=187&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_187",
       "sacrament",
@@ -3982,8 +2821,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "병자 영성체 통상 예식",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -4010,20 +2848,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=189&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_189",
       "sacrament",
@@ -4033,8 +2857,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "병자도유 예식",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -4061,20 +2884,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=188&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_188",
       "sacrament",
@@ -4084,8 +2893,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "죽을 위험에 놓인 병자에게 거행하는 견진예식",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -4112,20 +2920,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=184&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_184",
       "sacrament",
@@ -4135,8 +2929,7 @@
       "秘跡・式次第",
       "Sacramenta et ritus",
       "죽을 위험에 있거나 죽음이 임박한 때에 사용하는 짧은 어른 입교 예식",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -4163,31 +2956,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=166&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_166",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "(어린 자녀) 선생님을 위한 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -4214,31 +2987,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=164&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_164",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "(어린 자녀) 아빠를 위한 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -4265,31 +3018,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=165&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_165",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "(어린 자녀) 엄마를 위한 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -4316,31 +3049,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=163&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_163",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "(어린 자녀) 할머니, 할아버지를 위한 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -4367,31 +3080,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-grandparents",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_of_grandparents",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing of Grandparents",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4418,31 +3111,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-parents-after-miscarriage-or-stillbirth",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_of_parents_after_a_miscarriage_or_stillbirth",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing of Parents after a Miscarriage or Stillbirth",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4469,31 +3142,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-christmas-manger-or-nativity-scene",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_of_a_christmas_manger_or_nativity_scene",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing of a Christmas Manger or Nativity Scene",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4520,31 +3173,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-christmas-tree",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_of_a_christmas_tree",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing of a Christmas Tree",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4571,31 +3204,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-advent-wreath",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_of_an_advent_wreath",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing of an Advent Wreath",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4622,31 +3235,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-home-and-household-epiphany",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_of_the_home_and_household_on_epiphany",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing of the Home and Household on Epiphany",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4673,31 +3266,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-childs-birthday",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_on_a_child_s_birthday",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing on a Child's Birthday",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4724,31 +3297,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/blessing-childs-name-day",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_blessing_on_a_child_s_name_day",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Blessing on a Child's Name Day",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4775,31 +3328,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/children-world-photo-slides",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_children_of_the_world_photo_slides",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Children of the World Photo Slides",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4824,33 +3357,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-ioseph"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_commemoratio_sancti_ioseph",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Commemoratio Sancti Ioseph",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -4877,31 +3390,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/daily-blessing-child",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_daily_blessing_of_a_child",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Daily Blessing of a Child",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4928,31 +3421,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/gracious-lord-child-bethlehem",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_gracious_lord_child_of_bethlehem",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Gracious Lord, Child of Bethlehem",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -4977,33 +3450,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#invocatio-sancti-iosephi"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_invocatio_sancti_iosephi",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Invocatio Sancti Iosephi",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -5028,33 +3481,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#ioseph-virgo-pater-iesu"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_ioseph_virgo_pater_iesu",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Ioseph, Virgo Pater Iesu",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -5079,33 +3512,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#memento-nostri-beate-ioseph"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_memento_nostri_beate_ioseph",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Memento Nostri, Beate Ioseph",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -5130,33 +3543,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#memorare-sancti-ioseph"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_memorare_sancti_ioseph",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Memorare Sancti Ioseph",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -5181,33 +3574,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-ad-sanctum-iosephum"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_oratio_ad_sanctum_iosephum",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Oratio ad Sanctum Iosephum",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -5234,31 +3607,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/order-blessing-organizations-concerned-public-need",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_order_for_the_blessing_of_organizations_concerned_with_public_need",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Order for the Blessing of Organizations Concerned with Public Need",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5285,31 +3638,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/order-blessing-victim-crime-or-oppression",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_order_for_the_blessing_of_a_victim_of_crime_or_oppression",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Order for the Blessing of a Victim of Crime or Oppression",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5336,31 +3669,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/order-blessing-sick",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_order_for_the_blessing_of_the_sick",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Order for the Blessing of the Sick",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5387,31 +3700,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/parents-prayer-vocations",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_parents_prayer_for_vocations",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Parents Prayer for Vocations",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5438,31 +3731,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/parents-thanksgiving",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_parents_thanksgiving",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Parents' Thanksgiving",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5489,31 +3762,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-those-who-have-died-after-leaving-their-homelands-search-better-life-0",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_those_who_have_died_after_leaving_their_homela",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Pope Francis' Prayer for Those Who Have Died After Leaving Their Homelands in Search of a Better Life",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5540,31 +3793,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-card-75th-anniversary-hiroshima-and-nagasaki-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_card_for_the_75th_anniversary_of_hiroshima_and_nagasaki_spanish",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer Card for the 75th Anniversary of Hiroshima and Nagasaki - Spanish",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5591,31 +3824,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-married-couples",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_married_couples",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer for Married Couples",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5642,31 +3855,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-migrant-children",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_migrant_children",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer for Migrant Children",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5693,31 +3886,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-those-hoping-conceive-or-adopt-child",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_those_hoping_to_conceive_or_adopt_a_child",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer for Those Hoping to Conceive or Adopt a Child",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5744,31 +3917,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-defense-marriage",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_in_defense_of_marriage",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer in Defense of Marriage",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5795,31 +3948,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-couple-anniversary-marriage",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_of_a_couple_on_the_anniversary_of_marriage",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer of a Couple on the Anniversary of Marriage",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5846,31 +3979,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-bringing-child-home",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_on_bringing_a_child_into_the_home",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer on Bringing a Child into the Home",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5897,31 +4010,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-care-our-common-home",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_care_for_our_common_home",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Prayer to Care for Our Common Home",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5948,31 +4041,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/thank-you-creating-children-world",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_thank_you_for_creating_the_children_of_the_world",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Thank You for Creating the Children of the World",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -5999,31 +4072,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/thank-you-creating-children-world-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_thank_you_for_creating_the_children_of_the_world_spanish",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Thank You for Creating the Children of the World - Spanish",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -6050,31 +4103,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/thanksgiving-newborn-or-newly-adopted-young-child",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_thanksgiving_for_a_newborn_or_newly_adopted_young_child",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Thanksgiving for a Newborn or Newly Adopted Young Child",
-      "Household Blessings and Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Household Blessings and Prayers"
     ]
   },
   {
@@ -6099,33 +4132,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "joseph"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#virginum-custos"
+      "LA": "Ioseph"
     },
     "tags": [
       "la_virginum_custos",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "Virginum Custos",
-      "joseph",
-      "Pray Orémus"
+      "Ioseph"
     ]
   },
   {
@@ -6152,31 +4165,11 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_子とものための祈り",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "子どものための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -6203,31 +4196,11 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#24",
-      "LA": ""
-    },
     "tags": [
       "jp_家族の祈り",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "家族の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -6254,31 +4227,11 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#25",
-      "LA": ""
-    },
     "tags": [
       "jp_父母のための祈り",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "父母のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -6305,31 +4258,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=194&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_194",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "가정 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -6356,31 +4289,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=25&ingId=174&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_25_174",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "가정을 위한 기도",
-      "가정",
-      "가톨릭 기도서"
+      "가정"
     ]
   },
   {
@@ -6407,31 +4320,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=54&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_54",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "가정을 위한 기도 1",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -6458,31 +4351,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=55&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_55",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "가정을 위한 기도 2",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -6509,31 +4382,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=25&ingId=175&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_25_175",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "가족의 안전을 위한 기도",
-      "가정",
-      "가톨릭 기도서"
+      "가정"
     ]
   },
   {
@@ -6560,31 +4413,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=20&ingId=151&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_20_151",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "갈등을 겪고 있는 부부의(부부를 위한) 기도",
-      "부부",
-      "가톨릭 기도서"
+      "부부"
     ]
   },
   {
@@ -6611,31 +4444,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=208&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_208",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "거동하지 못하는 노인 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -6662,31 +4475,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=20&ingId=149&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_20_149",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "결혼기념일에 바치는 부부의 기도",
-      "부부",
-      "가톨릭 기도서"
+      "부부"
     ]
   },
   {
@@ -6713,31 +4506,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=198&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_198",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "공장, 사무실, 상점 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -6764,31 +4537,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=210&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_210",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "교리 교사 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -6815,31 +4568,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=211&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_211",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "교리 교육이나 기도 모임 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -6866,31 +4599,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=199&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_199",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "교통수단 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -6917,31 +4630,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=193&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_193",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "무덤 축복",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -6968,31 +4661,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=19&ingId=144&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_19_144",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "미래의 배우자를 위한 기도",
-      "혼인",
-      "가톨릭 기도서"
+      "혼인"
     ]
   },
   {
@@ -7019,31 +4692,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=201&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_201",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "미사 밖에서 거행하는 성수 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7070,31 +4723,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=23&ingId=168&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_23_168",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "부모를 위한 기도",
-      "부모",
-      "가톨릭 기도서"
+      "부모"
     ]
   },
   {
@@ -7121,31 +4754,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=56&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_56",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "부모를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -7172,31 +4785,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=203&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_203",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "부부 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7223,31 +4816,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=20&ingId=150&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_20_150",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "부부가 하는 매일의 축복",
-      "부부",
-      "가톨릭 기도서"
+      "부부"
     ]
   },
   {
@@ -7274,31 +4847,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=58&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_58",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "부부의 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -7325,31 +4878,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=209&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_209",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "부활 계란 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7376,31 +4909,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=197&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_197",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "새 집 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7427,31 +4940,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=21&ingId=156&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_21_156",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "새로 맞이하는 자녀를 위한 축복 (출산/입양)",
-      "임신,출산,입양",
-      "가톨릭 기도서"
+      "임신,출산,입양"
     ]
   },
   {
@@ -7478,31 +4971,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=200&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_200",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "생업 관련 기기 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7529,31 +5002,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=162&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_162",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "성인이 되는 자녀를 위한 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -7580,31 +5033,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=63&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_63",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "세상을 떠난 부모를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -7631,31 +5064,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=202&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_202",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "신심 증진을 위한 성물 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7682,31 +5095,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=19&ingId=146&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_19_146",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "신혼부부의 기도 1",
-      "혼인",
-      "가톨릭 기도서"
+      "혼인"
     ]
   },
   {
@@ -7733,31 +5126,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=19&ingId=147&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_19_147",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "신혼부부의 기도 2",
-      "혼인",
-      "가톨릭 기도서"
+      "혼인"
     ]
   },
   {
@@ -7784,31 +5157,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=205&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_205",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "아직 세례 받지 못한 어린이 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7835,31 +5188,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=25&ingId=176&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_25_176",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "아픈 가족을 위한 기도",
-      "가정",
-      "가톨릭 기도서"
+      "가정"
     ]
   },
   {
@@ -7886,31 +5219,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=195&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_195",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "어른 병자 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7937,31 +5250,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=196&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_196",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "어린이 병자 축복 예식",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -7988,31 +5281,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=167&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_167",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "어린이 봉사자의 기도 (복사단, 전례단, 성가대 등)",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -8039,31 +5312,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=20&ingId=152&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_20_152",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "영명 축일에 바치는 부부의 기도",
-      "부부",
-      "가톨릭 기도서"
+      "부부"
     ]
   },
   {
@@ -8090,31 +5343,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=25&ingId=177&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_25_177",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "위기를 겪고 있는 가정의(가정을 위한) 기도",
-      "가정",
-      "가톨릭 기도서"
+      "가정"
     ]
   },
   {
@@ -8141,31 +5374,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=204&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_204",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "이미 세례 받은 어린이 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -8192,31 +5405,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=21&ingId=155&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_21_155",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀를 낳은 가정의 감사기도 (출산/입양)",
-      "임신,출산,입양",
-      "가톨릭 기도서"
+      "임신,출산,입양"
     ]
   },
   {
@@ -8243,31 +5436,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=21&ingId=153&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_21_153",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀를 바라는 기도 (임신/입양)",
-      "임신,출산,입양",
-      "가톨릭 기도서"
+      "임신,출산,입양"
     ]
   },
   {
@@ -8294,31 +5467,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=57&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_57",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -8345,31 +5498,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=157&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_157",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀를 위한 기도 1",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -8396,31 +5529,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=158&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_158",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀를 위한 기도 2",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -8447,31 +5560,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=24&ingId=171&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_24_171",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀를 잃은 이들을 위한 기도",
-      "슬퍼하는 이들을 위한 기도",
-      "가톨릭 기도서"
+      "슬퍼하는 이들을 위한 기도"
     ]
   },
   {
@@ -8498,31 +5591,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=159&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_159",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀에게 하는 매일의 축복",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -8549,31 +5622,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=160&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_160",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀의 생일에 하는 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -8600,31 +5653,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=22&ingId=161&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_22_161",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "자녀의 영명 축일에 하는 기도",
-      "자녀",
-      "가톨릭 기도서"
+      "자녀"
     ]
   },
   {
@@ -8651,31 +5684,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=23&ingId=169&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_23_169",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "조부모를 위한 기도",
-      "부모",
-      "가톨릭 기도서"
+      "부모"
     ]
   },
   {
@@ -8702,31 +5715,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=212&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_212",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "출발하는 순례자 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -8753,31 +5746,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=206&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_206",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "출산 전 어머니 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -8804,31 +5777,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=30&ingId=207&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_30_207",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "출산 후 어머니 축복 기도",
-      "Ⅳ. 축복 예식과 기도",
-      "가톨릭 기도서"
+      "Ⅳ. 축복 예식과 기도"
     ]
   },
   {
@@ -8855,31 +5808,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=21&ingId=154&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_21_154",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "태아를 위한 기도",
-      "임신,출산,입양",
-      "가톨릭 기도서"
+      "임신,출산,입양"
     ]
   },
   {
@@ -8906,31 +5839,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=19&ingId=145&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_19_145",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "혼인을 준비하며 바치는 기도(약혼자의 기도)",
-      "혼인",
-      "가톨릭 기도서"
+      "혼인"
     ]
   },
   {
@@ -8957,31 +5870,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=19&ingId=148&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_19_148",
       "blessing_household",
-      "축복·가정기도",
-      "Lời chúc lành và gia đình",
-      "Blessings and Household Prayers",
-      "祝福と家庭の祈り",
-      "Benedictiones et familia",
       "혼인하는 이들(가족, 지인 등)을 위한 기도",
-      "혼인",
-      "가톨릭 기도서"
+      "혼인"
     ]
   },
   {
@@ -9008,31 +5901,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=99&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_99",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 납골 또는 자연장(세상을 떠난 이들)",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9059,31 +5932,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=74&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_74",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 성인 호칭 기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9110,31 +5963,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=98&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_98",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 쇄골 또는 습골(욥의 기도)",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9161,31 +5994,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=80&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_80",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 113 / 마침기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9212,31 +6025,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=86&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_86",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 117",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9263,31 +6056,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=90&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_90",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 118/마침기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9314,31 +6087,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=72&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_72",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 129(130)",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9365,31 +6118,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=77&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_77",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 129(130)",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9416,31 +6149,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=83&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_83",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 22(23) / 마침기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9467,31 +6180,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=89&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_89",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 24",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9518,31 +6211,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=87&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_87",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 41",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9569,31 +6242,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=73&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_73",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 50(51),3-21",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9620,31 +6273,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=71&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_71",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 62(63),2-8",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9671,31 +6304,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=84&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_84",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 83(84)",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9722,31 +6335,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=88&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_88",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편 92",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9773,31 +6366,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=82&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_82",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편41(42),2-3.5;42(43),3-5",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9824,31 +6397,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=78&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_78",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 시편50(51),3-21",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9875,31 +6428,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=94&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_94",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 유가족을 위한 기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9926,31 +6459,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=92&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_92",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 자비송",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -9977,31 +6490,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=76&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_76",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 주님의 기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10028,31 +6521,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=95&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_95",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 즈카르야의 노래",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10079,31 +6552,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=75&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_75",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 찬미가",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10130,31 +6583,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=93&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_93",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 청원기도",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10181,31 +6614,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=97&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_97",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "- 화답송",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10230,33 +6643,13 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#in-paradiso"
+      "LA": "Angeli"
     },
     "tags": [
       "la_in_paradiso",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "In Paradiso",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -10283,31 +6676,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-end-use-death-penalty",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_end_the_use_of_the_death_penalty",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "Prayer to End the Use of the Death Penalty",
-      "Prayers for Death and Dying",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Death and Dying"
     ]
   },
   {
@@ -10334,31 +6707,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-death-baptized-child",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_at_the_death_of_a_baptized_child",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "Prayers at the Death of a Baptized Child",
-      "Prayers for Death and Dying",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Death and Dying"
     ]
   },
   {
@@ -10385,30 +6738,10 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-death-and-dying",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_for_death_and_dying",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
-      "Prayers for Death and Dying",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Death and Dying"
     ]
   },
   {
@@ -10435,31 +6768,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-mourners",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_for_mourners",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "Prayers for Mourners",
-      "Prayers for Death and Dying",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Death and Dying"
     ]
   },
   {
@@ -10486,31 +6799,11 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#27",
-      "LA": ""
-    },
     "tags": [
       "jp_病人のための祈り",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "病人のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -10537,31 +6830,11 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#34",
-      "LA": ""
-    },
     "tags": [
       "jp_病気_怪我をした時",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "病気・怪我をした時",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -10588,31 +6861,11 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_病気_怪我をした時の祈り",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "病気・怪我をした時の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -10639,31 +6892,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=79&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_79",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "염습과 입관",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10690,31 +6923,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=218&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_218",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "우제",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10741,31 +6954,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=85&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_85",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "운구",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10790,30 +6983,11 @@
       "VN": "",
       "EN": "Basic Prayers",
       "JP": "日々の祈り",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/eternal-rest.html",
-      "EN": "https://www.usccb.org/prayers",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#28",
-      "LA": "https://prayoremus.com/prayers#requiem-aeternam"
+      "LA": "Generalia"
     },
     "tags": [
       "eternal_rest",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "위령 기도",
       "Nghỉ yên muôn đời",
       "Eternal Rest",
@@ -10822,12 +6996,7 @@
       "상장 예식",
       "Basic Prayers",
       "日々の祈り",
-      "general",
-      "가톨릭 기도서",
-      "Vatican News - Kinh nguyện",
-      "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "カトリック祈祷書 祈りの友",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -10854,31 +7023,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=138&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_138",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "위령 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -10905,31 +7054,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=33&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_33",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "위령기도 1",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -10956,31 +7085,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=69&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_69",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "위령기도 2(짧은 위령 기도)",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -11007,31 +7116,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=215&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_215",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "임종과 운명",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -11058,31 +7147,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=191&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_191",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "임종과 운명",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -11109,31 +7178,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=81&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_81",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "출관",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -11160,31 +7209,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=91&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_91",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "하관",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -11211,31 +7240,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=190&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_190",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "하관",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -11262,31 +7271,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=10&ingId=96&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_10_96",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "화장",
-      "상장 예식",
-      "가톨릭 기도서"
+      "상장 예식"
     ]
   },
   {
@@ -11313,31 +7302,11 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=29&ingId=192&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_29_192",
       "funeral",
-      "위령·장례기도",
-      "Kinh cầu cho người qua đời",
-      "Funeral and Prayers for the Dead",
-      "死者・葬儀の祈り",
-      "Preces pro defunctis",
       "화장",
-      "Ⅲ. 성사(예식)",
-      "가톨릭 기도서"
+      "Ⅲ. 성사(예식)"
     ]
   },
   {
@@ -11364,20 +7333,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=183&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_183",
       "national",
@@ -11387,8 +7342,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "2025년 희년 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -11415,20 +7369,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=216&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_216",
       "national",
@@ -11438,8 +7378,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "2027 서울 세계청년대회 공식기도문",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -11466,20 +7405,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/concluding-prayer-go-and-make-disciples",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_concluding_prayer_go_and_make_disciples",
       "national",
@@ -11488,8 +7413,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Concluding Prayer - Go and Make Disciples",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Concluding Prayer - Go and Make Disciples"
     ]
   },
   {
@@ -11516,20 +7440,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-life",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_prayer_for_life",
       "national",
@@ -11538,8 +7448,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Prayer for Life",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Prayer for Life"
     ]
   },
   {
@@ -11566,20 +7475,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-people-syria",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_prayer_for_the_people_of_syria",
       "national",
@@ -11588,8 +7483,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Prayer for the People of Syria",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Prayer for the People of Syria"
     ]
   },
   {
@@ -11616,20 +7510,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-our-lady-guadalupe",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_prayer_to_our_lady_of_guadalupe",
       "national",
@@ -11638,8 +7518,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Prayer to Our Lady of Guadalupe",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Prayer to Our Lady of Guadalupe"
     ]
   },
   {
@@ -11666,20 +7545,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-st-juan-diego",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_prayer_to_st_juan_diego",
       "national",
@@ -11688,8 +7553,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Prayer to St. Juan Diego",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Prayer to St. Juan Diego"
     ]
   },
   {
@@ -11716,20 +7580,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-creator",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_prayer_to_the_creator",
       "national",
@@ -11738,8 +7588,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Prayer to the Creator",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Prayer to the Creator"
     ]
   },
   {
@@ -11766,20 +7615,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/soldiers-prayers",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_a_soldier_s_prayers",
       "national",
@@ -11788,8 +7623,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "A Soldier's Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "A Soldier's Prayers"
     ]
   },
   {
@@ -11816,20 +7650,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/act-consecration-immaculate-heart-mary-russia-and-ukraine",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_act_of_consecration_to_the_immaculate_heart_of_mary_for_russia_and_ukr",
       "national",
@@ -11838,8 +7658,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Act of Consecration to the Immaculate Heart of Mary for Russia and Ukraine",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Act of Consecration to the Immaculate Heart of Mary for Russia and Ukraine"
     ]
   },
   {
@@ -11866,20 +7685,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/act-faith-hope-and-love",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_act_of_faith_hope_and_love",
       "national",
@@ -11888,8 +7693,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Act of Faith, Hope, and Love",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Act of Faith, Hope, and Love"
     ]
   },
   {
@@ -11914,21 +7718,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#actus-caritatis"
+      "LA": "Generalia"
     },
     "tags": [
       "la_actus_caritatis",
@@ -11939,8 +7729,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Actus Caritatis",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -11965,21 +7754,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#actus-fidei"
+      "LA": "Generalia"
     },
     "tags": [
       "la_actus_fidei",
@@ -11990,8 +7765,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Actus Fidei",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -12016,21 +7790,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#actus-reparationis"
+      "LA": "Christus"
     },
     "tags": [
       "la_actus_reparationis",
@@ -12041,8 +7801,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Actus Reparationis",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -12067,21 +7826,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#actus-spei"
+      "LA": "Generalia"
     },
     "tags": [
       "la_actus_spei",
@@ -12092,8 +7837,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Actus Spei",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -12118,21 +7862,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#ad-sanctum-raphaelem-archangelum"
+      "LA": "Angeli"
     },
     "tags": [
       "la_ad_sanctum_raphaelem_archangelum",
@@ -12143,8 +7873,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Ad Sanctum Raphaelem Archangelum",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -12169,21 +7898,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#alma-redemptoris-mater"
+      "LA": "Maria"
     },
     "tags": [
       "la_alma_redemptoris_mater",
@@ -12194,8 +7909,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Alma Redemptoris Mater",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -12220,21 +7934,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#ave-maris-stella"
+      "LA": "Maria"
     },
     "tags": [
       "la_ave_maris_stella",
@@ -12245,8 +7945,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Ave Maris Stella",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -12271,21 +7970,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#ave-regina-caelorum"
+      "LA": "Maria"
     },
     "tags": [
       "la_ave_regina_caelorum",
@@ -12296,8 +7981,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Ave Regina Caelorum",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -12324,20 +8008,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/cchd-2016-prayer-card",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_cchd_2016_prayer_card",
       "national",
@@ -12346,8 +8016,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "CCHD 2016 Prayer Card",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "CCHD 2016 Prayer Card"
     ]
   },
   {
@@ -12374,20 +8043,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/cchd-2016-prayer-card-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_cchd_2016_prayer_card_in_spanish",
       "national",
@@ -12396,8 +8051,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "CCHD 2016 Prayer Card in Spanish",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "CCHD 2016 Prayer Card in Spanish"
     ]
   },
   {
@@ -12424,20 +8078,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/covid-19-prayer-card",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_covid_19_prayer_card",
       "national",
@@ -12446,8 +8086,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "COVID-19 Prayer Card",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "COVID-19 Prayer Card"
     ]
   },
   {
@@ -12474,20 +8113,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/care-gods-creation-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_care_for_god_s_creation_prayer",
       "national",
@@ -12496,8 +8121,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Care for God’s Creation Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Care for God’s Creation Prayer"
     ]
   },
   {
@@ -12524,20 +8148,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/catechists-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_catechist_s_prayer",
       "national",
@@ -12546,8 +8156,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Catechist’s Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Catechist’s Prayer"
     ]
   },
   {
@@ -12574,20 +8183,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/chaplet-divine-mercy",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_chaplet_of_divine_mercy",
       "national",
@@ -12596,8 +8191,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Chaplet of Divine Mercy",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Chaplet of Divine Mercy"
     ]
   },
   {
@@ -12624,20 +8218,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/civilize-it-advent-prayer-be-mary",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_civilize_it_advent_prayer_to_be_like_mary",
       "national",
@@ -12646,8 +8226,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Civilize It: Advent Prayer to be like Mary",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Civilize It: Advent Prayer to be like Mary"
     ]
   },
   {
@@ -12674,20 +8253,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/civilize-it-advent-prayer-see-jesus-others",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_civilize_it_an_advent_prayer_to_see_jesus_in_others",
       "national",
@@ -12696,8 +8261,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Civilize It: An Advent Prayer to See Jesus in Others",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Civilize It: An Advent Prayer to See Jesus in Others"
     ]
   },
   {
@@ -12722,21 +8286,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-archangelorm"
+      "LA": "Angeli"
     },
     "tags": [
       "la_commemoratio_archangelorm",
@@ -12747,8 +8297,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Archangelorm",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -12773,21 +8322,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-antonii"
+      "LA": "Sancti"
     },
     "tags": [
       "la_commemoratio_sancti_antonii",
@@ -12798,8 +8333,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Sancti Antonii",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -12824,21 +8358,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-benedicti"
+      "LA": "Sancti"
     },
     "tags": [
       "la_commemoratio_sancti_benedicti",
@@ -12849,8 +8369,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Sancti Benedicti",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -12875,21 +8394,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-francisci-assisiensis"
+      "LA": "Sancti"
     },
     "tags": [
       "la_commemoratio_sancti_francisci_assisiensis",
@@ -12900,8 +8405,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Sancti Francisci Assisiensis",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -12926,21 +8430,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-gabrielis-archangeli"
+      "LA": "Angeli"
     },
     "tags": [
       "la_commemoratio_sancti_gabrielis_archangeli",
@@ -12951,8 +8441,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Sancti Gabrielis Archangeli",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -12977,21 +8466,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-michaelis-archangeli"
+      "LA": "Angeli"
     },
     "tags": [
       "la_commemoratio_sancti_michaelis_archangeli",
@@ -13002,8 +8477,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Sancti Michaelis Archangeli",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -13028,21 +8502,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#commemoratio-sancti-raphaelis-archangeli"
+      "LA": "Angeli"
     },
     "tags": [
       "la_commemoratio_sancti_raphaelis_archangeli",
@@ -13053,8 +8513,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Commemoratio Sancti Raphaelis Archangeli",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -13081,20 +8540,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/covid-19-prayer-solidarity",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_covid_19_a_prayer_of_solidarity",
       "national",
@@ -13103,8 +8548,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Covid-19: A Prayer of Solidarity",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Covid-19: A Prayer of Solidarity"
     ]
   },
   {
@@ -13131,20 +8575,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/create-me-love-ever-more-open",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_create_in_me_a_love_ever_more_open",
       "national",
@@ -13153,8 +8583,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Create in me a Love ever more open",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Create in me a Love ever more open"
     ]
   },
   {
@@ -13179,21 +8608,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#deus-protector-noster"
+      "LA": "Generalia"
     },
     "tags": [
       "la_deus_protector_noster",
@@ -13204,8 +8619,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Deus, Protector Noster",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -13230,21 +8644,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#deus-in-adjutorium-meum-intende"
+      "LA": "Generalia"
     },
     "tags": [
       "la_deus_in_adjutorium_meum_intende",
@@ -13255,8 +8655,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Deus, in Adjutorium Meum Intende",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -13283,20 +8682,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/dignity-work-and-rights-workers",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_dignity_of_work_and_the_rights_of_workers",
       "national",
@@ -13305,8 +8690,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Dignity of Work and the Rights of Workers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Dignity of Work and the Rights of Workers"
     ]
   },
   {
@@ -13333,20 +8717,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/divine-praises",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_divine_praises",
       "national",
@@ -13355,8 +8725,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Divine Praises",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Divine Praises"
     ]
   },
   {
@@ -13381,21 +8750,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#domine-iesu-christe-in-unione"
+      "LA": "Generalia"
     },
     "tags": [
       "la_domine_iesu_christe_in_unione",
@@ -13406,8 +8761,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Domine Iesu Christe, In Unione",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -13432,21 +8786,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#domine-iesu-christe-qui-mariae-et-ioseph-subditus"
+      "LA": "Christus"
     },
     "tags": [
       "la_domine_iesu_christe_qui_mariae_et_ioseph_subditus",
@@ -13457,8 +8797,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Domine Iesu Christe, qui Mariae et Ioseph subditus",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -13483,21 +8822,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#flos-carmeli"
+      "LA": "Maria"
     },
     "tags": [
       "la_flos_carmeli",
@@ -13508,8 +8833,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Flos Carmeli",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -13536,20 +8860,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/deceased-veterans",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_for_deceased_veterans",
       "national",
@@ -13558,8 +8868,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "For Deceased Veterans",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "For Deceased Veterans"
     ]
   },
   {
@@ -13586,20 +8895,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/hail-holy-queen-salve-regina",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_hail_holy_queen_the_salve_regina",
       "national",
@@ -13608,8 +8903,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Hail, Holy Queen (The Salve Regina)",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Hail, Holy Queen (The Salve Regina)"
     ]
   },
   {
@@ -13636,20 +8930,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/health-care-pulpit-announcement-and-prayer-pdf",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_health_care_pulpit_announcement_and_prayer_pdf",
       "national",
@@ -13658,8 +8938,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Health Care Pulpit Announcement and Prayer PDF",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Health Care Pulpit Announcement and Prayer PDF"
     ]
   },
   {
@@ -13686,20 +8965,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/health-care-pulpit-announcement-and-prayer-pdf-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_health_care_pulpit_announcement_and_prayer_pdf_in_spanish",
       "national",
@@ -13708,8 +8973,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Health Care Pulpit Announcement and Prayer PDF in Spanish",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Health Care Pulpit Announcement and Prayer PDF in Spanish"
     ]
   },
   {
@@ -13736,20 +9000,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/hear-us-o-god",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_hear_us_o_god",
       "national",
@@ -13758,8 +9008,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Hear Us, O God",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Hear Us, O God"
     ]
   },
   {
@@ -13786,20 +9035,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/help-me-listen-voice-creation",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_help_me_to_listen_to_the_voice_of_creation",
       "national",
@@ -13808,8 +9043,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Help Me to Listen to the Voice of Creation",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Help Me to Listen to the Voice of Creation"
     ]
   },
   {
@@ -13836,20 +9070,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/help-us-build-communities-gods-vision-justice",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_help_us_build_communities_in_god_s_vision_of_justice",
       "national",
@@ -13858,8 +9078,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Help Us Build Communities in God's Vision of Justice",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Help Us Build Communities in God's Vision of Justice"
     ]
   },
   {
@@ -13886,20 +9105,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/help-us-love-good-samaritan",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_help_us_to_love_like_the_good_samaritan",
       "national",
@@ -13908,8 +9113,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Help Us to Love Like the Good Samaritan",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Help Us to Love Like the Good Samaritan"
     ]
   },
   {
@@ -13936,20 +9140,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/hope-amidst-dark-clouds",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_hope_amidst_dark_clouds",
       "national",
@@ -13958,8 +9148,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Hope Amidst Dark Clouds",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Hope Amidst Dark Clouds"
     ]
   },
   {
@@ -13986,20 +9175,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/how-pray-chaplet-divine-mercy",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_how_to_pray_the_chaplet_of_divine_mercy",
       "national",
@@ -14008,8 +9183,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "How To Pray the Chaplet of Divine Mercy",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "How To Pray the Chaplet of Divine Mercy"
     ]
   },
   {
@@ -14034,21 +9208,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#iesu-dulcis-memoria"
+      "LA": "Christus"
     },
     "tags": [
       "la_iesu_dulcis_memoria",
@@ -14059,8 +9219,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Iesu Dulcis Memoria",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -14085,21 +9244,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#iesu-meus-miserere"
+      "LA": "Generalia"
     },
     "tags": [
       "la_iesu_meus_miserere",
@@ -14110,8 +9255,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Iesu Meus, Miserere",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -14138,20 +9282,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/intercessions-marginalized",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_intercessions_for_the_marginalized",
       "national",
@@ -14160,8 +9290,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Intercessions for the Marginalized",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Intercessions for the Marginalized"
     ]
   },
   {
@@ -14188,20 +9317,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/intercessory-prayers-marginalized",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_intercessory_prayers_the_marginalized",
       "national",
@@ -14210,8 +9325,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Intercessory Prayers: The Marginalized",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Intercessory Prayers: The Marginalized"
     ]
   },
   {
@@ -14236,21 +9350,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#inviolata"
+      "LA": "Maria"
     },
     "tags": [
       "la_inviolata",
@@ -14261,8 +9361,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Inviolata",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -14289,20 +9388,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "Vatican News - Kinh nguyện",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "https://www.vaticannews.va/vi/kinh-nguyen/act-of-love.html",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "vn_kinh_tin_cay_men",
       "national",
@@ -14311,8 +9396,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Kinh Tin - Cậy - Mến",
-      "Vatican News - Kinh nguyện"
+      "Kinh Tin - Cậy - Mến"
     ]
   },
   {
@@ -14339,20 +9423,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/lenten-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_lenten_prayer",
       "national",
@@ -14361,8 +9431,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Lenten Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Lenten Prayer"
     ]
   },
   {
@@ -14389,20 +9458,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/lenten-prayer-civility",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_lenten_prayer_for_civility",
       "national",
@@ -14411,8 +9466,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Lenten Prayer for Civility",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Lenten Prayer for Civility"
     ]
   },
   {
@@ -14439,20 +9493,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/lenten-prayers-unemployment-and-poverty",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_lenten_prayers_unemployment_and_poverty",
       "national",
@@ -14461,8 +9501,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Lenten Prayers - Unemployment and Poverty",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Lenten Prayers - Unemployment and Poverty"
     ]
   },
   {
@@ -14489,20 +9528,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/letania-por-la-libertad",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_letania_por_la_libertad",
       "national",
@@ -14511,8 +9536,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Letanía por la Libertad",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Letanía por la Libertad"
     ]
   },
   {
@@ -14539,20 +9563,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/life-and-dignity-human-person-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_life_and_dignity_of_the_human_person_prayer",
       "national",
@@ -14561,8 +9571,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Life and Dignity of the Human Person Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Life and Dignity of the Human Person Prayer"
     ]
   },
   {
@@ -14587,21 +9596,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#magnificat"
+      "LA": "Maria"
     },
     "tags": [
       "la_magnificat",
@@ -14612,8 +9607,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Magnificat",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -14640,20 +9634,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/memorare",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_memorare",
       "national",
@@ -14662,8 +9642,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Memorare",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Memorare"
     ]
   },
   {
@@ -14688,21 +9667,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary, general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#memorare"
+      "LA": "Maria"
     },
     "tags": [
       "la_memorare",
@@ -14713,8 +9678,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Memorare",
-      "mary, general",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -14741,20 +9705,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/morning-offering",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_morning_offering",
       "national",
@@ -14763,8 +9713,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Morning Offering",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Morning Offering"
     ]
   },
   {
@@ -14791,20 +9740,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/national-migration-week-collected-book-prayers-migrants",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_national_migration_week_a_collected_book_of_prayers_for_migrants",
       "national",
@@ -14813,8 +9748,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "National Migration Week: A Collected Book of Prayers for Migrants",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "National Migration Week: A Collected Book of Prayers for Migrants"
     ]
   },
   {
@@ -14839,21 +9773,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#nativitas-christi-novena-sancti-andreae"
+      "LA": "Sancti"
     },
     "tags": [
       "la_nativitas_christi_novena_sancti_andreae",
@@ -14864,8 +9784,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Nativitas Christi Novena Sancti Andreae",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -14892,20 +9811,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/novena-faithful-citizenship",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_novena_for_faithful_citizenship",
       "national",
@@ -14914,8 +9819,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Novena for Faithful Citizenship",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Novena for Faithful Citizenship"
     ]
   },
   {
@@ -14942,20 +9846,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/novena-solemnity-saint-joseph",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_novena_for_the_solemnity_of_saint_joseph",
       "national",
@@ -14964,8 +9854,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Novena for the Solemnity of Saint Joseph",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Novena for the Solemnity of Saint Joseph"
     ]
   },
   {
@@ -14990,21 +9879,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#nunc-dimittis"
+      "LA": "Christus"
     },
     "tags": [
       "la_nunc_dimittis",
@@ -15015,8 +9890,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Nunc Dimittis",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -15041,21 +9915,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-bone-iesu"
+      "LA": "Christus"
     },
     "tags": [
       "la_o_bone_iesu",
@@ -15066,8 +9926,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Bone Iesu",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -15092,21 +9951,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-caelestis-medice"
+      "LA": "Angeli"
     },
     "tags": [
       "la_o_caelestis_medice",
@@ -15117,8 +9962,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Caelestis Medice",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -15143,21 +9987,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "holy spirit"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-creator-sancte-spiritus"
+      "LA": "Spiritus Sanctus"
     },
     "tags": [
       "la_o_creator_sancte_spiritus",
@@ -15168,8 +9998,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Creator Sancte Spiritus",
-      "holy spirit",
-      "Pray Orémus"
+      "Spiritus Sanctus"
     ]
   },
   {
@@ -15194,21 +10023,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-divi-amoris-victima"
+      "LA": "Christus"
     },
     "tags": [
       "la_o_divi_amoris_victima",
@@ -15219,8 +10034,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Divi Amoris Victima",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -15245,21 +10059,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-fortitudo-dei"
+      "LA": "Angeli"
     },
     "tags": [
       "la_o_fortitudo_dei",
@@ -15270,8 +10070,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Fortitudo Dei",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -15296,21 +10095,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-princeps-caelestis-militiae"
+      "LA": "Angeli"
     },
     "tags": [
       "la_o_princeps_caelestis_militiae",
@@ -15321,8 +10106,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Princeps Caelestis Militiae",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -15349,20 +10133,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/o-sacrum-convivium",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_o_sacrum_convivium",
       "national",
@@ -15371,8 +10141,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "O Sacrum Convivium",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "O Sacrum Convivium"
     ]
   },
   {
@@ -15397,21 +10166,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "holy spirit"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#o-sancte-spiritus"
+      "LA": "Spiritus Sanctus"
     },
     "tags": [
       "la_o_sancte_spiritus",
@@ -15422,8 +10177,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "O Sancte Spiritus",
-      "holy spirit",
-      "Pray Orémus"
+      "Spiritus Sanctus"
     ]
   },
   {
@@ -15448,21 +10202,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#obsecro-te-angelice-spiritus"
+      "LA": "Angeli"
     },
     "tags": [
       "la_obsecro_te_angelice_spiritus",
@@ -15473,8 +10213,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Obsecro Te, Angelice Spiritus",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -15501,20 +10240,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-para-ciudadanos-fieles",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_para_ciudadanos_fieles",
       "national",
@@ -15523,8 +10248,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oracion Para Ciudadanos Fieles",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oracion Para Ciudadanos Fieles"
     ]
   },
   {
@@ -15551,20 +10275,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-de-los-fieles-por-la-jornada-de-oracion-por-la-paz-en-nuestras-comunidades-0",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_de_los_fieles_por_la_jornada_de_oracion_por_la_paz_en_nuestras",
       "national",
@@ -15573,8 +10283,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración De Los Fieles Por La Jornada De Oración Por La Paz En Nuestras Comunidades",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración De Los Fieles Por La Jornada De Oración Por La Paz En Nuestras Comunidades"
     ]
   },
   {
@@ -15601,20 +10310,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-despues-de-un-dia-de-elecciones-0",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_despues_de_un_dia_de_elecciones",
       "national",
@@ -15623,8 +10318,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración despues de un día de elecciones",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración despues de un día de elecciones"
     ]
   },
   {
@@ -15651,20 +10345,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-para-antes-de-unas-elecciones",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_para_antes_de_unas_elecciones",
       "national",
@@ -15673,8 +10353,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración para Antes de Unas Elecciones",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración para Antes de Unas Elecciones"
     ]
   },
   {
@@ -15701,20 +10380,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-para-abordar-el-pecado-del-racismo",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_para_abordar_el_pecado_del_racismo",
       "national",
@@ -15723,8 +10388,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración para abordar el pecado del racismo",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración para abordar el pecado del racismo"
     ]
   },
   {
@@ -15751,20 +10415,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-para-cuidar-de-nuestra-casa-comun",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_para_cuidar_de_nuestra_casa_comun",
       "national",
@@ -15773,8 +10423,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración para cuidar de nuestra casa común",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración para cuidar de nuestra casa común"
     ]
   },
   {
@@ -15801,20 +10450,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-para-llegar-ser-buenos-mayordomos-de-la-creacion-de-dios",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_para_llegar_a_ser_buenos_mayordomos_de_la_creacion_de_dios",
       "national",
@@ -15823,8 +10458,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración para llegar a ser buenos mayordomos de la creación de Dios",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración para llegar a ser buenos mayordomos de la creación de Dios"
     ]
   },
   {
@@ -15851,20 +10485,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-para-sanar-la-division-racial",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_para_sanar_la_division_racial",
       "national",
@@ -15873,8 +10493,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración para sanar la división racial",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración para sanar la división racial"
     ]
   },
   {
@@ -15901,20 +10520,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-por-el-papa-benedicto-xvi",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_por_el_papa_benedicto_xvi",
       "national",
@@ -15923,8 +10528,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración por el Papa Benedicto XVI",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración por el Papa Benedicto XVI"
     ]
   },
   {
@@ -15951,20 +10555,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-por-el-sinodo-sobre-la-sinodalidad",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_por_el_sinodo_sobre_la_sinodalidad",
       "national",
@@ -15973,8 +10563,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración por el Sínodo sobre la Sinodalidad",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración por el Sínodo sobre la Sinodalidad"
     ]
   },
   {
@@ -16001,20 +10590,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/oracion-por-la-unidad-para-superar-las-divisiones",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_oracion_por_la_unidad_para_superar_las_divisiones",
       "national",
@@ -16023,8 +10598,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Oración por la unidad, para superar las divisiones",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Oración por la unidad, para superar las divisiones"
     ]
   },
   {
@@ -16051,20 +10625,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/orando-como-un-ciudadano-fiel",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_orando_como_un_ciudadano_fiel",
       "national",
@@ -16073,8 +10633,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Orando Como Un Ciudadano Fiel",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Orando Como Un Ciudadano Fiel"
     ]
   },
   {
@@ -16099,21 +10658,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-ad-angelum-custodem"
+      "LA": "Angeli"
     },
     "tags": [
       "la_oratio_ad_angelum_custodem",
@@ -16124,8 +10669,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Ad Angelum Custodem",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -16150,21 +10694,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "divine mercy chaplet"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-finalis"
+      "LA": "Coronula Divinae Misericordiae"
     },
     "tags": [
       "la_oratio_finalis",
@@ -16175,8 +10705,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Finalis",
-      "divine mercy chaplet",
-      "Pray Orémus"
+      "Coronula Divinae Misericordiae"
     ]
   },
   {
@@ -16201,21 +10730,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-iesu"
+      "LA": "Christus"
     },
     "tags": [
       "la_oratio_iesu",
@@ -16226,8 +10741,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Iesu",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -16252,21 +10766,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "divine mercy chaplet"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-incipiens"
+      "LA": "Coronula Divinae Misericordiae"
     },
     "tags": [
       "la_oratio_incipiens",
@@ -16277,8 +10777,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Incipiens",
-      "divine mercy chaplet",
-      "Pray Orémus"
+      "Coronula Divinae Misericordiae"
     ]
   },
   {
@@ -16303,21 +10802,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "holy spirit"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-pro-propagatione-fidei"
+      "LA": "Spiritus Sanctus"
     },
     "tags": [
       "la_oratio_pro_propagatione_fidei",
@@ -16328,8 +10813,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Pro Propagatione Fidei",
-      "holy spirit",
-      "Pray Orémus"
+      "Spiritus Sanctus"
     ]
   },
   {
@@ -16354,21 +10838,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-sagittae-aureae"
+      "LA": "Generalia"
     },
     "tags": [
       "la_oratio_sagittae_aureae",
@@ -16379,8 +10849,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Sagittae Aureae",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -16405,21 +10874,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-sancti-augustini"
+      "LA": "Sancti"
     },
     "tags": [
       "la_oratio_sancti_augustini",
@@ -16430,8 +10885,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Sancti Augustini",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -16456,21 +10910,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-sancti-benedicti"
+      "LA": "Sancti"
     },
     "tags": [
       "la_oratio_sancti_benedicti",
@@ -16481,8 +10921,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio Sancti Benedicti",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -16507,21 +10946,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#oratio-ad-dominum-nostrum-in-cruce"
+      "LA": "Christus"
     },
     "tags": [
       "la_oratio_ad_dominum_nostrum_in_cruce",
@@ -16532,8 +10957,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Oratio ad Dominum Nostrum in Cruce",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -16558,21 +10982,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "divine mercy chaplet"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#pater-aeterne"
+      "LA": "Coronula Divinae Misericordiae"
     },
     "tags": [
       "la_pater_aeterne",
@@ -16583,8 +10993,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Pater Aeterne",
-      "divine mercy chaplet",
-      "Pray Orémus"
+      "Coronula Divinae Misericordiae"
     ]
   },
   {
@@ -16609,21 +11018,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#petitiones-sancti-augustini"
+      "LA": "Christus"
     },
     "tags": [
       "la_petitiones_sancti_augustini",
@@ -16634,8 +11029,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Petitiones Sancti Augustini",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -16662,20 +11056,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-mercy",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_mercy",
       "national",
@@ -16684,8 +11064,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis' Prayer for Mercy",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis' Prayer for Mercy"
     ]
   },
   {
@@ -16712,20 +11091,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-way-cross",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_at_the_way_of_the_cross",
       "national",
@@ -16734,8 +11099,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis’ Prayer at the Way of the Cross",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis’ Prayer at the Way of the Cross"
     ]
   },
   {
@@ -16762,20 +11126,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-peace",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_peace",
       "national",
@@ -16784,8 +11134,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis’ Prayer for Peace",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis’ Prayer for Peace"
     ]
   },
   {
@@ -16812,20 +11161,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-peace-and-protection-violence-and-terrorism",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_peace_and_protection_from_violence_and_from_te",
       "national",
@@ -16834,8 +11169,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis’ Prayer for Peace and Protection from Violence and from Terrorism",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis’ Prayer for Peace and Protection from Violence and from Terrorism"
     ]
   },
   {
@@ -16862,20 +11196,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-workers",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_workers",
       "national",
@@ -16884,8 +11204,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis’ Prayer for Workers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis’ Prayer for Workers"
     ]
   },
   {
@@ -16912,20 +11231,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-immaculate-conception",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_the_immaculate_conception",
       "national",
@@ -16934,8 +11239,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis’ Prayer for the Immaculate Conception",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis’ Prayer for the Immaculate Conception"
     ]
   },
   {
@@ -16962,20 +11266,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pope-francis-prayer-joy-gospel",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pope_francis_prayer_for_the_joy_of_the_gospel",
       "national",
@@ -16984,8 +11274,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pope Francis’ Prayer for the Joy of the Gospel",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pope Francis’ Prayer for the Joy of the Gospel"
     ]
   },
   {
@@ -17012,20 +11301,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-after-election",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_after_an_election",
       "national",
@@ -17034,8 +11309,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer After an Election",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer After an Election"
     ]
   },
   {
@@ -17062,20 +11336,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-against-racism",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_against_racism",
       "national",
@@ -17084,8 +11344,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Against Racism",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Against Racism"
     ]
   },
   {
@@ -17112,20 +11371,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-against-racism-prayer-card-english",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_against_racism_prayer_card_english",
       "national",
@@ -17134,8 +11379,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Against Racism Prayer Card (English)",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Against Racism Prayer Card (English)"
     ]
   },
   {
@@ -17162,20 +11406,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-against-racism-prayer-card-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_against_racism_prayer_card_spanish",
       "national",
@@ -17184,8 +11414,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Against Racism Prayer Card (Spanish)",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Against Racism Prayer Card (Spanish)"
     ]
   },
   {
@@ -17212,20 +11441,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-election",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_before_an_election",
       "national",
@@ -17234,8 +11449,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Before an Election",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Before an Election"
     ]
   },
   {
@@ -17262,20 +11476,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-card-day-prayer-persecuted-christians-november-26-2017",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_card_for_day_of_prayer_for_persecuted_christians_november_26_20",
       "national",
@@ -17284,8 +11484,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Card for Day of Prayer for Persecuted Christians, November 26 2017",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Card for Day of Prayer for Persecuted Christians, November 26 2017"
     ]
   },
   {
@@ -17312,20 +11511,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-card-anniversaries-hiroshima-and-nagasaki",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_card_for_the_anniversaries_of_hiroshima_and_nagasaki",
       "national",
@@ -17334,8 +11519,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Card for the Anniversaries of Hiroshima and Nagasaki",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Card for the Anniversaries of Hiroshima and Nagasaki"
     ]
   },
   {
@@ -17362,20 +11546,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-card-syria-commemorating-visit-his-beatitude-gregorios-iii",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_card_of_syria_commemorating_visit_from_his_beatitude_gregorios_",
       "national",
@@ -17384,8 +11554,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Card of Syria Commemorating Visit from His Beatitude Gregorios III",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Card of Syria Commemorating Visit from His Beatitude Gregorios III"
     ]
   },
   {
@@ -17412,20 +11581,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-during-difficult-economic-times",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_during_difficult_economic_times",
       "national",
@@ -17434,8 +11589,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer During Difficult Economic Times",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer During Difficult Economic Times"
     ]
   },
   {
@@ -17462,20 +11616,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-canticle-saint-john-cross",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_from_a_canticle_by_saint_john_of_the_cross",
       "national",
@@ -17484,8 +11624,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer From a Canticle by Saint John of the Cross",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer From a Canticle by Saint John of the Cross"
     ]
   },
   {
@@ -17512,20 +11651,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-inspired-pope-francis-laudate-deum-praise-god",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_inspired_by_pope_francis_laudate_deum_praise_god",
       "national",
@@ -17534,8 +11659,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Inspired by Pope Francis' Laudate Deum (Praise God)",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Inspired by Pope Francis' Laudate Deum (Praise God)"
     ]
   },
   {
@@ -17562,20 +11686,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-service-national-day-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_service_for_national_day_of_prayer",
       "national",
@@ -17584,8 +11694,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Service for National Day of Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Service for National Day of Prayer"
     ]
   },
   {
@@ -17612,20 +11721,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-service-put-two-feet-love-action",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_service_to_put_two_feet_of_love_in_action",
       "national",
@@ -17634,8 +11729,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Service to Put Two Feet of Love in Action",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Service to Put Two Feet of Love in Action"
     ]
   },
   {
@@ -17662,20 +11756,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-service-be-disciples-mission",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_service_to_be_disciples_on_mission",
       "national",
@@ -17684,8 +11764,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer Service to be Disciples on Mission",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer Service to be Disciples on Mission"
     ]
   },
   {
@@ -17712,20 +11791,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-when-gathering-meet-or-study",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_when_gathering_to_meet_or_study",
       "national",
@@ -17734,8 +11799,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer When Gathering to Meet or Study",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer When Gathering to Meet or Study"
     ]
   },
   {
@@ -17762,20 +11826,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-basic-rights",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_basic_rights",
       "national",
@@ -17784,8 +11834,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Basic Rights",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Basic Rights"
     ]
   },
   {
@@ -17812,20 +11861,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-charity-truth",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_charity_in_truth",
       "national",
@@ -17834,8 +11869,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Charity in Truth",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Charity in Truth"
     ]
   },
   {
@@ -17862,20 +11896,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-civic-leaders",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_civic_leaders",
       "national",
@@ -17884,8 +11904,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Civic Leaders",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Civic Leaders"
     ]
   },
   {
@@ -17912,20 +11931,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-community",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_community",
       "national",
@@ -17934,8 +11939,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Community",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Community"
     ]
   },
   {
@@ -17962,20 +11966,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-end-nuclear-weapons",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_end_of_nuclear_weapons",
       "national",
@@ -17984,8 +11974,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for End of Nuclear Weapons",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for End of Nuclear Weapons"
     ]
   },
   {
@@ -18012,20 +12001,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-families",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_families",
       "national",
@@ -18034,8 +12009,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Families",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Families"
     ]
   },
   {
@@ -18062,20 +12036,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-healing-victims-abuse",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_healing_victims_of_abuse",
       "national",
@@ -18084,8 +12044,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Healing Victims of Abuse",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Healing Victims of Abuse"
     ]
   },
   {
@@ -18112,20 +12071,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-justice",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_justice",
       "national",
@@ -18134,8 +12079,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Justice",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Justice"
     ]
   },
   {
@@ -18162,20 +12106,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-labor-day",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_labor_day",
       "national",
@@ -18184,8 +12114,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Labor Day",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Labor Day"
     ]
   },
   {
@@ -18212,20 +12141,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-life-and-dignity",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_life_and_dignity",
       "national",
@@ -18234,8 +12149,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Life and Dignity",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Life and Dignity"
     ]
   },
   {
@@ -18262,20 +12176,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-memorial-day-last-monday-may",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_memorial_day_last_monday_in_may",
       "national",
@@ -18284,8 +12184,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Memorial Day (Last Monday in May)",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Memorial Day (Last Monday in May)"
     ]
   },
   {
@@ -18312,20 +12211,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-migrant-families",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_migrant_families",
       "national",
@@ -18334,8 +12219,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Migrant Families",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Migrant Families"
     ]
   },
   {
@@ -18362,20 +12246,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-migrants",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_migrants",
       "national",
@@ -18384,8 +12254,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Migrants",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Migrants"
     ]
   },
   {
@@ -18412,20 +12281,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-migrants-and-refugees",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_migrants_and_refugees",
       "national",
@@ -18434,8 +12289,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Migrants and Refugees",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Migrants and Refugees"
     ]
   },
   {
@@ -18462,20 +12316,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-our-troops",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_our_troops",
       "national",
@@ -18484,8 +12324,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Our Troops",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Our Troops"
     ]
   },
   {
@@ -18512,20 +12351,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-peace-iraq",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_peace_in_iraq",
       "national",
@@ -18534,8 +12359,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Peace in Iraq",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Peace in Iraq"
     ]
   },
   {
@@ -18562,20 +12386,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-peace-our-communities-prayer-card-english",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_peace_in_our_communities_prayer_card_in_english",
       "national",
@@ -18584,8 +12394,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Peace in Our Communities Prayer Card in English",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Peace in Our Communities Prayer Card in English"
     ]
   },
   {
@@ -18612,20 +12421,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-peace-our-communities-prayer-card-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_peace_in_our_communities_prayer_card_in_spanish",
       "national",
@@ -18634,8 +12429,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Peace in Our Communities Prayer Card in Spanish",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Peace in Our Communities Prayer Card in Spanish"
     ]
   },
   {
@@ -18662,20 +12456,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-peace-pope-francis",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_peace_of_pope_francis",
       "national",
@@ -18684,8 +12464,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Peace of Pope Francis",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Peace of Pope Francis"
     ]
   },
   {
@@ -18712,20 +12491,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-pope-benedict-xvi",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_pope_benedict_xvi",
       "national",
@@ -18734,8 +12499,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Pope Benedict XVI",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Pope Benedict XVI"
     ]
   },
   {
@@ -18762,20 +12526,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-pope-leo-xiv",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_pope_leo_xiv",
       "national",
@@ -18784,8 +12534,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Pope Leo XIV",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Pope Leo XIV"
     ]
   },
   {
@@ -18812,20 +12561,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-priests",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_priests",
       "national",
@@ -18834,8 +12569,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Priests",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Priests"
     ]
   },
   {
@@ -18862,20 +12596,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-protection-conscience-rights-health-care",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_protection_of_conscience_rights_in_health_care",
       "national",
@@ -18884,8 +12604,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Protection of Conscience Rights in Health Care",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Protection of Conscience Rights in Health Care"
     ]
   },
   {
@@ -18912,20 +12631,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-safety",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_safety",
       "national",
@@ -18934,8 +12639,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Safety",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Safety"
     ]
   },
   {
@@ -18962,20 +12666,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-solidarity",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_solidarity",
       "national",
@@ -18984,8 +12674,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Solidarity",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Solidarity"
     ]
   },
   {
@@ -19012,20 +12701,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-students",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_students",
       "national",
@@ -19034,8 +12709,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Students",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Students"
     ]
   },
   {
@@ -19062,20 +12736,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-teachers",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_teachers",
       "national",
@@ -19084,8 +12744,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Teachers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Teachers"
     ]
   },
   {
@@ -19112,20 +12771,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-those-poverty",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_those_in_poverty",
       "national",
@@ -19134,8 +12779,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Those in Poverty",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Those in Poverty"
     ]
   },
   {
@@ -19162,20 +12806,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-unity-overcome-division",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_unity_to_overcome_division",
       "national",
@@ -19184,8 +12814,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Unity, to Overcome Division",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Unity, to Overcome Division"
     ]
   },
   {
@@ -19212,20 +12841,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-vocations",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_vocations",
       "national",
@@ -19234,8 +12849,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Vocations",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Vocations"
     ]
   },
   {
@@ -19262,20 +12876,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-work",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_work",
       "national",
@@ -19284,8 +12884,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Work",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Work"
     ]
   },
   {
@@ -19312,20 +12911,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-youth",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_youth",
       "national",
@@ -19334,8 +12919,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for Youth",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for Youth"
     ]
   },
   {
@@ -19362,20 +12946,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-victim-accident-or-violence",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_a_victim_of_accident_or_violence",
       "national",
@@ -19384,8 +12954,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for a Victim of Accident or Violence",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for a Victim of Accident or Violence"
     ]
   },
   {
@@ -19412,20 +12981,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-election-new-pope",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_the_election_of_a_new_pope",
       "national",
@@ -19434,8 +12989,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for the Election of a New Pope",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for the Election of a New Pope"
     ]
   },
   {
@@ -19462,20 +13016,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-new-evangelization",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_the_new_evangelization",
       "national",
@@ -19484,8 +13024,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for the New Evangelization",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for the New Evangelization"
     ]
   },
   {
@@ -19512,20 +13051,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-new-year",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_the_new_year",
       "national",
@@ -19534,8 +13059,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for the New Year",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for the New Year"
     ]
   },
   {
@@ -19562,20 +13086,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-poor",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_the_poor",
       "national",
@@ -19584,8 +13094,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for the Poor",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for the Poor"
     ]
   },
   {
@@ -19612,20 +13121,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-protection-religious-liberty",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_the_protection_of_religious_liberty",
       "national",
@@ -19634,8 +13129,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for the Protection of Religious Liberty",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for the Protection of Religious Liberty"
     ]
   },
   {
@@ -19662,20 +13156,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-synod-synodality",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_for_the_synod_on_synodality",
       "national",
@@ -19684,8 +13164,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer for the Synod on Synodality",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer for the Synod on Synodality"
     ]
   },
   {
@@ -19712,20 +13191,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-canticle-st-john-cross",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_from_a_canticle_by_st_john_of_the_cross",
       "national",
@@ -19734,8 +13199,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer from a Canticle by St. John of the Cross",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer from a Canticle by St. John of the Cross"
     ]
   },
   {
@@ -19762,20 +13226,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-time-financial-difficulties",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_in_time_of_financial_difficulties",
       "national",
@@ -19784,8 +13234,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer in Time of Financial Difficulties",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer in Time of Financial Difficulties"
     ]
   },
   {
@@ -19812,20 +13261,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-times-seeking-gods-will",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_in_times_of_seeking_god_s_will",
       "national",
@@ -19834,8 +13269,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer in Times of Seeking God's Will",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer in Times of Seeking God's Will"
     ]
   },
   {
@@ -19862,20 +13296,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-times-suffering-and-need",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_in_times_of_suffering_and_need",
       "national",
@@ -19884,8 +13304,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer in Times of Suffering and Need",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer in Times of Suffering and Need"
     ]
   },
   {
@@ -19912,20 +13331,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-elderly-pope-saint-john-paul-ii",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_of_the_elderly_pope_saint_john_paul_ii",
       "national",
@@ -19934,8 +13339,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer of the Elderly, Pope Saint John Paul II",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer of the Elderly, Pope Saint John Paul II"
     ]
   },
   {
@@ -19962,20 +13366,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-faithful-day-prayer-peace-our-communities",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_of_the_faithful_for_the_day_of_prayer_for_peace_in_our_communit",
       "national",
@@ -19984,8 +13374,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer of the Faithful for the Day of Prayer for Peace in Our Communities",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer of the Faithful for the Day of Prayer for Peace in Our Communities"
     ]
   },
   {
@@ -20012,20 +13401,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-solemnity-immaculate-conception",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_on_the_solemnity_of_the_immaculate_conception",
       "national",
@@ -20034,8 +13409,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer on the Solemnity of the Immaculate Conception",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer on the Solemnity of the Immaculate Conception"
     ]
   },
   {
@@ -20062,20 +13436,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-address-sin-racism",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_address_the_sin_of_racism",
       "national",
@@ -20084,8 +13444,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Address the Sin of Racism",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Address the Sin of Racism"
     ]
   },
   {
@@ -20112,20 +13471,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-be-disciples-and-missionaries",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_be_disciples_and_missionaries",
       "national",
@@ -20134,8 +13479,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Be Disciples and Missionaries",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Be Disciples and Missionaries"
     ]
   },
   {
@@ -20162,20 +13506,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-become-stewards-gods-creation",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_become_stewards_of_god_s_creation",
       "national",
@@ -20184,8 +13514,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Become Stewards of God's Creation",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Become Stewards of God's Creation"
     ]
   },
   {
@@ -20212,20 +13541,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-confront-global-poverty",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_confront_global_poverty",
       "national",
@@ -20234,8 +13549,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Confront Global Poverty",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Confront Global Poverty"
     ]
   },
   {
@@ -20262,20 +13576,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-discern-vocation",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_discern_a_vocation",
       "national",
@@ -20284,8 +13584,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Discern a Vocation",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Discern a Vocation"
     ]
   },
   {
@@ -20312,20 +13611,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-end-trafficking",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_end_trafficking",
       "national",
@@ -20334,8 +13619,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to End Trafficking",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to End Trafficking"
     ]
   },
   {
@@ -20362,20 +13646,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-heal-racial-division",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_heal_racial_division",
       "national",
@@ -20384,8 +13654,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Heal Racial Division",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Heal Racial Division"
     ]
   },
   {
@@ -20412,20 +13681,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-listen-heal-and-respond",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_listen_heal_and_respond",
       "national",
@@ -20434,8 +13689,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Listen, Heal and Respond",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Listen, Heal and Respond"
     ]
   },
   {
@@ -20462,20 +13716,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-live-gospel-be-disciples",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_live_the_gospel_be_disciples",
       "national",
@@ -20484,8 +13724,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Live the Gospel, Be Disciples",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Live the Gospel, Be Disciples"
     ]
   },
   {
@@ -20512,20 +13751,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-overcome-indifference",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_overcome_indifference",
       "national",
@@ -20534,8 +13759,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Overcome Indifference",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Overcome Indifference"
     ]
   },
   {
@@ -20562,20 +13786,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-saint-juan-diego",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_saint_juan_diego",
       "national",
@@ -20584,8 +13794,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Saint Juan Diego",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Saint Juan Diego"
     ]
   },
   {
@@ -20612,20 +13821,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-your-guardian-angel",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_your_guardian_angel",
       "national",
@@ -20634,8 +13829,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to Your Guardian Angel",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to Your Guardian Angel"
     ]
   },
   {
@@ -20662,20 +13856,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-our-lord-jesus-christ-crucified",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_our_lord_jesus_christ_crucified",
       "national",
@@ -20684,8 +13864,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to our Lord Jesus Christ Crucified",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to our Lord Jesus Christ Crucified"
     ]
   },
   {
@@ -20712,20 +13891,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-holy-spirit",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_the_holy_spirit",
       "national",
@@ -20734,8 +13899,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to the Holy Spirit",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to the Holy Spirit"
     ]
   },
   {
@@ -20762,20 +13926,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-sacred-heart-jesus",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_the_sacred_heart_of_jesus",
       "national",
@@ -20784,8 +13934,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayer to the Sacred Heart of Jesus",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayer to the Sacred Heart of Jesus"
     ]
   },
   {
@@ -20812,20 +13961,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-peace-middle-east-2008",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_for_peace_in_the_middle_east_2008",
       "national",
@@ -20834,8 +13969,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers for Peace in the Middle East, 2008",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Peace in the Middle East, 2008"
     ]
   },
   {
@@ -20862,20 +13996,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-times-trouble",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_for_times_of_trouble",
       "national",
@@ -20884,8 +14004,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers for Times of Trouble",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Times of Trouble"
     ]
   },
   {
@@ -20912,20 +14031,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-vocations",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_for_vocations",
       "national",
@@ -20934,8 +14039,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers for Vocations",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for Vocations"
     ]
   },
   {
@@ -20962,20 +14066,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-health-and-dignity-sick",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_for_the_health_and_dignity_of_the_sick",
       "national",
@@ -20984,8 +14074,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers for the Health and Dignity of the Sick",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers for the Health and Dignity of the Sick"
     ]
   },
   {
@@ -21012,20 +14101,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-times-seeking-will-god",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_in_times_of_seeking_the_will_of_god",
       "national",
@@ -21034,8 +14109,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers in Times of Seeking the Will of God",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers in Times of Seeking the Will of God"
     ]
   },
   {
@@ -21062,20 +14136,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-time-war",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_in_a_time_of_war",
       "national",
@@ -21084,8 +14144,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers in a Time of War",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers in a Time of War"
     ]
   },
   {
@@ -21112,20 +14171,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-care-creation-0",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_on_the_care_of_creation",
       "national",
@@ -21134,8 +14179,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers on the Care of Creation",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers on the Care of Creation"
     ]
   },
   {
@@ -21162,20 +14206,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayers-care-creation",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayers_to_care_for_creation",
       "national",
@@ -21184,8 +14214,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Prayers to Care for Creation",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Prayers to Care for Creation"
     ]
   },
   {
@@ -21212,20 +14241,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/praying-faithful-citizen",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_praying_like_a_faithful_citizen",
       "national",
@@ -21234,8 +14249,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Praying Like a Faithful Citizen",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Praying Like a Faithful Citizen"
     ]
   },
   {
@@ -21262,20 +14276,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/praying-faithful-citizen-pdf",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_praying_like_a_faithful_citizen_pdf",
       "national",
@@ -21284,8 +14284,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Praying Like a Faithful Citizen PDF",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Praying Like a Faithful Citizen PDF"
     ]
   },
   {
@@ -21310,21 +14309,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#princeps-gloriosissime"
+      "LA": "Angeli"
     },
     "tags": [
       "la_princeps_gloriosissime",
@@ -21335,8 +14320,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Princeps Gloriosissime",
-      "angel",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
@@ -21361,21 +14345,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "divine mercy chaplet"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#pro-dolorosa"
+      "LA": "Coronula Divinae Misericordiae"
     },
     "tags": [
       "la_pro_dolorosa",
@@ -21386,8 +14356,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Pro Dolorosa",
-      "divine mercy chaplet",
-      "Pray Orémus"
+      "Coronula Divinae Misericordiae"
     ]
   },
   {
@@ -21414,20 +14383,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/pro-life-prayers",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_pro_life_prayers",
       "national",
@@ -21436,8 +14391,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Pro-Life Prayers",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Pro-Life Prayers"
     ]
   },
   {
@@ -21462,21 +14416,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#quinque-orationes-chapleti-sanctae-faciei"
+      "LA": "Generalia"
     },
     "tags": [
       "la_quinque_orationes_chapleti_sanctae_faciei",
@@ -21487,8 +14427,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Quinque Orationes Chapleti Sanctae Faciei",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -21513,21 +14452,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#responsorium-pressi-malorum"
+      "LA": "Sancti"
     },
     "tags": [
       "la_responsorium_pressi_malorum",
@@ -21538,8 +14463,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Responsorium Pressi Malorum",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -21564,21 +14488,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#responsorium-si-vis-patronum"
+      "LA": "Sancti"
     },
     "tags": [
       "la_responsorium_si_vis_patronum",
@@ -21589,8 +14499,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Responsorium Si Vis Patronum",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -21617,20 +14526,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/sample-prayers-sudan",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_sample_prayers_for_sudan",
       "national",
@@ -21639,8 +14534,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Sample Prayers for Sudan",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Sample Prayers for Sudan"
     ]
   },
   {
@@ -21665,21 +14559,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "divine mercy chaplet"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#sancte-deus"
+      "LA": "Coronula Divinae Misericordiae"
     },
     "tags": [
       "la_sancte_deus",
@@ -21690,8 +14570,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Sancte Deus",
-      "divine mercy chaplet",
-      "Pray Orémus"
+      "Coronula Divinae Misericordiae"
     ]
   },
   {
@@ -21716,21 +14595,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "angel, general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#sancte-michael-archangele"
+      "LA": "Angeli"
     },
     "tags": [
       "la_sancte_michael_archangele",
@@ -21741,13 +14606,12 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Sancte Michael Archangele",
-      "angel, general",
-      "Pray Orémus"
+      "Angeli"
     ]
   },
   {
     "id": "en_scriptural_stations_of_the_cross",
-    "category": "national",
+    "category": "stations_of_cross",
     "titles": {
       "KR": "",
       "VN": "",
@@ -21769,30 +14633,15 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/scriptural-stations-cross",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_scriptural_stations_of_the_cross",
-      "national",
-      "국가별·기타 기도문",
-      "Kinh theo từng nước và kinh khác",
-      "Local and Other Prayers",
-      "各国・その他の祈り",
-      "Preces locales et aliae",
-      "Scriptural Stations of the Cross",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "stations_of_cross",
+      "십자가의 길",
+      "Đàng Thánh Giá",
+      "Stations of the Cross",
+      "十字架の道行き",
+      "Via Crucis",
+      "Scriptural Stations of the Cross"
     ]
   },
   {
@@ -21819,20 +14668,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/share-journey-prayer-service-solidarity-dreamers-and-migrants",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_share_the_journey_prayer_service_in_solidarity_with_dreamers_and_migra",
       "national",
@@ -21841,8 +14676,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Share the Journey: Prayer Service in Solidarity with Dreamers and Migrants",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Share the Journey: Prayer Service in Solidarity with Dreamers and Migrants"
     ]
   },
   {
@@ -21869,20 +14703,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/short-prayer-vocations",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_short_prayer_for_vocations",
       "national",
@@ -21891,8 +14711,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Short Prayer for Vocations",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Short Prayer for Vocations"
     ]
   },
   {
@@ -21919,20 +14738,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/show-us-your-face",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_show_us_your_face",
       "national",
@@ -21941,8 +14746,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Show Us Your Face",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Show Us Your Face"
     ]
   },
   {
@@ -21967,21 +14771,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "saint"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#si-quaeris-miracula-ite-ad-antonio"
+      "LA": "Sancti"
     },
     "tags": [
       "la_si_quaeris_miracula_ite_ad_antonio",
@@ -21992,8 +14782,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Si Quaeris Miracula, Ite Ad Antonio",
-      "saint",
-      "Pray Orémus"
+      "Sancti"
     ]
   },
   {
@@ -22020,20 +14809,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/st-peter-claver-prayer-service",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_st_peter_claver_prayer_service",
       "national",
@@ -22042,13 +14817,12 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "St. Peter Claver Prayer Service",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "St. Peter Claver Prayer Service"
     ]
   },
   {
     "id": "en_stations_of_the_cross_for_life",
-    "category": "national",
+    "category": "stations_of_cross",
     "titles": {
       "KR": "",
       "VN": "",
@@ -22070,30 +14844,15 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/stations-cross-life",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_stations_of_the_cross_for_life",
-      "national",
-      "국가별·기타 기도문",
-      "Kinh theo từng nước và kinh khác",
-      "Local and Other Prayers",
-      "各国・その他の祈り",
-      "Preces locales et aliae",
-      "Stations of the Cross for Life",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "stations_of_cross",
+      "십자가의 길",
+      "Đàng Thánh Giá",
+      "Stations of the Cross",
+      "十字架の道行き",
+      "Via Crucis",
+      "Stations of the Cross for Life"
     ]
   },
   {
@@ -22118,21 +14877,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#sub-tuum-praesidium"
+      "LA": "Maria"
     },
     "tags": [
       "la_sub_tuum_praesidium",
@@ -22143,8 +14888,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Sub Tuum Praesidium",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -22169,21 +14913,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "general"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#surge-domine"
+      "LA": "Generalia"
     },
     "tags": [
       "la_surge_domine",
@@ -22194,8 +14924,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Surge Domine",
-      "general",
-      "Pray Orémus"
+      "Generalia"
     ]
   },
   {
@@ -22220,21 +14949,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "christ"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#suscipe-domine"
+      "LA": "Christus"
     },
     "tags": [
       "la_suscipe_domine",
@@ -22245,8 +14960,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Suscipe Domine",
-      "christ",
-      "Pray Orémus"
+      "Christus"
     ]
   },
   {
@@ -22273,20 +14987,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/synod-prayer-unity",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_synod_prayer_for_unity",
       "national",
@@ -22295,8 +14995,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Synod Prayer for Unity",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Synod Prayer for Unity"
     ]
   },
   {
@@ -22323,20 +15022,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/tantum-ergo",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_tantum_ergo",
       "national",
@@ -22345,8 +15030,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Tantum Ergo",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Tantum Ergo"
     ]
   },
   {
@@ -22373,20 +15057,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/thanksgiving-day-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_thanksgiving_day_prayer",
       "national",
@@ -22395,8 +15065,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Thanksgiving Day Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Thanksgiving Day Prayer"
     ]
   },
   {
@@ -22405,7 +15074,7 @@
     "titles": {
       "KR": "",
       "VN": "",
-      "EN": "The \"O Antiphons\" of Advent",
+      "EN": "The 'O Antiphons' of Advent",
       "JP": "",
       "LA": ""
     },
@@ -22423,20 +15092,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/o-antiphons-advent",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_the_o_antiphons_of_advent",
       "national",
@@ -22445,8 +15100,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "The \"O Antiphons\" of Advent",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "The 'O Antiphons' of Advent"
     ]
   },
   {
@@ -22473,20 +15127,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/jubilee-prayer",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_the_jubilee_prayer",
       "national",
@@ -22495,8 +15135,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "The Jubilee Prayer",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "The Jubilee Prayer"
     ]
   },
   {
@@ -22523,20 +15162,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/popes-monthly-intentions-2026",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_the_pope_s_monthly_intentions_for_2026",
       "national",
@@ -22545,8 +15170,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "The Pope's Monthly Intentions for 2026",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "The Pope's Monthly Intentions for 2026"
     ]
   },
   {
@@ -22571,21 +15195,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "mary"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#tota-pulchra-es-maria"
+      "LA": "Maria"
     },
     "tags": [
       "la_tota_pulchra_es_maria",
@@ -22596,8 +15206,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Tota Pulchra Es Maria",
-      "mary",
-      "Pray Orémus"
+      "Maria"
     ]
   },
   {
@@ -22622,21 +15231,7 @@
       "VN": "",
       "EN": "",
       "JP": "",
-      "LA": "holy spirit"
-    },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "Pray Orémus"
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": "https://prayoremus.com/prayers#veni-creator-spiritus"
+      "LA": "Spiritus Sanctus"
     },
     "tags": [
       "la_veni_creator_spiritus",
@@ -22647,8 +15242,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "Veni Creator Spiritus",
-      "holy spirit",
-      "Pray Orémus"
+      "Spiritus Sanctus"
     ]
   },
   {
@@ -22675,20 +15269,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/veterans-day",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_veterans_day",
       "national",
@@ -22697,13 +15277,12 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Veterans Day",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Veterans Day"
     ]
   },
   {
     "id": "en_via_crucis_oraciones_de_los_fieles",
-    "category": "national",
+    "category": "stations_of_cross",
     "titles": {
       "KR": "",
       "VN": "",
@@ -22725,30 +15304,15 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/crucis-oraciones-de-los-fieles",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_via_crucis_oraciones_de_los_fieles",
-      "national",
-      "국가별·기타 기도문",
-      "Kinh theo từng nước và kinh khác",
-      "Local and Other Prayers",
-      "各国・その他の祈り",
-      "Preces locales et aliae",
-      "Vía Crucis Oraciones de los Fieles",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "stations_of_cross",
+      "십자가의 길",
+      "Đàng Thánh Giá",
+      "Stations of the Cross",
+      "十字架の道行き",
+      "Via Crucis",
+      "Vía Crucis Oraciones de los Fieles"
     ]
   },
   {
@@ -22775,20 +15339,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/we-are-all-gods-image",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_we_are_all_in_god_s_image",
       "national",
@@ -22797,8 +15347,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "We Are All in God's Image",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "We Are All in God's Image"
     ]
   },
   {
@@ -22825,20 +15374,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/we-are-all-gods-image-spanish",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_we_are_all_in_god_s_image_spanish",
       "national",
@@ -22847,8 +15382,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "We Are All in God's Image - Spanish",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "We Are All in God's Image - Spanish"
     ]
   },
   {
@@ -22875,20 +15409,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/while-trouble-near-give-them-strength-and-consolation",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_while_trouble_is_near_give_them_strength_and_consolation",
       "national",
@@ -22897,8 +15417,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "While Trouble is Near, Give Them Strength and Consolation",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "While Trouble is Near, Give Them Strength and Consolation"
     ]
   },
   {
@@ -22925,20 +15444,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/world-youth-day-prayer-united-states",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_world_youth_day_prayer_for_the_united_states",
       "national",
@@ -22947,8 +15452,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "World Youth Day Prayer for the United States",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "World Youth Day Prayer for the United States"
     ]
   },
   {
@@ -22975,20 +15479,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/your-gaze-upon-us",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_your_gaze_is_upon_us",
       "national",
@@ -22997,8 +15487,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "Your Gaze is Upon Us",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "Your Gaze is Upon Us"
     ]
   },
   {
@@ -23025,20 +15514,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "Catholic Household Blessings and Prayers / USCCB Prayers",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "https://www.usccb.org/prayers/prayer-sacred-heart-jesus-love-and-mercy",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "en_prayer_to_the_sacred_heart_of_jesus_for_love_and_mercy",
       "national",
@@ -23047,8 +15522,7 @@
       "Local and Other Prayers",
       "各国・その他の祈り",
       "Preces locales et aliae",
-      "​Prayer to the Sacred Heart of Jesus for Love and Mercy",
-      "Catholic Household Blessings and Prayers / USCCB Prayers"
+      "​Prayer to the Sacred Heart of Jesus for Love and Mercy"
     ]
   },
   {
@@ -23075,20 +15549,6 @@
       "JP": "広島教区の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#51",
-      "LA": ""
-    },
     "tags": [
       "jp_平和の使徒_となるための祈り",
       "national",
@@ -23098,8 +15558,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "「平和の使徒」となるための祈り",
-      "広島教区の祈り",
-      "カトリック祈祷書 祈りの友"
+      "広島教区の祈り"
     ]
   },
   {
@@ -23126,20 +15585,6 @@
       "JP": "広島教区の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#50",
-      "LA": ""
-    },
     "tags": [
       "jp_津和野の証し人",
       "national",
@@ -23149,8 +15594,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "「津和野の証し人」",
-      "広島教区の祈り",
-      "カトリック祈祷書 祈りの友"
+      "広島教区の祈り"
     ]
   },
   {
@@ -23177,20 +15621,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_津和野の証し人_の列聖を求める祈り",
       "national",
@@ -23200,8 +15630,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "「津和野の証し人」の列聖を求める祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23228,20 +15657,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#47",
-      "LA": ""
-    },
     "tags": [
       "jp_あたたかさのある教会を願う祈り",
       "national",
@@ -23251,8 +15666,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "あたたかさのある教会を願う祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23279,20 +15693,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_お告けの祈り",
       "national",
@@ -23302,8 +15702,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "お告げの祈り**",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23330,20 +15729,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#46",
-      "LA": ""
-    },
     "tags": [
       "jp_すへてのいのちを守るための_キリスト者の祈り",
       "national",
@@ -23353,8 +15738,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "すべてのいのちを守るための キリスト者の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23381,20 +15765,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_すへてのいのちを守るためのキリスト者の祈り",
       "national",
@@ -23404,8 +15774,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "すべてのいのちを守るためのキリスト者の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23432,20 +15801,6 @@
       "JP": "広島教区の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#47",
-      "LA": ""
-    },
     "tags": [
       "jp_ともに歩む",
       "national",
@@ -23455,8 +15810,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "ともに歩む",
-      "広島教区の祈り",
-      "カトリック祈祷書 祈りの友"
+      "広島教区の祈り"
     ]
   },
   {
@@ -23483,20 +15837,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_ともに歩むあたたかさのある教会を願う祈り",
       "national",
@@ -23506,8 +15846,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "ともに歩むあたたかさのある教会を願う祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23534,20 +15873,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#50",
-      "LA": ""
-    },
     "tags": [
       "jp_の列聖を求める祈り",
       "national",
@@ -23557,8 +15882,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "の列聖を求める祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23585,20 +15909,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_ゆるしの秘跡の受け方",
       "national",
@@ -23608,8 +15918,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "ゆるしの秘跡の受け方",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23636,20 +15945,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_アレルヤの祈り",
       "national",
@@ -23659,8 +15954,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "アレルヤの祈り**",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23687,20 +15981,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_アウエ_マリアの祈り",
       "national",
@@ -23710,8 +15990,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "アヴエ・マリアの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23738,20 +16017,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#12",
-      "LA": ""
-    },
     "tags": [
       "jp_イエスのみ心",
       "national",
@@ -23761,8 +16026,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "イエスのみ心",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23789,20 +16053,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_イエスのみ心への祈り",
       "national",
@@ -23812,8 +16062,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "イエスのみ心への祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23840,20 +16089,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_キリストの魂",
       "national",
@@ -23863,8 +16098,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "キリストの魂**",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23891,20 +16125,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://shimonosekicatholic.org/pray-for-community/",
-      "LA": ""
-    },
     "tags": [
       "jp_コミュニティのための祈り",
       "national",
@@ -23914,8 +16134,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "コミュニティのための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23942,20 +16161,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#40",
-      "LA": ""
-    },
     "tags": [
       "jp_サカリアの賛歌",
       "national",
@@ -23965,8 +16170,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "ザカリアの賛歌",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -23993,20 +16197,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_サカリアの賛歌_ルカ1_68_79",
       "national",
@@ -24016,8 +16206,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "ザカリアの賛歌**ルカ1：68－79",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24044,20 +16233,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#48",
-      "LA": ""
-    },
     "tags": [
       "jp_シノトスのための祈り",
       "national",
@@ -24067,8 +16242,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "シノドスのための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24095,20 +16269,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_ニケア_コンスタンチノ一フル信条",
       "national",
@@ -24118,8 +16278,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "ニケア，コンスタンチノ一プル信条",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24146,20 +16305,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#39",
-      "LA": ""
-    },
     "tags": [
       "jp_マリアの賛歌",
       "national",
@@ -24169,8 +16314,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "マリアの賛歌",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24197,20 +16341,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_マリアの賛歌_ルカ1_46_55",
       "national",
@@ -24220,8 +16350,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "マリアの賛歌**ルカ1：46－55",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24248,20 +16377,6 @@
       "JP": "広島教区の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#52",
-      "LA": ""
-    },
     "tags": [
       "jp_三姉妹教区のための祈り",
       "national",
@@ -24271,8 +16386,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "三姉妹教区のための祈り",
-      "広島教区の祈り",
-      "カトリック祈祷書 祈りの友"
+      "広島教区の祈り"
     ]
   },
   {
@@ -24299,20 +16413,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#44",
-      "LA": ""
-    },
     "tags": [
       "jp_主の十戒",
       "national",
@@ -24322,8 +16422,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "主の十戒",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24350,20 +16449,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#54",
-      "LA": ""
-    },
     "tags": [
       "jp_主よ_わたしをお使いくたさい",
       "national",
@@ -24373,8 +16458,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "主よ、わたしをお使いください",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24401,20 +16485,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#35",
-      "LA": ""
-    },
     "tags": [
       "jp_信徳唱",
       "national",
@@ -24424,8 +16494,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "信徳唱",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24452,20 +16521,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_元后あわれみの母",
       "national",
@@ -24475,8 +16530,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "元后あわれみの母**",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24503,20 +16557,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#14",
-      "LA": ""
-    },
     "tags": [
       "jp_初めの祈り",
       "national",
@@ -24526,8 +16566,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "初めの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24554,20 +16593,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#49",
-      "LA": ""
-    },
     "tags": [
       "jp_取り次きを願う祈り",
       "national",
@@ -24577,8 +16602,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "取り次ぎを願う祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24605,20 +16629,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#53",
-      "LA": ""
-    },
     "tags": [
       "jp_召命のための祈り",
       "national",
@@ -24628,8 +16638,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "召命のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24656,20 +16665,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#30",
-      "LA": ""
-    },
     "tags": [
       "jp_召命を求める祈り",
       "national",
@@ -24679,8 +16674,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "召命を求める祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24707,20 +16701,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#29",
-      "LA": ""
-    },
     "tags": [
       "jp_司祭のための祈り",
       "national",
@@ -24730,8 +16710,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "司祭のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24758,20 +16737,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://shimonosekicatholic.org/pray-for-priest/",
-      "LA": ""
-    },
     "tags": [
       "jp_司祭のための祈り集",
       "national",
@@ -24781,8 +16746,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "司祭のための祈り集",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24809,20 +16773,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://shimonosekicatholic.org/pray-for-japan-priest/",
-      "LA": ""
-    },
     "tags": [
       "jp_司祭のための祈り_日本の教会のために",
       "national",
@@ -24832,8 +16782,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "司祭のための祈り（日本の教会のために）",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24860,20 +16809,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#33",
-      "LA": ""
-    },
     "tags": [
       "jp_困難の時の祈り",
       "national",
@@ -24883,8 +16818,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "困難の時の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24911,20 +16845,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#19",
-      "LA": ""
-    },
     "tags": [
       "jp_夕の祈り",
       "national",
@@ -24934,8 +16854,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "夕の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -24962,20 +16881,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#21",
-      "LA": ""
-    },
     "tags": [
       "jp_大天使聖ミカエルへ",
       "national",
@@ -24985,8 +16890,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "大天使聖ミカエルへ",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25013,20 +16917,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_大天使聖ミカエルへの祈り",
       "national",
@@ -25036,8 +16926,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "大天使聖ミカエルへの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25064,20 +16953,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#26",
-      "LA": ""
-    },
     "tags": [
       "jp_子供のための祈り",
       "national",
@@ -25087,8 +16962,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "子供のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25115,20 +16989,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://shimonosekicatholic.org/pray-for-parish/",
-      "LA": ""
-    },
     "tags": [
       "jp_小教区のための祈り",
       "national",
@@ -25138,8 +16998,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "小教区のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25166,20 +17025,6 @@
       "JP": "広島教区の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#31",
-      "LA": ""
-    },
     "tags": [
       "jp_平和を願う祈り",
       "national",
@@ -25189,8 +17034,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "平和を願う祈り",
-      "広島教区の祈り",
-      "カトリック祈祷書 祈りの友"
+      "広島教区の祈り"
     ]
   },
   {
@@ -25217,20 +17061,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#37",
-      "LA": ""
-    },
     "tags": [
       "jp_愛徳唱",
       "national",
@@ -25240,8 +17070,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "愛徳唱",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25268,20 +17097,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_感謝の歌",
       "national",
@@ -25291,8 +17106,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "感謝の歌**",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25319,20 +17133,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#45",
-      "LA": ""
-    },
     "tags": [
       "jp_教会の五つの掟",
       "national",
@@ -25342,8 +17142,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "教会の五つの掟",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25370,20 +17169,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#36",
-      "LA": ""
-    },
     "tags": [
       "jp_望徳唱",
       "national",
@@ -25393,8 +17178,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "望徳唱",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25421,20 +17205,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#18",
-      "LA": ""
-    },
     "tags": [
       "jp_朝の祈り",
       "national",
@@ -25444,8 +17214,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "朝の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25472,20 +17241,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_神に希望をおく人の祈り_望徳唱",
       "national",
@@ -25495,8 +17250,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "神に希望をおく人の祈り(望徳唱）",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25523,20 +17277,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_神を信しる人の祈り",
       "national",
@@ -25546,8 +17286,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "神を信じる人の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25574,20 +17313,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_神を愛する人の祈り",
       "national",
@@ -25597,8 +17322,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "神を愛する人の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25625,20 +17349,6 @@
       "JP": "広島教区の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#49",
-      "LA": ""
-    },
     "tags": [
       "jp_福者ヘトロ岐部と187殉教者に",
       "national",
@@ -25648,8 +17358,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "福者ペトロ岐部と187殉教者に",
-      "広島教区の祈り",
-      "カトリック祈祷書 祈りの友"
+      "広島教区の祈り"
     ]
   },
   {
@@ -25676,20 +17385,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_福者ヘトロ岐部と187殉教者に取り次きを願う祈り",
       "national",
@@ -25699,8 +17394,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "福者ペトロ岐部と187殉教者に取り次ぎを願う祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25727,20 +17421,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#32",
-      "LA": ""
-    },
     "tags": [
       "jp_福音宣教の祈り",
       "national",
@@ -25750,8 +17430,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "福音宣教の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25778,20 +17457,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#15",
-      "LA": ""
-    },
     "tags": [
       "jp_終わりの祈り",
       "national",
@@ -25801,8 +17466,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "終わりの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25829,20 +17493,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#23",
-      "LA": ""
-    },
     "tags": [
       "jp_聖イクナチオの祈り",
       "national",
@@ -25852,8 +17502,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖イグナチオの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25880,20 +17529,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_聖イクナチオ_ロヨラの祈り",
       "national",
@@ -25903,8 +17538,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖イグナチオ・ロヨラの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25931,20 +17565,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://opusdei.org/ja-jp/article/sei-yosefu-7-nichiyoubi/",
-      "LA": ""
-    },
     "tags": [
       "jp_聖ヨセフの七つの_悲しみと喜ひ",
       "national",
@@ -25954,8 +17574,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖ヨセフの七つの「悲しみと喜び」",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -25982,20 +17601,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://shimonosekicatholic.org/novena-to-saint-joseph/",
-      "LA": ""
-    },
     "tags": [
       "jp_聖ヨセフへの九日間の祈り",
       "national",
@@ -26005,8 +17610,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖ヨセフへの九日間の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26033,20 +17637,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#22",
-      "LA": ""
-    },
     "tags": [
       "jp_聖ヨセフへの祈り",
       "national",
@@ -26056,8 +17646,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖ヨセフへの祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26084,20 +17673,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#13",
-      "LA": ""
-    },
     "tags": [
       "jp_聖体拝領のため",
       "national",
@@ -26107,8 +17682,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖体拝領のため",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26135,20 +17709,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_聖体拝領のための祈り",
       "national",
@@ -26158,8 +17718,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖体拝領のための祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26186,20 +17745,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/#10",
-      "LA": ""
-    },
     "tags": [
       "jp_聖霊の助けを願う",
       "national",
@@ -26209,8 +17754,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖霊の助けを願う",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26237,20 +17781,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://inoruhana.com/ja/daily-prayers/",
-      "LA": ""
-    },
     "tags": [
       "jp_聖霊の助けを願う祈り",
       "national",
@@ -26260,8 +17790,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "聖霊の助けを願う祈り**",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26288,20 +17817,6 @@
       "JP": "日々の祈り",
       "LA": ""
     },
-    "source": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "カトリック祈祷書 祈りの友",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "",
-      "VN": "",
-      "EN": "",
-      "JP": "https://tokyo.catholic.jp/info/diocese/37978/",
-      "LA": ""
-    },
     "tags": [
       "jp_霊的な聖体拝領の祈り",
       "national",
@@ -26311,8 +17826,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "霊的な聖体拝領の祈り",
-      "日々の祈り",
-      "カトリック祈祷書 祈りの友"
+      "日々の祈り"
     ]
   },
   {
@@ -26339,20 +17853,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=66&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_66",
       "national",
@@ -26362,8 +17862,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "가뭄과 장마 때에 바치는 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26390,20 +17889,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=40&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_40",
       "national",
@@ -26413,8 +17898,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "교황이나 주교를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26441,20 +17925,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=60&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_60",
       "national",
@@ -26464,8 +17934,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "군인을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26492,20 +17961,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=59&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_59",
       "national",
@@ -26515,8 +17970,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "군인의 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26543,20 +17997,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=48&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_48",
       "national",
@@ -26566,8 +18006,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "그리스도교 일치를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26594,20 +18033,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=24&ingId=172&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_24_172",
       "national",
@@ -26617,8 +18042,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "낙태로 아파하는 이들을 위한 기도",
-      "슬퍼하는 이들을 위한 기도",
-      "가톨릭 기도서"
+      "슬퍼하는 이들을 위한 기도"
     ]
   },
   {
@@ -26645,20 +18069,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=129&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_129",
       "national",
@@ -26668,8 +18078,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "농민을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26696,20 +18105,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=52&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_52",
       "national",
@@ -26719,8 +18114,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "대중 매체 선용을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26747,20 +18141,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=142&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_142",
       "national",
@@ -26770,8 +18150,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "레지오 마리애 기도문",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26798,20 +18177,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=49&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_49",
       "national",
@@ -26821,8 +18186,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "민족의 화해와 일치를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26849,20 +18213,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=24&ingId=173&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_24_173",
       "national",
@@ -26872,8 +18222,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "반려동물을 떠나보낸 가족의 기도",
-      "슬퍼하는 이들을 위한 기도",
-      "가톨릭 기도서"
+      "슬퍼하는 이들을 위한 기도"
     ]
   },
   {
@@ -26900,20 +18249,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=61&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_61",
       "national",
@@ -26923,8 +18258,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "병자를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -26951,20 +18285,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=51&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_51",
       "national",
@@ -26974,8 +18294,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "복음화를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27002,20 +18321,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=46&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_46",
       "national",
@@ -27025,8 +18330,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "비신자들을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27053,20 +18357,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=41&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_41",
       "national",
@@ -27076,8 +18366,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "사제들을 위한 기도 1",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27104,20 +18393,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=42&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_42",
       "national",
@@ -27127,8 +18402,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "사제들을 위한 기도 2",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27155,20 +18429,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=65&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_65",
       "national",
@@ -27178,8 +18438,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "새해를 맞이하며 바치는 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27206,20 +18465,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=178&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_178",
       "national",
@@ -27229,8 +18474,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "생명을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27257,20 +18501,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=62&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_62",
       "national",
@@ -27280,8 +18510,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "선종을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27308,20 +18537,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=39&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_39",
       "national",
@@ -27331,8 +18546,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성 암브로시오의 사은 찬미가 (Te Deum)",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27359,20 +18573,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=38&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_38",
       "national",
@@ -27382,8 +18582,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성 토마스의 성체 찬미가",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27410,20 +18609,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=102&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_102",
       "national",
@@ -27433,8 +18618,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성령 송가",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27461,20 +18645,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=36&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_36",
       "national",
@@ -27484,8 +18654,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성모 성심께 바치는 봉헌 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27512,20 +18681,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=37&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_37",
       "national",
@@ -27535,8 +18690,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성모님께 자기를 바치는 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27563,20 +18717,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=50&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_50",
       "national",
@@ -27586,8 +18726,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성서 사도직을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27614,20 +18753,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=47&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_47",
       "national",
@@ -27637,8 +18762,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성소를 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27665,20 +18789,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=34&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_34",
       "national",
@@ -27688,8 +18798,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성수 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27716,20 +18825,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=53&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_53",
       "national",
@@ -27739,8 +18834,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "성전 건립 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27767,20 +18861,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=24&ingId=170&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_24_170",
       "national",
@@ -27790,8 +18870,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "세상을 떠난 가족을 위한 기도",
-      "슬퍼하는 이들을 위한 기도",
-      "가톨릭 기도서"
+      "슬퍼하는 이들을 위한 기도"
     ]
   },
   {
@@ -27818,20 +18897,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=64&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_64",
       "national",
@@ -27841,8 +18906,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "세상을 떠난 형제, 친척, 친구, 은인을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27869,20 +18933,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=43&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_43",
       "national",
@@ -27892,8 +18942,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "수도자들을 위한 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -27920,20 +18969,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=217&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_217",
       "national",
@@ -27943,13 +18978,12 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "시노드 기도문",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
     "id": "kr_9_32",
-    "category": "national",
+    "category": "stations_of_cross",
     "titles": {
       "KR": "십자가의 길",
       "VN": "",
@@ -27971,30 +19005,14 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=9&ingId=32&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_9_32",
-      "national",
-      "국가별·기타 기도문",
-      "Kinh theo từng nước và kinh khác",
-      "Local and Other Prayers",
-      "各国・その他の祈り",
-      "Preces locales et aliae",
+      "stations_of_cross",
       "십자가의 길",
-      "가톨릭 기도서"
+      "Đàng Thánh Giá",
+      "Stations of the Cross",
+      "十字架の道行き",
+      "Via Crucis"
     ]
   },
   {
@@ -28021,20 +19039,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=35&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_35",
       "national",
@@ -28044,8 +19048,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "예수 성심께 바치는 봉헌 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -28072,20 +19075,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=179&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_179",
       "national",
@@ -28095,8 +19084,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "젊은이를 위한 기도(WYD 기도문)",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -28123,20 +19111,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=44&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_44",
       "national",
@@ -28146,8 +19120,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "평신도 사도직을 위한 기도 1",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -28174,20 +19147,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=45&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_45",
       "national",
@@ -28197,8 +19156,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "평신도 사도직을 위한 기도 2",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   },
   {
@@ -28225,20 +19183,6 @@
       "JP": "",
       "LA": ""
     },
-    "source": {
-      "KR": "가톨릭 기도서",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
-    "sourceUrl": {
-      "KR": "https://maria.catholic.or.kr/mi_pr/prayer/prayer.asp?menu=prayer&pgubun=6&ingId=143&sgubun=w",
-      "VN": "",
-      "EN": "",
-      "JP": "",
-      "LA": ""
-    },
     "tags": [
       "kr_6_143",
       "national",
@@ -28248,8 +19192,7 @@
       "各国・その他の祈り",
       "Preces locales et aliae",
       "하느님 자비를 구하는 기도",
-      "여러 가지 기도",
-      "가톨릭 기도서"
+      "여러 가지 기도"
     ]
   }
 ];
