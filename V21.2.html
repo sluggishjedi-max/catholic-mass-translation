@@ -99,7 +99,7 @@
         .floating-settings-btn { justify-self: end; width: 34px; height: 30px; border: 0; border-radius: 0; background: transparent; color: var(--liturgy-text-color, white); cursor: pointer; font-size: 1.08rem; font-weight: 900; line-height: 1; box-shadow: none; }
         .floating-settings-btn:hover { background: transparent; }
         body.non-mass-tab .liturgy-nav-btn { visibility: hidden; pointer-events: none; }
-        body.non-mass-tab #floating-liturgy-banner { display: none; }
+        body.non-mass-tab #floating-liturgy-banner { cursor: pointer; }
         .section-bar { background: #eee; color: var(--primary-color); padding: 15px; text-align: center; font-weight: 900; font-size: 1.1rem; border-bottom: 2px solid var(--primary-color); margin-top: 15px; margin-bottom: 10px; }
         .part-container { display: flex; flex-direction: column; border-bottom: 1px solid #ddd; padding-bottom: 15px; margin-bottom: 15px; }
         .pc-line-row { display: flex; align-items: stretch; width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0); }
@@ -148,7 +148,9 @@
         .aux-language-block { min-width: 0; border: 1px solid #ebedf0; border-radius: 10px; padding: 12px; background: #fafafa; }
         .aux-language-label { margin-bottom: 6px; color: var(--primary-color); font-size: 0.82rem; font-weight: 900; }
         .aux-prayer-title { margin-bottom: 6px; font-weight: 900; line-height: 1.35; }
-        .aux-prayer-body { white-space: pre-line; line-height: 1.58; color: #444; }
+        .aux-prayer-body { white-space: normal; line-height: 1.58; color: #444; }
+        .aux-prayer-body .rubric { margin: 4px 0 2px; }
+        .aux-prayer-body u { text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; }
         .aux-empty { border: 1px dashed #cfd6dd; border-radius: 10px; padding: 14px; color: var(--sub-txt); background: #fafafa; text-align: center; line-height: 1.5; }
         .church-search-row { grid-template-columns: minmax(0, 1fr) auto; }
         .church-map-status { margin: 8px 0 10px; color: var(--sub-txt); font-size: 0.88rem; line-height: 1.45; }
@@ -158,6 +160,7 @@
         .church-map-frame[hidden],
         .church-map-js[hidden] { display: none; }
         .church-map-caption { margin-top: 8px; line-height: 1.45; font-size: 0.88rem; }
+        .church-map-caption a { display: inline-flex; align-items: center; justify-content: center; margin-top: 4px; padding: 8px 11px; border-radius: 8px; background: var(--primary-color); color: #fff; font-weight: 900; text-decoration: none; }
 
         .dialogue { display: flex; gap: 3px; line-height: 1.45; }
         .speaker { width: var(--speaker-width, 36px); min-width: var(--speaker-width, 36px); flex-shrink: 0; text-align: left; padding-top: 2px; font-size: 0.8rem; font-weight: 800; color: #555; }
@@ -322,7 +325,7 @@
     <button type="button" class="nav-item active" data-tab="mass" onclick="showAppTab('mass')">미사</button>
     <button type="button" class="nav-item" data-tab="prayers" onclick="showAppTab('prayers')">기도문</button>
     <button type="button" class="nav-item" data-tab="hymns" onclick="showAppTab('hymns')">성가</button>
-    <button type="button" class="nav-item" data-tab="churches" onclick="showAppTab('churches')">성당정보</button>
+    <button type="button" class="nav-item" data-tab="churches" onclick="showAppTab('churches')">인근 성당</button>
 </nav>
 
 <header id="main-header">
@@ -438,7 +441,7 @@
 
 <section id="church-panel" class="aux-panel" aria-labelledby="church-panel-title">
     <div class="aux-card">
-        <h2 id="church-panel-title">성당정보</h2>
+        <h2 id="church-panel-title">인근 성당</h2>
         <p id="church-panel-note" class="aux-note">아래 검색창에서 성당 이름을 검색하시면 성당 위치를 표시하며, GPS를 활성화 할 경우 인근의 성당이 표출됩니다.</p>
         <div class="aux-controls">
             <div class="aux-search-row church-search-row">
@@ -533,8 +536,23 @@
 <script src="JS%20file/missa_data.js"></script>
 <script src="JS%20file/prayer_data.js"></script>
 
-<script defer src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-<script defer src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+<script>
+    (function loadFirebaseSdkInBackground() {
+        const appScript = document.createElement('script');
+        appScript.src = 'https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js';
+        appScript.async = true;
+        appScript.onload = () => {
+            const firestoreScript = document.createElement('script');
+            firestoreScript.src = 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js';
+            firestoreScript.async = true;
+            firestoreScript.onload = () => {
+                if (typeof initFirebaseIfAvailable === 'function') initFirebaseIfAvailable();
+            };
+            document.head.appendChild(firestoreScript);
+        };
+        document.head.appendChild(appScript);
+    })();
+</script>
 <script>
     // Firebase 프로젝트 연결 정보입니다.
     // Firebase SDK is deferred, so the app must be able to start before it is ready.
@@ -610,10 +628,12 @@
         dayOffset: 0,
         liturgyNavSlot: '',
         liturgicalDateContext: null,
+        dailyReadingsLoading: false,
     };
 
     const DEFAULT_TARGET_LANG = 'VN';
     const hiddenSelectableLangs = new Set();
+    const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA'];
     const dailySourceCache = {};
     const APP_VERSION = 'V21.2';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
@@ -621,10 +641,13 @@
     const DATE_NAV_LIMIT_MESSAGE = '금일 전 후 7일이 초과하는 전례는 조회할 수 없습니다';
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
     const ORDINARY_MASS_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+    const ORDINARY_MASS_FIRESTORE_STARTUP_WAIT_MS = 300;
     const POPE_NAME_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
     const VATICAN_PONTIFFS_URL = 'https://www.vatican.va/content/vatican/en/holy-father.html';
-    const REMOTE_FETCH_RETRIES = 1;
-    const REMOTE_FETCH_TIMEOUT_MS = 12000;
+    const REMOTE_FETCH_RETRIES = 0;
+    const REMOTE_FETCH_TIMEOUT_MS = 8000;
+    const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 12000;
+    const KTCG_CITATION_TIMEOUT_MS = 3000;
     const liturgicalTimeZones = {
         KR: 'Asia/Seoul',
         VN: 'Asia/Ho_Chi_Minh',
@@ -661,6 +684,17 @@
 
     function isFreshCacheEntry(entry, ttlMs) {
         return !!(entry && entry.cachedAt && Date.now() - entry.cachedAt < ttlMs);
+    }
+
+    function withTimeout(promise, timeoutMs, message = 'Operation timed out') {
+        if (!timeoutMs || timeoutMs <= 0) return promise;
+        let timer = null;
+        const timeout = new Promise((_, reject) => {
+            timer = setTimeout(() => reject(new Error(message)), timeoutMs);
+        });
+        return Promise.race([promise, timeout]).finally(() => {
+            if (timer) clearTimeout(timer);
+        });
     }
 
     function stripPapalOrdinal(name) {
@@ -1763,7 +1797,7 @@
     }
 
     const liturgyLoadingMessages = {
-        KR: '전례 내용을 불러오는 중입니다...',
+        KR: '전례내용을 불러오는 중입니다...',
         VN: 'Đang tải nội dung phụng vụ...',
         EN: 'Loading liturgical texts...',
         JP: '典礼本文を読み込み中です...',
@@ -1777,11 +1811,12 @@
     function showLiturgyLoadingMessage(message) {
         const headerName = document.getElementById('header-liturgy-name');
         if (!headerName) return;
-        updateFloatingLiturgyBanner('', '');
+        state.dailyReadingsLoading = true;
         const leftLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
         const rightLang = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
         const leftMessage = localizedLiturgyLoadingMessage(leftLang) || message;
         const rightMessage = localizedLiturgyLoadingMessage(rightLang) || message;
+        updateFloatingLiturgyBanner(leftMessage, leftLang === rightLang ? '' : rightMessage);
         if (leftLang === rightLang) {
             headerName.innerHTML = liturgyDateNavigationHtml(leftMessage, '');
             return;
@@ -1972,7 +2007,7 @@
             hymnPlaceholder: '성가 번호, 제목, 전례 분류 검색',
             hymnEmpty: '성가 검색 결과가 없습니다. 업로드 성가 파일을 연결하면 이 영역에서 번호·제목·가사를 검색합니다.',
             hymnBodyPlaceholder: '가사 본문은 업로드 파일 연결 후 이 자리에 표시됩니다.',
-            churchTitle: '성당정보',
+            churchTitle: '인근 성당',
             churchNote: '아래 검색창에서 성당 이름을 검색하시면 성당 위치를 표시하며, GPS를 활성화 할 경우 인근의 성당이 표출됩니다.',
             churchPlaceholder: '성당 이름 검색',
             churchReady: '성당 이름을 입력하거나 지도를 움직이면 현재 지도 영역의 성당을 다시 검색합니다.',
@@ -1990,7 +2025,7 @@
             hymnPlaceholder: 'Tìm số, tên, hoặc phần phụng vụ',
             hymnEmpty: 'Không có kết quả tìm kiếm thánh ca. Khi nối tệp thánh ca đã tải lên, bạn có thể tìm theo số, tên và lời ca.',
             hymnBodyPlaceholder: 'Lời bài hát sẽ hiển thị ở đây sau khi nối tệp đã tải lên.',
-            churchTitle: 'Thông tin nhà thờ',
+            churchTitle: 'Nhà thờ gần đây',
             churchNote: 'Hãy tìm tên nhà thờ trong ô bên dưới để hiển thị vị trí. Nếu bật GPS, các nhà thờ gần bạn sẽ được hiển thị.',
             churchPlaceholder: 'Tìm tên nhà thờ',
             churchReady: 'Nhập tên nhà thờ hoặc di chuyển bản đồ để tìm lại các nhà thờ trong vùng đang hiển thị.',
@@ -2008,7 +2043,7 @@
             hymnPlaceholder: 'Search hymn number, title, or category',
             hymnEmpty: 'No hymn results. Connect uploaded hymn files to search by number, title, and lyrics.',
             hymnBodyPlaceholder: 'Lyrics will appear here after an uploaded file is connected.',
-            churchTitle: 'Church Information',
+            churchTitle: 'Nearby Churches',
             churchNote: 'Search for a church name below to display its location. If GPS is enabled, nearby churches will be shown.',
             churchPlaceholder: 'Search church name',
             churchReady: 'Type a church name or move the map to search churches in the visible area again.',
@@ -2026,7 +2061,7 @@
             hymnPlaceholder: '聖歌番号、題名、典礼区分を検索',
             hymnEmpty: '聖歌の検索結果がありません。アップロードファイルを接続すると番号、題名、歌詞を検索できます。',
             hymnBodyPlaceholder: 'アップロードファイルを接続すると歌詞がここに表示されます。',
-            churchTitle: '教会情報',
+            churchTitle: '近くの教会',
             churchNote: '下の検索欄で教会名を検索すると位置を表示します。GPSを有効にすると近くの教会が表示されます。',
             churchPlaceholder: '教会名を検索',
             churchReady: '教会名を入力するか地図を動かすと、表示範囲内の教会を再検索します。',
@@ -2044,7 +2079,7 @@
             hymnPlaceholder: 'Quaere numerum, titulum, vel genus cantus',
             hymnEmpty: 'Nullus cantus inventus est. Fasciculis additis coniunctis numerum, titulum, et verba quaerere poteris.',
             hymnBodyPlaceholder: 'Verba cantus hic apparebunt cum fasciculus additus coniungetur.',
-            churchTitle: 'Ecclesiae',
+            churchTitle: 'Ecclesiae proximae',
             churchNote: 'Nomen ecclesiae infra quaere ut locus eius ostendatur. Si GPS activum est, ecclesiae proximae monstrabuntur.',
             churchPlaceholder: 'Quaere nomen ecclesiae',
             churchReady: 'Nomen ecclesiae scribe vel tabulam move ut ecclesiae intra conspectum iterum quaerantur.',
@@ -2097,16 +2132,61 @@
         return cleanNodeText(value).toLowerCase().normalize('NFKC');
     }
 
+    function localizedFlatKeys(baseNames, langCode) {
+        const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
+        const lower = lang.toLowerCase();
+        return (baseNames || []).flatMap(base => [
+            `${base}_${lang}`,
+            `${base}_${lower}`,
+            `${base}${lang}`,
+            `${base}${lower}`,
+            `${lang}_${base}`,
+            `${lower}_${base}`
+        ]);
+    }
+
+    function localizedObjectFromFlatEntry(entry, directValue, baseNames, defaultLang = 'KR') {
+        const output = {};
+        if (directValue && typeof directValue === 'object' && !Array.isArray(directValue)) {
+            Object.keys(directValue).forEach(key => {
+                const lang = normalizeSelectableLang(String(key).toUpperCase(), '');
+                if (lang) output[lang] = directValue[key];
+            });
+        } else if (typeof directValue === 'string' && directValue.trim()) {
+            const lang = normalizeSelectableLang(entry.lang || entry.language || entry.country || defaultLang, defaultLang);
+            output[lang] = directValue;
+        }
+        SUPPORTED_LANGS.forEach(lang => {
+            localizedFlatKeys(baseNames, lang).some(key => {
+                const value = entry && entry[key];
+                if (value === undefined || value === null || value === '') return false;
+                output[lang] = value;
+                return true;
+            });
+        });
+        return Object.keys(output).length ? output : (directValue || {});
+    }
+
+    function localizedFlatValue(entry, directValue, baseNames, langCode, defaultLang = 'KR') {
+        const value = localizedObjectFromFlatEntry(entry, directValue, baseNames, defaultLang);
+        if (typeof value === 'string') return cleanNodeText(value);
+        const lang = normalizeSelectableLang(langCode || defaultLang, defaultLang);
+        return cleanNodeText(value[lang] || value[lang.toLowerCase()] || value.KR || value.kr || value.EN || value.en || Object.values(value).find(Boolean) || '');
+    }
+
     function getUploadedHymnData() {
         const data = Array.isArray(window.uploadedHymnData) ? window.uploadedHymnData : (Array.isArray(window.hymnData) ? window.hymnData : []);
-        return data.map(entry => ({
-            country: normalizeSelectableLang(entry.country || entry.lang || entry.language || 'KR', 'KR'),
-            number: cleanNodeText(entry.number || entry.no || entry.num || ''),
-            title: cleanNodeText(entry.title || entry.name || ''),
-            category: cleanNodeText(entry.category || entry.season || entry.part || ''),
-            source: cleanNodeText(entry.source || entry.fileName || '업로드 성가 파일'),
-            text: cleanNodeText(entry.text || entry.lyrics || entry.body || '')
-        })).filter(entry => entry.title || entry.number || entry.text);
+        return data.map(entry => {
+            const country = normalizeSelectableLang(entry.country || entry.lang || entry.language || 'KR', 'KR');
+            return {
+                country,
+                number: cleanNodeText(entry.number || entry.no || entry.num || ''),
+                title: localizedFlatValue(entry, entry.title || entry.name || '', ['title', 'name'], country),
+                category: localizedFlatValue(entry, entry.category || entry.season || entry.part || '', ['category', 'season', 'part'], country),
+                source: localizedFlatValue(entry, entry.source || entry.fileName || '업로드 성가 파일', ['source', 'fileName'], country),
+                text: localizedFlatValue(entry, entry.text || entry.lyrics || entry.body || '', ['text', 'lyrics', 'body'], country)
+            };
+        }).filter(entry => entry.title || entry.number || entry.text);
     }
 
     function getHymnData() {
@@ -2157,8 +2237,9 @@
         if (!churchMapsApiKeyPromise) {
             churchMapsApiKeyPromise = fetchWithTimeout(GOOGLE_MAPS_CONFIG_ENDPOINT, {
                 method: 'GET',
-                headers: { 'Accept': 'application/json' }
-            }, 8000).then(async response => {
+                headers: { 'Accept': 'application/json' },
+                timeoutMs: 1200
+            }).then(async response => {
                 if (!response.ok) throw new Error(`mapsConfig HTTP ${response.status}`);
                 const payload = await response.json();
                 churchMapsApiKey = String(payload && (payload.apiKey || payload.key) || '').trim();
@@ -2172,7 +2253,11 @@
     }
 
     function googleMapsEmbedUrl(query) {
-        return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+        return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=14&output=embed`;
+    }
+
+    function googleMapsSearchUrl(query) {
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
     }
 
     function churchCountryFromLocation(value = state.currentLoc) {
@@ -2194,6 +2279,20 @@
         if (caption) caption.textContent = text || '';
     }
 
+    function setChurchCaptionHtml(html) {
+        const caption = document.getElementById('church-map-caption');
+        if (caption) caption.innerHTML = html || '';
+    }
+
+    function churchOpenMapsText() {
+        const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        if (lang === 'VN') return 'Mở trong Google Maps';
+        if (lang === 'EN') return 'Open in Google Maps';
+        if (lang === 'JP') return 'Google マップで開く';
+        if (lang === 'LA') return 'Aperi in Google Maps';
+        return 'Google Maps에서 열기';
+    }
+
     function churchFoundText(count) {
         const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
         if (lang === 'VN') return `Đã tìm thấy ${count} nhà thờ trong vùng bản đồ đang hiển thị.`;
@@ -2212,8 +2311,11 @@
             frame.hidden = false;
             frame.src = googleMapsEmbedUrl(fallbackQuery);
         }
-        setChurchStatus('');
-        setChurchCaption(fallbackQuery);
+        setChurchStatus(auxText().churchReady);
+        setChurchCaptionHtml([
+            `<span>${escapeHtml(fallbackQuery)}</span>`,
+            `<br><a href="${escapeHtml(googleMapsSearchUrl(fallbackQuery))}" target="_blank" rel="noopener">${escapeHtml(churchOpenMapsText())}</a>`
+        ].join(''));
     }
 
     async function loadGoogleMapsForChurches() {
@@ -2244,7 +2346,11 @@
                 return;
             }
             navigator.geolocation.getCurrentPosition(
-                pos => resolve({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+                pos => {
+                    const lat = Number(pos && pos.coords && pos.coords.latitude);
+                    const lng = Number(pos && pos.coords && pos.coords.longitude);
+                    resolve(Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null);
+                },
                 () => resolve(null),
                 { timeout: 2500, maximumAge: 300000, enableHighAccuracy: false }
             );
@@ -2337,53 +2443,57 @@
         if (!mapNode) return;
         try {
             await loadGoogleMapsForChurches();
-        } catch (error) {
-            showChurchFallback();
-            return;
-        }
-        if (frame) frame.hidden = true;
-        mapNode.hidden = false;
-        const fallback = churchMapDefaultForLang();
-        const gpsCenter = await getGpsPositionForChurchMap();
-        const center = gpsCenter || fallback.center;
-        if (!churchMap) {
-            churchMap = new google.maps.Map(mapNode, {
-                center,
-                zoom: gpsCenter ? 14 : fallback.zoom,
-                mapTypeControl: false,
-                streetViewControl: false,
-                fullscreenControl: true
-            });
-            churchPlacesService = new google.maps.places.PlacesService(churchMap);
-            churchInfoWindow = new google.maps.InfoWindow();
-            churchMap.addListener('idle', scheduleChurchViewportSearch);
-            churchMap.addListener('dragend', scheduleChurchViewportSearch);
-            churchMap.addListener('zoom_changed', scheduleChurchViewportSearch);
-            const input = document.getElementById('church-search');
-            if (input && !churchAutocomplete) {
-                churchAutocomplete = new google.maps.places.Autocomplete(input, {
-                    fields: ['name', 'geometry', 'formatted_address', 'place_id']
+            if (frame) frame.hidden = true;
+            mapNode.hidden = false;
+            const fallback = churchMapDefaultForLang();
+            const gpsCenter = await getGpsPositionForChurchMap();
+            const center = gpsCenter || fallback.center;
+            if (!churchMap) {
+                churchMap = new google.maps.Map(mapNode, {
+                    center,
+                    zoom: gpsCenter ? 14 : fallback.zoom,
+                    mapTypeControl: false,
+                    streetViewControl: false,
+                    fullscreenControl: true
                 });
-                churchAutocomplete.addListener('place_changed', () => {
-                    const place = churchAutocomplete.getPlace();
-                    if (!focusChurchPlace(place)) searchChurchByName();
-                });
+                churchPlacesService = new google.maps.places.PlacesService(churchMap);
+                churchInfoWindow = new google.maps.InfoWindow();
+                churchMap.addListener('idle', scheduleChurchViewportSearch);
+                churchMap.addListener('dragend', scheduleChurchViewportSearch);
+                churchMap.addListener('zoom_changed', scheduleChurchViewportSearch);
+                const input = document.getElementById('church-search');
+                if (input && !churchAutocomplete) {
+                    churchAutocomplete = new google.maps.places.Autocomplete(input, {
+                        fields: ['name', 'geometry', 'formatted_address', 'place_id']
+                    });
+                    churchAutocomplete.addListener('place_changed', () => {
+                        const place = churchAutocomplete.getPlace();
+                        if (!focusChurchPlace(place)) searchChurchByName();
+                    });
+                }
+            } else {
+                churchMap.setCenter(center);
+                churchMap.setZoom(gpsCenter ? 14 : fallback.zoom);
             }
-        } else {
-            churchMap.setCenter(center);
-            churchMap.setZoom(gpsCenter ? 14 : fallback.zoom);
+            churchMapInitialized = true;
+            setChurchStatus(auxText().churchReady);
+            searchChurchesInCurrentView();
+        } catch (error) {
+            console.warn('Google Maps church map failed, using iframe fallback.', error);
+            churchMapInitialized = false;
+            showChurchFallback();
         }
-        churchMapInitialized = true;
-        setChurchStatus(auxText().churchReady);
-        searchChurchesInCurrentView();
     }
 
     async function renderChurchPanel() {
         localizeAuxPanels();
         updateFooterCopyright();
-        const key = googleMapsApiKey() || await fetchGoogleMapsApiKey();
+        const key = googleMapsApiKey();
         if (!key) {
             showChurchFallback();
+            fetchGoogleMapsApiKey().then(remoteKey => {
+                if (remoteKey && (state.activeTab || '') === 'churches') initializeChurchMap();
+            });
             return;
         }
         initializeChurchMap();
@@ -2410,10 +2520,10 @@
         return data.map(entry => ({
             id: cleanNodeText(entry.id || entry.key || ''),
             category: cleanNodeText(entry.category || entry.appCategory || ''),
-            titles: entry.titles || entry.title || {},
-            texts: entry.texts || entry.text || {},
-            sourceCategory: entry.sourceCategory || entry.sourceCategories || {},
-            source: entry.source || entry.sources || (hasUploadedPrayerData ? (entry.fileName || '업로드 기도문 파일') : ''),
+            titles: localizedObjectFromFlatEntry(entry, entry.titles || entry.title || entry.name || {}, ['title', 'name']),
+            texts: localizedObjectFromFlatEntry(entry, entry.texts || entry.text || entry.body || {}, ['text', 'body', 'content', 'prayer']),
+            sourceCategory: localizedObjectFromFlatEntry(entry, entry.sourceCategory || entry.sourceCategories || {}, ['sourceCategory', 'source_category']),
+            source: localizedObjectFromFlatEntry(entry, entry.source || entry.sources || (hasUploadedPrayerData ? (entry.fileName || '업로드 기도문 파일') : ''), ['source', 'sources', 'fileName']),
             sourceUrl: entry.sourceUrl || entry.sourceUrls || entry.url || {},
             tags: Array.isArray(entry.tags) ? entry.tags : []
         })).filter(entry => entry.id || Object.keys(entry.titles || {}).length || Object.keys(entry.texts || {}).length);
@@ -2539,9 +2649,20 @@
         return `${escapeHtml(directTitle || fallbackTitle)}${officialTag}${missingTag}`;
     }
 
+    function formatPrayerMarkupHtml(value) {
+        let html = escapeHtml(value);
+        html = html.replace(/&lt;rubric&gt;([\s\S]*?)&lt;\/rubric&gt;/gi, (_, inner) => {
+            const text = cleanNodeText(inner);
+            return text ? `<span class="rubric">${text}</span>` : '';
+        });
+        html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u>$1</u>');
+        html = html.replace(/\*\*([\s\S]*?)\*\*/g, (_, inner) => `<strong>${inner}</strong>`);
+        return html.replace(/\r?\n/g, '<br>');
+    }
+
     function prayerBodyHtml(entry, langCode, otherLangCode) {
         const directBody = localizedPrayerValueStrict(entry.texts, langCode);
-        if (directBody) return escapeHtml(directBody);
+        if (directBody) return formatPrayerMarkupHtml(directBody);
         const sourceText = normalizeSelectableLang(langCode, 'KR') !== normalizeSelectableLang(otherLangCode, 'KR')
             ? (localizedPrayerValueStrict(entry.texts, otherLangCode) || localizedPrayerValueStrict(entry.titles, otherLangCode))
             : '';
@@ -2688,6 +2809,14 @@
     }
 
     function setupFloatingLiturgyBanner() {
+        const banner = document.getElementById('floating-liturgy-banner');
+        if (banner && !banner.dataset.clickBound) {
+            banner.dataset.clickBound = 'true';
+            banner.addEventListener('click', event => {
+                if (event.target && event.target.closest && event.target.closest('button')) return;
+                showAppTab('mass');
+            });
+        }
         window.addEventListener('scroll', syncFloatingLiturgyBannerVisibility, { passive: true });
         window.addEventListener('resize', syncFloatingLiturgyBannerVisibility, { passive: true });
         syncFloatingLiturgyBannerVisibility();
@@ -3083,7 +3212,7 @@
         const response = await fetchWithTimeout(KTCG_PROXY_ENDPOINT, {
             method: 'POST',
             cache: 'no-cache',
-            timeoutMs: 12000,
+            timeoutMs: KTCG_CITATION_TIMEOUT_MS,
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -3670,8 +3799,22 @@
     function parseKoreanReadingSection(lines, isGospel = false) {
         let blocks = splitSourceBlocks(lines).filter(line => !/^(?:[◎○✚▥✠]\s*)?(주님의\s*말씀입니다|그리스도님,?\s*찬미합니다|하느님,?\s*감사합니다)/i.test(line));
         if (isGospel) {
-            const prayerIndex = blocks.findIndex(line => /^(신자들의\s*기도|보편\s*(?:지향\s*)?기도)(?:$|\s|[:：])/i.test(cleanNodeText(line)));
-            if (prayerIndex >= 0) blocks = blocks.slice(0, prayerIndex);
+            const terminalIndex = blocks.findIndex(line => /^(신자들의\s*기도|보편\s*(?:지향\s*)?기도|오늘의\s*묵상|영성체\s*후\s*묵상|강론)(?:$|\s|[:：])/i.test(cleanNodeText(line)));
+            if (terminalIndex >= 0) blocks = blocks.slice(0, terminalIndex);
+            blocks = blocks.reduce((acc, line) => {
+                const cleaned = cleanNodeText(line);
+                const tailIndex = [/오늘의\s*묵상/i, /영성체\s*후\s*묵상/i, /보편\s*(?:지향\s*)?기도/i, /강론/i]
+                    .map(pattern => cleaned.search(pattern))
+                    .filter(index => index >= 0)
+                    .sort((a, b) => a - b)[0];
+                if (tailIndex >= 0) {
+                    const beforeTail = cleanNodeText(cleaned.slice(0, tailIndex));
+                    if (beforeTail) acc.push(beforeTail);
+                    return acc;
+                }
+                acc.push(line);
+                return acc;
+            }, []);
         }
         const summaryResult = extractQuotedSummary(blocks);
         blocks = summaryResult.lines;
@@ -4443,11 +4586,11 @@
         });
     }
 
-    function mergeSourceData(target, parsed, lang) {
+    function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
         const lower = lang.toLowerCase();
         const suppressNonLeftProper = isNonLeftLocalProperSource(lang, parsed.title);
-        if (parsed.title) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
+        if (parsed.title && !options.suppressTitle) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
         Object.keys(parsed.data || {}).forEach(key => {
             if (suppressNonLeftProper && properLocalDailySectionIds.has(key)) return;
             if (shouldSuppressMismatchedLocalProperSection(lang, key)) return;
@@ -4473,7 +4616,7 @@
                 target[key][lower] = value;
             }
         });
-        if (parsed.title && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) {
+        if (!options.suppressTitle && parsed.title && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) {
             state.liturgyInfo.names[lang] = cleanLiturgyTitle(parsed.title);
             state.liturgyInfo.krName = state.liturgyInfo.names.KR;
             state.liturgyInfo.vnName = state.liturgyInfo.names.VN;
@@ -4482,7 +4625,7 @@
                 state.isSunday = state.isSunday || state.liturgyInfo.isSolemnity;
             }
         }
-        if (parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
+        if (!options.suppressTitle && parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
     }
 
     function parseKoreanDailyMass(html) {
@@ -4899,27 +5042,31 @@
         return '';
     }
 
-    async function resolveVietnameseDailyUrls(date) {
+    async function resolveVietnameseDailyUrls(date, options = {}) {
         const fixedUrls = vietnameseFixedDailyUrls(date);
         if (fixedUrls.length) return fixedUrls;
         const info = buildGeneratedLiturgyInfo(date);
+        const meta = info.meta || getSeasonMeta(date);
         const preferProperDate = hasPriorityCelebrationForLookup(date, info);
         const expectedCandidates = vietnameseLookupCandidates(date);
         const titleSlug = slugifyVietnamese(vietnameseLookupTitle(date));
         const datedSlug = vietnameseDatedSlug(date, vietnameseLookupTitle(date));
-        const titleUrls = titleSlug ? ['a', 'b', 'c'].map(cycle =>
-            `https://www.tonggiaophanhanoi.org/${titleSlug}-nam-${cycle}/`
-        ).concat(`https://www.tonggiaophanhanoi.org/${titleSlug}/`) : [];
+        const cycleUrls = titleSlug && meta.day === 0 && meta.sundayCycle
+            ? ['a', 'b', 'c'].map(cycle => `https://www.tonggiaophanhanoi.org/${titleSlug}-nam-${cycle}/`)
+            : [];
+        const titleUrls = titleSlug ? cycleUrls.concat(`https://www.tonggiaophanhanoi.org/${titleSlug}/`) : [];
         const slugUrls = titleUrls.concat([
             `https://www.tonggiaophanhanoi.org/${datedSlug}-2/`,
             `https://www.tonggiaophanhanoi.org/${datedSlug}/`,
             `https://www.tonggiaophanhanoi.org/${datedSlug}-1/`
         ]).filter((url, index, list) => url && list.indexOf(url) === index);
+        if (options.directOnly) return slugUrls;
 
+        const discoveredUrls = [];
         if (preferProperDate) {
             try {
                 const matchedIndexUrl = await resolveVietnameseIndexUrl(date, expectedCandidates, true);
-                if (matchedIndexUrl) return [matchedIndexUrl].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+                if (matchedIndexUrl) discoveredUrls.push(matchedIndexUrl);
             } catch (error) {
                 console.warn('베트남어 고유미사 목록 파싱 실패, 전례력 기반 링크로 재시도합니다.', error);
             }
@@ -4927,18 +5074,18 @@
 
         try {
             const calendarReadingUrl = await resolveVietnameseCalendarReadingUrl(date);
-            if (calendarReadingUrl) return [calendarReadingUrl].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+            if (calendarReadingUrl) discoveredUrls.push(calendarReadingUrl);
         } catch (error) {
             console.warn('베트남어 전례력 기반 미사독서 링크 파싱 실패, 미사독서 목록으로 재시도합니다.', error);
         }
 
         try {
             const matchedIndexUrl = await resolveVietnameseIndexUrl(date, expectedCandidates, preferProperDate);
-            if (matchedIndexUrl) return [matchedIndexUrl].concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+            if (matchedIndexUrl) discoveredUrls.push(matchedIndexUrl);
         } catch (error) {
             console.warn('베트남어 미사 목록 파싱 실패, slug URL로 재시도합니다.', error);
         }
-        return slugUrls;
+        return discoveredUrls.concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
     }
 
     async function resolveVietnameseDailyUrl(date) {
@@ -6717,32 +6864,37 @@
     async function fetchStrictDailyMass(lang, date) {
         await loadAllSoulsMassConfigIfNeeded(date);
         if (lang === 'VN') {
-            const urls = await resolveVietnameseDailyUrls(date);
+            let urls = await resolveVietnameseDailyUrls(date, { directOnly: true });
             let lastError = null;
             let properPartialParsed = null;
             const preferProperDate = hasPriorityCelebrationForLookup(date, buildGeneratedLiturgyInfo(date));
-            for (let index = 0; index < urls.length; index += 1) {
-                const url = urls[index];
-                try {
-                    const source = await fetchTextWithFallbacks(url);
-                    const parsed = strictParseDailyMass(lang, source, date);
-                    const fixedTitle = strictFixedDailyTitle(lang, date);
-                    if (fixedTitle) parsed.title = fixedTitle;
-                    if (hasVietnameseParsedMass(parsed)) {
-                        const mergedParsed = properPartialParsed ? mergeVietnameseProperPartialWithReadings(parsed, properPartialParsed) : parsed;
-                        if (!strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
-                            throw new Error('VN source did not match calendar reading hints');
+            for (let pass = 0; pass < 2; pass += 1) {
+                for (let index = 0; index < urls.length; index += 1) {
+                    const url = urls[index];
+                    try {
+                        const source = await fetchTextWithFallbacks(url);
+                        const parsed = strictParseDailyMass(lang, source, date);
+                        const fixedTitle = strictFixedDailyTitle(lang, date);
+                        if (fixedTitle) parsed.title = fixedTitle;
+                        if (hasVietnameseParsedMass(parsed)) {
+                            const mergedParsed = properPartialParsed ? mergeVietnameseProperPartialWithReadings(parsed, properPartialParsed) : parsed;
+                            if (!strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
+                                throw new Error('VN source did not match calendar reading hints');
+                            }
+                            return await applyKtcgkpvCitationSource(mergedParsed, date);
                         }
-                        return await applyKtcgkpvCitationSource(mergedParsed, date);
+                        if (preferProperDate && hasAnyParsedDailySection(parsed) && (index === 0 || vietnameseProperLinkMatchesDate({ href: url, text: '' }, date))) {
+                            properPartialParsed = parsed;
+                        }
+                        throw new Error('No strict VN readings found');
+                    } catch (error) {
+                        lastError = error;
+                        console.warn(`VN strict source failed: ${url}`, error);
                     }
-                    if (preferProperDate && hasAnyParsedDailySection(parsed) && (index === 0 || vietnameseProperLinkMatchesDate({ href: url, text: '' }, date))) {
-                        properPartialParsed = parsed;
-                    }
-                    throw new Error('No strict VN readings found');
-                } catch (error) {
-                    lastError = error;
-                    console.warn(`VN strict source failed: ${url}`, error);
                 }
+                const expandedUrls = await resolveVietnameseDailyUrls(date);
+                urls = expandedUrls.filter(url => !urls.includes(url));
+                if (!urls.length) break;
             }
             throw lastError || new Error('VN strict source not found');
         }
@@ -7501,6 +7653,7 @@
             ['mercy_sinned', /죄.*불쌍|자비.*죄|xin xot thuong.*pham toi|nguyen thuong.*nhan hau|be merciful.*sinned|have mercy.*sinned|miserere.*peccavimus/i],
             ['praise_soul_lord', /영혼.*찬미|linh hon.*ngoi khen|praise.*soul.*lord|lauda.*anima/i]
         ] : [
+            ['good_shepherd_sheep_know', /착한\s*목자|내\s*양|양들.*알|con chien.*nghe.*tieng|ta biet chung|chung biet ta|good shepherd|my sheep.*hear|know them|pastor bonus|oves.*audiunt/i],
             ['new_commandment_love', /새\s*계명|서로\s*사랑|dieu ran moi|yeu thuong nhau|thay ban|new commandment|love one another|as i have loved|mandatum novum|diligatis invicem|sicut dilexi/i],
             ['teach_paths_truth', /길.*가르|진리.*이끌|당신.*길|day bao.*loi buoc|loi buoc.*chua|huong dan.*chan ly|teach me.*paths|guide me.*truth|vias tuas|veritatem tuam|doce me/i],
             ['speak_lord_life', /말씀하소서|생명의 말씀|xin hay phan|dang lang tai nghe|su song doi doi|speak lord|servant.*listening|words.*everlasting life/i],
@@ -7606,12 +7759,26 @@
         };
     }
 
+    function firstOptionSemanticKey(baseId, optionMap, lower) {
+        const option = optionMap && Array.isArray(optionMap[lower]) ? optionMap[lower][0] : null;
+        return option ? variantSemanticKey(baseId, variantOptionMeaningText(baseId, option)) : '';
+    }
+
+    function activeFirstOptionsAreSemanticMatch(baseId, optionMap) {
+        const { left, right } = currentLeftRightLowerKeys();
+        if (!left || !right || left === right) return false;
+        const leftKey = firstOptionSemanticKey(baseId, optionMap, left);
+        const rightKey = firstOptionSemanticKey(baseId, optionMap, right);
+        return !!(leftKey && rightKey && leftKey === rightKey);
+    }
+
     function buildLeftCitationFirstAlignment(baseId, section, optionMap) {
         if (baseId !== 'gospel_accl') return [];
         const { left, right } = currentLeftRightLowerKeys();
         if (!left || !right || left === right) return [];
         if (!Array.isArray(optionMap[left]) || !optionMap[left].length) return [];
         if (!Array.isArray(optionMap[right]) || !optionMap[right].length) return [];
+        if (activeFirstOptionsAreSemanticMatch(baseId, optionMap)) return [];
         const leftCitation = directCitationForLower(section, left);
         const rightCitation = directCitationForLower(section, right);
         if (!citationsAreDifferent(leftCitation, rightCitation)) return [];
@@ -7916,7 +8083,7 @@
                     const sourceIndex = hasAlignedIndex ? alignmentGroup[lower] : i;
                     const optionLines = hasAlignedIndex
                         ? (options[sourceIndex] || [])
-                        : (alignmentGroup ? [] : (options[sourceIndex] || (baseId === 'gospel_accl' ? [] : options[Math.min(i, options.length - 1)])));
+                        : (alignmentGroup ? [] : (options[sourceIndex] || []));
                     if (optionLines.length) applyParsedLinesForLanguage(lines, lower, optionLines, baseId);
                     else clearParsedLanguageLines(lines, lower, baseId);
                     return;
@@ -8053,13 +8220,13 @@
         updateFooterCopyright();
     }
 
-    function applyCachedDailyReadings(date, sources = getActiveDailySourceLanguages()) {
+    function applyCachedDailyReadings(date, sources = getActiveDailySourceLanguages(), options = {}) {
         const fetchedData = createDailyReadingData();
         let appliedCount = 0;
         sources.forEach(lang => {
             const parsed = readCachedDailySource(lang, date);
             if (!parsed) return;
-            mergeSourceData(fetchedData, parsed, lang);
+            mergeSourceData(fetchedData, parsed, lang, { suppressTitle: !!options.suppressTitles });
             appliedCount += 1;
         });
         if (!appliedCount) {
@@ -8074,44 +8241,81 @@
     async function fetchDailyReadings(options = {}) {
         const today = cloneDateOnly(options.date || getActiveLiturgicalSourceDate());
         const fetchedData = createDailyReadingData();
-        if (!options.silent) showLiturgyLoadingMessage('전례 내용을 불러오는 중입니다...');
         const sources = options.sources || getActiveDailySourceLanguages();
+        state.dailyReadingsLoading = true;
+        if (!options.silent) showLiturgyLoadingMessage(liturgyLoadingMessages.KR);
 
-        const results = await Promise.all(sources.map(async lang => {
-            try {
-                const parsed = await fetchParsedDailyMass(lang, today);
-                return { lang, parsed };
-            } catch (error) {
-                return { lang, error };
+        if (!sources.length) {
+            if (options.shouldApply && !options.shouldApply()) return false;
+            state.dailyReadingsLoading = false;
+            render();
+            return false;
+        }
+
+        let appliedCount = 0;
+        const applyResult = result => {
+            if (options.shouldApply && !options.shouldApply()) return false;
+            if (result.parsed) {
+                mergeSourceData(fetchedData, result.parsed, result.lang);
+                applyCachedVariantAlignments(fetchedData, today);
+                finalizeDailyReadingsData(fetchedData);
+                appliedCount += 1;
+                console.log(`${result.lang} 매일미사 데이터 적용 완료`, result.parsed.title || '');
+                render();
+                return true;
             }
+            state.liturgyInfo.names[result.lang] = state.liturgyInfo.names[result.lang] || localizedLiturgyLoadingMessage(result.lang);
+            console.warn(`${result.lang} 매일미사 데이터 파싱 실패`, result.error);
+            return false;
+        };
+
+        const results = await Promise.all(sources.map(lang => {
+            const sourcePromise = fetchParsedDailyMass(lang, today);
+            return withTimeout(
+                sourcePromise,
+                DAILY_SOURCE_LANGUAGE_TIMEOUT_MS,
+                `${lang} daily source timeout`
+            )
+                .then(parsed => ({ lang, parsed }))
+                .catch(error => ({ lang, error }))
+                .then(result => {
+                    applyResult(result);
+                    return result;
+                });
         }));
 
         if (options.shouldApply && !options.shouldApply()) return false;
 
-        results.forEach(result => {
-            if (result.parsed) {
-                mergeSourceData(fetchedData, result.parsed, result.lang);
-                console.log(`${result.lang} 매일미사 데이터 적용 완료`, result.parsed.title || '');
-                return;
-            }
-            state.liturgyInfo.names[result.lang] = state.liturgyInfo.names[result.lang] || '로딩중...';
-            console.warn(`${result.lang} 매일미사 데이터 파싱 실패`, result.error);
-        });
-
-        applyCachedVariantAlignments(fetchedData, today);
-        finalizeDailyReadingsData(fetchedData);
-        alignDailySelectableVariantsWithAI(fetchedData, today).then(() => {
-            if (options.shouldApply && !options.shouldApply()) return;
+        state.dailyReadingsLoading = false;
+        if (appliedCount) {
+            applyCachedVariantAlignments(fetchedData, today);
             finalizeDailyReadingsData(fetchedData);
-            render();
-        }).catch(error => {
-            console.warn('일일 독서 선택지 정렬 보정 실패', error);
-        });
-        return true;
+        }
+        render();
+
+        if (appliedCount) {
+            alignDailySelectableVariantsWithAI(fetchedData, today).then(() => {
+                if (options.shouldApply && !options.shouldApply()) return;
+                finalizeDailyReadingsData(fetchedData);
+                render();
+            }).catch(error => {
+                console.warn('일일 독서 선택지 정렬 보정 실패', error);
+            });
+        }
+        return appliedCount > 0 || results.some(result => result.parsed);
     }
 
-    async function loadOrdinaryMassDataFromFirestore() {
-        const readyDb = db || await waitForFirebaseReady();
+    function ensureOrdinaryMassRefreshPromise(options = {}) {
+        if (!ordinaryMassRefreshPromise) {
+            ordinaryMassRefreshPromise = loadOrdinaryMassDataFromFirestore(options)
+                .finally(() => { ordinaryMassRefreshPromise = null; });
+        }
+        return ordinaryMassRefreshPromise;
+    }
+
+    async function loadOrdinaryMassDataFromFirestore(options = {}) {
+        const readyTimeout = Number.isFinite(options.firebaseReadyTimeoutMs) ? options.firebaseReadyTimeoutMs : 2500;
+        const readyDb = db || await waitForFirebaseReady(readyTimeout);
         if (!readyDb) throw new Error("Firestore is not available");
         const snapshot = await readyDb.collection("order_of_mass").orderBy("order").get();
         if (snapshot.empty) throw new Error("Firestore order_of_mass is empty");
@@ -8136,17 +8340,13 @@
 
     async function refreshOrdinaryMassDataFromFirestore(today, loadId) {
         try {
-            if (!ordinaryMassRefreshPromise) {
-                ordinaryMassRefreshPromise = loadOrdinaryMassDataFromFirestore()
-                    .finally(() => { ordinaryMassRefreshPromise = null; });
-            }
-            const remoteData = await ordinaryMassRefreshPromise;
+            const remoteData = await ensureOrdinaryMassRefreshPromise({ firebaseReadyTimeoutMs: 2500 });
             if (loadId !== activeMassDataLoadId) return;
             resetMassDataFrom(remoteData);
             await loadSpecialMassFileIfNeeded(today);
             if (loadId !== activeMassDataLoadId) return;
             const sources = getActiveDailySourceLanguages();
-            applyCachedDailyReadings(today, sources);
+            applyCachedDailyReadings(today, sources, { suppressTitles: state.dailyReadingsLoading });
             await fetchDailyReadings({
                 date: today,
                 sources,
@@ -8166,21 +8366,24 @@
         state.liturgyInfo = applyNavigationDateLabel(buildGeneratedLiturgyInfo(today), dateContext);
         state.liturgyInfo.color = recommendedVestmentColor(today, state.liturgyInfo.color, state.liturgyInfo);
         state.isSunday = !!(state.liturgyInfo.isSunday || state.liturgyInfo.isSolemnity);
+        state.dailyReadingsLoading = true;
         state.options.eucharist_song = '';
         state.autoEucharistSongKey = '';
 
-        let ordinaryMassSource = null;
+        let ordinaryMassSource = getStartupOrdinaryMassData();
         let loadedOrdinaryFromFirestore = false;
+        const firestoreStartup = ensureOrdinaryMassRefreshPromise({
+            firebaseReadyTimeoutMs: ORDINARY_MASS_FIRESTORE_STARTUP_WAIT_MS
+        });
         try {
-            if (!ordinaryMassRefreshPromise) {
-                ordinaryMassRefreshPromise = loadOrdinaryMassDataFromFirestore()
-                    .finally(() => { ordinaryMassRefreshPromise = null; });
-            }
-            ordinaryMassSource = await ordinaryMassRefreshPromise;
+            ordinaryMassSource = await withTimeout(
+                firestoreStartup,
+                ORDINARY_MASS_FIRESTORE_STARTUP_WAIT_MS,
+                'Firestore startup wait exceeded'
+            );
             loadedOrdinaryFromFirestore = true;
         } catch (error) {
-            console.warn('Firestore 통상문 로딩 실패, 로컬 JS 데이터로 폴백합니다.', error);
-            ordinaryMassSource = getStartupOrdinaryMassData();
+            console.warn('Firestore 통상문 첫 로딩이 늦어 로컬 JS 데이터로 먼저 시작합니다.', error);
         }
         if (loadId !== activeMassDataLoadId) return;
 
@@ -8190,7 +8393,7 @@
         if (loadId !== activeMassDataLoadId) return;
 
         const sources = getActiveDailySourceLanguages();
-        applyCachedDailyReadings(today, sources);
+        applyCachedDailyReadings(today, sources, { suppressTitles: true });
         render();
         refreshPopeNamesFromVatican().then(changed => {
             if (changed && loadId === activeMassDataLoadId) render();
@@ -8625,11 +8828,11 @@
     };
 
     function escapeInlineArg(value) {
-        return String(value || '').replace(/\\/g, "\\\\").replace(/'/g, "\\'").replace(/"/g, "&quot;").replace(/\r?\n/g, " ");
+        return escapeHtml(JSON.stringify(String(value || '').replace(/\r?\n/g, ' ')));
     }
 
     function makeAIButton(srcText, predefinedAiText, targetLang) {
-        return `<button class="btn-ai-trans" onclick="simAITrans(this, '${escapeInlineArg(srcText)}', '${escapeInlineArg(predefinedAiText)}', '${escapeInlineArg(targetLang)}')">🤖 AI 번역</button>`;
+        return `<button class="btn-ai-trans" onclick="simAITrans(this, ${escapeInlineArg(srcText)}, ${escapeInlineArg(predefinedAiText)}, ${escapeInlineArg(targetLang)})">🤖 AI 번역</button>`;
     }
 
     function combinedLineText(line) {
@@ -9068,6 +9271,78 @@
         ].join('');
     }
 
+    function citationForDisplayData(data, lower) {
+        const citObj = (data && data.cit) || {};
+        return citObj[`cit_${lower}`] || (lower === 'kr' ? (citObj.cit || '') : '');
+    }
+
+    function activeDisplayCitationsAreDifferent(data, leftKey, rightKey) {
+        if (!leftKey || !rightKey || leftKey === rightKey) return false;
+        return citationsAreDifferent(citationForDisplayData(data, leftKey), citationForDisplayData(data, rightKey));
+    }
+
+    function hasLocalProperNameMarker(text) {
+        const normalized = normalizeSemanticText(text);
+        return /bien\s*-?\s*duc|benedict|benedicto|benedictus|be\s*ne\s*dic|베네딕|ベネディクト|(?:le kinh|theo loi)\s+thanh\b/i.test(normalized);
+    }
+
+    function lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey) {
+        const leftText = cleanNodeText(line && line[`text_${leftKey}`]);
+        const rightText = cleanNodeText(line && line[`text_${rightKey}`]);
+        if (!leftText || !rightText) return false;
+        return hasLocalProperNameMarker(leftText) !== hasLocalProperNameMarker(rightText);
+    }
+
+    function dailyLineSemanticKey(text) {
+        const normalized = normalizeSemanticText(text);
+        const raw = String(text || '');
+        const haystack = `${normalized}\n${raw}`;
+        const patterns = [
+            ['taste_see_good_lord', /맛보고.*깨달|주님.*얼마나\s*좋|hay nem.*nhin coi|chua thien hao|taste.*see.*good|gustate.*videte/i],
+            ['good_shepherd_sheep_know', /착한\s*목자|내\s*양|양들.*알|con chien.*nghe.*tieng|ta biet chung|good shepherd|my sheep.*hear|know them/i]
+        ];
+        const matched = patterns.find(([, pattern]) => pattern.test(haystack));
+        return matched ? matched[0] : '';
+    }
+
+    function activeLineTextsAreSemanticMatch(line, leftKey, rightKey) {
+        const leftKeyName = dailyLineSemanticKey(line && line[`text_${leftKey}`]);
+        const rightKeyName = dailyLineSemanticKey(line && line[`text_${rightKey}`]);
+        return !!(leftKeyName && rightKeyName && leftKeyName === rightKeyName);
+    }
+
+    function clearDisplayLanguageFromLine(line, lower) {
+        const copy = Object.assign({}, line || {});
+        copy[`sp_${lower}`] = '';
+        copy[`text_${lower}`] = '';
+        copy[`text_${lower}_ai`] = '';
+        copy[`role_${lower}`] = '';
+        copy[`rubric_${lower}`] = '';
+        return copy;
+    }
+
+    function shouldSplitMismatchedDailyLine(line, baseId, data, leftKey, rightKey) {
+        if (!line || !leftKey || !rightKey || leftKey === rightKey) return false;
+        if (isPrayerFrameLine(line) || lineHasAnyRubric(line)) return false;
+        const leftText = cleanNodeText(line[`text_${leftKey}`]);
+        const rightText = cleanNodeText(line[`text_${rightKey}`]);
+        if (!leftText || !rightText) return false;
+        if ((baseId === 'entrance' || baseId === 'communion') && activeDisplayCitationsAreDifferent(data, leftKey, rightKey) && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey)) return true;
+        if (['collect', 'prayer_offerings', 'prayer_after'].includes(baseId) && lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey)) return true;
+        return false;
+    }
+
+    function splitMismatchedDailyLinesForActiveLanguages(lines, baseId, data, leftKey, rightKey) {
+        if (!Array.isArray(lines) || leftKey === rightKey) return lines || [];
+        return lines.flatMap(line => {
+            if (!shouldSplitMismatchedDailyLine(line, baseId, data, leftKey, rightKey)) return [line];
+            return [
+                clearDisplayLanguageFromLine(line, rightKey),
+                clearDisplayLanguageFromLine(line, leftKey)
+            ];
+        });
+    }
+
     // 화면 렌더링
     function render() {
         if (state.startupConsentDeclined) return;
@@ -9116,10 +9391,10 @@
         updateRoleLegend(leftL, rightL);
         const appNames = { 'KR': '가톨릭 매일미사', 'VN': 'Lời Chúa Mỗi Ngày', 'EN': 'Daily Mass', 'JP': '毎日のミサ', 'LA': 'Daily Mass in Latin' };
         document.title = `${appNames[leftL] || 'Ordo Missae'} | ${appNames[rightL] || 'Ordo Missae'} - Ordo Missae`;
-        const leftLitName = getLiturgyDisplayName(leftL);
-        const rightLitName = getLiturgyDisplayName(rightL);
-        document.getElementById('header-liturgy-name').innerHTML = liturgyDateNavigationHtml(leftLitName, rightLitName);
-        updateFloatingLiturgyBanner(leftLitName, rightLitName);
+        const leftLitName = state.dailyReadingsLoading ? localizedLiturgyLoadingMessage(leftL) : getLiturgyDisplayName(leftL);
+        const rightLitName = state.dailyReadingsLoading ? localizedLiturgyLoadingMessage(rightL) : getLiturgyDisplayName(rightL);
+        document.getElementById('header-liturgy-name').innerHTML = liturgyDateNavigationHtml(leftLitName, leftL === rightL ? '' : rightLitName);
+        updateFloatingLiturgyBanner(leftLitName, leftL === rightL ? '' : rightLitName);
         updateFooterCopyright();
 
         const root = document.getElementById('missal-root');
@@ -9145,6 +9420,7 @@
 
             const data = Object.assign({}, item);
             if (item.type === 'selectable' && item.variants) {
+                normalizeDailySelectableTemplate(item);
                 ensureDismissalDefaultOption(item, baseId);
                 const variantKeys = Object.keys(item.variants).sort();
                 const currentKey = state.options[baseId];
@@ -9202,7 +9478,8 @@
             if (!isStacked) headerRow.appendChild(hColR);
             partContainer.appendChild(headerRow);
 
-            data.lines.forEach(line => {
+            const displayLines = splitMismatchedDailyLinesForActiveLanguages(data.lines, baseId, data, leftL.toLowerCase(), rightL.toLowerCase());
+            displayLines.forEach(line => {
                 if (line && line.isDivider) {
                     appendDottedDividerRow(partContainer, isStacked);
                     return;
