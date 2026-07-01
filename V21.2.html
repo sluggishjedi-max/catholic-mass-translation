@@ -93,8 +93,8 @@
         .floating-liturgy-text:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
         .floating-liturgy-prev { grid-column: 1; }
         .floating-liturgy-text { grid-column: 2; }
-        .floating-settings-btn { grid-column: 3; grid-row: 1; }
-        .floating-liturgy-next { grid-column: 4; grid-row: 1; }
+        .floating-liturgy-next { grid-column: 3; grid-row: 1; }
+        .floating-settings-btn { grid-column: 4; grid-row: 1; }
         .floating-liturgy-nav-btn { width: 32px; height: 30px; font-size: 1.24rem; }
         .floating-settings-btn { justify-self: end; width: 34px; height: 30px; border: 0; border-radius: 0; background: transparent; color: var(--liturgy-text-color, white); cursor: pointer; font-size: 1.08rem; font-weight: 900; line-height: 1; box-shadow: none; }
         .floating-settings-btn:hover { background: transparent; }
@@ -160,7 +160,8 @@
         .church-map-frame[hidden],
         .church-map-js[hidden] { display: none; }
         .church-map-caption { display: none; margin: 0; }
-        #church-panel { padding-bottom: 0; }
+        #church-panel { padding-bottom: 18px; }
+        #church-panel .aux-card { margin-bottom: 0; }
 
         .dialogue { display: flex; gap: 3px; line-height: 1.45; }
         .speaker { width: var(--speaker-width, 36px); min-width: var(--speaker-width, 36px); flex-shrink: 0; text-align: left; padding-top: 2px; font-size: 0.8rem; font-weight: 800; color: #555; }
@@ -274,7 +275,7 @@
             .setting-help { margin-top: -4px; text-align: left; }
             #lbl-set-voice-note { padding-left: 2em; }
             .aux-panel { padding: 14px 10px 78px; }
-            #church-panel { padding-bottom: 0; }
+            #church-panel { padding-bottom: 14px; }
             .aux-card { padding: 13px; }
             .aux-search-row,
             .aux-prayer-row { grid-template-columns: 1fr; }
@@ -3328,8 +3329,11 @@
 
     function applyKtcgkpvCitationToParsed(parsed, key, optionCits, ktcgOptions = []) {
         if (['entrance', 'communion'].includes(key) && parsed.data && parsed.data[key]) {
+            const existingOptionCits = Array.isArray(parsed.data[key].optionCits) ? parsed.data[key].optionCits : [];
+            const parsedOptionCount = splitParsedOptionsForCitation(parsed.data[key].lines).length;
             const aligned = alignKtcgkpvCitationsByMeaning(parsed.data[key], ktcgOptions);
             if (aligned.some(item => item.cit_vn)) optionCits = aligned;
+            else if (existingOptionCits.some(item => item.cit_vn) && optionCits.length < parsedOptionCount) optionCits = existingOptionCits;
         }
         if (!Array.isArray(optionCits) || !optionCits.length || !optionCits.some(item => item.cit_vn)) return;
         if (!parsed.data[key] || typeof parsed.data[key] !== 'object') parsed.data[key] = parsed.data[key] || {};
@@ -3578,14 +3582,37 @@
         return isVietnameseStandaloneCitationLine(citation) ? citation : '';
     }
 
+    function vietnameseAntiphonCitationMatchesText(citation, text) {
+        const cit = normalizeBibleAliasForCompare(citation);
+        const normalized = normalizeSemanticText(text);
+        if (!cit || !normalized) return false;
+        if (/^(?:mt|mat|matt|matthieu)\s*11\s*[,.:]\s*28/.test(cit)) {
+            return /kho nhoc|ganh nang|den cung ta|bo s[ứu]c|bo xuc|mang do/i.test(normalized);
+        }
+        if (/^(?:tv|ps|psalm)\s*(?:33|34)\s*[,.:]\s*9/.test(cit)) {
+            return /nem thu|nhin coi|thien hao|nua tu[aạ]/i.test(normalized);
+        }
+        if (/^(?:tv|ps|psalm)\s*(?:102|103)\s*[,.:]\s*1/.test(cit)) {
+            return /linh hon.*chuc tung|thanh danh/i.test(normalized);
+        }
+        if (/^(?:ga|jn|john|gioan)\s*17\s*[,.:]\s*20/.test(cit)) {
+            return /nen mot|cha da sai con|the gian tin/i.test(normalized);
+        }
+        return false;
+    }
+
     function prepareVietnameseAntiphonSection(heading, lines) {
         const headingCitation = extractVietnameseAntiphonHeadingCitation(heading);
         const optionCits = [];
         const preparedLines = [];
-        splitOptionsByMarker(lines, /^Hoặc\b|^Hoặc đọc/i).forEach((block, index) => {
+        const optionBlocks = splitOptionsByMarker(lines, /^Hoặc\b|^Hoặc đọc/i);
+        const citationResults = optionBlocks.map(block => extractVietnameseOptionCitation(block));
+        const headingCitationIndex = headingCitation && citationResults.length > 1
+            ? citationResults.findIndex(result => vietnameseAntiphonCitationMatchesText(headingCitation, result.lines.join(' ')))
+            : 0;
+        citationResults.forEach((citationResult, index) => {
             if (index > 0) preparedLines.push('Hoặc:');
-            const citationResult = extractVietnameseOptionCitation(block);
-            const citation = citationResult.citation || headingCitation;
+            const citation = citationResult.citation || (index === headingCitationIndex ? headingCitation : '');
             optionCits.push(citation ? { cit_vn: citation } : {});
             preparedLines.push(...citationResult.lines);
         });
@@ -7582,7 +7609,7 @@
         return options.length ? options : [parsedLines || []];
     }
 
-    const aiAlignedVariantSectionIds = new Set(['psalm', 'gospel_accl']);
+    const aiAlignedVariantSectionIds = new Set(['psalm', 'gospel_accl', 'entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
 
     function selectableOptionMapFromData(newData, baseId = '') {
         const optionMap = {};
@@ -7658,7 +7685,13 @@
             ['poor_in_spirit_kingdom', /마음이\s*가난|하늘\s*나라.*그들의\s*것|phuc thay.*tam hon ngheo kho|nuoc troi.*cua ho|blessed.*poor in spirit|kingdom of heaven.*theirs/i],
             ['light_world_life', /세상의\s*빛|생명의\s*빛|su sang the gian|anh sang.*su song|light of the world|light of life|lux mundi/i],
             ['savior_destroyed_death_life', /구원자.*죽음.*복음.*생명|죽음을\s*없애.*생명|dang cuu do.*tieu diet.*than chet|tieu diet.*than chet.*tin mung|tin mung.*phuc truong sinh|savior.*destroyed.*death.*gospel.*life|abolished death.*gospel.*life/i],
-            ['faithful_holy_works', /주님.*넘어지는.*붙들|주님.*일으켜|chua trung thanh.*viec chua|nang do.*nga quy|thien hao.*loai nguoi|lord.*faithful.*works|raises.*bowed down/i]
+            ['faithful_holy_works', /주님.*넘어지는.*붙들|주님.*일으켜|chua trung thanh.*viec chua|nang do.*nga quy|thien hao.*loai nguoi|lord.*faithful.*works|raises.*bowed down/i],
+            ['kingdom_near_repent_gospel', /하느님\s*나라.*가까.*회개.*복음|trieu dai thien chua.*den gan.*sam hoi.*tin mung|nuoc thien chua.*den gan.*sam hoi.*tin mung|kingdom.*(?:near|at hand).*repent.*gospel/i],
+            ['come_to_me_rest', /고생.*무거운\s*짐.*나에게\s*오너라|안식을\s*주리라|kho nhoc.*ganh nang.*den cung ta|den cung ta.*bo s[ứu]c|come to me.*burden|give you rest/i],
+            ['taste_see_good_lord', /맛보고.*깨달|주님.*얼마나\s*좋|hay nem.*nhin coi|nem thu.*nhin coi|chua thien hao|taste.*see.*good|gustate.*videte/i],
+            ['praise_soul_holy_name', /내\s*영혼.*찬미|거룩하신.*이름|linh hon.*chuc tung|thanh danh nguoi|bless the lord.*soul|holy name/i],
+            ['my_god_praise_salvation', /당신은\s*저의\s*하느님.*찬송|구원이\s*되어|chua la thien chua cua toi|tro nen phan roi|my god.*praise|become.*salvation/i],
+            ['unity_sent_by_father', /하나가\s*되게|아버지.*보내셨다는|nen mot|cha da sai con|be one|sent me|sent con/i]
         ];
         const haystack = `${normalized}\n${raw}`;
         const matched = patterns.find(([, pattern]) => pattern.test(haystack));
@@ -7879,8 +7912,17 @@
     }
 
     function buildVariantAlignmentPrompt(baseId, optionMap) {
+        const sectionNames = {
+            psalm: 'responsorial_psalm',
+            gospel_accl: 'gospel_acclamation',
+            entrance: 'entrance_antiphon',
+            communion: 'communion_antiphon',
+            collect: 'collect',
+            prayer_offerings: 'prayer_over_the_offerings',
+            prayer_after: 'prayer_after_communion'
+        };
         const input = {
-            section: baseId === 'psalm' ? 'responsorial_psalm' : 'gospel_acclamation',
+            section: sectionNames[baseId] || baseId,
             instructions: [
                 'Align semantically equivalent Catholic liturgical options across languages.',
                 'Ignore option labels and source order when they disagree.',
@@ -7968,6 +8010,12 @@
                 section.variantAlignment = cached;
                 return;
             }
+            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap);
+            if (fallbackAlignment.length) {
+                section.variantAlignment = fallbackAlignment;
+                writeCachedDailyVariantAlignment(date, baseId, signature, fallbackAlignment);
+                return;
+            }
             try {
                 const alignment = await requestVariantAlignmentWithGemini(baseId, optionMap);
                 if (alignment.length) {
@@ -7975,16 +8023,172 @@
                     writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
                 }
             } catch (error) {
-                const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap);
-                if (fallbackAlignment.length) {
-                    section.variantAlignment = fallbackAlignment;
-                    writeCachedDailyVariantAlignment(date, baseId, signature, fallbackAlignment);
-                    console.warn(`${baseId} AI variant alignment failed, used semantic fallback.`, error);
-                    return;
-                }
                 console.warn(`${baseId} AI variant alignment failed, keeping source order.`, error);
             }
         }));
+    }
+
+    const aiSemanticDecisionSectionIds = new Set(['entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
+    const pendingDailySemanticEquivalenceKeys = new Set();
+
+    function hashSemanticText(value) {
+        let hash = 2166136261;
+        const text = normalizeSemanticText(value).slice(0, 1600);
+        for (let i = 0; i < text.length; i += 1) {
+            hash ^= text.charCodeAt(i);
+            hash = Math.imul(hash, 16777619);
+        }
+        return (hash >>> 0).toString(36);
+    }
+
+    function dailySemanticEquivalenceStorageKey(date) {
+        return `${STORAGE_PREFIX}dailySemanticEquivalence:${formatDateIso(date)}:${strictDailySourceCacheVariant(date)}`;
+    }
+
+    function semanticEquivalenceSignature(baseId, leftText, rightText) {
+        const pair = [hashSemanticText(leftText), hashSemanticText(rightText)].sort();
+        return `${baseId}:${pair[0]}:${pair[1]}`;
+    }
+
+    function readCachedDailySemanticEquivalence(date, baseId, leftText, rightText) {
+        const entry = readStorageJSON(dailySemanticEquivalenceStorageKey(date));
+        if (!entry || !entry.decisions || !isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)) return null;
+        const value = entry.decisions[semanticEquivalenceSignature(baseId, leftText, rightText)];
+        return typeof value === 'boolean' ? value : null;
+    }
+
+    function writeCachedDailySemanticEquivalence(date, baseId, leftText, rightText, equivalent) {
+        const storageKey = dailySemanticEquivalenceStorageKey(date);
+        const entry = readStorageJSON(storageKey);
+        const next = entry && entry.decisions && isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)
+            ? entry
+            : { cachedAt: Date.now(), decisions: {} };
+        next.cachedAt = Date.now();
+        next.decisions[semanticEquivalenceSignature(baseId, leftText, rightText)] = !!equivalent;
+        writeStorageJSON(storageKey, next);
+    }
+
+    function localSemanticEquivalent(baseId, leftText, rightText) {
+        const leftKey = variantSemanticKey(baseId, leftText);
+        const rightKey = variantSemanticKey(baseId, rightText);
+        return !!(leftKey && rightKey && leftKey === rightKey);
+    }
+
+    function cachedOrLocalSemanticEquivalent(baseId, leftText, rightText) {
+        const cached = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
+        if (cached !== null) return cached;
+        return localSemanticEquivalent(baseId, leftText, rightText);
+    }
+
+    function buildSemanticEquivalencePrompt(task) {
+        const sectionNames = {
+            entrance: 'entrance antiphon',
+            communion: 'communion antiphon',
+            collect: 'collect',
+            prayer_offerings: 'prayer over the offerings',
+            prayer_after: 'prayer after communion'
+        };
+        return [
+            'Decide whether these two Catholic liturgical texts are the same prayer/antiphon in different languages.',
+            'Be generous with normal translation differences, word order, punctuation, and citation numbering.',
+            'Return false only when the liturgical source text is clearly different, such as a different saint, feast, antiphon, or prayer intention.',
+            'Return strict JSON only: {"equivalent":true} or {"equivalent":false}.',
+            '',
+            JSON.stringify({
+                section: sectionNames[task.baseId] || task.baseId,
+                leftLanguage: langCodeFromLowerKey(task.leftLower),
+                rightLanguage: langCodeFromLowerKey(task.rightLower),
+                leftText: task.leftText,
+                rightText: task.rightText
+            }, null, 2)
+        ].join('\n');
+    }
+
+    async function requestSemanticEquivalenceWithGemini(task) {
+        const payload = await fetchGeminiViaFirebase('align', {
+            contents: [{ parts: [{ text: buildSemanticEquivalencePrompt(task) }] }],
+            generationConfig: { temperature: 0 }
+        }, {
+            timeoutMs: 30000,
+            label: 'AI semantic equivalence'
+        });
+        const text = geminiTextFromPayload(payload);
+        try {
+            const parsed = extractJsonObjectFromText(text);
+            if (typeof parsed.equivalent === 'boolean') return parsed.equivalent;
+        } catch (error) {
+            if (/true/i.test(text)) return true;
+            if (/false/i.test(text)) return false;
+            throw error;
+        }
+        throw new Error('AI semantic equivalence returned no boolean decision.');
+    }
+
+    function collectDailySemanticEquivalenceTasks(date) {
+        const lowers = ['kr', 'vn', 'en', 'jp', 'la'];
+        const active = currentLeftRightLowerKeys();
+        const tasks = [];
+        massData.forEach(item => {
+            const baseId = getBaseId(item && item.id);
+            if (!aiSemanticDecisionSectionIds.has(baseId)) return;
+            const lineSets = [];
+            if (item && Array.isArray(item.lines)) lineSets.push(item.lines);
+            if (item && item.variants && typeof item.variants === 'object' && !Array.isArray(item.variants)) {
+                Object.values(item.variants).forEach(variant => {
+                    if (variant && Array.isArray(variant.lines)) lineSets.push(variant.lines);
+                });
+            }
+            lineSets.forEach(lines => {
+                (lines || []).forEach(line => {
+                    if (!line || isPrayerFrameLine(line) || lineHasAnyRubric(line)) return;
+                    for (let i = 0; i < lowers.length; i += 1) {
+                        for (let j = i + 1; j < lowers.length; j += 1) {
+                            const leftLower = lowers[i];
+                            const rightLower = lowers[j];
+                            const leftText = cleanNodeText(line[`text_${leftLower}`]);
+                            const rightText = cleanNodeText(line[`text_${rightLower}`]);
+                            if (!leftText || !rightText || normalizeSemanticText(leftText) === normalizeSemanticText(rightText)) continue;
+                            if (readCachedDailySemanticEquivalence(date, baseId, leftText, rightText) !== null) continue;
+                            if (localSemanticEquivalent(baseId, leftText, rightText)) {
+                                writeCachedDailySemanticEquivalence(date, baseId, leftText, rightText, true);
+                                continue;
+                            }
+                            const signature = `${dailySemanticEquivalenceStorageKey(date)}:${semanticEquivalenceSignature(baseId, leftText, rightText)}`;
+                            if (pendingDailySemanticEquivalenceKeys.has(signature)) continue;
+                            pendingDailySemanticEquivalenceKeys.add(signature);
+                            const activePair = (leftLower === active.left && rightLower === active.right)
+                                || (leftLower === active.right && rightLower === active.left);
+                            tasks.push({ baseId, leftLower, rightLower, leftText, rightText, signature, activePair });
+                        }
+                    }
+                });
+            });
+        });
+        return tasks.sort((a, b) => Number(b.activePair) - Number(a.activePair));
+    }
+
+    async function alignDailyTextEquivalenceWithAI(date) {
+        const tasks = collectDailySemanticEquivalenceTasks(date).slice(0, 8);
+        if (!tasks.length) return false;
+        let changed = false;
+        for (const task of tasks) {
+            try {
+                const equivalent = await requestSemanticEquivalenceWithGemini(task);
+                writeCachedDailySemanticEquivalence(date, task.baseId, task.leftText, task.rightText, equivalent);
+                changed = true;
+            } catch (error) {
+                const fallback = localSemanticEquivalent(task.baseId, task.leftText, task.rightText);
+                if (fallback) {
+                    writeCachedDailySemanticEquivalence(date, task.baseId, task.leftText, task.rightText, true);
+                    changed = true;
+                }
+                console.warn(`${task.baseId} AI semantic equivalence failed, used local fallback.`, error);
+            } finally {
+                pendingDailySemanticEquivalenceKeys.delete(task.signature);
+            }
+            await new Promise(resolve => setTimeout(resolve, 180));
+        }
+        return changed;
     }
 
     function dailyVariantLabel(index) {
@@ -8016,15 +8220,21 @@
             const languageOptions = optionMap && Array.isArray(optionMap[lower]) ? optionMap[lower] : null;
             const hasStructuredOptions = !!(languageOptions && languageOptions.length > 1);
             const optionCits = newData[`optionCits_${lower}`];
+            const hasOptionCitations = Array.isArray(optionCits) && optionCits.length;
+            let optionCitationMatched = false;
             if (Array.isArray(optionCits) && optionCits.length) {
                 const source = optionCits[sourceIndex] || {};
                 Object.keys(source).forEach(key => {
-                    if (/^cit_/i.test(key) && source[key]) cit[key] = source[key];
+                    if (/^cit_/i.test(key) && source[key]) {
+                        cit[key] = source[key];
+                        optionCitationMatched = true;
+                    }
                 });
             }
             const directKey = `cit_${lower}`;
             const hasLanguageOptions = !!(languageOptions && languageOptions.length);
             let directCitationMatchesVariant = true;
+            if (hasOptionCitations && hasStructuredOptions && !optionCitationMatched) directCitationMatchesVariant = false;
             if (alignmentGroup) {
                 if (hasLanguageOptions && !hasAlignedIndex) directCitationMatchesVariant = false;
                 else if (hasStructuredOptions && sourceIndex > 0) directCitationMatchesVariant = false;
@@ -8295,7 +8505,7 @@
         render();
 
         if (appliedCount) {
-            alignDailySelectableVariantsWithAI(fetchedData, today).then(() => {
+            alignDailySelectableVariantsWithAI(fetchedData, today).then(() => alignDailyTextEquivalenceWithAI(today)).then(() => {
                 if (options.shouldApply && !options.shouldApply()) return;
                 finalizeDailyReadingsData(fetchedData);
                 render();
@@ -9295,6 +9505,8 @@
     }
 
     function dailyLineSemanticKey(text) {
+        const sharedKey = variantSemanticKey('daily_line', text);
+        if (sharedKey) return sharedKey;
         const normalized = normalizeSemanticText(text);
         const raw = String(text || '');
         const haystack = `${normalized}\n${raw}`;
@@ -9308,9 +9520,12 @@
         return matched ? matched[0] : '';
     }
 
-    function activeLineTextsAreSemanticMatch(line, leftKey, rightKey) {
-        const leftKeyName = dailyLineSemanticKey(line && line[`text_${leftKey}`]);
-        const rightKeyName = dailyLineSemanticKey(line && line[`text_${rightKey}`]);
+    function activeLineTextsAreSemanticMatch(line, leftKey, rightKey, baseId = '') {
+        const leftText = line && line[`text_${leftKey}`];
+        const rightText = line && line[`text_${rightKey}`];
+        if (baseId && cachedOrLocalSemanticEquivalent(baseId, leftText, rightText)) return true;
+        const leftKeyName = dailyLineSemanticKey(leftText);
+        const rightKeyName = dailyLineSemanticKey(rightText);
         return !!(leftKeyName && rightKeyName && leftKeyName === rightKeyName);
     }
 
@@ -9330,8 +9545,11 @@
         const leftText = cleanNodeText(line[`text_${leftKey}`]);
         const rightText = cleanNodeText(line[`text_${rightKey}`]);
         if (!leftText || !rightText) return false;
-        if ((baseId === 'entrance' || baseId === 'communion') && activeDisplayCitationsAreDifferent(data, leftKey, rightKey) && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey)) return true;
-        if (['collect', 'prayer_offerings', 'prayer_after'].includes(baseId) && lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey)) return true;
+        const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
+        if (cachedEquivalent === true) return false;
+        if (cachedEquivalent === false && aiSemanticDecisionSectionIds.has(baseId)) return true;
+        if ((baseId === 'entrance' || baseId === 'communion') && activeDisplayCitationsAreDifferent(data, leftKey, rightKey) && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey, baseId)) return true;
+        if (['collect', 'prayer_offerings', 'prayer_after'].includes(baseId) && lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey) && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey, baseId)) return true;
         return false;
     }
 
@@ -9346,7 +9564,36 @@
         });
     }
 
-    const sourceChoiceVariantPartIds = new Set(['entrance', 'prayer_offerings', 'prayer_after']);
+    function gospelAcclamationAlleluiaText(lower, position) {
+        const opening = position === 0;
+        const map = {
+            kr: '알렐루야.',
+            vn: opening ? 'Alleluia, alleluia!' : 'Alleluia.',
+            en: opening ? 'Alleluia, alleluia!' : 'Alleluia.',
+            jp: opening ? 'アレルヤ、アレルヤ。' : 'アレルヤ。',
+            la: opening ? 'Alleluia, alleluia!' : 'Alleluia.'
+        };
+        return map[lower] || map.en;
+    }
+
+    function fillGospelAcclamationAlleluiaLines(lines) {
+        if (!Array.isArray(lines)) return lines || [];
+        const alleluiaIndexes = [];
+        lines.forEach((line, index) => {
+            const hasAlleluia = ['kr', 'vn', 'en', 'jp', 'la'].some(lower => isAlleluiaOnlyText(line && line[`text_${lower}`]));
+            if (hasAlleluia) alleluiaIndexes.push(index);
+        });
+        alleluiaIndexes.forEach((lineIndex, position) => {
+            const line = lines[lineIndex];
+            ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
+                if (!cleanNodeText(line[`text_${lower}`])) line[`text_${lower}`] = gospelAcclamationAlleluiaText(lower, position);
+                if (position === 0 && !cleanNodeText(line[`sp_${lower}`])) line[`sp_${lower}`] = peopleSpeakerByLang[lower] || '';
+            });
+        });
+        return lines;
+    }
+
+    const sourceChoiceVariantPartIds = new Set(['entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
 
     function sourceChoiceLabelForLower(sourceLower) {
         const names = {
@@ -9373,12 +9620,15 @@
             const leftText = cleanNodeText(line[`text_${leftKey}`]);
             const rightText = cleanNodeText(line[`text_${rightKey}`]);
             if (!leftText || !rightText) return indexes;
-            const entranceMismatch = baseId === 'entrance'
+            const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
+            if (cachedEquivalent === true) return indexes;
+            const antiphonMismatch = (baseId === 'entrance' || baseId === 'communion')
                 && activeDisplayCitationsAreDifferent(data, leftKey, rightKey)
-                && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey);
-            const prayerMismatch = (baseId === 'prayer_offerings' || baseId === 'prayer_after')
-                && lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey);
-            if (entranceMismatch || prayerMismatch) indexes.push(index);
+                && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey, baseId);
+            const prayerMismatch = ['collect', 'prayer_offerings', 'prayer_after'].includes(baseId)
+                && lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey)
+                && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey, baseId);
+            if (cachedEquivalent === false || antiphonMismatch || prayerMismatch) indexes.push(index);
             return indexes;
         }, []);
     }
@@ -9553,6 +9803,7 @@
 
             const sourceChoiceData = buildSourceChoiceDisplayData(data, baseId, leftL.toLowerCase(), rightL.toLowerCase());
             if (sourceChoiceData) Object.assign(data, sourceChoiceData);
+            if (baseId === 'gospel_accl') fillGospelAcclamationAlleluiaLines(data.lines);
 
             const partContainer = document.createElement('section');
             partContainer.className = 'part-container';
