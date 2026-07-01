@@ -159,8 +159,8 @@
         .church-map-frame { display: block; width: 100%; min-height: 440px; border: 0; background: #eef2f6; }
         .church-map-frame[hidden],
         .church-map-js[hidden] { display: none; }
-        .church-map-caption { margin-top: 8px; line-height: 1.45; font-size: 0.88rem; }
-        .church-map-caption a { display: inline-flex; align-items: center; justify-content: center; margin-top: 4px; padding: 8px 11px; border-radius: 8px; background: var(--primary-color); color: #fff; font-weight: 900; text-decoration: none; }
+        .church-map-caption { display: none; margin: 0; }
+        #church-panel { padding-bottom: 0; }
 
         .dialogue { display: flex; gap: 3px; line-height: 1.45; }
         .speaker { width: var(--speaker-width, 36px); min-width: var(--speaker-width, 36px); flex-shrink: 0; text-align: left; padding-top: 2px; font-size: 0.8rem; font-weight: 800; color: #555; }
@@ -274,6 +274,7 @@
             .setting-help { margin-top: -4px; text-align: left; }
             #lbl-set-voice-note { padding-left: 2em; }
             .aux-panel { padding: 14px 10px 78px; }
+            #church-panel { padding-bottom: 0; }
             .aux-card { padding: 13px; }
             .aux-search-row,
             .aux-prayer-row { grid-template-columns: 1fr; }
@@ -2256,10 +2257,6 @@
         return `https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=14&output=embed`;
     }
 
-    function googleMapsSearchUrl(query) {
-        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-    }
-
     function churchCountryFromLocation(value = state.currentLoc) {
         return normalizeSelectableLang(value || 'KR', 'KR');
     }
@@ -2276,21 +2273,18 @@
 
     function setChurchCaption(text) {
         const caption = document.getElementById('church-map-caption');
-        if (caption) caption.textContent = text || '';
+        if (caption) {
+            caption.textContent = '';
+            caption.hidden = true;
+        }
     }
 
     function setChurchCaptionHtml(html) {
         const caption = document.getElementById('church-map-caption');
-        if (caption) caption.innerHTML = html || '';
-    }
-
-    function churchOpenMapsText() {
-        const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
-        if (lang === 'VN') return 'Mở trong Google Maps';
-        if (lang === 'EN') return 'Open in Google Maps';
-        if (lang === 'JP') return 'Google マップで開く';
-        if (lang === 'LA') return 'Aperi in Google Maps';
-        return 'Google Maps에서 열기';
+        if (caption) {
+            caption.innerHTML = '';
+            caption.hidden = true;
+        }
     }
 
     function churchFoundText(count) {
@@ -2312,10 +2306,7 @@
             frame.src = googleMapsEmbedUrl(fallbackQuery);
         }
         setChurchStatus(auxText().churchReady);
-        setChurchCaptionHtml([
-            `<span>${escapeHtml(fallbackQuery)}</span>`,
-            `<br><a href="${escapeHtml(googleMapsSearchUrl(fallbackQuery))}" target="_blank" rel="noopener">${escapeHtml(churchOpenMapsText())}</a>`
-        ].join(''));
+        setChurchCaption('');
     }
 
     async function loadGoogleMapsForChurches() {
@@ -3995,6 +3986,13 @@
             .replace(/^A\s+lleluia/iu, 'Alleluia')
             .replace(/\s*\)\s*$/u, ''));
         if (!cleaned) return;
+        const inlineAlleluia = cleaned.match(/^(Alleluia(?:,\s*alleluia)?[!.])\s+(.+?)\s*[–-]\s*(Alleluia[!.]?)$/i);
+        if (inlineAlleluia) {
+            out.push(parsedLine(speaker, inlineAlleluia[1]));
+            out.push(parsedLine('', inlineAlleluia[2].replace(/\s*[–-]\s*$/u, '')));
+            out.push(parsedLine('', inlineAlleluia[3]));
+            return;
+        }
         const combinedAlleluia = cleaned.match(/^(Alleluia[^!.\n]*[!.])\s*[–-]\s*(.+?)\s*[–-]?\s*(Alleluia[!.]?)$/i);
         if (combinedAlleluia) {
             out.push(parsedLine(speaker, combinedAlleluia[1]));
@@ -7658,7 +7656,9 @@
             ['teach_paths_truth', /길.*가르|진리.*이끌|당신.*길|day bao.*loi buoc|loi buoc.*chua|huong dan.*chan ly|teach me.*paths|guide me.*truth|vias tuas|veritatem tuam|doce me/i],
             ['speak_lord_life', /말씀하소서|생명의 말씀|xin hay phan|dang lang tai nghe|su song doi doi|speak lord|servant.*listening|words.*everlasting life/i],
             ['poor_in_spirit_kingdom', /마음이\s*가난|하늘\s*나라.*그들의\s*것|phuc thay.*tam hon ngheo kho|nuoc troi.*cua ho|blessed.*poor in spirit|kingdom of heaven.*theirs/i],
-            ['light_world_life', /세상의\s*빛|생명의\s*빛|su sang the gian|anh sang.*su song|light of the world|light of life|lux mundi/i]
+            ['light_world_life', /세상의\s*빛|생명의\s*빛|su sang the gian|anh sang.*su song|light of the world|light of life|lux mundi/i],
+            ['savior_destroyed_death_life', /구원자.*죽음.*복음.*생명|죽음을\s*없애.*생명|dang cuu do.*tieu diet.*than chet|tieu diet.*than chet.*tin mung|tin mung.*phuc truong sinh|savior.*destroyed.*death.*gospel.*life|abolished death.*gospel.*life/i],
+            ['faithful_holy_works', /주님.*넘어지는.*붙들|주님.*일으켜|chua trung thanh.*viec chua|nang do.*nga quy|thien hao.*loai nguoi|lord.*faithful.*works|raises.*bowed down/i]
         ];
         const haystack = `${normalized}\n${raw}`;
         const matched = patterns.find(([, pattern]) => pattern.test(haystack));
@@ -7759,17 +7759,18 @@
         };
     }
 
-    function firstOptionSemanticKey(baseId, optionMap, lower) {
-        const option = optionMap && Array.isArray(optionMap[lower]) ? optionMap[lower][0] : null;
-        return option ? variantSemanticKey(baseId, variantOptionMeaningText(baseId, option)) : '';
-    }
-
-    function activeFirstOptionsAreSemanticMatch(baseId, optionMap) {
+    function activeOptionsHaveSemanticMatches(baseId, optionMap) {
         const { left, right } = currentLeftRightLowerKeys();
         if (!left || !right || left === right) return false;
-        const leftKey = firstOptionSemanticKey(baseId, optionMap, left);
-        const rightKey = firstOptionSemanticKey(baseId, optionMap, right);
-        return !!(leftKey && rightKey && leftKey === rightKey);
+        const leftOptions = Array.isArray(optionMap && optionMap[left]) ? optionMap[left] : [];
+        const rightOptions = Array.isArray(optionMap && optionMap[right]) ? optionMap[right] : [];
+        const rightKeys = new Set(rightOptions
+            .map(option => variantSemanticKey(baseId, variantOptionMeaningText(baseId, option)))
+            .filter(Boolean));
+        return leftOptions.some(option => {
+            const key = variantSemanticKey(baseId, variantOptionMeaningText(baseId, option));
+            return !!(key && rightKeys.has(key));
+        });
     }
 
     function buildLeftCitationFirstAlignment(baseId, section, optionMap) {
@@ -7778,7 +7779,7 @@
         if (!left || !right || left === right) return [];
         if (!Array.isArray(optionMap[left]) || !optionMap[left].length) return [];
         if (!Array.isArray(optionMap[right]) || !optionMap[right].length) return [];
-        if (activeFirstOptionsAreSemanticMatch(baseId, optionMap)) return [];
+        if (activeOptionsHaveSemanticMatches(baseId, optionMap)) return [];
         const leftCitation = directCitationForLower(section, left);
         const rightCitation = directCitationForLower(section, right);
         if (!citationsAreDifferent(leftCitation, rightCitation)) return [];
@@ -9299,7 +9300,9 @@
         const haystack = `${normalized}\n${raw}`;
         const patterns = [
             ['taste_see_good_lord', /맛보고.*깨달|주님.*얼마나\s*좋|hay nem.*nhin coi|chua thien hao|taste.*see.*good|gustate.*videte/i],
-            ['good_shepherd_sheep_know', /착한\s*목자|내\s*양|양들.*알|con chien.*nghe.*tieng|ta biet chung|good shepherd|my sheep.*hear|know them/i]
+            ['good_shepherd_sheep_know', /착한\s*목자|내\s*양|양들.*알|con chien.*nghe.*tieng|ta biet chung|good shepherd|my sheep.*hear|know them/i],
+            ['temple_mercy_praise_name', /성전.*자애|당신의\s*성전|이름.*찬송|lòng\s*thương\s*xót.*đền\s*thánh|long thuong xot.*den thanh|thanh danh.*khen ngoi|tay huu.*cong minh|temple.*mercy|name.*praise.*justice/i],
+            ['clap_hands_peoples', /손뼉.*쳐라|모든\s*민족|chư\s*dân.*vỗ\s*tay|chu dan.*vo tay|clap.*hands.*peoples/i]
         ];
         const matched = patterns.find(([, pattern]) => pattern.test(haystack));
         return matched ? matched[0] : '';
@@ -9341,6 +9344,92 @@
                 clearDisplayLanguageFromLine(line, leftKey)
             ];
         });
+    }
+
+    const sourceChoiceVariantPartIds = new Set(['entrance', 'prayer_offerings', 'prayer_after']);
+
+    function sourceChoiceLabelForLower(sourceLower) {
+        const names = {
+            kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana' },
+            vn: { kr: '베트남어', vn: 'tiếng Việt', en: 'Vietnamese', jp: 'ベトナム語', la: 'Vietnamica' },
+            en: { kr: '영어', vn: 'tiếng Anh', en: 'English', jp: '英語', la: 'Anglica' },
+            jp: { kr: '일본어', vn: 'tiếng Nhật', en: 'Japanese', jp: '日本語', la: 'Iaponica' },
+            la: { kr: '라틴어', vn: 'tiếng Latinh', en: 'Latin', jp: 'ラテン語', la: 'Latina' }
+        };
+        const name = names[sourceLower] || names.kr;
+        return {
+            kr: `${name.kr} 원문`,
+            vn: `Nguyên bản ${name.vn}`,
+            en: `${name.en} source`,
+            jp: `${name.jp}原文`,
+            la: `Textus ${name.la}`
+        };
+    }
+
+    function sourceChoiceMismatchIndexes(lines, baseId, data, leftKey, rightKey) {
+        if (!sourceChoiceVariantPartIds.has(baseId) || !Array.isArray(lines) || leftKey === rightKey) return [];
+        return lines.reduce((indexes, line, index) => {
+            if (!line || isPrayerFrameLine(line) || lineHasAnyRubric(line)) return indexes;
+            const leftText = cleanNodeText(line[`text_${leftKey}`]);
+            const rightText = cleanNodeText(line[`text_${rightKey}`]);
+            if (!leftText || !rightText) return indexes;
+            const entranceMismatch = baseId === 'entrance'
+                && activeDisplayCitationsAreDifferent(data, leftKey, rightKey)
+                && !activeLineTextsAreSemanticMatch(line, leftKey, rightKey);
+            const prayerMismatch = (baseId === 'prayer_offerings' || baseId === 'prayer_after')
+                && lineLooksLikeMismatchedLocalProper(line, leftKey, rightKey);
+            if (entranceMismatch || prayerMismatch) indexes.push(index);
+            return indexes;
+        }, []);
+    }
+
+    function cloneLinesForSourceChoice(lines, keepLower, clearLower, mismatchIndexes) {
+        const mismatchSet = new Set(mismatchIndexes || []);
+        return cloneMassLines(lines || []).map((line, index) =>
+            mismatchSet.has(index) ? clearDisplayLanguageFromLine(line, clearLower) : line
+        );
+    }
+
+    function sourceChoiceCitation(cit, keepLower) {
+        const source = cit || {};
+        const out = {};
+        const directKey = `cit_${keepLower}`;
+        if (source[directKey]) out[directKey] = source[directKey];
+        if (keepLower === 'kr' && source.cit) out.cit = source.cit;
+        return out;
+    }
+
+    function buildSourceChoiceDisplayData(data, baseId, leftKey, rightKey) {
+        const indexes = sourceChoiceMismatchIndexes(data && data.lines, baseId, data, leftKey, rightKey);
+        if (!indexes.length) return null;
+        const optionKey = `${baseId}_source`;
+        const variants = {
+            A: {
+                label: sourceChoiceLabelForLower(leftKey),
+                header: data.header || {},
+                cit: sourceChoiceCitation(data.cit, leftKey),
+                lines: cloneLinesForSourceChoice(data.lines, leftKey, rightKey, indexes)
+            },
+            B: {
+                label: sourceChoiceLabelForLower(rightKey),
+                header: data.header || {},
+                cit: sourceChoiceCitation(data.cit, rightKey),
+                lines: cloneLinesForSourceChoice(data.lines, rightKey, leftKey, indexes)
+            }
+        };
+        const currentKey = state.options[optionKey];
+        const selectedKey = currentKey && variants[currentKey] ? currentKey : 'A';
+        state.options[optionKey] = selectedKey;
+        return {
+            __displaySourceVariants: true,
+            __displayOptionKey: optionKey,
+            type: 'selectable',
+            variants,
+            header: data.header || {},
+            cit: variants[selectedKey].cit,
+            lines: cloneMassLines(variants[selectedKey].lines),
+            label: variants[selectedKey].label
+        };
     }
 
     // 화면 렌더링
@@ -9462,6 +9551,9 @@
                 data.lines = addEucharisticDottedDividers(compiledLines);
             }
 
+            const sourceChoiceData = buildSourceChoiceDisplayData(data, baseId, leftL.toLowerCase(), rightL.toLowerCase());
+            if (sourceChoiceData) Object.assign(data, sourceChoiceData);
+
             const partContainer = document.createElement('section');
             partContainer.className = 'part-container';
             partContainer.dataset.partId = baseId;
@@ -9557,17 +9649,18 @@
 
     function genHeaderControls(orig, baseId, langCode) {
         const key = langCode.toLowerCase();
+        const optionKey = orig.__displayOptionKey || baseId;
         let selectHtml = '';
         let secondarySelectHtml = '';
 
-        if (orig.type === 'selectable' && orig.variants && baseId !== 'entrance') {
-            selectHtml = `<select class="select-inline" onchange="optChange('${baseId}', this.value)">`;
+        if (orig.type === 'selectable' && orig.variants && (baseId !== 'entrance' || orig.__displaySourceVariants)) {
+            selectHtml = `<select class="select-inline" onchange="optChange('${optionKey}', this.value)">`;
             Object.keys(orig.variants).sort().forEach(k => {
                 const labelObj = orig.variants[k].label;
                 const labelText = typeof labelObj === 'object' && labelObj !== null
                     ? (labelObj[key] || labelObj.en || labelObj.kr || '')
                     : (labelObj || k);
-                selectHtml += `<option value="${k}" ${state.options[baseId]===k?'selected':''}>${labelText}</option>`;
+                selectHtml += `<option value="${k}" ${state.options[optionKey]===k?'selected':''}>${labelText}</option>`;
             });
             selectHtml += `</select>`;
             
@@ -9596,7 +9689,8 @@
         const title = headerTitleFor(data, langCode);
         const citation = headerCitationFor(orig, data, langCode);
         const citationHtml = citation ? `<span class="citation">${escapeHtml(citation)}</span>` : '';
-        const { selectHtml, secondarySelectHtml } = genHeaderControls(orig, baseId, langCode);
+        const controlsSource = data && data.__displaySourceVariants ? data : orig;
+        const { selectHtml, secondarySelectHtml } = genHeaderControls(controlsSource, baseId, langCode);
         const hasSelect = !!(selectHtml || secondarySelectHtml);
         return `<div class="part-header${hasSelect ? ' has-select' : ''}"><div><span class="part-title">${title}</span>${citationHtml}</div></div>${genHeaderSelectRow(selectHtml, secondarySelectHtml)}`;
     }
@@ -9616,7 +9710,8 @@
         const citationHtml = leftCitation || rightCitation
             ? `<span class="citation">${combinedHeaderText(leftCitation, rightCitation)}</span>`
             : '';
-        const { selectHtml, secondarySelectHtml } = genHeaderControls(orig, baseId, leftLang);
+        const controlsSource = data && data.__displaySourceVariants ? data : orig;
+        const { selectHtml, secondarySelectHtml } = genHeaderControls(controlsSource, baseId, leftLang);
         const hasSelect = !!(selectHtml || secondarySelectHtml);
         return `<div class="part-header${hasSelect ? ' has-select' : ''}"><div><span class="part-title">${titleHtml}</span>${citationHtml}</div></div>${genHeaderSelectRow(selectHtml, secondarySelectHtml)}`;
     }
