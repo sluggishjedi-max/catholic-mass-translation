@@ -62,11 +62,11 @@
       LA: 'Signum Crucis'
     },
     texts: {
-      KR: '<rubric>십자성호를 그으며</rubric>\n성부와 성자와 성령의 이름으로. 아멘.',
-      VN: '<rubric> </rubric>\nNhân danh Cha và Con và Thánh Thần. Amen.',
-      EN: '<rubric> </rubric>\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen.',
-      JP: '<rubric> </rubric>\n父と子と聖霊のみ名によって。アーメン。',
-      LA: '<rubric> </rubric>\nIn nomine Patris, et Filii, et Spiritus Sancti. Amen.'
+      KR: '<rubric>십자성호를 그으며</rubric>성부와 성자와 성령의 이름으로. 아멘.',
+      VN: '<rubric>Vừa làm dấu Thánh Giá</rubric>Nhân danh Cha và Con và Thánh Thần. Amen.',
+      EN: '<rubric>Making the Sign of the Cross</rubric>In the name of the Father, and of the Son, and of the Holy Spirit. Amen.',
+      JP: '<rubric>十字架のしるしをしながら</rubric>父と子と聖霊のみ名によって。アーメン。',
+      LA: '<rubric>Signans se signo crucis</rubric>In nomine Patris, et Filii, et Spiritus Sancti. Amen.'
     },
     sourceCategory: {
       KR: '주요 기도',
@@ -191,11 +191,11 @@
       LA: 'Gloria Patri'
     },
     texts: {
-      KR: '<rubric>밑줄 부분에서 고개를 숙이며</rubric>\n<U>영광이 성부와 성자와 성령께</U>\n처음과 같이\n이제와 항상 영원히.\n아멘.',
-      VN: '<rubric> </rubric>\n<U>Sáng danh Đức Chúa Cha và Đức Chúa Con và Đức Chúa Thánh Thần.</U>\nNhư đã có trước vô cùng\nvà bây giờ và hằng có\nvà đời đời chẳng cùng.\nAmen.',
-      EN: '<rubric> </rubric>\n<U>Glory be to the Father, and to the Son, and to the Holy Spirit,</u>\nas it was in the beginning, is now,\nand ever shall be, world without end.\nAmen.',
-      JP: '<rubric> </rubric>\n<U>栄光は父と子と聖霊に。</U>\n初めのように、今もいつも世々に。\nアーメン。',
-      LA: '<rubric> </rubric>\n<U>Gloria Patri, et Filio, et Spiritui Sancto.</U>\nSicut erat in principio, et nunc, et semper,\net in saecula saeculorum.\nAmen.'
+      KR: '<rubric>밑줄 부분에서 고개를 숙이며</rubric><U>영광이 성부와 성자와 성령께</U>\n처음과 같이\n이제와 항상 영원히.\n아멘.',
+      VN: '<rubric>Cúi đầu khi đọc phần gạch chân</rubric><U>Sáng danh Đức Chúa Cha và Đức Chúa Con và Đức Chúa Thánh Thần.</U>\nNhư đã có trước vô cùng\nvà bây giờ và hằng có\nvà đời đời chẳng cùng.\nAmen.',
+      EN: '<rubric>Bowing the head at the underlined part</rubric>\n<U>Glory be to the Father, and to the Son, and to the Holy Spirit,</u>\nas it was in the beginning, is now,\nand ever shall be, world without end.\nAmen.',
+      JP: '<rubric>下線部で頭を下げながら</rubric><U>栄光は父と子と聖霊に。</U>\n初めのように、今もいつも世々に。\nアーメン。',
+      LA: '<rubric>Caput inclinans ad verba sublineata</rubric><U>Gloria Patri, et Filio, et Spiritui Sancto.</U>\nSicut erat in principio, et nunc, et semper,\net in saecula saeculorum.\nAmen.'
     },
     sourceCategory: {
       KR: '주요 기도',
@@ -234,11 +234,11 @@
       LA: 'Symbolum Apostolorum'
     },
     texts: {
-      KR: '전능하신 천주 성부\n천지의 창조주를 저는 믿나이다.\n그 외아들 우리 주 예수 그리스도님\n<rubric>밑줄 부분에서 모두 깊은 절을 한다.</rubric>\n<U>성령으로 인하여 동정 마리아께 잉태되어 나시고</U>\n본시오 빌라도 통치 아래서 고난을 받으시고\n십자가에 못 박혀 돌아가시고 묻히셨으며\n저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고\n하늘에 올라 전능하신 천주 성부 오른편에 앉으시며\n그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다.\n성령을 믿으며\n거룩하고 보편된 교회와 모든 성인의 통공을 믿으며\n죄의 용서와 육신의 부활을 믿으며\n영원한 삶을 믿나이다.\n아멘.',
-      VN: 'Tôi tin kính Đức Chúa Trời\nlà Cha phép tắc vô cùng dựng nên trời đất.\nTôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha cùng là Chúa chúng tôi;\n<rubric> </rubric>\n<U>bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria Đồng Trinh</u>; chịu nạn đời quan Phongxiô Philatô, chịu đóng đinh trên cây Thánh Giá, chết và táng xác; xuống ngục tổ tông, ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết. Tôi tin kính Đức Chúa Thánh Thần. Tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công. Tôi tin phép tha tội. Tôi tin xác loài người ngày sau sống lại. Tôi tin hằng sống vậy. Amen.',
-      EN: 'I believe in God,\nthe Father almighty,\nCreator of heaven and earth,\nand in Jesus Christ, his only Son, our Lord,\n<rubric> </rubric>\n<u>who was conceived by the Holy Spirit,\nborn of the Virgin Mary,</u>\nsuffered under Pontius Pilate,\nwas crucified, died and was buried;\nhe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting.\nAmen.',
-      JP: '天地の創造主、\n全能の父である神を信じます。\n父のひとり子、わたしたちの主\nイエス・キリストを信じます。\n<rubric> </rubric>\n<u>主は聖霊によってやどり、\nおとめマリアから生まれ、</u>\nポンティオ・ピラトのもとで苦しみを受け、\n十字架につけられて死に、葬られ、\n陰府（よみ）に下り、\n三日目に死者のうちから復活し、\n天に昇って、\n全能の父である神の右の座に着き、\n生者（せいしゃ）と死者を裁くために来られます。\n聖霊を信じ、\n聖なる普遍の教会、\n聖徒の交わり、\n罪のゆるし、\nからだの復活、\n永遠のいのちを信じます。アーメン。\n（2004年2月18日 日本カトリック司教協議会認可）\n### ニケア・コンスタンチノープル信条\nこの「ニケア・コンスタンチノープル信条」は、第1回コンスタンチノーブル公会議（381年）後に作られた。\nわたしは信じます。唯一の神、\n全能の父、\n天と地、\n見えるもの、見えないもの、すべてのものの造り主を。\nわたしは信じます。唯一の主イエス・キリストを。\n主は神のひとり子、\nすべてに先立って父より生まれ、\n神よりの神、光よりの光、まことの神よりのまことの神、\n造られることなく生まれ、父と一体。\nすべては主によって造られました。\n主は、わたしたち人類のため、\nわたしたちの救いのために天からくだり、\n聖霊によって、おとめマリアよりからだを受け、\n人となられました。\nポンティオ・ピラトのもとで、わたしたちのために十字架につけられ、\n苦しみを受け、葬られ、\n聖書にあるとおり三日目に復活し、\n天に昇り、父の右の座に着いておられます。\n主は、生者（せいしゃ）と死者を裁くために栄光のうちに再び来られます。\nその国は終わることがありません。\nわたしは信じます。主であり、いのちの与え主である聖霊を。\n聖霊は、父と子から出て、\n父と子とともに礼拝され、栄光を受け、\nまた預言者をとおして語られました。\nわたしは、聖なる、普遍の、使徒的、唯一の教会を信じます。\n罪のゆるしをもたらす唯一の洗礼を認め、\n死者の復活と\n来世のいのちを待ち望みます。アーメン。\n（2004年2月18日 日本カトリック司教協議会認可）\n### 洗礼式の信仰宣言\n天地の創造主、\n全能の、神である父を信じます。\n父のひとり子、おとめマリアから生まれ、\n苦しみを受けて葬られ、\n死者のうちから復活して、\n父の右におられる主イエス・キリストを信じます。\n聖霊を信じ、聖なる普遍の教会、\n聖徒の交わり、罪のゆるし、\nからだの復活、永遠のいのちを信じます。',
-      LA: 'Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae. Et in Iesum Christum, Filium eius unicum, Dominum nostrum,\n<rubric> </rubric>\n<u>qui conceptus est de Spiritu Sancto, natus ex Maria Virgine</u>, passus sub Pontio Pilato, crucifixus, mortuus, et sepultus, descendit ad infernos, tertia die resurrexit a mortuis, ascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos. Credo in Spiritum Sanctum, sanctam Ecclesiam catholicam, sanctorum communionem, remissionem peccatorum, carnis resurrectionem, vitam aeternam. Amen.'
+      KR: '전능하신 천주 성부\n천지의 창조주를 저는 믿나이다.\n그 외아들 우리 주 예수 그리스도님\n<rubric>밑줄 부분에서 모두 깊은 절을 한다.</rubric><U>성령으로 인하여 동정 마리아께 잉태되어 나시고</U>\n본시오 빌라도 통치 아래서 고난을 받으시고\n십자가에 못 박혀 돌아가시고 묻히셨으며\n저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고\n하늘에 올라 전능하신 천주 성부 오른편에 앉으시며\n그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다.\n성령을 믿으며\n거룩하고 보편된 교회와 모든 성인의 통공을 믿으며\n죄의 용서와 육신의 부활을 믿으며\n영원한 삶을 믿나이다.\n아멘.',
+      VN: 'Tôi tin kính Đức Chúa Trời\nlà Cha phép tắc vô cùng dựng nên trời đất.\nTôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha cùng là Chúa chúng tôi;\n<rubric>Mọi người cúi mình sâu khi đọc phần gạch chân</rubric><U>bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria Đồng Trinh</u>;\nchịu nạn đời quan Phongxiô Philatô,\nchịu đóng đinh trên cây Thánh Giá,\nchết và táng xác;\nxuống ngục tổ tông,\nngày thứ ba bởi trong kẻ chết mà sống lại;\nlên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng;\nngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết.\nTôi tin kính Đức Chúa Thánh Thần.\nTôi tin có Hội Thánh hằng có ở khắp thế này,\ncác thánh thông công.\nTôi tin phép tha tội.\nTôi tin xác loài người ngày sau sống lại.\nTôi tin hằng sống vậy.\nAmen.',
+      EN: 'I believe in God,\nthe Father almighty,\nCreator of heaven and earth,\nand in Jesus Christ, his only Son, our Lord,\n<rubric>All bow deeply at the underlined part</rubric><u>who was conceived by the Holy Spirit,\nborn of the Virgin Mary,</u>\nsuffered under Pontius Pilate,\nwas crucified, died and was buried;\nhe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting.\nAmen.',
+      JP: '天地の創造主、\n全能の父である神を信じます。\n父のひとり子、わたしたちの主\nイエス・キリストを信じます。\n<rubric>下線部で皆で深く礼をする</rubric><u>主は聖霊によってやどり、\nおとめマリアから生まれ、</u>\nポンティオ・ピラトのもとで苦しみを受け、\n十字架につけられて死に、葬られ、\n陰府（よみ）に下り、\n三日目に死者のうちから復活し、\n天に昇って、\n全能の父である神の右の座に着き、\n生者（せいしゃ）と死者を裁くために来られます。\n聖霊を信じ、\n聖なる普遍の教会、\n聖徒の交わり、\n罪のゆるし、\nからだの復活、\n永遠のいのちを信じます。アーメン。\n（2004年2月18日 日本カトリック司教協議会認可）\n### ニケア・コンスタンチノープル信条\nこの「ニケア・コンスタンチノープル信条」は、第1回コンスタンチノーブル公会議（381年）後に作られた。\nわたしは信じます。唯一の神、\n全能の父、\n天と地、\n見えるもの、見えないもの、すべてのものの造り主を。\nわたしは信じます。唯一の主イエス・キリストを。\n主は神のひとり子、\nすべてに先立って父より生まれ、\n神よりの神、光よりの光、まことの神よりのまことの神、\n造られることなく生まれ、父と一体。\nすべては主によって造られました。\n主は、わたしたち人類のため、\nわたしたちの救いのために天からくだり、\n聖霊によって、おとめマリアよりからだを受け、\n人となられました。\nポンティオ・ピラトのもとで、わたしたちのために十字架につけられ、\n苦しみを受け、葬られ、\n聖書にあるとおり三日目に復活し、\n天に昇り、父の右の座に着いておられます。\n主は、生者（せいしゃ）と死者を裁くために栄光のうちに再び来られます。\nその国は終わることがありません。\nわたしは信じます。主であり、いのちの与え主である聖霊を。\n聖霊は、父と子から出て、\n父と子とともに礼拝され、栄光を受け、\nまた預言者をとおして語られました。\nわたしは、聖なる、普遍の、使徒的、唯一の教会を信じます。\n罪のゆるしをもたらす唯一の洗礼を認め、\n死者の復活と\n来世のいのちを待ち望みます。アーメン。\n（2004年2月18日 日本カトリック司教協議会認可）\n### 洗礼式の信仰宣言\n天地の創造主、\n全能の、神である父を信じます。\n父のひとり子、おとめマリアから生まれ、\n苦しみを受けて葬られ、\n死者のうちから復活して、\n父の右におられる主イエス・キリストを信じます。\n聖霊を信じ、聖なる普遍の教会、\n聖徒の交わり、罪のゆるし、\nからだの復活、永遠のいのちを信じます。',
+      LA: 'Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae.\nEt in Iesum Christum, Filium eius unicum, Dominum nostrum,\n<rubric>Omnes profunde se inclinant ad verba sublineata</rubric><u>qui conceptus est de Spiritu Sancto, natus ex Maria Virgine</u>,\npassus sub Pontio Pilato, crucifixus, mortuus,\net sepultus, descendit ad infernos, tertia die resurrexit a mortuis,\nascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos.\nCredo in Spiritum Sanctum,\nsanctam Ecclesiam catholicam, sanctorum communionem, \nremissionem peccatorum, carnis resurrectionem,\nvitam aeternam.\nAmen.'
     },
     sourceCategory: {
       KR: '주요 기도',
@@ -309,6 +309,43 @@
     ]
   },
   {
+    id: '008.ten_commandments',
+    category: 'common',
+    titles: {
+      KR: '십계명',
+      VN: '10 Ðiều Răn',
+      EN: 'Ten Commandments',
+      JP: '',
+      LA: ''
+    },
+    texts: {
+      KR: '일. 한 분이신 하느님을 흠숭하여라.\n이. 하느님의 이름을 함부로 부르지 마라.\n삼. 주일을 거룩히 지내라.\n사. 부모에게 효도하여라.\n오. 사람을 죽이지 마라.\n육. 간음하지 마라.\n칠. 도둑질을 하지 마라.\n팔. 거짓 증언을 하지 마라.\n구. 남의 아내를 탐내지 마라.\n십. 남의 재물을 탐내지 마라.',
+      VN: 'Đạo Đức Chúa Trời có mười điều răn:\nThứ nhất: Thờ phượng một Đức Chúa Trời và kính mến người trên hết mọi sự.\nThư hai: Chớ kêu tên Đức Chúa Trời vô cớ.\nThứ ba: Giữ ngày Chúa Nhật.\nThứ bốn: Thảo kính cha mẹ.\nThứ năm: Chớ giết người.\nThứ sáu: Chớ làm sự dâm dục.\nThứ bảy: Chớ lấy của người.\nThứ tám: Chớ làm chứng dối.\nThứ chín: Chớ muốn vợ chồng người.\nThứ mười: Chớ tham của người.\nMười điều răn ấy tóm về hai này mà chớ: trước kính mến một Đức Chúa Trời trên hết mọi sự sau lại yêu người như mình ta vậy.\nAmen.',
+      EN: '',
+      JP: '',
+      LA: ''
+    },
+    sourceCategory: {
+      KR: '주요 기도',
+      VN: '',
+      EN: '',
+      JP: '',
+      LA: ''
+    },
+    tags: [
+      '008.ten_commandments',
+      'common',
+      '공통기도문',
+      'Kinh nguyện chung',
+      'Common Prayers',
+      '共通の祈り',
+      'Preces communes',
+      '십계명',
+      'Ten Commandments',
+      '주요 기도'
+    ]
+  },
+    {
     id: '007.examination_of_conscience',
     category: 'common',
     titles: {
@@ -341,43 +378,6 @@
       '共通の祈り',
       'Preces communes',
       '반성 기도',
-      '주요 기도'
-    ]
-  },
-  {
-    id: '008.ten_commandments',
-    category: 'common',
-    titles: {
-      KR: '십계명',
-      VN: '',
-      EN: 'Ten Commandments',
-      JP: '',
-      LA: ''
-    },
-    texts: {
-      KR: '일. 한 분이신 하느님을 흠숭하여라.\n이. 하느님의 이름을 함부로 부르지 마라.\n삼. 주일을 거룩히 지내라.\n사. 부모에게 효도하여라.\n오. 사람을 죽이지 마라.\n육. 간음하지 마라.\n칠. 도둑질을 하지 마라.\n팔. 거짓 증언을 하지 마라.\n구. 남의 아내를 탐내지 마라.\n십. 남의 재물을 탐내지 마라.',
-      VN: '',
-      EN: '',
-      JP: '',
-      LA: ''
-    },
-    sourceCategory: {
-      KR: '주요 기도',
-      VN: '',
-      EN: '',
-      JP: '',
-      LA: ''
-    },
-    tags: [
-      '008.ten_commandments',
-      'common',
-      '공통기도문',
-      'Kinh nguyện chung',
-      'Common Prayers',
-      '共通の祈り',
-      'Preces communes',
-      '십계명',
-      'Ten Commandments',
       '주요 기도'
     ]
   },
@@ -423,15 +423,15 @@
     category: 'common',
     titles: {
       KR: '통회 기도',
-      VN: '',
+      VN: 'Kinh Ăn Năn Tội',
       EN: 'Act of Contrition',
       JP: '痛悔の祈り',
       LA: 'Actus Contritionis'
     },
     texts: {
       KR: '하느님,\n제가 죄를 지어\n참으로 사랑받으셔야 할 하느님의 마음을 아프게 하였기에\n악을 저지르고 선을 멀리한 모든 잘못을\n진심으로 뉘우치나이다.\n하느님의 은총으로 속죄하고\n다시는 죄를 짓지 않으며\n죄지을 기회를 피하기로 굳게 다짐하오니\n우리 구세주 예수 그리스도의 수난 공로를 보시고\n저에게 자비를 베풀어 주소서.\n아멘.',
-      VN: '',
-      EN: '### Act of Contrition\nO my God,\nI am heartily sorry for having offended you,\nand I detest all my sins because of your just punishments,\nbut most of all because they offend you, my God,\nwho are all good and deserving of all my love.\nI firmly resolve, with the help of your grace,\nto sin no more\nand to avoid the near occasions of sin.\nAmen.\n* * *\n_or:_\nO my God,\nI am sorry and repent with all my heart\nfor all the wrong I have done\nand for the good I have failed to do,\nbecause by sinning I have offended you,\nwho are all good and worthy to be loved above all things.\nI firmly resolve, with the help of your grace,\nto do penance,\nto sin no more,\nand to avoid the occasions of sin.\nThrough the merits of the Passion of our Savior Jesus Christ,\nLord, have mercy.\n* * *\n_or:_\n_Lord Jesus, Son of God,_\nhave mercy on me, a sinner.\n_*From the_ Order of Penance _, nos. 45 and 92._',
+      VN: 'Lạy Chúa, Chúa là Đấng trọn tốt trọn lành vô cùng.  Chúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con, mà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa, thì con lo buồn đau đớn, cùng chê ghét mọi tội con trên hết mọi sự, con dốc lòng chừa cải, và nhờ ơn Chúa, thì con sẽ lánh xa dịp tội, cùng làm việc đền tội cho xứng. Amen.',
+      EN: 'O my God,\nI am heartily sorry for having offended you,\nand I detest all my sins because of your just punishments,\nbut most of all because they offend you, my God,\nwho are all good and deserving of all my love.\nI firmly resolve, with the help of your grace,\nto sin no more\nand to avoid the near occasions of sin.\nAmen.\n<rubric>Or:</rubric>O my God,\nI am sorry and repent with all my heart\nfor all the wrong I have done\nand for the good I have failed to do,\nbecause by sinning I have offended you,\nwho are all good and worthy to be loved above all things.\nI firmly resolve, with the help of your grace,\nto do penance,\nto sin no more,\nand to avoid the occasions of sin.\nThrough the merits of the Passion of our Savior Jesus Christ,\nLord, have mercy.\n<rubric>Or:</rubric>Lord Jesus, Son of God,\nhave mercy on me, a sinner.',
       JP: 'いつくしみ深いイエスよ、あなたの尊いみ足のもとにひれ伏して、\n心の底から罪のゆるしを願います。\n特に自分の罪を、あなたの限りない愛に背くものとして悔やみ憎みます。\n再び罪を犯してあなたに背くより、むしろ死ぬことを望み、\n生涯、すべてに超えてあなたを愛することを決心します。',
       LA: 'Deus meus, ex toto corde poenitet me omnium meorum peccatorum, eaque detestor, quia peccando, non solum poenas a Te iuste statutas promeritus sum, sed praesertim quia offendi Te, summum bonum, ac dignum qui super omnia diligaris. Ideo firmiter propono, adiuvante gratia Tua, de cetero me non peccaturum peccandique occasiones proximas fugiturum. Amen.'
     },
@@ -473,14 +473,14 @@
     texts: {
       KR: '하느님, 하느님께서는 진리의 근원이시며\n그르침이 없으시므로\n계시하신 진리를\n교회가 가르치는 대로 굳게 믿나이다.',
       VN: 'Lạy Chúa, con tin thật có một Đức Chúa Trời là Đấng thưởng phạt vô cùng. Con lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm Người, chịu nạn chịu chết mà chuộc tội cho thiên hạ. Bấy nhiêu điều ấy cùng các điều Hội Thánh dạy thì con tin vững vàng, vì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh. Amen.',
-      EN: '',
+      EN: 'O my God, I firmly believe that you are one God in three divine Persons, Father, Son, and Holy Spirit. I believe that your divine Son became man and died for our sins and that he will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches because you have revealed them who are eternal truth and wisdom, who can neither deceive nor be deceived. In this faith I intend to live and die. Amen.',
       JP: '',
       LA: ''
     },
     sourceCategory: {
       KR: '주요 기도',
       VN: '',
-      EN: '',
+      EN: 'Basic Prayers',
       JP: '',
       LA: ''
     },
@@ -513,14 +513,14 @@
     texts: {
       KR: '하느님, 하느님께서는 자비의 근원이시며\n저버림이 없으시므로\n예수 그리스도의 공로를 통하여 주실\n구원의 은총과 영원한 생명을 바라나이다.',
       VN: 'Lạy Chúa, con trông cậy vững vàng, vì công nghiệp Đức Chúa Giêsu thì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này, cho ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời, vì Chúa là đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy chẳng có lẽ nào sai được. Amen.',
-      EN: '',
+      EN: 'O Lord God, I hope by your grace for the pardon of all my sins and after life here to gain eternal happiness because you have promised it who are infinitely powerful, faithful, kind, and merciful. In this hope I intend to live and die. Amen.',
       JP: '',
       LA: ''
     },
     sourceCategory: {
       KR: '주요 기도',
       VN: '',
-      EN: '',
+      EN: 'Basic Prayers',
       JP: '',
       LA: ''
     },
@@ -553,14 +553,14 @@
     texts: {
       KR: '하느님, 하느님께서는 사랑의 근원이시며\n한없이 좋으시므로\n마음을 다하여 주님을 사랑하며\n이웃을 제 몸같이 사랑하나이다.',
       VN: 'Lạy Chúa, con kính mến Chúa hết lòng hết sức trên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lạy vì Chúa, thì con thương yêu người ta như mình con vậy. Amen.',
-      EN: '',
+      EN: 'O Lord God, I love you above all things and I love my neighbor for your sake because you are the highest, infinite and perfect good, worthy of all my love. In this love I intend to live and die. Amen.',
       JP: '',
       LA: ''
     },
     sourceCategory: {
       KR: '주요 기도',
       VN: '',
-      EN: '',
+      EN: 'Basic Prayers',
       JP: '',
       LA: ''
     },
@@ -586,14 +586,14 @@
     titles: {
       KR: '봉헌 기도',
       VN: '',
-      EN: 'Offering Prayer',
+      EN: 'Morning Offering',
       JP: '',
       LA: ''
     },
     texts: {
       KR: '하느님, 저를 사랑으로 내시고\n저에게 영혼 육신을 주시어\n주님만을 섬기고 사람을 도우라 하셨나이다.\n저는 비록 죄가 많사오나\n주님께 받은 몸과 마음을 오롯이 도로 바쳐\n찬미와 봉사의 제물로 드리오니\n어여삐 여기시어 받아 주소서.\n아멘.',
       VN: '',
-      EN: '',
+      EN: 'O Jesus, through the Immaculate Heart of Mary,\nI offer you my prayers, works, joys and sufferings of this day\nfor all the intentions of your Sacred Heart,\nin union with the Holy Sacrifice of the Mass throughout the world,\nfor the salvation of souls, the reparation for sins, the reunion of all Christians,\nand in particular for the intentions of the Holy Father this month.\nAmen.',
       JP: '',
       LA: ''
     },
@@ -628,9 +628,9 @@
       LA: 'Angelus'
     },
     texts: {
-      KR: '○ 주님의 천사가 마리아께 아뢰니\n● 성령으로 잉태하셨나이다.\n성모송\n○ “주님의 종이오니\n● 그대로 제게 이루어지소서!”\n성모송\n○ 이에 말씀이 사람이 되시어\n● 저희 가운데 계시나이다.\n성모송\n○ 천주의 성모님, 저희를 위하여 빌어주시어\n● 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n╋ 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘.',
+      KR: '○ 주님의 천사가 마리아께 아뢰니\n● 성령으로 잉태하셨나이다.\n○ <rubric>성모송</rubric>은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n○ “주님의 종이오니\n● 그대로 제게 이루어지소서!”\n○ <rubric>성모송</rubric>은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n○ 이에 말씀이 사람이 되시어\n● 저희 가운데 계시나이다.\n○ <rubric>성모송</rubric>은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n○ 천주의 성모님, 저희를 위하여 빌어주시어\n● 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n✚ 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘.',
       VN: '',
-      EN: '**V/.** The Angel of the Lord declared unto Mary,\n**R/.** And she conceived of the Holy Spirit.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n**V/.** Behold the handmaid of the Lord,\n**R/.** Be it done unto me according to your Word.\nHail Mary…\n**V/.** And the Word was made flesh,\n**R/.** And dwelt among us.\nHail Mary…\n**V/.** Pray for us, O holy Mother of God,\n**R/.** That we may be made worthy of the promises of Christ.\n**Let us pray.** Pour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.\nExcerpted from _Catholic Household Blessings and Prayers_, _revised edition_ © 2007 United States Conference of Catholic Bishops. All rights reserved.',
+      EN: 'V. The Angel of the Lord declared unto Mary,\nR. And she conceived of the Holy Spirit.\nALL. Hail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\nV. Behold the handmaid of the Lord,\nR. Be it done unto me according to your Word.\nALL. Hail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\nV. And the Word was made flesh,\nR. And dwelt among us.\n\nALL. Hail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\nV. Pray for us, O holy Mother of God,\nR. That we may be made worthy of the promises of Christ.\nV. Let us pray.\nALL. Pour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.',
       JP: '主のみ使いのお告げを受けて、\nマリアは聖霊によって神の御子を宿された。\n〔アヴェ･マリアの祈り〕\nアヴェ、マリア、恵みに満ちた方、\n主はあなたとともにおられます。\nあなたは女のうちで祝福され、\nご胎内の御子イエスも祝福されています。\n神の母聖マリア、\nわたしたち罪びとのために、\n今も、死を迎える時も、お祈りください。\nアーメン。\nわたしは主のはしため、\nおことばどおりになりますように。\n（引き続き、上記の〔アヴェ･マリアの祈り〕を唱えます。）\nみことばは人となり、\nわたしたちのうちに住まわれた。\n（ここでも〔アヴェ･マリアの祈り〕を唱えます。）\n神の母聖マリア、わたしたちのために祈ってください。\nキリストの約束にかなうものとなりますように。\n祈願\n神よ、み使いのお告げによって、御子が人となられたことを\n知ったわたしたちが、キリストの受難と十字架をとおして、\n復活の栄光に達することができるよう、恵みを注いでください。\nわたしたちの主イエス・キリストによって。 アーメン。',
       LA: 'Alma Redemptoris Mater, quae pervia caeli Porta manes, et stella maris, succurre cadenti, Surgere qui curat, populo: tu quae genuisti, Natura mirante, tuum sanctum Genitorem Virgo prius ac posterius, Gabrielis ab ore Sumens illud Ave, peccatorum miserere.\nTempus Adventus:\nV. Angelus Domini nuntiavit Mariae.\nR. Et concepit de Spiritu Sancto.\nOremus:\nGratiam tuam, quaesumus, Domine, mentibus nostris infunde: ut qui, Angelo nuntiante, Christi Filii tui incarnationem cognovimus; per passionem eius et crucem, ad resurrectionis gloriam perducamur. Per eundem Christum Dominum nostrum. Amen.\nDonec Purificatio:\nV. Post partum, Virgo, inviolata permansisti.\nR. Dei Genetrix, intercede pro nobis.\nOremus:\nDeus, qui salutis aeternae, beatae Mariae virginitate fecunda, humano generi praemia praestitisti: tribue, quaesumus; ut ipsam pro nobis intercedere sentiamus, per quam meruimus auctorem vitae suscipere, Dominum nostrum Iesum Christum, Filium tuum. Amen.'
     },
@@ -669,9 +669,9 @@
       LA: 'Regina Caeli'
     },
     texts: {
-      KR: '(주님 부활 대축일부터 성령 강림 대축일까지)\n○ 하늘의 모후님, 기뻐하소서. 알렐루야.\n● 태중에 모시던 아드님께서, 알렐루야.\n○ 말씀하신 대로 부활하셨나이다. 알렐루야.\n● 저희를 위하여 하느님께 빌어 주소서. 알렐루야.\n○ 동정 마리아님, 기뻐하시며 즐거워하소서. 알렐루야.\n● 주님께서 참으로 부활하셨나이다. 알렐루야.\n╋ 기도합시다.\n하느님, 성자 우리 주 예수 그리스도의 부활로\n온 세상을 기쁘게 하셨으니\n성자의 어머니 동정 마리아의 도움으로\n영생의 즐거움을 얻게 하소서.\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘.',
+      KR: '<rubric>주님 부활 대축일부터 성령 강림 대축일까지</rubric>\n○ 하늘의 모후님, 기뻐하소서. 알렐루야.\n● 태중에 모시던 아드님께서, 알렐루야.\n○ 말씀하신 대로 부활하셨나이다. 알렐루야.\n● 저희를 위하여 하느님께 빌어 주소서. 알렐루야.\n○ 동정 마리아님, 기뻐하시며 즐거워하소서. 알렐루야.\n● 주님께서 참으로 부활하셨나이다. 알렐루야.\n✚ 기도합시다.\n하느님, 성자 우리 주 예수 그리스도의 부활로\n온 세상을 기쁘게 하셨으니\n성자의 어머니 동정 마리아의 도움으로\n영생의 즐거움을 얻게 하소서.\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘.',
       VN: '',
-      EN: 'Queen of heaven, rejoice, alleluia.\nThe Son whom you merited to bear, alleluia,\nhas risen as he said, alleluia.\nPray for us to God, alleluia.\n**V.** Rejoice and be glad, O Virgin Mary, alleluia.\n**R.** For the Lord has truly risen, alleluia.\nLet us pray.\nO God, who have been pleased to gladden the world\nby the Resurrection of your Son our Lord Jesus Christ,\ngrant, we pray,\nthat through his Mother, the Virgin Mary,\nwe may receive the joys of everlasting life.\nThrough Christ our Lord. Amen.',
+      EN: 'V. Queen of heaven, rejoice, alleluia.\nR. The Son whom you merited to bear, alleluia,\nV. has risen as he said, alleluia.\nR. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\nV. Let us pray.\nALL. O God, who have been pleased to gladden the world\nby the Resurrection of your Son our Lord Jesus Christ,\ngrant, we pray,\nthat through his Mother, the Virgin Mary,\nwe may receive the joys of everlasting life.\nThrough Christ our Lord. Amen.',
       JP: '神の母聖マリア、お喜びください。アレルヤ。\nあなたに宿られた方は。アレルヤ。\nおことばどおりに復活されました。アレルヤ。\nわたしたちのためにお祈りください。アレルヤ。\n聖マリア、お喜びください。アレルヤ。\n主はまことに復活されました。アレルヤ。\n祈願\n神よ、あなたは御子キリストの復活によって、\n世界に喜びをお与えになりました。\nキリストの母、聖マリアにならい、\nわたしたちも永遠のいのちの喜びを得ることができますように。\nわたしたちの主イエス・キリストによって。アーメン。',
       LA: 'Regina coeli, laetare, alleluia: Quia quem meruisti portare, alleluia. Resurrexit sicut dixit, alleluia. Ora pro nobis Deum, alleluia.\nV. Gaude et laetare, Virgo Maria, alleluia.\nR. Quia surrexit Dominus vere, alleluia.\nOremus:\nDeus qui per resurrectionem Filii tui, Domini nostri Iesu Christi, mundum laetificare dignatus es: praesta, quaesumus, ut per eius Genetricem Virginem Mariam, perpetuae capiamus gaudia vitae. Per eundem Christum Dominum nostrum.\nR. Amen.'
     },
@@ -691,6 +691,7 @@
       '共通の祈り',
       'Preces communes',
       '부활 삼종 기도',
+      '레지나 첼리',
       'Regina Caeli',
       'Kinh Lạy Nữ Vương Thiên Đàng',
       '주요 기도',
@@ -1124,24 +1125,24 @@
     ]
   },
   {
-    id: 'guardian_angel',
+    id: '000.guardian_angel',
     category: 'common',
     titles: {
       KR: '수호천사에게 바치는 기도',
       VN: 'Kinh Thiên Thần Bản Mệnh',
-      EN: 'Guardian Angel Prayer',
+      EN: 'Prayer to Your Guardian Angel',
       JP: '守護の天使への祈り',
       LA: 'Angele Dei'
     },
     texts: {
       KR: '저를 지켜 주시는 수호천사여, 하느님께서 당신께 맡기신 저를 오늘 비추고 지켜 주시며 다스리고 이끌어 주소서. 아멘.',
       VN: 'Lạy Thiên Thần Chúa là Đấng gìn giữ con, xin soi sáng, gìn giữ, cai quản và hướng dẫn con trong ngày hôm nay. Amen.',
-      EN: 'Angel of God, my guardian dear, to whom God’s love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.',
+      EN: 'Angel of God, my guardian dear,\nto whom God’s love commits me here,\never this day be at my side,\nto light and guard, to rule and guide.\nAmen.',
       JP: '神の天使、わたしの守護者よ、神の愛によってあなたにゆだねられたわたしを、今日も照らし、守り、導いてください。アーメン。',
       LA: 'Angele Dei, qui custos es mei, me tibi commissum pietate superna illumina, custodi, rege et guberna. Amen.'
     },
     sourceCategory: {
-      KR: '주요 기도',
+      KR: '민간전승',
       VN: '',
       EN: 'Basic Prayers',
       JP: '日々の祈り',
@@ -9775,14 +9776,13 @@
     texts: {
       KR: '',
       VN: '',
-      EN: '',
-      JP: '',
+      EN: '
       LA: ''
     },
     sourceCategory: {
       KR: '',
       VN: '',
-      EN: '',
+      EN: 'Basic Prayers',
       JP: '',
       LA: ''
     },
@@ -9794,7 +9794,8 @@
       'Local and Other Prayers',
       '各国・その他の祈り',
       'Preces locales et aliae',
-      'Morning Offering'
+      'Morning Offering',
+      'Basic Prayers'
     ]
   },
   {
