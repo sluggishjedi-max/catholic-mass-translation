@@ -182,6 +182,7 @@
         .pair-line.translation { color: var(--sub-txt); margin-top: -2px; padding-bottom: 2px; border-bottom: none; }
         .pair-line.summary .text-content { color: #777; font-style: italic; }
         .pair-line.summary .speaker { color: #777; font-style: italic; }
+        .pair-line.conclusion { margin-top: 2px; }
         .pair-line.ai-pending { justify-content: flex-start; }
         .pair-line.blank-line .text-content { min-height: 1.5em; }
         .pc-divider-row .pc-col { padding-top: 4px; padding-bottom: 4px; }
@@ -5089,7 +5090,7 @@
 
     async function resolveVietnameseDailyUrls(date, options = {}) {
         const fixedUrls = vietnameseFixedDailyUrls(date);
-        if (fixedUrls.length) return fixedUrls;
+        if (fixedUrls.length && options.directOnly) return fixedUrls;
         const info = buildGeneratedLiturgyInfo(date);
         const meta = info.meta || getSeasonMeta(date);
         const preferProperDate = hasPriorityCelebrationForLookup(date, info);
@@ -5130,7 +5131,7 @@
         } catch (error) {
             console.warn('베트남어 미사 목록 파싱 실패, slug URL로 재시도합니다.', error);
         }
-        return discoveredUrls.concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+        return fixedUrls.concat(discoveredUrls, slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
     }
 
     async function resolveVietnameseDailyUrl(date) {
@@ -9242,6 +9243,13 @@
         return ['entrance', 'communion', 'announcement', 'final_song'].includes(baseId);
     }
 
+    function roleClassForLine(line, lower) {
+        const role = line && line[`role_${lower}`];
+        if (role === 'summary') return 'summary';
+        if (role === 'conclusion') return 'conclusion';
+        return '';
+    }
+
     function speakerHTML(sp, langKey, skipSpeaker) {
         if (skipSpeaker) return '';
         const text = sp || '&nbsp;';
@@ -9954,8 +9962,8 @@
                     const rubricLeft = line['rubric_' + leftKey] || '';
                     const rubricRight = line['rubric_' + rightKey] || '';
                     if (rubricLeft) block.innerHTML += `<div class="rubric">${rubricLeft}</div>`;
-                    const leftRoleClass = line['role_' + leftKey] === 'summary' ? 'summary' : '';
-                    const rightRoleClass = line['role_' + rightKey] === 'summary' ? 'summary' : '';
+                    const leftRoleClass = roleClassForLine(line, leftKey);
+                    const rightRoleClass = roleClassForLine(line, rightKey);
                     block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, shouldSuppressSpeaker(baseId), shouldRenderBlankParagraph(line, leftKey, baseId));
                     if (rubricRight) block.innerHTML += `<div class="rubric translation">${rubricRight}</div>`;
                     block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), shouldSuppressSpeaker(baseId), shouldRenderBlankParagraph(line, rightKey, baseId));
@@ -10094,7 +10102,7 @@
         const keepBlank = hasNoContent && shouldRenderBlankParagraph(line, lowerLang, baseId);
 
         if (!hasNoContent || keepBlank) {
-            const roleClass = line['role_' + lowerLang] === 'summary' ? 'summary' : '';
+            const roleClass = roleClassForLine(line, lowerLang);
             html += linePairHTML(sp, txt, lowerLang, roleClass, shouldSuppressSpeaker(baseId), keepBlank);
         }
         return html;
