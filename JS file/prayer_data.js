@@ -464,7 +464,7 @@
       id: "011a.act_of_faith",
       category: "common",
       titles: {
-        KR: "삼덕송: 신덕송",
+        KR: "신덕송",
         VN: "Kinh Tin",
         EN: "Act of Faith",
         JP: "",
@@ -504,7 +504,7 @@
       id: "011b.act_of_hope",
       category: "common",
       titles: {
-        KR: "삼덕송: 망덕송",
+        KR: "망덕송",
         VN: "Kinh Cậy",
         EN: "Act of Hope",
         JP: "",
@@ -544,7 +544,7 @@
       id: "011c.act_of_love",
       category: "common",
       titles: {
-        KR: "삼덕송: 애덕송",
+        KR: "애덕송",
         VN: "Kinh Mến",
         EN: "Act of Love",
         JP: "",
@@ -622,15 +622,15 @@
       category: "common",
       titles: {
         KR: "삼종 기도",
-        VN: "Kinh Truyền Tin",
+        VN: "",
         EN: "Angelus",
         JP: "お告げの祈り",
         LA: "Angelus"
       },
       texts: {
-        KR: "○ 주님의 천사가 마리아께 아뢰니\n● 성령으로 잉태하셨나이다.\n○ <rubric>성모송</rubric>은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n○ “주님의 종이오니\n● 그대로 제게 이루어지소서!”\n○ <rubric>성모송</rubric>은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n○ 이에 말씀이 사람이 되시어\n● 저희 가운데 계시나이다.\n○ <rubric>성모송</rubric>은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n○ 천주의 성모님, 저희를 위하여 빌어주시어\n● 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n✚ 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘.",
-        VN: "X. Đức Chúa Trời sai Thánh Thiên Thần truyền tin cho Rất Thánh Đức Bà Maria.\nĐ. Và Rất Thánh Đức Bà chịu thai bởi phép Đức Chúa Thánh Thần.\n<rubric>Kinh Kính Mừng</rubric>Kính mừng Maria đầy ơn phúc Đức Chúa Trời ở cùng Bà,/nBà có phúc lạ hơn mọi người nữ,\nvà Giêsu con lòng Bà gồm phúc lạ.\nThánh Maria Đức Mẹ Chúa\nTrời cầu cho chúng con là kẻ có tội\nkhi này và trong giờ lâm tử, Amen.\nX. Này tôi là tôi tá Đức Chúa Trời.\nĐ.Tôi xin vâng như lời Thánh Thiên Thần truyền.\n<rubric>Kinh Kính Mừng</rubric>Kính mừng Maria đầy ơn phúc Đức Chúa Trời ở cùng Bà,/nBà có phúc lạ hơn mọi người nữ,\nvà Giêsu con lòng Bà gồm phúc lạ.\nThánh Maria Đức Mẹ Chúa\nTrời cầu cho chúng con là kẻ có tội\nkhi này và trong giờ lâm tử, Amen.\nX. Chốc ấy Ngôi Thứ Hai xuống thế làm người.\nĐ. Và ở cùng chúng con.\n<rubric>Kinh Kính Mừng</rubric>Kính mừng Maria đầy ơn phúc Đức Chúa Trời ở cùng Bà,/nBà có phúc lạ hơn mọi người nữ,\nvà Giêsu con lòng Bà gồm phúc lạ.\nThánh Maria Đức Mẹ Chúa\nTrời cầu cho chúng con là kẻ có tội\nkhi này và trong giờ lâm tử, Amen.\nX. Lạy Rất Thánh Đức Mẹ Chúa Trời, xin cầu cho chúng con.\nĐ. Đáng chịu lấy những sự Chúa Kitô đã hứa.\nX.LỜI NGUYỆN\nCĐ.Lạy Chúa, chúng con xin Chúa ban ơn xuống trong linh hồn chúng con là kẻ đã nhờ lời Thánh Thiên Thần truyền, mà biết thật Chúa Kitô là con Chúa đã xuống thế làm Người, thì xin vì công ơn Chúa chịu nạn chịu chết trên cây Thánh Giá, cho chúng con ngày sau khi sống lại được đến nơi vinh hiển, cũng vì công nghiệp Chúa Kitô Chúa chúng con. Amen.",
-        EN: "V. The Angel of the Lord declared unto Mary,\nR. And she conceived of the Holy Spirit.\nALL. Hail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\nV. Behold the handmaid of the Lord,\nR. Be it done unto me according to your Word.\nALL. Hail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\nV. And the Word was made flesh,\nR. And dwelt among us.\n\nALL. Hail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\nV. Pray for us, O holy Mother of God,\nR. That we may be made worthy of the promises of Christ.\nV. Let us pray.\nALL. Pour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.",
+        KR: "<B>○</b> 주님의 천사가 마리아께 아뢰니\n<b>●</b> 성령으로 잉태하셨나이다.\n<rubric>성모송</rubric><B>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<B>○</b> “주님의 종이오니\n<b>●</b> 그대로 제게 이루어지소서!”\n<rubric>성모송</rubric><B>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 이에 말씀이 사람이 되시어\n<b>●</b> 저희 가운데 계시나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n● 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>✚</b> 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘.",
+        VN: "",
+        EN: "<b>V.</b> The Angel of the Lord declared unto Mary,\n<b>R.</b> And she conceived of the Holy Spirit.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> Behold the handmaid of the Lord,\n<b>R.</b> Be it done unto me according to your Word.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> And the Word was made flesh,\n<b>R.</b> And dwelt among us.\n\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> Pray for us, O holy Mother of God,\n<b>R.</b> That we may be made worthy of the promises of Christ.\n<b>Let us pray.</b>\nPour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.",
         JP: "主のみ使いのお告げを受けて、\nマリアは聖霊によって神の御子を宿された。\n〔アヴェ･マリアの祈り〕\nアヴェ、マリア、恵みに満ちた方、\n主はあなたとともにおられます。\nあなたは女のうちで祝福され、\nご胎内の御子イエスも祝福されています。\n神の母聖マリア、\nわたしたち罪びとのために、\n今も、死を迎える時も、お祈りください。\nアーメン。\nわたしは主のはしため、\nおことばどおりになりますように。\n（引き続き、上記の〔アヴェ･マリアの祈り〕を唱えます。）\nみことばは人となり、\nわたしたちのうちに住まわれた。\n（ここでも〔アヴェ･マリアの祈り〕を唱えます。）\n神の母聖マリア、わたしたちのために祈ってください。\nキリストの約束にかなうものとなりますように。\n祈願\n神よ、み使いのお告げによって、御子が人となられたことを\n知ったわたしたちが、キリストの受難と十字架をとおして、\n復活の栄光に達することができるよう、恵みを注いでください。\nわたしたちの主イエス・キリストによって。 アーメン。",
         LA: "Alma Redemptoris Mater, quae pervia caeli Porta manes, et stella maris, succurre cadenti, Surgere qui curat, populo: tu quae genuisti, Natura mirante, tuum sanctum Genitorem Virgo prius ac posterius, Gabrielis ab ore Sumens illud Ave, peccatorum miserere.\nTempus Adventus:\nV. Angelus Domini nuntiavit Mariae.\nR. Et concepit de Spiritu Sancto.\nOremus:\nGratiam tuam, quaesumus, Domine, mentibus nostris infunde: ut qui, Angelo nuntiante, Christi Filii tui incarnationem cognovimus; per passionem eius et crucem, ad resurrectionis gloriam perducamur. Per eundem Christum Dominum nostrum. Amen.\nDonec Purificatio:\nV. Post partum, Virgo, inviolata permansisti.\nR. Dei Genetrix, intercede pro nobis.\nOremus:\nDeus, qui salutis aeternae, beatae Mariae virginitate fecunda, humano generi praemia praestitisti: tribue, quaesumus; ut ipsam pro nobis intercedere sentiamus, per quam meruimus auctorem vitae suscipere, Dominum nostrum Iesum Christum, Filium tuum. Amen."
       },
@@ -650,9 +650,8 @@
         "共通の祈り",
         "Preces communes",
         "삼종 기도",
-        "Kinh Truyền Tin",
         "Angelus",
-        "お告げの祈り",
+        "Kinh Truyền Tin",
         "주요 기도",
         "Basic Prayers",
         "日々の祈り",
@@ -8901,11 +8900,11 @@
         LA: "Salve, Regina, Mater misericordiae,\nvita, dulcedo, et spes nostra, salve.\nad te clamamus\nexsules filii Hevae,\nad te suspiramus, gementes et flentes\nin hac lacrimarum valle.\nEia, ergo, advocata nostra, illos tuos\nmisericordes oculos ad nos converte;\net Jesum, benedictum fructum ventris tui,\nnobis post hoc exsilium ostende.\nO clemens, O pia, O dulcis Virgo Maria.\n(Ora pro nobis sancta Dei Genetrix.\nUt digni efficiamur promissionibus Christi.\nOremus.\nOmnipotens sempiterne Deus,\nqui gloriosae Virginis Matris Mariae corpus et animam,\nut dignum Filii tui habitaculum effici mereretur,\nSpiritu Sancto  cooperante praeparasti:\nda, ut cuius commemoratione laetamur;\neius pia intercessione,\nab instantibus malis,\net a morte perpetua liberemur.\nPer eundem Christum Dominum nostrum.\nAmen.)"
       },
       sourceCategory: {
-        KR: "성월기도",
+        KR: "성월기도; 묵주기도",
         VN: "Lần Hạt Mân Côi",
         EN: "Basic Prayers",
         JP: "日々の祈り",
-        LA: "성월기도"
+        LA: "Generalia"
       },
       tags: [
         "000.the_salve_regina",
@@ -8921,6 +8920,7 @@
         "元后あわれみの母（Salve Regina）",
         "Salve Regina",
         "성월기도",
+        "묵주기도",
         "Lần Hạt Mân Côi",
         "Basic Prayers",
         "日々の祈り"
