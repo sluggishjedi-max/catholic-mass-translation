@@ -3900,7 +3900,7 @@
 
     function splitVietnamesePrayerParagraphs(text) {
         const normalized = normalizeVietnamesePrayerEnding(text).replace(/\s+/g, ' ').trim();
-        const endingMatch = normalized.match(/\b(?:Người là Thiên Chúa hằng sống.+|Người hằng sống và hiển trị muôn đời\.?)$/i);
+        const endingMatch = normalized.match(/\b(?:Người là Thiên Chúa hằng sống.+|Người là Thiên Chúa,\s*Người hằng sống.+|Người hằng sống và hiển trị muôn đời\.?)$/i);
         if (!endingMatch) return normalized ? [normalized] : [];
         const before = normalized.slice(0, endingMatch.index).trim();
         const ending = endingMatch[0].trim();
@@ -3964,6 +3964,13 @@
         return out;
     }
 
+    function normalizeVietnamesePsalmResponseTail(text) {
+        const response = '(?:Đáp|Ðáp|Dap|Đ\\.|Ð\\.)';
+        return cleanNodeText(text)
+            .replace(new RegExp(`\\s*[–—-]\\s*${response}\\.?\\s*(?:[–—-]\\s*${response}\\.?\\s*)+$`, 'iu'), ' - Ðáp.')
+            .replace(new RegExp(`\\s*[–—-]\\s*${response}\\.?\\s*$`, 'iu'), ' - Ðáp.');
+    }
+
     function parseVietnamesePsalmLines(lines) {
         const out = [];
         let responseRef = '';
@@ -3985,8 +3992,9 @@
                 return;
             }
             if (/^Xướng:/i.test(line)) {
-                let text = line.replace(/^Xướng:\s*/i, '').trim();
-                if (!/-\s*[ĐÐ]áp\.?$/i.test(text)) text = `${text} - Ðáp.`;
+                let text = normalizeVietnamesePsalmResponseTail(line.replace(/^Xướng:\s*/i, '').trim());
+                if (!/[–—-]\s*(?:Đáp|Ðáp|Dap|Đ\.|Ð\.)\.?$/iu.test(text)) text = `${text} - Ðáp.`;
+                text = normalizeVietnamesePsalmResponseTail(text);
                 out.push(parsedLine('Xướng', text));
                 return;
             }
@@ -4012,7 +4020,7 @@
             .replace(/^[-–]\s*/, '')
             .replace(/^A\s+lleluia/iu, 'Alleluia')
             .replace(/\s*\)\s*$/u, ''));
-        if (!cleaned) return;
+        if (!cleaned || /^[–—-]+$/.test(cleaned)) return;
         const inlineAlleluia = cleaned.match(/^(Alleluia(?:,\s*alleluia)?[!.])\s+(.+?)\s*[–-]\s*(Alleluia[!.]?)$/i);
         if (inlineAlleluia) {
             out.push(parsedLine(speaker, inlineAlleluia[1]));
@@ -4036,7 +4044,7 @@
         let hasPrimary = false;
         splitSourceBlocks(lines).forEach(line => {
             const cleaned = line.replace(/^[-–]\s*/, '').trim();
-            if (!cleaned) return;
+            if (!cleaned || /^[–—-]+$/.test(cleaned)) return;
             const alternative = strictAlternativeMatch(cleaned.replace(/^\((.*)\)$/u, '$1'));
             if (alternative) {
                 out.push(parsedLine('', 'Hoặc:'));
@@ -6113,12 +6121,17 @@
     function strictAppendPsalmResponse(lang, key, speaker, text) {
         const cleaned = strictCleanLine(text);
         if (key !== 'psalm' || !strictShouldAppendPsalmResponse(lang, speaker)) return cleaned;
+        if (lang === 'VN') {
+            const normalized = normalizeVietnamesePsalmResponseTail(cleaned);
+            if (/[–—-]\s*(?:Đáp|Ðáp|Dap|Đ\.|Ð\.)\.?$/iu.test(normalized)) return normalized;
+        }
         const suffix = strictPsalmResponseTail(lang);
         if (!suffix) return cleaned;
         const escaped = suffix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
         if (new RegExp(`${escaped}\\s*$`, 'iu').test(cleaned)) return cleaned;
         if (lang === 'KR' && /◎\s*$/.test(cleaned)) return cleaned;
-        return `${cleaned} ${suffix}`;
+        const withSuffix = `${cleaned} ${suffix}`;
+        return lang === 'VN' ? normalizeVietnamesePsalmResponseTail(withSuffix) : withSuffix;
     }
 
     function strictParseJoinedAcclamation(lang, blocks) {
@@ -6132,6 +6145,7 @@
             verseBuffer = [];
         };
         (blocks || []).forEach(line => {
+            if (/^[–—-]+$/.test(strictCleanLine(line))) return;
             if (strictLooksLikeCitation(line, lang)) return;
             if (speakerOnlyPattern.test(line)) return;
             const split = line.match(responsePattern);
@@ -6328,6 +6342,7 @@
         strictGroupAlternativeBlocks(citationResult.blocks).forEach((group, index) => {
             if (index > 0) out.push(strictParsedLine('', 'Or:'));
             group.forEach(line => {
+                if (/^[–—-]+$/.test(strictCleanLine(line))) return;
                 if (/^(◎|○|●|R\.|V\.|℟\.?|℣\.?|Rit|Response|Responsorial|Alleluia|Đ\.|Ð\.|X\.|Xướng|Đáp|Ðáp)\s*[:.：]?\s*$/iu.test(line)) return;
                 const split = line.match(/^(◎|○|●|R\.|V\.|℟\.?|℣\.?|Rit|Response|Responsorial|Alleluia|Đ\.|Ð\.|X\.|Xướng|Đáp|Ðáp)\s*[:.：]?\s*(.+)$/iu);
                 if (split) out.push(strictParsedLine(split[1], strictAppendPsalmResponse(lang, key, split[1], split[2])));
@@ -6439,6 +6454,7 @@
             VN: {
                 collect: [
                     'Chúng con cầu xin nhờ Đức Giê-su Ki-tô Con Chúa, Thiên Chúa và là Chúa chúng con, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
+                    'Người là Thiên Chúa hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
                     'Người là Thiên Chúa, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
                     'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.'
                 ],
@@ -7674,6 +7690,15 @@
     function variantSemanticKey(baseId, text) {
         const normalized = normalizeSemanticText(text);
         const raw = String(text || '');
+        if (['collect', 'prayer_offerings', 'prayer_after', 'daily_line'].includes(baseId)) {
+            const prayerPatterns = [
+                ['standard_prayer_conclusion', /우리\s*주\s*그리스도를\s*통하여|성자께서는.*(?:성부|성령|영원히).*살아|chung con cau xin nho duc|nguoi.*hang song.*hien tri|chua.*hang song.*hien tri|through christ our lord|who lives?.*reigns?|per christum dominum|qui.*vivit.*regnat|muon doi|forever and ever|for ever and ever/i],
+                ['sacraments_salvation_offering', /신비.*구원.*성찬례.*제사|bi tich.*ban phat.*on cuu do|cu hanh le te.*phuc vu.*duc\s*ki\s*-?\s*to|sacraments?.*salvation.*worship|mysteries.*salvation/i]
+            ];
+            const haystack = `${normalized}\n${raw}`;
+            const prayerMatched = prayerPatterns.find(([, pattern]) => pattern.test(haystack));
+            if (prayerMatched) return prayerMatched[0];
+        }
         const patterns = baseId === 'psalm' ? [
             ['mercy_sinned', /죄.*불쌍|자비.*죄|xin xot thuong.*pham toi|nguyen thuong.*nhan hau|be merciful.*sinned|have mercy.*sinned|miserere.*peccavimus/i],
             ['praise_soul_lord', /영혼.*찬미|linh hon.*ngoi khen|praise.*soul.*lord|lauda.*anima/i]
@@ -8075,9 +8100,10 @@
     }
 
     function cachedOrLocalSemanticEquivalent(baseId, leftText, rightText) {
+        if (localSemanticEquivalent(baseId, leftText, rightText)) return true;
         const cached = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
         if (cached !== null) return cached;
-        return localSemanticEquivalent(baseId, leftText, rightText);
+        return false;
     }
 
     function buildSemanticEquivalencePrompt(task) {
@@ -9108,11 +9134,13 @@
     }
 
     function fallbackSourceTextForLine(line, targetLower, baseId) {
-        if (baseId !== 'dismissal' && !isEucharistPrefaceLine(line, baseId)) return '';
-        const preferred = ['kr', 'vn', 'en', 'la', 'jp'].filter(lower => lower !== targetLower);
+        if (!allowsAIFallback(baseId) && !isEucharistPrefaceLine(line, baseId)) return '';
+        const active = currentLeftRightLowerKeys();
+        const preferred = [active.left, active.right, 'kr', 'vn', 'en', 'la', 'jp']
+            .filter((lower, index, array) => lower && lower !== targetLower && array.indexOf(lower) === index);
         for (const lower of preferred) {
             const text = line && line[`text_${lower}`];
-            if (cleanNodeText(text) && !isAIButton(text)) return text;
+            if (cleanNodeText(text) && !isAIButton(text) && !isLiturgicalPlaceholderText(text)) return text;
         }
         return '';
     }
@@ -9545,6 +9573,7 @@
         const leftText = cleanNodeText(line[`text_${leftKey}`]);
         const rightText = cleanNodeText(line[`text_${rightKey}`]);
         if (!leftText || !rightText) return false;
+        if (localSemanticEquivalent(baseId, leftText, rightText)) return false;
         const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
         if (cachedEquivalent === true) return false;
         if (cachedEquivalent === false && aiSemanticDecisionSectionIds.has(baseId)) return true;
@@ -9620,6 +9649,7 @@
             const leftText = cleanNodeText(line[`text_${leftKey}`]);
             const rightText = cleanNodeText(line[`text_${rightKey}`]);
             if (!leftText || !rightText) return indexes;
+            if (localSemanticEquivalent(baseId, leftText, rightText)) return indexes;
             const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
             if (cachedEquivalent === true) return indexes;
             const antiphonMismatch = (baseId === 'entrance' || baseId === 'communion')
