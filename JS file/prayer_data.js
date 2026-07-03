@@ -320,7 +320,7 @@
       },
       texts: {
         KR: "일. 한 분이신 하느님을 흠숭하여라.\n이. 하느님의 이름을 함부로 부르지 마라.\n삼. 주일을 거룩히 지내라.\n사. 부모에게 효도하여라.\n오. 사람을 죽이지 마라.\n육. 간음하지 마라.\n칠. 도둑질을 하지 마라.\n팔. 거짓 증언을 하지 마라.\n구. 남의 아내를 탐내지 마라.\n십. 남의 재물을 탐내지 마라.",
-        VN: "Đạo Đức Chúa Trời có mười điều răn:\nThứ nhất: Thờ phượng một Đức Chúa Trời và kính mến người trên hết mọi sự.\nThư hai: Chớ kêu tên Đức Chúa Trời vô cớ.\nThứ ba: Giữ ngày Chúa Nhật.\nThứ bốn: Thảo kính cha mẹ.\nThứ năm: Chớ giết người.\nThứ sáu: Chớ làm sự dâm dục.\nThứ bảy: Chớ lấy của người.\nThứ tám: Chớ làm chứng dối.\nThứ chín: Chớ muốn vợ chồng người.\nThứ mười: Chớ tham của người.\nMười điều răn ấy tóm về hai này mà chớ: trước kính mến một Đức Chúa Trời trên hết mọi sự sau lại yêu người như mình ta vậy.\nAmen.",
+        VN: "Đạo Đức Chúa Trời có mười điều răn:\nThứ nhất: Thờ phượng một Đức Chúa Trời và kính mến người trên hết mọi sự.\nThư hai: Chớ kêu tên Đức Chúa Trời vô cớ.\nThứ ba: Giữ ngày Chúa Nhật.\nThứ bốn: Thảo kính cha mẹ.\nThứ năm: Chớ giết người.\nThứ sáu: Chớ làm sự dâm dục.\nThứ bảy: Chớ lấy của người.\nThứ tám: Chớ làm chứng dối.\nThứ chín: Chớ muốn vợ chồng người.\nThứ mười: Chớ tham của người.\nMười điều răn ấy tóm về hai này mà chớ: trước kính mến một Đức Chúa Trời trên hết mọi sự sau lại yêu người như mình ta vậy.\nAmen.",
         EN: "",
         JP: "",
         LA: ""
@@ -423,17 +423,17 @@
       category: "common",
       titles: {
         KR: "통회 기도",
-        VN: "Kinh Ăn Năn Tội",
+        VN: "Kinh Ăn Năn Tội",
         EN: "Act of Contrition",
         JP: "痛悔の祈り",
         LA: "Actus Contritionis"
       },
       texts: {
         KR: "하느님,\n제가 죄를 지어\n참으로 사랑받으셔야 할 하느님의 마음을 아프게 하였기에\n악을 저지르고 선을 멀리한 모든 잘못을\n진심으로 뉘우치나이다.\n하느님의 은총으로 속죄하고\n다시는 죄를 짓지 않으며\n죄지을 기회를 피하기로 굳게 다짐하오니\n우리 구세주 예수 그리스도의 수난 공로를 보시고\n저에게 자비를 베풀어 주소서.\n아멘.",
-        VN: "Lạy Chúa, Chúa là Đấng trọn tốt trọn lành vô cùng.  Chúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con, mà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa, thì con lo buồn đau đớn, cùng chê ghét mọi tội con trên hết mọi sự, con dốc lòng chừa cải, và nhờ ơn Chúa, thì con sẽ lánh xa dịp tội, cùng làm việc đền tội cho xứng. Amen.",
+        VN: "Lạy Chúa,\nChúa là Đấng trọn tốt trọn lành vô cùng.\nChúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con,\nmà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa,\nthì con lo buồn đau đớn,\ncùng chê ghét mọi tội con trên hết mọi sự,\ncon dốc lòng chừa cải, và nhờ ơn Chúa,\nthì con sẽ lánh xa dịp tội, cùng làm việc đền tội cho xứng.\nAmen.",
         EN: "O my God,\nI am heartily sorry for having offended you,\nand I detest all my sins because of your just punishments,\nbut most of all because they offend you, my God,\nwho are all good and deserving of all my love.\nI firmly resolve, with the help of your grace,\nto sin no more\nand to avoid the near occasions of sin.\nAmen.\n<rubric>Or:</rubric>O my God,\nI am sorry and repent with all my heart\nfor all the wrong I have done\nand for the good I have failed to do,\nbecause by sinning I have offended you,\nwho are all good and worthy to be loved above all things.\nI firmly resolve, with the help of your grace,\nto do penance,\nto sin no more,\nand to avoid the occasions of sin.\nThrough the merits of the Passion of our Savior Jesus Christ,\nLord, have mercy.\n<rubric>Or:</rubric>Lord Jesus, Son of God,\nhave mercy on me, a sinner.",
         JP: "いつくしみ深いイエスよ、あなたの尊いみ足のもとにひれ伏して、\n心の底から罪のゆるしを願います。\n特に自分の罪を、あなたの限りない愛に背くものとして悔やみ憎みます。\n再び罪を犯してあなたに背くより、むしろ死ぬことを望み、\n生涯、すべてに超えてあなたを愛することを決心します。",
-        LA: "Deus meus, ex toto corde poenitet me omnium meorum peccatorum, eaque detestor, quia peccando, non solum poenas a Te iuste statutas promeritus sum, sed praesertim quia offendi Te, summum bonum, ac dignum qui super omnia diligaris. Ideo firmiter propono, adiuvante gratia Tua, de cetero me non peccaturum peccandique occasiones proximas fugiturum. Amen."
+        LA: "Deus meus,\nex toto corde poenitet me omnium meorum peccatorum, eaque detestor, quia peccando, non solum poenas a Te iuste statutas promeritus sum,\nsed praesertim quia offendi Te, summum bonum, ac dignum qui super omnia diligaris.\nIdeo firmiter propono, adiuvante gratia Tua,\nde cetero me non peccaturum peccandique occasiones proximas fugiturum.\nAmen."
       },
       sourceCategory: {
         KR: "주요 기도",
@@ -472,7 +472,7 @@
       },
       texts: {
         KR: "하느님, 하느님께서는 진리의 근원이시며\n그르침이 없으시므로\n계시하신 진리를\n교회가 가르치는 대로 굳게 믿나이다.",
-        VN: "Lạy Chúa, con tin thật có một Đức Chúa Trời là Đấng thưởng phạt vô cùng. Con lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm Người, chịu nạn chịu chết mà chuộc tội cho thiên hạ. Bấy nhiêu điều ấy cùng các điều Hội Thánh dạy thì con tin vững vàng, vì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh. Amen.",
+        VN: "Lạy Chúa, con tin thật có một Đức Chúa Trời là Đấng thưởng phạt vô cùng. Con lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm Người, chịu nạn chịu chết mà chuộc tội cho thiên hạ. Bấy nhiêu điều ấy cùng các điều Hội Thánh dạy thì con tin vững vàng, vì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh. Amen.",
         EN: "O my God, I firmly believe that you are one God in three divine Persons, Father, Son, and Holy Spirit. I believe that your divine Son became man and died for our sins and that he will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches because you have revealed them who are eternal truth and wisdom, who can neither deceive nor be deceived. In this faith I intend to live and die. Amen.",
         JP: "",
         LA: ""
@@ -512,7 +512,7 @@
       },
       texts: {
         KR: "하느님, 하느님께서는 자비의 근원이시며\n저버림이 없으시므로\n예수 그리스도의 공로를 통하여 주실\n구원의 은총과 영원한 생명을 바라나이다.",
-        VN: "Lạy Chúa, con trông cậy vững vàng, vì công nghiệp Đức Chúa Giêsu thì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này, cho ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời, vì Chúa là đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy chẳng có lẽ nào sai được. Amen.",
+        VN: "Lạy Chúa, con trông cậy vững vàng, vì công nghiệp Đức Chúa Giêsu thì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này, cho ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời, vì Chúa là đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy chẳng có lẽ nào sai được. Amen.",
         EN: "O Lord God, I hope by your grace for the pardon of all my sins and after life here to gain eternal happiness because you have promised it who are infinitely powerful, faithful, kind, and merciful. In this hope I intend to live and die. Amen.",
         JP: "",
         LA: ""
@@ -552,7 +552,7 @@
       },
       texts: {
         KR: "하느님, 하느님께서는 사랑의 근원이시며\n한없이 좋으시므로\n마음을 다하여 주님을 사랑하며\n이웃을 제 몸같이 사랑하나이다.",
-        VN: "Lạy Chúa, con kính mến Chúa hết lòng hết sức trên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lạy vì Chúa, thì con thương yêu người ta như mình con vậy. Amen.",
+        VN: "Lạy Chúa, con kính mến Chúa hết lòng hết sức trên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lạy vì Chúa, thì con thương yêu người ta như mình con vậy. Amen.",
         EN: "O Lord God, I love you above all things and I love my neighbor for your sake because you are the highest, infinite and perfect good, worthy of all my love. In this love I intend to live and die. Amen.",
         JP: "",
         LA: ""
