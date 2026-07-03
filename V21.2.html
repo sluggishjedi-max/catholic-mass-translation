@@ -3496,6 +3496,13 @@
         return line;
     }
 
+    function isStandaloneDashText(value) {
+        const text = cleanNodeText(value)
+            .replace(/<[^>]*>/g, '')
+            .replace(/\s+/g, '');
+        return /^[\u002d\u2010-\u2015\u2212]+$/u.test(text);
+    }
+
     function parsedRubricLine(rubric, text) {
         const line = parsedLine('', text);
         line.rubric = cleanNodeText(rubric);
@@ -4015,23 +4022,27 @@
     }
 
     function pushVietnameseAcclamationContent(out, raw, speaker = '') {
+        if (isStandaloneDashText(raw)) return;
         const cleaned = cleanNodeText(String(raw || '')
             .replace(/^\((.*)\)$/u, '$1')
-            .replace(/^[-–]\s*/, '')
+            .replace(/^[\u002d\u2010-\u2015\u2212]\s*/u, '')
             .replace(/^A\s+lleluia/iu, 'Alleluia')
             .replace(/\s*\)\s*$/u, ''));
-        if (!cleaned || /^[–—-]+$/.test(cleaned)) return;
+        if (!cleaned || isStandaloneDashText(cleaned)) return;
+        const cleanAcclamationVerse = value => cleanNodeText(String(value || '')
+            .replace(/^[\u002d\u2010-\u2015\u2212]\s*/u, '')
+            .replace(/\s*[\u002d\u2010-\u2015\u2212]\s*$/u, ''));
         const inlineAlleluia = cleaned.match(/^(Alleluia(?:,\s*alleluia)?[!.])\s+(.+?)\s*[–-]\s*(Alleluia[!.]?)$/i);
         if (inlineAlleluia) {
             out.push(parsedLine(speaker, inlineAlleluia[1]));
-            out.push(parsedLine('', inlineAlleluia[2].replace(/\s*[–-]\s*$/u, '')));
+            out.push(parsedLine('', cleanAcclamationVerse(inlineAlleluia[2])));
             out.push(parsedLine('', inlineAlleluia[3]));
             return;
         }
         const combinedAlleluia = cleaned.match(/^(Alleluia[^!.\n]*[!.])\s*[–-]\s*(.+?)\s*[–-]?\s*(Alleluia[!.]?)$/i);
         if (combinedAlleluia) {
             out.push(parsedLine(speaker, combinedAlleluia[1]));
-            out.push(parsedLine('', combinedAlleluia[2].replace(/\s*[–-]\s*$/u, '')));
+            out.push(parsedLine('', cleanAcclamationVerse(combinedAlleluia[2])));
             out.push(parsedLine('', combinedAlleluia[3]));
             return;
         }
@@ -4043,8 +4054,9 @@
         const out = [];
         let hasPrimary = false;
         splitSourceBlocks(lines).forEach(line => {
-            const cleaned = line.replace(/^[-–]\s*/, '').trim();
-            if (!cleaned || /^[–—-]+$/.test(cleaned)) return;
+            if (isStandaloneDashText(line)) return;
+            const cleaned = line.replace(/^[\u002d\u2010-\u2015\u2212]\s*/u, '').trim();
+            if (!cleaned || isStandaloneDashText(cleaned)) return;
             const alternative = strictAlternativeMatch(cleaned.replace(/^\((.*)\)$/u, '$1'));
             if (alternative) {
                 out.push(parsedLine('', 'Hoặc:'));
@@ -5335,7 +5347,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict63';
+    const STRICT_PARSER_CACHE_VERSION = 'strict64';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -6145,7 +6157,7 @@
             verseBuffer = [];
         };
         (blocks || []).forEach(line => {
-            if (/^[–—-]+$/.test(strictCleanLine(line))) return;
+            if (isStandaloneDashText(line)) return;
             if (strictLooksLikeCitation(line, lang)) return;
             if (speakerOnlyPattern.test(line)) return;
             const split = line.match(responsePattern);
@@ -6290,6 +6302,9 @@
     function strictParsePsalmOrAcclamation(lang, key, section) {
         const blocks = strictSplitBlocks(section.lines);
         const citationResult = strictExtractCitation(section, blocks, lang, { preserveParentheses: true });
+        const contentBlocks = key === 'gospel_accl'
+            ? citationResult.blocks.filter(line => !isStandaloneDashText(line))
+            : citationResult.blocks;
         const out = [];
         if (lang === 'VN' && key === 'psalm') {
             const parsedPsalm = parseVietnamesePsalmLines(citationResult.blocks);
@@ -6300,7 +6315,7 @@
             return result;
         }
         if (lang === 'VN' && key === 'gospel_accl') {
-            parseVietnameseAcclamationLines(citationResult.blocks).lines.forEach(line => {
+            parseVietnameseAcclamationLines(contentBlocks).lines.forEach(line => {
                 out.push(strictParsedLine(line.sp, line.text));
             });
             const result = { text: parsedLinesToText(out), lines: out };
@@ -6308,7 +6323,7 @@
             return result;
         }
         if (lang === 'KR') {
-            splitKoreanMarkedLines(citationResult.blocks, ['◎', '○', '●']).forEach(line => {
+            splitKoreanMarkedLines(contentBlocks, ['◎', '○', '●']).forEach(line => {
                 out.push(strictParsedLine(line.sp, strictAppendPsalmResponse(lang, key, line.sp, strictStripArabicVerseNumbers(line.text))));
             });
             const result = { text: parsedLinesToText(out), lines: out };
@@ -6322,7 +6337,7 @@
             return result;
         }
         if (lang === 'JP' && key === 'gospel_accl') {
-            buildJapaneseAcclamationLines(citationResult.blocks).forEach(line => out.push(line));
+            buildJapaneseAcclamationLines(contentBlocks).forEach(line => out.push(line));
             const result = { text: parsedLinesToText(out), lines: out };
             if (citationResult.citation) result.cit_jp = citationResult.citation;
             return result;
@@ -6334,15 +6349,15 @@
             return strictParseLatinPsalm(citationResult.citation, citationResult.blocks);
         }
         if (['EN', 'LA'].includes(lang) && key === 'gospel_accl') {
-            strictParseJoinedAcclamation(lang, citationResult.blocks).forEach(line => out.push(line));
+            strictParseJoinedAcclamation(lang, contentBlocks).forEach(line => out.push(line));
             const result = { text: parsedLinesToText(out), lines: out };
             if (citationResult.citation) result[`cit_${lang.toLowerCase()}`] = citationResult.citation;
             return result;
         }
-        strictGroupAlternativeBlocks(citationResult.blocks).forEach((group, index) => {
+        strictGroupAlternativeBlocks(contentBlocks).forEach((group, index) => {
             if (index > 0) out.push(strictParsedLine('', 'Or:'));
             group.forEach(line => {
-                if (/^[–—-]+$/.test(strictCleanLine(line))) return;
+                if (key === 'gospel_accl' && isStandaloneDashText(line)) return;
                 if (/^(◎|○|●|R\.|V\.|℟\.?|℣\.?|Rit|Response|Responsorial|Alleluia|Đ\.|Ð\.|X\.|Xướng|Đáp|Ðáp)\s*[:.：]?\s*$/iu.test(line)) return;
                 const split = line.match(/^(◎|○|●|R\.|V\.|℟\.?|℣\.?|Rit|Response|Responsorial|Alleluia|Đ\.|Ð\.|X\.|Xướng|Đáp|Ðáp)\s*[:.：]?\s*(.+)$/iu);
                 if (split) out.push(strictParsedLine(split[1], strictAppendPsalmResponse(lang, key, split[1], split[2])));
@@ -6533,6 +6548,43 @@
         if (!ending) return text ? [text] : [];
         const body = text.slice(0, text.length - ending.length).trim();
         return [body, ending].filter(Boolean);
+    }
+
+    function prayerConclusionEndingForText(lang, key, text) {
+        if (!strictPrayerKeys.has(key)) return '';
+        const expanded = strictExpandPrayerEnding(lang, key, text);
+        return strictPrayerEndingFormulas(lang, key).find(item => expanded.endsWith(item)) || '';
+    }
+
+    function splitPrayerParsedLineByConclusion(parsed, lang, key) {
+        const text = cleanNodeText(parsed && parsed.text);
+        if (!text || isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text)) return [parsed];
+        const expanded = strictExpandPrayerEnding(lang, key, text);
+        const ending = prayerConclusionEndingForText(lang, key, expanded);
+        if (!ending) return [Object.assign({}, parsed, { text: expanded })];
+        const body = expanded.slice(0, expanded.length - ending.length).trim();
+        const output = [];
+        if (body) output.push(Object.assign({}, parsed, { text: body, role: parsed.role || 'body' }));
+        output.push(Object.assign({}, parsed, { sp: '', text: ending, role: 'conclusion' }));
+        return output;
+    }
+
+    function normalizePrayerParsedLinesBeforeApply(lower, baseId, parsedLines) {
+        if (!strictPrayerKeys.has(baseId) || !Array.isArray(parsedLines)) return parsedLines;
+        const lang = langCodeFromLowerKey(lower);
+        let hasConclusion = false;
+        const splitLines = parsedLines.flatMap(parsed => {
+            const lines = splitPrayerParsedLineByConclusion(parsed, lang, baseId);
+            if (lines.some(line => line && line.role === 'conclusion')) hasConclusion = true;
+            return lines;
+        });
+        if (!hasConclusion) return splitLines;
+        return splitLines.map(line => {
+            if (!line || line.role || line.rubric) return line;
+            const text = cleanNodeText(line.text);
+            if (!text || isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text)) return line;
+            return Object.assign({}, line, { role: 'body' });
+        });
     }
 
     function strictAntiphonParagraphs(lang, key, blocks) {
@@ -7095,6 +7147,16 @@
         return /^(아멘\.?|Amen\.?|アーメン。?)$/i.test(cleanNodeText(text));
     }
 
+    function isPrayerConclusionText(text) {
+        const cleaned = cleanNodeText(text);
+        if (!cleaned) return false;
+        return ['KR', 'VN', 'EN', 'JP', 'LA'].some(lang =>
+            ['collect', 'prayer_offerings', 'prayer_after'].some(key =>
+                strictPrayerEndingFormulas(lang, key).some(formula => cleaned === formula)
+            )
+        );
+    }
+
     function isPrayerOpenerLine(line) {
         return ['kr', 'vn', 'en', 'jp', 'la'].some(lower => isPrayerOpenerText(line && line[`text_${lower}`]));
     }
@@ -7205,7 +7267,9 @@
     }
 
     function usesReadingRoles(baseId, parsedLines) {
-        return ['reading1', 'reading2', 'gospel'].includes(baseId) && parsedLines.some(line => line.role);
+        if (['reading1', 'reading2', 'gospel'].includes(baseId)) return parsedLines.some(line => line.role);
+        if (isPrayerPart(baseId)) return parsedLines.some(line => line.role === 'conclusion');
+        return false;
     }
 
     function lineHasAnyRole(line, role) {
@@ -7417,6 +7481,9 @@
                         line[`sp_${lower}`] = celebrantSpeakerByLang[lower] || line[`sp_${lower}`] || '';
                     } else if (isPrayerAmenText(text)) {
                         line[`sp_${lower}`] = peopleSpeakerByLang[lower] || line[`sp_${lower}`] || '';
+                    } else if (isPrayerConclusionText(text)) {
+                        line[`sp_${lower}`] = '';
+                        line[`role_${lower}`] = 'conclusion';
                     } else if (text && !isAlternativeText(text)) {
                         line[`sp_${lower}`] = '';
                     }
@@ -7523,6 +7590,7 @@
     }
 
     function applyParsedLinesForLanguage(targetLines, lower, parsedLines, baseId) {
+        parsedLines = normalizePrayerParsedLinesBeforeApply(lower, baseId, parsedLines);
         parsedLines = normalizeParsedLinesBeforeApply(lower, baseId, parsedLines);
         if (!Array.isArray(parsedLines) || !parsedLines.length) return;
         if (usesReadingRoles(baseId, parsedLines)) {
