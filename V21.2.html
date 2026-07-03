@@ -2653,6 +2653,8 @@
             const text = cleanNodeText(inner);
             return text ? `<span class="rubric">${text}</span>` : '';
         });
+        html = html.replace(/&lt;(b|strong)&gt;([\s\S]*?)&lt;\/(?:b|strong)&gt;/gi, '<strong>$2</strong>');
+        html = html.replace(/&lt;(i|em)&gt;([\s\S]*?)&lt;\/(?:i|em)&gt;/gi, '<em>$2</em>');
         html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u>$1</u>');
         html = html.replace(/\*\*([\s\S]*?)\*\*/g, (_, inner) => `<strong>${inner}</strong>`);
         return html.replace(/\r?\n/g, '<br>');
