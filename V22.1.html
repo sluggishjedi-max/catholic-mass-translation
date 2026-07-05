@@ -327,7 +327,7 @@
         <div class="consent-language-grid">
             <div class="consent-language-block lang-KR">
                 <strong class="consent-language-title">한국어</strong>
-                <p>&lt;미사통상문&gt; 및 &lt;전례독서&gt;의 본 사이트 게재와 관련하여 각국의 천주교주교회의 공식 사용허가를 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.</p>
+                <p>&lt;미사통상문&gt; 및 &lt;전례독서&gt;, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의 등 저작권자의 승인을 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.</p>
             </div>
             <div class="consent-language-block lang-VN">
                 <strong class="consent-language-title">Tiếng Việt</strong>
@@ -568,7 +568,7 @@
 
 <script src="JS%20file/missa_data.js"></script>
 <script src="JS%20file/prayer_data.js?v=20260703-prayer-data-3"></script>
-<script src="JS%20file/hymn_data.js?v=20260706-v221"></script>
+<script src="JS%20file/hymn_data.js?v=20260706-v221-copyright"></script>
 
 <script>
     (function loadFirebaseSdkInBackground() {
@@ -2259,6 +2259,7 @@
             const verseText = verses.map(verse => [verse.label, verse.text].filter(Boolean).join(' ')).join('\n\n');
             const text = localizedFlatValue(entry, entry.text || entry.lyrics || entry.body || '', ['text', 'lyrics', 'body'], country) || verseText;
             const firstLine = localizedFlatValue(entry, entry.firstLine || '', ['firstLine'], country);
+            const copyright = localizedFlatValue(entry, entry.copyright || entry.copyrightNotice || '', ['copyright', 'copyrightNotice'], country);
             const normalized = {
                 id: cleanNodeText(entry.id || (country + '-hymn-' + (number || title))),
                 country,
@@ -2275,6 +2276,7 @@
                 composer: cleanNodeText(entry.composer || ''),
                 lyricist: cleanNodeText(entry.lyricist || ''),
                 lyricsNote: localizedFlatValue(entry, entry.lyricsNote || '', ['lyricsNote'], country),
+                copyright,
                 verses,
                 text,
                 lyrics: text,
@@ -2306,7 +2308,8 @@
             firstLine: '\uCCAB \uC18C\uC808',
             composer: '\uC791\uACE1',
             lyricist: '\uC791\uC0AC',
-            source: '\uCD9C\uCC98'
+            source: '\uCD9C\uCC98',
+            copyright: '\uC800\uC791\uAD8C'
         };
     }
 
@@ -2343,6 +2346,9 @@
         const youtubeHtml = youtubeUrl
             ? '<a class="hymn-media-link" href="' + escapeAttr(youtubeUrl) + '" target="_blank" rel="noopener">' + labels.youtube + '</a>'
             : '<span class="hymn-media-placeholder">' + labels.youtubePending + '</span>';
+        const copyrightHtml = entry.copyright
+            ? '<div class="hymn-detail-section aux-muted">' + escapeHtml(labels.copyright + ': ' + entry.copyright) + '</div>'
+            : '';
         return [
             '<article class="hymn-detail">',
             tagsHtml,
@@ -2354,6 +2360,7 @@
             lyricsNoteHtml,
             '</div>',
             '<div class="hymn-detail-actions">' + aiHtml + scoreHtml + youtubeHtml + '</div>',
+            copyrightHtml,
             '</article>'
         ].join('');
     }
@@ -8688,35 +8695,37 @@
         });
     }
 
-    function localizedPrayerCopyrightText(langCode) {
-        const lang = normalizeSelectableLang(langCode || state.uiLang || 'KR', 'KR');
-        const vnNotice = 'Copyright © 2017-2026 Dicasterium pro Communicatione - Giữ bản quyền';
-        const enNotice = '©2026 United States Conference of Catholic Bishops';
-        if (lang === 'VN') return `Nguồn kinh nguyện: tiếng Việt — Vatican News (${vnNotice})<br>tiếng Anh — Hội đồng Giám mục Công giáo Hoa Kỳ (${enNotice})`;
-        if (lang === 'EN') return `Prayer sources: Vietnamese — Vatican News (${vnNotice})<br>English — United States Conference of Catholic Bishops (${enNotice})`;
-        if (lang === 'JP') return `祈りの出典: ベトナム語 — バチカンニュース (${vnNotice})<br>英語 — 米国カトリック司教協議会 (${enNotice})`;
-        if (lang === 'LA') return `Fontes precum: Vietnamice — Nuntii Vaticani (${vnNotice})<br>Anglice — Conferentia Episcoporum Catholicorum Civitatum Foederatarum (${enNotice})`;
-        return `기도문 출처: 베트남어 — 바티칸뉴스 (${vnNotice})<br>영어 — 미국가톨릭주교회의 (${enNotice})`;
+    function prayerCopyrightNoticeForLang(langCode) {
+        const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
+        const notices = {
+            KR: 'ⓒ 한국천주교주교회의',
+            VN: 'Copyright © 2017-2026 Dicasterium pro Communicatione - Giữ bản quyền',
+            EN: '©2026 United States Conference of Catholic Bishops',
+            JP: '© apud Administrationem Patrimonii Sedis Apostolicae in Civitate Vaticana, 2008.',
+            LA: '© Libreria Editrice Vaticana'
+        };
+        return notices[lang] || '';
     }
 
-    function localizedChurchMapCopyrightText(langCode) {
-        const lang = normalizeSelectableLang(langCode || state.uiLang || 'KR', 'KR');
-        if (lang === 'VN') return 'Nguồn bản đồ: Google Maps. Vui lòng theo ghi nhận bản quyền của Google và nhà cung cấp dữ liệu hiển thị trên bản đồ.';
-        if (lang === 'EN') return 'Map source: Google Maps. Follow the Google and map-data provider attribution shown on the map.';
-        if (lang === 'JP') return '地図出典: Google マップ。地図上に表示される Google および地図データ提供者の著作権表示に従います。';
-        if (lang === 'LA') return 'Fons tabulae: Google Maps. Attributiones Google et datorum tabulae in ipsa tabula ostensas sequimur.';
-        return '지도 출처: 구글지도. 지도 안에 표시되는 Google 및 지도 데이터 제공자의 저작권 표기를 따릅니다.';
+    function localizedPrayerCopyrightText(langCodes = []) {
+        const langs = Array.from(new Set((Array.isArray(langCodes) ? langCodes : [langCodes])
+            .map(lang => normalizeSelectableLang(lang, ''))
+            .filter(Boolean)));
+        return langs
+            .map(prayerCopyrightNoticeForLang)
+            .filter(Boolean)
+            .join('<br>');
     }
 
     function updateFooterCopyright() {
         const footer = document.getElementById('main-footer');
         if (!footer) return;
         if (state.activeTab === 'prayers') {
-            footer.innerHTML = localizedPrayerCopyrightText(state.uiLang);
+            footer.innerHTML = localizedPrayerCopyrightText([state.currentLoc, state.targetLang]);
             return;
         }
-        if (state.activeTab === 'churches') {
-            footer.innerHTML = localizedChurchMapCopyrightText(state.uiLang);
+        if (state.activeTab === 'hymns' || state.activeTab === 'churches') {
+            footer.innerHTML = '';
             return;
         }
         let copyright = '';
