@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>파이어베이스 자동 업로드 트럭</title>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+    <script src="../JS%20file/missa_data.js"></script>
+    <script src="../JS%20file/prayer_data.js"></script>
+    <script src="../JS%20file/hymn_data.js"></script>
+    
+    <style>
+        body { text-align: center; padding: 50px; font-family: sans-serif; background: #e8f4f8; }
+        .upload-btn { margin: 8px; padding: 18px 34px; font-size: 22px; background: #3498db; color: white; border: none; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .upload-btn:hover { background: #2980b9; }
+        .upload-btn.prayer { background: #8e44ad; }
+        .upload-btn.prayer:hover { background: #71368a; }
+        .upload-btn.hymn { background: #16a085; }
+        .upload-btn.hymn:hover { background: #12816c; }
+        .upload-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+        #status { margin-top: 30px; font-size: 20px; font-weight: bold; color: #2c3e50; }
+    </style>
+</head>
+<body>
+
+    <h1>🚚 전례 데이터 운반 트럭</h1>
+    <p>버튼을 누르면 <b>JS file/missa_data.js</b>, <b>JS file/prayer_data.js</b>, <b>JS file/hymn_data.js</b> 파일에 있는 내용을 파이어베이스로 옮깁니다.</p>
+    <button id="massUploadBtn" class="upload-btn" onclick="startMassUpload()">미사통상문 업로드 🚀</button>
+    <button id="prayerUploadBtn" class="upload-btn prayer" onclick="startPrayerUpload()">다국어 기도문 업로드 🙏</button>
+    <button id="hymnUploadBtn" class="upload-btn hymn" onclick="startHymnUpload()">성가 데이터 업로드 🎵</button>
+    <div id="status">대기 중...</div>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyA3yXeo3I3bnhRuUsQT7TymnaDYr32oCUg",
+            authDomain: "ordinary-mass-app.firebaseapp.com",
+            projectId: "ordinary-mass-app",
+            storageBucket: "ordinary-mass-app.firebasestorage.app",
+            messagingSenderId: "314851403029",
+            appId: "1:314851403029:web:babc9ee9d5f7b5543cf51c"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        function cloneForUpload(item) {
+            return JSON.parse(JSON.stringify(item || {}));
+        }
+
+        function getMissaUploadData() {
+            if (Array.isArray(globalThis.missaData)) return globalThis.missaData;
+            if (typeof massData !== 'undefined' && Array.isArray(massData)) return massData;
+            return null;
+        }
+
+        function getPrayerUploadData() {
+            if (Array.isArray(globalThis.prayerData)) return globalThis.prayerData;
+            if (Array.isArray(globalThis.uploadedPrayerData)) return globalThis.uploadedPrayerData;
+            return null;
+        }
+
+        function getHymnUploadData() {
+            if (Array.isArray(globalThis.ordoHymnData)) return globalThis.ordoHymnData;
+            if (Array.isArray(globalThis.hymnData)) return globalThis.hymnData;
+            if (Array.isArray(globalThis.uploadedHymnData)) return globalThis.uploadedHymnData;
+            return null;
+        }
+
+        function setButtonsDisabled(disabled) {
+            document.getElementById('massUploadBtn').disabled = disabled;
+            document.getElementById('prayerUploadBtn').disabled = disabled;
+            document.getElementById('hymnUploadBtn').disabled = disabled;
+        }
+
+        function updateReadyStatus() {
+            const massData = getMissaUploadData();
+            const prayerData = getPrayerUploadData();
+            const hymnData = getHymnUploadData();
+            const status = document.getElementById('status');
+            status.innerHTML = [
+                massData ? `미사 통상문 ${massData.length}개 로드됨` : '미사 통상문 파일을 찾지 못했습니다',
+                prayerData ? `기도문 ${prayerData.length}개 로드됨` : '기도문 파일을 찾지 못했습니다',
+                hymnData ? `성가 ${hymnData.length}개 로드됨` : '성가 파일을 찾지 못했습니다'
+            ].join('<br>');
+        }
+
+        async function uploadCollection({ data, collectionName, idPrefix, label }) {
+            if (!Array.isArray(data)) {
+                alert(`⚠️ 에러: ${label} 데이터를 찾을 수 없습니다! JS file 폴더의 데이터 파일이 정상적으로 로드되는지 확인해주세요.`);
+                return;
+            }
+
+            const status = document.getElementById('status');
+            setButtonsDisabled(true);
+            status.innerHTML = `${label} 업로드 중입니다... (창을 닫지 마세요!)`;
+
+            try {
+                for (let i = 0; i < data.length; i++) {
+                    const item = cloneForUpload(data[i]);
+                    item.order = (i + 1) * 10; 
+                    const docId = item.id ? item.id : `${idPrefix}_${i}`;
+                    await db.collection(collectionName).doc(docId).set(item);
+                    status.innerHTML = `${label} 진행률: ${i + 1} / ${data.length} 개 완료...`;
+                }
+                
+                status.innerHTML = `🎉 ${label} 업로드 완료! 컬렉션: ${collectionName}`;
+                
+            } catch (error) {
+                console.error("에러 발생:", error);
+                status.innerHTML = `⚠️ 에러 발생: ${error.message}`;
+            } finally {
+                setButtonsDisabled(false);
+            }
+        }
+
+        async function startMassUpload() {
+            // JS file/missa_data.js는 현재 globalThis.missaData 이름으로 데이터를 내보냅니다.
+            await uploadCollection({
+                data: getMissaUploadData(),
+                collectionName: 'order_of_mass',
+                idPrefix: 'section',
+                label: '미사통상문'
+            });
+        }
+
+        async function startPrayerUpload() {
+            // JS file/prayer_data.js는 현재 globalThis.prayerData 이름으로 데이터를 내보냅니다.
+            await uploadCollection({
+                data: getPrayerUploadData(),
+                collectionName: 'prayer_data',
+                idPrefix: 'prayer',
+                label: '다국어 기도문'
+            });
+        }
+
+        async function startHymnUpload() {
+            // JS file/hymn_data.js는 현재 globalThis.ordoHymnData/hymnData 이름으로 데이터를 내보냅니다.
+            await uploadCollection({
+                data: getHymnUploadData(),
+                collectionName: 'hymn_data',
+                idPrefix: 'hymn',
+                label: '성가 데이터'
+            });
+        }
+
+        window.addEventListener('load', updateReadyStatus);
+    </script>
+</body>
+</html>
