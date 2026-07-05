@@ -2225,7 +2225,49 @@ globalThis.missaData = [
             { sp_kr: '', text_kr: '그러므로 모든 천사와 성인과 함께 저희도 주님을 찬양하며 끝없이 노래하나이다.', sp_en: '', text_en: 'And so, with all the Angels and Saints, we praise you, as without end we acclaim:', sp_la: '', text_la: 'Et ídeo cum Sanctis et Ángelis ómnibus te laudámus, sine fine dicéntes:', sp_vn: '', text_vn: 'Vì thế, cùng với toàn thể các Thiên thần và các Thánh, chúng con ca ngợi Chúa và không ngừng tung hô rằng:', sp_jp: '', text_jp: '' }
         ]
     },
-    // 82. 미국 고유: 추수감사절 감사송
+
+    // 82. 한국 고유 감사송 1 (선조들의 신앙)
+    "kr_proper_1": {
+        title: { kr: "한국 고유 감사송 1 : 선조들의 신앙", vn: "", en: "", jp: "", la: "" },
+        content: [
+            { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '아버지께서는 저희 선조들을 복음의 빛 안으로 불러 주시어 무수한 순교자들의 피로 교회를 세우시고 자라게 하셨으며 그들이 갖가지 빛나는 덕행을 갖추고 혹독한 형벌 속에서도 죽기까지 신앙을 지켜 마침내 아드님의 승리를 함께 누리게 하셨나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '그러므로 하늘의 모든 천사와 한국 순교자들과 함께 저희도 땅에서 주님의 영광을 찬미하며 끝없이 노래하나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' }
+        ]
+    },
+
+    // 83. 한국 고유 감사송 2 (창조와 구원의 하느님)
+    "kr_proper_2_lunar_new_year": {
+        title: { kr: "한국 고유 감사송 2 : 창조와 구원의 하느님", vn: "", en: "", jp: "", la: "" },
+        content: [
+            { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사하고 특히 오늘 설날을 맞이하여 더욱 정성 들여 찬양함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '주님께서는 시간의 주인이시며 위대한 예술가이시니 하늘에서는 해와 달과 별들의 무리가 조화를 이루고 땅에서는 모든 생명이 평화로이 한 가족을 이루게 하시나이다. 또한 저희 조상들을 종살이에서 해방시키셨으며 때가 차자 아드님의 완전한 파스카 제사를 받아들이시고 저희가 주님의 자녀로서 완전한 자유를 누리게 하셨나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '주님께서는 끊임없이 저희에게 생명의 영을 주시어 부활하신 아드님을 만나게 하시고 이 세상에서 양식과 건강을 주시며 더 큰 자유와 행복의 나라로 이끄시나이다. 그러므로 저희는 하늘과 땅의 모든 피조물과 함께 주님을 찬양하며 환호하나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' }
+        ]
+    },
+
+    // 84. 한국 고유 감사송 3 (구원의 역사와 한겨레의 찬양)
+    "kr_proper_3_chuseok": {
+        title: { kr: "한국 고유 감사송 3 : 구원의 역사와 한겨레의 찬양", vn: "", en: "", jp: "", la: "" },
+        content: [
+            { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 하늘과 땅의 모든 피조물과 함께 언제나 어디서나 아버지께 감사하고 아버지를 찬양함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '주님께서는 주님 모습대로 사람을 지으시고 모든 피조물과 함께 어울려 살게 하시며 사람들을 뽑으시어 주님 백성으로 삼으시고 영원한 계약을 맺으셨으며 종살이에서 이끌어 내시어 자유를 주시고 약속의 땅으로 인도하셨나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '또한 주님께서는 예언자들을 통하여 완전한 자유와 영원한 생명을 약속하셨으며 성자 우리 주 예수 그리스도께서는 이 약속을 완전하게 이루시고 교회 안에서 세세 대대 전해지게 하셨나이다. 주님의 위대한 사랑과 섭리는 이 땅에서도 이루어지니 저희는 주님의 가르침에 따라 모든 사람과 온갖 피조물과 함께 평화로이 조화를 이루며 주님의 은총으로 땀을 흘려 주님께 바칠 예물을 마련하나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '그러므로 저희는 사랑과 기쁨에 넘쳐 모든 천사와 성인과 온 세상 만물과 함께 주님을 찬양하며 끝없이 찬송하나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' }
+        ]
+    },
+
+    // 85. 한국 고유 감사송 4 (민족의 일치와 통일을 이루시는 하느님)
+    "kr_proper_4_unification": {
+        title: { kr: "한국 고유 감사송 4 : 민족의 일치와 통일을 이루시는 하느님", vn: "", en: "", jp: "", la: "" },
+        content: [
+            { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '아버지께서는 저희 선조들에게 놀라운 방법으로 주님의 진리를 가르쳐 주시고 일치의 표상인 거룩한 교회를 세워 주셨나이다. 이 나라가 지금은 남북으로 갈라져 쓰라린 시련을 겪고 있으나 주님께서는 불가능을 모르시며 흩어진 이들을 하나로 모으시니 주님의 오묘한 섭리로 저희가 민족 통일의 희망을 키우고 우리 주 그리스도를 통하여 마침내 한마음으로 주님을 찬양하도록 이끄시나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '그러므로 하늘의 모든 천사와 한국 순교 성인들과 함께 저희도 기꺼이 주님을 찬미하며 노래하나이다.', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '' }
+        ]
+    },
+
+    // 86. 미국 고유: 추수감사절 감사송
     "us_thanksgiving": {
         title: { kr: "추수감사절 감사송 (미국 고유)", vn: "", en: "Preface for Thanksgiving Day", jp: "", la: "" },
         content: [
@@ -2235,7 +2277,7 @@ globalThis.missaData = [
         ]
     },
 
-    // 83. 미국 고유: 독립기념일 감사송
+    // 87. 미국 고유: 독립기념일 감사송
     "us_independence": {
         title: { kr: "독립기념일 감사송 (미국 고유)", vn: "", en: "Preface for Independence Day", jp: "", la: "" },
         content: [
@@ -2245,7 +2287,7 @@ globalThis.missaData = [
         ]
     },
 
-    // 84. 미국 고유: 과달루페의 복되신 동정 마리아 대축일 감사송
+    // 88. 미국 고유: 과달루페의 복되신 동정 마리아 대축일 감사송
     "us_guadalupe": {
         title: { kr: "과달루페의 성모 감사송 (미국 고유)", vn: "", en: "Preface of Our Lady of Guadalupe", jp: "", la: "" },
         content: [
@@ -2255,7 +2297,7 @@ globalThis.missaData = [
         ]
     },
 
-    // 85. 베트남 고유: 베트남 순교자 대축일 감사송
+    // 89. 베트남 고유: 베트남 순교자 대축일 감사송
     "vn_martyrs": {
         title: { kr: "베트남 순교자 감사송 (베트남 고유)", vn: "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam", en: "", jp: "", la: "" },
         content: [
@@ -2265,7 +2307,7 @@ globalThis.missaData = [
         ]
     },
 
-    // 86. 일본 고유: 일본 26위 성인 순교자 축일 (일본어 단독 배정)
+    // 90. 일본 고유: 일본 26위 성인 순교자 축일 (일본어 단독 배정)
     "jp_26_martyrs": {
         title: { kr: "일본 26위 순교자 감사송 (일본 고유)", vn: "", en: "", jp: "日本二十六聖人殉教者の叙唱", la: "" },
         content: [
@@ -2275,7 +2317,7 @@ globalThis.missaData = [
         ]
     },
 
-    // 87. 일본 고유: 일본 신자 발견의 성모 축일 (일본어 단독 배정)
+    // 91. 일본 고유: 일본 신자 발견의 성모 축일 (일본어 단독 배정)
     "jp_discovery_of_christians": {
         title: { kr: "일본 신자 발견의 성모 감사송 (일본 고유)", vn: "", en: "", jp: "日本の信徒発見の聖母の叙唱", la: "" },
         content: [
