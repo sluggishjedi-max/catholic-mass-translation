@@ -35,7 +35,8 @@
           "label": "2)",
           "text": ""
         }
-      ]
+      ],
+      "copyright": "저작권자 표기는 hymn_data.js의 성가별 copyright 필드에서 변경합니다."
     },
     {
       "id": "kr-hymn-002",
@@ -55,7 +56,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=2"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=2",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-003",
@@ -75,7 +77,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=3"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=3",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-004",
@@ -95,7 +98,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=4"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=4",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-005",
@@ -115,7 +119,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=5"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=5",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-006",
@@ -135,7 +140,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=6"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=6",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-007",
@@ -155,7 +161,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=7"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=7",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-008",
@@ -175,7 +182,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=8"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=8",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-009",
@@ -195,7 +203,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=9"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=9",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-010",
@@ -215,7 +224,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=10"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=10",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-011",
@@ -235,7 +245,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=11"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=11",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-012",
@@ -255,7 +266,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=12"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=12",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-013",
@@ -275,7 +287,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=13"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=13",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-014",
@@ -295,7 +308,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=14"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=14",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-015",
@@ -315,7 +329,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=15"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=15",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-016",
@@ -335,7 +350,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=16"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=16",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-017",
@@ -355,7 +371,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=17"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=17",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-018",
@@ -375,7 +392,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=18"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=18",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-019",
@@ -395,7 +413,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=19"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=19",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-020",
@@ -415,7 +434,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=20"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=20",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-021",
@@ -435,7 +455,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=21"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=21",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-022",
@@ -455,7 +476,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=22"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=22",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-023",
@@ -475,7 +497,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=23"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=23",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-024",
@@ -495,7 +518,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=24"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=24",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-025",
@@ -515,7 +539,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=25"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=25",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-026",
@@ -535,7 +560,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=26"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=26",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-027",
@@ -555,7 +581,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=27"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=27",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-028",
@@ -575,7 +602,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=28"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=28",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-029",
@@ -595,7 +623,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=29"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=29",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-030",
@@ -615,7 +644,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=30"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=30",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-031",
@@ -635,7 +665,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=31"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=31",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-032",
@@ -655,7 +686,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=32"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=32",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-033",
@@ -675,7 +707,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=33"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=33",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-034",
@@ -695,7 +728,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=34"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=34",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-035",
@@ -715,7 +749,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=35"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=35",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-036",
@@ -735,7 +770,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=36"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=36",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-037",
@@ -755,7 +791,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=37"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=37",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-038",
@@ -775,7 +812,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=38"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=38",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-039",
@@ -795,7 +833,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=39"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=39",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-040",
@@ -815,7 +854,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=40"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=40",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-041",
@@ -835,7 +875,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=41"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=41",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-042",
@@ -855,7 +896,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=42"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=42",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-043",
@@ -875,7 +917,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=43"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=43",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-044",
@@ -895,7 +938,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=44"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=44",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-045",
@@ -915,7 +959,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=45"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=45",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-046",
@@ -935,7 +980,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=46"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=46",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-047",
@@ -955,7 +1001,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=47"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=47",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-048",
@@ -975,7 +1022,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=48"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=48",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-049",
@@ -995,7 +1043,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=49"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=49",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-050",
@@ -1015,7 +1064,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=50"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=50",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-051",
@@ -1035,7 +1085,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=51"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=51",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-052",
@@ -1055,7 +1106,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=52"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=52",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-053",
@@ -1075,7 +1127,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=53"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=53",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-054",
@@ -1095,7 +1148,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=54"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=54",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-055",
@@ -1115,7 +1169,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=55"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=55",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-056",
@@ -1135,7 +1190,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=56"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=56",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-057",
@@ -1155,7 +1211,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=57"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=57",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-058",
@@ -1175,7 +1232,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=58"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=58",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-059",
@@ -1195,7 +1253,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=59"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=59",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-060",
@@ -1215,7 +1274,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=60"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=60",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-061",
@@ -1235,7 +1295,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=61"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=61",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-062",
@@ -1255,7 +1316,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=62"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=62",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-063",
@@ -1275,7 +1337,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=63"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=63",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-064",
@@ -1295,7 +1358,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=64"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=64",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-065",
@@ -1315,7 +1379,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=65"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=65",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-066",
@@ -1335,7 +1400,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=66"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=66",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-067",
@@ -1355,7 +1421,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=67"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=67",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-068",
@@ -1375,7 +1442,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=68"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=68",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-069",
@@ -1395,7 +1463,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=69"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=69",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-070",
@@ -1415,7 +1484,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=70"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=70",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-071",
@@ -1435,7 +1505,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=71"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=71",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-072",
@@ -1455,7 +1526,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=72"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=72",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-073",
@@ -1475,7 +1547,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=73"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=73",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-074",
@@ -1495,7 +1568,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=74"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=74",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-075",
@@ -1515,7 +1589,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=75"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=75",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-076",
@@ -1535,7 +1610,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=76"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=76",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-077",
@@ -1555,7 +1631,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=77"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=77",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-078",
@@ -1575,7 +1652,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=78"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=78",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-079",
@@ -1595,7 +1673,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=79"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=79",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-080",
@@ -1615,7 +1694,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=80"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=80",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-081",
@@ -1635,7 +1715,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=81"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=81",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-082",
@@ -1655,7 +1736,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=82"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=82",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-083",
@@ -1675,7 +1757,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=83"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=83",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-084",
@@ -1695,7 +1778,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=84"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=84",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-085",
@@ -1715,7 +1799,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=85"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=85",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-086",
@@ -1735,7 +1820,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=86"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=86",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-087",
@@ -1755,7 +1841,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=87"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=87",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-088",
@@ -1775,7 +1862,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=88"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=88",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-089",
@@ -1795,7 +1883,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=89"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=89",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-090",
@@ -1815,7 +1904,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=90"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=90",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-091",
@@ -1835,7 +1925,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=91"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=91",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-092",
@@ -1855,7 +1946,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=92"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=92",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-093",
@@ -1875,7 +1967,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=93"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=93",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-094",
@@ -1895,7 +1988,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=94"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=94",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-095",
@@ -1915,7 +2009,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=95"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=95",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-096",
@@ -1935,7 +2030,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=96"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=96",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-097",
@@ -1955,7 +2051,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=97"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=97",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-098",
@@ -1975,7 +2072,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=98"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=98",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-099",
@@ -1995,7 +2093,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=99"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=99",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-100",
@@ -2015,7 +2114,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=100"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=100",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-101",
@@ -2035,7 +2135,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=101"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=101",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-102",
@@ -2055,7 +2156,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=102"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=102",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-103",
@@ -2075,7 +2177,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=103"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=103",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-104",
@@ -2095,7 +2198,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=104"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=104",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-105",
@@ -2115,7 +2219,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=105"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=105",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-106",
@@ -2135,7 +2240,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=106"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=106",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-107",
@@ -2155,7 +2261,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=107"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=107",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-108",
@@ -2175,7 +2282,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=108"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=108",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-109",
@@ -2195,7 +2303,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=109"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=109",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-110",
@@ -2215,7 +2324,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=110"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=110",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-111",
@@ -2235,7 +2345,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=111"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=111",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-112",
@@ -2255,7 +2366,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=112"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=112",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-113",
@@ -2275,7 +2387,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=113"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=113",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-114",
@@ -2295,7 +2408,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=114"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=114",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-115",
@@ -2315,7 +2429,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=115"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=115",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-116",
@@ -2335,7 +2450,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=116"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=116",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-117",
@@ -2355,7 +2471,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=117"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=117",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-118",
@@ -2375,7 +2492,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=118"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=118",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-119",
@@ -2395,7 +2513,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=119"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=119",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-120",
@@ -2415,7 +2534,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=120"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=120",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-121",
@@ -2435,7 +2555,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=121"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=121",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-122",
@@ -2455,7 +2576,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=122"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=122",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-123",
@@ -2475,7 +2597,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=123"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=123",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-124",
@@ -2495,7 +2618,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=124"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=124",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-125",
@@ -2515,7 +2639,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=125"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=125",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-126",
@@ -2535,7 +2660,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=126"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=126",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-127",
@@ -2555,7 +2681,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=127"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=127",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-128",
@@ -2575,7 +2702,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=128"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=128",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-129",
@@ -2595,7 +2723,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=129"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=129",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-130",
@@ -2615,7 +2744,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=130"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=130",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-131",
@@ -2635,7 +2765,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=131"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=131",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-132",
@@ -2655,7 +2786,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=132"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=132",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-133",
@@ -2675,7 +2807,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=133"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=133",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-134",
@@ -2695,7 +2828,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=134"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=134",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-135",
@@ -2715,7 +2849,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=135"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=135",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-136",
@@ -2735,7 +2870,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=136"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=136",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-137",
@@ -2755,7 +2891,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=137"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=137",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-138",
@@ -2775,7 +2912,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=138"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=138",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-139",
@@ -2795,7 +2933,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=139"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=139",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-140",
@@ -2815,7 +2954,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=140"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=140",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-141",
@@ -2835,7 +2975,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=141"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=141",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-142",
@@ -2855,7 +2996,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=142"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=142",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-143",
@@ -2875,7 +3017,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=143"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=143",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-144",
@@ -2895,7 +3038,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=144"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=144",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-145",
@@ -2915,7 +3059,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=145"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=145",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-146",
@@ -2935,7 +3080,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=146"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=146",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-147",
@@ -2955,7 +3101,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=147"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=147",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-148",
@@ -2975,7 +3122,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=148"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=148",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-149",
@@ -2995,7 +3143,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=149"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=149",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-150",
@@ -3015,7 +3164,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=150"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=150",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-151",
@@ -3035,7 +3185,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=151"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=151",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-152",
@@ -3055,7 +3206,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=152"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=152",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-153",
@@ -3075,7 +3227,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=153"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=153",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-154",
@@ -3095,7 +3248,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=154"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=154",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-155",
@@ -3115,7 +3269,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=155"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=155",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-156",
@@ -3135,7 +3290,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=156"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=156",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-157",
@@ -3155,7 +3311,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=157"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=157",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-158",
@@ -3175,7 +3332,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=158"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=158",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-159",
@@ -3195,7 +3353,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=159"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=159",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-160",
@@ -3215,7 +3374,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=160"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=160",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-161",
@@ -3235,7 +3395,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=161"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=161",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-162",
@@ -3255,7 +3416,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=162"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=162",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-163",
@@ -3275,7 +3437,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=163"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=163",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-164",
@@ -3295,7 +3458,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=164"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=164",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-165",
@@ -3315,7 +3479,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=165"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=165",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-166",
@@ -3335,7 +3500,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=166"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=166",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-167",
@@ -3355,7 +3521,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=167"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=167",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-168",
@@ -3375,7 +3542,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=168"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=168",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-169",
@@ -3395,7 +3563,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=169"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=169",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-170",
@@ -3415,7 +3584,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=170"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=170",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-171",
@@ -3435,7 +3605,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=171"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=171",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-172",
@@ -3455,7 +3626,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=172"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=172",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-173",
@@ -3475,7 +3647,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=173"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=173",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-174",
@@ -3495,7 +3668,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=174"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=174",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-175",
@@ -3515,7 +3689,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=175"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=175",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-176",
@@ -3535,7 +3710,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=176"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=176",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-177",
@@ -3555,7 +3731,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=177"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=177",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-178",
@@ -3575,7 +3752,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=178"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=178",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-179",
@@ -3595,7 +3773,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=179"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=179",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-180",
@@ -3615,7 +3794,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=180"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=180",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-181",
@@ -3635,7 +3815,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=181"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=181",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-182",
@@ -3655,7 +3836,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=182"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=182",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-183",
@@ -3675,7 +3857,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=183"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=183",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-184",
@@ -3695,7 +3878,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=184"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=184",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-185",
@@ -3715,7 +3899,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=185"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=185",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-186",
@@ -3735,7 +3920,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=186"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=186",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-187",
@@ -3755,7 +3941,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=187"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=187",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-188",
@@ -3775,7 +3962,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=188"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=188",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-189",
@@ -3795,7 +3983,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=189"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=189",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-190",
@@ -3815,7 +4004,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=190"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=190",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-191",
@@ -3835,7 +4025,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=191"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=191",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-192",
@@ -3855,7 +4046,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=192"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=192",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-193",
@@ -3875,7 +4067,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=193"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=193",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-194",
@@ -3895,7 +4088,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=194"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=194",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-195",
@@ -3915,7 +4109,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=195"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=195",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-196",
@@ -3935,7 +4130,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=196"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=196",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-197",
@@ -3955,7 +4151,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=197"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=197",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-198",
@@ -3975,7 +4172,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=198"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=198",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-199",
@@ -3995,7 +4193,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=199"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=199",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-200",
@@ -4015,7 +4214,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=200"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=200",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-201",
@@ -4035,7 +4235,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=201"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=201",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-202",
@@ -4055,7 +4256,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=202"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=202",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-203",
@@ -4075,7 +4277,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=203"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=203",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-204",
@@ -4095,7 +4298,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=204"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=204",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-205",
@@ -4115,7 +4319,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=205"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=205",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-206",
@@ -4135,7 +4340,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=206"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=206",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-207",
@@ -4155,7 +4361,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=207"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=207",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-208",
@@ -4175,7 +4382,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=208"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=208",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-209",
@@ -4195,7 +4403,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=209"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=209",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-210",
@@ -4215,7 +4424,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=210"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=210",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-211",
@@ -4235,7 +4445,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=211"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=211",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-212",
@@ -4255,7 +4466,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=212"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=212",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-213",
@@ -4275,7 +4487,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=213"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=213",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-214",
@@ -4295,7 +4508,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=214"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=214",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-215",
@@ -4315,7 +4529,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=215"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=215",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-216",
@@ -4335,7 +4550,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=216"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=216",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-217",
@@ -4355,7 +4571,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=217"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=217",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-218",
@@ -4375,7 +4592,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=218"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=218",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-219",
@@ -4395,7 +4613,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=219"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=219",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-220",
@@ -4415,7 +4634,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=220"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=220",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-221",
@@ -4435,7 +4655,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=221"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=221",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-222",
@@ -4455,7 +4676,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=222"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=222",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-223",
@@ -4475,7 +4697,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=223"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=223",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-224",
@@ -4495,7 +4718,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=224"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=224",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-225",
@@ -4515,7 +4739,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=225"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=225",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-226",
@@ -4535,7 +4760,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=226"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=226",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-227",
@@ -4555,7 +4781,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=227"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=227",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-228",
@@ -4575,7 +4802,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=228"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=228",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-229",
@@ -4595,7 +4823,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=229"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=229",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-230",
@@ -4615,7 +4844,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=230"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=230",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-231",
@@ -4635,7 +4865,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=231"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=231",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-232",
@@ -4655,7 +4886,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=232"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=232",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-233",
@@ -4675,7 +4907,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=233"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=233",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-234",
@@ -4695,7 +4928,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=234"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=234",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-235",
@@ -4715,7 +4949,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=235"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=235",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-236",
@@ -4735,7 +4970,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=236"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=236",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-237",
@@ -4755,7 +4991,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=237"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=237",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-238",
@@ -4775,7 +5012,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=238"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=238",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-239",
@@ -4795,7 +5033,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=239"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=239",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-240",
@@ -4815,7 +5054,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=240"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=240",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-241",
@@ -4835,7 +5075,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=241"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=241",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-242",
@@ -4855,7 +5096,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=242"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=242",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-243",
@@ -4875,7 +5117,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=243"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=243",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-244",
@@ -4895,7 +5138,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=244"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=244",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-245",
@@ -4915,7 +5159,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=245"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=245",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-246",
@@ -4935,7 +5180,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=246"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=246",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-247",
@@ -4955,7 +5201,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=247"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=247",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-248",
@@ -4975,7 +5222,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=248"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=248",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-249",
@@ -4995,7 +5243,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=249"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=249",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-250",
@@ -5015,7 +5264,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=250"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=250",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-251",
@@ -5035,7 +5285,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=251"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=251",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-252",
@@ -5055,7 +5306,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=252"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=252",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-253",
@@ -5075,7 +5327,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=253"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=253",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-254",
@@ -5095,7 +5348,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=254"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=254",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-255",
@@ -5115,7 +5369,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=255"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=255",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-256",
@@ -5135,7 +5390,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=256"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=256",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-257",
@@ -5155,7 +5411,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=257"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=257",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-258",
@@ -5175,7 +5432,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=258"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=258",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-259",
@@ -5195,7 +5453,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=259"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=259",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-260",
@@ -5215,7 +5474,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=260"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=260",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-261",
@@ -5235,7 +5495,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=261"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=261",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-262",
@@ -5255,7 +5516,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=262"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=262",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-263",
@@ -5275,7 +5537,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=263"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=263",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-264",
@@ -5295,7 +5558,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=264"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=264",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-265",
@@ -5315,7 +5579,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=265"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=265",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-266",
@@ -5335,7 +5600,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=266"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=266",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-267",
@@ -5355,7 +5621,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=267"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=267",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-268",
@@ -5375,7 +5642,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=268"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=268",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-269",
@@ -5395,7 +5663,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=269"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=269",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-270",
@@ -5415,7 +5684,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=270"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=270",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-271",
@@ -5435,7 +5705,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=271"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=271",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-272",
@@ -5455,7 +5726,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=272"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=272",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-273",
@@ -5475,7 +5747,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=273"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=273",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-274",
@@ -5495,7 +5768,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=274"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=274",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-275",
@@ -5515,7 +5789,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=275"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=275",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-276",
@@ -5535,7 +5810,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=276"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=276",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-277",
@@ -5555,7 +5831,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=277"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=277",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-278",
@@ -5575,7 +5852,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=278"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=278",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-279",
@@ -5595,7 +5873,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=279"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=279",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-280",
@@ -5615,7 +5894,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=280"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=280",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-281",
@@ -5635,7 +5915,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=281"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=281",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-282",
@@ -5655,7 +5936,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=282"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=282",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-283",
@@ -5675,7 +5957,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=283"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=283",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-284",
@@ -5695,7 +5978,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=284"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=284",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-285",
@@ -5715,7 +5999,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=285"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=285",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-286",
@@ -5735,7 +6020,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=286"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=286",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-287",
@@ -5755,7 +6041,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=287"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=287",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-288",
@@ -5775,7 +6062,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=288"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=288",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-289",
@@ -5795,7 +6083,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=289"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=289",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-290",
@@ -5815,7 +6104,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=290"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=290",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-291",
@@ -5835,7 +6125,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=291"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=291",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-292",
@@ -5855,7 +6146,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=292"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=292",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-293",
@@ -5875,7 +6167,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=293"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=293",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-294",
@@ -5895,7 +6188,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=294"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=294",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-295",
@@ -5915,7 +6209,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=295"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=295",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-296",
@@ -5935,7 +6230,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=296"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=296",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-297",
@@ -5955,7 +6251,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=297"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=297",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-298",
@@ -5975,7 +6272,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=298"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=298",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-299",
@@ -5995,7 +6293,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=299"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=299",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-300",
@@ -6015,7 +6314,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=300"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=300",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-301",
@@ -6035,7 +6335,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=301"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=301",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-302",
@@ -6055,7 +6356,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=302"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=302",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-303",
@@ -6075,7 +6377,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=303"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=303",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-304",
@@ -6095,7 +6398,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=304"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=304",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-305",
@@ -6115,7 +6419,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=305"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=305",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-306",
@@ -6135,7 +6440,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=306"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=306",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-307",
@@ -6155,7 +6461,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=307"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=307",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-308",
@@ -6175,7 +6482,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=308"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=308",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-309",
@@ -6195,7 +6503,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=309"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=309",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-310",
@@ -6215,7 +6524,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=310"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=310",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-311",
@@ -6235,7 +6545,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=311"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=311",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-312",
@@ -6255,7 +6566,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=312"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=312",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-313",
@@ -6275,7 +6587,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=313"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=313",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-314",
@@ -6295,7 +6608,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=314"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=314",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-315",
@@ -6315,7 +6629,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=315"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=315",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-316",
@@ -6335,7 +6650,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=316"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=316",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-317",
@@ -6355,7 +6671,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=317"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=317",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-318",
@@ -6375,7 +6692,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=318"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=318",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-319",
@@ -6395,7 +6713,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=319"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=319",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-320",
@@ -6415,7 +6734,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=320"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=320",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-321",
@@ -6435,7 +6755,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=321"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=321",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-322",
@@ -6455,7 +6776,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=322"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=322",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-323",
@@ -6475,7 +6797,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=323"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=323",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-324",
@@ -6495,7 +6818,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=324"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=324",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-325",
@@ -6515,7 +6839,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=325"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=325",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-326",
@@ -6535,7 +6860,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=326"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=326",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-327",
@@ -6555,7 +6881,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=327"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=327",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-328",
@@ -6575,7 +6902,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=328"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=328",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-329",
@@ -6595,7 +6923,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=329"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=329",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-330",
@@ -6615,7 +6944,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=330"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=330",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-331",
@@ -6635,7 +6965,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=331"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=331",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-332",
@@ -6655,7 +6986,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=332"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=332",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-333",
@@ -6675,7 +7007,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=333"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=333",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-334",
@@ -6695,7 +7028,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=334"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=334",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-335",
@@ -6715,7 +7049,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=335"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=335",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-336",
@@ -6735,7 +7070,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=336"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=336",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-337",
@@ -6755,7 +7091,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=337"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=337",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-338",
@@ -6775,7 +7112,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=338"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=338",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-339",
@@ -6795,7 +7133,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=339"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=339",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-340",
@@ -6815,7 +7154,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=340"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=340",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-341",
@@ -6835,7 +7175,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=341"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=341",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-342",
@@ -6855,7 +7196,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=342"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=342",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-343",
@@ -6875,7 +7217,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=343"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=343",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-344",
@@ -6895,7 +7238,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=344"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=344",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-345",
@@ -6915,7 +7259,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=345"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=345",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-346",
@@ -6935,7 +7280,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=346"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=346",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-347",
@@ -6955,7 +7301,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=347"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=347",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-348",
@@ -6975,7 +7322,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=348"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=348",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-349",
@@ -6995,7 +7343,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=349"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=349",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-350",
@@ -7015,7 +7364,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=350"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=350",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-351",
@@ -7035,7 +7385,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=351"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=351",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-352",
@@ -7055,7 +7406,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=352"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=352",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-353",
@@ -7075,7 +7427,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=353"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=353",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-354",
@@ -7095,7 +7448,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=354"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=354",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-355",
@@ -7115,7 +7469,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=355"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=355",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-356",
@@ -7135,7 +7490,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=356"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=356",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-357",
@@ -7155,7 +7511,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=357"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=357",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-358",
@@ -7175,7 +7532,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=358"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=358",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-359",
@@ -7195,7 +7553,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=359"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=359",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-360",
@@ -7215,7 +7574,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=360"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=360",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-361",
@@ -7235,7 +7595,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=361"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=361",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-362",
@@ -7255,7 +7616,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=362"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=362",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-363",
@@ -7275,7 +7637,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=363"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=363",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-364",
@@ -7295,7 +7658,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=364"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=364",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-365",
@@ -7315,7 +7679,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=365"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=365",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-366",
@@ -7335,7 +7700,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=366"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=366",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-367",
@@ -7355,7 +7721,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=367"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=367",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-368",
@@ -7375,7 +7742,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=368"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=368",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-369",
@@ -7395,7 +7763,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=369"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=369",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-370",
@@ -7415,7 +7784,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=370"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=370",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-371",
@@ -7435,7 +7805,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=371"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=371",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-372",
@@ -7455,7 +7826,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=372"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=372",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-373",
@@ -7475,7 +7847,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=373"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=373",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-374",
@@ -7495,7 +7868,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=374"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=374",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-375",
@@ -7515,7 +7889,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=375"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=375",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-376",
@@ -7535,7 +7910,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=376"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=376",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-377",
@@ -7555,7 +7931,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=377"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=377",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-378",
@@ -7575,7 +7952,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=378"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=378",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-379",
@@ -7595,7 +7973,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=379"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=379",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-380",
@@ -7615,7 +7994,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=380"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=380",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-381",
@@ -7635,7 +8015,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=381"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=381",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-382",
@@ -7655,7 +8036,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=382"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=382",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-383",
@@ -7675,7 +8057,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=383"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=383",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-384",
@@ -7695,7 +8078,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=384"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=384",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-385",
@@ -7715,7 +8099,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=385"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=385",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-386",
@@ -7735,7 +8120,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=386"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=386",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-387",
@@ -7755,7 +8141,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=387"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=387",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-388",
@@ -7775,7 +8162,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=388"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=388",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-389",
@@ -7795,7 +8183,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=389"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=389",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-390",
@@ -7815,7 +8204,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=390"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=390",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-391",
@@ -7835,7 +8225,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=391"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=391",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-392",
@@ -7855,7 +8246,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=392"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=392",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-393",
@@ -7875,7 +8267,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=393"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=393",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-394",
@@ -7895,7 +8288,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=394"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=394",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-395",
@@ -7915,7 +8309,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=395"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=395",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-396",
@@ -7935,7 +8330,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=396"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=396",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-397",
@@ -7955,7 +8351,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=397"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=397",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-398",
@@ -7975,7 +8372,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=398"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=398",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-399",
@@ -7995,7 +8393,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=399"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=399",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-400",
@@ -8015,7 +8414,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=400"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=400",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-401",
@@ -8035,7 +8435,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=401"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=401",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-402",
@@ -8055,7 +8456,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=402"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=402",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-403",
@@ -8075,7 +8477,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=403"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=403",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-404",
@@ -8095,7 +8498,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=404"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=404",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-405",
@@ -8115,7 +8519,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=405"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=405",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-406",
@@ -8135,7 +8540,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=406"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=406",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-407",
@@ -8155,7 +8561,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=407"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=407",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-408",
@@ -8175,7 +8582,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=408"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=408",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-409",
@@ -8195,7 +8603,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=409"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=409",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-410",
@@ -8215,7 +8624,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=410"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=410",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-411",
@@ -8235,7 +8645,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=411"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=411",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-412",
@@ -8255,7 +8666,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=412"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=412",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-413",
@@ -8275,7 +8687,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=413"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=413",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-414",
@@ -8295,7 +8708,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=414"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=414",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-415",
@@ -8315,7 +8729,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=415"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=415",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-416",
@@ -8335,7 +8750,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=416"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=416",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-417",
@@ -8355,7 +8771,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=417"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=417",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-418",
@@ -8375,7 +8792,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=418"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=418",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-419",
@@ -8395,7 +8813,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=419"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=419",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-420",
@@ -8415,7 +8834,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=420"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=420",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-421",
@@ -8435,7 +8855,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=421"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=421",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-422",
@@ -8455,7 +8876,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=422"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=422",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-423",
@@ -8475,7 +8897,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=423"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=423",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-424",
@@ -8495,7 +8918,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=424"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=424",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-425",
@@ -8515,7 +8939,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=425"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=425",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-426",
@@ -8535,7 +8960,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=426"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=426",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-427",
@@ -8555,7 +8981,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=427"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=427",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-428",
@@ -8575,7 +9002,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=428"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=428",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-429",
@@ -8595,7 +9023,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=429"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=429",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-430",
@@ -8615,7 +9044,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=430"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=430",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-431",
@@ -8635,7 +9065,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=431"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=431",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-432",
@@ -8655,7 +9086,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=432"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=432",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-433",
@@ -8675,7 +9107,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=433"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=433",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-434",
@@ -8695,7 +9128,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=434"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=434",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-435",
@@ -8715,7 +9149,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=435"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=435",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-436",
@@ -8735,7 +9170,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=436"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=436",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-437",
@@ -8755,7 +9191,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=437"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=437",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-438",
@@ -8775,7 +9212,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=438"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=438",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-439",
@@ -8795,7 +9233,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=439"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=439",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-440",
@@ -8815,7 +9254,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=440"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=440",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-441",
@@ -8835,7 +9275,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=441"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=441",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-442",
@@ -8855,7 +9296,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=442"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=442",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-443",
@@ -8875,7 +9317,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=443"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=443",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-444",
@@ -8895,7 +9338,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=444"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=444",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-445",
@@ -8915,7 +9359,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=445"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=445",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-446",
@@ -8935,7 +9380,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=446"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=446",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-447",
@@ -8955,7 +9401,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=447"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=447",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-448",
@@ -8975,7 +9422,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=448"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=448",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-449",
@@ -8995,7 +9443,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=449"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=449",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-450",
@@ -9015,7 +9464,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=450"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=450",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-451",
@@ -9035,7 +9485,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=451"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=451",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-452",
@@ -9055,7 +9506,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=452"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=452",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-453",
@@ -9075,7 +9527,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=453"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=453",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-454",
@@ -9095,7 +9548,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=454"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=454",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-455",
@@ -9115,7 +9569,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=455"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=455",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-456",
@@ -9135,7 +9590,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=456"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=456",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-457",
@@ -9155,7 +9611,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=457"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=457",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-458",
@@ -9175,7 +9632,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=458"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=458",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-459",
@@ -9195,7 +9653,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=459"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=459",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-460",
@@ -9215,7 +9674,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=460"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=460",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-461",
@@ -9235,7 +9695,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=461"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=461",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-462",
@@ -9255,7 +9716,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=462"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=462",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-463",
@@ -9275,7 +9737,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=463"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=463",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-464",
@@ -9295,7 +9758,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=464"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=464",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-465",
@@ -9315,7 +9779,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=465"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=465",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-466",
@@ -9335,7 +9800,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=466"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=466",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-467",
@@ -9355,7 +9821,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=467"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=467",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-468",
@@ -9375,7 +9842,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=468"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=468",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-469",
@@ -9396,7 +9864,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=469"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=469",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-470",
@@ -9416,7 +9885,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=470"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=470",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-471",
@@ -9436,7 +9906,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=471"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=471",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-472",
@@ -9456,7 +9927,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=472"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=472",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-473",
@@ -9476,7 +9948,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=473"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=473",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-474",
@@ -9496,7 +9969,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=474"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=474",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-475",
@@ -9516,7 +9990,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=475"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=475",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-476",
@@ -9536,7 +10011,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=476"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=476",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-477",
@@ -9556,7 +10032,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=477"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=477",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-478",
@@ -9576,7 +10053,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=478"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=478",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-479",
@@ -9596,7 +10074,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=479"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=479",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-480",
@@ -9616,7 +10095,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=480"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=480",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-481",
@@ -9636,7 +10116,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=481"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=481",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-482",
@@ -9656,7 +10137,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=482"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=482",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-483",
@@ -9676,7 +10158,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=483"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=483",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-484",
@@ -9696,7 +10179,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=484"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=484",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-485",
@@ -9716,7 +10200,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=485"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=485",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-486",
@@ -9736,7 +10221,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=486"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=486",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-487",
@@ -9756,7 +10242,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=487"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=487",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-488",
@@ -9776,7 +10263,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=488"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=488",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-489",
@@ -9796,7 +10284,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=489"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=489",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-490",
@@ -9816,7 +10305,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=490"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=490",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-491",
@@ -9836,7 +10326,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=491"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=491",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-492",
@@ -9856,7 +10347,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=492"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=492",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-493",
@@ -9876,7 +10368,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=493"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=493",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-494",
@@ -9896,7 +10389,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=494"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=494",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-495",
@@ -9916,7 +10410,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=495"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=495",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-496",
@@ -9936,7 +10431,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=496"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=496",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-497",
@@ -9956,7 +10452,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=497"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=497",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-498",
@@ -9976,7 +10473,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=498"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=498",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-499",
@@ -9996,7 +10494,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=499"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=499",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-500",
@@ -10016,7 +10515,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=500"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=500",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-501",
@@ -10036,7 +10536,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=501"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=501",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-502",
@@ -10056,7 +10557,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=502"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=502",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-503",
@@ -10076,7 +10578,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=503"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=503",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-504",
@@ -10096,7 +10599,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=504"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=504",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-505",
@@ -10116,7 +10620,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=505"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=505",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-506",
@@ -10136,7 +10641,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=506"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=506",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-507",
@@ -10156,7 +10662,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=507"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=507",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-508",
@@ -10176,7 +10683,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=508"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=508",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-509",
@@ -10196,7 +10704,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=509"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=509",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-510",
@@ -10216,7 +10725,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=510"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=510",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-511",
@@ -10236,7 +10746,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=511"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=511",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-512",
@@ -10256,7 +10767,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=512"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=512",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-513",
@@ -10276,7 +10788,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=513"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=513",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-514",
@@ -10296,7 +10809,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=514"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=514",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-515",
@@ -10317,7 +10831,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=515"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=515",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-516",
@@ -10337,7 +10852,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=516"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=516",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-517",
@@ -10357,7 +10873,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=517"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=517",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-518",
@@ -10377,7 +10894,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=518"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=518",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-519",
@@ -10397,7 +10915,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=519"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=519",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-520",
@@ -10417,7 +10936,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=520"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=520",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-521",
@@ -10437,7 +10957,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=521"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=521",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-522",
@@ -10457,7 +10978,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=522"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=522",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-523",
@@ -10477,7 +10999,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=523"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=523",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-524",
@@ -10497,7 +11020,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=524"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=524",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-525",
@@ -10517,7 +11041,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=525"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=525",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-526",
@@ -10537,7 +11062,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=526"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=526",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-527",
@@ -10557,7 +11083,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=527"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=527",
+      "copyright": ""
     },
     {
       "id": "kr-hymn-528",
@@ -10577,7 +11104,8 @@
         "youtubeUrl": ""
       },
       "source": "GoodNews Catholic Hymn Search",
-      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=528"
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=528",
+      "copyright": ""
     }
   ]
 ;
