@@ -7191,6 +7191,15 @@
             .filter((lang, index, list) => lang && dailySourceFetchers[lang] && list.indexOf(lang) === index);
     }
 
+    function markDailyReadingLanguagesLoading(sources = getActiveDailySourceLanguages()) {
+        const langs = Array.from(new Set((sources || [])
+            .map(lang => normalizeSelectableLang(lang, ''))
+            .filter(lang => lang && dailySourceFetchers[lang])));
+        state.dailyReadingsLoading = true;
+        state.dailyReadingLanguageStatus = Object.fromEntries(langs.map(lang => [lang, 'loading']));
+        return langs;
+    }
+
     function dailySourceStorageKey(lang, date) {
         return `${STORAGE_PREFIX}dailySource:${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}`;
     }
@@ -8665,9 +8674,7 @@
     async function fetchDailyReadings(options = {}) {
         const today = cloneDateOnly(options.date || getActiveLiturgicalSourceDate());
         const fetchedData = createDailyReadingData();
-        const sources = options.sources || getActiveDailySourceLanguages();
-        state.dailyReadingsLoading = true;
-        state.dailyReadingLanguageStatus = Object.fromEntries(sources.map(lang => [lang, 'loading']));
+        const sources = markDailyReadingLanguagesLoading(options.sources || getActiveDailySourceLanguages());
         if (!options.silent) showLiturgyLoadingMessage();
 
         if (!sources.length) {
@@ -8795,7 +8802,7 @@
         state.liturgyInfo = applyNavigationDateLabel(buildGeneratedLiturgyInfo(today), dateContext);
         state.liturgyInfo.color = recommendedVestmentColor(today, state.liturgyInfo.color, state.liturgyInfo);
         state.isSunday = !!(state.liturgyInfo.isSunday || state.liturgyInfo.isSolemnity);
-        state.dailyReadingsLoading = true;
+        markDailyReadingLanguagesLoading();
         state.options.eucharist_song = '';
         state.autoEucharistSongKey = '';
 
@@ -8821,7 +8828,7 @@
         await loadSpecialMassFileIfNeeded(today);
         if (loadId !== activeMassDataLoadId) return;
 
-        const sources = getActiveDailySourceLanguages();
+        const sources = markDailyReadingLanguagesLoading(getActiveDailySourceLanguages());
         applyCachedDailyReadings(today, sources, { suppressTitles: true });
         render();
         refreshPopeNamesFromVatican().then(changed => {
