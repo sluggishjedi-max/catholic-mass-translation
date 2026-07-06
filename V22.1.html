@@ -159,9 +159,9 @@
         .aux-empty { border: 1px dashed #cfd6dd; border-radius: 10px; padding: 14px; color: var(--sub-txt); background: #fafafa; text-align: center; line-height: 1.5; }
         .hymn-layout { display: grid; gap: 12px; }
         .hymn-list { display: grid; gap: 8px; }
-        .hymn-list-item { display: grid; grid-template-columns: minmax(120px, auto) minmax(0, 1fr); align-items: center; gap: 10px; border: 1px solid #e1e5ea; border-radius: 8px; padding: 9px 11px; background: #fff; }
+        .hymn-list-item { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); align-items: start; gap: 10px; border: 1px solid #e1e5ea; border-radius: 8px; padding: 9px 11px; background: #fff; }
         .hymn-tags { display: flex; flex-wrap: wrap; gap: 5px; min-width: 0; }
-        .hymn-title-button { min-width: 0; border: 0; background: transparent; color: var(--primary-color); font: inherit; font-weight: 900; line-height: 1.35; text-align: left; cursor: pointer; overflow-wrap: anywhere; }
+        .hymn-title-button { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-width: 0; border: 0; background: transparent; color: var(--primary-color); font: inherit; font-weight: 900; line-height: 1.35; text-align: left; cursor: pointer; overflow: hidden; overflow-wrap: anywhere; word-break: keep-all; }
         .hymn-title-button:hover { text-decoration: underline; text-underline-offset: 3px; }
         .hymn-list-item.is-selected { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.14); }
         .hymn-title-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
@@ -316,6 +316,8 @@
             .aux-search-row,
             .aux-prayer-row { grid-template-columns: 1fr; }
             .aux-two-column { grid-template-columns: 1fr; }
+            .hymn-list-item { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+            .hymn-title-button { -webkit-line-clamp: 3; }
             .church-search-row { grid-template-columns: 1fr; }
             .church-map-js,
             .church-map-frame { min-height: 360px; }
@@ -433,7 +435,7 @@
 <section id="prayer-panel" class="aux-panel" aria-labelledby="prayer-panel-title">
     <div class="aux-card">
         <h2 id="prayer-panel-title">다국어 기도문</h2>
-        <div class="aux-dev-warning" role="status" aria-live="polite">⚠ 개발중으로, 정확하지 않을 수 있습니다.</div>
+        <div id="prayer-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.</div>
         <div class="aux-controls">
             <div class="aux-search-row aux-prayer-row">
                 <select id="prayer-category" class="aux-select" aria-label="기도문 분류" onchange="renderPrayerPanel()">
@@ -464,7 +466,7 @@
                 <option value="LA">Cantus Latini</option>
             </select>
         </h2>
-        <div id="hymn-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">한국어 성가집 우선 개발중입니다.</div>
+        <div id="hymn-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 한국어/베트남어 성가 작업중으로, 가사 표출이 정상적이지 않습니다.</div>
         <div class="aux-controls">
             <div class="aux-search-row">
                 <select id="hymn-category" class="aux-select" aria-label="성가 카테고리 선택" onchange="renderHymnPanel()">
@@ -2068,13 +2070,14 @@
         KR: {
             prayerTitle: '다국어 기도문',
             prayerNote: '',
+            prayerWarning: '현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.',
             prayerPlaceholder: '기도문 제목 검색',
             prayerEmpty: '기도문 검색 결과가 없습니다. 업로드 기도문 파일을 연결하면 이 영역에서 제목과 본문을 검색합니다.',
             prayerBodyPlaceholder: '기도문 본문은 업로드 파일이 연결되면 이 자리에 표시됩니다.',
             hymnTitle: '성가 검색',
             hymnNote: '',
             hymnPlaceholder: '성가 번호, 제목, 가사 검색',
-            hymnWarning: '한국어 성가집 우선 개발중입니다.',
+            hymnWarning: '현재 한국어/베트남어 성가 작업중으로, 가사 표출이 정상적이지 않습니다.',
             hymnCategoryAll: '전체',
             hymnEmpty: '성가 검색 결과가 없습니다. 업로드 성가 파일을 연결하면 이 영역에서 번호·제목·가사를 검색합니다.',
             hymnBodyPlaceholder: '가사 본문은 업로드 파일 연결 후 이 자리에 표시됩니다.',
@@ -2088,13 +2091,14 @@
         VN: {
             prayerTitle: 'Kinh nguyện đa ngôn ngữ',
             prayerNote: '',
+            prayerWarning: 'Hiện đang xử lý phần kinh nguyện, nên nội dung có thể hiển thị chưa chính xác.',
             prayerPlaceholder: 'Tìm tên kinh nguyện',
             prayerEmpty: 'Không có kết quả tìm kiếm kinh nguyện. Khi nối tệp đã tải lên, bạn có thể tìm theo tên và nội dung tại đây.',
             prayerBodyPlaceholder: 'Nội dung kinh nguyện sẽ hiển thị ở đây sau khi nối tệp đã tải lên.',
             hymnTitle: 'Tìm thánh ca',
             hymnNote: '',
             hymnPlaceholder: 'Tìm số, tên, hoặc lời ca',
-            hymnWarning: 'Đang ưu tiên phát triển sách thánh ca tiếng Hàn.',
+            hymnWarning: 'Hiện đang xử lý thánh ca tiếng Hàn/tiếng Việt, nên lời ca có thể hiển thị chưa chính xác.',
             hymnCategoryAll: 'Tất cả',
             hymnEmpty: 'Không có kết quả tìm kiếm thánh ca. Khi nối tệp thánh ca đã tải lên, bạn có thể tìm theo số, tên và lời ca.',
             hymnBodyPlaceholder: 'Lời bài hát sẽ hiển thị ở đây sau khi nối tệp đã tải lên.',
@@ -2108,13 +2112,14 @@
         EN: {
             prayerTitle: 'Multilingual Prayers',
             prayerNote: '',
+            prayerWarning: 'Prayers are currently being worked on, so text may not display correctly.',
             prayerPlaceholder: 'Search prayer title',
             prayerEmpty: 'No prayer results. Connect uploaded prayer files to search by title and body here.',
             prayerBodyPlaceholder: 'Prayer text will appear here once an uploaded file is connected.',
             hymnTitle: 'Hymn Search',
             hymnNote: '',
             hymnPlaceholder: 'Search hymn number, title, or lyrics',
-            hymnWarning: 'Korean hymnal is being developed first.',
+            hymnWarning: 'Korean/Vietnamese hymns are currently being worked on, so lyrics may not display correctly.',
             hymnCategoryAll: 'All',
             hymnEmpty: 'No hymn results. Connect uploaded hymn files to search by number, title, and lyrics.',
             hymnBodyPlaceholder: 'Lyrics will appear here after an uploaded file is connected.',
@@ -2128,13 +2133,14 @@
         JP: {
             prayerTitle: '多言語の祈り',
             prayerNote: '',
+            prayerWarning: '現在、祈り文を作業中のため、本文の表示が正常でない場合があります。',
             prayerPlaceholder: '祈りの題名を検索',
             prayerEmpty: '祈りの検索結果がありません。アップロードファイルを接続すると題名と本文を検索できます。',
             prayerBodyPlaceholder: 'アップロードファイルを接続すると祈りの本文がここに表示されます。',
             hymnTitle: '聖歌検索',
             hymnNote: '',
             hymnPlaceholder: '聖歌番号、題名、歌詞を検索',
-            hymnWarning: '韓国語聖歌集を優先して開発中です。',
+            hymnWarning: '現在、韓国語/ベトナム語聖歌を作業中のため、歌詞の表示が正常でない場合があります。',
             hymnCategoryAll: 'すべて',
             hymnEmpty: '聖歌の検索結果がありません。アップロードファイルを接続すると番号、題名、歌詞を検索できます。',
             hymnBodyPlaceholder: 'アップロードファイルを接続すると歌詞がここに表示されます。',
@@ -2148,13 +2154,14 @@
         LA: {
             prayerTitle: 'Preces multilingues',
             prayerNote: '',
+            prayerWarning: 'Preces nunc parantur; textus non semper recte ostendi possunt.',
             prayerPlaceholder: 'Quaere titulum precis',
             prayerEmpty: 'Nullus exitus precum inventus est. Fasciculis additis coniunctis titulum et textum quaerere poteris.',
             prayerBodyPlaceholder: 'Textus precis hic apparebit cum fasciculus additus coniungetur.',
             hymnTitle: 'Cantus quaerere',
             hymnNote: '',
             hymnPlaceholder: 'Quaere numerum, titulum, vel verba',
-            hymnWarning: 'Liber cantuum Coreanus primum evolvitur.',
+            hymnWarning: 'Cantus Coreani/Vietnamici nunc parantur; verba cantuum non semper recte ostendi possunt.',
             hymnCategoryAll: 'Omnia',
             hymnEmpty: 'Nullus cantus inventus est. Fasciculis additis coniunctis numerum, titulum, et verba quaerere poteris.',
             hymnBodyPlaceholder: 'Verba cantus hic apparebunt cum fasciculus additus coniungetur.',
@@ -2198,9 +2205,10 @@
         const dict = auxText();
         setTextIfExists('prayer-panel-title', dict.prayerTitle);
         setTextIfExists('prayer-panel-note', dict.prayerNote);
+        setTextIfExists('prayer-dev-warning', dict.prayerWarning || '현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.');
         setTextIfExists('prayer-search-button', dict.search);
         setHymnPanelTitleText(dict.hymnTitle);
-        setTextIfExists('hymn-dev-warning', dict.hymnWarning || '한국어 성가집 우선 개발중입니다.');
+        setTextIfExists('hymn-dev-warning', dict.hymnWarning || '현재 한국어/베트남어 성가 작업중으로, 가사 표출이 정상적이지 않습니다.');
         setTextIfExists('hymn-search-button', dict.search);
         updateHymnCountryOptionLabels();
         setTextIfExists('church-panel-title', dict.churchTitle);
@@ -2332,6 +2340,7 @@
                 searchAliases: Array.isArray(entry.searchAliases) ? entry.searchAliases.map(cleanNodeText).filter(Boolean) : [],
                 composer: cleanNodeText(entry.composer || ''),
                 lyricist: cleanNodeText(entry.lyricist || ''),
+                arranger: cleanNodeText(entry.arranger || entry.arrangedBy || ''),
                 lyricsNote: localizedFlatValue(entry, entry.lyricsNote || '', ['lyricsNote'], country),
                 copyright,
                 sourceFormat: cleanNodeText(entry.sourceFormat || entry.fileFormat || entry.originalFormat || ''),
@@ -2365,11 +2374,10 @@
             ai: 'AI \uBC88\uC5ED',
             composer: '\uC791\uACE1',
             lyricist: '\uC791\uC0AC',
+            arranger: '\uD3B8\uACE1',
             score: '\uC545\uBCF4',
             scorePending: '\uC545\uBCF4 \uC774\uBBF8\uC9C0\uB97C \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.',
-            copyright: '\uC800\uC791\uAD8C',
-            original: '\uC6D0\uBCF8',
-            originalFile: '\uC6D0\uBCF8 \uD30C\uC77C'
+            copyright: '\uC800\uC791\uAD8C'
         };
     }
 
@@ -2389,10 +2397,9 @@
             ? makeAIButton(entry.text, '', targetLang)
             : '<button type="button" class="btn-ai-trans hymn-ai-button" disabled>' + labels.ai + ' (' + escapeHtml(appLanguageName(targetLang)) + ')</button>';
         const metaRows = [
-            entry.composer ? labels.composer + ': ' + entry.composer : '',
             entry.lyricist ? labels.lyricist + ': ' + entry.lyricist : '',
-            entry.sourceFormat ? labels.original + ': ' + entry.sourceFormat + (entry.originalFileAvailable && entry.originalFileSize ? ' (' + entry.originalFileSize + ' bytes)' : '') : '',
-            entry.originalFileName ? labels.originalFile + ': ' + entry.originalFileName : '',
+            entry.composer ? labels.composer + ': ' + entry.composer : '',
+            entry.arranger ? labels.arranger + ': ' + entry.arranger : '',
         ].filter(Boolean);
         const metaHtml = metaRows.length
             ? '<div class="hymn-meta">' + metaRows.map(row => {
@@ -10375,7 +10382,7 @@
         return lines;
     }
 
-    const sourceChoiceVariantPartIds = new Set(['collect', 'prayer_offerings', 'prayer_after']);
+    const sourceChoiceVariantPartIds = new Set(['entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
 
     function sourceChoiceLabelForLower(sourceLower) {
         const names = {
