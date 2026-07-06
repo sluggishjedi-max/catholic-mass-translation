@@ -108,6 +108,11 @@
         .pc-col-sub { background: #fafafa; border-left: 1px solid #eee; }
         .pc-header-row .pc-col { display: flex; }
         .pc-header-row .part-header { flex: 1 1 auto; }
+        #missal-root .pc-col,
+        #missal-root .pair-block,
+        #missal-root .pair-line,
+        #missal-root .speaker,
+        #missal-root .text-content { user-select: text; -webkit-user-select: text; }
 
         .part-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; width: 100%; min-width: 0; box-sizing: border-box; margin-bottom: 10px; border-bottom: 1px dashed #ccc; padding-bottom: 8px; line-height: 1.48; }
         .part-header.has-select { margin-bottom: 5px; }
@@ -161,14 +166,11 @@
         .hymn-list-item.is-selected { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.14); }
         .hymn-title-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
         .hymn-country-title-select { width: auto; min-width: 170px; max-width: min(280px, 100%); padding: 6px 10px; font-size: 0.92rem; }
-        .hymn-detail { border: 1px solid #d9dee5; border-radius: 8px; padding: 14px; background: #fafafa; }
+        .hymn-detail { border: 1px solid #d9dee5; border-radius: 8px; padding: 14px; background: #fafafa; scroll-margin-top: 76px; }
         .hymn-detail h3 { margin-bottom: 10px; }
         .hymn-detail-section { margin-top: 12px; }
         .hymn-meta { display: grid; gap: 4px; margin-top: 10px; color: var(--sub-txt); font-size: 0.9rem; line-height: 1.45; }
         .hymn-detail-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
-        .hymn-media-link, .hymn-media-placeholder { display: inline-flex; align-items: center; min-height: 30px; border-radius: 999px; padding: 5px 10px; font-weight: 900; font-size: 0.82rem; }
-        .hymn-media-link { background: #eef7f1; color: var(--primary-color); text-decoration: none; }
-        .hymn-media-placeholder { background: #eef2f6; color: var(--sub-txt); }
         .church-search-row { grid-template-columns: minmax(0, 1fr) auto; }
         .church-map-status { margin: 8px 0 10px; color: var(--sub-txt); font-size: 0.88rem; line-height: 1.45; }
         .church-map-shell { overflow: hidden; border: 1px solid #d9dee5; border-radius: 14px; background: #eef2f6; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08); }
@@ -458,7 +460,7 @@
                 <option value="LA">Cantus Latini</option>
             </select>
         </h2>
-        <div class="aux-dev-warning" role="status" aria-live="polite">⚠ 개발중인 페이지 입니다.</div>
+        <div id="hymn-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">한국어 성가집 우선 개발중입니다.</div>
         <div class="aux-controls">
             <div class="aux-search-row">
                 <select id="hymn-category" class="aux-select" aria-label="성가 카테고리 선택" onchange="renderHymnPanel()">
@@ -568,7 +570,7 @@
 
 <script src="JS%20file/missa_data.js"></script>
 <script src="JS%20file/prayer_data.js?v=20260703-prayer-data-3"></script>
-<script src="JS%20file/hymn_data.js?v=20260706-v221-copyright"></script>
+<script src="JS%20file/hymn_data.js?v=20260706-v221-hymn-cleanup"></script>
 
 <script>
     (function loadFirebaseSdkInBackground() {
@@ -2018,9 +2020,41 @@
         return labels[normalizeSelectableLang(langCode, 'KR')] || labels.KR;
     }
 
+    function translatedHymnLabel(langCode, uiLang = state.uiLang) {
+        const labels = {
+            KR: { KR: '한국어 성가', VN: 'Thánh ca tiếng Hàn', EN: 'Korean Hymns', JP: '韓国語聖歌', LA: 'Cantus Coreani' },
+            VN: { KR: '베트남어 성가', VN: 'Thánh ca tiếng Việt', EN: 'Vietnamese Hymns', JP: 'ベトナム語聖歌', LA: 'Cantus Vietnamici' },
+            EN: { KR: '영어 성가', VN: 'Thánh ca tiếng Anh', EN: 'English Hymns', JP: '英語聖歌', LA: 'Cantus Anglici' },
+            JP: { KR: '일본어 성가', VN: 'Thánh ca tiếng Nhật', EN: 'Japanese Hymns', JP: '日本語聖歌', LA: 'Cantus Iaponici' },
+            LA: { KR: '라틴어 성가', VN: 'Thánh ca tiếng Latinh', EN: 'Latin Hymns', JP: 'ラテン語聖歌', LA: 'Cantus Latini' }
+        };
+        const lang = normalizeSelectableLang(langCode, 'KR');
+        const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
+        return (labels[lang] && labels[lang][ui]) || nativeHymnLabel(lang);
+    }
+
+    function hymnOptionLabel(langCode, uiLang = state.uiLang) {
+        const native = nativeHymnLabel(langCode);
+        const translated = translatedHymnLabel(langCode, uiLang);
+        return normalizeSelectableLang(langCode, 'KR') === normalizeSelectableLang(uiLang || 'KR', 'KR') || native === translated
+            ? native
+            : `${native} | ${translated}`;
+    }
+
+    function updateHymnCountryOptionLabels() {
+        const select = document.getElementById('hymn-country');
+        if (!select) return;
+        Array.from(select.options).forEach(option => {
+            option.textContent = hymnOptionLabel(option.value, state.uiLang || 'KR');
+        });
+    }
+
     function updateHymnPanelNativeTitle(langCode) {
         const select = document.getElementById('hymn-country');
-        if (select) select.value = normalizeSelectableLang(langCode, 'KR');
+        if (select) {
+            updateHymnCountryOptionLabels();
+            select.value = normalizeSelectableLang(langCode, 'KR');
+        }
     }
 
     const hiddenHymnTags = new Set(['전례', '그레고리오']);
@@ -2036,6 +2070,7 @@
             hymnTitle: '성가 검색',
             hymnNote: '',
             hymnPlaceholder: '성가 번호, 제목, 가사 검색',
+            hymnWarning: '한국어 성가집 우선 개발중입니다.',
             hymnCategoryAll: '전체',
             hymnEmpty: '성가 검색 결과가 없습니다. 업로드 성가 파일을 연결하면 이 영역에서 번호·제목·가사를 검색합니다.',
             hymnBodyPlaceholder: '가사 본문은 업로드 파일 연결 후 이 자리에 표시됩니다.',
@@ -2055,6 +2090,7 @@
             hymnTitle: 'Tìm thánh ca',
             hymnNote: '',
             hymnPlaceholder: 'Tìm số, tên, hoặc lời ca',
+            hymnWarning: 'Đang ưu tiên phát triển sách thánh ca tiếng Hàn.',
             hymnCategoryAll: 'Tất cả',
             hymnEmpty: 'Không có kết quả tìm kiếm thánh ca. Khi nối tệp thánh ca đã tải lên, bạn có thể tìm theo số, tên và lời ca.',
             hymnBodyPlaceholder: 'Lời bài hát sẽ hiển thị ở đây sau khi nối tệp đã tải lên.',
@@ -2074,6 +2110,7 @@
             hymnTitle: 'Hymn Search',
             hymnNote: '',
             hymnPlaceholder: 'Search hymn number, title, or lyrics',
+            hymnWarning: 'Korean hymnal is being developed first.',
             hymnCategoryAll: 'All',
             hymnEmpty: 'No hymn results. Connect uploaded hymn files to search by number, title, and lyrics.',
             hymnBodyPlaceholder: 'Lyrics will appear here after an uploaded file is connected.',
@@ -2093,6 +2130,7 @@
             hymnTitle: '聖歌検索',
             hymnNote: '',
             hymnPlaceholder: '聖歌番号、題名、歌詞を検索',
+            hymnWarning: '韓国語聖歌集を優先して開発中です。',
             hymnCategoryAll: 'すべて',
             hymnEmpty: '聖歌の検索結果がありません。アップロードファイルを接続すると番号、題名、歌詞を検索できます。',
             hymnBodyPlaceholder: 'アップロードファイルを接続すると歌詞がここに表示されます。',
@@ -2112,6 +2150,7 @@
             hymnTitle: 'Cantus quaerere',
             hymnNote: '',
             hymnPlaceholder: 'Quaere numerum, titulum, vel verba',
+            hymnWarning: 'Liber cantuum Coreanus primum evolvitur.',
             hymnCategoryAll: 'Omnia',
             hymnEmpty: 'Nullus cantus inventus est. Fasciculis additis coniunctis numerum, titulum, et verba quaerere poteris.',
             hymnBodyPlaceholder: 'Verba cantus hic apparebunt cum fasciculus additus coniungetur.',
@@ -2157,7 +2196,9 @@
         setTextIfExists('prayer-panel-note', dict.prayerNote);
         setTextIfExists('prayer-search-button', dict.search);
         setHymnPanelTitleText(dict.hymnTitle);
+        setTextIfExists('hymn-dev-warning', dict.hymnWarning || '한국어 성가집 우선 개발중입니다.');
         setTextIfExists('hymn-search-button', dict.search);
+        updateHymnCountryOptionLabels();
         setTextIfExists('church-panel-title', dict.churchTitle);
         setTextIfExists('church-panel-note', dict.churchNote);
         setTextIfExists('church-search-button', dict.search);
@@ -2237,11 +2278,6 @@
         return cleanNodeText(entry.displayTitle || fallback);
     }
 
-    function hymnMediaUrl(entry, key) {
-        const media = entry && entry.media && typeof entry.media === 'object' ? entry.media : {};
-        return cleanNodeText(media[key] || entry[key] || '');
-    }
-
     function getUploadedHymnData() {
         const data = Array.isArray(window.uploadedHymnData) && window.uploadedHymnData.length
             ? window.uploadedHymnData
@@ -2268,10 +2304,6 @@
                 displayTitle: cleanNodeText(entry.displayTitle || ''),
                 tags,
                 category: tags.join(' / '),
-                source: localizedFlatValue(entry, entry.source || entry.fileName || '', ['source', 'fileName'], country),
-                sourceUrl: cleanNodeText(entry.sourceUrl || entry.url || ''),
-                scoreUrl: hymnMediaUrl(entry, 'scoreUrl'),
-                youtubeUrl: hymnMediaUrl(entry, 'youtubeUrl'),
                 firstLine,
                 composer: cleanNodeText(entry.composer || ''),
                 lyricist: cleanNodeText(entry.lyricist || ''),
@@ -2279,8 +2311,7 @@
                 copyright,
                 verses,
                 text,
-                lyrics: text,
-                media: entry.media || {}
+                lyrics: text
             };
             normalized.displayTitle = hymnDisplayTitle(normalized);
             return normalized;
@@ -2301,14 +2332,8 @@
             lyrics: '\uAC00\uC0AC',
             lyricsPending: '\uAC00\uC0AC \uC790\uB8CC\uAC00 \uC5F0\uACB0\uB418\uBA74 \uC774 \uC790\uB9AC\uC5D0 \uD45C\uC2DC\uB429\uB2C8\uB2E4.',
             ai: 'AI \uBC88\uC5ED',
-            score: '\uC545\uBCF4',
-            scorePending: '\uC545\uBCF4 \uC790\uB9AC',
-            youtube: 'YouTube',
-            youtubePending: 'YouTube \uC790\uB9AC',
-            firstLine: '\uCCAB \uC18C\uC808',
             composer: '\uC791\uACE1',
             lyricist: '\uC791\uC0AC',
-            source: '\uCD9C\uCC98',
             copyright: '\uC800\uC791\uAD8C'
         };
     }
@@ -2328,10 +2353,7 @@
         const aiHtml = entry.text
             ? makeAIButton(entry.text, '', targetLang)
             : '<button type="button" class="btn-ai-trans hymn-ai-button" disabled>' + labels.ai + ' (' + escapeHtml(appLanguageName(targetLang)) + ')</button>';
-        const scoreUrl = cleanNodeText(entry.scoreUrl || entry.sourceUrl || '');
-        const youtubeUrl = cleanNodeText(entry.youtubeUrl || '');
         const metaRows = [
-            entry.firstLine ? labels.firstLine + ': ' + entry.firstLine : '',
             entry.composer ? labels.composer + ': ' + entry.composer : '',
             entry.lyricist ? labels.lyricist + ': ' + entry.lyricist : '',
         ].filter(Boolean);
@@ -2340,14 +2362,10 @@
                 return '<div>' + escapeHtml(row) + '</div>';
             }).join('') + '</div>'
             : '';
-        const scoreHtml = scoreUrl
-            ? '<a class="hymn-media-link" href="' + escapeAttr(scoreUrl) + '" target="_blank" rel="noopener">' + labels.score + '</a>'
-            : '<span class="hymn-media-placeholder">' + labels.scorePending + '</span>';
-        const youtubeHtml = youtubeUrl
-            ? '<a class="hymn-media-link" href="' + escapeAttr(youtubeUrl) + '" target="_blank" rel="noopener">' + labels.youtube + '</a>'
-            : '<span class="hymn-media-placeholder">' + labels.youtubePending + '</span>';
-        const copyrightHtml = entry.copyright
-            ? '<div class="hymn-detail-section aux-muted">' + escapeHtml(labels.copyright + ': ' + entry.copyright) + '</div>'
+        const copyrightText = cleanNodeText(entry.copyright || '');
+        const copyrightDisplay = copyrightText && /^[©ⓒ]/u.test(copyrightText) ? copyrightText : (copyrightText ? 'ⓒ ' + copyrightText : '');
+        const copyrightHtml = copyrightDisplay
+            ? '<div class="hymn-detail-section aux-muted">' + escapeHtml(copyrightDisplay) + '</div>'
             : '';
         return [
             '<article class="hymn-detail">',
@@ -2359,7 +2377,7 @@
             lyricsHtml,
             lyricsNoteHtml,
             '</div>',
-            '<div class="hymn-detail-actions">' + aiHtml + scoreHtml + youtubeHtml + '</div>',
+            '<div class="hymn-detail-actions">' + aiHtml + '</div>',
             copyrightHtml,
             '</article>'
         ].join('');
@@ -2368,6 +2386,11 @@
     window.openHymnDetail = function(id) {
         state.selectedHymnId = cleanNodeText(id);
         renderHymnPanel();
+        requestAnimationFrame(() => {
+            const detailId = 'hymn-detail-' + cleanNodeText(id).replace(/[^\w-]+/g, '-');
+            const detail = document.getElementById(detailId);
+            if (detail) detail.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        });
     };
 
     function hymnCategorySort(a, b) {
@@ -2427,14 +2450,19 @@
             const tags = entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []);
             const tagHtml = tags.map(tag => '<span class="aux-pill">' + escapeHtml(tag) + '</span>').join('');
             const selectedClass = selected && selected.id === entry.id ? ' is-selected' : '';
+            const detailId = 'hymn-detail-' + cleanNodeText(entry.id).replace(/[^\w-]+/g, '-');
+            const inlineDetailHtml = selected && selected.id === entry.id
+                ? '<div id="' + escapeAttr(detailId) + '" class="hymn-inline-detail">' + renderHymnDetail(selected, country) + '</div>'
+                : '';
             return [
                 '<article class="hymn-list-item' + selectedClass + '">',
                 '<div class="hymn-tags">' + tagHtml + '</div>',
-                '<button type="button" class="hymn-title-button" onclick="openHymnDetail(' + escapeInlineArg(entry.id) + ')">' + escapeHtml(entry.displayTitle || entry.title) + '</button>',
-                '</article>'
+                '<button type="button" class="hymn-title-button" aria-expanded="' + (selectedClass ? 'true' : 'false') + '" aria-controls="' + escapeAttr(detailId) + '" onclick="openHymnDetail(' + escapeInlineArg(entry.id) + ')">' + escapeHtml(entry.displayTitle || entry.title) + '</button>',
+                '</article>',
+                inlineDetailHtml
             ].join('');
         }).join('');
-        root.innerHTML = '<div class="hymn-layout"><div class="hymn-list">' + listHtml + '</div>' + (selected ? renderHymnDetail(selected, country) : '') + '</div>';
+        root.innerHTML = '<div class="hymn-layout"><div class="hymn-list">' + listHtml + '</div></div>';
     }
 
     function googleMapsApiKey() {
@@ -10180,6 +10208,12 @@
         return !!(leftKeyName && rightKeyName && leftKeyName === rightKeyName);
     }
 
+    function activeLineTextsAreKnownSemanticMismatch(line, leftKey, rightKey) {
+        const leftKeyName = dailyLineSemanticKey(line && line[`text_${leftKey}`]);
+        const rightKeyName = dailyLineSemanticKey(line && line[`text_${rightKey}`]);
+        return !!(leftKeyName && rightKeyName && leftKeyName !== rightKeyName);
+    }
+
     function clearDisplayLanguageFromLine(line, lower) {
         const copy = Object.assign({}, line || {});
         copy[`sp_${lower}`] = '';
@@ -10196,6 +10230,7 @@
         const leftText = cleanNodeText(line[`text_${leftKey}`]);
         const rightText = cleanNodeText(line[`text_${rightKey}`]);
         if (!leftText || !rightText) return false;
+        if ((baseId === 'entrance' || baseId === 'communion') && activeLineTextsAreKnownSemanticMismatch(line, leftKey, rightKey)) return true;
         if (localSemanticEquivalent(baseId, leftText, rightText)) return false;
         const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
         if (cachedEquivalent === true) return false;
@@ -10245,7 +10280,7 @@
         return lines;
     }
 
-    const sourceChoiceVariantPartIds = new Set(['entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
+    const sourceChoiceVariantPartIds = new Set(['collect', 'prayer_offerings', 'prayer_after']);
 
     function sourceChoiceLabelForLower(sourceLower) {
         const names = {
@@ -10272,6 +10307,10 @@
             const leftText = cleanNodeText(line[`text_${leftKey}`]);
             const rightText = cleanNodeText(line[`text_${rightKey}`]);
             if (!leftText || !rightText) return indexes;
+            if ((baseId === 'entrance' || baseId === 'communion') && activeLineTextsAreKnownSemanticMismatch(line, leftKey, rightKey)) {
+                indexes.push(index);
+                return indexes;
+            }
             if (localSemanticEquivalent(baseId, leftText, rightText)) return indexes;
             const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
             if (cachedEquivalent === true) return indexes;
