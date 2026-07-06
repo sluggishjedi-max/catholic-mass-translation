@@ -657,7 +657,7 @@
         aiVoiceOn: false,
         isSunday: false, 
         liturgyInfo: { krName: '로딩중...', vnName: 'Đang tải...', names: { KR: '로딩중...', VN: 'Đang tải...', EN: 'Loading...', JP: '読み込み中...', LA: 'Exspecta...' }, color: '#27ae60', dateStr: '로딩중...', meta: {} },
-        options: { entrance: 'A', greeting: 'A', penitential: 'A', creed: 'A', eucharist: '2', eucharist_song: '', dismissal: '' },
+        options: { entrance: 'A', greeting: 'A', penitential: 'A', creed: 'A', eucharist: '2', eucharist_song: '', eucharist3_intercession: 'ordinary', dismissal: '' },
         autoEucharistSongKey: '',
         autoDismissalOptionKey: '',
         popeNames: { kr: '레오', vn: 'Lêô', en: 'Leo', jp: 'レオ', la: 'Leo' },
@@ -2329,6 +2329,7 @@
                 tags,
                 category: tags.join(' / '),
                 firstLine,
+                searchAliases: Array.isArray(entry.searchAliases) ? entry.searchAliases.map(cleanNodeText).filter(Boolean) : [],
                 composer: cleanNodeText(entry.composer || ''),
                 lyricist: cleanNodeText(entry.lyricist || ''),
                 lyricsNote: localizedFlatValue(entry, entry.lyricsNote || '', ['lyricsNote'], country),
@@ -2495,7 +2496,7 @@
             .filter(entry => !category || (entry.tags || []).includes(category))
             .filter(entry => {
                 if (!query) return true;
-                return normalizeAuxSearch([entry.number, entry.title, entry.displayTitle, entry.book, (entry.tags || []).join(' '), entry.firstLine, entry.text].join(' ')).includes(query);
+                return normalizeAuxSearch([entry.number, entry.title, entry.displayTitle, entry.book, (entry.tags || []).join(' '), (entry.searchAliases || []).join(' '), entry.firstLine, entry.text].join(' ')).includes(query);
             });
         if (!rows.length) {
             root.innerHTML = '<div class="aux-empty">' + escapeHtml(appLanguageName(country)) + ' ' + escapeHtml(dict.hymnEmpty) + '</div>';
@@ -9948,6 +9949,43 @@
         });
     }
 
+    function getEucharistInlineOptionBlock(item, optionKey) {
+        const formLines = item && item.forms && Array.isArray(item.forms['3']) ? item.forms['3'] : [];
+        return formLines.find(line =>
+            line && line.type === 'optionBlock' && line.optionKey === optionKey && line.options
+        ) || null;
+    }
+
+    function activeEucharistInlineOptionKey(block) {
+        const options = block && block.options && typeof block.options === 'object' ? block.options : {};
+        const keys = Object.keys(options);
+        if (!keys.length) return '';
+        let key = state.options[block.optionKey] || block.defaultOption || keys[0];
+        if (!options[key]) key = block.defaultOption && options[block.defaultOption] ? block.defaultOption : keys[0];
+        state.options[block.optionKey] = key;
+        return key;
+    }
+
+    function expandEucharistInlineOptions(lines) {
+        const output = [];
+        (Array.isArray(lines) ? lines : []).forEach(line => {
+            if (line && line.type === 'optionBlock') {
+                const key = activeEucharistInlineOptionKey(line);
+                const option = key && line.options ? line.options[key] : null;
+                output.push(...(option && Array.isArray(option.lines) ? option.lines : []));
+                return;
+            }
+            output.push(line);
+        });
+        return output;
+    }
+
+    function getEucharistInlineOptionLabel(block, optionKey, langCode) {
+        const option = block && block.options ? block.options[optionKey] : null;
+        const label = option && option.label;
+        return getLocalizedObjectValue(label, langCode) || optionKey;
+    }
+
     function romanToNumber(value) {
         const roman = String(value || '').toUpperCase();
         const map = { I: 1, V: 5, X: 10, L: 50, C: 100 };
@@ -10531,15 +10569,16 @@
                 const songChoice = getSelectedEucharistSongKey(item);
                 let compiledLines = markEucharistLines(item.common_dialogue, 'dialogue');
                 if (selectedForm === '4') {
-                    if (item.forms && Array.isArray(item.forms['4'])) compiledLines = compiledLines.concat(markEucharistLines(item.forms['4'], 'form'));
+                    if (item.forms && Array.isArray(item.forms['4'])) compiledLines = compiledLines.concat(markEucharistLines(expandEucharistInlineOptions(item.forms['4']), 'form'));
                 } else {
                     const songLines = getEucharistSongLines(item, songChoice);
                     if (songLines.length) compiledLines = compiledLines.concat(markEucharistLines(songLines, 'preface'));
                     if (Array.isArray(item.sanctus)) compiledLines = compiledLines.concat(markEucharistLines(item.sanctus, 'sanctus'));
                     if (item.forms && Array.isArray(item.forms[selectedForm])) {
-                        const formLines = selectedForm === '1'
+                        let formLines = selectedForm === '1'
                             ? filterRomanCanonSeasonalLines(item.forms[selectedForm], getActiveLiturgicalSourceDate())
                             : item.forms[selectedForm];
+                        formLines = expandEucharistInlineOptions(formLines);
                         compiledLines = compiledLines.concat(markEucharistLines(formLines, 'form'));
                     }
                 }
@@ -10670,12 +10709,29 @@
                 const songKeys = getEucharistSongKeys(orig);
                 const selectedSongKey = getSelectedEucharistSongKey(orig);
                 if (songKeys.length) {
-                    secondarySelectHtml = `<div class="select-block"><select class="select-inline" onchange="optChange('eucharist_song', this.value)">`;
+                    secondarySelectHtml += `<div class="select-block"><select class="select-inline" onchange="optChange('eucharist_song', this.value)">`;
                     songKeys.forEach(songKey => {
                         const selected = selectedSongKey === songKey ? 'selected' : '';
                         secondarySelectHtml += `<option value="${escapeHtml(songKey)}" ${selected}>${escapeHtml(getEucharistSongLabel(orig, songKey, langCode))}</option>`;
                     });
                     secondarySelectHtml += '</select></div>';
+                }
+
+                if (state.options.eucharist === '3') {
+                    const intercessionBlock = getEucharistInlineOptionBlock(orig, 'eucharist3_intercession');
+                    if (intercessionBlock) {
+                        const keys = Object.keys(intercessionBlock.options || {});
+                        const selectedIntercessionKey = activeEucharistInlineOptionKey(intercessionBlock);
+                        if (keys.length) {
+                            const blockLabel = getLocalizedObjectValue(intercessionBlock.label, langCode);
+                            secondarySelectHtml += `<div class="select-block"><select class="select-inline" aria-label="${escapeAttr(blockLabel || 'Eucharistic Prayer III intercession')}" onchange="optChange('eucharist3_intercession', this.value)">`;
+                            keys.forEach(optionKey => {
+                                const selected = selectedIntercessionKey === optionKey ? 'selected' : '';
+                                secondarySelectHtml += `<option value="${escapeHtml(optionKey)}" ${selected}>${escapeHtml(getEucharistInlineOptionLabel(intercessionBlock, optionKey, langCode))}</option>`;
+                            });
+                            secondarySelectHtml += '</select></div>';
+                        }
+                    }
                 }
             }
         }
