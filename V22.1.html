@@ -171,6 +171,10 @@
         .hymn-detail-section { margin-top: 12px; }
         .hymn-meta { display: grid; gap: 4px; margin-top: 10px; color: var(--sub-txt); font-size: 0.9rem; line-height: 1.45; }
         .hymn-detail-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+        .hymn-score-list { display: grid; gap: 10px; margin-top: 8px; }
+        .hymn-score-figure { margin: 0; display: grid; gap: 5px; }
+        .hymn-score-image { display: block; width: 100%; max-width: 920px; height: auto; margin: 0 auto; border: 1px solid #e0e4ea; border-radius: 6px; background: white; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); }
+        .hymn-score-caption { color: var(--sub-txt); font-size: 0.78rem; font-weight: 800; text-align: center; }
         .church-search-row { grid-template-columns: minmax(0, 1fr) auto; }
         .church-map-status { margin: 8px 0 10px; color: var(--sub-txt); font-size: 0.88rem; line-height: 1.45; }
         .church-map-shell { overflow: hidden; border: 1px solid #d9dee5; border-radius: 14px; background: #eef2f6; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08); }
@@ -333,19 +337,19 @@
             </div>
             <div class="consent-language-block lang-VN">
                 <strong class="consent-language-title">Tiếng Việt</strong>
-                <p>Xin lưu ý rằng việc đăng &lt;Nghi thức Thánh lễ&gt; và &lt;Bài đọc phụng vụ&gt; trên trang này chưa được phép sử dụng chính thức bởi Hội đồng Giám mục Công giáo của từng quốc gia. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.</p>
+                <p>Xin lưu ý rằng &lt;Nghi thức Thánh lễ&gt;, &lt;Bài đọc phụng vụ&gt;, cũng như các kinh nguyện và thánh ca trên trang này chưa được các Hội đồng Giám mục Công giáo của từng quốc gia hoặc các chủ sở hữu bản quyền liên quan chấp thuận. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.</p>
             </div>
             <div class="consent-language-block lang-EN">
                 <strong class="consent-language-title">English</strong>
-                <p>Please note that publication of the &lt;Order of Mass&gt; and &lt;Liturgical Readings&gt; on this site has not received official permission for use from the Catholic Bishops' Conferences of each country. Some parts may differ in the celebration of Mass; please use this site for reference only.</p>
+                <p>Please note that the &lt;Order of Mass&gt;, &lt;Liturgical Readings&gt;, prayers, and hymns on this site have not been approved by the Catholic Bishops' Conferences of each country or other relevant copyright holders. Some parts may differ in the celebration of Mass; please use this site for reference only.</p>
             </div>
             <div class="consent-language-block lang-JP">
                 <strong class="consent-language-title">日本語</strong>
-                <p>本サイトに掲載している&lt;ミサ通常文&gt;および&lt;典礼朗読&gt;について、各国のカトリック司教協議会から公式な使用許可を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。</p>
+                <p>本サイトに掲載している&lt;ミサ通常文&gt;、&lt;典礼朗読&gt;、祈祷文および聖歌について、各国のカトリック司教協議会その他の著作権者から承認を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。</p>
             </div>
             <div class="consent-language-block lang-LA">
                 <strong class="consent-language-title">Latine</strong>
-                <p>Monemus textus &lt;Ordinarii Missae&gt; et &lt;Lectionum liturgicarum&gt; in hoc situ positos non esse usu officiali a Conferentiis Episcoporum Catholicorum singularum nationum permissos. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.</p>
+                <p>Monemus &lt;Ordinarium Missae&gt;, &lt;Lectiones liturgicas&gt;, preces atque cantus in hoc situ positos non esse approbatos a Conferentiis Episcoporum Catholicorum singularum nationum neque ab aliis iurium auctoralium possessoribus pertinentibus. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.</p>
             </div>
         </div>
         <div class="consent-actions">
@@ -570,7 +574,7 @@
 
 <script src="JS%20file/missa_data.js"></script>
 <script src="JS%20file/prayer_data.js?v=20260703-prayer-data-3"></script>
-<script src="JS%20file/hymn_data.js?v=20260706-v221-hymn-cleanup"></script>
+<script src="JS%20file/hymn_data.js?v=20260706-v221-hymn-assets"></script>
 
 <script>
     (function loadFirebaseSdkInBackground() {
@@ -2262,12 +2266,30 @@
     }
 
     function normalizeHymnTags(entry, country) {
-        const tagSource = Array.isArray(entry.tags) ? entry.tags : [entry.tag, entry.category, entry.season, entry.part, entry.form, entry.type];
+        const tagSource = Array.isArray(entry.tags)
+            ? [entry.book, ...entry.tags]
+            : [entry.book, entry.tag, entry.category, entry.season, entry.part, entry.form, entry.type];
         return Array.from(new Set(tagSource
             .flatMap(value => Array.isArray(value) ? value : String(value || '').split(/[\/,|]/))
             .map(value => localizedFlatValue(entry, value, ['tag', 'category', 'season', 'part', 'form', 'type'], country))
             .map(cleanNodeText)
             .filter(value => value && !hiddenHymnTags.has(value))));
+    }
+
+    function normalizeHymnScoreImages(entry) {
+        const source = Array.isArray(entry.scoreImages)
+            ? entry.scoreImages
+            : (entry.scoreImage ? [entry.scoreImage] : []);
+        return source.map((image, index) => {
+            if (typeof image === 'string') {
+                return { src: cleanNodeText(image), label: '' };
+            }
+            if (!image || typeof image !== 'object') return { src: '', label: '' };
+            return {
+                src: cleanNodeText(image.src || image.url || image.path || ''),
+                label: cleanNodeText(image.label || image.caption || image.title || ((index + 1) + ''))
+            };
+        }).filter(image => image.src);
     }
 
     function hymnDisplayTitle(entry) {
@@ -2286,6 +2308,7 @@
             const country = normalizeSelectableLang(entry.country || entry.lang || entry.language || 'KR', 'KR');
             const number = cleanNodeText(entry.number || entry.no || entry.num || '');
             const title = localizedFlatValue(entry, entry.title || entry.name || '', ['title', 'name'], country);
+            const book = cleanNodeText(entry.book || entry.sourceBook || '');
             const tags = normalizeHymnTags(entry, country);
             const rawVerses = Array.isArray(entry.verses) ? entry.verses : [];
             const verses = rawVerses.map((verse, index) => ({
@@ -2301,6 +2324,7 @@
                 country,
                 number,
                 title,
+                book,
                 displayTitle: cleanNodeText(entry.displayTitle || ''),
                 tags,
                 category: tags.join(' / '),
@@ -2309,6 +2333,8 @@
                 lyricist: cleanNodeText(entry.lyricist || ''),
                 lyricsNote: localizedFlatValue(entry, entry.lyricsNote || '', ['lyricsNote'], country),
                 copyright,
+                scoreImages: normalizeHymnScoreImages(entry),
+                scoreNote: localizedFlatValue(entry, entry.scoreNote || '', ['scoreNote'], country),
                 verses,
                 text,
                 lyrics: text
@@ -2334,6 +2360,8 @@
             ai: 'AI \uBC88\uC5ED',
             composer: '\uC791\uACE1',
             lyricist: '\uC791\uC0AC',
+            score: '\uC545\uBCF4',
+            scorePending: '\uC545\uBCF4 \uC774\uBBF8\uC9C0\uB97C \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.',
             copyright: '\uC800\uC791\uAD8C'
         };
     }
@@ -2362,6 +2390,26 @@
                 return '<div>' + escapeHtml(row) + '</div>';
             }).join('') + '</div>'
             : '';
+        const scoreImages = Array.isArray(entry.scoreImages) ? entry.scoreImages : [];
+        const scoreBodyHtml = scoreImages.length
+            ? '<div class="hymn-score-list">' + scoreImages.map((image, index) => {
+                const label = image.label || (index + 1);
+                return [
+                    '<figure class="hymn-score-figure">',
+                    '<img class="hymn-score-image" loading="lazy" decoding="async" src="' + escapeAttr(image.src) + '" alt="' + escapeAttr((entry.displayTitle || entry.title || '') + ' ' + labels.score + ' ' + label) + '">',
+                    image.label ? '<figcaption class="hymn-score-caption">' + escapeHtml(image.label) + '</figcaption>' : '',
+                    '</figure>'
+                ].join('');
+            }).join('') + '</div>'
+            : '<p class="aux-muted">' + labels.scorePending + '</p>';
+        const scoreNoteHtml = entry.scoreNote ? '<p class="aux-muted">' + escapeHtml(entry.scoreNote) + '</p>' : '';
+        const scoreHtml = [
+            '<div class="hymn-detail-section hymn-score-section">',
+            '<div class="aux-language-label">' + labels.score + '</div>',
+            scoreBodyHtml,
+            scoreNoteHtml,
+            '</div>'
+        ].join('');
         const copyrightText = cleanNodeText(entry.copyright || '');
         const copyrightDisplay = copyrightText && /^[©ⓒ]/u.test(copyrightText) ? copyrightText : (copyrightText ? 'ⓒ ' + copyrightText : '');
         const copyrightHtml = copyrightDisplay
@@ -2378,6 +2426,7 @@
             lyricsNoteHtml,
             '</div>',
             '<div class="hymn-detail-actions">' + aiHtml + '</div>',
+            scoreHtml,
             copyrightHtml,
             '</article>'
         ].join('');
@@ -2438,7 +2487,7 @@
             .filter(entry => !category || (entry.tags || []).includes(category))
             .filter(entry => {
                 if (!query) return true;
-                return normalizeAuxSearch([entry.number, entry.title, entry.displayTitle, entry.firstLine, entry.text].join(' ')).includes(query);
+                return normalizeAuxSearch([entry.number, entry.title, entry.displayTitle, entry.book, (entry.tags || []).join(' '), entry.firstLine, entry.text].join(' ')).includes(query);
             });
         if (!rows.length) {
             root.innerHTML = '<div class="aux-empty">' + escapeHtml(appLanguageName(country)) + ' ' + escapeHtml(dict.hymnEmpty) + '</div>';
