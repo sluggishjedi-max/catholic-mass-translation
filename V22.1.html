@@ -123,6 +123,7 @@
         .stacked-header-separator { color: var(--sub-txt); font-weight: 800; opacity: 0.75; }
         .citation { display: inline-block; vertical-align: baseline; color: var(--sub-txt); font-size: 0.8em; font-weight: bold; background: #eee; padding: 2px 6px; border-radius: 4px; margin-left: 8px; }
         .part-select-row { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; width: 100%; margin: 0 0 8px; }
+        .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
         .select-inline { display: block; width: fit-content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: 0.85em; outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
         .select-block { display: block; margin: 0; text-align: right; }
 
@@ -574,7 +575,7 @@
 <footer id="main-footer">
     </footer>
 
-<script src="JS%20file/missa_data.js?v=20260706-v221-ep3-options"></script>
+<script src="JS%20file/missa_data.js?v=20260707-v221-ep3-inline-control"></script>
 <script src="JS%20file/prayer_data.js?v=20260703-prayer-data-3"></script>
 <script src="JS%20file/hymn_data.js?v=20260706-v221-hymn-assets-2"></script>
 
@@ -9979,6 +9980,7 @@
             if (line && line.type === 'optionBlock') {
                 const key = activeEucharistInlineOptionKey(line);
                 const option = key && line.options ? line.options[key] : null;
+                output.push({ type: 'inlineOptionControl', optionKey: line.optionKey, optionBlock: line });
                 output.push(...(option && Array.isArray(option.lines) ? option.lines : []));
                 return;
             }
@@ -9991,6 +9993,21 @@
         const option = block && block.options ? block.options[optionKey] : null;
         const label = option && option.label;
         return getLocalizedObjectValue(label, langCode) || optionKey;
+    }
+
+    function genEucharistInlineOptionControl(line, langCode) {
+        const block = line && line.optionBlock && line.optionBlock.options ? line.optionBlock : null;
+        const keys = block && block.options ? Object.keys(block.options) : [];
+        if (!block || !keys.length || !block.optionKey) return '';
+        const selectedKey = activeEucharistInlineOptionKey(block);
+        const blockLabel = getLocalizedObjectValue(block.label, langCode) || 'Eucharistic Prayer III intercession';
+        let html = `<div class="inline-option-control-row"><select class="select-inline" aria-label="${escapeAttr(blockLabel)}" onchange="optChange('${escapeAttr(block.optionKey)}', this.value)">`;
+        keys.forEach(optionKey => {
+            const selected = selectedKey === optionKey ? 'selected' : '';
+            html += `<option value="${escapeAttr(optionKey)}" ${selected}>${escapeHtml(getEucharistInlineOptionLabel(block, optionKey, langCode))}</option>`;
+        });
+        html += '</select></div>';
+        return html;
     }
 
     function romanToNumber(value) {
@@ -10623,6 +10640,11 @@
                     appendDottedDividerRow(partContainer, isStacked);
                     return;
                 }
+                if (line && line.type === 'inlineOptionControl') {
+                    const controlHtml = genEucharistInlineOptionControl(line, leftL);
+                    if (controlHtml) partContainer.insertAdjacentHTML('beforeend', controlHtml);
+                    return;
+                }
                 const leftKey = leftL.toLowerCase();
                 const rightKey = rightL.toLowerCase();
                 const leftSp = line['sp_' + leftKey] || '';
@@ -10722,23 +10744,6 @@
                         secondarySelectHtml += `<option value="${escapeHtml(songKey)}" ${selected}>${escapeHtml(getEucharistSongLabel(orig, songKey, langCode))}</option>`;
                     });
                     secondarySelectHtml += '</select></div>';
-                }
-
-                if (state.options.eucharist === '3') {
-                    const intercessionBlock = getEucharistInlineOptionBlock(orig, 'eucharist3_intercession');
-                    if (intercessionBlock) {
-                        const keys = Object.keys(intercessionBlock.options || {});
-                        const selectedIntercessionKey = activeEucharistInlineOptionKey(intercessionBlock);
-                        if (keys.length) {
-                            const blockLabel = getLocalizedObjectValue(intercessionBlock.label, langCode);
-                            secondarySelectHtml += `<div class="select-block"><select class="select-inline" aria-label="${escapeAttr(blockLabel || 'Eucharistic Prayer III intercession')}" onchange="optChange('eucharist3_intercession', this.value)">`;
-                            keys.forEach(optionKey => {
-                                const selected = selectedIntercessionKey === optionKey ? 'selected' : '';
-                                secondarySelectHtml += `<option value="${escapeHtml(optionKey)}" ${selected}>${escapeHtml(getEucharistInlineOptionLabel(intercessionBlock, optionKey, langCode))}</option>`;
-                            });
-                            secondarySelectHtml += '</select></div>';
-                        }
-                    }
                 }
             }
         }
