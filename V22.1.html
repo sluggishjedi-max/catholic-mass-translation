@@ -2333,6 +2333,10 @@
                 lyricist: cleanNodeText(entry.lyricist || ''),
                 lyricsNote: localizedFlatValue(entry, entry.lyricsNote || '', ['lyricsNote'], country),
                 copyright,
+                sourceFormat: cleanNodeText(entry.sourceFormat || entry.fileFormat || entry.originalFormat || ''),
+                originalFileName: cleanNodeText(entry.originalFileName || entry.originalFile || ''),
+                originalFileSize: Number(entry.originalFileSize || 0) || 0,
+                originalFileAvailable: !!entry.originalFileAvailable,
                 scoreImages: normalizeHymnScoreImages(entry),
                 scoreNote: localizedFlatValue(entry, entry.scoreNote || '', ['scoreNote'], country),
                 verses,
@@ -2362,7 +2366,9 @@
             lyricist: '\uC791\uC0AC',
             score: '\uC545\uBCF4',
             scorePending: '\uC545\uBCF4 \uC774\uBBF8\uC9C0\uB97C \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.',
-            copyright: '\uC800\uC791\uAD8C'
+            copyright: '\uC800\uC791\uAD8C',
+            original: '\uC6D0\uBCF8',
+            originalFile: '\uC6D0\uBCF8 \uD30C\uC77C'
         };
     }
 
@@ -2384,6 +2390,8 @@
         const metaRows = [
             entry.composer ? labels.composer + ': ' + entry.composer : '',
             entry.lyricist ? labels.lyricist + ': ' + entry.lyricist : '',
+            entry.sourceFormat ? labels.original + ': ' + entry.sourceFormat + (entry.originalFileAvailable && entry.originalFileSize ? ' (' + entry.originalFileSize + ' bytes)' : '') : '',
+            entry.originalFileName ? labels.originalFile + ': ' + entry.originalFileName : '',
         ].filter(Boolean);
         const metaHtml = metaRows.length
             ? '<div class="hymn-meta">' + metaRows.map(row => {
