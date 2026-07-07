@@ -188,6 +188,9 @@
         .hymn-detail-section { margin-top: 12px; }
         .hymn-meta { display: grid; gap: 4px; margin-top: 10px; color: var(--sub-txt); font-size: 0.9rem; line-height: 1.45; }
         .hymn-detail-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
+        .hymn-verse-block { display: grid; gap: 5px; margin: 0 0 10px; }
+        .hymn-verse-block .aux-prayer-body { margin: 0; }
+        .hymn-verse-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
         .hymn-score-list { display: grid; gap: 10px; margin-top: 8px; }
         .hymn-score-figure { margin: 0; display: grid; gap: 5px; }
         .hymn-score-image { display: block; width: 100%; max-width: 920px; height: auto; margin: 0 auto; border: 1px solid #e0e4ea; border-radius: 6px; background: white; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); }
@@ -612,7 +615,7 @@
 
 <script src="JS%20file/missa_data.js?v=20260707-v222-ep3-data-tabs"></script>
 <script src="JS%20file/prayer_data.js?v=20260703-prayer-data-3"></script>
-<script src="JS%20file/hymn_data.js?v=20260706-v221-hymn-assets-2"></script>
+<script src="JS%20file/hymn_data.js?v=20260707-v222-yj-crops-verse-ai"></script>
 
 <script>
     (function loadFirebaseSdkInBackground() {
@@ -2451,13 +2454,18 @@
         const tags = entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []);
         const tagsHtml = tags.length ? '<div class="hymn-tags">' + tags.map(tag => '<span class="aux-pill">' + escapeHtml(tag) + '</span>').join('') + '</div>' : '';
         const versesHtml = Array.isArray(entry.verses) && entry.verses.length
-            ? entry.verses.map(verse => '<p class="aux-prayer-body"><strong>' + escapeHtml(verse.label || '') + '</strong> ' + escapeHtml(verse.text || '') + '</p>').join('')
+            ? entry.verses.map(verse => {
+                const verseText = cleanNodeText(verse && verse.text);
+                const labelHtml = verse.label ? '<strong>' + escapeHtml(verse.label || '') + '</strong> ' : '';
+                const aiHtml = verseText ? '<div class="hymn-verse-actions">' + makeAIButton(verseText, '', targetLang) + '</div>' : '';
+                return '<div class="hymn-verse-block"><p class="aux-prayer-body">' + labelHtml + escapeHtml(verseText) + '</p>' + aiHtml + '</div>';
+            }).join('')
             : '';
         const lyricsHtml = versesHtml || (entry.text
             ? '<p class="aux-prayer-body">' + escapeHtml(entry.text) + '</p>'
             : '<p class="aux-muted">' + labels.lyricsPending + '</p>');
         const lyricsNoteHtml = entry.lyricsNote ? '<p class="aux-muted">' + escapeHtml(entry.lyricsNote) + '</p>' : '';
-        const aiHtml = entry.text
+        const aiHtml = !versesHtml && entry.text
             ? makeAIButton(entry.text, '', targetLang)
             : '<button type="button" class="btn-ai-trans hymn-ai-button" disabled>' + labels.ai + ' (' + escapeHtml(appLanguageName(targetLang)) + ')</button>';
         const metaRows = [
@@ -2505,7 +2513,7 @@
             lyricsHtml,
             lyricsNoteHtml,
             '</div>',
-            '<div class="hymn-detail-actions">' + aiHtml + '</div>',
+            !versesHtml ? '<div class="hymn-detail-actions">' + aiHtml + '</div>' : '',
             scoreHtml,
             copyrightHtml,
             '</article>'
