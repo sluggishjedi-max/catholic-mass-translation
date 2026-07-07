@@ -1203,41 +1203,6 @@
       ]
     },
     {
-      id: "en_a_rosary_for_life_the_joyful_mysteries",
-      category: "rosary",
-      titles: {
-        KR: "",
-        VN: "",
-        EN: "A Rosary for Life: The Joyful Mysteries",
-        JP: "",
-        LA: ""
-      },
-      texts: {
-        KR: "",
-        VN: "",
-        EN: "",
-        JP: "",
-        LA: ""
-      },
-      sourceCategory: {
-        KR: "",
-        VN: "",
-        EN: "Rosary",
-        JP: "",
-        LA: ""
-      },
-      tags: [
-        "en_a_rosary_for_life_the_joyful_mysteries",
-        "rosary",
-        "묵주기도",
-        "Kinh Mân Côi",
-        "Rosary",
-        "ロザリオ",
-        "Rosarium",
-        "A Rosary for Life: The Joyful Mysteries"
-      ]
-    },
-    {
       id: "en_a_rosary_for_life_the_luminous_mysteries",
       category: "rosary",
       titles: {
@@ -1413,41 +1378,6 @@
       ]
     },
     {
-      id: "en_prayers_of_the_rosary",
-      category: "rosary",
-      titles: {
-        KR: "",
-        VN: "",
-        EN: "Prayers of the Rosary",
-        JP: "",
-        LA: ""
-      },
-      texts: {
-        KR: "",
-        VN: "",
-        EN: "",
-        JP: "",
-        LA: ""
-      },
-      sourceCategory: {
-        KR: "",
-        VN: "",
-        EN: "Rosary",
-        JP: "",
-        LA: ""
-      },
-      tags: [
-        "en_prayers_of_the_rosary",
-        "rosary",
-        "묵주기도",
-        "Kinh Mân Côi",
-        "Rosary",
-        "ロザリオ",
-        "Rosarium",
-        "Prayers of the Rosary"
-      ]
-    },
-    {
       id: "en_pro_life_rosary_prayer_intentions",
       category: "rosary",
       titles: {
@@ -1589,38 +1519,40 @@
       ]
     },
     {
-      id: "kr_8_67",
+      id: "000. rosary_the_joyful_mysteries",
       category: "rosary",
       titles: {
-        KR: "묵주 기도",
+        KR: "환희의 신비",
         VN: "",
-        EN: "",
+        EN: "The Joyful Mysteries",
         JP: "",
         LA: ""
       },
       texts: {
-        KR: "",
+        KR: "<rubic>월·토요일에 바친다.</rubric>\n1단 마리아께서 예수님을 잉태하심을 묵상합시다.\n2단 마리아께서 엘리사벳을 찾아보심을 묵상합시다.\n3단 마리아께서 예수님을 낳으심을 묵상합시다.\n4단 마리아께서 예수님을 성전에 바치심을 묵상합시다.\n5단 마리아께서 잃으셨던 예수님을 성전에서 찾으심을 묵상합시다.",
         VN: "",
-        EN: "",
+        EN: "<rubic>traditionally prayed on Mondays, Saturdays, and, during the season of Advent, on Sundays.</rubric>\n1. The Annunciation\n<i>“In the sixth month, the angel Gabriel was sent from God to a town of Galilee called Nazareth, to a virgin betrothed to a man named Joseph, of the house of David, and the virgin’s name was Mary.” - Luke 1:26-27</i>\n2. The Visitation\n<i>“During those days Mary set out and traveled to the hill country in haste to a town of Judah, where she entered the house of Zechariah and greeted Elizabeth. When Elizabeth heard Mary’s greeting, the infant leaped in her womb, and Elizabeth, filled with the holy Spirit, cried out in a loud voice and said, 'Most blessed are you among women, and blessed is the fruit of your womb.'” - Luke 1:39-42,</i>\n3. The Nativity\n<i>“In those days a decree went out from Caesar Augustus that the whole world should be enrolled. This was the first enrollment, when Quirinius was governor of Syria. So all went to be enrolled, each to his own town. And Joseph too went up from Galilee from the town of Nazareth to Judea, to the city of David that is called Bethlehem, because he was of the house and family of David, to be enrolled with Mary, his betrothed, who was with child. While they were there, the time came for her to have her child, and she gave birth to her firstborn son. She wrapped him in swaddling clothes and laid him in a manger, because there was no room for them in the inn.” - Luke 2:1-7</i>\n4. The Presentation in the Temple\n<i>“When eight days were completed for his circumcision, he was named Jesus, the name given him by the angel before he was conceived in the womb. When the days were completed for their purification according to the law of Moses, they took him up to Jerusalem to present him to the Lord, just as it is written in the law of the Lord, 'Every male that opens the womb shall be consecrated to the Lord,' and to offer the sacrifice of 'a pair of turtledoves or two young pigeons,' in accordance with the dictate in the law of the Lord.” - Luke 2:21-24</i>\n5. The Finding in the Temple\n<i>“Each year his parents went to Jerusalem for the feast of Passover,  and when he was twelve years old, they went up according to festival custom. After they had completed its days, as they were returning, the boy Jesus remained behind in Jerusalem, but his parents did not know it. Thinking that he was in the caravan, they journeyed for a day and looked for him among their relatives and acquaintances, but not finding him, they returned to Jerusalem to look for him. After three days they found him in the temple, sitting in the midst of the teachers, listening to them and asking them questions, and all who heard him were astounded at his understanding and his answers.” - Luke 2:41-47</i> ",
         JP: "",
         LA: ""
       },
       sourceCategory: {
         KR: "묵주기도",
         VN: "",
-        EN: "",
+        EN: "The Rosary",
         JP: "",
         LA: ""
       },
       tags: [
-        "kr_8_67",
+        "000. rosary_the_joyful_mysteries",
         "rosary",
         "묵주기도",
         "Kinh Mân Côi",
         "Rosary",
         "ロザリオ",
         "Rosarium",
-        "묵주 기도"
+        "환희의 신비",
+        "The Joyful Mysteries",
+        "The Rosary"
       ]
     },
     {
@@ -1665,21 +1597,21 @@
       titles: {
         KR: "묵주기도 바치는 방법",
         VN: "",
-        EN: "",
+        EN: "How to Pray the Rosary",
         JP: "",
         LA: ""
       },
       texts: {
-        KR: "",
+        KR: "1. 묵주에 달린 십자가를 잡은 채 십자성호(성호경)를 이마, 가슴, 양 어깨 순으로 긋고 십자가 발 부분에 친구(입맞춤)한 다음, 사도신경을 바칩니다.\n2. 큰 알(또는 간격이 넓은 알)에서 주님의 기도 1번, 작은 알 3개에서 성모송 각 1번씩, 그리고 맨 마지막 알에서 영광송을 바칩니다. 이어서 구원을 위한 기도(구원송)를 바칠 수 있습니다.\n3. 그리고 같은 자리에서 신비 제1단(환희의 신비, 빛의 신비, 고통의 신비, 영광의 신비 중에서 하나를 선택)을 묵상한 후 주님의 기도를 1번 드립니다.\n4. 이어서 다음의 작은 묵주 알에서 각각 1번씩 성모송 10번을 바칩니다.\n5. 10개의 작은 묵주 알을 지나 하나의 큰 묵주 알(또는 간격이 넓은 알)에서 영광송을 바칩니다. 이어서 구원을 위한 기도(구원송)를 바칠 수 있습니다. 그리고 다시 전과 같이 신비 제2단을 묵상한 후 주님의 기도를 1번 드립니다.\n6. 이와 같이 매 단마다 그 신비를 묵상하면서 제3단, 제4단, 제5단을 계속 바칩니다.\n7. 마지막 제5단의 묵주기도가 끝나면 마침 성호경을 하기 전에 묵주기도성월 기도인 성모찬송을 바칠 수도 있습니다.\n8. 한 바퀴를 돌아 다시 돌아온 십자가를 잡고 성호경으로 끝을 맺습니다. 이때 십자가에 친구(입맞춤)하며 마칠 수 있습니다.",
         VN: "",
-        EN: "",
+        EN: "1. Make the Sign of the Cross.\n2. Holding the Crucifix, say the Apostles' Creed.\n3. On the first bead, say an Our Father.\n4. Say one Hail Mary on each of the next three beads.\n5. Say the Glory Be\n6. For each of the five decades, announce the Mystery (perhaps followed by a brief reading from Scripture) then say the Our Father.\n7. While fingering each of the ten beads of the decade, next say ten Hail Marys while meditating on the Mystery. Then say a Glory Be.\n8. After finishing each decade, some say the following prayer requested by the Blessed Virgin Mary at Fatima.\n9. After saying the five decades, say the Hail, Holy Queen. (A prayer to St. Joseph may also follow.)\\10. Conclude the Rosary with the Sign of the Cross.",
         JP: "",
         LA: ""
       },
       sourceCategory: {
         KR: "묵주기도",
         VN: "",
-        EN: "",
+        EN: "Rosary",
         JP: "",
         LA: ""
       },
@@ -1691,7 +1623,8 @@
         "Rosary",
         "ロザリオ",
         "Rosarium",
-        "묵주기도 바치는 방법"
+        "묵주기도 바치는 방법",
+        "How to Pray the Rosary"
       ]
     },
     {
@@ -19214,6 +19147,90 @@
         "Preces locales et aliae",
         "하느님 자비를 구하는 기도",
         "여러 가지 기도"
+      ]
+    },
+    {
+      id: "000. rosary_the_luminous_mysteries",
+      category: "rosary",
+      titles: {
+        KR: "빛의 신비",
+        EN: "The Luminous Mysteries"
+      },
+      texts: {
+        KR: "<rubic>목요일에 바친다.</rubric>\n1단 예수님께서 세례 받으심을 묵상합시다.\n2단 예수님께서 카나에서 첫 기적을 행하심을 묵상합시다.\n3단 예수님께서 하느님 나라를 선포하심을 묵상합시다.\n4단 예수님께서 거룩하게 변모하심을 묵상합시다.\n5단 예수님께서 성체성사를 세우심을 묵상합시다.",
+        EN: "<rubic>The Five Luminous Mysteries are traditionally prayed on Thursdays</rubric>\n1. The Baptism of Christ in the Jordan\n<i>“After Jesus was baptized, he came up from the water and behold, the heavens were opened [for him], and he saw the Spirit of God descending like a dove [and] coming upon him. And a voice came from the heavens, saying, 'This is my beloved Son, with whom I am well pleased.'” - Matthew 3:16-17</i>\n2. The Wedding Feast at Cana\n<i>“On the third day there was a wedding in Cana in Galilee, and the mother of Jesus was there. Jesus and his disciples were also invited to the wedding. When the wine ran short, the mother of Jesus said to him, 'They have no wine.' [And] Jesus said to her, 'Woman, how does your concern affect me? My hour has not yet come.' His mother said to the servers, 'Do whatever he tells you.'” - John 2:1-5</i>\n3. Jesus' Proclamation of the Coming of the Kingdom of God\n<i>“'This is the time of fulfillment. The kingdom of God is at hand. Repent, and believe in the gospel.'” - Mark 1:15</i>\n4. The Transfiguration\n<i>“After six days Jesus took Peter, James, and John his brother, and led them up a high mountain by themselves. And he was transfigured before them; his face shone like the sun and his clothes became white as light.” - Matthew 17:1-2</i>\n5. The Institution of the Eucharist\n<i>“While they were eating, Jesus took bread, said the blessing, broke it, and giving it to his disciples said, 'Take and eat; this is my body.'” - Matthew 26:26</i> "
+      },
+      sourceCategory: {
+        KR: "묵주기도",
+        EN: "The Rosary"
+      },
+      tags: [
+        "000. rosary_the_luminous_mysteries",
+        "rosary",
+        "묵주기도",
+        "Kinh Mân Côi",
+        "Rosary",
+        "ロザリオ",
+        "Rosarium",
+        "빛의 신비",
+        "The Luminous Mysteries",
+        "The Rosary"
+      ]
+    },
+    {
+      id: "000. rosary_the_glorious_mysteries",
+      category: "rosary",
+      titles: {
+        KR: "영광의 신비",
+        EN: "The Glorious Mysteries"
+      },
+      texts: {
+        KR: "<rubic>수·일요일에 바친다.</rubric>\n1단 예수님께서 부활하심을 묵상합시다.\n2단 예수님께서 승천하심을 묵상합시다.\n3단 예수님께서 성령을 보내심을 묵상합시다.\n4단 예수님께서 마리아를 하늘에 불러올리심을 묵상합시다.\n5단 예수님께서 마리아께 천상 모후의 관을 씌우심을 묵상합시다.",
+        EN: "<rubic>The Five Glorious Mysteries are traditionally prayed on Wednesdays and, outside the seasons of Advent and Lent, on Sundays:</rubric>\n1. The Resurrection\n<i>“But at daybreak on the first day of the week they took the spices they had prepared and went to the tomb.They found the stone rolled away from the tomb; but when they entered, they did not find the body of the Lord Jesus. While they were puzzling over this, behold, two men in dazzling garments appeared to them. They were terrified and bowed their faces to the ground. They said to them, 'Why do you seek the living one among the dead? He is not here, but he has been raised.'” - Luke 24:1-5</i>\n2. The Ascension\n<i>“So then the Lord Jesus, after he spoke to them, was taken up into heaven and took his seat at the right hand of God.” - Mark 16:19</i>\n3. The Descent of the Holy Spirit\n<i>“When the time for Pentecost was fulfilled, they were all in one place together. And suddenly there came from the sky a noise like a strong driving wind, and it filled the entire house in which they were. Then there appeared to them tongues as of fire, which parted and came to rest on each one of them. And they were all filled with the holy Spirit and began to speak in different tongues, as the Spirit enabled them to proclaim.” - Acts 2:1-4</i>\n4. The Assumption\n<i>“Behold, from now on will all ages call me blessed. The Mighty One has done great things for me, and holy is his name.” - Luke 1:48-49</i>\n5. The Coronation of Mary\n<i>“A great sign appeared in the sky, a woman clothed with the sun, with the moon under her feet, and on her head a crown of twelve stars.” - Revelation 12:1</i> "
+      },
+      sourceCategory: {
+        KR: "묵주기도",
+        EN: "The Rosary"
+      },
+      tags: [
+        "000. rosary_the_glorious_mysteries",
+        "rosary",
+        "묵주기도",
+        "Kinh Mân Côi",
+        "Rosary",
+        "ロザリオ",
+        "Rosarium",
+        "영광의 신비",
+        "The Glorious Mysteries",
+        "The Rosary"
+      ]
+    },
+    {
+      id: "000. rosary_the_sorrowful_mysteries",
+      category: "rosary",
+      titles: {
+        KR: "고통의 신비",
+        EN: "The Sorrowful Mysteries"
+      },
+      texts: {
+        KR: "<rubic>화·금요일에 바친다.</rubric>\n1단 예수님께서 우리를 위하여 피땀 흘리심을 묵상합시다.\n2단 예수님께서 우리를 위하여 매 맞으심을 묵상합시다.\n3단 예수님께서 우리를 위하여 가시관 쓰심을 묵상합시다.\n4단 예수님께서 우리를 위하여 십자가 지심을 묵상합시다.\n5단 예수님께서 우리를 위하여 십자가에 못 박혀 돌아가심을 묵상합시다.",
+        EN: "<rubic>The Five Sorrowful Mysteries are traditionally prayed on Tuesdays, Fridays, and, during the season of Lent, on Sundays:</rubric>\n1. The Agony in the Garden\n<i>“Then Jesus came with them to a place called Gethsemane, and he said to his disciples, 'Sit here while I go over there and pray.' He took along Peter and the two sons of Zebedee, and began to feel sorrow and distress. Then he said to them, 'My soul is sorrowful even to death. Remain here and keep watch with me.' He advanced a little and fell prostrate in prayer, saying, 'My Father, if it is possible, let this cup pass from me; yet, not as I will, but as you will.'” - Matthew 26:36-39</i>\n2. The Scourging at the Pillar\n<i>\nThe Scourging at the Pillar\n“Then he released Barabbas to them, but after he had Jesus scourged, he handed him over to be crucified.” - Matthew 27:26</i>\n3. The Crowning with Thorns\n<i>“Then the soldiers of the governor took Jesus inside the praetorium and gathered the whole cohort around him. They stripped off his clothes and threw a scarlet military cloak about him. Weaving a crown out of thorns, they placed it on his head, and a reed in his right hand. And kneeling before him, they mocked him, saying, 'Hail, King of the Jews!'” - Matthew 27:27-29</i>\n4. The Carrying of the Cross\n<i\nThe Carrying of the Cross\n“They pressed into service a passer-by, Simon, a Cyrenian, who was coming in from the country, the father of Alexander and Rufus, to carry his cross. They brought him to the place of Golgotha (which is translated Place of the Skull).” - Mark 15:21-22</i>\n5. The Crucifixion and Death\n<i>“When they came to the place called the Skull, they crucified him and the criminals there, one on his right, the other on his left. [Then Jesus said, 'Father, forgive them, they know not what they do.'] They divided his garments by casting lots. The people stood by and watched; the rulers, meanwhile, sneered at him and said, 'He saved others, let him save himself if he is the chosen one, the Messiah of God.' Even the soldiers jeered at him. As they approached to offer him wine they called out, 'If you are King of the Jews, save yourself.' Above him there was an inscription that read, 'This is the King of the Jews.' Now one of the criminals hanging there reviled Jesus, saying, 'Are you not the Messiah? Save yourself and us.' The other, however, rebuking him, said in reply, 'Have you no fear of God, for you are subject to the same condemnation? And indeed, we have been condemned justly, for the sentence we received corresponds to our crimes, but this man has done nothing criminal.' Then he said, 'Jesus, remember me when you come into your kingdom.' He replied to him, 'Amen, I say to you, today you will be with me in Paradise.' It was now about noon and darkness came over the whole land until three in the afternoon because of an eclipse of the sun. Then the veil of the temple was torn down the middle. Jesus cried out in a loud voice, 'Father, into your hands I commend my spirit'; and when he had said this he breathed his last.” - Luke 23:33-46</i> "
+      },
+      sourceCategory: {
+        KR: "묵주기도",
+        EN: "The Rosary"
+      },
+      tags: [
+        "000. rosary_the_sorrowful_mysteries",
+        "rosary",
+        "묵주기도",
+        "Kinh Mân Côi",
+        "Rosary",
+        "ロザリオ",
+        "Rosarium",
+        "고통의 신비",
+        "The Sorrowful Mysteries",
+        "The Rosary"
       ]
     }
   ];
