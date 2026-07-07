@@ -102,14 +102,14 @@
         .floating-settings-btn:hover { background: transparent; }
         body.non-mass-tab .liturgy-nav-btn { visibility: hidden; pointer-events: none; }
         body.non-mass-tab #floating-liturgy-banner { cursor: pointer; }
-        .aux-search-popup { position: fixed; top: 8px; left: 50%; z-index: 997; display: grid; justify-items: center; width: min(720px, calc(100% - 24px)); transform: translateX(-50%); pointer-events: none; }
+        .aux-search-popup { position: fixed; top: calc(var(--floating-liturgy-offset, 0px) + 8px); left: 50%; z-index: 997; display: grid; justify-items: center; width: min(720px, calc(100% - 24px)); transform: translateX(-50%); pointer-events: none; }
         .aux-search-popup[hidden] { display: none; }
         .aux-search-toggle { pointer-events: auto; border: 1px solid rgba(26, 37, 47, 0.18); border-radius: 999px; background: rgba(255, 255, 255, 0.82); color: #1a252f; padding: 7px 12px; font-weight: 900; font-size: 0.86rem; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14); cursor: pointer; backdrop-filter: blur(8px); }
         .aux-search-toggle:hover { background: rgba(255, 255, 255, 0.94); }
         .aux-search-menu { pointer-events: auto; width: 100%; margin-top: 7px; padding: 10px; border: 1px solid rgba(26, 37, 47, 0.14); border-radius: 10px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18); backdrop-filter: blur(10px); }
         .aux-search-menu[hidden] { display: none; }
         .aux-search-menu .aux-controls { margin: 0; }
-        .aux-controls-anchor { display: none; }
+        .aux-controls-anchor { display: block; height: 0; overflow: hidden; }
         .quick-home-menu { position: fixed; right: 12px; bottom: calc(74px + env(safe-area-inset-bottom, 0px)); z-index: 1001; display: grid; gap: 5px; padding: 6px; border-radius: 12px; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.24); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16); backdrop-filter: blur(7px); }
         .quick-home-btn { min-width: 74px; border: 1px solid rgba(26, 37, 47, 0.16); border-radius: 999px; padding: 6px 9px; background: rgba(255, 255, 255, 0.42); color: #1a252f; font: inherit; font-size: 0.76rem; font-weight: 900; line-height: 1.15; cursor: pointer; }
         .quick-home-btn:hover,
@@ -333,7 +333,7 @@
             .aux-panel { padding: 14px 10px 78px; }
             #church-panel { padding-bottom: 14px; }
             .aux-card { padding: 13px; }
-            .aux-search-popup { top: 6px; width: calc(100% - 18px); }
+            .aux-search-popup { top: calc(var(--floating-liturgy-offset, 0px) + 6px); width: calc(100% - 18px); }
             .aux-search-menu { padding: 8px; }
             .quick-home-menu { right: 8px; bottom: calc(68px + env(safe-area-inset-bottom, 0px)); gap: 4px; padding: 5px; }
             .quick-home-btn { min-width: 64px; padding: 6px 7px; font-size: 0.7rem; }
@@ -2408,6 +2408,8 @@
                 composer: cleanNodeText(entry.composer || ''),
                 lyricist: cleanNodeText(entry.lyricist || ''),
                 arranger: cleanNodeText(entry.arranger || entry.arrangedBy || ''),
+                selector: cleanNodeText(entry.selector || entry.selectedBy || entry.songSelector || ''),
+                scripture: localizedFlatValue(entry, entry.scripture || entry.bibleVerse || entry.scriptureReference || '', ['scripture', 'bibleVerse', 'scriptureReference'], country),
                 lyricsNote: localizedFlatValue(entry, entry.lyricsNote || '', ['lyricsNote'], country),
                 copyright,
                 sourceFormat: cleanNodeText(entry.sourceFormat || entry.fileFormat || entry.originalFormat || ''),
@@ -2442,10 +2444,16 @@
             composer: '\uC791\uACE1',
             lyricist: '\uC791\uC0AC',
             arranger: '\uD3B8\uACE1',
+            selector: '\uC120\uACE1',
+            scripture: '\uC131\uACBD\uAD6C\uC808',
             score: '\uC545\uBCF4',
             scorePending: '\uC545\uBCF4 \uC774\uBBF8\uC9C0\uB97C \uC900\uBE44 \uC911\uC785\uB2C8\uB2E4.',
             copyright: '\uC800\uC791\uAD8C'
         };
+    }
+
+    function hymnLyricsHtml(value) {
+        return escapeHtml(value).replace(/\[\uD6C4\uB834\]/g, '<strong>[\uD6C4\uB834]</strong>');
     }
 
     function renderHymnDetail(entry, country) {
@@ -2458,11 +2466,11 @@
                 const verseText = cleanNodeText(verse && verse.text);
                 const labelHtml = verse.label ? '<strong>' + escapeHtml(verse.label || '') + '</strong> ' : '';
                 const aiHtml = verseText ? '<div class="hymn-verse-actions">' + makeAIButton(verseText, '', targetLang) + '</div>' : '';
-                return '<div class="hymn-verse-block"><p class="aux-prayer-body">' + labelHtml + escapeHtml(verseText) + '</p>' + aiHtml + '</div>';
+                return '<div class="hymn-verse-block"><p class="aux-prayer-body">' + labelHtml + hymnLyricsHtml(verseText) + '</p>' + aiHtml + '</div>';
             }).join('')
             : '';
         const lyricsHtml = versesHtml || (entry.text
-            ? '<p class="aux-prayer-body">' + escapeHtml(entry.text) + '</p>'
+            ? '<p class="aux-prayer-body">' + hymnLyricsHtml(entry.text) + '</p>'
             : '<p class="aux-muted">' + labels.lyricsPending + '</p>');
         const lyricsNoteHtml = entry.lyricsNote ? '<p class="aux-muted">' + escapeHtml(entry.lyricsNote) + '</p>' : '';
         const aiHtml = !versesHtml && entry.text
@@ -2472,6 +2480,8 @@
             entry.lyricist ? labels.lyricist + ': ' + entry.lyricist : '',
             entry.composer ? labels.composer + ': ' + entry.composer : '',
             entry.arranger ? labels.arranger + ': ' + entry.arranger : '',
+            entry.selector ? labels.selector + ': ' + entry.selector : '',
+            entry.scripture ? labels.scripture + ': ' + entry.scripture : '',
         ].filter(Boolean);
         const metaHtml = metaRows.length
             ? '<div class="hymn-meta">' + metaRows.map(row => {
@@ -2575,7 +2585,7 @@
             .filter(entry => !category || (entry.tags || []).includes(category))
             .filter(entry => {
                 if (!query) return true;
-                return normalizeAuxSearch([entry.number, entry.title, entry.displayTitle, entry.book, (entry.tags || []).join(' '), (entry.searchAliases || []).join(' '), entry.firstLine, entry.text].join(' ')).includes(query);
+                return normalizeAuxSearch([entry.number, entry.title, entry.displayTitle, entry.book, (entry.tags || []).join(' '), (entry.searchAliases || []).join(' '), entry.firstLine, entry.text, entry.lyricist, entry.composer, entry.arranger, entry.selector, entry.scripture, entry.copyright].join(' ')).includes(query);
             });
         if (!rows.length) {
             root.innerHTML = '<div class="aux-empty">' + escapeHtml(appLanguageName(country)) + ' ' + escapeHtml(dict.hymnEmpty) + '</div>';
@@ -3108,6 +3118,7 @@
     };
     let auxSearchMountedTab = '';
     let auxSearchPopupOpen = false;
+    let auxSearchSyncFrame = 0;
 
     function auxSearchPopupLabel(tab) {
         const config = auxSearchControlConfig[tab] || {};
@@ -3119,10 +3130,48 @@
         const config = auxSearchControlConfig[auxSearchMountedTab];
         const controls = config && document.getElementById(config.controlsId);
         const anchor = config && document.getElementById(config.anchorId);
-        if (controls && anchor && controls.parentElement !== anchor.parentElement) {
+        if (controls && anchor && anchor.nextElementSibling !== controls) {
             anchor.insertAdjacentElement('afterend', controls);
         }
+        if (anchor) anchor.style.height = '';
         auxSearchMountedTab = '';
+    }
+
+    function auxSearchFloatTopOffset() {
+        const value = getComputedStyle(document.documentElement).getPropertyValue('--floating-liturgy-offset');
+        const offset = Number.parseFloat(value);
+        return (Number.isFinite(offset) ? offset : 0) + 8;
+    }
+
+    function auxSearchFloatTriggerOffset() {
+        return auxSearchFloatTopOffset() + Math.min(260, Math.max(96, window.innerHeight * 0.32));
+    }
+
+    function shouldFloatAuxSearchControls(tab) {
+        const config = auxSearchControlConfig[tab];
+        if (!config) return false;
+        const anchor = document.getElementById(config.anchorId);
+        const panel = anchor && anchor.closest('.aux-panel');
+        if (!anchor || !panel || panel.hidden || !panel.classList.contains('active')) return false;
+        const panelRect = panel.getBoundingClientRect();
+        if (panelRect.bottom <= auxSearchFloatTopOffset()) return false;
+        return anchor.getBoundingClientRect().top <= auxSearchFloatTriggerOffset();
+    }
+
+    function preserveAuxSearchInlineSpace(anchor, controls) {
+        if (!anchor || !controls) return;
+        let height = Math.ceil(controls.getBoundingClientRect().height);
+        if (height) {
+            const style = getComputedStyle(controls);
+            const marginTop = Number.parseFloat(style.marginTop) || 0;
+            const marginBottom = Number.parseFloat(style.marginBottom) || 0;
+            height = Math.ceil(height + marginTop + marginBottom);
+        }
+        if (!height) height = Math.ceil(Number.parseFloat(controls.dataset.inlineHeight || '0'));
+        if (!height) height = Math.ceil(Number.parseFloat(anchor.style.height || '0'));
+        if (!height) return;
+        controls.dataset.inlineHeight = String(height);
+        anchor.style.height = height + 'px';
     }
 
     function mountAuxSearchControls(tab) {
@@ -3139,11 +3188,22 @@
             toggle.setAttribute('aria-expanded', 'false');
             return;
         }
+        if (!shouldFloatAuxSearchControls(tab)) {
+            restoreAuxSearchControls();
+            popup.hidden = true;
+            menu.hidden = true;
+            toggle.setAttribute('aria-expanded', 'false');
+            return;
+        }
         if (auxSearchMountedTab && auxSearchMountedTab !== tab) restoreAuxSearchControls();
         const controls = document.getElementById(config.controlsId);
+        const anchor = document.getElementById(config.anchorId);
         if (controls && controls.parentElement !== menu) {
+            preserveAuxSearchInlineSpace(anchor, controls);
             menu.appendChild(controls);
             auxSearchMountedTab = tab;
+        } else if (controls && anchor && controls.parentElement === menu) {
+            preserveAuxSearchInlineSpace(anchor, controls);
         }
         const label = auxSearchPopupLabel(tab);
         toggle.textContent = label;
@@ -3151,6 +3211,14 @@
         toggle.setAttribute('aria-expanded', auxSearchPopupOpen ? 'true' : 'false');
         popup.hidden = false;
         menu.hidden = !auxSearchPopupOpen;
+    }
+
+    function requestAuxSearchSync() {
+        if (auxSearchSyncFrame) return;
+        auxSearchSyncFrame = requestAnimationFrame(() => {
+            auxSearchSyncFrame = 0;
+            mountAuxSearchControls(state.activeTab || 'mass');
+        });
     }
 
     function setAuxSearchPopupOpen(open) {
@@ -3161,6 +3229,9 @@
     window.toggleAuxSearchPopup = function() {
         setAuxSearchPopupOpen(!auxSearchPopupOpen);
     };
+
+    window.addEventListener('scroll', requestAuxSearchSync, { passive: true });
+    window.addEventListener('resize', requestAuxSearchSync);
 
     function syncQuickHomeMenu(tab) {
         document.querySelectorAll('#quick-home-menu .quick-home-btn[data-home-tab]').forEach(btn => {
