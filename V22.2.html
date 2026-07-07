@@ -2024,6 +2024,9 @@
     let churchMapInitialized = false;
     let churchMapsApiKey = '';
     let churchMapsApiKeyPromise = null;
+    let churchSearchRequestId = 0;
+    const CHURCH_MAX_RESULTS = 60;
+    const CHURCH_TEXT_SEARCH_PAGE_DELAY_MS = 1800;
     const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
 
     const prayerSeedData = [
@@ -2589,6 +2592,7 @@
             });
         if (!rows.length) {
             root.innerHTML = '<div class="aux-empty">' + escapeHtml(appLanguageName(country)) + ' ' + escapeHtml(dict.hymnEmpty) + '</div>';
+            requestAuxSearchSync();
             return;
         }
         if (state.selectedHymnId && !rows.some(entry => entry.id === state.selectedHymnId)) state.selectedHymnId = '';
@@ -2610,6 +2614,7 @@
             ].join('');
         }).join('');
         root.innerHTML = '<div class="hymn-layout"><div class="hymn-list">' + listHtml + '</div></div>';
+        requestAuxSearchSync();
     }
 
     function googleMapsApiKey() {
@@ -2726,10 +2731,15 @@
                 pos => {
                     const lat = Number(pos && pos.coords && pos.coords.latitude);
                     const lng = Number(pos && pos.coords && pos.coords.longitude);
-                    resolve(Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null);
+                    const accuracy = Number(pos && pos.coords && pos.coords.accuracy);
+                    resolve(Number.isFinite(lat) && Number.isFinite(lng) ? {
+                        lat,
+                        lng,
+                        accuracy: Number.isFinite(accuracy) ? accuracy : null
+                    } : null);
                 },
                 () => resolve(null),
-                { timeout: 2500, maximumAge: 300000, enableHighAccuracy: false }
+                { timeout: 8000, maximumAge: 60000, enableHighAccuracy: true }
             );
         });
     }
@@ -2763,19 +2773,31 @@
 
     function renderChurchPlaces(results = []) {
         clearChurchMarkers();
-        results.slice(0, 24).forEach(place => addChurchMarker(place));
+        results.slice(0, CHURCH_MAX_RESULTS).forEach(place => addChurchMarker(place));
         if (results.length) setChurchCaption(churchFoundText(results.length));
     }
 
     function searchChurchesInCurrentView() {
         if (!churchPlacesService || !churchMap || !churchMap.getBounds()) return;
+        const requestId = ++churchSearchRequestId;
+        const collected = [];
         setChurchStatus(auxText().churchReady);
         churchPlacesService.textSearch({
             query: 'Catholic church',
             bounds: churchMap.getBounds()
-        }, (results, status) => {
+        }, function handleChurchResults(results, status, pagination) {
+            if (requestId !== churchSearchRequestId) return;
             if (status === google.maps.places.PlacesServiceStatus.OK && Array.isArray(results)) {
-                renderChurchPlaces(results);
+                results.forEach(place => {
+                    if (!place || !place.place_id) return;
+                    if (!collected.some(item => item.place_id === place.place_id)) collected.push(place);
+                });
+                renderChurchPlaces(collected);
+                if (pagination && pagination.hasNextPage && collected.length < CHURCH_MAX_RESULTS) {
+                    setTimeout(() => {
+                        if (requestId === churchSearchRequestId) pagination.nextPage();
+                    }, CHURCH_TEXT_SEARCH_PAGE_DELAY_MS);
+                }
             } else if (status === google.maps.places.PlacesServiceStatus.ZERO_RESULTS) {
                 clearChurchMarkers();
                 setChurchCaption(churchFoundText(0));
@@ -3080,6 +3102,7 @@
             });
         if (!rows.length) {
             root.innerHTML = `<div class="aux-empty">${escapeHtml(dict.prayerEmpty)}</div>`;
+            requestAuxSearchSync();
             return;
         }
         root.innerHTML = rows.map(entry => {
@@ -3097,20 +3120,24 @@
                 '</article>'
             ].join('');
         }).join('');
+        requestAuxSearchSync();
     }
 
     const auxSearchControlConfig = {
         prayers: {
             controlsId: 'prayer-controls',
             anchorId: 'prayer-controls-anchor',
+            triggerSelector: '#prayer-results .aux-card, #prayer-results .aux-empty',
             label: { KR: '기도문 검색', VN: 'Tìm kinh', EN: 'Prayer search', JP: '祈り検索', LA: 'Quaerere preces' }
         },
         hymns: {
             controlsId: 'hymn-controls',
             anchorId: 'hymn-controls-anchor',
+            triggerSelector: '#hymn-results .hymn-list-item, #hymn-results .aux-empty',
             label: { KR: '성가 검색', VN: 'Tìm thánh ca', EN: 'Hymn search', JP: '聖歌検索', LA: 'Quaerere cantus' }
         },
         churches: {
+            disabled: true,
             controlsId: 'church-controls',
             anchorId: 'church-controls-anchor',
             label: { KR: '성당 검색', VN: 'Tìm nhà thờ', EN: 'Church search', JP: '教会検索', LA: 'Quaerere ecclesiam' }
@@ -3143,19 +3170,18 @@
         return (Number.isFinite(offset) ? offset : 0) + 8;
     }
 
-    function auxSearchFloatTriggerOffset() {
-        return auxSearchFloatTopOffset() + Math.min(260, Math.max(96, window.innerHeight * 0.32));
-    }
-
     function shouldFloatAuxSearchControls(tab) {
         const config = auxSearchControlConfig[tab];
         if (!config) return false;
+        if (config.disabled) return false;
         const anchor = document.getElementById(config.anchorId);
         const panel = anchor && anchor.closest('.aux-panel');
+        const trigger = panel && config.triggerSelector ? panel.querySelector(config.triggerSelector) : anchor;
         if (!anchor || !panel || panel.hidden || !panel.classList.contains('active')) return false;
+        if (!trigger) return false;
         const panelRect = panel.getBoundingClientRect();
         if (panelRect.bottom <= auxSearchFloatTopOffset()) return false;
-        return anchor.getBoundingClientRect().top <= auxSearchFloatTriggerOffset();
+        return trigger.getBoundingClientRect().top <= auxSearchFloatTopOffset();
     }
 
     function preserveAuxSearchInlineSpace(anchor, controls) {
