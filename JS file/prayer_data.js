@@ -56,7 +56,7 @@
       category: "common",
       titles: {
         KR: "성호경",
-        VN: "Dấu Thánh Giá",
+        VN: "Dấu Thánh Giá (đơn)",
         EN: "Sign of the Cross",
         JP: "十字架のしるし",
         LA: "Signum Crucis"
@@ -70,7 +70,7 @@
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "日々の祈り",
         LA: "Generalia"
@@ -89,9 +89,42 @@
         "十字架のしるし",
         "Signum Crucis",
         "주요 기도",
+        "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
         "Generalia"
+      ]
+    },
+    {
+      id: "001-1.sign_of_cross_double",
+      category: "common",
+      titles: {
+        KR: "",
+        VN: "Dấu Thánh Giá (kép)",
+        EN: "",
+        JP: "",
+        LA: ""
+      },
+      texts: {
+        KR: "",
+        VN: "Lạy Chúa con,\nvì dấu thánh giá,\nxin chữa chúng con  cho khổi kể thù.\nNhân danh Cha và Con và Thầnh Thần.\nAmen.",
+        EN: "",
+        JP: "",
+        LA: ""
+      },
+      sourceCategory: {
+        KR: "",
+        VN: "Kinh Hằng Ngày",
+        EN: "",
+        JP: "",
+        LA: ""
+      },
+      tags: [
+        "001-1.sign_of_cross_double",
+        "common",
+        "Kinh nguyện chung",
+        "Dấu Thánh Giá (kép)",
+        "Kinh Hằng Ngày"
       ]
     },
     {
@@ -113,7 +146,7 @@
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "日々の祈り",
         LA: "Generalia"
@@ -127,11 +160,12 @@
         "共通の祈り",
         "Preces communes",
         "주님의 기도",
-        "Kinh L?y Cha",
+        "Kinh Lạy Cha",
         "Our Father",
         "主の祈り",
         "Pater Noster",
         "주요 기도",
+        "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
         "Generalia"
@@ -156,7 +190,7 @@
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "日々の祈り",
         LA: "Generalia"
@@ -175,6 +209,7 @@
         "アヴェ・マリアの祈り",
         "Ave Maria",
         "주요 기도",
+        "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
         "Generalia"
@@ -199,7 +234,7 @@
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "日々の祈り",
         LA: "Generalia"
@@ -218,6 +253,7 @@
         "栄唱",
         "Gloria Patri",
         "주요 기도",
+        "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
         "Generalia"
@@ -242,7 +278,7 @@
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "日々の祈り",
         LA: "Symbolum fidei"
@@ -261,6 +297,7 @@
         "使徒信条",
         "Symbolum Apostolorum",
         "주요 기도",
+        "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
         "Symbolum fidei"
@@ -386,21 +423,21 @@
       category: "common",
       titles: {
         KR: "고백 기도",
-        VN: "",
+        VN: "Kinh Thú Nhận",
         EN: "Confiteor",
         JP: "",
         LA: "Confiteor"
       },
       texts: {
         KR: "전능하신 하느님과 형제들에게 고백하오니\n생각과 말과 행위로 죄를 많이 지었으며\n자주 의무를 소홀히 하였나이다.\n가슴을 치며 제 탓이요\n가슴을 치며 제 탓이요\n가슴을 치며 저의 큰 탓이옵니다.\n그러므로 간절히 바라오니\n평생 동정이신 성모 마리아와\n모든 천사와 성인과 형제들은\n저를 위하여 하느님께 빌어 주소서.\n(┼전능하신 하느님, 저희에게 자비를 베푸시어\n죄를 용서하시고\n영원한 생명으로 이끌어 주소서.)\n아멘.",
-        VN: "",
+        VN: "Tôi thú nhận cùng Thiên Chúa toàn năng\nvà cùng anh chị em :\nTôi đã phạm tội nhiều trong tư tưởng,\nlời nói, việc làm, và những điều thiếu sót.\nLỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng.\nVì vậy tôi xin Đức Bà Ma-ri-a trọn đời đồng trinh,\ncác thiên thần, các thánh và anh chị em\nkhẩn cầu cho tôi trước toà Thiên Chúa, Chúa chúng ta.\nA-men.",
         EN: "",
         JP: "",
         LA: ""
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "",
         JP: "",
         LA: ""
@@ -414,8 +451,10 @@
         "共通の祈り",
         "Preces communes",
         "고백 기도",
+        "Kinh Thú Nhận",
         "Confiteor",
-        "주요 기도"
+        "주요 기도",
+        "Kinh Hằng Ngày"
       ]
     },
     {
@@ -430,14 +469,14 @@
       },
       texts: {
         KR: "하느님,\n제가 죄를 지어\n참으로 사랑받으셔야 할 하느님의 마음을 아프게 하였기에\n악을 저지르고 선을 멀리한 모든 잘못을\n진심으로 뉘우치나이다.\n하느님의 은총으로 속죄하고\n다시는 죄를 짓지 않으며\n죄지을 기회를 피하기로 굳게 다짐하오니\n우리 구세주 예수 그리스도의 수난 공로를 보시고\n저에게 자비를 베풀어 주소서.\n아멘.",
-        VN: "Lạy Chúa,\nChúa là Đấng trọn tốt trọn lành vô cùng.\nChúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con,\nmà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa,\nthì con lo buồn đau đớn,\ncùng chê ghét mọi tội con trên hết mọi sự,\ncon dốc lòng chừa cải, và nhờ ơn Chúa,\nthì con sẽ lánh xa dịp tội, cùng làm việc đền tội cho xứng.\nAmen.",
+        VN: "Lạy Chúa (con),\nChúa là Đấng trọn tốt trọn lành vô cùng.\nChúa đã dựng nên con, và cho Con Chúa ra đời chịu nạn chịu chết vì con,\nmà con đã cả lòng phản nghịch lỗi nghĩa cùng Chúa,\nthì con lo buồn đau đớn,\ncùng chê ghét mọi tội con trên hết mọi sự,\ncon dốc lòng chừa cải, và nhờ ơn Chúa,\nthì con sẽ lánh xa dịp tội, cùng làm việc đền tội cho xứng.\nAmen.",
         EN: "O my God,\nI am heartily sorry for having offended you,\nand I detest all my sins because of your just punishments,\nbut most of all because they offend you, my God,\nwho are all good and deserving of all my love.\nI firmly resolve, with the help of your grace,\nto sin no more\nand to avoid the near occasions of sin.\nAmen.\n<rubric>Or:</rubric>O my God,\nI am sorry and repent with all my heart\nfor all the wrong I have done\nand for the good I have failed to do,\nbecause by sinning I have offended you,\nwho are all good and worthy to be loved above all things.\nI firmly resolve, with the help of your grace,\nto do penance,\nto sin no more,\nand to avoid the occasions of sin.\nThrough the merits of the Passion of our Savior Jesus Christ,\nLord, have mercy.\n<rubric>Or:</rubric>Lord Jesus, Son of God,\nhave mercy on me, a sinner.",
         JP: "いつくしみ深いイエスよ、あなたの尊いみ足のもとにひれ伏して、\n心の底から罪のゆるしを願います。\n特に自分の罪を、あなたの限りない愛に背くものとして悔やみ憎みます。\n再び罪を犯してあなたに背くより、むしろ死ぬことを望み、\n生涯、すべてに超えてあなたを愛することを決心します。",
         LA: "Deus meus,\nex toto corde poenitet me omnium meorum peccatorum, eaque detestor, quia peccando, non solum poenas a Te iuste statutas promeritus sum,\nsed praesertim quia offendi Te, summum bonum, ac dignum qui super omnia diligaris.\nIdeo firmiter propono, adiuvante gratia Tua,\nde cetero me non peccaturum peccandique occasiones proximas fugiturum.\nAmen."
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "日々の祈り",
         LA: "Generalia"
@@ -455,6 +494,7 @@
         "Kinh Ăn Năn Tội",
         "Actus Contritionis",
         "주요 기도",
+        "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
         "Generalia"
@@ -472,14 +512,14 @@
       },
       texts: {
         KR: "하느님, 하느님께서는 진리의 근원이시며\n그르침이 없으시므로\n계시하신 진리를\n교회가 가르치는 대로 굳게 믿나이다.",
-        VN: "Lạy Chúa, con tin thật có một Đức Chúa Trời là Đấng thưởng phạt vô cùng. Con lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm Người, chịu nạn chịu chết mà chuộc tội cho thiên hạ. Bấy nhiêu điều ấy cùng các điều Hội Thánh dạy thì con tin vững vàng, vì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh. Amen.",
+        VN: "Lạy Chúa (con),\ncon tin thật có một Đức Chúa Trời\nlà Đấng thưởng phạt vô cùng.\nCon lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm Người,\nchịu nạn chịu chết mà chuộc tội cho thiên hạ.\nBấy nhiêu điều ấy cùng các điều Hội Thánh dạy thì con tin vững vàng,\nvì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh.\nAmen.",
         EN: "O my God, I firmly believe that you are one God in three divine Persons, Father, Son, and Holy Spirit. I believe that your divine Son became man and died for our sins and that he will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches because you have revealed them who are eternal truth and wisdom, who can neither deceive nor be deceived. In this faith I intend to live and die. Amen.",
         JP: "",
         LA: ""
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "",
         LA: ""
@@ -497,7 +537,8 @@
         "신덕송",
         "Kinh Tin",
         "Act of Faith",
-        "주요 기도"
+        "주요 기도",
+        "Kinh Hằng Ngày"
       ]
     },
     {
@@ -512,14 +553,14 @@
       },
       texts: {
         KR: "하느님, 하느님께서는 자비의 근원이시며\n저버림이 없으시므로\n예수 그리스도의 공로를 통하여 주실\n구원의 은총과 영원한 생명을 바라나이다.",
-        VN: "Lạy Chúa, con trông cậy vững vàng, vì công nghiệp Đức Chúa Giêsu thì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này, cho ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời, vì Chúa là đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy chẳng có lẽ nào sai được. Amen.",
+        VN: "Lạy Chúa (con), con trông cậy vững vàng, vì công nghiệp Đức Chúa Giêsu thì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này, for ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời, vì Chúa là đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy chẳng có lẽ nào sai được. Amen.",
         EN: "O Lord God, I hope by your grace for the pardon of all my sins and after life here to gain eternal happiness because you have promised it who are infinitely powerful, faithful, kind, and merciful. In this hope I intend to live and die. Amen.",
         JP: "",
         LA: ""
       },
       sourceCategory: {
         KR: "주요 기도",
-        VN: "",
+        VN: "Kinh Hằng Ngày",
         EN: "Basic Prayers",
         JP: "",
         LA: ""
@@ -537,7 +578,8 @@
         "망덕송",
         "Kinh Cậy",
         "Act of Hope",
-        "주요 기도"
+        "주요 기도",
+        "Kinh Hằng Ngày"
       ]
     },
     {
@@ -545,14 +587,14 @@
       category: "common",
       titles: {
         KR: "애덕송",
-        VN: "Kinh Mến",
+        VN: "Kinh Kính Mến",
         EN: "Act of Love",
         JP: "",
         LA: "Actus Caritatis"
       },
       texts: {
         KR: "하느님, 하느님께서는 사랑의 근원이시며\n한없이 좋으시므로\n마음을 다하여 주님을 사랑하며\n이웃을 제 몸같이 사랑하나이다.",
-        VN: "Lạy Chúa, con kính mến Chúa hết lòng hết sức trên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lạy vì Chúa, thì con thương yêu người ta như mình con vậy. Amen.",
+        VN: "Lạy Chúa (con), con kính mến Chúa hết lòng hết sức trên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lạy vì Chúa, thì con thương yêu người ta như mình con vậy. Amen.",
         EN: "O Lord God, I love you above all things and I love my neighbor for your sake because you are the highest, infinite and perfect good, worthy of all my love. In this love I intend to live and die. Amen.",
         JP: "",
         LA: ""
@@ -628,7 +670,7 @@
         LA: "Angelus"
       },
       texts: {
-        KR: "<b>○</b> 주님의 천사가 마리아께 아뢰니\n<b>●</b> 성령으로 잉태하셨나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> “주님의 종이오니\n<b>●</b> 그대로 제게 이루어지소서!”\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 이에 말씀이 사람이 되시어\n<b>●</b> 저희 가운데 계시나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>✚</b> 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n<b><b>◎</b></b> 아멘.",
+        KR: "<b>○</b> 주님의 천사가 마리아께 아뢰니\n<b>●</b> 성령으로 잉태하셨나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> “주님의 종이오니\n<b>●</b> 그대로 제게 이루어지소서!”\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 이에 말씀이 사람이 되시어\n<b>●</b> 저희 가운데 계시나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>✚</b> 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘.",
         VN: "",
         EN: "<b>V.</b> The Angel of the Lord declared unto Mary,\n<b>R.</b> And she conceived of the Holy Spirit.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> Behold the handmaid of the Lord,\n<b>R.</b> Be it done unto me according to your Word.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> And the Word was made flesh,\n<b>R.</b> And dwelt among us.\n\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> Pray for us, O holy Mother of God,\n<b>R.</b> That we may be made worthy of the promises of Christ.\n<b>Let us pray.</b>\nPour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.",
         JP: "主のみ使いのお告げを受けて、\nマリアは聖霊によって神の御子を宿された。\n〔アヴェ･マリアの祈り〕\nアヴェ、マリア、恵みに満ちた方、\n主はあなたとともにおられます。\nあなたは女のうちで祝福され、\nご胎内の御子イエスも祝福されています。\n神の母聖マリア、\nわたしたち罪びとのために、\n今も、死を迎える時も、お祈りください。\nアーメン。\nわたしは主のはしため、\nおことばどおりになりますように。\n（引き続き、上記の〔アヴェ･マリアの祈り〕を唱えます。）\nみことばは人となり、\nわたしたちのうちに住まわれた。\n（ここでも〔アヴェ･マリアの祈り〕を唱えます。）\n神の母聖マリア、わたしたちのために祈ってください。\nキリストの約束にかなうものとなりますように。\n祈願\n神よ、み使いのお告げによって、御子が人となられたことを\n知ったわたしたちが、キリストの受難と十字架をとおして、\n復活の栄光に達することができるよう、恵みを注いでください。\nわたしたちの主イエス・キリストによって。 アーメン。",
@@ -865,14 +907,14 @@
       id: "019.prayer_after_work",
       category: "common",
       titles: {
-        KR: "일을 마치고 바치는 기도",
+        KR: "일을 마치고 바치는 기도 (성모님께 보호를 철하는 기도)",
         VN: "",
         EN: "",
         JP: "",
         LA: ""
       },
       texts: {
-        KR: "(성모님께 보호를 청하는 기도)\n천주의 성모님, 당신의 보호에 저희를 맡기오니\n어려울 때에 저희의 간절한 기도를 외면하지 마시고\n항상 모든 위험에서 저희를 구하소서.\n영화롭고 복되신 동정녀시여.",
+        KR: "천주의 성모님, 당신의 보호에 저희를 맡기오니\n어려울 때에 저희의 간절한 기도를 외면하지 마시고\n항상 모든 위험에서 저희를 구하소서.\n영화롭고 복되신 동정녀시여.",
         VN: "",
         EN: "",
         JP: "",
@@ -894,6 +936,7 @@
         "共通の祈り",
         "Preces communes",
         "일을 마치고 바치는 기도",
+        "성모님께 보호를 청하는 기도",
         "주요 기도"
       ]
     },
