@@ -730,6 +730,7 @@
         liturgicalDateContext: null,
         dailyReadingsLoading: false,
         dailyReadingLanguageStatus: {},
+        dailyReadingLanguageErrorAt: {},
     };
 
     const DEFAULT_TARGET_LANG = 'VN';
@@ -2596,7 +2597,11 @@
     }
 
     function hymnTargetLanguage(country) {
-        return normalizeDistinctTargetLang(state.targetLang || DEFAULT_TARGET_LANG, country || state.currentLoc || 'KR');
+        const hymnLang = normalizeSelectableLang(country || state.currentLoc || 'KR', 'KR');
+        const configuredTarget = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
+        const localLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
+        if (hymnLang === configuredTarget && localLang !== hymnLang) return localLang;
+        return normalizeDistinctTargetLang(configuredTarget, hymnLang);
     }
 
     function hymnDetailLabels() {
@@ -3813,7 +3818,7 @@
             reading1: [/^第一朗読/], psalm: [/^答唱詩編/], reading2: [/^第二朗読/], gospel_accl: [/^アレルヤ唱/, /^詠唱/], gospel: [/^福音朗読/], preface: [/^叙唱/]
         },
         VN: {
-            entrance: [/^Ca nhập lễ/i], collect: [/^Lời nguyện nhập lễ/i], reading1: [/^Bài [ĐÐ]ọc I/i], psalm: [/^[ĐÐ]áp Ca/i, /^[ĐÐ]áp ca/i], reading2: [/^Bài [ĐÐ]ọc II/i], gospel_accl: [/^Alleluia/i, /^Tung hô Tin Mừng/i], gospel: [/^Phúc Âm/i, /^Tin Mừng\s*:/i], prayer_offerings: [/^Lời nguyện tiến lễ/i], preface: [/^Lời tiền tụng/i, /^Kinh Tiền Tụng/i], communion: [/^Ca hiệp lễ/i], meditation_after_communion: [/^Suy niệm sau hiệp lễ/i], prayer_after: [/^Lời nguyện hiệp lễ/i], meditation: [/^Suy niệm/i]
+            entrance: [/^Ca nhập lễ/i], collect: [/^Lời nguyện nhập lễ/i], reading1: [/^Bài [ĐÐ]ọc I/i], psalm: [/^[ĐÐ]áp Ca/i, /^[ĐÐ]áp ca/i], reading2: [/^Bài [ĐÐ]ọc II/i], gospel_accl: [/^Alleluia/i, /^Tung hô Tin Mừng/i], gospel: [/^Phúc Âm/i, /^Tin Mừng\s*:/i], prayer_offerings: [/^Lời nguyện tiến lễ/i], preface: [/^Lời tiền tụng/i, /^Kinh Tiền Tụng/i], communion: [/^Ca hiệp lễ/i], meditation_after_communion: [/^Suy niệm sau hiệp lễ/i], prayer_after: [/^Lời nguyện (?:hiệp|kết) lễ/i], meditation: [/^Suy niệm/i]
         }
     };
 
@@ -4825,7 +4830,7 @@
     }
 
     function isVietnameseSectionAfterIntroLine(line) {
-        return /^(Ca nhập lễ|Lời nguyện nhập lễ|Bài [ĐÐ]ọc I|[ĐÐ]áp Ca|Bài [ĐÐ]ọc II|Alleluia|Tung hô Tin Mừng|Phúc Âm|Tin Mừng|Lời nguyện tiến lễ|Lời tiền tụng|Kinh Tiền Tụng|Ca hiệp lễ|Lời nguyện hiệp lễ)/i.test(cleanNodeText(line));
+        return /^(Ca nhập lễ|Lời nguyện nhập lễ|Bài [ĐÐ]ọc I|[ĐÐ]áp Ca|Bài [ĐÐ]ọc II|Alleluia|Tung hô Tin Mừng|Phúc Âm|Tin Mừng|Lời nguyện tiến lễ|Lời tiền tụng|Kinh Tiền Tụng|Ca hiệp lễ|Lời nguyện (?:hiệp|kết) lễ)/i.test(cleanNodeText(line));
     }
 
     function stripVietnameseIntroductoryLines(lines) {
@@ -4889,8 +4894,8 @@
         const gospel = sliceVietnameseSection(body, [/^Phúc Âm/i, /^Tin Mừng\s*:/i], [/^Lời nguyện tín hữu/i, /^Lời nguyện tiến lễ/i]);
         const offerings = sliceVietnameseSection(body, [/^Lời nguyện tiến lễ/i], [/^Lời tiền tụng/i, /^Kinh Tiền Tụng/i, /^Ca hiệp lễ/i]);
         const preface = sliceVietnameseSection(body, [/^Lời tiền tụng/i, /^Kinh Tiền Tụng/i], [/^Ca hiệp lễ/i]);
-        const communion = sliceVietnameseSection(body, [/^Ca hiệp lễ/i], [/^Suy niệm sau hiệp lễ/i, /^Lời nguyện hiệp lễ/i]);
-        const after = sliceVietnameseSection(body, [/^Lời nguyện hiệp lễ/i], [/^Suy niệm/i, /^Chia sẻ/i, /^Bài liên quan/i, /^Tags?:/i]);
+        const communion = sliceVietnameseSection(body, [/^Ca hiệp lễ/i], [/^Suy niệm sau hiệp lễ/i, /^Lời nguyện (?:hiệp|kết) lễ/i]);
+        const after = sliceVietnameseSection(body, [/^Lời nguyện (?:hiệp|kết) lễ/i], [/^Suy niệm/i, /^Chia sẻ/i, /^Bài liên quan/i, /^Tags?:/i]);
         if (preface.lines.length) {
             state.liturgyInfo.prefaceHint = cleanNodeText(preface.heading || preface.lines[0]);
             state.liturgyInfo.prefaceHintSource = 'source';
@@ -5557,7 +5562,7 @@
         const meta = info.meta || getSeasonMeta(date);
         const lookupNames = lookupLiturgyNamesForDate(date, info);
         const candidates = [];
-        if (expected && meta.sundayCycle) {
+        if (expected && meta.sundayCycle && !new RegExp(`Năm\\s+${meta.sundayCycle}\\b`, 'i').test(expected)) {
             candidates.push(`${expected} Năm ${meta.sundayCycle}`);
             candidates.push(`${expected} - Năm ${meta.sundayCycle}`);
         }
@@ -5605,6 +5610,17 @@
                 : `${weekdayNames.VN[meta.day]} tuần ${roman} Thường niên`;
         }
         return info.names.VN || '';
+    }
+
+    function vietnameseSeasonalLookupTitle(date) {
+        const meta = getSeasonMeta(date);
+        if (meta.season === 'ordinary') {
+            const roman = toRoman(meta.week);
+            return meta.day === 0
+                ? `Chúa Nhật ${roman} Thường Niên - Năm ${meta.sundayCycle}`
+                : `${weekdayNames.VN[meta.day]} tuần ${roman} Thường niên`;
+        }
+        return formatSeasonalName('VN', meta.season, meta.week, meta.day, meta.sundayCycle) || '';
     }
 
     function vietnameseCalendarMonthFallbackUrl(date) {
@@ -5836,22 +5852,35 @@
 
     async function resolveVietnameseDailyUrls(date, options = {}) {
         const fixedUrls = vietnameseFixedDailyUrls(date);
-        if (fixedUrls.length && options.directOnly) return fixedUrls;
         const info = buildGeneratedLiturgyInfo(date);
         const meta = info.meta || getSeasonMeta(date);
         const preferProperDate = hasPriorityCelebrationForLookup(date, info);
         const expectedCandidates = vietnameseLookupCandidates(date);
-        const titleSlug = slugifyVietnamese(vietnameseLookupTitle(date));
-        const datedSlug = vietnameseDatedSlug(date, vietnameseLookupTitle(date));
-        const cycleUrls = titleSlug && meta.day === 0 && meta.sundayCycle
-            ? ['a', 'b', 'c'].map(cycle => `https://www.tonggiaophanhanoi.org/${titleSlug}-nam-${cycle}/`)
-            : [];
-        const titleUrls = titleSlug ? cycleUrls.concat(`https://www.tonggiaophanhanoi.org/${titleSlug}/`) : [];
-        const slugUrls = titleUrls.concat([
+        const properTitle = vietnameseLookupTitle(date);
+        const seasonalTitle = vietnameseSeasonalLookupTitle(date);
+        const titleOrder = (preferProperDate ? [seasonalTitle, properTitle] : [properTitle, seasonalTitle])
+            .filter((title, index, list) => title && list.indexOf(title) === index);
+        const titleUrls = titleOrder.flatMap(title => {
+            const slug = slugifyVietnamese(title);
+            if (!slug) return [];
+            const cycle = String(meta.sundayCycle || '').toLowerCase();
+            const cyclePattern = cycle ? new RegExp(`(?:^|-)nam-${cycle}(?:-|$)`) : null;
+            const urls = [];
+            if (meta.day === 0 && cycle && cyclePattern.test(slug)) {
+                urls.push(`https://www.tonggiaophanhanoi.org/${slug.replace(new RegExp(`-nam-${cycle}(?=-|$)`), `-${cycle}`)}/`);
+            }
+            urls.push(`https://www.tonggiaophanhanoi.org/${slug}/`);
+            if (meta.day === 0 && cycle && !cyclePattern.test(slug)) urls.push(`https://www.tonggiaophanhanoi.org/${slug}-${cycle}/`);
+            return urls;
+        });
+        const datedSlug = properTitle ? vietnameseDatedSlug(date, properTitle) : '';
+        const datedUrls = datedSlug ? [
             `https://www.tonggiaophanhanoi.org/${datedSlug}-2/`,
             `https://www.tonggiaophanhanoi.org/${datedSlug}/`,
             `https://www.tonggiaophanhanoi.org/${datedSlug}-1/`
-        ]).filter((url, index, list) => url && list.indexOf(url) === index);
+        ] : [];
+        const slugUrls = fixedUrls.concat(titleUrls, datedUrls)
+            .filter((url, index, list) => url && list.indexOf(url) === index);
         if (options.directOnly) return slugUrls;
 
         const discoveredUrls = [];
@@ -5877,7 +5906,7 @@
         } catch (error) {
             console.warn('베트남어 미사 목록 파싱 실패, slug URL로 재시도합니다.', error);
         }
-        return fixedUrls.concat(discoveredUrls, slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
+        return discoveredUrls.concat(slugUrls).filter((url, index, list) => url && list.indexOf(url) === index);
     }
 
     async function resolveVietnameseDailyUrl(date) {
@@ -6108,7 +6137,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict64';
+    const STRICT_PARSER_CACHE_VERSION = 'strict65';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -6578,7 +6607,7 @@
             ['gospel', /^(?:Phúc Âm(?:\s|$|[:：])|Tin Mừng(?:$|[:：]))/iu],
             ['prayer_offerings', /^Lời nguyện tiến lễ(?:\s|$|[:：])/iu],
             ['communion', /^Ca hiệp lễ(?:\s|$|[:：])/iu],
-            ['prayer_after', /^Lời nguyện hiệp lễ(?:\s|$|[:：])/iu]
+            ['prayer_after', /^Lời nguyện (?:hiệp|kết) lễ(?:\s|$|[:：])/iu]
         ]
     };
 
@@ -7729,7 +7758,8 @@
                         const source = await fetchTextWithFallbacks(url);
                         const parsed = strictParseDailyMass(lang, source, date);
                         const fixedTitle = strictFixedDailyTitle(lang, date);
-                        if (fixedTitle) parsed.title = fixedTitle;
+                        const calendarTitle = preferProperDate ? vietnameseLookupTitle(date) : '';
+                        if (fixedTitle || calendarTitle) parsed.title = fixedTitle || calendarTitle;
                         if (hasVietnameseParsedMass(parsed)) {
                             const mergedParsed = properPartialParsed ? mergeVietnameseProperPartialWithReadings(parsed, properPartialParsed) : parsed;
                             if (!strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
@@ -7842,6 +7872,7 @@
             .filter(lang => lang && dailySourceFetchers[lang])));
         state.dailyReadingsLoading = true;
         state.dailyReadingLanguageStatus = Object.fromEntries(langs.map(lang => [lang, 'loading']));
+        state.dailyReadingLanguageErrorAt = {};
         return langs;
     }
 
@@ -9346,6 +9377,7 @@
             }
             if (result.parsed) {
                 state.dailyReadingLanguageStatus[result.lang] = 'done';
+                delete (state.dailyReadingLanguageErrorAt || {})[result.lang];
                 mergeSourceData(fetchedData, result.parsed, result.lang);
                 applyCachedVariantAlignments(fetchedData, today);
                 finalizeDailyReadingsData(fetchedData);
@@ -9355,6 +9387,8 @@
                 return true;
             }
             state.dailyReadingLanguageStatus[result.lang] = 'error';
+            if (!state.dailyReadingLanguageErrorAt) state.dailyReadingLanguageErrorAt = {};
+            state.dailyReadingLanguageErrorAt[result.lang] = Date.now();
             console.warn(`${result.lang} 매일미사 데이터 파싱 실패`, result.error);
             render();
             return false;
@@ -9834,6 +9868,7 @@
 
     function syncLiturgyLoadingStatusBar(leftLang, rightLang) {
         const status = state.dailyReadingLanguageStatus || {};
+        const errorStartedAt = state.dailyReadingLanguageErrorAt || (state.dailyReadingLanguageErrorAt = {});
         const visibleLangs = Array.from(new Set([leftLang, rightLang]
             .map(lang => normalizeSelectableLang(lang, ''))
             .filter(Boolean)));
@@ -9842,9 +9877,17 @@
             updateLiturgyStatusBar(loadingLangs.map(lang => localizedLiturgyLoadingMessageForLang(lang)), { loading: true });
             return;
         }
-        const errorLangs = visibleLangs.filter(lang => status[lang] === 'error');
+        const now = Date.now();
+        const errorLangs = visibleLangs.filter(lang => {
+            if (status[lang] !== 'error') return false;
+            if (!errorStartedAt[lang]) errorStartedAt[lang] = now;
+            if (now - errorStartedAt[lang] < 8000) return true;
+            status[lang] = 'error-hidden';
+            return false;
+        });
         if (errorLangs.length) {
-            updateLiturgyStatusBar(errorLangs.map(lang => localizedLiturgyLoadFailedMessageForLang(lang)), { error: true });
+            const remainingMs = Math.max(1, Math.min(...errorLangs.map(lang => 8000 - (now - errorStartedAt[lang]))));
+            updateLiturgyStatusBar(errorLangs.map(lang => localizedLiturgyLoadFailedMessageForLang(lang)), { error: true, autoHideMs: remainingMs });
             return;
         }
         hideLiturgyStatusBar();
