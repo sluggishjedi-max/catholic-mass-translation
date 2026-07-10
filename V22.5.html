@@ -2719,6 +2719,83 @@
         return result;
     }
 
+    const hymnMachineTranslationLanguageCodes = {
+        KR: 'ko',
+        VN: 'vi',
+        EN: 'en',
+        JP: 'ja',
+        LA: 'la'
+    };
+
+    function splitHymnTranslationText(value, maxLength = 3000) {
+        const source = String(value || '').trim();
+        if (!source) return [];
+        const chunks = [];
+        let remaining = source;
+        while (remaining.length > maxLength) {
+            let cutAt = remaining.lastIndexOf('\n', maxLength);
+            if (cutAt < Math.floor(maxLength * 0.55)) cutAt = remaining.lastIndexOf(' ', maxLength);
+            if (cutAt < Math.floor(maxLength * 0.55)) cutAt = maxLength;
+            chunks.push(remaining.slice(0, cutAt).trim());
+            remaining = remaining.slice(cutAt).trim();
+        }
+        if (remaining) chunks.push(remaining);
+        return chunks;
+    }
+
+    async function translateHymnTextWithMachineFallback(value, sourceLang, targetLang) {
+        const sourceCode = hymnMachineTranslationLanguageCodes[sourceLang] || 'auto';
+        const targetCode = hymnMachineTranslationLanguageCodes[targetLang];
+        if (!targetCode) throw new Error('The fallback translation language is not supported.');
+        const chunks = splitHymnTranslationText(value);
+        const translatedChunks = [];
+        for (const chunk of chunks) {
+            const body = new URLSearchParams({
+                client: 'gtx',
+                sl: sourceCode,
+                tl: targetCode,
+                dt: 't',
+                q: chunk
+            });
+            const response = await fetchWithTimeout('https://translate.googleapis.com/translate_a/single', {
+                method: 'POST',
+                cache: 'no-cache',
+                timeoutMs: 20000,
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+                body: body.toString()
+            });
+            if (!response.ok) throw new Error(`Fallback translation failed: HTTP ${response.status}`);
+            const payload = await response.json();
+            const translated = Array.isArray(payload && payload[0])
+                ? payload[0].map(part => Array.isArray(part) ? (part[0] || '') : '').join('')
+                : '';
+            if (!cleanNodeText(translated)) throw new Error('Fallback translation returned an empty result.');
+            translatedChunks.push(translated.trim());
+        }
+        return translatedChunks.join('\n');
+    }
+
+    async function translateHymnWithFallback(entry, targetLang) {
+        try {
+            return await translateHymnWithGemini(entry, targetLang);
+        } catch (geminiError) {
+            const sourceLang = normalizeSelectableLang(entry && entry.country, 'VN');
+            try {
+                const [title, lyrics] = await Promise.all([
+                    translateHymnTextWithMachineFallback(cleanNodeText(entry && entry.title), sourceLang, targetLang),
+                    translateHymnTextWithMachineFallback(plainTextFromHtml(entry && entry.text), sourceLang, targetLang)
+                ]);
+                const result = { title, lyrics };
+                if (!hymnTranslationUsesTargetScript(result, targetLang)) throw new Error('Fallback result did not contain the target-language script.');
+                return result;
+            } catch (fallbackError) {
+                const primaryMessage = geminiError && geminiError.message ? geminiError.message : 'AI hymn translation failed.';
+                const fallbackMessage = fallbackError && fallbackError.message ? fallbackError.message : 'Fallback translation failed.';
+                throw new Error(`${primaryMessage} / ${fallbackMessage}`);
+            }
+        }
+    }
+
     function requestReverseHymnTranslation(entry, country, force = false) {
         if (!entry || !entry.text || !usesReverseHymnTranslation(country)) return null;
         const targetLang = hymnTargetLanguage(country);
@@ -2726,7 +2803,7 @@
         const existing = hymnTranslationRecords.get(key);
         if (!force && existing && ['pending', 'done'].includes(existing.status)) return existing;
         hymnTranslationRecords.set(key, { status: 'pending', targetLang });
-        translateHymnWithGemini(entry, targetLang).then(result => {
+        translateHymnWithFallback(entry, targetLang).then(result => {
             hymnTranslationRecords.set(key, {
                 status: 'done',
                 targetLang,
