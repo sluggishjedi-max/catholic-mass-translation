@@ -1133,9 +1133,10 @@ globalThis.missaData = [
         ],
         // 2. 감사송
         songs: {
+
     // 1. 대림 감사송 1
     "advent_1": {
-        title: { kr: "대림 감사송 1", vn: "Kinh Tiền Tụng Mùa Vọng I", en: "Preface of Advent I", jp: "待降節の叙唱 I", la: "Praefatio I de Adventu" },
+        title: { kr: "대림 감사송 1 : 그리스도의 두 차례 오심", vn: "KINH TIỀN TỤNG MÙA VỌNG I - Hai lần Đức Kitô đến", en: "PREFACE I OF ADVENT - The two comings of Christ", jp: "待降節叙唱一「キリストの二つの来臨」", la: "PRÆFATIO I DE ADVENTU - De duobus adventibus Christi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1162,7 +1163,7 @@ globalThis.missaData = [
 
     // 2. 대림 감사송 2
     "advent_2": {
-        title: { kr: "대림 감사송 2", vn: "Kinh Tiền Tụng Mùa Vọng II", en: "Preface of Advent II", jp: "待降節の叙唱 II", la: "Praefatio II de Adventu" },
+        title: { kr: "대림 감사송 2 : 그리스도를 기다리는 두 가지 의미", vn: "KINH TIỀN TỤNG MÙA VỌNG II - Hai lần mong đợi Đức Kitô", en: "PREFACE II OF ADVENT - The twofold expectation of Christ", jp: "待降節叙唱二「キリストを待ち望む二重の意味」", la: "PRÆFATIO II DE ADVENTU - De duplici exspectatione Christi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1189,7 +1190,7 @@ globalThis.missaData = [
 
     // 3. 성탄 감사송 1
     "nativity_1": {
-        title: { kr: "성탄 감사송 1", vn: "Kinh Tiền Tụng Giáng Sinh I", en: "Preface of the Nativity of the Lord I", jp: "降誕祭の叙唱 I", la: "Praefatio I de Nativitate" },
+        title: { kr: "주님 성탄 감사송 1 : 빛이신 그리스도", vn: "KINH TIỀN TỤNG GIÁNG SINH I - Đức Kitô là ánh sáng", en: "PREFACE I OF THE NATIVITY OF THE LORD - Christ the Light", jp: "主の降誕叙唱一", la: "PRÆFATIO I DE NATIVITATE DOMINI - De Christo luce" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', 
@@ -1211,7 +1212,7 @@ globalThis.missaData = [
 
     // 4. 성탄 감사송 2
     "nativity_2": {
-        title: { kr: "성탄 감사송 2", vn: "Kinh Tiền Tụng Giáng Sinh II", en: "Preface of the Nativity of the Lord II", jp: "降誕祭の叙唱 II", la: "Praefatio II de Nativitate" },
+        title: { kr: "주님 성탄 감사송 2 : 강생으로 온 세상이 새로워짐", vn: "KINH TIỀN TỤNG GIÁNG SINH II - Canh tân vạn vật trong mầu nhiệm Nhập Thể", en: "PREFACE II OF THE NATIVITY OF THE LORD - The restoration of all things in the Incarnation", jp: "主の降誕叙唱二", la: "PRÆFATIO II DE NATIVITATE DOMINI - De restauratione universa in Incarnatione" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', 
@@ -1238,7 +1239,7 @@ globalThis.missaData = [
 
     // 5. 성탄 감사송 3
     "nativity_3": {
-        title: { kr: "성탄 감사송 3", vn: "Kinh Tiền Tụng Giáng Sinh III", en: "Preface of the Nativity of the Lord III", jp: "降誕祭の叙唱 III", la: "Praefatio III de Nativitate" },
+        title: { kr: "주님 성탄 감사송 3 : 말씀의 강생으로 이루어진 거룩한 교환", vn: "KINH TIỀN TỤNG GIÁNG SINH III - Cuộc trao đổi trong mầu nhiệm Ngôi Lời Nhập Thể", en: "PREFACE III OF THE NATIVITY OF THE LORD - The exchange in the Incarnation of the Word", jp: "主の降誕叙唱三", la: "PRÆFATIO III DE NATIVITATE DOMINI - De commercio in Incarnatione Verbi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', 
@@ -1260,7 +1261,7 @@ globalThis.missaData = [
 
     // 6. 주님 공현 감사송
     "epiphany": {
-        title: { kr: "주님 공현 감사송", vn: "Kinh Tiền Tụng Hiển Linh", en: "Preface of the Epiphany of the Lord", jp: "主の公現の叙唱", la: "Praefatio de Epiphania Domini" },
+        title: { kr: "주님 공현 감사송 : 인류의 빛이신 그리스도", vn: "KINH TIỀN TỤNG LỄ HIỂN LINH - Đức Kitô là ánh sáng muôn dân", en: "PREFACE OF THE EPIPHANY OF THE LORD - Christ the light of the nations", jp: "主の公現叙唱「諸国民の光であるキリスト」", la: "PRÆFATIO DE EPIPHANIA DOMINI - De Christo lumine gentium" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', 
@@ -1287,7 +1288,7 @@ globalThis.missaData = [
 
     // 7. 사순 감사송 1
     "lent_1": {
-        title: { kr: "사순 감사송 1", vn: "Kinh Tiền Tụng Mùa Chay I", en: "Preface of Lent I", jp: "四旬節の叙唱 I", la: "Praefatio I de Quadragesima" },
+        title: { kr: "사순 감사송 1 : 사순 시기의 영성적 의미", vn: "Kinh Tiền Tụng Mùa Chay I", en: "Preface of Lent I", jp: "四旬節の叙唱 I", la: "Praefatio I de Quadragesima" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1341,7 +1342,7 @@ globalThis.missaData = [
 
     // 9. 사순 감사송 3
     "lent_3": {
-        title: { kr: "사순 감사송 3", vn: "Kinh Tiền Tụng Mùa Chay III", en: "Preface of Lent III", jp: "四旬節の叙唱 III", la: "Praefatio III de Quadragesima" },
+        title: { kr: "사순 감사송 3 : 절제", vn: "KINH TIỀN TỤNG MÙA CHAY III - Hiệu quả của việc hãm mình", en: "PREFACE III OF LENT - The fruits of abstinence", jp: "四旬節の叙唱 III", la: "PRÆFATIO III DE QUADRAGESIMA" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', 
@@ -1363,7 +1364,7 @@ globalThis.missaData = [
 
     // 10. 사순 감사송 4
     "lent_4": {
-        title: { kr: "사순 감사송 4", vn: "Kinh Tiền Tụng Mùa Chay IV", en: "Preface of Lent IV", jp: "四旬節の叙唱 IV", la: "Praefatio IV de Quadragesima" },
+        title: { kr: "사순 감사송 4 : 단식", vn: "KINH TIỀN TỤNG MÙA CHAY IV - Hiệu quả của chay tịnh", en: "PREFACE IV OF LENT - The fruits of fasting", jp: "四旬節の叙唱 IV", la: "PRÆFATIO IV DE QUADRAGESIMA - De fructibus ieiunii" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', 
@@ -1385,7 +1386,7 @@ globalThis.missaData = [
 
     // 11. 사순 제1주일 감사송 (광야의 유혹)
     "lent_1st_sunday": {
-        title: { kr: "사순 제1주일 감사송", vn: "Kinh Tiền Tụng Chúa Nhật I Mùa Chay", en: "Preface of the First Sunday of Lent", jp: "四旬節第1主日の叙唱", la: "Praefatio I de dominicis Quadragesimæ" },
+        title: { kr: "사순 감사송 5 : 주님께서 받으신 유혹(사순 제1주일)", vn: "KINH TIỀN TỤNG CHÚA NHẬT I MÙA CHAY - Chúa chịu cám dỗ", en: "PREFACE OF THE FIRST SUNDAY OF LENT - The Temptation of the Lord", jp: "四旬節叙唱五「主の誘惑」", la: "PRÆFATIO DE PRIMA DOMINICA QUADRAGESIMÆ - De tentatione Domini" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1407,7 +1408,7 @@ globalThis.missaData = [
 
     // 12. 사순 제2주일 감사송 (주님의 거룩한 변모)
     "lent_2nd_sunday": {
-        title: { kr: "사순 제2주일 감사송", vn: "Kinh Tiền Tụng Chúa Nhật II Mùa Chay", en: "Preface of the Second Sunday of Lent", jp: "四旬節第2主日の叙唱", la: "Praefatio II de dominicis Quadragesimæ" },
+        title: { kr: "사순 감사송 6 : 주님의 거룩한 변모(사순 제2주일)", vn: "KINH TIỀN TỤNG CHÚA NHẬT II MÙA CHAY - Chúa hiển dung", en: "PREFACE OF THE SECOND SUNDAY OF LENT - The Transfiguration of the Lord", jp: "四旬節叙唱六「主の変容」", la: "PRÆFATIO DE SECUNDA DOMINICA QUADRAGESIMÆ - De transfiguratione Domini" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1429,7 +1430,7 @@ globalThis.missaData = [
 
     // 13. 사순 제3주일 감사송 (사마리아 여인)
     "lent_3rd_sunday": {
-        title: { kr: "사순 제3주일 감사송", vn: "Kinh Tiền Tụng Chúa Nhật III Mùa Chay", en: "Preface of the Third Sunday of Lent", jp: "四旬節第3主日の叙唱", la: "Praefatio III de dominicis Quadragesimæ" },
+        title: { kr: "사순 감사송 7 : 사마리아 여인(사순 제3주일)", vn: "KINH TIỀN TỤNG CHÚA NHẬT III MÙA CHAY - Người phụ nữ Samari", en: "PREFACE OF THE THIRD SUNDAY OF LENT - The Samaritan Woman", jp: "四旬節叙唱七「サマリアの女」", la: "PRÆFATIO DE TERTIA DOMINICA QUADRAGESIMÆ - De Samaritana" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.',
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1451,7 +1452,7 @@ globalThis.missaData = [
 
     // 14. 사순 제4주일 감사송 (태어날 때부터 눈먼 사람)
     "lent_4th_sunday": {
-        title: { kr: "사순 제4주일 감사송", vn: "Kinh Tiền Tụng Chúa Nhật IV Mùa Chay", en: "Preface of the Fourth Sunday of Lent", jp: "四旬節第4主日の叙唱", la: "Praefatio IV de dominicis Quadragesimæ" },
+        title: { kr: "사순 감사송 8 : 태어나면서부터 눈먼 사람(사순 제4주일)", vn: "KINH TIỀN TỤNG CHÚA NHẬT IV MÙA CHAY - Người mù từ thuở mới sinh", en: "PREFACE OF THE FOURTH SUNDAY OF LENT - The Man Born Blind", jp: "四旬節叙唱八「生まれつきの盲人」", la: "PRÆFATIO DE QUARTA DOMINICA QUADRAGESIMÆ - De cæco nato" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1473,7 +1474,7 @@ globalThis.missaData = [
 
     // 15. 사순 제5주일 감사송 (라자로)
     "lent_5th_sunday": {
-        title: { kr: "사순 제5주일 감사송", vn: "Kinh Tiền Tụng Chúa Nhật V Mùa Chay", en: "Preface of the Fifth Sunday of Lent", jp: "四旬節第5主日の叙唱", la: "Praefatio V de dominicis Quadragesimæ" },
+        title: { kr: "사순 감사송 9 : 라자로(사순 제5주일)", vn: "KINH TIỀN TỤNG CHÚA NHẬT V MÙA CHAY - Ông Ladarô", en: "PREFACE OF THE FIFTH SUNDAY OF LENT - Lazarus", jp: "四旬節叙唱九「ラザロ」", la: "PRÆFATIO DE QUINTA DOMINICA QUADRAGESIMÆ - De Lazaro" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', 
                 sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', 
@@ -1495,7 +1496,7 @@ globalThis.missaData = [
 
     // 16. 주의 수난 감사송 1
     "passion_1": {
-        title: { kr: "주의 수난 감사송 1", vn: "Kinh Tiền Tụng Cuộc Thương Khó Của Chúa I", en: "Preface of the Passion of the Lord I", jp: "主の受難の叙唱 I", la: "Praefatio I de Passione Domini" },
+        title: { kr: "주님 수난 감사송 1 : 십자가의 힘", vn: "KINH TIỀN TỤNG THƯƠNG KHÓ I - Quyền lực của Thập giá", en: "PREFACE I OF THE PASSION OF THE LORD - The power of the Cross", jp: "主の受難叙唱一「十字架の力」", la: "PRÆFATIO I DE PASSIONE DOMINI - De virtute Crucis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '온 세상은 외아들의 수난으로 하느님의 위대하심을 깨닫고 찬양하게 되었으며, 형언할 수 없는 십자가의 힘으로 세상에 대한 심판과 십자가에 못 박히신 분의 권능이 환히 드러났나이다.', sp_en: '', text_en: 'For, through the saving Passion of your Son, the whole world has received a heart to confess the infinite power of your majesty, since by the wondrous power of the cross your judgment on the world is now revealed and the authority of Christ crucified.', sp_la: '', text_la: 'Quia per salutíferam Fílii tui passiónem, ad confiténdam maiestátem tuam totus mundus percépit agnitiónem, cum, ineffábili crucis poténtia, iudícium mundi et potéstas elucéscat Crucifíxi.', sp_vn: '', text_vn: 'Vì nhờ cuộc khổ hình mang lại ơn cứu độ của Con Chúa, toàn thế giới đã nhận biết phải tuyên xưng uy linh Chúa; và nhờ quyền lực khôn tả của Thập Giá, sự phán xét trần gian và quyền bính của Đấng chịu đóng đinh được tỏa sáng.', sp_jp: '', text_jp: '' },
@@ -1505,7 +1506,7 @@ globalThis.missaData = [
 
     // 17. 주의 수난 감사송 2
     "passion_2": {
-        title: { kr: "주의 수난 감사송 2", vn: "Kinh Tiền Tụng Cuộc Thương Khó Của Chúa II", en: "Preface of the Passion of the Lord II", jp: "主の受難の叙唱 II", la: "Praefatio II de Passione Domini" },
+        title: { kr: "주님 수난 감사송 2 : 수난의 승리", vn: "KINH TIỀN TỤNG THƯƠNG KHÓ II - Chiến thắng của cuộc Khổ Nạn", en: "PREFACE II OF THE PASSION OF THE LORD - The victory of the Passion", jp: "主の受難叙唱二「受難の勝利」", la: "PRÆFATIO II DE PASSIONE DOMINI - De victoria passionis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '구원하신 수난과 영광스러운 부활의 날이 다가왔나이다. 이로써 원수인 마귀의 오만은 꺾이고 그리스도를 통한 저희 구원의 신비가 거행되나이다.', sp_en: '', text_en: 'For the days of his saving Passion and glorious Resurrection are approaching, by which the pride of the ancient foe is vanquished and the mystery of our redemption in Christ is celebrated.', sp_la: '', text_la: 'Nam salutíferæ passiónis et gloriósæ resurrectiónis eius dies appropínquant, quibus de antíqui hostis supérbia triumphátur, et redemptiónis nostræ in Christo mystérium recólitur.', sp_vn: '', text_vn: 'Vì những ngày khổ hình mang lại ơn cứu độ và những ngày Phục Sinh vinh quang của Người đã gần tới. Nhờ đó, Chúa đánh bại kiêu căng của kẻ thù xưa và chúng con được cử hành mầu nhiệm cứu chuộc chúng con.', sp_jp: '', text_jp: '' },
@@ -1515,7 +1516,7 @@ globalThis.missaData = [
 
     // 18. 부활 감사송 1
     "easter_1": {
-        title: { kr: "부활 감사송 1", vn: "Kinh Tiền Tụng Phục Sinh I", en: "Preface of Easter I", jp: "復活祭の叙唱 I", la: "Praefatio I de Paschate" },
+        title: { kr: "부활 감사송 1 : 파스카의 신비", vn: "KINH TIỀN TỤNG PHỤC SINH I - Mầu nhiệm Vượt qua", en: "PREFACE I OF EASTER - The Paschal Mystery", jp: "復活叙唱一「過越の神秘」", la: "PRÆFATIO PASCHALIS I - De mysterio paschali" },
         content: [
             { sp_kr: '✚', text_kr: '주님, 언제나 주님을 찬송함이 마땅하오나 특히 그리스도께서 저희를 위하여 파스카 제물이 되신 이때에(또는 이 밤에/이 날에) 더욱 성대하게 찬미함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, at all times to acclaim you, O Lord, but in this time (or on this night / on this day) above all to laud you yet more gloriously, when Christ our Passover has been sacrificed.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre: Te quidem, Dómine, omni témpore confitéri, sed in hoc témpore (in hac nocte / in hac die) gloriósius prædicáre, cum Pascha nostrum immolátus est Christus.', sp_vn: 'LM.', text_vn: 'Lạy Chúa, chúng con tuyên xưng Chúa mọi lúc, nhất là trong mùa rất thánh này (hoặc trong đêm nay / trong ngày này), chúng con càng hãnh diện tung hô Chúa, khi Đức Kitô đã được hiến tế làm chiên vượt qua của chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '참된 어린양이신 그리스도께서 세상의 죄를 없애셨나이다. 그리스도께서는 죽음으로 저희 죽음을 없애시고 부활로 저희 생명을 되찾아 주셨나이다.', sp_en: '', text_en: 'For he is the true Lamb who has taken away the sins of the world; by dying he has destroyed our death, and by rising, restored our life.', sp_la: '', text_la: 'Ipse enim verus est Agnus, qui ábstulit peccáta mundi. Qui mortem nostram moriéndo destrúxit, et vitam resurgéndo reparávit.', sp_vn: '', text_vn: 'Người là Chiên Thật đã xóa bỏ tội trần gian. Người đã chết để tiêu diệt sự chết nơi chúng con, và sống lại để ban lại sự sống cho chúng con.', sp_jp: '', text_jp: '' },
@@ -1525,7 +1526,7 @@ globalThis.missaData = [
 
     // 19. 부활 감사송 2
     "easter_2": {
-        title: { kr: "부활 감사송 2", vn: "Kinh Tiền Tụng Phục Sinh II", en: "Preface of Easter II", jp: "復活祭の叙唱 II", la: "Praefatio II de Paschate" },
+        title: { kr: "부활 감사송 2 : 그리스도 안의 새 생명", vn: "KINH TIỀN TỤNG PHỤC SINH II - Cuộc sống mới trong Đức Kitô", en: "PREFACE II OF EASTER - New life in Christ", jp: "復活叙唱二", la: "PRÆFATIO PASCHALIS II" },
         content: [
             { sp_kr: '✚', text_kr: '주님, 언제나 주님을 찬송함이 마땅하오나 특히 그리스도께서 저희를 위하여 파스카 제물이 되신 이때에 더욱 성대하게 찬미함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, at all times to acclaim you, O Lord, but in this time above all to laud you yet more gloriously, when Christ our Passover has been sacrificed.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre: Te quidem, Dómine, omni témpore confitéri, sed in hoc témpore gloriósius prædicáre, cum Pascha nostrum immolátus est Christus.', sp_vn: 'LM.', text_vn: 'Lạy Chúa, chúng con tuyên xưng Chúa mọi lúc, nhất là trong mùa rất thánh này, chúng con càng hãnh diện tung hô Chúa, khi Đức Kitô đã được hiến tế làm chiên vượt qua của chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도를 통하여 빛의 자녀들이 영원한 생명으로 태어났고 믿는 이들에게 하늘 나라의 문이 열렸나이다. 주님의 죽음으로써 저희가 죽음에서 구원받았고 주님의 부활로써 모든 이가 새 생명으로 부활하였나이다.', sp_en: '', text_en: 'Through him the children of light rise to eternal life and the halls of the heavenly Kingdom are thrown open to the faithful; for his Death is our ransom from death, and in his rising the life of all has risen.', sp_la: '', text_la: 'Per quem fílii lucis in vitam ætérnam oriúntur, et regni cæléstis átria fidélibus reserántur. Quia mors nostra eius morte redémpta est, et in eius resurrectióne vita ómnium surréxit.', sp_vn: '', text_vn: 'Nhờ Người, con cái sự sáng được sinh ra để sống đời đời, và cửa Nước Trời được mở ra đón các tín hữu. Vì nhờ sự chết của Người, chúng con khỏi chết, và trong sự sống lại của Người, mọi người được phục sinh.', sp_jp: '', text_jp: '' },
@@ -1535,7 +1536,7 @@ globalThis.missaData = [
 
     // 20. 부활 감사송 3
     "easter_3": {
-        title: { kr: "부활 감사송 3", vn: "Kinh Tiền Tụng Phục Sinh III", en: "Preface of Easter III", jp: "復活祭の叙唱 III", la: "Praefatio III de Paschate" },
+        title: { kr: "부활 감사송 3 : 살아 계시며 언제나 우리를 위하여 빌어 주시는 그리스도", vn: "KINH TIỀN TỤNG PHỤC SINH III - Đức Kitô hằng sống và luôn chuyển cầu cho chúng ta", en: "PREFACE III OF EASTER - Christ living and always interceding for us", jp: "復活叙唱三", la: "PRÆFATIO PASCHALIS III - De Christo vivente et semper interpellante pro nobis" },
         content: [
             { sp_kr: '✚', text_kr: '주님, 언제나 주님을 찬송함이 마땅하오나 특히 그리스도께서 저희를 위하여 파스카 제물이 되신 이때에 더욱 성대하게 찬미함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, at all times to acclaim you, O Lord, but in this time above all to laud you yet more gloriously, when Christ our Passover has been sacrificed.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre: Te quidem, Dómine, omni témpore confitéri, sed in hoc témpore gloriósius prædicáre, cum Pascha nostrum immolátus est Christus.', sp_vn: 'LM.', text_vn: 'Lạy Chúa, chúng con tuyên xưng Chúa mọi lúc, nhất là trong mùa rất thánh này, chúng con càng hãnh diện tung hô Chúa, khi Đức Kitô đã được hiến tế làm chiên vượt qua của chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 저희를 위하여 언제나 자신을 바치시고 저희를 변호하여 주시나이다. 그분께서는 희생되셨으나 다시는 죽지 않으시며 십자가에 못 박히셨으나 영원히 살아 계시나이다.', sp_en: '', text_en: 'He never ceases to offer himself for us but defends us and ever pleads our cause before you: he is the sacrificial Victim who dies no more, the Lamb, once slain, who lives forever.', sp_la: '', text_la: 'Qui se pro nobis offérre non désinit, sed intérpellat pro nobis te iúgiter propugnátor; qui immolátus iam non móritur, sed semper vivit occísus.', sp_vn: '', text_vn: 'Người không ngừng hiến thân vì chúng con, và luôn làm Trạng Sư bênh vực chúng con trước tòa Chúa; Người đã bị tế sát, nay không còn chết nữa; dù đã bị giết, nay vẫn sống luôn.', sp_jp: '', text_jp: '' },
@@ -1545,7 +1546,7 @@ globalThis.missaData = [
 
     // 21. 부활 감사송 4
     "easter_4": {
-        title: { kr: "부활 감사송 4", vn: "Kinh Tiền Tụng Phục Sinh IV", en: "Preface of Easter IV", jp: "復活祭の叙唱 IV", la: "Praefatio IV de Paschate" },
+        title: { kr: "부활 감사송 4 : 파스카 신비로 온 세상이 새로워짐", vn: "KINH TIỀN TỤNG PHỤC SINH IV - Tái tạo vũ trụ nhờ mầu nhiệm Vượt Qua", en: "PREFACE IV OF EASTER - The restoration of the universe through the Paschal Mystery", jp: "復活叙唱四", la: "PRÆFATIO PASCHALIS IV - De restauratione universi per mysterium paschale" },
         content: [
             { sp_kr: '✚', text_kr: '주님, 언제나 주님을 찬송함이 마땅하오나 특히 그리스도께서 저희를 위하여 파스카 제물이 되신 이때에 더욱 성대하게 찬미함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, at all times to acclaim you, O Lord, but in this time above all to laud you yet more gloriously, when Christ our Passover has been sacrificed.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre: Te quidem, Dómine, omni témpore confitéri, sed in hoc témpore gloriósius prædicáre, cum Pascha nostrum immolátus est Christus.', sp_vn: 'LM.', text_vn: 'Lạy Chúa, chúng con tuyên xưng Chúa mọi lúc, nhất là trong mùa rất thánh này, chúng con càng hãnh diện tung hô Chúa, khi Đức Kitô đã được hiến tế làm chiên vượt qua của chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '이제 죄와 죽음은 사라지고 타락하였던 만물이 새로워지며 그리스도 안에서 저희 생명이 온전히 회복되나이다.', sp_en: '', text_en: 'For, with the old order destroyed, a universe cast down is renewed, and integrity of life is restored to us in Christ.', sp_la: '', text_la: 'Quia, vetustáte destrúcta, renovántur univérsa deiécta, et vitæ in Christo nobis intégritas restitúitur.', sp_vn: '', text_vn: 'Vì nhờ vạn vật cũ đã bị hủy diệt, mọi sự suy đồi được đổi mới, và sự sống của chúng con được phục hồi trọn vẹn trong Chúa Kitô.', sp_jp: '', text_jp: '' },
@@ -1555,7 +1556,7 @@ globalThis.missaData = [
 
     // 22. 부활 감사송 5
     "easter_5": {
-        title: { kr: "부활 감사송 5", vn: "Kinh Tiền Tụng Phục Sinh V", en: "Preface of Easter V", jp: "復活祭の叙唱 V", la: "Praefatio V de Paschate" },
+        title: { kr: "부활 감사송 5 : 사제이시며 제물이신 그리스도", vn: "KINH TIỀN TỤNG PHỤC SINH V - Đức Kitô là Linh mục và là của lễ", en: "PREFACE V OF EASTER - Christ, Priest and Victim", jp: "復活叙唱五", la: "PRÆFATIO PASCHALIS V - De Christo sacerdote et victima" },
         content: [
             { sp_kr: '✚', text_kr: '주님, 언제나 주님을 찬송함이 마땅하오나 특히 그리스도께서 저희를 위하여 파스카 제물이 되신 이때에 더욱 성대하게 찬미함은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, at all times to acclaim you, O Lord, but in this time above all to laud you yet more gloriously, when Christ our Passover has been sacrificed.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre: Te quidem, Dómine, omni témpore confitéri, sed in hoc témpore gloriósius prædicáre, cum Pascha nostrum immolátus est Christus.', sp_vn: 'LM.', text_vn: 'Lạy Chúa, chúng con tuyên xưng Chúa mọi lúc, nhất là trong mùa rất thánh này, chúng con càng hãnh diện tung hô Chúa, khi Đức Kitô đã được hiến tế làm chiên vượt qua của chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 십자가에서 몸을 바쳐 옛 제사를 완성하셨으며 저희 구원을 위하여 자신을 아버지께 맡기시어 스스로 사제요 제단이며 희생 제물이 되셨나이다.', sp_en: '', text_en: 'By the oblation of his Body, he brought the sacrifices of old to fulfillment in the reality of the Cross and, by commending himself to you for our salvation, showed himself the Priest, the Altar, and the Lamb of sacrifice.', sp_la: '', text_la: 'Qui, oblatióne córporis sui, antíqua sacrifícia in crucis veritáte perfécit, et, seípsum te pro nostra salúte comméndans, idem sacérdos, altáre et agnus exhíbuit.', sp_vn: '', text_vn: 'Nhờ việc hiến dâng Thân Thể mình, Người đã kiện toàn các hy lễ Cựu Ước nơi sự thật của Thập Giá; và khi phó thác mình cho Chúa để cứu độ chúng con, Người đã tỏ mình là Tư Tế, là Bàn Thờ và là Con Chiên.', sp_jp: '', text_jp: '' },
@@ -1564,7 +1565,7 @@ globalThis.missaData = [
     },
     // 23. 승천 감사송 1
     "ascension_1": {
-        title: { kr: "승천 감사송 1", vn: "Kinh Tiền Tụng Thăng Thiên I", en: "Preface of the Ascension of the Lord I", jp: "主の昇天の叙唱 I", la: "Praefatio I de Ascensione Domini" },
+        title: { kr: "주님 승천 감사송 1 : 승천의 신비", vn: "KINH TIỀN TỤNG THĂNG THIÊN I - Mầu nhiệm Thăng Thiên", en: "PREFACE I OF THE ASCENSION OF THE LORD - The mystery of the Ascension", jp: "主の昇天叙唱一「昇天の神秘」", la: "PRÆFATIO I DE ASCENSIONE DOMINI - De mysterio Ascensionis" },
         content: [
 
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
@@ -1575,7 +1576,7 @@ globalThis.missaData = [
 
     // 24. 승천 감사송 2
     "ascension_2": {
-        title: { kr: "승천 감사송 2", vn: "Kinh Tiền Tụng Thăng Thiên II", en: "Preface of the Ascension of the Lord II", jp: "主の昇天の叙唱 II", la: "Praefatio II de Ascensione Domini" },
+        title: { kr: "주님 승천 감사송 2 : 승천의 신비", vn: "KINH TIỀN TỤNG THĂNG THIÊN II - Mầu nhiệm Thăng Thiên", en: "PREFACE II OF THE ASCENSION OF THE LORD - The mystery of the Ascension", jp: "主の昇天叙唱二「昇天の神秘」", la: "PRÆFATIO II DE ASCENSIONE DOMINI - De mysterio Ascensionis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '영광의 임금이시며 죄악과 죽음의 정복자이신 주 예수님께서는 오늘 천사들의 경탄을 받으시며 가장 높은 하늘로 오르셨나이다.', sp_en: '', text_en: 'For the Lord Jesus, the King of glory, conqueror of sin and death, ascended today to the highest heavens, as the Angels gazed in wonder.', sp_la: '', text_la: 'Quia Dóminus Iesus, Rex glóriæ, peccáti triumphátor et mortis, mirántibus Ángelis, ascéndit hódie summa cælórum,', sp_vn: '', text_vn: 'Vì Chúa Giêsu là Vua vinh quang, Đấng chiến thắng tội lỗi và sự chết, hôm nay đã lên trời cao thẳm trước sự ngỡ ngàng của các Thiên thần.', sp_jp: '', text_jp: '' },
@@ -1586,7 +1587,7 @@ globalThis.missaData = [
 
     // 25. 성령 강림 감사송
     "pentecost": {
-        title: { kr: "성령 강림 감사송", vn: "Kinh Tiền Tụng Hiện Xuống", en: "Preface of Pentecost", jp: "聖霊降臨の叙唱", la: "Praefatio de Spiritu Sancto" },
+        title: { kr: "성령 강림 감사송 : 성령 강림의 신비", vn: "KINH TIỀN TỤNG LỄ HIỆN XUỐNG - Mầu nhiệm Chúa Thánh Thần hiện xuống", en: "PREFACE OF PENTECOST - The mystery of Pentecost", jp: "聖霊降臨叙唱「聖霊降臨の神秘」", la: "PRÆFATIO DE PENTECOSTE - De mysterio Pentecostes" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 파스카 신비를 완성하시려고 외아들과 결합한 저희를 하느님의 자녀가 되게 하시고 오늘 성령을 보내 주셨나이다.', sp_en: '', text_en: 'For, bringing your Paschal Mystery to completion, you bestowed the Holy Spirit today on those you made your adopted children by uniting them to your Only Begotten Son.', sp_la: '', text_la: 'Qui, sacraméntum paschále consúmmans, quibus per Unigéniti tui consórtium filiórum adoptiónem tríbuit, Spíritum Sanctum hodiérna die misit.', sp_vn: '', text_vn: 'Để hoàn tất mầu nhiệm Vượt Qua, hôm nay Chúa đã ban Chúa Thánh Thần cho những người Chúa đã nhận làm nghĩa tử, nhờ kết hợp họ với Con Một Chúa.', sp_jp: '', text_jp: '' },
@@ -1597,7 +1598,7 @@ globalThis.missaData = [
 
     // 26. 연중 주일 감사송 1
     "ordinary_1": {
-        title: { kr: "연중 주일 감사송 1", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên I", en: "Preface of Sundays in Ordinary Time I", jp: "年間主日の叙唱 I", la: "Praefatio I de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 1 : 파스카 신비와 하느님 백성", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN I - Mầu nhiệm Vượt qua và Dân Thiên Chúa", en: "PREFACE I OF THE SUNDAYS IN ORDINARY TIME - The Paschal Mystery and the People of God", jp: "年間主日叙唱一「過越の神秘と神の民」", la: "PRÆFATIO I DE DOMINICIS “PER ANNUM” - De mysterio paschali et de populo Dei" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 파스카의 신비로 위대한 업적을 이루시어 저희를 죄와 죽음의 멍에에서 벗어나게 하셨으며 선택된 겨레, 임금의 사제단, 거룩한 민족, 하느님의 백성이 되게 하셨나이다.', sp_en: '', text_en: 'For through his Paschal Mystery, he accomplished the marvelous deed, by which he has freed us from the yoke of sin and death, summoning us to the glory of being now called a chosen race, a royal priesthood, a holy nation, a people for your own possession,', sp_la: '', text_la: 'Qui per paschále mystérium in admirábile opus nos vocávit, ut de peccáto et mortis iugo ad hanc glóriam vocarémur, qua nunc genus eléctum, regále sacerdótium, gens sancta, pópulus acquisitiónis dícimur,', sp_vn: '', text_vn: 'Nhờ mầu nhiệm Vượt Qua, Người đã thực hiện một công trình kỳ diệu này là kêu gọi chúng con bỏ đàng tội lỗi, thoát ách sự chết, tới ánh vinh quang. Nhờ đó, giờ đây chúng con được gọi là giống nòi được tuyển chọn, hàng tư tế vương giả, chủng tộc thánh thiện, dân riêng của Chúa,', sp_jp: '', text_jp: '' },
@@ -1608,7 +1609,7 @@ globalThis.missaData = [
 
     // 27. 연중 주일 감사송 2
     "ordinary_2": {
-        title: { kr: "연중 주일 감사송 2", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên II", en: "Preface of Sundays in Ordinary Time II", jp: "年間主日の叙唱 II", la: "Praefatio II de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 2 : 구원의 신비", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN II - Mầu nhiệm cứu độ", en: "PREFACE II OF THE SUNDAYS IN ORDINARY TIME - The mystery of salvation", jp: "年間主日叙唱二", la: "PRÆFATIO II DE DOMINICIS “PER ANNUM” - De mysterio salutis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 인류의 잘못을 가엾이 여기시어 동정녀에게서 태어나셨으며 십자가의 고통을 받으시어 저희를 영원한 죽음에서 구원하시고 죽은 이들 가운데서 부활하시어 저희에게 영원한 생명을 주셨나이다.', sp_en: '', text_en: 'For out of compassion for the waywardness that is ours, he humbled himself and was born of the Virgin; by the passion of the Cross he freed us from unending death, and by rising from the dead he gave us life eternal.', sp_la: '', text_la: 'Qui, humánis miserátus erróribus, de Vírgine nasci dignátus est, et crucis perpéssus iniúriam a perpétua morte nos erípuit, atque a mórtuis resúrgens vitam nobis donávit ætérnam.', sp_vn: '', text_vn: 'Vì thương xót nhân loại lầm lạc, Người đã đoái thương sinh ra bởi Đức Trinh Nữ; khi chịu khổ hình thập giá, Người đã cứu chúng con khỏi chết muôn đời; và khi từ cõi chết sống lại, Người đã ban cho chúng con sự sống vô tận.', sp_jp: '', text_jp: '' },
@@ -1617,7 +1618,7 @@ globalThis.missaData = [
     },
     // 28. 연중 주일 감사송 3
     "ordinary_3": {
-        title: { kr: "연중 주일 감사송 3", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên III", en: "Preface of Sundays in Ordinary Time III", jp: "年間主日の叙唱 III", la: "Praefatio III de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 3 : 사람이신 그리스도를 통한 인류 구원", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN III - Việc cứu độ loài người do một người", en: "PREFACE III OF THE SUNDAYS IN ORDINARY TIME - The salvation of man by a man", jp: "年間主日叙唱三", la: "PRÆFATIO III DE DOMINICIS “PER ANNUM” - De salvatione hominis per hominem" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '주님께서는 무한한 영광을 받으셔야 마땅하오나 구원자 그리스도를 통하여 비천한 인간을 도와주셨나이다. 인간이 죽을 운명에 놓였으나 주님께서는 바로 그 인간의 본성으로 저희를 다시 살리시어 구원해 주셨나이다.', sp_en: '', text_en: 'For we know it belongs to your boundless glory, that you came to the aid of mortal beings with your divinity and even fashioned for us a remedy out of mortality itself, that the cause of our downfall might become the means of our salvation, through Christ our Lord.', sp_la: '', text_la: 'In quo te imménsæ glóriæ recognóscimus, ut mortálibus tua divinitáte succúrreres, et remédium nobis ex ipsa nostra mortalitáte providéres, ut, unde perdítio exstíterat, inde salus orirétur, per Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Chúng con nhận biết vinh quang bao la của Chúa, là Chúa đã dùng thần tính cứu trợ người phàm chúng con, lại còn dùng chính bản tính phải chết của chúng con mà cung cấp phương dược cứu độ, để nhờ bản tính sinh ra tử vong, chúng con được sống lại, nhờ Đức Kitô, Chúa chúng con.', sp_jp: '', text_jp: '' },
@@ -1627,7 +1628,7 @@ globalThis.missaData = [
 
     // 29. 연중 주일 감사송 4
     "ordinary_4": {
-        title: { kr: "연중 주일 감사송 4", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên IV", en: "Preface of Sundays in Ordinary Time IV", jp: "年間主日の叙唱 IV", la: "Praefatio IV de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 4 : 구원의 역사", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN IV - Lịch sử cứu độ", en: "PREFACE IV OF THE SUNDAYS IN ORDINARY TIME - The history of salvation", jp: "年間主日叙唱四", la: "PRÆFATIO IV DE DOMINICIS “PER ANNUM” - De historia salutis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 태어나시어 낡은 인류를 새롭게 하시고 수난하시어 저희 죄를 없애셨으며 죽은 이들 가운데서 부활하시어 영원한 생명의 길을 열어 주셨고 아버지께 올라가시어 천상 문을 열어 주셨나이다.', sp_en: '', text_en: 'For by his birth he brought renewal to humanity\'s fallen state, and by his suffering, canceled out our sins; by his rising from the dead he has opened the way to eternal life, and by ascending to you, O Father, he has unlocked the gates of heaven.', sp_la: '', text_la: 'Qui nascéndo vetustátem humánam renovávit, patiéndo delévit nostra peccáta, a mórtuis resurgéndo tránsitum vitæ præstitit ad ætérnam, et ad te, Pater, ascendéndo portas cæli reserávit.', sp_vn: '', text_vn: 'Khi sinh ra, Người đã đổi mới con người cũ; khi chịu khổ hình, Người đã tẩy xóa tội lỗi chúng con; khi từ cõi chết sống lại, Người đã mở lối vào chốn trường sinh; và khi lên cùng Chúa là Cha, Người đã mở cửa Nước Trời.', sp_jp: '', text_jp: '' },
@@ -1637,7 +1638,7 @@ globalThis.missaData = [
 
     // 30. 연중 주일 감사송 5
     "ordinary_5": {
-        title: { kr: "연중 주일 감사송 5", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên V", en: "Preface of Sundays in Ordinary Time V", jp: "年間主日の叙唱 V", la: "Praefatio V de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 5 : 창조", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN V - Việc sáng tạo", en: "PREFACE V OF THE SUNDAYS IN ORDINARY TIME - Creation", jp: "年間主日叙唱五", la: "PRÆFATIO V DE DOMINICIS “PER ANNUM”" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 만물을 지으시고 시간의 흐름을 정하셨으며 사람을 아버지의 모습으로 창조하시어 이 세상 온갖 경이를 다스리게 하셨나이다. 또한 우리 주 그리스도를 통하여 그 크신 업적을 바라보며 언제나 아버지를 찬양하게 하셨나이다.', sp_en: '', text_en: 'For you created all things of the world and have directed the changing of seasons, but you formed man in your own image and set humanity over the whole world in all its wonder, to rule in your name over all you have made and forever praise you in your mighty works, through Christ our Lord.', sp_la: '', text_la: 'Quia ómnia mundi eleménta fecísti, et vices témporum disposuísti variári; hóminem vero ad imáginem tuam cónditum, in divérsis opéribus cunctis mundi miráculis præésse voluísti, ut in tuo nómine dominarétur univérsis, et in tuis magnálibus te iúgiter glorificáret, per Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Chúa đã dựng nên muôn loài trong vũ trụ, và sắp đặt cho thời gian thay đổi tuần hoàn. Chúa đã dựng nên con người giống hình ảnh Chúa, và bắt vạn vật kỳ diệu phải suy phục con người, để họ thay quyền Chúa mà cai quản mọi loài Chúa đã dựng nên, và không ngừng ngợi khen Chúa vì những công trình kỳ diệu của Chúa, nhờ Đức Kitô, Chúa chúng con.', sp_jp: '', text_jp: '' },
@@ -1647,7 +1648,7 @@ globalThis.missaData = [
 
     // 31. 연중 주일 감사송 6
     "ordinary_6": {
-        title: { kr: "연중 주일 감사송 6", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên VI", en: "Preface of Sundays in Ordinary Time VI", jp: "年間主日の叙唱 VI", la: "Praefatio VI de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 6 : 영원한 파스카의 보증", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN VI - Bảo chứng của sự Phục Sinh muôn đời", en: "PREFACE VI OF THE SUNDAYS IN ORDINARY TIME - The pledge of the eternal Passover", jp: "年間主日叙唱六", la: "PRÆFATIO VI DE DOMINICIS “PER ANNUM” - De pignore æterni Paschatis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '저희는 주님 안에서 숨 쉬고 움직이며 살아가오니 이 세상에 사는 동안 날마다 주님의 인자하심을 체험할 뿐 아니라 영원한 생명을 보증으로 받았나이다. 주님께서는 예수님을 죽은 이들 가운데서 일으키신 성령을 저희에게 첫 선물로 주셨으니 저희 안에서도 파스카의 신비가 영원히 이어지기를 바라나이다.', sp_en: '', text_en: 'For in you we live and move and have our being, and while in this body we not only experience the daily effects of your care, but even now possess the pledge of life eternal. For, having received the first fruits of the Spirit, through whom you raised up Jesus from the dead, we hope for an everlasting share in the Paschal Mystery.', sp_la: '', text_la: 'In quo vívimus, movémur et sumus; et in hoc córpore constitúti, non solum pietátis tuæ cotidiános experímur efféctus, sed æternitátis étiam pignus habémus. Primítias enim Spíritus comprehendéntes, per quem suscitásti Iesum a mórtuis, paschále mystérium in nobis sperámus manére perpétuum.', sp_vn: '', text_vn: 'Thật vậy, chúng con đang sống, đang hoạt động và hiện hữu trong Chúa. Và hằng ngày, khi được thâu thập những ân trạch của Chúa, chúng con không những cảm nghiệm được ơn Chúa quan phòng, mà còn nắm giữ phần bảo chứng của sự sống muôn đời. Thật thế, vì chúng con được lãnh nhận những hoa quả đầu mùa của Chúa Thánh Thần, Đấng mà nhờ Người, Chúa đã cho Chúa Giêsu từ cõi chết sống lại, nên chúng con hy vọng mầu nhiệm Vượt Qua sẽ đem lại lợi ích muôn đời cho chúng con.', sp_jp: '', text_jp: '' },
@@ -1657,7 +1658,7 @@ globalThis.missaData = [
 
     // 32. 연중 주일 감사송 7
     "ordinary_7": {
-        title: { kr: "연중 주일 감사송 7", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên VII", en: "Preface of Sundays in Ordinary Time VII", jp: "年間主日の叙唱 VII", la: "Praefatio VII de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 7 : 그리스도의 순종과 우리의 구원", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN VII - Ơn cứu độ nhờ sự vâng phục của Đức Kitô", en: "PREFACE VII OF THE SUNDAYS IN ORDINARY TIME - Salvation through the obedience of Christ", jp: "年間主日叙唱七", la: "PRÆFATIO VII DE DOMINICIS “PER ANNUM” - De salute per obœdientiam Christi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '주님께서는 자비로우시어 저희를 극진히 사랑하셨으므로 죄인인 저희를 구원하시려고 구세주를 보내 주셨나이다. 성자께서는 죄 말고는 저희와 똑같이 되시어 주님께서는 성자 안에서 사랑하신 것을 저희 안에서도 사랑하시니 저희가 순종하지 않아 잃었던 당신의 은총을 성자의 순종으로 다시 찾게 하셨나이다.', sp_en: '', text_en: 'For you so loved the world that in your mercy you sent us the Redeemer, to live like us in all things but sin, so that you might love in us what you loved in your Son, by whose obedience we have been restored to those gifts of yours that, by sinning, we had lost in disobedience.', sp_la: '', text_la: 'Qui nos ita tua miseratióne dilexísti, ut, cum peccatóres essémus, Salvatórem nobis míttere dignaréris, cuius ad tuam formam nos in ómnibus, præter peccátum, fáceres aptári, ut amáres in nobis quod diligébas in Fílio, cuius obœdiéntia dona tua restituísti, quæ per inobœdiéntiam amiserámus peccándo.', sp_vn: '', text_vn: 'Chúa đã thương xót và yêu thương chúng con, đến nỗi khi chúng con là những kẻ tội lỗi, Chúa đã đoái thương sai Đấng Cứu Chuộc đến với chúng con. Chúa muốn Người sống mọi đàng giống như chúng con, ngoại trừ tội lỗi, để Chúa yêu thương nơi chúng con điều Chúa đã yêu thương nơi Con Chúa; và nhờ sự vâng lời của Người, Chúa đã phục hồi cho chúng con những ân huệ mà chúng con đã đánh mất vì bất tuân lệnh Chúa.', sp_jp: '', text_jp: '' },
@@ -1667,7 +1668,7 @@ globalThis.missaData = [
 
     // 33. 연중 주일 감사송 8
     "ordinary_8": {
-        title: { kr: "연중 주일 감사송 8", vn: "Kinh Tiền Tụng Chúa Nhật Thường Niên VIII", en: "Preface of Sundays in Ordinary Time VIII", jp: "年間主日の叙唱 VIII", la: "Praefatio VIII de Dominicis per Annum" },
+        title: { kr: "연중 주일 감사송 8 : 삼위의 일치와 교회의 일치", vn: "KINH TIỀN TỤNG CHÚA NHẬT THƯỜNG NIÊN VIII - Hội Thánh được liên kết nhờ sự duy nhất của Ba Ngôi", en: "PREFACE VIII OF THE SUNDAYS IN ORDINARY TIME - The Church united by the unity of the Trinity", jp: "年間主日叙唱八", la: "PRÆFATIO VIII DE DOMINICIS “PER ANNUM” - De Ecclesia adunata ex unitate Trinitatis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '주님께서는 죄로 멀어진 자녀들을 성자의 피와 성령의 힘으로 다시 한데 모으셨나이다. 그리하여 일체를 이루시는 삼위의 신비로 모인 백성이 되게 하시고 주님의 영광을 찬미하는 그리스도의 몸이며 성령의 궁전인 교회가 되게 하셨나이다.', sp_en: '', text_en: 'For, when your children were scattered afar by sin, through the Blood of your Son and the power of the Spirit, you gathered them again to yourself, that a people, formed as one by the unity of the Trinity, made the body of Christ and the temple of the Holy Spirit, might, to the praise of your manifold wisdom, be manifest as the Church.', sp_la: '', text_la: 'Quia fílios, quos longe peccáti crimen abstúlerat, per sánguinem Fílii tui Spiritúsque virtúte, in unum ad te dénuo congregáre voluísti: ut plebs, de unitáte Trinitátis adunáta, corpus Christi templúmque Spíritus Sancti noscerétur Ecclésia, ad laudem multifórmis sapiéntiæ tuæ.', sp_vn: '', text_vn: 'Vì Chúa muốn nhờ Máu Con Chúa và quyền năng Chúa Thánh Thần quy tụ lại những con cái đã bị tội lỗi làm cho tản mác, để một dân tộc được hiệp nhất nhờ sự hiệp nhất của Chúa Ba Ngôi, được gọi là Hội Thánh, là Thân Thể Chúa Kitô và Đền Thờ Chúa Thánh Thần, để ca ngợi sự khôn ngoan muôn hình vạn trạng của Chúa.', sp_jp: '', text_jp: '' },
@@ -1677,7 +1678,7 @@ globalThis.missaData = [
 
     // 34. 공통 감사송 1
     "common_1": {
-        title: { kr: "공통 감사송 1", vn: "Kinh Tiền Tụng Chung I", en: "Common Preface I", jp: "共通叙唱 I", la: "Praefatio Communis I" },
+        title: { kr: "공통 감사송 1 : 그리스도 안에서 만물이 새로워짐", vn: "KINH TIỀN TỤNG CHUNG I - Canh tân vạn vật trong Đức Kitô", en: "COMMON PREFACE I - The renewal of all things in Christ", jp: "共通叙唱一「キリストにおける万物の刷新」", la: "PRÆFATIO COMMUNIS I" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 기꺼이 모든 것을 그리스도 안에서 새롭게 하시어 모든 이에게 그 은혜를 가득히 주셨나이다. 그리스도께서는 참된 하느님이시나 자신을 비우시고 십자가에서 흘리신 피로 세상을 평화롭게 하셨나이다. 그리하여 아버지께서는 만물 위에 그분을 높이 올리시고 그분께 순종하는 모든 사람에게 구원의 원천이 되게 하셨나이다.', sp_en: '', text_en: 'In him you have been pleased to renew all things, giving us all a share in his fullness. For though he was in the form of God, he emptied himself and by the blood of his Cross brought peace to all creation. Therefore he has been exalted above all things, and to all who obey him, has become the source of eternal salvation.', sp_la: '', text_la: 'In quo ómnia instauráre tibi complácuit, et de plenitúdine eius nos omnes accípere tribuísti. Cum enim in forma Dei esset, exinanívit semetípsum, ac per sánguinem crucis suæ pacificávit univérsa; unde exaltátus est super ómnia et ómnibus obtemperántibus sibi factus est causa salútis ætérnæ.', sp_vn: '', text_vn: 'Trong Người, Chúa đã muốn canh tân mọi sự và cho hết thảy chúng con được thông phần sự sung mãn của Người. Bởi vì, tuy vốn là Thiên Chúa, Người đã tự bỏ mình đi, và nhờ Máu Người đổ ra trên thập giá, Người đã hòa giải muôn loài. Bởi đó, Người đã được suy tôn trên hết mọi sự và trở nên căn nguyên cứu độ vĩnh cửu cho tất cả những ai vâng phục Người.', sp_jp: '', text_jp: '' },
@@ -1687,7 +1688,7 @@ globalThis.missaData = [
 
     // 35. 공통 감사송 2
     "common_2": {
-        title: { kr: "공통 감사송 2", vn: "Kinh Tiền Tụng Chung II", en: "Common Preface II", jp: "共通叙唱 II", la: "Praefatio Communis II" },
+        title: { kr: "공통 감사송 2 : 그리스도를 통한 구원", vn: "KINH TIỀN TỤNG CHUNG II - Ơn cứu độ nhờ Đức Kitô", en: "COMMON PREFACE II - Salvation through Christ", jp: "共通叙唱二「キリストによる救い」", la: "PRÆFATIO COMMUNIS II - De salute per Christum" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 인간을 선으로 창조하시고 정의로 책벌하셨으나 우리 주 그리스도를 통하여 자비로 구원하셨나이다.', sp_en: '', text_en: 'For in goodness you created man and, when he was justly condemned, in mercy you redeemed him, through Christ our Lord.', sp_la: '', text_la: 'Qui bonitáte hóminem condidísti, ac iustítia damnátum misericórdia redemísti: per Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Do lòng nhân hậu, Chúa đã tạo dựng con người, và khi con người bị luận phạt công minh, Chúa đã thương tình cứu chuộc, nhờ Đức Kitô, Chúa chúng con.', sp_jp: '', text_jp: '' },
@@ -1697,7 +1698,7 @@ globalThis.missaData = [
 
     // 36. 공통 감사송 3
     "common_3": {
-        title: { kr: "공통 감사송 3", vn: "Kinh Tiền Tụng Chung III", en: "Common Preface III", jp: "共通叙唱 III", la: "Praefatio Communis III" },
+        title: { kr: "공통 감사송 3 : 인간의 창조와 회복에 대한 하느님 찬미", vn: "KINH TIỀN TỤNG CHUNG III - Ca ngợi Thiên Chúa tạo dựng và canh tân loài người", en: "COMMON PREFACE III - Praise to God for the creation and restoration of the human race", jp: "共通叙唱三「人間の創造と回復に対する神への賛美」", la: "PRÆFATIO COMMUNIS III - Laudes Deo pro creatione et reformatione hominis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 사랑하시는 아드님을 통하여 인류를 창조하셨듯이 또한 인자로이 인류를 구원하셨나이다. 그러므로 창조된 만물이 마땅히 주님을 섬기고 구원된 모든 사람이 다 함께 주님을 찬송하며 성인들도 한마음으로 찬미하나이다.', sp_en: '', text_en: 'For just as through your beloved Son you created the human race, so also through him with great goodness you formed it anew. And so, it is right that all your creatures serve you, all the redeemed praise you, and all your Saints with one heart bless you.', sp_la: '', text_la: 'Qui per Fílium dilectiónis tuæ, sicut cónditor géneris es humáni, ita benigníssimus reformátor. Unde mérito tibi cunctæ sérviunt creatúræ, te redémpti rite colláudant univérsi, et uno Sancti tui te corde benedícunt.', sp_vn: '', text_vn: 'Nhờ Con yêu dấu của Chúa, Chúa đã tác thành nhân loại thế nào thì Chúa cũng lấy lòng rất nhân từ mà tái tạo như vậy. Bởi đó, Chúa đáng được muôn thụ tạo phụng thờ, mọi người được cứu chuộc ở khắp nơi cung kính ngợi khen, và các Thánh đồng tâm chúc tụng.', sp_jp: '', text_jp: '' },
@@ -1707,7 +1708,7 @@ globalThis.missaData = [
 
     // 37. 공통 감사송 4
     "common_4": {
-        title: { kr: "공통 감사송 4", vn: "Kinh Tiền Tụng Chung IV", en: "Common Preface IV", jp: "共通叙唱 IV", la: "Praefatio Communis IV" },
+        title: { kr: "공통 감사송 4 : 하느님의 선물인 찬미", vn: "KINH TIỀN TỤNG CHUNG IV - Được ca ngợi Chúa là một hồng ân", en: "COMMON PREFACE IV - Praise, the gift of God", jp: "共通叙唱四「神のたまものである賛美」", la: "PRÆFATIO COMMUNIS IV - De laude, dono Dei" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께는 저희의 찬미가 필요하지 않으나 저희가 감사를 드림은 아버지의 은사이옵니다. 저희 찬미가 아버지께는 아무런 보탬이 되지 않으나 저희에게는 주 그리스도를 통한 구원에 도움이 되나이다.', sp_en: '', text_en: 'For, although you have no need of our praise, yet our thanksgiving is itself your gift, since our praises add nothing to your greatness but profit us for salvation, through Christ our Lord.', sp_la: '', text_la: 'Quia, cum nostra laude non égeas, tuum tamen est donum quod tibi grates rependámus, nam te non augent nostra præcónia, sed nobis profíciunt ad salútem, per Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Tuy Chúa không cần chúng con ca tụng, nhưng việc chúng con cảm tạ Chúa lại là một hồng ân Chúa ban, vì những lời chúng con ca tụng chẳng thêm gì cho Chúa, nhưng đem lại cho chúng con ơn cứu độ, nhờ Đức Kitô, Chúa chúng con.', sp_jp: '', text_jp: '' },
@@ -1717,7 +1718,7 @@ globalThis.missaData = [
 
     // 38. 공통 감사송 5
     "common_5": {
-        title: { kr: "공통 감사송 5", vn: "Kinh Tiền Tụng Chung V", en: "Common Preface V", jp: "共通叙唱 V", la: "Praefatio Communis V" },
+        title: { kr: "공통 감사송 5 : 그리스도의 신비 선포", vn: "KINH TIỀN TỤNG CHUNG V - Công bố mầu nhiệm của Đức Kitô", en: "COMMON PREFACE V - The proclamation of the mystery of Christ", jp: "共通叙唱五「キリストの神秘の宣言」", la: "PRÆFATIO COMMUNIS V - Proclamatio mysterii Christi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí Thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '저희는 참된 사랑으로 그리스도의 죽음을 기념하고 활기찬 믿음으로 그 부활을 고백하며 한결같은 희망으로 영광스러운 재림을 기다리나이다.', sp_en: '', text_en: 'His Death we celebrate in love, his Resurrection we confess with living faith, and his Coming in glory we await with unwavering hope.', sp_la: '', text_la: 'Cuius mortem in caritáte celebrámus, resurrectiónem fide vívida confitémur, advéntum in glória spe firmíssima præstolámur.', sp_vn: '', text_vn: 'Chúng con tôn vinh Người chịu chết, vì yêu thương, chúng con vững tin tuyên xưng Người sống lại, và bền lòng trông cậy đợi chờ Người đến trong vinh quang.', sp_jp: '', text_jp: '' },
@@ -1727,7 +1728,7 @@ globalThis.missaData = [
 
     // PDF 원문 대조본: 공통 감사송 6
     "common_6": {
-        title: { kr: "공통 감사송 6", vn: "Kinh Tiền Tụng Chung VI", en: "Common Preface VI", jp: "共通叙唱 VI", la: "Praefatio Communis VI" },
+        title: { kr: "공통 감사송 6 : 그리스도 안에서의 구원 신비", vn: "KINH TIỀN TỤNG CHUNG VI - Mầu nhiệm cứu độ trong Đức Kitô", en: "COMMON PREFACE VI - The mystery of salvation in Christ", jp: "共通叙唱六「キリストにおける救いの神秘」", la: "PRÆFATIO COMMUNIS VI - De mysterio salutis in Christo" },
         content: [
             { sp_kr: '✚',
                 text_kr: '거룩하신 아버지, 사랑하시는 성자 예수 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.',
@@ -1766,7 +1767,7 @@ globalThis.missaData = [
 
     // 40. 위령 감사송 1
     "dead_1": {
-        title: { kr: "위령 감사송 1", vn: "Kinh Tiền Tụng Cầu Cho Tín Hữu Qua Đời I", en: "Preface for the Dead I", jp: "死者のための叙唱 I", la: "Praefatio I de Defunctis" },
+        title: { kr: "위령 감사송 1 : 그리스도 안에서의 부활 희망", vn: "KINH TIỀN TỤNG I - CẦU CHO NHỮNG NGƯỜI ĐÃ QUA ĐỜI", en: "PREFACE I FOR THE DEAD - The hope of resurrection in Christ", jp: "死者叙唱一", la: "PRÆFATIO I DE DEFUNCTIS - De spe resurrectionis in Christo" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도 안에서 복된 부활의 희망이 저희에게 빛나게 하셨으니, 죽어야 할 운명을 지닌 저희가 다가오는 영원한 생명의 약속으로 위로를 받나이다.', sp_en: '', text_en: 'In him the hope of blessed resurrection has dawned, that those saddened by the certainty of dying might be consoled by the promise of immortality to come.', sp_la: '', text_la: 'In quo nobis spes beátæ resurrectiónis effúlsit, ut, quos contrístat certa moriéndi condício, eósdem consolétur futúræ immortalitátis promíssio.', sp_vn: '', text_vn: 'Nơi Người, niềm hy vọng sống lại vinh phúc đã chiếu tỏ trên chúng con, để những ai buồn sầu vì số phận chắc chắn phải chết, cũng được an ủi vì Chúa đã hứa ban phúc trường sinh.', sp_jp: '', text_jp: '' },
@@ -1777,7 +1778,7 @@ globalThis.missaData = [
 
     // 41. 위령 감사송 2
     "dead_2": {
-        title: { kr: "위령 감사송 2", vn: "Kinh Tiền Tụng Cầu Cho Tín Hữu Qua Đời II", en: "Preface for the Dead II", jp: "死者のための叙唱 II", la: "Praefatio II de Defunctis" },
+        title: { kr: "위령 감사송 2 : 그리스도께서 돌아가시어 우리가 살게 됨", vn: "KINH TIỀN TỤNG II - CẦU CHO NHỮNG NGƯỜI ĐÃ QUA ĐỜI", en: "PREFACE II FOR THE DEAD - Christ died so that we might live", jp: "死者叙唱二", la: "PRÆFATIO II DE DEFUNCTIS - Christus mortuus est pro vita nostra" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 홀로 죽음을 겪으시어 모든 인간이 죽음에서 벗어나게 하셨나이다. 또한 그분께서는 홀로 죽으시어 저희 모두가 주님을 위하여 영원히 살게 하셨나이다.', sp_en: '', text_en: 'For as one alone he accepted death, so that we might all escape from dying; as one man he chose to die, so that in your sight we all might live for ever.', sp_la: '', text_la: 'Qui unus mortem suscépit, ut omnes a morte liberarémur; qui unus mori dignátus est, ut omnes tibi viverémus in ævum.', sp_vn: '', text_vn: 'Vì một mình Người đã chịu chết để tất cả chúng con khỏi phải chết; một mình Người đã đoái thương chịu chết để tất cả chúng con được sống luôn mãi cho Chúa.', sp_jp: '', text_jp: '' },
@@ -1787,7 +1788,7 @@ globalThis.missaData = [
 
     // 42. 위령 감사송 3
     "dead_3": {
-        title: { kr: "위령 감사송 3", vn: "Kinh Tiền Tụng Cầu Cho Tín Hữu Qua Đời III", en: "Preface for the Dead III", jp: "死者のための叙唱 III", la: "Praefatio III de Defunctis" },
+        title: { kr: "위령 감사송 3 : 구원이시며 생명이신 그리스도", vn: "KINH TIỀN TỤNG III - CẦU CHO NHỮNG NGƯỜI ĐÃ QUA ĐỜI", en: "PREFACE III FOR THE DEAD - Christ, the salvation and the life", jp: "死者叙唱三", la: "PRÆFATIO III DE DEFUNCTIS - Christus, salus et vita" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 세상의 구원이시고 사람들의 생명이시며 죽은 이들의 부활이시옵니다.', sp_en: '', text_en: 'For he is the salvation of the world, the life of the human race, the resurrection of the dead.', sp_la: '', text_la: 'Qui est salus mundi, vita hóminum, resurréctio mortuórum.', sp_vn: '', text_vn: 'Người là ơn cứu độ của thế gian, là sự sống của nhân loại và là sự sống lại của kẻ chết.', sp_jp: '', text_jp: '' },
@@ -1797,7 +1798,7 @@ globalThis.missaData = [
 
     // 43. 위령 감사송 4
     "dead_4": {
-        title: { kr: "위령 감사송 4", vn: "Kinh Tiền Tụng Cầu Cho Tín Hữu Qua Đời IV", en: "Preface for the Dead IV", jp: "死者のための叙唱 IV", la: "Praefatio IV de Defunctis" },
+        title: { kr: "위령 감사송 4 : 지상 생활에서 천상 영광으로", vn: "KINH TIỀN TỤNG IV - CẦU CHO NHỮNG NGƯỜI ĐÃ QUA ĐỜI", en: "PREFACE IV FOR THE DEAD - From earthly life to heavenly glory", jp: "死者叙唱四", la: "PRÆFATIO IV DE DEFUNCTIS - De vita terrena ad gloriam cælestem" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '주님의 명으로 태어나고 주님의 뜻으로 다스려지는 저희는 죄의 법에 따라 본디 흙에서 왔으니 흙으로 돌아가나이다.', sp_en: '', text_en: 'For it is at your summons that we come to birth, by your will that we are governed, and at your command that we return, on account of sin, to that earth from which we came.', sp_la: '', text_la: 'Cuius império náscimur, cuius arbítrio régimur, cuius præcépto in terra, de qua sumpti sumus, peccáti lege absólvimur.', sp_vn: '', text_vn: 'Do lệnh Chúa chúng con được sinh ra, do thánh ý Chúa chúng con được hướng dẫn; và vì luật định của tội lỗi, do phán quyết của Chúa chúng con phải trở về bụi đất là nơi chúng con được tạo thành.', sp_jp: '', text_jp: '' },
@@ -1808,7 +1809,7 @@ globalThis.missaData = [
 
     // 44. 위령 감사송 5
     "dead_5": {
-        title: { kr: "위령 감사송 5", vn: "Kinh Tiền Tụng Cầu Cho Tín Hữu Qua Đời V", en: "Preface for the Dead V", jp: "死者のための叙唱 V", la: "Praefatio V de Defunctis" },
+        title: { kr: "위령 감사송 5 : 그리스도의 승리를 통한 우리의 부활", vn: "KINH TIỀN TỤNG V - CẦU CHO NHỮNG NGƯỜI ĐÃ QUA ĐỜI", en: "PREFACE V FOR THE DEAD - Our resurrection through the victory of Christ", jp: "死者叙唱五", la: "PRÆFATIO V DE DEFUNCTIS - De resurrectione nostra per victoriam Christi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 저희를 위하여 십자가의 고통을 겪으심으로써 주님을 믿는 저희가 죽음의 멍에를 벗어 버리게 하셨나이다.', sp_en: '', text_en: 'For even though by our own fault we perish, yet by your compassion and your grace, when seized by death according to our sins, we are resolved through Christ\'s victory to be with you.', sp_la: '', text_la: 'Qui nostram mortem moriéndo destrúxit, ac vitam resurgéndo reparávit.', sp_vn: '', text_vn: 'Người đã chịu khổ hình thập giá vì chúng con, để chúng con là những kẻ tin vào Chúa, được gỡ bỏ ách tử thần.', sp_jp: '', text_jp: '' },
@@ -1819,7 +1820,7 @@ globalThis.missaData = [
 
     // 45. 성모 감사송 1
     "mary_1": {
-        title: { kr: "성모 감사송 1", vn: "Kinh Tiền Tụng Đức Trinh Nữ Maria I", en: "Preface of the Blessed Virgin Mary I", jp: "聖母マリアの叙唱 I", la: "Praefatio I de Beata Maria Virgine" },
+        title: { kr: "복되신 동정 마리아 감사송 1 : 어머니이신 마리아", vn: "KINH TIỀN TỤNG ĐỨC MẸ I - Thiên chức làm Mẹ của Đức Trinh Nữ Maria", en: "PREFACE I OF THE BLESSED VIRGIN MARY - The Motherhood of the Blessed Virgin Mary", jp: "聖母マリア叙唱一", la: "PRÆFATIO I DE BEATA MARIA VIRGINE - De Maternitate beatæ Mariæ Virginis" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 평생 동정이신 마리아를 기리며 주님을 찬송하고 찬양하며 영광을 드림은 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, and to praise, bless, and glorify your name on the [...] of the Blessed Virgin Mary.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: Et te in [...] beátæ Maríæ semper Vírginis collaudáre, benedícere et prædicáre.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con; cùng với toàn thể Giáo Hội, chúng con ca ngợi, chúc tụng và tôn vinh Chúa trong ngày lễ [...] Đức Maria trọn đời đồng trinh.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '마리아께서는 성령의 이끄심으로 외아들을 잉태하시고 동정의 영광을 간직한 채 이 세상에 영원한 빛이신 우리 주 예수 그리스도를 낳으셨나이다.', sp_en: '', text_en: 'For by the overshadowing of the Holy Spirit she conceived your Only Begotten Son, and without losing the glory of virginity, brought forth into the world the eternal Light, Jesus Christ our Lord.', sp_la: '', text_la: 'Quæ et Unigénitum tuum Sancti Spíritus obumbratióne concépit, et, virginitátis glória pérmanens, lumen ætérnum mundo effúdit, Iesum Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Vì nhờ quyền năng Chúa Thánh Thần, Đức Maria đã thụ thai Con Một Chúa, và đã chiếu giãi vào thế gian ánh sáng vĩnh cửu là Đức Giêsu Kitô, Chúa chúng con, mà vẫn còn rạng ngời vinh quang trinh tiết.', sp_jp: '', text_jp: '' },
@@ -1829,7 +1830,7 @@ globalThis.missaData = [
 
     // 46. 성모 감사송 2 (교회의 어머니이신 마리아)
     "mary_2": {
-        title: { kr: "성모 감사송 2", vn: "Kinh Tiền Tụng Đức Trinh Nữ Maria II", en: "Preface of the Blessed Virgin Mary II", jp: "聖母マリアの叙唱 II", la: "Praefatio II de Beata Maria Virgine" },
+        title: { kr: "복되신 동정 마리아 감사송 2 : 마리아의 노래로 하느님을 찬미하는 교회", vn: "KINH TIỀN TỤNG ĐỨC MẸ II - Hội Thánh dùng lời Đức Trinh Nữ Maria", en: "PREFACE II OF THE BLESSED VIRGIN MARY - The Church praises God with the words of Mary", jp: "聖母マリア叙唱二", la: "PRÆFATIO II DE BEATA MARIA VIRGINE - Ecclesia, verbis Mariæ, laudes Deo persolvit" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, and to praise, bless, and glorify your name on the [...] of the Blessed Virgin Mary.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: Et te in [...] beátæ Maríæ semper Vírginis collaudáre, benedícere et prædicáre.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con; cùng với toàn thể Giáo Hội, chúng con ca ngợi, chúc tụng và tôn vinh Chúa trong ngày lễ [...] Đức Maria trọn đời đồng trinh.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '마리아께서는 주님의 말씀을 티 없는 마음으로 받아들이시어 동정녀의 몸으로 잉태하셨으며 교회의 시작인 그리스도를 낳으시어 이스라엘의 기다림을 채워 주셨나이다.', sp_en: '', text_en: 'For by the overshadowing of the Holy Spirit she conceived your Only Begotten Son, and without losing the glory of virginity, brought forth into the world the eternal Light, Jesus Christ our Lord.', sp_la: '', text_la: 'Quæ et Unigénitum tuum Sancti Spíritus obumbratióne concépit, et, virginitátis glória pérmanens, lumen ætérnum mundo effúdit, Iesum Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Bởi vì, khi nhận lãnh Ngôi Lời của Chúa trong tâm hồn tinh sạch, Đức Maria đã thụ thai Người trong cung lòng trinh tiết, và khi sinh hạ Đấng Tạo Hóa, Mẹ đã nuôi dưỡng Hội Thánh từ lúc khởi thủy.', sp_jp: '', text_jp: '' },
@@ -1840,7 +1841,7 @@ globalThis.missaData = [
 
     // 47. 사도 감사송 1
     "apostles_1": {
-        title: { kr: "사도 감사송 1", vn: "Kinh Tiền Tụng Các Tông Đồ I", en: "Preface of Apostles I", jp: "使徒の叙唱 I", la: "Praefatio I de Apostolis" },
+        title: { kr: "사도 감사송 1 : 하느님 백성의 목자인 사도", vn: "KINH TIỀN TỤNG CÁC THÁNH TÔNG ĐỒ I - Các Tông Đồ là mục tử của Dân Thiên Chúa", en: "PREFACE I OF APOSTLES - The Apostles, shepherds of God’s people", jp: "使徒叙唱一", la: "PRÆFATIO I DE APOSTOLIS - De Apostolis pastoribus populi Dei" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '영원한 목자이신 주님께서는 양 떼를 버려두지 않으시고 거룩한 사도들을 통하여 끊임없이 보호하시며 주님의 대리자인 성직자들을 세우시어 이 양 떼를 이끌게 하셨나이다.', sp_en: '', text_en: 'For you, eternal Shepherd, do not desert your flock, but through the blessed Apostles watch over it and protect it always, so that it may be governed by those you have appointed shepherds to lead it in the name of your Son.', sp_la: '', text_la: 'Qui gregem tuum, Pastor ætérne, non déseris, sed per beátos Apóstolos contínua protectióne custódis, ut iísdem rectóribus gubernétur, quos óperis tui vicários eídem contulísti præésse pastóres.', sp_vn: '', text_vn: 'Lạy Vị Mục Tử muôn đời, Chúa không bỏ rơi đoàn chiên Chúa, nhưng nhờ các thánh Tông Đồ, Chúa luôn che chở giữ gìn, để đoàn chiên được hướng dẫn do các vị lãnh đạo Chúa đã đặt làm mục tử thay quyền Chúa Kitô.', sp_jp: '', text_jp: '' },
@@ -1850,7 +1851,7 @@ globalThis.missaData = [
 
     // 48. 사도 감사송 2
     "apostles_2": {
-        title: { kr: "사도 감사송 2", vn: "Kinh Tiền Tụng Các Tông Đồ II", en: "Preface of Apostles II", jp: "使徒の叙唱 II", la: "Praefatio II de Apostolis" },
+        title: { kr: "사도 감사송 2 : 교회의 기초이며 증거자인 사도", vn: "KINH TIỀN TỤNG THÁNH TÔNG ĐỒ II - Các Tông Đồ là nền tảng và chứng nhân", en: "PREFACE II OF APOSTLES - The apostolic foundation and witness", jp: "使徒叙唱二", la: "PRÆFATIO II DE APOSTOLIS - De apostolico fundamento et testimonio" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '주님께서는 사도들의 튼튼한 터전 위에 교회를 세우시어 세상 끝날까지 주님 거룩함의 영원한 표지가 되게 하시고 모든 사람에게 구원의 참빛을 비추게 하셨나이다.', sp_en: '', text_en: 'For you have built your Church to stand firm on apostolic foundations, to be a lasting sign of your holiness on earth and offer all humanity your heavenly teaching.', sp_la: '', text_la: 'Qui ecclésiam tuam in apostólicis tribuísti consístere fundaméntis, ut signum sanctitátis tuæ in terris manéret in ævum, et cæléstia præbéret cunctis homínibus documénta.', sp_vn: '', text_vn: 'Chúa đã cho Hội Thánh được xây dựng trên nền tảng các Tông Đồ, để Hội Thánh luôn là dấu chỉ sự thánh thiện của Chúa tại trần gian, và truyền bá giáo lý nước trời cho mọi người.', sp_jp: '', text_jp: '' },
@@ -1859,7 +1860,7 @@ globalThis.missaData = [
     },
     // 49. 순교자 감사송
     "martyrs": {
-        title: { kr: "순교자 감사송", vn: "Kinh Tiền Tụng Các Thánh Tử Đạo", en: "Preface of Holy Martyrs", jp: "殉教者の叙唱", la: "Praefatio de Martyribus" },
+        title: { kr: "순교자 감사송 1 : 순교자들의 증거와 모범", vn: "KINH TIỀN TỤNG THÁNH TỬ ĐẠO I - Dấu chỉ và gương sáng của các vị Tử Đạo", en: "PREFACE I OF HOLY MARTYRS - The sign and example of martyrdom", jp: "殉教者叙唱一", la: "PRÆFATIO I DE SANCTIS MARTYRIBUS - De signo et exemplo martyrii" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '복된 순교자 (...)은(는) 그리스도를 본받아 하느님의 이름을 영광스럽게 하려고 피를 흘렸으며 주님의 놀라운 권능을 드러내었나이다.', sp_en: '', text_en: 'For the blood of your blessed Martyr N., poured out like Christ\'s to glorify your name, shows forth your marvelous works,', sp_la: '', text_la: 'Quóniam beáti Mártyris N. pro confessióne nóminis tui, ad imitatiónem Christi, sanguis effúsus tua magnália maniféstat,', sp_vn: '', text_vn: 'Vì máu của Thánh Tử Đạo ... đã đổ ra như Đức Kitô để tuyên xưng danh Chúa, đã biểu dương những kỳ công của Chúa.', sp_jp: '', text_jp: '' },
@@ -1870,7 +1871,7 @@ globalThis.missaData = [
 
     // 50. 목자 감사송
     "pastors": {
-        title: { kr: "목자 감사송", vn: "Kinh Tiền Tụng Các Mục Tử", en: "Preface of Holy Pastors", jp: "牧者の叙唱", la: "Praefatio de Pastoribus" },
+        title: { kr: "목자 감사송 : 교회 안에 계신 거룩한 목자", vn: "KINH TIỀN TỤNG THÁNH MỤC TỬ - Sự hiện diện của các Thánh Mục Tử trong Hội Thánh", en: "PREFACE OF HOLY PASTORS - The presence of holy Pastors in the Church", jp: "聖なる牧者叙唱「教会における聖なる牧者の現存」", la: "PRÆFATIO DE SANCTIS PASTORIBUS - De præsentia sanctorum Pastorum in Ecclesia" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 복된 (...)의 축일을 지내며 기뻐하는 교회에 그의 훌륭한 삶으로 모범을 주시고 훌륭한 가르침으로 깨우쳐 주시며 그의 간절한 기도로 보호해 주시나이다.', sp_en: '', text_en: 'For, as on the festival of Saint N. you bid your Church rejoice, so, too, you strengthen her by the example of his holy life, teach her by his words of preaching, and keep her safe in answer to his prayers.', sp_la: '', text_la: 'Qui pro festivitáte sancti N. Ecclésiam tuam gáudio tríbuis amplificári, eius tiám exémplo piæ conversatiónis róboras, verbo prædicatiónis érudis, et grata supplicatióne tuéris.', sp_vn: '', text_vn: 'Trong ngày Lễ Nhớ thánh ..., Chúa cho Hội Thánh được hân hoan, thì Chúa cũng dùng gương sáng đời sống đạo đức của ngài để củng cố, dùng lời giảng dạy của ngài để giáo huấn, và nhờ ngài cầu thay nguyện giúp, Chúa giữ gìn Hội Thánh.', sp_jp: '', text_jp: '' },
@@ -1880,7 +1881,7 @@ globalThis.missaData = [
 
     // 51. 동정녀와 수도자 감사송
     "virgins_and_religious": {
-        title: { kr: "동정녀와 수도자 감사송", vn: "Kinh Tiền Tụng Các Thánh Đồng Trinh Và Tu Sĩ", en: "Preface of Holy Virgins and Religious", jp: "おとめと修道者の叙唱", la: "Praefatio de Virginibus et Religiosis" },
+        title: { kr: "동정녀와 수도자 감사송 : 하느님께 봉헌된 삶의 표지", vn: "KINH TIỀN TỤNG THÁNH TRINH NỮ – TU SĨ - Dấu chỉ của đời tận hiến cho Thiên Chúa", en: "PREFACE OF HOLY VIRGINS AND RELIGIOUS - The sign of a life consecrated to God", jp: "聖なるおとめと修道者叙唱「神に奉献された生活のしるし」", la: "PRÆFATIO DE SANCTIS VIRGINIBUS ET RELIGIOSIS - De signo vitæ Deo consecratæ" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '하느님 나라를 위하여 그리스도께 자신을 바친 성인들을 기리며 주님의 섭리를 찬양함은 참으로 마땅하옵니다.', sp_en: '', text_en: 'For in the Saints who consecrated themselves to Christ for the sake of the Kingdom of Heaven, it is right to celebrate the wonders of your providence,', sp_la: '', text_la: 'In Sanctis enim, qui pro cælórum regno Christo se devovérunt, providéntiam tuam mirábilem celebráre concéditur,', sp_vn: '', text_vn: 'Thật vậy, nơi các Thánh là những người đã hiến mình cho Đức Kitô vì Nước Trời, chúng con được ca ngợi sự quan phòng kỳ diệu của Chúa,', sp_jp: '', text_jp: '' },
@@ -1890,7 +1891,7 @@ globalThis.missaData = [
     },
     // 52. 성인 감사송 1
     "saints_1": {
-        title: { kr: "성인 감사송 1", vn: "Kinh Tiền Tụng Các Thánh I", en: "Preface of Holy Men and Women I", jp: "諸聖人の叙唱 I", la: "Praefatio I de Sanctis" },
+        title: { kr: "성인 감사송 1 : 성인들의 영광", vn: "KINH TIỀN TỤNG CÁC THÁNH I - Vinh quang của các Thánh", en: "PREFACE I OF SAINTS - The glory of the Saints", jp: "諸聖人叙唱一「聖人の栄光」", la: "PRÆFATIO I DE SANCTIS - De gloria Sanctorum" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 성인들의 모임에서 찬양을 받으시며 그들의 공로에 상을 주시어 아버지의 은총을 빛내시나이다.', sp_en: '', text_en: 'For you are praised in the company of your Saints and, in crowning their merits, you crown your own gifts.', sp_la: '', text_la: 'Qui in Sanctórum concílio celebráris, et eórum coronándo mérita corónas dona tua.', sp_vn: '', text_vn: 'Chúa được tôn vinh khi cộng đoàn các thánh được ca ngợi, và khi tuyên dương công trạng các ngài là Chúa tuyên dương những hồng ân của Chúa.', sp_jp: '', text_jp: '' },
@@ -1901,7 +1902,7 @@ globalThis.missaData = [
 
     // 53. 성인 감사송 2
     "saints_2": {
-        title: { kr: "성인 감사송 2", vn: "Kinh Tiền Tụng Các Thánh II", en: "Preface of Holy Men and Women II", jp: "諸聖人の叙唱 II", la: "Praefatio II de Sanctis" },
+        title: { kr: "성인 감사송 2 : 성인들 안에서 이루어진 하느님의 일", vn: "KINH TIỀN TỤNG CÁC THÁNH II - Hoạt động của các Thánh", en: "PREFACE II OF SAINTS - The action of the Saints", jp: "諸聖人叙唱二", la: "PRÆFATIO II DE SANCTIS - De actione Sanctorum" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 성인들의 놀라운 신앙 고백으로 교회에 끊임없이 새로운 활력을 주시고 저희를 향한 아버지의 확실한 사랑을 보여 주시나이다.', sp_en: '', text_en: 'For in the marvelous confession of your Saints, you make your Church fruitful with strength ever new and offer us sure signs of your love.', sp_la: '', text_la: 'Qui Ecclésiam tuam, nova semper Sanctórum virtúte fecúndans, signa tui amóris præbes evidéntia,', sp_vn: '', text_vn: 'Chúa luôn dùng sức mạnh mới của các thánh mà làm cho Hội Thánh được phong phú, và tỏ cho chúng con những bằng chứng hiển nhiên của tình thương Chúa.', sp_jp: '', text_jp: '' },
@@ -1922,7 +1923,7 @@ globalThis.missaData = [
 
     // 55. 세례자 요한 감사송
     "john_the_baptist": {
-        title: { kr: "세례자 요한 감사송", vn: "Kinh Tiền Tụng Thánh Gioan Tẩy Giả", en: "Preface of Saint John the Baptist", jp: "洗礼者ヨハネの叙唱", la: "Praefatio de S. Ioanne Baptista" },
+        title: { kr: "세례자 요한 감사송 : 선구자의 사명", vn: "KINH TIỀN TỤNG SINH NHẬT THÁNH GIOAN TẨY GIẢ - Sứ mạng của vị Tiền Hô", en: "PREFACE OF THE NATIVITY OF SAINT JOHN THE BAPTIST - The mission of the Precursor", jp: "洗礼者聖ヨハネ誕生叙唱「先駆者の使命」", la: "PRÆFATIO DE NATIVITATE SANCTI IOANNIS BAPTISTÆ" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 여인에게서 태어난 이들 가운데 선구자 복된 요한을 특별한 영예로 들어 높이셨나이다. 요한은 모태에서부터 구세주의 오심을 기뻐 뛰었고 태어나서는 많은 이에게 큰 기쁨을 주었으며 모든 예언자 가운데 유일하게 세상의 구속자이신 어린양을 가리켜 주었나이다.', sp_en: '', text_en: 'In his Precursor, Saint John the Baptist, we praise your great glory, for you consecrated him for a singular honor among those born of women. His birth brought great rejoicing; even in the womb he leapt for joy at the coming of human salvation. He alone of all the prophets pointed out the Lamb of redemption.', sp_la: '', text_la: 'Cuius Præcursórem, beátum Ioánnem, inter natos mulíerum honóre præcípuo magnificámus. Qui vel nondum éditus exsultávit ad humáni advéntum salútis; nato iam in terram propinquásse cæléstia regna monstrávit;', sp_vn: '', text_vn: 'Chúng con ca ngợi những kỳ công của Chúa nơi thánh Gioan Tiền Hô, người Chúa đã thánh hiến và dành cho một vinh dự đặc biệt trong số những người sinh ra bởi người phụ nữ. Lúc chưa chào đời, thánh nhân đã nhảy mừng khi Đấng Cứu Độ nhân loại ngự đến. Lúc được sinh ra, thánh nhân đã đem lại niềm vui lớn lao. Trong các ngôn sứ, chỉ có thánh nhân đã chỉ cho thấy Chiên Thiên Chúa, Đấng cứu chuộc thế gian.', sp_jp: '', text_jp: '' },
@@ -1960,7 +1961,7 @@ globalThis.missaData = [
 
     // 57. 삼위일체 감사송 (대축일)
     "holy_trinity": {
-        title: { kr: "삼위일체 감사송", vn: "Kinh Tiền Tụng Chúa Ba Ngôi", en: "Preface of the Most Holy Trinity", jp: "三位一体の叙唱", la: "Praefatio de Sanctissima Trinitate" },
+        title: { kr: "주님의 축일과 신비 감사송 1 : 지극히 거룩하신 삼위일체의 신비(삼위일체 대축일)", vn: "KINH TIỀN TỤNG CHÚA BA NGÔI - Mầu nhiệm Thiên Chúa Ba Ngôi", en: "PREFACE OF THE MOST HOLY TRINITY - The mystery of the Most Holy Trinity", jp: "三位一体叙唱「三位一体の神秘」", la: "PRÆFATIO DE SANCTISSIMA TRINITATE" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 외아들과 성령과 함께 한 하느님이시며 한 주님이시옵니다. 하느님께서는 한 위격이 아니시라 한 본체로 삼위일체를 이루시나이다.', sp_en: '', text_en: 'For with your Only Begotten Son and the Holy Spirit you are one God, one Lord: not in the unity of a single person, but in a Trinity of one substance.', sp_la: '', text_la: 'Qui cum unigénito Fílio tuo et Spíritu Sancto unus es Deus, unus es Dóminus: non in uníus singularitáte persónæ, sed in uníus Trinitáte substántiæ.', sp_vn: '', text_vn: 'Cùng với Con Một Chúa và Chúa Thánh Thần, Chúa là một Thiên Chúa, là một Chúa Tể: không phải trong sự hợp nhất của một ngôi vị, nhưng trong sự Ba Ngôi cùng một bản thể.', sp_jp: '', text_jp: '' },
@@ -2024,7 +2025,7 @@ globalThis.missaData = [
 
     // 63. 주님 변모 감사송 (주님의 거룩한 변모 축일)
     "transfiguration": {
-        title: { kr: "주님 변모 감사송", vn: "Kinh Tiền Tụng Chúa Hiển Dung", en: "Preface of the Transfiguration of the Lord", jp: "主の変容の叙唱", la: "Praefatio de Transfiguratione Domini" },
+        title: { kr: "주님의 축일과 신비 감사송 9 : 변모의 신비", vn: "KINH TIỀN TỤNG CHÚA HIỂN DUNG - Mầu nhiệm Chúa hiển dung", en: "PREFACE OF THE TRANSFIGURATION OF THE LORD - The mystery of the Transfiguration", jp: "主の変容叙唱「変容の神秘」", la: "PRÆFATIO DE TRANSFIGURATIONE DOMINI" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 뽑으신 증인들 앞에서 당신의 영광을 드러내시고 저희와 똑같은 육신을 크나큰 빛으로 눈부시게 하셨나이다. 이는 십자가의 수난을 겪어야만 부활의 영광에 이른다는 것을 제자들 마음속에 깊이 새겨 주시고, 교회의 머리이신 당신께서 놀랍게 변모하시어 지체인 저희도 그 영광을 함께 누리리라는 희망을 갖게 하심이옵니다.', sp_en: '', text_en: 'For he revealed his glory in the presence of chosen witnesses and filled with the greatest splendor that bodily form which he shares with all humanity, that the scandal of the Cross might be removed from the hearts of his disciples and that he might show how in the Body of the whole Church is to be fulfilled what so wonderfully shone forth first in its Head.', sp_la: '', text_la: 'Qui glóriam suam eléctis téstibus osténdit, et commúnem cum céteris formam máximo splendóre perfúdit, ut e córdibus discipulórum crucis scándalum tólleret, et in totíus Ecclésiæ córpore compléri monstráret, quod in ipso cápite mirabíliter præfúlsit.', sp_vn: '', text_vn: 'Người đã tỏ vinh quang Người cho các chứng nhân được tuyển chọn, và làm cho hình thể giống như mọi người của Người trở nên sáng láng huy hoàng. Nhờ đó Người dọn lòng các môn đệ khỏi vấp phạm vì khổ hình Thập Giá, và làm sáng tỏ sự việc là toàn Thân Thể Hội Thánh sẽ được thông phần vinh quang đã chói lọi cách kỳ diệu nơi Người là Đầu.', sp_jp: '', text_jp: '' },
@@ -2034,7 +2035,7 @@ globalThis.missaData = [
 
     // 64. 성체 감사송 1 (그리스도의 제사와 성사)
     "eucharist_1": {
-        title: { kr: "성체 감사송 1", vn: "Kinh Tiền Tụng Thánh Thể I", en: "Preface of the Holy Eucharist I", jp: "聖体の叙唱 I", la: "Praefatio I de Ss.ma Eucharistia" },
+        title: { kr: "성찬 감사송 1 : 그리스도의 제사와 성사", vn: "KINH TIỀN TỤNG THÁNH THỂ I - Hy lễ và bí tích của Đức Kitô", en: "PREFACE I OF THE MOST HOLY EUCHARIST - The Sacrifice and the Sacrament of Christ", jp: "聖体の叙唱 I", la: "PRÆFATIO I DE SS.MA EUCHARISTIA - De sacrificio et de sacramento Christi" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '참되고 영원한 사제이신 그리스도께서는 영원한 구원의 제사를 제정하시어 구원의 희생 제물로 당신 자신을 맨 먼저 아버지께 바치시고 저희도 당신을 기억하여 이 제사를 바치게 하셨나이다.', sp_en: '', text_en: 'For he is the true and eternal Priest, who instituted the pattern of an everlasting sacrifice and was the first to offer himself as the saving Victim, commanding us to make this offering as his memorial.', sp_la: '', text_la: 'Qui verus æternúsque Sacerdos, formam sacrifícii perénnis instítuens, hóstiam tibi salútiferam primus óbtulit, et nos, in sui memóriam, præcépit offérre.', sp_vn: '', text_vn: 'Người là Tư Tế thật và hằng hữu, khi thiết lập thể thức hy lễ muôn đời, Người đã dâng mình cho Chúa làm của lễ ban ơn cứu độ trước tiên, và đã truyền cho chúng con dâng hy lễ đó để tưởng nhớ đến Người.', sp_jp: '', text_jp: '' },
@@ -2045,7 +2046,7 @@ globalThis.missaData = [
 
     // 65. 성체 감사송 2 (제사의 열매)
     "eucharist_2": {
-        title: { kr: "성체 감사송 2", vn: "Kinh Tiền Tụng Thánh Thể II", en: "Preface of the Holy Eucharist II", jp: "聖体の叙唱 II", la: "Praefatio II de Ss.ma Eucharistia" },
+        title: { kr: "성찬 감사송 2 : 지극히 거룩한 성찬의 열매", vn: "KINH TIỀN TỤNG THÁNH THỂ II - Hiệu quả của bí tích Thánh Thể", en: "PREFACE II OF THE MOST HOLY EUCHARIST - The fruits of the Most Holy Eucharist", jp: "聖体の叙唱 II", la: "PRÆFATIO II DE SS.MA EUCHARISTIA - De fructibus Sanctissimæ Eucharistiæ" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 사도들과 함께 마지막 만찬을 잡수실 때 당신의 십자가 구원을 세세 대대로 남기시려고 흠 없는 어린양이시요 완전한 찬미의 제물로 자신을 아버지께 바치셨나이다.', sp_en: '', text_en: 'For at the Last Supper with his Apostles, establishing for the ages to come the saving memorial of the Cross, he offered himself to you as the unblemished Lamb, the acceptable gift of perfect praise.', sp_la: '', text_la: 'Qui, cum Apóstolis suis in cena novíssima recúmbens, salvíficæ crucis memóriam in sǽcula duratúram erígens, immaculátum se tibi Agnum obtulit, perféctæ laudis munus accéptum.', sp_vn: '', text_vn: 'Trong bữa Tiệc Ly với các Tông Đồ, để lưu truyền tưởng niệm cứu độ của Thập Giá cho đến muôn đời, Người đã hiến dâng mình cho Chúa làm Con Chiên vẹn toàn, một hy lễ chúc tụng trọn hảo đẹp lòng Chúa.', sp_jp: '', text_jp: '' },
@@ -2056,7 +2057,7 @@ globalThis.missaData = [
 
     // 66. 예수 성심 감사송 (지극히 거룩하신 예수 성심 대축일)
     "sacred_heart": {
-        title: { kr: "예수 성심 감사송", vn: "Kinh Tiền Tụng Thánh Tâm Chúa Giêsu", en: "Preface of the Most Sacred Heart of Jesus", jp: "み心の叙唱", la: "Praefatio de Sacratissimo Corde Iesu" },
+        title: { kr: "주님의 축일과 신비 감사송 4 : 그리스도의 무한하신 사랑(예수 성심 대축일)", vn: "KINH TIỀN TỤNG THÁNH TÂM CHÚA GIÊSU - Tình yêu vô biên của Đức Kitô", en: "PREFACE OF THE MOST SACRED HEART OF JESUS - The boundless charity of Christ", jp: "イエスのみ心叙唱「限りない愛」", la: "PRÆFATIO DE SACRATISSIMO CORDE IESU" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '그리스도께서는 십자가에 높이 달리시어 무한한 사랑으로 저희를 위하여 몸 바치시고 창에 찔리신 옆구리에서 피와 물을 흘리시어 교회의 성사들이 흘러나오게 하셨나이다. 또한 모든 이가 구세주의 열린 성심으로 달려가 끊임없이 구원의 샘물을 기어 올리게 하셨나이다.', sp_en: '', text_en: 'For raised up high on the Cross, he gave himself up for us with a wonderful love and poured out blood and water from his pierced side, the wellspring of the Church\'s Sacraments, so that, won over to the open heart of the Savior, all might draw water joyfully from the springs of salvation.', sp_la: '', text_la: 'Qui, mira caritáte exaltátus in cruce, pro nobis trádidit semetípsum, atque ex excíso látere sánguinem fudit et aquam, ex quo Ecclésiæ sacraménta manárent, ut omnes, ad Cor apértum Salvatóris attrácti, iúgiter haurírent e fóntibus salútis in gáudio.', sp_vn: '', text_vn: 'Khi chịu treo trên Thập Giá, vì tình yêu lạ lùng, Người đã hiến thân vì chúng con. Từ cạnh sườn bị đâm thủng, Người đã để máu và nước chảy ra, hầu khơi nguồn các bí tích của Hội Thánh. Nhờ đó, khi mọi người được lôi kéo đến cùng Thánh Tâm rộng mở của Đấng Cứu Độ, họ sẽ luôn hân hoan múc tận nguồn ơn cứu độ.', sp_jp: '', text_jp: '' },
@@ -2076,7 +2077,7 @@ globalThis.missaData = [
 
     // 68. 사도 베드로와 바오로 감사송 (성 베드로와 성 바오로 사도 대축일)
     "peter_and_paul": {
-        title: { kr: "사도 베드로와 바오로 감사송", vn: "Kinh Tiền Tụng Hai Thánh Tông Đồ Phêrô Và Phaolô", en: "Preface of Saints Peter and Paul, Apostles", jp: "使徒ペトロとパウロの叙唱", la: "Praefatio de Ss. Petro et Paulo, Apostolis" },
+        title: { kr: "성 베드로와 성 바오로 감사송 : 베드로와 바오로의 사명", vn: "KINH TIỀN TỤNG THÁNH PHÊRÔ VÀ THÁNH PHAOLÔ TÔNG ĐỒ", en: "PREFACE OF SAINTS PETER AND PAUL, APOSTLES", jp: "聖ペトロ・聖パウロ使徒叙唱", la: "PRÆFATIO DE SANCTIS PETRO ET PAULO APOSTOLIS" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 사도 베드로와 바오로의 축일을 마련하시어 저희에게 기쁨을 주셨나이다. 베드로는 맨 먼저 신앙을 고백하고 이스라엘의 남은 백성으로 처음 교회를 세웠으며, 바오로는 신앙의 신비를 밝혀 주고 부르심을 받은 이방인들의 스승이 되었나이다.', sp_en: '', text_en: 'For by your providence the blessed Apostles Peter and Paul bring us joy: Peter, foremost in confessing the faith, Paul, its outstanding preacher, Peter, who established the early Church from the remnant of Israel, Paul, master and teacher of the Gentiles that you call.', sp_la: '', text_la: 'Qui beátos Apóstolos Petrum et Paulum nobis tríbuis venerári. Petrus enim in confiténdo Christo primus exstítit, Paulus in astruéndo præclárus: ille Ecclésiæ rudiménta de Ísrael relíquiis cóndidit, hic magíster et doctor géntium vocandárum assúmptus est.', sp_vn: '', text_vn: 'Chúa đã ban cho chúng con niềm vui trong ngày lễ hai thánh Tông Đồ Phêrô và Phaolô: Phêrô là người đầu tiên tuyên xưng đức tin, Phaolô là người đã làm sáng tỏ đức tin; Phêrô đã thiết lập Hội Thánh tiên khởi cho những người Ít-ra-en trung thành với Chúa, Phaolô là thầy giảng dạy cho dân ngoại được Chúa kêu gọi.', sp_jp: '', text_jp: '' },
@@ -2087,7 +2088,7 @@ globalThis.missaData = [
 
     // 69. 성 요셉 감사송 (복되신 동정 마리아의 배필 성 요셉 대축일)
     "saint_joseph": {
-        title: { kr: "성 요셉 감사송", vn: "Kinh Tiền Tụng Thánh Giuse", en: "Preface of Saint Joseph", jp: "聖ヨセフの叙唱", la: "Praefatio de Sancto Ioseph" },
+        title: { kr: "성 요셉 감사송 : 요셉 성인의 사명", vn: "KINH TIỀN TỤNG THÁNH GIUSE - Sứ mạng của thánh Giuse", en: "PREFACE OF SAINT JOSEPH - The mission of Saint Joseph", jp: "聖ヨセフ叙唱「聖ヨセフの使命」", la: "PRÆFATIO DE SANCTO IOSEPH" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 복된 요셉 성인의 축일을 지내며 마땅히 주님을 찬양하고 찬송하며 찬미하나이다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, and on the Solemnity of Saint Joseph to give you fitting praise, to glorify you and bless you.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: Et te in Sollemnitáte beáti Ioseph débitis magnificáre præcóniis, benedicére et prædicáre.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con. Trong ngày lễ kính thánh Giuse, chúng con cùng tung hô, chúc tụng và ca ngợi Chúa.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '의로운 사람 요셉은 하느님의 어머니 동정 마리아의 배필이 되었고 충실하고 지혜로운 종으로서 주님의 성가정을 맡아 성령으로 잉태되신 우리 주 예수 그리스도를 아버지처럼 돌보았나이다.', sp_en: '', text_en: 'For this just man was given by you as spouse to the Virgin Mother of God and set as a wise and faithful servant in charge of your household to watch like a father over your Only Begotten Son, who was conceived by the overshadowing of the Holy Spirit, Lord Jesus Christ.', sp_la: '', text_la: 'Qui et vir iustus, a te Deíparæ Vírgini Sponsus est datus, et fidélis servus ac prudens super Famíliam tuam est constitútus, ut Unigénitum tuum, Sancti Spíritus obumbratióne concéptum, patérna vice custodíret, Iesum Christum Dóminum nostrum.', sp_vn: '', text_vn: 'Vì thánh Giuse là người công chính, Chúa đã ban cho làm bạn trăm năm Đức Trinh Nữ, Mẹ Thiên Chúa; là tôi tớ trung tín và khôn ngoan, Chúa đã trao phó Thánh Gia cho ngài coi sóc, để ngài thay quyền người cha gìn giữ Con Một Chúa đã thụ thai bởi phép Chúa Thánh Thần, là Đức Giêsu Kitô, Chúa chúng con.', sp_jp: '', text_jp: '' },
@@ -2108,7 +2109,7 @@ globalThis.missaData = [
 
     // 71. 한국 교회의 수호자, 원죄 없이 잉태되신 복되신 동정 마리아 대축일 감사송
     "immaculate_conception": {
-        title: { kr: "원죄 없이 잉태되신 동정 마리아 대축일 감사송", vn: "Kinh Tiền Tụng Lễ Đức Mẹ Vô Nhiễm Nguyên Tội", en: "Preface of the Immaculate Conception of the Blessed Virgin Mary", jp: "無原罪の聖マリアの叙唱", la: "Praefatio de Immaculata Conceptione B.M.V." },
+        title: { kr: "복되신 동정 마리아 감사송 3 : 마리아와 교회의 신비", vn: "KINH TIỀN TỤNG ĐỨC MẸ VÔ NHIỄM NGUYÊN TỘI - Mầu nhiệm Đức Maria và Hội Thánh", en: "PREFACE OF THE IMMACULATE CONCEPTION OF THE BLESSED VIRGIN MARY - The mystery of Mary and the Church", jp: "無原罪の聖マリア叙唱「マリアと教会の神秘」", la: "PRÆFATIO DE IMMACULATA CONCEPTIONE BEATÆ MARIÆ VIRGINIS" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus:', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 복되신 동정 마리아를 원죄에 물들지 않게 보호하시어 성자께 합당한 어머니가 되게 하시고 교회의 시작이며 그 아름다운 모상이 되게 하셨나이다.', sp_en: '', text_en: 'For you preserved the Most Blessed Virgin Mary from all stain of original sin, so that in her, endowed with the rich fullness of your grace, you might prepare a worthy Mother for your Son and signify the beginning of the Church, his beautiful Bride without spot or wrinkle.', sp_la: '', text_la: 'Qui beatíssimam Vírginem Maríam ab omni originális culpæ labe præservásti, ut in ea, tuæ grátiæ plenitúdine ditáta, dignam Fílio tuo Genetrícem præparáres, et signum Ecclésiæ exórdius, sponsæ speciósæ sine mácula et rúga, signáres.', sp_vn: '', text_vn: 'Vì Chúa đã gìn giữ Đức Trinh Nữ Maria Rất Thánh khỏi mọi tỳ ố nguyên tội, để Mẹ được đầy tràn ân sủng Chúa mà trở nên Mẹ xứng đáng của Con Chúa, đồng thời là hình ảnh khai nguyên của Hội Thánh, hiền thê xinh đẹp không tỳ ố, không vết nhăn.', sp_jp: '', text_jp: '' },
@@ -2119,7 +2120,7 @@ globalThis.missaData = [
 
     // 72. 성모 승천 대축일 감사송
     "assumption": {
-        title: { kr: "성모 승천 대축일 감사송", vn: "Kinh Tiền Tụng Lễ Đức Mẹ Lên Trời", en: "Preface of the Assumption of the Blessed Virgin Mary", jp: "聖母の被昇天の叙唱", la: "Praefatio de Assumptione B.M.V." },
+        title: { kr: "복되신 동정 마리아 감사송 4 : 영광스러운 마리아의 승천", vn: "KINH TIỀN TỤNG LỄ ĐỨC MẸ HỒN XÁC LÊN TRỜI - Đức Maria được đưa lên trời", en: "PREFACE OF THE ASSUMPTION OF THE BLESSED VIRGIN MARY - Mary assumed into glory", jp: "聖母の被昇天叙唱「天に上げられた聖母」", la: "PRÆFATIO DE ASSUMPTIONE BEATÆ MARIÆ VIRGINIS" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '오늘 하늘로 오르신 하느님의 어머니 동정 마리아께서는 완성될 교회의 시작이며 모상으로서 이 세상 순례자들에게 확실한 희망과 위로를 주시나이다.', sp_en: '', text_en: 'For today the Virgin Mother of God was assumed into heaven as the beginning and image of your Church\'s coming to perfection and a sign of sure hope and comfort to your pilgrim people;', sp_la: '', text_la: 'Quia hódie Virgo Deípara in cælum assúmpta est, Ecclésiæ tuæ consummándæ inítium et imágo, ac pópulo peregrinánti certæ spei et solácii documéntum;', sp_vn: '', text_vn: 'Hôm nay Đức Trinh Nữ, Mẹ Thiên Chúa, đã được rước lên trời. Mẹ là khởi điểm, là hình ảnh của Hội Thánh sẽ được hoàn thành, và là niềm an ủi, niềm hy vọng dạt dào cho dân Chúa đang lữ hành.', sp_jp: '', text_jp: '' },
@@ -2153,7 +2154,7 @@ globalThis.missaData = [
 
     // 75. 성당 봉헌 감사송 (성당 봉헌 주년 축일)
     "dedication_of_a_church": {
-        title: { kr: "성당 봉헌 감사송", vn: "Kinh Tiền Tụng Cung Hiến Thánh Đường", en: "Preface of the Dedication of a Church", jp: "教会堂献堂の叙唱", la: "Praefatio de Dedicatione Ecclesiae" },
+        title: { kr: "주님의 축일과 신비 감사송 10-2 : 그리스도의 배필이며 성령의 성전인 교회의 신비(성당 봉헌)", vn: "KINH TIỀN TỤNG LỄ CUNG HIẾN THÁNH ĐƯỜNG - Hội Thánh là đền thờ của Thiên Chúa", en: "PREFACE OF THE DEDICATION OF A CHURCH - The mystery of the Church as God’s temple", jp: "教会献堂叙唱「神の神殿である教会」", la: "PRÆFATIO DE DEDICATIONE ECCLESIÆ" },
         content: [
             { sp_kr: '✚', text_kr: '거룩하신 아버지, 전능하시고 영원하신 주 하느님, 우리 주 그리스도를 통하여 언제나 어디서나 아버지께 감사함이 참으로 마땅하고 옳은 일이며 저희 도리요 구원의 길이옵니다.', sp_en: 'P.', text_en: 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks, Lord, holy Father, almighty and eternal God, through Christ our Lord.', sp_la: 'S.', text_la: 'Vere dignum et iustum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine, sancte Pater, omnípotens ætérne Deus: per Christum Dóminum nostrum.', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, nhờ Đức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '司', text_jp: '' },
             { sp_kr: '', text_kr: '아버지께서는 저희가 모인 이 거룩한 집을 지켜 주시어 은총과 축복의 터전인 영적 성전으로 닦아 주시고 저희를 성령의 궁전으로 지어 주시나이다. 언제나 이 성전을 통하여 그리스도를 신랑으로 맞아들인 교회의 신비가 드러나옵니다.', sp_en: '', text_en: 'For in this visible house that you have let us build and where you never cease to show favor to the family on pilgrimage to you in this place, you wonderfully manifest and accomplish the mystery of your own communion with us. Here you build up for yourself the temple that we are, and cause your Church, spread throughout the world, to grow ever more and more as the Lord\'s own Body, till she reaches her fullness in the vision of peace, the heavenly city of Jerusalem.', sp_la: '', text_la: 'Qui in hac domo visíbili, quam nobis exstruéndam dedísti, ubi peregrinántem ad te famíliam tuam indesinénter fovére dignáris, mirábile tuæ communiónis nobíscum signum et grátiam maniféstas ac pérficis. Hic enim tibi templum quod nos sumus ædíficas, et Ecclésiam tuam, per totum mundum diffúsam, in corpus Dómini facis iúgiter amplificári, donec ad pacis visiónem perfécta, in cæléstem Ierúsalem consummétur.', sp_vn: '', text_vn: 'Trong ngôi nhà hữu hình Chúa cho chúng con xây dựng này, Chúa vẫn không ngừng săn sóc gia đình Chúa đang lữ hành về với Chúa, và Chúa đã tỏ hiện cũng như hoàn thành ơn thánh và dấu chỉ kỳ diệu về sự hiệp thông của Chúa với chúng con. Thật vậy, ở đây, Chúa xây dựng cho Chúa một đền thờ là chính chúng con; và làm cho Hội Thánh Chúa đang lan rộng khắp thế giới luôn được phát triển thành Thân Thể Chúa Kitô, cho đến khi đạt tới sự thành toàn là thành Giêrusalem trên trời trong nhan thánh đầy bình an.', sp_jp: '', text_jp: '' },
@@ -2267,6 +2268,16 @@ globalThis.missaData = [
         ]
     },
 
+    // 89. 베트남 고유: 베트남 순교자 대축일 감사송
+    "vn_martyrs": {
+        title: { kr: "베트남 순교자 감사송 (베트남 고유)", vn: "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam", en: "", jp: "", la: "" },
+        content: [
+            { sp_kr: '✚', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: 'Vì Chúa đã ban cho Hội Thánh Việt Nam những chứng nhân anh dũng. Các ngài đã không ngần ngại đổ máu đào để tuyên xưng đức tin vào Đức Kitô, và dùng chính mạng sống mình để gieo hạt giống Tin Mừng trên quê hương đất nước chúng con.', sp_jp: '', text_jp: '' },
+            { sp_kr: '', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: 'Vì thế, cùng với các Thiên thần và toàn thể các Thánh, chúng con hân hoan ca ngợi Chúa và không ngừng tung hô rằng:', sp_jp: '', text_jp: '' }
+        ]
+    },
+
     // 86. 미국 고유: 추수감사절 감사송
     "us_thanksgiving": {
         title: { kr: "추수감사절 감사송 (미국 고유)", vn: "", en: "Preface for Thanksgiving Day", jp: "", la: "" },
@@ -2297,16 +2308,6 @@ globalThis.missaData = [
         ]
     },
 
-    // 89. 베트남 고유: 베트남 순교자 대축일 감사송
-    "vn_martyrs": {
-        title: { kr: "베트남 순교자 감사송 (베트남 고유)", vn: "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam", en: "", jp: "", la: "" },
-        content: [
-            { sp_kr: '✚', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: 'LM.', text_vn: 'Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.', sp_jp: '', text_jp: '' },
-            { sp_kr: '', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: 'Vì Chúa đã ban cho Hội Thánh Việt Nam những chứng nhân anh dũng. Các ngài đã không ngần ngại đổ máu đào để tuyên xưng đức tin vào Đức Kitô, và dùng chính mạng sống mình để gieo hạt giống Tin Mừng trên quê hương đất nước chúng con.', sp_jp: '', text_jp: '' },
-            { sp_kr: '', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: 'Vì thế, cùng với các Thiên thần và toàn thể các Thánh, chúng con hân hoan ca ngợi Chúa và không ngừng tung hô rằng:', sp_jp: '', text_jp: '' }
-        ]
-    },
-
     // 90. 일본 고유: 일본 26위 성인 순교자 축일 (일본어 단독 배정)
     "jp_26_martyrs": {
         title: { kr: "일본 26위 순교자 감사송 (일본 고유)", vn: "", en: "", jp: "日本二十六聖人殉教者の叙唱", la: "" },
@@ -2325,8 +2326,8 @@ globalThis.missaData = [
             { sp_kr: '', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '聖霊によってみことばを宿したおとめマリアは、永遠の光である主キリストを世にもたらしました。' },
             { sp_kr: '', text_kr: '', sp_en: '', text_en: '', sp_la: '', text_la: '', sp_vn: '', text_vn: '', sp_jp: '', text_jp: '主の威光を仰ぎ、永遠の喜びにあふれる天使とともに、わたしたちも声を合わせ、賛美の歌をささげます。' }
         ]
-    }   
-        },
+    }
+    },
         // 3. 거룩하시도다
         sanctus: [
             { sp_kr: '◎', text_kr: '거룩하시도다! 거룩하시도다! 거룩하시도다!', 
