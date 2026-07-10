@@ -187,7 +187,7 @@
         .aux-empty { border: 1px dashed #cfd6dd; border-radius: 10px; padding: 14px; color: var(--sub-txt); background: #fafafa; text-align: center; line-height: 1.5; }
         .hymn-layout { display: grid; gap: 12px; }
         .hymn-list { display: grid; gap: 8px; }
-        .hymn-list-item { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); align-items: start; gap: 10px; border: 1px solid #e1e5ea; border-radius: 8px; padding: 9px 11px; background: #fff; }
+        .hymn-list-item { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); align-items: center; gap: 10px; border: 1px solid #e1e5ea; border-radius: 8px; padding: 9px 11px; background: #fff; }
         .hymn-tags { display: flex; flex-wrap: wrap; gap: 5px; min-width: 0; }
         .hymn-title-button { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; min-width: 0; border: 0; background: transparent; color: var(--primary-color); font: inherit; font-weight: 900; line-height: 1.35; text-align: left; cursor: pointer; overflow: hidden; overflow-wrap: anywhere; word-break: keep-all; }
         .hymn-title-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-width: 0; overflow: hidden; }
@@ -201,6 +201,9 @@
         .hymn-detail h3 { margin-bottom: 10px; }
         .hymn-detail .aux-prayer-body { white-space: pre-wrap; }
         .hymn-detail .aux-prayer-body strong { color: var(--primary-color); }
+        .hymn-translation-grid { margin-top: 12px; }
+        .hymn-translation-status { min-height: 42px; display: flex; align-items: center; }
+        .hymn-translation-error { color: #9f3a38; line-height: 1.45; }
         .hymn-detail-section { margin-top: 12px; }
         .hymn-meta { display: grid; gap: 4px; margin-top: 10px; color: var(--sub-txt); font-size: 0.9rem; line-height: 1.45; }
         .hymn-detail-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
@@ -2604,6 +2607,139 @@
         return normalizeDistinctTargetLang(configuredTarget, hymnLang);
     }
 
+    const hymnTranslationRecords = new Map();
+
+    function usesReverseHymnTranslation(country) {
+        const hymnLang = normalizeSelectableLang(country || 'KR', 'KR');
+        const configuredTarget = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
+        const localLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
+        return hymnLang === configuredTarget && localLang !== hymnLang && hymnTargetLanguage(hymnLang) === localLang;
+    }
+
+    function hymnTranslationRecordKey(entry, targetLang) {
+        const source = [entry && entry.id, entry && entry.title, entry && entry.text].filter(Boolean).join('\n');
+        return `${normalizeSelectableLang(targetLang, DEFAULT_TARGET_LANG)}:${cleanNodeText(entry && entry.id)}:${stableTextHash(source)}`;
+    }
+
+    function hymnTranslationRecord(entry, country) {
+        const targetLang = hymnTargetLanguage(country);
+        return hymnTranslationRecords.get(hymnTranslationRecordKey(entry, targetLang)) || null;
+    }
+
+    function hymnTranslationUiText(kind, targetLang) {
+        const targetName = appLanguageName(targetLang);
+        const uiLang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        const messages = {
+            KR: {
+                pending: `${targetName} 번역 중...`,
+                action: `${targetName} 번역`,
+                retry: `${targetName} 번역 다시 시도`,
+                failed: `${targetName} 번역을 불러오지 못했습니다.`
+            },
+            VN: {
+                pending: `Đang dịch sang ${targetName}...`,
+                action: `Dịch sang ${targetName}`,
+                retry: `Thử dịch lại sang ${targetName}`,
+                failed: `Không tải được bản dịch ${targetName}.`
+            },
+            EN: {
+                pending: `Translating into ${targetName}...`,
+                action: `Translate into ${targetName}`,
+                retry: `Retry ${targetName} translation`,
+                failed: `The ${targetName} translation could not be loaded.`
+            },
+            JP: {
+                pending: `${targetName}に翻訳中...`,
+                action: `${targetName}に翻訳`,
+                retry: `${targetName}翻訳を再試行`,
+                failed: `${targetName}翻訳を読み込めませんでした。`
+            },
+            LA: {
+                pending: `In ${targetName} vertitur...`,
+                action: `In ${targetName} verte`,
+                retry: `Conversionem ${targetName} repete`,
+                failed: `Conversio ${targetName} onerari non potuit.`
+            }
+        };
+        return (messages[uiLang] || messages.KR)[kind] || '';
+    }
+
+    function parseHymnTranslationPayload(value) {
+        const raw = String(value || '').trim();
+        const unfenced = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+        const jsonCandidate = unfenced.match(/\{[\s\S]*\}/);
+        if (!jsonCandidate) throw new Error('성가 번역 결과 형식이 올바르지 않습니다.');
+        const parsed = JSON.parse(jsonCandidate[0]);
+        const title = cleanNodeText(parsed && (parsed.title || parsed.name || ''));
+        const lyrics = String(parsed && (parsed.lyrics || parsed.text || '') || '').trim();
+        if (!lyrics) throw new Error('성가 번역 결과가 비어 있습니다.');
+        return { title, lyrics };
+    }
+
+    async function translateHymnWithGemini(entry, targetLang) {
+        const targetName = aiLanguageNames[targetLang] || targetLang;
+        const prompt = [
+            `Translate this Catholic hymn title and lyrics into ${targetName}.`,
+            'Return strict JSON only in this shape: {"title":"translated title","lyrics":"translated lyrics"}.',
+            'Preserve stanza numbers, refrain labels, and paragraph breaks.',
+            'Do not add commentary or Markdown fences.',
+            '',
+            JSON.stringify({
+                title: cleanNodeText(entry && entry.title),
+                lyrics: plainTextFromHtml(entry && entry.text)
+            })
+        ].join('\n');
+        const payload = await fetchGeminiViaFirebase('translate', {
+            contents: [{ parts: [{ text: prompt }] }],
+            generationConfig: { temperature: 0.2, responseMimeType: 'application/json' }
+        }, {
+            timeoutMs: 30000,
+            label: 'Hymn translation'
+        });
+        return parseHymnTranslationPayload(geminiTextFromPayload(payload));
+    }
+
+    function requestReverseHymnTranslation(entry, country, force = false) {
+        if (!entry || !entry.text || !usesReverseHymnTranslation(country)) return null;
+        const targetLang = hymnTargetLanguage(country);
+        const key = hymnTranslationRecordKey(entry, targetLang);
+        const existing = hymnTranslationRecords.get(key);
+        if (!force && existing && ['pending', 'done'].includes(existing.status)) return existing;
+        hymnTranslationRecords.set(key, { status: 'pending', targetLang });
+        translateHymnWithGemini(entry, targetLang).then(result => {
+            hymnTranslationRecords.set(key, {
+                status: 'done',
+                targetLang,
+                title: result.title,
+                text: result.lyrics
+            });
+            if (state.selectedHymnId === entry.id) renderHymnPanel();
+        }).catch(error => {
+            hymnTranslationRecords.set(key, {
+                status: 'error',
+                targetLang,
+                message: error && error.message ? error.message : '성가 번역 실패'
+            });
+            if (state.selectedHymnId === entry.id) renderHymnPanel();
+        });
+        return hymnTranslationRecords.get(key);
+    }
+
+    function hymnTranslatedTitle(entry, country) {
+        const targetLang = hymnTargetLanguage(country);
+        const record = hymnTranslationRecord(entry, country);
+        if (record && record.status === 'done' && record.title) return record.title;
+        const stored = entry && entry.translations && entry.translations[targetLang];
+        return cleanNodeText(stored && stored.title);
+    }
+
+    window.retryHymnTranslation = function(id, country) {
+        const entry = getHymnData().find(item => cleanNodeText(item && item.id) === cleanNodeText(id));
+        if (!entry) return;
+        requestReverseHymnTranslation(entry, country, true);
+        renderHymnPanel();
+    };
+
     function hymnDetailLabels() {
         return {
             lyrics: '\uAC00\uC0AC',
@@ -2627,6 +2763,8 @@
     function renderHymnDetail(entry, country) {
         const labels = hymnDetailLabels();
         const targetLang = hymnTargetLanguage(country);
+        const reverseTranslation = usesReverseHymnTranslation(country);
+        const translationRecord = hymnTranslationRecord(entry, country);
         const tags = (entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []))
             .filter(tag => cleanNodeText(tag) && cleanNodeText(tag) !== cleanNodeText(entry.book));
         const tagsHtml = tags.length ? '<div class="hymn-tags">' + tags.map(tag => '<span class="aux-pill">' + escapeHtml(tag) + '</span>').join('') + '</div>' : '';
@@ -2641,9 +2779,22 @@
             ? '<p class="aux-prayer-body">' + hymnLyricsHtml(entry.text) + '</p>'
             : '<p class="aux-muted">' + labels.lyricsPending + '</p>');
         const lyricsNoteHtml = entry.lyricsNote ? '<p class="aux-muted">' + escapeHtml(entry.lyricsNote) + '</p>' : '';
-        const aiHtml = entry.text
-            ? makeAIButton(entry.text, '', targetLang)
-            : '<button type="button" class="btn-ai-trans hymn-ai-button" disabled>' + labels.ai + ' (' + escapeHtml(appLanguageName(targetLang)) + ')</button>';
+        let translatedLyricsHtml = '';
+        if (reverseTranslation && translationRecord && translationRecord.status === 'done') {
+            translatedLyricsHtml = '<p class="aux-prayer-body hymn-translated-lyrics">' + aiTranslatedHtml(translationRecord.text) + '</p>';
+        } else if (reverseTranslation && translationRecord && translationRecord.status === 'pending') {
+            translatedLyricsHtml = '<p class="aux-muted hymn-translation-status">' + escapeHtml(hymnTranslationUiText('pending', targetLang)) + '</p>';
+        } else if (reverseTranslation) {
+            const failedText = translationRecord && translationRecord.status === 'error'
+                ? '<p class="hymn-translation-error">' + escapeHtml(hymnTranslationUiText('failed', targetLang)) + '</p>'
+                : '';
+            const actionText = hymnTranslationUiText(translationRecord && translationRecord.status === 'error' ? 'retry' : 'action', targetLang);
+            translatedLyricsHtml = failedText + '<div class="hymn-detail-actions"><button type="button" class="btn-ai-trans hymn-ai-button" onclick="retryHymnTranslation(' + escapeInlineArg(entry.id) + ', ' + escapeInlineArg(country) + ')">🤖 ' + escapeHtml(actionText) + '</button></div>';
+        } else {
+            translatedLyricsHtml = entry.text
+                ? '<div class="hymn-detail-actions">' + makeAIButton(entry.text, '', targetLang) + '</div>'
+                : '<button type="button" class="btn-ai-trans hymn-ai-button" disabled>' + labels.ai + ' (' + escapeHtml(appLanguageName(targetLang)) + ')</button>';
+        }
         const metaRows = [
             entry.lyricist ? labels.lyricist + ': ' + entry.lyricist : '',
             entry.composer ? labels.composer + ': ' + entry.composer : '',
@@ -2681,19 +2832,28 @@
             ? '<div class="hymn-detail-section aux-muted">' + escapeHtml(copyrightDisplay) + '</div>'
             : '';
             
-        const translatedTitle = entry.translations && entry.translations[targetLang] && entry.translations[targetLang].title;
+        const translatedTitle = hymnTranslatedTitle(entry, country);
         const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : escapeHtml(entry.displayTitle || entry.title);
+        const translationPaneTitle = translatedTitle || hymnTranslationUiText(translationRecord && translationRecord.status === 'pending' ? 'pending' : 'action', targetLang);
 
         return [
             '<article class="hymn-detail">',
             tagsHtml,
             '<h3>' + titleHtml + '</h3>',
             metaHtml,
-            '<div class="hymn-detail-section">',
+            '<div class="aux-two-column hymn-translation-grid">',
+            '<section class="aux-language-block hymn-original-pane">',
+            '<div class="aux-language-label">' + escapeHtml(appLanguageName(country)) + '</div>',
+            '<div class="aux-prayer-title">' + escapeHtml(entry.displayTitle || entry.title) + '</div>',
             lyricsHtml,
             lyricsNoteHtml,
+            '</section>',
+            '<section class="aux-language-block aux-language-block-translation hymn-translation-pane">',
+            '<div class="aux-language-label">' + escapeHtml(appLanguageName(targetLang)) + '</div>',
+            '<div class="aux-prayer-title">' + escapeHtml(translationPaneTitle) + '</div>',
+            translatedLyricsHtml,
+            '</section>',
             '</div>',
-            '<div class="hymn-detail-actions">' + aiHtml + '</div>',
             scoreHtml,
             copyrightHtml,
             '</article>'
@@ -2704,6 +2864,11 @@
         const normalizedId = cleanNodeText(id);
         const willOpen = state.selectedHymnId !== normalizedId;
         state.selectedHymnId = willOpen ? normalizedId : '';
+        if (willOpen) {
+            const country = normalizeSelectableLang((document.getElementById('hymn-country') || {}).value || state.currentLoc || 'KR', 'KR');
+            const entry = getHymnData().find(item => cleanNodeText(item && item.id) === normalizedId);
+            if (entry) requestReverseHymnTranslation(entry, country);
+        }
         renderHymnPanel();
         if (!willOpen) return;
         requestAnimationFrame(() => {
@@ -2778,8 +2943,14 @@
                 ? '<div id="' + escapeAttr(detailId) + '" class="hymn-inline-detail">' + renderHymnDetail(selected, country) + '</div>'
                 : '';
                 
-            const translatedTitle = entry.translations && entry.translations[targetLang] && entry.translations[targetLang].title;
-            const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : escapeHtml(entry.displayTitle || entry.title);
+            const translatedTitle = hymnTranslatedTitle(entry, country);
+            const translationRecord = hymnTranslationRecord(entry, country);
+            const pendingTitle = usesReverseHymnTranslation(country) && translationRecord && translationRecord.status === 'pending'
+                ? hymnTranslationUiText('pending', targetLang)
+                : '';
+            const titleHtml = translatedTitle || pendingTitle
+                ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle || pendingTitle) + '</span>'
+                : escapeHtml(entry.displayTitle || entry.title);
 
             return [
                 '<article class="hymn-list-item' + selectedClass + '">',
@@ -8658,16 +8829,23 @@
         return text.replace(/[^\p{L}\p{N}]+/gu, '');
     }
 
-    function citationStartForCompare(value) {
+    function citationStartsForCompare(value) {
         const source = String(value || '')
             .replace(/\s*(?:참고|참조)$/u, '')
             .replace(/^(?:x\.?|cf\.?|cfr\.?|see)\s+/i, '')
             .trim();
-        const match = source.match(/^(.*?)\s*(\d+)\s*[,.:]\s*(\d+)/u);
-        if (!match) return '';
+        const match = source.match(/^(.*?)\s*(\d+)(?:\s*\(\s*(\d+)\s*\))?\s*[,.:]\s*(\d+)/u);
+        if (!match) return [];
         const bookKey = normalizeBibleAliasForCompare(match[1]);
         const entry = bibleAliasEntriesForCompare().find(item => item.key === bookKey);
-        return entry ? `${entry.kr}:${match[2]}:${match[3]}` : '';
+        if (!entry) return [];
+        return Array.from(new Set([match[2], match[3]]
+            .filter(Boolean)
+            .map(chapter => `${entry.kr}:${chapter}:${match[4]}`)));
+    }
+
+    function citationStartForCompare(value) {
+        return citationStartsForCompare(value)[0] || '';
     }
 
     function directCitationForLower(section, lower) {
@@ -8681,9 +8859,9 @@
     function citationsAreDifferent(leftCitation, rightCitation) {
         const left = normalizedCitationForCompare(leftCitation);
         const right = normalizedCitationForCompare(rightCitation);
-        const leftStart = citationStartForCompare(leftCitation);
-        const rightStart = citationStartForCompare(rightCitation);
-        if (leftStart && rightStart && leftStart === rightStart) return false;
+        const leftStarts = citationStartsForCompare(leftCitation);
+        const rightStarts = new Set(citationStartsForCompare(rightCitation));
+        if (leftStarts.some(start => rightStarts.has(start))) return false;
         return !!(left && right && left !== right);
     }
 
@@ -10962,6 +11140,13 @@
         return citationsAreDifferent(citationForDisplayData(data, leftKey), citationForDisplayData(data, rightKey));
     }
 
+    function activeDisplayCitationsMatch(data, leftKey, rightKey) {
+        if (!leftKey || !rightKey || leftKey === rightKey) return false;
+        const leftCitation = citationForDisplayData(data, leftKey);
+        const rightCitation = citationForDisplayData(data, rightKey);
+        return !!(leftCitation && rightCitation && !citationsAreDifferent(leftCitation, rightCitation));
+    }
+
     function hasLocalProperNameMarker(text) {
         const normalized = normalizeSemanticText(text);
         return /bien\s*-?\s*duc|benedict|benedicto|benedictus|be\s*ne\s*dic|베네딕|ベネディクト|(?:le kinh|theo loi)\s+thanh\b/i.test(normalized);
@@ -11023,6 +11208,7 @@
         const rightText = cleanNodeText(line[`text_${rightKey}`]);
         if (!leftText || !rightText) return false;
         if ((baseId === 'entrance' || baseId === 'communion') && activeLineTextsAreKnownSemanticMismatch(line, leftKey, rightKey)) return true;
+        if ((baseId === 'entrance' || baseId === 'communion') && activeDisplayCitationsMatch(data, leftKey, rightKey)) return false;
         if (localSemanticEquivalent(baseId, leftText, rightText)) return false;
         const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
         if (cachedEquivalent === true) return false;
@@ -11103,6 +11289,7 @@
                 indexes.push(index);
                 return indexes;
             }
+            if ((baseId === 'entrance' || baseId === 'communion') && activeDisplayCitationsMatch(data, leftKey, rightKey)) return indexes;
             if (localSemanticEquivalent(baseId, leftText, rightText)) return indexes;
             const cachedEquivalent = readCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(), baseId, leftText, rightText);
             if (cachedEquivalent === true) return indexes;
