@@ -144,6 +144,9 @@
         .aux-panel { display: none; max-width: 1100px; margin: 0 auto; padding: 18px 20px 86px; background: #fff; color: #333; }
         .aux-panel.active { display: block; }
         .aux-card { border: 1px solid #e1e5ea; border-radius: 12px; padding: 16px; margin-bottom: 14px; background: #fff; box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05); }
+        .aux-panel-header-card { min-height: 218px; box-sizing: border-box; }
+        .aux-panel-header-card > h2 { display: flex; align-items: center; min-height: 44px; margin: 0 0 8px; }
+        .aux-panel-header-card > .aux-dev-warning { min-height: 64px; box-sizing: border-box; }
         .aux-panel h2 { margin-bottom: 8px; color: var(--primary-color); font-size: 1.25rem; }
         .aux-panel h3 { margin-bottom: 8px; color: var(--primary-color); font-size: 1.05rem; }
         .aux-title-secondary { color: var(--sub-txt); opacity: 0.62; font-size: 0.88em; font-weight: 700; }
@@ -180,13 +183,16 @@
         .aux-prayer-translation-title { margin-left: 8px; color: var(--sub-txt); opacity: 0.58; font-size: 0.88em; font-weight: 700; }
         .aux-prayer-list-detail { padding: 0 16px 16px; border-top: 1px solid #edf0f3; }
         .aux-prayer-list-detail .aux-result-meta { margin-top: 12px; }
-        .aux-language-block-translation .aux-prayer-title { color: var(--sub-txt); opacity: 0.62; }
+        .aux-language-block-translation .aux-prayer-title { color: #333; opacity: 1; }
         .aux-empty { border: 1px dashed #cfd6dd; border-radius: 10px; padding: 14px; color: var(--sub-txt); background: #fafafa; text-align: center; line-height: 1.5; }
         .hymn-layout { display: grid; gap: 12px; }
         .hymn-list { display: grid; gap: 8px; }
         .hymn-list-item { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); align-items: start; gap: 10px; border: 1px solid #e1e5ea; border-radius: 8px; padding: 9px 11px; background: #fff; }
         .hymn-tags { display: flex; flex-wrap: wrap; gap: 5px; min-width: 0; }
-        .hymn-title-button { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-width: 0; border: 0; background: transparent; color: var(--primary-color); font: inherit; font-weight: 900; line-height: 1.35; text-align: left; cursor: pointer; overflow: hidden; overflow-wrap: anywhere; word-break: keep-all; }
+        .hymn-title-button { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; min-width: 0; border: 0; background: transparent; color: var(--primary-color); font: inherit; font-weight: 900; line-height: 1.35; text-align: left; cursor: pointer; overflow: hidden; overflow-wrap: anywhere; word-break: keep-all; }
+        .hymn-title-text { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; min-width: 0; overflow: hidden; }
+        .hymn-disclosure { color: var(--primary-color); font-size: 0.78rem; transition: transform 0.18s ease; }
+        .hymn-list-item.is-selected .hymn-disclosure { transform: rotate(180deg); }
         .hymn-title-button:hover { text-decoration: underline; text-underline-offset: 3px; }
         .hymn-list-item.is-selected { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.14); }
         .hymn-title-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
@@ -343,6 +349,9 @@
             .aux-panel { padding: 14px 10px 78px; }
             #church-panel { padding-bottom: 14px; }
             .aux-card { padding: 13px; }
+            .aux-panel-header-card { min-height: 350px; }
+            .aux-panel-header-card > h2 { min-height: 84px; }
+            .aux-panel-header-card > .aux-dev-warning { min-height: 94px; }
             .aux-search-popup { top: calc(var(--floating-liturgy-offset, 0px) + 6px); width: calc(100% - 18px); }
             .aux-search-menu { padding: 8px; }
             .quick-home-menu { right: 8px; bottom: calc(68px + env(safe-area-inset-bottom, 0px)); gap: 4px; padding: 5px; }
@@ -351,7 +360,7 @@
             .aux-prayer-row { grid-template-columns: 1fr; }
             .aux-two-column { grid-template-columns: 1fr; }
             .hymn-list-item { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-            .hymn-title-button { -webkit-line-clamp: 3; }
+            .hymn-title-text { -webkit-line-clamp: 3; }
             .church-search-row { grid-template-columns: 1fr; }
             .church-map-js,
             .church-map-frame { min-height: 360px; }
@@ -472,7 +481,7 @@
 </section>
 
 <section id="prayer-panel" class="aux-panel" aria-labelledby="prayer-panel-title">
-    <div class="aux-card">
+    <div class="aux-card aux-panel-header-card">
         <h2 id="prayer-panel-title">다국어 기도문</h2>
         <div id="prayer-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.</div>
         <div id="prayer-controls-anchor" class="aux-controls-anchor"></div>
@@ -495,7 +504,7 @@
 </section>
 
 <section id="hymn-panel" class="aux-panel" aria-labelledby="hymn-panel-title">
-    <div class="aux-card">
+    <div class="aux-card aux-panel-header-card">
         <h2 id="hymn-panel-title" class="hymn-title-heading">
             <span id="hymn-panel-title-label">성가 검색</span>
             <select id="hymn-country" class="aux-select hymn-country-title-select" aria-label="성가 국가 선택" onchange="renderHymnPanel({ resetCategory: true })">
@@ -623,7 +632,6 @@
 <footer id="main-footer">
     </footer>
 
-<script src="JS%20file/liturgical_calendar_2026.js?v=20260710-v225"></script>
 <script src="JS%20file/missa_data.js?v=20260710-v225"></script>
 <script src="JS%20file/prayer_data.js?v=20260710-v225"></script>
 <script src="JS%20file/hymn_data.js?v=20260710-v225"></script>
@@ -1565,7 +1573,7 @@
             const week = Math.floor(dayDiff(d, ordinaryStart) / 7) + (day === 0 ? 2 : 1);
             return { season: 'ordinary', week, day, sundayCycle, weekdayCycle, color: liturgyColorMap.green };
         }
-        if (d > ashWednesday && d < firstSundayLent) {
+        if (d >= ashWednesday && d < firstSundayLent) {
             const names = {
                 KR: `재의 예식 다음 ${weekdayNames.KR[day]}`,
                 VN: `${weekdayNames.VN[day]} sau Lễ Tro`,
@@ -1589,7 +1597,7 @@
             const week = Math.floor(dayDiff(d, firstSundayLent) / 7) + 1;
             return { season: 'lent', week, day, sundayCycle, weekdayCycle, color: (day === 0 && week === 4) ? liturgyColorMap.rose : liturgyColorMap.purple };
         }
-        if (d > easter && d <= addDays(easter, 7)) {
+        if (d >= easter && d <= addDays(easter, 7)) {
             const names = {
                 KR: `부활 팔일 축제 ${weekdayNames.KR[day]}`,
                 VN: `${weekdayNames.VN[day]} trong Tuần Bát Nhật Phục Sinh`,
@@ -1599,7 +1607,7 @@
             };
             return { season: 'easter', week: 1, day, sundayCycle, weekdayCycle, color: liturgyColorMap.white, names };
         }
-        if (d > addDays(easter, 7) && d < pentecost) {
+        if (d > addDays(easter, 7) && d <= pentecost) {
             return { season: 'easter', week: Math.floor(dayDiff(d, easter) / 7) + 1, day, sundayCycle, weekdayCycle, color: liturgyColorMap.white };
         }
         if (d > pentecost && d < adventStart) {
@@ -1630,17 +1638,6 @@
         return normalizeSelectableLang(state.currentLoc || getLiturgicalBaseLang() || 'KR', 'KR');
     }
 
-    function calendarPrefaceDateKey(date) {
-        const value = toDateOnly(date || getActiveLiturgicalSourceDate());
-        return `${value.getFullYear()}-${String(value.getMonth() + 1).padStart(2, '0')}-${String(value.getDate()).padStart(2, '0')}`;
-    }
-
-    function calendarPrefaceRecord(date) {
-        const calendar = globalThis.liturgicalCalendarPrefaces;
-        const byDate = calendar && calendar.byDate;
-        return byDate && byDate[calendarPrefaceDateKey(date)] ? byDate[calendarPrefaceDateKey(date)] : null;
-    }
-
     function firstCalendarPrefaceCandidate(value, langCode) {
         const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
         const splitPattern = {
@@ -1662,11 +1659,55 @@
         return cleanNodeText(names[lang] || names[getLangFromLocation(lang)] || '');
     }
 
-    function localProperPrefaceSelection(info, langCode) {
+    function koreanLunarMonthDay(date) {
+        try {
+            const value = toDateOnly(date || getActiveLiturgicalSourceDate());
+            const localNoon = new Date(value.getFullYear(), value.getMonth(), value.getDate(), 12);
+            const formatter = new Intl.DateTimeFormat('en-u-ca-chinese', {
+                month: 'numeric',
+                day: 'numeric',
+                timeZone: 'Asia/Seoul'
+            });
+            const parts = formatter.formatToParts(localNoon);
+            const month = Number((parts.find(part => part.type === 'month') || {}).value);
+            const day = Number((parts.find(part => part.type === 'day') || {}).value);
+            return Number.isFinite(month) && Number.isFinite(day) ? { month, day } : null;
+        } catch (error) {
+            console.warn('한국 음력 날짜 계산을 지원하지 않는 브라우저입니다.', error);
+            return null;
+        }
+    }
+
+    function localProperPrefaceByDate(date, langCode) {
+        const value = toDateOnly(date || getActiveLiturgicalSourceDate());
         const lang = normalizeSelectableLang(langCode || activePrefaceLanguage(), 'KR');
-        const record = calendarPrefaceRecord(getActiveLiturgicalSourceDate());
-        const calendarTitle = record && record.names ? cleanNodeText(record.names[lang] || '') : '';
-        const title = [leftLiturgyName(info, lang), calendarTitle].filter(Boolean).join(' ');
+        const month = value.getMonth() + 1;
+        const day = value.getDate();
+        if (lang === 'KR') {
+            const lunar = koreanLunarMonthDay(value);
+            if (lunar && lunar.month === 1 && lunar.day === 1) return { key: 'kr_proper_2_lunar_new_year', source: 'perpetual-local-rule' };
+            if (lunar && lunar.month === 8 && lunar.day === 15) return { key: 'kr_proper_3_chuseok', source: 'perpetual-local-rule' };
+            if (month === 6 && day === 25) return { key: 'kr_proper_4_unification', source: 'perpetual-local-rule' };
+            if ((month === 7 && day === 5) || (month === 9 && day === 20)) return { key: 'kr_proper_1', source: 'perpetual-local-rule' };
+        }
+        if (lang === 'VN' && month === 11 && day === 24) return { key: 'vn_martyrs', source: 'perpetual-local-rule' };
+        if (lang === 'EN') {
+            if (month === 7 && day === 4) return { key: 'us_independence', source: 'perpetual-local-rule' };
+            if (month === 11 && value.getDay() === 4 && day >= 22 && day <= 28) return { key: 'us_thanksgiving', source: 'perpetual-local-rule' };
+            if (month === 12 && day === 12) return { key: 'us_guadalupe', source: 'perpetual-local-rule' };
+        }
+        if (lang === 'JP') {
+            if (month === 2 && day === 5) return { key: 'jp_26_martyrs', source: 'perpetual-local-rule' };
+            if (month === 3 && day === 17) return { key: 'jp_discovery_of_christians', source: 'perpetual-local-rule' };
+        }
+        return null;
+    }
+
+    function localProperPrefaceSelection(info, langCode, date = null) {
+        const lang = normalizeSelectableLang(langCode || activePrefaceLanguage(), 'KR');
+        const byDate = localProperPrefaceByDate(date || getActiveLiturgicalSourceDate(), lang);
+        if (byDate) return byDate;
+        const title = leftLiturgyName(info, lang);
         const rules = {
             KR: [
                 [/한국 성직자들의 수호자|김대건|정하상|한국 순교/i, 'kr_proper_1'],
@@ -1716,7 +1757,12 @@
             [/십자가 현양|Holy Cross|Thánh Giá|十字架|Exaltatione/i, 'holy_cross'],
             [/성모 승천|Assumption|Lên Trời|被昇天|Assumptione/i, 'assumption'],
             [/원죄 없이|Immaculate Conception|Vô Nhiễm|無原罪|Immaculata/i, 'immaculate_conception'],
-            [/모든 성인|All Saints|諸聖人|Omnium Sanctorum/i, 'all_saints']
+            [/모든 성인|All Saints|諸聖人|Omnium Sanctorum/i, 'all_saints'],
+            [/성모|Our Lady|Blessed Virgin|Đức Mẹ|聖母|Beata Maria/i, 'mary_1'],
+            [/사도|Apostle|Tông Đồ|使徒|Apostol/i, 'apostles_1'],
+            [/순교|Martyr|Tử Đạo|殉教|Martyr/i, 'martyrs'],
+            [/사제|주교|Pastor|Priest|Bishop|Linh Mục|Giám Mục|司祭|司教|Pastor/i, 'pastors'],
+            [/동정녀|Virgin|Trinh Nữ|おとめ|Virgine/i, 'virgins_and_religious']
         ];
         const matched = rules.find(([pattern]) => pattern.test(text));
         return matched ? { key: matched[1], hint: text, source: 'calendar-rule' } : null;
@@ -1737,29 +1783,33 @@
             return { key: 'ascension_1', hint: '주님 승천 감사송 1', source: 'calendar-exception' };
         }
 
-        const localProper = localProperPrefaceSelection(info, lang);
+        const localProper = localProperPrefaceSelection(info, lang, activeDate);
         if (localProper) return localProper;
         const explicit = explicitPrefaceSelectionFromLiturgyInfo(info, lang);
-        if (explicit && explicit.source === 'special-mass') return explicit;
-
-        const record = calendarPrefaceRecord(activeDate);
-        const rawCalendarHint = record && record.prefaces ? record.prefaces[lang] : '';
-        const calendarHint = firstCalendarPrefaceCandidate(rawCalendarHint, lang);
-        if (calendarHint) return { hint: calendarHint, source: 'calendar-xlsx' };
-        if (record && lang === 'KR' && meta.season === 'ordinary' && !(info && info.isSunday)) {
-            return { key: 'common_1', hint: '공통 감사송 1', source: 'calendar-blank' };
-        }
         if (explicit) return explicit;
 
         if (meta.season === 'advent') return { key: activeDate.getMonth() === 11 && activeDate.getDate() >= 17 ? 'advent_2' : 'advent_1', source: 'season-rule' };
         if (meta.season === 'christmas') return { key: 'nativity_1', source: 'season-rule' };
         if (meta.season === 'lent') {
+            if (meta.week === 0) return { key: activeDate.getDay() === 3 ? 'lent_3' : 'lent_1', source: 'season-rule' };
             if (meta.week === 6) return { key: activeDate.getDay() === 0 ? 'passion_1' : 'passion_2', source: 'season-rule' };
             if (activeDate.getDay() === 0 && meta.week >= 1 && meta.week <= 5) return { key: `lent_${['1st', '2nd', '3rd', '4th', '5th'][meta.week - 1]}_sunday`, source: 'season-rule' };
+            if (meta.week === 5) return { key: 'passion_1', source: 'season-rule' };
             return { key: 'lent_1', source: 'season-rule' };
         }
         if (meta.season === 'easter') return { key: 'easter_1', source: 'season-rule' };
-        return { key: info && info.isSunday ? 'ordinary_1' : 'common_1', source: 'season-rule' };
+        if (meta.season === 'ordinary' && info && info.isSunday) {
+            const koreanOrdinarySundayPrefaceByWeek = {
+                2: 1, 3: 1, 4: 1, 5: 1, 6: 2,
+                11: 2, 12: 2, 13: 2, 15: 3,
+                16: 6, 17: 6, 18: 6, 19: 6, 20: 6,
+                21: 8, 22: 7, 23: 7, 24: 7,
+                26: 6, 27: 6, 28: 6, 30: 6, 32: 6, 33: 3
+            };
+            const number = lang === 'KR' ? (koreanOrdinarySundayPrefaceByWeek[meta.week] || 1) : 1;
+            return { key: `ordinary_${number}`, source: 'perpetual-ordinary-week-rule' };
+        }
+        return { key: 'common_1', source: 'season-rule' };
     }
 
     function defaultPrefaceHintForLiturgyInfo(info, date = null) {
@@ -2452,6 +2502,17 @@
             .filter(value => value && !hiddenHymnTags.has(value))));
     }
 
+    function normalizeHymnTranslations(entry) {
+        const source = entry && entry.translations && typeof entry.translations === 'object' ? entry.translations : {};
+        const output = {};
+        SUPPORTED_LANGS.forEach(lang => {
+            const raw = source[lang] || source[lang.toLowerCase()] || null;
+            const title = cleanNodeText(raw && typeof raw === 'object' ? (raw.title || raw.name || '') : raw);
+            if (title) output[lang] = { title };
+        });
+        return output;
+    }
+
     function normalizeHymnScoreImages(entry) {
         const source = Array.isArray(entry.scoreImages)
             ? entry.scoreImages
@@ -2504,6 +2565,7 @@
                 displayTitle: cleanNodeText(entry.displayTitle || ''),
                 tags,
                 category: tags.join(' / '),
+                translations: normalizeHymnTranslations(entry),
                 firstLine,
                 searchAliases: Array.isArray(entry.searchAliases) ? entry.searchAliases.map(cleanNodeText).filter(Boolean) : [],
                 composer: cleanNodeText(entry.composer || ''),
@@ -2560,7 +2622,8 @@
     function renderHymnDetail(entry, country) {
         const labels = hymnDetailLabels();
         const targetLang = hymnTargetLanguage(country);
-        const tags = entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []);
+        const tags = (entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []))
+            .filter(tag => cleanNodeText(tag) && cleanNodeText(tag) !== cleanNodeText(entry.book));
         const tagsHtml = tags.length ? '<div class="hymn-tags">' + tags.map(tag => '<span class="aux-pill">' + escapeHtml(tag) + '</span>').join('') + '</div>' : '';
         const versesHtml = Array.isArray(entry.verses) && entry.verses.length
             ? entry.verses.map(verse => {
@@ -2614,7 +2677,7 @@
             : '';
             
         const translatedTitle = entry.translations && entry.translations[targetLang] && entry.translations[targetLang].title;
-        const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + ' <span class="aux-muted" style="font-size: 0.9em; font-weight: normal;">(' + escapeHtml(translatedTitle) + ')</span>' : escapeHtml(entry.displayTitle || entry.title);
+        const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : escapeHtml(entry.displayTitle || entry.title);
 
         return [
             '<article class="hymn-detail">',
@@ -2633,10 +2696,13 @@
     }
 
     window.openHymnDetail = function(id) {
-        state.selectedHymnId = cleanNodeText(id);
+        const normalizedId = cleanNodeText(id);
+        const willOpen = state.selectedHymnId !== normalizedId;
+        state.selectedHymnId = willOpen ? normalizedId : '';
         renderHymnPanel();
+        if (!willOpen) return;
         requestAnimationFrame(() => {
-            const detailId = 'hymn-detail-' + cleanNodeText(id).replace(/[^\w-]+/g, '-');
+            const detailId = 'hymn-detail-' + normalizedId.replace(/[^\w-]+/g, '-');
             const detail = document.getElementById(detailId);
             if (detail) detail.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         });
@@ -2700,8 +2766,7 @@
         const targetLang = hymnTargetLanguage(country);
         
         const listHtml = rows.map(entry => {
-            const tags = entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []);
-            const tagHtml = tags.map(tag => '<span class="aux-pill">' + escapeHtml(tag) + '</span>').join('');
+            const tagHtml = entry.book ? '<span class="aux-pill">' + escapeHtml(entry.book) + '</span>' : '';
             const selectedClass = selected && selected.id === entry.id ? ' is-selected' : '';
             const detailId = 'hymn-detail-' + cleanNodeText(entry.id).replace(/[^\w-]+/g, '-');
             const inlineDetailHtml = selected && selected.id === entry.id
@@ -2709,12 +2774,12 @@
                 : '';
                 
             const translatedTitle = entry.translations && entry.translations[targetLang] && entry.translations[targetLang].title;
-            const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + ' <span class="aux-muted" style="font-size: 0.9em; font-weight: normal;">(' + escapeHtml(translatedTitle) + ')</span>' : escapeHtml(entry.displayTitle || entry.title);
+            const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : escapeHtml(entry.displayTitle || entry.title);
 
             return [
                 '<article class="hymn-list-item' + selectedClass + '">',
                 '<div class="hymn-tags">' + tagHtml + '</div>',
-                '<button type="button" class="hymn-title-button" aria-expanded="' + (selectedClass ? 'true' : 'false') + '" aria-controls="' + escapeAttr(detailId) + '" onclick="openHymnDetail(' + escapeInlineArg(entry.id) + ')">' + titleHtml + '</button>',
+                '<button type="button" class="hymn-title-button" aria-expanded="' + (selectedClass ? 'true' : 'false') + '" aria-controls="' + escapeAttr(detailId) + '" onclick="openHymnDetail(' + escapeInlineArg(entry.id) + ')"><span class="hymn-title-text">' + titleHtml + '</span><span class="hymn-disclosure" aria-hidden="true">▼</span></button>',
                 '</article>',
                 inlineDetailHtml
             ].join('');
@@ -3155,6 +3220,12 @@
         return `${escapeHtml(directTitle || fallbackTitle)}${officialTag}${missingTag}`;
     }
 
+    function prayerSummaryTitleHtml(entry, langCode, otherLangCode) {
+        const directTitle = localizedPrayerValueStrict(entry.titles, langCode);
+        const fallbackTitle = localizedPrayerValue(entry.titles, langCode) || localizedPrayerValue(entry.titles, otherLangCode) || '기도문';
+        return escapeHtml(directTitle || fallbackTitle);
+    }
+
     function formatPrayerMarkupHtml(value) {
         let html = escapeHtml(value);
         html = html.replace(/&lt;rubric&gt;([\s\S]*?)&lt;\/rubric&gt;/gi, (_, inner) => {
@@ -3213,6 +3284,7 @@
             return;
         }
         root.innerHTML = rows.map(entry => {
+            const summaryLeftTitle = prayerSummaryTitleHtml(entry, leftLang, rightLang);
             const leftTitle = prayerTitleHtml(entry, leftLang, rightLang, false);
             const rightTitle = prayerTitleHtml(entry, rightLang, leftLang, true);
             const translatedTitleHtml = rightTitle ? `<span class="aux-prayer-translation-title">${rightTitle}</span>` : '';
@@ -3220,7 +3292,7 @@
             const rightBody = prayerBodyHtml(entry, rightLang, leftLang);
             return [
                 '<details class="aux-card aux-prayer-list-item">',
-                `<summary><span class="aux-prayer-summary-title">${leftTitle}${translatedTitleHtml}</span></summary>`,
+                `<summary><span class="aux-prayer-summary-title">${summaryLeftTitle}${translatedTitleHtml}</span></summary>`,
                 '<div class="aux-prayer-list-detail">',
                 `<div class="aux-result-meta">${prayerMetaHtml(entry, leftLang, rightLang)}</div>`,
                 '<div class="aux-two-column">',
@@ -5989,6 +6061,20 @@
         return !!(sourceSectionHasContent(data.reading1) && sourceSectionHasContent(data.gospel));
     }
 
+    const requiredVietnameseDailySectionKeys = [
+        'entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel',
+        'prayer_offerings', 'communion', 'prayer_after'
+    ];
+
+    function missingVietnameseDailySections(parsed) {
+        const data = (parsed && parsed.data) || {};
+        return requiredVietnameseDailySectionKeys.filter(key => !sourceSectionHasContent(data[key]));
+    }
+
+    function hasCompleteVietnameseParsedMass(parsed) {
+        return hasVietnameseParsedMass(parsed) && missingVietnameseDailySections(parsed).length === 0;
+    }
+
     async function fetchVietnameseSourceForParsing(url, date) {
         const source = await fetchTextWithFallbacks(url);
         const structure = inspectVietnameseSourceStructure(source, date);
@@ -7649,7 +7735,10 @@
                             if (!strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
                                 throw new Error('VN source did not match calendar reading hints');
                             }
-                            return await applyKtcgkpvCitationSource(mergedParsed, date);
+                            const citedParsed = await applyKtcgkpvCitationSource(mergedParsed, date);
+                            if (hasCompleteVietnameseParsedMass(citedParsed)) return citedParsed;
+                            if (preferProperDate && hasAnyParsedDailySection(parsed)) properPartialParsed = parsed;
+                            throw new Error('VN source is incomplete: ' + missingVietnameseDailySections(citedParsed).join(', '));
                         }
                         if (preferProperDate && hasAnyParsedDailySection(parsed) && (index === 0 || vietnameseProperLinkMatchesDate({ href: url, text: '' }, date))) {
                             properPartialParsed = parsed;
@@ -7764,10 +7853,12 @@
         const entry = readStorageJSON(dailySourceStorageKey(lang, date));
         if (!entry || !entry.parsed) return null;
         if (!options.allowStale && !isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)) return null;
+        if (lang === 'VN' && !hasCompleteVietnameseParsedMass(entry.parsed)) return null;
         return entry.parsed;
     }
 
     function writeCachedDailySource(lang, date, parsed) {
+        if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) return;
         if (parsed && parsed.data) {
             writeStorageJSON(dailySourceStorageKey(lang, date), { cachedAt: Date.now(), parsed });
         }
@@ -7782,6 +7873,9 @@
             } else {
                 dailySourceCache[key] = dailySourceFetchers[lang](date)
                     .then(parsed => {
+                        if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) {
+                            throw new Error('VN source is incomplete: ' + missingVietnameseDailySections(parsed).join(', '));
+                        }
                         writeCachedDailySource(lang, date, parsed);
                         return parsed;
                     })
@@ -9246,6 +9340,10 @@
         let appliedCount = 0;
         const applyResult = result => {
             if (options.shouldApply && !options.shouldApply()) return false;
+            if (result.parsed && result.lang === 'VN' && !hasCompleteVietnameseParsedMass(result.parsed)) {
+                result.error = new Error('VN source is incomplete: ' + missingVietnameseDailySections(result.parsed).join(', '));
+                result.parsed = null;
+            }
             if (result.parsed) {
                 state.dailyReadingLanguageStatus[result.lang] = 'done';
                 mergeSourceData(fetchedData, result.parsed, result.lang);
@@ -9280,7 +9378,6 @@
         if (options.shouldApply && !options.shouldApply()) return false;
 
         state.dailyReadingsLoading = false;
-        state.dailyReadingLanguageStatus = {};
         if (appliedCount) {
             applyCachedVariantAlignments(fetchedData, today);
             finalizeDailyReadingsData(fetchedData);
@@ -9611,6 +9708,19 @@
             .join('\n');
     }
 
+    function localizedLiturgyLoadFailedMessageForLang(langCode, uiLang = state.uiLang) {
+        const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
+        const lang = normalizeSelectableLang(langCode || state.currentLoc || 'KR', 'KR');
+        const nameText = localizedLanguageNameForUi(lang, ui);
+        return {
+            KR: nameText + ' 전례 전체를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.',
+            VN: 'Không thể tải đầy đủ phụng vụ ' + nameText + '. Vui lòng thử lại sau.',
+            EN: 'The complete ' + nameText + ' liturgy could not be loaded. Please try again later.',
+            JP: nameText + 'の典礼全文を読み込めませんでした。しばらくしてから再試行してください。',
+            LA: 'Liturgia ' + nameText + ' integra onerari non potuit. Mox iterum tenta.'
+        }[ui] || ('The complete ' + nameText + ' liturgy could not be loaded.');
+    }
+
     function ensureVoiceStatusBar() {
         let bar = document.getElementById('voice-status-bar');
         if (bar) return bar;
@@ -9723,19 +9833,21 @@
     }
 
     function syncLiturgyLoadingStatusBar(leftLang, rightLang) {
-        if (!state.dailyReadingsLoading) {
-            hideLiturgyStatusBar();
-            return;
-        }
         const status = state.dailyReadingLanguageStatus || {};
-        const langs = Array.from(new Set([leftLang, rightLang]
+        const visibleLangs = Array.from(new Set([leftLang, rightLang]
             .map(lang => normalizeSelectableLang(lang, ''))
-            .filter(lang => lang && status[lang] === 'loading')));
-        if (!langs.length) {
-            hideLiturgyStatusBar();
+            .filter(Boolean)));
+        const loadingLangs = visibleLangs.filter(lang => state.dailyReadingsLoading && status[lang] === 'loading');
+        if (loadingLangs.length) {
+            updateLiturgyStatusBar(loadingLangs.map(lang => localizedLiturgyLoadingMessageForLang(lang)), { loading: true });
             return;
         }
-        updateLiturgyStatusBar(langs.map(lang => localizedLiturgyLoadingMessageForLang(lang)), { loading: true });
+        const errorLangs = visibleLangs.filter(lang => status[lang] === 'error');
+        if (errorLangs.length) {
+            updateLiturgyStatusBar(errorLangs.map(lang => localizedLiturgyLoadFailedMessageForLang(lang)), { error: true });
+            return;
+        }
+        hideLiturgyStatusBar();
     }
 
     function clearVoiceListeningAnchor() {
