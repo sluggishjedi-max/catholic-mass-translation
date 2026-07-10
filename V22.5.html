@@ -2676,15 +2676,31 @@
         return { title, lyrics };
     }
 
+    function hymnTranslationUsesTargetScript(result, targetLang) {
+        const translated = `${cleanNodeText(result && result.title)}\n${String(result && result.lyrics || '')}`;
+        const targetScript = {
+            KR: /[\uAC00-\uD7A3]/,
+            VN: /[\u00C0-\u00C3\u00C8-\u00CA\u00CC\u00CD\u00D2-\u00D5\u00D9\u00DA\u00DD\u0102\u0110\u0128\u0168\u01A0\u01AF\u1EA0-\u1EF9]/i,
+            JP: /[\u3040-\u30FF\u3400-\u9FFF]/
+        }[targetLang];
+        return !targetScript || targetScript.test(translated);
+    }
+
     async function translateHymnWithGemini(entry, targetLang) {
         const targetName = aiLanguageNames[targetLang] || targetLang;
+        const sourceLang = normalizeSelectableLang(entry && entry.country, 'VN');
+        const sourceName = aiLanguageNames[sourceLang] || sourceLang;
         const prompt = [
-            `Translate this Catholic hymn title and lyrics into ${targetName}.`,
-            'Return strict JSON only in this shape: {"title":"translated title","lyrics":"translated lyrics"}.',
+            `Translate this Catholic hymn from ${sourceName} into ${targetName}.`,
+            `Source language: ${sourceName}. Target language: ${targetName}.`,
+            `Translate every ${sourceName} sentence into natural ${targetName}; do not copy the source-language sentences into the result.`,
+            'Return strict JSON only in this shape: {"title":"target-language title","lyrics":"target-language lyrics"}.',
             'Preserve stanza numbers, refrain labels, and paragraph breaks.',
             'Do not add commentary or Markdown fences.',
             '',
             JSON.stringify({
+                sourceLanguage: sourceName,
+                targetLanguage: targetName,
                 title: cleanNodeText(entry && entry.title),
                 lyrics: plainTextFromHtml(entry && entry.text)
             })
@@ -2696,7 +2712,11 @@
             timeoutMs: 30000,
             label: 'Hymn translation'
         });
-        return parseHymnTranslationPayload(geminiTextFromPayload(payload));
+        const result = parseHymnTranslationPayload(geminiTextFromPayload(payload));
+        if (!hymnTranslationUsesTargetScript(result, targetLang)) {
+            throw new Error(`${targetName} translation did not contain the target-language script.`);
+        }
+        return result;
     }
 
     function requestReverseHymnTranslation(entry, country, force = false) {
