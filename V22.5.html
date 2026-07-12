@@ -262,10 +262,10 @@
         }
         .btn-ai-trans:hover { background: #ffd54f; }
         .btn-ai-trans:disabled { opacity: 0.6; cursor: not-allowed; }
-        .voice-control { display: inline-flex; align-items: center; justify-content: flex-end; gap: 8px; min-width: 0; }
-        .voice-toggle-btn { border: 1px solid var(--primary-color); border-radius: 6px; background: white; color: var(--primary-color); padding: 4px 9px; font-weight: 900; cursor: pointer; line-height: 1.2; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        .voice-toggle-btn:hover { background: #f7f7f7; }
-        .voice-toggle-btn.is-recording { background: #c0392b; border-color: #c0392b; color: white; }
+        .voice-control { display: inline-flex; align-items: center; justify-content: flex-end; gap: 10px; min-width: 0; flex-wrap: wrap; }
+        .voice-toggle-btn { min-width: 116px; min-height: 42px; border: 1px solid #1769c2; border-radius: 999px; background: #1976d2; color: white; padding: 9px 18px; font-size: 0.98rem; font-weight: 900; cursor: pointer; line-height: 1.2; box-shadow: 0 5px 14px rgba(25, 118, 210, 0.28); transition: background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease; }
+        .voice-toggle-btn:hover { background: #1565c0; box-shadow: 0 7px 18px rgba(25, 118, 210, 0.34); transform: translateY(-1px); }
+        .voice-toggle-btn.is-recording { background: #0d5eae; border-color: #0d5eae; color: white; }
         .voice-highlight-active,
         .voice-listening-anchor { background: rgba(108, 117, 125, 0.16) !important; border-radius: 8px; box-shadow: inset 4px 0 0 rgba(108, 117, 125, 0.58), inset 0 0 0 1px rgba(108, 117, 125, 0.22); transition: background-color 0.25s ease, box-shadow 0.25s ease; }
         .voice-listening-anchor { background: rgba(108, 117, 125, 0.10) !important; box-shadow: inset 4px 0 0 rgba(108, 117, 125, 0.36), inset 0 0 0 1px rgba(108, 117, 125, 0.14); }
@@ -273,14 +273,16 @@
         .liturgy-status-bar { position: fixed; left: 50%; bottom: calc(106px + env(safe-area-inset-bottom, 0px)); z-index: 1199; display: flex; flex-direction: column-reverse; align-items: stretch; gap: 6px; width: min(680px, calc(100% - 24px)); transform: translate(-50%, 14px); opacity: 0; pointer-events: none; transition: opacity 0.18s ease, transform 0.18s ease; }
         .voice-status-bar.is-visible,
         .liturgy-status-bar.is-visible { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+        .voice-status-bar { flex-direction: row; align-items: center; gap: 10px; min-height: 48px; box-sizing: border-box; padding: 8px 10px 8px 15px; border: 1px solid rgba(255, 255, 255, 0.24); border-radius: 999px; background: rgba(73, 80, 87, 0.88); color: white; font-size: 0.9rem; font-weight: 900; line-height: 1.35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26); backdrop-filter: blur(7px); }
         .liturgy-status-line { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 38px; padding: 9px 13px; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 999px; background: rgba(73, 80, 87, 0.78); color: white; font-size: 0.86rem; font-weight: 900; line-height: 1.35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24); backdrop-filter: blur(7px); }
         .voice-status-bar.is-error { background: rgba(90, 90, 90, 0.86); }
         .liturgy-status-bar.is-error .liturgy-status-line { background: rgba(90, 90, 90, 0.86); }
+        .voice-status-dot { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: #cbd5e1; }
         .voice-status-bar.is-recording .voice-status-dot { background: #f87171; animation: voicePulse 1.1s ease-in-out infinite; }
         .voice-status-bar.is-paused .voice-status-dot { background: #facc15; }
         .liturgy-status-bar.is-loading .voice-status-dot { background: #cbd5e1; animation: voicePulse 1.1s ease-in-out infinite; }
         .voice-status-message { min-width: 0; flex: 1 1 auto; overflow-wrap: anywhere; }
-        .voice-status-action-btn { flex: 0 0 auto; display: inline-grid; place-items: center; min-width: 30px; height: 28px; border: 1px solid rgba(255,255,255,0.55); border-radius: 999px; background: rgba(255, 255, 255, 0.14); color: white; padding: 0 9px; font-size: 0.86rem; font-weight: 900; letter-spacing: 0; cursor: pointer; }
+        .voice-status-action-btn { flex: 0 0 auto; display: inline-grid; place-items: center; width: 32px; min-width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.66); border-radius: 50%; background: rgba(255, 255, 255, 0.14); color: white; padding: 0; font-size: 0.82rem; font-weight: 900; line-height: 1; letter-spacing: 0; cursor: pointer; box-shadow: 0 3px 8px rgba(0,0,0,0.2); }
         .voice-status-action-btn:hover { background: rgba(255, 255, 255, 0.24); }
         .voice-status-stop-btn { background: rgba(239, 68, 68, 0.96); }
         .voice-status-stop-btn:hover { background: rgba(220, 38, 38, 1); }
@@ -637,7 +639,7 @@
 
 <script src="JS%20file/missa_data.js?v=20260710-v225"></script>
 <script src="JS%20file/prayer_data.js?v=20260710-v225"></script>
-<script src="JS%20file/hymn_data.js?v=20260710-v225"></script>
+<script src="JS%20file/hymn_data.js?v=20260712-v225"></script>
 
 <script>
     (function loadFirebaseSdkInBackground() {
@@ -2609,11 +2611,9 @@
 
     const hymnTranslationRecords = new Map();
 
-    function usesReverseHymnTranslation(country) {
+    function usesAutomaticHymnTranslation(country) {
         const hymnLang = normalizeSelectableLang(country || 'KR', 'KR');
-        const configuredTarget = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
-        const localLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
-        return hymnLang === configuredTarget && localLang !== hymnLang && hymnTargetLanguage(hymnLang) === localLang;
+        return hymnTargetLanguage(hymnLang) !== hymnLang;
     }
 
     function hymnTranslationRecordKey(entry, targetLang) {
@@ -2747,28 +2747,24 @@
         const sourceCode = hymnMachineTranslationLanguageCodes[sourceLang] || 'auto';
         const targetCode = hymnMachineTranslationLanguageCodes[targetLang];
         if (!targetCode) throw new Error('The fallback translation language is not supported.');
-        const chunks = splitHymnTranslationText(value);
+        const chunks = splitHymnTranslationText(value, 1200);
         const translatedChunks = [];
         for (const chunk of chunks) {
-            const body = new URLSearchParams({
-                client: 'gtx',
-                sl: sourceCode,
-                tl: targetCode,
-                dt: 't',
-                q: chunk
-            });
-            const response = await fetchWithTimeout('https://translate.googleapis.com/translate_a/single', {
+            const response = await fetchWithTimeout(GEMINI_PROXY_ENDPOINT, {
                 method: 'POST',
                 cache: 'no-cache',
-                timeoutMs: 20000,
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-                body: body.toString()
+                timeoutMs: 25000,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    kind: 'translateFallback',
+                    sourceLang: sourceCode,
+                    targetLang: targetCode,
+                    text: chunk
+                })
             });
             if (!response.ok) throw new Error(`Fallback translation failed: HTTP ${response.status}`);
             const payload = await response.json();
-            const translated = Array.isArray(payload && payload[0])
-                ? payload[0].map(part => Array.isArray(part) ? (part[0] || '') : '').join('')
-                : '';
+            const translated = String(payload && payload.text || '');
             if (!cleanNodeText(translated)) throw new Error('Fallback translation returned an empty result.');
             translatedChunks.push(translated.trim());
         }
@@ -2796,8 +2792,8 @@
         }
     }
 
-    function requestReverseHymnTranslation(entry, country, force = false) {
-        if (!entry || !entry.text || !usesReverseHymnTranslation(country)) return null;
+    function requestAutomaticHymnTranslation(entry, country, force = false) {
+        if (!entry || !entry.text || !usesAutomaticHymnTranslation(country)) return null;
         const targetLang = hymnTargetLanguage(country);
         const key = hymnTranslationRecordKey(entry, targetLang);
         const existing = hymnTranslationRecords.get(key);
@@ -2824,16 +2820,18 @@
 
     function hymnTranslatedTitle(entry, country) {
         const targetLang = hymnTargetLanguage(country);
+        const stored = entry && entry.translations && entry.translations[targetLang];
+        const storedTitle = cleanNodeText(stored && stored.title);
+        if (storedTitle) return storedTitle;
         const record = hymnTranslationRecord(entry, country);
         if (record && record.status === 'done' && record.title) return record.title;
-        const stored = entry && entry.translations && entry.translations[targetLang];
-        return cleanNodeText(stored && stored.title);
+        return '';
     }
 
     window.retryHymnTranslation = function(id, country) {
         const entry = getHymnData().find(item => cleanNodeText(item && item.id) === cleanNodeText(id));
         if (!entry) return;
-        requestReverseHymnTranslation(entry, country, true);
+        requestAutomaticHymnTranslation(entry, country, true);
         renderHymnPanel();
     };
 
@@ -2860,7 +2858,7 @@
     function renderHymnDetail(entry, country) {
         const labels = hymnDetailLabels();
         const targetLang = hymnTargetLanguage(country);
-        const reverseTranslation = usesReverseHymnTranslation(country);
+        const automaticTranslation = usesAutomaticHymnTranslation(country);
         const translationRecord = hymnTranslationRecord(entry, country);
         const tags = (entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []))
             .filter(tag => cleanNodeText(tag) && cleanNodeText(tag) !== cleanNodeText(entry.book));
@@ -2877,11 +2875,11 @@
             : '<p class="aux-muted">' + labels.lyricsPending + '</p>');
         const lyricsNoteHtml = entry.lyricsNote ? '<p class="aux-muted">' + escapeHtml(entry.lyricsNote) + '</p>' : '';
         let translatedLyricsHtml = '';
-        if (reverseTranslation && translationRecord && translationRecord.status === 'done') {
+        if (automaticTranslation && translationRecord && translationRecord.status === 'done') {
             translatedLyricsHtml = '<p class="aux-prayer-body hymn-translated-lyrics">' + aiTranslatedHtml(translationRecord.text) + '</p>';
-        } else if (reverseTranslation && translationRecord && translationRecord.status === 'pending') {
+        } else if (automaticTranslation && translationRecord && translationRecord.status === 'pending') {
             translatedLyricsHtml = '<p class="aux-muted hymn-translation-status">' + escapeHtml(hymnTranslationUiText('pending', targetLang)) + '</p>';
-        } else if (reverseTranslation) {
+        } else if (automaticTranslation) {
             const failedText = translationRecord && translationRecord.status === 'error'
                 ? '<p class="hymn-translation-error">' + escapeHtml(hymnTranslationUiText('failed', targetLang)) + '</p>'
                 : '';
@@ -2964,7 +2962,7 @@
         if (willOpen) {
             const country = normalizeSelectableLang((document.getElementById('hymn-country') || {}).value || state.currentLoc || 'KR', 'KR');
             const entry = getHymnData().find(item => cleanNodeText(item && item.id) === normalizedId);
-            if (entry) requestReverseHymnTranslation(entry, country);
+            if (entry) requestAutomaticHymnTranslation(entry, country);
         }
         renderHymnPanel();
         if (!willOpen) return;
@@ -3042,7 +3040,7 @@
                 
             const translatedTitle = hymnTranslatedTitle(entry, country);
             const translationRecord = hymnTranslationRecord(entry, country);
-            const pendingTitle = usesReverseHymnTranslation(country) && translationRecord && translationRecord.status === 'pending'
+            const pendingTitle = usesAutomaticHymnTranslation(country) && translationRecord && translationRecord.status === 'pending'
                 ? hymnTranslationUiText('pending', targetLang)
                 : '';
             const titleHtml = translatedTitle || pendingTitle
@@ -4985,10 +4983,40 @@
         const intro = introIndex >= 0 ? blocks[introIndex] : '';
         if (introIndex >= 0) blocks.splice(introIndex, 1);
         const out = [];
-        if (summaryResult.summary) out.push(parsedLine('', summaryResult.summary, 'summary'));
-        if (intro) out.push(parsedLine('', intro, 'intro'));
-        if (blocks.length) out.push(parsedLine('', blocks.join('\n'), 'body'));
+        const appendOption = body => {
+            if (summaryResult.summary) out.push(parsedLine('', summaryResult.summary, 'summary'));
+            if (intro) out.push(parsedLine('', intro, 'intro'));
+            if (cleanNodeText(body)) out.push(parsedLine('', body, 'body'));
+        };
+        const joinedBody = blocks.join('\n');
+        const hasBracketedShortForm = isGospel && /\[[\s\S]+?\]/u.test(joinedBody);
+        if (hasBracketedShortForm) {
+            const longBody = joinedBody.replace(/[\[\]]/g, '').replace(/\n{3,}/g, '\n\n').trim();
+            const shortBody = joinedBody.replace(/\[[\s\S]*?\]/gu, '').replace(/\n{3,}/g, '\n\n').trim();
+            appendOption(longBody);
+            out.push(parsedLine('', 'Hoặc:'));
+            appendOption(shortBody);
+        } else {
+            appendOption(joinedBody);
+        }
         return out;
+    }
+
+    function vietnameseGospelOptionCitations(citation, parsedLines) {
+        if (splitParsedAlternatives(parsedLines).length < 2) return [];
+        const source = cleanNodeText(citation);
+        const match = source.match(/^(.*?)\s*\{\s*(?:hoặc|hoac|or)\s+([^}]+)\}\s*$/iu);
+        if (!match) return [{ cit_vn: source }, { cit_vn: source }];
+        const shortCitation = cleanNodeText(match[1]);
+        const alternative = cleanNodeText(match[2]);
+        let longCitation = alternative;
+        const rangePrefix = shortCitation.match(/^(.*?,\s*)[^,{}]+$/u);
+        if (rangePrefix && !alternative.includes(',')) longCitation = `${rangePrefix[1]}${alternative}`;
+        else if (!/^[1-3]?\s*[A-Za-zÀ-ỹ]+\s+/u.test(alternative)) {
+            const bookPrefix = shortCitation.match(/^([^\d]+)\s*/u);
+            if (bookPrefix) longCitation = `${bookPrefix[1].trim()} ${alternative}`;
+        }
+        return [{ cit_vn: cleanNodeText(longCitation) }, { cit_vn: shortCitation }];
     }
 
     function normalizeVietnamesePsalmResponseTail(text) {
@@ -5064,6 +5092,13 @@
             out.push(parsedLine(speaker, combinedAlleluia[1]));
             out.push(parsedLine('', cleanAcclamationVerse(combinedAlleluia[2])));
             out.push(parsedLine('', combinedAlleluia[3]));
+            return;
+        }
+        const wrappedAlleluia = cleaned.match(/^(Alleluia(?:,\s*alleluia)?[!.])\s+(.+?)\s+(Alleluia[!.]?)$/i);
+        if (wrappedAlleluia) {
+            out.push(parsedLine(speaker, wrappedAlleluia[1]));
+            out.push(parsedLine('', cleanAcclamationVerse(wrappedAlleluia[2])));
+            out.push(parsedLine('', wrappedAlleluia[3]));
             return;
         }
         if (/^Alleluia/i.test(cleaned)) out.push(parsedLine(speaker, cleaned));
@@ -5190,7 +5225,14 @@
         if (accl.lines.length) result.gospel_accl = { text: formatVietnameseSection('gospel_accl', accl.lines), lines: formatVietnameseSectionLines('gospel_accl', accl.lines) };
         if (gospel.lines.length) {
             const parsedLines = parseVietnameseReadingLines(gospel.lines, true);
-            result.gospel = { text: parsedLinesToText(parsedLines), lines: parsedLines, cit_vn: extractCitationFromHeading(gospel.heading) };
+            const citation = extractCitationFromHeading(gospel.heading);
+            const optionCits = vietnameseGospelOptionCitations(citation, parsedLines);
+            result.gospel = {
+                text: parsedLinesToText(parsedLines),
+                lines: parsedLines,
+                cit_vn: optionCits[0] && optionCits[0].cit_vn ? optionCits[0].cit_vn : citation,
+                optionCits
+            };
         }
         if (offerings.lines.length) result.prayer_offerings = { text: formatVietnameseSection('prayer_offerings', offerings.lines), lines: formatVietnameseSectionLines('prayer_offerings', offerings.lines) };
         if (communion.lines.length) {
@@ -6405,7 +6447,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict65';
+    const STRICT_PARSER_CACHE_VERSION = 'strict66';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -8770,6 +8812,99 @@
         return options.length ? options : [parsedLines || []];
     }
 
+    function normalizeGospelAlternativeOption(option, lower) {
+        if (lower !== 'kr') return option;
+        return (option || []).map(line => {
+            if (!line || line.role !== 'body') return line;
+            const text = String(line.text || '')
+                .replace(/^\s*<[^>\n]+>\s*(?:\r?\n|$)/u, '')
+                .replace(/^\s*[✠▥]\s*[^\n]*전한\s+거룩한\s+복음입니다\.?\s*(?:\r?\n|$)/u, '')
+                .trim();
+            return Object.assign({}, line, { text });
+        }).filter(line => cleanNodeText(line && line.text) || cleanNodeText(line && line.sp) || cleanNodeText(line && line.rubric));
+    }
+
+    function expandBracketedVietnameseGospelLines(parsedLines) {
+        const source = Array.isArray(parsedLines) ? parsedLines : [];
+        if (splitParsedAlternatives(source).length > 1) return source;
+        const hasBracketedBody = source.some(line => line && line.role === 'body' && /\[[\s\S]+?\]/u.test(String(line.text || '')));
+        if (!hasBracketedBody) return source;
+        const makeOption = shortForm => source.map(line => {
+            if (!line || line.role !== 'body') return Object.assign({}, line);
+            const raw = String(line.text || '');
+            const text = shortForm
+                ? raw.replace(/\[[\s\S]*?\]/gu, '').replace(/\n{3,}/g, '\n\n').trim()
+                : raw.replace(/[\[\]]/g, '').replace(/\n{3,}/g, '\n\n').trim();
+            return Object.assign({}, line, { text });
+        }).filter(line => cleanNodeText(line && line.text) || cleanNodeText(line && line.sp) || cleanNodeText(line && line.rubric));
+        return makeOption(false).concat([parsedLine('', 'Hoặc:')], makeOption(true));
+    }
+
+    function normalizeDailyGospelOptions(newData) {
+        if (!newData || !Array.isArray(newData.vn_lines)) return;
+        newData.vn_lines = expandBracketedVietnameseGospelLines(newData.vn_lines);
+        if (splitParsedAlternatives(newData.vn_lines).length < 2) return;
+        const existingOptionCits = Array.isArray(newData.optionCits_vn) && newData.optionCits_vn.length >= 2
+            ? newData.optionCits_vn
+            : [];
+        const optionCits = existingOptionCits.length
+            ? existingOptionCits
+            : vietnameseGospelOptionCitations(newData.cit_vn || '', newData.vn_lines);
+        if (optionCits.length) {
+            newData.optionCits_vn = optionCits;
+            if (optionCits[0].cit_vn) newData.cit_vn = optionCits[0].cit_vn;
+        }
+    }
+
+    const gospelLengthVariantLabels = {
+        long: { kr: '긴 복음', vn: 'Bài Tin Mừng dài', en: 'Long Gospel', jp: '長い福音', la: 'Evangelium longum' },
+        short: { kr: '짧은 복음', vn: 'Bài Tin Mừng ngắn', en: 'Short Gospel', jp: '短い福音', la: 'Evangelium breve' }
+    };
+
+    function applyGospelLengthVariantLabels(variants) {
+        const entries = Object.entries(variants || {});
+        if (entries.length !== 2) return;
+        const measured = entries.map(([key, variant]) => {
+            const length = (variant.lines || []).reduce((sum, line) => sum + ['kr', 'vn', 'en', 'jp', 'la'].reduce((lineSum, lower) => {
+                if (line[`role_${lower}`] !== 'body') return lineSum;
+                return lineSum + cleanNodeText(line[`text_${lower}`]).length;
+            }, 0), 0);
+            return { key, variant, length };
+        }).sort((a, b) => b.length - a.length);
+        if (!measured[1].length || measured[0].length < measured[1].length * 1.18) return;
+        measured[0].variant.label = Object.assign({}, gospelLengthVariantLabels.long);
+        measured[1].variant.label = Object.assign({}, gospelLengthVariantLabels.short);
+    }
+
+    function applyGospelLengthVariantCitations(variants, newData) {
+        Object.values(variants || {}).forEach(variant => {
+            const isLong = variant && variant.label && variant.label.kr === gospelLengthVariantLabels.long.kr;
+            const isShort = variant && variant.label && variant.label.kr === gospelLengthVariantLabels.short.kr;
+            if (!isLong && !isShort) return;
+            const optionIndex = isShort ? 1 : 0;
+            variant.cit = variant.cit || {};
+            ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
+                const optionCits = newData && newData[`optionCits_${lower}`];
+                const source = Array.isArray(optionCits) ? optionCits[optionIndex] : null;
+                const key = `cit_${lower}`;
+                if (source && source[key]) variant.cit[key] = source[key];
+            });
+            if (isShort) {
+                const vietnameseShort = newData && Array.isArray(newData.optionCits_vn) && newData.optionCits_vn[1]
+                    ? cleanNodeText(newData.optionCits_vn[1].cit_vn || '')
+                    : '';
+                const shortRange = (vietnameseShort.match(/[,.:]\s*([\d\s;\-–—a-z]+)$/iu) || [])[1];
+                if (shortRange) {
+                    ['kr', 'en', 'jp', 'la'].forEach(lower => {
+                        const key = `cit_${lower}`;
+                        if (!variant.cit[key]) return;
+                        variant.cit[key] = variant.cit[key].replace(/([,.:]\s*)[\d\s;\-–—a-z]+$/iu, `$1${shortRange}`);
+                    });
+                }
+            }
+        });
+    }
+
     const aiAlignedVariantSectionIds = new Set(['psalm', 'gospel_accl', 'entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
 
     function selectableOptionMapFromData(newData, baseId = '') {
@@ -8861,7 +8996,9 @@
             ['taste_see_good_lord', /맛보고.*깨달|주님.*얼마나\s*좋|hay nem.*nhin coi|nem thu.*nhin coi|chua thien hao|taste.*see.*good|gustate.*videte/i],
             ['praise_soul_holy_name', /내\s*영혼.*찬미|거룩하신.*이름|linh hon.*chuc tung|thanh danh nguoi|bless the lord.*soul|holy name/i],
             ['my_god_praise_salvation', /당신은\s*저의\s*하느님.*찬송|구원이\s*되어|chua la thien chua cua toi|tro nen phan roi|my god.*praise|become.*salvation/i],
-            ['unity_sent_by_father', /하나가\s*되게|아버지.*보내셨다는|nen mot|cha da sai con|be one|sent me|sent con/i]
+            ['unity_sent_by_father', /하나가\s*되게|아버지.*보내셨다는|nen mot|cha da sai con|be one|sent me|sent con/i],
+            ['seed_word_sower_christ', /씨앗.*하느님.*말씀.*씨.*뿌리.*그리스도|hat giong.*loi thien chua.*nguoi gieo giong.*duc\s*ki\s*-?\s*to|seed.*word of god.*sower.*christ/i],
+            ['father_word_truth_sanctify', /아버지.*말씀.*진리|진리로.*거룩|loi cha.*chan ly|thanh hoa.*su that|father.*word.*truth|sanctify.*truth/i]
         ];
         const haystack = `${normalized}\n${raw}`;
         const matched = patterns.find(([, pattern]) => pattern.test(haystack));
@@ -9442,13 +9579,15 @@
     function ensureDailySelectableVariants(item, newData, baseId) {
         normalizeDailySelectableTemplate(item);
         if (item.isEucharist || baseId === 'eucharist') return false;
+        if (baseId === 'gospel') normalizeDailyGospelOptions(newData);
         const lowerLangs = ['kr', 'vn', 'en', 'jp', 'la'];
         const optionMap = {};
         let maxOptions = 1;
         lowerLangs.forEach(lower => {
             const structured = newData[`${lower}_lines`];
             if (!Array.isArray(structured) || !structured.length) return;
-            const options = dedupeParsedAlternatives(baseId, splitParsedAlternatives(structured));
+            let options = dedupeParsedAlternatives(baseId, splitParsedAlternatives(structured));
+            if (baseId === 'gospel') options = options.map(option => normalizeGospelAlternativeOption(option, lower));
             optionMap[lower] = options;
             maxOptions = Math.max(maxOptions, options.length);
         });
@@ -9495,6 +9634,10 @@
             const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
             const label = alignmentGroup ? dailyVariantLabelForAlignment(alignmentGroup, i) : dailyVariantLabel(i);
             variants[key] = { label, header: item.header || {}, cit, lines };
+        }
+        if (baseId === 'gospel') {
+            applyGospelLengthVariantLabels(variants);
+            applyGospelLengthVariantCitations(variants, newData);
         }
         item.type = 'selectable';
         item.variants = variants;
@@ -9945,42 +10088,42 @@
 
     const voiceUiText = {
         KR: {
-            on: '켜짐', off: '꺼짐', ready: '준비됨', start: '시작', stop: '끄기',
-            preparing: '음성 인식 준비 중', listening: '듣는 중 · ■ 정지', paused: '정지됨 · ▶ 재생',
+            on: '켜짐', off: '꺼짐', ready: '준비됨', start: '음성인식 시작', stop: '음성인식 끄기',
+            preparing: '음성 인식 준비 중', listening: '음성 인식 중 · 오른쪽 정지 버튼으로 잠시 멈출 수 있습니다', paused: '음성 인식 정지됨 · 오른쪽 재생 버튼으로 다시 시작하세요',
             found: text => `위치 표시 중 · 들은 말: ${text}`, searching: text => `위치를 찾는 중 · 들은 말: ${text}`,
-            noSpeech: '음성이 들리지 않습니다 · ■ 정지', unsupported: '이 브라우저는 실시간 음성 인식을 지원하지 않습니다',
+            noSpeech: '음성이 들리지 않습니다 · 정지하거나 계속 말씀해 주세요', unsupported: '이 브라우저는 실시간 음성 인식을 지원하지 않습니다',
             permission: '마이크 권한이 필요합니다', error: '브라우저 음성 인식 오류가 발생했습니다',
             startFailed: '음성 인식을 시작할 수 없습니다', pauseTitle: '음성 인식 정지', playTitle: '음성 인식 재생'
         },
         VN: {
             on: 'Bật', off: 'Tắt', ready: 'Sẵn sàng', start: 'Bắt đầu', stop: 'Tắt',
-            preparing: 'Đang chuẩn bị nhận giọng nói', listening: 'Đang nghe · ■ dừng', paused: 'Đã dừng · ▶ nghe tiếp',
+            preparing: 'Đang chuẩn bị nhận giọng nói', listening: 'Đang nhận giọng nói · dùng nút dừng bên phải để tạm dừng', paused: 'Đã dừng nhận giọng nói · dùng nút phát bên phải để tiếp tục',
             found: text => `Đang đánh dấu vị trí · nghe: ${text}`, searching: text => `Đang tìm vị trí · nghe: ${text}`,
-            noSpeech: 'Không nghe thấy tiếng nói · ■ dừng', unsupported: 'Trình duyệt này không hỗ trợ nhận giọng nói trực tiếp',
+            noSpeech: 'Không nghe thấy tiếng nói · hãy tiếp tục nói hoặc nhấn nút dừng', unsupported: 'Trình duyệt này không hỗ trợ nhận giọng nói trực tiếp',
             permission: 'Cần quyền dùng micro', error: 'Lỗi nhận giọng nói của trình duyệt',
             startFailed: 'Không thể bắt đầu nhận giọng nói', pauseTitle: 'Dừng nhận giọng nói', playTitle: 'Nghe tiếp'
         },
         EN: {
             on: 'On', off: 'Off', ready: 'Ready', start: 'Start', stop: 'Turn off',
-            preparing: 'Preparing voice recognition', listening: 'Listening · ■ pause', paused: 'Paused · ▶ resume',
+            preparing: 'Preparing voice recognition', listening: 'Voice recognition active · use the stop button on the right to pause', paused: 'Voice recognition paused · use the play button on the right to resume',
             found: text => `Tracking position · heard: ${text}`, searching: text => `Finding position · heard: ${text}`,
-            noSpeech: 'No speech heard · ■ pause', unsupported: 'This browser does not support live speech recognition',
+            noSpeech: 'No speech heard · keep speaking or use the stop button', unsupported: 'This browser does not support live speech recognition',
             permission: 'Microphone permission is required', error: 'Browser speech recognition error',
             startFailed: 'Could not start speech recognition', pauseTitle: 'Pause speech recognition', playTitle: 'Resume speech recognition'
         },
         JP: {
             on: 'オン', off: 'オフ', ready: '準備完了', start: '開始', stop: 'オフ',
-            preparing: '音声認識を準備中', listening: '聞き取り中 · ■ 停止', paused: '停止中 · ▶ 再開',
+            preparing: '音声認識を準備中', listening: '音声認識中 · 右の停止ボタンで一時停止できます', paused: '音声認識を停止中 · 右の再生ボタンで再開できます',
             found: text => `位置を表示中 · 認識: ${text}`, searching: text => `位置を検索中 · 認識: ${text}`,
-            noSpeech: '音声が聞こえません · ■ 停止', unsupported: 'このブラウザはリアルタイム音声認識に対応していません',
+            noSpeech: '音声が聞こえません · 続けて話すか停止ボタンを押してください', unsupported: 'このブラウザはリアルタイム音声認識に対応していません',
             permission: 'マイクの許可が必要です', error: 'ブラウザの音声認識エラー',
             startFailed: '音声認識を開始できません', pauseTitle: '音声認識を停止', playTitle: '音声認識を再開'
         },
         LA: {
             on: 'Actum', off: 'Exstinctum', ready: 'Paratum', start: 'Incipe', stop: 'Exstingue',
-            preparing: 'Cognitio vocis paratur', listening: 'Audio · ■ siste', paused: 'Sistitur · ▶ perge',
+            preparing: 'Cognitio vocis paratur', listening: 'Cognitio vocis agit · globulum rubrum ad dextram preme ut sistas', paused: 'Cognitio vocis sistitur · globulum viridem ad dextram preme ut pergas',
             found: text => `Locus indicatur · auditum: ${text}`, searching: text => `Locus quaeritur · auditum: ${text}`,
-            noSpeech: 'Vox non auditur · ■ siste', unsupported: 'Hic navigator cognitionem vocis continuam non sustinet',
+            noSpeech: 'Vox non auditur · loquere vel globulum sistendi preme', unsupported: 'Hic navigator cognitionem vocis continuam non sustinet',
             permission: 'Licentia microphoni necessaria est', error: 'Error cognitionis vocis',
             startFailed: 'Cognitionem vocis incipere non potest', pauseTitle: 'Siste cognitionem vocis', playTitle: 'Perge cognitionem vocis'
         }
