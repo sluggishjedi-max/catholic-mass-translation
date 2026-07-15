@@ -6904,7 +6904,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict71';
+    const STRICT_PARSER_CACHE_VERSION = 'strict72';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -8176,7 +8176,10 @@
     }
 
     function strictParsePrayerOrAntiphon(lang, key, section) {
-        const blocks = strictSplitBlocks(section.lines);
+        const sourceBlocks = strictSplitBlocks(section.lines);
+        const blocks = lang === 'VN'
+            ? cleanVietnameseSectionSourceLines(key, sourceBlocks)
+            : sourceBlocks;
         const parsed = [];
         const optionCits = [];
         strictGroupAlternativeBlocks(blocks).forEach((group, index) => {
