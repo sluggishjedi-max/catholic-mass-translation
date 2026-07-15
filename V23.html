@@ -138,7 +138,7 @@
         .citation { display: inline-block; vertical-align: baseline; color: var(--sub-txt); font-size: 0.8em; font-weight: bold; background: #eee; padding: 2px 6px; border-radius: 4px; margin-left: 8px; }
         .part-select-row { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; width: 100%; margin: 0 0 8px; }
         .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
-        .select-inline { display: block; width: fit-content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: 0.85em; outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
+        .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: 0.85em; outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
         .select-block { display: block; margin: 0; text-align: right; }
 
         .aux-panel { display: none; max-width: 1100px; margin: 0 auto; padding: 18px 20px 86px; background: #fff; color: #333; }
@@ -634,10 +634,10 @@
 <footer id="main-footer">
     </footer>
 
-<script src="JS%20file/missa_data.js?v=20260715-v23-2"></script>
-<script src="JS%20file/korean_temporal_data.js?v=20260715-v23-2"></script>
-<script src="JS%20file/prayer_data.js?v=20260715-v23-2"></script>
-<script src="JS%20file/hymn_data.js?v=20260715-v23-2"></script>
+<script src="JS%20file/missa_data.js?v=20260715-v23-3"></script>
+<script src="JS%20file/korean_temporal_data.js?v=20260715-v23-3"></script>
+<script src="JS%20file/prayer_data.js?v=20260715-v23-3"></script>
+<script src="JS%20file/hymn_data.js?v=20260715-v23-3"></script>
 
 <script>
     // 통상문은 배포된 missa_data.js만 사용합니다.
@@ -690,7 +690,7 @@
     const VATICAN_PONTIFFS_URL = 'https://www.vatican.va/content/vatican/en/holy-father.html';
     const REMOTE_FETCH_RETRIES = 0;
     const REMOTE_FETCH_TIMEOUT_MS = 8000;
-    const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 12000;
+    const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 60000;
     const KTCG_CITATION_TIMEOUT_MS = 3000;
     const liturgicalTimeZones = {
         KR: 'Asia/Seoul',
@@ -2141,13 +2141,15 @@
         const activeLangs = new Set([leftLang, rightLang].filter(lang => langMeta[lang]));
         const legend = document.getElementById('role-legend');
         if (!legend) return;
+        const grid = legend.querySelector('.role-legend-grid');
+        if (!grid) return;
         const groups = Array.from(legend.querySelectorAll('[data-legend-lang]'));
         groups.forEach(group => {
             group.hidden = !activeLangs.has(group.dataset.legendLang);
         });
         [leftLang, rightLang].forEach(lang => {
             const group = groups.find(candidate => candidate.dataset.legendLang === lang);
-            if (group) legend.appendChild(group);
+            if (group) grid.appendChild(group);
         });
     }
 
@@ -2172,10 +2174,23 @@
     let churchMapsApiKey = '';
     let churchMapsApiKeyPromise = null;
     let churchSearchRequestId = 0;
+    let churchMapsAuthErrorCode = '';
     const CHURCH_MAX_RESULTS = 120;
     const CHURCH_MAX_RESULTS_PER_QUERY = 60;
     const CHURCH_TEXT_SEARCH_PAGE_DELAY_MS = 1800;
     const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
+
+    // Google Maps reports the actionable authentication reason only through
+    // console.error before calling gm_authFailure.  Retain just that public
+    // error code on the map node so a failed deployment can be diagnosed
+    // without exposing the browser key.
+    const originalConsoleErrorForMaps = console.error.bind(console);
+    console.error = (...args) => {
+        const message = args.map(value => String(value || '')).join(' ');
+        const match = message.match(/\b([A-Za-z]+MapError)\b/);
+        if (match) churchMapsAuthErrorCode = match[1];
+        originalConsoleErrorForMaps(...args);
+    };
 
     const prayerSeedData = [
         {
@@ -3140,6 +3155,11 @@
     window.gm_authFailure = function() {
         churchMapInitialized = false;
         const input = document.getElementById('church-search');
+        const mapNode = document.getElementById('church-map');
+        if (mapNode) mapNode.dataset.authError = churchMapsAuthErrorCode || 'GoogleMapsAuthFailure';
+        setTimeout(() => {
+            if (mapNode) mapNode.dataset.authError = churchMapsAuthErrorCode || mapNode.dataset.authError || 'GoogleMapsAuthFailure';
+        }, 250);
         showChurchFallback(cleanNodeText(input && input.value));
     };
 
@@ -8086,6 +8106,32 @@
         };
     }
 
+    function ibreviaryAntiphonEndIndex(lines, lang) {
+        let lastCitationIndex = -1;
+        (lines || []).forEach((line, index) => {
+            const alternative = strictAlternativeMatch(line);
+            const citationCandidate = alternative && alternative.rest ? alternative.rest : line;
+            if (strictLooksLikeCitation(citationCandidate, lang)) lastCitationIndex = index;
+        });
+        if (lastCitationIndex < 0) return -1;
+        for (let i = lastCitationIndex + 1; i < lines.length - 1; i += 1) {
+            const text = strictCleanLine(lines[i]);
+            if (/[.!?。]$/.test(text)) return i + 1;
+        }
+        return -1;
+    }
+
+    function ibreviarySplitUnlabelledAntiphonAndPrayer(lines, lang) {
+        const boundary = ibreviaryAntiphonEndIndex(lines, lang);
+        if (boundary <= 0 || boundary >= lines.length) {
+            return { antiphon: [], prayer: [] };
+        }
+        return {
+            antiphon: lines.slice(0, boundary).filter(line => !ibreviaryIsDelimiter(line)),
+            prayer: lines.slice(boundary).filter(line => !ibreviaryIsDelimiter(line))
+        };
+    }
+
     function ibreviaryPreferProperReadings(lines) {
         const source = lines || [];
         const start = source.findIndex(line => /^(Proper readings|Readings proper)$/i.test(strictCleanLine(line)));
@@ -8126,8 +8172,13 @@
     function parseIbreviaryAntiphonAndCollect(lang, source) {
         const labels = ibreviaryLabels[lang] || ibreviaryLabels.EN;
         const lines = ibreviaryLines(source);
-        const entrance = ibreviaryBlock(lines, labels.entrance, labels.collect);
-        const collect = ibreviaryBlock(lines, labels.collect);
+        let entrance = ibreviaryBlock(lines, labels.entrance, labels.collect);
+        let collect = ibreviaryBlock(lines, labels.collect);
+        if (!entrance.lines.length || !collect.lines.length) {
+            const fallback = ibreviarySplitUnlabelledAntiphonAndPrayer(lines, lang);
+            if (!entrance.lines.length && fallback.antiphon.length) entrance = { heading: '', lines: fallback.antiphon };
+            if (!collect.lines.length && fallback.prayer.length) collect = { heading: '', lines: fallback.prayer };
+        }
         const data = {};
         if (entrance.lines.length) data.entrance = strictFormatSection(lang, 'entrance', entrance);
         if (collect.lines.length) data.collect = strictFormatSection(lang, 'collect', collect);
@@ -8137,7 +8188,13 @@
     function parseIbreviaryOfferings(lang, source) {
         const labels = ibreviaryLabels[lang] || ibreviaryLabels.EN;
         const lines = ibreviaryLines(source);
-        const offerings = ibreviaryBlock(lines, labels.offerings);
+        let offerings = ibreviaryBlock(lines, labels.offerings);
+        if (!offerings.lines.length && lines.length) {
+            offerings = {
+                heading: '',
+                lines: lines.filter(line => !ibreviaryIsDelimiter(line) && !/^(?:Preface|Praefatio)\b/iu.test(strictCleanLine(line)))
+            };
+        }
         return offerings.lines.length ? { prayer_offerings: strictFormatSection(lang, 'prayer_offerings', offerings) } : {};
     }
 
@@ -8146,13 +8203,18 @@
         const lines = ibreviaryLines(source);
         const afterIndex = ibreviaryFindIndex(lines, labels.after);
         const communionStart = ibreviaryFindIndex(lines, labels.communion);
-        const communion = communionStart >= 0
+        let communion = communionStart >= 0
             ? {
                 heading: lines[communionStart],
                 lines: lines.slice(communionStart + 1, afterIndex >= 0 ? afterIndex : lines.length).filter(line => !ibreviaryIsDelimiter(line))
             }
             : { heading: '', lines: [] };
-        const after = ibreviaryBlock(lines, labels.after);
+        let after = ibreviaryBlock(lines, labels.after);
+        if (!communion.lines.length || !after.lines.length) {
+            const fallback = ibreviarySplitUnlabelledAntiphonAndPrayer(lines, lang);
+            if (!communion.lines.length && fallback.antiphon.length) communion = { heading: '', lines: fallback.antiphon };
+            if (!after.lines.length && fallback.prayer.length) after = { heading: '', lines: fallback.prayer };
+        }
         const data = {};
         if (communion.lines.length) data.communion = strictFormatSection(lang, 'communion', communion);
         if (after.lines.length) data.prayer_after = strictFormatSection(lang, 'prayer_after', after);
@@ -9455,19 +9517,50 @@
         return matched ? matched[0] : '';
     }
 
-    function buildFallbackVariantAlignment(baseId, optionMap) {
-        const groupsByKey = {};
+    function buildFallbackVariantAlignment(baseId, optionMap, section = {}) {
+        const citationGroups = {};
         Object.keys(optionMap || {}).forEach(lower => {
             optionMap[lower].forEach((option, index) => {
-                const key = variantSemanticKey(baseId, variantOptionMeaningText(baseId, option));
-                if (!key) return;
-                if (!groupsByKey[key]) groupsByKey[key] = {};
-                groupsByKey[key][lower] = index;
+                const citationEntry = Array.isArray(section[`optionCits_${lower}`])
+                    ? section[`optionCits_${lower}`][index]
+                    : null;
+                const rawCitation = cleanNodeText(citationEntry && citationEntry[`cit_${lower}`]);
+                const citationKey = citationStartsForCompare(rawCitation)[0] || normalizedCitationForCompare(rawCitation);
+                if (!citationKey) return;
+                if (!citationGroups[citationKey]) citationGroups[citationKey] = {};
+                citationGroups[citationKey][lower] = index;
             });
         });
-        const groups = Object.values(groupsByKey);
+
+        const groups = [];
+        const used = new Set();
+        Object.values(citationGroups).forEach(group => {
+            const mappedLanguages = Object.keys(group);
+            if (mappedLanguages.length < 2) return;
+            groups.push(group);
+            mappedLanguages.forEach(lower => used.add(`${lower}:${group[lower]}`));
+        });
+
+        const semanticGroups = {};
+        Object.keys(optionMap || {}).forEach(lower => {
+            optionMap[lower].forEach((option, index) => {
+                if (used.has(`${lower}:${index}`)) return;
+                const key = variantSemanticKey(baseId, variantOptionMeaningText(baseId, option));
+                if (!key) return;
+                if (!semanticGroups[key]) semanticGroups[key] = {};
+                semanticGroups[key][lower] = index;
+            });
+        });
+        groups.push(...Object.values(semanticGroups));
         if (!groups.length) return [];
-        return normalizeVariantAlignmentGroups(optionMap, groups);
+
+        const normalized = normalizeVariantAlignmentGroups(optionMap, groups);
+        const { left, right } = currentLeftRightLowerKeys();
+        return normalized.sort((a, b) => {
+            const aPair = Number.isInteger(a[left]) && Number.isInteger(a[right]) ? 0 : 1;
+            const bPair = Number.isInteger(b[left]) && Number.isInteger(b[right]) ? 0 : 1;
+            return aPair - bPair;
+        });
     }
 
     function normalizeBibleAliasForCompare(value) {
@@ -9757,7 +9850,7 @@
                 section.variantAlignment = cached;
                 return;
             }
-            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap);
+            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
             if (fallbackAlignment.length) section.variantAlignment = fallbackAlignment;
         });
     }
@@ -9784,7 +9877,7 @@
                 section.variantAlignment = cached;
                 return;
             }
-            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap);
+            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
             if (fallbackAlignment.length) {
                 section.variantAlignment = fallbackAlignment;
                 writeCachedDailyVariantAlignment(date, baseId, signature, fallbackAlignment);
@@ -9980,6 +10073,12 @@
     function dailyVariantLabelForAlignment(alignmentGroup, fallbackIndex) {
         const label = Object.assign({}, dailyVariantLabel(fallbackIndex));
         if (alignmentGroup && alignmentGroup.__leftCitationFirst) return label;
+        const mappedLanguages = ['kr', 'vn', 'en', 'jp', 'la']
+            .filter(lower => alignmentGroup && Number.isInteger(alignmentGroup[lower]));
+        const { right } = currentLeftRightLowerKeys();
+        if (mappedLanguages.length === 1 && mappedLanguages[0] === right) {
+            return sourceChoiceLabelForLower(right);
+        }
         ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
             const sourceIndex = alignmentGroup && Number.isInteger(alignmentGroup[lower]) ? alignmentGroup[lower] : fallbackIndex;
             label[lower] = dailyVariantLabel(sourceIndex)[lower] || label[lower];
@@ -10542,7 +10641,7 @@
 
     const voiceUiText = {
         KR: {
-            on: '켜짐', off: '꺼짐', ready: '준비됨', activeShort: '음성 인식 중', start: '시작', stop: '끄기',
+            on: '켜짐', off: '꺼짐', ready: '준비됨', activeShort: '음성 인식 중', pausedShort: '음성인식 정지됨', start: '시작', stop: '끄기',
             preparing: '음성 인식 준비 중', listening: '음성 인식 중 · 위치가 맞게 표시되면 정지 버튼을 누르세요', paused: '음성 인식 정지됨 · 재생 버튼을 누르면 다시 시작합니다',
             found: text => `위치 표시 중 · 들은 말: ${text}`, searching: text => `위치를 찾는 중 · 들은 말: ${text}`,
             noSpeech: '음성이 들리지 않습니다 · 정지하거나 계속 말씀해 주세요', unsupported: '이 브라우저는 실시간 음성 인식을 지원하지 않습니다',
@@ -10550,7 +10649,7 @@
             startFailed: '음성 인식을 시작할 수 없습니다', pauseTitle: '음성 인식 정지', playTitle: '음성 인식 재생'
         },
         VN: {
-            on: 'Bật', off: 'Tắt', ready: 'Sẵn sàng', activeShort: 'Đang nhận giọng nói', start: 'Bắt đầu', stop: 'Tắt',
+            on: 'Bật', off: 'Tắt', ready: 'Sẵn sàng', activeShort: 'Đang nhận giọng nói', pausedShort: 'Đã dừng nhận giọng nói', start: 'Bắt đầu', stop: 'Tắt',
             preparing: 'Đang chuẩn bị nhận giọng nói', listening: 'Đang nhận giọng nói · khi vị trí đã đúng, hãy nhấn nút dừng', paused: 'Đã dừng nhận giọng nói · nhấn nút phát để tiếp tục',
             found: text => `Đang đánh dấu vị trí · nghe: ${text}`, searching: text => `Đang tìm vị trí · nghe: ${text}`,
             noSpeech: 'Không nghe thấy tiếng nói · hãy tiếp tục nói hoặc nhấn nút dừng', unsupported: 'Trình duyệt này không hỗ trợ nhận giọng nói trực tiếp',
@@ -10558,7 +10657,7 @@
             startFailed: 'Không thể bắt đầu nhận giọng nói', pauseTitle: 'Dừng nhận giọng nói', playTitle: 'Nghe tiếp'
         },
         EN: {
-            on: 'On', off: 'Off', ready: 'Ready', activeShort: 'Voice recognition active', start: 'Start', stop: 'Turn off',
+            on: 'On', off: 'Off', ready: 'Ready', activeShort: 'Voice recognition active', pausedShort: 'Voice recognition paused', start: 'Start', stop: 'Turn off',
             preparing: 'Preparing voice recognition', listening: 'Voice recognition active · press stop once the correct position is shown', paused: 'Voice recognition paused · press play to resume',
             found: text => `Tracking position · heard: ${text}`, searching: text => `Finding position · heard: ${text}`,
             noSpeech: 'No speech heard · keep speaking or use the stop button', unsupported: 'This browser does not support live speech recognition',
@@ -10566,7 +10665,7 @@
             startFailed: 'Could not start speech recognition', pauseTitle: 'Pause speech recognition', playTitle: 'Resume speech recognition'
         },
         JP: {
-            on: 'オン', off: 'オフ', ready: '準備完了', activeShort: '音声認識中', start: '開始', stop: 'オフ',
+            on: 'オン', off: 'オフ', ready: '準備完了', activeShort: '音声認識中', pausedShort: '音声認識停止', start: '開始', stop: 'オフ',
             preparing: '音声認識を準備中', listening: '音声認識中 · 正しい位置が表示されたら停止ボタンを押してください', paused: '音声認識を停止中 · 再生ボタンで再開できます',
             found: text => `位置を表示中 · 認識: ${text}`, searching: text => `位置を検索中 · 認識: ${text}`,
             noSpeech: '音声が聞こえません · 続けて話すか停止ボタンを押してください', unsupported: 'このブラウザはリアルタイム音声認識に対応していません',
@@ -10574,7 +10673,7 @@
             startFailed: '音声認識を開始できません', pauseTitle: '音声認識を停止', playTitle: '音声認識を再開'
         },
         LA: {
-            on: 'Actum', off: 'Exstinctum', ready: 'Paratum', activeShort: 'Cognitio vocis agit', start: 'Incipe', stop: 'Exstingue',
+            on: 'Actum', off: 'Exstinctum', ready: 'Paratum', activeShort: 'Cognitio vocis agit', pausedShort: 'Cognitio vocis sistitur', start: 'Incipe', stop: 'Exstingue',
             preparing: 'Cognitio vocis paratur', listening: 'Cognitio vocis agit · ubi locus recte indicatur, globulum sistendi preme', paused: 'Cognitio vocis sistitur · globulum agendi preme ut pergas',
             found: text => `Locus indicatur · auditum: ${text}`, searching: text => `Locus quaeritur · auditum: ${text}`,
             noSpeech: 'Vox non auditur · loquere vel globulum sistendi preme', unsupported: 'Hic navigator cognitionem vocis continuam non sustinet',
@@ -10797,7 +10896,7 @@
     function setVoiceStatus(text, recording = false, options = {}) {
         const status = document.getElementById('set-ai-voice-status');
         const button = document.getElementById('btn-ai-voice');
-        if (status) status.textContent = recording ? voiceText('activeShort') : text;
+        if (status) status.textContent = recording ? voiceText('activeShort') : (options.settingsText || text);
         if (button) {
             button.textContent = state.aiVoiceOn ? voiceText('stop') : voiceText('start');
             button.classList.toggle('is-recording', recording);
@@ -10825,7 +10924,9 @@
             button.textContent = state.aiVoiceOn ? voiceText('stop') : voiceText('start');
         }
         const status = document.getElementById('set-ai-voice-status');
-        const nextStatus = statusText || (state.aiVoiceOn ? (voicePaused ? voiceText('paused') : voiceText('ready')) : voiceText('off'));
+        const nextStatus = state.aiVoiceOn && voicePaused
+            ? voiceText('pausedShort')
+            : (statusText || (state.aiVoiceOn ? voiceText('ready') : voiceText('off')));
         if (status) status.textContent = state.aiVoiceOn && !voicePaused ? voiceText('activeShort') : nextStatus;
         if (!state.aiVoiceOn && !isRecordingVoice) {
             hideVoiceStatusBar();
@@ -11122,8 +11223,8 @@
     window.pauseVoiceRecognitionFromBar = function() {
         if (!state.aiVoiceOn) return;
         voicePaused = true;
-        stopVoiceRecognitionInternal({ keepEnabled: true, statusText: voiceText('paused') });
-        setVoiceStatus(voiceText('paused'), false, { paused: true });
+        stopVoiceRecognitionInternal({ keepEnabled: true, statusText: voiceText('pausedShort') });
+        setVoiceStatus(voiceText('paused'), false, { paused: true, settingsText: voiceText('pausedShort') });
     };
 
     window.resumeVoiceRecognitionFromBar = function() {
@@ -12291,7 +12392,7 @@
         let selectHtml = '';
         let secondarySelectHtml = '';
 
-        if (orig.type === 'selectable' && orig.variants && (baseId !== 'entrance' || orig.__displaySourceVariants)) {
+        if (orig.type === 'selectable' && orig.variants) {
             selectHtml = `<select class="select-inline" onchange="optChange('${optionKey}', this.value)">`;
             Object.keys(orig.variants).sort().forEach(k => {
                 const labelObj = orig.variants[k].label;

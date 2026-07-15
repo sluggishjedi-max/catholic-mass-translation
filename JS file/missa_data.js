@@ -150,7 +150,7 @@ globalThis.missaData = [
         header: { kr: '참회', vn: 'Sám Hối', en: 'Penitential Act', la: 'Actus pænitentialis', jp: '回心の祈り' },
         variants: {
             'A': { label: { 
-                    kr: '1양식', 
+                    kr: '제1양식',
                     vn: 'Mẫu 1', 
                     en: 'Form I', 
                     la: 'Forma I', 
@@ -228,7 +228,7 @@ globalThis.missaData = [
                     sp_jp: '会', text_jp: 'アーメン。' }
                 ] },
                 'B': { label: { 
-                        kr: '2양식', 
+                        kr: '제2양식',
                         vn: 'Mẫu 2', 
                         en: 'Form II', 
                         la: 'Forma II', 
@@ -286,7 +286,7 @@ globalThis.missaData = [
                     sp_jp: '会', text_jp: 'アーメン。' }
             ] },
             'C': { label: {
-                    kr: '3양식', 
+                    kr: '제3양식',
                     vn: 'Mẫu 3', 
                     en: 'Form III', 
                     la: 'Forma III', 
