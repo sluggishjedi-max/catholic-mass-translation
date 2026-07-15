@@ -222,6 +222,13 @@
         .church-map-frame[hidden],
         .church-map-js[hidden] { display: none; }
         .church-map-caption { display: none; margin: 0; }
+        .church-marker-label { max-width: 180px; overflow: hidden; padding: 2px 5px; border: 1px solid rgba(26, 37, 47, 0.2); border-radius: 5px; background: rgba(255, 255, 255, 0.94); box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2); color: #1a252f; text-overflow: ellipsis; white-space: nowrap; }
+        .church-info-card { min-width: 230px; max-width: 330px; color: #1a252f; font-size: 0.82rem; line-height: 1.42; }
+        .church-info-title { margin-bottom: 7px; color: var(--primary-color); font-size: 1rem; font-weight: 900; }
+        .church-info-grid { display: grid; grid-template-columns: minmax(62px, auto) minmax(0, 1fr); gap: 5px 9px; }
+        .church-info-label { color: #59636e; font-weight: 900; }
+        .church-info-value { min-width: 0; overflow-wrap: anywhere; }
+        .church-info-value a { color: var(--primary-color); font-weight: 800; text-decoration: underline; }
         #church-panel { padding-bottom: 18px; }
         #church-panel .aux-card { margin-bottom: 0; }
 
@@ -2174,6 +2181,8 @@
     let churchMapsApiKey = '';
     let churchMapsApiKeyPromise = null;
     let churchSearchRequestId = 0;
+    let churchInfoRequestId = 0;
+    const churchPlaceDetailsCache = new Map();
     const CHURCH_MAX_RESULTS = 120;
     const CHURCH_MAX_RESULTS_PER_QUERY = 60;
     const CHURCH_TEXT_SEARCH_PAGE_DELAY_MS = 1800;
@@ -3194,18 +3203,138 @@
         churchMarkers = [];
     }
 
+    function churchDetailLabels() {
+        const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        const labels = {
+            KR: { address: '주소', phone: '전화', website: '홈페이지', priest: '사제', sisters: '수녀', massTimes: '미사 시간', openingHours: '개방 시간', maps: 'Google 지도', loading: '상세 정보를 불러오는 중입니다.', unavailable: '확인되지 않음', official: '공식 홈페이지에서 확인' },
+            VN: { address: 'Địa chỉ', phone: 'Điện thoại', website: 'Trang web', priest: 'Linh mục', sisters: 'Nữ tu', massTimes: 'Giờ lễ', openingHours: 'Giờ mở cửa', maps: 'Google Maps', loading: 'Đang tải thông tin chi tiết.', unavailable: 'Chưa xác nhận', official: 'Xem trên trang chính thức' },
+            EN: { address: 'Address', phone: 'Phone', website: 'Website', priest: 'Priest', sisters: 'Sisters', massTimes: 'Mass times', openingHours: 'Opening hours', maps: 'Google Maps', loading: 'Loading details.', unavailable: 'Not confirmed', official: 'Check the official website' },
+            JP: { address: '住所', phone: '電話', website: '公式サイト', priest: '司祭', sisters: '修道女', massTimes: 'ミサ時間', openingHours: '開館時間', maps: 'Google マップ', loading: '詳細情報を読み込んでいます。', unavailable: '未確認', official: '公式サイトで確認' },
+            LA: { address: 'Inscriptio', phone: 'Telephonum', website: 'Pagina', priest: 'Sacerdos', sisters: 'Sorores', massTimes: 'Horae Missae', openingHours: 'Horae apertionis', maps: 'Google Maps', loading: 'Notitiae onerantur.', unavailable: 'Non confirmatum', official: 'Vide paginam officialem' }
+        };
+        return labels[lang] || labels.EN;
+    }
+
+    function churchLocalDetailsForPlace(place) {
+        const source = globalThis.churchLocalDetails && typeof globalThis.churchLocalDetails === 'object'
+            ? globalThis.churchLocalDetails
+            : {};
+        const placeId = cleanNodeText(place && place.place_id);
+        const name = cleanNodeText(place && place.name).toLowerCase();
+        return (placeId && source[placeId]) || (name && source[name]) || {};
+    }
+
+    function churchDetailList(value) {
+        if (Array.isArray(value)) return value.map(cleanNodeText).filter(Boolean);
+        const text = cleanNodeText(value);
+        return text ? [text] : [];
+    }
+
+    function churchSafeLink(url, label) {
+        const value = String(url || '').trim();
+        if (!/^https?:\/\//i.test(value)) return '';
+        return `<a href="${escapeAttr(value)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+    }
+
+    function churchInfoField(label, valueHtml) {
+        return `<span class="church-info-label">${escapeHtml(label)}</span><span class="church-info-value">${valueHtml}</span>`;
+    }
+
+    function churchInfoWindowHtml(place, options = {}) {
+        const labels = churchDetailLabels();
+        const local = churchLocalDetailsForPlace(place);
+        const name = cleanNodeText((place && place.name) || local.name || auxText().churchTitle);
+        const address = cleanNodeText((place && (place.formatted_address || place.vicinity)) || local.address);
+        const phone = cleanNodeText((place && place.phone) || local.phone);
+        const website = String((place && place.website) || local.website || '').trim();
+        const mapsUrl = String((place && place.google_maps_url) || local.googleMapsUrl || '').trim();
+        const priestNames = churchDetailList((place && (place.priestNames || place.priest)) || local.priestNames || local.priest);
+        const sisterNames = churchDetailList((place && (place.sisterNames || place.sisters)) || local.sisterNames || local.sisters);
+        const massTimes = churchDetailList((place && place.massTimes) || local.massTimes);
+        const openingHours = churchDetailList((place && place.opening_hours) || local.openingHours);
+        const officialFallback = churchSafeLink(website, labels.official) || escapeHtml(labels.unavailable);
+        const rows = [];
+        rows.push(churchInfoField(labels.address, address ? escapeHtml(address) : escapeHtml(labels.unavailable)));
+        rows.push(churchInfoField(labels.phone, phone ? escapeHtml(phone) : escapeHtml(labels.unavailable)));
+        rows.push(churchInfoField(labels.website, churchSafeLink(website, labels.website) || escapeHtml(labels.unavailable)));
+        rows.push(churchInfoField(labels.priest, priestNames.length ? priestNames.map(escapeHtml).join('<br>') : officialFallback));
+        rows.push(churchInfoField(labels.sisters, sisterNames.length ? sisterNames.map(escapeHtml).join('<br>') : officialFallback));
+        rows.push(churchInfoField(labels.massTimes, massTimes.length ? massTimes.map(escapeHtml).join('<br>') : officialFallback));
+        if (openingHours.length) rows.push(churchInfoField(labels.openingHours, openingHours.map(escapeHtml).join('<br>')));
+        if (mapsUrl) rows.push(churchInfoField(labels.maps, churchSafeLink(mapsUrl, labels.maps)));
+        if (options.loading) rows.push(churchInfoField('', escapeHtml(labels.loading)));
+        return `<div class="church-info-card"><div class="church-info-title">${escapeHtml(name)}</div><div class="church-info-grid">${rows.join('')}</div></div>`;
+    }
+
+    function normalizeLegacyChurchDetails(place) {
+        if (!place) return null;
+        return {
+            place_id: place.place_id || '',
+            name: cleanNodeText(place.name || ''),
+            formatted_address: cleanNodeText(place.formatted_address || place.vicinity || ''),
+            vicinity: cleanNodeText(place.vicinity || place.formatted_address || ''),
+            phone: cleanNodeText(place.formatted_phone_number || place.international_phone_number || ''),
+            website: String(place.website || '').trim(),
+            google_maps_url: String(place.url || '').trim(),
+            opening_hours: churchDetailList(place.opening_hours && place.opening_hours.weekday_text),
+            geometry: place.geometry || null
+        };
+    }
+
+    function mergeChurchPlaceDetails(base, details) {
+        const merged = Object.assign({}, base || {}, details || {});
+        merged.geometry = (details && details.geometry) || (base && base.geometry) || null;
+        return merged;
+    }
+
+    async function fetchChurchPlaceDetails(place) {
+        const placeId = cleanNodeText(place && place.place_id);
+        if (!placeId) return place;
+        if (churchPlaceDetailsCache.has(placeId)) return churchPlaceDetailsCache.get(placeId);
+        try {
+            const Place = await modernChurchPlaceClass();
+            if (Place) {
+                const detailPlace = new Place({ id: placeId });
+                const result = await detailPlace.fetchFields({ fields: ['displayName', 'formattedAddress', 'location', 'nationalPhoneNumber', 'websiteURI', 'googleMapsURI', 'regularOpeningHours'] });
+                const normalized = normalizeModernChurchPlace((result && result.place) || detailPlace);
+                const merged = mergeChurchPlaceDetails(place, normalized);
+                churchPlaceDetailsCache.set(placeId, merged);
+                return merged;
+            }
+        } catch (error) {
+            console.warn('Places API (New) 성당 상세 정보 조회에 실패했습니다.', error);
+        }
+        if (churchPlacesService && typeof churchPlacesService.getDetails === 'function') {
+            const legacy = await new Promise(resolve => {
+                churchPlacesService.getDetails({
+                    placeId,
+                    fields: ['name', 'formatted_address', 'formatted_phone_number', 'international_phone_number', 'website', 'url', 'opening_hours', 'geometry', 'place_id']
+                }, (result, status) => resolve(status === google.maps.places.PlacesServiceStatus.OK ? result : null));
+            });
+            const merged = mergeChurchPlaceDetails(place, normalizeLegacyChurchDetails(legacy));
+            churchPlaceDetailsCache.set(placeId, merged);
+            return merged;
+        }
+        return place;
+    }
+
     function addChurchMarker(place, focus = false) {
         if (!churchMap || !place || !place.geometry || !place.geometry.location) return null;
+        const name = cleanNodeText(place.name || '');
         const marker = new google.maps.Marker({
             map: churchMap,
             position: place.geometry.location,
-            title: place.name || ''
+            title: name,
+            label: name ? { text: name, color: '#1a252f', fontSize: '11px', fontWeight: '800', className: 'church-marker-label' } : null,
+            optimized: false
         });
-        marker.addListener('click', () => {
-            const name = place.name || auxText().churchTitle;
-            const address = place.formatted_address || place.vicinity || '';
-            churchInfoWindow.setContent(`<strong>${escapeHtml(name)}</strong>${address ? `<br>${escapeHtml(address)}` : ''}`);
+        marker.addListener('click', async () => {
+            const requestId = ++churchInfoRequestId;
+            churchInfoWindow.setContent(churchInfoWindowHtml(place, { loading: true }));
             churchInfoWindow.open(churchMap, marker);
+            const details = await fetchChurchPlaceDetails(place);
+            if (requestId !== churchInfoRequestId) return;
+            churchInfoWindow.setContent(churchInfoWindowHtml(details));
         });
         churchMarkers.push(marker);
         if (focus) {
@@ -3279,6 +3408,10 @@
             name: cleanNodeText(place.displayName || ''),
             formatted_address: cleanNodeText(place.formattedAddress || ''),
             vicinity: cleanNodeText(place.formattedAddress || ''),
+            phone: cleanNodeText(place.nationalPhoneNumber || place.internationalPhoneNumber || ''),
+            website: String(place.websiteURI || '').trim(),
+            google_maps_url: String(place.googleMapsURI || '').trim(),
+            opening_hours: churchDetailList(place.regularOpeningHours && place.regularOpeningHours.weekdayDescriptions),
             geometry: { location: place.location }
         };
     }
@@ -6707,7 +6840,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict67';
+    const STRICT_PARSER_CACHE_VERSION = 'strict68';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -8114,6 +8247,22 @@
         };
     }
 
+    function ibreviaryPrepareAntiphonChoiceLines(lines) {
+        const prepared = [];
+        let hasChoiceContent = false;
+        (lines || []).forEach(rawLine => {
+            const line = strictCleanLine(rawLine);
+            if (!line) return;
+            if (/^\[[^\]]+\]$/u.test(line)) {
+                if (hasChoiceContent && !strictIsAlternativeLine(prepared[prepared.length - 1] || '')) prepared.push('Or:');
+                return;
+            }
+            prepared.push(line);
+            if (!ibreviaryIsDelimiter(line) && !strictIsAlternativeLine(line)) hasChoiceContent = true;
+        });
+        return prepared;
+    }
+
     function ibreviaryPreferProperReadings(lines) {
         const source = lines || [];
         const start = source.findIndex(line => /^(Proper readings|Readings proper)$/i.test(strictCleanLine(line)));
@@ -8161,6 +8310,7 @@
             if (!entrance.lines.length && fallback.antiphon.length) entrance = { heading: '', lines: fallback.antiphon };
             if (!collect.lines.length && fallback.prayer.length) collect = { heading: '', lines: fallback.prayer };
         }
+        entrance = Object.assign({}, entrance, { lines: ibreviaryPrepareAntiphonChoiceLines(entrance.lines) });
         const data = {};
         if (entrance.lines.length) data.entrance = strictFormatSection(lang, 'entrance', entrance);
         if (collect.lines.length) data.collect = strictFormatSection(lang, 'collect', collect);
@@ -8197,6 +8347,7 @@
             if (!communion.lines.length && fallback.antiphon.length) communion = { heading: '', lines: fallback.antiphon };
             if (!after.lines.length && fallback.prayer.length) after = { heading: '', lines: fallback.prayer };
         }
+        communion = Object.assign({}, communion, { lines: ibreviaryPrepareAntiphonChoiceLines(communion.lines) });
         const data = {};
         if (communion.lines.length) data.communion = strictFormatSection(lang, 'communion', communion);
         if (after.lines.length) data.prayer_after = strictFormatSection(lang, 'prayer_after', after);
@@ -9506,7 +9657,10 @@
                 const citationEntry = Array.isArray(section[`optionCits_${lower}`])
                     ? section[`optionCits_${lower}`][index]
                     : null;
-                const rawCitation = cleanNodeText(citationEntry && citationEntry[`cit_${lower}`]);
+                const rawCitation = cleanNodeText(
+                    (citationEntry && citationEntry[`cit_${lower}`])
+                    || (index === 0 ? directCitationForLower(section, lower) : '')
+                );
                 const citationKey = citationStartsForCompare(rawCitation)[0] || normalizedCitationForCompare(rawCitation);
                 if (!citationKey) return;
                 if (!citationGroups[citationKey]) citationGroups[citationKey] = {};
@@ -9652,6 +9806,8 @@
         if (!Array.isArray(optionMap[left]) || !optionMap[left].length) return [];
         if (!Array.isArray(optionMap[right]) || !optionMap[right].length) return [];
         if (activeOptionsHaveSemanticMatches(baseId, optionMap)) return [];
+        const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
+        if (fallbackAlignment.some(group => Number.isInteger(group[left]) && Number.isInteger(group[right]))) return [];
         const leftCitation = directCitationForLower(section, left);
         const rightCitation = directCitationForLower(section, right);
         if (!citationsAreDifferent(leftCitation, rightCitation)) return [];
@@ -10052,15 +10208,24 @@
         };
     }
 
-    function dailyVariantLabelForAlignment(alignmentGroup, fallbackIndex) {
+    const sourceLabeledDailyVariantPartIds = new Set(['entrance', 'gospel_accl', 'communion']);
+
+    function dailyVariantLabelForAlignment(alignmentGroup, fallbackIndex, alignmentGroups = [], baseId = '') {
         const label = Object.assign({}, dailyVariantLabel(fallbackIndex));
         if (alignmentGroup && alignmentGroup.__leftCitationFirst) return label;
         const mappedLanguages = ['kr', 'vn', 'en', 'jp', 'la']
             .filter(lower => alignmentGroup && Number.isInteger(alignmentGroup[lower]));
-        const { right } = currentLeftRightLowerKeys();
-        if (mappedLanguages.length === 1 && mappedLanguages[0] === right) {
-            return sourceChoiceLabelForLower(right);
+        const { left, right } = currentLeftRightLowerKeys();
+        if (sourceLabeledDailyVariantPartIds.has(baseId) && mappedLanguages.length) {
+            const sourceLower = mappedLanguages.includes(left) ? left : mappedLanguages[0];
+            const sourceGroupCount = (alignmentGroups || [])
+                .filter(group => group && Number.isInteger(group[sourceLower])).length;
+            const sourceOrdinal = sourceGroupCount > 1
+                ? alignmentGroup[sourceLower] + 1
+                : null;
+            return sourceChoiceLabelForLower(sourceLower, sourceOrdinal);
         }
+        if (mappedLanguages.length === 1 && mappedLanguages[0] === right) return sourceChoiceLabelForLower(right);
         ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
             const sourceIndex = alignmentGroup && Number.isInteger(alignmentGroup[lower]) ? alignmentGroup[lower] : fallbackIndex;
             label[lower] = dailyVariantLabel(sourceIndex)[lower] || label[lower];
@@ -10173,7 +10338,7 @@
             normalizeDailySectionLines(lines, baseId);
             removeDailyProclamationEndingLines(lines, baseId);
             const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
-            const label = alignmentGroup ? dailyVariantLabelForAlignment(alignmentGroup, i) : dailyVariantLabel(i);
+            const label = alignmentGroup ? dailyVariantLabelForAlignment(alignmentGroup, i, alignmentGroups, baseId) : dailyVariantLabel(i);
             variants[key] = { label, header: item.header || {}, cit, lines };
         }
         if (baseId === 'gospel') {
@@ -11375,7 +11540,7 @@
     }
 
     function markMutedNamePlaceholders(html) {
-        const mutedNamePattern = '(?:주교명|세례명|bishop name|bishop n\\.?|baptismal name|Christian name|person n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|tên thánh|tên rửa tội|司教名|洗礼名|nomen episcopi|nomen baptismale)';
+        const mutedNamePattern = '(?:주교명|세례명|bishop name|bishop n\\.?|baptismal name|Christian name|person name|the other person name|person n\\.?|the other person n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|tên thánh|tên rửa tội|司教名|洗礼名|nomen episcopi|nomen baptismale)';
         return String(html || '')
             .replace(
                 new RegExp(`(?:\\(${mutedNamePattern}\\)|\\[${mutedNamePattern}\\])`, 'giu'),
@@ -12047,7 +12212,7 @@
 
     const sourceChoiceVariantPartIds = new Set(['entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
 
-    function sourceChoiceLabelForLower(sourceLower) {
+    function sourceChoiceLabelForLower(sourceLower, sourceOrdinal = null) {
         const names = {
             kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana' },
             vn: { kr: '베트남어', vn: 'tiếng Việt', en: 'Vietnamese', jp: 'ベトナム語', la: 'Vietnamica' },
@@ -12056,12 +12221,13 @@
             la: { kr: '라틴어', vn: 'tiếng Latinh', en: 'Latin', jp: 'ラテン語', la: 'Latina' }
         };
         const name = names[sourceLower] || names.kr;
+        const ordinalSuffix = Number.isInteger(sourceOrdinal) && sourceOrdinal > 0 ? ` ${sourceOrdinal}` : '';
         return {
-            kr: `${name.kr} 원문`,
-            vn: `Nguyên bản ${name.vn}`,
-            en: `${name.en} source`,
-            jp: `${name.jp}原文`,
-            la: `Textus ${name.la}`
+            kr: `${name.kr} 원문${ordinalSuffix}`,
+            vn: `Nguyên bản ${name.vn}${ordinalSuffix}`,
+            en: `${name.en} source${ordinalSuffix}`,
+            jp: `${name.jp}原文${ordinalSuffix}`,
+            la: `Textus ${name.la}${ordinalSuffix}`
         };
     }
 
