@@ -3066,7 +3066,7 @@
             churchMapsApiKeyPromise = fetchWithTimeout(GOOGLE_MAPS_CONFIG_ENDPOINT, {
                 method: 'GET',
                 headers: { 'Accept': 'application/json' },
-                timeoutMs: 1200
+                timeoutMs: 8000
             }).then(async response => {
                 if (!response.ok) throw new Error(`mapsConfig HTTP ${response.status}`);
                 const payload = await response.json();
@@ -3074,6 +3074,7 @@
                 return churchMapsApiKey;
             }).catch(error => {
                 console.warn('Google Maps 설정을 불러오지 못해 iframe 지도로 대체합니다.', error);
+                churchMapsApiKeyPromise = null;
                 return '';
             });
         }
