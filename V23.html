@@ -3213,11 +3213,11 @@
     function churchDetailLabels() {
         const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
         const labels = {
-            KR: { address: '주소', diocese: '교구', phone: '전화', website: '홈페이지', priest: '사제', sisters: '수녀', massTimes: '미사 시간', openingHours: '개방 시간', maps: 'Google 지도', loading: '상세 정보를 불러오는 중입니다.', unavailable: '확인되지 않음', official: '공식 홈페이지에서 확인' },
-            VN: { address: 'Địa chỉ', diocese: 'Giáo phận', phone: 'Điện thoại', website: 'Trang web', priest: 'Linh mục', sisters: 'Nữ tu', massTimes: 'Giờ lễ', openingHours: 'Giờ mở cửa', maps: 'Google Maps', loading: 'Đang tải thông tin chi tiết.', unavailable: 'Chưa xác nhận', official: 'Xem trên trang chính thức' },
-            EN: { address: 'Address', diocese: 'Diocese', phone: 'Phone', website: 'Website', priest: 'Priest', sisters: 'Sisters', massTimes: 'Mass times', openingHours: 'Opening hours', maps: 'Google Maps', loading: 'Loading details.', unavailable: 'Not confirmed', official: 'Check the official website' },
-            JP: { address: '住所', diocese: '教区', phone: '電話', website: '公式サイト', priest: '司祭', sisters: '修道女', massTimes: 'ミサ時間', openingHours: '開館時間', maps: 'Google マップ', loading: '詳細情報を読み込んでいます。', unavailable: '未確認', official: '公式サイトで確認' },
-            LA: { address: 'Inscriptio', diocese: 'Dioecesis', phone: 'Telephonum', website: 'Pagina', priest: 'Sacerdos', sisters: 'Sorores', massTimes: 'Horae Missae', openingHours: 'Horae apertionis', maps: 'Google Maps', loading: 'Notitiae onerantur.', unavailable: 'Non confirmatum', official: 'Vide paginam officialem' }
+            KR: { address: '주소', diocese: '교구', phone: '전화', website: '홈페이지', priest: '사제', sisters: '수녀', massTimes: '미사 시간', massTimesPeriod: '미사 시간 기준', openingHours: '개방 시간', maps: 'Google 지도', loading: '상세 정보를 불러오는 중입니다.', unavailable: '확인되지 않음', official: '공식 홈페이지에서 확인' },
+            VN: { address: 'Địa chỉ', diocese: 'Giáo phận', phone: 'Điện thoại', website: 'Trang web', priest: 'Linh mục', sisters: 'Nữ tu', massTimes: 'Giờ lễ', massTimesPeriod: 'Thời gian áp dụng', openingHours: 'Giờ mở cửa', maps: 'Google Maps', loading: 'Đang tải thông tin chi tiết.', unavailable: 'Chưa xác nhận', official: 'Xem trên trang chính thức' },
+            EN: { address: 'Address', diocese: 'Diocese', phone: 'Phone', website: 'Website', priest: 'Priest', sisters: 'Sisters', massTimes: 'Mass times', massTimesPeriod: 'Schedule period', openingHours: 'Opening hours', maps: 'Google Maps', loading: 'Loading details.', unavailable: 'Not confirmed', official: 'Check the official website' },
+            JP: { address: '住所', diocese: '教区', phone: '電話', website: '公式サイト', priest: '司祭', sisters: '修道女', massTimes: 'ミサ時間', massTimesPeriod: '適用期間', openingHours: '開館時間', maps: 'Google マップ', loading: '詳細情報を読み込んでいます。', unavailable: '未確認', official: '公式サイトで確認' },
+            LA: { address: 'Inscriptio', diocese: 'Dioecesis', phone: 'Telephonum', website: 'Pagina', priest: 'Sacerdos', sisters: 'Sorores', massTimes: 'Horae Missae', massTimesPeriod: 'Tempus indicis', openingHours: 'Horae apertionis', maps: 'Google Maps', loading: 'Notitiae onerantur.', unavailable: 'Non confirmatum', official: 'Vide paginam officialem' }
         };
         return labels[lang] || labels.EN;
     }
@@ -3230,7 +3230,7 @@
         const name = cleanNodeText(place && place.name).toLowerCase();
         const normalizedName = name
             .normalize('NFKC')
-            .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|カトリック/gu, '')
+            .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|họ đạo|giáo điểm|カトリック/gu, '')
             .replace(/성당|본당|교회|church|parish|教会/gu, '')
             .replace(/[^\p{L}\p{N}]+/gu, '');
         return (placeId && source[placeId])
@@ -3267,8 +3267,10 @@
         const priestNames = churchDetailList((place && (place.priestNames || place.priest)) || local.priestNames || local.priest);
         const sisterNames = churchDetailList((place && (place.sisterNames || place.sisters)) || local.sisterNames || local.sisters);
         const massTimes = churchDetailList((place && place.massTimes) || local.massTimes);
+        const massTimesPeriod = cleanNodeText((place && place.massTimesPeriod) || local.massTimesPeriod);
         const openingHours = churchDetailList((place && place.opening_hours) || local.openingHours);
-        const officialFallback = churchSafeLink(website, labels.official) || escapeHtml(labels.unavailable);
+        const officialUrl = String(local.officialDioceseUrl || website || local.sourceUrl || '').trim();
+        const officialFallback = churchSafeLink(officialUrl, labels.official) || escapeHtml(labels.unavailable);
         const rows = [];
         rows.push(churchInfoField(labels.address, address ? escapeHtml(address) : escapeHtml(labels.unavailable)));
         if (diocese) rows.push(churchInfoField(labels.diocese, escapeHtml(diocese)));
@@ -3277,6 +3279,7 @@
         rows.push(churchInfoField(labels.priest, priestNames.length ? priestNames.map(escapeHtml).join('<br>') : officialFallback));
         rows.push(churchInfoField(labels.sisters, sisterNames.length ? sisterNames.map(escapeHtml).join('<br>') : officialFallback));
         rows.push(churchInfoField(labels.massTimes, massTimes.length ? massTimes.map(escapeHtml).join('<br>') : officialFallback));
+        if (massTimesPeriod) rows.push(churchInfoField(labels.massTimesPeriod, escapeHtml(massTimesPeriod)));
         if (openingHours.length) rows.push(churchInfoField(labels.openingHours, openingHours.map(escapeHtml).join('<br>')));
         if (mapsUrl) rows.push(churchInfoField(labels.maps, churchSafeLink(mapsUrl, labels.maps)));
         if (options.loading) rows.push(churchInfoField('', escapeHtml(labels.loading)));
