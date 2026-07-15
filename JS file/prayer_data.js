@@ -174,7 +174,11 @@
         "Kinh Hằng Ngày",
         "Basic Prayers",
         "日々の祈り",
-        "Generalia"
+        "Generalia",
+        "kr_10_76",
+        "funeral",
+        "- 주님의 기도",
+        "상장 예식"
       ]
     },
     {
@@ -536,7 +540,7 @@
         "VN": "Kinh Hằng Ngày",
         "EN": "Basic Prayers",
         "JP": "",
-        "LA": ""
+        "LA": "Generalia"
       },
       "tags": [
         "011a.act_of_faith",
@@ -554,7 +558,15 @@
         "주요 기도",
         "Kinh Hằng Ngày",
         "Actus Fidei",
-        "Basic Prayers"
+        "Basic Prayers",
+        "la_actus_fidei",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "Generalia"
       ]
     },
     {
@@ -579,7 +591,7 @@
         "VN": "Kinh Hằng Ngày",
         "EN": "Basic Prayers",
         "JP": "",
-        "LA": ""
+        "LA": "Generalia"
       },
       "tags": [
         "011b.act_of_hope",
@@ -597,7 +609,15 @@
         "주요 기도",
         "Kinh Hằng Ngày",
         "Actus Spei",
-        "Basic Prayers"
+        "Basic Prayers",
+        "la_actus_spei",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "Generalia"
       ]
     },
     {
@@ -622,7 +642,7 @@
         "VN": "Kinh Hằng Ngày",
         "EN": "Basic Prayers",
         "JP": "",
-        "LA": ""
+        "LA": "Generalia"
       },
       "tags": [
         "011c.act_of_love",
@@ -641,7 +661,15 @@
         "Kinh Kính Mến",
         "Actus Caritatis",
         "Kinh Hằng Ngày",
-        "Basic Prayers"
+        "Basic Prayers",
+        "la_actus_caritatis",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "Generalia"
       ]
     },
     {
@@ -664,7 +692,7 @@
       "sourceCategory": {
         "KR": "주요 기도",
         "VN": "Kinh Hằng Ngày",
-        "EN": "",
+        "EN": "Basic Prayers",
         "JP": "",
         "LA": ""
       },
@@ -681,7 +709,15 @@
         "주요 기도",
         "Kinh Phú Dâng",
         "Morning Offering",
-        "Kinh Hằng Ngày"
+        "Kinh Hằng Ngày",
+        "en_morning_offering",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "Basic Prayers"
       ]
     },
     {
@@ -724,7 +760,15 @@
         "日々の祈り",
         "Maria",
         "お告げの祈り",
-        "Các Kinh Cầu"
+        "Các Kinh Cầu",
+        "jp_お告けの祈り",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "お告げの祈り**"
       ]
     },
     {
@@ -769,7 +813,15 @@
         "Maria",
         "Kinh Nữ Vương Thiên Đàng",
         "アレルヤの祈り",
-        "Các Kinh Cầu"
+        "Các Kinh Cầu",
+        "jp_アレルヤの祈り",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "アレルヤの祈り**"
       ]
     },
     {
@@ -991,7 +1043,7 @@
         "KR": "주요 기도",
         "VN": "",
         "EN": "",
-        "JP": "",
+        "JP": "日々の祈り",
         "LA": ""
       },
       "tags": [
@@ -1005,7 +1057,16 @@
         "아침 기도",
         "Morning Prayer",
         "Kinh Sáng",
-        "주요 기도"
+        "주요 기도",
+        "jp_朝の祈り",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "朝の祈り",
+        "日々の祈り"
       ]
     },
     {
@@ -1083,7 +1144,15 @@
         "キリストの魂",
         "Basic Prayers",
         "日々の祈り",
-        "Christus"
+        "Christus",
+        "jp_キリストの魂",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "キリストの魂**"
       ]
     },
     {
@@ -1237,7 +1306,15 @@
         "주요 기도",
         "Basic Prayers",
         "日々の祈り",
-        "Angeli"
+        "Angeli",
+        "en_prayer_to_your_guardian_angel",
+        "national",
+        "국가별·기타 기도문",
+        "Kinh theo từng nước và kinh khác",
+        "Local and Other Prayers",
+        "各国・その他の祈り",
+        "Preces locales et aliae",
+        "Prayer to Your Guardian Angel"
       ]
     },
     {
@@ -2304,42 +2381,6 @@
       ]
     },
     {
-      "id": "kr_5_27",
-      "category": "litany",
-      "titles": {
-        "KR": "예수 성심 호칭 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "kr_5_27",
-        "litany",
-        "호칭기도",
-        "Kinh cầu",
-        "Litanies",
-        "連祷",
-        "Litaniae",
-        "예수 성심 호칭 기도",
-        "호칭 기도"
-      ]
-    },
-    {
       "id": "kr_5_31",
       "category": "litany",
       "titles": {
@@ -2695,42 +2736,8 @@
         "秘跡・式次第",
         "Sacramenta et ritus",
         "고해 성사",
-        "고해성사"
-      ]
-    },
-    {
-      "id": "kr_29_185",
-      "category": "sacrament",
-      "titles": {
-        "KR": "고해성사",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "Ⅲ. 성사(예식)",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "kr_29_185",
-        "sacrament",
-        "성사·예식",
-        "Bí tích và nghi thức",
-        "Sacraments and Rites",
-        "秘跡・式次第",
-        "Sacramenta et ritus",
         "고해성사",
+        "kr_29_185",
         "Ⅲ. 성사(예식)"
       ]
     },
@@ -4284,37 +4291,6 @@
       ]
     },
     {
-      "id": "kr_25_174",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "가정을 위한 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "가정",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "kr_25_174",
-        "blessing_household",
-        "가정을 위한 기도",
-        "가정"
-      ]
-    },
-    {
       "id": "kr_6_54",
       "category": "blessing_household",
       "titles": {
@@ -4745,37 +4721,8 @@
         "kr_23_168",
         "blessing_household",
         "부모를 위한 기도",
-        "부모"
-      ]
-    },
-    {
-      "id": "kr_6_56",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "부모를 위한 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
+        "부모",
         "kr_6_56",
-        "blessing_household",
-        "부모를 위한 기도",
         "여러 가지 기도"
       ]
     },
@@ -6109,38 +6056,8 @@
         "kr_10_72",
         "funeral",
         "- 시편 129(130)",
-        "상장 예식"
-      ]
-    },
-    {
-      "id": "kr_10_77",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 129(130)",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "kr_10_77",
-        "funeral",
-        "- 시편 129(130)",
-        "상장 예식"
+        "상장 예식",
+        "kr_10_77"
       ]
     },
     {
@@ -6264,7 +6181,9 @@
         "kr_10_73",
         "funeral",
         "- 시편 50(51),3-21",
-        "상장 예식"
+        "상장 예식",
+        "kr_10_78",
+        "- 시편50(51),3-21"
       ]
     },
     {
@@ -6392,37 +6311,6 @@
       ]
     },
     {
-      "id": "kr_10_78",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편50(51),3-21",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "kr_10_78",
-        "funeral",
-        "- 시편50(51),3-21",
-        "상장 예식"
-      ]
-    },
-    {
       "id": "kr_10_94",
       "category": "funeral",
       "titles": {
@@ -6481,37 +6369,6 @@
         "kr_10_92",
         "funeral",
         "- 자비송",
-        "상장 예식"
-      ]
-    },
-    {
-      "id": "kr_10_76",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 주님의 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "kr_10_76",
-        "funeral",
-        "- 주님의 기도",
         "상장 예식"
       ]
     },
@@ -7014,37 +6871,8 @@
         "상장 예식",
         "Basic Prayers",
         "日々の祈り",
-        "Generalia"
-      ]
-    },
-    {
-      "id": "kr_6_138",
-      "category": "funeral",
-      "titles": {
-        "KR": "위령 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
+        "Generalia",
         "kr_6_138",
-        "funeral",
-        "위령 기도",
         "여러 가지 기도"
       ]
     },
@@ -7138,37 +6966,8 @@
         "kr_10_215",
         "funeral",
         "임종과 운명",
-        "상장 예식"
-      ]
-    },
-    {
-      "id": "kr_29_191",
-      "category": "funeral",
-      "titles": {
-        "KR": "임종과 운명",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "Ⅲ. 성사(예식)",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
+        "상장 예식",
         "kr_29_191",
-        "funeral",
-        "임종과 운명",
         "Ⅲ. 성사(예식)"
       ]
     },
@@ -7231,37 +7030,8 @@
         "kr_10_91",
         "funeral",
         "하관",
-        "상장 예식"
-      ]
-    },
-    {
-      "id": "kr_29_190",
-      "category": "funeral",
-      "titles": {
-        "KR": "하관",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "Ⅲ. 성사(예식)",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
+        "상장 예식",
         "kr_29_190",
-        "funeral",
-        "하관",
         "Ⅲ. 성사(예식)"
       ]
     },
@@ -7293,37 +7063,8 @@
         "kr_10_96",
         "funeral",
         "화장",
-        "상장 예식"
-      ]
-    },
-    {
-      "id": "kr_29_192",
-      "category": "funeral",
-      "titles": {
-        "KR": "화장",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "Ⅲ. 성사(예식)",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
+        "상장 예식",
         "kr_29_192",
-        "funeral",
-        "화장",
         "Ⅲ. 성사(예식)"
       ]
     },
@@ -7715,78 +7456,6 @@
       ]
     },
     {
-      "id": "la_actus_caritatis",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Actus Caritatis"
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Generalia"
-      },
-      "tags": [
-        "la_actus_caritatis",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Actus Caritatis",
-        "Generalia"
-      ]
-    },
-    {
-      "id": "la_actus_fidei",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Actus Fidei"
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Generalia"
-      },
-      "tags": [
-        "la_actus_fidei",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Actus Fidei",
-        "Generalia"
-      ]
-    },
-    {
       "id": "la_actus_reparationis",
       "category": "national",
       "titles": {
@@ -7820,42 +7489,6 @@
         "Preces locales et aliae",
         "Actus Reparationis",
         "Christus"
-      ]
-    },
-    {
-      "id": "la_actus_spei",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Actus Spei"
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Generalia"
-      },
-      "tags": [
-        "la_actus_spei",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Actus Spei",
-        "Generalia"
       ]
     },
     {
@@ -9649,41 +9282,6 @@
         "VN": "",
         "EN": "Memorare",
         "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "en_memorare",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Memorare"
-      ]
-    },
-    {
-      "id": "la_memorare",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
         "LA": "Memorare"
       },
       "texts": {
@@ -9701,7 +9299,7 @@
         "LA": "Maria"
       },
       "tags": [
-        "la_memorare",
+        "en_memorare",
         "national",
         "국가별·기타 기도문",
         "Kinh theo từng nước và kinh khác",
@@ -9709,43 +9307,8 @@
         "各国・その他の祈り",
         "Preces locales et aliae",
         "Memorare",
+        "la_memorare",
         "Maria"
-      ]
-    },
-    {
-      "id": "en_morning_offering",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "Morning Offering",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "Basic Prayers",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "en_morning_offering",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Morning Offering",
-        "Basic Prayers"
       ]
     },
     {
@@ -13830,41 +13393,6 @@
       ]
     },
     {
-      "id": "en_prayer_to_your_guardian_angel",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "Prayer to Your Guardian Angel",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "en_prayer_to_your_guardian_angel",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Prayer to Your Guardian Angel"
-      ]
-    },
-    {
       "id": "en_prayer_to_our_lord_jesus_christ_crucified",
       "category": "national",
       "titles": {
@@ -15702,42 +15230,6 @@
       ]
     },
     {
-      "id": "jp_お告けの祈り",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "お告げの祈り**",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "日々の祈り",
-        "LA": ""
-      },
-      "tags": [
-        "jp_お告けの祈り",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "お告げの祈り**",
-        "日々の祈り"
-      ]
-    },
-    {
       "id": "jp_すへてのいのちを守るための_キリスト者の祈り",
       "category": "national",
       "titles": {
@@ -15770,43 +15262,9 @@
         "各国・その他の祈り",
         "Preces locales et aliae",
         "すべてのいのちを守るための キリスト者の祈り",
-        "日々の祈り"
-      ]
-    },
-    {
-      "id": "jp_すへてのいのちを守るためのキリスト者の祈り",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "すべてのいのちを守るためのキリスト者の祈り",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "日々の祈り",
-        "LA": ""
-      },
-      "tags": [
+        "日々の祈り",
         "jp_すへてのいのちを守るためのキリスト者の祈り",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "すべてのいのちを守るためのキリスト者の祈り",
-        "日々の祈り"
+        "すべてのいのちを守るためのキリスト者の祈り"
       ]
     },
     {
@@ -15954,42 +15412,6 @@
       ]
     },
     {
-      "id": "jp_アレルヤの祈り",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "アレルヤの祈り**",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "日々の祈り",
-        "LA": ""
-      },
-      "tags": [
-        "jp_アレルヤの祈り",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "アレルヤの祈り**",
-        "日々の祈り"
-      ]
-    },
-    {
       "id": "jp_アウエ_マリアの祈り",
       "category": "national",
       "titles": {
@@ -16094,42 +15516,6 @@
         "各国・その他の祈り",
         "Preces locales et aliae",
         "イエスのみ心への祈り",
-        "日々の祈り"
-      ]
-    },
-    {
-      "id": "jp_キリストの魂",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "キリストの魂**",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "日々の祈り",
-        "LA": ""
-      },
-      "tags": [
-        "jp_キリストの魂",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "キリストの魂**",
         "日々の祈り"
       ]
     },
@@ -17210,42 +16596,6 @@
         "各国・その他の祈り",
         "Preces locales et aliae",
         "望徳唱",
-        "日々の祈り"
-      ]
-    },
-    {
-      "id": "jp_朝の祈り",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "朝の祈り",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "日々の祈り",
-        "LA": ""
-      },
-      "tags": [
-        "jp_朝の祈り",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "朝の祈り",
         "日々の祈り"
       ]
     },
@@ -20086,7 +19436,7 @@
         "LA": ""
       },
       "sourceCategory": {
-        "KR": "",
+        "KR": "호칭 기도",
         "VN": "Các Kinh Cầu",
         "EN": "",
         "JP": "",
@@ -20102,7 +19452,10 @@
         "Litaniae",
         "예수성심호칭기도",
         "Kinh Cầu Trái Tim Đức Chúa Giê-su",
-        "Các Kinh Cầu"
+        "Các Kinh Cầu",
+        "kr_5_27",
+        "예수 성심 호칭 기도",
+        "호칭 기도"
       ]
     },
     {
@@ -20715,7 +20068,7 @@
         "LA": ""
       },
       "sourceCategory": {
-        "KR": "",
+        "KR": "가정",
         "VN": "Các Kinh Cầu",
         "EN": "",
         "JP": "",
@@ -20731,7 +20084,10 @@
         "Preces Variae",
         "가정을 위한 기도",
         "Kinh Cầu Nguyện Cho Gia Đình",
-        "Các Kinh Cầu"
+        "Các Kinh Cầu",
+        "kr_25_174",
+        "blessing_household",
+        "가정"
       ]
     },
     {
