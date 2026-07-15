@@ -6840,7 +6840,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict68';
+    const STRICT_PARSER_CACHE_VERSION = 'strict69';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9628,6 +9628,7 @@
             ['mercy_sinned', /죄.*불쌍|자비.*죄|xin xot thuong.*pham toi|nguyen thuong.*nhan hau|be merciful.*sinned|have mercy.*sinned|miserere.*peccavimus/i],
             ['praise_soul_lord', /영혼.*찬미|linh hon.*ngoi khen|praise.*soul.*lord|lauda.*anima/i]
         ] : [
+            ['father_revealed_little_ones', /하늘과\s*땅.*(?:아버지|주님).*철부지|아버지.*하늘\s*나라.*(?:신비|비밀).*철부지|lay cha.*chua te troi dat.*(?:mac khai|to lo).*?(?:be mon|nho be)|father.*lord of heaven and earth.*reveal.*(?:little ones|children)|pater.*(?:caeli|coeli).*terrae.*revela.*parvul|天地の主.*父.*幼子|父.*幼子.*(?:示|現)/i],
             ['good_shepherd_sheep_know', /착한\s*목자|내\s*양|양들.*알|con chien.*nghe.*tieng|ta biet chung|chung biet ta|good shepherd|my sheep.*hear|know them|pastor bonus|oves.*audiunt/i],
             ['new_commandment_love', /새\s*계명|서로\s*사랑|dieu ran moi|yeu thuong nhau|thay ban|new commandment|love one another|as i have loved|mandatum novum|diligatis invicem|sicut dilexi/i],
             ['teach_paths_truth', /길.*가르|진리.*이끌|당신.*길|day bao.*loi buoc|loi buoc.*chua|huong dan.*chan ly|teach me.*paths|guide me.*truth|vias tuas|veritatem tuam|doce me/i],
@@ -10212,7 +10213,6 @@
 
     function dailyVariantLabelForAlignment(alignmentGroup, fallbackIndex, alignmentGroups = [], baseId = '') {
         const label = Object.assign({}, dailyVariantLabel(fallbackIndex));
-        if (alignmentGroup && alignmentGroup.__leftCitationFirst) return label;
         const mappedLanguages = ['kr', 'vn', 'en', 'jp', 'la']
             .filter(lower => alignmentGroup && Number.isInteger(alignmentGroup[lower]));
         const { left, right } = currentLeftRightLowerKeys();
@@ -10225,12 +10225,54 @@
                 : null;
             return sourceChoiceLabelForLower(sourceLower, sourceOrdinal);
         }
+        if (alignmentGroup && alignmentGroup.__leftCitationFirst) return label;
         if (mappedLanguages.length === 1 && mappedLanguages[0] === right) return sourceChoiceLabelForLower(right);
         ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
             const sourceIndex = alignmentGroup && Number.isInteger(alignmentGroup[lower]) ? alignmentGroup[lower] : fallbackIndex;
             label[lower] = dailyVariantLabel(sourceIndex)[lower] || label[lower];
         });
         return label;
+    }
+
+    function dailyVariantContentLanguages(variant, baseId) {
+        const lines = Array.isArray(variant && variant.lines) ? variant.lines : [];
+        return ['kr', 'vn', 'en', 'jp', 'la'].filter(lower => {
+            const optionLines = lines
+                .filter(line => line && !lineHasAnyRubric(line))
+                .map(line => ({ text: line[`text_${lower}`] || '' }));
+            return !!variantOptionMeaningText(baseId, optionLines).trim();
+        });
+    }
+
+    function applyDailySourceVariantLabels(variants, baseId, alignmentGroups = []) {
+        if (!sourceLabeledDailyVariantPartIds.has(baseId) || !variants) return variants;
+        const lowers = ['kr', 'vn', 'en', 'jp', 'la'];
+        const { left } = currentLeftRightLowerKeys();
+        const entries = Object.entries(variants).map(([key, variant], index) => {
+            const alignmentGroup = alignmentGroups[index] || null;
+            let languages = dailyVariantContentLanguages(variant, baseId);
+            if (!languages.length && alignmentGroup) {
+                languages = lowers.filter(lower => Number.isInteger(alignmentGroup[lower]));
+            }
+            return { key, variant, index, alignmentGroup, languages };
+        });
+        const languageCounts = Object.fromEntries(lowers.map(lower => [
+            lower,
+            entries.filter(entry => entry.languages.includes(lower)).length
+        ]));
+        const sourceOccurrences = Object.fromEntries(lowers.map(lower => [lower, 0]));
+        entries.forEach(entry => {
+            if (!entry.languages.length) return;
+            const sourceLower = entry.languages.includes(left) ? left : entry.languages[0];
+            sourceOccurrences[sourceLower] += 1;
+            let ordinal = null;
+            if (languageCounts[sourceLower] > 1) {
+                const alignedIndex = entry.alignmentGroup && entry.alignmentGroup[sourceLower];
+                ordinal = Number.isInteger(alignedIndex) ? alignedIndex + 1 : sourceOccurrences[sourceLower];
+            }
+            entry.variant.label = sourceChoiceLabelForLower(sourceLower, ordinal);
+        });
+        return variants;
     }
 
     function collectVariantCitation(newData, lowerLangs, optionIndex, alignmentGroup = null, optionMap = null) {
@@ -10341,6 +10383,7 @@
             const label = alignmentGroup ? dailyVariantLabelForAlignment(alignmentGroup, i, alignmentGroups, baseId) : dailyVariantLabel(i);
             variants[key] = { label, header: item.header || {}, cit, lines };
         }
+        applyDailySourceVariantLabels(variants, baseId, alignmentGroups || []);
         if (baseId === 'gospel') {
             applyGospelLengthVariantLabels(variants);
             applyGospelLengthVariantCitations(variants, newData);
