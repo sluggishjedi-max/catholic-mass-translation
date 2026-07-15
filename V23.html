@@ -2174,23 +2174,10 @@
     let churchMapsApiKey = '';
     let churchMapsApiKeyPromise = null;
     let churchSearchRequestId = 0;
-    let churchMapsAuthErrorCode = '';
     const CHURCH_MAX_RESULTS = 120;
     const CHURCH_MAX_RESULTS_PER_QUERY = 60;
     const CHURCH_TEXT_SEARCH_PAGE_DELAY_MS = 1800;
     const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
-
-    // Google Maps reports the actionable authentication reason only through
-    // console.error before calling gm_authFailure.  Retain just that public
-    // error code on the map node so a failed deployment can be diagnosed
-    // without exposing the browser key.
-    const originalConsoleErrorForMaps = console.error.bind(console);
-    console.error = (...args) => {
-        const message = args.map(value => String(value || '')).join(' ');
-        const match = message.match(/\b([A-Za-z]+MapError)\b/);
-        if (match) churchMapsAuthErrorCode = match[1];
-        originalConsoleErrorForMaps(...args);
-    };
 
     const prayerSeedData = [
         {
@@ -3155,11 +3142,6 @@
     window.gm_authFailure = function() {
         churchMapInitialized = false;
         const input = document.getElementById('church-search');
-        const mapNode = document.getElementById('church-map');
-        if (mapNode) mapNode.dataset.authError = churchMapsAuthErrorCode || 'GoogleMapsAuthFailure';
-        setTimeout(() => {
-            if (mapNode) mapNode.dataset.authError = churchMapsAuthErrorCode || mapNode.dataset.authError || 'GoogleMapsAuthFailure';
-        }, 250);
         showChurchFallback(cleanNodeText(input && input.value));
     };
 
