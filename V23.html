@@ -643,8 +643,10 @@
 
 <script src="JS%20file/missa_data.js?v=20260715-v23-3"></script>
 <script src="JS%20file/korean_temporal_data.js?v=20260715-v23-3"></script>
+<script src="JS%20file/korean_blessing_data.js?v=20260716-v23-2"></script>
 <script src="JS%20file/prayer_data.js?v=20260715-v23-3"></script>
 <script src="JS%20file/hymn_data.js?v=20260715-v23-3"></script>
+<script src="JS%20file/church_local_details.js?v=20260716-v23-2"></script>
 
 <script>
     // 통상문은 배포된 missa_data.js만 사용합니다.
@@ -668,6 +670,7 @@
         options: { entrance: 'A', greeting: 'A', penitential: 'A', creed: 'A', eucharist: '2', eucharist_song: '', eucharist3_intercession: 'ordinary', dismissal: '' },
         autoEucharistSongKey: '',
         autoDismissalOptionKey: '',
+        autoBlessingSignature: '',
         popeNames: { kr: '레오', vn: 'Lêô', en: 'Leo', jp: 'レオ', la: 'Leo' },
         popeSourceName: 'Leo XIV',
         startupConsentDeclined: false,
@@ -688,7 +691,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V23-20260715';
+    const APP_VERSION = 'V23-20260716';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DATE_NAV_LIMIT_MESSAGE = '금일 전 후 7일이 초과하는 전례는 조회할 수 없습니다';
@@ -3210,11 +3213,11 @@
     function churchDetailLabels() {
         const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
         const labels = {
-            KR: { address: '주소', phone: '전화', website: '홈페이지', priest: '사제', sisters: '수녀', massTimes: '미사 시간', openingHours: '개방 시간', maps: 'Google 지도', loading: '상세 정보를 불러오는 중입니다.', unavailable: '확인되지 않음', official: '공식 홈페이지에서 확인' },
-            VN: { address: 'Địa chỉ', phone: 'Điện thoại', website: 'Trang web', priest: 'Linh mục', sisters: 'Nữ tu', massTimes: 'Giờ lễ', openingHours: 'Giờ mở cửa', maps: 'Google Maps', loading: 'Đang tải thông tin chi tiết.', unavailable: 'Chưa xác nhận', official: 'Xem trên trang chính thức' },
-            EN: { address: 'Address', phone: 'Phone', website: 'Website', priest: 'Priest', sisters: 'Sisters', massTimes: 'Mass times', openingHours: 'Opening hours', maps: 'Google Maps', loading: 'Loading details.', unavailable: 'Not confirmed', official: 'Check the official website' },
-            JP: { address: '住所', phone: '電話', website: '公式サイト', priest: '司祭', sisters: '修道女', massTimes: 'ミサ時間', openingHours: '開館時間', maps: 'Google マップ', loading: '詳細情報を読み込んでいます。', unavailable: '未確認', official: '公式サイトで確認' },
-            LA: { address: 'Inscriptio', phone: 'Telephonum', website: 'Pagina', priest: 'Sacerdos', sisters: 'Sorores', massTimes: 'Horae Missae', openingHours: 'Horae apertionis', maps: 'Google Maps', loading: 'Notitiae onerantur.', unavailable: 'Non confirmatum', official: 'Vide paginam officialem' }
+            KR: { address: '주소', diocese: '교구', phone: '전화', website: '홈페이지', priest: '사제', sisters: '수녀', massTimes: '미사 시간', openingHours: '개방 시간', maps: 'Google 지도', loading: '상세 정보를 불러오는 중입니다.', unavailable: '확인되지 않음', official: '공식 홈페이지에서 확인' },
+            VN: { address: 'Địa chỉ', diocese: 'Giáo phận', phone: 'Điện thoại', website: 'Trang web', priest: 'Linh mục', sisters: 'Nữ tu', massTimes: 'Giờ lễ', openingHours: 'Giờ mở cửa', maps: 'Google Maps', loading: 'Đang tải thông tin chi tiết.', unavailable: 'Chưa xác nhận', official: 'Xem trên trang chính thức' },
+            EN: { address: 'Address', diocese: 'Diocese', phone: 'Phone', website: 'Website', priest: 'Priest', sisters: 'Sisters', massTimes: 'Mass times', openingHours: 'Opening hours', maps: 'Google Maps', loading: 'Loading details.', unavailable: 'Not confirmed', official: 'Check the official website' },
+            JP: { address: '住所', diocese: '教区', phone: '電話', website: '公式サイト', priest: '司祭', sisters: '修道女', massTimes: 'ミサ時間', openingHours: '開館時間', maps: 'Google マップ', loading: '詳細情報を読み込んでいます。', unavailable: '未確認', official: '公式サイトで確認' },
+            LA: { address: 'Inscriptio', diocese: 'Dioecesis', phone: 'Telephonum', website: 'Pagina', priest: 'Sacerdos', sisters: 'Sorores', massTimes: 'Horae Missae', openingHours: 'Horae apertionis', maps: 'Google Maps', loading: 'Notitiae onerantur.', unavailable: 'Non confirmatum', official: 'Vide paginam officialem' }
         };
         return labels[lang] || labels.EN;
     }
@@ -3225,7 +3228,15 @@
             : {};
         const placeId = cleanNodeText(place && place.place_id);
         const name = cleanNodeText(place && place.name).toLowerCase();
-        return (placeId && source[placeId]) || (name && source[name]) || {};
+        const normalizedName = name
+            .normalize('NFKC')
+            .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|カトリック/gu, '')
+            .replace(/성당|본당|교회|church|parish|教会/gu, '')
+            .replace(/[^\p{L}\p{N}]+/gu, '');
+        return (placeId && source[placeId])
+            || (name && source[name])
+            || (normalizedName && source[normalizedName])
+            || {};
     }
 
     function churchDetailList(value) {
@@ -3249,6 +3260,7 @@
         const local = churchLocalDetailsForPlace(place);
         const name = cleanNodeText((place && place.name) || local.name || auxText().churchTitle);
         const address = cleanNodeText((place && (place.formatted_address || place.vicinity)) || local.address);
+        const diocese = cleanNodeText((place && place.diocese) || local.diocese);
         const phone = cleanNodeText((place && place.phone) || local.phone);
         const website = String((place && place.website) || local.website || '').trim();
         const mapsUrl = String((place && place.google_maps_url) || local.googleMapsUrl || '').trim();
@@ -3259,6 +3271,7 @@
         const officialFallback = churchSafeLink(website, labels.official) || escapeHtml(labels.unavailable);
         const rows = [];
         rows.push(churchInfoField(labels.address, address ? escapeHtml(address) : escapeHtml(labels.unavailable)));
+        if (diocese) rows.push(churchInfoField(labels.diocese, escapeHtml(diocese)));
         rows.push(churchInfoField(labels.phone, phone ? escapeHtml(phone) : escapeHtml(labels.unavailable)));
         rows.push(churchInfoField(labels.website, churchSafeLink(website, labels.website) || escapeHtml(labels.unavailable)));
         rows.push(churchInfoField(labels.priest, priestNames.length ? priestNames.map(escapeHtml).join('<br>') : officialFallback));
@@ -6912,7 +6925,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict73';
+    const STRICT_PARSER_CACHE_VERSION = 'strict74';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9736,12 +9749,13 @@
             .toLowerCase();
     }
 
+    const sourceSeparatedPrayerVariantPartIds = new Set(['collect', 'prayer_offerings', 'prayer_after']);
+
     function variantSemanticKey(baseId, text) {
         const normalized = normalizeSemanticText(text);
         const raw = String(text || '');
         if (['collect', 'prayer_offerings', 'prayer_after', 'daily_line'].includes(baseId)) {
             const prayerPatterns = [
-                ['standard_prayer_conclusion', /우리\s*주\s*그리스도를\s*통하여|성자께서는.*(?:성부|성령|영원히).*살아|chung con cau xin nho duc|nguoi.*hang song.*hien tri|chua.*hang song.*hien tri|through christ our lord|who lives?.*reigns?|per christum dominum|qui.*vivit.*regnat|muon doi|forever and ever|for ever and ever/i],
                 ['sacraments_salvation_offering', /신비.*구원.*성찬례.*제사|bi tich.*ban phat.*on cuu do|cu hanh le te.*phuc vu.*duc\s*ki\s*-?\s*to|sacraments?.*salvation.*worship|mysteries.*salvation/i]
             ];
             const haystack = `${normalized}\n${raw}`;
@@ -9812,7 +9826,12 @@
                 semanticGroups[key][lower] = index;
             });
         });
-        groups.push(...Object.values(semanticGroups));
+        const semanticMatches = Object.values(semanticGroups);
+        if (sourceSeparatedPrayerVariantPartIds.has(baseId)) {
+            groups.push(...semanticMatches.filter(group => Object.keys(group).length >= 2));
+            return normalizeVariantAlignmentGroups(optionMap, groups);
+        }
+        groups.push(...semanticMatches);
         if (!groups.length) return [];
 
         const normalized = normalizeVariantAlignmentGroups(optionMap, groups);
@@ -10333,7 +10352,12 @@
         };
     }
 
-    const sourceLabeledDailyVariantPartIds = new Set(['entrance', 'gospel_accl', 'communion']);
+    const sourceLabeledDailyVariantPartIds = new Set([
+        'entrance',
+        'gospel_accl',
+        'communion',
+        ...sourceSeparatedPrayerVariantPartIds
+    ]);
 
     function dailyVariantLabelForAlignment(alignmentGroup, fallbackIndex, alignmentGroups = [], baseId = '') {
         const label = Object.assign({}, dailyVariantLabel(fallbackIndex));
@@ -12222,6 +12246,114 @@
         return fallback && songs[fallback[1]] ? fallback[1] : '';
     }
 
+    function koreanBlessingDateSelection(date, info = state.liturgyInfo) {
+        const source = globalThis.koreanBlessingData || {};
+        const lentenPrayers = source.lentenPrayers || {};
+        const solemnBlessings = source.solemnBlessings || {};
+        const activeDate = toDateOnly(date || getActiveLiturgicalSourceDate());
+        // Local/calendar overlays may mark a day as `special` (Ash Wednesday,
+        // Pentecost, local solemnities, and so on).  The perpetual season,
+        // week, and weekday must still come from the date itself so those
+        // overlays cannot hide a date-assigned prayer over the people.
+        const meta = getSeasonMeta(activeDate);
+        const title = cleanNodeText([
+            info && info.krName,
+            info && info.names && info.names.KR,
+            info && info.names && info.names.EN,
+            info && info.names && info.names.LA
+        ].filter(Boolean).join(' '));
+
+        // The Missal assigns these prayers by Lenten week and weekday, so this
+        // remains valid without a year-specific calendar file.
+        if (meta.season === 'lent' && Number.isInteger(meta.week) && Number.isInteger(meta.day)) {
+            const prayerKey = `lent_${meta.week}_${meta.day}`;
+            if (lentenPrayers[prayerKey]) {
+                return { type: 'prayer_over_people', key: prayerKey, entry: lentenPrayers[prayerKey] };
+            }
+        }
+
+        let key = '';
+        const month = activeDate.getMonth() + 1;
+        const day = activeDate.getDate();
+        if (month === 1 && day === 1) key = 'new_year';
+        else if (/성령\s*강림|Pentecost|Pentecostes/i.test(title)) key = 'pentecost';
+        else if (/주님\s*승천|Ascension|Ascensione/i.test(title)) key = 'ascension';
+        else if (/주님\s*공현|Epiphany|Epiphan/i.test(title)) key = 'epiphany';
+        else if (/성\s*베드로와\s*성\s*바오로|Peter\s+and\s+Paul|Petri\s+et\s+Pauli/i.test(title)) key = 'peter_and_paul';
+        else if (/모든\s*성인|All\s+Saints|Omnium\s+Sanctorum/i.test(title)) key = 'all_saints';
+        else if (/성당\s*봉헌|성전\s*봉헌|Dedication\s+of.*Church|Dedicatione\s+ecclesiae/i.test(title)) key = 'church_dedication';
+        else if (/위령|죽은\s*이|All\s+Souls|Defunctor/i.test(title) || (month === 11 && day === 2)) key = 'for_the_dead';
+        else if (/사도(?:\s|들|$)|Apostle|Apostol/i.test(title)) key = 'apostles';
+        else if (/성모|마리아|Our\s+Lady|Blessed\s+Virgin|Beatae?\s+Mariae/i.test(title)) key = 'blessed_virgin_mary';
+        else if (meta.season === 'advent') key = 'advent';
+        else if (meta.season === 'christmas') key = 'christmas';
+        else if (meta.season === 'lent' && meta.week === 6) key = 'passion';
+        else if (meta.season === 'easter') key = 'easter';
+        else if (meta.season === 'ordinary') key = 'ordinary_1';
+        if (!key || !solemnBlessings[key]) return null;
+        return { type: 'solemn_blessing', key, entry: solemnBlessings[key] };
+    }
+
+    function koreanBlessingLine(text, response = false) {
+        const line = {
+            sp_kr: response ? '◎' : '✚', text_kr: text,
+            sp_vn: response ? 'CĐ.' : 'LM.', text_vn: response ? 'Amen.' : '',
+            sp_en: response ? 'ALL' : 'P.', text_en: response ? 'Amen.' : '',
+            sp_la: response ? 'P.' : 'S.', text_la: response ? 'Amen.' : '',
+            sp_jp: response ? '会衆' : '司祭', text_jp: response ? 'アーメン。' : ''
+        };
+        return line;
+    }
+
+    function parsedKoreanSolemnBlessingLines(lines) {
+        return (Array.isArray(lines) ? lines : []).map(raw => {
+            const text = cleanNodeText(raw);
+            const response = /^[◎○]/.test(text);
+            return koreanBlessingLine(text.replace(/^[╋＋✚◎○]\s*/, ''), response);
+        }).filter(line => cleanNodeText(line.text_kr));
+    }
+
+    function prepareKoreanBlessingForActiveDate(item, baseId) {
+        if (baseId !== 'blessing' || !item || !item.variants || !item.variants.C) return;
+        const variant = item.variants.C;
+        if (!item.__originalKoreanBlessingVariantC) {
+            item.__originalKoreanBlessingVariantC = {
+                label: JSON.parse(JSON.stringify(variant.label || {})),
+                lines: cloneMassLines(variant.lines || [])
+            };
+        }
+        const original = item.__originalKoreanBlessingVariantC;
+        variant.label = JSON.parse(JSON.stringify(original.label));
+        variant.lines = cloneMassLines(original.lines);
+
+        const date = getActiveLiturgicalSourceDate();
+        const selection = koreanBlessingDateSelection(date, state.liturgyInfo);
+        if (!selection || !selection.entry) return;
+        const entry = selection.entry;
+        const originalLines = cloneMassLines(original.lines);
+        const prefix = originalLines.slice(0, 3);
+        let content = [];
+        if (selection.type === 'prayer_over_people') {
+            content = [
+                koreanBlessingLine((entry.lines || []).join('<br>')),
+                koreanBlessingLine('아멘.', true),
+                ...originalLines.slice(4)
+            ];
+            variant.label.kr = `백성을 위한 기도 - ${entry.title || selection.key}`;
+        } else {
+            content = parsedKoreanSolemnBlessingLines(entry.lines);
+            variant.label.kr = `장엄강복 - ${entry.label || selection.key}`;
+        }
+        if (!content.length) return;
+        variant.lines = prefix.concat(content);
+
+        const signature = `${formatDateIso(date)}|${selection.type}|${selection.key}`;
+        if (state.autoBlessingSignature !== signature) {
+            state.options.blessing = 'C';
+            state.autoBlessingSignature = signature;
+        }
+    }
+
     function getSelectedEucharistSongKey(item) {
         const keys = getEucharistSongKeys(item);
         if (!keys.length) return state.options.eucharist_song || '';
@@ -12545,6 +12677,7 @@
 
         massData.forEach(item => {
             const baseId = getBaseId(item.id);
+            prepareKoreanBlessingForActiveDate(item, baseId);
             if (item.if === 'sunday' && !state.isSunday) return;
             if (item.if === 'easter_or_pentecost' && !isEasterOrPentecost(getTargetDate())) return;
             if (item.if === 'not_penitential_C' && state.options.penitential === 'C') return;
