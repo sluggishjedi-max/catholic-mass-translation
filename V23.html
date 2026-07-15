@@ -5318,8 +5318,30 @@
             || /^Phụng\s+vụ\s+Lời\s+Chúa\s*[-–—:]?\s*\(\s*theo\s+ngày\s+trong\s+tuần\s*\)\s*$/iu.test(text);
     }
 
+    function vietnameseLiturgicalReadingDirectiveIndex(line) {
+        const text = cleanNodeText(line);
+        const match = text.match(/(?:^|\s)(?:Bài\s+[ĐÐđd]ọc(?:\s+Phụng\s+vụ\s+Lời\s+Chúa)?|Phụng\s+vụ\s+Lời\s+Chúa)\s*[-–—:]?\s*(?:\(\s*theo\s+ngày\s+trong\s+tuần\s*\))?\s*$/iu);
+        if (!match) return -1;
+        return match.index + (/^\s/u.test(match[0]) ? 1 : 0);
+    }
+
+    function cleanVietnameseSectionSourceLines(key, lines) {
+        const output = [];
+        for (const sourceLine of splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean)) {
+            const directiveIndex = vietnameseLiturgicalReadingDirectiveIndex(sourceLine);
+            if (directiveIndex >= 0) {
+                const beforeDirective = cleanNodeText(sourceLine.slice(0, directiveIndex));
+                if (beforeDirective) output.push(beforeDirective);
+                if (key === 'collect') break;
+                continue;
+            }
+            if (!isVietnameseLiturgicalReadingDirectiveLine(sourceLine)) output.push(sourceLine);
+        }
+        return output;
+    }
+
     function formatVietnameseSectionLines(key, lines) {
-        const cleaned = splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean).filter(line => !isVietnameseLiturgicalReadingDirectiveLine(line));
+        const cleaned = cleanVietnameseSectionSourceLines(key, lines);
         if (key === 'psalm') return parseVietnamesePsalmLines(cleaned).lines;
         if (key === 'gospel_accl') return parseVietnameseAcclamationLines(cleaned).lines;
         const output = [];
@@ -5331,7 +5353,7 @@
     }
 
     function formatVietnameseSection(key, lines) {
-        const cleaned = splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean).filter(line => !isVietnameseLiturgicalReadingDirectiveLine(line));
+        const cleaned = cleanVietnameseSectionSourceLines(key, lines);
         if (key === 'psalm') {
             return parsedLinesToText(parseVietnamesePsalmLines(cleaned).lines);
         }
@@ -6882,7 +6904,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict70';
+    const STRICT_PARSER_CACHE_VERSION = 'strict71';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
