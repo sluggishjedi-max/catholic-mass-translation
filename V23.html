@@ -2083,6 +2083,10 @@
         state.dailyReadingsLoading = true;
         const leftLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
         const rightLang = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
+        if ((state.activeTab || 'mass') !== 'mass') {
+            hideLiturgyStatusBar();
+            return;
+        }
         if (message) updateLiturgyStatusBar([message], { loading: true });
         else syncLiturgyLoadingStatusBar(leftLang, rightLang);
     }
@@ -4115,6 +4119,10 @@
         syncQuickHomeMenu(tab);
         updateFooterCopyright();
         syncFloatingLiturgyBannerVisibility();
+        syncLiturgyLoadingStatusBar(
+            normalizeSelectableLang(state.currentLoc || 'KR', 'KR'),
+            normalizeDistinctTargetLang(state.targetLang, state.currentLoc || 'KR')
+        );
     }
 
     function captureMassTabScroll() {
@@ -6904,7 +6912,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict72';
+    const STRICT_PARSER_CACHE_VERSION = 'strict73';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -8221,7 +8229,7 @@
             .replace(/<span[^>]+class=["'][^"']*titolo[^"']*["'][^>]*>([\s\S]*?)<\/span>/gi, '\n$1\n')
             .replace(/<span[^>]+class=["'][^"']*sezione[^"']*["'][^>]*>([\s\S]*?)<\/span>/gi, '\n$1\n')
             .replace(/<span[^>]+class=["'][^"']*citazione[^"']*["'][^>]*>([\s\S]*?)<\/span>/gi, '\n$1\n')
-            .replace(/<span[^>]+class=["'][^"']*rubrica[^"']*["'][^>]*>([\s\S]*?)<\/span>/gi, ' $1 ')
+            .replace(/<span[^>]+class=["'][^"']*rubrica[^"']*["'][^>]*>([\s\S]*?)<\/span>/gi, '\n$1\n')
             .replace(/<hr\s*\/?>/gi, '\n* * *\n')
             .replace(/<br\s*\/?>/gi, '\n')
             .replace(/<\/p>/gi, '\n')
@@ -8330,6 +8338,53 @@
         return prepared;
     }
 
+    function ibreviaryPrayerChoiceTokens(line, lang) {
+        let text = strictCleanLine(line);
+        const terminalPattern = lang === 'LA'
+            ? /\bPr(?:æ|ae)fatio\s+de\b/iu
+            : /\bPreface\s+of\b/iu;
+        const terminalIndex = text.search(terminalPattern);
+        const terminalFound = terminalIndex >= 0;
+        if (terminalFound) text = strictCleanLine(text.slice(0, terminalIndex));
+        text = text.replace(/(\[(?:Common\s+of\s+[^\]]+|Schema\s+\d+)\])/giu, '\n$1\n');
+        if (lang === 'LA') text = text.replace(/\b(Pro\s+(?:doctoribus|pastoribus))\b/giu, '\n$1\n');
+        return {
+            tokens: text.split(/\n+/).map(strictCleanLine).filter(Boolean),
+            terminalFound
+        };
+    }
+
+    function ibreviaryIsPrayerChoiceRubric(line, lang) {
+        const text = strictCleanLine(line);
+        return /^\[(?:Common\s+of\s+[^\]]+|Schema\s+\d+)\]$/iu.test(text)
+            || (lang === 'LA' && /^Pro\s+(?:doctoribus|pastoribus)$/iu.test(text));
+    }
+
+    function ibreviaryPreparePrayerChoiceLines(lines, lang) {
+        const prepared = [];
+        let currentHasContent = false;
+        for (const rawLine of lines || []) {
+            const split = ibreviaryPrayerChoiceTokens(rawLine, lang);
+            for (const token of split.tokens) {
+                const alternative = strictAlternativeMatch(token);
+                if (ibreviaryIsPrayerChoiceRubric(token, lang) || alternative) {
+                    if (currentHasContent && !strictIsAlternativeLine(prepared[prepared.length - 1] || '')) prepared.push('Or:');
+                    currentHasContent = false;
+                    if (alternative && alternative.rest) {
+                        prepared.push(alternative.rest);
+                        currentHasContent = true;
+                    }
+                    continue;
+                }
+                if (ibreviaryIsDelimiter(token)) continue;
+                prepared.push(token);
+                currentHasContent = true;
+            }
+            if (split.terminalFound) break;
+        }
+        return prepared;
+    }
+
     function ibreviaryPreferProperReadings(lines) {
         const source = lines || [];
         const start = source.findIndex(line => /^(Proper readings|Readings proper)$/i.test(strictCleanLine(line)));
@@ -8380,7 +8435,7 @@
         entrance = Object.assign({}, entrance, { lines: ibreviaryPrepareAntiphonChoiceLines(entrance.lines) });
         const data = {};
         if (entrance.lines.length) data.entrance = strictFormatSection(lang, 'entrance', entrance);
-        if (collect.lines.length) data.collect = strictFormatSection(lang, 'collect', collect);
+        if (collect.lines.length) data.collect = strictFormatSection(lang, 'collect', Object.assign({}, collect, { lines: ibreviaryPreparePrayerChoiceLines(collect.lines, lang) }));
         return data;
     }
 
@@ -8394,7 +8449,9 @@
                 lines: lines.filter(line => !ibreviaryIsDelimiter(line) && !/^(?:Preface|Praefatio)\b/iu.test(strictCleanLine(line)))
             };
         }
-        return offerings.lines.length ? { prayer_offerings: strictFormatSection(lang, 'prayer_offerings', offerings) } : {};
+        return offerings.lines.length ? {
+            prayer_offerings: strictFormatSection(lang, 'prayer_offerings', Object.assign({}, offerings, { lines: ibreviaryPreparePrayerChoiceLines(offerings.lines, lang) }))
+        } : {};
     }
 
     function parseIbreviaryCommunion(lang, source) {
@@ -8417,7 +8474,7 @@
         communion = Object.assign({}, communion, { lines: ibreviaryPrepareAntiphonChoiceLines(communion.lines) });
         const data = {};
         if (communion.lines.length) data.communion = strictFormatSection(lang, 'communion', communion);
-        if (after.lines.length) data.prayer_after = strictFormatSection(lang, 'prayer_after', after);
+        if (after.lines.length) data.prayer_after = strictFormatSection(lang, 'prayer_after', Object.assign({}, after, { lines: ibreviaryPreparePrayerChoiceLines(after.lines, lang) }));
         return data;
     }
 
@@ -11095,6 +11152,10 @@
     }
 
     function syncLiturgyLoadingStatusBar(leftLang, rightLang) {
+        if ((state.activeTab || 'mass') !== 'mass') {
+            hideLiturgyStatusBar();
+            return;
+        }
         const status = state.dailyReadingLanguageStatus || {};
         const errorStartedAt = state.dailyReadingLanguageErrorAt || (state.dailyReadingLanguageErrorAt = {});
         const visibleLangs = Array.from(new Set([leftLang, rightLang]
