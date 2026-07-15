@@ -3375,6 +3375,11 @@
         return Array.from(new Set(localized[lang] || localized.EN));
     }
 
+    function isChurchPlacesAuthorizationError(error) {
+        const text = cleanNodeText(error && (error.message || error)).toLowerCase();
+        return /permission_denied|referer.*blocked|api.?target.?blocked|not authorized|origin.*not allowed/.test(text);
+    }
+
     function churchLatLngNumber(point, axis) {
         if (!point) return NaN;
         const value = point[axis];
@@ -3478,6 +3483,10 @@
             }
         } catch (error) {
             console.warn('Places API (New) 성당 검색에 실패하여 기존 검색으로 재시도합니다.', error);
+            if (isChurchPlacesAuthorizationError(error)) {
+                showChurchFallback(churchMapDefaultForLang().query);
+                return;
+            }
         }
 
         if (!churchPlacesService) {
@@ -3645,6 +3654,10 @@
                 if (await searchChurchWithModernPlaces(query)) return;
             } catch (error) {
                 console.warn('Places API (New) 성당 이름 검색에 실패하여 기존 검색으로 재시도합니다.', error);
+                if (isChurchPlacesAuthorizationError(error)) {
+                    showChurchFallback(query);
+                    return;
+                }
             }
             if (searchChurchWithPlaces(query)) return;
         }
@@ -5272,9 +5285,12 @@
         return result;
     }
 
-    function normalizeVietnamesePrayerEnding(text) {
+    function normalizeVietnamesePrayerEnding(text, key = 'prayer_after') {
         let out = String(text || '').trim();
-        out = out.replace(/Chúng con cầu xin(?:\s*[.…]+)?\s*$/i, 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.');
+        const petitionEnding = key === 'collect'
+            ? 'Chúng con cầu xin nhờ Đức Giê-su Ki-tô Con Chúa, Thiên Chúa và là Chúa chúng con, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.'
+            : 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.';
+        out = out.replace(/Chúng con cầu xin(?:\s*[.…]+)?\s*$/i, petitionEnding);
         out = out.replace(/Xin Thiên Chúa toàn năng(?:\s*[.…]+)?\s*$/i, 'Xin Thiên Chúa toàn năng thương xót, tha tội, và dẫn đưa chúng ta đến sự sống muôn đời.');
         out = out.replace(/Người là Thiên Chúa(?:\s*[.…]+)?\s*$/i, 'Người là Thiên Chúa hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
         out = out.replace(/Chúa hằng sống(?:\s*[.…]+)?\s*$/i, 'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
@@ -5282,23 +5298,28 @@
         return out;
     }
 
-    function splitVietnamesePrayerParagraphs(text) {
-        const normalized = normalizeVietnamesePrayerEnding(text).replace(/\s+/g, ' ').trim();
-        const endingMatch = normalized.match(/\b(?:Người là Thiên Chúa hằng sống.+|Người là Thiên Chúa,\s*Người hằng sống.+|Người hằng sống và hiển trị muôn đời\.?)$/i);
-        if (!endingMatch) return normalized ? [normalized] : [];
-        const before = normalized.slice(0, endingMatch.index).trim();
-        const ending = endingMatch[0].trim();
+    function splitVietnamesePrayerParagraphs(text, key) {
+        const normalized = normalizeVietnamesePrayerEnding(text, key).replace(/\s+/g, ' ').trim();
+        const ending = strictPrayerEndingFormulas('VN', key).find(item => normalized.endsWith(item)) || '';
+        if (!ending) return normalized ? [normalized] : [];
+        const before = normalized.slice(0, normalized.length - ending.length).trim();
         return [before, ending].filter(Boolean);
     }
 
     function vietnameseParagraphsForSection(key, text) {
-        if (['collect', 'prayer_offerings', 'prayer_after'].includes(key)) return splitVietnamesePrayerParagraphs(text);
+        if (['collect', 'prayer_offerings', 'prayer_after'].includes(key)) return splitVietnamesePrayerParagraphs(text, key);
         const paragraph = cleanNodeText(String(text || '').replace(/\s+/g, ' '));
         return paragraph ? [paragraph] : [];
     }
 
+    function isVietnameseLiturgicalReadingDirectiveLine(line) {
+        const text = cleanNodeText(line);
+        return /^Bài\s+[ĐÐđd]ọc(?:\s+Phụng\s+vụ\s+Lời\s+Chúa)?\s*[-–—:]?\s*(?:\(\s*theo\s+ngày\s+trong\s+tuần\s*\))?\s*$/iu.test(text)
+            || /^Phụng\s+vụ\s+Lời\s+Chúa\s*[-–—:]?\s*\(\s*theo\s+ngày\s+trong\s+tuần\s*\)\s*$/iu.test(text);
+    }
+
     function formatVietnameseSectionLines(key, lines) {
-        const cleaned = splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean);
+        const cleaned = splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean).filter(line => !isVietnameseLiturgicalReadingDirectiveLine(line));
         if (key === 'psalm') return parseVietnamesePsalmLines(cleaned).lines;
         if (key === 'gospel_accl') return parseVietnameseAcclamationLines(cleaned).lines;
         const output = [];
@@ -5310,7 +5331,7 @@
     }
 
     function formatVietnameseSection(key, lines) {
-        const cleaned = splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean);
+        const cleaned = splitSourceBlocks(lines).map(cleanMarkdownLine).filter(Boolean).filter(line => !isVietnameseLiturgicalReadingDirectiveLine(line));
         if (key === 'psalm') {
             return parsedLinesToText(parseVietnamesePsalmLines(cleaned).lines);
         }
@@ -5511,13 +5532,34 @@
         return output;
     }
 
+    function vietnameseArticleTailIndex(line) {
+        const text = cleanNodeText(line);
+        return text.search(/(?:^|\s)(?:Post\s+Views?\s*:|Tìm\s+kiếm(?:\s+Tìm\s+kiếm)?(?:\s|$)|LỄ\s+KÍNH\s+CÁC\s+THÁNH(?:\s|$)|CÁC\s+MÙA\s+TRONG\s+NĂM\s+PHỤNG\s+VỤ(?:\s|$)|TỔNG\s+GIÁO\s+PHẬN\s+HÀ\s+NỘI(?:\s|$))/iu);
+    }
+
+    function trimVietnameseArticleTail(lines) {
+        const output = [];
+        for (const line of lines || []) {
+            const text = cleanNodeText(line);
+            const tailIndex = vietnameseArticleTailIndex(text);
+            if (tailIndex >= 0) {
+                const beforeTail = text.slice(0, tailIndex).trim();
+                if (beforeTail) output.push(beforeTail);
+                break;
+            }
+            if (text) output.push(line);
+        }
+        return output;
+    }
+
     function getVietnameseBodyLines(lines) {
         const body = contentLinesFromSource(lines);
         const articleStart = body.findIndex(isVietnameseArticleStartLine);
         const scoped = articleStart >= 0 ? body.slice(articleStart) : body;
         const withoutIntro = stripVietnameseIntroductoryLines(scoped);
-        const meditationStart = withoutIntro.findIndex(line => /^Suy niệm(?:\s|$)/i.test(cleanNodeText(line)));
-        return meditationStart >= 0 ? withoutIntro.slice(0, meditationStart) : withoutIntro;
+        const withoutTail = trimVietnameseArticleTail(withoutIntro);
+        const meditationStart = withoutTail.findIndex(line => /^Suy niệm(?:\s|$)/i.test(cleanNodeText(line)));
+        return meditationStart >= 0 ? withoutTail.slice(0, meditationStart) : withoutTail;
     }
 
     function firstIndex(lines, patterns, start = 0) {
@@ -5548,7 +5590,7 @@
         const body = selectVietnameseCycle(getVietnameseBodyLines(lines), date);
         const result = {};
         const entrance = sliceVietnameseSection(body, [/^Ca nhập lễ/i], [/^Lời nguyện nhập lễ/i]);
-        const collect = sliceVietnameseSection(body, [/^Lời nguyện nhập lễ/i], [/^Bài [ĐÐ]ọc I/i]);
+        const collect = sliceVietnameseSection(body, [/^Lời nguyện nhập lễ/i], [/^Bài\s+[ĐÐđd]ọc(?:\s|$)/iu, /^Phụng vụ Lời Chúa(?:\s|$)/iu]);
         const reading1 = sliceVietnameseSection(body, [/^Bài [ĐÐ]ọc I/i], [/^[ĐÐ]áp Ca/i, /^[ĐÐ]áp ca/i]);
         const psalm = sliceVietnameseSection(body, [/^[ĐÐ]áp Ca/i, /^[ĐÐ]áp ca/i], [/^Bài [ĐÐ]ọc II/i, /^Alleluia/i, /^Tung hô Tin Mừng/i, /^Phúc Âm/i, /^Tin Mừng\s*:/i]);
         const reading2 = sliceVietnameseSection(body, [/^Bài [ĐÐ]ọc II/i], [/^Alleluia/i, /^Tung hô Tin Mừng/i, /^Phúc Âm/i, /^Tin Mừng\s*:/i]);
@@ -6840,7 +6882,7 @@
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict69';
+    const STRICT_PARSER_CACHE_VERSION = 'strict70';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11521,8 +11563,12 @@
     }
 
     function shouldSuppressAIFallbackForLine(line, baseId, lower) {
-        return shouldSuppressAIFallbackLine(line, baseId)
-            || displayLanguageWasCleared(line, lower)
+        if (shouldSuppressAIFallbackLine(line, baseId)) return true;
+        // A source-choice variant intentionally clears the opposite language.
+        // Keep the AI button available there so the selected original can be
+        // translated into the empty display column on demand.
+        if (line && line.__sourceChoiceOriginal) return false;
+        return displayLanguageWasCleared(line, lower)
             || sourceChoiceLanguageIsEmpty(line, lower);
     }
 
