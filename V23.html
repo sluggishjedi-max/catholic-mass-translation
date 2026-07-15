@@ -83,7 +83,7 @@
         .missal-container { max-width: 1100px; margin: 0 auto; background: white; }
         .role-legend { position: sticky; top: var(--floating-liturgy-offset, 0px); z-index: 998; max-width: 1100px; max-height: calc(38vh - var(--floating-liturgy-offset, 0px)); margin: 0 auto; padding: 14px 20px 12px; overflow-y: auto; background: white; border: 1px solid #ddd; border-top: 0; border-radius: 0 0 8px 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16); color: #333; font-family: 'Noto Sans', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans CJK JP', 'Segoe UI', Arial, sans-serif; font-size: 0.86rem; transition: top 0.18s ease, max-height 0.18s ease; }
         .role-legend .role-legend-group { font-family: inherit; }
-        .role-legend-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 12px 18px; }
+        .role-legend-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; }
         .role-legend-group { min-width: 0; }
         .role-legend-title { margin-bottom: 4px; color: var(--primary-color); font-weight: 900; font-size: 1em; }
         .role-legend-lines { display: flex; flex-direction: column; gap: 3px; }
@@ -370,9 +370,6 @@
             .church-map-js,
             .church-map-frame { min-height: 360px; }
         }
-        @media (orientation: portrait) {
-            .role-legend-grid { grid-template-columns: 1fr; }
-        }
     </style>
 </head>
 <body class="consent-pending">
@@ -637,10 +634,10 @@
 <footer id="main-footer">
     </footer>
 
-<script src="JS%20file/missa_data.js?v=20260715-v23"></script>
-<script src="JS%20file/korean_temporal_data.js?v=20260715-v23"></script>
-<script src="JS%20file/prayer_data.js?v=20260715-v23"></script>
-<script src="JS%20file/hymn_data.js?v=20260715-v23"></script>
+<script src="JS%20file/missa_data.js?v=20260715-v23-2"></script>
+<script src="JS%20file/korean_temporal_data.js?v=20260715-v23-2"></script>
+<script src="JS%20file/prayer_data.js?v=20260715-v23-2"></script>
+<script src="JS%20file/hymn_data.js?v=20260715-v23-2"></script>
 
 <script>
     // 통상문은 배포된 missa_data.js만 사용합니다.
@@ -3228,6 +3225,44 @@
         return Array.from(new Set([...(localized[lang] || localized.EN), 'Catholic church']));
     }
 
+    function churchNearbyKeywordsForLocation(value = state.currentLoc) {
+        const lang = normalizeSelectableLang(value || 'KR', 'KR');
+        const localized = {
+            KR: ['천주교', '가톨릭'],
+            VN: ['Công giáo', 'giáo xứ'],
+            EN: ['Catholic', 'Catholic parish'],
+            JP: ['カトリック'],
+            LA: ['cattolica']
+        };
+        return Array.from(new Set(localized[lang] || localized.EN));
+    }
+
+    function churchLatLngNumber(point, axis) {
+        if (!point) return NaN;
+        const value = point[axis];
+        return Number(typeof value === 'function' ? value.call(point) : value);
+    }
+
+    function churchDistanceMeters(from, to) {
+        const lat1 = churchLatLngNumber(from, 'lat');
+        const lng1 = churchLatLngNumber(from, 'lng');
+        const lat2 = churchLatLngNumber(to, 'lat');
+        const lng2 = churchLatLngNumber(to, 'lng');
+        if (![lat1, lng1, lat2, lng2].every(Number.isFinite)) return 0;
+        const radians = value => value * Math.PI / 180;
+        const dLat = radians(lat2 - lat1);
+        const dLng = radians(lng2 - lng1);
+        const a = Math.sin(dLat / 2) ** 2
+            + Math.cos(radians(lat1)) * Math.cos(radians(lat2)) * Math.sin(dLng / 2) ** 2;
+        return 6371000 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function churchBoundsRadiusMeters(bounds) {
+        if (!bounds || typeof bounds.getCenter !== 'function' || typeof bounds.getNorthEast !== 'function') return 5000;
+        const radius = churchDistanceMeters(bounds.getCenter(), bounds.getNorthEast()) * 1.08;
+        return Math.max(1000, Math.min(50000, Math.ceil(radius || 5000)));
+    }
+
     function searchChurchesInCurrentView() {
         if (!churchPlacesService || !churchMap || !churchMap.getBounds()) return;
         const requestId = ++churchSearchRequestId;
@@ -3235,7 +3270,7 @@
         const bounds = churchMap.getBounds();
         setChurchStatus('');
 
-        const runQuery = query => new Promise(resolve => {
+        const runPagedSearch = startSearch => new Promise(resolve => {
             let queryResultCount = 0;
             const handleChurchResults = (results, status, pagination) => {
                 if (requestId !== churchSearchRequestId) {
@@ -3259,10 +3294,19 @@
                 }
                 resolve();
             };
-            churchPlacesService.textSearch({ query, bounds, type: 'church' }, handleChurchResults);
+            startSearch(handleChurchResults);
         });
 
-        Promise.all(churchSearchQueriesForLocation().map(runQuery)).then(() => {
+        const textSearches = churchSearchQueriesForLocation().map(query => runPagedSearch(callback => {
+            churchPlacesService.textSearch({ query, bounds, type: 'church' }, callback);
+        }));
+        const center = bounds.getCenter();
+        const radius = churchBoundsRadiusMeters(bounds);
+        const nearbySearches = churchNearbyKeywordsForLocation().map(keyword => runPagedSearch(callback => {
+            churchPlacesService.nearbySearch({ location: center, radius, keyword, type: 'church' }, callback);
+        }));
+
+        Promise.all([...textSearches, ...nearbySearches]).then(() => {
             if (requestId !== churchSearchRequestId) return;
             const results = Array.from(collected.values());
             renderChurchPlaces(results);
@@ -11429,7 +11473,36 @@
 
     function getEucharistSongKeys(item) {
         const songs = getEucharistSongMap(item);
-        return Object.keys(songs);
+        const keys = Object.keys(songs);
+        const familyFirstIndex = new Map();
+        const rows = keys.map((key, index) => {
+            const matched = String(key).match(/^(.*)_([1-9]\d*)$/);
+            const family = matched ? matched[1] : key;
+            const variation = matched ? Number.parseInt(matched[2], 10) : Number.MAX_SAFE_INTEGER;
+            if (!familyFirstIndex.has(family)) familyFirstIndex.set(family, index);
+            return { key, index, family, variation };
+        });
+        return rows.sort((left, right) => {
+            const familyOrder = familyFirstIndex.get(left.family) - familyFirstIndex.get(right.family);
+            if (familyOrder) return familyOrder;
+            if (left.family === right.family && left.variation !== right.variation) return left.variation - right.variation;
+            return left.index - right.index;
+        }).map(row => row.key);
+    }
+
+    function compactEucharistSongLabel(label) {
+        const text = cleanNodeText(label || '');
+        if (!text) return '';
+        return text.replace(/\s*(?:[:：]\s+|[-–—]\s+|「).*$/u, '').trim() || text;
+    }
+
+    function setEucharistPrefaceSelectExpanded(select, expanded) {
+        if (!select || !select.options) return;
+        Array.from(select.options).forEach(option => {
+            const fullLabel = option.dataset.fullLabel || option.textContent || '';
+            const compactLabel = option.dataset.compactLabel || compactEucharistSongLabel(fullLabel);
+            option.textContent = expanded || !option.selected ? fullLabel : compactLabel;
+        });
     }
 
     function getLocalizedObjectValue(value, langCode) {
@@ -11927,8 +12000,9 @@
         const rightL = normalizeDistinctTargetLang(state.targetLang, leftL);
         state.currentLoc = leftL;
         state.targetLang = rightL;
-        document.getElementById('header-main-title').textContent = localizedHeaderMainTitle(leftL);
-        document.getElementById('header-date').textContent = localizedHeaderDate(getActiveLiturgicalDateContext(), leftL, state.liturgyInfo.dateStr);
+        const uiL = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        document.getElementById('header-main-title').textContent = localizedHeaderMainTitle(uiL);
+        document.getElementById('header-date').textContent = localizedHeaderDate(getActiveLiturgicalDateContext(), uiL, state.liturgyInfo.dateStr);
         updateRoleLegend(leftL, rightL);
         const appNames = { 'KR': '가톨릭 매일미사', 'VN': 'Lời Chúa Mỗi Ngày', 'EN': 'Daily Mass', 'JP': '毎日のミサ', 'LA': 'Daily Mass in Latin' };
         document.title = `${appNames[leftL] || 'Ordo Missae'} | ${appNames[rightL] || 'Ordo Missae'} - Ordo Missae`;
@@ -12131,10 +12205,13 @@
                 const songKeys = getEucharistSongKeys(orig);
                 const selectedSongKey = getSelectedEucharistSongKey(orig);
                 if (songKeys.length) {
-                    secondarySelectHtml += `<div class="select-block"><select class="select-inline" onchange="optChange('eucharist_song', this.value)">`;
+                    secondarySelectHtml += `<div class="select-block"><select class="select-inline" aria-label="Preface" onpointerdown="setEucharistPrefaceSelectExpanded(this, true)" onblur="setEucharistPrefaceSelectExpanded(this, false)" onchange="optChange('eucharist_song', this.value)">`;
                     songKeys.forEach(songKey => {
                         const selected = selectedSongKey === songKey ? 'selected' : '';
-                        secondarySelectHtml += `<option value="${escapeHtml(songKey)}" ${selected}>${escapeHtml(getEucharistSongLabel(orig, songKey, langCode))}</option>`;
+                        const fullLabel = getEucharistSongLabel(orig, songKey, langCode);
+                        const compactLabel = compactEucharistSongLabel(fullLabel);
+                        const visibleLabel = selected ? compactLabel : fullLabel;
+                        secondarySelectHtml += `<option value="${escapeAttr(songKey)}" data-full-label="${escapeAttr(fullLabel)}" data-compact-label="${escapeAttr(compactLabel)}" ${selected}>${escapeHtml(visibleLabel)}</option>`;
                     });
                     secondarySelectHtml += '</select></div>';
                 }
