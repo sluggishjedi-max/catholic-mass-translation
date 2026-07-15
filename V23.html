@@ -3137,6 +3137,12 @@
         setChurchCaption('');
     }
 
+    window.gm_authFailure = function() {
+        churchMapInitialized = false;
+        const input = document.getElementById('church-search');
+        showChurchFallback(cleanNodeText(input && input.value));
+    };
+
     async function loadGoogleMapsForChurches() {
         if (window.google && google.maps && google.maps.places) return Promise.resolve();
         const key = await fetchGoogleMapsApiKey();
@@ -3459,6 +3465,14 @@
                 churchMap.addListener('idle', scheduleChurchViewportSearch);
                 churchMap.addListener('dragend', scheduleChurchViewportSearch);
                 churchMap.addListener('zoom_changed', scheduleChurchViewportSearch);
+                setTimeout(() => {
+                    if (mapNode.querySelector('.gm-err-container, .gm-err-message')) {
+                        console.warn('Google Maps 인증 오류를 감지하여 iframe 지도로 전환합니다.');
+                        churchMapInitialized = false;
+                        const input = document.getElementById('church-search');
+                        showChurchFallback(cleanNodeText(input && input.value));
+                    }
+                }, 1500);
             } else {
                 churchMap.setCenter(center);
                 churchMap.setZoom(gpsCenter ? 14 : fallback.zoom);
