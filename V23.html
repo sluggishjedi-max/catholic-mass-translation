@@ -3264,12 +3264,85 @@
         return Math.max(1000, Math.min(50000, Math.ceil(radius || 5000)));
     }
 
-    function searchChurchesInCurrentView() {
-        if (!churchPlacesService || !churchMap || !churchMap.getBounds()) return;
+    function normalizeModernChurchPlace(place) {
+        if (!place || !place.location) return null;
+        return {
+            place_id: place.id || `${place.displayName || ''}|${place.formattedAddress || ''}`,
+            name: cleanNodeText(place.displayName || ''),
+            formatted_address: cleanNodeText(place.formattedAddress || ''),
+            vicinity: cleanNodeText(place.formattedAddress || ''),
+            geometry: { location: place.location }
+        };
+    }
+
+    function isLikelyCatholicChurchPlace(place) {
+        const text = `${place && place.displayName || ''} ${place && place.formattedAddress || ''}`;
+        return /천주교|가톨릭|catholic|công\s*giáo|giáo\s*xứ|カトリック|cattolic|parrocchia/i.test(text);
+    }
+
+    async function modernChurchPlaceClass() {
+        if (!(window.google && google.maps && typeof google.maps.importLibrary === 'function')) return null;
+        const library = await google.maps.importLibrary('places');
+        return library && library.Place && typeof library.Place.searchByText === 'function' ? library.Place : null;
+    }
+
+    async function searchChurchesWithModernPlaces(bounds) {
+        const Place = await modernChurchPlaceClass();
+        if (!Place) return null;
+        const fields = ['id', 'displayName', 'formattedAddress', 'location'];
+        const center = bounds.getCenter();
+        const radius = churchBoundsRadiusMeters(bounds);
+        const tasks = churchSearchQueriesForLocation().map(textQuery => Place.searchByText({
+            textQuery,
+            fields,
+            includedType: 'church',
+            locationRestriction: bounds,
+            maxResultCount: 20
+        }));
+        if (typeof Place.searchNearby === 'function') {
+            tasks.push(Place.searchNearby({
+                fields,
+                locationRestriction: { center, radius },
+                includedPrimaryTypes: ['church'],
+                maxResultCount: 20
+            }).then(result => ({ places: (result.places || []).filter(isLikelyCatholicChurchPlace) })));
+        }
+        const settled = await Promise.allSettled(tasks);
+        const fulfilled = settled.filter(result => result.status === 'fulfilled');
+        if (!fulfilled.length) throw (settled.find(result => result.status === 'rejected') || {}).reason || new Error('Places API (New) search failed.');
+        const collected = new Map();
+        fulfilled.forEach(result => {
+            (result.value && result.value.places || []).forEach(place => {
+                const normalized = normalizeModernChurchPlace(place);
+                if (normalized && normalized.place_id && !collected.has(normalized.place_id)) collected.set(normalized.place_id, normalized);
+            });
+        });
+        return Array.from(collected.values());
+    }
+
+    async function searchChurchesInCurrentView() {
+        if (!churchMap || !churchMap.getBounds()) return;
         const requestId = ++churchSearchRequestId;
         const collected = new Map();
         const bounds = churchMap.getBounds();
         setChurchStatus('');
+
+        try {
+            const modernResults = await searchChurchesWithModernPlaces(bounds);
+            if (requestId !== churchSearchRequestId) return;
+            if (Array.isArray(modernResults)) {
+                renderChurchPlaces(modernResults);
+                if (!modernResults.length) setChurchCaption(churchFoundText(0));
+                return;
+            }
+        } catch (error) {
+            console.warn('Places API (New) 성당 검색에 실패하여 기존 검색으로 재시도합니다.', error);
+        }
+
+        if (!churchPlacesService) {
+            showChurchFallback();
+            return;
+        }
 
         const runPagedSearch = startSearch => new Promise(resolve => {
             let queryResultCount = 0;
@@ -3328,6 +3401,21 @@
         return true;
     }
 
+    async function searchChurchWithModernPlaces(query) {
+        const Place = await modernChurchPlaceClass();
+        if (!Place) return false;
+        const request = {
+            textQuery: query,
+            fields: ['id', 'displayName', 'formattedAddress', 'location'],
+            includedType: 'church',
+            maxResultCount: 5
+        };
+        if (churchMap && typeof churchMap.getCenter === 'function') request.locationBias = churchMap.getCenter();
+        const result = await Place.searchByText(request);
+        const matched = result && result.places && result.places[0];
+        return focusChurchPlace(normalizeModernChurchPlace(matched));
+    }
+
     function searchChurchWithPlaces(query) {
         if (!churchPlacesService || !query) return false;
         churchPlacesService.findPlaceFromQuery({
@@ -3339,6 +3427,7 @@
             } else {
                 churchPlacesService.textSearch({ query: `${query} Catholic church` }, (textResults, textStatus) => {
                     if (textStatus === google.maps.places.PlacesServiceStatus.OK && textResults && textResults[0]) focusChurchPlace(textResults[0]);
+                    else showChurchFallback(query);
                 });
             }
         });
@@ -3370,16 +3459,6 @@
                 churchMap.addListener('idle', scheduleChurchViewportSearch);
                 churchMap.addListener('dragend', scheduleChurchViewportSearch);
                 churchMap.addListener('zoom_changed', scheduleChurchViewportSearch);
-                const input = document.getElementById('church-search');
-                if (input && !churchAutocomplete) {
-                    churchAutocomplete = new google.maps.places.Autocomplete(input, {
-                        fields: ['name', 'geometry', 'formatted_address', 'place_id']
-                    });
-                    churchAutocomplete.addListener('place_changed', () => {
-                        const place = churchAutocomplete.getPlace();
-                        if (!focusChurchPlace(place)) searchChurchByName();
-                    });
-                }
             } else {
                 churchMap.setCenter(center);
                 churchMap.setZoom(gpsCenter ? 14 : fallback.zoom);
@@ -3408,11 +3487,18 @@
         initializeChurchMap();
     }
 
-    window.searchChurchByName = function() {
+    window.searchChurchByName = async function() {
         const input = document.getElementById('church-search');
         const query = cleanNodeText(input && input.value);
         if (!query) return;
-        if (churchMapInitialized && searchChurchWithPlaces(query)) return;
+        if (churchMapInitialized) {
+            try {
+                if (await searchChurchWithModernPlaces(query)) return;
+            } catch (error) {
+                console.warn('Places API (New) 성당 이름 검색에 실패하여 기존 검색으로 재시도합니다.', error);
+            }
+            if (searchChurchWithPlaces(query)) return;
+        }
         showChurchFallback(query);
     };
 
