@@ -5504,10 +5504,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (cleanNodeText(body)) out.push(parsedLine('', body, 'body'));
         };
         const joinedBody = blocks.join('\n');
-        const hasBracketedShortForm = isGospel && /\[[\s\S]+?\]/u.test(joinedBody);
-        if (hasBracketedShortForm) {
-            const longBody = joinedBody.replace(/[\[\]]/g, '').replace(/\n{3,}/g, '\n\n').trim();
-            const shortBody = joinedBody.replace(/\[[\s\S]*?\]/gu, '').replace(/\n{3,}/g, '\n\n').trim();
+        const hasMarkedShortForm = isGospel && /(?:\[[\s\S]+?\]|\{[\s\S]+?\})/u.test(joinedBody);
+        if (hasMarkedShortForm) {
+            const longBody = joinedBody.replace(/[\[\]{}]/g, '').replace(/\n{3,}/g, '\n\n').trim();
+            const shortBody = joinedBody.replace(/(?:\[[\s\S]*?\]|\{[\s\S]*?\})/gu, '').replace(/\n{3,}/g, '\n\n').trim();
             appendOption(longBody);
             out.push(parsedLine('', 'Hoặc:'));
             appendOption(shortBody);
@@ -9634,14 +9634,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function expandBracketedVietnameseGospelLines(parsedLines) {
         const source = Array.isArray(parsedLines) ? parsedLines : [];
         if (splitParsedAlternatives(source).length > 1) return source;
-        const hasBracketedBody = source.some(line => line && line.role === 'body' && /\[[\s\S]+?\]/u.test(String(line.text || '')));
-        if (!hasBracketedBody) return source;
+        const hasMarkedBody = source.some(line => line && line.role === 'body' && /(?:\[[\s\S]+?\]|\{[\s\S]+?\})/u.test(String(line.text || '')));
+        if (!hasMarkedBody) return source;
         const makeOption = shortForm => source.map(line => {
             if (!line || line.role !== 'body') return Object.assign({}, line);
             const raw = String(line.text || '');
             const text = shortForm
-                ? raw.replace(/\[[\s\S]*?\]/gu, '').replace(/\n{3,}/g, '\n\n').trim()
-                : raw.replace(/[\[\]]/g, '').replace(/\n{3,}/g, '\n\n').trim();
+                ? raw.replace(/(?:\[[\s\S]*?\]|\{[\s\S]*?\})/gu, '').replace(/\n{3,}/g, '\n\n').trim()
+                : raw.replace(/[\[\]{}]/g, '').replace(/\n{3,}/g, '\n\n').trim();
             return Object.assign({}, line, { text });
         }).filter(line => cleanNodeText(line && line.text) || cleanNodeText(line && line.sp) || cleanNodeText(line && line.rubric));
         return makeOption(false).concat([parsedLine('', 'Hoặc:')], makeOption(true));
