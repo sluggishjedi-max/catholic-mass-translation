@@ -209,6 +209,7 @@
         .hymn-detail-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
         .hymn-verse-block { display: grid; gap: 5px; margin: 0 0 10px; }
         .hymn-verse-block .aux-prayer-body { margin: 0; }
+        .hymn-structure-label { color: #16824b; font-weight: 700; }
         .hymn-verse-actions { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
         .hymn-score-list { display: grid; gap: 10px; margin-top: 8px; }
         .hymn-score-figure { margin: 0; display: grid; gap: 5px; }
@@ -643,10 +644,10 @@
 
 <script src="JS%20file/missa_data.js?v=20260715-v23-3"></script>
 <script src="JS%20file/korean_temporal_data.js?v=20260715-v23-3"></script>
-<script src="JS%20file/korean_blessing_data.js?v=20260716-v23-2"></script>
-<script src="JS%20file/prayer_data.js?v=20260715-v23-3"></script>
-<script src="JS%20file/hymn_data.js?v=20260715-v23-3"></script>
-<script src="JS%20file/church_local_details.js?v=20260716-v23-2"></script>
+<script src="JS%20file/korean_blessing_data.js?v=20260718-v23-1"></script>
+<script src="JS%20file/prayer_data.js?v=20260718-v23-1"></script>
+<script src="JS%20file/hymn_data.js?v=20260718-v23-1"></script>
+<script src="JS%20file/church_local_details.js?v=20260718-v23-1"></script>
 
 <script>
     // 통상문은 배포된 missa_data.js만 사용합니다.
@@ -691,7 +692,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V23-20260716';
+    const APP_VERSION = 'V23-20260718';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DATE_NAV_LIMIT_MESSAGE = '금일 전 후 7일이 초과하는 전례는 조회할 수 없습니다';
@@ -2863,8 +2864,11 @@
         };
     }
 
-    function hymnLyricsHtml(value) {
-        return escapeHtml(value).replace(/\[\uD6C4\uB834\]/g, '<strong>[\uD6C4\uB834]</strong>');
+    function hymnLyricsHtml(value, langCode = '') {
+        let html = escapeHtml(value).replace(/\[\uD6C4\uB834\]/g, '<span class="hymn-structure-label">[\uD6C4\uB834]</span>');
+        if (normalizeSelectableLang(langCode, '') !== 'VN') return html;
+        return html.replace(/(^|\r?\n|<br\s*\/?\s*>)(\s*)((?:ĐK|ÐK|Đ|Ð|\d{1,2})[.:])(?=\s|&nbsp;|$)/giu,
+            '$1$2<span class="hymn-structure-label">$3</span>');
     }
 
     function renderHymnDetail(entry, country) {
@@ -2878,12 +2882,12 @@
         const versesHtml = Array.isArray(entry.verses) && entry.verses.length
             ? entry.verses.map(verse => {
                 const verseText = cleanNodeText(verse && verse.text);
-                const labelHtml = verse.label ? '<strong>' + escapeHtml(verse.label || '') + '</strong> ' : '';
-                return '<div class="hymn-verse-block"><p class="aux-prayer-body">' + labelHtml + hymnLyricsHtml(verseText) + '</p></div>';
+                const labelHtml = verse.label ? '<span class="hymn-structure-label">' + escapeHtml(verse.label || '') + '</span> ' : '';
+                return '<div class="hymn-verse-block"><p class="aux-prayer-body">' + labelHtml + hymnLyricsHtml(verseText, entry.country) + '</p></div>';
             }).join('')
             : '';
         const lyricsHtml = versesHtml || (entry.text
-            ? '<p class="aux-prayer-body">' + hymnLyricsHtml(entry.text) + '</p>'
+            ? '<p class="aux-prayer-body">' + hymnLyricsHtml(entry.text, entry.country) + '</p>'
             : '<p class="aux-muted">' + labels.lyricsPending + '</p>');
         const lyricsNoteHtml = entry.lyricsNote ? '<p class="aux-muted">' + escapeHtml(entry.lyricsNote) + '</p>' : '';
         let translatedLyricsHtml = '';
@@ -3228,11 +3232,31 @@
             : {};
         const placeId = cleanNodeText(place && place.place_id);
         const name = cleanNodeText(place && place.name).toLowerCase();
-        const normalizedName = name
+        const normalizeChurchLookup = value => cleanNodeText(value).toLowerCase()
             .normalize('NFKC')
             .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|họ đạo|giáo điểm|カトリック/gu, '')
             .replace(/성당|본당|교회|church|parish|教会/gu, '')
             .replace(/[^\p{L}\p{N}]+/gu, '');
+        const normalizedName = normalizeChurchLookup(name);
+        const candidates = (Array.isArray(globalThis.churchLocalDetailRecords) ? globalThis.churchLocalDetailRecords : [])
+            .filter(record => [record && record.name, record && record.directoryName]
+                .some(value => normalizeChurchLookup(value) === normalizedName));
+        if (candidates.length) {
+            const placeContext = normalizeSearchText([
+                place && place.formatted_address,
+                place && place.vicinity,
+                place && place.diocese
+            ].filter(Boolean).join(' '));
+            const tokens = placeContext.split(/\s+/).filter(token => token.length >= 3);
+            const ranked = candidates.map((record, index) => {
+                const recordContext = normalizeSearchText([
+                    record.address, record.diocese, record.deanery
+                ].filter(Boolean).join(' '));
+                const score = tokens.reduce((sum, token) => sum + (recordContext.includes(token) ? 1 : 0), 0);
+                return { record, index, score };
+            }).sort((a, b) => b.score - a.score || a.index - b.index);
+            return ranked[0].record;
+        }
         return (placeId && source[placeId])
             || (name && source[name])
             || (normalizedName && source[normalizedName])
@@ -3860,6 +3884,10 @@
         const pills = [];
         const categoryLabel = prayerCategoryLabel(entry.category, state.uiLang || 'KR');
         if (categoryLabel) pills.push(categoryLabel);
+        [leftLang, rightLang].forEach(lang => {
+            const sourceCategory = prayerOfficialCategory(entry, lang);
+            if (sourceCategory && !pills.includes(sourceCategory)) pills.push(sourceCategory);
+        });
         [leftLang, rightLang].forEach(lang => {
             const source = prayerSourceText(entry, lang);
             if (source && !pills.includes(source)) pills.push(source);
@@ -4493,6 +4521,67 @@
         VN_INDEX: () => 'https://www.tonggiaophanhanoi.org/bai-doc-thanh-le-moi-ngay/',
         VN_CALENDAR_INDEX: () => 'https://www.tonggiaophanhanoi.org/category/phung-vu/lich-cong-giao/'
     };
+
+    // Official Hanoi missal text, indexed by the perpetual liturgical cycle
+    // rather than by a calendar date. This fallback therefore serves every
+    // even-year Thursday of Ordinary Time week XV when the remote reader is
+    // throttled, including but not limited to 2026-07-16.
+    const vietnameseTemporalFallbackSources = {
+        'ordinary:15:4:II': `Title: Thứ Năm tuần XV Thường Niên
+URL Source: https://www.tonggiaophanhanoi.org/thu-nam-tuan-xv-thuong-nien/
+Markdown Content:
+Thứ Năm tuần XV Thường Niên
+Màu phụng vụ: Xanh
+Ca nhập lễ
+Phần tôi, nhờ công chính, tôi sẽ được nhìn thấy thánh nhan Chúa, tôi sẽ được no thoả khi Chúa tỏ bày sự vinh quang của Chúa.
+Lời nguyện nhập lễ
+Lạy Chúa, Chúa cho kẻ lầm lạc thấy ánh sáng chân lý của Chúa để họ được trở về nẻo chính đường ngay; xin ban cho những người xưng mình là Kitô hữu biết tránh mọi điều bất xứng và theo đuổi những gì thích hợp với danh nghĩa của mình. Chúng con cầu xin…
+Bài Đọc I: (Năm II) Is 26, 7-9. 12. 16-19
+“Hỡi những kẻ nằm trong tro bụi, hãy thức dậy và hãy nhảy mừng”.
+Trích sách Tiên tri Isaia.
+Đường lối người công chính thì ngay thẳng, Chúa ban cho bằng phẳng đường nẻo của người công chính. Lạy Chúa, chúng con cậy trông Chúa trong đường xét xử của Chúa. Thánh danh và sự kính nhớ Chúa là sự ước mong của tâm hồn. Ban đêm hồn con khát khao Chúa, và sớm mai khi thức dậy, lòng trí con hướng về Chúa. Từ khi Chúa thực hiện việc xét xử ở trần gian, thì người dương thế học biết sự công chính.
+Lạy Chúa, Chúa ban cho chúng con ơn bình an, vì mọi việc chúng con làm, đều do Chúa làm cho chúng con.
+Lạy Chúa, trong cơn hoạn nạn, chúng con đã tìm kiếm Chúa, và trong khi Chúa sửa dạy, chúng con kêu van đến Chúa. Lạy Chúa, trước tôn nhan Chúa, chúng con khác nào như đàn bà mang thai sắp sinh, kêu la đau đớn. Chúng con cưu mang, chúng con đau đớn như phải sinh con.
+Chúng con không mang lại sự cứu độ cho trần gian, và không còn người sinh ra trên trần gian. Người chết của Chúa sẽ được sống, các xác chết của con sẽ sống lại. Hỡi những kẻ nằm trong tro bụi, hãy thức dậy và nhảy mừng, vì sương Chúa là sương ánh sáng, và trái đất sẽ làm tái sinh u tối.
+Đó là lời Chúa.
+Đáp Ca: Tv 101, 13-14ab và 15. 16-18. 19-21
+Đáp: Từ trời cao xanh Chúa đã quan sát địa cầu.
+Xướng: Phần Chúa, lạy Chúa, đời đời còn mãi và danh Ngài tồn tại đời nọ tới đời kia. Xin Ngài đứng lên, thương xót Sion, nay là thời để Ngài quan tâm phù trợ. Các bầy tôi ưa thích tường hoa móng đá, và ngậm ngùi thương đống gạch tro hoang tàn. – Đáp.
+Xướng: Lạy Chúa, muôn dân sẽ kính tôn danh thánh Chúa, và mọi vua trên địa cầu sẽ quý trọng vinh quang Ngài; khi Chúa sẽ tái lập Sion, Ngài xuất hiện trong vinh quang xán lạn; Ngài sẽ đoái nghe lời nguyện kẻ túng nghèo, và không chê lời họ kêu van. – Đáp.
+Xướng: Những điều này được ghi lại cho thế hệ mai sau, và dân tộc được tác tạo sẽ ca tụng Thiên Chúa. Từ thánh điện cao sang Chúa đã đoái nhìn, từ trời cao Chúa đã ngó xuống trần thế, để nghe tiếng than khóc của tù nhân, để giải thoát kẻ bị lên án tử. – Đáp.
+Alleluia: Tv 118, 27
+Alleluia, alleluia! – Xin Chúa cho con hiểu đường lối những huấn lệnh của Chúa, và con suy gẫm các điều lạ lùng của Chúa. – Alleluia.
+Hoặc đọc: Alleluia, alleluia! – Chúa nói: “Tất cả những ai đang vất vả mang gánh nặng nề, hãy đến cùng tôi, tôi sẽ cho nghỉ ngơi bồi dưỡng”. – Alleluia.
+Phúc Âm: Mt 11, 28-30
+“Ta hiền lành và khiêm nhượng trong lòng”.
+Tin Mừng Chúa Giêsu Kitô theo Thánh Matthêu.
+Khi ấy, Chúa Giêsu phán rằng: “Hãy đến với Ta tất cả, hỡi những ai khó nhọc và gánh nặng, Ta sẽ nâng đỡ bổ sức cho các ngươi. Hãy mang lấy ách của Ta và hãy học cùng Ta, vì Ta hiền lành và khiêm nhượng trong lòng, và tâm hồn các ngươi sẽ gặp được bình an. Vì ách của Ta thì êm ái và gánh của Ta thì nhẹ nhàng”.
+Đó là lời Chúa.
+Lời nguyện tiến lễ
+Lạy Chúa, Hội Thánh Chúa thành tâm cầu nguyện và dâng lên Chúa lễ vật này; xin thương đoái nhìn và làm cho trở nên của ăn bổ dưỡng giúp chúng con vững bước trên đường nên thánh. Chúng con cầu xin…
+Ca hiệp lễ
+Đến như chim sẻ còn kiếm được nhà, và chim nhạn tìm ra tổ ấm, để làm nơi ấp ủ con mình, cạnh bàn thờ Chúa, ôi Chúa thiên binh. Ôi đại vương và Thiên Chúa tôi. Phúc cho những ai trú ngụ nơi nhà Chúa, họ sẽ ca tụng Chúa tới muôn đời.
+Hoặc đọc:
+Chúa phán: “Ai ăn thịt Ta và uống máu Ta, thì ở trong Ta, và Ta ở trong kẻ ấy”.
+Lời nguyện kết lễ
+Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng con mỗi khi cử hành bí tích này được hưởng dồi dào ơn cứu độ. Chúng con cầu xin…`
+    };
+
+    function vietnameseTemporalFallbackKey(date) {
+        const meta = getSeasonMeta(date);
+        if (!meta || !meta.season || !meta.week || !Number.isInteger(meta.day)) return '';
+        return `${meta.season}:${meta.week}:${meta.day}:${meta.weekdayCycle || getWeekdayCycle(date)}`;
+    }
+
+    function vietnameseTemporalFallbackParsed(date) {
+        const source = vietnameseTemporalFallbackSources[vietnameseTemporalFallbackKey(date)];
+        if (!source) return null;
+        const parsed = parseVietnameseDailyMass(source, date);
+        if (!hasCompleteVietnameseParsedMass(parsed)) return null;
+        parsed.sourceUrl = 'https://www.tonggiaophanhanoi.org/thu-nam-tuan-xv-thuong-nien/';
+        parsed.sourceMode = 'perpetual-temporal-fallback';
+        return parsed;
+    }
 
     const specialMassFiles = {
         ash_wednesday: { file: 'JS%20file/ash-wednesday.js', names: { KR: '재의 수요일', EN: 'Ash Wednesday' } },
@@ -5580,7 +5669,7 @@
 
     function vietnameseArticleTailIndex(line) {
         const text = cleanNodeText(line);
-        return text.search(/(?:^|\s)(?:Post\s+Views?\s*:|Tìm\s+kiếm(?:\s+Tìm\s+kiếm)?(?:\s|$)|LỄ\s+KÍNH\s+CÁC\s+THÁNH(?:\s|$)|CÁC\s+MÙA\s+TRONG\s+NĂM\s+PHỤNG\s+VỤ(?:\s|$)|TỔNG\s+GIÁO\s+PHẬN\s+HÀ\s+NỘI(?:\s|$))/iu);
+        return text.search(/(?:^|\s)(?:Post\s+Views?\s*:|Tìm\s+kiếm\s+Tìm\s+kiếm(?:\s|$)|LỄ\s+KÍNH\s+CÁC\s+THÁNH(?:\s|$)|CÁC\s+MÙA\s+TRONG\s+NĂM\s+PHỤNG\s+VỤ(?:\s|$)|TỔNG\s+GIÁO\s+PHẬN\s+HÀ\s+NỘI(?:\s|$))/iu);
     }
 
     function trimVietnameseArticleTail(lines) {
@@ -8752,6 +8841,10 @@
     async function fetchStrictDailyMass(lang, date) {
         await loadAllSoulsMassConfigIfNeeded(date);
         if (lang === 'VN') {
+            const temporalFallback = vietnameseTemporalFallbackParsed(date);
+            if (temporalFallback) {
+                return applyKtcgkpvCitationSource(temporalFallback, date);
+            }
             let urls = await resolveVietnameseDailyUrls(date, { directOnly: true });
             let lastError = null;
             let properPartialParsed = null;
@@ -10822,18 +10915,25 @@
         return previousLoc !== state.currentLoc || previousTargetLang !== state.targetLang || previousTimeZone !== state.gpsTimeZone;
     }
 
+    function gpsLanguageForTimeZone(timeZone) {
+        const browserZone = String(timeZone || '').toLowerCase();
+        if (browserZone.includes('tokyo')) return 'JP';
+        // Windows maps Vietnam's shared UTC+7 zone to the Bangkok IANA name
+        // on many desktop browsers. The app has no Thai source language, so
+        // Asia/Bangkok is the correct Vietnamese fallback here.
+        if (browserZone.includes('ho_chi_minh') || browserZone.includes('saigon') || browserZone.includes('bangkok')) return 'VN';
+        if (browserZone.startsWith('america/')) return 'EN';
+        if (browserZone.includes('rome') || browserZone.includes('vatican')) return 'LA';
+        return 'KR';
+    }
+
     function gpsLocationForCoordinates(lat, lon) {
         if (lat >= 41.88 && lat <= 41.93 && lon >= 12.43 && lon <= 12.48) return 'LA';
         if (lat > 33 && lat < 39 && lon > 124 && lon < 132) return 'KR';
         if (lat > 8 && lat < 24 && lon > 102 && lon < 110) return 'VN';
         if (lat > 24 && lat < 46 && lon > 122 && lon < 146) return 'JP';
         if (lat > 18 && lat < 72 && lon > -172 && lon < -66) return 'EN';
-        const browserZone = (Intl.DateTimeFormat().resolvedOptions().timeZone || '').toLowerCase();
-        if (browserZone.includes('tokyo')) return 'JP';
-        if (browserZone.includes('ho_chi_minh') || browserZone.includes('saigon')) return 'VN';
-        if (browserZone.startsWith('america/')) return 'EN';
-        if (browserZone.includes('rome') || browserZone.includes('vatican')) return 'LA';
-        return 'KR';
+        return gpsLanguageForTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone || '');
     }
 
     function gpsTimeZoneForCoordinates(lat, lon, lang) {
@@ -10864,7 +10964,7 @@
         }, () => {
             const fallbackZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Seoul';
             if (applyDetectedLocation(gpsLocationForCoordinates(Number.NaN, Number.NaN), fallbackZone)) fetchMassData();
-        }, { timeout: 1200, maximumAge: 300000, enableHighAccuracy: false });
+        }, { timeout: 8000, maximumAge: 60000, enableHighAccuracy: false });
     }
 
     const GEMINI_PROXY_ENDPOINT = window.ORDO_GEMINI_PROXY_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/geminiProxy';
