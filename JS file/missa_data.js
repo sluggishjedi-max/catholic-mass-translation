@@ -3686,7 +3686,7 @@ globalThis.missaData = [
                     sp_la: '', text_la: ' ',
                     sp_jp: '', text_jp: ' ' },
                 { sp_kr: '', text_kr: '<span class="rubric">그날의 성인이나 수호자 이름</span>\([성인이름] 과\)',
-                    sp_vn: '', text_vn: '<span class="rubric"tên Thánh kính trong ngày hoặc Thánh bổn mạng</span>\(cùng với Thánh [tên thánh] \)',
+                    sp_vn: '', text_vn: '<span class="rubric">tên Thánh kính trong ngày hoặc Thánh bổn mạng</span>\(cùng với Thánh [tên thánh] \)',
                     sp_en: '', text_en: ' ',
                     sp_la: '', text_la: ' ',
                     sp_jp: '', text_jp: ' ' },
