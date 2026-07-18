@@ -108,7 +108,7 @@
       },
       "texts": {
         "KR": "",
-        "VN": "<rubric>Làm dấu thánh giá trên trán</rubric>Lạy Chúa chúng con,\n<rubric>Làm dấu thánh giá nhỏ trên môi</rubric>vì dấu thánh giá,\n<rubric>Làm dấu thánh giá trên ngực/rubric>xin chữa chúng con cho khỏi kẻ thù.\n<rubric>Làm dấu thánh giá</rubric>Nhân danh Cha và Con và Thánh Thần.\nA-men.",
+        "VN": "<rubric>Làm dấu thánh giá trên trán</rubric>Lạy Chúa chúng con,\n<rubric>Làm dấu thánh giá nhỏ trên môi</rubric>vì dấu thánh giá,\n<rubric>Làm dấu thánh giá trên ngực</rubric>xin chữa chúng con cho khỏi kẻ thù.\n<rubric>Làm dấu thánh giá</rubric>Nhân danh Cha và Con và Thánh Thần.\nA-men.",
         "EN": "",
         "JP": "",
         "LA": ""

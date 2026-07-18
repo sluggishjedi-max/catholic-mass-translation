@@ -766,7 +766,7 @@ globalThis.missaData = [
             ] },
             'B': { label: { 
                     kr: '니케아-콘스탄티노플 신경', 
-                    vn: 'Kinh Tin Kính Nicaea-Constantinople', 
+                    vn: 'Kinh Tin Kính Nicêa - Constantinôpôli',
                     en: 'Nicene-Constantinopolitan Creed', 
                     la: 'Symbolum Nicaeno-Constantiniopolitanum', 
                     jp: 'ニケア・コンスタチノープル信条' },
