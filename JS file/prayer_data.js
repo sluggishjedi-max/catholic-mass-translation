@@ -273,14 +273,14 @@
       "category": "common",
       "titles": {
         "KR": "사도 신경",
-        "VN": "Kinh Tin Kính",
+        "VN": "Kinh Tin Kính (Các Thánh Tông Đồ)",
         "EN": "Apostles' Creed",
         "JP": "使徒信条",
         "LA": "Symbolum Apostolorum"
       },
       "texts": {
         "KR": "전능하신 천주 성부\n천지의 창조주를 저는 믿나이다.\n그 외아들 우리 주 예수 그리스도님\n<rubric>밑줄 부분에서 모두 깊은 절을 한다.</rubric><U>성령으로 인하여 동정 마리아께 잉태되어 나시고</U>\n본시오 빌라도 통치 아래서 고난을 받으시고\n십자가에 못 박혀 돌아가시고 묻히셨으며\n저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고\n하늘에 올라 전능하신 천주 성부 오른편에 앉으시며\n그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다.\n성령을 믿으며\n거룩하고 보편된 교회와 모든 성인의 통공을 믿으며\n죄의 용서와 육신의 부활을 믿으며\n영원한 삶을 믿나이다.\n아멘.",
-        "VN": "Tôi tin kính Đức Chúa Trời\nlà Cha phép tắc vô cùng\ndựng nên trời đất.\nTôi tin kính Đức Chúa Giê-su Ki-tô\nlà Con Một Đức Chúa Cha\ncùng là Chúa chúng tôi.<rubric>밑줄 부분에서 모두 깊은 절을 한다.</rubric><U>\nBởi phép Đức Chúa Thánh Thần\nmà Người xuống thai, sinh bởi bà Ma-ri-a đồng trình,</u>\nchịu nạn đời quan Phong-xi-ô Phi-la-tô, chịu đóng đinh trên cây thánh giá, chết và táng xác,\nxuống ngục tổ tông,\nngày thứ ba bởi trong kẻ chết mà sống lại,\nlên trời\nngự bên hữu Đức Chúa Cha phép tắc vô cùng,\nngày sau bởi trời lại xuống phán xét kẻ sống và kể chết.\nTôi tin kính Đức Chúa Thánh Thần.\nTôi tin có Hội Thánh hằng có ở khắp thế này,\ncác thánh thông công.\nTôi tin phép tha tội. J\nTôi tin xác loài người ngày sau sống lại.\nTôi tin hằng sống vậy.\nA-emn.",
+        "VN": "Tôi tin kính Đức Chúa Trời\nlà Cha phép tắc vô cùng\ndựng nên trời đất.\nTôi tin kính Đức Chúa Giê-su Ki-tô\nlà Con Một Đức Chúa Cha\ncùng là Chúa chúng tôi.<rubric>Mọi người cúi mình khi nhìn vào phần được gạch chân.</rubric><U>Bởi phép Đức Chúa Thánh Thần\nmà Người xuống thai, sinh bởi bà Ma-ri-a đồng trình,</u>\nchịu nạn đời quan Phong-xi-ô Phi-la-tô, chịu đóng đinh trên cây thánh giá, chết và táng xác,\nxuống ngục tổ tông,\nngày thứ ba bởi trong kẻ chết mà sống lại,\nlên trời\nngự bên hữu Đức Chúa Cha phép tắc vô cùng,\nngày sau bởi trời lại xuống phán xét kẻ sống và kể chết.\nTôi tin kính Đức Chúa Thánh Thần.\nTôi tin có Hội Thánh hằng có ở khắp thế này,\ncác thánh thông công.\nTôi tin phép tha tội. J\nTôi tin xác loài người ngày sau sống lại.\nTôi tin hằng sống vậy.\nA-emn.",
         "EN": "I believe in God,\nthe Father almighty,\nCreator of heaven and earth,\nand in Jesus Christ, his only Son, our Lord,\n<rubric>All bow deeply at the underlined part</rubric><u>who was conceived by the Holy Spirit,\nborn of the Virgin Mary,</u>\nsuffered under Pontius Pilate,\nwas crucified, died and was buried;\nhe descended into hell;\non the third day he rose again from the dead;\nhe ascended into heaven,\nand is seated at the right hand of God the Father almighty;\nfrom there he will come to judge the living and the dead.\nI believe in the Holy Spirit,\nthe holy catholic Church,\nthe communion of saints,\nthe forgiveness of sins,\nthe resurrection of the body,\nand life everlasting.\nAmen.",
         "JP": "天地の創造主、\n全能の父である神を信じます。\n父のひとり子、わたしたちの主\nイエス・キリストを信じます。\n<rubric>下線部で皆で深く礼をする</rubric><u>主は聖霊によってやどり、\nおとめマリアから生まれ、</u>\nポンティオ・ピラトのもとで苦しみを受け、\n十字架につけられて死に、葬られ、\n陰府（よみ）に下り、\n三日目に死者のうちから復活し、\n天に昇って、\n全能の父である神の右の座に着き、\n生者（せいしゃ）と死者を裁くために来られます。\n聖霊を信じ、\n聖なる普遍の教会、\n聖徒の交わり、\n罪のゆるし、\nからだの復活、\n永遠のいのちを信じます。アーメン。",
         "LA": "Credo in Deum Patrem omnipotentem, Creatorem caeli et terrae.\nEt in Iesum Christum, Filium eius unicum, Dominum nostrum,\n<rubric>Omnes profunde se inclinant ad verba sublineata</rubric><u>qui conceptus est de Spiritu Sancto, natus ex Maria Virgine</u>,\npassus sub Pontio Pilato, crucifixus, mortuus,\net sepultus, descendit ad infernos, tertia die resurrexit a mortuis,\nascendit ad caelos, sedet ad dexteram Dei Patris omnipotentis, inde venturus est iudicare vivos et mortuos.\nCredo in Spiritum Sanctum,\nsanctam Ecclesiam catholicam, sanctorum communionem, \nremissionem peccatorum, carnis resurrectionem,\nvitam aeternam.\nAmen."
@@ -301,6 +301,7 @@
         "共通の祈り",
         "Preces communes",
         "사도 신경",
+        "Kinh Tin Kính",
         "Kinh Tin Kính Các Thánh Tông Đồ",
         "Apostles' Creed",
         "使徒信条",
@@ -318,7 +319,7 @@
       "category": "common",
       "titles": {
         "KR": "니케아-콘스탄티노폴리스 신경",
-        "VN": "Kinh Tin Kính Nicêa - Constantinôpôli",
+        "VN": "Kinh Tin Kính (Nicêa - Constantinôpôli)",
         "EN": "Nicene Creed",
         "JP": "ニケア・コンスタンチノープル信条",
         "LA": "Symbolum Nicaenum"
@@ -346,6 +347,7 @@
         "共通の祈り",
         "Preces communes",
         "니케아-콘스탄티노폴리스 신경",
+        "Kinh Tin Kính",
         "Kinh Tin Kính Nicêa - Constantinôpôli",
         "Nicene Creed",
         "ニケア・コンスタンチノープル信条",
@@ -446,8 +448,8 @@
         "LA": "Confiteor"
       },
       "texts": {
-        "KR": "전능하신 하느님과 형제들에게 고백하오니\n생각과 말과 행위로 죄를 많이 지었으며\n자주 의무를 소홀히 하였나이다.\n<rubric>가슴을 치며</rubric>제 탓이요\n<rubric>가슴을 치며</rubric>제 탓이요\n<rubric>가슴을 치며</rubric>저의 큰 탓이옵니다.\n그러므로 간절히 바라오니\n평생 동정이신 성모 마리아와\n모든 천사와 성인과 형제들은\n저를 위하여 하느님께 빌어 주소서.\n(┼전능하신 하느님, 저희에게 자비를 베푸시어\n죄를 용서하시고\n영원한 생명으로 이끌어 주소서.)\n아멘.",
-        "VN": "Tôi thú nhận cùng Thiên Chúa toàn năng\nvà cùng anh chị em: Tôi đã phạm tội nhiều\ntrong tư tưởng, lời nói, việc làm\nvà những điều thiếu sót. <rubric>Đập ngực tôi</rubric>Lỗi tại tôi,<rubric>Đập ngực tôi</rubric>lỗi tại tôi,<rubric>Đập ngực tôi</rubric>lỗi tại tôi mọi đàng. Vì vậy tôi xin Đức Bà Ma-ri-a trọn đời đồng trinh, các thiên thần, các thánh và anh chị em\nkhẩn cầu cho tôi trước toà Thiên Chúa, Chúa chúng ta. A-men.",
+        "KR": "전능하신 하느님과 형제들에게 고백하오니\n생각과 말과 행위로 죄를 많이 지었으며\n자주 의무를 소홀히 하였나이다.\n<rubric>가슴을 치며</rubric>제 탓이요\n<rubric>가슴을 치며</rubric>제 탓이요\n<rubric>가슴을 치며</rubric>저의 큰 탓이옵니다.\n그러므로 간절히 바라오니\n평생 동정이신 성모 마리아와\n모든 천사와 성인과 형제들은\n저를 위하여 하느님께 빌어 주소서.\n(<b>✚</b> 전능하신 하느님, 저희에게 자비를 베푸시어\n죄를 용서하시고\n영원한 생명으로 이끌어 주소서.)\n아멘.",
+        "VN": "Tôi thú nhận cùng Thiên Chúa toàn năng\nvà cùng anh chị em: Tôi đã phạm tội nhiều\ntrong tư tưởng, lời nói, việc làm\nvà những điều thiếu sót. <rubric>Đập ngực tôi</rubric>Lỗi tại tôi,<rubric>Đập ngực tôi</rubric>lỗi tại tôi,<rubric>Đập ngực tôi</rubric>lỗi tại tôi mọi đàng.\nVì vậy tôi xin Đức Bà Ma-ri-a trọn đời đồng trinh,\ncác thiên thần,\ncác thánh\nvà anh chị em\nkhẩn cầu cho tôi trước toà Thiên Chúa, Chúa chúng ta.\nA-men.",
         "EN": "I confess\nto almighty God\nand to you, my brothers [and sisters],\nthat I have greatly sinned,\nin my thoughts and in my words,\nin what I have done and in what I have failed to do,\n<rubric>beating my chest</rubric>through my fault,\n<rubric>beating my chest</rubric>through my fault,\n<rubric>beating my chest</rubric>through my most grievous fault;\ntherefore I ask blessed Mary ever-Virgin,\nall the Angels and Saints,\nand you,\nmy brothers [and sisters],\nto pray for me to the Lord our God.\n(<b>✚</b>May almighty God have mercy on us,\nforgive us our sins,\nand bring us to everlasting life.)\nAmen.",
         "JP": "",
         "LA": ""
@@ -529,7 +531,7 @@
       },
       "texts": {
         "KR": "하느님, 하느님께서는 진리의 근원이시며\n그르침이 없으시므로\n계시하신 진리를\n교회가 가르치는 대로 굳게 믿나이다.",
-        "VN": "Lạy Chúa (con),\ncon tin thật có một Đức Chúa Trời\nlà Đấng thưởng phạt vô cùng.\nCon lại tin thật Đức Chúa Trời có Ba Ngôi, mà Ngôi Thứ Hai đã xuống thế làm người\nchịu nạn chịu chết mà chuộc tội cho thiên hạ. Bấy nhiêu điều ấy\ncùng các điều Hội Thánh dạy, thì con tin vững vàng, vì Chúa là Đấng thông minh\nvà chân thật vô cùng\nđã phán truyền cho Hội Thánh.\nA-men.",
+        "VN": "Lạy Chúa (con),\ncon tin thật có một Đức Chúa Trời là Đấng thưởng phạt vô cùng.\nCon lại tin thật Đức Chúa Trời có Ba Ngôi,\nmà Ngôi Thứ Hai đã xuống thế làm người chịu nạn chịu chết mà chuộc tội cho thiên hạ.\nBấy nhiêu điều ấy cùng các điều Hội Thánh dạy,\nthì con tin vững vàng,\nvì Chúa là Đấng thông minh và chân thật vô cùng đã phán truyền cho Hội Thánh.\nA-men.",
         "EN": "O my God, I firmly believe that you are one God in three divine Persons, Father, Son, and Holy Spirit. I believe that your divine Son became man and died for our sins and that he will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches because you have revealed them who are eternal truth and wisdom, who can neither deceive nor be deceived. In this faith I intend to live and die. Amen.",
         "JP": "",
         "LA": ""
@@ -573,7 +575,7 @@
       },
       "texts": {
         "KR": "하느님, 하느님께서는 자비의 근원이시며\n저버림이 없으시므로\n예수 그리스도의 공로를 통하여 주실\n구원의 은총과 영원한 생명을 바라나이다.",
-        "VN": "Lạy Chúa (con), con trông cậy vững vàng, vì công nghiệp Đức Chúa Giê-su, thì Chúa sẽ ban ơn cho con\ngiữ đạo nên ở đời này, cho. ngày sau được lên thiên đàng\nxem thấy mặt Đức Chúa Trời\nhưởng phúc đời đời, vì Chúa là Đấng phép tắc\nvà lòng lành vô cùng\nđã phán hứa sự ấy, chẳng có lẽ nào sai được. A-men.",
+        "VN": "Lạy Chúa (con),\ncon trông cậy vững vàng,\nvì công nghiệp Đức Chúa Giê-su,\nthì Chúa sẽ ban ơn cho con giữ đạo nên ở đời này,\ncho ngày sau được lên thiên đàng xem thấy mặt Đức Chúa Trời hưởng phúc đời đời,\nvì Chúa là Đấng phép tắc và lòng lành vô cùng đã phán hứa sự ấy,\nchẳng có lẽ nào sai được.\nA-men.",
         "EN": "O Lord God, I hope by your grace for the pardon of all my sins and after life here to gain eternal happiness because you have promised it who are infinitely powerful, faithful, kind, and merciful. In this hope I intend to live and die. Amen.",
         "JP": "",
         "LA": ""
@@ -617,8 +619,8 @@
       },
       "texts": {
         "KR": "하느님, 하느님께서는 사랑의 근원이시며\n한없이 좋으시므로\n마음을 다하여 주님을 사랑하며\n이웃을 제 몸같이 사랑하나이다.",
-        "VN": "Lạy Chúa (con), con kính mến Chúa hết lòng hết sức\ntrên hết mọi sự, vì Chúa là Đấng trọn tốt trọn lành vô cùng, lại vì Chúa\nthì con thương yêu người ta\nnhư mình con vậy. A-men.",
-        "EN": "O Lord God, I love you above all things and I love my neighbor for your sake because you are the highest, infinite and perfect good, worthy of all my love. In this love I intend to live and die. Amen.",
+        "VN": "Lạy Chúa (con),\ncon kính mến Chúa hết lòng hết sức trên hết mọi sự,\nvì Chúa là Đấng trọn tốt trọn lành vô cùng,\nlại vì Chúa thì con thương yêu người ta như mình con vậy.\nA-men.",
+        "EN": "O Lord God, I love you above all things\nand I love my neighbor for your sake because you are the highest,\ninfinite and perfect good, worthy of all my love.\nIn this love I intend to live and die.\nAmen.",
         "JP": "",
         "LA": ""
       },
@@ -662,7 +664,7 @@
       },
       "texts": {
         "KR": "하느님, 저를 사랑으로 내시고\n저에게 영혼 육신을 주시어\n주님만을 섬기고 사람을 도우라 하셨나이다.\n저는 비록 죄가 많사오나\n주님께 받은 몸과 마음을 오롯이 도로 바쳐\n찬미와 봉사의 제물로 드리오니\n어여삐 여기시어 받아 주소서.\n아멘.",
-        "VN": "Lạy Chúa (con), con xin phú dâng linh hồn và xác con ở trong tay Chúa (con). Chúa đã phù hộ con ban ngày\nthì xin Chúa cũng gìn giữ con ban đêm, kẻo sa phạm tội gì mất lòng Chúa, hay là chết tươi ăn năn tội chẳng kịp. Chớ chỉ (dù) sống (dù) chết, con được giữ một lòng kinh mến Chúa luôn. A-men. \"He\" lÍ",
+        "VN": "Lạy Chúa (con), con xin phú dâng linh hồn và xác con ở trong tay Chúa (con). Chúa đã phù hộ con ban ngày\nthì xin Chúa cũng gìn giữ con ban đêm, kẻo sa phạm tội gì mất lòng Chúa, hay là chết tươi ăn năn tội chẳng kịp. Chớ chỉ (dù) sống (dù) chết, con được giữ một lòng kinh mến Chúa luôn. A-men.",
         "EN": "O Jesus, through the Immaculate Heart of Mary,\nI offer you my prayers, works, joys and sufferings of this day\nfor all the intentions of your Sacred Heart,\nin union with the Holy Sacrifice of the Mass throughout the world,\nfor the salvation of souls, the reparation for sins, the reunion of all Christians,\nand in particular for the intentions of the Holy Father this month.\nAmen.",
         "JP": "",
         "LA": ""
@@ -702,7 +704,7 @@
       },
       "texts": {
         "KR": "<b>○</b> 주님의 천사가 마리아께 아뢰니\n<b>●</b> 성령으로 잉태하셨나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> “주님의 종이오니\n<b>●</b> 그대로 제게 이루어지소서!”\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 이에 말씀이 사람이 되시어\n<b>●</b> 저희 가운데 계시나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>✚</b> 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘.",
-        "VN": "<b>X.</b> Đức Chúa Trời sai thánh thiên thần truyền tin cho Rất thánh Đức Bà Ma-ri-a.<b>Ð.</b> Và Rất thánh Đức Bà chịu thai bởi phép Đức Chúa Thánh Thần\n<rubric>성모송</rubric>(Kinh mừng Ma-ri-a. . . ) X. Này tôi là tôi tá Đức Chúa Trời. Ð. Tôi xin vâng như lời thánh thiên thần truyền (Kính mừng Ma-ri-a. . . ) X. Chốc ấy Ngôi Thứ Hai xuống thế làm người. Ð. Và ở cùng chúng con (Kính mừng Ma-ri-a. . ) X. Lạy Rất thánh Đức Mẹ Chúa Trời, xin cầu cho chúng con. Ð. Đáng chịu lấy những sự Chúa Ki-tô đã hứa. Lời nguyện Lạy Chúa, chúng con xin Chúa ban ơn xuống trong linh hồn chúng con, là kể đã nhờ lời thánh thiên thần truyền, mà biết thật Chúa Ki-tô là Con Chúa đã xuống thế làm người, thì xin vì công ơn Con Chúa chịu nạn chịu chết trên cây thánh giá cho chúng con ngày sau khi sống lại, được đến nơi vinh hiển, cũng vì công nghiệp Chúa Ki-tô là Chúa chúng con. A-men. 1⁄4 SÀN Đại K Ôn Ñ i",
+        "VN": "<b>X.</b> Đức Chúa Trời sai thánh thiên thần truyền tin cho Rất thánh Đức Bà Ma-ri-a.<b>Ð.</b> Và Rất thánh Đức Bà chịu thai bởi phép Đức Chúa Thánh Thần\n<rubric>Kinh Kính Mừng</rubric><b>X.</b> Kính mừng Ma-ri-â, đầy ơn phúc, Đức Chúa Trời, ở cùng Bà,\nBà có phúc lạ hơn mọi người nữ\nvà Giê-su con lòng Bà gồm phúc lạ.\n<b>Ð.</b> Thánh Ma-ri-a, Đức Mẹ Chúa Trời,\ncầu cho chúng con là kẻ có tội,\nkhi nay và trong giờ lâm tử.\nA-men.\n<b>X.</b> Này tôi là tôi tá Đức Chúa Trời.\n<b>Ð.</b> Tôi xin vâng như lời thánh thiên thần truyền.\n<rubric>Kinh Kính Mừng</rubric><b>X.</b> Kính mừng Ma-ri-â, đầy ơn phúc, Đức Chúa Trời, ở cùng Bà,\nBà có phúc lạ hơn mọi người nữ\nvà Giê-su con lòng Bà gồm phúc lạ.\n<b>Ð.</b> Thánh Ma-ri-a, Đức Mẹ Chúa Trời,\ncầu cho chúng con là kẻ có tội,\nkhi nay và trong giờ lâm tử.\nA-men.\n<b>X.</b> Chốc ấy Ngôi Thứ Hai xuống thế làm người. <b>Ð.</b> Và ở cùng chúng con.\n<rubric>Kinh Kính Mừng</rubric><b>X.</b> Kính mừng Ma-ri-â, đầy ơn phúc, Đức Chúa Trời, ở cùng Bà,\nBà có phúc lạ hơn mọi người nữ\nvà Giê-su con lòng Bà gồm phúc lạ.\n<b>Ð.</b> Thánh Ma-ri-a, Đức Mẹ Chúa Trời,\ncầu cho chúng con là kẻ có tội,\nkhi nay và trong giờ lâm tử.\nA-men.\n<b>X.</b> Lạy Rất thánh Đức Mẹ Chúa Trời, xin cầu cho chúng con.\<b>Ð.</b> Đáng chịu lấy những sự Chúa Ki-tô đã hứa.\nLời nguyện.\nLạy Chúa, chúng con xin Chúa ban ơn xuống trong linh hồn chúng con,\nlà kể đã nhờ lời thánh thiên thần truyền,\nmà biết thật Chúa Ki-tô là Con Chúa đã xuống thế làm người,\nthì xin vì công ơn Con Chúa chịu nạn chịu chết trên cây thánh giá\ncho chúng con ngày sau khi sống lại,\nđược đến nơi vinh hiển,\ncũng vì công nghiệp Chúa Ki-tô là Chúa chúng con.\nA-men.",
         "EN": "<b>V.</b> The Angel of the Lord declared unto Mary,\n<b>R.</b> And she conceived of the Holy Spirit.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> Behold the handmaid of the Lord,\n<b>R.</b> Be it done unto me according to your Word.\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> And the Word was made flesh,\n<b>R.</b> And dwelt among us.\n\nHail Mary, full of grace, the Lord is with you;\nblessed are you among women,\nand blessed is the fruit of your womb, Jesus.\nHoly Mary, Mother of God,\npray for us sinners\nnow and at the hour of our death.\nAmen.\n<b>V.</b> Pray for us, O holy Mother of God,\n<b>R.</b> That we may be made worthy of the promises of Christ.\n<b>Let us pray.</b>\nPour forth, we beseech you, O Lord, your grace into our hearts: that we, to whom the Incarnation of Christ your Son was made known by the message of an Angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.",
         "JP": "主のみ使いのお告げを受けて、\nマリアは聖霊によって神の御子を宿された。\n〔アヴェ･マリアの祈り〕\nアヴェ、マリア、恵みに満ちた方、\n主はあなたとともにおられます。\nあなたは女のうちで祝福され、\nご胎内の御子イエスも祝福されています。\n神の母聖マリア、\nわたしたち罪びとのために、\n今も、死を迎える時も、お祈りください。\nアーメン。\nわたしは主のはしため、\nおことばどおりになりますように。\n（引き続き、上記の〔アヴェ･マリアの祈り〕を唱えます。）\nみことばは人となり、\nわたしたちのうちに住まわれた。\n（ここでも〔アヴェ･マリアの祈り〕を唱えます。）\n神の母聖マリア、わたしたちのために祈ってください。\nキリストの約束にかなうものとなりますように。\n祈願\n神よ、み使いのお告げによって、御子が人となられたことを\n知ったわたしたちが、キリストの受難と十字架をとおして、\n復活の栄光に達することができるよう、恵みを注いでください。\nわたしたちの主イエス・キリストによって。 アーメン。",
         "LA": "Alma Redemptoris Mater, quae pervia caeli Porta manes, et stella maris, succurre cadenti, Surgere qui curat, populo: tu quae genuisti, Natura mirante, tuum sanctum Genitorem Virgo prius ac posterius, Gabrielis ab ore Sumens illud Ave, peccatorum miserere.\nTempus Adventus:\nV. Angelus Domini nuntiavit Mariae.\nR. Et concepit de Spiritu Sancto.\nOremus:\nGratiam tuam, quaesumus, Domine, mentibus nostris infunde: ut qui, Angelo nuntiante, Christi Filii tui incarnationem cognovimus; per passionem eius et crucem, ad resurrectionis gloriam perducamur. Per eundem Christum Dominum nostrum. Amen.\nDonec Purificatio:\nV. Post partum, Virgo, inviolata permansisti.\nR. Dei Genetrix, intercede pro nobis.\nOremus:\nDeus, qui salutis aeternae, beatae Mariae virginitate fecunda, humano generi praemia praestitisti: tribue, quaesumus; ut ipsam pro nobis intercedere sentiamus, per quam meruimus auctorem vitae suscipere, Dominum nostrum Iesum Christum, Filium tuum. Amen."
@@ -731,14 +733,6 @@
         "Maria",
         "お告げの祈り",
         "Các Kinh Cầu",
-        "jp_お告けの祈り",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "お告げの祈り**"
       ]
     },
     {
@@ -753,10 +747,10 @@
       },
       "texts": {
         "KR": "<rubric>주님 부활 대축일부터 성령 강림 대축일까지</rubric><b>○</b> 하늘의 모후님, 기뻐하소서. 알렐루야.\n<b>●</b> 태중에 모시던 아드님께서, 알렐루야.\n<b>○</b> 말씀하신 대로 부활하셨나이다. 알렐루야.\n<b>●</b> 저희를 위하여 하느님께 빌어 주소서. 알렐루야.\n<b>○</b> 동정 마리아님, 기뻐하시며 즐거워하소서. 알렐루야.\n<b>●</b> 주님께서 참으로 부활하셨나이다. 알렐루야.\n<b>✚</b> 기도합시다.\n하느님, 성자 우리 주 예수 그리스도의 부활로\n온 세상을 기쁘게 하셨으니\n성자의 어머니 동정 마리아의 도움으로\n영생의 즐거움을 얻게 하소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘.",
-        "VN": "<rubric>Đọc trong Mùa Phục Sinh, thay kinh Truyền Tin</rubric><b>X.</b> Lạy Nữ vương thiên đàng hãy vui mừng, Al-lê-lui-a.\n<b>Ð.</b> Vì Đấng Mẹ đã đáng cưu mang trong lòng, Al-lê-lui-a.\n<b>X.</b> Người đã sống lại thật như lời đã phán hứa, Al-lê-lui-a.\n<b>Ð.</b> Xin cầu cùng Chúa cho chúng con, Al-lê lui-a.\n<b>X.</b>Lạy Đức Nữ đồng trinh Ma-ri-a hãy hỷ hoan khoái lạc, Al-lê-lui-a.\n<b>Ð.</b> Vì Chúa đã sống lại thật, Al-lê-lui-a.\n<b>✚</b> Lời nguyện.\nLạy Chúa là Đấng đã làm cho thiên hạ được vui mừng quá bội,\nbởi Đức Chúa Giê-su Kitô, là Con Chúa cùng là Chúa chúng con đã sống lại,\nxin gì Đức Nữ Đồng Trinh Ma-ri-a là Thánh Mẫu Người nguyện cầu,\ncho chúng con được hưởng phúc vui về hằng sống đời đời:\nvì công nghiệp Chúa Ki-tô là Chúa chúng con.\nA-men.",
-        "EN": "V. Queen of heaven, rejoice, alleluia.\nR. The Son whom you merited to bear, alleluia,\nV. has risen as he said, alleluia.\nR. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\nV. Let us pray.\nALL. O God, who have been pleased to gladden the world\nby the Resurrection of your Son our Lord Jesus Christ,\ngrant, we pray,\nthat through his Mother, the Virgin Mary,\nwe may receive the joys of everlasting life.\nThrough Christ our Lord. Amen.",
-        "JP": "神の母聖マリア、お喜びください。アレルヤ。\nあなたに宿られた方は。アレルヤ。\nおことばどおりに復活されました。アレルヤ。\nわたしたちのためにお祈りください。アレルヤ。\n聖マリア、お喜びください。アレルヤ。\n主はまことに復活されました。アレルヤ。\n祈願\n神よ、あなたは御子キリストの復活によって、\n世界に喜びをお与えになりました。\nキリストの母、聖マリアにならい、\nわたしたちも永遠のいのちの喜びを得ることができますように。\nわたしたちの主イエス・キリストによって。アーメン。",
-        "LA": "Regina coeli, laetare, alleluia: Quia quem meruisti portare, alleluia. Resurrexit sicut dixit, alleluia. Ora pro nobis Deum, alleluia.\nV. Gaude et laetare, Virgo Maria, alleluia.\nR. Quia surrexit Dominus vere, alleluia.\nOremus:\nDeus qui per resurrectionem Filii tui, Domini nostri Iesu Christi, mundum laetificare dignatus es: praesta, quaesumus, ut per eius Genetricem Virginem Mariam, perpetuae capiamus gaudia vitae. Per eundem Christum Dominum nostrum.\nR. Amen."
+        "VN": "<rubric>Đọc trong Mùa Phục Sinh, thay kinh Truyền Tin</rubric><b>X.</b> Lạy Nữ vương thiên đàng hãy vui mừng, Al-lê-lui-a.\n<b>Ð.</b> Vì Đấng Mẹ đã đáng cưu mang trong lòng, Al-lê-lui-a.\n<b>X.</b> Người đã sống lại thật như lời đã phán hứa, Al-lê-lui-a.\n<b>Ð.</b> Xin cầu cùng Chúa cho chúng con, Al-lê lui-a.\n<b>X.</b>Lạy Đức Nữ đồng trinh Ma-ri-a hãy hỷ hoan khoái lạc, Al-lê-lui-a.\n<b>Ð.</b> Vì Chúa đã sống lại thật, Al-lê-lui-a.\n<b>Lời nguyện.</b> \nLạy Chúa là Đấng đã làm cho thiên hạ được vui mừng quá bội,\nbởi Đức Chúa Giê-su Kitô, là Con Chúa cùng là Chúa chúng con đã sống lại,\nxin gì Đức Nữ Đồng Trinh Ma-ri-a là Thánh Mẫu Người nguyện cầu,\ncho chúng con được hưởng phúc vui về hằng sống đời đời:\nvì công nghiệp Chúa Ki-tô là Chúa chúng con.\nA-men.",
+        "EN": "V. Queen of heaven, rejoice, alleluia.\nR. The Son whom you merited to bear, alleluia,\nV. has risen as he said, alleluia.\nR. Pray for us to God, alleluia.\nV. Rejoice and be glad, O Virgin Mary, alleluia.\nR. For the Lord has truly risen, alleluia.\n<b>Let us pray.</b>\nO God, who have been pleased to gladden the world\nby the Resurrection of your Son our Lord Jesus Christ,\ngrant, we pray,\nthat through his Mother, the Virgin Mary,\nwe may receive the joys of everlasting life.\nThrough Christ our Lord. Amen.",
+        "JP": "神の母聖マリア、お喜びください。アレルヤ。\nあなたに宿られた方は。アレルヤ。\nおことばどおりに復活されました。アレルヤ。\nわたしたちのためにお祈りください。アレルヤ。\n聖マリア、お喜びください。アレルヤ。\n主はまことに復活されました。アレルヤ。\n<b>祈願</b>\n神よ、あなたは御子キリストの復活によって、\n世界に喜びをお与えになりました。\nキリストの母、聖マリアにならい、\nわたしたちも永遠のいのちの喜びを得ることができますように。\nわたしたちの主イエス・キリストによって。アーメン。",
+        "LA": "Regina coeli, laetare, alleluia: Quia quem meruisti portare, alleluia. Resurrexit sicut dixit, alleluia. Ora pro nobis Deum, alleluia.\nV. Gaude et laetare, Virgo Maria, alleluia.\nR. Quia surrexit Dominus vere, alleluia.\n<b>Oremus:</b>\nDeus qui per resurrectionem Filii tui, Domini nostri Iesu Christi, mundum laetificare dignatus es: praesta, quaesumus, ut per eius Genetricem Virginem Mariam, perpetuae capiamus gaudia vitae. Per eundem Christum Dominum nostrum.\nR. Amen."
       },
       "sourceCategory": {
         "KR": "주요 기도",
@@ -781,17 +775,8 @@
         "Basic Prayers",
         "日々の祈り",
         "Maria",
-        "Kinh Nữ Vương Thiên Đàng",
         "アレルヤの祈り",
         "Các Kinh Cầu",
-        "jp_アレルヤの祈り",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "アレルヤの祈り**"
       ]
     },
     {
@@ -799,21 +784,21 @@
       "category": "common",
       "titles": {
         "KR": "구원을 비는 기도",
-        "VN": "",
+        "VN": "Lời kinh Fatima",
         "EN": "Fatima Prayer",
         "JP": "",
         "LA": "Oratio Fatimae"
       },
       "texts": {
-        "KR": "예수님, 저희 죄를 용서하시며\n저희를 지옥 불에서 구하시고\n연옥 영혼을 돌보시며\n가장 버림받은 영혼을 돌보소서.",
-        "VN": "",
-        "EN": "",
+        "KR": "예수님,\n저희 죄를 용서하시며\n저희를 지옥 불에서 구하시고\n연옥 영혼을 돌보시며\n가장 버림받은 영혼을 돌보소서.",
+        "VN": "Lạy Chúa Giêsu,\nxin tha tội cho chúng con,\nxin cứu chúng con khỏi sa hỏa ngục,\nxin đem các linh hồn lên thiên đàng,\nnhất là những linh hồn cần đến lòng Chúa thương xót hơn.\nA-men.",
+        "EN": "O My Jesus,\nforgive us our sins,\nsave us from the fires of Hell and lead all souls to Heaven,\nespecially those who are in most need of Thy mercy.",
         "JP": "",
-        "LA": "O mi Iesu, dimitte nobis debita nostra, libera nos ab igne inferni, conduc in caelum omnes animas, praeseritim illas quae maxime indigent misericordia tua."
+        "LA": "O mi Iesu,\ndimitte nobis debita nostra,\nlibera nos ab igne inferni,\nconduc in caelum omnes animas\npraeseritim illas quae maxime indigent misericordia tua."
       },
       "sourceCategory": {
         "KR": "주요 기도",
-        "VN": "",
+        "VN": "Kinh Mân Côi",
         "EN": "Basic Prayers",
         "JP": "日々の祈り",
         "LA": "Rosarium"
@@ -830,6 +815,7 @@
         "Fatima Prayer",
         "Oratio Fatimae",
         "주요 기도",
+        "Kinh Mân Côi",
         "Basic Prayers",
         "日々の祈り",
         "Rosarium"
@@ -927,14 +913,14 @@
         "VN": "",
         "EN": "",
         "JP": "",
-        "LA": ""
+        "LA": "Veni, Sancte Spiritus"
       },
       "texts": {
         "KR": "<b>○</b> 오소서, 성령님.\n저희 마음을 성령으로 가득 채우시어\n저희 안에 사랑의 불이 타오르게 하소서.\n<b>●</b> 주님의 성령을 보내소서. 저희가 새로워지리이다.\n또한 온 누리가 새롭게 되리이다.\n<b>✚</b> 기도합시다.\n하느님, 성령의 빛으로 저희 마음을 이끄시어\n바르게 생각하고\n언제나 성령의 위로를 받아 누리게 하소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘.",
         "VN": "",
         "EN": "",
         "JP": "",
-        "LA": ""
+        "LA": "<b>V.</b> Veni, Sancte Spiritus,\nreple tuorum corda fidelium,\net tui amoris in eis ignem accende. \n<b>R.</b> Emitte Spiritum tuum et creabuntur. Et renovabis faciem terrae.\n<b>Oremus:</b>\nDeus, qui corda fidelium Sancti Spiritus illustratione docuisti,\nda nobis in eodem Spiritu recta sapere et de eius semper consolatione gaudere.\nPer Christum Dominum nostrum.\nAmen."
       },
       "sourceCategory": {
         "KR": "주요 기도",
@@ -956,31 +942,31 @@
       ]
     },
     {
-      "id": "019.prayer_after_work",
+      "id": "019.sub_tuum_praesidium",
       "category": "common",
       "titles": {
-        "KR": "일을 마치고 바치는 기도 (성모님께 보호를 철하는 기도)",
-        "VN": "",
+        "KR": "일을 마치고 바치는 기도 (성모님께 보호를 청하는 기도)",
+        "VN": "Kinh Trông Cậy",
         "EN": "",
         "JP": "",
-        "LA": ""
+        "LA": "Sub tuum praesidium"
       },
       "texts": {
         "KR": "천주의 성모님, 당신의 보호에 저희를 맡기오니\n어려울 때에 저희의 간절한 기도를 외면하지 마시고\n항상 모든 위험에서 저희를 구하소서.\n영화롭고 복되신 동정녀시여.",
-        "VN": "",
+        "VN": "Chúng con trông cậy Rất Thánh Đức Mẹ Chúa Trời,\nxin chớ chê, chớ bỏ lời chúng con nguyện\ntrong cơn gian nan thiếu thốn\nĐức Nữ Đồng Trình hiển vinh sáng láng\nhằng chữa chúng con cho khỏi mọi sự dữ.\nA-men.",
         "EN": "",
         "JP": "",
-        "LA": ""
+        "LA": "Sub tuum praesidium\nconfugimus, Sancta Dei Genetrix.\nNostras deprecationes ne despicias\nin necessitatibus, sed a periculis cunctis libera nos semper,\nVirgo gloriosa et benedicta."
       },
       "sourceCategory": {
         "KR": "주요 기도",
-        "VN": "",
+        "VN": "Kinh Hằng Ngày",
         "EN": "",
         "JP": "",
         "LA": ""
       },
       "tags": [
-        "019.prayer_after_work",
+        "019.sub_tuum_praesidium",
         "common",
         "공통기도문",
         "Kinh nguyện chung",
@@ -989,7 +975,9 @@
         "Preces communes",
         "일을 마치고 바치는 기도",
         "성모님께 보호를 청하는 기도",
-        "주요 기도"
+        "Kinh Trông Cậy",
+        "주요 기도",
+        "Kinh Hằng Ngày"
       ]
     },
     {
@@ -14386,42 +14374,6 @@
       ]
     },
     {
-      "id": "la_sub_tuum_praesidium",
-      "category": "national",
-      "titles": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Sub Tuum Praesidium"
-      },
-      "texts": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "",
-        "EN": "",
-        "JP": "",
-        "LA": "Maria"
-      },
-      "tags": [
-        "la_sub_tuum_praesidium",
-        "national",
-        "국가별·기타 기도문",
-        "Kinh theo từng nước và kinh khác",
-        "Local and Other Prayers",
-        "各国・その他の祈り",
-        "Preces locales et aliae",
-        "Sub Tuum Praesidium",
-        "Maria"
-      ]
-    },
-    {
       "id": "la_surge_domine",
       "category": "national",
       "titles": {
@@ -18756,43 +18708,6 @@
         "Preces communes",
         "감사기도",
         "Kinh Cám Ơn",
-        "Kinh Hằng Ngày"
-      ]
-    },
-    {
-      "id": "vn_ocr_017_kinh_trong_cay",
-      "category": "common",
-      "titles": {
-        "KR": "희망의 기도",
-        "VN": "Kinh Trông Cậy",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "texts": {
-        "KR": "",
-        "VN": "Chúng con trông cậy Rất Thánh Đức Mẹ Chúa Trời, xin chớ chê, chớ bỏ lời chúng con nguyện\ntrong cơn gian nan thiếu thốn\nĐức Nữ Đồng Trình hiển vinh sáng láng\nhằng chữa chúng con cho khỏi mọi sự dữ. A-men.",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "sourceCategory": {
-        "KR": "",
-        "VN": "Kinh Hằng Ngày",
-        "EN": "",
-        "JP": "",
-        "LA": ""
-      },
-      "tags": [
-        "vn_ocr_017_kinh_trong_cay",
-        "common",
-        "공통기도문",
-        "Kinh nguyện chung",
-        "Common Prayers",
-        "共通の祈り",
-        "Preces communes",
-        "희망의 기도",
-        "Kinh Trông Cậy",
         "Kinh Hằng Ngày"
       ]
     },
