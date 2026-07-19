@@ -646,7 +646,7 @@
 <script src="JS%20file/korean_temporal_data.js?v=20260715-v23-3"></script>
 <script src="JS%20file/korean_blessing_data.js?v=20260718-v23-1"></script>
 <script src="JS%20file/prayer_data.js?v=20260718-v23-2"></script>
-<script src="JS%20file/hymn_data.js?v=20260718-v23-1"></script>
+<script src="JS%20file/hymn_data.js?v=20260719-v23-1"></script>
 <script src="JS%20file/church_local_details.js?v=20260718-v23-1"></script>
 
 <script>
@@ -12952,15 +12952,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let secondarySelectHtml = '';
 
         if (orig.type === 'selectable' && orig.variants) {
-            selectHtml = `<select class="select-inline" onchange="optChange('${optionKey}', this.value)">`;
-            Object.keys(orig.variants).sort().forEach(k => {
-                const labelObj = orig.variants[k].label;
-                const labelText = typeof labelObj === 'object' && labelObj !== null
-                    ? (labelObj[key] || labelObj.en || labelObj.kr || '')
-                    : (labelObj || k);
-                selectHtml += `<option value="${k}" ${state.options[optionKey]===k?'selected':''}>${labelText}</option>`;
-            });
-            selectHtml += `</select>`;
+            const variantKeys = Object.keys(orig.variants).sort();
+            if (variantKeys.length > 1) {
+                selectHtml = `<select class="select-inline" onchange="optChange('${optionKey}', this.value)">`;
+                variantKeys.forEach(k => {
+                    const labelObj = orig.variants[k].label;
+                    const labelText = typeof labelObj === 'object' && labelObj !== null
+                        ? (labelObj[key] || labelObj.en || labelObj.kr || '')
+                        : (labelObj || k);
+                    selectHtml += `<option value="${k}" ${state.options[optionKey]===k?'selected':''}>${labelText}</option>`;
+                });
+                selectHtml += `</select>`;
+            }
 
             if (baseId === 'eucharist' && state.options.eucharist !== '4') {
                 const songKeys = getEucharistSongKeys(orig);
