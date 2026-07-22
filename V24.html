@@ -74,6 +74,8 @@
         .vn-source-content { width: min(560px, 96vw); background: white; color: #333; border-radius: 12px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
         .vn-source-content h2 { margin: 0 0 10px; color: var(--primary-color); font-size: 1.15rem; }
         .vn-source-content p { margin: 0 0 14px; line-height: 1.55; }
+        .vn-source-modal-translation { display: block; margin-top: 3px; opacity: 0.58; font-size: 0.88em; font-weight: 500; }
+        #vn-source-description .vn-source-modal-translation { font-size: 0.92em; }
         .vn-source-actions { display: grid; gap: 10px; }
         .vn-source-btn { width: 100%; border: 1px solid #d6dbe1; border-radius: 10px; padding: 12px 14px; background: #f7f8fa; color: #263238; text-align: left; cursor: pointer; font: inherit; line-height: 1.4; }
         .vn-source-btn:hover,
@@ -439,8 +441,14 @@
 
 <div id="vn-source-modal" role="dialog" aria-modal="true" aria-labelledby="vn-source-title" aria-describedby="vn-source-description">
     <div class="vn-source-content">
-        <h2 id="vn-source-title">베트남어 전례독서 번역 선택</h2>
-        <p id="vn-source-description">베트남어 본문을 불러오기 전에 사용할 번역을 선택해 주세요.<br>Vui lòng chọn bản dịch bài đọc phụng vụ tiếng Việt trước khi tải.</p>
+        <h2 id="vn-source-title">
+            <span data-vn-source-title-main>베트남어 전례독서 번역 선택</span>
+            <span class="vn-source-modal-translation" data-vn-source-title-translation>Chọn bản dịch bài đọc phụng vụ tiếng Việt</span>
+        </h2>
+        <p id="vn-source-description">
+            <span data-vn-source-description-main>베트남어 본문을 불러오기 전에 사용할 번역을 선택해 주세요.</span>
+            <span class="vn-source-modal-translation" data-vn-source-description-translation>Vui lòng chọn bản dịch bài đọc phụng vụ tiếng Việt trước khi tải.</span>
+        </p>
         <div class="vn-source-actions">
             <button type="button" class="vn-source-btn" data-vn-source="hanoi" onclick="chooseVietnameseReadingSource('hanoi')">
                 <strong data-vn-source-main>주교회의 전례위원회(UBPT) 번역 · 미사 전례독서</strong>
@@ -1081,6 +1089,7 @@
         '08-10': saintEntry('red', { KR: '성 라우렌시오 부제 순교자 축일', VN: 'Thánh Laurensô, Phó tế, Tử đạo', EN: 'Saint Lawrence, Deacon and Martyr', JP: '聖ラウレンチオ助祭殉教者', LA: 'Sancti Laurentii' }, { rank: 'feast' }),
         '08-15': saintEntry('white', { KR: '성모 승천 대축일', VN: 'Lễ Đức Mẹ Hồn Xác Lên Trời', EN: 'The Assumption of the Blessed Virgin Mary', JP: '聖母の被昇天', LA: 'In Assumptione Beatae Mariae Virginis' }, { rank: 'solemnity' }),
         '08-24': saintEntry('red', { KR: '성 바르톨로메오 사도 축일', VN: 'Thánh Batôlômêô, Tông đồ', EN: 'Saint Bartholomew, Apostle', JP: '聖バルトロマイ使徒', LA: 'Sancti Bartholomaei, apostoli' }, { rank: 'feast' }),
+        '08-29': saintEntry('red', { KR: '성 요한 세례자의 수난 기념일', VN: 'Thánh Gioan Tẩy Giả bị trảm quyết', EN: 'The Passion of Saint John the Baptist', JP: '洗礼者聖ヨハネの殉教', LA: 'In Passione Sancti Ioannis Baptistae' }, { rank: 'memorial' }),
         '09-08': saintEntry('white', { KR: '복되신 동정 마리아 탄생 축일', VN: 'Sinh nhật Đức Trinh Nữ Maria', EN: 'The Nativity of the Blessed Virgin Mary', JP: '聖母マリアの誕生', LA: 'In Nativitate Beatae Mariae Virginis' }, { rank: 'feast' }),
         '09-14': saintEntry('red', { KR: '성 십자가 현양 축일', VN: 'Lễ Suy Tôn Thánh Giá', EN: 'The Exaltation of the Holy Cross', JP: '十字架称賛', LA: 'In Exaltatione Sanctae Crucis' }, { rank: 'feastOfLord' }),
         '09-15': saintEntry('white', { KR: '고통의 성모 마리아 기념일', VN: 'Đức Mẹ Sầu Bi', EN: 'Our Lady of Sorrows', JP: '悲しみの聖母', LA: 'Beatae Mariae Virginis Perdolentis' }, { rank: 'memorial' }),
@@ -1269,7 +1278,29 @@
         return rank === 'memorial';
     }
 
+    function getAnnunciationObservedDate(year) {
+        const nominal = new Date(year, 2, 25);
+        const easter = computeEasterSunday(year);
+        const palmSunday = addDays(easter, -7);
+        const octaveEnd = addDays(easter, 7);
+        if (nominal >= palmSunday && nominal <= octaveEnd) return addDays(easter, 8);
+        if (nominal.getDay() === 0 && getSeasonMeta(nominal).season === 'lent') return addDays(nominal, 1);
+        return nominal;
+    }
+
     function getUniversalDynamicCalendarOverride(date) {
+        const annunciation = fixedSaintsCalendar['03-25'];
+        const annunciationObserved = getAnnunciationObservedDate(date.getFullYear());
+        const annunciationTransferred = calendarDateKey(annunciationObserved) !== '03-25';
+        if (annunciationTransferred && sameDay(date, annunciationObserved)) {
+            return calendarOverrideFromEntry(annunciation, {
+                source: 'General Roman Calendar transferred solemnity rule',
+                transferredFrom: '03-25'
+            });
+        }
+        if (annunciationTransferred && calendarDateKey(date) === '03-25') {
+            return generatedSeasonalCalendarOverride(date, { includeFixed: false });
+        }
         if (isImmaculateHeartMemorialDate(date)) {
             return calendarOverrideFromEntry(saintEntry('white', immaculateHeartNames, { rank: 'memorial', source: 'Easter+69 dynamic calendar' }));
         }
@@ -1804,27 +1835,32 @@
         const text = leftLiturgyName(info, lang);
         const rules = [
             [/주님 공현|Epiphany|Hiển Linh|公現|Epiphan/i, 'epiphany'],
-            [/주님 세례|Baptism of the Lord|Chịu Phép Rửa|洗礼/i, 'baptism_of_the_lord'],
-            [/주님 성탄|Nativity of the Lord|Giáng Sinh|降誕|Nativit/i, 'nativity_1'],
-            [/부활 대축일|Easter Sunday|Phục Sinh|復活|Pasch/i, 'easter_1'],
+            [/주님 세례|Baptism of the Lord|Chịu Phép Rửa|洗礼|Baptismate Domini/i, 'baptism_of_the_lord'],
+            [/주님 봉헌|Presentation of the Lord|Dâng Chúa.*Đền Thánh|主の奉献|Praesentatione Domini/i, 'presentation_of_the_lord'],
+            [/마리아 막달레나|Mary Magdalene|Ma-ri-a Ma-đa-lê-na|マリア.*マグダレナ|Mariae Magdalenae/i, 'mary_magdalene'],
+            [/세례자 요한|John the Baptist|Gioan Tẩy Giả|洗礼者.*ヨハネ|Ioannis Baptistae/i, 'john_the_baptist'],
+            [/주님 성탄|Nativity of the Lord|Giáng Sinh|主の降誕|Nativitate Domini/i, 'nativity_1'],
+            [/부활 대축일|Easter Sunday|Phục Sinh|復活|Pasch|Resurrectionis Domini/i, 'easter_1'],
             [/승천|Ascension|Thăng Thiên|昇天|Ascensione/i, 'ascension_1'],
             [/성령 강림|Pentecost|Hiện Xuống|聖霊降臨/i, 'pentecost'],
             [/삼위일체|Trinity|Ba Ngôi|三位一体|Trinit/i, 'holy_trinity'],
-            [/성체 성혈|Body and Blood|Mình Máu|Corpus|聖体/i, 'eucharist_1'],
-            [/예수 성심|Sacred Heart|Thánh Tâm|み心|Corde Iesu/i, 'sacred_heart'],
+            [/성체 성혈|Body and Blood|Mình Máu|Corpus|Corporis et Sanguinis|聖体/i, 'eucharist_2'],
+            [/예수 성심|Sacred Heart|Thánh Tâm|み心|Corde Iesu|Cordis Iesu/i, 'sacred_heart'],
             [/그리스도\s*왕|Christ.*King|Kitô Vua|キリスト.*王|Regis/i, 'christ_the_king'],
             [/성 요셉|Saint Joseph|Thánh Giuse|聖ヨセフ|Ioseph/i, 'saint_joseph'],
             [/탄생 예고|Annunciation|Truyền Tin|お告げ|Annuntiation/i, 'annunciation'],
-            [/세례자 요한|John the Baptist|Gioan Tẩy Giả|洗礼者.*ヨハネ|Ioannis Baptistae/i, 'john_the_baptist'],
             [/베드로.*바오로|Peter and Paul|Phêrô.*Phaolô|ペトロ.*パウロ|Petri.*Pauli/i, 'peter_and_paul'],
             [/변모|Transfiguration|Hiển Dung|変容|Transfiguratione/i, 'transfiguration'],
             [/십자가 현양|Holy Cross|Thánh Giá|十字架|Exaltatione/i, 'holy_cross'],
             [/성모 승천|Assumption|Lên Trời|被昇天|Assumptione/i, 'assumption'],
             [/원죄 없이|Immaculate Conception|Vô Nhiễm|無原罪|Immaculata/i, 'immaculate_conception'],
             [/모든 성인|All Saints|諸聖人|Omnium Sanctorum/i, 'all_saints'],
-            [/성모|Our Lady|Blessed Virgin|Đức Mẹ|聖母|Beata Maria/i, 'mary_1'],
-            [/사도|Apostle|Tông Đồ|使徒|Apostol/i, 'apostles_1'],
-            [/순교|Martyr|Tử Đạo|殉教|Martyr/i, 'martyrs'],
+            [/위령의 날|All Souls|Các tín hữu đã qua đời|死者の日|Omnium Fidelium Defunctorum/i, 'dead_1'],
+            [/라테라노.*봉헌|Lateran.*Dedication|Cung hiến.*Latêranô|ラテラノ.*献堂|Dedicatione Basilicae Lateranensis/i, 'dedication_of_a_church'],
+            [/대천사|수호천사|Archangels?|Guardian Angels?|Tổng lãnh Thiên thần|Các Thiên thần Hộ thủ|大天使|守護の天使|Michaelis.*Gabrielis.*Raphaelis|Angelorum Custodum/i, 'angels'],
+            [/성모|Our Lady|Blessed Virgin|Đức Mẹ|聖母|Beata Maria|Beatae Mariae/i, 'mary_1'],
+            [/사도|Apostle|Tông Đồ|使徒|Apostol|evangelistae|Simonis.*Iudae/i, 'apostles_1'],
+            [/순교|Martyr|Tử Đạo|殉教|Martyr|Laurentii/i, 'martyrs'],
             [/사제|주교|Pastor|Priest|Bishop|Linh Mục|Giám Mục|司祭|司教|Pastor/i, 'pastors'],
             [/동정녀|Virgin|Trinh Nữ|おとめ|Virgine/i, 'virgins_and_religious']
         ];
@@ -1857,7 +1893,12 @@
         if (meta.season === 'lent') {
             if (meta.week === 0) return { key: activeDate.getDay() === 3 ? 'lent_3' : 'lent_1', source: 'season-rule' };
             if (meta.week === 6) return { key: activeDate.getDay() === 0 ? 'passion_1' : 'passion_2', source: 'season-rule' };
-            if (activeDate.getDay() === 0 && meta.week >= 1 && meta.week <= 5) return { key: `lent_${['1st', '2nd', '3rd', '4th', '5th'][meta.week - 1]}_sunday`, source: 'season-rule' };
+            if (activeDate.getDay() === 0 && meta.week >= 1 && meta.week <= 5) {
+                if (meta.week <= 2 || meta.sundayCycle === 'A') {
+                    return { key: `lent_${['1st', '2nd', '3rd', '4th', '5th'][meta.week - 1]}_sunday`, source: 'season-rule' };
+                }
+                return { key: 'lent_1', source: 'season-rule' };
+            }
             if (meta.week === 5) return { key: 'passion_1', source: 'season-rule' };
             return { key: 'lent_1', source: 'season-rule' };
         }
@@ -4474,6 +4515,29 @@
         }
     });
 
+    const vietnameseReadingSourceModalCopy = Object.freeze({
+        KR: {
+            title: '베트남어 전례독서 번역 선택',
+            description: '베트남어 본문을 불러오기 전에 사용할 번역을 선택해 주세요.'
+        },
+        VN: {
+            title: 'Chọn bản dịch bài đọc phụng vụ tiếng Việt',
+            description: 'Vui lòng chọn bản dịch bài đọc phụng vụ tiếng Việt trước khi tải.'
+        },
+        EN: {
+            title: 'Choose a Vietnamese Lectionary Translation',
+            description: 'Choose the Vietnamese liturgical reading translation before loading the text.'
+        },
+        JP: {
+            title: 'ベトナム語典礼朗読の翻訳を選択',
+            description: 'ベトナム語本文を読み込む前に、使用する典礼朗読の翻訳を選択してください。'
+        },
+        LA: {
+            title: 'Selectio versionis Lectionarii Vietnamici',
+            description: 'Antequam textus Vietnamicus oneretur, versionem lectionum liturgicarum elige.'
+        }
+    });
+
     function vietnameseReadingSourceLabel(source, langCode) {
         const labels = vietnameseReadingSourceLabels[normalizeVietnameseReadingSource(source)] || vietnameseReadingSourceLabels.hanoi;
         const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
@@ -4483,6 +4547,18 @@
     function syncVietnameseSourceChoiceLabels() {
         const originalLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
         const translatedLang = normalizeDistinctTargetLang(state.targetLang, originalLang);
+        const originalCopy = vietnameseReadingSourceModalCopy[originalLang] || vietnameseReadingSourceModalCopy.KR;
+        const translatedCopy = vietnameseReadingSourceModalCopy[translatedLang] || vietnameseReadingSourceModalCopy.KR;
+        const modalCopyTargets = [
+            ['[data-vn-source-title-main]', originalCopy.title],
+            ['[data-vn-source-title-translation]', translatedCopy.title],
+            ['[data-vn-source-description-main]', originalCopy.description],
+            ['[data-vn-source-description-translation]', translatedCopy.description]
+        ];
+        modalCopyTargets.forEach(([selector, value]) => {
+            const target = document.querySelector(selector);
+            if (target) target.textContent = value;
+        });
         document.querySelectorAll('.vn-source-btn[data-vn-source]').forEach(button => {
             const source = normalizeVietnameseReadingSource(button.dataset.vnSource);
             const main = button.querySelector('[data-vn-source-main]');
