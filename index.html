@@ -8764,19 +8764,26 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     'Chúng con cầu xin nhờ Đức Giê-su Ki-tô Con Chúa, Thiên Chúa và là Chúa chúng con, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
                     'Người là Thiên Chúa hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
                     'Người là Thiên Chúa, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
-                    'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.'
+                    'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
+                    'Chúa Ki-tô là Thiên Chúa hằng sống và hiển trị cùng Chúa hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.'
                 ],
                 prayer_offerings: [
                     'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.',
-                    'Chúa là Thiên Chúa, hằng sống và hiển trị muôn.',
+                    'Chúa là Thiên Chúa, hằng sống và hiển trị muôn đời.',
+                    'Chúa là Đấng hằng sống và hiển trị muôn đời.',
                     'Chúa hằng sống và hiển trị muôn đời.',
-                    'Người hằng sống và hiển trị muôn đời.'
+                    'Người hằng sống và hiển trị muôn đời.',
+                    'Đấng hằng sống và hiển trị muôn đời.',
+                    'Ðấng hằng sống và hiển trị muôn đời.'
                 ],
                 prayer_after: [
                     'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.',
-                    'Chúa là Thiên Chúa, hằng sống và hiển trị muôn.',
+                    'Chúa là Thiên Chúa, hằng sống và hiển trị muôn đời.',
+                    'Chúa là Đấng hằng sống và hiển trị muôn đời.',
                     'Chúa hằng sống và hiển trị muôn đời.',
-                    'Người hằng sống và hiển trị muôn đời.'
+                    'Người hằng sống và hiển trị muôn đời.',
+                    'Đấng hằng sống và hiển trị muôn đời.',
+                    'Ðấng hằng sống và hiển trị muôn đời.'
                 ]
             },
             EN: {
@@ -8837,15 +8844,28 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictPrayerParagraphs(lang, key, blocks) {
         let text = strictCleanLine(blocks.join(' '));
         text = strictExpandPrayerEnding(lang, key, text);
-        const ending = strictPrayerEndingFormulas(lang, key).find(item => text.endsWith(item)) || '';
+        const ending = prayerConclusionEndingForText(lang, key, text);
         if (!ending) return text ? [text] : [];
         const body = text.slice(0, text.length - ending.length).trim();
         return [body, ending].filter(Boolean);
     }
 
+    function strictPrayerConclusionPattern(lang, key) {
+        if (lang === 'VN' && key === 'collect') {
+            return /((?:Chúng con cầu xin nhờ Đức Gi[êe]-su Ki-tô[\s\S]*?|(?:Chúa|Đức|Ðức)\s+Ki-tô\s+là\s+Thiên Chúa\s+|(?:Người|Chúa)(?:\s+là\s+Thiên Chúa,?\s*)?)hằng sống và hiển trị[\s\S]*?muôn (?:thuở\s+)?muôn đời\.)$/iu;
+        }
+        if (lang === 'VN' && (key === 'prayer_offerings' || key === 'prayer_after')) {
+            return /((?:(?:Con Một Chúa|(?:Đức|Ðức)\s+Ki-tô),?\s*)?(?:Chúa|Người|Đấng|Ðấng)(?:\s+là\s+(?:Thiên Chúa|Đấng))?,?\s*hằng sống và hiển trị muôn đời\.|Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con\.)$/iu;
+        }
+        return null;
+    }
+
     function prayerConclusionEndingForText(lang, key, text) {
         if (!strictPrayerKeys.has(key)) return '';
         const expanded = strictExpandPrayerEnding(lang, key, text);
+        const pattern = strictPrayerConclusionPattern(lang, key);
+        const matched = pattern && expanded.match(pattern);
+        if (matched) return strictCleanLine(matched[1]);
         return strictPrayerEndingFormulas(lang, key).find(item => expanded.endsWith(item)) || '';
     }
 
@@ -8865,19 +8885,36 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function normalizePrayerParsedLinesBeforeApply(lower, baseId, parsedLines) {
         if (!strictPrayerKeys.has(baseId) || !Array.isArray(parsedLines)) return parsedLines;
         const lang = langCodeFromLowerKey(lower);
-        let hasConclusion = false;
         const splitLines = parsedLines.flatMap(parsed => {
-            const lines = splitPrayerParsedLineByConclusion(parsed, lang, baseId);
-            if (lines.some(line => line && line.role === 'conclusion')) hasConclusion = true;
-            return lines;
+            return splitPrayerParsedLineByConclusion(parsed, lang, baseId);
         });
-        if (!hasConclusion) return splitLines;
-        return splitLines.map(line => {
-            if (!line || line.role || line.rubric) return line;
+        const output = [];
+        let body = null;
+        const flushBody = () => {
+            if (!body) return;
+            body.text = strictCleanLine(body.text);
+            if (body.ai) body.ai = strictCleanLine(body.ai);
+            if (body.text || body.ai) output.push(body);
+            body = null;
+        };
+        splitLines.forEach(line => {
+            if (!line) return;
             const text = cleanNodeText(line.text);
-            if (!text || isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text)) return line;
-            return Object.assign({}, line, { role: 'body' });
+            const isBoundary = !text || line.role === 'conclusion' || line.rubric
+                || isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text);
+            if (isBoundary) {
+                flushBody();
+                output.push(line);
+                return;
+            }
+            if (!body) {
+                body = Object.assign({}, line, { sp: '', text: '', ai: '', role: 'body' });
+            }
+            body.text = [body.text, line.text].filter(Boolean).join(' ');
+            body.ai = [body.ai, line.ai].filter(Boolean).join(' ');
         });
+        flushBody();
+        return output;
     }
 
     function strictAntiphonParagraphs(lang, key, blocks) {
@@ -9687,7 +9724,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!cleaned) return false;
         return ['KR', 'VN', 'EN', 'JP', 'LA'].some(lang =>
             ['collect', 'prayer_offerings', 'prayer_after'].some(key =>
-                strictPrayerEndingFormulas(lang, key).some(formula => cleaned === formula)
+                prayerConclusionEndingForText(lang, key, cleaned) === cleaned
             )
         );
     }
@@ -11200,6 +11237,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         normalizeDailySelectableTemplate(item);
         if (item.isEucharist || baseId === 'eucharist') return false;
         if (baseId === 'gospel') normalizeDailyGospelOptions(newData);
+        if (isPrayerPart(baseId) && !item.__dailyPrayerBaseTemplate) {
+            item.__dailyPrayerBaseTemplate = {
+                type: item.type,
+                lines: cloneMassLines(item.lines || [])
+            };
+        }
         const lowerLangs = ['kr', 'vn', 'en', 'jp', 'la'];
         const optionMap = {};
         let maxOptions = 1;
@@ -11215,7 +11258,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ? newData.variantAlignment
             : null;
         if (alignmentGroups) maxOptions = Math.max(maxOptions, alignmentGroups.length);
-        if (maxOptions < 2) return false;
+        if (maxOptions < 2) {
+            if (isPrayerPart(baseId) && item.__dailyGeneratedPrayerVariants && item.__dailyPrayerBaseTemplate) {
+                item.type = item.__dailyPrayerBaseTemplate.type || 'part';
+                item.lines = cloneMassLines(item.__dailyPrayerBaseTemplate.lines || []);
+                delete item.variants;
+                item.__dailyGeneratedPrayerVariants = false;
+            }
+            return false;
+        }
 
         const template = cloneMassLines(item.lines || []);
         const variants = {};
@@ -11264,6 +11315,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         item.type = 'selectable';
         item.variants = variants;
         item.lines = variants.A ? variants.A.lines : Object.values(variants)[0].lines;
+        if (isPrayerPart(baseId)) item.__dailyGeneratedPrayerVariants = true;
         if (!state.options[baseId] || !variants[state.options[baseId]]) state.options[baseId] = variants.A ? 'A' : Object.keys(variants)[0];
         return true;
     }
@@ -13031,7 +13083,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         else if (/성당\s*봉헌|성전\s*봉헌|Dedication\s+of.*Church|Dedicatione\s+ecclesiae/i.test(title)) key = 'church_dedication';
         else if (/위령|죽은\s*이|All\s+Souls|Defunctor/i.test(title) || (month === 11 && day === 2)) key = 'for_the_dead';
         else if (/사도(?:\s|들|$)|Apostle|Apostol/i.test(title)) key = 'apostles';
-        else if (/성모|마리아|Our\s+Lady|Blessed\s+Virgin|Beatae?\s+Mariae/i.test(title)) key = 'blessed_virgin_mary';
+        else if (/천주의\s*성모|복되신\s*동정\s*마리아|성모(?:\s|$)|Our\s+Lady|Blessed\s+Virgin\s+Mary|Beatae?\s+Mariae\s+Virginis|Sanctae\s+Dei\s+Genetricis/i.test(title)) key = 'blessed_virgin_mary';
         else if (meta.season === 'advent') key = 'advent';
         else if (meta.season === 'christmas') key = 'christmas';
         else if (meta.season === 'lent' && meta.week === 6) key = 'passion';
