@@ -93,6 +93,7 @@
         .missal-container { max-width: 1100px; margin: 0 auto; background: white; }
         .role-legend { position: sticky; top: var(--floating-liturgy-offset, 0px); z-index: 998; max-width: 1100px; max-height: calc(38vh - var(--floating-liturgy-offset, 0px)); margin: 0 auto; padding: 14px 20px 12px; overflow-y: auto; background: white; border: 1px solid #ddd; border-top: 0; border-radius: 0 0 8px 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16); color: #333; font-family: 'Noto Sans', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans CJK JP', 'Segoe UI', Arial, sans-serif; font-size: 0.86rem; transition: top 0.18s ease, max-height 0.18s ease; }
         .role-legend .role-legend-group { font-family: inherit; }
+        .role-legend-group[hidden] { display: none !important; }
         .role-legend-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 18px; }
         .role-legend-group { min-width: 0; }
         .role-legend-title { margin-bottom: 4px; color: var(--primary-color); font-weight: 900; font-size: 1em; }
@@ -441,12 +442,12 @@
         <p id="vn-source-description">베트남어 본문을 불러오기 전에 사용할 번역을 선택해 주세요.<br>Vui lòng chọn bản dịch bài đọc phụng vụ tiếng Việt trước khi tải.</p>
         <div class="vn-source-actions">
             <button type="button" class="vn-source-btn" data-vn-source="hanoi" onclick="chooseVietnameseReadingSource('hanoi')">
-                <strong>하노이대교구 번역 · Bản dịch TGP Hà Nội</strong>
-                Sách Bài Đọc (tonggiaophanhanoi.org)
+                <strong>주교회의 전례위원회(UBPT) 번역 · Bản dịch UBPT</strong>
+                Sách Bài Đọc
             </button>
             <button type="button" class="vn-source-btn" data-vn-source="ktcg" onclick="chooseVietnameseReadingSource('ktcg')">
                 <strong>베트남 성무일도번역위원회 번역</strong>
-                Nhóm Phiên Dịch Các Giờ Kinh Phụng Vụ (ktcgkpv.org)
+                Nhóm Phiên Dịch Các Giờ Kinh Phụng Vụ
             </button>
         </div>
     </div>
@@ -646,7 +647,7 @@
         <div class="setting-row">
             <label id="lbl-set-vn-source">📖 베트남어 전례독서 번역</label>
             <select id="set-vn-source" onchange="updateSettings()">
-                <option value="hanoi">하노이대교구 · TGP Hà Nội</option>
+                <option value="hanoi">주교회의 전례위원회(UBPT) 번역</option>
                 <option value="ktcg">성무일도번역위원회 · KTCG KPV</option>
             </select>
         </div>
@@ -2217,7 +2218,10 @@
         if (!grid) return;
         const groups = Array.from(legend.querySelectorAll('[data-legend-lang]'));
         groups.forEach(group => {
-            group.hidden = !activeLangs.has(group.dataset.legendLang);
+            const isActive = activeLangs.has(group.dataset.legendLang);
+            group.hidden = !isActive;
+            group.style.display = isActive ? '' : 'none';
+            group.setAttribute('aria-hidden', isActive ? 'false' : 'true');
         });
         [leftLang, rightLang].forEach(lang => {
             const group = groups.find(candidate => candidate.dataset.legendLang === lang);
