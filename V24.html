@@ -79,6 +79,7 @@
         .vn-source-btn:hover,
         .vn-source-btn:focus-visible { border-color: var(--primary-color); background: #fff; outline: none; }
         .vn-source-btn strong { display: block; color: var(--primary-color); font-weight: 900; }
+        .vn-source-btn .vn-source-translation { display: block; margin-top: 3px; color: #5f6b73; opacity: 0.58; font-size: 0.92em; }
         .closed-message { min-height: 100vh; display: grid; place-items: center; padding: 24px; text-align: center; background: #f7f7f7; color: #333; font-weight: 800; line-height: 1.6; }
         body.consent-pending > nav,
         body.consent-pending > header,
@@ -442,12 +443,12 @@
         <p id="vn-source-description">베트남어 본문을 불러오기 전에 사용할 번역을 선택해 주세요.<br>Vui lòng chọn bản dịch bài đọc phụng vụ tiếng Việt trước khi tải.</p>
         <div class="vn-source-actions">
             <button type="button" class="vn-source-btn" data-vn-source="hanoi" onclick="chooseVietnameseReadingSource('hanoi')">
-                <strong>주교회의 전례위원회(UBPT) 번역 · Bản dịch UBPT</strong>
-                Sách Bài Đọc
+                <strong data-vn-source-main>주교회의 전례위원회(UBPT) 번역 · 미사 전례독서</strong>
+                <span class="vn-source-translation" data-vn-source-translation>Bản dịch Ủy ban Phụng tự (UBPT) · Sách Bài Đọc</span>
             </button>
             <button type="button" class="vn-source-btn" data-vn-source="ktcg" onclick="chooseVietnameseReadingSource('ktcg')">
-                <strong>베트남 성무일도번역위원회 번역 · Nhóm Phiên Dịch Các Giờ Kinh Phụng Vụ</strong>
-                Sách Bài Đọc trong Thánh Lễ
+                <strong data-vn-source-main>베트남 성무일도번역위원회 번역 · 미사 전례독서</strong>
+                <span class="vn-source-translation" data-vn-source-translation>Bản dịch KTCGKPV · Sách Bài Đọc trong Thánh Lễ</span>
             </button>
         </div>
     </div>
@@ -4456,9 +4457,45 @@
         return value === 'ktcg' ? 'ktcg' : 'hanoi';
     }
 
+    const vietnameseReadingSourceLabels = Object.freeze({
+        hanoi: {
+            KR: '주교회의 전례위원회(UBPT) 번역 · 미사 전례독서',
+            VN: 'Bản dịch Ủy ban Phụng tự (UBPT) · Sách Bài Đọc',
+            EN: 'Vietnamese Episcopal Liturgy Commission (UBPT) translation · Mass Lectionary',
+            JP: 'ベトナム司教協議会典礼委員会（UBPT）訳 · ミサ朗読聖書',
+            LA: 'Versio Commissionis Liturgicae Episcoporum Vietnamiae (UBPT) · Lectionarium Missae'
+        },
+        ktcg: {
+            KR: '베트남 성무일도번역위원회 번역 · 미사 전례독서',
+            VN: 'Bản dịch KTCGKPV · Sách Bài Đọc trong Thánh Lễ',
+            EN: 'KTCGKPV translation · Mass Lectionary',
+            JP: 'KTCGKPV訳 · ミサ朗読聖書',
+            LA: 'Versio KTCGKPV · Lectionarium Missae'
+        }
+    });
+
+    function vietnameseReadingSourceLabel(source, langCode) {
+        const labels = vietnameseReadingSourceLabels[normalizeVietnameseReadingSource(source)] || vietnameseReadingSourceLabels.hanoi;
+        const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
+        return labels[lang] || labels.KR;
+    }
+
+    function syncVietnameseSourceChoiceLabels() {
+        const originalLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
+        const translatedLang = normalizeDistinctTargetLang(state.targetLang, originalLang);
+        document.querySelectorAll('.vn-source-btn[data-vn-source]').forEach(button => {
+            const source = normalizeVietnameseReadingSource(button.dataset.vnSource);
+            const main = button.querySelector('[data-vn-source-main]');
+            const translation = button.querySelector('[data-vn-source-translation]');
+            if (main) main.textContent = vietnameseReadingSourceLabel(source, originalLang);
+            if (translation) translation.textContent = vietnameseReadingSourceLabel(source, translatedLang);
+        });
+    }
+
     function syncVietnameseReadingSourceSelect() {
         const select = document.getElementById('set-vn-source');
         if (select) select.value = normalizeVietnameseReadingSource(state.vnReadingSource);
+        syncVietnameseSourceChoiceLabels();
     }
 
     function activeSourcesIncludeVietnamese(sources = getActiveDailySourceLanguages()) {
@@ -5113,36 +5150,167 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return strictEnsureReadingSummarySlots({ title, color: state.liturgyInfo.color, data }, 'VN');
     }
 
-    // KTCG publishes the readings and antiphons, but not the Roman Missal
-    // prayers.  Use only verified diocesan pages as an optional prayer
-    // supplement, without replacing any KTCG reading or antiphon text.
-    const vietnameseKtcgDiocesanPrayerSources = Object.freeze({
-        '07-22': 'https://gpbanmethuot.net/page/thanh-maria-magdalena.html'
-    });
+    // KTCG publishes readings and antiphons, but not the Roman Missal prayers.
+    // Resolve the matching Ban Me Thuot diocesan article from its current RSS
+    // feed, then copy only the three prayers from the matching Mass block.
+    const VIETNAMESE_KTCG_DIOCESAN_RSS_URL = 'https://gpbanmethuot.net/rss/loi-chua-moi-ngay/';
+    let vietnameseKtcgDiocesanFeedPromise = null;
 
-    function vietnameseKtcgDiocesanPrayerUrl(date) {
-        return vietnameseKtcgDiocesanPrayerSources[formatDateIso(date)]
-            || vietnameseKtcgDiocesanPrayerSources[calendarDateKey(date)]
-            || '';
+    function normalizeVietnameseDiocesanMatchText(value) {
+        let text = String(value || '');
+        let joined = '';
+        do {
+            joined = text;
+            text = text.replace(/([A-Za-zÀ-ỹĐđ])-\s*(?=[A-Za-zÀ-ỹĐđ])/g, '$1');
+        } while (text !== joined);
+        return normalizeSearchText(text);
+    }
+
+    function vietnameseDiocesanMatchVariants(value, date) {
+        const normalized = normalizeVietnameseDiocesanMatchText(value);
+        const meta = getSeasonMeta(date);
+        const roman = meta && meta.week ? toRoman(meta.week).toLowerCase() : '';
+        const arabic = roman
+            ? normalized.replace(new RegExp(`\\b${roman}\\b`, 'g'), String(meta.week))
+            : normalized;
+        return [normalized, arabic].filter((item, index, list) => item && list.indexOf(item) === index);
+    }
+
+    function vietnameseDiocesanTextMatchScore(actualText, expectedText, date) {
+        const actual = normalizeVietnameseDiocesanMatchText(actualText);
+        if (!actual) return 0;
+        return vietnameseDiocesanMatchVariants(expectedText, date).reduce((best, expected) => {
+            if (!expected) return best;
+            const tokens = expected.split(/\s+/).filter(token => token.length >= 2 && !['loi', 'chua'].includes(token));
+            const actualTokens = new Set(actual.split(/\s+/));
+            const matched = tokens.filter(token => actualTokens.has(token)).length;
+            const tokenScore = tokens.length ? matched / tokens.length : 0;
+            return Math.max(best, tokenScore + (actual.includes(expected) ? 1 : 0));
+        }, 0);
+    }
+
+    function vietnameseKtcgDiocesanLinkScore(link, date) {
+        if (!link || !/gpbanmethuot\.net\/(?:song-dao|loi-chua-moi-ngay)\//i.test(link.href || '')) return 0;
+        const expected = vietnameseSeasonalLookupTitle(date);
+        const actual = `${link.text || ''} ${decodeURIComponent(String(link.href || ''))}`;
+        return vietnameseDiocesanTextMatchScore(actual, expected, date);
+    }
+
+    function rankVietnameseKtcgDiocesanLinks(links, date) {
+        return (links || [])
+            .map(link => ({ link, score: vietnameseKtcgDiocesanLinkScore(link, date) }))
+            .filter(item => item.score >= 0.55)
+            .sort((a, b) => b.score - a.score)
+            .map(item => item.link);
+    }
+
+    async function fetchVietnameseKtcgDiocesanLinks() {
+        if (!vietnameseKtcgDiocesanFeedPromise) {
+            vietnameseKtcgDiocesanFeedPromise = fetchTextWithFallbacks(VIETNAMESE_KTCG_DIOCESAN_RSS_URL, { timeoutMs: 12000 })
+                .then(source => {
+                    const seen = new Set();
+                    return extractSourceLinks(source, VIETNAMESE_KTCG_DIOCESAN_RSS_URL).filter(link => {
+                        if (!/gpbanmethuot\.net\/(?:song-dao|loi-chua-moi-ngay)\/loi-chua-[^?#]+\.html/i.test(link.href || '')) return false;
+                        if (seen.has(link.href)) return false;
+                        seen.add(link.href);
+                        return true;
+                    });
+                })
+                .catch(error => {
+                    vietnameseKtcgDiocesanFeedPromise = null;
+                    throw error;
+                });
+        }
+        return vietnameseKtcgDiocesanFeedPromise;
+    }
+
+    async function resolveVietnameseKtcgDiocesanPrayerUrls(date) {
+        const links = await fetchVietnameseKtcgDiocesanLinks();
+        return rankVietnameseKtcgDiocesanLinks(links, date).slice(0, 6).map(link => link.href);
+    }
+
+    function vietnameseKtcgDiocesanSourceMatchesDate(source, date) {
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        const pattern = new RegExp(`(?:^|\\D)0?${day}\\s*[\\/.-]\\s*0?${month}\\s*[\\/.-]\\s*${year}(?:\\D|$)`);
+        return pattern.test(String(source || ''));
+    }
+
+    function vietnameseKtcgPrayerMassBlocks(source) {
+        const lines = strictSourceLines(source);
+        const starts = [];
+        lines.forEach((line, index) => {
+            if (/\bbai doc trong thanh le\b/.test(normalizeVietnameseDiocesanMatchText(line))) starts.push(index);
+        });
+        if (!starts.length) return [{ lines, descriptor: lines.slice(0, 12).join(' ') }];
+        return starts.map((start, index) => ({
+            lines: lines.slice(start, starts[index + 1] || lines.length),
+            descriptor: lines.slice(Math.max(0, start - 8), Math.min(lines.length, start + 6)).join(' ')
+        }));
+    }
+
+    function parseVietnameseKtcgPrayerBlock(block, date) {
+        const rawSections = strictExtractRawSections(block.lines || [], 'VN', getStrictMassSelector(date));
+        const data = {};
+        ['collect', 'prayer_offerings', 'prayer_after'].forEach(key => {
+            if (!rawSections[key]) return;
+            const parsed = strictFormatSection('VN', key, rawSections[key]);
+            if (sourceSectionHasContent(parsed)) data[key] = parsed;
+        });
+        return data;
+    }
+
+    function vietnameseKtcgPrayerBlockScore(block, date, ktcgTitle) {
+        const normalizedTitle = normalizeVietnameseDiocesanMatchText(ktcgTitle);
+        const isTemporal = /\b(?:ngay thuong|tuan|mua|chua nhat)\b/.test(normalizedTitle);
+        const candidates = isTemporal
+            ? [ktcgTitle, vietnameseSeasonalLookupTitle(date)]
+            : [ktcgTitle, vietnameseLookupTitle(date)];
+        const score = candidates.reduce((best, title) => Math.max(
+            best,
+            vietnameseDiocesanTextMatchScore(block.descriptor || '', title, date)
+        ), 0);
+        const descriptor = normalizeVietnameseDiocesanMatchText(block.descriptor || '');
+        return score - (!isTemporal && /\btuan\b/.test(descriptor) ? 0.25 : 0);
+    }
+
+    function parseVietnameseKtcgDiocesanPrayers(source, date, ktcgTitle) {
+        const prayerKeys = ['collect', 'prayer_offerings', 'prayer_after'];
+        const candidates = vietnameseKtcgPrayerMassBlocks(source)
+            .map(block => ({ block, score: vietnameseKtcgPrayerBlockScore(block, date, ktcgTitle) }))
+            .sort((a, b) => b.score - a.score);
+        for (const candidate of candidates) {
+            const data = parseVietnameseKtcgPrayerBlock(candidate.block, date);
+            if (prayerKeys.every(key => sourceSectionHasContent(data[key]))) return data;
+        }
+        return {};
+    }
+
+    function hasVietnameseKtcgDiocesanPrayers(parsed) {
+        const data = (parsed && parsed.data) || {};
+        return ['collect', 'prayer_offerings', 'prayer_after'].every(key => sourceSectionHasContent(data[key]));
     }
 
     async function applyVietnameseKtcgDiocesanPrayers(parsed, date) {
-        const sourceUrl = vietnameseKtcgDiocesanPrayerUrl(date);
-        if (!sourceUrl || !parsed || !parsed.data) return parsed;
+        if (!parsed || !parsed.data) return parsed;
         try {
-            const source = await fetchTextWithFallbacks(sourceUrl);
-            const supplement = strictParseDailyMass('VN', source, date);
-            const prayerKeys = ['collect', 'prayer_offerings', 'prayer_after'];
-            let applied = 0;
-            prayerKeys.forEach(key => {
-                if (sourceSectionHasContent(supplement.data && supplement.data[key])) {
-                    parsed.data[key] = supplement.data[key];
-                    applied += 1;
+            const sourceUrls = await resolveVietnameseKtcgDiocesanPrayerUrls(date);
+            for (const sourceUrl of sourceUrls) {
+                try {
+                    const source = await fetchTextWithFallbacks(sourceUrl, { timeoutMs: 12000 });
+                    if (!vietnameseKtcgDiocesanSourceMatchesDate(source, date)) continue;
+                    const prayers = parseVietnameseKtcgDiocesanPrayers(source, date, parsed.title);
+                    if (!['collect', 'prayer_offerings', 'prayer_after'].every(key => sourceSectionHasContent(prayers[key]))) continue;
+                    Object.assign(parsed.data, prayers);
+                    parsed.prayerSourceUrl = sourceUrl;
+                    parsed.prayerSourceName = 'Giáo Phận Ban Mê Thuột';
+                    return parsed;
+                } catch (sourceError) {
+                    console.warn(`Vietnamese diocesan prayer candidate failed: ${sourceUrl}`, sourceError);
                 }
-            });
-            if (!applied) throw new Error('No diocesan Roman Missal prayers found');
-            parsed.prayerSourceUrl = sourceUrl;
-            parsed.prayerSourceName = 'Giáo Phận Ban Mê Thuột';
+            }
+            throw new Error('No matching diocesan Roman Missal prayer article found');
         } catch (error) {
             console.warn('Vietnamese diocesan prayer supplement failed; keeping KTCG sections.', error);
         }
@@ -9438,11 +9606,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!entry || !entry.parsed) return null;
         if (!options.allowStale && !isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)) return null;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(entry.parsed)) return null;
+        if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
+            && !hasVietnameseKtcgDiocesanPrayers(entry.parsed)) return null;
         return entry.parsed;
     }
 
     function writeCachedDailySource(lang, date, parsed) {
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) return;
+        if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
+            && !hasVietnameseKtcgDiocesanPrayers(parsed)) return;
         if (parsed && parsed.data) {
             writeStorageJSON(dailySourceStorageKey(lang, date), { cachedAt: Date.now(), parsed });
         }
