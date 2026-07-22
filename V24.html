@@ -446,8 +446,8 @@
                 Sách Bài Đọc
             </button>
             <button type="button" class="vn-source-btn" data-vn-source="ktcg" onclick="chooseVietnameseReadingSource('ktcg')">
-                <strong>베트남 성무일도번역위원회 번역</strong>
-                Nhóm Phiên Dịch Các Giờ Kinh Phụng Vụ
+                <strong>베트남 성무일도번역위원회 번역 · Nhóm Phiên Dịch Các Giờ Kinh Phụng Vụ</strong>
+                Sách Bài Đọc trong Thánh Lễ
             </button>
         </div>
     </div>
@@ -648,7 +648,7 @@
             <label id="lbl-set-vn-source">📖 베트남어 전례독서 번역</label>
             <select id="set-vn-source" onchange="updateSettings()">
                 <option value="hanoi">주교회의 전례위원회(UBPT) 번역</option>
-                <option value="ktcg">성무일도번역위원회 · KTCG KPV</option>
+                <option value="ktcg">베트남 성무일도번역위원회 번역</option>
             </select>
         </div>
 
@@ -1869,7 +1869,7 @@
                 21: 8, 22: 7, 23: 7, 24: 7,
                 26: 6, 27: 6, 28: 6, 30: 6, 32: 6, 33: 3
             };
-            const number = lang === 'KR' ? (koreanOrdinarySundayPrefaceByWeek[meta.week] || 1) : 1;
+            const number = koreanOrdinarySundayPrefaceByWeek[meta.week] || 1;
             return { key: `ordinary_${number}`, source: 'perpetual-ordinary-week-rule' };
         }
         return { key: 'common_1', source: 'season-rule' };
@@ -1881,8 +1881,15 @@
     }
 
     function ensureDefaultPrefaceHint(info, date = null) {
-        if (info && (!info.prefaceHint || /^(?:default|calendar|season)/.test(info.prefaceHintSource || ''))) {
-            const selection = defaultPrefaceSelectionForLiturgyInfo(info, date);
+        const activeDate = date ? toDateOnly(date) : getActiveLiturgicalSourceDate();
+        const lang = activePrefaceLanguage();
+        const followsKoreanDefault = lang !== 'KR' && !localProperPrefaceSelection(info, lang, activeDate);
+        if (info && (
+            !info.prefaceHint
+            || /^(?:default|calendar|season)/.test(info.prefaceHintSource || '')
+            || (followsKoreanDefault && info.prefaceHintSource === 'source')
+        )) {
+            const selection = defaultPrefaceSelectionForLiturgyInfo(info, activeDate);
             info.prefaceHint = selection.hint || selection.key || '';
             info.prefaceKey = selection.key || '';
             info.prefaceHintSource = selection.source || 'default';
@@ -4968,7 +4975,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const doc = parseHtml(`<main id="ktcg-root">${String(html || '')}</main>`);
         const root = doc.getElementById('ktcg-root');
         if (!root) return [];
-        root.querySelectorAll('script, style').forEach(node => node.remove());
+        root.querySelectorAll('script, style, .holycross').forEach(node => node.remove());
         root.querySelectorAll('sup').forEach(node => node.replaceWith('\n'));
         root.querySelectorAll('br').forEach(node => node.replaceWith('\n'));
         const blocks = Array.from(root.querySelectorAll('p'));
@@ -5028,6 +5035,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         choices.forEach((choice, index) => {
             if (index) lines.push(parsedLine('', 'Hoặc:'));
             optionCits.push({ cit_vn: choice.citation });
+            let responseAdded = false;
             const doc = parseHtml(`<main id="ktcg-psalm">${choice.html}</main>`);
             const root = doc.getElementById('ktcg-psalm');
             if (!root) return;
@@ -5036,10 +5044,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             root.querySelectorAll('br').forEach(node => node.replaceWith('\n'));
             const blocks = Array.from(root.querySelectorAll('p'));
             (blocks.length ? blocks : [root]).forEach(node => {
-                const pre = node.matches('.response') ? cleanNodeText((node.querySelector('.pre') || {}).textContent) : '';
-                const bodyNode = node.matches('.response') ? node.querySelector('.body') : node;
+                const isResponse = node.matches('.response');
+                if (isResponse && responseAdded) return;
+                const pre = isResponse ? '- Đáp.' : '';
+                const bodyNode = isResponse ? node.querySelector('.body') : node;
                 const text = cleanNodeText(bodyNode && bodyNode.textContent);
                 if (pre || text) lines.push(parsedLine(pre, text));
+                if (isResponse) responseAdded = true;
             });
         });
         if (!lines.length) return null;
@@ -5054,8 +5065,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         choices.forEach((choice, index) => {
             if (index) lines.push(parsedLine('', 'Hoặc:'));
             optionCits.push({ cit_vn: choice.citation });
-            const parsed = parseVietnameseAcclamationLines(ktcgkpvHtmlParagraphs(choice.html));
-            lines.push(...(parsed.lines || []));
+            const paragraphs = ktcgkpvHtmlParagraphs(choice.html).map(text => text.replace(/^[-–—]\s*/, ''));
+            let text = cleanNodeText(paragraphs.join(' '));
+            const opening = text.match(/^(Ha-lê-lui-a\.\s*Ha-lê-lui-a\.)\s*/i);
+            const closing = text.match(/\s*(Ha-lê-lui-a\.)\s*$/i);
+            if (opening && closing && closing.index >= opening[0].length) {
+                const middle = cleanNodeText(text.slice(opening[0].length, closing.index));
+                lines.push(parsedLine('Mọi người', cleanNodeText(opening[1])));
+                if (middle) lines.push(parsedLine('', middle));
+                lines.push(parsedLine('', cleanNodeText(closing[1])));
+            } else {
+                const parsed = parseVietnameseAcclamationLines(paragraphs);
+                lines.push(...(parsed.lines || []));
+            }
         });
         if (!lines.length) return null;
         const cit_vn = optionCits.map(item => item.cit_vn).find(Boolean) || '';
@@ -5069,20 +5091,62 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const reading1Entries = firstNonEmptyKtcgkpvArray(choice, ['reading1', 'reading_1']);
         const reading2Entries = firstNonEmptyKtcgkpvArray(choice, ['reading2', 'reading_2']);
         const gospelEntries = firstNonEmptyKtcgkpvArray(choice, ['gospel']);
+        const entranceEntries = firstNonEmptyKtcgkpvArray(choice, ['introit', 'entrance']);
+        const communionEntries = firstNonEmptyKtcgkpvArray(choice, ['communion']);
         const data = {};
+        const entrance = ktcgkpvReadingSection(entranceEntries);
         const reading1 = ktcgkpvReadingSection(reading1Entries);
         const psalm = ktcgkpvPsalmSection(reading1Entries);
         const reading2 = ktcgkpvReadingSection(reading2Entries);
         const gospelAccl = ktcgkpvAcclamationSection(gospelEntries);
         const gospel = ktcgkpvReadingSection(gospelEntries);
+        const communion = ktcgkpvReadingSection(communionEntries);
+        if (entrance) data.entrance = entrance;
         if (reading1) data.reading1 = reading1;
         if (psalm) data.psalm = psalm;
         if (reading2) data.reading2 = reading2;
         if (gospelAccl) data.gospel_accl = gospelAccl;
         if (gospel) data.gospel = gospel;
+        if (communion) data.communion = communion;
         const dateInfo = choice.date_info || {};
         const title = cleanLiturgyTitle(dateInfo.daily_title || choice.display_text || getLiturgyDisplayName('VN'));
         return strictEnsureReadingSummarySlots({ title, color: state.liturgyInfo.color, data }, 'VN');
+    }
+
+    // KTCG publishes the readings and antiphons, but not the Roman Missal
+    // prayers.  Use only verified diocesan pages as an optional prayer
+    // supplement, without replacing any KTCG reading or antiphon text.
+    const vietnameseKtcgDiocesanPrayerSources = Object.freeze({
+        '07-22': 'https://gpbanmethuot.net/page/thanh-maria-magdalena.html'
+    });
+
+    function vietnameseKtcgDiocesanPrayerUrl(date) {
+        return vietnameseKtcgDiocesanPrayerSources[formatDateIso(date)]
+            || vietnameseKtcgDiocesanPrayerSources[calendarDateKey(date)]
+            || '';
+    }
+
+    async function applyVietnameseKtcgDiocesanPrayers(parsed, date) {
+        const sourceUrl = vietnameseKtcgDiocesanPrayerUrl(date);
+        if (!sourceUrl || !parsed || !parsed.data) return parsed;
+        try {
+            const source = await fetchTextWithFallbacks(sourceUrl);
+            const supplement = strictParseDailyMass('VN', source, date);
+            const prayerKeys = ['collect', 'prayer_offerings', 'prayer_after'];
+            let applied = 0;
+            prayerKeys.forEach(key => {
+                if (sourceSectionHasContent(supplement.data && supplement.data[key])) {
+                    parsed.data[key] = supplement.data[key];
+                    applied += 1;
+                }
+            });
+            if (!applied) throw new Error('No diocesan Roman Missal prayers found');
+            parsed.prayerSourceUrl = sourceUrl;
+            parsed.prayerSourceName = 'Giáo Phận Ban Mê Thuột';
+        } catch (error) {
+            console.warn('Vietnamese diocesan prayer supplement failed; keeping KTCG sections.', error);
+        }
+        return parsed;
     }
 
     function ktcgkpvCitationFromEntry(entry) {
@@ -7334,7 +7398,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         'prayer_offerings', 'communion', 'prayer_after'
     ];
 
-    const requiredVietnameseKtcgSectionKeys = ['reading1', 'psalm', 'gospel_accl', 'gospel'];
+    const requiredVietnameseKtcgSectionKeys = ['entrance', 'reading1', 'psalm', 'gospel_accl', 'gospel', 'communion'];
 
     function activeRequiredVietnameseDailySectionKeys() {
         return normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
@@ -9209,7 +9273,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         await loadAllSoulsMassConfigIfNeeded(date);
         if (lang === 'VN') {
             if (normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg') {
-                return fetchVietnameseKtcgDailyMass(date);
+                const parsed = await fetchVietnameseKtcgDailyMass(date);
+                return applyVietnameseKtcgDiocesanPrayers(parsed, date);
             }
             const temporalFallback = vietnameseTemporalFallbackParsed(date);
             if (temporalFallback) {
