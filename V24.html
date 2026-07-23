@@ -5157,6 +5157,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (index) lines.push(parsedLine('', 'Hoặc:'));
             optionCits.push({ cit_vn: choice.citation });
             let responseAdded = false;
+            const hanoiStyleLines = [];
             const doc = parseHtml(`<main id="ktcg-psalm">${choice.html}</main>`);
             const root = doc.getElementById('ktcg-psalm');
             if (!root) return;
@@ -5167,12 +5168,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             (blocks.length ? blocks : [root]).forEach(node => {
                 const isResponse = node.matches('.response');
                 if (isResponse && responseAdded) return;
-                const pre = isResponse ? '- Đáp.' : '';
                 const bodyNode = isResponse ? node.querySelector('.body') : node;
-                const text = cleanNodeText(bodyNode && bodyNode.textContent);
-                if (pre || text) lines.push(parsedLine(pre, text));
+                const text = cleanNodeText(bodyNode && bodyNode.textContent).replace(/\s+/g, ' ').trim();
+                if (!text) return;
+                hanoiStyleLines.push(`${isResponse ? 'Đáp' : 'Xướng'}: ${text}`);
                 if (isResponse) responseAdded = true;
             });
+            lines.push(...parseVietnamesePsalmLines(hanoiStyleLines).lines);
         });
         if (!lines.length) return null;
         const cit_vn = optionCits.map(item => item.cit_vn).find(Boolean) || '';
@@ -6212,8 +6214,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function normalizeVietnamesePsalmResponseTail(text) {
         const response = '(?:Đáp|Ðáp|Dap|Đ\\.|Ð\\.)';
         return cleanNodeText(text)
-            .replace(new RegExp(`\\s*[–—-]\\s*${response}\\.?\\s*(?:[–—-]\\s*${response}\\.?\\s*)+$`, 'iu'), ' - Ðáp.')
-            .replace(new RegExp(`\\s*[–—-]\\s*${response}\\.?\\s*$`, 'iu'), ' - Ðáp.');
+            .replace(new RegExp(`\\s*[–—-]\\s*${response}\\.?\\s*(?:[–—-]\\s*${response}\\.?\\s*)+$`, 'iu'), ' - Đáp.')
+            .replace(new RegExp(`\\s*[–—-]\\s*${response}\\.?\\s*$`, 'iu'), ' - Đáp.');
     }
 
     function parseVietnamesePsalmLines(lines) {
@@ -6233,12 +6235,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             if (/^(Đáp|Ðáp|Đ\.|Ð\.)\s*[:.：]?/i.test(line)) {
                 responseRef = responseRef || extractParentheticalRef(line);
-                out.push(parsedLine('Ðáp', removeParentheticalRef(line.replace(/^(Đáp|Ðáp|Đ\.|Ð\.)\s*[:.：]?\s*/i, ''))));
+                out.push(parsedLine('Đáp', removeParentheticalRef(line.replace(/^(Đáp|Ðáp|Đ\.|Ð\.)\s*[:.：]?\s*/i, ''))));
                 return;
             }
             if (/^Xướng:/i.test(line)) {
                 let text = normalizeVietnamesePsalmResponseTail(line.replace(/^Xướng:\s*/i, '').trim());
-                if (!/[–—-]\s*(?:Đáp|Ðáp|Dap|Đ\.|Ð\.)\.?$/iu.test(text)) text = `${text} - Ðáp.`;
+                if (!/[–—-]\s*(?:Đáp|Ðáp|Dap|Đ\.|Ð\.)\.?$/iu.test(text)) text = `${text} - Đáp.`;
                 text = normalizeVietnamesePsalmResponseTail(text);
                 out.push(parsedLine('Xướng', text));
                 return;
