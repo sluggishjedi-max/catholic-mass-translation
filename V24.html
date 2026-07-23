@@ -709,6 +709,7 @@
 <script src="JS%20file/prayer_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/hymn_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/church_local_details.js?v=20260722-v24-1"></script>
+<script src="JS%20file/bishop_data.js?v=20260723-v24-2"></script>
 
 <script>
     // 통상문은 배포된 missa_data.js만 사용합니다.
@@ -746,6 +747,9 @@
         churchCountry: '',
         selectedLocationCode: 'KR',
         gpsTimeZone: '',
+        gpsCoordinates: null,
+        gpsDiocese: '',
+        bishopContext: null,
         massScrollSnapshot: null,
         dayOffset: 0,
         liturgyNavSlot: '',
@@ -2300,10 +2304,12 @@
     let churchMapsApiKeyPromise = null;
     let churchSearchRequestId = 0;
     let churchInfoRequestId = 0;
+    let gpsBishopRequestId = 0;
     const churchPlaceDetailsCache = new Map();
     const CHURCH_MAX_RESULTS = 120;
     const CHURCH_MAX_RESULTS_PER_QUERY = 60;
     const CHURCH_TEXT_SEARCH_PAGE_DELAY_MS = 1800;
+    const GPS_BISHOP_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
     const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
 
     const prayerSeedData = [
@@ -3370,6 +3376,117 @@
             || (name && source[name])
             || (normalizedName && source[normalizedName])
             || {};
+    }
+
+    function normalizeDioceseLookup(value) {
+        return normalizeSemanticText(value)
+            .replace(/\b(?:archdiocese|diocese|tong giao phan|giao phan)\b/gu, '')
+            .replace(/(?:대)?교구/gu, '')
+            .replace(/[^\p{L}\p{N}]+/gu, '');
+    }
+
+    function bishopContextForDiocese(diocese) {
+        const entries = globalThis.diocesanBishopData && globalThis.diocesanBishopData.entries;
+        if (!entries || !diocese) return null;
+        const exact = entries[diocese];
+        const normalized = normalizeDioceseLookup(diocese);
+        const matchedKey = exact ? diocese : Object.keys(entries).find(key => normalizeDioceseLookup(key) === normalized);
+        const entry = exact || (matchedKey && entries[matchedKey]);
+        if (!entry || !entry.ordinary) return null;
+        return {
+            diocese: matchedKey || diocese,
+            ordinary: entry.ordinary,
+            auxiliaries: Array.isArray(entry.auxiliaries) ? entry.auxiliaries : [],
+            collaboratorSummary: !!entry.collaboratorSummary,
+            sourceUrls: Array.isArray(entry.sourceUrls) ? entry.sourceUrls : []
+        };
+    }
+
+    function bishopContextFromNearbyChurchPlaces(places, center = null) {
+        const ranked = (Array.isArray(places) ? places : []).map((place, index) => ({
+            place,
+            index,
+            distance: center && place && place.geometry && place.geometry.location
+                ? churchDistanceMeters(center, place.geometry.location)
+                : index
+        })).sort((a, b) => a.distance - b.distance || a.index - b.index);
+        for (const item of ranked) {
+            const local = churchLocalDetailsForPlace(item.place);
+            const context = bishopContextForDiocese(local && local.diocese);
+            if (context) return context;
+        }
+        return null;
+    }
+
+    function gpsBishopCacheKey(lat, lon) {
+        return `${STORAGE_PREFIX}gpsBishop:${Number(lat).toFixed(2)}:${Number(lon).toFixed(2)}`;
+    }
+
+    function applyGpsBishopContext(context) {
+        const previousDiocese = cleanNodeText(state.gpsDiocese);
+        state.bishopContext = context || null;
+        state.gpsDiocese = context ? cleanNodeText(context.diocese) : '';
+        return previousDiocese !== state.gpsDiocese;
+    }
+
+    async function nearbyCatholicChurchesForBishop(lat, lon) {
+        await loadGoogleMapsForChurches();
+        const center = { lat: Number(lat), lng: Number(lon) };
+        const Place = await modernChurchPlaceClass();
+        if (Place && typeof Place.searchNearby === 'function') {
+            const result = await Place.searchNearby({
+                fields: ['id', 'displayName', 'formattedAddress', 'location'],
+                locationRestriction: { center, radius: 30000 },
+                includedPrimaryTypes: ['church'],
+                maxResultCount: 20
+            });
+            return (result.places || [])
+                .filter(isLikelyCatholicChurchPlace)
+                .map(normalizeModernChurchPlace)
+                .filter(Boolean);
+        }
+        if (!(window.google && google.maps && google.maps.places)) return [];
+        const service = churchPlacesService || new google.maps.places.PlacesService(document.createElement('div'));
+        const results = await new Promise(resolve => {
+            service.nearbySearch({
+                location: center,
+                radius: 30000,
+                keyword: churchNearbyKeywordsForLocation()[0],
+                type: 'church'
+            }, (items, status) => resolve(
+                status === google.maps.places.PlacesServiceStatus.OK && Array.isArray(items) ? items : []
+            ));
+        });
+        return results;
+    }
+
+    async function refreshGpsBishopContext(lat, lon, lang = state.currentLoc) {
+        if (!['KR', 'VN'].includes(normalizeSelectableLang(lang || '', ''))) {
+            if (applyGpsBishopContext(null)) render();
+            return null;
+        }
+        const requestId = ++gpsBishopRequestId;
+        const cacheKey = gpsBishopCacheKey(lat, lon);
+        const cached = readStorageJSON(cacheKey);
+        if (isFreshCacheEntry(cached, GPS_BISHOP_CACHE_TTL_MS)) {
+            const cachedContext = bishopContextForDiocese(cached.diocese);
+            if (cachedContext) {
+                if (applyGpsBishopContext(cachedContext)) render();
+                return cachedContext;
+            }
+        }
+        try {
+            const center = { lat: Number(lat), lng: Number(lon) };
+            const places = await nearbyCatholicChurchesForBishop(lat, lon);
+            if (requestId !== gpsBishopRequestId) return null;
+            const context = bishopContextFromNearbyChurchPlaces(places, center);
+            if (context) writeStorageJSON(cacheKey, { cachedAt: Date.now(), diocese: context.diocese });
+            if (applyGpsBishopContext(context)) render();
+            return context;
+        } catch (error) {
+            console.warn('GPS 교구/주교 판별에 실패하여 주교명 자리표시자를 유지합니다.', error);
+            return null;
+        }
     }
 
     function churchDetailList(value) {
@@ -4639,6 +4756,8 @@
         if (!state.useGps) {
             state.selectedLocationCode = document.getElementById('set-loc').value || 'KR';
             state.gpsTimeZone = '';
+            state.gpsCoordinates = null;
+            applyGpsBishopContext(null);
             state.currentLoc = normalizeSelectableLang(getLangFromLocation(state.selectedLocationCode), 'KR');
         } else if (!previousUseGps) {
             simulateGPS(); // GPS 스위치를 방금 켰을 때만 재탐색
@@ -10647,10 +10766,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     (citationEntry && citationEntry[`cit_${lower}`])
                     || (index === 0 ? directCitationForLower(section, lower) : '')
                 );
-                const citationKey = citationStartsForCompare(rawCitation)[0] || normalizedCitationForCompare(rawCitation);
-                if (!citationKey) return;
-                if (!citationGroups[citationKey]) citationGroups[citationKey] = {};
-                citationGroups[citationKey][lower] = index;
+                const citationStarts = citationStartsForCompare(rawCitation);
+                const citationKeys = citationStarts.length
+                    ? citationStarts
+                    : [normalizedCitationForCompare(rawCitation)].filter(Boolean);
+                citationKeys.forEach(citationKey => {
+                    if (!citationGroups[citationKey]) citationGroups[citationKey] = {};
+                    citationGroups[citationKey][lower] = index;
+                });
             });
         });
 
@@ -11728,11 +11851,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         navigator.geolocation.getCurrentPosition(pos => {
             const lat = pos.coords.latitude;
             const lon = pos.coords.longitude;
+            state.gpsCoordinates = { lat, lon };
             const nextLoc = gpsLocationForCoordinates(lat, lon);
             const detectedTimeZone = gpsTimeZoneForCoordinates(lat, lon, nextLoc);
             if (applyDetectedLocation(nextLoc, detectedTimeZone)) fetchMassData();
             else render();
+            refreshGpsBishopContext(lat, lon, nextLoc);
         }, () => {
+            state.gpsCoordinates = null;
+            applyGpsBishopContext(null);
             const fallbackZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Seoul';
             if (applyDetectedLocation(gpsLocationForCoordinates(Number.NaN, Number.NaN), fallbackZone)) fetchMassData();
         }, { timeout: 8000, maximumAge: 60000, enableHighAccuracy: false });
@@ -12623,6 +12750,63 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/(교황\s*)(?:\[[^\]]*\]|\([^)]*\)|\?{1,4})(\s*와(?:\(과\))?)/gu, `$1${popeNameHtml}$2`);
     }
 
+    function localizedBishopName(person, langKey) {
+        if (!person) return '';
+        return cleanNodeText(person[langKey] || person.en || person.kr || person.vn || person.la || person.jp);
+    }
+
+    function koreanNameParticle(name) {
+        const compact = cleanNodeText(name).replace(/\s+/g, '');
+        const last = compact.charCodeAt(compact.length - 1);
+        return last >= 0xAC00 && last <= 0xD7A3 && (last - 0xAC00) % 28 !== 0 ? '과' : '와';
+    }
+
+    function koreanBishopSequence(context = state.bishopContext, options = {}) {
+        if (!context || !context.ordinary) return '';
+        const html = !!options.html;
+        const includeAuxiliaries = options.includeAuxiliaries !== false;
+        const renderName = person => {
+            const name = localizedBishopName(person, 'kr');
+            return html ? `<span class="muted-name-placeholder">${escapeHtml(name)}</span>` : name;
+        };
+        const ordinaryName = localizedBishopName(context.ordinary, 'kr');
+        const ordinary = `${renderName(context.ordinary)}${koreanNameParticle(ordinaryName)}`;
+        const auxiliaries = includeAuxiliaries && Array.isArray(context.auxiliaries) ? context.auxiliaries : [];
+        if (!auxiliaries.length) return ordinary;
+        if (context.collaboratorSummary) return `${ordinary}, 협력주교들과`;
+        return [ordinary].concat(auxiliaries.map(person => {
+            const name = localizedBishopName(person, 'kr');
+            return `${renderName(person)}${koreanNameParticle(name)}`;
+        })).join(', ');
+    }
+
+    function replaceBishopPlaceholder(html, langKey) {
+        const context = state.bishopContext;
+        if (!context || !context.ordinary) return String(html || '');
+        const ordinaryName = localizedBishopName(context.ordinary, langKey);
+        if (!ordinaryName) return String(html || '');
+        const ordinaryHtml = `<span class="muted-name-placeholder">${escapeHtml(ordinaryName)}</span>`;
+        let output = String(html || '');
+        if (langKey === 'kr') {
+            output = output.replace(/\s*\\?\(\s*(?:협력\s*주교들과?|보좌\s*주교들과?)[^)]*\\?\)/gu, '');
+            const koreanPlaceholder = '(?:\\[(?:주교명|세례명)\\]|\\((?:주교명|세례명)\\)|아무|\\?{1,4})';
+            output = output.replace(
+                new RegExp(`(저희\\s*주교\\s*)${koreanPlaceholder}\\s*(?:와(?:\\(과\\))?|과(?:\\(와\\))?)?`, 'gu'),
+                (match, prefix, offset, source) => {
+                    const remaining = source.slice(offset + match.length);
+                    const includeAuxiliaries = !/^\s*,?\s*세계의\s*모든\s*주교/u.test(remaining);
+                    return `${prefix}${koreanBishopSequence(context, { html: true, includeAuxiliaries })}`;
+                }
+            );
+            return output.replace(/(?:\[주교명\]|\(주교명\))/gu, ordinaryHtml);
+        }
+        const bishopPattern = '(?:bishop name|bishop n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|司教名|nomen episcopi|episcopus n\\.?)';
+        output = output.replace(new RegExp(`(?:\\(${bishopPattern}\\)|\\[${bishopPattern}\\])`, 'giu'), ordinaryHtml);
+        if (langKey === 'vn') output = output.replace(/(Đức\s+Giám\s+Mục\s+)T…/giu, `$1${ordinaryHtml}`);
+        if (langKey === 'jp') output = output.replace(/(司教\s*)○{2,}/gu, `$1${ordinaryHtml}`);
+        return output;
+    }
+
     function markMutedNamePlaceholders(html) {
         const mutedNamePattern = '(?:주교명|세례명|bishop name|bishop n\\.?|baptismal name|Christian name|person name|the other person name|person n\\.?|the other person n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|tên thánh|tên rửa tội|司教名|洗礼名|nomen episcopi|nomen baptismale)';
         return String(html || '')
@@ -12636,7 +12820,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function formatDynamicLineText(html, langKey) {
         if (!html || isAIButton(html)) return html || '';
-        return markMutedNamePlaceholders(replacePopePlaceholder(html, langKey));
+        return markMutedNamePlaceholders(replaceBishopPlaceholder(replacePopePlaceholder(html, langKey), langKey));
     }
 
     function shouldSuppressSpeaker(baseId) {
