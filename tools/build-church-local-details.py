@@ -44,6 +44,23 @@ CANTHO_PRIESTS_URL = "https://gpcantho.com/danh-sach-linh-muc-doan-giao-phan-can
 CANTHO_PRIESTS_DRIVE_ID = "1anYoEw10NybGEBur7UtPrd719xjVbbhy"
 GOODNEWS_PARISH_API = "https://catholicapi.catholic.or.kr/app/parish/getParishList.asp"
 GOODNEWS_PARISH_DETAIL = "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum={orgnum}"
+GOODNEWS_KOREAN_DIOCESES = {
+    "11": {"diocese": "서울대교구", "key": "Seoul"},
+    "12": {"diocese": "대전교구", "key": "Daejeon"},
+    "14": {"diocese": "인천교구", "key": "Incheon"},
+    "15": {"diocese": "춘천교구", "key": "Chuncheon"},
+    "16": {"diocese": "원주교구", "key": "Wonju"},
+    "17": {"diocese": "의정부교구", "key": "Uijeongbu"},
+    "21": {"diocese": "대구대교구", "key": "Daegu"},
+    "22": {"diocese": "부산교구", "key": "Busan"},
+    "23": {"diocese": "청주교구", "key": "Cheongju"},
+    "24": {"diocese": "마산교구", "key": "Masan"},
+    "25": {"diocese": "안동교구", "key": "Andong"},
+    "31": {"diocese": "광주대교구", "key": "Gwangju"},
+    "32": {"diocese": "전주교구", "key": "Jeonju"},
+    "33": {"diocese": "제주교구", "key": "Jeju"},
+    "41": {"diocese": "군종교구", "key": "Military"},
+}
 HCMC_MASS_LIST_URL = "https://tgpsaigon.net/gio-le/"
 HCMC_MASS_API_URL = "https://tgpsaigon.net/ArchDiocese/LoadMassTime"
 HCMC_BASE_URL = "https://tgpsaigon.net/"
@@ -539,6 +556,7 @@ def build_goodnews_diocese(gyo_code: str, diocese: str, *, refresh: bool = False
 
     def build_row(row: dict) -> dict:
         orgnum = clean_text(row.get("orgnum"))
+        directory_name = clean_text(row.get("TITLE"))
         mass_times: list[str] = []
         mass_period = ""
         if orgnum:
@@ -546,14 +564,17 @@ def build_goodnews_diocese(gyo_code: str, diocese: str, *, refresh: bool = False
                 mass_times, mass_period = parse_goodnews_mass_detail(orgnum, refresh=refresh)
             except Exception as error:
                 print(f"GoodNews detail failed ({diocese} {orgnum}): {error}", flush=True)
-        if not mass_times and clean_text(row.get("missatime")):
-            mass_times = [clean_text(row.get("missatime"))]
+        daily_fallback = clean_text(row.get("missatime"))
+        if not mass_times and daily_fallback:
+            mass_times = [re.sub(r"^([^-]+)-", r"\1 ", daily_fallback)]
+            korea_today = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date().isoformat()
+            mass_period = f"가톨릭 굿뉴스 당일 미사시간 ({korea_today})"
         lat = clean_text(row.get("lat"))
         lng = clean_text(row.get("lng"))
         return compact_record({
             "country": "KR",
-            "name": f"{clean_text(row.get('TITLE'))}성당",
-            "directoryName": clean_text(row.get("TITLE")),
+            "name": directory_name if directory_name.endswith("성당") else f"{directory_name}성당",
+            "directoryName": directory_name,
             "diocese": diocese,
             "deanery": clean_text(row.get("giguName1") or row.get("localName")),
             "address": clean_text(row.get("addr")),
@@ -598,19 +619,63 @@ def merge_official_diocese_records(korea: list[dict], diocesan: list[dict]) -> i
             index[key] = source
             merged += 1
             continue
-        for field in ("address", "phone", "website", "massTimesPeriod", "officialDioceseUrl"):
+        for field in (
+            "address", "phone", "website", "massTimesPeriod", "officialDioceseUrl",
+            "deanery", "patron", "lat", "lng",
+        ):
             if source.get(field):
                 target[field] = source[field]
         if source.get("massTimes"):
             target["massTimes"] = unique(source["massTimes"])
+            target["massTimesSourceUrl"] = source.get("sourceUrl")
         for field in ("priestNames", "sisterNames", "openingHours"):
             if source.get(field):
                 target[field] = unique([*target.get(field, []), *source[field]])
+        target["sourceUrls"] = unique([
+            *target.get("sourceUrls", []),
+            target.get("sourceUrl", ""),
+            source.get("sourceUrl", ""),
+        ])
+        target["dioceseSourceCode"] = source.get("sourceCode")
         target["dioceseSourceName"] = source.get("sourceName")
         target["dioceseSourceAuthority"] = source.get("sourceAuthority")
         merged += 1
     korea.sort(key=lambda item: item.get("directoryName", ""))
     return merged
+
+
+def merge_goodnews_korean_dioceses(
+    korea: list[dict],
+    *,
+    refresh: bool = False,
+    workers: int = 8,
+) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for gyo_code, spec in GOODNEWS_KOREAN_DIOCESES.items():
+        diocese = spec["diocese"]
+        key = spec["key"]
+        diocesan = build_goodnews_diocese(
+            gyo_code,
+            diocese,
+            refresh=refresh,
+            workers=workers,
+        )
+        merged = merge_official_diocese_records(korea, diocesan)
+        mass_count = sum(bool(item.get("massTimes")) for item in diocesan)
+        daily_fallback_count = sum(
+            clean_text(item.get("massTimesPeriod")).startswith("가톨릭 굿뉴스 당일 미사시간")
+            for item in diocesan
+        )
+        counts[f"KR-{key}Records"] = len(diocesan)
+        counts[f"KR-{key}MassTimes"] = mass_count
+        counts[f"KR-{key}DailyFallbacks"] = daily_fallback_count
+        counts[f"KR-{key}Merged"] = merged
+        print(
+            f"GoodNews {diocese}: records={len(diocesan)} "
+            f"massTimes={mass_count} dailyFallbacks={daily_fallback_count} merged={merged}",
+            flush=True,
+        )
+    return counts
 
 
 def accent_fold(value: str) -> str:
@@ -2032,16 +2097,14 @@ def main() -> None:
         if "korea" in countries:
             korea = [record for record in records if record.get("country") == "KR"]
             records = [record for record in records if record.get("country") != "KR"]
-            seoul = build_goodnews_diocese("11", "서울대교구", refresh=args.refresh, workers=args.workers)
-            merged_seoul = merge_official_diocese_records(korea, seoul)
-            uijeongbu = build_goodnews_diocese("17", "의정부교구", refresh=args.refresh, workers=args.workers)
-            merged_uijeongbu = merge_official_diocese_records(korea, uijeongbu)
+            goodnews_counts = merge_goodnews_korean_dioceses(
+                korea,
+                refresh=args.refresh,
+                workers=args.workers,
+            )
             records.extend(korea)
             source_counts["KR"] = len(korea)
-            source_counts["KR-SeoulMassTimes"] = sum(bool(item.get("massTimes")) for item in seoul)
-            source_counts["KR-SeoulMerged"] = merged_seoul
-            source_counts["KR-UijeongbuMassTimes"] = sum(bool(item.get("massTimes")) for item in uijeongbu)
-            source_counts["KR-UijeongbuMerged"] = merged_uijeongbu
+            source_counts.update(goodnews_counts)
         if "hochiminh" in countries or "vietnam" in countries:
             records = [record for record in records if record.get("diocese") != "Tổng Giáo phận Sài Gòn"]
             hochiminh = build_hochiminh(refresh=args.refresh, workers=args.workers)
@@ -2083,18 +2146,16 @@ def main() -> None:
         korea = build_korea(refresh=args.refresh, workers=args.workers)
         suwon = build_suwon(refresh=args.refresh, workers=args.workers)
         merged_suwon = merge_official_diocese_records(korea, suwon)
-        seoul = build_goodnews_diocese("11", "서울대교구", refresh=args.refresh, workers=args.workers)
-        merged_seoul = merge_official_diocese_records(korea, seoul)
-        uijeongbu = build_goodnews_diocese("17", "의정부교구", refresh=args.refresh, workers=args.workers)
-        merged_uijeongbu = merge_official_diocese_records(korea, uijeongbu)
+        goodnews_counts = merge_goodnews_korean_dioceses(
+            korea,
+            refresh=args.refresh,
+            workers=args.workers,
+        )
         records.extend(korea)
         source_counts["KR"] = len(korea)
         source_counts["KR-SuwonMassTimes"] = sum(bool(item.get("massTimes")) for item in suwon)
         source_counts["KR-SuwonMerged"] = merged_suwon
-        source_counts["KR-SeoulMassTimes"] = sum(bool(item.get("massTimes")) for item in seoul)
-        source_counts["KR-SeoulMerged"] = merged_seoul
-        source_counts["KR-UijeongbuMassTimes"] = sum(bool(item.get("massTimes")) for item in uijeongbu)
-        source_counts["KR-UijeongbuMerged"] = merged_uijeongbu
+        source_counts.update(goodnews_counts)
     if "cantho" in countries or "vietnam" in countries:
         cantho = build_cantho(refresh=args.refresh)
         records.extend(cantho)
