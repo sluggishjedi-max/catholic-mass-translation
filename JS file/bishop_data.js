@@ -23,7 +23,13 @@
     titus: { kr: '티토', vn: 'Titô', en: 'Titus', jp: 'ティト', la: 'Titus' },
     john: { kr: '요한', vn: 'Gioan', en: 'John', jp: 'ヨハネ', la: 'Ioannes' },
     basil: { kr: '바실리오', vn: 'Basiliô', en: 'Basil', jp: 'バジリオ', la: 'Basilius' },
-    emmanuel: { kr: '임마누엘', vn: 'Emmanuel', en: 'Emmanuel', jp: 'エマヌエル', la: 'Emmanuel' }
+    emmanuel: { kr: '임마누엘', vn: 'Emmanuel', en: 'Emmanuel', jp: 'エマヌエル', la: 'Emmanuel' },
+    tarcisius: { kr: '타르치시오', vn: 'Tarcisiô', en: 'Tarcisius', jp: 'タルチシオ', la: 'Tarcisius' },
+    andrea: { kr: '안드레아', vn: 'Anrê', en: 'Andrea', jp: 'アンドレア', la: 'Andreas' },
+    thomasAquinas: { kr: '토마스 아퀴나스', vn: 'Tôma Aquinô', en: 'Thomas Aquinas', jp: 'トマス・アクィナス', la: 'Thomas Aquinas' },
+    michael: { kr: '미카엘', vn: 'Micae', en: 'Michael', jp: 'ミカエル', la: 'Michael' },
+    josepMaria: { kr: '요셉 마리아', vn: 'Giuse Maria', en: 'Josep Maria', jp: 'ヨゼフ・マリア', la: 'Ioseph Maria' },
+    bernard: { kr: '베르나르도', vn: 'Bênađô', en: 'Bernard', jp: 'ベルナルド', la: 'Bernardus' }
   };
 
   const cbck = code => `https://directory.cbck.or.kr/m/catholicInfo.asp?code=${code}&gubun=1`;
@@ -56,15 +62,33 @@
       'Tổng Giáo phận Hà Nội': entry('joseph', ['joseph'], [
         'https://www.tonggiaophanhanoi.org/cac-uy-ban-muc-vu-tong-giao-phan-ha-noi-hop-tong-ket-2025/'
       ]),
-      'Tổng Giáo phận Sài Gòn': entry('joseph', ['joseph'], [
-        'https://tgpsaigon.net/bai-viet/duc-tong-giam-muc-giuse-chuc-mung-dai-le-phat-dan-phat-lich-2570-89105',
-        'https://tgpsaigon.net/bai-viet/thanh-le-be-mac-nam-thuc-tap-muc-vu-khoa-21-89104'
-      ]),
+      'Tổng Giáo phận Sài Gòn': entry('joseph', ['joseph', 'johnBaptist'], [
+        'https://tgpsaigon.net/bai-viet/luoc-su-tong-giao-phan-sai-gon-tphcm-65',
+        'https://tgpsaigon.net/bai-viet/buoi-cau-nguyen-dau-tien-cho-duc-giam-muc-tan-cu-gioan-baotixita-nguyen-quang-tuyen-87607'
+      ], { collaboratorSummary: true }),
       'Giáo phận Cần Thơ': entry('peter', [], [
         'https://gpcantho.com/giao-phan-can-tho-quyet-dinh-thuc-hanh-muc-vu-nam-2026/'
       ]),
       'Giáo phận Bà Rịa': entry('emmanuel', [], [
         'https://www.giaophanbaria.org/sinh-hoat-giao-xu/binh-gia/2026/07/07/gx-xuan-son-thanh-le-ban-bi-tich-them-suc-ngay-06-7-2026.html'
+      ]),
+      '東京大司教区': entry('tarcisius', ['andrea'], [
+        'https://www.cbcj.catholic.jp/english/japan/diocese/tokyo/'
+      ]),
+      '大阪高松大司教区': entry('thomasAquinas', ['paul'], [
+        'https://www.cbcj.catholic.jp/english/japan/diocese/ostk/'
+      ]),
+      '京都司教区': entry('paul', [], [
+        'https://www.cbcj.catholic.jp/english/japan/diocese/kyoto/'
+      ]),
+      '名古屋司教区': entry('michael', [], [
+        'https://www.cbcj.catholic.jp/english/japan/diocese/nagoya/'
+      ]),
+      '福岡司教区': entry('josepMaria', [], [
+        'https://www.cbcj.catholic.jp/english/japan/diocese/fukuoka/'
+      ]),
+      '札幌司教区': entry('bernard', [], [
+        'https://www.cbcj.catholic.jp/english/japan/diocese/sapporo/'
       ])
     }
   };

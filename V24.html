@@ -708,8 +708,9 @@
 <script src="JS%20file/korean_blessing_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/prayer_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/hymn_data.js?v=20260722-v24-1"></script>
-<script src="JS%20file/church_local_details.js?v=20260722-v24-1"></script>
-<script src="JS%20file/bishop_data.js?v=20260723-v24-3"></script>
+<script src="JS%20file/church_local_details.js?v=20260723-v24-2"></script>
+<script src="JS%20file/bishop_data.js?v=20260723-v24-4"></script>
+<script src="JS%20file/us_bishop_data.js?v=20260723-v24-1"></script>
 
 <script>
     // 통상문은 배포된 missa_data.js만 사용합니다.
@@ -2306,11 +2307,13 @@
     let churchInfoRequestId = 0;
     let gpsBishopRequestId = 0;
     const churchPlaceDetailsCache = new Map();
+    const usMassTimesCache = new Map();
     const CHURCH_MAX_RESULTS = 120;
     const CHURCH_MAX_RESULTS_PER_QUERY = 60;
     const CHURCH_TEXT_SEARCH_PAGE_DELAY_MS = 1800;
     const GPS_BISHOP_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
     const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
+    const US_MASS_TIMES_ENDPOINT = window.ORDO_US_MASS_TIMES_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/usMassTimesProxy';
 
     const prayerSeedData = [
         {
@@ -3378,10 +3381,143 @@
             || {};
     }
 
+    function churchPointCoordinates(value) {
+        const location = value && value.geometry && value.geometry.location
+            ? value.geometry.location
+            : value;
+        const lat = Number(location && (typeof location.lat === 'function' ? location.lat() : (location.lat ?? location.latitude)));
+        const lng = Number(location && (typeof location.lng === 'function' ? location.lng() : (location.lng ?? location.longitude)));
+        return Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
+    }
+
+    function usMassTimesCacheKey(lat, lng) {
+        return `${Number(lat).toFixed(3)}:${Number(lng).toFixed(3)}`;
+    }
+
+    async function fetchUsMassTimesNearby(lat, lng) {
+        const key = usMassTimesCacheKey(lat, lng);
+        if (usMassTimesCache.has(key)) return usMassTimesCache.get(key);
+        const promise = fetchWithTimeout(US_MASS_TIMES_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ lat: Number(lat), lon: Number(lng), page: 1 }),
+            cache: 'no-cache',
+            timeoutMs: 15000
+        }).then(async response => {
+            if (!response.ok) throw new Error(`USCCB/MassTimes HTTP ${response.status}`);
+            const payload = await response.json();
+            return Array.isArray(payload && payload.churches) ? payload.churches : [];
+        }).catch(error => {
+            usMassTimesCache.delete(key);
+            throw error;
+        });
+        usMassTimesCache.set(key, promise);
+        return promise;
+    }
+
+    function usMassTimeText(item) {
+        const serviceType = cleanNodeText(item && item.serviceType);
+        if (!/^(?:Weekend|Week Days|Holy Days)$/i.test(serviceType)) return '';
+        const time = [cleanNodeText(item && item.start), cleanNodeText(item && item.end)]
+            .filter(Boolean)
+            .map(value => value.replace(/:\d{2}$/, ''))
+            .join('–');
+        return [
+            cleanNodeText(item && item.day),
+            time,
+            cleanNodeText(item && item.language),
+            cleanNodeText(item && item.comment)
+        ].filter(Boolean).join(' · ');
+    }
+
+    function normalizeUsMassTimesChurch(church) {
+        if (!church || typeof church !== 'object') return null;
+        const dioceseName = cleanNodeText(church.dioceseName);
+        const dioceseType = cleanNodeText(church.dioceseType);
+        const massTimes = (Array.isArray(church.worshipTimes) ? church.worshipTimes : [])
+            .map(usMassTimeText)
+            .filter(Boolean);
+        const address = [
+            cleanNodeText(church.address),
+            cleanNodeText(church.city),
+            cleanNodeText(church.state),
+            cleanNodeText(church.postalCode)
+        ].filter(Boolean).join(', ');
+        return {
+            place_id: church.id ? `masstimes-${church.id}` : '',
+            name: cleanNodeText(church.name),
+            formatted_address: address,
+            phone: cleanNodeText(church.phone),
+            website: String(church.website || '').trim(),
+            priestNames: churchDetailList(church.pastor),
+            diocese: [dioceseType, dioceseName].filter(Boolean).join(' of '),
+            massTimes,
+            massTimesPeriod: [
+                'USCCB / MassTimes.org',
+                cleanNodeText(church.lastUpdate) ? `updated ${cleanNodeText(church.lastUpdate)}` : ''
+            ].filter(Boolean).join(' · '),
+            massTimesSourceUrl: 'https://www.usccb.org/mass-times',
+            geometry: Number.isFinite(Number(church.latitude)) && Number.isFinite(Number(church.longitude))
+                ? { location: { lat: Number(church.latitude), lng: Number(church.longitude) } }
+                : null
+        };
+    }
+
+    function churchCoordinateDistanceMeters(left, right) {
+        const a = churchPointCoordinates(left);
+        const b = churchPointCoordinates(right);
+        if (!a || !b) return Number.POSITIVE_INFINITY;
+        const rad = value => value * Math.PI / 180;
+        const dLat = rad(b.lat - a.lat);
+        const dLng = rad(b.lng - a.lng);
+        const sinLat = Math.sin(dLat / 2);
+        const sinLng = Math.sin(dLng / 2);
+        const h = sinLat * sinLat + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * sinLng * sinLng;
+        return 6371000 * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(Math.max(0, 1 - h)));
+    }
+
+    function bestUsMassTimesChurch(place, churches) {
+        const normalizedPlaceName = normalizeSearchText(cleanNodeText(place && place.name))
+            .replace(/\b(?:roman|catholic|church|parish|cathedral|basilica|shrine)\b/gu, '')
+            .replace(/\s+/g, '');
+        const ranked = (Array.isArray(churches) ? churches : [])
+            .map(normalizeUsMassTimesChurch)
+            .filter(Boolean)
+            .map(church => {
+                const normalizedName = normalizeSearchText(church.name)
+                    .replace(/\b(?:roman|catholic|church|parish|cathedral|basilica|shrine)\b/gu, '')
+                    .replace(/\s+/g, '');
+                const nameScore = normalizedPlaceName && normalizedName && (
+                    normalizedPlaceName === normalizedName ? 4
+                        : (normalizedPlaceName.includes(normalizedName) || normalizedName.includes(normalizedPlaceName) ? 2 : 0)
+                );
+                return { church, nameScore, distance: churchCoordinateDistanceMeters(place, church) };
+            })
+            .sort((a, b) => b.nameScore - a.nameScore || a.distance - b.distance);
+        const best = ranked[0];
+        return best && (best.nameScore > 0 || best.distance <= 800) ? best.church : null;
+    }
+
+    async function enrichUsChurchPlaceDetails(place) {
+        if (normalizeSelectableLang(state.currentLoc || '', '') !== 'EN') return place;
+        const coordinates = churchPointCoordinates(place);
+        if (!coordinates) return place;
+        try {
+            const churches = await fetchUsMassTimesNearby(coordinates.lat, coordinates.lng);
+            const local = bestUsMassTimesChurch(place, churches);
+            return local ? mergeChurchPlaceDetails(place, local) : place;
+        } catch (error) {
+            console.warn('USCCB/MassTimes 성당 미사시간 조회에 실패했습니다.', error);
+            return place;
+        }
+    }
+
     function normalizeDioceseLookup(value) {
         return normalizeSemanticText(value)
-            .replace(/\b(?:archdiocese|diocese|tong giao phan|giao phan)\b/gu, '')
+            .replace(/\b(?:archdiocese|diocese)(?:\s+of)?\b/gu, '')
+            .replace(/\b(?:tong giao phan|giao phan)\b/gu, '')
             .replace(/(?:대)?교구/gu, '')
+            .replace(/(?:大司教区|司教区|教区)/gu, '')
             .replace(/[^\p{L}\p{N}]+/gu, '');
     }
 
@@ -3461,7 +3597,8 @@
     }
 
     async function refreshGpsBishopContext(lat, lon, lang = state.currentLoc) {
-        if (!['KR', 'VN'].includes(normalizeSelectableLang(lang || '', ''))) {
+        const normalizedLang = normalizeSelectableLang(lang || '', '');
+        if (!['KR', 'VN', 'JP', 'EN'].includes(normalizedLang)) {
             if (applyGpsBishopContext(null)) render();
             return null;
         }
@@ -3477,9 +3614,19 @@
         }
         try {
             const center = { lat: Number(lat), lng: Number(lon) };
-            const places = await nearbyCatholicChurchesForBishop(lat, lon);
+            let context = null;
+            if (normalizedLang === 'EN') {
+                const churches = await fetchUsMassTimesNearby(lat, lon);
+                const nearest = churches
+                    .filter(church => !church.rite || /roman|latin/i.test(church.rite))
+                    .map(normalizeUsMassTimesChurch)
+                    .find(Boolean);
+                context = bishopContextForDiocese(nearest && nearest.diocese);
+            } else {
+                const places = await nearbyCatholicChurchesForBishop(lat, lon);
+                context = bishopContextFromNearbyChurchPlaces(places, center);
+            }
             if (requestId !== gpsBishopRequestId) return null;
-            const context = bishopContextFromNearbyChurchPlaces(places, center);
             if (context) writeStorageJSON(cacheKey, { cachedAt: Date.now(), diocese: context.diocese });
             if (applyGpsBishopContext(context)) render();
             return context;
@@ -3519,7 +3666,13 @@
         const massTimes = churchDetailList((place && place.massTimes) || local.massTimes);
         const massTimesPeriod = cleanNodeText((place && place.massTimesPeriod) || local.massTimesPeriod);
         const openingHours = churchDetailList((place && place.opening_hours) || local.openingHours);
-        const officialUrl = String(local.officialDioceseUrl || website || local.sourceUrl || '').trim();
+        const officialUrl = String(
+            (place && place.massTimesSourceUrl)
+            || local.officialDioceseUrl
+            || website
+            || local.sourceUrl
+            || ''
+        ).trim();
         const officialFallback = churchSafeLink(officialUrl, labels.official) || escapeHtml(labels.unavailable);
         const rows = [];
         rows.push(churchInfoField(labels.address, address ? escapeHtml(address) : escapeHtml(labels.unavailable)));
@@ -3602,7 +3755,7 @@
             const requestId = ++churchInfoRequestId;
             churchInfoWindow.setContent(churchInfoWindowHtml(place, { loading: true }));
             churchInfoWindow.open(churchMap, marker);
-            const details = await fetchChurchPlaceDetails(place);
+            const details = await enrichUsChurchPlaceDetails(await fetchChurchPlaceDetails(place));
             if (requestId !== churchInfoRequestId) return;
             churchInfoWindow.setContent(churchInfoWindowHtml(details));
         });
