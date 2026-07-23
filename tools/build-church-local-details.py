@@ -62,6 +62,102 @@ BARIA_DEANERY_URLS = {
     "Vũng Tàu": urllib.parse.urljoin(BARIA_BASE_URL, "giao-hat/hat-vung-tau"),
     "Xuyên Mộc": urllib.parse.urljoin(BARIA_BASE_URL, "giao-hat/hat-xuyen-moc"),
 }
+VIETNAM_MISSION_DIRECTORY_BASE = "https://vntaiwan.catholic.org.tw/vnchurch/"
+GIOLE_LIVESEARCH_URL = urllib.parse.urljoin(GIOLE_BASE_URL, "livesearch.php")
+VIETNAM_REMAINING_DIOCESES = {
+    "Giáo phận Lạng Sơn – Cao Bằng": {
+        "directory": "langson.htm",
+        "official": "https://giaophanlangson.net/",
+    },
+    "Giáo phận Hưng Hóa": {
+        "directory": "hunghoa.htm",
+        "official": "https://giaophanhunghoa.org/vi/giao-phan/giao-hat-giao-xu/",
+    },
+    "Giáo phận Bắc Ninh": {
+        "directory": "bacninh.htm",
+        "official": "https://giaophanbacninh.org/",
+    },
+    "Giáo phận Hải Phòng": {
+        "directory": "haiphong.htm",
+        "official": "https://gphaiphong.org/chi-tiet/giao-hat-giao-xu",
+    },
+    "Giáo phận Thái Bình": {
+        "directory": "thaibinh.htm",
+        "official": "https://giaophanthaibinh.org/",
+    },
+    "Giáo phận Bùi Chu": {
+        "directory": "buichu.htm",
+        "official": "https://gpbuichu.org/index.php/giao-phan/Giao-hat.html",
+    },
+    "Giáo phận Phát Diệm": {
+        "directory": "phatdiem.htm",
+        "official": "https://phatdiem.org/cac-giao-hat.html",
+    },
+    "Giáo phận Thanh Hóa": {
+        "directory": "thanhhoa.htm",
+        "official": "https://giaophanthanhhoa.net/",
+    },
+    "Giáo phận Vinh": {
+        "directory": "vinh.htm",
+        "official": "https://giaophanvinh.net/",
+    },
+    "Giáo phận Hà Tĩnh": {
+        "directory": "hatinh.htm",
+        "official": "https://giaophanhatinh.com/",
+    },
+    "Tổng Giáo phận Huế": {
+        "directory": "hue.htm",
+        "official": "https://tonggiaophanhue.net/",
+    },
+    "Giáo phận Đà Nẵng": {
+        "directory": "danang.htm",
+        "official": "https://giaophandanang.org/",
+    },
+    "Giáo phận Qui Nhơn": {
+        "directory": "quinhon.htm",
+        "official": "https://gpquinhon.org/",
+    },
+    "Giáo phận Kontum": {
+        "directory": "kontum.htm",
+        "official": "https://giaophankontum.com/",
+    },
+    "Giáo phận Nha Trang": {
+        "directory": "nhatrang.htm",
+        "official": "https://giaophannhatrang.org/",
+    },
+    "Giáo phận Ban Mê Thuột": {
+        "directory": "banmethu.htm",
+        "official": "https://gpbanmethuot.com/",
+    },
+    "Giáo phận Đà Lạt": {
+        "directory": "dalat.htm",
+        "official": "https://giaophandalat.org/",
+    },
+    "Giáo phận Phan Thiết": {
+        "directory": "phanthie.htm",
+        "official": "https://gpphanthiet.com/",
+    },
+    "Giáo phận Phú Cường": {
+        "directory": "phucuong.htm",
+        "official": "https://giaophanphucuong.org/",
+    },
+    "Giáo phận Xuân Lộc": {
+        "directory": "xuanloc.htm",
+        "official": "https://giaophanxuanloc.net/",
+    },
+    "Giáo phận Mỹ Tho": {
+        "directory": "mytho.htm",
+        "official": "https://giaophanmytho.net/",
+    },
+    "Giáo phận Vĩnh Long": {
+        "directory": "vinhlong.htm",
+        "official": "https://giaophanvinhlong.net/",
+    },
+    "Giáo phận Long Xuyên": {
+        "directory": "logxuyen.htm",
+        "official": "https://giaophanlongxuyen.org/",
+    },
+}
 TOKYO_PARISH_LIST_URL = "https://tokyo.catholic.jp/archdiocese/parishes/tokyo/"
 OSAKA_TAKAMATSU_PARISH_URL = "https://ostk.catholic.jp/parish_mass/"
 KYOTO_PARISH_URL = "https://kyoto.catholic.jp/addres/Address_Table.htm"
@@ -709,7 +805,15 @@ def build_hanoi(*, refresh: bool = False, workers: int = 8) -> list[dict]:
 def vietnamese_parish_heading_name(value: str) -> str:
     text = re.sub(r"^\s*\d+\s*[./)-]?\s*", "", clean_text(value))
     folded = accent_fold(text)
-    prefixes = ("giao xu ", "ho dao ", "giao diem ", "nha tho ")
+    prefixes = (
+        "giao xu ",
+        "giao ho ",
+        "chuan xu ",
+        "cong doan ",
+        "ho dao ",
+        "giao diem ",
+        "nha tho ",
+    )
     for prefix in prefixes:
         if folded.startswith(prefix):
             # Accent folding keeps one code point for every visible letter,
@@ -720,7 +824,7 @@ def vietnamese_parish_heading_name(value: str) -> str:
 
 def normalized_vietnamese_parish_name(value: str, *, drop_parenthetical: bool = False) -> str:
     text = accent_fold(value)
-    text = re.sub(r"^(?:giao xu|ho dao|giao diem|nha tho)\s+", "", text)
+    text = re.sub(r"^(?:giao xu|giao ho|chuan xu|cong doan|ho dao|giao diem|nha tho)\s+", "", text)
     if drop_parenthetical:
         text = re.sub(r"\([^)]*\)", "", text)
     return re.sub(r"[^a-z0-9]", "", text)
@@ -1089,6 +1193,342 @@ def build_cantho(*, refresh: bool = False) -> list[dict]:
         record["sourceUrls"] = [CANTHO_ADDRESS_URL, CANTHO_MASS_URL, CANTHO_PRIESTS_URL]
     print(f"Can Tho: addresses={len(records)} massTimes={mass_matched} priestAssignments={priest_matched}", flush=True)
     return sorted(records, key=lambda item: accent_fold(item.get("directoryName", "")))
+
+
+def vietnam_mission_directory_heading(value: str) -> tuple[str, str]:
+    text = clean_text(value).replace("Ð", "Đ").replace("ð", "đ")
+    folded = accent_fold(text)
+    kinds = (
+        ("giao xu", "Giáo xứ"),
+        ("giao ho", "Giáo họ"),
+        ("chuan xu", "Chuẩn xứ"),
+        ("giao diem", "Giáo điểm"),
+        ("nha tho", "Nhà thờ"),
+    )
+    for prefix, label in kinds:
+        if folded == prefix:
+            return "", label
+        if folded.startswith(f"{prefix} "):
+            name = text[len(prefix):].strip(" .:-")
+            name = re.sub(
+                r"\s*\((?:mới|cũ|năm\s+\d{4}|\d{4}|kỷ niệm[^)]*|mùa\s+noel|cảnh[^)]*)\)\s*$",
+                "",
+                name,
+                flags=re.IGNORECASE,
+            ).strip(" .:-")
+            return name, label
+    return "", ""
+
+
+def vietnam_directory_address_after(node) -> str:
+    sibling = node.find_next_sibling()
+    inspected = 0
+    while sibling is not None and inspected < 7:
+        current = sibling
+        sibling = sibling.find_next_sibling()
+        if getattr(current, "name", None) not in ("p", "div"):
+            continue
+        inspected += 1
+        text = clean_text(current.get_text(" ", strip=True)).replace("Ð", "Đ").replace("ð", "đ")
+        if not text:
+            continue
+        candidate_heading = vietnam_mission_directory_heading(text)
+        if candidate_heading[0] or accent_fold(text).startswith("hat "):
+            break
+        folded = accent_fold(text)
+        if any(folded.startswith(prefix) for prefix in (
+            "trang web", "website", "hinh ", "xem ", "den tho ", "cac giao ho",
+        )):
+            continue
+        if len(text) > 320 or "prepared for internet" in folded:
+            continue
+        return text
+    return ""
+
+
+def parse_vietnam_mission_diocese(
+    diocese: str,
+    spec: dict[str, str],
+    *,
+    refresh: bool = False,
+) -> list[dict]:
+    directory_url = urllib.parse.urljoin(VIETNAM_MISSION_DIRECTORY_BASE, spec["directory"])
+    soup = BeautifulSoup(fetch_text(directory_url, refresh=refresh), "html.parser")
+    records: list[dict] = []
+    deanery = ""
+    for paragraph in soup.find_all("p"):
+        heading = paragraph.find(["b", "strong"])
+        heading_text = clean_text(heading.get_text(" ", strip=True) if heading else "")
+        if not heading_text:
+            continue
+        heading_text = heading_text.replace("Ð", "Đ").replace("ð", "đ")
+        folded = accent_fold(heading_text)
+        if folded.startswith("hat "):
+            deanery = re.sub(r"^Hạt\s+", "", heading_text, flags=re.IGNORECASE).strip(" .:")
+            continue
+        directory_name, church_type = vietnam_mission_directory_heading(heading_text)
+        if not directory_name:
+            continue
+        address = vietnam_directory_address_after(paragraph)
+        records.append(compact_record({
+            "country": "VN",
+            "name": f"{church_type} {directory_name}",
+            "directoryName": directory_name,
+            "officialDirectoryName": heading_text,
+            "churchType": church_type,
+            "diocese": diocese,
+            "deanery": deanery,
+            "address": address,
+            "website": spec["official"],
+            "officialDioceseUrl": spec["official"],
+            "sourceUrl": directory_url,
+            "sourceUrls": [directory_url, spec["official"]],
+            "sourceName": "Danh bạ các giáo xứ Việt Nam",
+            "sourceAuthority": "Vietnamese Missionaries in Asia",
+        }))
+
+    deduplicated: list[dict] = []
+    by_key: dict[tuple[str, str, str], dict] = {}
+    for record in records:
+        name_key = normalized_vietnamese_parish_name(record.get("directoryName", ""), drop_parenthetical=True)
+        address_key = accent_fold(record.get("address", ""))
+        deanery_key = accent_fold(record.get("deanery", ""))
+        key = (name_key, address_key, "" if address_key else deanery_key)
+        existing = by_key.get(key)
+        if existing:
+            if not existing.get("address") and record.get("address"):
+                existing.update(record)
+            continue
+        by_key[key] = record
+        deduplicated.append(record)
+    return deduplicated
+
+
+def giole_province_urls(*, refresh: bool = False, workers: int = 8) -> dict[str, str]:
+    def search(letter: str) -> list[tuple[str, str]]:
+        url = f"{GIOLE_LIVESEARCH_URL}?q={urllib.parse.quote(letter)}"
+        soup = BeautifulSoup(fetch_text(url, refresh=refresh), "html.parser")
+        found: list[tuple[str, str]] = []
+        for anchor in soup.select("a[href]"):
+            href = clean_text(anchor.get("href"))
+            if not re.fullmatch(r"/[^/]+\.\d+/", href):
+                continue
+            found.append((urllib.parse.urljoin(GIOLE_BASE_URL, href), clean_text(anchor.get_text(" ", strip=True))))
+        return found
+
+    found: dict[str, str] = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        for rows in executor.map(search, "abcdefghijklmnopqrstuvwxyz"):
+            for url, name in rows:
+                found[url] = name
+    if len(found) < 30:
+        raise RuntimeError(f"Giờ Lễ province directory is incomplete: {len(found)}")
+    return found
+
+
+def giole_mass_times_from_text(value: str) -> list[str]:
+    text = clean_text(value)
+    results: list[str] = []
+    labels = ("Ngày thường", "Thứ Bảy", "Chúa Nhật")
+    for index, label in enumerate(labels):
+        next_label = labels[index + 1] if index + 1 < len(labels) else ""
+        terminator = rf"(?={re.escape(next_label)}\s*:)" if next_label else r"$"
+        match = re.search(
+            rf"{re.escape(label)}\s*:\s*(.*?){terminator}",
+            text,
+            flags=re.IGNORECASE,
+        )
+        schedule = clean_text(match.group(1) if match else "")
+        if schedule and re.search(r"\d", schedule):
+            results.append(f"{label}: {schedule}")
+    return unique(results)
+
+
+def parse_giole_province(
+    url: str,
+    province: str,
+    *,
+    refresh: bool = False,
+) -> list[dict]:
+    source = fetch_text(url, refresh=refresh)
+    soup = BeautifulSoup(source, "html.parser")
+    cards = soup.select("#accordion > .card") or soup.select(".accordion > .card")
+    coordinate_rows: dict[str, list[tuple[float, float]]] = {}
+    for match in re.finditer(
+        r"\[\{\s*lat:\s*(-?\d+(?:\.\d+)?),\s*lng:\s*(-?\d+(?:\.\d+)?)\s*\},\s*\"(.*?)\"\s*\]",
+        source,
+        flags=re.DOTALL,
+    ):
+        label_html = html.unescape(match.group(3)).replace("<br>", "\n").replace("<br/>", "\n")
+        label = clean_text(BeautifulSoup(label_html, "html.parser").get_text("\n", strip=True).splitlines()[0])
+        key = normalized_vietnamese_parish_name(label, drop_parenthetical=True)
+        coordinate_rows.setdefault(key, []).append((float(match.group(1)), float(match.group(2))))
+
+    records: list[dict] = []
+    for card in cards:
+        title_node = card.select_one(".card-header h5")
+        raw_name = re.sub(r"^\s*\d+\s*[.)-]?\s*", "", clean_text(title_node.get_text(" ", strip=True) if title_node else ""))
+        if not raw_name:
+            continue
+        directory_name = vietnamese_parish_heading_name(raw_name) or raw_name
+        address_node = card.select_one(".card-body a[href^='javascript:mapClick']")
+        address = clean_text(address_node.get_text(" ", strip=True) if address_node else "")
+        detail_link = next((
+            urllib.parse.urljoin(GIOLE_BASE_URL, anchor.get("href") or "")
+            for anchor in card.select("a[href]")
+            if re.search(r"\.html$", clean_text(anchor.get("href")), flags=re.IGNORECASE)
+        ), url)
+        schedule_node = card.select_one(".collapse .card-body")
+        mass_times = giole_mass_times_from_text(schedule_node.get_text(" ", strip=True) if schedule_node else "")
+        coordinate_key = normalized_vietnamese_parish_name(raw_name, drop_parenthetical=True)
+        coordinates = coordinate_rows.get(coordinate_key, [])
+        coordinate = coordinates.pop(0) if coordinates else None
+        records.append(compact_record({
+            "country": "VN",
+            "name": raw_name,
+            "directoryName": directory_name,
+            "province": province,
+            "address": address,
+            "massTimes": mass_times,
+            "massTimesPeriod": "Giờ Lễ – Văn phòng Hội đồng Giám mục Việt Nam",
+            "lat": coordinate[0] if coordinate else "",
+            "lng": coordinate[1] if coordinate else "",
+            "website": detail_link,
+            "sourceUrl": detail_link,
+            "sourceName": "Giờ Lễ Nhà Thờ",
+            "sourceAuthority": "Văn phòng Hội đồng Giám mục Việt Nam",
+        }))
+    return records
+
+
+def vietnam_address_tokens(value: str) -> set[str]:
+    stopwords = {
+        "tinh", "thanh", "pho", "huyen", "quan", "phuong", "thi", "tran",
+        "xa", "thon", "xom", "ap", "khu", "khupho", "duong", "so", "viet", "nam",
+    }
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", accent_fold(value))
+        if len(token) >= 3 and token not in stopwords
+    }
+
+
+def merge_giole_into_vietnam_directory(
+    directory_records: list[dict],
+    giole_records: list[dict],
+) -> int:
+    by_name: dict[str, list[dict]] = {}
+    for record in giole_records:
+        for key in {
+            normalized_vietnamese_parish_name(record.get("directoryName", "")),
+            normalized_vietnamese_parish_name(record.get("directoryName", ""), drop_parenthetical=True),
+        }:
+            if key:
+                by_name.setdefault(key, []).append(record)
+
+    used: set[int] = set()
+    matched = 0
+    for target in directory_records:
+        full_key = normalized_vietnamese_parish_name(target.get("directoryName", ""))
+        bare_key = normalized_vietnamese_parish_name(target.get("directoryName", ""), drop_parenthetical=True)
+        candidates: list[dict] = []
+        seen_ids: set[int] = set()
+        for key in (full_key, bare_key):
+            for candidate in by_name.get(key, []):
+                marker = id(candidate)
+                if marker not in seen_ids and marker not in used:
+                    seen_ids.add(marker)
+                    candidates.append(candidate)
+        if not candidates:
+            continue
+        target_tokens = vietnam_address_tokens(target.get("address", ""))
+        ranked = sorted(
+            candidates,
+            key=lambda item: (
+                len(target_tokens & vietnam_address_tokens(item.get("address", ""))),
+                int(normalized_vietnamese_parish_name(item.get("directoryName", "")) == full_key),
+                len(item.get("massTimes", [])),
+            ),
+            reverse=True,
+        )
+        best = ranked[0]
+        best_overlap = len(target_tokens & vietnam_address_tokens(best.get("address", "")))
+        second_overlap = (
+            len(target_tokens & vietnam_address_tokens(ranked[1].get("address", "")))
+            if len(ranked) > 1 else -1
+        )
+        if len(ranked) > 1 and best_overlap == 0 and second_overlap == 0:
+            continue
+        if len(ranked) > 1 and best_overlap == second_overlap and best_overlap < 2:
+            continue
+
+        used.add(id(best))
+        official_directory_name = target.get("officialDirectoryName") or target.get("directoryName")
+        for field in ("name", "directoryName", "address", "massTimes", "massTimesPeriod", "lat", "lng", "website"):
+            if best.get(field):
+                target[field] = best[field]
+        target["officialDirectoryName"] = official_directory_name
+        target["sourceUrls"] = unique([
+            *target.get("sourceUrls", []),
+            best.get("sourceUrl", ""),
+            target.get("officialDioceseUrl", ""),
+        ])
+        target["massTimesSourceUrl"] = best.get("sourceUrl", "")
+        target["sourceName"] = "Danh bạ giáo xứ Việt Nam · Giờ Lễ Nhà Thờ"
+        target["sourceAuthority"] = "Vietnamese Missionaries in Asia · Văn phòng Hội đồng Giám mục Việt Nam"
+        matched += 1
+    return matched
+
+
+def build_vietnam_remaining(*, refresh: bool = False, workers: int = 8) -> tuple[list[dict], dict[str, int]]:
+    directory_records: list[dict] = []
+
+    def build_diocese(item: tuple[str, dict[str, str]]) -> tuple[str, list[dict]]:
+        diocese, spec = item
+        return diocese, parse_vietnam_mission_diocese(diocese, spec, refresh=refresh)
+
+    diocese_counts: dict[str, int] = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        for diocese, records in executor.map(build_diocese, VIETNAM_REMAINING_DIOCESES.items()):
+            directory_records.extend(records)
+            diocese_counts[f"VN-Diocese:{diocese}"] = len(records)
+            print(f"Vietnam directory {diocese}: {len(records)}", flush=True)
+    if len(directory_records) < 1_700:
+        raise RuntimeError(f"Remaining Vietnam diocesan directory is incomplete: {len(directory_records)}")
+
+    province_urls = giole_province_urls(refresh=refresh, workers=workers)
+    giole_records: list[dict] = []
+
+    def build_province(item: tuple[str, str]) -> list[dict]:
+        url, province = item
+        return parse_giole_province(url, province, refresh=refresh)
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max(1, workers)) as executor:
+        for records in executor.map(build_province, province_urls.items()):
+            giole_records.extend(records)
+    if len(giole_records) < 3_000:
+        raise RuntimeError(f"Giờ Lễ nationwide church directory is incomplete: {len(giole_records)}")
+
+    matched = merge_giole_into_vietnam_directory(directory_records, giole_records)
+    counts = {
+        "VN-Remaining": len(directory_records),
+        "VN-RemainingAddresses": sum(bool(item.get("address")) for item in directory_records),
+        "VN-RemainingMassTimes": sum(bool(item.get("massTimes")) for item in directory_records),
+        "VN-RemainingCoordinates": sum("lat" in item and "lng" in item for item in directory_records),
+        "VN-GioLeNationwide": len(giole_records),
+        "VN-GioLeMatched": matched,
+        **diocese_counts,
+    }
+    print(
+        f"Vietnam remaining: churches={len(directory_records)} addresses={counts['VN-RemainingAddresses']} "
+        f"massTimes={counts['VN-RemainingMassTimes']} coordinates={counts['VN-RemainingCoordinates']} "
+        f"gioleMatches={matched}/{len(giole_records)}",
+        flush=True,
+    )
+    return sorted(
+        directory_records,
+        key=lambda item: (accent_fold(item.get("diocese", "")), accent_fold(item.get("directoryName", ""))),
+    ), counts
 
 
 def japanese_page_lines(soup: BeautifulSoup, selector: str = "main, article, .content, .parish") -> list[str]:
@@ -1548,13 +1988,18 @@ def write_javascript(records: list[dict], source_counts: dict[str, int], *, outp
             CANTHO_ADDRESS_URL, CANTHO_MASS_URL, CANTHO_PRIESTS_URL,
             HCMC_MASS_LIST_URL, HANOI_PARISH_CATEGORY_URL, GIOLE_BASE_URL,
             BARIA_MASS_URL, *BARIA_DEANERY_URLS.values(),
+            *(
+                urllib.parse.urljoin(VIETNAM_MISSION_DIRECTORY_BASE, spec["directory"])
+                for spec in VIETNAM_REMAINING_DIOCESES.values()
+            ),
+            *(spec["official"] for spec in VIETNAM_REMAINING_DIOCESES.values()),
             *JAPAN_SOURCE_URLS,
             VATICAN_SOURCE_URL,
         ],
     }, ensure_ascii=False, separators=(",", ":"))
     javascript = f"""// Generated by tools/build-church-local-details.py. Do not hand-edit.\n(function () {{\n  'use strict';\n  const records = {payload};\n  const metadata = {metadata};\n  const index = Object.create(null);\n  const normalize = value => String(value || '')\n    .normalize('NFKC')\n    .toLowerCase()\n    .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|カトリック/gu, '')\n    .replace(/성당|본당|교회|church|parish|教会/gu, '')\n    .replace(/[^\\p{{L}}\\p{{N}}]+/gu, '');\n  const aliases = record => {{\n    const raw = [record.name, record.directoryName].filter(Boolean);\n    const bare = String(record.directoryName || record.name || '').replace(/(?:성당|본당|교회)$/u, '');\n    raw.push(bare, `${{bare}}성당`, `천주교 ${{bare}}성당`, `가톨릭 ${{bare}}성당`);\n    return raw.filter(Boolean);\n  }};\n  records.forEach(record => {{\n    aliases(record).forEach(alias => {{\n      index[String(alias).trim().toLowerCase()] = record;\n      const normalized = normalize(alias);\n      if (normalized) index[normalized] = record;\n    }});\n  }});\n  globalThis.churchLocalDetailRecords = records;\n  globalThis.churchLocalDetails = index;\n  globalThis.churchLocalDetailsMeta = metadata;\n}})();\n"""
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(javascript, encoding="utf-8")
+    output_path.write_text(javascript, encoding="utf-8", newline="\n")
 
 
 def load_existing_javascript() -> tuple[list[dict], dict[str, int]]:
@@ -1617,6 +2062,15 @@ def main() -> None:
             source_counts["VN-BaRia"] = len(baria)
             source_counts["VN-BaRiaMassTimes"] = sum(bool(item.get("massTimes")) for item in baria)
             source_counts["VN-BaRiaAddresses"] = sum(bool(item.get("address")) for item in baria)
+        if "vietnam-remaining" in countries or "vietnam" in countries:
+            remaining_dioceses = set(VIETNAM_REMAINING_DIOCESES)
+            records = [record for record in records if record.get("diocese") not in remaining_dioceses]
+            vietnam_remaining, vietnam_remaining_counts = build_vietnam_remaining(
+                refresh=args.refresh,
+                workers=args.workers,
+            )
+            records.extend(vietnam_remaining)
+            source_counts.update(vietnam_remaining_counts)
         if "japan" in countries:
             records = [record for record in records if record.get("country") != "JP"]
             japan, japan_counts = build_japan(refresh=args.refresh, workers=args.workers)
@@ -1664,6 +2118,13 @@ def main() -> None:
         source_counts["VN-BaRia"] = len(baria)
         source_counts["VN-BaRiaMassTimes"] = sum(bool(item.get("massTimes")) for item in baria)
         source_counts["VN-BaRiaAddresses"] = sum(bool(item.get("address")) for item in baria)
+    if "vietnam-remaining" in countries or "vietnam" in countries:
+        vietnam_remaining, vietnam_remaining_counts = build_vietnam_remaining(
+            refresh=args.refresh,
+            workers=args.workers,
+        )
+        records.extend(vietnam_remaining)
+        source_counts.update(vietnam_remaining_counts)
     if "japan" in countries:
         japan, japan_counts = build_japan(refresh=args.refresh, workers=args.workers)
         records.extend(japan)

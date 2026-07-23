@@ -708,7 +708,7 @@
 <script src="JS%20file/korean_blessing_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/prayer_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/hymn_data.js?v=20260722-v24-1"></script>
-<script src="JS%20file/church_local_details.js?v=20260723-v24-2"></script>
+<script src="JS%20file/church_local_details.js?v=20260723-v24-3"></script>
 <script src="JS%20file/bishop_data.js?v=20260723-v24-5"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260723-v24-1"></script>
 
@@ -3355,24 +3355,49 @@
             .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|họ đạo|giáo điểm|カトリック/gu, '')
             .replace(/성당|본당|교회|church|parish|教会/gu, '')
             .replace(/[^\p{L}\p{N}]+/gu, '');
+        const normalizeChurchContext = value => {
+            let normalized = normalizeSearchText(value);
+            if (/\b(?:ho chi minh|sai gon|tphcm|tp hcm)\b/.test(normalized)) {
+                normalized += ' ho chi minh sai gon tphcm';
+            }
+            if (/\b(?:can tho|tpct)\b/.test(normalized)) {
+                normalized += ' can tho tpct';
+            }
+            return normalized;
+        };
         const normalizedName = normalizeChurchLookup(name);
         const candidates = (Array.isArray(globalThis.churchLocalDetailRecords) ? globalThis.churchLocalDetailRecords : [])
             .filter(record => [record && record.name, record && record.directoryName]
                 .some(value => normalizeChurchLookup(value) === normalizedName));
         if (candidates.length) {
-            const placeContext = normalizeSearchText([
+            const placeContext = normalizeChurchContext([
                 place && place.formatted_address,
                 place && place.vicinity,
                 place && place.diocese
             ].filter(Boolean).join(' '));
-            const tokens = placeContext.split(/\s+/).filter(token => token.length >= 3);
+            const tokens = Array.from(new Set(
+                placeContext.split(/\s+/).filter(token => token.length >= 2 || /^\d+$/.test(token))
+            ));
+            const placePoint = churchPointCoordinates(place);
             const ranked = candidates.map((record, index) => {
-                const recordContext = normalizeSearchText([
+                const recordContext = normalizeChurchContext([
                     record.address, record.diocese, record.deanery
                 ].filter(Boolean).join(' '));
-                const score = tokens.reduce((sum, token) => sum + (recordContext.includes(token) ? 1 : 0), 0);
-                return { record, index, score };
-            }).sort((a, b) => b.score - a.score || a.index - b.index);
+                const recordTokens = recordContext.split(/\s+/);
+                let score = tokens.reduce((sum, token) => sum + (recordTokens.includes(token) ? 1 : 0), 0);
+                let distanceKm = Number.POSITIVE_INFINITY;
+                const recordPoint = churchPointCoordinates(record);
+                if (placePoint && recordPoint) {
+                    const latitudeScale = Math.cos((placePoint.lat + recordPoint.lat) * Math.PI / 360);
+                    const dx = (placePoint.lng - recordPoint.lng) * 111.32 * latitudeScale;
+                    const dy = (placePoint.lat - recordPoint.lat) * 110.57;
+                    distanceKm = Math.sqrt(dx * dx + dy * dy);
+                    if (distanceKm <= 1) score += 200;
+                    else if (distanceKm <= 5) score += 100;
+                    else if (distanceKm <= 20) score += 30;
+                }
+                return { record, index, score, distanceKm };
+            }).sort((a, b) => b.score - a.score || a.distanceKm - b.distanceKm || a.index - b.index);
             return ranked[0].record;
         }
         return (placeId && source[placeId])
