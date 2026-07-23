@@ -29,7 +29,13 @@
     thomasAquinas: { kr: '토마스 아퀴나스', vn: 'Tôma Aquinô', en: 'Thomas Aquinas', jp: 'トマス・アクィナス', la: 'Thomas Aquinas' },
     michael: { kr: '미카엘', vn: 'Micae', en: 'Michael', jp: 'ミカエル', la: 'Michael' },
     josepMaria: { kr: '요셉 마리아', vn: 'Giuse Maria', en: 'Josep Maria', jp: 'ヨゼフ・マリア', la: 'Ioseph Maria' },
-    bernard: { kr: '베르나르도', vn: 'Bênađô', en: 'Bernard', jp: 'ベルナルド', la: 'Bernardus' }
+    bernard: { kr: '베르나르도', vn: 'Bênađô', en: 'Bernard', jp: 'ベルナルド', la: 'Bernardus' },
+    dominic: { kr: '도미니코', vn: 'Đaminh', en: 'Dominic', jp: 'ドミニコ', la: 'Dominicus' },
+    vincent: { kr: '빈첸시오', vn: 'Vinh Sơn', en: 'Vincent', jp: 'ヴィンセンシオ', la: 'Vincentius' },
+    alphonse: { kr: '알폰소', vn: 'Alphongsô', en: 'Alphonse', jp: 'アルフォンソ', la: 'Alphonsus' },
+    louis: { kr: '루도비코', vn: 'Louis', en: 'Louis', jp: 'ルイ', la: 'Ludovicus' },
+    matthew: { kr: '마태오', vn: 'Matthêô', en: 'Matthew', jp: 'マタイ', la: 'Matthaeus' },
+    aloysius: { kr: '알로이시오', vn: 'Aloisiô', en: 'Aloysius', jp: 'アロイシオ', la: 'Aloysius' }
   };
 
   const cbck = code => `https://directory.cbck.or.kr/m/catholicInfo.asp?code=${code}&gubun=1`;
@@ -59,18 +65,91 @@
       '전주교구': entry('john', [], cbck('201000027')),
       '제주교구': entry('pius', [], cbck('201000028')),
       '원주교구': entry('basil', [], cbck('201000019')),
+      'Giáo phận Lạng Sơn – Cao Bằng': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Hưng Hóa': entry('dominic', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Bắc Ninh': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
       'Tổng Giáo phận Hà Nội': entry('joseph', ['joseph'], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165',
         'https://www.tonggiaophanhanoi.org/cac-uy-ban-muc-vu-tong-giao-phan-ha-noi-hop-tong-ket-2025/'
       ]),
-      'Tổng Giáo phận Sài Gòn': entry('joseph', ['joseph', 'johnBaptist'], [
-        'https://tgpsaigon.net/bai-viet/luoc-su-tong-giao-phan-sai-gon-tphcm-65',
-        'https://tgpsaigon.net/bai-viet/buoi-cau-nguyen-dau-tien-cho-duc-giam-muc-tan-cu-gioan-baotixita-nguyen-quang-tuyen-87607'
-      ], { collaboratorSummary: true }),
-      'Giáo phận Cần Thơ': entry('peter', [], [
-        'https://gpcantho.com/giao-phan-can-tho-quyet-dinh-thuc-hanh-muc-vu-nam-2026/'
+      'Giáo phận Hải Phòng': entry('vincent', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Thái Bình': entry('dominic', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Bùi Chu': entry('thomasAquinas', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Phát Diệm': entry('peter', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Thanh Hóa': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Vinh': entry('alphonse', ['peter'], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Hà Tĩnh': entry('louis', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Tổng Giáo phận Huế': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/duc-cha-giuse-dang-duc-ngan-tong-giam-muc-chinh-toa-tong-giao-phan-hue'
+      ]),
+      'Giáo phận Đà Nẵng': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/duc-cha-giuse-dang-duc-ngan-tong-giam-muc-chinh-toa-tong-giao-phan-hue'
+      ]),
+      'Giáo phận Qui Nhơn': entry('matthew', ['johnBaptist'], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165',
+        'https://hdgmvietnam.com/chi-tiet/thanh-le-truyen-chuc-giam-muc-pho-cho-duc-cha-gioan-baotixita-nguyen-quoc-hung'
+      ]),
+      'Giáo phận Kontum': entry('aloysius', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Nha Trang': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Ban Mê Thuột': entry('johnBaptist', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Đà Lạt': entry('dominic', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Phan Thiết': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Phú Cường': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Xuân Lộc': entry('john', ['dominic'], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
       ]),
       'Giáo phận Bà Rịa': entry('emmanuel', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165',
         'https://www.giaophanbaria.org/sinh-hoat-giao-xu/binh-gia/2026/07/07/gx-xuan-son-thanh-le-ban-bi-tich-them-suc-ngay-06-7-2026.html'
+      ]),
+      'Tổng Giáo phận Sài Gòn': entry('joseph', ['joseph', 'johnBaptist'], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165',
+        'https://hdgmvietnam.com/chi-tiet/thanh-le-truyen-chuc-giam-muc-cho-duc-cha-tan-cu-gioan-baotixita-nguyen-quang-tuyen-vao-luc-08g30-ngay-2362026'
+      ], { collaboratorSummary: true }),
+      'Giáo phận Mỹ Tho': entry('peter', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Vĩnh Long': entry('peter', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Long Xuyên': entry('joseph', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165'
+      ]),
+      'Giáo phận Cần Thơ': entry('peter', [], [
+        'https://hdgmvietnam.com/chi-tiet/cac-giam-muc-va-giao-phan-viet-nam-nam-2017-31165',
+        'https://gpcantho.com/giao-phan-can-tho-quyet-dinh-thuc-hanh-muc-vu-nam-2026/'
       ]),
       '東京大司教区': entry('tarcisius', ['andrea'], [
         'https://www.cbcj.catholic.jp/english/japan/diocese/tokyo/'
