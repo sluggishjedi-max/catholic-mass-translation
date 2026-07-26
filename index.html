@@ -708,7 +708,7 @@
 <script src="JS%20file/korean_blessing_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/prayer_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/hymn_data.js?v=20260722-v24-1"></script>
-<script src="JS%20file/church_local_details.js?v=20260723-v24-4"></script>
+<script src="JS%20file/church_local_details.js?v=20260726-v24-5"></script>
 <script src="JS%20file/bishop_data.js?v=20260723-v24-5"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260723-v24-1"></script>
 
@@ -2314,6 +2314,7 @@
     const GPS_BISHOP_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
     const GOOGLE_MAPS_CONFIG_ENDPOINT = window.ORDO_MAPS_CONFIG_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/mapsConfig';
     const US_MASS_TIMES_ENDPOINT = window.ORDO_US_MASS_TIMES_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/usMassTimesProxy';
+    const BISHOP_DIRECTORY_ENDPOINT = window.ORDO_BISHOP_DIRECTORY_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/bishopDirectoryProxy';
 
     const prayerSeedData = [
         {
@@ -3553,7 +3554,19 @@
         const normalized = normalizeDioceseLookup(diocese);
         const matchedKey = exact ? diocese : Object.keys(entries).find(key => normalizeDioceseLookup(key) === normalized);
         const entry = exact || (matchedKey && entries[matchedKey]);
-        if (!entry || !entry.ordinary) return null;
+        if (!entry || !entry.ordinary) {
+            const usDiocese = cleanNodeText(diocese);
+            if (/^(?:Archdiocese|Diocese) of /i.test(usDiocese)) {
+                return {
+                    diocese: usDiocese,
+                    ordinary: null,
+                    auxiliaries: [],
+                    collaboratorSummary: false,
+                    sourceUrls: []
+                };
+            }
+            return null;
+        }
         return {
             diocese: matchedKey || diocese,
             ordinary: entry.ordinary,
@@ -3561,6 +3574,158 @@
             collaboratorSummary: !!entry.collaboratorSummary,
             sourceUrls: Array.isArray(entry.sourceUrls) ? entry.sourceUrls : []
         };
+    }
+
+    const vietnamBishopDirectoryPaths = {
+        'Giáo phận Lạng Sơn – Cao Bằng': '/diocese/dlscb.html',
+        'Giáo phận Hưng Hóa': '/diocese/dhung.html',
+        'Giáo phận Bắc Ninh': '/diocese/dbacn.html',
+        'Tổng Giáo phận Hà Nội': '/diocese/dhano.html',
+        'Giáo phận Hải Phòng': '/diocese/dhaip.html',
+        'Giáo phận Thái Bình': '/diocese/dthai.html',
+        'Giáo phận Bùi Chu': '/diocese/dbuic.html',
+        'Giáo phận Phát Diệm': '/diocese/dphat.html',
+        'Giáo phận Thanh Hóa': '/diocese/dthho.html',
+        'Giáo phận Vinh': '/diocese/dvinh.html',
+        'Giáo phận Hà Tĩnh': '/diocese/dhati.html',
+        'Tổng Giáo phận Huế': '/diocese/dhuev.html',
+        'Giáo phận Đà Nẵng': '/diocese/ddana.html',
+        'Giáo phận Qui Nhơn': '/diocese/dquyn.html',
+        'Giáo phận Kontum': '/diocese/dkont.html',
+        'Giáo phận Nha Trang': '/diocese/dnhat.html',
+        'Giáo phận Ban Mê Thuột': '/diocese/dbanm.html',
+        'Giáo phận Đà Lạt': '/diocese/ddala.html',
+        'Giáo phận Phan Thiết': '/diocese/dphan.html',
+        'Giáo phận Phú Cường': '/diocese/dphuc.html',
+        'Giáo phận Xuân Lộc': '/diocese/dxuan.html',
+        'Giáo phận Bà Rịa': '/diocese/dbria.html',
+        'Tổng Giáo phận Sài Gòn': '/diocese/dthan.html',
+        'Giáo phận Mỹ Tho': '/diocese/dmyth.html',
+        'Giáo phận Vĩnh Long': '/diocese/dvinl.html',
+        'Giáo phận Long Xuyên': '/diocese/dloxu.html',
+        'Giáo phận Cần Thơ': '/diocese/dcanv.html'
+    };
+
+    function bishopDirectoryRequestForContext(context) {
+        if (!context || !context.diocese) return null;
+        const sourceUrls = Array.isArray(context.sourceUrls) ? context.sourceUrls : [];
+        const cbckSource = sourceUrls.find(url => /^https:\/\/directory\.cbck\.or\.kr\/m\/catholicInfo\.asp/i.test(url));
+        if (cbckSource) return { country: 'KR', diocese: context.diocese, sourceUrl: cbckSource };
+        const cbcjSource = sourceUrls.find(url => /^https:\/\/www\.cbcj\.catholic\.jp\/english\/japan\/diocese\//i.test(url));
+        if (cbcjSource) return { country: 'JP', diocese: context.diocese, sourceUrl: cbcjSource };
+        const lookupPath = vietnamBishopDirectoryPaths[context.diocese];
+        if (lookupPath) return { country: 'VN', diocese: context.diocese, lookupPath };
+        if (/^(?:Archdiocese|Diocese) of /i.test(context.diocese)) {
+            return { country: 'US', diocese: context.diocese };
+        }
+        return null;
+    }
+
+    function normalizeBishopPersonLookup(value) {
+        return String(value || '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[’']/g, '')
+            .replace(/[^a-z0-9가-힣ぁ-んァ-ヶ一-龠]+/gi, '')
+            .toLowerCase();
+    }
+
+    function knownBishopPeople() {
+        const entries = globalThis.diocesanBishopData && globalThis.diocesanBishopData.entries;
+        if (!entries) return [];
+        const people = [];
+        Object.values(entries).forEach(entry => {
+            if (entry && entry.ordinary) people.push(entry.ordinary);
+            if (entry && Array.isArray(entry.auxiliaries)) people.push(...entry.auxiliaries);
+        });
+        return people.filter(Boolean);
+    }
+
+    function bishopPersonLocalization(name) {
+        const normalized = normalizeBishopPersonLookup(name);
+        const aliases = {
+            tarcisio: 'tarcisius',
+            mathias: 'matthias',
+            petrus: 'peter',
+            paulus: 'paul',
+            ioannes: 'john',
+            ioseph: 'joseph'
+        };
+        const wanted = aliases[normalized] || normalized;
+        const matched = knownBishopPeople().find(person =>
+            ['kr', 'vn', 'en', 'jp', 'la'].some(lower => {
+                const candidate = normalizeBishopPersonLookup(person && person[lower]);
+                return candidate === wanted || (aliases[candidate] || candidate) === wanted;
+            })
+        );
+        if (matched) return Object.assign({}, matched);
+        const fallback = cleanNodeText(name);
+        return { kr: fallback, vn: fallback, en: fallback, jp: fallback, la: fallback };
+    }
+
+    function bishopDirectoryCacheKey(diocese) {
+        return `${STORAGE_PREFIX}bishopDirectory:${normalizeDioceseLookup(diocese)}`;
+    }
+
+    function applyBishopDirectoryPayload(context, payload) {
+        if (!context || !payload || !cleanNodeText(payload.ordinary)) return context;
+        const ordinary = bishopPersonLocalization(payload.ordinary);
+        const auxiliaries = (Array.isArray(payload.auxiliaries) ? payload.auxiliaries : [])
+            .map(bishopPersonLocalization)
+            .filter((person, index, list) => {
+                const key = normalizeBishopPersonLookup(person.en || person.kr || '');
+                return key && list.findIndex(candidate =>
+                    normalizeBishopPersonLookup(candidate.en || candidate.kr || '') === key
+                ) === index;
+            });
+        return Object.assign({}, context, {
+            ordinary,
+            auxiliaries,
+            sourceUrls: Array.from(new Set([
+                ...(Array.isArray(context.sourceUrls) ? context.sourceUrls : []),
+                cleanNodeText(payload.sourceUrl)
+            ].filter(Boolean))),
+            directoryCheckedAt: cleanNodeText(payload.checkedAt)
+        });
+    }
+
+    async function refreshBishopContextFromDirectory(context) {
+        const request = bishopDirectoryRequestForContext(context);
+        if (!request) return context;
+        const cacheKey = bishopDirectoryCacheKey(context.diocese);
+        const cached = readStorageJSON(cacheKey);
+        if (isFreshCacheEntry(cached, GPS_BISHOP_CACHE_TTL_MS) && cached.payload) {
+            return applyBishopDirectoryPayload(context, cached.payload);
+        }
+        try {
+            const response = await fetchWithTimeout(BISHOP_DIRECTORY_ENDPOINT, {
+                method: 'POST',
+                cache: 'no-cache',
+                timeoutMs: 35000,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(request)
+            });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const payload = await response.json();
+            if (!payload || !payload.ordinary) throw new Error('Current bishop directory response is empty');
+            writeStorageJSON(cacheKey, { cachedAt: Date.now(), payload });
+            return applyBishopDirectoryPayload(context, payload);
+        } catch (error) {
+            console.warn('교구 주교명 주간 갱신에 실패하여 기존 명단을 유지합니다.', error);
+            return cached && cached.payload ? applyBishopDirectoryPayload(context, cached.payload) : context;
+        }
+    }
+
+    function refreshResolvedBishopContext(context, requestId) {
+        if (!context) return;
+        refreshBishopContextFromDirectory(context).then(refreshed => {
+            if (requestId !== gpsBishopRequestId || !refreshed) return;
+            if (normalizeDioceseLookup(state.gpsDiocese) !== normalizeDioceseLookup(refreshed.diocese)) return;
+            if (applyGpsBishopContext(refreshed)) render();
+        });
     }
 
     function bishopContextFromNearbyChurchPlaces(places, center = null) {
@@ -3584,10 +3749,16 @@
     }
 
     function applyGpsBishopContext(context) {
-        const previousDiocese = cleanNodeText(state.gpsDiocese);
+        const previous = JSON.stringify({
+            diocese: cleanNodeText(state.gpsDiocese),
+            context: state.bishopContext || null
+        });
         state.bishopContext = context || null;
         state.gpsDiocese = context ? cleanNodeText(context.diocese) : '';
-        return previousDiocese !== state.gpsDiocese;
+        return previous !== JSON.stringify({
+            diocese: state.gpsDiocese,
+            context: state.bishopContext
+        });
     }
 
     async function nearbyCatholicChurchesForBishop(lat, lon) {
@@ -3634,6 +3805,7 @@
             const cachedContext = bishopContextForDiocese(cached.diocese);
             if (cachedContext) {
                 if (applyGpsBishopContext(cachedContext)) render();
+                refreshResolvedBishopContext(cachedContext, requestId);
                 return cachedContext;
             }
         }
@@ -3654,6 +3826,7 @@
             if (requestId !== gpsBishopRequestId) return null;
             if (context) writeStorageJSON(cacheKey, { cachedAt: Date.now(), diocese: context.diocese });
             if (applyGpsBishopContext(context)) render();
+            refreshResolvedBishopContext(context, requestId);
             return context;
         } catch (error) {
             console.warn('GPS 교구/주교 판별에 실패하여 주교명 자리표시자를 유지합니다.', error);
@@ -5446,6 +5619,38 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }, []);
     }
 
+    const KTCGKPV_ALLELUIA_TOKEN_SOURCE = '(?:Alleluia|Aleluia|Ha?-l[eê]-lui(?:-a)?)';
+
+    function normalizeKtcgkpvAcclamationText(value) {
+        return cleanNodeText(value)
+            // Some KTCGKPV entries omit the final “-a” in the second
+            // opening response (for example 24 July 2026).
+            .replace(/\bHa-lê-lui(?=\s*[,.!?:;)]|\s|$)/giu, 'Ha-lê-lui-a')
+            .replace(/\bHa-le-lui(?=\s*[,.!?:;)]|\s|$)/giu, 'Ha-le-lui-a');
+    }
+
+    function ktcgkpvSplitAcclamation(value) {
+        const text = normalizeKtcgkpvAcclamationText(value);
+        if (!text) return null;
+        const token = KTCGKPV_ALLELUIA_TOKEN_SOURCE;
+        const openingPattern = new RegExp(
+            `^((?:${token}\\s*[,.;!?]?\\s*){2}(?:\\(\\s*(?:${token}\\s*[,.;!?]?\\s*){2}\\))?)\\s*`,
+            'iu'
+        );
+        const closingPattern = new RegExp(
+            `\\s*(${token}\\s*[,.;!?]?(?:\\s*\\(\\s*${token}\\s*[,.;!?]?\\s*\\))?)\\s*$`,
+            'iu'
+        );
+        const opening = text.match(openingPattern);
+        const closing = text.match(closingPattern);
+        if (!opening || !closing || closing.index < opening[0].length) return null;
+        return {
+            opening: cleanNodeText(opening[1]),
+            verse: cleanNodeText(text.slice(opening[0].length, closing.index)),
+            closing: cleanNodeText(closing[1])
+        };
+    }
+
     function ktcgkpvPsalmSection(readingEntries) {
         const choices = ktcgkpvSupplementChoices(readingEntries);
         const lines = [];
@@ -5486,14 +5691,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (index) lines.push(parsedLine('', 'Hoặc:'));
             optionCits.push({ cit_vn: choice.citation });
             const paragraphs = ktcgkpvHtmlParagraphs(choice.html).map(text => text.replace(/^[-–—]\s*/, ''));
-            let text = cleanNodeText(paragraphs.join(' '));
-            const opening = text.match(/^(Ha-lê-lui-a\.\s*Ha-lê-lui-a\.)\s*/i);
-            const closing = text.match(/\s*(Ha-lê-lui-a\.)\s*$/i);
-            if (opening && closing && closing.index >= opening[0].length) {
-                const middle = cleanNodeText(text.slice(opening[0].length, closing.index));
-                lines.push(parsedLine('Mọi người', cleanNodeText(opening[1])));
-                if (middle) lines.push(parsedLine('', middle));
-                lines.push(parsedLine('', cleanNodeText(closing[1])));
+            const split = ktcgkpvSplitAcclamation(paragraphs.join(' '));
+            if (split) {
+                lines.push(parsedLine('Mọi người', split.opening));
+                if (split.verse) lines.push(parsedLine('', split.verse));
+                lines.push(parsedLine('', split.closing));
             } else {
                 const parsed = parseVietnameseAcclamationLines(paragraphs);
                 lines.push(...(parsed.lines || []));
@@ -10851,9 +11053,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function isAlleluiaOnlyText(text) {
         const compact = cleanNodeText(text)
             .replace(/^(?:CĐ\.|CD\.|◎|会)\s*/i, '')
-            .replace(/[,.!?:;、。，\s]/g, '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[()\[\]{}\-–—,.!?:;、。，\s]/g, '')
             .toLowerCase();
-        return /^(?:alleluia|aleluia|알렐루야|アレルヤ)+$/i.test(compact);
+        return /^(?:alleluia|aleluia|haleluia|알렐루야|アレルヤ)+$/i.test(compact);
     }
 
     function variantOptionMeaningText(baseId, optionLines) {
@@ -11275,13 +11479,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             if (maxOptions < 2) return;
             const signature = variantAlignmentSignature(baseId, optionMap);
+            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
+            if (fallbackAlignment.length) {
+                section.variantAlignment = fallbackAlignment;
+                return;
+            }
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
                 section.variantAlignment = cached;
                 return;
             }
-            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
-            if (fallbackAlignment.length) section.variantAlignment = fallbackAlignment;
         });
     }
 
@@ -11302,15 +11509,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             if (maxOptions < 2) return;
             const signature = variantAlignmentSignature(baseId, optionMap);
-            const cached = readCachedDailyVariantAlignment(date, baseId, signature);
-            if (cached) {
-                section.variantAlignment = cached;
-                return;
-            }
             const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
             if (fallbackAlignment.length) {
                 section.variantAlignment = fallbackAlignment;
                 writeCachedDailyVariantAlignment(date, baseId, signature, fallbackAlignment);
+                return;
+            }
+            const cached = readCachedDailyVariantAlignment(date, baseId, signature);
+            if (cached) {
+                section.variantAlignment = cached;
                 return;
             }
             try {

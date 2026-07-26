@@ -945,6 +945,20 @@ def looks_like_vietnamese_mass_schedule(value: str) -> bool:
     return schedule_word or has_time
 
 
+def normalize_cantho_mass_schedule(value: str) -> str:
+    text = clean_text(value).strip(" ,;")
+    # The diocesan page occasionally omits the minutes before a separator
+    # (for example "07g,15g00"). Treat a bare hour as :00 while preserving
+    # the following Mass time.
+    text = re.sub(
+        r"\b(\d{1,2})\s*g\s*,\s*(\d{1,2})\s*g\s*(\d{2})\b",
+        lambda match: f"{match.group(1)}g00, {match.group(2)}g{match.group(3)}",
+        text,
+        flags=re.IGNORECASE,
+    )
+    return text
+
+
 def parse_cantho_mass_times(*, refresh: bool = False) -> list[dict]:
     soup = BeautifulSoup(fetch_text(CANTHO_MASS_URL, refresh=refresh), "html.parser")
     entry = soup.select_one("article .entry")
@@ -972,7 +986,11 @@ def parse_cantho_mass_times(*, refresh: bool = False) -> list[dict]:
 
     for record in records:
         raw_lines = record.pop("lines", [])
-        schedule = [line for line in raw_lines if looks_like_vietnamese_mass_schedule(line)]
+        schedule = [
+            normalize_cantho_mass_schedule(line)
+            for line in raw_lines
+            if looks_like_vietnamese_mass_schedule(line)
+        ]
         address = next((line for line in raw_lines if line not in schedule and not line.startswith("|") and len(line) > 5), "")
         if address:
             record["address"] = address.lstrip("–- ")
@@ -1211,21 +1229,35 @@ def build_cantho(*, refresh: bool = False) -> list[dict]:
         by_exact.setdefault(normalized_vietnamese_parish_name(record["directoryName"]), []).append(record)
         by_bare.setdefault(normalized_vietnamese_parish_name(record["directoryName"], drop_parenthetical=True), []).append(record)
 
-    def match(name: str) -> dict | None:
+    def match(name: str, deanery: str = "") -> dict | None:
+        deanery_key = accent_fold(deanery)
+
+        def unique_for_deanery(candidates: list[dict]) -> dict | None:
+            if len(candidates) == 1:
+                return candidates[0]
+            if not deanery_key:
+                return None
+            scoped = [
+                candidate for candidate in candidates
+                if accent_fold(candidate.get("deanery", "")) == deanery_key
+            ]
+            return scoped[0] if len(scoped) == 1 else None
+
         exact = by_exact.get(normalized_vietnamese_parish_name(name), [])
-        if len(exact) == 1:
-            return exact[0]
+        exact_match = unique_for_deanery(exact)
+        if exact_match:
+            return exact_match
         bare = by_bare.get(normalized_vietnamese_parish_name(name, drop_parenthetical=True), [])
-        return bare[0] if len(bare) == 1 else None
+        return unique_for_deanery(bare)
 
     mass_records = parse_cantho_mass_times(refresh=refresh)
     mass_matched = 0
     for source in mass_records:
-        target = match(source["name"])
+        target = match(source["name"], source.get("deanery", ""))
         if not source.get("massTimes"):
             continue
         if not target:
-            target = {
+            target = compact_record({
                 "country": "VN",
                 "name": f"Giáo xứ {source['name']}",
                 "directoryName": source["name"],
@@ -1236,8 +1268,8 @@ def build_cantho(*, refresh: bool = False) -> list[dict]:
                 "sourceUrl": CANTHO_MASS_URL,
                 "sourceName": "Giờ lễ các nhà thờ Giáo phận Cần Thơ 2025",
                 "sourceAuthority": "Giáo phận Cần Thơ",
-            }
-            records.append(compact_record(target))
+            })
+            records.append(target)
             by_exact.setdefault(normalized_vietnamese_parish_name(source["name"]), []).append(target)
             by_bare.setdefault(normalized_vietnamese_parish_name(source["name"], drop_parenthetical=True), []).append(target)
         target["massTimes"] = source["massTimes"]
@@ -2105,6 +2137,13 @@ def main() -> None:
             records.extend(korea)
             source_counts["KR"] = len(korea)
             source_counts.update(goodnews_counts)
+        if "cantho" in countries or "vietnam" in countries:
+            records = [record for record in records if record.get("diocese") != "Giáo phận Cần Thơ"]
+            cantho = build_cantho(refresh=args.refresh)
+            records.extend(cantho)
+            source_counts["VN-CanTho"] = len(cantho)
+            source_counts["VN-CanThoMassTimes"] = sum(bool(item.get("massTimes")) for item in cantho)
+            source_counts["VN-CanThoPriests"] = sum(bool(item.get("priestNames")) for item in cantho)
         if "hochiminh" in countries or "vietnam" in countries:
             records = [record for record in records if record.get("diocese") != "Tổng Giáo phận Sài Gòn"]
             hochiminh = build_hochiminh(refresh=args.refresh, workers=args.workers)

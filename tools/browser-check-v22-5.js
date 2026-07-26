@@ -316,11 +316,11 @@ function assert(condition, message) {
           countries: globalThis.churchLocalDetailsMeta?.sourceCounts || {},
           bellmal: churchLocalDetailsForPlace({ name: '천주교 벌말성당' }),
           maegok: churchLocalDetailsForPlace({ name: '천주교 매곡성당' }),
-          canthoAnBinh: churchLocalDetailsForPlace({ name: 'Nhà thờ An Bình' }),
+          canthoAnBinh: churchLocalDetailsForPlace({ name: 'Nhà thờ An Bình', diocese: 'Giáo phận Cần Thơ' }),
           canthoAnHoi: churchLocalDetailsForPlace({ name: 'Nhà thờ An Hội' }),
           bariaThuLuu: churchLocalDetailsForPlace({ name: 'Nhà thờ Thủ Lựu' }),
           bellmalCard: churchInfoWindowHtml({ name: '천주교 벌말성당' }),
-          canthoAnBinhCard: churchInfoWindowHtml({ name: 'Nhà thờ An Bình' }),
+          canthoAnBinhCard: churchInfoWindowHtml({ name: 'Nhà thờ An Bình', diocese: 'Giáo phận Cần Thơ' }),
           canthoAnHoiCard: churchInfoWindowHtml({ name: 'Nhà thờ An Hội' }),
           bariaThuLuuCard: churchInfoWindowHtml({ name: 'Nhà thờ Thủ Lựu' })
         },
@@ -343,7 +343,7 @@ function assert(condition, message) {
     assert(languageDefaults.placesAuthFailureFallback, `Places authorization failures should fall back to a usable Google map instead of leaving an empty marker layer: ${JSON.stringify(languageDefaults)}`);
     assert(languageDefaults.churchMarkerNameLabels && languageDefaults.churchDetailsOnDemand, `Church marker names or on-demand Place details are not wired: ${JSON.stringify(languageDefaults)}`);
     assert(['주소', '사제', '수녀', '미사 시간', '홍길동 신부', '김마리아 수녀', '주일 11:00'].every(text => languageDefaults.churchInfoFixture.includes(text)), `Church info card is missing requested fields: ${languageDefaults.churchInfoFixture}`);
-    assert(languageDefaults.churchDirectory.count >= 2050 && languageDefaults.churchDirectory.countries.KR >= 1789 && languageDefaults.churchDirectory.countries['VN-CanTho'] >= 165 && languageDefaults.churchDirectory.countries['VN-BaRia'] === 99 && languageDefaults.churchDirectory.bellmal?.diocese === '수원교구' && languageDefaults.churchDirectory.maegok?.diocese === '수원교구', `Official local church directory did not load or match named parishes: ${JSON.stringify(languageDefaults.churchDirectory)}`);
+    assert(languageDefaults.churchDirectory.count >= 2050 && languageDefaults.churchDirectory.countries.KR >= 1789 && languageDefaults.churchDirectory.countries['VN-CanTho'] >= 164 && languageDefaults.churchDirectory.countries['VN-BaRia'] === 99 && languageDefaults.churchDirectory.bellmal?.diocese === '수원교구' && languageDefaults.churchDirectory.maegok?.diocese === '수원교구', `Official local church directory did not load or match named parishes: ${JSON.stringify(languageDefaults.churchDirectory)}`);
     assert(['14058', '수원교구', '031-424-6401', '주일 07:00, 10:30, 16:00, 19:30', '2026년 07월 13일'].every(text => languageDefaults.churchDirectory.bellmalCard.includes(text)), `Official Bellmal parish details are missing from the marker card: ${languageDefaults.churchDirectory.bellmalCard}`);
     assert(languageDefaults.churchDirectory.canthoAnBinh?.diocese === 'Giáo phận Cần Thơ' && ['55/1', 'Chúa Nhật', 'Giáo phận Cần Thơ'].every(text => languageDefaults.churchDirectory.canthoAnBinhCard.includes(text)), `Official Cần Thơ parish details are missing from the marker card: ${languageDefaults.churchDirectory.canthoAnBinhCard}`);
     assert(['Thứ Bảy: 17g30', 'Chúa Nhật: 05g00, 07g00, 17g30'].every(text => languageDefaults.churchDirectory.canthoAnHoiCard.includes(text)), `An Hội anticipated and Sunday evening Mass times were not corrected: ${languageDefaults.churchDirectory.canthoAnHoiCard}`);
@@ -466,6 +466,14 @@ function assert(condition, message) {
         INDEXING_2: '',
         CONTENT_2: '<p>Ha-lê-lui-a. Ha-lê-lui-a.</p><p>Ma-ri-a hỡi, xin kể lại,<br>trên đường đi đã thấy gì cô ?</p><p>- Thấy mồ trống Đức Ki-tô</p><p>phục sinh vinh hiển thiên thu khải hoàn. Ha-lê-lui-a.</p>'
       }]);
+      const fridayAcclamation = ktcgkpvAcclamationSection([{
+        INDEXING_2: 'x. Lc 8,15',
+        CONTENT_2: '<p>Ha-lê-lui-a. Ha-lê-lui. Hạnh phúc thay người thành tâm thiện chí, hằng ấp ủ lời Chúa trong lòng, nhờ kiên nhẫn mà sinh hoa kết quả. Ha-lê-lui-a.</p>'
+      }]);
+      const parentheticalAcclamation = ktcgkpvAcclamationSection([{
+        INDEXING_2: '',
+        CONTENT_2: '<p>Alleluia, alleluia (Ha-le-lui-a, ha-le-lui-a) Gospel acclamation verse. Alleluia (Ha-le-lui-a)</p>'
+      }]);
       const gospel = ktcgkpvReadingSection([{
         INDEXING: 'Ga 20,1-2.11-18',
         LEAD: '<span class="holycross">✠</span>Tin Mừng Chúa Giê-su Ki-tô theo thánh Gio-an.',
@@ -547,6 +555,8 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
         communionText: communion?.text,
         psalmLines: psalm?.lines || [],
         acclamationParagraphs: (acclamation?.lines || []).map(line => line.text),
+        fridayAcclamationParagraphs: (fridayAcclamation?.lines || []).map(line => line.text),
+        parentheticalAcclamationParagraphs: (parentheticalAcclamation?.lines || []).map(line => line.text),
         gospelIntro: gospel?.lines?.find(line => line.role === 'intro')?.text || '',
         vietnameseMain,
         koreanTranslation,
@@ -584,6 +594,8 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
       { sp: 'Xướng', text: 'Câu xướng hai. - Đáp.' }
     ]), `KTCG Psalm does not match the Hanoi Đáp/Xướng structure: ${JSON.stringify(ktcgParsing)}`);
     assert(JSON.stringify(ktcgParsing.acclamationParagraphs) === JSON.stringify(['Ha-lê-lui-a. Ha-lê-lui-a.', 'Ma-ri-a hỡi, xin kể lại, trên đường đi đã thấy gì cô ? Thấy mồ trống Đức Ki-tô phục sinh vinh hiển thiên thu khải hoàn.', 'Ha-lê-lui-a.']), `KTCG Gospel acclamation paragraphs are wrong: ${JSON.stringify(ktcgParsing)}`);
+    assert(JSON.stringify(ktcgParsing.fridayAcclamationParagraphs) === JSON.stringify(['Ha-lê-lui-a. Ha-lê-lui-a.', 'Hạnh phúc thay người thành tâm thiện chí, hằng ấp ủ lời Chúa trong lòng, nhờ kiên nhẫn mà sinh hoa kết quả.', 'Ha-lê-lui-a.']), `KTCG Friday Gospel acclamation typo was not normalized into three paragraphs: ${JSON.stringify(ktcgParsing)}`);
+    assert(JSON.stringify(ktcgParsing.parentheticalAcclamationParagraphs) === JSON.stringify(['Alleluia, alleluia (Ha-le-lui-a, ha-le-lui-a)', 'Gospel acclamation verse.', 'Alleluia (Ha-le-lui-a)']), `Parenthetical KTCG Gospel acclamation was not split into three paragraphs: ${JSON.stringify(ktcgParsing)}`);
     assert(ktcgParsing.gospelIntro === 'Tin Mừng Chúa Giê-su Ki-tô theo thánh Gio-an.' && !ktcgParsing.gospelIntro.includes('✠'), `KTCG Gospel cross was not removed: ${JSON.stringify(ktcgParsing)}`);
     assert(/^Bản dịch KTCGKPV/.test(ktcgParsing.vietnameseMain) && /^베트남 성무일도번역위원회/.test(ktcgParsing.koreanTranslation) && ktcgParsing.translationOpacity < 0.7, `KTCG source labels do not prioritize the original language: ${JSON.stringify(ktcgParsing)}`);
     assert(/KTCGKPV translation/.test(ktcgParsing.englishMain) && /KTCGKPV訳/.test(ktcgParsing.japaneseTranslation) && !JSON.stringify(ktcgParsing).includes('Nhóm Phiên Dịch'), `KTCG source labels are fixed to Korean/Vietnamese or use the old name: ${JSON.stringify(ktcgParsing)}`);
@@ -1238,13 +1250,32 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
         optionCits_kr: [{ cit_kr: '시편 111(110),4-5' }, { cit_kr: '묵시 3,20 참조' }],
         optionCits_vn: [{ cit_vn: 'Tv 110,4-5' }, { cit_vn: 'Kh 3,20' }]
       };
-      return buildFallbackVariantAlignment('communion', optionMap, section);
+      const fallback = buildFallbackVariantAlignment('communion', optionMap, section);
+      const date = new Date(2026, 6, 24, 9);
+      const stale = normalizeVariantAlignmentGroups(optionMap, [
+        { kr: 0 },
+        { kr: 1 },
+        { vn: 0 },
+        { vn: 1 }
+      ]);
+      writeCachedDailyVariantAlignment(date, 'communion', variantAlignmentSignature('communion', optionMap), stale);
+      const mergedSection = Object.assign({}, section, {
+        kr_lines: optionMap.kr.flatMap((option, index) => index ? [parsedLine('', '또는:'), ...option] : option),
+        vn_lines: optionMap.vn.flatMap((option, index) => index ? [parsedLine('', 'Hoặc:'), ...option] : option)
+      });
+      applyCachedVariantAlignments({ communion: mergedSection }, date);
+      localStorage.removeItem(dailyVariantAlignmentStorageKey(date, 'communion'));
+      return { fallback, applied: mergedSection.variantAlignment || [] };
     });
     assert(
-      alternatePsalmNumberingAlignment[0]?.kr === 0
-        && alternatePsalmNumberingAlignment[0]?.vn === 0
-        && alternatePsalmNumberingAlignment[1]?.kr === 1
-        && alternatePsalmNumberingAlignment[1]?.vn === 1,
+      alternatePsalmNumberingAlignment.fallback[0]?.kr === 0
+        && alternatePsalmNumberingAlignment.fallback[0]?.vn === 0
+        && alternatePsalmNumberingAlignment.fallback[1]?.kr === 1
+        && alternatePsalmNumberingAlignment.fallback[1]?.vn === 1
+        && alternatePsalmNumberingAlignment.applied[0]?.kr === 0
+        && alternatePsalmNumberingAlignment.applied[0]?.vn === 0
+        && alternatePsalmNumberingAlignment.applied[1]?.kr === 1
+        && alternatePsalmNumberingAlignment.applied[1]?.vn === 1,
       `Korean/Vietnamese Communion antiphons split on alternate Psalm numbering: ${JSON.stringify(alternatePsalmNumberingAlignment)}`
     );
 
@@ -1308,6 +1339,44 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
     assert(gpsDiocesanBishops.baRia === '교황 레오와 저희 주교 임마누엘과', `Bà Rịa bishop name is wrong: ${JSON.stringify(gpsDiocesanBishops)}`);
     assert(gpsDiocesanBishops.nearbyDiocese === '수원교구' && gpsDiocesanBishops.dataUpdatedAt === '2026-07-23', `Nearby-church GPS diocese lookup is wrong: ${JSON.stringify(gpsDiocesanBishops)}`);
     assert((gpsDiocesanBishops.unresolved.match(/muted-name-placeholder/g) || []).length === 2, `Unresolved bishop/person placeholders were overwritten: ${JSON.stringify(gpsDiocesanBishops)}`);
+
+    const weeklyBishopDirectory = await page.evaluate(() => {
+      const suwon = bishopContextForDiocese('수원교구');
+      const tokyo = bishopContextForDiocese('東京大司教区');
+      const canTho = bishopContextForDiocese('Giáo phận Cần Thơ');
+      const boston = bishopContextForDiocese('Archdiocese of Boston');
+      const refreshedSuwon = applyBishopDirectoryPayload(suwon, {
+        ordinary: 'Matthias',
+        auxiliaries: ['John', 'Germanus'],
+        sourceUrl: 'https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000018&gubun=1',
+        checkedAt: '2026-07-26T00:00:00.000Z'
+      });
+      return {
+        ttl: GPS_BISHOP_CACHE_TTL_MS,
+        suwonRequest: bishopDirectoryRequestForContext(suwon),
+        tokyoRequest: bishopDirectoryRequestForContext(tokyo),
+        canThoRequest: bishopDirectoryRequestForContext(canTho),
+        bostonRequest: bishopDirectoryRequestForContext(boston),
+        localizedSuwon: {
+          ordinary: refreshedSuwon?.ordinary?.kr || '',
+          auxiliaries: (refreshedSuwon?.auxiliaries || []).map(person => person.kr)
+        }
+      };
+    });
+    assert(weeklyBishopDirectory.ttl === 7 * 24 * 60 * 60 * 1000, `Bishop directory cache is not weekly: ${JSON.stringify(weeklyBishopDirectory)}`);
+    assert(
+      weeklyBishopDirectory.suwonRequest?.country === 'KR'
+        && weeklyBishopDirectory.tokyoRequest?.country === 'JP'
+        && weeklyBishopDirectory.canThoRequest?.country === 'VN'
+        && weeklyBishopDirectory.canThoRequest?.lookupPath === '/diocese/dcanv.html'
+        && weeklyBishopDirectory.bostonRequest?.country === 'US',
+      `Weekly bishop directory routing is incomplete: ${JSON.stringify(weeklyBishopDirectory)}`
+    );
+    assert(
+      weeklyBishopDirectory.localizedSuwon.ordinary === '마티아'
+        && JSON.stringify(weeklyBishopDirectory.localizedSuwon.auxiliaries) === JSON.stringify(['요한', '제르마노']),
+      `Refreshed bishop names were not localized through the diocesan name table: ${JSON.stringify(weeklyBishopDirectory)}`
+    );
 
     const voiceUi = await page.evaluate(() => {
       state.uiLang = 'KR';
