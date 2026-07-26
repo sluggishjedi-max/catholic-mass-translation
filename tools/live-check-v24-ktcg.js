@@ -137,6 +137,73 @@ function startServer() {
       return sections;
     });
     console.log(JSON.stringify({ prayerDiagnostics }, null, 2));
+
+    const officialKoreanAndGospel = await page.evaluate(async () => {
+      const date = new Date(2026, 6, 26, 9);
+      state.currentLoc = 'VN';
+      state.targetLang = 'KR';
+      state.vnReadingSource = 'ktcg';
+      state.liturgicalDateContext = { date, localDate: date, leftLang: 'VN', slot: 'day' };
+      state.liturgyInfo = buildGeneratedLiturgyInfo(date);
+      const generatedSeasonalTitleAccepted = isGeneratedSeasonalNameForInfo(
+        'VN',
+        'Chúa Nhật Tuần XVII - Mùa Thường Niên',
+        state.liturgyInfo
+      );
+      const vietnamese = await fetchStrictDailyMass('VN', date);
+      const korean = await fetchStrictDailyMass('KR', date);
+      const merged = createDailyReadingData();
+      mergeSourceData(merged, vietnamese, 'VN');
+      const localCalendarAfterVietnamese = state.liturgyInfo.localCalendar || null;
+      mergeSourceData(merged, korean, 'KR');
+      applyCachedVariantAlignments(merged, date);
+      applyDailyReadingsToMassData(merged);
+      render();
+
+      const sectionIds = [
+        'entrance', 'collect', 'reading1', 'psalm', 'reading2',
+        'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'
+      ];
+      const koreanSections = Object.fromEntries(sectionIds.map(id => {
+        const section = merged[id] || {};
+        const text = [
+          section.kr,
+          ...(Array.isArray(section.kr_lines) ? section.kr_lines.flatMap(line => [line.sp, line.text]) : [])
+        ].filter(Boolean).join(' ');
+        const node = document.querySelector(`[data-part-id="${id}"]`);
+        return [id, {
+          sourceTextLength: cleanNodeText(text).length,
+          aiButtonCount: node ? node.querySelectorAll('.line-kr .btn-ai-trans').length : -1
+        }];
+      }));
+
+      const gospelItem = massData.find(item => getBaseId(item.id) === 'gospel');
+      const renderedGospels = Object.fromEntries(Object.entries(gospelItem?.variants || {}).map(([key, variant]) => [
+        key,
+        (variant.lines || []).map(line => line.text_vn || '').filter(Boolean).join('\n\n')
+      ]));
+      if (!Object.keys(renderedGospels).length && gospelItem) {
+        renderedGospels.default = (gospelItem.lines || []).map(line => line.text_vn || '').filter(Boolean).join('\n\n');
+      }
+      return {
+        generatedSeasonalTitleAccepted,
+        localCalendarAfterVietnamese,
+        koreanSections,
+        renderedGospels
+      };
+    });
+    const missingOfficialKorean = Object.entries(officialKoreanAndGospel.koreanSections)
+      .filter(([, result]) => result.sourceTextLength < 2 || result.aiButtonCount !== 0);
+    if (!officialKoreanAndGospel.generatedSeasonalTitleAccepted
+      || officialKoreanAndGospel.localCalendarAfterVietnamese
+      || missingOfficialKorean.length) {
+      throw new Error(`Official Korean liturgy was suppressed or replaced by AI: ${JSON.stringify(officialKoreanAndGospel)}`);
+    }
+    const gospelBodies = Object.values(officialKoreanAndGospel.renderedGospels);
+    if (!gospelBodies.some(text => /kho báu/i.test(text) && /thương gia/i.test(text))) {
+      throw new Error(`KTCG Gospel body paragraphs were overwritten: ${JSON.stringify(officialKoreanAndGospel.renderedGospels)}`);
+    }
+    console.log(JSON.stringify({ officialKoreanAndGospel }, null, 2));
   } finally {
     await browser.close();
     await new Promise(resolve => server.close(resolve));

@@ -300,6 +300,11 @@ function assert(condition, message) {
         normalizedModernChurch: normalizeModernChurchPlace({ id: 'test', displayName: '천주교 벌말성당', formattedAddress: '대한민국', location: { lat: 1, lng: 2 } }),
         churchMarkerNameLabels: /label:\s*name/.test(addChurchMarker.toString()) && /church-marker-label/.test(addChurchMarker.toString()),
         churchDetailsOnDemand: /fetchFields/.test(fetchChurchPlaceDetails.toString()) && /nationalPhoneNumber/.test(fetchChurchPlaceDetails.toString()) && /regularOpeningHours/.test(fetchChurchPlaceDetails.toString()),
+        churchPopupSurvivesViewportIdle: /churchInfoWindowOpen/.test(scheduleChurchViewportSearch.toString())
+          && /closeclick/.test(initializeChurchMap.toString())
+          && /churchInfoWindowOpen\s*=\s*true/.test(addChurchMarker.toString()),
+        protestantChurchExcluded: isClearlyNonCatholicChurchPlace({ name: 'Nhà thờ Tin Lành An Phú' })
+          && !isLikelyCatholicChurchPlace({ name: 'Nhà thờ Tin Lành An Phú' }),
         churchInfoFixture: churchInfoWindowHtml({
           name: '천주교 벌말성당',
           formatted_address: '경기도 의왕시 테스트로 1',
@@ -318,6 +323,12 @@ function assert(condition, message) {
           maegok: churchLocalDetailsForPlace({ name: '천주교 매곡성당' }),
           canthoAnBinh: churchLocalDetailsForPlace({ name: 'Nhà thờ An Bình', diocese: 'Giáo phận Cần Thơ' }),
           canthoAnHoi: churchLocalDetailsForPlace({ name: 'Nhà thờ An Hội' }),
+          canthoCathedral: churchLocalDetailsForPlace({ name: 'Cathedral of the Diocese of Can Tho', formatted_address: 'Ninh Kiều, Cần Thơ' }),
+          canthoLo20: churchLocalDetailsForPlace({ name: 'Nhà thờ Đức Mẹ Vô Nhiễm - Lộ 20', formatted_address: 'Ninh Kiều, Cần Thơ' }),
+          canthoRachSuc: churchLocalDetailsForPlace({ name: 'Nhà Thờ ĐỨC MẸ RẠCH SÚC', formatted_address: 'Bình Thủy, Cần Thơ' }),
+          canthoThoiHoa: churchLocalDetailsForPlace({ name: 'Nhà Thờ Thới Hoà', formatted_address: 'Ninh Kiều, Cần Thơ' }),
+          canthoBishopHouse: churchLocalDetailsForPlace({ name: 'Toà giám mục Cần Thơ', formatted_address: '12 Nguyễn Trãi, Ninh Kiều, Cần Thơ' }),
+          canthoPinnedPlaces: localPinnedChurchPlacesForBounds(null),
           bariaThuLuu: churchLocalDetailsForPlace({ name: 'Nhà thờ Thủ Lựu' }),
           bellmalCard: churchInfoWindowHtml({ name: '천주교 벌말성당' }),
           canthoAnBinhCard: churchInfoWindowHtml({ name: 'Nhà thờ An Bình', diocese: 'Giáo phận Cần Thơ' }),
@@ -342,11 +353,16 @@ function assert(condition, message) {
     assert(languageDefaults.mapsAuthFailureFallback, `Google Maps authentication failures should fall back to the iframe map: ${JSON.stringify(languageDefaults)}`);
     assert(languageDefaults.placesAuthFailureFallback, `Places authorization failures should fall back to a usable Google map instead of leaving an empty marker layer: ${JSON.stringify(languageDefaults)}`);
     assert(languageDefaults.churchMarkerNameLabels && languageDefaults.churchDetailsOnDemand, `Church marker names or on-demand Place details are not wired: ${JSON.stringify(languageDefaults)}`);
+    assert(languageDefaults.churchPopupSurvivesViewportIdle, `The church detail popup can still be destroyed by a map idle refresh: ${JSON.stringify(languageDefaults)}`);
+    assert(languageDefaults.protestantChurchExcluded, `Explicitly Protestant places must not be shown as Catholic churches: ${JSON.stringify(languageDefaults)}`);
     assert(['주소', '사제', '수녀', '미사 시간', '홍길동 신부', '김마리아 수녀', '주일 11:00'].every(text => languageDefaults.churchInfoFixture.includes(text)), `Church info card is missing requested fields: ${languageDefaults.churchInfoFixture}`);
-    assert(languageDefaults.churchDirectory.count >= 2050 && languageDefaults.churchDirectory.countries.KR >= 1789 && languageDefaults.churchDirectory.countries['VN-CanTho'] >= 164 && languageDefaults.churchDirectory.countries['VN-BaRia'] === 99 && languageDefaults.churchDirectory.bellmal?.diocese === '수원교구' && languageDefaults.churchDirectory.maegok?.diocese === '수원교구', `Official local church directory did not load or match named parishes: ${JSON.stringify(languageDefaults.churchDirectory)}`);
+    assert(languageDefaults.churchDirectory.count >= 4800 && languageDefaults.churchDirectory.countries.KR >= 1789 && languageDefaults.churchDirectory.countries['VN-CanTho'] >= 160 && languageDefaults.churchDirectory.countries['VN-CanThoMassTimes'] >= 159 && languageDefaults.churchDirectory.countries['VN-BaRia'] === 99 && languageDefaults.churchDirectory.bellmal?.diocese === '수원교구' && languageDefaults.churchDirectory.maegok?.diocese === '수원교구', `Official local church directory did not load or match named parishes: ${JSON.stringify(languageDefaults.churchDirectory)}`);
     assert(['14058', '수원교구', '031-424-6401', '주일 07:00, 10:30, 16:00, 19:30', '2026년 07월 13일'].every(text => languageDefaults.churchDirectory.bellmalCard.includes(text)), `Official Bellmal parish details are missing from the marker card: ${languageDefaults.churchDirectory.bellmalCard}`);
     assert(languageDefaults.churchDirectory.canthoAnBinh?.diocese === 'Giáo phận Cần Thơ' && ['55/1', 'Chúa Nhật', 'Giáo phận Cần Thơ'].every(text => languageDefaults.churchDirectory.canthoAnBinhCard.includes(text)), `Official Cần Thơ parish details are missing from the marker card: ${languageDefaults.churchDirectory.canthoAnBinhCard}`);
     assert(['Thứ Bảy: 17g30', 'Chúa Nhật: 05g00, 07g00, 17g30'].every(text => languageDefaults.churchDirectory.canthoAnHoiCard.includes(text)), `An Hội anticipated and Sunday evening Mass times were not corrected: ${languageDefaults.churchDirectory.canthoAnHoiCard}`);
+    assert(languageDefaults.churchDirectory.canthoCathedral?.directoryName === 'Chánh Tòa' && languageDefaults.churchDirectory.canthoLo20?.directoryName === 'Lộ 20' && languageDefaults.churchDirectory.canthoRachSuc?.directoryName === 'Rạch Súc' && languageDefaults.churchDirectory.canthoThoiHoa?.directoryName === 'Thới Hòa', `Descriptive Google place names do not match the official Cần Thơ directory: ${JSON.stringify(languageDefaults.churchDirectory)}`);
+    assert(languageDefaults.churchDirectory.canthoBishopHouse?.directoryName === 'Tòa Giám Mục' && languageDefaults.churchDirectory.canthoBishopHouse?.massTimes?.length >= 3, `The Cần Thơ bishop's house did not resolve to its official schedule: ${JSON.stringify(languageDefaults.churchDirectory.canthoBishopHouse)}`);
+    assert(languageDefaults.churchDirectory.canthoPinnedPlaces.some(place => place.name === 'Tòa Giám mục Cần Thơ' && Math.abs(place.geometry.location.lat - 10.0395622) < 0.000001 && Math.abs(place.geometry.location.lng - 105.7861857) < 0.000001), `The Cần Thơ bishop's house is not pinned at its verified map location: ${JSON.stringify(languageDefaults.churchDirectory.canthoPinnedPlaces)}`);
     assert(languageDefaults.churchDirectory.bariaThuLuu?.diocese === 'Giáo phận Bà Rịa' && ['20 Hà Huy Tập', 'Thứ 7: 18g00', 'Giáo phận Bà Rịa'].every(text => languageDefaults.churchDirectory.bariaThuLuuCard.includes(text)), `Official Bà Rịa parish details are missing from the marker card: ${languageDefaults.churchDirectory.bariaThuLuuCard}`);
     assert(JSON.stringify(languageDefaults.koreanPenitentialLabels) === JSON.stringify(['제1양식', '제2양식', '제3양식']), `Korean penitential-form labels are wrong: ${JSON.stringify(languageDefaults)}`);
 
@@ -1495,14 +1511,23 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
 
     const vietnamesePrayerSourceCategory = await page.evaluate(() => {
       const entry = getPrayerData().find(item => item.sourceCategory?.VN === 'Các Kinh Cầu');
-      const host = document.createElement('div');
-      host.innerHTML = entry ? prayerMetaHtml(entry, 'VN', 'KR') : '';
+      const titleHost = document.createElement('div');
+      titleHost.innerHTML = entry
+        ? `${prayerTitleHtml(entry, 'VN', 'KR', false)}${prayerTitleHtml(entry, 'KR', 'VN', true)}`
+        : '';
+      const metaHost = document.createElement('div');
+      metaHost.innerHTML = entry ? prayerMetaHtml(entry, 'VN', 'KR') : '';
       return {
         id: entry?.id || '',
-        pills: Array.from(host.querySelectorAll('.aux-pill')).map(node => node.textContent.trim())
+        bookTags: Array.from(titleHost.querySelectorAll('.aux-prayer-book-tag')).map(node => node.textContent.trim()),
+        pills: Array.from(metaHost.querySelectorAll('.aux-pill')).map(node => node.textContent.trim()),
+        appOnlyCategoryHidden: prayerOfficialCategory({
+          category: 'common',
+          sourceCategory: { VN: 'Kinh nguyện chung' }
+        }, 'VN') === ''
       };
     });
-    assert(vietnamesePrayerSourceCategory.id && vietnamesePrayerSourceCategory.pills.includes('Các Kinh Cầu'), `Vietnamese prayer sourceCategory is missing from body tags: ${JSON.stringify(vietnamesePrayerSourceCategory)}`);
+    assert(vietnamesePrayerSourceCategory.id && vietnamesePrayerSourceCategory.bookTags.includes('Các Kinh Cầu') && !vietnamesePrayerSourceCategory.pills.includes('Các Kinh Cầu') && vietnamesePrayerSourceCategory.appOnlyCategoryHidden, `Prayer-book categories must be orange title tags while app-only categories stay in the gray grouping panel: ${JSON.stringify(vietnamesePrayerSourceCategory)}`);
 
     const prayerLanguageVisibility = await page.evaluate(() => {
       const countFor = (left, query) => {
@@ -1565,10 +1590,12 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
       return {
         rightTitleColor: style?.color || '',
         rightTitleOpacity: style ? Number.parseFloat(style.opacity) : 0,
-        leftBodyCategoryTags: first?.querySelectorAll('.aux-language-block:first-child .aux-prayer-tag').length || 0
+        leftBodyCategoryTags: first?.querySelectorAll('.aux-language-block:first-child .aux-prayer-book-tag').length || 0,
+        rightBodyCategoryTags: first?.querySelectorAll('.aux-language-block-translation .aux-prayer-book-tag').length || 0
       };
     });
     assert(prayerDetailUi.rightTitleColor === 'rgb(51, 51, 51)' && prayerDetailUi.rightTitleOpacity === 1, `Prayer translation box title should be black: ${JSON.stringify(prayerDetailUi)}`);
+    assert(prayerDetailUi.leftBodyCategoryTags >= 1 && prayerDetailUi.rightBodyCategoryTags >= 1, `Official prayer-book categories should appear beside both original and translated titles: ${JSON.stringify(prayerDetailUi)}`);
 
     await page.evaluate(() => {
       globalThis.__savedUploadedPrayerDataForAutoTest = globalThis.uploadedPrayerData;

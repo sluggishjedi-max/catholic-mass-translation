@@ -178,6 +178,7 @@
         .aux-result-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; color: var(--sub-txt); font-size: 0.84rem; font-weight: 800; }
         .aux-pill { display: inline-flex; align-items: center; border-radius: 999px; background: #eef2f6; padding: 3px 8px; }
         .aux-prayer-tag { display: inline-flex; align-items: center; margin-left: 6px; border-radius: 999px; background: #f4efe8; color: #8a5a2b; padding: 2px 7px; font-size: 0.75rem; font-weight: 800; vertical-align: middle; }
+        .aux-prayer-book-tag { display: inline-flex; align-items: center; margin-left: 6px; border: 1px solid #f1a54b; border-radius: 999px; background: #fff1df; color: #b45309; padding: 2px 7px; font-size: 0.75rem; font-weight: 900; vertical-align: middle; }
         .aux-title-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; margin-bottom: 8px; }
         .aux-title-row strong { color: var(--primary-color); font-size: 1.05rem; }
         .aux-muted { color: var(--sub-txt); }
@@ -250,7 +251,7 @@
         .dialogue { display: flex; gap: 3px; line-height: 1.45; }
         .speaker { width: var(--speaker-width, 36px); min-width: var(--speaker-width, 36px); flex-shrink: 0; text-align: left; padding-top: 2px; font-size: 0.8rem; font-weight: 800; color: #555; }
         .speaker-placeholder { visibility: hidden; }
-        .text-content { flex-grow: 1; min-width: 0; overflow-wrap: anywhere; word-break: normal; line-break: anywhere; hyphens: auto; }
+        .text-content { flex-grow: 1; min-width: 0; overflow-wrap: anywhere; word-break: normal; line-break: anywhere; hyphens: auto; white-space: pre-line; }
 
         /* 지시문은 각 언어의 본문 바로 위에 독립된 줄로 보입니다. */
         .rubric { display: block; color: var(--rubric-color); font-style: italic; font-size: 0.9em; margin-bottom: 2px; }
@@ -708,7 +709,7 @@
 <script src="JS%20file/korean_blessing_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/prayer_data.js?v=20260722-v24-1"></script>
 <script src="JS%20file/hymn_data.js?v=20260722-v24-1"></script>
-<script src="JS%20file/church_local_details.js?v=20260726-v24-5"></script>
+<script src="JS%20file/church_local_details.js?v=20260726-v24-6"></script>
 <script src="JS%20file/bishop_data.js?v=20260723-v24-5"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260723-v24-1"></script>
 
@@ -2180,6 +2181,7 @@
             .replace(/\s*[（(][^()（）]*[）)]\s*/g, ' ')
             .replace(/\s+\b(?:cycle|year|năm|annus)\s+[abc]\b\s*$/i, ' ')
             .replace(/\s*[-–—]\s*(?:cycle|year|năm|annus)\s+[abc]\s*$/i, ' ')
+            .replace(/\b(?:tuần|mùa)\b/giu, ' ')
             .replace(/\s+/g, ' ')
             .trim();
     }
@@ -2297,6 +2299,7 @@
     let churchPlacesService = null;
     let churchAutocomplete = null;
     let churchInfoWindow = null;
+    let churchInfoWindowOpen = false;
     let churchMarkers = [];
     let churchMapLoadPromise = null;
     let churchIdleTimer = null;
@@ -3367,9 +3370,45 @@
             return normalized;
         };
         const normalizedName = normalizeChurchLookup(name);
+        const normalizeChurchTokens = value => normalizeSearchText(value)
+            .replace(/\b(?:천주교|가톨릭|성당|본당|교회|catholic|roman|church|parish|the|of|nhà|thờ|giao|giáo|xứ|họ|đạo|điểm|công|カトリック|教会)\b/gu, ' ')
+            .split(/\s+/)
+            .filter(token => token.length >= 2 || /^\d+$/.test(token));
+        const placeNameTokens = new Set(normalizeChurchTokens(name));
         const candidates = (Array.isArray(globalThis.churchLocalDetailRecords) ? globalThis.churchLocalDetailRecords : [])
-            .filter(record => [record && record.name, record && record.directoryName]
-                .some(value => normalizeChurchLookup(value) === normalizedName));
+            .map(record => {
+                const recordNames = [
+                    record && record.name,
+                    record && record.directoryName,
+                    record && record.officialDirectoryName,
+                    ...(Array.isArray(record && record.aliases) ? record.aliases : [])
+                ].filter(Boolean);
+                let nameScore = 0;
+                recordNames.forEach(value => {
+                    const recordKey = normalizeChurchLookup(value);
+                    if (!recordKey || !normalizedName) return;
+                    if (recordKey === normalizedName) {
+                        nameScore = Math.max(nameScore, 1000 + recordKey.length);
+                        return;
+                    }
+                    if (recordKey.length >= 4 && normalizedName.includes(recordKey)) {
+                        nameScore = Math.max(nameScore, 500 + recordKey.length);
+                        return;
+                    }
+                    if (normalizedName.length >= 4 && recordKey.includes(normalizedName)) {
+                        nameScore = Math.max(nameScore, 450 + normalizedName.length);
+                        return;
+                    }
+                    const recordTokens = new Set(normalizeChurchTokens(value));
+                    const shared = Array.from(recordTokens).filter(token => placeNameTokens.has(token));
+                    const coverage = shared.length / Math.max(recordTokens.size, placeNameTokens.size, 1);
+                    if (shared.length >= 2 && coverage >= 0.72) {
+                        nameScore = Math.max(nameScore, 300 + shared.length * 10);
+                    }
+                });
+                return { record, nameScore };
+            })
+            .filter(candidate => candidate.nameScore > 0);
         if (candidates.length) {
             const placeContext = normalizeChurchContext([
                 place && place.formatted_address,
@@ -3380,12 +3419,14 @@
                 placeContext.split(/\s+/).filter(token => token.length >= 2 || /^\d+$/.test(token))
             ));
             const placePoint = churchPointCoordinates(place);
-            const ranked = candidates.map((record, index) => {
+            const ranked = candidates.map((candidate, index) => {
+                const record = candidate.record;
                 const recordContext = normalizeChurchContext([
                     record.address, record.diocese, record.deanery
                 ].filter(Boolean).join(' '));
                 const recordTokens = recordContext.split(/\s+/);
-                let score = tokens.reduce((sum, token) => sum + (recordTokens.includes(token) ? 1 : 0), 0);
+                let score = candidate.nameScore
+                    + tokens.reduce((sum, token) => sum + (recordTokens.includes(token) ? 10 : 0), 0);
                 let distanceKm = Number.POSITIVE_INFINITY;
                 const recordPoint = churchPointCoordinates(record);
                 if (placePoint && recordPoint) {
@@ -3940,7 +3981,8 @@
     }
 
     function addChurchMarker(place, focus = false) {
-        if (!churchMap || !place || !place.geometry || !place.geometry.location) return null;
+        if (!churchMap || !(window.google && google.maps && typeof google.maps.Marker === 'function')
+            || !place || !place.geometry || !place.geometry.location) return null;
         const name = cleanNodeText(place.name || '');
         const marker = new google.maps.Marker({
             map: churchMap,
@@ -3951,6 +3993,7 @@
         });
         marker.addListener('click', async () => {
             const requestId = ++churchInfoRequestId;
+            churchInfoWindowOpen = true;
             churchInfoWindow.setContent(churchInfoWindowHtml(place, { loading: true }));
             churchInfoWindow.open(churchMap, marker);
             const details = await enrichUsChurchPlaceDetails(await fetchChurchPlaceDetails(place));
@@ -3966,10 +4009,50 @@
         return marker;
     }
 
+    function localPinnedChurchPlacesForBounds(bounds) {
+        const records = Array.isArray(globalThis.churchLocalDetailRecords)
+            ? globalThis.churchLocalDetailRecords
+            : [];
+        return records.filter(record => {
+            if (!record || !record.showOnMap) return false;
+            const point = churchPointCoordinates(record);
+            if (!point) return false;
+            if (!bounds || typeof bounds.contains !== 'function') return true;
+            return bounds.contains(point);
+        }).map(record => {
+            const point = churchPointCoordinates(record);
+            return {
+                place_id: record.placeId || `local:${record.country || ''}:${record.diocese || ''}:${record.directoryName || record.name || ''}`,
+                name: cleanNodeText(record.name || record.directoryName || ''),
+                formatted_address: cleanNodeText(record.address || ''),
+                vicinity: cleanNodeText(record.address || ''),
+                diocese: cleanNodeText(record.diocese || ''),
+                phone: cleanNodeText(record.phone || ''),
+                website: String(record.website || '').trim(),
+                google_maps_url: String(record.googleMapsUrl || '').trim(),
+                priestNames: record.priestNames || [],
+                sisterNames: record.sisterNames || [],
+                massTimes: record.massTimes || [],
+                massTimesPeriod: record.massTimesPeriod || '',
+                massTimesSourceUrl: record.officialDioceseUrl || record.sourceUrl || '',
+                geometry: { location: point },
+                __localPinned: true
+            };
+        });
+    }
+
     function renderChurchPlaces(results = []) {
+        if (churchInfoWindowOpen) return;
+        const combined = new Map();
+        results.slice(0, CHURCH_MAX_RESULTS).forEach(place => {
+            if (place && place.place_id) combined.set(place.place_id, place);
+        });
+        const bounds = churchMap && typeof churchMap.getBounds === 'function' ? churchMap.getBounds() : null;
+        localPinnedChurchPlacesForBounds(bounds).forEach(place => combined.set(place.place_id, place));
+        const places = Array.from(combined.values());
         clearChurchMarkers();
-        results.slice(0, CHURCH_MAX_RESULTS).forEach(place => addChurchMarker(place));
-        if (results.length) setChurchCaption(churchFoundText(results.length));
+        places.forEach(place => addChurchMarker(place));
+        if (places.length) setChurchCaption(churchFoundText(places.length));
     }
 
     function churchSearchQueriesForLocation(value = state.currentLoc) {
@@ -4043,8 +4126,14 @@
     }
 
     function isLikelyCatholicChurchPlace(place) {
-        const text = `${place && place.displayName || ''} ${place && place.formattedAddress || ''}`;
-        return /천주교|가톨릭|catholic|công\s*giáo|giáo\s*xứ|カトリック|cattolic|parrocchia/i.test(text);
+        const text = `${place && (place.displayName || place.name) || ''} ${place && (place.formattedAddress || place.formatted_address || place.vicinity) || ''}`;
+        if (/tin\s*lành|protestant|baptist|methodist|evangelical/i.test(text)) return false;
+        return /천주교|가톨릭|catholic|công\s*giáo|giáo\s*xứ|giáo\s*phận|cathedral|カトリック|cattolic|parrocchia/i.test(text);
+    }
+
+    function isClearlyNonCatholicChurchPlace(place) {
+        const text = `${place && (place.displayName || place.name) || ''} ${place && (place.formattedAddress || place.formatted_address || place.vicinity) || ''}`;
+        return /tin\s*lành|protestant|baptist|methodist|evangelical/i.test(text);
     }
 
     async function modernChurchPlaceClass() {
@@ -4080,6 +4169,7 @@
         const collected = new Map();
         fulfilled.forEach(result => {
             (result.value && result.value.places || []).forEach(place => {
+                if (isClearlyNonCatholicChurchPlace(place)) return;
                 const normalized = normalizeModernChurchPlace(place);
                 if (normalized && normalized.place_id && !collected.has(normalized.place_id)) collected.set(normalized.place_id, normalized);
             });
@@ -4125,6 +4215,7 @@
                 if (status === google.maps.places.PlacesServiceStatus.OK && Array.isArray(results)) {
                     results.forEach(place => {
                         if (!place || !place.place_id) return;
+                        if (isClearlyNonCatholicChurchPlace(place)) return;
                         queryResultCount += 1;
                         if (!collected.has(place.place_id)) collected.set(place.place_id, place);
                     });
@@ -4160,12 +4251,16 @@
     }
 
     function scheduleChurchViewportSearch() {
+        if (churchInfoWindowOpen) return;
         if (churchIdleTimer) clearTimeout(churchIdleTimer);
         churchIdleTimer = setTimeout(searchChurchesInCurrentView, 650);
     }
 
     function focusChurchPlace(place) {
         if (!place || !place.geometry || !place.geometry.location) return false;
+        if (churchInfoWindow) churchInfoWindow.close();
+        churchInfoWindowOpen = false;
+        churchInfoRequestId += 1;
         clearChurchMarkers();
         addChurchMarker(place, true);
         setChurchCaption(place.name || auxText().churchTitle);
@@ -4227,6 +4322,11 @@
                 });
                 churchPlacesService = new google.maps.places.PlacesService(churchMap);
                 churchInfoWindow = new google.maps.InfoWindow();
+                churchInfoWindow.addListener('closeclick', () => {
+                    churchInfoWindowOpen = false;
+                    churchInfoRequestId += 1;
+                    scheduleChurchViewportSearch();
+                });
                 churchMap.addListener('idle', scheduleChurchViewportSearch);
                 churchMap.addListener('dragend', scheduleChurchViewportSearch);
                 churchMap.addListener('zoom_changed', scheduleChurchViewportSearch);
@@ -4239,6 +4339,9 @@
                     }
                 }, 1500);
             } else {
+                if (churchInfoWindow) churchInfoWindow.close();
+                churchInfoWindowOpen = false;
+                churchInfoRequestId += 1;
                 churchMap.setCenter(center);
                 churchMap.setZoom(gpsCenter ? 14 : fallback.zoom);
             }
@@ -4359,7 +4462,10 @@
     }
 
     function prayerOfficialCategory(entry, langCode) {
-        return localizedPrayerValueStrict(entry && entry.sourceCategory, langCode);
+        const category = localizedPrayerValueStrict(entry && entry.sourceCategory, langCode);
+        if (!category) return '';
+        const appOnlyCategory = /^(?:공통\s*기도문|국가별(?:[·\s]*기타)?\s*기도문?|Kinh\s+nguyện\s+chung|Kinh\s+theo\s+từng\s+nước(?:\s+và\s+kinh\s+khác)?|Common\s+Prayers?|Local\s+and\s+Other\s+Prayers?|共通の祈り|各国・その他の祈り|Preces\s+communes|Preces\s+locales\s+et\s+aliae)$/iu;
+        return appOnlyCategory.test(category) ? '' : category;
     }
 
     function prayerSourceText(entry, langCode) {
@@ -4452,14 +4558,14 @@
     function prayerTitleHtml(entry, langCode, otherLangCode, isTranslation = false) {
         const directTitle = localizedPrayerValueStrict(entry.titles, langCode);
         const automaticTitle = directTitle ? '' : prayerAutomaticTranslatedText(entry, langCode, otherLangCode, 'title');
+        const category = prayerOfficialCategory(entry, langCode);
+        const officialTag = category ? `<span class="aux-prayer-book-tag">${escapeHtml(category)}</span>` : '';
         if (isTranslation) {
-            if (directTitle) return escapeHtml(directTitle);
-            return automaticTitle ? `<span class="ai-badge">AI</span>${escapeHtml(automaticTitle)}` : '';
+            if (directTitle) return `${escapeHtml(directTitle)}${officialTag}`;
+            return automaticTitle ? `<span class="ai-badge">AI</span>${escapeHtml(automaticTitle)}${officialTag}` : '';
         }
         const fallbackTitle = localizedPrayerValue(entry.titles, langCode) || localizedPrayerValue(entry.titles, otherLangCode) || '기도문';
-        const category = prayerOfficialCategory(entry, langCode);
         const missingTag = directTitle ? '' : (automaticTitle ? '<span class="ai-badge">AI</span>' : '<span class="aux-prayer-tag">AI 번역</span>');
-        const officialTag = category ? `<span class="aux-prayer-tag">${escapeHtml(category)}</span>` : '';
         return `${escapeHtml(directTitle || automaticTitle || fallbackTitle)}${officialTag}${missingTag}`;
     }
 
@@ -4505,10 +4611,6 @@
         const pills = [];
         const categoryLabel = prayerCategoryLabel(entry.category, state.uiLang || 'KR');
         if (categoryLabel) pills.push(categoryLabel);
-        [leftLang, rightLang].forEach(lang => {
-            const sourceCategory = prayerOfficialCategory(entry, lang);
-            if (sourceCategory && !pills.includes(sourceCategory)) pills.push(sourceCategory);
-        });
         [leftLang, rightLang].forEach(lang => {
             const source = prayerSourceText(entry, lang);
             if (source && !pills.includes(source)) pills.push(source);
@@ -7388,6 +7490,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!cleanTitle) return;
         const currentTitle = state.liturgyInfo.names && state.liturgyInfo.names[lang];
         if (!currentTitle) return;
+        // Daily sources often reorder harmless seasonal words (for example,
+        // "Chúa Nhật Tuần XVII - Mùa Thường Niên"). Do not mistake that for a
+        // country-only proper and erase the official counterpart languages.
+        if (isGeneratedSeasonalNameForInfo(lang, cleanTitle, state.liturgyInfo)) return;
         const fixedSharedTitle = strictFixedDailyTitle(lang, getActiveLiturgicalSourceDate());
         if (fixedSharedTitle && normalizeCalendarNameForCompare(cleanTitle) === normalizeCalendarNameForCompare(fixedSharedTitle)) return;
         const activeDate = getActiveLiturgicalSourceDate();
@@ -10746,9 +10852,34 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    function consolidateParsedReadingBodyLines(baseId, parsedLines) {
+        if (!['reading1', 'reading2', 'gospel'].includes(baseId) || !Array.isArray(parsedLines)) return parsedLines;
+        const output = [];
+        let bodyLine = null;
+        parsedLines.forEach(line => {
+            if (!line || (line.role || 'body') !== 'body') {
+                output.push(line);
+                return;
+            }
+            if (!bodyLine) {
+                bodyLine = Object.assign({}, line);
+                output.push(bodyLine);
+                return;
+            }
+            const nextText = String(line.text || '').trim();
+            if (nextText) bodyLine.text = [String(bodyLine.text || '').trim(), nextText].filter(Boolean).join('\n\n');
+            const nextAi = String(line.ai || '').trim();
+            if (nextAi) bodyLine.ai = [String(bodyLine.ai || '').trim(), nextAi].filter(Boolean).join('\n\n');
+            if (!bodyLine.sp && line.sp) bodyLine.sp = line.sp;
+            if (!bodyLine.rubric && line.rubric) bodyLine.rubric = line.rubric;
+        });
+        return output;
+    }
+
     function applyParsedLinesForLanguage(targetLines, lower, parsedLines, baseId) {
         parsedLines = normalizePrayerParsedLinesBeforeApply(lower, baseId, parsedLines);
         parsedLines = normalizeParsedLinesBeforeApply(lower, baseId, parsedLines);
+        parsedLines = consolidateParsedReadingBodyLines(baseId, parsedLines);
         if (!Array.isArray(parsedLines) || !parsedLines.length) return;
         if (usesReadingRoles(baseId, parsedLines)) {
             const targetsByRole = ensureRoleTargetLines(targetLines, baseId, parsedLines);

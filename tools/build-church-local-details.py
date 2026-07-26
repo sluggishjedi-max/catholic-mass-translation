@@ -42,6 +42,7 @@ CANTHO_ADDRESS_URL = "https://gpcantho.com/dia-chi-cac-giao-xu-giao-phan-can-tho
 CANTHO_MASS_URL = "https://gpcantho.com/gio-le-cac-nha-tho-trong-giao-phan-can-tho-2/"
 CANTHO_PRIESTS_URL = "https://gpcantho.com/danh-sach-linh-muc-doan-giao-phan-can-tho-tu-thang-11-nam-2025/"
 CANTHO_PRIESTS_DRIVE_ID = "1anYoEw10NybGEBur7UtPrd719xjVbbhy"
+CANTHO_GOOGLE_AUDIT_PATH = ROOT / "tools" / "cantho-google-places-audit.json"
 GOODNEWS_PARISH_API = "https://catholicapi.catholic.or.kr/app/parish/getParishList.asp"
 GOODNEWS_PARISH_DETAIL = "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum={orgnum}"
 GOODNEWS_KOREAN_DIOCESES = {
@@ -868,7 +869,7 @@ def build_hanoi(*, refresh: bool = False, workers: int = 8) -> list[dict]:
 
 
 def vietnamese_parish_heading_name(value: str) -> str:
-    text = re.sub(r"^\s*\d+\s*[./)-]?\s*", "", clean_text(value))
+    text = re.sub(r"^\s*\d+\s*[./)-]?\s*", "", clean_text(value)).lstrip("*•–—- ")
     folded = accent_fold(text)
     prefixes = (
         "giao xu ",
@@ -969,20 +970,25 @@ def parse_cantho_mass_times(*, refresh: bool = False) -> list[dict]:
     records: list[dict] = []
     current: dict | None = None
     for child in entry.find_all(["h1", "p", "ol", "ul"], recursive=False):
-        separator = " | " if child.name in ("ol", "ul") else " "
-        text = clean_text(child.get_text(separator, strip=True))
-        if child.name == "h1" and "hat " in accent_fold(text):
-            deanery = cantho_deanery_name(text)
+        heading_text = clean_text(child.get_text(" ", strip=True))
+        if child.name == "h1" and "hat " in accent_fold(heading_text):
+            deanery = cantho_deanery_name(heading_text)
             continue
-        if child.name not in ("p", "ol", "ul") or not text:
+        if child.name not in ("p", "ol", "ul"):
             continue
-        name = vietnamese_parish_heading_name(text)
-        if name:
-            current = {"name": name, "deanery": deanery, "lines": []}
-            records.append(current)
-            continue
-        if current:
-            current["lines"].append(text)
+        direct_items = child.find_all("li", recursive=False) if child.name in ("ol", "ul") else []
+        texts = [
+            clean_text(node.get_text(" ", strip=True))
+            for node in direct_items
+        ] if direct_items else [heading_text]
+        for text in filter(None, texts):
+            name = vietnamese_parish_heading_name(text)
+            if name:
+                current = {"name": name, "deanery": deanery, "lines": []}
+                records.append(current)
+                continue
+            if current:
+                current["lines"].append(text)
 
     for record in records:
         raw_lines = record.pop("lines", [])
@@ -991,7 +997,10 @@ def parse_cantho_mass_times(*, refresh: bool = False) -> list[dict]:
             for line in raw_lines
             if looks_like_vietnamese_mass_schedule(line)
         ]
-        address = next((line for line in raw_lines if line not in schedule and not line.startswith("|") and len(line) > 5), "")
+        address = next((
+            line for line in raw_lines
+            if not looks_like_vietnamese_mass_schedule(line) and not line.startswith("|") and len(line) > 5
+        ), "")
         if address:
             record["address"] = address.lstrip("–- ")
         if schedule:
@@ -1226,8 +1235,20 @@ def build_cantho(*, refresh: bool = False) -> list[dict]:
     by_exact: dict[str, list[dict]] = {}
     by_bare: dict[str, list[dict]] = {}
     for record in records:
-        by_exact.setdefault(normalized_vietnamese_parish_name(record["directoryName"]), []).append(record)
-        by_bare.setdefault(normalized_vietnamese_parish_name(record["directoryName"], drop_parenthetical=True), []).append(record)
+        lookup_names = unique([
+            record.get("directoryName", ""),
+            record.get("officialDirectoryName", ""),
+        ])
+        for lookup_name in lookup_names:
+            by_exact.setdefault(normalized_vietnamese_parish_name(lookup_name), []).append(record)
+            by_bare.setdefault(normalized_vietnamese_parish_name(lookup_name, drop_parenthetical=True), []).append(record)
+
+    cantho_name_aliases = {
+        normalized_vietnamese_parish_name("Thánh Giuse – Việt Kiều"): normalized_vietnamese_parish_name("Giuse (Việt Kiều)"),
+        normalized_vietnamese_parish_name("Kinh Ba"): normalized_vietnamese_parish_name("Kênh Ba"),
+        normalized_vietnamese_parish_name("Thánh Phụng"): normalized_vietnamese_parish_name("Kinh Tế Mới"),
+        normalized_vietnamese_parish_name("Xavie"): normalized_vietnamese_parish_name("Xavier"),
+    }
 
     def match(name: str, deanery: str = "") -> dict | None:
         deanery_key = accent_fold(deanery)
@@ -1243,7 +1264,8 @@ def build_cantho(*, refresh: bool = False) -> list[dict]:
             ]
             return scoped[0] if len(scoped) == 1 else None
 
-        exact = by_exact.get(normalized_vietnamese_parish_name(name), [])
+        normalized_name = normalized_vietnamese_parish_name(name)
+        exact = by_exact.get(cantho_name_aliases.get(normalized_name, normalized_name), [])
         exact_match = unique_for_deanery(exact)
         if exact_match:
             return exact_match
@@ -1286,8 +1308,68 @@ def build_cantho(*, refresh: bool = False) -> list[dict]:
         target["priestAssignmentsPeriod"] = "Từ tháng 1 năm 2026"
         priest_matched += 1
 
+    google_audit: dict[tuple[str, str], dict] = {}
+    google_audit_generated_at = ""
+    if CANTHO_GOOGLE_AUDIT_PATH.is_file():
+        try:
+            audit_payload = json.loads(CANTHO_GOOGLE_AUDIT_PATH.read_text(encoding="utf-8"))
+            google_audit_generated_at = clean_text(audit_payload.get("generatedAt", ""))
+            for item in audit_payload.get("records", []):
+                key = (
+                    normalized_vietnamese_parish_name(item.get("directoryName", "")),
+                    accent_fold(item.get("deanery", "")),
+                )
+                if key[0]:
+                    google_audit[key] = item
+        except (OSError, ValueError, TypeError) as error:
+            print(f"Cần Thơ Google audit skipped: {error}", flush=True)
+
     for record in records:
         record["sourceUrls"] = [CANTHO_ADDRESS_URL, CANTHO_MASS_URL, CANTHO_PRIESTS_URL]
+        normalized_name = normalized_vietnamese_parish_name(record.get("directoryName", ""))
+        google_item = google_audit.get((normalized_name, accent_fold(record.get("deanery", ""))))
+        if google_item:
+            record["googlePlacesAuditStatus"] = google_item.get("status", "missing")
+            record["googlePlacesAuditDate"] = google_audit_generated_at
+            if google_item.get("status") == "matched":
+                google_name = clean_text(google_item.get("googleName", ""))
+                record["aliases"] = unique([*record.get("aliases", []), google_name])
+                record["googlePlacesName"] = google_name
+                record["googlePlacesAddress"] = clean_text(google_item.get("googleAddress", ""))
+                record["placeId"] = clean_text(google_item.get("placeId", ""))
+                record["lat"] = google_item.get("lat")
+                record["lng"] = google_item.get("lng")
+                record["googleMapsUrl"] = clean_text(google_item.get("googleMapsUrl", ""))
+                if record.get("placeId") and not record.get("googleMapsUrl"):
+                    record["googleMapsUrl"] = (
+                        "https://www.google.com/maps/search/?api=1&query=place_id:"
+                        f"{record['placeId']}"
+                    )
+                record["showOnMap"] = True
+        if normalized_name == normalized_vietnamese_parish_name("Chánh Tòa"):
+            record["aliases"] = unique([
+                *record.get("aliases", []),
+                "Cathedral of the Diocese of Can Tho",
+                "Can Tho Cathedral",
+                "Nhà thờ Chính tòa Cần Thơ",
+                "Nhà thờ Chánh tòa Cần Thơ",
+            ])
+        if normalized_name == normalized_vietnamese_parish_name("Tòa Giám Mục"):
+            record.update({
+                "name": "Tòa Giám mục Cần Thơ",
+                "lat": 10.0395622,
+                "lng": 105.7861857,
+                "placeId": "ChIJcf49Ds1joDEReTd8v4mT5Vw",
+                "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=place_id:ChIJcf49Ds1joDEReTd8v4mT5Vw",
+                "showOnMap": True,
+                "aliases": unique([
+                    *record.get("aliases", []),
+                    "Toà giám mục Cần Thơ",
+                    "Tòa Giám mục Cần Thơ",
+                    "Can Tho Bishop House",
+                    "Can Tho Diocesan Curia",
+                ]),
+            })
     print(f"Can Tho: addresses={len(records)} massTimes={mass_matched} priestAssignments={priest_matched}", flush=True)
     return sorted(records, key=lambda item: accent_fold(item.get("directoryName", "")))
 
