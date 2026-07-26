@@ -299,7 +299,9 @@ function assert(condition, message) {
           && /showChurchFallback/.test(searchChurchByName.toString()),
         normalizedModernChurch: normalizeModernChurchPlace({ id: 'test', displayName: '천주교 벌말성당', formattedAddress: '대한민국', location: { lat: 1, lng: 2 } }),
         churchMarkerNameLabels: /label:\s*name/.test(addChurchMarker.toString()) && /church-marker-label/.test(addChurchMarker.toString()),
-        churchDetailsOnDemand: /fetchFields/.test(fetchChurchPlaceDetails.toString()) && /nationalPhoneNumber/.test(fetchChurchPlaceDetails.toString()) && /regularOpeningHours/.test(fetchChurchPlaceDetails.toString()),
+        churchDetailsOnDemand: /fetchFields/.test(fetchChurchPlaceDetails.toString())
+          && /nationalPhoneNumber/.test(fetchChurchPlaceDetails.toString())
+          && !/regularOpeningHours|opening_hours/.test(fetchChurchPlaceDetails.toString()),
         churchPopupSurvivesViewportIdle: /churchInfoWindowOpen/.test(scheduleChurchViewportSearch.toString())
           && /closeclick/.test(initializeChurchMap.toString())
           && /churchInfoWindowOpen\s*=\s*true/.test(addChurchMarker.toString()),
@@ -316,6 +318,10 @@ function assert(condition, message) {
           massTimes: ['주일 09:00', '주일 11:00'],
           opening_hours: ['월요일 09:00~18:00']
         }),
+        churchOpeningHoursHidden: !churchInfoWindowHtml({
+          name: '천주교 벌말성당',
+          opening_hours: ['월요일 09:00~18:00']
+        }).includes('09:00~18:00'),
         churchDirectory: {
           count: globalThis.churchLocalDetailsMeta?.recordCount || 0,
           countries: globalThis.churchLocalDetailsMeta?.sourceCounts || {},
@@ -356,6 +362,7 @@ function assert(condition, message) {
     assert(languageDefaults.churchPopupSurvivesViewportIdle, `The church detail popup can still be destroyed by a map idle refresh: ${JSON.stringify(languageDefaults)}`);
     assert(languageDefaults.protestantChurchExcluded, `Explicitly Protestant places must not be shown as Catholic churches: ${JSON.stringify(languageDefaults)}`);
     assert(['주소', '사제', '수녀', '미사 시간', '홍길동 신부', '김마리아 수녀', '주일 11:00'].every(text => languageDefaults.churchInfoFixture.includes(text)), `Church info card is missing requested fields: ${languageDefaults.churchInfoFixture}`);
+    assert(languageDefaults.churchOpeningHoursHidden, `Church opening hours must not be shown in the info card: ${languageDefaults.churchInfoFixture}`);
     assert(languageDefaults.churchDirectory.count >= 4800 && languageDefaults.churchDirectory.countries.KR >= 1789 && languageDefaults.churchDirectory.countries['VN-CanTho'] >= 160 && languageDefaults.churchDirectory.countries['VN-CanThoMassTimes'] >= 159 && languageDefaults.churchDirectory.countries['VN-BaRia'] === 99 && languageDefaults.churchDirectory.bellmal?.diocese === '수원교구' && languageDefaults.churchDirectory.maegok?.diocese === '수원교구', `Official local church directory did not load or match named parishes: ${JSON.stringify(languageDefaults.churchDirectory)}`);
     assert(['14058', '수원교구', '031-424-6401', '주일 07:00, 10:30, 16:00, 19:30', '2026년 07월 13일'].every(text => languageDefaults.churchDirectory.bellmalCard.includes(text)), `Official Bellmal parish details are missing from the marker card: ${languageDefaults.churchDirectory.bellmalCard}`);
     assert(languageDefaults.churchDirectory.canthoAnBinh?.diocese === 'Giáo phận Cần Thơ' && ['55/1', 'Chúa Nhật', 'Giáo phận Cần Thơ'].every(text => languageDefaults.churchDirectory.canthoAnBinhCard.includes(text)), `Official Cần Thơ parish details are missing from the marker card: ${languageDefaults.churchDirectory.canthoAnBinhCard}`);
