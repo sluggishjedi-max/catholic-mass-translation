@@ -4252,6 +4252,9 @@
 
     function scheduleChurchViewportSearch() {
         if (churchInfoWindowOpen) return;
+        if (!churchMarkers.length && churchMap && typeof churchMap.getBounds === 'function' && churchMap.getBounds()) {
+            renderChurchPlaces([]);
+        }
         if (churchIdleTimer) clearTimeout(churchIdleTimer);
         churchIdleTimer = setTimeout(searchChurchesInCurrentView, 650);
     }
