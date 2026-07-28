@@ -616,7 +616,7 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
       { sp: 'Xướng', text: 'Câu xướng một. Tiếp câu một. - Đáp.' },
       { sp: 'Xướng', text: 'Câu xướng hai. - Đáp.' }
     ]), `KTCG Psalm does not match the Hanoi Đáp/Xướng structure: ${JSON.stringify(ktcgParsing)}`);
-    assert(JSON.stringify(ktcgParsing.acclamationParagraphs) === JSON.stringify(['Ha-lê-lui-a. Ha-lê-lui-a.', 'Ma-ri-a hỡi, xin kể lại, trên đường đi đã thấy gì cô ? Thấy mồ trống Đức Ki-tô phục sinh vinh hiển thiên thu khải hoàn.', 'Ha-lê-lui-a.']), `KTCG Gospel acclamation paragraphs are wrong: ${JSON.stringify(ktcgParsing)}`);
+    assert(JSON.stringify(ktcgParsing.acclamationParagraphs) === JSON.stringify(['Ha-lê-lui-a. Ha-lê-lui-a.', 'Ma-ri-a hỡi, xin kể lại, trên đường đi đã thấy gì cô? Thấy mồ trống Đức Ki-tô phục sinh vinh hiển thiên thu khải hoàn.', 'Ha-lê-lui-a.']), `KTCG Gospel acclamation paragraphs are wrong: ${JSON.stringify(ktcgParsing)}`);
     assert(JSON.stringify(ktcgParsing.fridayAcclamationParagraphs) === JSON.stringify(['Ha-lê-lui-a. Ha-lê-lui-a.', 'Hạnh phúc thay người thành tâm thiện chí, hằng ấp ủ lời Chúa trong lòng, nhờ kiên nhẫn mà sinh hoa kết quả.', 'Ha-lê-lui-a.']), `KTCG Friday Gospel acclamation typo was not normalized into three paragraphs: ${JSON.stringify(ktcgParsing)}`);
     assert(JSON.stringify(ktcgParsing.parentheticalAcclamationParagraphs) === JSON.stringify(['Alleluia, alleluia (Ha-le-lui-a, ha-le-lui-a)', 'Gospel acclamation verse.', 'Alleluia (Ha-le-lui-a)']), `Parenthetical KTCG Gospel acclamation was not split into three paragraphs: ${JSON.stringify(ktcgParsing)}`);
     assert(ktcgParsing.gospelIntro === 'Tin Mừng Chúa Giê-su Ki-tô theo thánh Gio-an.' && !ktcgParsing.gospelIntro.includes('✠'), `KTCG Gospel cross was not removed: ${JSON.stringify(ktcgParsing)}`);
@@ -1114,9 +1114,8 @@ Lạy Chúa, chúng con hân hoan đón nhận hồng ân trong ngày lễ kính
         labels: alignment.map((group, index) => dailyVariantLabelForAlignment(group, index, alignment, 'prayer_offerings').kr)
       };
     });
-    assert(unpairedOfferingAlignment.alignment.length === 5 && unpairedOfferingAlignment.alignment.every(group => !(Number.isInteger(group.kr) && Number.isInteger(group.en))), `Offering prayers with only a shared conclusion were falsely aligned: ${JSON.stringify(unpairedOfferingAlignment)}`);
+    assert(unpairedOfferingAlignment.alignment.length === 0, `Offering prayers without a reliable local semantic match should be delegated to AI alignment: ${JSON.stringify(unpairedOfferingAlignment)}`);
     assert(unpairedOfferingAlignment.semanticKeys.every(key => !key), `A standard prayer conclusion was treated as semantic equivalence: ${JSON.stringify(unpairedOfferingAlignment)}`);
-    assert(JSON.stringify(unpairedOfferingAlignment.labels) === JSON.stringify(['한국어 원문', '영어 원문 1', '영어 원문 2', '영어 원문 3', '영어 원문 4']), `Unpaired offering source labels are incorrect: ${JSON.stringify(unpairedOfferingAlignment)}`);
 
     const singleVariantHeaderControls = await page.evaluate(() => {
       const line = parsedLine('', '한 개뿐인 전례문', 'body');

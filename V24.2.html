@@ -655,11 +655,6 @@
         </div>
 
         <div class="setting-row">
-            <label id="lbl-set-stacked">📱 원문/번역문 상하 배치 (강제)</label>
-            <input type="checkbox" id="set-stacked" onchange="updateSettings()">
-        </div>
-
-        <div class="setting-row">
             <label id="lbl-set-voice">🎙️ 음성 진행 표시 (Beta)</label>
             <span class="voice-control">
                 <button type="button" id="btn-ai-voice" class="voice-toggle-btn" onclick="toggleVoiceRecognition()">시작</button>
@@ -678,7 +673,7 @@
             </select>
         </div>
 
-        <div class="setting-row">
+        <div class="setting-row" id="ui-language-row">
             <label id="lbl-set-ui-lang">⚙️ 설정창 언어 (UI)</label>
             <select id="set-ui-lang" onchange="updateSettings()">
                 <option value="KR">한국어</option>
@@ -687,6 +682,11 @@
                 <option value="JP">日本語 (Beta)</option>
                 <option value="LA">Latin</option>
             </select>
+        </div>
+
+        <div class="setting-row" id="stacked-layout-row">
+            <label id="lbl-set-stacked">📱 원문/번역문 상하 배치 (강제)</label>
+            <input type="checkbox" id="set-stacked" onchange="updateSettings()">
         </div>
 
         <div class="setting-row" id="android-status-bar-row" hidden>
@@ -5734,6 +5734,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return readings.find(item => item && !item.is_special) || readings[0];
     }
 
+    function normalizeKtcgkpvPunctuation(value) {
+        return String(value || '').replace(/[ \t\u00a0]+([,.;:!?])/g, '$1');
+    }
+
     function ktcgkpvHtmlParagraphs(html) {
         const doc = parseHtml(`<main id="ktcg-root">${String(html || '')}</main>`);
         const root = doc.getElementById('ktcg-root');
@@ -5748,6 +5752,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 .replace(/\u00a0/g, ' ')
                 .split(/\n+/)
                 .map(cleanNodeText)
+                .map(normalizeKtcgkpvPunctuation)
                 .filter(Boolean)
         );
     }
@@ -5765,7 +5770,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!citation && !body.length) return;
             if (lines.length || entryIndex > 0) lines.push(parsedLine('', 'Hoặc:'));
             optionCits.push({ cit_vn: citation });
-            const summary = cleanNodeText(entry.EPITOMIZE || entry.epitomize || '');
+            const summary = normalizeKtcgkpvPunctuation(cleanNodeText(entry.EPITOMIZE || entry.epitomize || ''));
             const intro = ktcgkpvHtmlParagraphs(entry.LEAD || entry.lead || '').join(' ');
             if (summary) lines.push(parsedLine('', summary, 'summary'));
             if (intro) lines.push(parsedLine('', intro, 'intro'));
@@ -5806,7 +5811,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const KTCGKPV_ALLELUIA_TOKEN_SOURCE = '(?:Alleluia|Aleluia|Ha?-l[eê]-lui(?:-a)?)';
 
     function normalizeKtcgkpvAcclamationText(value) {
-        return cleanNodeText(value)
+        return normalizeKtcgkpvPunctuation(cleanNodeText(value))
             // Some KTCGKPV entries omit the final “-a” in the second
             // opening response (for example 24 July 2026).
             .replace(/\bHa-lê-lui(?=\s*[,.!?:;)]|\s|$)/giu, 'Ha-lê-lui-a')
@@ -5855,7 +5860,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const isResponse = node.matches('.response');
                 if (isResponse && responseAdded) return;
                 const bodyNode = isResponse ? node.querySelector('.body') : node;
-                const text = cleanNodeText(bodyNode && bodyNode.textContent).replace(/\s+/g, ' ').trim();
+                const text = normalizeKtcgkpvPunctuation(cleanNodeText(bodyNode && bodyNode.textContent))
+                    .replace(/\s+/g, ' ')
+                    .trim();
                 if (!text) return;
                 hanoiStyleLines.push(`${isResponse ? 'Đáp' : 'Xướng'}: ${text}`);
                 if (isResponse) responseAdded = true;
@@ -11310,6 +11317,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .toLowerCase();
     }
 
+    function isPrayerAfterConclusionLine(text) {
+        const cleaned = cleanNodeText(text).replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, '');
+        const normalized = normalizeSemanticText(cleaned);
+        return /^chung con cau xin nho\b/.test(normalized)
+            || /^성자께서는\s*(?:성부와\s*함께\s*)?영원히(?:\s|$)/.test(cleaned);
+    }
+
     const sourceSeparatedPrayerVariantPartIds = new Set(['collect', 'prayer_offerings', 'prayer_after']);
 
     function variantSemanticKey(baseId, text) {
@@ -11634,6 +11648,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 'Ignore option labels and source order when they disagree.',
                 'Use Korean options as anchors when Korean is present.',
                 'For prayers after Communion, treat authorized translations as equivalent when they share the same Eucharistic memorial and salvation intention, even if one translation explicitly mentions the Resurrection or calls the gift a sacrament of love.',
+                'Do not create a separate option solely because one language ends with “Chúng con cầu xin nhờ…” while Korean uses “성자께서는 성부와 함께 영원히…”. These are equivalent authorized liturgical conclusion formulas.',
                 'Every option index from every language must appear exactly once.',
                 'Use null when a language has no equivalent option in a group.',
                 'Indexes are zero-based.'
@@ -11789,6 +11804,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function localSemanticEquivalent(baseId, leftText, rightText) {
+        if (baseId === 'prayer_after'
+            && isPrayerAfterConclusionLine(leftText)
+            && isPrayerAfterConclusionLine(rightText)) {
+            return true;
+        }
         const leftKey = variantSemanticKey(baseId, leftText);
         const rightKey = variantSemanticKey(baseId, rightText);
         return !!(leftKey && rightKey && leftKey === rightKey);
@@ -11813,6 +11833,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             'Decide whether these two Catholic liturgical texts are the same prayer/antiphon in different languages.',
             'Be generous with normal translation differences, word order, punctuation, and citation numbering.',
             'For a prayer after Communion, compare the central Eucharistic memorial and salvation intention. One authorized translation may explicitly mention the Resurrection or “sacrament of love” where another says the Son’s Passion and saving gift; that alone does not make the prayers different.',
+            'For a prayer after Communion, “Chúng con cầu xin nhờ…” and “성자께서는 성부와 함께 영원히…” are equivalent authorized conclusion formulas; never return false only because those conclusions differ.',
             'Return false only when the liturgical source text is clearly different, such as a different saint, feast, antiphon, or prayer intention.',
             'Return strict JSON only: {"equivalent":true} or {"equivalent":false}.',
             '',
