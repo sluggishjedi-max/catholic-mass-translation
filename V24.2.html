@@ -31,7 +31,7 @@
         /* 상단 이동 탭은 아직 준비 중인 메뉴까지 한곳에서 보여줍니다. */
         nav { width: 100%; margin: 0; background: #1a252f; color: white; font-size: var(--chrome-compact-font-size); }
         .nav-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; align-items: stretch; padding: 7px 4px; gap: 3px; }
-        .nav-item { flex: 1 1 0; min-width: 0; cursor: pointer; padding: 7px 4px; border: 0; border-radius: 5px; color: inherit; background: transparent; opacity: 0.6; font: inherit; line-height: 1.2; overflow-wrap: anywhere; }
+        .nav-item { flex: 0 0 auto; min-width: 0; cursor: pointer; padding: 7px 6px; border: 0; border-radius: 5px; color: inherit; background: transparent; opacity: 0.6; font: inherit; line-height: 1.2; white-space: nowrap; }
         .nav-item.active { opacity: 1; font-weight: bold; background: rgba(255, 255, 255, 0.2); }
 
         /* 오늘 날짜와 전례명을 보여주는 머리말입니다. */
@@ -106,8 +106,9 @@
         .role-legend-lines { display: flex; flex-direction: column; gap: 3px; }
         .role-legend-line { font-size: 0.92em; line-height: 1.35; overflow-wrap: anywhere; }
         .role-legend-line strong { font-weight: 900; }
-        .floating-liturgy-banner { position: fixed; top: 0; left: 50%; z-index: 998; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px 44px; align-items: center; gap: 8px; width: 100%; max-width: 1100px; padding: 8px 14px; transform: translate(-50%, -115%); opacity: 0; pointer-events: none; background: var(--liturgy-bg-color, var(--primary-color)); color: var(--liturgy-text-color, white); border-radius: 0; box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08), 0 0 18px rgba(0, 0, 0, 0.12); text-align: center; font-size: var(--chrome-font-size); font-weight: 900; line-height: 1.35; transition: transform 0.18s ease, opacity 0.18s ease; }
-        .floating-liturgy-banner.is-visible { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+        .floating-liturgy-banner { position: fixed; top: 0; left: 0; z-index: 998; width: 100%; transform: translateY(-115%); opacity: 0; pointer-events: none; background: var(--liturgy-bg-color, var(--primary-color)); color: var(--liturgy-text-color, white); border-radius: 0; box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08), 0 0 18px rgba(0, 0, 0, 0.12); text-align: center; font-size: var(--chrome-font-size); font-weight: 900; line-height: 1.35; transition: transform 0.18s ease, opacity 0.18s ease; }
+        .floating-liturgy-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px 44px; align-items: center; gap: 8px; padding: 8px 14px; }
+        .floating-liturgy-banner.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
         .floating-liturgy-text { min-width: 0; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
         .floating-liturgy-text:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
         .floating-liturgy-prev { grid-column: 1; }
@@ -128,7 +129,7 @@
         .aux-search-menu .aux-controls { margin: 0; }
         .aux-controls-anchor { display: block; height: 0; overflow: hidden; }
         .quick-home-menu { position: fixed; right: 12px; bottom: calc(74px + env(safe-area-inset-bottom, 0px)); z-index: 1001; display: grid; gap: 5px; padding: 6px; border-radius: 12px; background: rgba(26, 37, 47, 0.16); border: 1px solid rgba(26, 37, 47, 0.24); box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16); backdrop-filter: blur(7px); }
-        .quick-home-btn { min-width: 88px; border: 1px solid #1a252f; border-radius: 999px; padding: 8px 11px; background: #1a252f; color: white; opacity: 1; font: inherit; font-size: 16px; font-weight: 900; line-height: 1.15; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.72); box-shadow: 0 3px 9px rgba(0, 0, 0, 0.24); cursor: pointer; transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease; }
+        .quick-home-btn { min-width: 88px; border: 1px solid #1a252f; border-radius: 999px; padding: 8px 11px; background: #1a252f; color: white; opacity: 1; font: inherit; font-size: 12px; font-weight: 900; line-height: 1.15; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.72); box-shadow: 0 3px 9px rgba(0, 0, 0, 0.24); cursor: pointer; transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease; }
         .quick-home-btn:hover,
         .quick-home-btn.is-active { background: #263746; color: white; border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 7px 17px rgba(0, 0, 0, 0.34); opacity: 1; transform: translateY(-1px); }
         .section-bar { background: #eee; color: var(--primary-color); padding: 15px; text-align: center; font-weight: 900; font-size: 1.1rem; border-bottom: 2px solid var(--primary-color); margin-top: 15px; margin-bottom: 10px; }
@@ -358,7 +359,8 @@
             .part-header > div > .select-inline { margin-top: 6px; }
             .part-select-row .select-block { margin-top: 0; }
             .role-legend { max-height: none; padding: 8px 10px; overflow: visible; font-size: var(--chrome-font-size); white-space: normal; }
-            .floating-liturgy-banner { grid-template-columns: 40px minmax(0, 1fr) 40px 44px; gap: 5px; padding: 8px 8px; font-size: var(--chrome-font-size); }
+            .floating-liturgy-banner { font-size: var(--chrome-font-size); }
+            .floating-liturgy-inner { grid-template-columns: 40px minmax(0, 1fr) 40px 44px; gap: 5px; padding: 8px 8px; }
             .floating-liturgy-nav-btn { width: 34px; height: 34px; margin: -3px 0; font-size: 1.12rem; }
             .floating-settings-btn { width: 44px; height: 42px; font-size: calc(var(--font-size-base) * 1.55); }
             .role-legend-grid { display: flex; grid-template-columns: none; flex-direction: column; gap: 2px; width: 100%; }
@@ -400,7 +402,7 @@
             .aux-search-popup { top: calc(var(--floating-liturgy-offset, 0px) + 6px); width: calc(100% - 18px); }
             .aux-search-menu { padding: 8px; }
             .quick-home-menu { right: 8px; bottom: calc(68px + env(safe-area-inset-bottom, 0px)); gap: 4px; padding: 5px; }
-            .quick-home-btn { min-width: 82px; padding: 8px 9px; font-size: 16px; }
+            .quick-home-btn { min-width: 82px; padding: 8px 9px; font-size: 12px; }
             .aux-search-row,
             .aux-prayer-row { grid-template-columns: 1fr; }
             .aux-two-column { grid-template-columns: 1fr; }
@@ -491,10 +493,12 @@
 </header>
 
 <div id="floating-liturgy-banner" class="floating-liturgy-banner" aria-hidden="true">
-    <button type="button" class="liturgy-nav-btn floating-liturgy-nav-btn floating-liturgy-prev" aria-label="전날 전례로 이동" title="전날 전례로 이동" onclick="changeLiturgicalDay(-1)">&lt;</button>
-    <span id="floating-liturgy-text" class="floating-liturgy-text" role="button" tabindex="0" title="미사 탭으로 이동" onclick="showAppTab('mass')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showAppTab('mass');}"></span>
-    <button type="button" class="liturgy-nav-btn floating-liturgy-nav-btn floating-liturgy-next" aria-label="다음날 전례로 이동" title="다음날 전례로 이동" onclick="changeLiturgicalDay(1)">&gt;</button>
-    <button type="button" class="floating-settings-btn" aria-label="설정 열기" onclick="openSettings()">☰</button>
+    <div class="floating-liturgy-inner">
+        <button type="button" class="liturgy-nav-btn floating-liturgy-nav-btn floating-liturgy-prev" aria-label="전날 전례로 이동" title="전날 전례로 이동" onclick="changeLiturgicalDay(-1)">&lt;</button>
+        <span id="floating-liturgy-text" class="floating-liturgy-text" role="button" tabindex="0" title="미사 탭으로 이동" onclick="showAppTab('mass')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();showAppTab('mass');}"></span>
+        <button type="button" class="liturgy-nav-btn floating-liturgy-nav-btn floating-liturgy-next" aria-label="다음날 전례로 이동" title="다음날 전례로 이동" onclick="changeLiturgicalDay(1)">&gt;</button>
+        <button type="button" class="floating-settings-btn" aria-label="설정 열기" onclick="openSettings()">☰</button>
+    </div>
 </div>
 
 <div id="aux-search-popup" class="aux-search-popup" hidden>
@@ -720,11 +724,45 @@
         return String(id || '').replace(/^[\d.\-\s]+/, '').trim();
     }
 
+    const UI_LANGUAGE_STORAGE_KEY = 'ordoMass:uiLanguage';
+
+    function preferredUiLanguageFromDevice(languageList) {
+        const candidates = Array.isArray(languageList)
+            ? languageList
+            : (Array.isArray(navigator.languages) && navigator.languages.length
+                ? navigator.languages
+                : [navigator.language || '']);
+        const languageMap = { ko: 'KR', vi: 'VN', en: 'EN', ja: 'JP', la: 'LA' };
+        for (const candidate of candidates) {
+            const base = String(candidate || '').trim().toLowerCase().split(/[-_]/)[0];
+            if (languageMap[base]) return languageMap[base];
+        }
+        return 'KR';
+    }
+
+    function initialUiLanguage() {
+        try {
+            const stored = localStorage.getItem(UI_LANGUAGE_STORAGE_KEY);
+            if (['KR', 'VN', 'EN', 'JP', 'LA'].includes(stored)) return stored;
+        } catch (error) {
+            console.warn('설정 언어 저장값을 불러오지 못했습니다.', error);
+        }
+        return preferredUiLanguageFromDevice();
+    }
+
+    function rememberUiLanguage(languageCode) {
+        try {
+            localStorage.setItem(UI_LANGUAGE_STORAGE_KEY, languageCode);
+        } catch (error) {
+            console.warn('설정 언어를 저장하지 못했습니다.', error);
+        }
+    }
+
     let state = {
         useGps: true,
         currentLoc: 'KR', // 좌측 (현지어)
         targetLang: 'VN', // 우측 (번역어)
-        uiLang: 'KR', // 설정창이 지금 어떤 언어로 글씨를 보여줄지 기억합니다.
+        uiLang: initialUiLanguage(), // 최초에는 기기/브라우저 언어를 따르고, 이후에는 사용자의 선택을 기억합니다.
         layoutStacked: false,
         fontSize: '16px',
         vnReadingSource: 'hanoi',
@@ -5264,6 +5302,7 @@
         state.layoutStacked = document.getElementById('set-stacked').checked;
         state.fontSize = document.getElementById('set-font-size').value;
         state.uiLang = normalizeSelectableLang(document.getElementById('set-ui-lang').value, 'KR'); /* 사용자가 바꾼 설정창 언어를 기억 창고에 저장합니다. */
+        rememberUiLanguage(state.uiLang);
         if ((state.activeTab || 'mass') === 'mass' && previousUiLang !== state.uiLang) {
             state.targetLang = targetLangForUiLanguage(state.uiLang, state.currentLoc);
         }
@@ -12388,12 +12427,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         state.currentLoc = normalizeSelectableLang(nextLoc, 'KR');
         state.gpsTimeZone = detectedTimeZone || liturgicalTimeZoneForLang(state.currentLoc);
         state.liturgicalDateContext = null;
-        state.uiLang = state.currentLoc;
-        state.targetLang = targetLangForUiLanguage(state.uiLang, state.currentLoc);
+        state.targetLang = normalizeDistinctTargetLang(state.targetLang, state.currentLoc);
         setLocationSelectByLang(state.currentLoc);
         syncTargetLanguageOptions();
-        const uiSelect = document.getElementById('set-ui-lang');
-        if (uiSelect) uiSelect.value = state.uiLang;
         syncAuxPanelsWithSettings();
         return previousLoc !== state.currentLoc || previousTargetLang !== state.targetLang || previousTimeZone !== state.gpsTimeZone;
     }
@@ -14867,6 +14903,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     // 초기 실행: 로컬/캐시 데이터로 먼저 렌더하고 GPS는 백그라운드에서 보정합니다.
+    document.getElementById('set-ui-lang').value = state.uiLang;
+    syncLocalizedChromeAndSettings();
     setupFloatingLiturgyBanner();
     setupOrientationPersistence();
     setupLiturgicalDateRolloverWatch();
