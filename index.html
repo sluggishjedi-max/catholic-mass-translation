@@ -12367,7 +12367,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             applyGpsBishopContext(null);
             const fallbackZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Seoul';
             if (applyDetectedLocation(gpsLocationForCoordinates(Number.NaN, Number.NaN), fallbackZone)) fetchMassData();
-        }, { timeout: 15000, maximumAge: 30000, enableHighAccuracy: true });
+        }, { timeout: 30000, maximumAge: 60000, enableHighAccuracy: true });
     }
 
     const GEMINI_PROXY_ENDPOINT = window.ORDO_GEMINI_PROXY_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/geminiProxy';
