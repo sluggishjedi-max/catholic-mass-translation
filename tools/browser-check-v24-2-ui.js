@@ -100,6 +100,8 @@ function startServer() {
       const legend = document.getElementById('role-legend');
       const settingsButton = document.querySelector('.settings-btn').getBoundingClientRect();
       const floatingSettingsButton = document.querySelector('.floating-settings-btn').getBoundingClientRect();
+      const quickMenuRect = document.getElementById('quick-home-menu').getBoundingClientRect();
+      const footerRect = document.getElementById('main-footer').getBoundingClientRect();
       const mainHeader = document.getElementById('main-header').getBoundingClientRect();
       const mainNav = document.querySelector('nav').getBoundingClientRect();
       const mainNavInner = document.querySelector('.nav-inner').getBoundingClientRect();
@@ -210,6 +212,11 @@ function startServer() {
         missalPaddingBottom: getComputedStyle(document.getElementById('missal-root')).paddingBottom,
         settingsButton: { width: settingsButton.width, height: settingsButton.height },
         floatingSettingsButton: { width: floatingSettingsButton.width, height: floatingSettingsButton.height },
+        quickMenuFooterSpacing: {
+          right: Math.round(window.innerWidth - quickMenuRect.right),
+          bottom: Math.round(footerRect.top - quickMenuRect.bottom),
+          overlapsFooter: quickMenuRect.bottom > footerRect.top
+        },
         widthLimits: {
           header: mainHeader.width,
           nav: mainNav.width,
@@ -292,6 +299,10 @@ function startServer() {
     assert(result.settingsButton.width >= 44 && result.settingsButton.height >= 44
       && result.floatingSettingsButton.width >= 44 && result.floatingSettingsButton.height >= 42,
     `Settings buttons are too small: ${JSON.stringify(result)}`);
+    assert(!result.quickMenuFooterSpacing.overlapsFooter
+      && result.quickMenuFooterSpacing.right === result.quickMenuFooterSpacing.bottom
+      && result.quickMenuFooterSpacing.right === 8,
+    `Mobile quick menu does not keep equal right/footer gaps: ${JSON.stringify(result.quickMenuFooterSpacing)}`);
     assert(result.widthLimits.headerMax === '1100px'
       && result.widthLimits.navMax === 'none'
       && result.widthLimits.navInnerMax === '1100px'
