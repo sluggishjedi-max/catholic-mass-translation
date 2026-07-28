@@ -153,6 +153,130 @@ function startServer() {
         LEAD: '<p>Bài trích sách ngôn sứ Giê-rê-mi-a.</p>',
         CONTENT: '<p><strong>Mắt tôi hãy tuôn trào suối lệ cả ngày đêm không ngớt ?</strong><br><strong>vì trinh nữ cô gái dân tôi đã bị đánh nhừ đòn !</strong><br><strong>vết trọng thương hết đường cứu chữa .</strong></p>'
       }]);
+      const properDate = new Date(2026, 6, 29);
+      const properDateKey = formatDateIso(properDate);
+      const properCalendarContext = parseVietnameseCalendarDayContext([
+        '29 (16/6) Thứ Tư Tuần XVII Thường Niên',
+        'Bậc lễ: Nhớ',
+        '– Thánh Mác-ta, Ma-ri-a và La-da-rô',
+        'Lễ nhớ có bài đọc riêng',
+        'Màu phụng vụ: Trắng',
+        'Bài đọc: 1Ga 4,7-16; Ga 11,19-27'
+      ], properDate);
+      const ordinaryChoice = {
+        display_text: 'Ngày thường',
+        is_special: false,
+        date_info: { daily_title: 'Thứ Tư Tuần XVII - Mùa Thường Niên' },
+        reading1: [{ INDEXING: 'Gr 15,10.16-21' }],
+        gospel: [{ INDEXING: 'Mt 13,44-46' }]
+      };
+      const properChoice = {
+        display_text: 'Các thánh Mác-ta',
+        is_special: false,
+        date_info: { daily_title: 'Thứ Tư Tuần XVII - Mùa Thường Niên' },
+        reading1: [{ INDEXING: '1 Ga 4,7-16' }],
+        gospel: [{ INDEXING: 'Ga 11,19-27' }]
+      };
+      const previousProperHints = vietnameseCalendarReadingHints[properDateKey];
+      vietnameseCalendarReadingHints[properDateKey] = {
+        readings: [
+          { display: '1Ga 4,7-16', key: normalizeVietnameseCalendarCitation('1Ga 4,7-16'), isGospel: false },
+          { display: 'Ga 11,19-27', key: normalizeVietnameseCalendarCitation('Ga 11,19-27'), isGospel: true }
+        ],
+        context: properCalendarContext
+      };
+      const properSelected = ktcgkpvReadingChoice(
+        { mass_reading: [ordinaryChoice, properChoice] },
+        properDate,
+        properCalendarContext
+      );
+
+      const ordinaryDate = new Date(2026, 6, 30);
+      const ordinaryDateKey = formatDateIso(ordinaryDate);
+      const ordinaryCalendarContext = {
+        confirmed: true,
+        priority: false,
+        rank: 'Thường',
+        rankKey: 'feria',
+        title: '',
+        color: liturgyColorMap.green,
+        date: ordinaryDateKey
+      };
+      const previousOrdinaryHints = vietnameseCalendarReadingHints[ordinaryDateKey];
+      vietnameseCalendarReadingHints[ordinaryDateKey] = {
+        readings: [
+          { display: 'Gr 18,1-6', key: normalizeVietnameseCalendarCitation('Gr 18,1-6'), isGospel: false },
+          { display: 'Mt 13,47-53', key: normalizeVietnameseCalendarCitation('Mt 13,47-53'), isGospel: true }
+        ],
+        context: ordinaryCalendarContext
+      };
+      const ordinarySelected = ktcgkpvReadingChoice({
+        mass_reading: [
+          {
+            display_text: 'Thánh Phê-rô Kim Ngôn',
+            is_special: true,
+            reading1: [{ INDEXING: '2 Tm 4,1-5' }],
+            gospel: [{ INDEXING: 'Mt 5,13-19' }]
+          },
+          {
+            display_text: 'Ngày thường',
+            is_special: false,
+            date_info: { daily_title: 'Thứ Năm Tuần XVII - Mùa Thường Niên' },
+            reading1: [{ INDEXING: 'Gr 18,1-6' }],
+            gospel: [{ INDEXING: 'Mt 13,47-53' }]
+          }
+        ]
+      }, ordinaryDate, ordinaryCalendarContext);
+      if (previousProperHints) vietnameseCalendarReadingHints[properDateKey] = previousProperHints;
+      else delete vietnameseCalendarReadingHints[properDateKey];
+      if (previousOrdinaryHints) vietnameseCalendarReadingHints[ordinaryDateKey] = previousOrdinaryHints;
+      else delete vietnameseCalendarReadingHints[ordinaryDateKey];
+
+      const generatedProper = buildGeneratedLiturgyInfo(properDate);
+      const savedMergeState = {
+        liturgyInfo: state.liturgyInfo,
+        isSunday: state.isSunday,
+        currentLoc: state.currentLoc,
+        targetLang: state.targetLang,
+        liturgicalDateContext: state.liturgicalDateContext
+      };
+      const mergeDate = new Date(2026, 6, 31);
+      state.currentLoc = 'KR';
+      state.targetLang = 'VN';
+      state.liturgicalDateContext = { date: mergeDate, localDate: mergeDate };
+      state.liturgyInfo = buildGeneratedLiturgyInfo(mergeDate);
+      const mergedCalendarData = {};
+      mergeSourceData(mergedCalendarData, {
+        title: 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục',
+        color: liturgyColorMap.white,
+        calendarContext: {
+          confirmed: true,
+          priority: true,
+          rank: 'Nhớ',
+          rankKey: 'memorial',
+          title: 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục',
+          color: liturgyColorMap.white,
+          date: formatDateIso(mergeDate)
+        },
+        data: {
+          reading1: {
+            text: 'Bài đọc riêng theo lịch phụng vụ Việt Nam.',
+            lines: [{ sp: '', text: 'Bài đọc riêng theo lịch phụng vụ Việt Nam.', role: 'body' }]
+          }
+        }
+      }, 'VN');
+      const calendarMergeFixture = {
+        title: state.liturgyInfo.names.VN,
+        special: !!state.liturgyInfo.meta.special,
+        confirmed: !!state.liturgyInfo.meta.vietnameseCalendarConfirmed,
+        color: state.liturgyInfo.color,
+        reading: mergedCalendarData.reading1 && mergedCalendarData.reading1.vn
+      };
+      state.liturgyInfo = savedMergeState.liturgyInfo;
+      state.isSunday = savedMergeState.isSunday;
+      state.currentLoc = savedMergeState.currentLoc;
+      state.targetLang = savedMergeState.targetLang;
+      state.liturgicalDateContext = savedMergeState.liturgicalDateContext;
       const pairedGroups = [{ kr: 0, vn: 0 }, { kr: 1, vn: 1 }];
       const pairedLabels = pairedGroups.map((group, index) =>
         dailyVariantLabelForAlignment(group, index, pairedGroups, 'prayer_after')
@@ -236,6 +360,13 @@ function startServer() {
         ktcgFixture: {
           bodyCount: ktcgFixture.lines.filter(line => line.role === 'body').length,
           bodyText: ktcgFixture.lines.find(line => line.role === 'body')?.text || ''
+        },
+        vietnameseCalendarFixture: {
+          parsed: properCalendarContext,
+          properChoice: properSelected && properSelected.display_text,
+          ordinaryChoice: ordinarySelected && ordinarySelected.display_text,
+          generatedTitle: generatedProper.names && generatedProper.names.VN,
+          merged: calendarMergeFixture
         },
         prayerAfterEquivalent: localSemanticEquivalent('prayer_after', koreanPrayerAfter, vietnamesePrayerAfter),
         prayerAfterConclusionEquivalent: localSemanticEquivalent(
@@ -321,6 +452,24 @@ function startServer() {
       && result.ktcgFixture.bodyText === 'Mắt tôi hãy tuôn trào suối lệ cả ngày đêm không ngớt?\\nvì trinh nữ cô gái dân tôi đã bị đánh nhừ đòn!\\nvết trọng thương hết đường cứu chữa.'.replace(/\\n/g, '\n')
       && !/[ \t\u00a0]+[,.;:!?]/.test(result.ktcgFixture.bodyText),
     `KTCG reading lines were not kept as one newline-preserving paragraph: ${JSON.stringify(result.ktcgFixture)}`);
+    assert(result.vietnameseCalendarFixture.parsed.confirmed
+      && result.vietnameseCalendarFixture.parsed.priority
+      && result.vietnameseCalendarFixture.parsed.rankKey === 'memorial'
+      && result.vietnameseCalendarFixture.parsed.title === 'Thánh Mác-ta, Ma-ri-a và La-da-rô'
+      && result.vietnameseCalendarFixture.parsed.color === '#f7f8fa',
+    `Vietnamese official calendar context was not parsed correctly: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    assert(result.vietnameseCalendarFixture.properChoice === 'Các thánh Mác-ta'
+      && result.vietnameseCalendarFixture.ordinaryChoice === 'Ngày thường',
+    `KTCG did not follow proper/ordinary Vietnamese calendar citations: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    assert(/Mác-ta.*Ma-ri-a.*La-da-rô/.test(result.vietnameseCalendarFixture.generatedTitle)
+      && !/Thường Niên/i.test(result.vietnameseCalendarFixture.generatedTitle),
+    `Built-in Vietnamese liturgy title fell back to Ordinary Time: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    assert(result.vietnameseCalendarFixture.merged.title === 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục'
+      && result.vietnameseCalendarFixture.merged.special
+      && result.vietnameseCalendarFixture.merged.confirmed
+      && result.vietnameseCalendarFixture.merged.color === '#f7f8fa'
+      && result.vietnameseCalendarFixture.merged.reading === 'Bài đọc riêng theo lịch phụng vụ Việt Nam.',
+    `Korean-original/Vietnamese-target calendar merge suppressed the Vietnamese proper: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
     assert(result.prayerAfterEquivalent, 'Today’s Korean and Vietnamese Prayer after Communion should be semantically equivalent');
     assert(result.prayerAfterConclusionEquivalent, 'Vietnamese and Korean authorized Prayer after Communion conclusions should remain in one option');
     assert(!result.prayerAfterConclusionNegative, 'A non-conclusion Prayer after Communion line must not be matched only to a Korean conclusion');

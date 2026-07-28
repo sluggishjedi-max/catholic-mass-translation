@@ -1130,6 +1130,7 @@
         '07-15': saintEntry('white', { KR: '성 보나벤투라 주교 학자 기념일', VN: 'Thánh Bônaventura, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Bonaventure, Bishop and Doctor of the Church', JP: '聖ボナヴェントゥラ司教教会博士記念日', LA: 'Sancti Bonaventurae, episcopi et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '07-22': saintEntry('white', { KR: '성녀 마리아 막달레나 축일', VN: 'Thánh Maria Mađalêna', EN: 'Saint Mary Magdalene', JP: '聖マリア（マグダラ）', LA: 'Sanctae Mariae Magdalenae' }, { rank: 'feast' }),
         '07-25': saintEntry('red', { KR: '성 야고보 사도 축일', VN: 'Thánh Giacôbê, Tông đồ', EN: 'Saint James, Apostle', JP: '聖ヤコブ使徒', LA: 'Sancti Iacobi, apostoli' }, { rank: 'feast' }),
+        '07-29': saintEntry('white', { KR: '성녀 마르타와 성녀 마리아와 성 라자로 기념일', VN: 'Thánh Mác-ta, Ma-ri-a và La-da-rô', EN: 'Saints Martha, Mary and Lazarus', JP: '聖マルタ・聖マリア・聖ラザロ', LA: 'Sanctorum Marthae, Mariae et Lazari' }, { rank: 'memorial' }),
         '08-06': saintEntry('white', { KR: '주님 변모 축일', VN: 'Lễ Chúa Hiển Dung', EN: 'The Transfiguration of the Lord', JP: '主の変容', LA: 'In Transfiguratione Domini' }, { rank: 'feastOfLord' }),
         '08-10': saintEntry('red', { KR: '성 라우렌시오 부제 순교자 축일', VN: 'Thánh Laurensô, Phó tế, Tử đạo', EN: 'Saint Lawrence, Deacon and Martyr', JP: '聖ラウレンチオ助祭殉教者', LA: 'Sancti Laurentii' }, { rank: 'feast' }),
         '08-15': saintEntry('white', { KR: '성모 승천 대축일', VN: 'Lễ Đức Mẹ Hồn Xác Lên Trời', EN: 'The Assumption of the Blessed Virgin Mary', JP: '聖母の被昇天', LA: 'In Assumptione Beatae Mariae Virginis' }, { rank: 'solemnity' }),
@@ -5731,10 +5732,66 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return payload.data;
     }
 
-    function ktcgkpvReadingChoice(data) {
-        const readings = data && Array.isArray(data.mass_reading) ? data.mass_reading : [];
+    function ktcgkpvChoiceTitle(choice) {
+        if (!choice) return '';
+        const dateInfo = choice.date_info || {};
+        return cleanLiturgyTitle(choice.display_text || dateInfo.daily_title || '');
+    }
+
+    function ktcgkpvChoiceCitations(choice, names) {
+        return firstNonEmptyKtcgkpvArray(choice, names).flatMap(entry => [
+            ktcgkpvCitationFromEntry(entry),
+            cleanCitation(entry && (entry.OPTIONAL_INDEXING || entry.optional_indexing || ''))
+        ]).filter(Boolean);
+    }
+
+    function ktcgkpvChoiceIsSeasonal(choice) {
+        const dateInfo = (choice && choice.date_info) || {};
+        const normalized = normalizeVietnameseDiocesanMatchText(
+            `${choice && choice.display_text || ''} ${dateInfo.daily_title || ''}`
+        );
+        return /\b(?:ngay thuong|mua thuong nien|tuan [ivx\d]+(?:\s*-\s*mua)? thuong nien)\b/.test(normalized);
+    }
+
+    function ktcgkpvReadingChoice(data, date = null, calendarContext = null) {
+        const readings = data && Array.isArray(data.mass_reading) ? data.mass_reading.filter(Boolean) : [];
         if (!readings.length) return null;
-        return readings.find(item => item && !item.is_special) || readings[0];
+        const dateKey = date ? formatDateIso(date) : '';
+        const calendarHints = dateKey && vietnameseCalendarReadingHints[dateKey]
+            ? vietnameseCalendarReadingHints[dateKey]
+            : {};
+        const context = calendarContext || calendarHints.context || null;
+        const officialReadings = Array.isArray(calendarHints.readings) ? calendarHints.readings : [];
+        const readingHint = officialReadings.find(item => !item.isGospel) || null;
+        const gospelHint = officialReadings.find(item => item.isGospel) || null;
+        const generatedInfo = date ? buildGeneratedLiturgyInfo(date) : null;
+        const priority = context && context.confirmed
+            ? !!context.priority
+            : !!(date && hasPriorityCelebrationForLookup(date, generatedInfo));
+        const expectedTitle = context && context.title
+            ? context.title
+            : (priority && date ? vietnameseLookupTitle(date) : '');
+
+        const scored = readings.map((choice, index) => {
+            const title = ktcgkpvChoiceTitle(choice);
+            const seasonal = ktcgkpvChoiceIsSeasonal(choice);
+            const readingCitations = ktcgkpvChoiceCitations(choice, ['reading1', 'reading_1']);
+            const gospelCitations = ktcgkpvChoiceCitations(choice, ['gospel']);
+            let score = 0;
+            if (readingHint) {
+                score += readingCitations.some(citation => vietnameseCitationMatchesHint(citation, readingHint)) ? 20 : -4;
+            }
+            if (gospelHint) {
+                score += gospelCitations.some(citation => vietnameseCitationMatchesHint(citation, gospelHint)) ? 20 : -4;
+            }
+            if (expectedTitle) score += vietnameseDiocesanTextMatchScore(title, expectedTitle, date) * 6;
+            if (priority) score += seasonal ? -6 : 4;
+            else score += seasonal ? 5 : -1;
+            if (choice.is_special === true && priority) score += 1;
+            return { choice, index, score };
+        });
+        scored.sort((a, b) => b.score - a.score || a.index - b.index);
+        return scored[0].choice;
     }
 
     function normalizeKtcgkpvPunctuation(value) {
@@ -5901,8 +5958,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     async function fetchVietnameseKtcgDailyMass(date) {
-        const payload = await fetchKtcgkpvMassReadingJson(date);
-        const choice = ktcgkpvReadingChoice(payload);
+        const [payload, calendarContext] = await Promise.all([
+            fetchKtcgkpvMassReadingJson(date),
+            ensureVietnameseCalendarContext(date).catch(error => {
+                console.warn('베트남어 공식 전례력 확인 실패, 내장 전례력으로 KTCG 독서를 선택합니다.', error);
+                return null;
+            })
+        ]);
+        const choice = ktcgkpvReadingChoice(payload, date, calendarContext);
         if (!choice) throw new Error('KTCG mass-reading choice is empty');
         const reading1Entries = firstNonEmptyKtcgkpvArray(choice, ['reading1', 'reading_1']);
         const reading2Entries = firstNonEmptyKtcgkpvArray(choice, ['reading2', 'reading_2']);
@@ -5925,8 +5988,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (gospel) data.gospel = gospel;
         if (communion) data.communion = communion;
         const dateInfo = choice.date_info || {};
-        const title = cleanLiturgyTitle(dateInfo.daily_title || choice.display_text || getLiturgyDisplayName('VN'));
-        return strictEnsureReadingSummarySlots({ title, color: state.liturgyInfo.color, data }, 'VN');
+        const title = cleanLiturgyTitle(
+            calendarContext && calendarContext.priority && calendarContext.title
+                ? calendarContext.title
+                : (dateInfo.daily_title || choice.display_text || getLiturgyDisplayName('VN'))
+        );
+        const parsed = {
+            title,
+            color: calendarContext && calendarContext.color ? calendarContext.color : state.liturgyInfo.color,
+            data
+        };
+        if (calendarContext && calendarContext.confirmed) parsed.calendarContext = calendarContext;
+        return strictEnsureReadingSummarySlots(parsed, 'VN');
     }
 
     // KTCG publishes readings and antiphons, but not the Roman Missal prayers.
@@ -6216,8 +6289,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     async function applyKtcgkpvCitationSource(parsed, date) {
         try {
-            const data = await fetchKtcgkpvMassReadingJson(date);
-            const choice = ktcgkpvReadingChoice(data);
+            const [data, calendarContext] = await Promise.all([
+                fetchKtcgkpvMassReadingJson(date),
+                ensureVietnameseCalendarContext(date).catch(() => null)
+            ]);
+            const choice = ktcgkpvReadingChoice(data, date, calendarContext);
             if (!choice || !parsed || !parsed.data) return parsed;
             const map = {
                 entrance: ['introit', 'entrance'],
@@ -7606,7 +7682,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
         const lower = lang.toLowerCase();
-        const suppressNonLeftProper = isNonLeftLocalProperSource(lang, parsed.title);
+        const calendarContext = parsed.calendarContext && parsed.calendarContext.confirmed
+            ? parsed.calendarContext
+            : null;
+        const calendarPriority = !!(calendarContext && calendarContext.priority);
+        if (calendarPriority) {
+            state.liturgyInfo.meta = Object.assign({}, state.liturgyInfo.meta || {}, {
+                special: true,
+                rank: calendarContext.rankKey || (state.liturgyInfo.meta && state.liturgyInfo.meta.rank) || 'memorial',
+                vietnameseCalendarConfirmed: true
+            });
+            if (calendarContext.color) state.liturgyInfo.color = calendarContext.color;
+        }
+        const suppressNonLeftProper = calendarPriority ? false : isNonLeftLocalProperSource(lang, parsed.title);
         if (parsed.title && !options.suppressTitle) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
         Object.keys(parsed.data || {}).forEach(key => {
             if (suppressNonLeftProper && properLocalDailySectionIds.has(key)) return;
@@ -7909,6 +7997,55 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     const vietnameseCalendarReadingHints = {};
+    const vietnameseCalendarContextPromises = {};
+
+    function parseVietnameseCalendarDayContext(dayBlock, date) {
+        const lines = (dayBlock || []).map(cleanMarkdownLine).map(cleanNodeText).filter(Boolean);
+        if (!lines.length) return null;
+        const rankIndex = lines.findIndex(line => /Bậc\s*lễ\s*:/iu.test(line));
+        const colorIndex = lines.findIndex(line => /Màu\s*phụng\s*vụ\s*:/iu.test(line));
+        const rankLine = rankIndex >= 0 ? lines[rankIndex] : '';
+        const colorLine = colorIndex >= 0 ? lines[colorIndex] : '';
+        const rankLabel = cleanNodeText((rankLine.match(/Bậc\s*lễ\s*:\s*(.+)$/iu) || [])[1] || '');
+        const normalizedRank = normalizeSearchText(rankLabel);
+        const priority = !!rankLabel && !/\bthuong\b/.test(normalizedRank);
+        const rankKey = /\btrong\b/.test(normalizedRank)
+            ? 'solemnity'
+            : (/\bkinh\b/.test(normalizedRank)
+                ? 'feast'
+                : (/\bnho\b/.test(normalizedRank) ? 'memorial' : 'feria'));
+        const normalizedColor = normalizeSearchText(
+            (colorLine.match(/Màu\s*phụng\s*vụ\s*:\s*(.+)$/iu) || [])[1] || ''
+        );
+        const colorKey = /\btrang\b/.test(normalizedColor)
+            ? 'white'
+            : (/\bdo\b/.test(normalizedColor)
+                ? 'red'
+                : (/\btim\b/.test(normalizedColor)
+                    ? 'purple'
+                    : (/\bhong\b/.test(normalizedColor)
+                        ? 'rose'
+                        : (/\bden\b/.test(normalizedColor) ? 'black' : 'green'))));
+        const titleStart = rankIndex >= 0 ? rankIndex + 1 : 1;
+        const titleEnd = colorIndex > titleStart ? colorIndex : lines.length;
+        const title = lines.slice(titleStart, titleEnd)
+            .map(line => line.replace(/^[*•\-–—]\s*/u, '').trim())
+            .filter(line => line
+                && !/^(?:Lễ\s*(?:nhớ|kính|trọng)|Bài\s*[ĐÐ]ọc|Màu\s*phụng\s*vụ|Ý\s*(?:lễ|cầu nguyện)|Lưu ý)\b/iu.test(line)
+                && !/^_?Lễ\b.*\bbài đọc riêng\b/iu.test(line))
+            .map(cleanLiturgyTitle)
+            .find(Boolean) || '';
+        return {
+            confirmed: !!(rankLabel || colorLine || title),
+            priority,
+            rank: rankLabel,
+            rankKey,
+            title,
+            color: liturgyColorMap[colorKey] || liturgyColorMap.green,
+            date: date ? formatDateIso(date) : '',
+            source: 'Tổng Giáo phận Hà Nội'
+        };
+    }
 
     function normalizeVietnameseCalendarCitation(value) {
         return String(value || '')
@@ -8011,14 +8148,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function extractVietnameseCalendarReadingUrl(source, date, baseUrl) {
         const dayBlock = extractVietnameseCalendarDayBlock(source, date);
         if (!dayBlock.length) return '';
+        const dateKey = formatDateIso(date);
+        const context = parseVietnameseCalendarDayContext(dayBlock, date);
         const readingIndex = dayBlock.findIndex(line => /Bài\s*[ĐÐ]ọc/i.test(line));
-        if (readingIndex < 0) return '';
+        if (readingIndex < 0) {
+            vietnameseCalendarReadingHints[dateKey] = {
+                raw: '',
+                readings: [],
+                context: context ? Object.assign({}, context, { sourceUrl: baseUrl || '' }) : null
+            };
+            return '';
+        }
         const readingText = vietnameseCalendarReadingText(dayBlock, readingIndex);
         const links = extractSourceLinks(readingText, baseUrl);
         const readings = parseVietnameseCalendarReadingHints(readingText, links);
-        vietnameseCalendarReadingHints[formatDateIso(date)] = {
+        vietnameseCalendarReadingHints[dateKey] = {
             raw: readingText,
-            readings
+            readings,
+            context: context ? Object.assign({}, context, { sourceUrl: baseUrl || '' }) : null
         };
         const matched = links.find(link => vietnameseCalendarLinkMatchesHints(link, readings));
         return matched ? matched.href : (links[0] ? links[0].href : '');
@@ -8028,6 +8175,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const monthUrl = await resolveVietnameseCalendarMonthUrl(date);
         const monthHtml = await fetchTextWithFallbacks(monthUrl);
         return extractVietnameseCalendarReadingUrl(monthHtml, date, monthUrl);
+    }
+
+    async function ensureVietnameseCalendarContext(date) {
+        const dateKey = formatDateIso(date);
+        const cached = vietnameseCalendarReadingHints[dateKey];
+        if (cached && cached.context && cached.context.confirmed) return cached.context;
+        if (!vietnameseCalendarContextPromises[dateKey]) {
+            vietnameseCalendarContextPromises[dateKey] = resolveVietnameseCalendarReadingUrl(date)
+                .then(() => {
+                    const resolved = vietnameseCalendarReadingHints[dateKey];
+                    return resolved && resolved.context && resolved.context.confirmed ? resolved.context : null;
+                })
+                .catch(error => {
+                    delete vietnameseCalendarContextPromises[dateKey];
+                    throw error;
+                });
+        }
+        return vietnameseCalendarContextPromises[dateKey];
     }
 
     function vietnameseProperLinkMatchesDate(link, date) {
@@ -8399,7 +8564,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict74';
+    const STRICT_PARSER_CACHE_VERSION = 'strict75';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
