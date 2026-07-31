@@ -8051,6 +8051,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const vietnameseCalendarReadingHints = {};
     const vietnameseCalendarContextPromises = {};
 
+    function vietnameseCalendarDayHeaderTitle(line, date) {
+        const rawTitle = cleanLiturgyTitle(cleanNodeText(line)
+            .replace(/^(?:[*\-]\s*)?\d{1,2}(?:\s*\(\d{1,2}\s*\/\s*\d{1,2}\))?\s*/u, ' '));
+        const normalized = normalizeSearchText(rawTitle);
+        const isSeasonalHeader = /^(?:chua nhat|thu hai|thu ba|thu tu|thu nam|thu sau|thu bay)\b/.test(normalized)
+            && /\b(?:thuong nien|mua vong|mua chay|phuc sinh|giang sinh)\b/.test(normalized);
+        return isSeasonalHeader && date ? (vietnameseSeasonalLookupTitle(date) || rawTitle) : rawTitle;
+    }
+
+    function isVietnameseCalendarTitleMetadata(line) {
+        const normalized = normalizeSearchText(String(line || '').replace(/^[*\-–—•]\s*/u, ' '));
+        return /^(?:ca vinh(?:\s+tuan)?|khong cu hanh|mau phung vu|bai doc|cac giao xu|cac giao ho|cung nhau hoc|y le|y cau nguyen|luu y|h\.|t\.|\d+\s*\/)/.test(normalized);
+    }
+
     function parseVietnameseCalendarDayContext(dayBlock, date) {
         const lines = (dayBlock || []).map(cleanMarkdownLine).map(cleanNodeText).filter(Boolean);
         if (!lines.length) return null;
@@ -8061,11 +8075,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const rankLabel = cleanNodeText((rankLine.match(/Bậc\s*lễ\s*:\s*(.+)$/iu) || [])[1] || '');
         const normalizedRank = normalizeSearchText(rankLabel);
         const priority = !!rankLabel && !/\bthuong\b/.test(normalizedRank);
-        const rankKey = /\btrong\b/.test(normalizedRank)
-            ? 'solemnity'
-            : (/\bkinh\b/.test(normalizedRank)
-                ? 'feast'
-                : (/\bnho\b/.test(normalizedRank) ? 'memorial' : 'feria'));
+        const rankKey = /\bchua nhat\b/.test(normalizedRank)
+            ? 'sunday'
+            : (/\btrong\b/.test(normalizedRank)
+                ? 'solemnity'
+                : (/\bkinh\b/.test(normalizedRank)
+                    ? 'feast'
+                    : (/\bnho\b/.test(normalizedRank) ? 'memorial' : 'feria')));
         const normalizedColor = normalizeSearchText(
             (colorLine.match(/Màu\s*phụng\s*vụ\s*:\s*(.+)$/iu) || [])[1] || ''
         );
@@ -8080,13 +8096,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                         : (/\bden\b/.test(normalizedColor) ? 'black' : 'green'))));
         const titleStart = rankIndex >= 0 ? rankIndex + 1 : 1;
         const titleEnd = colorIndex > titleStart ? colorIndex : lines.length;
-        const title = lines.slice(titleStart, titleEnd)
+        const properTitle = rankKey === 'sunday' ? '' : lines.slice(titleStart, titleEnd)
             .map(line => line.replace(/^[*•\-–—]\s*/u, '').trim())
             .filter(line => line
+                && !isVietnameseCalendarTitleMetadata(line)
                 && !/^(?:Lễ\s*(?:nhớ|kính|trọng)|Bài\s*[ĐÐ]ọc|Màu\s*phụng\s*vụ|Ý\s*(?:lễ|cầu nguyện)|Lưu ý)\b/iu.test(line)
                 && !/^_?Lễ\b.*\bbài đọc riêng\b/iu.test(line))
             .map(cleanLiturgyTitle)
             .find(Boolean) || '';
+        const title = properTitle || vietnameseCalendarDayHeaderTitle(lines[0], date);
         return {
             confirmed: !!(rankLabel || colorLine || title),
             priority,

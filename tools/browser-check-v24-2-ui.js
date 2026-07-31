@@ -163,6 +163,15 @@ function startServer() {
         'Màu phụng vụ: Trắng',
         'Bài đọc: 1Ga 4,7-16; Ga 11,19-27'
       ], properDate);
+      const sundayCalendarContext = parseVietnameseCalendarDayContext([
+        '02 (20/6) CHÚA NHẬT XVIII THƯỜNG NIÊN',
+        'Bậc lễ: Chúa Nhật',
+        '– Ca vịnh tuần II.',
+        '– Không cử hành lễ các thánh trùng ngày.',
+        '– Chúa Nhật III trong tháng, ngày truyền giáo của giáo phận.',
+        'Màu phụng vụ: Xanh',
+        'Bài đọc: Is 55,1-3; Rm 8,35.37-39; Mt 14,13-21'
+      ], new Date(2026, 7, 2));
       const ordinaryChoice = {
         display_text: 'Ngày thường',
         is_special: false,
@@ -471,6 +480,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         },
         vietnameseCalendarFixture: {
           parsed: properCalendarContext,
+          sunday: sundayCalendarContext,
           properChoice: properSelected && properSelected.display_text,
           ordinaryChoice: ordinarySelected && ordinarySelected.display_text,
           generatedTitle: generatedProper.names && generatedProper.names.VN,
@@ -576,6 +586,11 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.vietnameseCalendarFixture.parsed.title === 'Thánh Mác-ta, Ma-ri-a và La-da-rô'
       && result.vietnameseCalendarFixture.parsed.color === '#f7f8fa',
     `Vietnamese official calendar context was not parsed correctly: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    assert(result.vietnameseCalendarFixture.sunday.confirmed
+      && result.vietnameseCalendarFixture.sunday.rankKey === 'sunday'
+      && result.vietnameseCalendarFixture.sunday.title === 'Chúa Nhật XVIII Thường Niên - Năm A'
+      && !/Ca vịnh|Không cử hành/i.test(result.vietnameseCalendarFixture.sunday.title),
+    `Vietnamese Sunday metadata was mistaken for the liturgy title: ${JSON.stringify(result.vietnameseCalendarFixture.sunday)}`);
     assert(result.vietnameseCalendarFixture.properChoice === 'Các thánh Mác-ta'
       && result.vietnameseCalendarFixture.ordinaryChoice === 'Ngày thường',
     `KTCG did not follow proper/ordinary Vietnamese calendar citations: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
