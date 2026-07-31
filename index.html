@@ -11,6 +11,7 @@
         /* 앱 전체에서 함께 쓰는 색상과 기본 글자 크기입니다. */
         :root {
             --primary-color: #27ae60;
+            --nav-color: #1a252f;
             --rubric-color: #d32f2f;
             --sub-txt: #6c757d;
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -31,7 +32,7 @@
         .lang-LA { font-family: 'Times New Roman', 'Noto Serif', 'One UI Serif', serif; }
 
         /* 상단 이동 탭은 아직 준비 중인 메뉴까지 한곳에서 보여줍니다. */
-        nav { width: 100%; margin: 0; background: #1a252f; color: white; font-size: var(--chrome-compact-font-size); }
+        nav { width: 100%; margin: 0; background: var(--nav-color); color: white; font-size: var(--chrome-compact-font-size); }
         .nav-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; align-items: stretch; padding: 7px 4px; gap: 3px; }
         .nav-item { flex: 0 0 auto; min-width: 0; cursor: pointer; padding: 7px 6px; border: 0; border-radius: 5px; color: inherit; background: transparent; opacity: 0.6; font: inherit; line-height: 1.2; white-space: nowrap; }
         .nav-item.active { opacity: 1; font-weight: bold; background: rgba(255, 255, 255, 0.2); }
@@ -65,27 +66,27 @@
         .close-btn { width: 100%; padding: 10px; border: 0; border-radius: 6px; background: var(--primary-color); color: white; font-weight: 800; cursor: pointer; }
         #consent-modal { display: flex; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         .consent-content { width: min(760px, 96vw); max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; gap: 14px; background: white; color: #333; border-radius: 10px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
-        .consent-content h2 { margin: 0; color: var(--primary-color); font-size: 1.15rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; }
+        .consent-content h2 { margin: 0; color: var(--nav-color); font-size: 1.15rem; border-bottom: 2px solid var(--nav-color); padding-bottom: 8px; }
         .consent-language-grid { overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; padding-right: 4px; }
         .consent-language-block { border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px 12px; background: #fafafa; }
-        .consent-language-title { display: block; margin-bottom: 5px; color: var(--primary-color); font-weight: 900; }
+        .consent-language-title { display: block; margin-bottom: 5px; color: var(--nav-color); font-weight: 900; }
         .consent-language-block p { margin: 0; line-height: 1.5; font-size: 0.92rem; }
         .consent-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; border-top: 1px solid #e8e8e8; padding-top: 12px; }
         .consent-btn { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 900; }
-        .consent-btn.accept { background: var(--primary-color); color: white; }
+        .consent-btn.accept { background: var(--nav-color); color: white; }
         .consent-btn.decline { background: #eee; color: #444; }
         #vn-source-modal { display: none; position: fixed; inset: 0; z-index: 10001; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         #vn-source-modal.is-visible { display: flex; }
         .vn-source-content { width: min(560px, 96vw); background: white; color: #333; border-radius: 12px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
-        .vn-source-content h2 { margin: 0 0 10px; color: var(--primary-color); font-size: 1.15rem; }
+        .vn-source-content h2 { margin: 0 0 10px; color: var(--nav-color); font-size: 1.15rem; }
         .vn-source-content p { margin: 0 0 14px; line-height: 1.55; }
         .vn-source-modal-translation { display: block; margin-top: 3px; opacity: 0.58; font-size: 0.88em; font-weight: 500; }
         #vn-source-description .vn-source-modal-translation { font-size: 0.92em; }
         .vn-source-actions { display: grid; gap: 10px; }
         .vn-source-btn { width: 100%; border: 1px solid #d6dbe1; border-radius: 10px; padding: 12px 14px; background: #f7f8fa; color: #263238; text-align: left; cursor: pointer; font: inherit; line-height: 1.4; }
         .vn-source-btn:hover,
-        .vn-source-btn:focus-visible { border-color: var(--primary-color); background: #fff; outline: none; }
-        .vn-source-btn strong { display: block; color: var(--primary-color); font-weight: 900; }
+        .vn-source-btn:focus-visible { border-color: var(--nav-color); background: #fff; outline: none; }
+        .vn-source-btn strong { display: block; color: var(--nav-color); font-weight: 900; }
         .vn-source-btn .vn-source-translation { display: block; margin-top: 3px; color: #5f6b73; opacity: 0.58; font-size: 0.92em; }
         .closed-message { min-height: 100vh; display: grid; place-items: center; padding: 24px; text-align: center; background: #f7f7f7; color: #333; font-weight: 800; line-height: 1.6; }
         body.consent-pending > nav,
@@ -112,6 +113,7 @@
         .floating-liturgy-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px 44px; align-items: center; gap: 8px; padding: 8px 14px; }
         .floating-liturgy-banner.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
         .floating-liturgy-text { min-width: 0; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+        .floating-liturgy-secondary { opacity: 0.82; }
         .floating-liturgy-text:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
         .floating-liturgy-prev { grid-column: 1; }
         .floating-liturgy-text { grid-column: 2; }
@@ -2094,6 +2096,7 @@
         return String(raw || '')
             .replace(/\s*또는(?:\s*[:：]?\s*.*)?$/u, ' ')
             .replace(/\s+\bor\b(?:\s+.*)?$/i, ' ')
+            .replace(/[.;]?\s*[–—•]\s*(?=(?:Thánh|Lễ)\b).*$/iu, ' ')
             .trim();
     }
 
@@ -2134,7 +2137,9 @@
     }
 
     function liturgicalCycleLabel(langCode) {
-        const cycle = state.liturgyInfo && state.liturgyInfo.meta && state.liturgyInfo.meta.sundayCycle;
+        const meta = state.liturgyInfo && state.liturgyInfo.meta;
+        if (!meta) return '';
+        const cycle = meta.sundayCycle;
         if (!cycle) return '';
         if (langCode === 'KR') return { A: '가해', B: '나해', C: '다해' }[cycle] || '';
         if (langCode === 'JP') return `${cycle}年`;
@@ -5062,7 +5067,23 @@
         const bannerText = document.getElementById('floating-liturgy-text') || banner;
         if (!banner) return;
         const names = [leftName, rightName].map(cleanNodeText).filter(Boolean);
-        bannerText.textContent = names.length > 1 ? `${names[0]} | ${names[1]}` : (names[0] || '');
+        bannerText.replaceChildren();
+        if (names[0]) {
+            const primary = document.createElement('span');
+            primary.className = 'floating-liturgy-primary';
+            primary.textContent = names[0];
+            bannerText.appendChild(primary);
+        }
+        if (names[1]) {
+            const separator = document.createElement('span');
+            separator.className = 'floating-liturgy-separator';
+            separator.textContent = ' | ';
+            bannerText.appendChild(separator);
+            const secondary = document.createElement('span');
+            secondary.className = 'floating-liturgy-secondary';
+            secondary.textContent = names[1];
+            bannerText.appendChild(secondary);
+        }
         syncFloatingLiturgyBannerVisibility();
     }
 
@@ -6003,8 +6024,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     // KTCG publishes readings and antiphons, but not the Roman Missal prayers.
-    // Resolve the matching Ban Me Thuot diocesan article from its current RSS
-    // feed, then copy only the three prayers from the matching Mass block.
+    // Resolve the matching Ban Me Thuot diocesan article from its current
+    // category page. The RSS XML contains the same articles, but the browser's
+    // text relay strips its item links, so keep RSS only as a fallback.
+    const VIETNAMESE_KTCG_DIOCESAN_INDEX_URL = 'https://gpbanmethuot.net/loi-chua-moi-ngay/';
     const VIETNAMESE_KTCG_DIOCESAN_RSS_URL = 'https://gpbanmethuot.net/rss/loi-chua-moi-ngay/';
     let vietnameseKtcgDiocesanFeedPromise = null;
 
@@ -6058,16 +6081,25 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     async function fetchVietnameseKtcgDiocesanLinks() {
         if (!vietnameseKtcgDiocesanFeedPromise) {
-            vietnameseKtcgDiocesanFeedPromise = fetchTextWithFallbacks(VIETNAMESE_KTCG_DIOCESAN_RSS_URL, { timeoutMs: 12000 })
-                .then(source => {
-                    const seen = new Set();
-                    return extractSourceLinks(source, VIETNAMESE_KTCG_DIOCESAN_RSS_URL).filter(link => {
-                        if (!/gpbanmethuot\.net\/(?:song-dao|loi-chua-moi-ngay)\/loi-chua-[^?#]+\.html/i.test(link.href || '')) return false;
-                        if (seen.has(link.href)) return false;
-                        seen.add(link.href);
-                        return true;
-                    });
-                })
+            vietnameseKtcgDiocesanFeedPromise = (async () => {
+                let lastError = null;
+                for (const sourceUrl of [VIETNAMESE_KTCG_DIOCESAN_INDEX_URL, VIETNAMESE_KTCG_DIOCESAN_RSS_URL]) {
+                    try {
+                        const source = await fetchTextWithFallbacks(sourceUrl, { timeoutMs: 12000 });
+                        const seen = new Set();
+                        const links = extractSourceLinks(source, sourceUrl).filter(link => {
+                            if (!/gpbanmethuot\.net\/(?:song-dao|loi-chua-moi-ngay)\/loi-chua-[^?#]+\.html/i.test(link.href || '')) return false;
+                            if (seen.has(link.href)) return false;
+                            seen.add(link.href);
+                            return true;
+                        });
+                        if (links.length) return links;
+                    } catch (error) {
+                        lastError = error;
+                    }
+                }
+                throw lastError || new Error('No Ban Me Thuot daily-word article links found');
+            })()
                 .catch(error => {
                     vietnameseKtcgDiocesanFeedPromise = null;
                     throw error;
@@ -7871,7 +7903,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         } catch (error) {
             // Markdown fallback below covers Jina Reader responses.
         }
-        const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+)\)/g;
+        const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+)(?:\s+["'][^)]*["'])?\)/g;
         let match;
         while ((match = markdownLinkRegex.exec(source || '')) !== null) {
             links.push({ text: cleanNodeText(match[1]), href: absoluteUrl(match[2], baseUrl) });
@@ -9066,7 +9098,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         KR: [/^감사송/u, /^오늘의 묵상/u, /^영성체 후 묵상/u, /^보편\s*지향\s*기도/u, /^강론/u],
         EN: [/^Preface/i, /^Reflection/i, /^Meditation/i, /^Universal Prayer/i, /^Daily Reflection/i],
         JP: [/^叙唱/u, /^今日の/u, /^共同祈願/u],
-        VN: [/^Lời tiền tụng/iu, /^Kinh Tiền Tụng/iu, /^Suy niệm/iu, /^Lời nguyện tín hữu/iu]
+        VN: [/^Lời tiền tụng/iu, /^Kinh Tiền Tụng/iu, /^Suy niệm/iu, /^Lời nguyện tín hữu/iu, /^Ghi nhận (?:lịch sử|phụng vụ)/iu]
     };
 
     function strictIdentifySection(line, lang) {

@@ -288,6 +288,46 @@ function startServer() {
       applyDailySourceVariantLabels(pairedVariants, 'prayer_after', pairedGroups);
       const koreanPrayerAfter = '주님, 저희가 성체를 받아 모시며 언제나 성자의 수난을 기념하오니 성자께서 극진한 사랑으로 베풀어 주신 이 선물이 저희 구원에 도움이 되게 하소서.';
       const vietnamesePrayerAfter = 'Lạy Chúa, Chúa đã cho chúng con tham dự vào bí tích Thánh Thể, để chúng con đời đời tưởng nhớ Đức Giêsu Con Một Chúa, đã chịu khổ hình và sống lại hiển vinh; xin cho bí tích tình yêu Người trối lại dẫn chúng con tới hưởng ơn cứu độ muôn đời.';
+      const navColor = getComputedStyle(document.querySelector('nav')).backgroundColor;
+      const startupAndSourceColors = {
+        nav: navColor,
+        noticeTitle: getComputedStyle(document.querySelector('.consent-content h2')).color,
+        noticeAccept: getComputedStyle(document.querySelector('.consent-btn.accept')).backgroundColor,
+        sourceTitle: getComputedStyle(document.querySelector('.vn-source-content h2')).color,
+        sourceChoice: getComputedStyle(document.querySelector('.vn-source-btn strong')).color
+      };
+      updateFloatingLiturgyBanner('전례명 원문', 'Translated liturgy name');
+      const floatingTranslation = {
+        primary: document.querySelector('.floating-liturgy-primary')?.textContent || '',
+        secondary: document.querySelector('.floating-liturgy-secondary')?.textContent || '',
+        secondaryOpacity: Number.parseFloat(getComputedStyle(document.querySelector('.floating-liturgy-secondary')).opacity || '1')
+      };
+      const savedLiturgyInfoForCycle = state.liturgyInfo;
+      state.liturgyInfo = { meta: { day: 5, sundayCycle: 'A' } };
+      const weekdayCycleTitle = formatDisplayLiturgyTitle('VN', 'Thứ Sáu Tuần XVII - Mùa Thường Niên');
+      state.liturgyInfo = { meta: { day: 0, sundayCycle: 'A' } };
+      const sundayCycleTitle = formatDisplayLiturgyTitle('VN', 'Chúa Nhật Tuần XVII - Mùa Thường Niên');
+      state.liturgyInfo = savedLiturgyInfoForCycle;
+      const mergedVietnameseTitle = cleanLiturgyTitle(
+        'Thánh I-nha-xi-ô Lôi-ô-la (Loyola), Linh mục.– Thánh Phê-rô Đoàn Công Quý, Linh mục, Tử đạo.'
+      );
+      const prayerBoundarySource = `Title: Lời Chúa THỨ SÁU TUẦN 17 THƯỜNG NIÊN
+URL Source: https://gpbanmethuot.net/loi-chua-moi-ngay/example.html
+Markdown Content:
+31/07/2026
+BÀI ĐỌC TRONG THÁNH LỄ
+Thánh Ignatiô Loyôla, linh mục
+Lời nguyện nhập lễ
+Lạy Chúa, xin nhận lời nguyện nhập lễ đầy đủ của chúng con. Chúng con cầu xin…
+Lời nguyện tiến lễ
+Lạy Chúa, xin nhận lời nguyện tiến lễ đầy đủ của chúng con. Chúng con cầu xin…
+Lời nguyện hiệp lễ
+Lạy Chúa, xin nhận lời nguyện hiệp lễ đầy đủ của chúng con. Chúng con cầu xin…
+Ghi nhận lịch sử – phụng vụ
+Nội dung lịch sử không thuộc lời nguyện.`;
+      const prayerBoundaryFixture = parseVietnameseKtcgPrayerBlock({
+        lines: strictSourceLines(prayerBoundarySource)
+      }, new Date(2026, 6, 31));
 
       return {
         baseline,
@@ -379,6 +419,14 @@ function startServer() {
           'Chúng con xin được no say ơn Chúa.',
           '성자께서는 성부와 함께 영원히 살아 계시며 다스리시나이다.'
         ),
+        startupAndSourceColors,
+        floatingTranslation,
+        liturgyTitleParsing: {
+          weekdayCycleTitle,
+          sundayCycleTitle,
+          mergedVietnameseTitle
+        },
+        prayerBoundaryText: prayerBoundaryFixture.prayer_after?.text || '',
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -470,6 +518,19 @@ function startServer() {
       && result.vietnameseCalendarFixture.merged.color === '#f7f8fa'
       && result.vietnameseCalendarFixture.merged.reading === 'Bài đọc riêng theo lịch phụng vụ Việt Nam.',
     `Korean-original/Vietnamese-target calendar merge suppressed the Vietnamese proper: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    assert(Object.values(result.startupAndSourceColors).every(color => color === result.startupAndSourceColors.nav),
+      `Startup notice and Vietnamese source selection do not use the nav color: ${JSON.stringify(result.startupAndSourceColors)}`);
+    assert(result.floatingTranslation.primary === '전례명 원문'
+      && result.floatingTranslation.secondary === 'Translated liturgy name'
+      && result.floatingTranslation.secondaryOpacity < 0.9,
+    `Floating liturgy translation is not visually secondary: ${JSON.stringify(result.floatingTranslation)}`);
+    assert(/Năm A/.test(result.liturgyTitleParsing.weekdayCycleTitle)
+      && /Năm A/.test(result.liturgyTitleParsing.sundayCycleTitle)
+      && result.liturgyTitleParsing.mergedVietnameseTitle === 'Thánh I-nha-xi-ô Lôi-ô-la (Loyola), Linh mục',
+    `Vietnamese liturgy title parsing or cycle labels are wrong: ${JSON.stringify(result.liturgyTitleParsing)}`);
+    assert(/lời nguyện hiệp lễ đầy đủ/.test(result.prayerBoundaryText)
+      && !/Nội dung lịch sử/.test(result.prayerBoundaryText),
+    `Vietnamese Prayer after Communion absorbed the following article: ${result.prayerBoundaryText}`);
     assert(result.prayerAfterEquivalent, 'Today’s Korean and Vietnamese Prayer after Communion should be semantically equivalent');
     assert(result.prayerAfterConclusionEquivalent, 'Vietnamese and Korean authorized Prayer after Communion conclusions should remain in one option');
     assert(!result.prayerAfterConclusionNegative, 'A non-conclusion Prayer after Communion line must not be matched only to a Korean conclusion');
