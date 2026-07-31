@@ -307,7 +307,7 @@ function startServer() {
         && first.top < second.bottom
         && first.bottom > second.top;
       state.dailyReadingsLoading = true;
-      state.dailyReadingLanguageStatus = { VN: 'loading', KR: 'loading', EN: 'done' };
+      state.dailyReadingLanguageStatus = { VN: 'loading', KR: 'done', EN: 'done' };
       state.dailyReadingLanguageErrorAt = {};
       showAppTab('mass');
       syncLiturgyLoadingStatusBar('VN', 'EN');
@@ -338,6 +338,7 @@ function startServer() {
         document.documentElement.style.setProperty('--primary-color', theme.accent);
         document.documentElement.style.setProperty('--liturgy-bg-color', theme.bg);
         document.documentElement.style.setProperty('--liturgy-text-color', theme.text);
+        document.documentElement.style.setProperty('--liturgy-primary-name-color', theme.primaryName || theme.text);
         document.documentElement.style.setProperty('--liturgy-secondary-color', theme.secondary || theme.text);
         document.documentElement.style.setProperty('--translation-color', theme.translation || '#6c757d');
         document.documentElement.style.setProperty('--translation-heading-color', theme.translationHeading || theme.accent);
@@ -358,6 +359,8 @@ function startServer() {
       const whiteLiturgyContrast = {
         headerPrimary: computedColor('.liturgy-name-primary'),
         headerTranslation: computedColor('.liturgy-name-secondary'),
+        floatingPrimary: computedColor('.floating-liturgy-primary'),
+        floatingTranslation: computedColor('.floating-liturgy-secondary'),
         partPrimary: computedColor('.part-title'),
         partTranslation: computedColor('.stacked-header-translation'),
         sectionPrimary: computedColor('.section-bar-primary'),
@@ -602,6 +605,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && Math.abs(result.runtimeStatusLayout.footerGap - 8) <= 1,
     `Mobile loading/voice status layout overlaps navigation or sits too far from the footer: ${JSON.stringify(result.runtimeStatusLayout)}`);
     assert(result.whiteLiturgyContrast.headerPrimary
+      && result.whiteLiturgyContrast.headerPrimary === 'rgb(124, 91, 23)'
+      && result.whiteLiturgyContrast.headerPrimary === result.whiteLiturgyContrast.floatingPrimary
+      && result.whiteLiturgyContrast.headerTranslation === result.whiteLiturgyContrast.floatingTranslation
       && result.whiteLiturgyContrast.headerPrimary !== result.whiteLiturgyContrast.headerTranslation
       && result.whiteLiturgyContrast.partPrimary !== result.whiteLiturgyContrast.partTranslation
       && result.whiteLiturgyContrast.sectionPrimary !== result.whiteLiturgyContrast.sectionTranslation

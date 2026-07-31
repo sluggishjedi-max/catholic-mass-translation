@@ -23,6 +23,7 @@
             --quick-home-reserved-width: 0px;
             --translation-color: var(--sub-txt);
             --translation-heading-color: var(--primary-color);
+            --liturgy-primary-name-color: inherit;
             --liturgy-secondary-color: inherit;
             --section-bar-bg: #eee;
         }
@@ -50,6 +51,7 @@
         .date-display { font-size: var(--chrome-font-size); margin-bottom: 10px; font-weight: bold; }
         .liturgy-name { display: grid; grid-template-columns: minmax(40px, auto) minmax(0, 1fr) minmax(40px, auto); align-items: center; gap: 10px; max-width: 1100px; margin: 0 auto; font-size: var(--chrome-font-size); font-weight: 900; line-height: 1.4; border-top: 1px solid var(--liturgy-border-color, rgba(255, 255, 255, 0.3)); padding-top: 10px; }
         .liturgy-name-text { min-width: 0; overflow-wrap: anywhere; }
+        .liturgy-name-primary { color: var(--liturgy-primary-name-color, inherit); }
         .liturgy-name-secondary { color: var(--liturgy-secondary-color, inherit); font-size: var(--chrome-font-size); opacity: 0.76; }
         .liturgy-nav-btn { position: relative; z-index: 2; width: 34px; height: 34px; border: 0; border-radius: 6px; background: transparent; color: inherit; cursor: pointer; font-size: 1.42rem; font-weight: 900; line-height: 1; text-shadow: 0 2px 7px rgba(0, 0, 0, 0.42); filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.22)); touch-action: manipulation; transition: background 0.16s ease, transform 0.16s ease, text-shadow 0.16s ease; }
         .liturgy-nav-btn:hover { background: var(--liturgy-hover-bg, rgba(255, 255, 255, 0.13)); transform: translateY(-1px); text-shadow: 0 3px 9px rgba(0, 0, 0, 0.48); }
@@ -118,6 +120,7 @@
         .floating-liturgy-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px 44px; align-items: center; gap: 8px; padding: 8px 14px; }
         .floating-liturgy-banner.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
         .floating-liturgy-text { min-width: 0; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+        .floating-liturgy-primary { color: var(--liturgy-primary-name-color, inherit); }
         .floating-liturgy-secondary { color: var(--liturgy-secondary-color, inherit); opacity: 0.76; }
         .floating-liturgy-text:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
         .floating-liturgy-prev { grid-column: 1; }
@@ -1569,6 +1572,7 @@
                 bg: '#f7f8fa',
                 text: '#111827',
                 accent: '#7c5b17',
+                primaryName: '#7c5b17',
                 secondary: '#526173',
                 translation: '#526173',
                 translationHeading: '#526173',
@@ -13263,7 +13267,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const trackedLangs = Array.from(new Set(visibleLangs.concat(Object.keys(status)
             .map(lang => normalizeSelectableLang(lang, ''))
             .filter(Boolean))));
-        const loadingLangs = trackedLangs.filter(lang => status[lang] === 'loading');
+        const loadingLangs = state.dailyReadingsLoading
+            ? trackedLangs.filter(lang => status[lang] !== 'error' && status[lang] !== 'error-hidden')
+            : trackedLangs.filter(lang => status[lang] === 'loading');
         if (loadingLangs.length) {
             updateLiturgyStatusBar(loadingLangs.map(lang => localizedLiturgyLoadingMessageForLang(lang)), { loading: true });
             return;
@@ -14778,6 +14784,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         document.documentElement.style.setProperty('--liturgy-hover-bg', colorTheme.hover);
         document.documentElement.style.setProperty('--liturgy-settings-bg', colorTheme.settingsBg);
         document.documentElement.style.setProperty('--liturgy-settings-border', colorTheme.settingsBorder);
+        document.documentElement.style.setProperty('--liturgy-primary-name-color', colorTheme.primaryName || colorTheme.text);
         document.documentElement.style.setProperty('--liturgy-secondary-color', colorTheme.secondary || colorTheme.text);
         document.documentElement.style.setProperty('--translation-color', colorTheme.translation || '#6c757d');
         document.documentElement.style.setProperty('--translation-heading-color', colorTheme.translationHeading || colorTheme.accent);
