@@ -12,6 +12,8 @@
         :root {
             --primary-color: #27ae60;
             --nav-color: #1a252f;
+            --brand-logo-color: #e52020;
+            --brand-logo-hover-color: #c81919;
             --rubric-color: #d32f2f;
             --sub-txt: #6c757d;
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -73,27 +75,29 @@
         .close-btn { width: 100%; padding: 10px; border: 0; border-radius: 6px; background: var(--primary-color); color: white; font-weight: 800; cursor: pointer; }
         #consent-modal { display: flex; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         .consent-content { width: min(760px, 96vw); max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; gap: 14px; background: white; color: #333; border-radius: 10px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
-        .consent-content h2 { margin: 0; color: var(--nav-color); font-size: 1.15rem; border-bottom: 2px solid var(--nav-color); padding-bottom: 8px; }
+        .consent-content h2 { margin: 0; color: var(--brand-logo-color); font-size: 1.15rem; border-bottom: 2px solid var(--brand-logo-color); padding-bottom: 8px; }
         .consent-language-grid { overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; padding-right: 4px; }
         .consent-language-block { border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px 12px; background: #fafafa; }
-        .consent-language-title { display: block; margin-bottom: 5px; color: var(--nav-color); font-weight: 900; }
+        .consent-language-title { display: block; margin-bottom: 5px; color: var(--brand-logo-color); font-weight: 900; }
         .consent-language-block p { margin: 0; line-height: 1.5; font-size: 0.92rem; }
         .consent-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; border-top: 1px solid #e8e8e8; padding-top: 12px; }
         .consent-btn { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 900; }
-        .consent-btn.accept { background: var(--nav-color); color: white; }
+        .consent-btn.accept { background: var(--brand-logo-color); color: white; }
+        .consent-btn.accept:hover,
+        .consent-btn.accept:focus-visible { background: var(--brand-logo-hover-color); outline: none; }
         .consent-btn.decline { background: #eee; color: #444; }
         #vn-source-modal { display: none; position: fixed; inset: 0; z-index: 10001; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         #vn-source-modal.is-visible { display: flex; }
         .vn-source-content { width: min(560px, 96vw); background: white; color: #333; border-radius: 12px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
-        .vn-source-content h2 { margin: 0 0 10px; color: var(--nav-color); font-size: 1.15rem; }
+        .vn-source-content h2 { margin: 0 0 10px; color: var(--brand-logo-color); font-size: 1.15rem; }
         .vn-source-content p { margin: 0 0 14px; line-height: 1.55; }
         .vn-source-modal-translation { display: block; margin-top: 3px; opacity: 0.58; font-size: 0.88em; font-weight: 500; }
         #vn-source-description .vn-source-modal-translation { font-size: 0.92em; }
         .vn-source-actions { display: grid; gap: 10px; }
         .vn-source-btn { width: 100%; border: 1px solid #d6dbe1; border-radius: 10px; padding: 12px 14px; background: #f7f8fa; color: #263238; text-align: left; cursor: pointer; font: inherit; line-height: 1.4; }
         .vn-source-btn:hover,
-        .vn-source-btn:focus-visible { border-color: var(--nav-color); background: #fff; outline: none; }
-        .vn-source-btn strong { display: block; color: var(--nav-color); font-weight: 900; }
+        .vn-source-btn:focus-visible { border-color: var(--brand-logo-color); background: #fff; outline: none; }
+        .vn-source-btn strong { display: block; color: var(--brand-logo-color); font-weight: 900; }
         .vn-source-btn .vn-source-translation { display: block; margin-top: 3px; color: #5f6b73; opacity: 0.58; font-size: 0.92em; }
         .closed-message { min-height: 100vh; display: grid; place-items: center; padding: 24px; text-align: center; background: #f7f7f7; color: #333; font-weight: 800; line-height: 1.6; }
         body.consent-pending > nav,

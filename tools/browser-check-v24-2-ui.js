@@ -298,12 +298,24 @@ function startServer() {
       const koreanPrayerAfter = '주님, 저희가 성체를 받아 모시며 언제나 성자의 수난을 기념하오니 성자께서 극진한 사랑으로 베풀어 주신 이 선물이 저희 구원에 도움이 되게 하소서.';
       const vietnamesePrayerAfter = 'Lạy Chúa, Chúa đã cho chúng con tham dự vào bí tích Thánh Thể, để chúng con đời đời tưởng nhớ Đức Giêsu Con Một Chúa, đã chịu khổ hình và sống lại hiển vinh; xin cho bí tích tình yêu Người trối lại dẫn chúng con tới hưởng ơn cứu độ muôn đời.';
       const navColor = getComputedStyle(document.querySelector('nav')).backgroundColor;
+      const brandColorToken = getComputedStyle(document.documentElement)
+        .getPropertyValue('--brand-logo-color')
+        .trim();
+      const brandColorProbe = document.createElement('span');
+      brandColorProbe.style.color = brandColorToken;
+      document.body.appendChild(brandColorProbe);
+      const brandColor = getComputedStyle(brandColorProbe).color;
+      brandColorProbe.remove();
+      const sourceChoiceButton = document.querySelector('.vn-source-btn');
       const startupAndSourceColors = {
+        brandToken: brandColorToken,
+        brand: brandColor,
         nav: navColor,
         noticeTitle: getComputedStyle(document.querySelector('.consent-content h2')).color,
+        noticeLanguageTitle: getComputedStyle(document.querySelector('.consent-language-title')).color,
         noticeAccept: getComputedStyle(document.querySelector('.consent-btn.accept')).backgroundColor,
         sourceTitle: getComputedStyle(document.querySelector('.vn-source-content h2')).color,
-        sourceChoice: getComputedStyle(document.querySelector('.vn-source-btn strong')).color
+        sourceChoice: getComputedStyle(sourceChoiceButton.querySelector('strong')).color
       };
       updateFloatingLiturgyBanner('전례명 원문', 'Translated liturgy name');
       const floatingTranslation = {
@@ -603,8 +615,17 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.vietnameseCalendarFixture.merged.color === '#f7f8fa'
       && result.vietnameseCalendarFixture.merged.reading === 'Bài đọc riêng theo lịch phụng vụ Việt Nam.',
     `Korean-original/Vietnamese-target calendar merge suppressed the Vietnamese proper: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
-    assert(Object.values(result.startupAndSourceColors).every(color => color === result.startupAndSourceColors.nav),
-      `Startup notice and Vietnamese source selection do not use the nav color: ${JSON.stringify(result.startupAndSourceColors)}`);
+    assert(result.startupAndSourceColors.brandToken.toLowerCase() === '#e52020'
+      && result.startupAndSourceColors.brand === 'rgb(229, 32, 32)'
+      && result.startupAndSourceColors.nav !== result.startupAndSourceColors.brand
+      && [
+        result.startupAndSourceColors.noticeTitle,
+        result.startupAndSourceColors.noticeLanguageTitle,
+        result.startupAndSourceColors.noticeAccept,
+        result.startupAndSourceColors.sourceTitle,
+        result.startupAndSourceColors.sourceChoice
+      ].every(color => color === result.startupAndSourceColors.brand),
+    `Startup notice and Vietnamese source selection do not use the official-mark color: ${JSON.stringify(result.startupAndSourceColors)}`);
     assert(result.floatingTranslation.primary === '전례명 원문'
       && result.floatingTranslation.secondary === 'Translated liturgy name'
       && result.floatingTranslation.secondaryOpacity < 0.9,
