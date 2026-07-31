@@ -302,6 +302,71 @@ function startServer() {
         secondary: document.querySelector('.floating-liturgy-secondary')?.textContent || '',
         secondaryOpacity: Number.parseFloat(getComputedStyle(document.querySelector('.floating-liturgy-secondary')).opacity || '1')
       };
+      const rectanglesOverlap = (first, second) => first.left < second.right
+        && first.right > second.left
+        && first.top < second.bottom
+        && first.bottom > second.top;
+      state.dailyReadingsLoading = true;
+      state.dailyReadingLanguageStatus = { VN: 'loading', KR: 'loading', EN: 'done' };
+      state.dailyReadingLanguageErrorAt = {};
+      showAppTab('mass');
+      syncLiturgyLoadingStatusBar('VN', 'EN');
+      updateVoiceStatusBar(voiceText('listening'), { recording: true });
+      const liturgyStatusBar = document.getElementById('liturgy-status-bar');
+      const voiceStatusBar = document.getElementById('voice-status-bar');
+      const statusQuickMenuRect = document.getElementById('quick-home-menu').getBoundingClientRect();
+      const statusFooterRect = document.getElementById('main-footer').getBoundingClientRect();
+      const liturgyStatusRect = liturgyStatusBar.getBoundingClientRect();
+      const voiceStatusRect = voiceStatusBar.getBoundingClientRect();
+      const runtimeStatusLayout = {
+        includesKoreanLoading: liturgyStatusBar.textContent.includes(localizedLiturgyLoadingMessageForLang('KR')),
+        includesVietnameseLoading: liturgyStatusBar.textContent.includes(localizedLiturgyLoadingMessageForLang('VN')),
+        statusBarsOverlap: rectanglesOverlap(liturgyStatusRect, voiceStatusRect),
+        liturgyOverlapsQuickMenu: rectanglesOverlap(liturgyStatusRect, statusQuickMenuRect),
+        voiceOverlapsQuickMenu: rectanglesOverlap(voiceStatusRect, statusQuickMenuRect),
+        liturgyOverlapsFooter: rectanglesOverlap(liturgyStatusRect, statusFooterRect),
+        voiceOverlapsFooter: rectanglesOverlap(voiceStatusRect, statusFooterRect),
+        footerGap: Math.round(statusFooterRect.top - voiceStatusRect.bottom)
+      };
+      hideVoiceStatusBar();
+      hideLiturgyStatusBar();
+      state.dailyReadingsLoading = false;
+      state.dailyReadingLanguageStatus = {};
+      state.dailyReadingLanguageErrorAt = {};
+
+      const applyVisualTheme = theme => {
+        document.documentElement.style.setProperty('--primary-color', theme.accent);
+        document.documentElement.style.setProperty('--liturgy-bg-color', theme.bg);
+        document.documentElement.style.setProperty('--liturgy-text-color', theme.text);
+        document.documentElement.style.setProperty('--liturgy-secondary-color', theme.secondary || theme.text);
+        document.documentElement.style.setProperty('--translation-color', theme.translation || '#6c757d');
+        document.documentElement.style.setProperty('--translation-heading-color', theme.translationHeading || theme.accent);
+        document.documentElement.style.setProperty('--section-bar-bg', theme.sectionBg || '#eee');
+        document.getElementById('main-header').style.background = theme.bg;
+        document.getElementById('main-header').style.color = theme.text;
+      };
+      const savedVisualTheme = liturgyColorVisualTheme(state.liturgyInfo.color);
+      applyVisualTheme(liturgyColorVisualTheme(liturgyColorMap.white));
+      const computedColor = selector => {
+        const node = document.querySelector(selector);
+        return node ? getComputedStyle(node).color : '';
+      };
+      const bodyPair = Array.from(document.querySelectorAll('#missal-root .pair-block')).find(block => (
+        block.querySelector(':scope > .pair-line:not(.translation):not(.summary) .text-content')
+        && block.querySelector(':scope > .pair-line.translation:not(.summary) .text-content')
+      ));
+      const whiteLiturgyContrast = {
+        headerPrimary: computedColor('.liturgy-name-primary'),
+        headerTranslation: computedColor('.liturgy-name-secondary'),
+        partPrimary: computedColor('.part-title'),
+        partTranslation: computedColor('.stacked-header-translation'),
+        sectionPrimary: computedColor('.section-bar-primary'),
+        sectionTranslation: computedColor('.section-bar-secondary'),
+        sourceBody: bodyPair ? getComputedStyle(bodyPair.querySelector(':scope > .pair-line:not(.translation):not(.summary) .text-content')).color : '',
+        translatedBody: bodyPair ? getComputedStyle(bodyPair.querySelector(':scope > .pair-line.translation:not(.summary) .text-content')).color : '',
+        sectionBackground: getComputedStyle(document.querySelector('.section-bar')).backgroundColor
+      };
+      applyVisualTheme(savedVisualTheme);
       const savedLiturgyInfoForCycle = state.liturgyInfo;
       state.liturgyInfo = { meta: { day: 5, sundayCycle: 'A' } };
       const weekdayCycleTitle = formatDisplayLiturgyTitle('VN', 'Thứ Sáu Tuần XVII - Mùa Thường Niên');
@@ -421,6 +486,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         ),
         startupAndSourceColors,
         floatingTranslation,
+        runtimeStatusLayout,
+        whiteLiturgyContrast,
         liturgyTitleParsing: {
           weekdayCycleTitle,
           sundayCycleTitle,
@@ -524,6 +591,23 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.floatingTranslation.secondary === 'Translated liturgy name'
       && result.floatingTranslation.secondaryOpacity < 0.9,
     `Floating liturgy translation is not visually secondary: ${JSON.stringify(result.floatingTranslation)}`);
+    assert(result.runtimeStatusLayout.includesKoreanLoading
+      && result.runtimeStatusLayout.includesVietnameseLoading,
+    `Loading status omitted a still-loading source language: ${JSON.stringify(result.runtimeStatusLayout)}`);
+    assert(!result.runtimeStatusLayout.statusBarsOverlap
+      && !result.runtimeStatusLayout.liturgyOverlapsQuickMenu
+      && !result.runtimeStatusLayout.voiceOverlapsQuickMenu
+      && !result.runtimeStatusLayout.liturgyOverlapsFooter
+      && !result.runtimeStatusLayout.voiceOverlapsFooter
+      && Math.abs(result.runtimeStatusLayout.footerGap - 8) <= 1,
+    `Mobile loading/voice status layout overlaps navigation or sits too far from the footer: ${JSON.stringify(result.runtimeStatusLayout)}`);
+    assert(result.whiteLiturgyContrast.headerPrimary
+      && result.whiteLiturgyContrast.headerPrimary !== result.whiteLiturgyContrast.headerTranslation
+      && result.whiteLiturgyContrast.partPrimary !== result.whiteLiturgyContrast.partTranslation
+      && result.whiteLiturgyContrast.sectionPrimary !== result.whiteLiturgyContrast.sectionTranslation
+      && result.whiteLiturgyContrast.sourceBody !== result.whiteLiturgyContrast.translatedBody
+      && result.whiteLiturgyContrast.sectionBackground !== 'rgb(238, 238, 238)',
+    `White-liturgy source and translation hierarchy is not visually distinct: ${JSON.stringify(result.whiteLiturgyContrast)}`);
     assert(/Năm A/.test(result.liturgyTitleParsing.weekdayCycleTitle)
       && /Năm A/.test(result.liturgyTitleParsing.sundayCycleTitle)
       && result.liturgyTitleParsing.mergedVietnameseTitle === 'Thánh I-nha-xi-ô Lôi-ô-la (Loyola), Linh mục',

@@ -20,6 +20,11 @@
             --chrome-compact-font-size: var(--font-size-base);
             --fixed-footer-height: 0px;
             --quick-home-edge-gap: 12px;
+            --quick-home-reserved-width: 0px;
+            --translation-color: var(--sub-txt);
+            --translation-heading-color: var(--primary-color);
+            --liturgy-secondary-color: inherit;
+            --section-bar-bg: #eee;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,7 +50,7 @@
         .date-display { font-size: var(--chrome-font-size); margin-bottom: 10px; font-weight: bold; }
         .liturgy-name { display: grid; grid-template-columns: minmax(40px, auto) minmax(0, 1fr) minmax(40px, auto); align-items: center; gap: 10px; max-width: 1100px; margin: 0 auto; font-size: var(--chrome-font-size); font-weight: 900; line-height: 1.4; border-top: 1px solid var(--liturgy-border-color, rgba(255, 255, 255, 0.3)); padding-top: 10px; }
         .liturgy-name-text { min-width: 0; overflow-wrap: anywhere; }
-        .liturgy-name-secondary { font-size: var(--chrome-font-size); opacity: 0.82; }
+        .liturgy-name-secondary { color: var(--liturgy-secondary-color, inherit); font-size: var(--chrome-font-size); opacity: 0.76; }
         .liturgy-nav-btn { position: relative; z-index: 2; width: 34px; height: 34px; border: 0; border-radius: 6px; background: transparent; color: inherit; cursor: pointer; font-size: 1.42rem; font-weight: 900; line-height: 1; text-shadow: 0 2px 7px rgba(0, 0, 0, 0.42); filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.22)); touch-action: manipulation; transition: background 0.16s ease, transform 0.16s ease, text-shadow 0.16s ease; }
         .liturgy-nav-btn:hover { background: var(--liturgy-hover-bg, rgba(255, 255, 255, 0.13)); transform: translateY(-1px); text-shadow: 0 3px 9px rgba(0, 0, 0, 0.48); }
         .liturgy-nav-btn:active { transform: translateY(0); }
@@ -113,7 +118,7 @@
         .floating-liturgy-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px 44px; align-items: center; gap: 8px; padding: 8px 14px; }
         .floating-liturgy-banner.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
         .floating-liturgy-text { min-width: 0; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
-        .floating-liturgy-secondary { opacity: 0.82; }
+        .floating-liturgy-secondary { color: var(--liturgy-secondary-color, inherit); opacity: 0.76; }
         .floating-liturgy-text:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
         .floating-liturgy-prev { grid-column: 1; }
         .floating-liturgy-text { grid-column: 2; }
@@ -136,7 +141,9 @@
         .quick-home-btn { min-width: 88px; border: 1px solid #1a252f; border-radius: 999px; padding: 8px 11px; background: #1a252f; color: white; opacity: 1; font: inherit; font-size: 12px; font-weight: 900; line-height: 1.15; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.72); box-shadow: 0 3px 9px rgba(0, 0, 0, 0.24); cursor: pointer; transition: background-color 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease; }
         .quick-home-btn:hover,
         .quick-home-btn.is-active { background: #263746; color: white; border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 7px 17px rgba(0, 0, 0, 0.34); opacity: 1; transform: translateY(-1px); }
-        .section-bar { background: #eee; color: var(--primary-color); padding: 15px; text-align: center; font-weight: 900; font-size: 1.1rem; border-bottom: 2px solid var(--primary-color); margin-top: 15px; margin-bottom: 10px; }
+        .section-bar { background: var(--section-bar-bg, #eee); color: var(--primary-color); padding: 15px; text-align: center; font-weight: 900; font-size: 1.1rem; border-bottom: 2px solid var(--primary-color); margin-top: 15px; margin-bottom: 10px; }
+        .section-bar-secondary { color: var(--translation-heading-color, var(--sub-txt)); opacity: 0.82; }
+        .section-bar-separator { color: var(--translation-color, var(--sub-txt)); opacity: 0.72; }
         .missal-container > .section-bar:first-child,
         .missal-container > .section-bar.first-section-bar { margin-top: 0; }
         .part-container { display: flex; flex-direction: column; border-bottom: 1px solid #ddd; padding-bottom: 15px; margin-bottom: 15px; }
@@ -144,7 +151,9 @@
         .pc-line-row { display: flex; align-items: stretch; width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0); }
         .pc-line-row:last-child { border-bottom: none; }
         .pc-col { flex: 1 1 0; min-width: 0; padding: 2px 20px; display: flex; flex-direction: column; gap: 2px; }
-        .pc-col-sub { background: #fafafa; border-left: 1px solid #eee; }
+        .pc-col-sub { background: #fafafa; border-left: 1px solid #eee; color: var(--translation-color, var(--sub-txt)); }
+        .pc-col-sub .part-title { color: var(--translation-heading-color, var(--primary-color)); }
+        .pc-col-sub .speaker { color: var(--translation-color, var(--sub-txt)); }
         .pc-header-row .pc-col { display: flex; }
         .pc-header-row .part-header { flex: 1 1 auto; }
         #missal-root .pc-col,
@@ -158,8 +167,8 @@
         .part-header > div { min-width: 0; width: 100%; padding-left: 0; text-indent: 0; }
         .part-header > div > * { text-indent: 0; }
         .part-title { color: var(--primary-color); font-weight: 900; font-size: 1.1em; line-height: 1.48; text-indent: 0; overflow-wrap: anywhere; }
-        .stacked-header-translation { color: var(--sub-txt); opacity: 0.78; text-indent: 0; overflow-wrap: anywhere; }
-        .stacked-header-separator { color: var(--sub-txt); font-weight: 800; opacity: 0.75; }
+        .stacked-header-translation { color: var(--translation-heading-color, var(--sub-txt)); opacity: 0.78; text-indent: 0; overflow-wrap: anywhere; }
+        .stacked-header-separator { color: var(--translation-color, var(--sub-txt)); font-weight: 800; opacity: 0.75; }
         .citation { display: inline-block; vertical-align: baseline; color: var(--sub-txt); font-size: 0.8em; font-weight: bold; background: #eee; padding: 2px 6px; border-radius: 4px; margin-left: 8px; }
         .part-select-row { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; width: 100%; margin: 0 0 8px; }
         .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
@@ -275,7 +284,7 @@
         .pair-line.line-vn { --speaker-width: 34px; --speaker-gap: 2px; }
         .pair-line.line-en { --speaker-width: 34px; --speaker-gap: 2px; }
         .pair-line.line-la { --speaker-width: 34px; --speaker-gap: 2px; }
-        .pair-line.translation { color: var(--sub-txt); margin-top: -2px; padding-bottom: 2px; border-bottom: none; }
+        .pair-line.translation { color: var(--translation-color, var(--sub-txt)); margin-top: -2px; padding-bottom: 2px; border-bottom: none; }
         .pair-line.summary .text-content { color: #777; font-style: italic; }
         .pair-line.summary .speaker { color: #777; font-style: italic; }
         .pair-line.conclusion { margin-top: 2px; }
@@ -303,11 +312,13 @@
         .voice-highlight-active,
         .voice-listening-anchor { background: rgba(108, 117, 125, 0.16) !important; border-radius: 8px; box-shadow: inset 4px 0 0 rgba(108, 117, 125, 0.58), inset 0 0 0 1px rgba(108, 117, 125, 0.22); transition: background-color 0.25s ease, box-shadow 0.25s ease; }
         .voice-listening-anchor { background: rgba(108, 117, 125, 0.10) !important; box-shadow: inset 4px 0 0 rgba(108, 117, 125, 0.36), inset 0 0 0 1px rgba(108, 117, 125, 0.14); }
+        .runtime-status-stack { position: fixed; left: 50%; bottom: calc(106px + env(safe-area-inset-bottom, 0px)); z-index: 1199; display: flex; flex-direction: column; align-items: stretch; gap: 6px; width: min(680px, calc(100% - 24px)); transform: translateX(-50%); pointer-events: none; }
         .voice-status-bar,
-        .liturgy-status-bar { position: fixed; left: 50%; bottom: calc(106px + env(safe-area-inset-bottom, 0px)); z-index: 1199; display: flex; flex-direction: column-reverse; align-items: stretch; gap: 6px; width: min(680px, calc(100% - 24px)); transform: translate(-50%, 14px); opacity: 0; pointer-events: none; transition: opacity 0.18s ease, transform 0.18s ease; }
+        .liturgy-status-bar { position: static; display: none; width: 100%; transform: translateY(10px); opacity: 0; pointer-events: none; transition: opacity 0.18s ease, transform 0.18s ease; }
         .voice-status-bar.is-visible,
-        .liturgy-status-bar.is-visible { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
-        .voice-status-bar { flex-direction: row; align-items: center; gap: 10px; min-height: 48px; box-sizing: border-box; padding: 8px 10px 8px 15px; border: 1px solid rgba(255, 255, 255, 0.24); border-radius: 999px; background: rgba(73, 80, 87, 0.88); color: white; font-size: 0.9rem; font-weight: 900; line-height: 1.35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26); backdrop-filter: blur(7px); }
+        .liturgy-status-bar.is-visible { display: flex; transform: translateY(0); opacity: 1; pointer-events: auto; }
+        .liturgy-status-bar { order: 1; flex-direction: column-reverse; align-items: stretch; gap: 6px; }
+        .voice-status-bar { order: 2; flex-direction: row; align-items: center; gap: 10px; min-height: 48px; box-sizing: border-box; padding: 8px 10px 8px 15px; border: 1px solid rgba(255, 255, 255, 0.24); border-radius: 999px; background: rgba(73, 80, 87, 0.88); color: white; font-size: 0.9rem; font-weight: 900; line-height: 1.35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.26); backdrop-filter: blur(7px); }
         .liturgy-status-line { display: flex; align-items: center; gap: 9px; width: 100%; min-height: 38px; padding: 9px 13px; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 999px; background: rgba(73, 80, 87, 0.78); color: white; font-size: 0.86rem; font-weight: 900; line-height: 1.35; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24); backdrop-filter: blur(7px); }
         .voice-status-bar.is-error { background: rgba(90, 90, 90, 0.86); }
         .liturgy-status-bar.is-error .liturgy-status-line { background: rgba(90, 90, 90, 0.86); }
@@ -343,6 +354,7 @@
 
         @media (max-width: 768px) {
             :root { --quick-home-edge-gap: 8px; }
+            .runtime-status-stack { left: var(--quick-home-edge-gap); right: calc(var(--quick-home-reserved-width) + var(--quick-home-edge-gap) + var(--quick-home-edge-gap)); bottom: calc(var(--fixed-footer-height) + var(--quick-home-edge-gap) + env(safe-area-inset-bottom, 0px)); width: auto; transform: none; }
             header { padding: 12px 12px 10px; }
             .header-brand { gap: 6px; margin-bottom: 4px; }
             .header-logo { width: 22px; height: 22px; }
@@ -1556,7 +1568,11 @@
             return {
                 bg: '#f7f8fa',
                 text: '#111827',
-                accent: '#6b7280',
+                accent: '#7c5b17',
+                secondary: '#526173',
+                translation: '#526173',
+                translationHeading: '#526173',
+                sectionBg: '#f4efe3',
                 border: 'rgba(17, 24, 39, 0.24)',
                 hover: 'rgba(17, 24, 39, 0.08)',
                 settingsBg: 'rgba(255, 255, 255, 0.74)',
@@ -12477,13 +12493,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const footer = document.getElementById('main-footer');
         if (!footer) return;
         const height = Math.max(0, footer.getBoundingClientRect().height);
+        const quickMenu = document.getElementById('quick-home-menu');
+        const quickMenuWidth = quickMenu ? Math.max(0, quickMenu.getBoundingClientRect().width) : 0;
         document.documentElement.style.setProperty('--fixed-footer-height', `${height}px`);
+        document.documentElement.style.setProperty('--quick-home-reserved-width', `${quickMenuWidth}px`);
     }
 
     window.addEventListener('resize', syncQuickHomeMenuWithFooter, { passive: true });
     if (typeof ResizeObserver === 'function') {
         const fixedFooterResizeObserver = new ResizeObserver(syncQuickHomeMenuWithFooter);
         fixedFooterResizeObserver.observe(document.getElementById('main-footer'));
+        fixedFooterResizeObserver.observe(document.getElementById('quick-home-menu'));
     }
 
     // AI 번역 버튼
@@ -13101,9 +13121,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }[ui] || ('The complete ' + nameText + ' liturgy could not be loaded.');
     }
 
+    function ensureRuntimeStatusStack() {
+        let stack = document.getElementById('runtime-status-stack');
+        if (stack) return stack;
+        stack = document.createElement('div');
+        stack.id = 'runtime-status-stack';
+        stack.className = 'runtime-status-stack';
+        document.body.appendChild(stack);
+        return stack;
+    }
+
     function ensureVoiceStatusBar() {
+        const stack = ensureRuntimeStatusStack();
         let bar = document.getElementById('voice-status-bar');
-        if (bar) return bar;
+        if (bar) {
+            if (bar.parentElement !== stack) stack.appendChild(bar);
+            return bar;
+        }
         bar = document.createElement('div');
         bar.id = 'voice-status-bar';
         bar.className = 'voice-status-bar';
@@ -13115,7 +13149,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             '<button type="button" id="voice-status-stop" class="voice-status-action-btn voice-status-stop-btn" onclick="pauseVoiceRecognitionFromBar()" hidden>■</button>',
             '<button type="button" id="voice-status-play" class="voice-status-action-btn voice-status-play-btn" onclick="resumeVoiceRecognitionFromBar()" hidden>▶</button>'
         ].join('');
-        document.body.appendChild(bar);
+        stack.appendChild(bar);
         return bar;
     }
 
@@ -13162,14 +13196,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function ensureLiturgyStatusBar() {
+        const stack = ensureRuntimeStatusStack();
         let bar = document.getElementById('liturgy-status-bar');
-        if (bar) return bar;
+        if (bar) {
+            if (bar.parentElement !== stack) stack.appendChild(bar);
+            return bar;
+        }
         bar = document.createElement('div');
         bar.id = 'liturgy-status-bar';
         bar.className = 'liturgy-status-bar';
         bar.setAttribute('role', 'status');
         bar.setAttribute('aria-live', 'polite');
-        document.body.appendChild(bar);
+        stack.appendChild(bar);
         return bar;
     }
 
@@ -13222,13 +13260,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const visibleLangs = Array.from(new Set([leftLang, rightLang]
             .map(lang => normalizeSelectableLang(lang, ''))
             .filter(Boolean)));
-        const loadingLangs = visibleLangs.filter(lang => status[lang] === 'loading');
+        const trackedLangs = Array.from(new Set(visibleLangs.concat(Object.keys(status)
+            .map(lang => normalizeSelectableLang(lang, ''))
+            .filter(Boolean))));
+        const loadingLangs = trackedLangs.filter(lang => status[lang] === 'loading');
         if (loadingLangs.length) {
             updateLiturgyStatusBar(loadingLangs.map(lang => localizedLiturgyLoadingMessageForLang(lang)), { loading: true });
             return;
         }
         const now = Date.now();
-        const errorLangs = visibleLangs.filter(lang => {
+        const errorLangs = trackedLangs.filter(lang => {
             if (status[lang] !== 'error') return false;
             if (!errorStartedAt[lang]) errorStartedAt[lang] = now;
             if (now - errorStartedAt[lang] < 8000) return true;
@@ -14495,7 +14536,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const nextLabel = '다음날 전례로 이동';
         return [
             `<button type="button" class="liturgy-nav-btn liturgy-nav-prev" aria-label="${prevLabel}" title="${prevLabel}" onclick="changeLiturgicalDay(-1)">&lt;</button>`,
-            `<div class="liturgy-name-text">${escapeHtml(leftName)}${secondary}</div>`,
+            `<div class="liturgy-name-text"><span class="liturgy-name-primary">${escapeHtml(leftName)}</span>${secondary}</div>`,
             `<button type="button" class="liturgy-nav-btn liturgy-nav-next" aria-label="${nextLabel}" title="${nextLabel}" onclick="changeLiturgicalDay(1)">&gt;</button>`
         ].join('');
     }
@@ -14737,6 +14778,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         document.documentElement.style.setProperty('--liturgy-hover-bg', colorTheme.hover);
         document.documentElement.style.setProperty('--liturgy-settings-bg', colorTheme.settingsBg);
         document.documentElement.style.setProperty('--liturgy-settings-border', colorTheme.settingsBorder);
+        document.documentElement.style.setProperty('--liturgy-secondary-color', colorTheme.secondary || colorTheme.text);
+        document.documentElement.style.setProperty('--translation-color', colorTheme.translation || '#6c757d');
+        document.documentElement.style.setProperty('--translation-heading-color', colorTheme.translationHeading || colorTheme.accent);
+        document.documentElement.style.setProperty('--section-bar-bg', colorTheme.sectionBg || '#eee');
         document.getElementById('main-header').style.background = colorTheme.bg;
         document.getElementById('main-header').style.color = colorTheme.text;
         document.getElementById('header-date').textContent = state.liturgyInfo.dateStr;
@@ -14778,7 +14823,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (!root.querySelector('.section-bar')) bar.classList.add('first-section-bar');
                 const titleLeft = item[leftL.toLowerCase()] || item.kr || '';
                 const titleRight = item[rightL.toLowerCase()] || item.vn || '';
-                bar.textContent = `${titleLeft} | ${titleRight}`;
+                bar.innerHTML = [
+                    `<span class="section-bar-primary">${escapeHtml(titleLeft)}</span>`,
+                    '<span class="section-bar-separator"> | </span>',
+                    `<span class="section-bar-secondary">${escapeHtml(titleRight)}</span>`
+                ].join('');
                 root.appendChild(bar);
                 return;
             }
