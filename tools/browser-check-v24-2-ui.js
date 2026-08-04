@@ -236,6 +236,23 @@ function startServer() {
           }
         ]
       }, ordinaryDate, ordinaryCalendarContext);
+      const augustFourthSelected = ktcgkpvReadingChoice({
+        mass_reading: [
+          {
+            display_text: 'Ngày thường',
+            is_special: false,
+            date_info: { daily_title: 'Thứ Ba Tuần XVIII - Mùa Thường Niên' },
+            reading1: [{ INDEXING: 'Gr 30,1-2.12-15.18-22' }],
+            gospel: [{ INDEXING: 'Mt 14,22-36' }]
+          },
+          {
+            display_text: 'Thánh Gio-an Ma-ri-a Vi-a-nê',
+            is_special: true,
+            reading1: [{ INDEXING: 'Ed 3,16-21' }],
+            gospel: [{ INDEXING: 'Mt 9,35-10,1' }]
+          }
+        ]
+      }, new Date(2026, 7, 4), null);
       if (previousProperHints) vietnameseCalendarReadingHints[properDateKey] = previousProperHints;
       else delete vietnameseCalendarReadingHints[properDateKey];
       if (previousOrdinaryHints) vietnameseCalendarReadingHints[ordinaryDateKey] = previousOrdinaryHints;
@@ -249,22 +266,22 @@ function startServer() {
         targetLang: state.targetLang,
         liturgicalDateContext: state.liturgicalDateContext
       };
-      const mergeDate = new Date(2026, 6, 31);
+      const mergeDate = new Date(2026, 7, 4);
       state.currentLoc = 'KR';
       state.targetLang = 'VN';
       state.liturgicalDateContext = { date: mergeDate, localDate: mergeDate };
       state.liturgyInfo = buildGeneratedLiturgyInfo(mergeDate);
       const mergedCalendarData = {};
       mergeSourceData(mergedCalendarData, {
-        title: 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục',
-        color: liturgyColorMap.white,
+        title: 'Tiêu đề KTCG bị phân tích sai',
+        color: liturgyColorMap.red,
         calendarContext: {
           confirmed: true,
           priority: true,
-          rank: 'Nhớ',
-          rankKey: 'memorial',
-          title: 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục',
-          color: liturgyColorMap.white,
+          rank: 'Lễ trọng',
+          rankKey: 'solemnity',
+          title: 'Tiêu đề lịch ngoài bị sai',
+          color: liturgyColorMap.red,
           date: formatDateIso(mergeDate)
         },
         data: {
@@ -418,6 +435,99 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         lines: strictSourceLines(prayerBoundarySource)
       }, new Date(2026, 6, 31));
 
+      const savedCalendarAuditState = {
+        currentLoc: state.currentLoc,
+        targetLang: state.targetLang,
+        liturgyInfo: state.liturgyInfo,
+        isSunday: state.isSunday
+      };
+      const calendarAudit = {
+        daysChecked: 0,
+        missingNames: [],
+        badColors: [],
+        fixedEntriesMissingNames: [],
+        transfersChecked: 0,
+        transferFailures: []
+      };
+      const currentLanguages = ['KR', 'VN', 'EN', 'JP', 'LA'];
+      const validColors = new Set(Object.values(liturgyColorMap));
+      for (const profile of currentLanguages) {
+        state.currentLoc = profile;
+        for (let year = 2026; year <= 2040; year += 1) {
+          for (let date = new Date(year, 0, 1); date.getFullYear() === year; date = addDays(date, 1)) {
+            const info = buildGeneratedLiturgyInfoV15(date);
+            calendarAudit.daysChecked += 1;
+            const missing = currentLanguages.filter(lang => !String(info.names && info.names[lang] || '').trim());
+            if (missing.length && calendarAudit.missingNames.length < 10) {
+              calendarAudit.missingNames.push({ profile, date: formatDateIso(date), missing });
+            }
+            if (!validColors.has(info.color) && calendarAudit.badColors.length < 10) {
+              calendarAudit.badColors.push({ profile, date: formatDateIso(date), color: info.color });
+            }
+          }
+        }
+      }
+      Object.entries(fixedSaintsCalendar).forEach(([dateKey, entry]) => {
+        const missing = currentLanguages.filter(lang => !String(entry.names && entry.names[lang] || '').trim());
+        if (missing.length) calendarAudit.fixedEntriesMissingNames.push({ dateKey, missing });
+      });
+      calendarAudit.fixedEntryCount = Object.keys(fixedSaintsCalendar).length;
+      state.currentLoc = 'LA';
+      for (let year = 2026; year <= 2040; year += 1) {
+        transferredFixedCelebrationsForYear(year).forEach(item => {
+          if (calendarDateKey(item.observed) === item.key) return;
+          calendarAudit.transfersChecked += 1;
+          const observed = buildGeneratedLiturgyInfoV15(item.observed);
+          const nominalParts = item.key.split('-').map(Number);
+          const nominalDate = new Date(year, nominalParts[0] - 1, nominalParts[1]);
+          const nominal = buildGeneratedLiturgyInfoV15(nominalDate);
+          const expected = fixedSaintsCalendar[item.key].names.LA;
+          if (observed.names.LA !== expected || nominal.names.LA === expected) {
+            calendarAudit.transferFailures.push({
+              year,
+              key: item.key,
+              observed: formatDateIso(item.observed),
+              observedTitle: observed.names.LA,
+              nominalTitle: nominal.names.LA,
+              expected
+            });
+          }
+        });
+      }
+      const calendarRuleFixtures = {};
+      state.currentLoc = 'KR';
+      calendarRuleFixtures.korean = {
+        aug4: buildGeneratedLiturgyInfoV15(new Date(2026, 7, 4)).names,
+        baptismAfterLateEpiphany: buildGeneratedLiturgyInfoV15(new Date(2029, 0, 8)).names.KR,
+        maryMotherOfChurch: buildGeneratedLiturgyInfoV15(addDays(computeEasterSunday(2026), 50)).names.KR
+      };
+      state.currentLoc = 'LA';
+      calendarRuleFixtures.latin = {
+        epiphany: buildGeneratedLiturgyInfoV15(new Date(2026, 0, 6)).names.LA,
+        ascension: buildGeneratedLiturgyInfoV15(addDays(computeEasterSunday(2026), 39)).names.LA,
+        corpusChristi: buildGeneratedLiturgyInfoV15(addDays(computeEasterSunday(2026), 60)).names.LA
+      };
+      state.currentLoc = 'KR';
+      calendarRuleFixtures.koreanTransferredPatroness = {
+        nominal: buildGeneratedLiturgyInfoV15(new Date(2030, 11, 8)).names.KR,
+        observed: buildGeneratedLiturgyInfoV15(new Date(2030, 11, 9)).names.KR
+      };
+      const futureProperFixtures = {};
+      [
+        ['FR', new Date(2026, 4, 30)],
+        ['ES', new Date(2026, 6, 25)],
+        ['MX', new Date(2026, 11, 12)],
+        ['BR', new Date(2026, 9, 12)],
+        ['ZH', new Date(2026, 6, 9)]
+      ].forEach(([profile, date]) => {
+        state.currentLoc = profile;
+        futureProperFixtures[profile] = buildGeneratedLiturgyInfoV15(date).names[profile];
+      });
+      state.currentLoc = savedCalendarAuditState.currentLoc;
+      state.targetLang = savedCalendarAuditState.targetLang;
+      state.liturgyInfo = savedCalendarAuditState.liturgyInfo;
+      state.isSunday = savedCalendarAuditState.isSunday;
+
       return {
         baseline,
         enlarged: {
@@ -495,6 +605,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           sunday: sundayCalendarContext,
           properChoice: properSelected && properSelected.display_text,
           ordinaryChoice: ordinarySelected && ordinarySelected.display_text,
+          augustFourthChoice: augustFourthSelected && augustFourthSelected.display_text,
           generatedTitle: generatedProper.names && generatedProper.names.VN,
           merged: calendarMergeFixture
         },
@@ -519,6 +630,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           mergedVietnameseTitle
         },
         prayerBoundaryText: prayerBoundaryFixture.prayer_after?.text || '',
+        calendarAudit,
+        calendarRuleFixtures,
+        futureProperFixtures,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -604,17 +718,47 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && !/Ca vịnh|Không cử hành/i.test(result.vietnameseCalendarFixture.sunday.title),
     `Vietnamese Sunday metadata was mistaken for the liturgy title: ${JSON.stringify(result.vietnameseCalendarFixture.sunday)}`);
     assert(result.vietnameseCalendarFixture.properChoice === 'Các thánh Mác-ta'
-      && result.vietnameseCalendarFixture.ordinaryChoice === 'Ngày thường',
+      && result.vietnameseCalendarFixture.ordinaryChoice === 'Ngày thường'
+      && /Vi-a-nê/.test(result.vietnameseCalendarFixture.augustFourthChoice),
     `KTCG did not follow proper/ordinary Vietnamese calendar citations: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
     assert(/Mác-ta.*Ma-ri-a.*La-da-rô/.test(result.vietnameseCalendarFixture.generatedTitle)
       && !/Thường Niên/i.test(result.vietnameseCalendarFixture.generatedTitle),
     `Built-in Vietnamese liturgy title fell back to Ordinary Time: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
-    assert(result.vietnameseCalendarFixture.merged.title === 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục'
+    assert(result.vietnameseCalendarFixture.merged.title === 'Thánh Gio-an Ma-ri-a Vi-a-nê, Linh mục'
       && result.vietnameseCalendarFixture.merged.special
-      && result.vietnameseCalendarFixture.merged.confirmed
+      && !result.vietnameseCalendarFixture.merged.confirmed
       && result.vietnameseCalendarFixture.merged.color === '#f7f8fa'
       && result.vietnameseCalendarFixture.merged.reading === 'Bài đọc riêng theo lịch phụng vụ Việt Nam.',
-    `Korean-original/Vietnamese-target calendar merge suppressed the Vietnamese proper: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    `External Vietnamese metadata overwrote the internal calendar or its reading was dropped: ${JSON.stringify(result.vietnameseCalendarFixture)}`);
+    assert(result.calendarAudit.daysChecked === 27395
+      && result.calendarAudit.missingNames.length === 0
+      && result.calendarAudit.badColors.length === 0
+      && result.calendarAudit.fixedEntryCount >= 100
+      && result.calendarAudit.fixedEntriesMissingNames.length === 0
+      && result.calendarAudit.transfersChecked > 0
+      && result.calendarAudit.transferFailures.length === 0,
+    `2026-2040 internal calendar audit failed: ${JSON.stringify(result.calendarAudit)}`);
+    assert(/비안네/.test(result.calendarRuleFixtures.korean.aug4.KR)
+      && /Vi-a-nê/.test(result.calendarRuleFixtures.korean.aug4.VN)
+      && /Vianney/.test(result.calendarRuleFixtures.korean.aug4.EN)
+      && /ヴィアンネ/.test(result.calendarRuleFixtures.korean.aug4.JP)
+      && /Vianney/.test(result.calendarRuleFixtures.korean.aug4.LA)
+      && /주님 세례/.test(result.calendarRuleFixtures.korean.baptismAfterLateEpiphany)
+      && /교회의 어머니/.test(result.calendarRuleFixtures.korean.maryMotherOfChurch),
+    `Universal calendar names or movable memorials are wrong: ${JSON.stringify(result.calendarRuleFixtures.korean)}`);
+    assert(result.calendarRuleFixtures.latin.epiphany === 'In Epiphania Domini'
+      && result.calendarRuleFixtures.latin.ascension === 'In Ascensione Domini'
+      && result.calendarRuleFixtures.latin.corpusChristi === 'Sanctissimi Corporis et Sanguinis Christi',
+    `Latin General Roman Calendar observances are wrong: ${JSON.stringify(result.calendarRuleFixtures.latin)}`);
+    assert(!/원죄 없이 잉태/.test(result.calendarRuleFixtures.koreanTransferredPatroness.nominal)
+      && /한국 교회의 수호자.*원죄 없이 잉태/.test(result.calendarRuleFixtures.koreanTransferredPatroness.observed),
+    `Korean proper solemnity was not transferred with the General Roman Calendar: ${JSON.stringify(result.calendarRuleFixtures.koreanTransferredPatroness)}`);
+    assert(/Jeanne d’Arc/.test(result.futureProperFixtures.FR)
+      && /Santiago/.test(result.futureProperFixtures.ES)
+      && /Guadalupe/.test(result.futureProperFixtures.MX)
+      && /Aparecida/.test(result.futureProperFixtures.BR)
+      && /中華殉道聖人/.test(result.futureProperFixtures.ZH),
+    `Future jurisdiction proper-calendar seeds are missing: ${JSON.stringify(result.futureProperFixtures)}`);
     assert(result.startupAndSourceColors.brandToken.toLowerCase() === '#e52020'
       && result.startupAndSourceColors.brand === 'rgb(229, 32, 32)'
       && result.startupAndSourceColors.nav !== result.startupAndSourceColors.brand

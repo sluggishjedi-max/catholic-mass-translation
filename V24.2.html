@@ -1118,12 +1118,43 @@
         LA: 'Cordis Immaculati Beatae Mariae Virginis'
     };
 
+    const maryMotherOfChurchNames = {
+        KR: '교회의 어머니 복되신 동정 마리아 기념일',
+        VN: 'Đức Trinh Nữ Maria, Mẹ Hội Thánh',
+        EN: 'The Blessed Virgin Mary, Mother of the Church',
+        JP: '教会の母聖マリア',
+        LA: 'Beatae Mariae Virginis, Ecclesiae Matris'
+    };
+
+    // Language and calendar jurisdiction are intentionally separate. The
+    // currently selectable languages use the first five profiles; the other
+    // reviewed profiles are ready for the planned language expansion.
+    const liturgicalCalendarProfiles = Object.freeze({
+        KR: Object.freeze({ id: 'KR', countryCalendar: 'KR', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        VN: Object.freeze({ id: 'VN', countryCalendar: 'VN', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        EN: Object.freeze({ id: 'US', countryCalendar: 'EN', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        JP: Object.freeze({ id: 'JP', countryCalendar: 'JP', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        LA: Object.freeze({ id: 'GENERAL_ROMAN', countryCalendar: 'LA', epiphany: 'fixed', ascension: 'thursday', corpusChristi: 'thursday' }),
+        FR: Object.freeze({ id: 'FR', countryCalendar: 'FR', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
+        ES: Object.freeze({ id: 'ES', countryCalendar: 'ES', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
+        PT: Object.freeze({ id: 'PT', countryCalendar: 'PT', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'thursday' }),
+        MX: Object.freeze({ id: 'MX', countryCalendar: 'MX', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'thursday' }),
+        BR: Object.freeze({ id: 'BR', countryCalendar: 'BR', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'thursday' }),
+        ZH: Object.freeze({ id: 'ZH', countryCalendar: 'ZH', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' })
+    });
+
+    function getLiturgicalCalendarProfile(langOrJurisdiction = state.currentLoc) {
+        const key = String(langOrJurisdiction || 'LA').trim().toUpperCase();
+        return liturgicalCalendarProfiles[key] || liturgicalCalendarProfiles.LA;
+    }
+
     const fixedSaintsCalendar = {
         '01-01': saintEntry('white', { KR: '천주의 성모 마리아 대축일', VN: 'Lễ Đức Maria, Mẹ Thiên Chúa', EN: 'Solemnity of Mary, the Holy Mother of God', JP: '神の母聖マリア', LA: 'In sollemnitate Sanctae Dei Genetricis Mariae' }, { rank: 'solemnity' }),
         '01-02': saintEntry('white', { KR: '성 대 바실리오와 나지안조의 성 그레고리오 주교 학자 기념일', VN: 'Thánh Basiliô Cả và Thánh Grêgôriô Nazianzênô, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saints Basil the Great and Gregory Nazianzen, Bishops and Doctors of the Church', JP: '聖大バジリオ・聖グレゴリオ（ナジアンゾスの）司教教会博士', LA: 'Sanctorum Basilii Magni et Gregorii Nazianzeni' }, { rank: 'memorial' }),
         '01-17': saintEntry('white', { KR: '성 안토니오 아빠스 기념일', VN: 'Thánh Antôn, Viện phụ', EN: 'Saint Anthony, Abbot', JP: '聖アントニオ修道院長', LA: 'Sancti Antonii, abbatis' }, { rank: 'memorial' }),
         '01-21': saintEntry('red', { KR: '성녀 아녜스 동정 순교자 기념일', VN: 'Thánh Anê, Trinh nữ, Tử đạo', EN: 'Saint Agnes, Virgin and Martyr', JP: '聖アグネスおとめ殉教者', LA: 'Sanctae Agnetis, virginis et martyris' }, { rank: 'memorial' }),
         '01-24': saintEntry('white', { KR: '성 프란치스코 살레시오 주교 학자 기념일', VN: 'Thánh Phanxicô Salêsiô, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Francis de Sales, Bishop and Doctor of the Church', JP: '聖フランシスコ・サレジオ司教教会博士', LA: 'Sancti Francisci de Sales' }, { rank: 'memorial' }),
+        '01-25': saintEntry('white', { KR: '성 바오로 사도의 회심 축일', VN: 'Thánh Phaolô Tông đồ trở lại', EN: 'The Conversion of Saint Paul the Apostle', JP: '聖パウロの回心', LA: 'In Conversione Sancti Pauli, apostoli' }, { rank: 'feast' }),
         '01-26': saintEntry('white', { KR: '성 티모테오와 성 티토 주교 기념일', VN: 'Thánh Timôthê và Thánh Titô, Giám mục', EN: 'Saints Timothy and Titus, Bishops', JP: '聖テモテ・聖テトス司教', LA: 'Sanctorum Timothei et Titi' }, { rank: 'memorial' }),
         '01-28': saintEntry('white', { KR: '성 토마스 아퀴나스 사제 학자 기념일', VN: 'Thánh Tôma Aquinô, Linh mục, Tiến sĩ Hội Thánh', EN: 'Saint Thomas Aquinas, Priest and Doctor of the Church', JP: '聖トマス・アクィナス司祭教会博士', LA: 'Sancti Thomae de Aquino' }, { rank: 'memorial' }),
         '01-31': saintEntry('white', { KR: '성 요한 보스코 사제 기념일', VN: 'Thánh Gioan Boscô, Linh mục', EN: 'Saint John Bosco, Priest', JP: '聖ヨハネ・ボスコ司祭', LA: 'Sancti Ioannis Bosco' }, { rank: 'memorial' }),
@@ -1132,48 +1163,84 @@
         '02-06': saintEntry('red', { KR: '성 바오로 미키와 동료 순교자들 기념일', VN: 'Thánh Phaolô Miki và các bạn tử đạo', EN: 'Saint Paul Miki and Companions, Martyrs', JP: '聖パウロ三木と同志殉教者', LA: 'Sanctorum Pauli Miki et sociorum martyrum' }, { rank: 'memorial' }),
         '02-10': saintEntry('white', { KR: '성녀 스콜라스티카 동정 기념일', VN: 'Thánh Scholastica, Trinh nữ', EN: 'Saint Scholastica, Virgin', JP: '聖スコラスティカおとめ', LA: 'Sanctae Scholasticae' }, { rank: 'memorial' }),
         '02-14': saintEntry('white', { KR: '성 치릴로 수도자와 성 메토디오 주교 기념일', VN: 'Thánh Cyrillô, Đan sĩ, và Thánh Mêthôđiô, Giám mục', EN: 'Saints Cyril, Monk, and Methodius, Bishop', JP: '聖チリロ隠世修道者・聖メトディオ司教', LA: 'Sanctorum Cyrilli et Methodii' }, { rank: 'memorial' }),
+        '02-22': saintEntry('white', { KR: '성 베드로 사도좌 축일', VN: 'Lập Tông tòa Thánh Phêrô, Tông đồ', EN: 'The Chair of Saint Peter the Apostle', JP: '聖ペトロの使徒座', LA: 'Cathedrae Sancti Petri, apostoli' }, { rank: 'feast' }),
+        '02-23': saintEntry('red', { KR: '성 폴리카르포 주교 순교자 기념일', VN: 'Thánh Polycarpô, Giám mục, Tử đạo', EN: 'Saint Polycarp, Bishop and Martyr', JP: '聖ポリカルポ司教殉教者', LA: 'Sancti Polycarpi, episcopi et martyris' }, { rank: 'memorial' }),
         '03-19': saintEntry('white', { KR: '복되신 동정 마리아의 배필 성 요셉 대축일', VN: 'Lễ Thánh Giuse, Bạn Trăm Năm Đức Trinh Nữ Maria', EN: 'Solemnity of Saint Joseph, Spouse of the Blessed Virgin Mary', JP: '聖ヨセフ', LA: 'Sancti Ioseph, Sponsi Beatae Mariae Virginis' }, { rank: 'solemnity' }),
         '03-25': saintEntry('white', { KR: '주님 탄생 예고 대축일', VN: 'Lễ Truyền Tin', EN: 'The Annunciation of the Lord', JP: '神のお告げ', LA: 'In Annuntiatione Domini' }, { rank: 'solemnity' }),
+        '04-07': saintEntry('white', { KR: '성 요한 밥티스타 드 라 살 사제 기념일', VN: 'Thánh Gioan Baotixita La San, Linh mục', EN: 'Saint John Baptist de La Salle, Priest', JP: '聖ヨハネ・バプティスト・ド・ラ・サール司祭', LA: 'Sancti Ioannis Baptistae de La Salle, presbyteri' }, { rank: 'memorial' }),
         '04-25': saintEntry('red', { KR: '성 마르코 복음사가 축일', VN: 'Thánh Máccô, Tác giả Tin Mừng', EN: 'Saint Mark, Evangelist', JP: '聖マルコ福音記者', LA: 'Sancti Marci, evangelistae' }, { rank: 'feast' }),
         '04-29': saintEntry('white', { KR: '시에나의 성녀 가타리나 동정 학자 기념일', VN: 'Thánh Catarina Siêna, Trinh nữ, Tiến sĩ Hội Thánh', EN: 'Saint Catherine of Siena, Virgin and Doctor of the Church', JP: '聖カタリナ（シエナの）おとめ教会博士', LA: 'Sanctae Catharinae Senensis' }, { rank: 'memorial' }),
         '05-02': saintEntry('white', { KR: '성 아타나시오 주교 학자 기념일', VN: 'Thánh Athanasiô, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Athanasius, Bishop and Doctor of the Church', JP: '聖アタナシオ司教教会博士', LA: 'Sancti Athanasii' }, { rank: 'memorial' }),
+        '05-03': saintEntry('red', { KR: '성 필립보와 성 야고보 사도 축일', VN: 'Thánh Philipphê và Thánh Giacôbê, Tông đồ', EN: 'Saints Philip and James, Apostles', JP: '聖フィリポ・聖ヤコブ使徒', LA: 'Sanctorum Philippi et Iacobi, apostolorum' }, { rank: 'feast' }),
         '05-14': saintEntry('red', { KR: '성 마티아 사도 축일', VN: 'Thánh Matthia, Tông đồ', EN: 'Saint Matthias, Apostle', JP: '聖マチア使徒', LA: 'Sancti Matthiae, apostoli' }, { rank: 'feast' }),
+        '05-26': saintEntry('white', { KR: '성 필립보 네리 사제 기념일', VN: 'Thánh Philipphê Nêri, Linh mục', EN: 'Saint Philip Neri, Priest', JP: '聖フィリポ・ネリ司祭', LA: 'Sancti Philippi Neri, presbyteri' }, { rank: 'memorial' }),
         '05-31': saintEntry('white', { KR: '복되신 동정 마리아의 방문 축일', VN: 'Đức Maria thăm viếng bà Êlisabét', EN: 'The Visitation of the Blessed Virgin Mary', JP: '聖母の訪問', LA: 'Visitationis Beatae Mariae Virginis' }, { rank: 'feast' }),
         '06-01': saintEntry('red', { KR: '성 유스티노 순교자 기념일', VN: 'Thánh Justinô, Tử đạo', EN: 'Saint Justin, Martyr', JP: '聖ユスティノ殉教者', LA: 'Sancti Iustini' }, { rank: 'memorial' }),
         '06-03': saintEntry('red', { KR: '성 가롤로 르왕가와 동료 순교자들 기념일', VN: 'Thánh Carôlô Lwanga và các bạn tử đạo', EN: 'Saint Charles Lwanga and Companions, Martyrs', JP: '聖カロロ・ルワンガと同志殉教者', LA: 'Sanctorum Caroli Lwanga et sociorum' }, { rank: 'memorial' }),
         '06-05': saintEntry('red', { KR: '성 보니파시오 주교 순교자 기념일', VN: 'Thánh Bônifaciô, Giám mục, Tử đạo', EN: 'Saint Boniface, Bishop and Martyr', JP: '聖ボニファツィオ司教殉教者', LA: 'Sancti Bonifatii' }, { rank: 'memorial' }),
         '06-11': saintEntry('red', { KR: '성 바르나바 사도 기념일', VN: 'Thánh Banaba, Tông đồ', EN: 'Memorial of Saint Barnabas, Apostle', JP: '聖バルナバ使徒', LA: 'Sancti Barnabae, Apostoli' }, { rank: 'memorial' }),
         '06-13': saintEntry('white', { KR: '파도바의 성 안토니오 사제 학자 기념일', VN: 'Thánh Antôn Pađôva, Linh mục, Tiến sĩ Hội Thánh', EN: 'Saint Anthony of Padua, Priest and Doctor of the Church', JP: '聖アントニオ（パドヴァの）司祭教会博士', LA: 'Sancti Antonii de Padova' }, { rank: 'memorial' }),
+        '06-21': saintEntry('white', { KR: '성 알로이시오 곤자가 수도자 기념일', VN: 'Thánh Louis Gonzaga, Tu sĩ', EN: 'Saint Aloysius Gonzaga, Religious', JP: '聖アロイジオ・ゴンザガ修道者', LA: 'Sancti Aloisii Gonzaga, religiosi' }, { rank: 'memorial' }),
         '06-24': saintEntry('white', { KR: '성 요한 세례자 탄생 대축일', VN: 'Lễ Sinh Nhật Thánh Gioan Tẩy Giả', EN: 'The Nativity of Saint John the Baptist', JP: '洗礼者聖ヨハネの誕生', LA: 'In Nativitate Sancti Ioannis Baptistae' }, { rank: 'solemnity' }),
+        '06-28': saintEntry('red', { KR: '성 이레네오 주교 순교자 학자 기념일', VN: 'Thánh Irênê, Giám mục, Tử đạo, Tiến sĩ Hội Thánh', EN: 'Saint Irenaeus, Bishop, Martyr and Doctor of the Church', JP: '聖イレネオ司教殉教者教会博士', LA: 'Sancti Irenaei, episcopi, martyris et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '06-29': saintEntry('red', { KR: '성 베드로와 성 바오로 사도 대축일', VN: 'Lễ Thánh Phêrô và Thánh Phaolô, Tông Đồ', EN: 'Solemnity of Saints Peter and Paul, Apostles', JP: '聖ペトロ 聖パウロ使徒', LA: 'Sanctorum Petri et Pauli, Apostolorum' }, { rank: 'solemnity' }),
         '07-03': saintEntry('red', { KR: '성 토마스 사도 축일', VN: 'Lễ Thánh Tôma, Tông Đồ', EN: 'Feast of Saint Thomas, Apostle', JP: '聖トマス使徒', LA: 'Sancti Thomae, Apostoli' }, { rank: 'feast' }),
         '07-11': saintEntry('white', { KR: '성 베네딕토 아빠스 기념일', VN: 'Thánh Bênêđictô, Viện phụ', EN: 'Saint Benedict, Abbot', JP: '聖ベネディクト修道院長', LA: 'Sancti Benedicti' }, { rank: 'memorial' }),
         '07-15': saintEntry('white', { KR: '성 보나벤투라 주교 학자 기념일', VN: 'Thánh Bônaventura, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Bonaventure, Bishop and Doctor of the Church', JP: '聖ボナヴェントゥラ司教教会博士記念日', LA: 'Sancti Bonaventurae, episcopi et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '07-22': saintEntry('white', { KR: '성녀 마리아 막달레나 축일', VN: 'Thánh Maria Mađalêna', EN: 'Saint Mary Magdalene', JP: '聖マリア（マグダラ）', LA: 'Sanctae Mariae Magdalenae' }, { rank: 'feast' }),
         '07-25': saintEntry('red', { KR: '성 야고보 사도 축일', VN: 'Thánh Giacôbê, Tông đồ', EN: 'Saint James, Apostle', JP: '聖ヤコブ使徒', LA: 'Sancti Iacobi, apostoli' }, { rank: 'feast' }),
+        '07-26': saintEntry('white', { KR: '복되신 동정 마리아의 부모 성 요아킴과 성녀 안나 기념일', VN: 'Thánh Gioakim và Thánh Anna, song thân Đức Trinh Nữ Maria', EN: 'Saints Joachim and Anne, Parents of the Blessed Virgin Mary', JP: '聖マリアの両親聖ヨアキム・聖アンナ', LA: 'Sanctorum Ioachim et Annae, parentum Beatae Mariae Virginis' }, { rank: 'memorial' }),
         '07-29': saintEntry('white', { KR: '성녀 마르타와 성녀 마리아와 성 라자로 기념일', VN: 'Thánh Mác-ta, Ma-ri-a và La-da-rô', EN: 'Saints Martha, Mary and Lazarus', JP: '聖マルタ・聖マリア・聖ラザロ', LA: 'Sanctorum Marthae, Mariae et Lazari' }, { rank: 'memorial' }),
+        '07-31': saintEntry('white', { KR: '성 이냐시오 데 로욜라 사제 기념일', VN: 'Thánh I-nha-xi-ô Lôi-ô-la, Linh mục', EN: 'Saint Ignatius of Loyola, Priest', JP: '聖イグナチオ（ロヨラ）司祭', LA: 'Sancti Ignatii de Loyola, presbyteri' }, { rank: 'memorial' }),
+        '08-01': saintEntry('white', { KR: '성 알폰소 마리아 데 리구오리 주교 학자 기념일', VN: 'Thánh An-phong-sô Ma-ri-a Li-gô-ri, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Alphonsus Liguori, Bishop and Doctor of the Church', JP: '聖アルフォンソ・マリア・デ・リゴリ司教教会博士', LA: 'Sancti Alfonsi Mariae de Liguori, episcopi et Ecclesiae doctoris' }, { rank: 'memorial' }),
+        '08-04': saintEntry('white', { KR: '성 요한 마리아 비안네 사제 기념일', VN: 'Thánh Gio-an Ma-ri-a Vi-a-nê, Linh mục', EN: 'Saint John Vianney, Priest', JP: '聖ヨハネ・マリア・ヴィアンネ司祭', LA: 'Sancti Ioannis Mariae Vianney, presbyteri' }, { rank: 'memorial' }),
         '08-06': saintEntry('white', { KR: '주님 변모 축일', VN: 'Lễ Chúa Hiển Dung', EN: 'The Transfiguration of the Lord', JP: '主の変容', LA: 'In Transfiguratione Domini' }, { rank: 'feastOfLord' }),
+        '08-08': saintEntry('white', { KR: '성 도미니코 사제 기념일', VN: 'Thánh Đa-minh, Linh mục', EN: 'Saint Dominic, Priest', JP: '聖ドミニコ司祭', LA: 'Sancti Dominici, presbyteri' }, { rank: 'memorial' }),
         '08-10': saintEntry('red', { KR: '성 라우렌시오 부제 순교자 축일', VN: 'Thánh Laurensô, Phó tế, Tử đạo', EN: 'Saint Lawrence, Deacon and Martyr', JP: '聖ラウレンチオ助祭殉教者', LA: 'Sancti Laurentii' }, { rank: 'feast' }),
+        '08-11': saintEntry('white', { KR: '성녀 클라라 동정 기념일', VN: 'Thánh Clara, Trinh nữ', EN: 'Saint Clare, Virgin', JP: '聖クララおとめ', LA: 'Sanctae Clarae, virginis' }, { rank: 'memorial' }),
+        '08-14': saintEntry('red', { KR: '성 막시밀리아노 마리아 콜베 사제 순교자 기념일', VN: 'Thánh Maximilianô Maria Kolbê, Linh mục, Tử đạo', EN: 'Saint Maximilian Kolbe, Priest and Martyr', JP: '聖マキシミリアノ・マリア・コルベ司祭殉教者', LA: 'Sancti Maximiliani Mariae Kolbe, presbyteri et martyris' }, { rank: 'memorial' }),
         '08-15': saintEntry('white', { KR: '성모 승천 대축일', VN: 'Lễ Đức Mẹ Hồn Xác Lên Trời', EN: 'The Assumption of the Blessed Virgin Mary', JP: '聖母の被昇天', LA: 'In Assumptione Beatae Mariae Virginis' }, { rank: 'solemnity' }),
+        '08-20': saintEntry('white', { KR: '성 베르나르도 아빠스 학자 기념일', VN: 'Thánh Bênađô, Viện phụ, Tiến sĩ Hội Thánh', EN: 'Saint Bernard, Abbot and Doctor of the Church', JP: '聖ベルナルド修道院長教会博士', LA: 'Sancti Bernardi, abbatis et Ecclesiae doctoris' }, { rank: 'memorial' }),
+        '08-21': saintEntry('white', { KR: '성 비오 10세 교황 기념일', VN: 'Thánh Piô X, Giáo hoàng', EN: 'Saint Pius X, Pope', JP: '聖ピオ十世教皇', LA: 'Sancti Pii X, papae' }, { rank: 'memorial' }),
+        '08-22': saintEntry('white', { KR: '복되신 동정 마리아 모후 기념일', VN: 'Đức Trinh Nữ Maria Nữ Vương', EN: 'The Queenship of the Blessed Virgin Mary', JP: '天の元后聖マリア', LA: 'Beatae Mariae Virginis Reginae' }, { rank: 'memorial' }),
         '08-24': saintEntry('red', { KR: '성 바르톨로메오 사도 축일', VN: 'Thánh Batôlômêô, Tông đồ', EN: 'Saint Bartholomew, Apostle', JP: '聖バルトロマイ使徒', LA: 'Sancti Bartholomaei, apostoli' }, { rank: 'feast' }),
+        '08-27': saintEntry('white', { KR: '성녀 모니카 기념일', VN: 'Thánh Mônica', EN: 'Saint Monica', JP: '聖モニカ', LA: 'Sanctae Monicae' }, { rank: 'memorial' }),
+        '08-28': saintEntry('white', { KR: '성 아우구스티노 주교 학자 기념일', VN: 'Thánh Augustinô, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Augustine, Bishop and Doctor of the Church', JP: '聖アウグスチヌス司教教会博士', LA: 'Sancti Augustini, episcopi et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '08-29': saintEntry('red', { KR: '성 요한 세례자의 수난 기념일', VN: 'Thánh Gioan Tẩy Giả bị trảm quyết', EN: 'The Passion of Saint John the Baptist', JP: '洗礼者聖ヨハネの殉教', LA: 'In Passione Sancti Ioannis Baptistae' }, { rank: 'memorial' }),
+        '09-03': saintEntry('white', { KR: '성 대 그레고리오 교황 학자 기념일', VN: 'Thánh Grêgôriô Cả, Giáo hoàng, Tiến sĩ Hội Thánh', EN: 'Saint Gregory the Great, Pope and Doctor of the Church', JP: '聖グレゴリオ一世教皇教会博士', LA: 'Sancti Gregorii Magni, papae et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '09-08': saintEntry('white', { KR: '복되신 동정 마리아 탄생 축일', VN: 'Sinh nhật Đức Trinh Nữ Maria', EN: 'The Nativity of the Blessed Virgin Mary', JP: '聖母マリアの誕生', LA: 'In Nativitate Beatae Mariae Virginis' }, { rank: 'feast' }),
+        '09-13': saintEntry('white', { KR: '성 요한 크리소스토모 주교 학자 기념일', VN: 'Thánh Gioan Kim Khẩu, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint John Chrysostom, Bishop and Doctor of the Church', JP: '聖ヨハネ・クリゾストモ司教教会博士', LA: 'Sancti Ioannis Chrysostomi, episcopi et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '09-14': saintEntry('red', { KR: '성 십자가 현양 축일', VN: 'Lễ Suy Tôn Thánh Giá', EN: 'The Exaltation of the Holy Cross', JP: '十字架称賛', LA: 'In Exaltatione Sanctae Crucis' }, { rank: 'feastOfLord' }),
         '09-15': saintEntry('white', { KR: '고통의 성모 마리아 기념일', VN: 'Đức Mẹ Sầu Bi', EN: 'Our Lady of Sorrows', JP: '悲しみの聖母', LA: 'Beatae Mariae Virginis Perdolentis' }, { rank: 'memorial' }),
+        '09-16': saintEntry('red', { KR: '성 고르넬리오 교황과 성 치프리아노 주교 순교자 기념일', VN: 'Thánh Cornêliô, Giáo hoàng, và Thánh Cyprianô, Giám mục, Tử đạo', EN: 'Saints Cornelius, Pope, and Cyprian, Bishop, Martyrs', JP: '聖コルネリオ教皇・聖チプリアノ司教殉教者', LA: 'Sanctorum Cornelii, papae, et Cypriani, episcopi, martyrum' }, { rank: 'memorial' }),
+        '09-20': saintEntry('red', { KR: '성 김대건 안드레아 사제와 성 정하상 바오로와 동료 순교자들 기념일', VN: 'Thánh Anrê Kim Taegon, Thánh Phaolô Chong Hasang và các bạn tử đạo', EN: 'Saints Andrew Kim Tae-gon, Paul Chong Ha-sang, and Companions, Martyrs', JP: '聖アンデレ金大建司祭と聖パウロ丁夏祥と同志殉教者', LA: 'Sanctorum Andreae Kim Tae-gon, Pauli Chong Ha-sang et sociorum martyrum' }, { rank: 'memorial' }),
         '09-21': saintEntry('red', { KR: '성 마태오 사도 복음사가 축일', VN: 'Thánh Matthêu, Tông đồ, Tác giả Tin Mừng', EN: 'Saint Matthew, Apostle and Evangelist', JP: '聖マタイ使徒福音記者', LA: 'Sancti Matthaei, apostoli et evangelistae' }, { rank: 'feast' }),
+        '09-23': saintEntry('white', { KR: '피에트렐치나의 성 비오 사제 기념일', VN: 'Thánh Piô Pietrelcina, Linh mục', EN: 'Saint Pius of Pietrelcina, Priest', JP: 'ピエトレルチーナの聖ピオ司祭', LA: 'Sancti Pii de Pietrelcina, presbyteri' }, { rank: 'memorial' }),
+        '09-27': saintEntry('white', { KR: '성 빈첸시오 드 폴 사제 기념일', VN: 'Thánh Vinh Sơn Phaolô, Linh mục', EN: 'Saint Vincent de Paul, Priest', JP: '聖ビンセンチオ・ア・パウロ司祭', LA: 'Sancti Vincentii de Paul, presbyteri' }, { rank: 'memorial' }),
         '09-29': saintEntry('white', { KR: '성 미카엘, 성 가브리엘, 성 라파엘 대천사 축일', VN: 'Các Tổng Lãnh Thiên Thần Micae, Gabriel và Raphael', EN: 'Saints Michael, Gabriel, and Raphael, Archangels', JP: '聖ミカエル 聖ガブリエル 聖ラファエル大天使', LA: 'Sanctorum Michaelis, Gabrielis et Raphaelis' }, { rank: 'feast' }),
+        '09-30': saintEntry('white', { KR: '성 예로니모 사제 학자 기념일', VN: 'Thánh Giêrônimô, Linh mục, Tiến sĩ Hội Thánh', EN: 'Saint Jerome, Priest and Doctor of the Church', JP: '聖ヒエロニモ司祭教会博士', LA: 'Sancti Hieronymi, presbyteri et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '10-01': saintEntry('white', { KR: '아기 예수의 성녀 데레사 동정 학자 기념일', VN: 'Thánh Têrêsa Hài Đồng Giêsu, Trinh nữ, Tiến sĩ Hội Thánh', EN: 'Saint Therese of the Child Jesus, Virgin and Doctor of the Church', JP: '幼きイエスの聖テレジアおとめ教会博士', LA: 'Sanctae Teresiae a Iesu Infante' }, { rank: 'memorial' }),
         '10-02': saintEntry('white', { KR: '수호천사 기념일', VN: 'Các Thiên Thần Hộ Thủ', EN: 'The Holy Guardian Angels', JP: '守護の天使', LA: 'Sanctorum Angelorum Custodum' }, { rank: 'memorial' }),
         '10-04': saintEntry('white', { KR: '아시시의 성 프란치스코 기념일', VN: 'Thánh Phanxicô Assisi', EN: 'Saint Francis of Assisi', JP: 'アシジの聖フランシスコ', LA: 'Sancti Francisci Assisiensis' }, { rank: 'memorial' }),
         '10-07': saintEntry('white', { KR: '묵주 기도의 복되신 동정 마리아 기념일', VN: 'Đức Mẹ Mân Côi', EN: 'Our Lady of the Rosary', JP: 'ロザリオの聖母', LA: 'Beatae Mariae Virginis a Rosario' }, { rank: 'memorial' }),
+        '10-15': saintEntry('white', { KR: '예수의 성녀 데레사 동정 학자 기념일', VN: 'Thánh Têrêsa Giêsu, Trinh nữ, Tiến sĩ Hội Thánh', EN: 'Saint Teresa of Jesus, Virgin and Doctor of the Church', JP: 'イエスの聖テレジアおとめ教会博士', LA: 'Sanctae Teresiae a Iesu, virginis et Ecclesiae doctoris' }, { rank: 'memorial' }),
+        '10-17': saintEntry('red', { KR: '안티오키아의 성 이냐시오 주교 순교자 기념일', VN: 'Thánh Ignatiô Antiôkhia, Giám mục, Tử đạo', EN: 'Saint Ignatius of Antioch, Bishop and Martyr', JP: 'アンティオキアの聖イグナチオ司教殉教者', LA: 'Sancti Ignatii Antiocheni, episcopi et martyris' }, { rank: 'memorial' }),
         '10-18': saintEntry('red', { KR: '성 루카 복음사가 축일', VN: 'Thánh Luca, Tác giả Tin Mừng', EN: 'Saint Luke, Evangelist', JP: '聖ルカ福音記者', LA: 'Sancti Lucae, evangelistae' }, { rank: 'feast' }),
         '10-28': saintEntry('red', { KR: '성 시몬과 성 유다 사도 축일', VN: 'Thánh Simon và Thánh Giuđa, Tông đồ', EN: 'Saints Simon and Jude, Apostles', JP: '聖シモン 聖ユダ使徒', LA: 'Sanctorum Simonis et Iudae' }, { rank: 'feast' }),
         '11-01': saintEntry('white', { KR: '모든 성인 대축일', VN: 'Lễ Các Thánh Nam Nữ', EN: 'Solemnity of All Saints', JP: '諸聖人', LA: 'Omnium Sanctorum' }, { rank: 'solemnity' }),
         '11-02': saintEntry('black', { KR: '죽은 모든 이를 기억하는 위령의 날', VN: 'Cầu cho các tín hữu đã qua đời', EN: 'The Commemoration of All the Faithful Departed', JP: '死者の日', LA: 'In Commemoratione Omnium Fidelium Defunctorum' }, { rank: 'commemoration' }),
+        '11-04': saintEntry('white', { KR: '성 가롤로 보로메오 주교 기념일', VN: 'Thánh Carôlô Bôrômêô, Giám mục', EN: 'Saint Charles Borromeo, Bishop', JP: '聖カロロ・ボロメオ司教', LA: 'Sancti Caroli Borromaei, episcopi' }, { rank: 'memorial' }),
         '11-09': saintEntry('white', { KR: '라테라노 대성전 봉헌 축일', VN: 'Cung hiến Đền thờ Latêranô', EN: 'The Dedication of the Lateran Basilica', JP: 'ラテラノ教会の献堂', LA: 'In Dedicatione Basilicae Lateranensis' }, { rank: 'feastOfLord' }),
+        '11-10': saintEntry('white', { KR: '성 대 레오 교황 학자 기념일', VN: 'Thánh Lêô Cả, Giáo hoàng, Tiến sĩ Hội Thánh', EN: 'Saint Leo the Great, Pope and Doctor of the Church', JP: '聖レオ一世教皇教会博士', LA: 'Sancti Leonis Magni, papae et Ecclesiae doctoris' }, { rank: 'memorial' }),
+        '11-11': saintEntry('white', { KR: '투르의 성 마르티노 주교 기념일', VN: 'Thánh Martinô thành Tours, Giám mục', EN: 'Saint Martin of Tours, Bishop', JP: '聖マルチノ（ツール）司教', LA: 'Sancti Martini Turonensis, episcopi' }, { rank: 'memorial' }),
+        '11-12': saintEntry('red', { KR: '성 요사팟 주교 순교자 기념일', VN: 'Thánh Giôsaphát, Giám mục, Tử đạo', EN: 'Saint Josaphat, Bishop and Martyr', JP: '聖ヨサファト司教殉教者', LA: 'Sancti Iosaphat, episcopi et martyris' }, { rank: 'memorial' }),
+        '11-17': saintEntry('white', { KR: '헝가리의 성녀 엘리사벳 수도자 기념일', VN: 'Thánh Êlisabét Hungari, Nữ tu', EN: 'Saint Elizabeth of Hungary, Religious', JP: 'ハンガリーの聖エリザベト修道女', LA: 'Sanctae Elisabeth Hungariae, religiosae' }, { rank: 'memorial' }),
+        '11-21': saintEntry('white', { KR: '복되신 동정 마리아의 자헌 기념일', VN: 'Đức Trinh Nữ Maria dâng mình trong Đền thờ', EN: 'The Presentation of the Blessed Virgin Mary', JP: '聖マリアの奉献', LA: 'In Praesentatione Beatae Mariae Virginis' }, { rank: 'memorial' }),
+        '11-22': saintEntry('red', { KR: '성녀 체칠리아 동정 순교자 기념일', VN: 'Thánh Cêcilia, Trinh nữ, Tử đạo', EN: 'Saint Cecilia, Virgin and Martyr', JP: '聖セシリアおとめ殉教者', LA: 'Sanctae Caeciliae, virginis et martyris' }, { rank: 'memorial' }),
         '11-24': saintEntry('red', { KR: '성 안드레아 둥락 사제와 동료 순교자들 기념일', VN: 'Thánh Anrê Dũng Lạc, Linh mục, và các bạn tử đạo', EN: 'Saint Andrew Dung-Lac, Priest, and Companions, Martyrs', JP: '聖アンデレ・ズンラク司祭と同志殉教者', LA: 'Sanctorum Andreae Dung-Lac presbyteri et sociorum martyrum' }, { rank: 'memorial' }),
         '11-30': saintEntry('red', { KR: '성 안드레아 사도 축일', VN: 'Thánh Anrê, Tông đồ', EN: 'Saint Andrew, Apostle', JP: '聖アンデレ使徒', LA: 'Sancti Andreae, apostoli' }, { rank: 'feast' }),
         '12-03': saintEntry('white', { KR: '성 프란치스코 하비에르 사제 기념일', VN: 'Thánh Phanxicô Xaviê, Linh mục', EN: 'Saint Francis Xavier, Priest', JP: '聖フランシスコ・ザビエル司祭', LA: 'Sancti Francisci Xavier' }, { rank: 'memorial' }),
+        '12-07': saintEntry('white', { KR: '성 암브로시오 주교 학자 기념일', VN: 'Thánh Ambrôsiô, Giám mục, Tiến sĩ Hội Thánh', EN: 'Saint Ambrose, Bishop and Doctor of the Church', JP: '聖アンブロジオ司教教会博士', LA: 'Sancti Ambrosii, episcopi et Ecclesiae doctoris' }, { rank: 'memorial' }),
         '12-08': saintEntry('white', { KR: '원죄 없이 잉태되신 복되신 동정 마리아 대축일', VN: 'Lễ Đức Mẹ Vô Nhiễm Nguyên Tội', EN: 'The Immaculate Conception of the Blessed Virgin Mary', JP: '無原罪の聖マリア', LA: 'In Conceptione Immaculata Beatae Mariae Virginis' }, { rank: 'solemnity' }),
         '12-13': saintEntry('red', { KR: '성녀 루치아 동정 순교자 기념일', VN: 'Thánh Lucia, Trinh nữ, Tử đạo', EN: 'Saint Lucy, Virgin and Martyr', JP: '聖ルチアおとめ殉教者', LA: 'Sanctae Luciae' }, { rank: 'memorial' }),
         '12-14': saintEntry('white', { KR: '십자가의 성 요한 사제 학자 기념일', VN: 'Thánh Gioan Thánh Giá, Linh mục, Tiến sĩ Hội Thánh', EN: 'Saint John of the Cross, Priest and Doctor of the Church', JP: '十字架の聖ヨハネ司祭教会博士', LA: 'Sancti Ioannis a Cruce' }, { rank: 'memorial' }),
@@ -1201,7 +1268,8 @@
             '02-03': saintEntry('red', { KR: '복자 유스토 다카야마 우콘 순교자 기념일', VN: 'Chân phước Justo Takayama Ukon, Tử đạo', EN: 'Blessed Justus Takayama Ukon, Martyr', JP: '福者ユスト高山右近殉教者', LA: 'Beati Iusti Takayama Ukon, martyris' }, { rank: 'memorial', localOnly: true, source: 'Japan proper calendar' }),
             '02-05': saintEntry('red', { KR: '일본 26 성인 순교자 축일', VN: 'Hai mươi sáu Thánh Tử đạo Nhật Bản', EN: 'The Twenty-Six Martyrs of Japan', JP: '日本26聖人殉教者（聖パウロ三木と同志殉教者）', LA: 'Viginti sex martyrum Iaponiae' }, { rank: 'feast', localOnly: true, source: 'Japan proper calendar' }),
             '03-17': saintEntry('white', { KR: '일본 신자 발견의 성모 축일', VN: 'Đức Mẹ của cuộc tìm thấy các tín hữu Nhật Bản', EN: 'Our Lady of the Discovery of Japanese Christians', JP: '日本の信徒発見の聖母', LA: 'Beatae Mariae Virginis inventionis christianorum Iaponiae' }, { rank: 'feast', localOnly: true, source: 'Japan proper calendar' }),
-            '07-01': saintEntry('red', { KR: '복자 베드로 기베 사제와 187위 순교자 기념일', VN: 'Chân phước Phêrô Kibe, Linh mục, và 187 vị tử đạo', EN: 'Blessed Peter Kibe, Priest, and 187 Martyrs', JP: '福者ペトロ岐部司祭と187殉教者', LA: 'Beati Petri Kibe presbyteri et centum octoginta septem martyrum' }, { rank: 'memorial', localOnly: true, source: 'Japan proper calendar' })
+            '07-01': saintEntry('red', { KR: '복자 베드로 기베 사제와 187위 순교자 기념일', VN: 'Chân phước Phêrô Kibe, Linh mục, và 187 vị tử đạo', EN: 'Blessed Peter Kibe, Priest, and 187 Martyrs', JP: '福者ペトロ岐部司祭と187殉教者', LA: 'Beati Petri Kibe presbyteri et centum octoginta septem martyrum' }, { rank: 'memorial', localOnly: true, source: 'Japan proper calendar' }),
+            '12-03': saintEntry('white', { KR: '일본 선교의 수호자 성 프란치스코 하비에르 사제 축일', VN: 'Thánh Phanxicô Xaviê, Linh mục, Bổn mạng công cuộc truyền giáo Nhật Bản', EN: 'Saint Francis Xavier, Priest, Patron of the Missions in Japan', JP: '日本宣教の保護者聖フランシスコ・ザビエル司祭', LA: 'Sancti Francisci Xavier, presbyteri, patroni missionum in Iaponia' }, { rank: 'feast', localOnly: true, source: 'Japan proper calendar' })
         },
         KR: {
             '05-29': saintEntry('red', { KR: '복자 윤지충 바오로와 동료 순교자들', VN: 'Chân phước Phaolô Yun Ji-chung và các bạn tử đạo', EN: 'Blessed Paul Yun Ji-chung and Companions, Martyrs', JP: '福者パウロ尹持忠と同志殉教者', LA: 'Beati Pauli Yun Ji-chung et sociorum martyrum' }, { rank: 'optional', localOnly: true, source: 'Korean proper calendar' }),
@@ -1211,6 +1279,24 @@
         },
         VN: {
             '11-24': saintEntry('red', { KR: '성 안드레아 둥락 사제와 동료 순교자들 대축일', VN: 'Thánh Anrê Dũng Lạc và các bạn tử đạo', EN: 'Saint Andrew Dung-Lac, Priest, and Companions, Martyrs', JP: '聖アンデレ・ズンラク司祭と同志殉教者', LA: 'Sanctorum Andreae Dung-Lac presbyteri et sociorum martyrum' }, { rank: 'solemnity', localOnly: true, source: 'Vietnamese proper calendar' })
+        },
+        FR: {
+            '05-30': saintEntry('white', { KR: '프랑스의 제2수호자 성녀 잔 다르크 동정 기념일', VN: 'Thánh Jeanne d’Arc, Trinh nữ, Bổn mạng thứ hai của Pháp', EN: 'Saint Joan of Arc, Virgin, Secondary Patroness of France', JP: 'フランスの副保護者聖ジャンヌ・ダルクおとめ', LA: 'Sanctae Ioannae de Arc, virginis, patronae secundariae Galliae', FR: 'Sainte Jeanne d’Arc, vierge, patronne secondaire de la France' }, { rank: 'memorial', localOnly: true, source: 'France proper calendar' })
+        },
+        ES: {
+            '07-25': saintEntry('red', { KR: '스페인의 수호자 성 야고보 사도 대축일', VN: 'Thánh Giacôbê Tông đồ, Bổn mạng Tây Ban Nha', EN: 'Saint James, Apostle, Patron of Spain', JP: 'スペインの保護者聖ヤコブ使徒', LA: 'Sancti Iacobi, apostoli, patroni Hispaniae', ES: 'Santiago, apóstol, patrono de España' }, { rank: 'solemnity', localOnly: true, source: 'Spain proper calendar' })
+        },
+        PT: {
+            '12-08': saintEntry('white', { KR: '포르투갈의 수호자 원죄 없이 잉태되신 복되신 동정 마리아 대축일', VN: 'Đức Mẹ Vô Nhiễm Nguyên Tội, Bổn mạng Bồ Đào Nha', EN: 'The Immaculate Conception of the Blessed Virgin Mary, Patroness of Portugal', JP: 'ポルトガルの保護者・無原罪の聖マリア', LA: 'In Conceptione Immaculata Beatae Mariae Virginis, patronae Portugalliae', PT: 'Imaculada Conceição da Virgem Santa Maria, Padroeira principal de Portugal' }, { rank: 'solemnity', localOnly: true, source: 'Portugal proper calendar' })
+        },
+        MX: {
+            '12-12': saintEntry('white', { KR: '멕시코의 수호자 과달루페의 복되신 동정 마리아 대축일', VN: 'Đức Mẹ Guadalupe, Bổn mạng Mêxicô', EN: 'Our Lady of Guadalupe, Patroness of Mexico', JP: 'メキシコの保護者グアダルペの聖母', LA: 'Beatae Mariae Virginis de Guadalupe, patronae Mexici', ES: 'Nuestra Señora de Guadalupe, patrona de México', MX: 'Nuestra Señora de Guadalupe, patrona de México' }, { rank: 'solemnity', localOnly: true, source: 'Mexico proper calendar' })
+        },
+        BR: {
+            '10-12': saintEntry('white', { KR: '브라질의 수호자 아파레시다의 원죄 없이 잉태되신 성모 마리아 대축일', VN: 'Đức Mẹ Vô Nhiễm Aparecida, Bổn mạng Brasil', EN: 'Our Lady of the Conception Aparecida, Patroness of Brazil', JP: 'ブラジルの保護者アパレシーダの聖母', LA: 'Beatae Mariae Virginis de Conceptione Aparecida, patronae Brasiliae', PT: 'Nossa Senhora da Conceição Aparecida, Padroeira do Brasil', BR: 'Nossa Senhora da Conceição Aparecida, Padroeira do Brasil' }, { rank: 'solemnity', localOnly: true, source: 'Brazil proper calendar' })
+        },
+        ZH: {
+            '07-09': saintEntry('red', { KR: '중국의 거룩한 순교자들 축일', VN: 'Các Thánh Tử đạo Trung Hoa', EN: 'The Holy Martyrs and Blessed of China', JP: '中国の聖なる殉教者と福者', LA: 'Sanctorum martyrum et beatorum Sinarum', ZH: '中華殉道聖人' }, { rank: 'feast', localOnly: true, source: 'Chinese proper calendar' })
         }
     };
 
@@ -1297,7 +1383,7 @@
 
     function protectedSeasonPreventsFixedEntry(date, rank) {
         const meta = getSeasonMeta(date);
-        if (date.getDay() === 0 && !['solemnity', 'feastOfLord'].includes(rank)) return true;
+        if (date.getDay() === 0 && !['solemnity', 'feastOfLord', 'commemoration'].includes(rank)) return true;
         if (meta.season === 'lent' && rank === 'memorial') return true;
         if (meta.season === 'easter' && meta.week === 1 && !['solemnity', 'feastOfLord'].includes(rank)) return true;
         if (meta.season === 'advent' && date.getMonth() === 11 && date.getDate() >= 17 && rank === 'memorial') return true;
@@ -1355,18 +1441,63 @@
         return nominal;
     }
 
+    function getSaintJosephObservedDate(year) {
+        const nominal = new Date(year, 2, 19);
+        const easter = computeEasterSunday(year);
+        const palmSunday = addDays(easter, -7);
+        const holySaturday = addDays(easter, -1);
+        if (nominal >= palmSunday && nominal <= holySaturday) return addDays(palmSunday, -1);
+        if (nominal.getDay() === 0 && getSeasonMeta(nominal).season === 'lent') return addDays(nominal, 1);
+        return nominal;
+    }
+
+    function getImmaculateConceptionObservedDate(year) {
+        const nominal = new Date(year, 11, 8);
+        return nominal.getDay() === 0 && getSeasonMeta(nominal).season === 'advent'
+            ? addDays(nominal, 1)
+            : nominal;
+    }
+
+    function getNativityJohnBaptistObservedDate(year) {
+        const nominal = new Date(year, 5, 24);
+        const sacredHeart = addDays(computeEasterSunday(year), 68);
+        return sameDay(nominal, sacredHeart) ? addDays(nominal, -1) : nominal;
+    }
+
+    function transferredFixedCelebrationsForYear(year) {
+        return [
+            { key: '03-19', observed: getSaintJosephObservedDate(year), source: 'General Roman Calendar Saint Joseph transfer rule' },
+            { key: '03-25', observed: getAnnunciationObservedDate(year), source: 'General Roman Calendar Annunciation transfer rule' },
+            { key: '06-24', observed: getNativityJohnBaptistObservedDate(year), source: 'General Roman Calendar Sacred Heart conflict rule' },
+            { key: '12-08', observed: getImmaculateConceptionObservedDate(year), source: 'General Roman Calendar Immaculate Conception transfer rule' }
+        ];
+    }
+
+    function isTransferredFixedCelebrationNominalDate(date, key = calendarDateKey(date)) {
+        return transferredFixedCelebrationsForYear(date.getFullYear()).some(item =>
+            item.key === key && calendarDateKey(item.observed) !== item.key
+        );
+    }
+
     function getUniversalDynamicCalendarOverride(date) {
-        const annunciation = fixedSaintsCalendar['03-25'];
-        const annunciationObserved = getAnnunciationObservedDate(date.getFullYear());
-        const annunciationTransferred = calendarDateKey(annunciationObserved) !== '03-25';
-        if (annunciationTransferred && sameDay(date, annunciationObserved)) {
-            return calendarOverrideFromEntry(annunciation, {
-                source: 'General Roman Calendar transferred solemnity rule',
-                transferredFrom: '03-25'
-            });
+        const transferred = transferredFixedCelebrationsForYear(date.getFullYear());
+        for (const item of transferred) {
+            if (calendarDateKey(item.observed) === item.key) continue;
+            if (sameDay(date, item.observed)) {
+                return calendarOverrideFromEntry(fixedSaintsCalendar[item.key], {
+                    source: item.source,
+                    transferredFrom: item.key
+                });
+            }
+            if (calendarDateKey(date) === item.key) {
+                return generatedSeasonalCalendarOverride(date, { includeFixed: false });
+            }
         }
-        if (annunciationTransferred && calendarDateKey(date) === '03-25') {
-            return generatedSeasonalCalendarOverride(date, { includeFixed: false });
+        if (sameDay(date, addDays(computeEasterSunday(date.getFullYear()), 50))) {
+            return calendarOverrideFromEntry(saintEntry('white', maryMotherOfChurchNames, {
+                rank: 'memorial',
+                source: 'General Roman Calendar Easter+50 memorial'
+            }));
         }
         if (isImmaculateHeartMemorialDate(date)) {
             return calendarOverrideFromEntry(saintEntry('white', immaculateHeartNames, { rank: 'memorial', source: 'Easter+69 dynamic calendar' }));
@@ -1408,20 +1539,29 @@
     }
 
     function getCountryCalendarOverride(date, countryLang = state.currentLoc) {
-        const lang = normalizeSelectableLang(countryLang, '');
-        if (!lang) return null;
-        if (lang === 'EN') {
+        const requested = String(countryLang || state.currentLoc || '').trim().toUpperCase();
+        const profile = getLiturgicalCalendarProfile(requested);
+        const countryKey = profile.countryCalendar || requested;
+        const countryEntries = countryFixedSaintsCalendar[countryKey] || {};
+        for (const item of transferredFixedCelebrationsForYear(date.getFullYear())) {
+            const localEntry = countryEntries[item.key];
+            if (!localEntry || calendarDateKey(item.observed) === item.key) continue;
+            if (sameDay(date, item.observed)) {
+                return calendarOverrideFromEntry(localEntry, { source: `${localEntry.meta.source} transferred solemnity rule`, transferredFrom: item.key });
+            }
+            if (calendarDateKey(date) === item.key) return null;
+        }
+        if (profile.id === 'US') {
             const usConflict = usImmaculateHeartConflictEntry(date);
             if (usConflict) return usConflict;
             if (sameDay(date, getFourthThursdayOfNovember(date.getFullYear()))) {
                 return calendarOverrideFromEntry(saintEntry('white', { KR: '미국 추수감사절', VN: 'Ngày Tạ Ơn', EN: 'Thanksgiving Day', JP: '感謝祭', LA: 'Dies Gratiarum Actionis' }, { rank: 'optional', localOnly: true, source: 'US proper calendar' }));
             }
         }
-        if (lang === 'JP') {
+        if (profile.id === 'JP') {
             const jpConflict = jpImmaculateHeartConflictEntry(date);
             if (jpConflict) return jpConflict;
         }
-        const countryEntries = countryFixedSaintsCalendar[lang] || {};
         const entry = countryEntries[calendarDateKey(date)];
         return fixedCalendarEntryApplies(date, entry) ? calendarOverrideFromEntry(entry) : null;
     }
@@ -1466,11 +1606,32 @@
     }
 
     function getEpiphanyObserved(year) {
-        return firstSundayBetween(year, 0, 2, 8);
+        const profile = getLiturgicalCalendarProfile();
+        return profile.epiphany === 'fixed' ? new Date(year, 0, 6) : firstSundayBetween(year, 0, 2, 8);
     }
 
     function getBaptismOfLord(year) {
-        return addDays(getEpiphanyObserved(year), 7);
+        const epiphany = getEpiphanyObserved(year);
+        const profile = getLiturgicalCalendarProfile();
+        if (profile.epiphany === 'sunday' && epiphany.getDate() >= 7) return addDays(epiphany, 1);
+        const daysToSunday = (7 - epiphany.getDay()) % 7 || 7;
+        return addDays(epiphany, daysToSunday);
+    }
+
+    function getHolyFamilyObserved(year) {
+        for (let day = 26; day <= 31; day += 1) {
+            const date = new Date(year, 11, day);
+            if (date.getDay() === 0) return date;
+        }
+        return new Date(year, 11, 30);
+    }
+
+    function getSecondSundayAfterChristmas(year) {
+        for (let day = 2; day <= 5; day += 1) {
+            const date = new Date(year, 0, day);
+            if (date.getDay() === 0) return date;
+        }
+        return null;
     }
 
     function getLiturgicalYear(date) {
@@ -1510,6 +1671,10 @@
         const adventStart = getAdventStart(y);
         const epiphany = getEpiphanyObserved(y);
         const baptism = getBaptismOfLord(y);
+        const profile = getLiturgicalCalendarProfile();
+        const ascension = addDays(easter, profile.ascension === 'thursday' ? 39 : 42);
+        const corpusChristi = addDays(easter, profile.corpusChristi === 'thursday' ? 60 : 63);
+        const secondSundayAfterChristmas = profile.epiphany === 'fixed' ? getSecondSundayAfterChristmas(y) : null;
         const movable = [
             { date: addDays(easter, -46), color: 'purple', isSunday: false, names: { KR: '재의 수요일', VN: 'Thứ Tư Lễ Tro', EN: 'Ash Wednesday', JP: '灰の水曜日', LA: 'Feria quarta Cinerum' }, specialMassKey: 'ash_wednesday' },
             { date: addDays(easter, -7), color: 'red', isSunday: true, names: { KR: '주님 수난 성지 주일', VN: 'Chúa Nhật Lễ Lá và Cuộc Thương Khó của Chúa', EN: 'Palm Sunday of the Passion of the Lord', JP: '受難の主日（枝の主日）', LA: 'Dominica in Palmis de Passione Domini' }, specialMassKey: 'palm_sunday' },
@@ -1517,21 +1682,25 @@
             { date: addDays(easter, -2), color: 'red', isSunday: false, names: { KR: '주님 수난 성금요일', VN: 'Thứ Sáu Tuần Thánh', EN: 'Friday of the Passion of the Lord', JP: '聖金曜日・主の受難', LA: 'Feria sexta in Passione Domini' }, specialMassKey: 'good_friday' },
             { date: addDays(easter, -1), color: 'gold', isSunday: false, names: { KR: '주님 부활 대축일 파스카 성야', VN: 'Đêm Canh Thức Vượt Qua', EN: 'Easter Vigil in the Holy Night', JP: '復活の聖なる徹夜祭', LA: 'Vigilia Paschalis in Nocte Sancta' }, specialMassKey: 'easter_vigil' },
             { date: easter, color: 'gold', isSunday: true, names: { KR: '주님 부활 대축일', VN: 'Chúa Nhật Phục Sinh', EN: 'Easter Sunday of the Resurrection of the Lord', JP: '復活の主日', LA: 'Dominica Resurrectionis Domini' } },
-            { date: addDays(easter, 42), color: 'white', isSunday: true, names: { KR: '주님 승천 대축일', VN: 'Chúa Nhật Chúa Thăng Thiên', EN: 'The Ascension of the Lord', JP: '主の昇天', LA: 'In Ascensione Domini' } },
+            { date: ascension, color: 'white', isSunday: ascension.getDay() === 0, names: { KR: '주님 승천 대축일', VN: 'Lễ Chúa Thăng Thiên', EN: 'The Ascension of the Lord', JP: '主の昇天', LA: 'In Ascensione Domini' } },
             { date: addDays(easter, 49), color: 'red', isSunday: true, names: { KR: '성령 강림 대축일', VN: 'Chúa Nhật Lễ Chúa Thánh Thần Hiện Xuống', EN: 'Pentecost Sunday', JP: '聖霊降臨の主日', LA: 'Dominica Pentecostes' } },
             { date: addDays(easter, 56), color: 'white', isSunday: true, names: { KR: '지극히 거룩하신 삼위일체 대축일', VN: 'Chúa Nhật Lễ Chúa Ba Ngôi', EN: 'The Solemnity of the Most Holy Trinity', JP: '三位一体の主日', LA: 'Sanctissimae Trinitatis' } },
-            { date: addDays(easter, 63), color: 'white', isSunday: true, names: { KR: '지극히 거룩하신 그리스도의 성체 성혈 대축일', VN: 'Lễ Mình Máu Thánh Chúa Kitô', EN: 'The Solemnity of the Most Holy Body and Blood of Christ', JP: 'キリストの聖体', LA: 'Sanctissimi Corporis et Sanguinis Christi' } },
+            { date: corpusChristi, color: 'white', isSunday: corpusChristi.getDay() === 0, names: { KR: '지극히 거룩하신 그리스도의 성체 성혈 대축일', VN: 'Lễ Mình Máu Thánh Chúa Kitô', EN: 'The Solemnity of the Most Holy Body and Blood of Christ', JP: 'キリストの聖体', LA: 'Sanctissimi Corporis et Sanguinis Christi' } },
             { date: addDays(easter, 68), color: 'white', isSunday: false, names: { KR: '지극히 거룩하신 예수 성심 대축일', VN: 'Lễ Thánh Tâm Chúa Giêsu', EN: 'The Solemnity of the Most Sacred Heart of Jesus', JP: 'イエスのみ心', LA: 'Sacratissimi Cordis Iesu' } },
             { date: addDays(adventStart, -7), color: 'white', isSunday: true, names: { KR: '온 누리의 임금이신 우리 주 예수 그리스도왕 대축일', VN: 'Chúa Nhật Lễ Chúa Giêsu Kitô Vua Vũ Trụ', EN: 'The Solemnity of Our Lord Jesus Christ, King of the Universe', JP: '王であるキリスト', LA: 'Domini Nostri Iesu Christi Universorum Regis' } },
-            { date: epiphany, color: 'white', isSunday: true, names: { KR: '주님 공현 대축일', VN: 'Lễ Chúa Hiển Linh', EN: 'The Epiphany of the Lord', JP: '主の公現', LA: 'In Epiphania Domini' } },
-            { date: baptism, color: 'white', isSunday: true, names: { KR: '주님 세례 축일', VN: 'Lễ Chúa Giêsu Chịu Phép Rửa', EN: 'The Baptism of the Lord', JP: '主の洗礼', LA: 'In Baptismate Domini' } }
+            { date: epiphany, color: 'white', isSunday: epiphany.getDay() === 0, names: { KR: '주님 공현 대축일', VN: 'Lễ Chúa Hiển Linh', EN: 'The Epiphany of the Lord', JP: '主の公現', LA: 'In Epiphania Domini' } },
+            { date: baptism, color: 'white', isSunday: baptism.getDay() === 0, names: { KR: '주님 세례 축일', VN: 'Lễ Chúa Giêsu Chịu Phép Rửa', EN: 'The Baptism of the Lord', JP: '主の洗礼', LA: 'In Baptismate Domini' } },
+            { date: getHolyFamilyObserved(y), color: 'white', isSunday: getHolyFamilyObserved(y).getDay() === 0, names: { KR: '예수, 마리아, 요셉의 성가정 축일', VN: 'Lễ Thánh Gia: Chúa Giêsu, Đức Maria và Thánh Giuse', EN: 'The Holy Family of Jesus, Mary and Joseph', JP: '聖家族', LA: 'Sanctae Familiae Iesu, Mariae et Ioseph' } },
+            ...(secondSundayAfterChristmas ? [{ date: secondSundayAfterChristmas, color: 'white', isSunday: true, names: { KR: '주님 성탄 후 제2주일', VN: 'Chúa Nhật II sau Lễ Giáng Sinh', EN: 'Second Sunday after the Nativity', JP: '主の降誕後第2主日', LA: 'Dominica II post Nativitatem' } }] : [])
         ];
         const hit = movable.find(item => sameDay(date, item.date));
         return hit ? celebration(hit.names, liturgyColorMap[hit.color], { isSunday: hit.isSunday, season: 'special', specialMassKey: hit.specialMassKey || '' }) : null;
     }
 
     function getFixedCelebration(date) {
-        const fixed = fixedSaintsCalendar[calendarDateKey(date)];
+        const key = calendarDateKey(date);
+        if (isTransferredFixedCelebrationNominalDate(date, key)) return null;
+        const fixed = fixedSaintsCalendar[key];
         if (!fixedCalendarEntryApplies(date, fixed)) return null;
         return celebration(fixed.names, liturgyColorMap[fixed.color], Object.assign({ season: 'special' }, fixed.meta || {}));
     }
@@ -1732,7 +1901,7 @@
         const sundayCycle = getSundayCycle(d);
         const weekdayCycle = getWeekdayCycle(d);
 
-        if (d >= adventStart) {
+        if (d >= adventStart && d < new Date(y, 11, 25)) {
             const week = Math.floor(dayDiff(d, adventStart) / 7) + 1;
             return { season: 'advent', week, day, sundayCycle, weekdayCycle, color: (day === 0 && week === 3) ? liturgyColorMap.rose : liturgyColorMap.purple };
         }
@@ -1781,6 +1950,30 @@
             const ordinaryWeekAnchor = day === 0 ? d : addDays(d, -(day - 1));
             const week = 34 - Math.floor(dayDiff(mondayBeforeAdvent, ordinaryWeekAnchor) / 7);
             return { season: 'ordinary', week, day, sundayCycle, weekdayCycle, color: liturgyColorMap.green };
+        }
+        if (d.getMonth() === 11 && d.getDate() >= 29 && d.getDate() <= 31) {
+            const octaveDay = d.getDate() - 24;
+            const ordinal = { 5: 'fifth', 6: 'sixth', 7: 'seventh' }[octaveDay];
+            const latinOrdinal = { 5: 'quinta', 6: 'sexta', 7: 'septima' }[octaveDay];
+            const names = {
+                KR: `성탄 팔일 축제 제${octaveDay}일`,
+                VN: `Ngày thứ ${octaveDay === 5 ? 'năm' : octaveDay === 6 ? 'sáu' : 'bảy'} trong Tuần Bát Nhật Giáng Sinh`,
+                EN: `${ordinal.charAt(0).toUpperCase() + ordinal.slice(1)} Day within the Octave of the Nativity`,
+                JP: `主の降誕第${octaveDay}日`,
+                LA: `Die ${latinOrdinal} infra octavam Nativitatis Domini`
+            };
+            return { season: 'christmas', week: 1, day, sundayCycle, weekdayCycle, color: liturgyColorMap.white, names };
+        }
+        if (d.getMonth() === 0 && d.getDate() >= 2 && d < baptism) {
+            const relation = d < getEpiphanyObserved(y) ? 'before' : 'after';
+            const names = {
+                KR: `주님 공현 대축일 ${relation === 'before' ? '전' : '후'} ${weekdayNames.KR[day]}`,
+                VN: `${weekdayNames.VN[day]} ${relation === 'before' ? 'trước' : 'sau'} lễ Hiển Linh`,
+                EN: `${weekdayNames.EN[day]} ${relation} Epiphany`,
+                JP: `主の公現${relation === 'before' ? '前' : '後'}の${weekdayNames.JP[day]}`,
+                LA: `${weekdayNames.LA[day]} ${relation === 'before' ? 'ante' : 'post'} Epiphaniam`
+            };
+            return { season: 'christmas', week: 1, day, sundayCycle, weekdayCycle, color: liturgyColorMap.white, names };
         }
         return { season: 'christmas', week: 1, day, sundayCycle, weekdayCycle, color: liturgyColorMap.white };
     }
@@ -5805,17 +5998,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const calendarHints = dateKey && vietnameseCalendarReadingHints[dateKey]
             ? vietnameseCalendarReadingHints[dateKey]
             : {};
-        const context = calendarContext || calendarHints.context || null;
+        const context = calendarContext || null;
         const officialReadings = Array.isArray(calendarHints.readings) ? calendarHints.readings : [];
         const readingHint = officialReadings.find(item => !item.isGospel) || null;
         const gospelHint = officialReadings.find(item => item.isGospel) || null;
         const generatedInfo = date ? buildGeneratedLiturgyInfo(date) : null;
-        const priority = context && context.confirmed
-            ? !!context.priority
-            : !!(date && hasPriorityCelebrationForLookup(date, generatedInfo));
-        const expectedTitle = context && context.title
-            ? context.title
-            : (priority && date ? vietnameseLookupTitle(date) : '');
+        const priority = !!(date && hasPriorityCelebrationForLookup(date, generatedInfo));
+        const expectedTitle = priority && date ? vietnameseLookupTitle(date) : '';
 
         const scored = readings.map((choice, index) => {
             const title = ktcgkpvChoiceTitle(choice);
@@ -6003,14 +6192,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     async function fetchVietnameseKtcgDailyMass(date) {
-        const [payload, calendarContext] = await Promise.all([
-            fetchKtcgkpvMassReadingJson(date),
-            ensureVietnameseCalendarContext(date).catch(error => {
-                console.warn('베트남어 공식 전례력 확인 실패, 내장 전례력으로 KTCG 독서를 선택합니다.', error);
-                return null;
-            })
-        ]);
-        const choice = ktcgkpvReadingChoice(payload, date, calendarContext);
+        const payload = await fetchKtcgkpvMassReadingJson(date);
+        const choice = ktcgkpvReadingChoice(payload, date, null);
         if (!choice) throw new Error('KTCG mass-reading choice is empty');
         const reading1Entries = firstNonEmptyKtcgkpvArray(choice, ['reading1', 'reading_1']);
         const reading2Entries = firstNonEmptyKtcgkpvArray(choice, ['reading2', 'reading_2']);
@@ -6032,18 +6215,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (gospelAccl) data.gospel_accl = gospelAccl;
         if (gospel) data.gospel = gospel;
         if (communion) data.communion = communion;
-        const dateInfo = choice.date_info || {};
-        const title = cleanLiturgyTitle(
-            calendarContext && calendarContext.priority && calendarContext.title
-                ? calendarContext.title
-                : (dateInfo.daily_title || choice.display_text || getLiturgyDisplayName('VN'))
-        );
+        const internalInfo = buildGeneratedLiturgyInfo(date);
+        const title = cleanLiturgyTitle(internalInfo.names.VN || getLiturgyDisplayName('VN'));
         const parsed = {
             title,
-            color: calendarContext && calendarContext.color ? calendarContext.color : state.liturgyInfo.color,
+            color: internalInfo.color,
+            titleSource: 'internal-calendar',
             data
         };
-        if (calendarContext && calendarContext.confirmed) parsed.calendarContext = calendarContext;
         return strictEnsureReadingSummarySlots(parsed, 'VN');
     }
 
@@ -7738,7 +7917,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
         const lower = lang.toLowerCase();
-        const calendarContext = parsed.calendarContext && parsed.calendarContext.confirmed
+        const allowExternalLiturgy = options.allowExternalLiturgy === true;
+        const calendarContext = allowExternalLiturgy && parsed.calendarContext && parsed.calendarContext.confirmed
             ? parsed.calendarContext
             : null;
         const calendarPriority = !!(calendarContext && calendarContext.priority);
@@ -7751,7 +7931,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (calendarContext.color) state.liturgyInfo.color = calendarContext.color;
         }
         const suppressNonLeftProper = calendarPriority ? false : isNonLeftLocalProperSource(lang, parsed.title);
-        if (parsed.title && !options.suppressTitle) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
+        if (allowExternalLiturgy && parsed.title && !options.suppressTitle) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
         Object.keys(parsed.data || {}).forEach(key => {
             if (suppressNonLeftProper && properLocalDailySectionIds.has(key)) return;
             if (shouldSuppressMismatchedLocalProperSection(lang, key)) return;
@@ -7777,7 +7957,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 target[key][lower] = value;
             }
         });
-        if (!options.suppressTitle && parsed.title && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) {
+        if (allowExternalLiturgy && !options.suppressTitle && parsed.title && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) {
             state.liturgyInfo.names[lang] = cleanLiturgyTitle(parsed.title);
             state.liturgyInfo.krName = state.liturgyInfo.names.KR;
             state.liturgyInfo.vnName = state.liturgyInfo.names.VN;
@@ -7786,7 +7966,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 state.isSunday = state.isSunday || state.liturgyInfo.isSolemnity;
             }
         }
-        if (!options.suppressTitle && parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
+        if (allowExternalLiturgy && !options.suppressTitle && parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
     }
 
     function parseKoreanDailyMass(html) {
