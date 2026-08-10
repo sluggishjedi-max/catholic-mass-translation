@@ -726,6 +726,18 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       state.targetLang = savedCalendarAuditState.targetLang;
       state.liturgyInfo = savedCalendarAuditState.liturgyInfo;
       state.isSunday = savedCalendarAuditState.isSunday;
+      const savedCopyrightState = {
+        activeTab: state.activeTab,
+        currentLoc: state.currentLoc,
+        targetLang: state.targetLang
+      };
+      state.activeTab = 'mass';
+      state.currentLoc = 'KR';
+      state.targetLang = 'VN';
+      updateFooterCopyright();
+      const vietnameseMassCopyright = document.getElementById('main-footer').textContent.trim();
+      Object.assign(state, savedCopyrightState);
+      updateFooterCopyright();
 
       return {
         baseline,
@@ -842,6 +854,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         calendarAudit,
         calendarRuleFixtures,
         futureProperFixtures,
+        vietnameseMassCopyright,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -968,6 +981,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /Aparecida/.test(result.futureProperFixtures.BR)
       && /中華殉道聖人/.test(result.futureProperFixtures.ZH),
     `Future jurisdiction proper-calendar seeds are missing: ${JSON.stringify(result.futureProperFixtures)}`);
+    assert(result.vietnameseMassCopyright.includes('2005 © - Hội đồng Giám mục Việt Nam')
+      && !result.vietnameseMassCopyright.includes('2024 © - Hội đồng Giám mục Việt Nam'),
+    `Vietnamese Mass copyright year is incorrect: ${result.vietnameseMassCopyright}`);
     assert(result.startupAndSourceColors.brandToken.toLowerCase() === '#e52020'
       && result.startupAndSourceColors.brand === 'rgb(229, 32, 32)'
       && result.startupAndSourceColors.nav !== result.startupAndSourceColors.brand
