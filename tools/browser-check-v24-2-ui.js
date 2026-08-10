@@ -552,6 +552,118 @@ function startServer() {
         commonReadingLabel: dailyVariantLabelFromSourceMetadata({ optionKinds_kr: ['common'] }, null, 0, null, 'reading2'),
         properGospelLabel: dailyVariantLabelFromSourceMetadata({ optionKinds_kr: ['proper'] }, null, 0, null, 'gospel')
       };
+      const aug11OrdinaryChoice = {
+        display_text: 'Ngày thường',
+        date_info: { daily_title: 'Thứ Ba Tuần XIX - Mùa Thường Niên' },
+        introit: [entry('', 'Lạy Chúa, xin nhớ lại giao ước của Chúa, và đừng bỏ rơi đến cùng những người nghèo khổ của Chúa.')]
+      };
+      const aug11ClareChoice = {
+        display_text: 'Thánh Cơ-la-ra, Trinh nữ',
+        is_special: true,
+        introit: [
+          entry('', 'Đây là trinh nữ khôn ngoan, đã cầm đèn sáng ra đón Đức Ki-tô.'),
+          entry('Tv 15,5', 'Lạy Chúa, Chúa là phần sản nghiệp và phần chén của con.')
+        ]
+      };
+      const aug11Sections = ktcgkpvDailySectionsFromChoices(
+        [aug11ClareChoice, aug11OrdinaryChoice],
+        [aug11ClareChoice, aug11OrdinaryChoice],
+        new Date(2026, 7, 11)
+      );
+      const aug11EntranceOptions = {
+        kr: [
+          [{ text: '슬기로운 동정녀는 등불을 밝혀 들고 그리스도를 맞으러 나갔네.' }],
+          [{ text: '그리스도의 동정녀는 얼마나 아름다운가! 그가 영원한 동정의 화관을 받았네.' }]
+        ],
+        vn: [
+          [{ text: 'Đây là trinh nữ khôn ngoan, đã cầm đèn sáng ra đón Đức Ki-tô.' }],
+          [{ text: 'Lạy Chúa, Chúa là phần sản nghiệp và phần chén của con.' }],
+          [{ text: 'Lạy Chúa, xin nhớ lại giao ước của Chúa, và đừng bỏ rơi đến cùng những người nghèo khổ của Chúa.' }]
+        ]
+      };
+      const aug11Alignment = buildFallbackVariantAlignment('entrance', aug11EntranceOptions, {});
+      const unsafeAiAlignment = normalizeSafeVariantAlignmentGroups(
+        'entrance',
+        aug11EntranceOptions,
+        [{ kr: 0, vn: 0 }, { kr: 1, vn: 1 }, { vn: 2 }]
+      );
+      const aug12OrdinaryChoice = {
+        display_text: 'Ngày thường',
+        date_info: { daily_title: 'Thứ Tư Tuần XIX - Mùa Thường Niên' },
+        introit: [entry('Tv 73,20.19.22.23', 'Lạy Chúa, xin nhớ lại giao ước của Chúa.')]
+      };
+      const aug12OptionalChoice = {
+        display_text: 'Thánh Gio-an-na Phan-xi-ca Săng-tan',
+        is_special: true,
+        introit: [entry('Tv 73,20.19.22.23', 'Lạy Chúa, xin nhớ lại giao ước của Chúa.')],
+        reading1: [entry('Cn 31,10-13.19-20.30-31', 'Bài đọc riêng của thánh nữ.')]
+      };
+      const aug12Sections = ktcgkpvDailySectionsFromChoices(
+        [aug12OrdinaryChoice, aug12OptionalChoice],
+        [aug12OrdinaryChoice, aug12OptionalChoice],
+        new Date(2026, 7, 12)
+      );
+      const adjacentVigilChoices = ktcgkpvOrderedReadingChoices({
+        mass_reading: [
+          { display_text: 'Ngày thường', reading1: [entry('Gs 24,14-29', 'Bài đọc ngày thường')] },
+          { display_text: 'Thánh Mác-xi-mi-li-a-nô Ma-ri-a Kôn-bê', reading1: [entry('1 Ga 3,13-18', 'Bài đọc lễ nhớ')] },
+          { display_text: 'Ngày 15 tháng 8 - ĐỨC MẸ LÊN TRỜI - Thánh lễ Vọng', reading1: [entry('1 Sb 15,3-4', 'Bài đọc lễ vọng')] }
+        ]
+      }, new Date(2026, 7, 14));
+      const kindedEntranceVariants = {
+        A: {
+          label: dailyVariantLabelForKind('proper', 'entrance'),
+          lines: [{ text_kr: '고유 입당송', text_vn: 'Ca nhập lễ riêng' }],
+          __dailyOptionKind: 'proper'
+        }
+      };
+      applyDailySourceVariantLabels(kindedEntranceVariants, 'entrance', [{ kr: 0, vn: 0 }]);
+      const provisionalAlignmentFixture = {
+        entrance: {
+          kr_lines: [[{ text: '한국어 미확인 입당송 하나' }], [{ text: '한국어 미확인 입당송 둘' }]].flatMap((option, index) =>
+            index ? [{ text: '또는:' }, ...option] : option
+          ),
+          vn_lines: [[{ text: 'Ca nhập lễ chưa xác định một' }], [{ text: 'Ca nhập lễ chưa xác định hai' }]].flatMap((option, index) =>
+            index ? [{ text: 'Hoặc:' }, ...option] : option
+          )
+        },
+        communion: {
+          kr_lines: [{ text: '서로 다른 인용문의 한국어 영성체송' }],
+          vn_lines: [{ text: 'Ca hiệp lễ có trích dẫn khác' }],
+          optionCits_kr: [{ cit_kr: '마태 5,3' }],
+          optionCits_vn: [{ cit_vn: 'Ga 6,52' }]
+        }
+      };
+      applyCachedVariantAlignments(provisionalAlignmentFixture, new Date(2040, 0, 17));
+      const ktcgVerseNumberFixture = ktcgkpvReadingSection([{
+        INDEXING: 'Ed 2,8 - 3,4',
+        CONTENT: '<p><sup>2</sup> Đức Chúa phán với tôi.</p><p><sup>3</sup> Hỡi con người, hãy ăn cuộn sách này.</p>'
+      }], { stripVerseNumbers: true });
+      const choiceRuleFixture = {
+        aug11Kinds: aug11Sections.entrance.optionKinds,
+        aug11Labels: aug11Sections.entrance.optionLabels,
+        aug11SemanticKeys: {
+          kr: aug11EntranceOptions.kr.map(option => variantSemanticKey('entrance', variantOptionMeaningText('entrance', option))),
+          vn: aug11EntranceOptions.vn.map(option => variantSemanticKey('entrance', variantOptionMeaningText('entrance', option)))
+        },
+        aug11Alignment,
+        unsafeAiAlignment,
+        aug12EntranceCount: splitParsedAlternatives(aug12Sections.entrance.lines).length,
+        aug12HasRawAlternative: aug12Sections.entrance.lines.some(line => /Hoặc\s*:/i.test(line.text || '')),
+        aug12Kinds: aug12Sections.entrance.optionKinds,
+        adjacentVigilChoiceTitles: adjacentVigilChoices.map(ktcgkpvChoiceTitle),
+        ordinaryWeekdayProperReadingKind: ktcgkpvChoiceKind(aug12OptionalChoice, 'reading1', new Date(2026, 7, 12)),
+        fixedMemorialProperReadingKind: ktcgkpvChoiceKind(aug11ClareChoice, 'reading1', new Date(2026, 7, 11)),
+        ktcgVerseNumberText: ktcgVerseNumberFixture.text,
+        provisionalEntranceAlignment: provisionalAlignmentFixture.entrance.variantAlignment,
+        citedSingleConflictAlignment: provisionalAlignmentFixture.communion.variantAlignment,
+        labels: {
+          commonEntrance: dailyVariantLabelFromSourceMetadata({ optionKinds_kr: ['common'] }, null, 0, null, 'entrance'),
+          properPsalm: dailyVariantLabelFromSourceMetadata({ optionKinds_vn: ['proper'] }, null, 0, null, 'psalm'),
+          commonCommunion: dailyVariantLabelFromSourceMetadata({ optionKinds_en: ['common'] }, null, 0, null, 'communion'),
+          preservedProperEntrance: kindedEntranceVariants.A.label
+        }
+      };
       const diocesanPrayerSourceFixture = `<p>08/08/2026 BÀI ĐỌC TRONG THÁNH LỄ Thứ bảy tuần 18 THƯỜNG NIÊN Ca nhập lễ Ca thường. Lời nguyện nhập lễ Lạy Chúa, lời nguyện ngày thường. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, lễ vật ngày thường. Chúng con cầu xin… Ca hiệp lễ Ca thường. Lời nguyện hiệp lễ Lạy Chúa, hiệp lễ ngày thường. Chúng con cầu xin… BÀI ĐỌC TRONG THÁNH LỄ Thánh Đa Minh, linh mục Ca nhập lễ Ca riêng. Lời nguyện nhập lễ Lạy Thiên Chúa toàn năng Chúa đã cho xuất hiện trong Hội Thánh một Tông Đồ nhiệt tâm truyền giảng chân lý là thánh Đa-minh. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, vì lời chuyển cầu của thánh Đa-minh, xin nâng đỡ những người đang chiến đấu bảo vệ đức tin. Chúng con cầu xin… Ca hiệp lễ Ca riêng. Lời nguyện hiệp lễ Lạy Thiên Chúa toàn năng hằng hữu, nhân ngày mừng lễ thánh Đa-minh, xin cho Hội Thánh được thánh nhân cầu thay nguyện giúp. Chúng con cầu xin…</p>`;
       const diocesanPrayerBlocks = vietnameseKtcgPrayerMassBlocks(diocesanPrayerSourceFixture);
       const diocesanPrayerData = parseVietnameseKtcgDiocesanPrayers(
@@ -841,6 +953,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         stackedTranslationColors,
         readingChoiceFixture,
         duplicateReadingFixture,
+        choiceRuleFixture,
         diocesanPrayerFixture,
         aug9PrayerFixture,
         citationAlignmentFixture,
@@ -1056,6 +1169,48 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.duplicateReadingFixture.commonReadingLabel.kr === '공통 독서'
       && result.duplicateReadingFixture.properGospelLabel.kr === '고유 복음',
     `Same-citation readings were split or labeled incorrectly: ${JSON.stringify(result.duplicateReadingFixture)}`);
+    assert(JSON.stringify(result.choiceRuleFixture.aug11Kinds) === JSON.stringify(['proper', 'proper', 'common'])
+      && JSON.stringify(result.choiceRuleFixture.aug11SemanticKeys.kr) === JSON.stringify([
+        'wise_virgin_lamp_meet_christ', 'virgin_beautiful_eternal_crown'
+      ])
+      && JSON.stringify(result.choiceRuleFixture.aug11SemanticKeys.vn) === JSON.stringify([
+        'wise_virgin_lamp_meet_christ', 'lord_portion_inheritance_cup', ''
+      ])
+      && result.choiceRuleFixture.aug11Alignment.some(group => group.kr === 0 && group.vn === 0)
+      && !result.choiceRuleFixture.aug11Alignment.some(group => group.kr === 1 && Number.isInteger(group.vn))
+      && !result.choiceRuleFixture.unsafeAiAlignment.some(group => group.kr === 1 && group.vn === 1),
+    `August 11 mismatched entrance antiphons were paired: ${JSON.stringify(result.choiceRuleFixture)}`);
+    assert(result.choiceRuleFixture.aug12EntranceCount === 1
+      && !result.choiceRuleFixture.aug12HasRawAlternative
+      && JSON.stringify(result.choiceRuleFixture.aug12Kinds) === JSON.stringify(['common'])
+      && result.choiceRuleFixture.adjacentVigilChoiceTitles.length === 2
+      && !result.choiceRuleFixture.adjacentVigilChoiceTitles.some(title => /15 tháng 8/i.test(title))
+      && result.choiceRuleFixture.ordinaryWeekdayProperReadingKind === ''
+      && result.choiceRuleFixture.fixedMemorialProperReadingKind === 'proper',
+    `August 12 duplicate Hoặc or ordinary-weekday proper label remains: ${JSON.stringify(result.choiceRuleFixture)}`);
+    assert(!/(?:^|\n)\s*[23]\s*(?:\n|$)/u.test(result.choiceRuleFixture.ktcgVerseNumberText)
+      && !/(?:^|\n)\s*[23](?=\p{L})/u.test(result.choiceRuleFixture.ktcgVerseNumberText),
+    `KTCG body verse numbers remain in reading text: ${result.choiceRuleFixture.ktcgVerseNumberText}`);
+    assert(result.choiceRuleFixture.provisionalEntranceAlignment.length === 4
+      && result.choiceRuleFixture.provisionalEntranceAlignment.every(group =>
+        Number.isInteger(group.kr) !== Number.isInteger(group.vn)
+      )
+      && result.choiceRuleFixture.citedSingleConflictAlignment.length === 2
+      && result.choiceRuleFixture.citedSingleConflictAlignment.every(group =>
+        Number.isInteger(group.kr) !== Number.isInteger(group.vn)
+      ),
+    `Unverified source options were position-paired before AI review: ${JSON.stringify({
+      entrance: result.choiceRuleFixture.provisionalEntranceAlignment,
+      communion: result.choiceRuleFixture.citedSingleConflictAlignment
+    })}`);
+    assert(result.choiceRuleFixture.labels.commonEntrance.kr === '공통 입당송'
+      && result.choiceRuleFixture.labels.commonEntrance.vn === 'Ca nhập lễ chung'
+      && result.choiceRuleFixture.labels.properPsalm.kr === '고유 화답송'
+      && result.choiceRuleFixture.labels.properPsalm.vn === 'Đáp ca riêng'
+      && result.choiceRuleFixture.labels.commonCommunion.en === 'Common Communion Antiphon'
+      && result.choiceRuleFixture.labels.preservedProperEntrance.kr === '고유 입당송'
+      && result.choiceRuleFixture.labels.preservedProperEntrance.vn === 'Ca nhập lễ riêng',
+    `Section-specific common/proper labels were overwritten: ${JSON.stringify(result.choiceRuleFixture.labels)}`);
     assert(result.citationAlignmentFixture.aug7.length === 3
       && result.citationAlignmentFixture.aug7[0].kr === 0
       && result.citationAlignmentFixture.aug7[0].vn === 0
