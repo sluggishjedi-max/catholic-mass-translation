@@ -407,7 +407,152 @@ function startServer() {
         translatedBody: bodyPair ? getComputedStyle(bodyPair.querySelector(':scope > .pair-line.translation:not(.summary) .text-content')).color : '',
         sectionBackground: getComputedStyle(document.querySelector('.section-bar')).backgroundColor
       };
+      const stackedHeaderProbe = document.createElement('div');
+      stackedHeaderProbe.innerHTML = genStackedHeader(
+        { type: 'part', cit: { cit_kr: '하바쿡 1,12', cit_vn: 'Kb 1,12' } },
+        {
+          type: 'part',
+          header: { kr: '독서', vn: 'Bài đọc' },
+          cit: { cit_kr: '하바쿡 1,12', cit_vn: 'Kb 1,12' }
+        },
+        'KR',
+        'VN',
+        'reading1'
+      );
+      document.body.appendChild(stackedHeaderProbe);
+      const stackedTranslationColors = Object.entries({
+        green: liturgyColorMap.green,
+        red: liturgyColorMap.red,
+        purple: liturgyColorMap.purple,
+        gold: liturgyColorMap.gold,
+        rose: liturgyColorMap.rose,
+        white: liturgyColorMap.white
+      }).map(([name, value]) => {
+        const theme = liturgyColorVisualTheme(value);
+        applyVisualTheme(theme);
+        const accentProbe = document.createElement('span');
+        accentProbe.style.color = theme.accent;
+        stackedHeaderProbe.appendChild(accentProbe);
+        const result = {
+          name,
+          accent: getComputedStyle(accentProbe).color,
+          sourceTitle: getComputedStyle(stackedHeaderProbe.querySelector('.part-title')).color,
+          translationTitle: getComputedStyle(stackedHeaderProbe.querySelector('.stacked-header-translation')).color,
+          sourceCitation: getComputedStyle(stackedHeaderProbe.querySelector('.stacked-citation-primary')).color,
+          translationCitation: getComputedStyle(stackedHeaderProbe.querySelector('.stacked-citation-translation')).color
+        };
+        accentProbe.remove();
+        return result;
+      });
+      stackedHeaderProbe.remove();
       applyVisualTheme(savedVisualTheme);
+
+      const entry = (citation, body) => ({ INDEXING: citation, CONTENT: `<p>${body}</p>` });
+      const aug7KtcgPayload = {
+        mass_reading: [
+          {
+            display_text: 'Ngày thường',
+            date_info: { daily_title: 'Thứ Sáu Tuần XVIII - Mùa Thường Niên' },
+            reading1: [entry('Nk 2,1.3 ; 3,1-3.6-7', 'Na-khum')],
+            gospel: [entry('Mt 16,24-28', 'Mát-thêu')]
+          },
+          {
+            display_text: 'Thánh Xíttô II, Giáo hoàng và các bạn tử đạo',
+            is_special: true,
+            reading1: [entry('Kn 3,1-9', 'Khôn ngoan')],
+            gospel: [entry('Mt 10,28-33', 'Mát-thêu riêng')]
+          },
+          {
+            display_text: 'Thánh Gaetanô, Linh mục',
+            is_special: true,
+            reading1: [entry('Hc 2,7-13', 'Huấn ca')],
+            gospel: [entry('Lc 12,32-34', 'Lu-ca')]
+          }
+        ]
+      };
+      const aug8KtcgPayload = {
+        mass_reading: [
+          {
+            display_text: 'Ngày thường',
+            date_info: { daily_title: 'Thứ Bảy Tuần XVIII - Mùa Thường Niên' },
+            introit: [entry('Tv 69,2.6', 'Ca nhập lễ ngày thường')],
+            reading1: [entry('Kb 1,12 - 2,4', 'Kha-ba-cúc')],
+            gospel: [entry('Mt 17,14-20', 'Mát-thêu')],
+            communion: [entry('Kn 16,20', 'Ca hiệp lễ ngày thường')]
+          },
+          {
+            display_text: 'Thánh Đa Minh, Linh mục',
+            is_special: true,
+            introit: [entry('Tv 15,5-6', 'Ca nhập lễ thánh Đa Minh')],
+            reading1: [entry('Kn 7,7-10', 'Khôn ngoan'), entry('1 Cr 2,1-10a', 'Cô-rin-tô')],
+            gospel: [entry('Lc 9,57-62', 'Lu-ca')],
+            communion: [entry('x. Mt 19,27-29', 'Ca hiệp lễ thánh Đa Minh')]
+          }
+        ]
+      };
+      const aug7KtcgSections = ktcgkpvDailySectionsFromChoices(
+        ktcgkpvOrderedReadingChoices(aug7KtcgPayload, new Date(2026, 7, 7))
+      );
+      const aug8KtcgChoices = ktcgkpvOrderedReadingChoices(aug8KtcgPayload, new Date(2026, 7, 8));
+      const aug8KtcgLiturgyChoices = ktcgkpvOrderedLiturgyChoices(aug8KtcgPayload, new Date(2026, 7, 8));
+      const aug8KtcgSections = ktcgkpvDailySectionsFromChoices(aug8KtcgChoices, aug8KtcgLiturgyChoices);
+      const readingChoiceFixture = {
+        aug7: {
+          reading1: aug7KtcgSections.reading1.optionCits.map(item => item.cit_vn),
+          gospel: aug7KtcgSections.gospel.optionCits.map(item => item.cit_vn),
+          labels: aug7KtcgSections.reading1.optionLabels
+        },
+        aug8: {
+          primary: ktcgkpvChoiceTitle(aug8KtcgChoices[0]),
+          entrance: aug8KtcgSections.entrance.optionCits.map(item => item.cit_vn),
+          reading1: aug8KtcgSections.reading1.optionCits.map(item => item.cit_vn),
+          gospel: aug8KtcgSections.gospel.optionCits.map(item => item.cit_vn),
+          communion: aug8KtcgSections.communion.optionCits.map(item => item.cit_vn),
+          labels: aug8KtcgSections.reading1.optionLabels
+        }
+      };
+      const diocesanPrayerSourceFixture = `<p>08/08/2026 BÀI ĐỌC TRONG THÁNH LỄ Thứ bảy tuần 18 THƯỜNG NIÊN Ca nhập lễ Ca thường. Lời nguyện nhập lễ Lạy Chúa, lời nguyện ngày thường. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, lễ vật ngày thường. Chúng con cầu xin… Ca hiệp lễ Ca thường. Lời nguyện hiệp lễ Lạy Chúa, hiệp lễ ngày thường. Chúng con cầu xin… BÀI ĐỌC TRONG THÁNH LỄ Thánh Đa Minh, linh mục Ca nhập lễ Ca riêng. Lời nguyện nhập lễ Lạy Thiên Chúa toàn năng Chúa đã cho xuất hiện trong Hội Thánh một Tông Đồ nhiệt tâm truyền giảng chân lý là thánh Đa-minh. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, vì lời chuyển cầu của thánh Đa-minh, xin nâng đỡ những người đang chiến đấu bảo vệ đức tin. Chúng con cầu xin… Ca hiệp lễ Ca riêng. Lời nguyện hiệp lễ Lạy Thiên Chúa toàn năng hằng hữu, nhân ngày mừng lễ thánh Đa-minh, xin cho Hội Thánh được thánh nhân cầu thay nguyện giúp. Chúng con cầu xin…</p>`;
+      const diocesanPrayerBlocks = vietnameseKtcgPrayerMassBlocks(diocesanPrayerSourceFixture);
+      const diocesanPrayerData = parseVietnameseKtcgDiocesanPrayers(
+        diocesanPrayerSourceFixture,
+        new Date(2026, 7, 8),
+        'Thánh Đa-minh, Linh mục'
+      );
+      const diocesanPrayerFixture = {
+        blockCount: diocesanPrayerBlocks.length,
+        collect: diocesanPrayerData.collect && diocesanPrayerData.collect.text || '',
+        offerings: diocesanPrayerData.prayer_offerings && diocesanPrayerData.prayer_offerings.text || '',
+        after: diocesanPrayerData.prayer_after && diocesanPrayerData.prayer_after.text || ''
+      };
+      const aug7OptionMap = { kr: [[{ text: '나훔' }]], vn: [[{ text: '나훔' }], [{ text: '지혜' }], [{ text: '집회' }]] };
+      const aug8OptionMap = {
+        kr: [[{ text: '하바쿡' }], [{ text: '코린토' }]],
+        vn: [[{ text: '하바쿡' }], [{ text: '지혜' }], [{ text: '코린토' }]]
+      };
+      const citationAlignmentFixture = {
+        aug7: buildStrictReadingCitationAlignment('reading1', aug7OptionMap, {
+          optionCits_kr: [{ cit_kr: '나훔 2,1.3; 3,1-3.6-7' }],
+          optionCits_vn: [{ cit_vn: 'Nk 2,1.3 ; 3,1-3.6-7' }, { cit_vn: 'Kn 3,1-9' }, { cit_vn: 'Hc 2,7-13' }]
+        }),
+        aug8: buildStrictReadingCitationAlignment('reading1', aug8OptionMap, {
+          optionCits_kr: [{ cit_kr: '하바쿡 1,12-2,4' }, { cit_kr: '1코린 2,1-10ㄱ' }],
+          optionCits_vn: [{ cit_vn: 'Kb 1,12 - 2,4' }, { cit_vn: 'Kn 7,7-10' }, { cit_vn: '1 Cr 2,1-10a' }]
+        })
+      };
+      const koreanProperSource = '<p>또는, 기념일 독서(1코린 2,1-10ㄱ)와 복음(루카 9,57-62)을 봉독할 수 있다.</p>';
+      const koreanBibleMarkdown = `1\n첫째 절입니다.\n2\n둘째 절입니다.\n10\n열째 절의 첫 문장입니다. 열째 절의 둘째 문장입니다.`;
+      const koreanProperFixture = {
+        references: koreanProperReadingReferencePairs(koreanProperSource),
+        descriptor: koreanBibleCitationDescriptor('1코린 2,1-10ㄱ'),
+        verses: parseKoreanBibleChapterVerses(koreanBibleMarkdown),
+        habakkuk: parseKoreanReadingSection([
+          '“의인은 성실함으로 산다.”',
+          '▥ 하바쿡 예언서의 말씀입니다.',
+          '1,12─2,4',
+          '12 주님, 당신은 옛날부터 불멸하시는 저의 하느님이 아니십니까?'
+        ], false),
+        strictHabakkukCitation: strictLooksLikeCitation('1,12─2,4', 'KR')
+      };
       const savedLiturgyInfoForCycle = state.liturgyInfo;
       state.liturgyInfo = { meta: { day: 5, sundayCycle: 'A' } };
       const weekdayCycleTitle = formatDisplayLiturgyTitle('VN', 'Thứ Sáu Tuần XVII - Mùa Thường Niên');
@@ -624,6 +769,11 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         floatingTranslation,
         runtimeStatusLayout,
         whiteLiturgyContrast,
+        stackedTranslationColors,
+        readingChoiceFixture,
+        diocesanPrayerFixture,
+        citationAlignmentFixture,
+        koreanProperFixture,
         liturgyTitleParsing: {
           weekdayCycleTitle,
           sundayCycleTitle,
@@ -794,6 +944,58 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.whiteLiturgyContrast.sourceBody !== result.whiteLiturgyContrast.translatedBody
       && result.whiteLiturgyContrast.sectionBackground !== 'rgb(238, 238, 238)',
     `White-liturgy source and translation hierarchy is not visually distinct: ${JSON.stringify(result.whiteLiturgyContrast)}`);
+    assert(result.stackedTranslationColors.every(item =>
+      item.sourceTitle === item.accent
+      && item.sourceCitation === item.accent
+      && item.translationTitle === 'rgb(108, 117, 125)'
+      && item.translationCitation === 'rgb(108, 117, 125)'
+      && item.sourceTitle !== item.translationTitle
+    ), `Stacked source/translation subtitles or citations use the wrong colors: ${JSON.stringify(result.stackedTranslationColors)}`);
+    assert(JSON.stringify(result.readingChoiceFixture.aug7.reading1) === JSON.stringify([
+      'Nk 2,1.3 ; 3,1-3.6-7', 'Kn 3,1-9', 'Hc 2,7-13'
+    ]) && JSON.stringify(result.readingChoiceFixture.aug7.gospel) === JSON.stringify([
+      'Mt 16,24-28', 'Mt 10,28-33', 'Lc 12,32-34'
+    ]) && result.readingChoiceFixture.aug7.labels.length === 3,
+    `August 7 KTCG ordinary/proper reading choices were dropped or reordered: ${JSON.stringify(result.readingChoiceFixture.aug7)}`);
+    assert(result.readingChoiceFixture.aug8.primary === 'Ngày thường'
+      && JSON.stringify(result.readingChoiceFixture.aug8.entrance) === JSON.stringify(['Tv 15,5-6', 'Tv 69,2.6'])
+      && JSON.stringify(result.readingChoiceFixture.aug8.reading1) === JSON.stringify([
+        'Kb 1,12 - 2,4', 'Kn 7,7-10', '1 Cr 2,1-10a'
+      ])
+      && JSON.stringify(result.readingChoiceFixture.aug8.gospel) === JSON.stringify(['Mt 17,14-20', 'Lc 9,57-62'])
+      && JSON.stringify(result.readingChoiceFixture.aug8.communion) === JSON.stringify(['x. Mt 19,27-29', 'Kn 16,20'])
+      && result.readingChoiceFixture.aug8.labels.length === 3,
+    `August 8 KTCG memorial/general reading choices are wrong: ${JSON.stringify(result.readingChoiceFixture.aug8)}`);
+    assert(result.citationAlignmentFixture.aug7.length === 3
+      && result.citationAlignmentFixture.aug7[0].kr === 0
+      && result.citationAlignmentFixture.aug7[0].vn === 0
+      && result.citationAlignmentFixture.aug7.slice(1).every(group => group.kr === null && Number.isInteger(group.vn)),
+    `August 7 different readings were paired as translations: ${JSON.stringify(result.citationAlignmentFixture.aug7)}`);
+    assert(result.citationAlignmentFixture.aug8.length === 3
+      && result.citationAlignmentFixture.aug8[0].kr === 0
+      && result.citationAlignmentFixture.aug8[0].vn === 0
+      && result.citationAlignmentFixture.aug8[1].kr === 1
+      && result.citationAlignmentFixture.aug8[1].vn === 2
+      && result.citationAlignmentFixture.aug8[2].kr === null
+      && result.citationAlignmentFixture.aug8[2].vn === 1,
+    `August 8 proper/general readings were paired by position instead of citation: ${JSON.stringify(result.citationAlignmentFixture.aug8)}`);
+    assert(result.diocesanPrayerFixture.blockCount === 2
+      && /thánh Đa-minh/.test(result.diocesanPrayerFixture.collect)
+      && /chiến đấu bảo vệ đức tin/.test(result.diocesanPrayerFixture.offerings)
+      && /toàn năng hằng hữu/.test(result.diocesanPrayerFixture.after)
+      && !/ngày thường/.test(result.diocesanPrayerFixture.collect),
+    `August 8 Vietnamese proper prayers fell back to the Ordinary weekday block: ${JSON.stringify(result.diocesanPrayerFixture)}`);
+    assert(result.koreanProperFixture.references.length === 1
+      && result.koreanProperFixture.references[0].reading === '1코린 2,1-10ㄱ'
+      && result.koreanProperFixture.references[0].gospel === '루카 9,57-62'
+      && result.koreanProperFixture.descriptor.urlBook === '1Cor'
+      && result.koreanProperFixture.descriptor.verses.length === 10
+      && result.koreanProperFixture.descriptor.verses[9].part === 'ㄱ'
+      && result.koreanProperFixture.verses['10'].startsWith('열째 절의 첫 문장')
+      && result.koreanProperFixture.habakkuk.cit_kr === '하바 1,12─2,4'
+      && !result.koreanProperFixture.habakkuk.text.includes('\n,12─2,4')
+      && result.koreanProperFixture.strictHabakkukCitation,
+    `Korean memorial proper-reading references or Bible verses were not parsed: ${JSON.stringify(result.koreanProperFixture)}`);
     assert(/Năm A/.test(result.liturgyTitleParsing.weekdayCycleTitle)
       && /Năm A/.test(result.liturgyTitleParsing.sundayCycleTitle)
       && result.liturgyTitleParsing.mergedVietnameseTitle === 'Thánh I-nha-xi-ô Lôi-ô-la (Loyola), Linh mục',

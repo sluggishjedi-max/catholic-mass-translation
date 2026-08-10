@@ -147,7 +147,29 @@ exports.ktcgProxy = onRequest(
       return;
     }
 
-    const dateParts = parseKtcgDate(parseBody(req));
+    const requestBody = parseBody(req);
+    if (requestBody.kind === "vietnameseDiocesanPage") {
+      const sourceUrl = parseVietnameseDiocesanUrl(requestBody.url);
+      if (!sourceUrl) {
+        res.status(400).json({ error: "A permitted Vietnamese diocesan page URL is required." });
+        return;
+      }
+      try {
+        const payload = await fetchVietnameseDiocesanPage(sourceUrl);
+        res.set("Cache-Control", "private, no-store, max-age=0");
+        res.status(200).json(payload);
+      } catch (error) {
+        logger.error("Vietnamese diocesan page proxy failed", {
+          url: sourceUrl,
+          status: error.status || 502,
+          message: error.message,
+        });
+        res.status(502).json({ error: "Vietnamese diocesan page request failed." });
+      }
+      return;
+    }
+
+    const dateParts = parseKtcgDate(requestBody);
     if (!dateParts) {
       res.status(400).json({ error: "A valid day, month, and year are required." });
       return;
@@ -402,6 +424,39 @@ async function fetchKtcgMassReading({ day, month, year }) {
     throw new Error("KTCG returned an empty mass-reading payload.");
   }
   return payload;
+}
+
+function parseVietnameseDiocesanUrl(value) {
+  try {
+    const url = new URL(String(value || ""));
+    const host = url.hostname.toLowerCase();
+    if (url.protocol !== "https:" || !["gpbanmethuot.net", "gpbanmethuot.vn"].includes(host)) return "";
+    if (!/^\/(?:song-dao|loi-chua-moi-ngay)\//i.test(url.pathname)) return "";
+    url.hash = "";
+    return url.toString();
+  } catch (error) {
+    return "";
+  }
+}
+
+async function fetchVietnameseDiocesanPage(url) {
+  const response = await fetch(url, {
+    headers: {
+      "Accept": "text/html,application/xhtml+xml",
+      "User-Agent": "Mozilla/5.0 (compatible; OrderOfMass/1.0; +https://sluggishbug.github.io/Order-of-Mass/)",
+    },
+    redirect: "follow",
+  });
+  if (!response.ok) {
+    const error = new Error(`Vietnamese diocesan page returned HTTP ${response.status}.`);
+    error.status = response.status;
+    throw error;
+  }
+  const source = await response.text();
+  if (!source || source.length > 2 * 1024 * 1024) {
+    throw new Error("Vietnamese diocesan page was empty or too large.");
+  }
+  return { success: true, sourceUrl: response.url || url, source };
 }
 
 async function fetchUsMassTimes(latitude, longitude, page) {

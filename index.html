@@ -174,9 +174,11 @@
         .part-header > div { min-width: 0; width: 100%; padding-left: 0; text-indent: 0; }
         .part-header > div > * { text-indent: 0; }
         .part-title { color: var(--primary-color); font-weight: 900; font-size: 1.1em; line-height: 1.48; text-indent: 0; overflow-wrap: anywhere; }
-        .stacked-header-translation { color: var(--translation-heading-color, var(--sub-txt)); opacity: 0.78; text-indent: 0; overflow-wrap: anywhere; }
+        .stacked-header-translation { color: var(--sub-txt); opacity: 0.78; text-indent: 0; overflow-wrap: anywhere; }
         .stacked-header-separator { color: var(--translation-color, var(--sub-txt)); font-weight: 800; opacity: 0.75; }
         .citation { display: inline-block; vertical-align: baseline; color: var(--sub-txt); font-size: 0.8em; font-weight: bold; background: #eee; padding: 2px 6px; border-radius: 4px; margin-left: 8px; }
+        .stacked-citation-primary { color: var(--primary-color); }
+        .stacked-citation-translation { color: var(--sub-txt); opacity: 0.82; }
         .part-select-row { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; width: 100%; margin: 0 0 8px; }
         .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
         .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: 0.85em; outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
@@ -2452,7 +2454,8 @@
         const meta = info && info.meta ? info.meta : {};
         if (!['ordinary', 'advent', 'lent', 'easter'].includes(meta.season) || !meta.week) return false;
         const generated = formatSeasonalName(langCode, meta.season, meta.week, meta.day, meta.sundayCycle);
-        return normalizeCalendarNameForCompare(stripSeasonalTitleAnnotation(value)) === normalizeCalendarNameForCompare(generated);
+        return normalizeCalendarNameForCompare(stripSeasonalTitleAnnotation(value))
+            === normalizeCalendarNameForCompare(stripSeasonalTitleAnnotation(generated));
     }
 
     function isGeneratedSeasonalName(langCode, value) {
@@ -6028,6 +6031,31 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return scored[0].choice;
     }
 
+    function ktcgkpvOrderedReadingChoices(data, date = null, calendarContext = null) {
+        const choices = data && Array.isArray(data.mass_reading) ? data.mass_reading.filter(Boolean) : [];
+        if (!choices.length) return [];
+        let primary = ktcgkpvReadingChoice(data, date, calendarContext);
+        if (date) {
+            const internalInfo = buildGeneratedLiturgyInfo(date);
+            const seasonalMeta = getSeasonMeta(date);
+            const isOrdinaryWeekdayMemorial = seasonalMeta.season === 'ordinary'
+                && date.getDay() !== 0
+                && internalInfo.meta
+                && internalInfo.meta.rank === 'memorial';
+            if (isOrdinaryWeekdayMemorial) {
+                primary = choices.find(ktcgkpvChoiceIsSeasonal) || primary;
+            }
+        }
+        return primary ? [primary].concat(choices.filter(choice => choice !== primary)) : choices;
+    }
+
+    function ktcgkpvOrderedLiturgyChoices(data, date = null, calendarContext = null) {
+        const choices = data && Array.isArray(data.mass_reading) ? data.mass_reading.filter(Boolean) : [];
+        if (!choices.length) return [];
+        const primary = ktcgkpvReadingChoice(data, date, calendarContext);
+        return primary ? [primary].concat(choices.filter(choice => choice !== primary)) : choices;
+    }
+
     function normalizeKtcgkpvPunctuation(value) {
         return String(value || '').replace(/[ \t\u00a0]+([,.;:!?])/g, '$1');
     }
@@ -6075,7 +6103,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const optionalBody = optionalBodyParagraphs.length
                 ? [optionalBodyParagraphs.join(options.mergeBodyParagraphs ? ' ' : '\n')]
                 : [];
-            if (optionalCitation || optionalBody.length) {
+            if (optionalCitation && optionalBody.length) {
                 lines.push(parsedLine('', 'Hoặc:'));
                 optionCits.push({ cit_vn: optionalCitation });
                 if (summary) lines.push(parsedLine('', summary, 'summary'));
@@ -6191,36 +6219,73 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return { cit_vn, optionCits, lines, text: parsedLinesToText(lines) };
     }
 
+    function ktcgkpvChoiceOptionLabel(choice, citation, optionIndex, optionCount) {
+        const title = ktcgkpvChoiceTitle(choice) || 'Lựa chọn phụng vụ';
+        const suffix = cleanCitation(citation) || (optionCount > 1 ? String(optionIndex + 1) : '');
+        return suffix ? `${title} — ${suffix}` : title;
+    }
+
+    function mergeKtcgkpvChoiceSections(choiceSections) {
+        const lines = [];
+        const optionCits = [];
+        const optionLabels = [];
+        (choiceSections || []).forEach(({ choice, section }) => {
+            if (!section || !Array.isArray(section.lines) || !section.lines.length) return;
+            const options = splitParsedAlternatives(section.lines).filter(option => Array.isArray(option) && option.length);
+            const citations = Array.isArray(section.optionCits) ? section.optionCits : [];
+            options.forEach((option, optionIndex) => {
+                if (lines.length) lines.push(parsedLine('', 'Hoặc:'));
+                lines.push(...option);
+                const citationEntry = citations[optionIndex]
+                    || (optionIndex === 0 && section.cit_vn ? { cit_vn: section.cit_vn } : {});
+                optionCits.push(citationEntry);
+                optionLabels.push(ktcgkpvChoiceOptionLabel(
+                    choice,
+                    citationEntry && citationEntry.cit_vn,
+                    optionIndex,
+                    options.length
+                ));
+            });
+        });
+        if (!lines.length) return null;
+        const cit_vn = optionCits.map(item => item && item.cit_vn).find(Boolean) || '';
+        return { cit_vn, optionCits, optionLabels, lines, text: parsedLinesToText(lines) };
+    }
+
+    function ktcgkpvDailySectionsFromChoices(choices, liturgyChoices = choices) {
+        const sectionBuilders = {
+            entrance: choice => ktcgkpvReadingSection(firstNonEmptyKtcgkpvArray(choice, ['introit', 'entrance']), { mergeBodyParagraphs: true }),
+            reading1: choice => ktcgkpvReadingSection(firstNonEmptyKtcgkpvArray(choice, ['reading1', 'reading_1'])),
+            psalm: choice => ktcgkpvPsalmSection(firstNonEmptyKtcgkpvArray(choice, ['reading1', 'reading_1'])),
+            reading2: choice => ktcgkpvReadingSection(firstNonEmptyKtcgkpvArray(choice, ['reading2', 'reading_2'])),
+            gospel_accl: choice => ktcgkpvAcclamationSection(firstNonEmptyKtcgkpvArray(choice, ['gospel'])),
+            gospel: choice => ktcgkpvReadingSection(firstNonEmptyKtcgkpvArray(choice, ['gospel'])),
+            communion: choice => ktcgkpvReadingSection(firstNonEmptyKtcgkpvArray(choice, ['communion']), { mergeBodyParagraphs: true })
+        };
+        return Object.entries(sectionBuilders).reduce((data, [key, buildSection]) => {
+            const sourceChoices = ['entrance', 'communion'].includes(key) ? liturgyChoices : choices;
+            const merged = mergeKtcgkpvChoiceSections((sourceChoices || []).map(choice => ({
+                choice,
+                section: buildSection(choice)
+            })));
+            if (merged) data[key] = merged;
+            return data;
+        }, {});
+    }
+
     async function fetchVietnameseKtcgDailyMass(date) {
         const payload = await fetchKtcgkpvMassReadingJson(date);
-        const choice = ktcgkpvReadingChoice(payload, date, null);
-        if (!choice) throw new Error('KTCG mass-reading choice is empty');
-        const reading1Entries = firstNonEmptyKtcgkpvArray(choice, ['reading1', 'reading_1']);
-        const reading2Entries = firstNonEmptyKtcgkpvArray(choice, ['reading2', 'reading_2']);
-        const gospelEntries = firstNonEmptyKtcgkpvArray(choice, ['gospel']);
-        const entranceEntries = firstNonEmptyKtcgkpvArray(choice, ['introit', 'entrance']);
-        const communionEntries = firstNonEmptyKtcgkpvArray(choice, ['communion']);
-        const data = {};
-        const entrance = ktcgkpvReadingSection(entranceEntries, { mergeBodyParagraphs: true });
-        const reading1 = ktcgkpvReadingSection(reading1Entries);
-        const psalm = ktcgkpvPsalmSection(reading1Entries);
-        const reading2 = ktcgkpvReadingSection(reading2Entries);
-        const gospelAccl = ktcgkpvAcclamationSection(gospelEntries);
-        const gospel = ktcgkpvReadingSection(gospelEntries);
-        const communion = ktcgkpvReadingSection(communionEntries, { mergeBodyParagraphs: true });
-        if (entrance) data.entrance = entrance;
-        if (reading1) data.reading1 = reading1;
-        if (psalm) data.psalm = psalm;
-        if (reading2) data.reading2 = reading2;
-        if (gospelAccl) data.gospel_accl = gospelAccl;
-        if (gospel) data.gospel = gospel;
-        if (communion) data.communion = communion;
+        const choices = ktcgkpvOrderedReadingChoices(payload, date, null);
+        const liturgyChoices = ktcgkpvOrderedLiturgyChoices(payload, date, null);
+        if (!choices.length) throw new Error('KTCG mass-reading choices are empty');
+        const data = ktcgkpvDailySectionsFromChoices(choices, liturgyChoices);
         const internalInfo = buildGeneratedLiturgyInfo(date);
         const title = cleanLiturgyTitle(internalInfo.names.VN || getLiturgyDisplayName('VN'));
         const parsed = {
             title,
             color: internalInfo.color,
             titleSource: 'internal-calendar',
+            ktcgChoiceTitles: choices.map(ktcgkpvChoiceTitle).filter(Boolean),
             data
         };
         return strictEnsureReadingSummarySlots(parsed, 'VN');
@@ -6325,7 +6390,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function vietnameseKtcgPrayerMassBlocks(source) {
-        const lines = strictSourceLines(source);
+        const embeddedHeading = /(?=(?:BÀI\s+[ĐÐ]ỌC\s+TRONG\s+THÁNH\s+LỄ|Ca\s+nhập\s+lễ|Lời\s+nguyện\s+nhập\s+lễ|Lời\s+nguyện\s+tiến\s+lễ|Ca\s+hiệp\s+lễ|Lời\s+nguyện\s+(?:hiệp|kết)\s+lễ|Suy\s+niệm|Ghi\s+nhận\s+(?:lịch\s+sử|phụng\s+vụ)))/giu;
+        const lines = strictSourceLines(source)
+            .flatMap(line => String(line || '').split(embeddedHeading))
+            .map(strictCleanLine)
+            .filter(Boolean);
         const starts = [];
         lines.forEach((line, index) => {
             if (/\bbai doc trong thanh le\b/.test(normalizeVietnameseDiocesanMatchText(line))) starts.push(index);
@@ -6364,10 +6433,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function parseVietnameseKtcgDiocesanPrayers(source, date, ktcgTitle) {
         const prayerKeys = ['collect', 'prayer_offerings', 'prayer_after'];
+        const normalizedTitle = normalizeVietnameseDiocesanMatchText(ktcgTitle);
+        const isTemporalTitle = /\b(?:ngay thuong|tuan|mua|chua nhat)\b/.test(normalizedTitle);
         const candidates = vietnameseKtcgPrayerMassBlocks(source)
             .map(block => ({ block, score: vietnameseKtcgPrayerBlockScore(block, date, ktcgTitle) }))
             .sort((a, b) => b.score - a.score);
         for (const candidate of candidates) {
+            if (!isTemporalTitle && candidate.score < 0.55) continue;
             const data = parseVietnameseKtcgPrayerBlock(candidate.block, date);
             if (prayerKeys.every(key => sourceSectionHasContent(data[key]))) return data;
         }
@@ -6379,13 +6451,36 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return ['collect', 'prayer_offerings', 'prayer_after'].every(key => sourceSectionHasContent(data[key]));
     }
 
+    async function fetchVietnameseKtcgDiocesanSource(url) {
+        try {
+            const endpoint = `${KTCG_PROXY_ENDPOINT}${KTCG_PROXY_ENDPOINT.includes('?') ? '&' : '?'}source=${encodeURIComponent(url)}`;
+            const response = await fetchWithTimeout(endpoint, {
+                method: 'POST',
+                cache: 'no-cache',
+                timeoutMs: 15000,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ kind: 'vietnameseDiocesanPage', url })
+            });
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const payload = await response.json();
+            if (!payload || !payload.success || !payload.source) throw new Error('Vietnamese diocesan proxy returned no source');
+            return payload.source;
+        } catch (error) {
+            console.warn('Vietnamese diocesan direct proxy failed, using text relay.', error);
+            return fetchTextWithFallbacks(url, { timeoutMs: 12000 });
+        }
+    }
+
     async function applyVietnameseKtcgDiocesanPrayers(parsed, date) {
         if (!parsed || !parsed.data) return parsed;
         try {
             const sourceUrls = await resolveVietnameseKtcgDiocesanPrayerUrls(date);
             for (const sourceUrl of sourceUrls) {
                 try {
-                    const source = await fetchTextWithFallbacks(sourceUrl, { timeoutMs: 12000 });
+                    const source = await fetchVietnameseKtcgDiocesanSource(sourceUrl);
                     if (!vietnameseKtcgDiocesanSourceMatchesDate(source, date)) continue;
                     const prayers = parseVietnameseKtcgDiocesanPrayers(source, date, parsed.title);
                     if (!['collect', 'prayer_offerings', 'prayer_after'].every(key => sourceSectionHasContent(prayers[key]))) continue;
@@ -7030,7 +7125,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const introIndex = blocks.findIndex(line => /^[▥✠]\s*/.test(line));
         const intro = introIndex >= 0 ? blocks[introIndex] : '';
         if (introIndex >= 0) blocks.splice(introIndex, 1);
-        const citIndex = blocks.findIndex(line => /^[\dIVX]+[,\dㄱ-ㅎa-zA-Z;.\s\-()]+$/.test(line));
+        const citIndex = blocks.findIndex(line => /^[\dIVX]+[,\dㄱ-ㅎa-zA-Z;.\s\-–—―─()]+$/.test(line));
         const citation = citIndex >= 0 ? blocks[citIndex] : '';
         if (citIndex >= 0) blocks.splice(citIndex, 1);
         const out = [];
@@ -7950,6 +8045,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (value.text) target[key][lower] = value.text;
                 if (Array.isArray(value.lines) && value.lines.length) target[key][`${lower}_lines`] = value.lines;
                 if (Array.isArray(value.optionCits) && value.optionCits.length) target[key][`optionCits_${lower}`] = value.optionCits;
+                if (Array.isArray(value.optionLabels) && value.optionLabels.length) target[key][`optionLabels_${lower}`] = value.optionLabels;
                 Object.keys(value).forEach(field => {
                     if (/^cit_/i.test(field) && value[field]) target[key][field] = value[field];
                 });
@@ -8818,7 +8914,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict75';
+    const STRICT_PARSER_CACHE_VERSION = 'strict77';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9379,7 +9475,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictLooksLikeCitation(line, lang) {
         const text = strictCitationCandidate(line, lang);
         if (!text || text.length > 120 || !/\d/.test(text)) return false;
-        if (/^\d[\d\s,.;:·+\-–—()ㄱ-ㅎ]*$/.test(text)) return true;
+        if (/^\d[\d\s,.;:·+\-–—―─()ㄱ-ㅎ]*$/.test(text)) return true;
         if (lang === 'KR') return /^(?:[1-3]\s*)?[가-힣]{1,12}\s*\d/.test(text);
         if (lang === 'EN') return /^(?:[1-3]\s*)?[A-Z][A-Za-z. ]{1,30}\s+\d/.test(text);
         if (lang === 'JP') return /^[一-龯ァ-ヶー]{1,20}\s*\d/.test(text);
@@ -10676,6 +10772,196 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return merged;
     }
 
+    const koreanBibleChapterPromiseCache = new Map();
+
+    function koreanProperReadingReferencePairs(source) {
+        const text = sourceTextLines(source).join('\n');
+        const pattern = /(?:기념일\s*)?(?:고유\s*)?독서\s*\(\s*([^)]+?)\s*\)\s*와\s*(?:기념일\s*)?(?:고유\s*)?복음\s*\(\s*([^)]+?)\s*\)/gu;
+        const seen = new Set();
+        return Array.from(text.matchAll(pattern)).reduce((pairs, match) => {
+            const reading = cleanCitation(match[1]);
+            const gospel = cleanCitation(match[2]);
+            const key = `${reading}\u0000${gospel}`;
+            if (!reading || !gospel || seen.has(key)) return pairs;
+            seen.add(key);
+            pairs.push({ reading, gospel });
+            return pairs;
+        }, []);
+    }
+
+    function koreanBibleCitationDescriptor(citation) {
+        const source = cleanCitation(citation).replace(/[–—]/g, '-');
+        const bookKey = Object.keys(bibleMap || {})
+            .sort((a, b) => b.length - a.length)
+            .find(key => source === key || source.startsWith(`${key} `));
+        if (!bookKey) return null;
+        const rest = source.slice(bookKey.length).trim();
+        const chapterMatch = rest.match(/^(\d+)\s*[,.:]\s*(.+)$/u);
+        if (!chapterMatch) return null;
+        const chapter = Number(chapterMatch[1]);
+        const verseSpec = chapterMatch[2];
+        const verses = [];
+        const seen = new Set();
+        Array.from(verseSpec.matchAll(/(\d+)([ㄱ-ㅎ]?)(?:\s*-\s*(\d+)([ㄱ-ㅎ]?))?/gu)).forEach(match => {
+            const first = Number(match[1]);
+            const last = Number(match[3] || match[1]);
+            const low = Math.min(first, last);
+            const high = Math.max(first, last);
+            for (let number = low; number <= high; number += 1) {
+                const part = number === first && match[2]
+                    ? match[2]
+                    : (number === last && match[4] ? match[4] : '');
+                const key = `${number}:${part}`;
+                if (!seen.has(key)) {
+                    verses.push({ number, part });
+                    seen.add(key);
+                }
+            }
+        });
+        if (!Number.isInteger(chapter) || !verses.length) return null;
+        const englishAlias = bibleMap[bookKey] && bibleMap[bookKey][1];
+        const urlBook = cleanNodeText(englishAlias).replace(/\s+/g, '');
+        return urlBook ? { bookKey, urlBook, chapter, verses, citation: source } : null;
+    }
+
+    function parseKoreanBibleChapterVerses(source) {
+        const verses = {};
+        if (/<(?:html|body|div)\b/i.test(String(source || ''))) {
+            const doc = parseHtml(source);
+            doc.querySelectorAll('.row').forEach(row => {
+                const number = Number(cleanNodeText((row.querySelector('.col-1 .highlight, .col-1') || {}).textContent));
+                const bodyNode = row.querySelector('.col-11 .text-justify, .col-11');
+                if (!Number.isInteger(number) || !bodyNode || verses[number]) return;
+                const clone = bodyNode.cloneNode(true);
+                clone.querySelectorAll('sup, .annotation').forEach(node => node.remove());
+                const text = cleanNodeText(clone.textContent);
+                if (text) verses[number] = text;
+            });
+            if (Object.keys(verses).length) return verses;
+        }
+
+        let current = null;
+        String(source || '').split(/\r?\n/).forEach(rawLine => {
+            const line = String(rawLine || '').replace(/^\s*>\s?/, '').trim();
+            if (/^#{1,6}\s+/.test(line)) return;
+            if (/^(?:Title|URL Source|Published Time|Markdown Content):/i.test(line)) return;
+            if (/^\d+$/.test(line)) {
+                current = Number(line);
+                return;
+            }
+            if (!current || !line || /^[-*]\s/.test(line)) return;
+            const text = cleanNodeText(line.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1'));
+            if (!text) return;
+            verses[current] = verses[current] ? `${verses[current]} ${text}` : text;
+        });
+        return verses;
+    }
+
+    function koreanBibleVersePart(text, part) {
+        const cleaned = cleanNodeText(text);
+        if (part !== 'ㄱ') return cleaned;
+        const sentences = cleaned.split(/(?<=[.!?])\s+/u).filter(Boolean);
+        return sentences[0] || cleaned;
+    }
+
+    async function fetchKoreanBibleChapter(descriptor) {
+        const key = `${descriptor.urlBook}:${descriptor.chapter}`;
+        if (!koreanBibleChapterPromiseCache.has(key)) {
+            const url = `https://bible.cbck.or.kr/Knb/${descriptor.urlBook}/${descriptor.chapter}`;
+            koreanBibleChapterPromiseCache.set(key, fetchTextWithFallbacks(url, { timeoutMs: 15000 })
+                .then(parseKoreanBibleChapterVerses)
+                .catch(error => {
+                    koreanBibleChapterPromiseCache.delete(key);
+                    throw error;
+                }));
+        }
+        return koreanBibleChapterPromiseCache.get(key);
+    }
+
+    function koreanBibleReadingIntro(bookKey, isGospel) {
+        const gospelNames = { 마태: '마태오', 마르: '마르코', 루카: '루카', 요한: '요한' };
+        if (isGospel && gospelNames[bookKey]) return `${gospelNames[bookKey]}가 전한 거룩한 복음입니다.`;
+        const bookNames = {
+            지혜: '지혜서', 집회: '집회서', 사도: '사도행전', 로마: '사도 바오로의 로마서',
+            '1코린': '사도 바오로의 코린토 1서', '2코린': '사도 바오로의 코린토 2서',
+            갈라: '사도 바오로의 갈라티아서', 에페: '사도 바오로의 에페소서', 필리: '사도 바오로의 필리피서',
+            콜로: '사도 바오로의 콜로새서', '1테살': '사도 바오로의 테살로니카 1서',
+            '2테살': '사도 바오로의 테살로니카 2서', '1티모': '사도 바오로의 티모테오 1서',
+            '2티모': '사도 바오로의 티모테오 2서', 티토: '사도 바오로의 티토서', 필레: '사도 바오로의 필레몬서',
+            히브: '히브리서', 야고: '야고보서', '1베드': '베드로 1서', '2베드': '베드로 2서',
+            '1요한': '요한 1서', '2요한': '요한 2서', '3요한': '요한 3서', 유다: '유다서', 묵시: '요한 묵시록'
+        };
+        const oldTestamentName = koreanIntroBookAliases.find(([, key]) => key === bookKey);
+        const title = bookNames[bookKey] || (oldTestamentName && oldTestamentName[0]) || bookKey;
+        return `${title}${/^사도 바오로의/u.test(title) ? ' ' : '의 '}말씀입니다.`;
+    }
+
+    async function fetchKoreanProperPassageSection(citation, isGospel) {
+        const descriptor = koreanBibleCitationDescriptor(citation);
+        if (!descriptor) throw new Error(`Unsupported Korean proper-reading citation: ${citation}`);
+        const chapterVerses = await fetchKoreanBibleChapter(descriptor);
+        const body = descriptor.verses
+            .map(({ number, part }) => koreanBibleVersePart(chapterVerses[number], part))
+            .filter(Boolean)
+            .join('\n');
+        if (!body) throw new Error(`Korean Bible passage is empty: ${citation}`);
+        const lines = [
+            parsedLine(isGospel ? '✠' : '▥', koreanBibleReadingIntro(descriptor.bookKey, isGospel), 'intro'),
+            parsedLine('', body, 'body')
+        ];
+        return { text: parsedLinesToText(lines), lines, cit_kr: descriptor.citation };
+    }
+
+    function appendKoreanProperSectionOption(section, properSection, baseId) {
+        if (!properSection || !sourceSectionHasContent(properSection)) return section;
+        if (!section || !sourceSectionHasContent(section)) {
+            properSection.optionCits = [{ cit_kr: properSection.cit_kr }];
+            properSection.optionLabels = [`기념일 고유 ${baseId === 'gospel' ? '복음' : '독서'} — ${properSection.cit_kr}`];
+            return properSection;
+        }
+        const options = splitParsedAlternatives(section.lines || []).filter(option => option.length);
+        const existingCits = Array.isArray(section.optionCits) && section.optionCits.length
+            ? section.optionCits.slice()
+            : options.map((_, index) => index === 0 && section.cit_kr ? { cit_kr: section.cit_kr } : {});
+        const duplicate = existingCits.some(entry => {
+            const citation = entry && entry.cit_kr;
+            return citation && !citationsAreDifferent(citation, properSection.cit_kr);
+        });
+        if (duplicate) return section;
+        const labels = Array.isArray(section.optionLabels) ? section.optionLabels.slice() : [];
+        while (labels.length < options.length) {
+            const index = labels.length;
+            const citation = existingCits[index] && existingCits[index].cit_kr;
+            labels.push(`일반 ${baseId === 'gospel' ? '복음' : '독서'}${citation ? ` — ${citation}` : ''}`);
+        }
+        const lines = Array.isArray(section.lines) ? section.lines.slice() : [];
+        if (lines.length) lines.push(parsedLine('', '또는:'));
+        lines.push(...(properSection.lines || []));
+        section.lines = lines;
+        section.text = parsedLinesToText(lines);
+        section.optionCits = existingCits.concat([{ cit_kr: properSection.cit_kr }]);
+        section.optionLabels = labels.concat([`기념일 고유 ${baseId === 'gospel' ? '복음' : '독서'} — ${properSection.cit_kr}`]);
+        return section;
+    }
+
+    async function appendKoreanProperReadingOptions(parsed, source) {
+        if (!parsed || !parsed.data) return parsed;
+        const pairs = koreanProperReadingReferencePairs(source);
+        for (const pair of pairs) {
+            try {
+                const [reading, gospel] = await Promise.all([
+                    fetchKoreanProperPassageSection(pair.reading, false),
+                    fetchKoreanProperPassageSection(pair.gospel, true)
+                ]);
+                parsed.data.reading1 = appendKoreanProperSectionOption(parsed.data.reading1, reading, 'reading1');
+                parsed.data.gospel = appendKoreanProperSectionOption(parsed.data.gospel, gospel, 'gospel');
+            } catch (error) {
+                console.warn(`한국어 기념일 고유 독서 선택지를 불러오지 못했습니다: ${pair.reading} / ${pair.gospel}`, error);
+            }
+        }
+        return parsed;
+    }
+
     async function fetchStrictDailyMass(lang, date) {
         await loadAllSoulsMassConfigIfNeeded(date);
         if (lang === 'VN') {
@@ -10779,6 +11065,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!Object.keys(parsed.data || {}).length && lang === 'EN') {
             return strictEnsureReadingSummarySlots(parseEnglishDailyMass(source, date), lang);
         }
+        if (lang === 'KR') parsed = await appendKoreanProperReadingOptions(parsed, source);
         const fixedTitle = strictFixedDailyTitle(lang, date);
         if (fixedTitle) parsed.title = fixedTitle;
         return parsed;
@@ -11846,6 +12133,42 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    function strictReadingOptionCitation(section, lower, index) {
+        const optionCits = section && section[`optionCits_${lower}`];
+        const optionCitation = Array.isArray(optionCits) && optionCits[index]
+            ? optionCits[index][`cit_${lower}`]
+            : '';
+        return cleanNodeText(optionCitation || (index === 0 ? directCitationForLower(section, lower) : ''));
+    }
+
+    function buildStrictReadingCitationAlignment(baseId, optionMap, section = {}) {
+        if (!strictReadingKeys.has(baseId)) return [];
+        const lowers = Object.keys(optionMap || {}).filter(lower => Array.isArray(optionMap[lower]) && optionMap[lower].length);
+        if (!lowers.length) return [];
+        const groupsByCitation = {};
+        let citedOptions = 0;
+        let maxOptions = 0;
+        lowers.forEach(lower => {
+            maxOptions = Math.max(maxOptions, optionMap[lower].length);
+            optionMap[lower].forEach((_, index) => {
+                const citation = strictReadingOptionCitation(section, lower, index);
+                if (!citation) return;
+                const keys = citationStartsForCompare(citation);
+                const key = keys[0] || normalizedCitationForCompare(citation);
+                if (!key) return;
+                citedOptions += 1;
+                if (!groupsByCitation[key]) groupsByCitation[key] = {};
+                if (!Number.isInteger(groupsByCitation[key][lower])) groupsByCitation[key][lower] = index;
+            });
+        });
+        const proposed = Object.values(groupsByCitation).filter(group => Object.keys(group).length >= 2);
+        const normalized = normalizeVariantAlignmentGroups(optionMap, proposed);
+        const totalOptions = lowers.reduce((sum, lower) => sum + optionMap[lower].length, 0);
+        if (totalOptions < 2 || normalized.length < 2) return [];
+        if (!proposed.length && maxOptions < 2 && citedOptions < 2) return [];
+        return normalized;
+    }
+
     function normalizeBibleAliasForCompare(value) {
         return String(value || '')
             .normalize('NFD')
@@ -11872,6 +12195,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const key = normalizeBibleAliasForCompare(englishName[1]);
                 if (key) entries.push({ key, kr });
             }
+        });
+        (typeof koreanIntroBookAliases !== 'undefined' ? koreanIntroBookAliases : []).forEach(([alias, kr]) => {
+            [alias, String(alias || '').replace(/서$/u, '')].forEach(value => {
+                const key = normalizeBibleAliasForCompare(value);
+                if (key && kr) entries.push({ key, kr });
+            });
         });
         return entries
             .filter((entry, index, list) => list.findIndex(candidate => candidate.key === entry.key && candidate.kr === entry.kr) === index)
@@ -12115,11 +12444,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         throw lastError || new Error('AI variant alignment failed');
     }
 
+    const dailyVariantAlignmentSectionIds = new Set([...aiAlignedVariantSectionIds, ...strictReadingKeys]);
+
     function applyCachedVariantAlignments(fetchedData, date) {
-        aiAlignedVariantSectionIds.forEach(baseId => {
+        dailyVariantAlignmentSectionIds.forEach(baseId => {
             const section = fetchedData && fetchedData[baseId];
             if (!section) return;
             const { optionMap, maxOptions } = selectableOptionMapFromData(section, baseId);
+            const strictReadingAlignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            if (strictReadingAlignment.length) {
+                section.variantAlignment = strictReadingAlignment;
+                return;
+            }
+            if (strictReadingKeys.has(baseId)) return;
             const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
             if (koreanOrdinaryTranslationAlignment.length) {
                 section.variantAlignment = koreanOrdinaryTranslationAlignment;
@@ -12146,10 +12483,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     async function alignDailySelectableVariantsWithAI(fetchedData, date) {
-        await Promise.all(Array.from(aiAlignedVariantSectionIds).map(async baseId => {
+        await Promise.all(Array.from(dailyVariantAlignmentSectionIds).map(async baseId => {
             const section = fetchedData && fetchedData[baseId];
             if (!section) return;
             const { optionMap, maxOptions } = selectableOptionMapFromData(section, baseId);
+            const strictReadingAlignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            if (strictReadingAlignment.length) {
+                section.variantAlignment = strictReadingAlignment;
+                writeCachedDailyVariantAlignment(date, baseId, variantAlignmentSignature(baseId, optionMap), strictReadingAlignment);
+                return;
+            }
+            if (strictReadingKeys.has(baseId)) return;
             const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
             if (koreanOrdinaryTranslationAlignment.length) {
                 section.variantAlignment = koreanOrdinaryTranslationAlignment;
@@ -12378,6 +12722,26 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         };
     }
 
+    function dailyVariantLabelFromSourceMetadata(newData, alignmentGroup, fallbackIndex, baseLabel) {
+        const label = Object.assign({}, baseLabel || dailyVariantLabel(fallbackIndex));
+        const lowers = ['kr', 'vn', 'en', 'jp', 'la'];
+        const found = {};
+        lowers.forEach(lower => {
+            const labels = newData && newData[`optionLabels_${lower}`];
+            const hasAlignedIndex = alignmentGroup && Number.isInteger(alignmentGroup[lower]);
+            const sourceIndex = hasAlignedIndex ? alignmentGroup[lower] : fallbackIndex;
+            if (!Array.isArray(labels) || (alignmentGroup && !hasAlignedIndex)) return;
+            const value = cleanNodeText(labels[sourceIndex]);
+            if (value) found[lower] = value;
+        });
+        const fallback = found.kr || found[currentLeftRightLowerKeys().left] || found.vn || Object.values(found)[0] || '';
+        if (!fallback) return label;
+        lowers.forEach(lower => {
+            label[lower] = found[lower] || fallback;
+        });
+        return label;
+    }
+
     const sourceLabeledDailyVariantPartIds = new Set([
         'entrance',
         'gospel_accl',
@@ -12583,7 +12947,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             normalizeDailySectionLines(lines, baseId);
             removeDailyProclamationEndingLines(lines, baseId);
             const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
-            const label = alignmentGroup ? dailyVariantLabelForAlignment(alignmentGroup, i, alignmentGroups, baseId) : dailyVariantLabel(i);
+            const baseLabel = alignmentGroup
+                ? dailyVariantLabelForAlignment(alignmentGroup, i, alignmentGroups, baseId)
+                : dailyVariantLabel(i);
+            const label = dailyVariantLabelFromSourceMetadata(newData, alignmentGroup, i, baseLabel);
             variants[key] = { label, header: item.header || {}, cit, lines };
         }
         applyDailySourceVariantLabels(variants, baseId, alignmentGroups || []);
@@ -15253,12 +15620,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return `${escapeHtml(left)} <span class="stacked-header-separator">|</span> <span class="stacked-header-translation">${escapeHtml(right)}</span>`;
     }
 
+    function combinedCitationHeaderText(leftText, rightText) {
+        const left = cleanNodeText(leftText);
+        const right = cleanNodeText(rightText);
+        if (!left) return `<span class="stacked-citation-translation">${escapeHtml(right)}</span>`;
+        if (!right || normalizeCalendarNameForCompare(left) === normalizeCalendarNameForCompare(right)) {
+            return `<span class="stacked-citation-primary">${escapeHtml(left)}</span>`;
+        }
+        return `<span class="stacked-citation-primary">${escapeHtml(left)}</span> <span class="stacked-header-separator">|</span> <span class="stacked-citation-translation">${escapeHtml(right)}</span>`;
+    }
+
     function genStackedHeader(orig, data, leftLang, rightLang, baseId) {
         const titleHtml = combinedHeaderText(headerTitleFor(data, leftLang), headerTitleFor(data, rightLang));
         const leftCitation = headerCitationFor(orig, data, leftLang);
         const rightCitation = headerCitationFor(orig, data, rightLang);
         const citationHtml = leftCitation || rightCitation
-            ? `<span class="citation">${combinedHeaderText(leftCitation, rightCitation)}</span>`
+            ? `<span class="citation">${combinedCitationHeaderText(leftCitation, rightCitation)}</span>`
             : '';
         const controlsSource = data && data.__displaySourceVariants ? data : orig;
         const { selectHtml, secondarySelectHtml } = genHeaderControls(controlsSource, baseId, leftLang);
