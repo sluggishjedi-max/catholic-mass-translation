@@ -314,6 +314,8 @@ function startServer() {
       applyDailySourceVariantLabels(pairedVariants, 'prayer_after', pairedGroups);
       const koreanPrayerAfter = '주님, 저희가 성체를 받아 모시며 언제나 성자의 수난을 기념하오니 성자께서 극진한 사랑으로 베풀어 주신 이 선물이 저희 구원에 도움이 되게 하소서.';
       const vietnamesePrayerAfter = 'Lạy Chúa, Chúa đã cho chúng con tham dự vào bí tích Thánh Thể, để chúng con đời đời tưởng nhớ Đức Giêsu Con Một Chúa, đã chịu khổ hình và sống lại hiển vinh; xin cho bí tích tình yêu Người trối lại dẫn chúng con tới hưởng ơn cứu độ muôn đời.';
+      const koreanOfferingPrayer = '주님, 복된 라우렌시오를 기리며 기쁘게 바치는 이 예물을 받으시고 저희를 자비로이 도우시어 구원하여 주소서.';
+      const vietnameseOfferingPrayer = 'Lạy Thiên Chúa nhân từ xin chấp nhận của lễ chúng con vui mừng dâng lên Chúa trong ngày lễ kính thánh Lô-ren-xô. Xin cho của lễ này giúp chúng con đạt tới ơn cứu độ.';
       const navColor = getComputedStyle(document.querySelector('nav')).backgroundColor;
       const brandColorToken = getComputedStyle(document.documentElement)
         .getPropertyValue('--brand-logo-color')
@@ -601,7 +603,9 @@ function startServer() {
           '1,12─2,4',
           '12 주님, 당신은 옛날부터 불멸하시는 저의 하느님이 아니십니까?'
         ], false),
-        strictHabakkukCitation: strictLooksLikeCitation('1,12─2,4', 'KR')
+        strictHabakkukCitation: strictLooksLikeCitation('1,12─2,4', 'KR'),
+        attachedVerseBody: strictStripArabicVerseNumbers('형제 여러분, 6적게 뿌리는 이는 적게 거두어들이고', '9,6ㄴ-10'),
+        spacedVerseBody: strictStripArabicVerseNumbers('7 저마다 마음에 작정한 대로 해야지')
       };
       const savedLiturgyInfoForCycle = state.liturgyInfo;
       state.liturgyInfo = { meta: { day: 5, sundayCycle: 'A' } };
@@ -805,6 +809,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           merged: calendarMergeFixture
         },
         prayerAfterEquivalent: localSemanticEquivalent('prayer_after', koreanPrayerAfter, vietnamesePrayerAfter),
+        offeringPrayerEquivalent: localSemanticEquivalent('prayer_offerings', koreanOfferingPrayer, vietnameseOfferingPrayer),
+        offertoryHeaderVietnamese: (globalThis.missaData || []).find(item => item.id === '3.1 offertory')?.header?.vn || '',
         prayerAfterConclusionEquivalent: localSemanticEquivalent(
           'prayer_after',
           'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.',
@@ -1067,7 +1073,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.koreanProperFixture.verses['10'].startsWith('열째 절의 첫 문장')
       && result.koreanProperFixture.habakkuk.cit_kr === '하바 1,12─2,4'
       && !result.koreanProperFixture.habakkuk.text.includes('\n,12─2,4')
-      && result.koreanProperFixture.strictHabakkukCitation,
+      && result.koreanProperFixture.strictHabakkukCitation
+      && result.koreanProperFixture.attachedVerseBody === '형제 여러분, 적게 뿌리는 이는 적게 거두어들이고'
+      && result.koreanProperFixture.spacedVerseBody === '저마다 마음에 작정한 대로 해야지',
     `Korean memorial proper-reading references or Bible verses were not parsed: ${JSON.stringify(result.koreanProperFixture)}`);
     assert(/Năm A/.test(result.liturgyTitleParsing.weekdayCycleTitle)
       && /Năm A/.test(result.liturgyTitleParsing.sundayCycleTitle)
@@ -1077,6 +1085,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && !/Nội dung lịch sử/.test(result.prayerBoundaryText),
     `Vietnamese Prayer after Communion absorbed the following article: ${result.prayerBoundaryText}`);
     assert(result.prayerAfterEquivalent, 'Today’s Korean and Vietnamese Prayer after Communion should be semantically equivalent');
+    assert(result.offeringPrayerEquivalent, 'Today’s Korean and Vietnamese Prayer over the Offerings should remain one translated option');
+    assert(result.offertoryHeaderVietnamese === 'Lời Nguyện trên lễ vật', `Vietnamese offertory heading still has terminal punctuation: ${result.offertoryHeaderVietnamese}`);
     assert(result.prayerAfterConclusionEquivalent, 'Vietnamese and Korean authorized Prayer after Communion conclusions should remain in one option');
     assert(!result.prayerAfterConclusionNegative, 'A non-conclusion Prayer after Communion line must not be matched only to a Korean conclusion');
     assert(result.pairedLabels.every((label, index) => label.kr === `선택지 ${index + 1}` && label.vn === `Lựa chọn ${index + 1}`),

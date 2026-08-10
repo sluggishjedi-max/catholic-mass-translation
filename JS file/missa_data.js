@@ -941,7 +941,7 @@ globalThis.missaData = [
         id: '3.1 offertory', 
         type: 'part', 
         header: { kr: '예물 준비 기도', 
-            vn: 'Lời Nguyện trên lễ vật.',
+            vn: 'Lời Nguyện trên lễ vật',
             en: 'Offertory', 
             la: 'Praeparatio Donorum', 
             jp: '供えもの準備' },
