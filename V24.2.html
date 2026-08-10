@@ -46,7 +46,8 @@
         .nav-item.active { opacity: 1; font-weight: bold; background: rgba(255, 255, 255, 0.2); }
 
         /* 오늘 날짜와 전례명을 보여주는 머리말입니다. */
-        header { width: 100%; max-width: 1100px; margin: 0 auto; background: var(--liturgy-bg-color, var(--primary-color)); color: var(--liturgy-text-color, white); padding: 20px; text-align: center; position: relative; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+        header { width: 100%; margin: 0; background: var(--liturgy-bg-color, var(--primary-color)); color: var(--liturgy-text-color, white); padding: 0; text-align: center; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); }
+        .header-inner { position: relative; width: 100%; max-width: 1100px; margin: 0 auto; padding: 20px; }
         .header-brand { display: inline-flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 8px; line-height: 1; }
         .header-logo { display: block; flex: 0 0 auto; width: 30px; height: 30px; object-fit: contain; }
         .header-title { font-size: var(--chrome-font-size); line-height: 1.2; opacity: 0.9; }
@@ -507,15 +508,17 @@
 </nav>
 
 <header id="main-header">
-    <button type="button" class="settings-btn" aria-label="설정 열기" onclick="openSettings()">☰</button>
-    <div class="header-top">
-        <div class="header-brand">
-            <img id="header-logo" class="header-logo" src="assets/app-logo.svg" alt="" aria-hidden="true">
-            <div id="header-main-title" class="header-title">오늘의 미사</div>
+    <div class="header-inner">
+        <button type="button" class="settings-btn" aria-label="설정 열기" onclick="openSettings()">☰</button>
+        <div class="header-top">
+            <div class="header-brand">
+                <img id="header-logo" class="header-logo" src="assets/app-logo.svg" alt="" aria-hidden="true">
+                <div id="header-main-title" class="header-title">오늘의 미사</div>
+            </div>
+            <div id="header-date" class="date-display">로딩중...</div>
         </div>
-        <div id="header-date" class="date-display">로딩중...</div>
+        <div id="header-liturgy-name" class="liturgy-name"></div>
     </div>
-    <div id="header-liturgy-name" class="liturgy-name"></div>
 </header>
 
 <div id="floating-liturgy-banner" class="floating-liturgy-banner" aria-hidden="true">

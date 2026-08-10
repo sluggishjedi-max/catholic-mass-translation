@@ -103,6 +103,7 @@ function startServer() {
       const quickMenuRect = document.getElementById('quick-home-menu').getBoundingClientRect();
       const footerRect = document.getElementById('main-footer').getBoundingClientRect();
       const mainHeader = document.getElementById('main-header').getBoundingClientRect();
+      const mainHeaderInner = document.querySelector('.header-inner').getBoundingClientRect();
       const mainNav = document.querySelector('nav').getBoundingClientRect();
       const mainNavInner = document.querySelector('.nav-inner').getBoundingClientRect();
       const missal = document.getElementById('missal-root').getBoundingClientRect();
@@ -924,6 +925,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         },
         widthLimits: {
           header: mainHeader.width,
+          headerInner: mainHeaderInner.width,
           nav: mainNav.width,
           navInner: mainNavInner.width,
           navButtonWidths,
@@ -932,6 +934,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           floating: floatingBanner.width,
           floatingInner: floatingInner.width,
           headerMax: getComputedStyle(document.getElementById('main-header')).maxWidth,
+          headerInnerMax: getComputedStyle(document.querySelector('.header-inner')).maxWidth,
           navMax: getComputedStyle(document.querySelector('nav')).maxWidth,
           navInnerMax: getComputedStyle(document.querySelector('.nav-inner')).maxWidth,
           floatingMax: getComputedStyle(document.getElementById('floating-liturgy-banner')).maxWidth,
@@ -992,6 +995,26 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       };
     });
 
+    await page.setViewportSize({ width: 1440, height: 900 });
+    const desktopHeaderLayout = await page.evaluate(() => {
+      window.scrollTo(0, 0);
+      const rect = selector => document.querySelector(selector).getBoundingClientRect();
+      const header = rect('#main-header');
+      const headerInner = rect('.header-inner');
+      const missal = rect('#missal-root');
+      const floating = rect('#floating-liturgy-banner');
+      const floatingInner = rect('.floating-liturgy-inner');
+      return {
+        headerWidth: header.width,
+        headerInnerWidth: headerInner.width,
+        missalWidth: missal.width,
+        floatingWidth: floating.width,
+        floatingInnerWidth: floatingInner.width,
+        headerBackground: getComputedStyle(document.getElementById('main-header')).backgroundColor,
+        floatingBackground: getComputedStyle(document.getElementById('floating-liturgy-banner')).backgroundColor
+      };
+    });
+
     assert(JSON.stringify(result.navTexts) === JSON.stringify(['Thánh lễ', 'Kinh nguyện', 'Thánh ca', 'Nhà thờ']), `Vietnamese header menu mismatch: ${JSON.stringify(result.navTexts)}`);
     assert(JSON.stringify(result.quickTexts) === JSON.stringify(['Thánh lễ', 'Kinh nguyện', 'Thánh ca', 'Nhà thờ']), `Vietnamese quick menu mismatch: ${JSON.stringify(result.quickTexts)}`);
     assert(result.targetOptions.includes('Tiếng Hàn / 한국어') && result.targetOptions.includes('Tiếng Anh / English'), `Localized target options missing: ${JSON.stringify(result.targetOptions)}`);
@@ -1042,7 +1065,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.quickMenuFooterSpacing.right === result.quickMenuFooterSpacing.bottom
       && result.quickMenuFooterSpacing.right === 8,
     `Mobile quick menu does not keep equal right/footer gaps: ${JSON.stringify(result.quickMenuFooterSpacing)}`);
-    assert(result.widthLimits.headerMax === '1100px'
+    assert(result.widthLimits.headerMax === 'none'
+      && result.widthLimits.headerInnerMax === '1100px'
       && result.widthLimits.navMax === 'none'
       && result.widthLimits.navInnerMax === '1100px'
       && result.widthLimits.navButtonFlexGrow.every(value => value === '0')
@@ -1050,12 +1074,19 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.widthLimits.floatingMax === 'none'
       && result.widthLimits.floatingInnerMax === '1100px'
       && result.widthLimits.legendMax === '1100px'
-      && result.widthLimits.header <= result.widthLimits.missal
+      && result.widthLimits.header >= result.widthLimits.headerInner
+      && result.widthLimits.headerInner <= result.widthLimits.missal
       && result.widthLimits.navInner <= result.widthLimits.missal
       && result.widthLimits.nav >= result.widthLimits.navInner
       && result.widthLimits.floating >= result.widthLimits.floatingInner
       && result.widthLimits.floatingInner <= result.widthLimits.missal,
     `Header, content-sized nav, or full-width floating banner is invalid: ${JSON.stringify(result.widthLimits)}`);
+    assert(desktopHeaderLayout.headerWidth === desktopHeaderLayout.floatingWidth
+      && desktopHeaderLayout.headerWidth > desktopHeaderLayout.missalWidth
+      && desktopHeaderLayout.headerInnerWidth === desktopHeaderLayout.missalWidth
+      && desktopHeaderLayout.floatingInnerWidth === desktopHeaderLayout.missalWidth
+      && desktopHeaderLayout.headerBackground === desktopHeaderLayout.floatingBackground,
+    `Desktop main liturgy color band does not match the floating banner width: ${JSON.stringify(desktopHeaderLayout)}`);
     assert(result.ktcgFixture.bodyCount === 1
       && result.ktcgFixture.bodyText === 'Mắt tôi hãy tuôn trào suối lệ cả ngày đêm không ngớt?\\nvì trinh nữ cô gái dân tôi đã bị đánh nhừ đòn!\\nvết trọng thương hết đường cứu chữa.'.replace(/\\n/g, '\n')
       && !/[ \t\u00a0]+[,.;:!?]/.test(result.ktcgFixture.bodyText),
