@@ -124,7 +124,9 @@
         .floating-liturgy-banner { position: fixed; top: 0; left: 0; z-index: 998; width: 100%; transform: translateY(-115%); opacity: 0; pointer-events: none; background: var(--liturgy-bg-color, var(--primary-color)); color: var(--liturgy-text-color, white); border-radius: 0; box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08), 0 0 18px rgba(0, 0, 0, 0.12); text-align: center; font-size: var(--chrome-font-size); font-weight: 900; line-height: 1.35; transition: transform 0.18s ease, opacity 0.18s ease; }
         .floating-liturgy-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px 44px; align-items: center; gap: 8px; padding: 8px 14px; }
         .floating-liturgy-banner.is-visible { transform: translateY(0); opacity: 1; pointer-events: auto; }
-        .floating-liturgy-text { min-width: 0; overflow: visible; text-overflow: clip; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+        .floating-liturgy-text { display: grid; gap: 1px; min-width: 0; overflow: hidden; text-overflow: clip; cursor: pointer; }
+        .floating-liturgy-primary,
+        .floating-liturgy-secondary { display: block; width: 100%; min-width: 0; overflow: visible; white-space: nowrap; line-height: 1.2; transform-origin: center center; }
         .floating-liturgy-primary { color: var(--liturgy-primary-name-color, inherit); }
         .floating-liturgy-secondary { color: var(--liturgy-secondary-color, inherit); opacity: 0.76; }
         .floating-liturgy-text:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 4px; }
@@ -5286,12 +5288,63 @@
         document.documentElement.style.setProperty('--floating-liturgy-offset', `${offset}px`);
     }
 
+    let floatingLiturgyFitFrame = 0;
+
+    function floatingLiturgyLineTextWidth(line) {
+        if (!line || !line.firstChild) return 0;
+        const range = document.createRange();
+        range.selectNodeContents(line);
+        const width = range.getBoundingClientRect().width;
+        if (typeof range.detach === 'function') range.detach();
+        return width;
+    }
+
+    function fitFloatingLiturgyLines() {
+        const banner = document.getElementById('floating-liturgy-banner');
+        const bannerText = document.getElementById('floating-liturgy-text');
+        if (!banner || !bannerText) return;
+        const availableWidth = bannerText.clientWidth;
+        const baseFontSize = Number.parseFloat(getComputedStyle(banner).fontSize) || 16;
+        if (!(availableWidth > 0)) return;
+
+        bannerText.querySelectorAll('.floating-liturgy-primary, .floating-liturgy-secondary').forEach(line => {
+            line.style.removeProperty('font-size');
+            line.style.removeProperty('letter-spacing');
+            line.style.removeProperty('transform');
+            line.dataset.fitAdjusted = 'false';
+            let textWidth = floatingLiturgyLineTextWidth(line);
+            if (textWidth <= availableWidth + 0.5) return;
+
+            line.dataset.fitAdjusted = 'true';
+            line.style.letterSpacing = '-0.04em';
+            textWidth = floatingLiturgyLineTextWidth(line);
+            if (textWidth > availableWidth + 0.5) {
+                const fontScale = Math.max(0.78, Math.min(1, availableWidth / textWidth));
+                line.style.fontSize = `${baseFontSize * fontScale}px`;
+                textWidth = floatingLiturgyLineTextWidth(line);
+            }
+            if (textWidth > availableWidth + 0.5) {
+                line.style.transform = `scaleX(${Math.min(1, availableWidth / textWidth)})`;
+            }
+        });
+    }
+
+    function scheduleFloatingLiturgyLineFit() {
+        if (floatingLiturgyFitFrame) cancelAnimationFrame(floatingLiturgyFitFrame);
+        floatingLiturgyFitFrame = requestAnimationFrame(() => {
+            floatingLiturgyFitFrame = 0;
+            fitFloatingLiturgyLines();
+            syncFloatingLiturgyBannerVisibility();
+        });
+    }
+
     function updateFloatingLiturgyBanner(leftName, rightName) {
         const banner = document.getElementById('floating-liturgy-banner');
         const bannerText = document.getElementById('floating-liturgy-text') || banner;
         if (!banner) return;
         const names = [leftName, rightName].map(cleanNodeText).filter(Boolean);
         bannerText.replaceChildren();
+        bannerText.setAttribute('aria-label', names.join(' / '));
         if (names[0]) {
             const primary = document.createElement('span');
             primary.className = 'floating-liturgy-primary';
@@ -5299,16 +5352,14 @@
             bannerText.appendChild(primary);
         }
         if (names[1]) {
-            const separator = document.createElement('span');
-            separator.className = 'floating-liturgy-separator';
-            separator.textContent = ' | ';
-            bannerText.appendChild(separator);
             const secondary = document.createElement('span');
             secondary.className = 'floating-liturgy-secondary';
             secondary.textContent = names[1];
             bannerText.appendChild(secondary);
         }
+        fitFloatingLiturgyLines();
         syncFloatingLiturgyBannerVisibility();
+        scheduleFloatingLiturgyLineFit();
     }
 
     function setupFloatingLiturgyBanner() {
@@ -5321,7 +5372,7 @@
             });
         }
         window.addEventListener('scroll', syncFloatingLiturgyBannerVisibility, { passive: true });
-        window.addEventListener('resize', syncFloatingLiturgyBannerVisibility, { passive: true });
+        window.addEventListener('resize', scheduleFloatingLiturgyLineFit, { passive: true });
         syncFloatingLiturgyBannerVisibility();
     }
 

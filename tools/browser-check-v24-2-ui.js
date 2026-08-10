@@ -338,10 +338,40 @@ function startServer() {
         sourceChoice: getComputedStyle(sourceChoiceButton.querySelector('strong')).color
       };
       updateFloatingLiturgyBanner('전례명 원문', 'Translated liturgy name');
+      const floatingPrimary = document.querySelector('.floating-liturgy-primary');
+      const floatingSecondary = document.querySelector('.floating-liturgy-secondary');
+      const floatingPrimaryRect = floatingPrimary.getBoundingClientRect();
+      const floatingSecondaryRect = floatingSecondary.getBoundingClientRect();
       const floatingTranslation = {
-        primary: document.querySelector('.floating-liturgy-primary')?.textContent || '',
-        secondary: document.querySelector('.floating-liturgy-secondary')?.textContent || '',
-        secondaryOpacity: Number.parseFloat(getComputedStyle(document.querySelector('.floating-liturgy-secondary')).opacity || '1')
+        primary: floatingPrimary?.textContent || '',
+        secondary: floatingSecondary?.textContent || '',
+        secondaryOpacity: Number.parseFloat(getComputedStyle(floatingSecondary).opacity || '1'),
+        primaryDisplay: getComputedStyle(floatingPrimary).display,
+        secondaryDisplay: getComputedStyle(floatingSecondary).display,
+        primaryWhiteSpace: getComputedStyle(floatingPrimary).whiteSpace,
+        secondaryWhiteSpace: getComputedStyle(floatingSecondary).whiteSpace,
+        fixedRows: floatingSecondaryRect.top >= floatingPrimaryRect.bottom - 0.5,
+        separatorCount: document.querySelectorAll('.floating-liturgy-separator').length
+      };
+      updateFloatingLiturgyBanner(
+        '한국 교회의 수호자 원죄 없이 잉태되신 복되신 동정 마리아 대축일 전야 미사',
+        'Solemnity of the Immaculate Conception of the Blessed Virgin Mary, Principal Patroness of the Church in Korea'
+      );
+      fitFloatingLiturgyLines();
+      const fittedText = document.getElementById('floating-liturgy-text');
+      const fittedPrimary = document.querySelector('.floating-liturgy-primary');
+      const fittedSecondary = document.querySelector('.floating-liturgy-secondary');
+      const fittedPrimaryRect = fittedPrimary.getBoundingClientRect();
+      const fittedSecondaryRect = fittedSecondary.getBoundingClientRect();
+      const floatingLongTitleFit = {
+        availableWidth: fittedText.clientWidth,
+        primaryTextWidth: floatingLiturgyLineTextWidth(fittedPrimary),
+        secondaryTextWidth: floatingLiturgyLineTextWidth(fittedSecondary),
+        primaryAdjusted: fittedPrimary.dataset.fitAdjusted,
+        secondaryAdjusted: fittedSecondary.dataset.fitAdjusted,
+        primaryWhiteSpace: getComputedStyle(fittedPrimary).whiteSpace,
+        secondaryWhiteSpace: getComputedStyle(fittedSecondary).whiteSpace,
+        fixedRows: fittedSecondaryRect.top >= fittedPrimaryRect.bottom - 0.5
       };
       const rectanglesOverlap = (first, second) => first.left < second.right
         && first.right > second.left
@@ -969,6 +999,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         ),
         startupAndSourceColors,
         floatingTranslation,
+        floatingLongTitleFit,
         runtimeStatusLayout,
         completionNotice,
         whiteLiturgyContrast,
@@ -1160,8 +1191,22 @@ Nội dung lịch sử không thuộc lời nguyện.`;
     `Startup notice and Vietnamese source selection do not use the official-mark color: ${JSON.stringify(result.startupAndSourceColors)}`);
     assert(result.floatingTranslation.primary === '전례명 원문'
       && result.floatingTranslation.secondary === 'Translated liturgy name'
-      && result.floatingTranslation.secondaryOpacity < 0.9,
+      && result.floatingTranslation.secondaryOpacity < 0.9
+      && result.floatingTranslation.primaryDisplay === 'block'
+      && result.floatingTranslation.secondaryDisplay === 'block'
+      && result.floatingTranslation.primaryWhiteSpace === 'nowrap'
+      && result.floatingTranslation.secondaryWhiteSpace === 'nowrap'
+      && result.floatingTranslation.fixedRows
+      && result.floatingTranslation.separatorCount === 0,
     `Floating liturgy translation is not visually secondary: ${JSON.stringify(result.floatingTranslation)}`);
+    assert(result.floatingLongTitleFit.primaryAdjusted === 'true'
+      && result.floatingLongTitleFit.secondaryAdjusted === 'true'
+      && result.floatingLongTitleFit.primaryWhiteSpace === 'nowrap'
+      && result.floatingLongTitleFit.secondaryWhiteSpace === 'nowrap'
+      && result.floatingLongTitleFit.fixedRows
+      && result.floatingLongTitleFit.primaryTextWidth <= result.floatingLongTitleFit.availableWidth + 1
+      && result.floatingLongTitleFit.secondaryTextWidth <= result.floatingLongTitleFit.availableWidth + 1,
+    `Long floating liturgy names do not fit one fixed row per language: ${JSON.stringify(result.floatingLongTitleFit)}`);
     assert(!result.runtimeStatusLayout.includesKoreanLoading
       && result.runtimeStatusLayout.includesVietnameseLoading
       && result.runtimeStatusLayout.preservedStatuses.KR === 'done'
