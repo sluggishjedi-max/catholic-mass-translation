@@ -347,6 +347,7 @@ function startServer() {
       state.dailyReadingsLoading = true;
       state.dailyReadingLanguageStatus = { VN: 'loading', KR: 'done', EN: 'done' };
       state.dailyReadingLanguageErrorAt = {};
+      markDailyReadingLanguagesLoading(['VN', 'KR', 'EN'], { preserveDone: true });
       showAppTab('mass');
       syncLiturgyLoadingStatusBar('VN', 'EN');
       updateVoiceStatusBar(voiceText('listening'), { recording: true });
@@ -357,6 +358,7 @@ function startServer() {
       const liturgyStatusRect = liturgyStatusBar.getBoundingClientRect();
       const voiceStatusRect = voiceStatusBar.getBoundingClientRect();
       const runtimeStatusLayout = {
+        preservedStatuses: Object.assign({}, state.dailyReadingLanguageStatus),
         includesKoreanLoading: liturgyStatusBar.textContent.includes(localizedLiturgyLoadingMessageForLang('KR')),
         includesVietnameseLoading: liturgyStatusBar.textContent.includes(localizedLiturgyLoadingMessageForLang('VN')),
         statusBarsOverlap: rectanglesOverlap(liturgyStatusRect, voiceStatusRect),
@@ -371,6 +373,17 @@ function startServer() {
       state.dailyReadingsLoading = false;
       state.dailyReadingLanguageStatus = {};
       state.dailyReadingLanguageErrorAt = {};
+      const sourceChoiceModal = document.getElementById('vn-source-modal');
+      sourceChoiceModal.classList.add('is-visible');
+      const completionRemembered = rememberLiturgyCompletionDuringChoice('KR');
+      sourceChoiceModal.classList.remove('is-visible');
+      const completionShown = showPendingLiturgyCompletionAfterChoice();
+      const completionNotice = {
+        remembered: completionRemembered,
+        shown: completionShown,
+        text: document.getElementById('liturgy-status-bar').textContent.trim()
+      };
+      hideLiturgyStatusBar();
 
       const applyVisualTheme = theme => {
         document.documentElement.style.setProperty('--primary-color', theme.accent);
@@ -511,6 +524,32 @@ function startServer() {
           labels: aug8KtcgSections.reading1.optionLabels
         }
       };
+      const duplicateKtcgPayload = {
+        mass_reading: [
+          {
+            display_text: 'Ngày thường',
+            reading1: [entry('2 Cr 9,6-10', 'Cô-rin-tô chung')],
+            gospel: [entry('Ga 12,24-26', 'Gio-an chung')]
+          },
+          {
+            display_text: 'Thánh Lô-ren-xô',
+            is_special: true,
+            reading1: [entry('2 Cr 9,6-10', 'Cô-rin-tô riêng')],
+            gospel: [entry('Ga 12,24-26', 'Gio-an riêng')]
+          }
+        ]
+      };
+      const duplicateKtcgChoices = ktcgkpvOrderedReadingChoices(duplicateKtcgPayload, new Date(2026, 7, 10));
+      const duplicateKtcgSections = ktcgkpvDailySectionsFromChoices(duplicateKtcgChoices);
+      const duplicateReadingFixture = {
+        readingCitations: duplicateKtcgSections.reading1.optionCits.map(item => item.cit_vn),
+        readingKinds: duplicateKtcgSections.reading1.optionKinds,
+        gospelCitations: duplicateKtcgSections.gospel.optionCits.map(item => item.cit_vn),
+        koreanRomans: buildKoreanCitation('▥ 사도 바오로의 로마서 말씀입니다.', '9,1-5'),
+        koreanCorinthians: buildKoreanCitation('▥ 사도 바오로의 코린토 2서 말씀입니다.', '9,6ㄴ-10'),
+        commonReadingLabel: dailyVariantLabelFromSourceMetadata({ optionKinds_kr: ['common'] }, null, 0, null, 'reading2'),
+        properGospelLabel: dailyVariantLabelFromSourceMetadata({ optionKinds_kr: ['proper'] }, null, 0, null, 'gospel')
+      };
       const diocesanPrayerSourceFixture = `<p>08/08/2026 BÀI ĐỌC TRONG THÁNH LỄ Thứ bảy tuần 18 THƯỜNG NIÊN Ca nhập lễ Ca thường. Lời nguyện nhập lễ Lạy Chúa, lời nguyện ngày thường. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, lễ vật ngày thường. Chúng con cầu xin… Ca hiệp lễ Ca thường. Lời nguyện hiệp lễ Lạy Chúa, hiệp lễ ngày thường. Chúng con cầu xin… BÀI ĐỌC TRONG THÁNH LỄ Thánh Đa Minh, linh mục Ca nhập lễ Ca riêng. Lời nguyện nhập lễ Lạy Thiên Chúa toàn năng Chúa đã cho xuất hiện trong Hội Thánh một Tông Đồ nhiệt tâm truyền giảng chân lý là thánh Đa-minh. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, vì lời chuyển cầu của thánh Đa-minh, xin nâng đỡ những người đang chiến đấu bảo vệ đức tin. Chúng con cầu xin… Ca hiệp lễ Ca riêng. Lời nguyện hiệp lễ Lạy Thiên Chúa toàn năng hằng hữu, nhân ngày mừng lễ thánh Đa-minh, xin cho Hội Thánh được thánh nhân cầu thay nguyện giúp. Chúng con cầu xin…</p>`;
       const diocesanPrayerBlocks = vietnameseKtcgPrayerMassBlocks(diocesanPrayerSourceFixture);
       const diocesanPrayerData = parseVietnameseKtcgDiocesanPrayers(
@@ -523,6 +562,17 @@ function startServer() {
         collect: diocesanPrayerData.collect && diocesanPrayerData.collect.text || '',
         offerings: diocesanPrayerData.prayer_offerings && diocesanPrayerData.prayer_offerings.text || '',
         after: diocesanPrayerData.prayer_after && diocesanPrayerData.prayer_after.text || ''
+      };
+      const aug9PrayerSourceFixture = `<p>09/08/2026 Lời nguyện nhập lễ Lạy Thiên Chúa toàn năng hằng hữu, chúng con đã được phúc gọi Chúa là Cha; xin cho chúng con ngày càng thêm lòng hiếu thảo, hầu đáng được hưởng gia nghiệp Chúa hứa ban. Chúng con cầu xin… Bài Đọc I: 1 V 19,9a.11-13a Bài trích sách các Vua quyển thứ nhất. Đáp Ca: Tv 84 Phúc Âm: Mt 14,22-33 Lời nguyện tiến lễ Lạy Chúa, xin chấp nhận lễ vật Hội Thánh dâng lên. Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con. Ca hiệp lễ Ca hiệp lễ. Lời nguyện hiệp lễ Lạy Chúa, xin cho bí tích này cứu độ chúng con. Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.</p>`;
+      const aug9PrayerData = parseVietnameseKtcgDiocesanPrayers(
+        aug9PrayerSourceFixture,
+        new Date(2026, 7, 9),
+        'Chúa Nhật XIX Thường Niên - Năm A'
+      );
+      const aug9PrayerFixture = {
+        collect: aug9PrayerData.collect && aug9PrayerData.collect.text || '',
+        offerings: aug9PrayerData.prayer_offerings && aug9PrayerData.prayer_offerings.text || '',
+        after: aug9PrayerData.prayer_after && aug9PrayerData.prayer_after.text || ''
       };
       const aug7OptionMap = { kr: [[{ text: '나훔' }]], vn: [[{ text: '나훔' }], [{ text: '지혜' }], [{ text: '집회' }]] };
       const aug8OptionMap = {
@@ -768,10 +818,13 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         startupAndSourceColors,
         floatingTranslation,
         runtimeStatusLayout,
+        completionNotice,
         whiteLiturgyContrast,
         stackedTranslationColors,
         readingChoiceFixture,
+        duplicateReadingFixture,
         diocesanPrayerFixture,
+        aug9PrayerFixture,
         citationAlignmentFixture,
         koreanProperFixture,
         liturgyTitleParsing: {
@@ -924,9 +977,16 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.floatingTranslation.secondary === 'Translated liturgy name'
       && result.floatingTranslation.secondaryOpacity < 0.9,
     `Floating liturgy translation is not visually secondary: ${JSON.stringify(result.floatingTranslation)}`);
-    assert(result.runtimeStatusLayout.includesKoreanLoading
-      && result.runtimeStatusLayout.includesVietnameseLoading,
-    `Loading status omitted a still-loading source language: ${JSON.stringify(result.runtimeStatusLayout)}`);
+    assert(!result.runtimeStatusLayout.includesKoreanLoading
+      && result.runtimeStatusLayout.includesVietnameseLoading
+      && result.runtimeStatusLayout.preservedStatuses.KR === 'done'
+      && result.runtimeStatusLayout.preservedStatuses.EN === 'done'
+      && result.runtimeStatusLayout.preservedStatuses.VN === 'loading',
+    `Loading status did not hide an already-loaded language: ${JSON.stringify(result.runtimeStatusLayout)}`);
+    assert(result.completionNotice.remembered
+      && result.completionNotice.shown
+      && /(?:한국어 전례 불러오기 완료|Đã tải xong phụng vụ tiếng Hàn)/.test(result.completionNotice.text),
+    `Background completion was not announced after source selection: ${JSON.stringify(result.completionNotice)}`);
     assert(!result.runtimeStatusLayout.statusBarsOverlap
       && !result.runtimeStatusLayout.liturgyOverlapsQuickMenu
       && !result.runtimeStatusLayout.voiceOverlapsQuickMenu
@@ -966,6 +1026,14 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && JSON.stringify(result.readingChoiceFixture.aug8.communion) === JSON.stringify(['x. Mt 19,27-29', 'Kn 16,20'])
       && result.readingChoiceFixture.aug8.labels.length === 3,
     `August 8 KTCG memorial/general reading choices are wrong: ${JSON.stringify(result.readingChoiceFixture.aug8)}`);
+    assert(JSON.stringify(result.duplicateReadingFixture.readingCitations) === JSON.stringify(['2 Cr 9,6-10'])
+      && JSON.stringify(result.duplicateReadingFixture.gospelCitations) === JSON.stringify(['Ga 12,24-26'])
+      && JSON.stringify(result.duplicateReadingFixture.readingKinds) === JSON.stringify(['proper'])
+      && result.duplicateReadingFixture.koreanRomans === '로마 9,1-5'
+      && result.duplicateReadingFixture.koreanCorinthians === '2코린 9,6ㄴ-10'
+      && result.duplicateReadingFixture.commonReadingLabel.kr === '공통 독서'
+      && result.duplicateReadingFixture.properGospelLabel.kr === '고유 복음',
+    `Same-citation readings were split or labeled incorrectly: ${JSON.stringify(result.duplicateReadingFixture)}`);
     assert(result.citationAlignmentFixture.aug7.length === 3
       && result.citationAlignmentFixture.aug7[0].kr === 0
       && result.citationAlignmentFixture.aug7[0].vn === 0
@@ -985,6 +1053,11 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /toàn năng hằng hữu/.test(result.diocesanPrayerFixture.after)
       && !/ngày thường/.test(result.diocesanPrayerFixture.collect),
     `August 8 Vietnamese proper prayers fell back to the Ordinary weekday block: ${JSON.stringify(result.diocesanPrayerFixture)}`);
+    assert(/được phúc gọi Chúa là Cha/.test(result.aug9PrayerFixture.collect)
+      && !/Bài trích|1 V 19|Mt 14/.test(result.aug9PrayerFixture.collect)
+      && /chấp nhận lễ vật/.test(result.aug9PrayerFixture.offerings)
+      && /bí tích này cứu độ/.test(result.aug9PrayerFixture.after),
+    `August 9 Vietnamese collect crossed into the readings: ${JSON.stringify(result.aug9PrayerFixture)}`);
     assert(result.koreanProperFixture.references.length === 1
       && result.koreanProperFixture.references[0].reading === '1코린 2,1-10ㄱ'
       && result.koreanProperFixture.references[0].gospel === '루카 9,57-62'
