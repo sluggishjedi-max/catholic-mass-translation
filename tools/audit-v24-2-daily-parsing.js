@@ -8,6 +8,9 @@ const targetHtml = process.env.ORDO_CHECK_HTML || 'V24.2.html';
 const startIso = process.env.ORDO_AUDIT_START || '2026-07-10';
 const endIso = process.env.ORDO_AUDIT_END || '2026-09-10';
 const krOnly = process.env.ORDO_AUDIT_KR_ONLY === '1';
+const vnOnly = process.env.ORDO_AUDIT_VN_ONLY === '1';
+const vnSource = process.env.ORDO_AUDIT_VN_SOURCE === 'hanoi' ? 'hanoi' : 'ktcg';
+const reportName = process.env.ORDO_AUDIT_REPORT || 'v24-2-daily-parsing-audit.json';
 const auditedSections = [
   'entrance', 'collect', 'reading1', 'psalm', 'reading2', 'gospel_accl',
   'gospel', 'prayer_offerings', 'communion', 'prayer_after'
@@ -54,11 +57,11 @@ function isoDates(start, end) {
     const results = [];
     for (let dateIndex = 0; dateIndex < dates.length; dateIndex += 1) {
       const iso = dates[dateIndex];
-      const result = await page.evaluate(async ({ iso, auditedSections, krOnly }) => {
+      const result = await page.evaluate(async ({ iso, auditedSections, krOnly, vnOnly, vnSource }) => {
         const date = new Date(`${iso}T09:00:00`);
         state.currentLoc = 'KR';
         state.targetLang = 'VN';
-        state.vnReadingSource = 'ktcg';
+        state.vnReadingSource = vnSource;
         state.liturgicalDateContext = { date, localDate: date, leftLang: 'KR', slot: 'day' };
         state.liturgyInfo = buildGeneratedLiturgyInfo(date);
 
@@ -77,23 +80,32 @@ function isoDates(start, end) {
           throw lastError;
         };
         const [payloadResult, koreanResult] = await Promise.allSettled([
-          krOnly ? Promise.resolve(null) : fetchWithAuditRetry(() => fetchKtcgkpvMassReadingJson(date)),
-          fetchWithAuditRetry(() => fetchStrictDailyMass('KR', date))
+          krOnly
+            ? Promise.resolve(null)
+            : fetchWithAuditRetry(() => vnSource === 'hanoi'
+              ? fetchStrictDailyMass('VN', date)
+              : fetchKtcgkpvMassReadingJson(date)),
+          vnOnly ? Promise.resolve(null) : fetchWithAuditRetry(() => fetchStrictDailyMass('KR', date))
         ]);
         const sourceErrors = [];
-        if (payloadResult.status !== 'fulfilled') sourceErrors.push(`KTCG_FETCH:${payloadResult.reason}`);
-        if (koreanResult.status !== 'fulfilled') {
-          return { date: iso, title: state.liturgyInfo.names.KR, issues: [], sourceErrors: [`KR_FETCH:${koreanResult.reason}`] };
-        }
+        if (payloadResult.status !== 'fulfilled') sourceErrors.push(`${vnSource.toUpperCase()}_FETCH:${payloadResult.reason}`);
+        if (koreanResult.status !== 'fulfilled') sourceErrors.push(`KR_FETCH:${koreanResult.reason}`);
 
-        const payload = payloadResult.status === 'fulfilled' ? payloadResult.value : null;
-        const korean = koreanResult.value;
+        const vietnameseResult = payloadResult.status === 'fulfilled' ? payloadResult.value : null;
+        const korean = koreanResult.status === 'fulfilled' ? koreanResult.value : null;
+        const payload = vnSource === 'ktcg' ? vietnameseResult : null;
         const choices = payload ? ktcgkpvOrderedReadingChoices(payload, date, null) : [];
         const liturgyChoices = payload ? ktcgkpvOrderedLiturgyChoices(payload, date, null) : [];
-        const vietnameseSections = payload ? ktcgkpvDailySectionsFromChoices(choices, liturgyChoices, date) : {};
+        const vietnameseSections = payload
+          ? ktcgkpvDailySectionsFromChoices(choices, liturgyChoices, date)
+          : ((vietnameseResult && vietnameseResult.data) || {});
         const merged = createDailyReadingData();
-        mergeSourceData(merged, korean, 'KR');
-        if (payload) mergeSourceData(merged, { data: vietnameseSections }, 'VN');
+        if (korean) mergeSourceData(merged, korean, 'KR');
+        if (vietnameseResult) mergeSourceData(
+          merged,
+          payload ? { data: vietnameseSections } : vietnameseResult,
+          'VN'
+        );
         applyCachedVariantAlignments(merged, date);
 
         const names = state.liturgyInfo.names || {};
@@ -215,12 +227,14 @@ function isoDates(start, end) {
           date: iso,
           title: names.KR,
           vietnameseTitle: names.VN,
-          choiceTitles: choices.map(ktcgkpvChoiceTitle),
+          choiceTitles: choices.length
+            ? choices.map(ktcgkpvChoiceTitle)
+            : [vietnameseResult && vietnameseResult.title].filter(Boolean),
           sectionStats,
           issues,
           sourceErrors
         };
-      }, { iso, auditedSections, krOnly });
+      }, { iso, auditedSections, krOnly, vnOnly, vnSource });
       results.push(result);
       if ((dateIndex + 1) % 5 === 0 || result.issues.length || result.sourceErrors.length || dateIndex === dates.length - 1) {
         console.log(`[${dateIndex + 1}/${dates.length}] ${iso} issues=${result.issues.length} sourceErrors=${result.sourceErrors.length}`);
@@ -232,7 +246,7 @@ function isoDates(start, end) {
     const unavailable = results.filter(result => result.sourceErrors && result.sourceErrors.length);
     const summary = {
       html: targetHtml,
-      mode: krOnly ? 'kr-only' : 'kr-vn',
+      mode: krOnly ? 'kr-only' : (vnOnly ? `vn-only-${vnSource}` : `kr-vn-${vnSource}`),
       range: { start: startIso, end: endIso, days: results.length },
       daysWithIssues: failures.length,
       issueCount: failures.reduce((sum, result) => sum + result.issues.length, 0),
@@ -243,7 +257,7 @@ function isoDates(start, end) {
       unavailable,
       results
     };
-    const reportPath = path.join(root, 'tmp', 'v24-2-daily-parsing-audit.json');
+    const reportPath = path.join(root, 'tmp', reportName);
     fs.mkdirSync(path.dirname(reportPath), { recursive: true });
     fs.writeFileSync(reportPath, `${JSON.stringify(summary, null, 2)}\n`, 'utf8');
     console.log(`Report: ${reportPath}`);

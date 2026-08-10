@@ -6681,6 +6681,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const aligned = alignKtcgkpvCitationsByMeaning(parsed.data[key], ktcgOptions);
             if (aligned.some(item => item.cit_vn)) optionCits = aligned;
             else if (existingOptionCits.some(item => item.cit_vn) && optionCits.length < parsedOptionCount) optionCits = existingOptionCits;
+            else if (optionCits.length !== parsedOptionCount) optionCits = [];
         }
         if (!Array.isArray(optionCits) || !optionCits.length || !optionCits.some(item => item.cit_vn)) return;
         if (!parsed.data[key] || typeof parsed.data[key] !== 'object') parsed.data[key] = parsed.data[key] || {};

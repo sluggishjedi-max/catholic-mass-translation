@@ -639,6 +639,22 @@ function startServer() {
         INDEXING: 'Ed 2,8 - 3,4',
         CONTENT: '<p><sup>2</sup> Đức Chúa phán với tôi.</p><p><sup>3</sup> Hỡi con người, hãy ăn cuộn sách này.</p>'
       }], { stripVerseNumbers: true });
+      const hanoiSingleCommunionFixture = {
+        data: {
+          communion: {
+            lines: [parsedLine('', 'Ca hiệp lễ duy nhất từ nguồn Hà Nội.')]
+          }
+        }
+      };
+      applyKtcgkpvCitationToParsed(
+        hanoiSingleCommunionFixture,
+        'communion',
+        [{ cit_vn: 'Mt 25,6' }, { cit_vn: 'Tv 26,4' }],
+        [
+          { cit_vn: 'Mt 25,6', text: 'Kìa Tân Lang đã tới.' },
+          { cit_vn: 'Tv 26,4', text: 'Một điều tôi kiếm tôi xin.' }
+        ]
+      );
       const choiceRuleFixture = {
         aug11Kinds: aug11Sections.entrance.optionKinds,
         aug11Labels: aug11Sections.entrance.optionLabels,
@@ -655,6 +671,9 @@ function startServer() {
         ordinaryWeekdayProperReadingKind: ktcgkpvChoiceKind(aug12OptionalChoice, 'reading1', new Date(2026, 7, 12)),
         fixedMemorialProperReadingKind: ktcgkpvChoiceKind(aug11ClareChoice, 'reading1', new Date(2026, 7, 11)),
         ktcgVerseNumberText: ktcgVerseNumberFixture.text,
+        hanoiSingleCommunionCitationCount: Array.isArray(hanoiSingleCommunionFixture.data.communion.optionCits)
+          ? hanoiSingleCommunionFixture.data.communion.optionCits.length
+          : 0,
         provisionalEntranceAlignment: provisionalAlignmentFixture.entrance.variantAlignment,
         citedSingleConflictAlignment: provisionalAlignmentFixture.communion.variantAlignment,
         labels: {
@@ -1191,6 +1210,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
     assert(!/(?:^|\n)\s*[23]\s*(?:\n|$)/u.test(result.choiceRuleFixture.ktcgVerseNumberText)
       && !/(?:^|\n)\s*[23](?=\p{L})/u.test(result.choiceRuleFixture.ktcgVerseNumberText),
     `KTCG body verse numbers remain in reading text: ${result.choiceRuleFixture.ktcgVerseNumberText}`);
+    assert(result.choiceRuleFixture.hanoiSingleCommunionCitationCount === 0,
+      `Multiple KTCG citations were attached to one unmatched Hanoi option: ${result.choiceRuleFixture.hanoiSingleCommunionCitationCount}`);
     assert(result.choiceRuleFixture.provisionalEntranceAlignment.length === 4
       && result.choiceRuleFixture.provisionalEntranceAlignment.every(group =>
         Number.isInteger(group.kr) !== Number.isInteger(group.vn)
