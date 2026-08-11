@@ -134,6 +134,28 @@ function startServer() {
       state.gpsTimeZone = locationStateBeforeGps.gpsTimeZone;
       document.getElementById('set-loc').value = locationStateBeforeGps.selectedLocation;
       syncTargetLanguageOptions();
+      const savedSourceVisibilityState = {
+        currentLoc: state.currentLoc,
+        targetLang: state.targetLang,
+        useGps: state.useGps
+      };
+      const probeVietnameseSourceVisibility = (currentLoc, targetLang, useGps) => {
+        state.currentLoc = currentLoc;
+        state.targetLang = targetLang;
+        state.useGps = useGps;
+        return syncVietnameseReadingSourceSettingVisibility();
+      };
+      const vietnameseSourceSettingVisibility = {
+        translatedVietnamese: probeVietnameseSourceVisibility('KR', 'VN', false),
+        forcedVietnameseOriginal: probeVietnameseSourceVisibility('VN', 'KR', false),
+        gpsVietnameseOriginal: probeVietnameseSourceVisibility('VN', 'EN', true),
+        forcedNonVietnamese: probeVietnameseSourceVisibility('EN', 'KR', false),
+        gpsNonVietnamese: probeVietnameseSourceVisibility('KR', 'EN', true)
+      };
+      state.currentLoc = savedSourceVisibilityState.currentLoc;
+      state.targetLang = savedSourceVisibilityState.targetLang;
+      state.useGps = savedSourceVisibilityState.useGps;
+      syncTargetLanguageOptions();
       openSettings();
       const androidRowsVisible = [
         document.getElementById('android-status-bar-row'),
@@ -655,6 +677,47 @@ function startServer() {
         text_vn: vn,
         role_vn: vn ? 'body' : ''
       });
+      const multilingualEntranceOptionMap = {
+        kr: [
+          [{ text: '이 슬기롭고 지혜로운 동정녀는 등불을 밝혀 들고 그리스도를 맞으러 나갔네.' }],
+          [{ text: '그리스도의 동정녀, 얼마나 아름다운가! 주님의 화관, 영원한 동정의 화관을 받았네.' }]
+        ],
+        en: [
+          [{ text: 'Here is a wise virgin, from among the number of the prudent, who went forth with lighted lamp to meet Christ.' }],
+          [{ text: 'How beautiful you are, O virgin of Christ, who were worthy to receive the Lord’s crown, the crown of perpetual virginity.' }],
+          [{ text: 'Let us rejoice and exult for joy for a holy and glorious virgin.' }]
+        ],
+        la: [
+          [{ text: 'Hæc est sápiens, et una de número prudéntum, quæ óbviam Christo cum lámpade accénsa éxiit.' }],
+          [{ text: 'O quam pulchra es, virgo Christi, quæ corónam Dómini digna fuísti accípere, corónam perpétuæ virginitátis.' }],
+          [{ text: 'Gaudeámus et exsultémus, quia Dóminus ómnium diléxit vírginem sanctam atque gloriósam.' }]
+        ]
+      };
+      const multilingualEntranceAlignment = buildFallbackVariantAlignment('entrance', multilingualEntranceOptionMap, {});
+      const completedMultilingualEntranceAlignment = combineTrustedVariantAlignments(
+        'entrance',
+        multilingualEntranceOptionMap,
+        multilingualEntranceAlignment,
+        [{ kr: 0, en: 0, la: 0 }, { kr: 1, en: 1, la: 1 }, { en: 2, la: 2 }]
+      );
+      const citationPriorityOptionMap = {
+        kr: [[{ text: '보라, 신랑이 오신다. 주 그리스도를 맞으러 나가라.' }]],
+        la: [
+          [{ text: 'Ecce Sponsus venit: exíte óbviam Christo Dómino.' }],
+          [{ text: 'Média nocte clamor factus est: Ecce sponsus venit, exíte.' }]
+        ]
+      };
+      const citationPriorityAlignment = buildFallbackVariantAlignment('communion', citationPriorityOptionMap, {
+        optionCits_kr: [{ cit_kr: '마태 25,6 참조' }],
+        optionCits_la: [{ cit_la: 'Cf. Mt 25, 6' }, { cit_la: 'Mt 25, 6' }]
+      });
+      const clareOfferingOptionMap = {
+        kr: [[{ text: '주님, 복된 동정녀 클라라를 기리는 저희가 놀라우신 주님을 찬양하며 그의 공로를 기꺼워하셨듯이 저희가 바치는 제사도 기쁘게 받아 주소서.' }]],
+        en: [[{ text: 'As we proclaim your wonders, O Lord, in the Virgin Clare, we humbly implore that, as her merits are pleasing to you, so, too, our dutiful service may find favor in your sight.' }]],
+        la: [[{ text: 'In beáta vírgine Clara te, Dómine, mirábilem prædicántes, maiestátem tuam supplíciter exorámus, ut, sicut eius tibi grata sunt mérita, sic nostræ servitútis accépta reddántur offícia.' }]]
+      };
+      const clareOfferingAlignment = buildFallbackVariantAlignment('prayer_offerings', clareOfferingOptionMap, {});
+      const incompleteAlignment = normalizeVariantAlignmentGroups(multilingualEntranceOptionMap, [{ kr: 0, en: 0, la: 0 }]);
       const propagatedKindVariants = {
         A: { lines: [optionBodyLine('고유 한국어 입당송', 'Ca nhập lễ riêng')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 0, vn: 0 } },
         B: { lines: [optionBodyLine('메타데이터가 빠진 한국어 입당송')], __dailyOptionKind: '', __dailySourceIndexes: { kr: 1 } },
@@ -791,6 +854,24 @@ function startServer() {
           fixedKinds: Object.values(implicitFixedProperVariants).map(variant => variant.__dailyOptionKind),
           fixedLabels: Object.values(implicitFixedProperVariants).map(variant => variant.label.kr),
           ordinaryKind: ordinaryUnknownVariant.A.__dailyOptionKind
+        },
+        multilingualAlignmentFixture: {
+          entrance: multilingualEntranceAlignment,
+          citationPriority: citationPriorityAlignment,
+          clareOffering: clareOfferingAlignment,
+          incompleteNeedsAi: variantAlignmentNeedsSemanticCompletion(incompleteAlignment),
+          fallbackNeedsAi: variantAlignmentNeedsSemanticCompletion(multilingualEntranceAlignment),
+          combinedNeedsAi: variantAlignmentNeedsSemanticCompletion(completedMultilingualEntranceAlignment),
+          japaneseMatthewStart: citationStartsForCompare('マタイ18・1-5、10、12-14'),
+          koreanMatthewStart: citationStartsForCompare('마태 18,1-5.10.12-14'),
+          japaneseEzekielStart: citationStartsForCompare('エゼキエル2・8-3・4'),
+          koreanEzekielStart: citationStartsForCompare('에제 2,8─3,4'),
+          englishPsalmStart: citationStartsForCompare('Psalm 119:14, 24, 72, 103, 111, 131'),
+          koreanPsalmStarts: citationStartsForCompare('시편 119(118),14.24.72.103.111.131'),
+          latinLongVirginAntiphonKey: variantSemanticKey(
+            'communion',
+            'Quinque prudentes virgines acceperunt oleum in vasis suis cum lampadibus. Media autem nocte clamor factus est: Ecce sponsus venit.'
+          )
         },
         readingLengthLabels: Object.values(readingLengthVariants).map(variant => variant.label.kr),
         readingLengthKinds: Object.values(readingLengthVariants).map(variant => variant.__dailyLengthKind),
@@ -1012,6 +1093,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           state: androidBarState
         },
         settingsRowOrder,
+        vietnameseSourceSettingVisibility,
         htmlLang: document.documentElement.lang,
         deviceUiLanguageFixtures,
         storedUiLanguage,
@@ -1146,6 +1228,12 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       stored: result.storedUiLanguage,
       gps: result.gpsUiLanguageIsolation
     })}`);
+    assert(result.vietnameseSourceSettingVisibility.translatedVietnamese
+      && result.vietnameseSourceSettingVisibility.forcedVietnameseOriginal
+      && result.vietnameseSourceSettingVisibility.gpsVietnameseOriginal
+      && !result.vietnameseSourceSettingVisibility.forcedNonVietnamese
+      && !result.vietnameseSourceSettingVisibility.gpsNonVietnamese,
+    `Vietnamese reading-source setting visibility is incorrect: ${JSON.stringify(result.vietnameseSourceSettingVisibility)}`);
     assert(result.legend.visibleCount === 2 && result.legend.lineCounts.every(count => count === 1) && !result.legend.hasTitles, `Legend was not reduced to two psalm notes: ${JSON.stringify(result.legend)}`);
     assert(result.enlarged.header === result.enlarged.date
       && result.enlarged.header === result.enlarged.liturgy
@@ -1383,6 +1471,27 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       entrance: result.choiceRuleFixture.provisionalEntranceAlignment,
       communion: result.choiceRuleFixture.citedSingleConflictAlignment
     })}`);
+    assert(result.choiceRuleFixture.multilingualAlignmentFixture.entrance.some(group =>
+        group.kr === 0 && group.en === 0 && group.la === 0)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.entrance.some(group =>
+        group.kr === 1 && group.en === 1 && group.la === 1)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.citationPriority.some(group =>
+        group.kr === 0 && group.la === 0)
+      && !result.choiceRuleFixture.multilingualAlignmentFixture.citationPriority.some(group =>
+        group.kr === 0 && group.la === 1)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.clareOffering.some(group =>
+        group.kr === 0 && group.en === 0 && group.la === 0)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.incompleteNeedsAi
+      && result.choiceRuleFixture.multilingualAlignmentFixture.fallbackNeedsAi
+      && !result.choiceRuleFixture.multilingualAlignmentFixture.combinedNeedsAi
+      && JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture.japaneseMatthewStart)
+        === JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture.koreanMatthewStart)
+      && JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture.japaneseEzekielStart)
+        === JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture.koreanEzekielStart)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.englishPsalmStart.some(start =>
+        result.choiceRuleFixture.multilingualAlignmentFixture.koreanPsalmStarts.includes(start))
+      && result.choiceRuleFixture.multilingualAlignmentFixture.latinLongVirginAntiphonKey === 'wise_virgin_lamp_meet_christ',
+    `Cross-language choice alignment is incomplete or citation-first: ${JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture)}`);
     assert(result.choiceRuleFixture.labels.commonEntrance.kr === '공통 입당송'
       && result.choiceRuleFixture.labels.commonEntrance.vn === 'Ca nhập lễ chung'
       && result.choiceRuleFixture.labels.properPsalm.kr === '고유 화답송'

@@ -677,7 +677,7 @@
             </select>
         </div>
 
-        <div class="setting-row">
+        <div class="setting-row" id="vn-reading-source-row">
             <label id="lbl-set-vn-source">📖 베트남어 전례독서 번역</label>
             <select id="set-vn-source" onchange="updateSettings()">
                 <option value="hanoi">주교회의 전례위원회(UBPT) 번역</option>
@@ -2524,6 +2524,22 @@
         return target && target !== left ? target : fallbackTargetLangFor(left, target);
     }
 
+    function shouldShowVietnameseReadingSourceSetting() {
+        const originalLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
+        const translationLang = normalizeSelectableLang(state.targetLang || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
+        return originalLang === 'VN' || translationLang === 'VN';
+    }
+
+    function syncVietnameseReadingSourceSettingVisibility() {
+        const row = document.getElementById('vn-reading-source-row');
+        if (!row) return false;
+        const visible = shouldShowVietnameseReadingSourceSetting();
+        row.hidden = !visible;
+        row.style.display = visible ? 'flex' : 'none';
+        row.setAttribute('aria-hidden', visible ? 'false' : 'true');
+        return visible;
+    }
+
     function syncTargetLanguageOptions() {
         const select = document.getElementById('set-target-lang');
         const left = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
@@ -2535,6 +2551,7 @@
             option.disabled = sameAsLeft;
         });
         select.value = state.targetLang;
+        syncVietnameseReadingSourceSettingVisibility();
     }
 
     function updateRoleLegend(leftLang, rightLang) {
@@ -5424,6 +5441,7 @@
     function openSettings() {
         syncLocalizedChromeAndSettings();
         syncAndroidSystemBarSettings();
+        syncVietnameseReadingSourceSettingVisibility();
         document.getElementById('settings-modal').style.display = 'flex';
     }
     function closeSettings() { document.getElementById('settings-modal').style.display = 'none'; }
@@ -12306,7 +12324,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const prayerPatterns = [
                 ['sacraments_salvation_offering', /신비.*구원.*성찬례.*제사|bi tich.*ban phat.*on cuu do|cu hanh le te.*phuc vu.*duc\s*ki\s*-?\s*to|sacraments?.*salvation.*worship|mysteries.*salvation/i],
                 ['saint_memorial_joyful_offering_salvation', /기리며.*기쁘게.*예물.*받으시고.*구원|cua le.*vui mung.*dang.*(?:ngay le kinh|thanh).*cuu do|joyfully.*offerings?.*(?:saint|memorial|feast).*salvation|oblata.*gaudentes.*(?:sanct|fest).*salut/iu],
-                ['eucharist_memorial_passion_love_salvation', /성체.*(?:성자|그리스도).*(?:수난|고난).*사랑.*(?:구원|영원한\s*생명)|(?:성자|그리스도).*수난.*(?:선물|사랑).*구원|bi tich thanh the.*tuong nho.*(?:chiu kho|kho hinh|cuoc kho nan).*tinh yeu.*cuu do|tham du.*bi tich thanh the.*(?:chiu kho|kho hinh).*cuu do|eucharist.*memorial.*passion.*love.*salvation|eucharist.*suffering.*resurrection.*eternal salvation/i]
+                ['eucharist_memorial_passion_love_salvation', /성체.*(?:성자|그리스도).*(?:수난|고난).*사랑.*(?:구원|영원한\s*생명)|(?:성자|그리스도).*수난.*(?:선물|사랑).*구원|bi tich thanh the.*tuong nho.*(?:chiu kho|kho hinh|cuoc kho nan).*tinh yeu.*cuu do|tham du.*bi tich thanh the.*(?:chiu kho|kho hinh).*cuu do|eucharist.*memorial.*passion.*love.*salvation|eucharist.*suffering.*resurrection.*eternal salvation/i],
+                ['clare_wonders_merits_offering', /클라라.*놀라우신.*공로.*제사|놀라우신.*클라라.*공로.*제사|clara.*wonders.*merits.*(?:service|offer|sacrifice)|wonders.*clare.*merits.*(?:service|offer|sacrifice)|clara.*mirabil.*merit.*(?:offici|servitut|sacrific)|clara.*ky dieu.*cong.*(?:hy le|phung vu)/i],
+                ['clare_divine_gift_passion_adhere', /천상\s*선물.*클라라.*예수.*수난.*주님.*뜻|divine gift.*clare.*(?:death|passion).*jesus.*(?:hold fast|cling|adhere)|divini muneris.*clara.*mortificationem iesu.*tibi soli|hong an.*clara.*cuoc kho nan.*chi minh chua/i]
             ];
             const haystack = `${normalized}\n${raw}`;
             const prayerMatched = prayerPatterns.find(([, pattern]) => pattern.test(haystack));
@@ -12316,11 +12336,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['mercy_sinned', /죄.*불쌍|자비.*죄|xin xot thuong.*pham toi|nguyen thuong.*nhan hau|be merciful.*sinned|have mercy.*sinned|miserere.*peccavimus/i],
             ['praise_soul_lord', /영혼.*찬미|linh hon.*ngoi khen|praise.*soul.*lord|lauda.*anima/i]
         ] : [
-            ['wise_virgin_lamp_meet_christ', /슬기(?:롭|로).*동정녀.*등불.*그리스도.*맞|trinh nu.*khon ngoan.*(?:den|ngon den).*don.*duc\s*ki\s*-?\s*to|wise virgin.*lamp.*meet.*christ|virgin(?:es)?.*prudentes.*lampad.*christ/i],
-            ['virgin_beautiful_eternal_crown', /그리스도.*동정녀.*아름.*영원한.*동정.*화관|trinh nu.*xinh dep.*(?:trieu thien|vuong mien).*dong trinh|virgin.*beautiful.*crown.*eternal virgin|virgo.*pulchra.*coron.*virginit/i],
+            ['wise_virgin_lamp_meet_christ', /슬기(?:롭|로).*동정녀.*등불.*그리스도.*맞|trinh nu.*khon ngoan.*(?:den|ngon den).*don.*duc\s*ki\s*-?\s*to|wise virgin.*lamp.*meet.*christ|sapiens.*prudent.*obviam christ.*lampad|prudent(?:es)?.*virgin(?:es)?.*(?:oleum|lampad)|virgin(?:es)?.*prudentes.*(?:oleum|lampad)|virgin(?:es)?.*prudentes.*lampad.*christ/i],
+            ['virgin_beautiful_eternal_crown', /그리스도.*동정녀.*아름.*영원한.*동정.*화관|trinh nu.*xinh dep.*(?:trieu thien|vuong mien).*dong trinh|virgin.*beautiful.*crown.*eternal virgin|beautiful.*virgin.*crown.*(?:eternal|perpetual).*virgin|pulchra.*virgo.*coron.*virginit|virgo.*pulchra.*coron.*virginit/i],
             ['lord_portion_inheritance_cup', /주님.*(?:몫|상속|기업).*잔|chua.*phan san nghiep.*chen(?: phuc)?|lord.*portion.*inheritance.*cup|dominus.*pars.*hereditat.*calic/i],
             ['covenant_defend_poor_lives', /계약.*가련한.*생명.*(?:소송|이끄|버리)|giao uoc.*ngheo.*(?:roi|bien ho|bao ve)|covenant.*poor.*(?:abandon|defend|cause)|testament.*pauper.*caus/i],
-            ['bridegroom_christ_comes', /신랑.*그리스도.*맞으러|tan lang.*duc\s*ki\s*-?\s*to.*(?:nghenh don|don nguoi)|bridegroom.*christ.*meet|sponsus.*christ.*occurr/i],
+            ['bridegroom_christ_comes', /신랑.*그리스도.*맞으러|tan lang.*duc\s*ki\s*-?\s*to.*(?:nghenh don|don nguoi)|bridegroom.*christ.*meet|bridegroom.*meet.*christ|sponsus.*(?:obviam|exite).*christ|sponsus.*christ.*occurr/i],
             ['one_request_house_lord', /청하는.*(?:한|오직).*가지.*주님.*집|mot dieu.*xin.*nha chua|one thing.*ask.*house of the lord|unam.*petii.*domo domini/i],
             ['leave_all_follow_eternal_inheritance', /모든.*버리고.*따르.*영원한.*생명|bo moi su.*theo thay.*su song doi doi|leave.*all.*follow.*eternal life|reliquistis omnia.*secuti.*vitam aeternam/i],
             ['father_revealed_little_ones', /하늘과\s*땅.*(?:아버지|주님).*철부지|아버지.*하늘\s*나라.*(?:신비|비밀).*철부지|lay cha.*chua te troi dat.*(?:mac khai|to lo).*?(?:be mon|nho be)|father.*lord of heaven and earth.*reveal.*(?:little ones|children)|pater.*(?:caeli|coeli).*terrae.*revela.*parvul|天地の主.*父.*幼子|父.*幼子.*(?:示|現)/i],
@@ -12347,9 +12367,28 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function buildFallbackVariantAlignment(baseId, optionMap, section = {}) {
+        const groups = [];
+        const used = new Set();
+        const semanticGroups = {};
+        Object.keys(optionMap || {}).forEach(lower => {
+            optionMap[lower].forEach((option, index) => {
+                const key = variantSemanticKey(baseId, variantOptionMeaningText(baseId, option));
+                if (!key) return;
+                if (!semanticGroups[key]) semanticGroups[key] = {};
+                semanticGroups[key][lower] = index;
+            });
+        });
+        Object.values(semanticGroups).forEach(group => {
+            const mappedLanguages = Object.keys(group);
+            if (mappedLanguages.length < 2) return;
+            groups.push(group);
+            mappedLanguages.forEach(lower => used.add(`${lower}:${group[lower]}`));
+        });
+
         const citationGroups = {};
         Object.keys(optionMap || {}).forEach(lower => {
             optionMap[lower].forEach((option, index) => {
+                if (used.has(`${lower}:${index}`)) return;
                 const citationEntry = Array.isArray(section[`optionCits_${lower}`])
                     ? section[`optionCits_${lower}`][index]
                     : null;
@@ -12367,33 +12406,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 });
             });
         });
-
-        const groups = [];
-        const used = new Set();
         Object.values(citationGroups).forEach(group => {
             const mappedLanguages = Object.keys(group);
             if (mappedLanguages.length < 2) return;
             groups.push(group);
             mappedLanguages.forEach(lower => used.add(`${lower}:${group[lower]}`));
         });
-
-        const semanticGroups = {};
-        Object.keys(optionMap || {}).forEach(lower => {
-            optionMap[lower].forEach((option, index) => {
-                if (used.has(`${lower}:${index}`)) return;
-                const key = variantSemanticKey(baseId, variantOptionMeaningText(baseId, option));
-                if (!key) return;
-                if (!semanticGroups[key]) semanticGroups[key] = {};
-                semanticGroups[key][lower] = index;
-            });
-        });
-        const semanticMatches = Object.values(semanticGroups);
-        if (sourceSeparatedPrayerVariantPartIds.has(baseId)) {
-            groups.push(...semanticMatches.filter(group => Object.keys(group).length >= 2));
-            if (!groups.length) return [];
-            return normalizeVariantAlignmentGroups(optionMap, groups);
-        }
-        groups.push(...semanticMatches);
         if (!groups.length) return [];
 
         const normalized = normalizeVariantAlignmentGroups(optionMap, groups);
@@ -12479,14 +12497,25 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .sort((a, b) => b.key.length - a.key.length);
     }
 
+    function bibleAliasEntryForCompare(bookKey) {
+        const aliases = bibleAliasEntriesForCompare();
+        return aliases.find(item => item.key === bookKey)
+            || aliases.find(item => item.key === `${bookKey}s` || `${item.key}s` === bookKey)
+            || aliases.find(item => item.key.length >= 2
+                && /[^\x00-\x7F]/.test(item.key)
+                && bookKey.startsWith(item.key))
+            || null;
+    }
+
     function normalizedCitationForCompare(value) {
         let text = normalizeBibleAliasForCompare(String(value || '').replace(/\s*(?:참고|참조)$/u, ''))
             .replace(/^(?:x|cf|cfr|see)\s+/, '')
             .trim();
-        const entry = bibleAliasEntriesForCompare().find(item =>
-            text === item.key || text.startsWith(`${item.key} `)
-        );
-        if (entry) text = `${entry.kr}${text.slice(entry.key.length)}`;
+        const spacedBook = bibleAliasEntriesForCompare().find(item => text.startsWith(`${item.key} `));
+        const compactBookKey = (text.match(/^([^\d]+)/u) || [])[1] || '';
+        const entry = spacedBook || bibleAliasEntryForCompare(compactBookKey);
+        const matchedAliasLength = spacedBook ? spacedBook.key.length : compactBookKey.length;
+        if (entry) text = `${entry.kr}${text.slice(matchedAliasLength)}`;
         return text.replace(/[^\p{L}\p{N}]+/gu, '');
     }
 
@@ -12495,10 +12524,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/\s*(?:참고|참조)$/u, '')
             .replace(/^(?:x\.?|cf\.?|cfr\.?|see)\s+/i, '')
             .trim();
-        const match = source.match(/^(.*?)\s*(\d+)(?:\s*\(\s*(\d+)\s*\))?\s*[,.:]\s*(\d+)/u);
+        const match = source.match(/^(.*?)\s*(\d+)(?:\s*\(\s*(\d+)\s*\))?\s*[,.:・]\s*(\d+)/u);
         if (!match) return [];
         const bookKey = normalizeBibleAliasForCompare(match[1]);
-        const entry = bibleAliasEntriesForCompare().find(item => item.key === bookKey);
+        const entry = bibleAliasEntryForCompare(bookKey);
         if (!entry) return [];
         return Array.from(new Set([match[2], match[3]]
             .filter(Boolean)
@@ -12580,8 +12609,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align2';
+
     function dailyVariantAlignmentStorageKey(date, baseId) {
-        return `${STORAGE_PREFIX}dailyVariantAlignment:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
+        return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
     }
 
     function readCachedDailyVariantAlignment(date, baseId, signature) {
@@ -12677,6 +12708,30 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return normalizeVariantAlignmentGroups(
             optionMap,
             splitKnownSemanticConflicts(baseId, optionMap, proposedGroups)
+        );
+    }
+
+    function matchedVariantAlignmentGroups(alignment) {
+        return (Array.isArray(alignment) ? alignment : []).filter(group =>
+            ['kr', 'vn', 'en', 'jp', 'la'].filter(lower => Number.isInteger(group && group[lower])).length >= 2
+        );
+    }
+
+    function variantAlignmentNeedsSemanticCompletion(alignment) {
+        const singletonLanguages = new Set();
+        (Array.isArray(alignment) ? alignment : []).forEach(group => {
+            const mapped = ['kr', 'vn', 'en', 'jp', 'la']
+                .filter(lower => Number.isInteger(group && group[lower]));
+            if (mapped.length === 1) singletonLanguages.add(mapped[0]);
+        });
+        return singletonLanguages.size >= 2;
+    }
+
+    function combineTrustedVariantAlignments(baseId, optionMap, trustedAlignment, proposedAlignment) {
+        return normalizeSafeVariantAlignmentGroups(
+            baseId,
+            optionMap,
+            matchedVariantAlignmentGroups(trustedAlignment).concat(Array.isArray(proposedAlignment) ? proposedAlignment : [])
         );
     }
 
@@ -12778,12 +12833,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const section = fetchedData && fetchedData[baseId];
             if (!section) return;
             const { optionMap, maxOptions } = selectableOptionMapFromData(section, baseId);
+            const signature = variantAlignmentSignature(baseId, optionMap);
             const strictReadingAlignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
-            if (strictReadingAlignment.length) {
-                section.variantAlignment = strictReadingAlignment;
+            if (strictReadingKeys.has(baseId)) {
+                const cached = readCachedDailyVariantAlignment(date, baseId, signature);
+                if (cached) section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, strictReadingAlignment, cached);
+                else if (strictReadingAlignment.length) section.variantAlignment = strictReadingAlignment;
                 return;
             }
-            if (strictReadingKeys.has(baseId)) return;
             const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
             if (koreanOrdinaryTranslationAlignment.length) {
                 section.variantAlignment = koreanOrdinaryTranslationAlignment;
@@ -12800,15 +12857,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return;
             }
             if (maxOptions < 2) return;
-            const signature = variantAlignmentSignature(baseId, optionMap);
             const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
-            if (fallbackAlignment.length) {
-                section.variantAlignment = fallbackAlignment;
-                return;
-            }
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
-                section.variantAlignment = normalizeSafeVariantAlignmentGroups(baseId, optionMap, cached);
+                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, cached);
+                return;
+            }
+            if (fallbackAlignment.length) {
+                section.variantAlignment = fallbackAlignment;
                 return;
             }
             // Until the asynchronous semantic check finishes, keep unmatched
@@ -12823,13 +12879,32 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const section = fetchedData && fetchedData[baseId];
             if (!section) return;
             const { optionMap, maxOptions } = selectableOptionMapFromData(section, baseId);
+            const signature = variantAlignmentSignature(baseId, optionMap);
             const strictReadingAlignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
-            if (strictReadingAlignment.length) {
-                section.variantAlignment = strictReadingAlignment;
-                writeCachedDailyVariantAlignment(date, baseId, variantAlignmentSignature(baseId, optionMap), strictReadingAlignment);
+            if (strictReadingKeys.has(baseId)) {
+                if (strictReadingAlignment.length && !variantAlignmentNeedsSemanticCompletion(strictReadingAlignment)) {
+                    section.variantAlignment = strictReadingAlignment;
+                    writeCachedDailyVariantAlignment(date, baseId, signature, strictReadingAlignment);
+                    return;
+                }
+                const cached = readCachedDailyVariantAlignment(date, baseId, signature);
+                if (cached) {
+                    section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, strictReadingAlignment, cached);
+                    return;
+                }
+                if (maxOptions < 2 && !strictReadingAlignment.length) return;
+                try {
+                    const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap);
+                    const alignment = combineTrustedVariantAlignments(baseId, optionMap, strictReadingAlignment, proposed);
+                    if (alignment.length) {
+                        section.variantAlignment = alignment;
+                        writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
+                    }
+                } catch (error) {
+                    console.warn(`${baseId} AI reading alignment failed, keeping citation alignment.`, error);
+                }
                 return;
             }
-            if (strictReadingKeys.has(baseId)) return;
             const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
             if (koreanOrdinaryTranslationAlignment.length) {
                 section.variantAlignment = koreanOrdinaryTranslationAlignment;
@@ -12846,20 +12921,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return;
             }
             if (maxOptions < 2) return;
-            const signature = variantAlignmentSignature(baseId, optionMap);
             const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
-            if (fallbackAlignment.length) {
+            if (fallbackAlignment.length && !variantAlignmentNeedsSemanticCompletion(fallbackAlignment)) {
                 section.variantAlignment = fallbackAlignment;
                 writeCachedDailyVariantAlignment(date, baseId, signature, fallbackAlignment);
                 return;
             }
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
-                section.variantAlignment = normalizeSafeVariantAlignmentGroups(baseId, optionMap, cached);
+                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, cached);
                 return;
             }
             try {
-                const alignment = await requestVariantAlignmentWithGemini(baseId, optionMap);
+                const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap);
+                const alignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, proposed);
                 if (alignment.length) {
                     section.variantAlignment = alignment;
                     writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
