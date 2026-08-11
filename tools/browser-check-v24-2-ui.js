@@ -61,7 +61,7 @@ function startServer() {
     await page.locator('[data-vn-source="hanoi"]').click({ timeout: 5000 }).catch(() => {});
     await page.waitForFunction(() => typeof render === 'function' && document.querySelectorAll('#missal-root > *').length > 0);
 
-    const result = await page.evaluate(() => {
+    const result = await page.evaluate(async () => {
       const px = selector => parseFloat(getComputedStyle(document.querySelector(selector)).fontSize);
       const setSelect = (id, value) => {
         const element = document.getElementById(id);
@@ -1079,6 +1079,79 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       Object.assign(state, savedCopyrightState);
       updateFooterCopyright();
 
+      const originalRefreshHandlers = { ...pageRefreshHandlers };
+      const routedRefreshTabs = [];
+      const originalFetchMassData = fetchMassData;
+      let massRefreshOptions = null;
+      fetchMassData = async options => { massRefreshOptions = { ...options }; return true; };
+      await refreshMassTabContent();
+      fetchMassData = originalFetchMassData;
+      const forceRefreshDate = new Date(2040, 0, 2);
+      const forceRefreshKey = `${formatDateIso(forceRefreshDate)}:EN:${strictDailySourceCacheVariant(forceRefreshDate)}`;
+      const originalEnglishDailyFetcher = dailySourceFetchers.EN;
+      let forceRemoteFetchCalls = 0;
+      dailySourceCache[forceRefreshKey] = Promise.resolve({ title: 'cached', data: {} });
+      dailySourceFetchers.EN = async () => {
+        forceRemoteFetchCalls += 1;
+        return { title: 'fresh', data: {} };
+      };
+      const forceRemoteResult = await fetchParsedDailyMass('EN', forceRefreshDate, { forceRemote: true });
+      dailySourceFetchers.EN = originalEnglishDailyFetcher;
+      delete dailySourceCache[forceRefreshKey];
+      localStorage.removeItem(dailySourceStorageKey('EN', forceRefreshDate));
+      for (const tab of ['mass', 'prayers', 'hymns', 'churches']) {
+        pageRefreshHandlers[tab] = async () => { routedRefreshTabs.push(tab); };
+        state.activeTab = tab;
+        await window.refreshActiveAppTab();
+      }
+      Object.assign(pageRefreshHandlers, originalRefreshHandlers);
+      try {
+        Object.defineProperty(navigator, 'maxTouchPoints', { configurable: true, value: 1 });
+      } catch (error) {
+        // Chromium mobile emulation may already expose this as a read-only value.
+      }
+      let pullGestureCalls = 0;
+      let pullMovePrevented = false;
+      pageRefreshHandlers.hymns = async () => { pullGestureCalls += 1; };
+      state.activeTab = 'hymns';
+      window.scrollTo(0, 0);
+      document.body.classList.add('consent-pending');
+      const blockedWhileConsentPending = !pullRefreshCanStart({ target: document.body });
+      document.body.classList.remove('consent-pending');
+      handlePullRefreshTouchStart({
+        target: document.body,
+        touches: [{ clientX: 120, clientY: 20 }]
+      });
+      handlePullRefreshTouchMove({
+        cancelable: true,
+        preventDefault: () => { pullMovePrevented = true; },
+        touches: [{ clientX: 122, clientY: 128 }]
+      });
+      const releaseLabelVisible = document.getElementById('pull-refresh-indicator').classList.contains('is-ready');
+      handlePullRefreshTouchEnd();
+      await new Promise(resolve => setTimeout(resolve, 760));
+      const pullRefreshFixture = {
+        routedRefreshTabs,
+        massSkipsStartupPrompts: massRefreshOptions?.skipStartupPrompts === true,
+        massForcesRemote: massRefreshOptions?.forceRemote === true,
+        forceRemoteBypassesMemoryCache: forceRemoteFetchCalls === 1 && forceRemoteResult?.title === 'fresh',
+        gestureCalls: pullGestureCalls,
+        movePrevented: pullMovePrevented,
+        releaseLabelVisible,
+        indicatorHidden: document.getElementById('pull-refresh-indicator').getAttribute('aria-hidden') === 'true',
+        consentStillHidden: getComputedStyle(document.getElementById('consent-modal')).display === 'none',
+        sourceChoiceStillHidden: !document.getElementById('vn-source-modal').classList.contains('is-visible'),
+        blockedWhileConsentPending,
+        prayerCacheBusts: /prayer_data\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('prayer_data.js')),
+        hymnCacheBusts: /hymn_data\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('hymn_data.js')),
+        churchCacheBusts: /church_local_details\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('church_local_details.js'))
+      };
+      Object.assign(pageRefreshHandlers, originalRefreshHandlers);
+      state.activeTab = 'mass';
+      applyActiveTabState();
+      const currentFirstSection = document.querySelector('#missal-root > .section-bar');
+      const currentLegend = document.getElementById('role-legend');
+
       return {
         baseline,
         enlarged: {
@@ -1122,7 +1195,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           hasTitles: !!document.querySelector('.role-legend-title'),
           text: visibleLegendGroups.map(node => node.textContent.trim())
         },
-        firstGap: firstSection && legend ? Math.round(firstSection.getBoundingClientRect().top - legend.getBoundingClientRect().bottom) : null,
+        firstGap: currentFirstSection && currentLegend
+          ? Math.round(currentFirstSection.getBoundingClientRect().top - currentLegend.getBoundingClientRect().bottom)
+          : null,
         bodyPaddingBottom: getComputedStyle(document.body).paddingBottom,
         missalPaddingBottom: getComputedStyle(document.getElementById('missal-root')).paddingBottom,
         settingsButton: { width: settingsButton.width, height: settingsButton.height },
@@ -1200,6 +1275,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         calendarRuleFixtures,
         futureProperFixtures,
         vietnameseMassCopyright,
+        pullRefreshFixture,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -1248,6 +1324,21 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && !result.vietnameseSourceSettingVisibility.forcedNonVietnamese
       && !result.vietnameseSourceSettingVisibility.gpsNonVietnamese,
     `Vietnamese reading-source setting visibility is incorrect: ${JSON.stringify(result.vietnameseSourceSettingVisibility)}`);
+    assert(JSON.stringify(result.pullRefreshFixture.routedRefreshTabs) === JSON.stringify(['mass', 'prayers', 'hymns', 'churches'])
+      && result.pullRefreshFixture.massSkipsStartupPrompts
+      && result.pullRefreshFixture.massForcesRemote
+      && result.pullRefreshFixture.forceRemoteBypassesMemoryCache
+      && result.pullRefreshFixture.gestureCalls === 1
+      && result.pullRefreshFixture.movePrevented
+      && result.pullRefreshFixture.releaseLabelVisible
+      && result.pullRefreshFixture.indicatorHidden
+      && result.pullRefreshFixture.consentStillHidden
+      && result.pullRefreshFixture.sourceChoiceStillHidden
+      && result.pullRefreshFixture.blockedWhileConsentPending
+      && result.pullRefreshFixture.prayerCacheBusts
+      && result.pullRefreshFixture.hymnCacheBusts
+      && result.pullRefreshFixture.churchCacheBusts,
+    `Mobile pull-to-refresh did not stay page-scoped or reopened startup choices: ${JSON.stringify(result.pullRefreshFixture)}`);
     assert(result.legend.visibleCount === 2 && result.legend.lineCounts.every(count => count === 1) && !result.legend.hasTitles, `Legend was not reduced to two psalm notes: ${JSON.stringify(result.legend)}`);
     assert(result.enlarged.header === result.enlarged.date
       && result.enlarged.header === result.enlarged.liturgy

@@ -32,7 +32,15 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body { font-size: var(--font-size-base); background: var(--bg-gradient); min-height: 100vh; padding-bottom: 0; transition: background 0.5s; }
+        html { overscroll-behavior-y: contain; }
+        body { font-size: var(--font-size-base); background: var(--bg-gradient); min-height: 100vh; padding-bottom: 0; overscroll-behavior-y: contain; transition: background 0.5s; }
+        .pull-refresh-indicator { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 8px); left: 50%; z-index: 10010; display: flex; align-items: center; gap: 7px; max-width: calc(100vw - 24px); padding: 8px 13px; border: 1px solid rgba(26, 37, 47, 0.16); border-radius: 999px; background: rgba(255, 255, 255, 0.96); box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18); color: #334155; font-size: 0.82rem; font-weight: 900; line-height: 1.2; opacity: 0; pointer-events: none; transform: translate(-50%, -150%); transition: transform 0.16s ease, opacity 0.16s ease, color 0.16s ease; }
+        .pull-refresh-indicator.is-visible { opacity: 1; }
+        .pull-refresh-indicator.is-ready { color: var(--brand-logo-color); }
+        .pull-refresh-indicator.is-refreshing { color: var(--primary-color); transform: translate(-50%, 0); }
+        .pull-refresh-spinner { width: 16px; height: 16px; flex: 0 0 auto; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; }
+        .pull-refresh-indicator.is-refreshing .pull-refresh-spinner { animation: pull-refresh-spin 0.72s linear infinite; }
+        @keyframes pull-refresh-spin { to { transform: rotate(360deg); } }
         .lang-KR { font-family: 'gulim', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', 'One UI Sans', sans-serif; }
         .lang-VN { font-family: 'Segoe UI', Arial, Helvetica, 'Noto Sans VN', 'Roboto', 'One UI Sans', sans-serif; }
         .lang-EN { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Roboto', 'One UI Sans', sans-serif; }
@@ -444,6 +452,11 @@
     </style>
 </head>
 <body class="consent-pending">
+
+<div id="pull-refresh-indicator" class="pull-refresh-indicator" role="status" aria-live="polite" aria-hidden="true">
+    <span class="pull-refresh-spinner" aria-hidden="true"></span>
+    <span id="pull-refresh-label">당겨서 새로고침</span>
+</div>
 
 <div id="consent-modal" role="dialog" aria-modal="true" aria-labelledby="consent-title">
     <div class="consent-content">
@@ -5292,6 +5305,203 @@
         applyActiveTabState();
         if (previousTab !== 'mass' && state.activeTab === 'mass') scheduleMassTabScrollRestore(state.massScrollSnapshot);
     }
+
+    const pullRefreshUiLabels = {
+        KR: { pull: '당겨서 새로고침', release: '놓아서 새로고침', loading: '새로고침 중', done: '새로고침 완료', error: '새로고침 실패' },
+        VN: { pull: 'Kéo xuống để làm mới', release: 'Thả ra để làm mới', loading: 'Đang làm mới', done: 'Đã làm mới', error: 'Không thể làm mới' },
+        EN: { pull: 'Pull to refresh', release: 'Release to refresh', loading: 'Refreshing', done: 'Refreshed', error: 'Refresh failed' },
+        JP: { pull: '下に引いて更新', release: '離して更新', loading: '更新中', done: '更新しました', error: '更新できませんでした' },
+        LA: { pull: 'Trahe ad renovandum', release: 'Dimitte ad renovandum', loading: 'Renovatur', done: 'Renovatum est', error: 'Renovari non potuit' }
+    };
+    const PULL_REFRESH_THRESHOLD = 86;
+    let pullRefreshStartY = 0;
+    let pullRefreshStartX = 0;
+    let pullRefreshDistance = 0;
+    let pullRefreshTracking = false;
+    let pullRefreshBusy = false;
+
+    function pullRefreshUiText(key) {
+        const lang = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        const labels = pullRefreshUiLabels[lang] || pullRefreshUiLabels.KR;
+        return labels[key] || pullRefreshUiLabels.KR[key] || '';
+    }
+
+    function updatePullRefreshIndicator(mode = 'hidden', distance = 0) {
+        const indicator = document.getElementById('pull-refresh-indicator');
+        const label = document.getElementById('pull-refresh-label');
+        if (!indicator || !label) return;
+        const visible = mode !== 'hidden';
+        indicator.classList.toggle('is-visible', visible);
+        indicator.classList.toggle('is-ready', mode === 'release');
+        indicator.classList.toggle('is-refreshing', mode === 'loading');
+        indicator.setAttribute('aria-hidden', visible ? 'false' : 'true');
+        label.textContent = pullRefreshUiText(mode === 'hidden' ? 'pull' : mode);
+        if (mode === 'pull' || mode === 'release') {
+            const visualDistance = Math.min(112, Math.max(0, distance) * 0.62);
+            indicator.style.transform = `translate(-50%, ${Math.max(-48, visualDistance - 54)}px)`;
+        } else if (mode === 'done' || mode === 'error') {
+            indicator.style.transform = 'translate(-50%, 0)';
+        } else {
+            indicator.style.removeProperty('transform');
+        }
+    }
+
+    function pageDataScriptUrl(fileName) {
+        const url = new URL(`JS file/${fileName}`, window.location.href);
+        url.searchParams.set('pullRefresh', String(Date.now()));
+        return url.href;
+    }
+
+    function reloadPageDataScript(fileName, onLoaded) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = pageDataScriptUrl(fileName);
+            script.onload = () => {
+                try {
+                    if (typeof onLoaded === 'function') onLoaded();
+                    resolve();
+                } catch (error) {
+                    reject(error);
+                } finally {
+                    script.remove();
+                }
+            };
+            script.onerror = () => {
+                script.remove();
+                reject(new Error(`${fileName} reload failed`));
+            };
+            document.head.appendChild(script);
+        });
+    }
+
+    async function refreshMassTabContent() {
+        return fetchMassData({ skipStartupPrompts: true, forceRemote: true });
+    }
+
+    async function refreshPrayerTabContent() {
+        await reloadPageDataScript('prayer_data.js');
+        aiTranslationRecords.clear();
+        renderPrayerPanel();
+    }
+
+    async function refreshHymnTabContent() {
+        await reloadPageDataScript('hymn_data.js', () => {
+            if (Array.isArray(window.ordoHymnData)) window.hymnData = window.ordoHymnData;
+        });
+        hymnTranslationRecords.clear();
+        renderHymnPanel();
+    }
+
+    async function refreshChurchTabContent() {
+        await reloadPageDataScript('church_local_details.js');
+        churchPlaceDetailsCache.clear();
+        usMassTimesCache.clear();
+        churchSearchRequestId += 1;
+        churchInfoRequestId += 1;
+        if (churchIdleTimer) clearTimeout(churchIdleTimer);
+        churchIdleTimer = null;
+        if (churchInfoWindow) churchInfoWindow.close();
+        churchInfoWindowOpen = false;
+        clearChurchMarkers();
+        const key = googleMapsApiKey() || await fetchGoogleMapsApiKey();
+        if (key) await initializeChurchMap();
+        else showChurchFallback();
+    }
+
+    const pageRefreshHandlers = {
+        mass: refreshMassTabContent,
+        prayers: refreshPrayerTabContent,
+        hymns: refreshHymnTabContent,
+        churches: refreshChurchTabContent
+    };
+
+    async function refreshActiveAppTab() {
+        const tab = ['mass', 'prayers', 'hymns', 'churches'].includes(state.activeTab) ? state.activeTab : 'mass';
+        const handler = pageRefreshHandlers[tab] || pageRefreshHandlers.mass;
+        await handler();
+        return tab;
+    }
+    window.refreshActiveAppTab = refreshActiveAppTab;
+
+    function pullRefreshBlockedByUi() {
+        if (document.body.classList.contains('consent-pending') || startupNoticeDecision !== true) return true;
+        const settings = document.getElementById('settings-modal');
+        const sourceChoice = document.getElementById('vn-source-modal');
+        return !!((settings && getComputedStyle(settings).display !== 'none')
+            || (sourceChoice && sourceChoice.classList.contains('is-visible')));
+    }
+
+    function pullRefreshCanStart(event) {
+        if (pullRefreshBusy || pullRefreshBlockedByUi()) return false;
+        if (!(navigator.maxTouchPoints > 0 || 'ontouchstart' in window)) return false;
+        if (window.innerWidth > 1024) return false;
+        if ((window.scrollY || document.documentElement.scrollTop || 0) > 1) return false;
+        const target = event && event.target;
+        return !(target && target.closest && target.closest('input, select, textarea, button, a, iframe, [role="application"], .gm-style'));
+    }
+
+    function resetPullRefreshGesture() {
+        pullRefreshTracking = false;
+        pullRefreshDistance = 0;
+        pullRefreshStartY = 0;
+        pullRefreshStartX = 0;
+    }
+
+    function handlePullRefreshTouchStart(event) {
+        if (!event.touches || event.touches.length !== 1 || !pullRefreshCanStart(event)) return;
+        pullRefreshTracking = true;
+        pullRefreshStartY = event.touches[0].clientY;
+        pullRefreshStartX = event.touches[0].clientX;
+        pullRefreshDistance = 0;
+    }
+
+    function handlePullRefreshTouchMove(event) {
+        if (!pullRefreshTracking || !event.touches || event.touches.length !== 1) return;
+        const deltaY = event.touches[0].clientY - pullRefreshStartY;
+        const deltaX = event.touches[0].clientX - pullRefreshStartX;
+        if (deltaY <= 0 || Math.abs(deltaX) > deltaY) {
+            updatePullRefreshIndicator('hidden');
+            resetPullRefreshGesture();
+            return;
+        }
+        pullRefreshDistance = deltaY;
+        if (event.cancelable) event.preventDefault();
+        updatePullRefreshIndicator(deltaY >= PULL_REFRESH_THRESHOLD ? 'release' : 'pull', deltaY);
+    }
+
+    async function runPullRefresh() {
+        pullRefreshBusy = true;
+        updatePullRefreshIndicator('loading');
+        try {
+            await window.refreshActiveAppTab();
+            updatePullRefreshIndicator('done');
+            await new Promise(resolve => setTimeout(resolve, 650));
+        } catch (error) {
+            console.warn('현재 페이지 새로고침 실패', error);
+            updatePullRefreshIndicator('error');
+            await new Promise(resolve => setTimeout(resolve, 1100));
+        } finally {
+            pullRefreshBusy = false;
+            updatePullRefreshIndicator('hidden');
+        }
+    }
+
+    function handlePullRefreshTouchEnd() {
+        if (!pullRefreshTracking) return;
+        const shouldRefresh = pullRefreshDistance >= PULL_REFRESH_THRESHOLD;
+        resetPullRefreshGesture();
+        if (shouldRefresh) runPullRefresh();
+        else updatePullRefreshIndicator('hidden');
+    }
+
+    document.addEventListener('touchstart', handlePullRefreshTouchStart, { passive: true });
+    document.addEventListener('touchmove', handlePullRefreshTouchMove, { passive: false });
+    document.addEventListener('touchend', handlePullRefreshTouchEnd, { passive: true });
+    document.addEventListener('touchcancel', () => {
+        resetPullRefreshGesture();
+        if (!pullRefreshBusy) updatePullRefreshIndicator('hidden');
+    }, { passive: true });
 
     function syncFloatingLiturgyBannerVisibility() {
         const banner = document.getElementById('floating-liturgy-banner');
@@ -11331,11 +11541,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
     }
 
-    async function fetchParsedDailyMass(lang, date) {
+    async function fetchParsedDailyMass(lang, date, options = {}) {
         const sourceVariant = lang === 'VN' ? `:${normalizeVietnameseReadingSource(state.vnReadingSource)}` : '';
         const key = `${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
+        if (options.forceRemote) delete dailySourceCache[key];
         if (!dailySourceCache[key]) {
-            const cached = readCachedDailySource(lang, date);
+            const cached = options.forceRemote ? null : readCachedDailySource(lang, date);
             if (cached) {
                 dailySourceCache[key] = Promise.resolve(cached);
             } else {
@@ -13798,7 +14009,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         };
 
         const results = await Promise.all(sources.map(lang => {
-            const sourcePromise = fetchParsedDailyMass(lang, today);
+            const sourcePromise = fetchParsedDailyMass(lang, today, { forceRemote: !!options.forceRemote });
             return withTimeout(
                 sourcePromise,
                 DAILY_SOURCE_LANGUAGE_TIMEOUT_MS,
@@ -13844,11 +14055,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return appliedCount > 0 || results.some(result => result.parsed);
     }
 
-    function refreshDailyReadingsForLoad(today, loadId, sources, silent = true) {
+    function refreshDailyReadingsForLoad(today, loadId, sources, silent = true, forceRemote = false) {
         return fetchDailyReadings({
             date: today,
             sources,
             silent,
+            forceRemote,
             preserveLoadedStatus: true,
             shouldApply: () => loadId === activeMassDataLoadId
         }).then(applied => {
@@ -13858,18 +14070,34 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
-    async function fetchMassData() {
+    function clearDailyAnalysisCachesForRefresh(date) {
+        try {
+            dailyVariantAlignmentSectionIds.forEach(baseId => {
+                localStorage.removeItem(dailyVariantAlignmentStorageKey(date, baseId));
+            });
+            localStorage.removeItem(dailySemanticEquivalenceStorageKey(date));
+        } catch (error) {
+            console.warn('전례 선택지 분석 캐시를 비우지 못했습니다.', error);
+        }
+    }
+
+    async function fetchMassData(options = {}) {
         const loadId = ++activeMassDataLoadId;
         const dateContext = rememberLiturgicalDateContext(getStrictDateContext(new Date()));
         const today = cloneDateOnly(dateContext.date);
         state.liturgyInfo = applyNavigationDateLabel(buildGeneratedLiturgyInfo(today), dateContext);
         state.liturgyInfo.color = recommendedVestmentColor(today, state.liturgyInfo.color, state.liturgyInfo);
         state.isSunday = !!(state.liturgyInfo.isSunday || state.liturgyInfo.isSolemnity);
-        const consentGranted = await waitForStartupNoticeDecision();
-        if (!consentGranted || loadId !== activeMassDataLoadId) return;
         const requestedSources = getActiveDailySourceLanguages();
-        await ensureVietnameseReadingSourceChoice(requestedSources);
+        if (!options.skipStartupPrompts) {
+            const consentGranted = await waitForStartupNoticeDecision();
+            if (!consentGranted || loadId !== activeMassDataLoadId) return false;
+            await ensureVietnameseReadingSourceChoice(requestedSources);
+        } else if (startupNoticeDecision !== true || document.body.classList.contains('consent-pending')) {
+            return false;
+        }
         if (loadId !== activeMassDataLoadId) return;
+        if (options.forceRemote) clearDailyAnalysisCachesForRefresh(today);
         state.options.eucharist_song = '';
         state.autoEucharistSongKey = '';
 
@@ -13878,14 +14106,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         await loadSpecialMassFileIfNeeded(today);
         if (loadId !== activeMassDataLoadId) return;
 
-        const sources = markDailyReadingLanguagesLoading(getActiveDailySourceLanguages());
+        const sources = markDailyReadingLanguagesLoading(requestedSources);
         applyCachedDailyReadings(today, sources, { suppressTitles: true });
         render();
         refreshPopeNamesFromVatican().then(changed => {
             if (changed && loadId === activeMassDataLoadId) render();
         });
 
-        refreshDailyReadingsForLoad(today, loadId, sources, true);
+        return refreshDailyReadingsForLoad(today, loadId, sources, true, !!options.forceRemote);
     }
 
     function applyDetectedLocation(nextLoc, detectedTimeZone = '') {
