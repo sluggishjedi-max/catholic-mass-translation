@@ -83,6 +83,12 @@ function startServer() {
         legend: px('.role-legend'),
         quick: px('.quick-home-btn')
       };
+      const koreanVietnameseSourceLabels = {
+        popup: vietnameseReadingSourceLabel('hanoi', 'KR'),
+        setting: document.querySelector('#set-vn-source option[value="hanoi"]')?.textContent.trim(),
+        vietnamese: vietnameseReadingSourceLabel('hanoi', 'VN'),
+        legacyKoreanPresent: document.body.textContent.includes('주교회의 전례위원회(UBPT)')
+      };
 
       setSelect('set-ui-lang', 'VN');
       setSelect('set-font-size', '22px');
@@ -1213,6 +1219,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         targetOptions,
         fontOptions,
         sourceOptions,
+        koreanVietnameseSourceLabels,
         settingsLabels: [
           'lbl-settings-title', 'lbl-set-gps', 'lbl-set-loc', 'lbl-set-target',
           'lbl-set-vn-source', 'lbl-set-stacked', 'lbl-set-voice',
@@ -1351,6 +1358,11 @@ Nội dung lịch sử không thuộc lời nguyện.`;
     assert(result.targetOptions.includes('Tiếng Hàn / 한국어') && result.targetOptions.includes('Tiếng Anh / English'), `Localized target options missing: ${JSON.stringify(result.targetOptions)}`);
     assert(JSON.stringify(result.fontOptions) === JSON.stringify(['Nhỏ', 'Bình thường', 'Lớn', 'Rất lớn']), `Vietnamese font choices mismatch: ${JSON.stringify(result.fontOptions)}`);
     assert(result.sourceOptions.every(text => /Bản dịch|KTCGKPV/.test(text)), `Vietnamese source choices are not localized: ${JSON.stringify(result.sourceOptions)}`);
+    assert(result.koreanVietnameseSourceLabels.popup === '베트남 주교회의 전례위원회 번역 · 미사독서'
+      && result.koreanVietnameseSourceLabels.setting === '베트남 주교회의 전례위원회 번역 · 미사독서'
+      && result.koreanVietnameseSourceLabels.vietnamese === 'Bản dịch Ủy ban Phụng tự (UBPT) · Sách Bài Đọc'
+      && !result.koreanVietnameseSourceLabels.legacyKoreanPresent,
+    `Korean Vietnamese-source labels changed incorrectly or altered the Vietnamese label: ${JSON.stringify(result.koreanVietnameseSourceLabels)}`);
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);
     assert(JSON.stringify(result.deviceUiLanguageFixtures) === JSON.stringify({
@@ -1509,10 +1521,10 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.startupAndSourceColors.nav !== result.startupAndSourceColors.brand
       && [
         result.startupAndSourceColors.noticeTitle,
-        result.startupAndSourceColors.noticeLanguageTitle,
         result.startupAndSourceColors.noticeAccept,
         result.startupAndSourceColors.sourceTitle
       ].every(color => color === result.startupAndSourceColors.brand)
+      && result.startupAndSourceColors.noticeLanguageTitle === 'rgb(17, 17, 17)'
       && result.startupAndSourceColors.sourceChoice === 'rgb(17, 17, 17)',
     `Startup accents or Vietnamese source-choice text use the wrong colors: ${JSON.stringify(result.startupAndSourceColors)}`);
     assert(result.floatingTranslation.primary === '전례명 원문'

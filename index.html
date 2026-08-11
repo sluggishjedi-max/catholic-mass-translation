@@ -87,7 +87,7 @@
         .consent-content h2 { margin: 0; color: var(--brand-logo-color); font-size: 1.15rem; border-bottom: 2px solid var(--brand-logo-color); padding-bottom: 8px; }
         .consent-language-grid { overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; padding-right: 4px; }
         .consent-language-block { border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px 12px; background: #fafafa; }
-        .consent-language-title { display: block; margin-bottom: 5px; color: var(--brand-logo-color); font-weight: 900; }
+        .consent-language-title { display: block; margin-bottom: 5px; color: #111; font-weight: 900; }
         .consent-language-block p { margin: 0; line-height: 1.5; font-size: 0.92rem; }
         .consent-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; border-top: 1px solid #e8e8e8; padding-top: 12px; }
         .consent-btn { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 900; }
@@ -502,7 +502,7 @@
         </p>
         <div class="vn-source-actions">
             <button type="button" class="vn-source-btn" data-vn-source="hanoi" onclick="chooseVietnameseReadingSource('hanoi')">
-                <strong data-vn-source-main>주교회의 전례위원회(UBPT) 번역 · 미사독서</strong>
+                <strong data-vn-source-main>베트남 주교회의 전례위원회 번역 · 미사독서</strong>
                 <span class="vn-source-translation" data-vn-source-translation>Bản dịch Ủy ban Phụng tự (UBPT) · Sách Bài Đọc</span>
             </button>
             <button type="button" class="vn-source-btn" data-vn-source="ktcg" onclick="chooseVietnameseReadingSource('ktcg')">
@@ -693,7 +693,7 @@
         <div class="setting-row" id="vn-reading-source-row">
             <label id="lbl-set-vn-source">📖 베트남어 전례독서 번역</label>
             <select id="set-vn-source" onchange="updateSettings()">
-                <option value="hanoi">주교회의 전례위원회(UBPT) 번역</option>
+                <option value="hanoi">베트남 주교회의 전례위원회 번역</option>
                 <option value="ktcg">베트남 성무일도번역위원회 번역</option>
             </select>
         </div>
@@ -5682,7 +5682,7 @@
 
     const vietnameseReadingSourceLabels = Object.freeze({
         hanoi: {
-            KR: '주교회의 전례위원회(UBPT) 번역 · 미사독서',
+            KR: '베트남 주교회의 전례위원회 번역 · 미사독서',
             VN: 'Bản dịch Ủy ban Phụng tự (UBPT) · Sách Bài Đọc',
             EN: 'Vietnamese Episcopal Liturgy Commission (UBPT) translation · Mass Readings',
             JP: 'ベトナム司教協議会典礼委員会（UBPT）訳 · ミサ朗読',
