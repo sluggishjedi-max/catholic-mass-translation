@@ -1099,6 +1099,45 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       dailySourceFetchers.EN = originalEnglishDailyFetcher;
       delete dailySourceCache[forceRefreshKey];
       localStorage.removeItem(dailySourceStorageKey('EN', forceRefreshDate));
+      const savedGpsRefreshState = {
+        useGps: state.useGps,
+        gpsCoordinates: state.gpsCoordinates
+      };
+      const originalGeolocationDescriptor = Object.getOwnPropertyDescriptor(navigator, 'geolocation');
+      let freshGpsRequestOptions = null;
+      Object.defineProperty(navigator, 'geolocation', {
+        configurable: true,
+        value: {
+          getCurrentPosition(success, _failure, options) {
+            freshGpsRequestOptions = { ...options };
+            success({ coords: { latitude: 37.5012, longitude: 127.0396, accuracy: 7 } });
+          }
+        }
+      });
+      state.useGps = true;
+      const freshGpsResult = await getGpsPositionForChurchMap({ forceFresh: true });
+      if (originalGeolocationDescriptor) Object.defineProperty(navigator, 'geolocation', originalGeolocationDescriptor);
+      else delete navigator.geolocation;
+      const freshGpsStateUpdated = state.gpsCoordinates?.lat === 37.5012 && state.gpsCoordinates?.lon === 127.0396;
+      Object.assign(state, savedGpsRefreshState);
+      const originalReloadPageDataScript = reloadPageDataScript;
+      const originalGetGpsPositionForChurchMap = getGpsPositionForChurchMap;
+      const originalGoogleMapsApiKey = googleMapsApiKey;
+      const originalInitializeChurchMap = initializeChurchMap;
+      let churchGpsRefreshOptions = null;
+      let churchRefreshOptions = null;
+      reloadPageDataScript = async () => true;
+      getGpsPositionForChurchMap = async options => {
+        churchGpsRefreshOptions = { ...options };
+        return { lat: 35.1796, lng: 129.0756, accuracy: 5 };
+      };
+      googleMapsApiKey = () => 'test-key';
+      initializeChurchMap = async options => { churchRefreshOptions = { ...options }; };
+      await refreshChurchTabContent();
+      reloadPageDataScript = originalReloadPageDataScript;
+      getGpsPositionForChurchMap = originalGetGpsPositionForChurchMap;
+      googleMapsApiKey = originalGoogleMapsApiKey;
+      initializeChurchMap = originalInitializeChurchMap;
       for (const tab of ['mass', 'prayers', 'hymns', 'churches']) {
         pageRefreshHandlers[tab] = async () => { routedRefreshTabs.push(tab); };
         state.activeTab = tab;
@@ -1144,7 +1183,13 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         blockedWhileConsentPending,
         prayerCacheBusts: /prayer_data\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('prayer_data.js')),
         hymnCacheBusts: /hymn_data\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('hymn_data.js')),
-        churchCacheBusts: /church_local_details\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('church_local_details.js'))
+        churchCacheBusts: /church_local_details\.js.*pullRefresh=\d+/.test(pageDataScriptUrl('church_local_details.js')),
+        churchForcesGpsRefresh: churchGpsRefreshOptions?.forceFresh === true,
+        churchUsesFreshGpsCenter: churchRefreshOptions?.gpsCenter?.lat === 35.1796
+          && churchRefreshOptions?.gpsCenter?.lng === 129.0756,
+        gpsMaximumAge: freshGpsRequestOptions?.maximumAge,
+        gpsHighAccuracy: freshGpsRequestOptions?.enableHighAccuracy === true,
+        gpsStateUpdated: freshGpsStateUpdated && freshGpsResult?.accuracy === 7
       };
       Object.assign(pageRefreshHandlers, originalRefreshHandlers);
       state.activeTab = 'mass';
@@ -1337,7 +1382,12 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.pullRefreshFixture.blockedWhileConsentPending
       && result.pullRefreshFixture.prayerCacheBusts
       && result.pullRefreshFixture.hymnCacheBusts
-      && result.pullRefreshFixture.churchCacheBusts,
+      && result.pullRefreshFixture.churchCacheBusts
+      && result.pullRefreshFixture.churchForcesGpsRefresh
+      && result.pullRefreshFixture.churchUsesFreshGpsCenter
+      && result.pullRefreshFixture.gpsMaximumAge === 0
+      && result.pullRefreshFixture.gpsHighAccuracy
+      && result.pullRefreshFixture.gpsStateUpdated,
     `Mobile pull-to-refresh did not stay page-scoped or reopened startup choices: ${JSON.stringify(result.pullRefreshFixture)}`);
     assert(result.legend.visibleCount === 2 && result.legend.lineCounts.every(count => count === 1) && !result.legend.hasTitles, `Legend was not reduced to two psalm notes: ${JSON.stringify(result.legend)}`);
     assert(result.enlarged.header === result.enlarged.date

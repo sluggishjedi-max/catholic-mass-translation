@@ -3609,7 +3609,7 @@
         return churchMapLoadPromise;
     }
 
-    function getGpsPositionForChurchMap() {
+    function getGpsPositionForChurchMap(options = {}) {
         return new Promise(resolve => {
             if (!(state.useGps && navigator.geolocation)) {
                 resolve(null);
@@ -3620,14 +3620,19 @@
                     const lat = Number(pos && pos.coords && pos.coords.latitude);
                     const lng = Number(pos && pos.coords && pos.coords.longitude);
                     const accuracy = Number(pos && pos.coords && pos.coords.accuracy);
-                    resolve(Number.isFinite(lat) && Number.isFinite(lng) ? {
+                    if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+                        resolve(null);
+                        return;
+                    }
+                    state.gpsCoordinates = { lat, lon: lng };
+                    resolve({
                         lat,
                         lng,
                         accuracy: Number.isFinite(accuracy) ? accuracy : null
-                    } : null);
+                    });
                 },
                 () => resolve(null),
-                { timeout: 8000, maximumAge: 60000, enableHighAccuracy: true }
+                { timeout: 8000, maximumAge: options.forceFresh ? 0 : 60000, enableHighAccuracy: true }
             );
         });
     }
@@ -4600,7 +4605,7 @@
         return true;
     }
 
-    async function initializeChurchMap() {
+    async function initializeChurchMap(options = {}) {
         localizeAuxPanels();
         const mapNode = document.getElementById('church-map');
         const frame = document.getElementById('church-map-frame');
@@ -4610,7 +4615,9 @@
             if (frame) frame.hidden = true;
             mapNode.hidden = false;
             const fallback = churchMapDefaultForLang();
-            const gpsCenter = await getGpsPositionForChurchMap();
+            const gpsCenter = Object.prototype.hasOwnProperty.call(options, 'gpsCenter')
+                ? options.gpsCenter
+                : await getGpsPositionForChurchMap();
             const center = gpsCenter || fallback.center;
             if (!churchMap) {
                 churchMap = new google.maps.Map(mapNode, {
@@ -5404,9 +5411,10 @@
         if (churchInfoWindow) churchInfoWindow.close();
         churchInfoWindowOpen = false;
         clearChurchMarkers();
+        const gpsCenter = await getGpsPositionForChurchMap({ forceFresh: true });
         const key = googleMapsApiKey() || await fetchGoogleMapsApiKey();
-        if (key) await initializeChurchMap();
-        else showChurchFallback();
+        if (key) await initializeChurchMap({ gpsCenter });
+        else showChurchFallback(gpsCenter ? `${gpsCenter.lat},${gpsCenter.lng} Catholic church` : '');
     }
 
     const pageRefreshHandlers = {
