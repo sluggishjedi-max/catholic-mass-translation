@@ -717,6 +717,14 @@ function startServer() {
         la: [[{ text: 'In beáta vírgine Clara te, Dómine, mirábilem prædicántes, maiestátem tuam supplíciter exorámus, ut, sicut eius tibi grata sunt mérita, sic nostræ servitútis accépta reddántur offícia.' }]]
       };
       const clareOfferingAlignment = buildFallbackVariantAlignment('prayer_offerings', clareOfferingOptionMap, {});
+      const vietnameseEnglishPsalmOptionMap = {
+        vn: [[{ text: 'Các lời sấm của Chúa ngọt ngào trong cổ họng con là dường nào.' }]],
+        en: [[{ text: 'How sweet to my taste is your promise!' }]]
+      };
+      const vietnameseEnglishPsalmAlignment = buildFallbackVariantAlignment('psalm', vietnameseEnglishPsalmOptionMap, {
+        optionCits_vn: [{ cit_vn: 'Tv 118,14.24.72.103.111.131' }],
+        optionCits_en: [{ cit_en: 'Psalm 119:14,24,72,103,111,131' }]
+      });
       const incompleteAlignment = normalizeVariantAlignmentGroups(multilingualEntranceOptionMap, [{ kr: 0, en: 0, la: 0 }]);
       const propagatedKindVariants = {
         A: { lines: [optionBodyLine('고유 한국어 입당송', 'Ca nhập lễ riêng')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 0, vn: 0 } },
@@ -859,6 +867,7 @@ function startServer() {
           entrance: multilingualEntranceAlignment,
           citationPriority: citationPriorityAlignment,
           clareOffering: clareOfferingAlignment,
+          vietnameseEnglishPsalm: vietnameseEnglishPsalmAlignment,
           incompleteNeedsAi: variantAlignmentNeedsSemanticCompletion(incompleteAlignment),
           fallbackNeedsAi: variantAlignmentNeedsSemanticCompletion(multilingualEntranceAlignment),
           combinedNeedsAi: variantAlignmentNeedsSemanticCompletion(completedMultilingualEntranceAlignment),
@@ -868,6 +877,11 @@ function startServer() {
           koreanEzekielStart: citationStartsForCompare('에제 2,8─3,4'),
           englishPsalmStart: citationStartsForCompare('Psalm 119:14, 24, 72, 103, 111, 131'),
           koreanPsalmStarts: citationStartsForCompare('시편 119(118),14.24.72.103.111.131'),
+          vietnamesePsalmStart: citationStartsForCompare('Tv 118,14.24.72.103.111.131'),
+          latinPsalmStart: citationStartsForCompare('Ps 26,4'),
+          koreanPsalm27Start: citationStartsForCompare('시편 27(26),4'),
+          adjacentEnglishPsalmsDiffer: !citationStartsForCompare('Psalm 118:14').some(start =>
+            citationStartsForCompare('Psalm 119:14').includes(start)),
           latinLongVirginAntiphonKey: variantSemanticKey(
             'communion',
             'Quinque prudentes virgines acceperunt oleum in vasis suis cum lampadibus. Media autem nocte clamor factus est: Ecce sponsus venit.'
@@ -1481,6 +1495,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         group.kr === 0 && group.la === 1)
       && result.choiceRuleFixture.multilingualAlignmentFixture.clareOffering.some(group =>
         group.kr === 0 && group.en === 0 && group.la === 0)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.vietnameseEnglishPsalm.some(group =>
+        group.vn === 0 && group.en === 0)
       && result.choiceRuleFixture.multilingualAlignmentFixture.incompleteNeedsAi
       && result.choiceRuleFixture.multilingualAlignmentFixture.fallbackNeedsAi
       && !result.choiceRuleFixture.multilingualAlignmentFixture.combinedNeedsAi
@@ -1490,6 +1506,11 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         === JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture.koreanEzekielStart)
       && result.choiceRuleFixture.multilingualAlignmentFixture.englishPsalmStart.some(start =>
         result.choiceRuleFixture.multilingualAlignmentFixture.koreanPsalmStarts.includes(start))
+      && result.choiceRuleFixture.multilingualAlignmentFixture.vietnamesePsalmStart.some(start =>
+        result.choiceRuleFixture.multilingualAlignmentFixture.englishPsalmStart.includes(start))
+      && result.choiceRuleFixture.multilingualAlignmentFixture.latinPsalmStart.some(start =>
+        result.choiceRuleFixture.multilingualAlignmentFixture.koreanPsalm27Start.includes(start))
+      && result.choiceRuleFixture.multilingualAlignmentFixture.adjacentEnglishPsalmsDiffer
       && result.choiceRuleFixture.multilingualAlignmentFixture.latinLongVirginAntiphonKey === 'wise_virgin_lamp_meet_christ',
     `Cross-language choice alignment is incomplete or citation-first: ${JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture)}`);
     assert(result.choiceRuleFixture.labels.commonEntrance.kr === '공통 입당송'

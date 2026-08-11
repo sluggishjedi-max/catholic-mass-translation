@@ -12507,6 +12507,57 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             || null;
     }
 
+    function vulgatePsalmChaptersForHebrew(hebrewChapter, verse) {
+        const chapter = Number(hebrewChapter);
+        const firstVerse = Number(verse);
+        if (!Number.isInteger(chapter)) return [];
+        if (chapter <= 8 || chapter >= 148) return [chapter];
+        if (chapter === 9 || chapter === 10) return [9];
+        if (chapter <= 113) return [chapter - 1];
+        if (chapter === 114 || chapter === 115) return [113];
+        if (chapter === 116) {
+            if (firstVerse >= 10) return [115];
+            return firstVerse >= 1 ? [114] : [114, 115];
+        }
+        if (chapter <= 146) return [chapter - 1];
+        if (chapter === 147) return firstVerse >= 12 ? [147] : [146];
+        return [chapter];
+    }
+
+    function hebrewPsalmChaptersForVulgate(vulgateChapter) {
+        const chapter = Number(vulgateChapter);
+        if (!Number.isInteger(chapter)) return [];
+        if (chapter <= 8 || chapter >= 148) return [chapter];
+        if (chapter === 9) return [9, 10];
+        if (chapter <= 112) return [chapter + 1];
+        if (chapter === 113) return [114, 115];
+        if (chapter === 114 || chapter === 115) return [116];
+        if (chapter <= 145) return [chapter + 1];
+        if (chapter === 146 || chapter === 147) return [147];
+        return [chapter];
+    }
+
+    function psalmCitationStartsForCompare(bookKey, mainChapter, alternateChapter, verse) {
+        const normalizedBook = normalizeBibleAliasForCompare(bookKey);
+        const main = Number(mainChapter);
+        const alternate = Number(alternateChapter);
+        const firstVerse = Number(verse);
+        const usesVulgateNumbering = normalizedBook === 'tv' || normalizedBook === 'ps';
+        const pairs = [];
+        if (Number.isInteger(alternate)) {
+            pairs.push(usesVulgateNumbering
+                ? { hebrew: alternate, vulgate: main }
+                : { hebrew: main, vulgate: alternate });
+        } else if (usesVulgateNumbering) {
+            hebrewPsalmChaptersForVulgate(main).forEach(hebrew => pairs.push({ hebrew, vulgate: main }));
+        } else {
+            vulgatePsalmChaptersForHebrew(main, firstVerse).forEach(vulgate => pairs.push({ hebrew: main, vulgate }));
+        }
+        return Array.from(new Set(pairs.map(pair =>
+            `시편:h${pair.hebrew}:v${pair.vulgate}:${firstVerse}`
+        )));
+    }
+
     function normalizedCitationForCompare(value) {
         let text = normalizeBibleAliasForCompare(String(value || '').replace(/\s*(?:참고|참조)$/u, ''))
             .replace(/^(?:x|cf|cfr|see)\s+/, '')
@@ -12529,6 +12580,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const bookKey = normalizeBibleAliasForCompare(match[1]);
         const entry = bibleAliasEntryForCompare(bookKey);
         if (!entry) return [];
+        if (entry.kr === '시편') {
+            return psalmCitationStartsForCompare(bookKey, match[2], match[3], match[4]);
+        }
         return Array.from(new Set([match[2], match[3]]
             .filter(Boolean)
             .map(chapter => `${entry.kr}:${chapter}:${match[4]}`)));
@@ -12856,7 +12910,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 section.variantAlignment = knownConflictAlignment;
                 return;
             }
-            if (maxOptions < 2) return;
             const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
@@ -12867,6 +12920,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 section.variantAlignment = fallbackAlignment;
                 return;
             }
+            if (maxOptions < 2) return;
             // Until the asynchronous semantic check finishes, keep unmatched
             // source options separate. Positional pairing can present two
             // different antiphons or prayers as if one were a translation.
@@ -12920,7 +12974,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 section.variantAlignment = knownConflictAlignment;
                 return;
             }
-            if (maxOptions < 2) return;
             const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
             if (fallbackAlignment.length && !variantAlignmentNeedsSemanticCompletion(fallbackAlignment)) {
                 section.variantAlignment = fallbackAlignment;
@@ -12930,6 +12983,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
                 section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, cached);
+                return;
+            }
+            if (maxOptions < 2) {
+                if (fallbackAlignment.length) section.variantAlignment = fallbackAlignment;
                 return;
             }
             try {
