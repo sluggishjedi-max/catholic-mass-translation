@@ -12061,29 +12061,120 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return normalizeVariantAlignmentGroups(optionMap, [{ [left]: 0, kr: 0 }]);
     }
 
-    const gospelLengthVariantLabels = {
-        long: { kr: '긴 복음', vn: 'Bài Tin Mừng dài', en: 'Long Gospel', jp: '長い福音', la: 'Evangelium longum' },
-        short: { kr: '짧은 복음', vn: 'Bài Tin Mừng ngắn', en: 'Short Gospel', jp: '短い福音', la: 'Evangelium breve' }
+    const dailyLengthVariantLabels = {
+        reading: {
+            long: { kr: '긴 독서', vn: 'Bài đọc dài', en: 'Long Reading', jp: '長い朗読', la: 'Lectio longior' },
+            short: { kr: '짧은 독서', vn: 'Bài đọc ngắn', en: 'Short Reading', jp: '短い朗読', la: 'Lectio brevior' }
+        },
+        gospel: {
+            long: { kr: '긴 복음', vn: 'Bài Tin Mừng dài', en: 'Long Gospel', jp: '長い福音', la: 'Evangelium longum' },
+            short: { kr: '짧은 복음', vn: 'Bài Tin Mừng ngắn', en: 'Short Gospel', jp: '短い福音', la: 'Evangelium breve' }
+        }
     };
+    const gospelLengthVariantLabels = dailyLengthVariantLabels.gospel;
 
-    function applyGospelLengthVariantLabels(variants) {
-        const entries = Object.entries(variants || {});
-        if (entries.length !== 2) return;
-        const measured = entries.map(([key, variant]) => {
-            const length = (variant.lines || []).reduce((sum, line) => sum + ['kr', 'vn', 'en', 'jp', 'la'].reduce((lineSum, lower) => {
-                if (line[`role_${lower}`] !== 'body') return lineSum;
-                return lineSum + cleanNodeText(line[`text_${lower}`]).length;
-            }, 0), 0);
-            return { key, variant, length };
-        }).sort((a, b) => b.length - a.length);
-        if (!measured[1].length || measured[0].length < measured[1].length * 1.18) return;
-        measured[0].variant.label = Object.assign({}, gospelLengthVariantLabels.long);
-        measured[1].variant.label = Object.assign({}, gospelLengthVariantLabels.short);
+    function dailyVariantBodyText(variant, lower) {
+        const lines = Array.isArray(variant && variant.lines) ? variant.lines : [];
+        const body = lines
+            .filter(line => line && line[`role_${lower}`] === 'body')
+            .map(line => cleanNodeText(line[`text_${lower}`]))
+            .filter(Boolean);
+        if (body.length) return body.join(' ');
+        return lines
+            .filter(line => line && !lineHasAnyRubric(line))
+            .map(line => cleanNodeText(line && line[`text_${lower}`]))
+            .filter(Boolean)
+            .join(' ');
+    }
+
+    function dailyVariantLengthTokens(text) {
+        return normalizeSemanticText(text).match(/[\p{L}\p{N}]+/gu) || [];
+    }
+
+    function dailyVariantTokenContainment(longText, shortText) {
+        const longCounts = new Map();
+        dailyVariantLengthTokens(longText).forEach(token => longCounts.set(token, (longCounts.get(token) || 0) + 1));
+        const shortTokens = dailyVariantLengthTokens(shortText);
+        if (shortTokens.length < 5) return 0;
+        let matched = 0;
+        shortTokens.forEach(token => {
+            const remaining = longCounts.get(token) || 0;
+            if (!remaining) return;
+            matched += 1;
+            longCounts.set(token, remaining - 1);
+        });
+        return matched / shortTokens.length;
+    }
+
+    function dailyVariantLengthPair(first, second, baseId) {
+        const firstLanguages = dailyVariantContentLanguages(first.variant, baseId);
+        const secondLanguages = dailyVariantContentLanguages(second.variant, baseId);
+        const sharedLanguages = firstLanguages.filter(lower => secondLanguages.includes(lower));
+        let best = null;
+        sharedLanguages.forEach(lower => {
+            const firstText = dailyVariantBodyText(first.variant, lower);
+            const secondText = dailyVariantBodyText(second.variant, lower);
+            const firstLength = normalizeSemanticText(firstText).replace(/[^\p{L}\p{N}]+/gu, '').length;
+            const secondLength = normalizeSemanticText(secondText).replace(/[^\p{L}\p{N}]+/gu, '').length;
+            if (!firstLength || !secondLength) return;
+            const longEntry = firstLength >= secondLength ? first : second;
+            const shortEntry = firstLength >= secondLength ? second : first;
+            const longText = firstLength >= secondLength ? firstText : secondText;
+            const shortText = firstLength >= secondLength ? secondText : firstText;
+            const longLength = Math.max(firstLength, secondLength);
+            const shortLength = Math.min(firstLength, secondLength);
+            if (longLength < shortLength * 1.18) return;
+            const containment = dailyVariantTokenContainment(longText, shortText);
+            if (containment < 0.86) return;
+            const candidate = { longEntry, shortEntry, score: containment + (1 - shortLength / longLength) };
+            if (!best || candidate.score > best.score) best = candidate;
+        });
+        return best;
+    }
+
+    function applyDailyLengthVariantLabels(variants, baseId) {
+        if (!['reading1', 'reading2', 'gospel'].includes(baseId)) return variants;
+        const entries = Object.entries(variants || {}).map(([key, variant]) => ({
+            key,
+            variant,
+            kind: variant && variant.__dailyOptionKind || '',
+            sourceLower: dailyVariantSourceLower(variant, baseId)
+        }));
+        const groups = new Map();
+        entries.forEach(entry => {
+            const groupKey = `${entry.kind || 'none'}:${entry.sourceLower || 'shared'}`;
+            if (!groups.has(groupKey)) groups.set(groupKey, []);
+            groups.get(groupKey).push(entry);
+        });
+        groups.forEach(groupEntries => {
+            const candidates = [];
+            groupEntries.forEach((first, firstIndex) => {
+                groupEntries.slice(firstIndex + 1).forEach(second => {
+                    const pair = dailyVariantLengthPair(first, second, baseId);
+                    if (pair) candidates.push(pair);
+                });
+            });
+            const assigned = new Set();
+            candidates.sort((a, b) => b.score - a.score).forEach(pair => {
+                if (assigned.has(pair.longEntry.key) || assigned.has(pair.shortEntry.key)) return;
+                pair.longEntry.variant.__dailyLengthKind = 'long';
+                pair.shortEntry.variant.__dailyLengthKind = 'short';
+                assigned.add(pair.longEntry.key);
+                assigned.add(pair.shortEntry.key);
+            });
+        });
+        const labelGroup = baseId === 'gospel' ? dailyLengthVariantLabels.gospel : dailyLengthVariantLabels.reading;
+        entries.forEach(entry => {
+            const lengthKind = entry.variant && entry.variant.__dailyLengthKind;
+            if (lengthKind && !entry.kind) entry.variant.label = Object.assign({}, labelGroup[lengthKind]);
+        });
+        return variants;
     }
 
     function preferShortGospelVariant(variants) {
         const shortEntry = Object.entries(variants || {}).find(([, variant]) =>
-            variant && variant.label && variant.label.kr === gospelLengthVariantLabels.short.kr
+            variant && (variant.__dailyLengthKind === 'short'
+                || (variant.label && variant.label.kr === gospelLengthVariantLabels.short.kr))
         );
         if (!shortEntry) return false;
         const shortKey = shortEntry[0];
@@ -12102,20 +12193,26 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function applyGospelLengthVariantCitations(variants, newData) {
         Object.values(variants || {}).forEach(variant => {
-            const isLong = variant && variant.label && variant.label.kr === gospelLengthVariantLabels.long.kr;
-            const isShort = variant && variant.label && variant.label.kr === gospelLengthVariantLabels.short.kr;
+            const isLong = variant && (variant.__dailyLengthKind === 'long'
+                || (variant.label && variant.label.kr === gospelLengthVariantLabels.long.kr));
+            const isShort = variant && (variant.__dailyLengthKind === 'short'
+                || (variant.label && variant.label.kr === gospelLengthVariantLabels.short.kr));
             if (!isLong && !isShort) return;
-            const optionIndex = isShort ? 1 : 0;
             variant.cit = variant.cit || {};
             ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
+                const mappedIndex = variant.__dailySourceIndexes && variant.__dailySourceIndexes[lower];
+                const optionIndex = Number.isInteger(mappedIndex) ? mappedIndex : (isShort ? 1 : 0);
                 const optionCits = newData && newData[`optionCits_${lower}`];
                 const source = Array.isArray(optionCits) ? optionCits[optionIndex] : null;
                 const key = `cit_${lower}`;
                 if (source && source[key]) variant.cit[key] = source[key];
             });
             if (isShort) {
-                const vietnameseShort = newData && Array.isArray(newData.optionCits_vn) && newData.optionCits_vn[1]
-                    ? cleanNodeText(newData.optionCits_vn[1].cit_vn || '')
+                const vietnameseShortIndex = Number.isInteger(variant.__dailySourceIndexes && variant.__dailySourceIndexes.vn)
+                    ? variant.__dailySourceIndexes.vn
+                    : 1;
+                const vietnameseShort = newData && Array.isArray(newData.optionCits_vn) && newData.optionCits_vn[vietnameseShortIndex]
+                    ? cleanNodeText(newData.optionCits_vn[vietnameseShortIndex].cit_vn || '')
                     : '';
                 const shortRange = (vietnameseShort.match(/[,.:]\s*([\d\s;\-–—a-z]+)$/iu) || [])[1];
                 if (shortRange) {
@@ -13073,6 +13170,41 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    function dailyVariantSourceLower(variant, baseId) {
+        const mappedLanguages = Object.keys(variant && variant.__dailySourceIndexes || {})
+            .filter(lower => Number.isInteger(variant.__dailySourceIndexes[lower]));
+        const languages = mappedLanguages.length ? mappedLanguages : dailyVariantContentLanguages(variant, baseId);
+        const { left, right } = currentLeftRightLowerKeys();
+        const activeLanguages = [left, right].filter((lower, index, all) =>
+            lower && all.indexOf(lower) === index && languages.includes(lower)
+        );
+        if (activeLanguages.length === 1) return activeLanguages[0];
+        if (activeLanguages.length > 1) return '';
+        return languages.length === 1 ? languages[0] : '';
+    }
+
+    function dailyVariantLabelForKindDetails(kind, baseId, sourceLower = '', lengthKind = '', ordinal = null) {
+        const unit = dailyVariantKindSectionNames[baseId] || { kr: '기도', vn: 'Lời nguyện', en: 'Prayer', jp: '祈願', la: 'Oratio' };
+        const lengthGroup = baseId === 'gospel' ? dailyLengthVariantLabels.gospel : dailyLengthVariantLabels.reading;
+        const lengthLabel = lengthKind && lengthGroup[lengthKind] ? lengthGroup[lengthKind] : null;
+        const sourceNames = sourceLower ? {
+            kr: eucharistInlineLanguageName(sourceLower, 'KR'),
+            vn: eucharistInlineLanguageName(sourceLower, 'VN'),
+            en: eucharistInlineLanguageName(sourceLower, 'EN'),
+            jp: eucharistInlineLanguageName(sourceLower, 'JP'),
+            la: eucharistInlineLanguageName(sourceLower, 'LA')
+        } : null;
+        const number = Number.isInteger(ordinal) && ordinal > 0 ? ` ${ordinal}` : '';
+        const length = lower => lengthLabel ? ` (${lengthLabel[lower]})` : '';
+        return {
+            kr: `${kind === 'common' ? '공통' : '고유'}${sourceNames ? ` ${sourceNames.kr}` : ''} ${unit.kr}${length('kr')}${number}`,
+            vn: `${unit.vn} ${kind === 'common' ? 'chung' : 'riêng'}${sourceNames ? ` ${sourceNames.vn}` : ''}${length('vn')}${number}`,
+            en: `${kind === 'common' ? 'Common' : 'Proper'}${sourceNames ? ` ${sourceNames.en}` : ''} ${unit.en}${length('en')}${number}`,
+            jp: `${kind === 'common' ? '共通' : '固有'}${sourceNames ? sourceNames.jp : ''}${unit.jp}${length('jp')}${number}`,
+            la: `${unit.la} ${kind === 'common' ? 'communis' : 'propria'}${sourceNames ? ` ${sourceNames.la}` : ''}${length('la')}${number}`
+        };
+    }
+
     function applyDailySourceVariantLabels(variants, baseId, alignmentGroups = []) {
         if (!sourceLabeledDailyVariantPartIds.has(baseId) || !variants) return variants;
         const lowers = ['kr', 'vn', 'en', 'jp', 'la'];
@@ -13109,6 +13241,34 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 ordinal = Number.isInteger(alignedIndex) ? alignedIndex + 1 : sourceOccurrences[sourceLower];
             }
             entry.variant.label = sourceChoiceLabelForLower(sourceLower, ordinal);
+        });
+        return variants;
+    }
+
+    function applyDailyKindedVariantLabels(variants, baseId) {
+        const entries = Object.values(variants || {}).map(variant => ({
+            variant,
+            kind: variant && variant.__dailyOptionKind || '',
+            sourceLower: dailyVariantSourceLower(variant, baseId),
+            lengthKind: variant && variant.__dailyLengthKind || ''
+        })).filter(entry => entry.kind === 'common' || entry.kind === 'proper');
+        const counts = {};
+        entries.forEach(entry => {
+            const signature = `${entry.kind}:${entry.sourceLower || 'shared'}:${entry.lengthKind || 'standard'}`;
+            counts[signature] = (counts[signature] || 0) + 1;
+            entry.signature = signature;
+        });
+        const occurrences = {};
+        entries.forEach(entry => {
+            occurrences[entry.signature] = (occurrences[entry.signature] || 0) + 1;
+            const ordinal = counts[entry.signature] > 1 ? occurrences[entry.signature] : null;
+            entry.variant.label = dailyVariantLabelForKindDetails(
+                entry.kind,
+                baseId,
+                entry.sourceLower,
+                entry.lengthKind,
+                ordinal
+            );
         });
         return variants;
     }
@@ -13203,6 +13363,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const key = dailyVariantKeys[i] || `O${i + 1}`;
             const lines = cloneMassLines(template);
             const alignmentGroup = alignmentGroups ? (alignmentGroups[i] || {}) : null;
+            const sourceIndexes = {};
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(lines, baseId);
             lowerLangs.forEach(lower => {
                 const options = optionMap[lower];
@@ -13214,6 +13375,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                         : (alignmentGroup ? [] : (options[sourceIndex] || []));
                     if (optionLines.length) applyParsedLinesForLanguage(lines, lower, optionLines, baseId);
                     else clearParsedLanguageLines(lines, lower, baseId);
+                    if (optionLines.length) sourceIndexes[lower] = sourceIndex;
                     return;
                 }
                 if ((baseId === 'gospel_accl' || alignmentGroup) && i > 0) {
@@ -13241,12 +13403,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 header: item.header || {},
                 cit,
                 lines,
-                __dailyOptionKind: dailyVariantKindFromSourceMetadata(newData, alignmentGroup, i)
+                __dailyOptionKind: dailyVariantKindFromSourceMetadata(newData, alignmentGroup, i),
+                __dailySourceIndexes: sourceIndexes
             };
         }
         applyDailySourceVariantLabels(variants, baseId, alignmentGroups || []);
+        applyDailyLengthVariantLabels(variants, baseId);
+        applyDailyKindedVariantLabels(variants, baseId);
         if (baseId === 'gospel') {
-            applyGospelLengthVariantLabels(variants);
             applyGospelLengthVariantCitations(variants, newData);
             preferShortGospelVariant(variants);
         }

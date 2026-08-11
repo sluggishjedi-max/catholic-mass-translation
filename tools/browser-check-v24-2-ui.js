@@ -649,6 +649,55 @@ function startServer() {
         }
       };
       applyDailySourceVariantLabels(kindedEntranceVariants, 'entrance', [{ kr: 0, vn: 0 }]);
+      const optionBodyLine = (kr, vn = '') => ({
+        text_kr: kr,
+        role_kr: kr ? 'body' : '',
+        text_vn: vn,
+        role_vn: vn ? 'body' : ''
+      });
+      const descriptiveChoiceVariants = {
+        A: { lines: [optionBodyLine('고유 독서 첫째 본문', 'Bài đọc riêng thứ nhất')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 0, vn: 0 } },
+        B: { lines: [optionBodyLine('고유 독서 둘째 본문', 'Bài đọc riêng thứ hai')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 1, vn: 1 } },
+        C: { lines: [optionBodyLine('공통 한국어 독서 첫째 본문')], __dailyOptionKind: 'common', __dailySourceIndexes: { kr: 2 } },
+        D: { lines: [optionBodyLine('공통 한국어 독서 둘째 본문')], __dailyOptionKind: 'common', __dailySourceIndexes: { kr: 3 } },
+        E: { lines: [optionBodyLine('', 'Bài đọc chung tiếng Việt')], __dailyOptionKind: 'common', __dailySourceIndexes: { vn: 2 } }
+      };
+      applyDailyKindedVariantLabels(descriptiveChoiceVariants, 'reading1');
+      const readingLengthVariants = {
+        A: {
+          lines: [optionBodyLine(
+            '처음 말씀 하나 둘 셋 넷 다섯 여섯 일곱 여덟 아홉 열 마지막 말씀',
+            'Khởi đầu lời một hai ba bốn năm sáu bảy tám chín mười lời cuối cùng'
+          )],
+          __dailyOptionKind: 'proper',
+          __dailySourceIndexes: { kr: 0, vn: 0 }
+        },
+        B: {
+          lines: [optionBodyLine('처음 말씀 하나 둘 마지막 말씀', 'Khởi đầu lời một hai lời cuối cùng')],
+          __dailyOptionKind: 'proper',
+          __dailySourceIndexes: { kr: 1, vn: 1 }
+        },
+        C: {
+          lines: [optionBodyLine('공통 시작 하나 둘 셋 넷 다섯 여섯 일곱 여덟 아홉 공통 마침')],
+          __dailyOptionKind: 'common',
+          __dailySourceIndexes: { kr: 2 }
+        },
+        D: {
+          lines: [optionBodyLine('공통 시작 하나 둘 공통 마침')],
+          __dailyOptionKind: 'common',
+          __dailySourceIndexes: { kr: 3 }
+        }
+      };
+      applyDailyLengthVariantLabels(readingLengthVariants, 'reading1');
+      applyDailyKindedVariantLabels(readingLengthVariants, 'reading1');
+      const gospelLengthVariants = {
+        A: JSON.parse(JSON.stringify(readingLengthVariants.A)),
+        B: JSON.parse(JSON.stringify(readingLengthVariants.B))
+      };
+      delete gospelLengthVariants.A.__dailyLengthKind;
+      delete gospelLengthVariants.B.__dailyLengthKind;
+      applyDailyLengthVariantLabels(gospelLengthVariants, 'gospel');
+      applyDailyKindedVariantLabels(gospelLengthVariants, 'gospel');
       const provisionalAlignmentFixture = {
         entrance: {
           kr_lines: [[{ text: '한국어 미확인 입당송 하나' }], [{ text: '한국어 미확인 입당송 둘' }]].flatMap((option, index) =>
@@ -712,7 +761,15 @@ function startServer() {
           properPsalm: dailyVariantLabelFromSourceMetadata({ optionKinds_vn: ['proper'] }, null, 0, null, 'psalm'),
           commonCommunion: dailyVariantLabelFromSourceMetadata({ optionKinds_en: ['common'] }, null, 0, null, 'communion'),
           preservedProperEntrance: kindedEntranceVariants.A.label
-        }
+        },
+        descriptiveChoiceLabels: {
+          kr: Object.values(descriptiveChoiceVariants).map(variant => variant.label.kr),
+          vn: Object.values(descriptiveChoiceVariants).map(variant => variant.label.vn)
+        },
+        readingLengthLabels: Object.values(readingLengthVariants).map(variant => variant.label.kr),
+        readingLengthKinds: Object.values(readingLengthVariants).map(variant => variant.__dailyLengthKind),
+        gospelLengthLabels: Object.values(gospelLengthVariants).map(variant => variant.label.kr),
+        gospelLengthKinds: Object.values(gospelLengthVariants).map(variant => variant.__dailyLengthKind)
       };
       const diocesanPrayerSourceFixture = `<p>08/08/2026 BÀI ĐỌC TRONG THÁNH LỄ Thứ bảy tuần 18 THƯỜNG NIÊN Ca nhập lễ Ca thường. Lời nguyện nhập lễ Lạy Chúa, lời nguyện ngày thường. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, lễ vật ngày thường. Chúng con cầu xin… Ca hiệp lễ Ca thường. Lời nguyện hiệp lễ Lạy Chúa, hiệp lễ ngày thường. Chúng con cầu xin… BÀI ĐỌC TRONG THÁNH LỄ Thánh Đa Minh, linh mục Ca nhập lễ Ca riêng. Lời nguyện nhập lễ Lạy Thiên Chúa toàn năng Chúa đã cho xuất hiện trong Hội Thánh một Tông Đồ nhiệt tâm truyền giảng chân lý là thánh Đa-minh. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, vì lời chuyển cầu của thánh Đa-minh, xin nâng đỡ những người đang chiến đấu bảo vệ đức tin. Chúng con cầu xin… Ca hiệp lễ Ca riêng. Lời nguyện hiệp lễ Lạy Thiên Chúa toàn năng hằng hữu, nhân ngày mừng lễ thánh Đa-minh, xin cho Hội Thánh được thánh nhân cầu thay nguyện giúp. Chúng con cầu xin…</p>`;
       const diocesanPrayerBlocks = vietnameseKtcgPrayerMassBlocks(diocesanPrayerSourceFixture);
@@ -1308,6 +1365,31 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.choiceRuleFixture.labels.preservedProperEntrance.kr === '고유 입당송'
       && result.choiceRuleFixture.labels.preservedProperEntrance.vn === 'Ca nhập lễ riêng',
     `Section-specific common/proper labels were overwritten: ${JSON.stringify(result.choiceRuleFixture.labels)}`);
+    assert(JSON.stringify(result.choiceRuleFixture.descriptiveChoiceLabels.kr) === JSON.stringify([
+      '고유 독서 1',
+      '고유 독서 2',
+      '공통 한국어 독서 1',
+      '공통 한국어 독서 2',
+      '공통 베트남어 독서'
+    ]) && JSON.stringify(result.choiceRuleFixture.descriptiveChoiceLabels.vn) === JSON.stringify([
+      'Bài đọc riêng 1',
+      'Bài đọc riêng 2',
+      'Bài đọc chung tiếng Hàn 1',
+      'Bài đọc chung tiếng Hàn 2',
+      'Bài đọc chung tiếng Việt'
+    ]), `Common/proper language and ordinal choice labels are incorrect: ${JSON.stringify(result.choiceRuleFixture.descriptiveChoiceLabels)}`);
+    assert(JSON.stringify(result.choiceRuleFixture.readingLengthKinds) === JSON.stringify(['long', 'short', 'long', 'short'])
+      && JSON.stringify(result.choiceRuleFixture.readingLengthLabels) === JSON.stringify([
+        '고유 독서 (긴 독서)',
+        '고유 독서 (짧은 독서)',
+        '공통 한국어 독서 (긴 독서)',
+        '공통 한국어 독서 (짧은 독서)'
+      ])
+      && JSON.stringify(result.choiceRuleFixture.gospelLengthKinds) === JSON.stringify(['long', 'short'])
+      && JSON.stringify(result.choiceRuleFixture.gospelLengthLabels) === JSON.stringify([
+        '고유 복음 (긴 복음)',
+        '고유 복음 (짧은 복음)'
+      ]), `Long/short reading or Gospel labels are incorrect: ${JSON.stringify(result.choiceRuleFixture)}`);
     assert(result.citationAlignmentFixture.aug7.length === 3
       && result.citationAlignmentFixture.aug7[0].kr === 0
       && result.citationAlignmentFixture.aug7[0].vn === 0
