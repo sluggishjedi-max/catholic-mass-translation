@@ -13130,6 +13130,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ...sourceSeparatedPrayerVariantPartIds
     ]);
 
+    const fixedCelebrationImplicitProperPartIds = new Set([
+        'entrance',
+        'gospel_accl',
+        'communion'
+    ]);
+
     function dailyVariantLabelForAlignment(alignmentGroup, fallbackIndex, alignmentGroups = [], baseId = '') {
         const label = Object.assign({}, dailyVariantLabel(fallbackIndex));
         const mappedLanguages = ['kr', 'vn', 'en', 'jp', 'la']
@@ -13273,6 +13279,49 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return variants;
     }
 
+    function inferDailyVariantKinds(variants, baseId, date = null) {
+        const entries = Object.values(variants || {});
+        if (!entries.length) return variants;
+        const validKinds = new Set(['common', 'proper']);
+        const sourceKinds = {};
+        entries.forEach(variant => {
+            const kind = variant && variant.__dailyOptionKind || '';
+            if (!validKinds.has(kind)) return;
+            Object.keys(variant.__dailySourceIndexes || {}).forEach(lower => {
+                if (!Number.isInteger(variant.__dailySourceIndexes[lower])) return;
+                if (!sourceKinds[lower]) sourceKinds[lower] = new Set();
+                sourceKinds[lower].add(kind);
+            });
+        });
+        entries.forEach(variant => {
+            if (!variant || validKinds.has(variant.__dailyOptionKind)) return;
+            const candidates = new Set();
+            Object.keys(variant.__dailySourceIndexes || {}).forEach(lower => {
+                if (!Number.isInteger(variant.__dailySourceIndexes[lower])) return;
+                const kinds = sourceKinds[lower];
+                if (kinds && kinds.size === 1) candidates.add(Array.from(kinds)[0]);
+            });
+            if (candidates.size === 1) variant.__dailyOptionKind = Array.from(candidates)[0];
+        });
+
+        const knownKinds = new Set(entries
+            .map(variant => variant && variant.__dailyOptionKind || '')
+            .filter(kind => validKinds.has(kind)));
+        if (knownKinds.size || !fixedCelebrationImplicitProperPartIds.has(baseId)) return variants;
+        const sourceDate = date instanceof Date && !Number.isNaN(date.getTime())
+            ? cloneDateOnly(date)
+            : getActiveLiturgicalSourceDate();
+        const generatedInfo = buildGeneratedLiturgyInfo(sourceDate);
+        const meta = generatedInfo.meta || {};
+        const isNamedFixedCelebration = hasPriorityCelebrationForLookup(sourceDate, generatedInfo)
+            && !!(meta.special || generatedInfo.localCalendar);
+        if (!isNamedFixedCelebration) return variants;
+        entries.forEach(variant => {
+            if (variant && !validKinds.has(variant.__dailyOptionKind)) variant.__dailyOptionKind = 'proper';
+        });
+        return variants;
+    }
+
     function collectVariantCitation(newData, lowerLangs, optionIndex, alignmentGroup = null, optionMap = null) {
         const cit = {};
         lowerLangs.forEach(lower => {
@@ -13407,6 +13456,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 __dailySourceIndexes: sourceIndexes
             };
         }
+        inferDailyVariantKinds(variants, baseId);
         applyDailySourceVariantLabels(variants, baseId, alignmentGroups || []);
         applyDailyLengthVariantLabels(variants, baseId);
         applyDailyKindedVariantLabels(variants, baseId);

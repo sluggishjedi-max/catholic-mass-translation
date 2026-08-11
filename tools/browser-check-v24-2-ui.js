@@ -655,6 +655,25 @@ function startServer() {
         text_vn: vn,
         role_vn: vn ? 'body' : ''
       });
+      const propagatedKindVariants = {
+        A: { lines: [optionBodyLine('고유 한국어 입당송', 'Ca nhập lễ riêng')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 0, vn: 0 } },
+        B: { lines: [optionBodyLine('메타데이터가 빠진 한국어 입당송')], __dailyOptionKind: '', __dailySourceIndexes: { kr: 1 } },
+        C: { lines: [optionBodyLine('', 'Ca nhập lễ riêng thứ hai')], __dailyOptionKind: 'proper', __dailySourceIndexes: { vn: 1 } },
+        D: { lines: [optionBodyLine('', 'Ca nhập lễ chung')], __dailyOptionKind: 'common', __dailySourceIndexes: { vn: 2 } }
+      };
+      inferDailyVariantKinds(propagatedKindVariants, 'entrance', new Date(2026, 7, 11));
+      applyDailyKindedVariantLabels(propagatedKindVariants, 'entrance');
+      const implicitFixedProperVariants = {
+        A: { lines: [optionBodyLine('하노이 한국어 입당송 하나')], __dailyOptionKind: '', __dailySourceIndexes: { kr: 0 } },
+        B: { lines: [optionBodyLine('하노이 한국어 입당송 둘')], __dailyOptionKind: '', __dailySourceIndexes: { kr: 1 } },
+        C: { lines: [optionBodyLine('', 'Ca nhập lễ Hà Nội')], __dailyOptionKind: '', __dailySourceIndexes: { vn: 0 } }
+      };
+      inferDailyVariantKinds(implicitFixedProperVariants, 'entrance', new Date(2026, 7, 11));
+      applyDailyKindedVariantLabels(implicitFixedProperVariants, 'entrance');
+      const ordinaryUnknownVariant = {
+        A: { lines: [optionBodyLine('연중 평일 입당송')], __dailyOptionKind: '', __dailySourceIndexes: { kr: 0 } }
+      };
+      inferDailyVariantKinds(ordinaryUnknownVariant, 'entrance', new Date(2026, 7, 12));
       const descriptiveChoiceVariants = {
         A: { lines: [optionBodyLine('고유 독서 첫째 본문', 'Bài đọc riêng thứ nhất')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 0, vn: 0 } },
         B: { lines: [optionBodyLine('고유 독서 둘째 본문', 'Bài đọc riêng thứ hai')], __dailyOptionKind: 'proper', __dailySourceIndexes: { kr: 1, vn: 1 } },
@@ -765,6 +784,13 @@ function startServer() {
         descriptiveChoiceLabels: {
           kr: Object.values(descriptiveChoiceVariants).map(variant => variant.label.kr),
           vn: Object.values(descriptiveChoiceVariants).map(variant => variant.label.vn)
+        },
+        inferredKindFixture: {
+          propagatedKinds: Object.values(propagatedKindVariants).map(variant => variant.__dailyOptionKind),
+          propagatedLabels: Object.values(propagatedKindVariants).map(variant => variant.label.kr),
+          fixedKinds: Object.values(implicitFixedProperVariants).map(variant => variant.__dailyOptionKind),
+          fixedLabels: Object.values(implicitFixedProperVariants).map(variant => variant.label.kr),
+          ordinaryKind: ordinaryUnknownVariant.A.__dailyOptionKind
         },
         readingLengthLabels: Object.values(readingLengthVariants).map(variant => variant.label.kr),
         readingLengthKinds: Object.values(readingLengthVariants).map(variant => variant.__dailyLengthKind),
@@ -1378,6 +1404,21 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       'Bài đọc chung tiếng Hàn 2',
       'Bài đọc chung tiếng Việt'
     ]), `Common/proper language and ordinal choice labels are incorrect: ${JSON.stringify(result.choiceRuleFixture.descriptiveChoiceLabels)}`);
+    assert(JSON.stringify(result.choiceRuleFixture.inferredKindFixture.propagatedKinds) === JSON.stringify([
+      'proper', 'proper', 'proper', 'common'
+    ]) && JSON.stringify(result.choiceRuleFixture.inferredKindFixture.propagatedLabels) === JSON.stringify([
+      '고유 입당송',
+      '고유 한국어 입당송',
+      '고유 베트남어 입당송',
+      '공통 베트남어 입당송'
+    ]) && JSON.stringify(result.choiceRuleFixture.inferredKindFixture.fixedKinds) === JSON.stringify([
+      'proper', 'proper', 'proper'
+    ]) && JSON.stringify(result.choiceRuleFixture.inferredKindFixture.fixedLabels) === JSON.stringify([
+      '고유 한국어 입당송 1',
+      '고유 한국어 입당송 2',
+      '고유 베트남어 입당송'
+    ]) && result.choiceRuleFixture.inferredKindFixture.ordinaryKind === '',
+    `Missing common/proper metadata was inferred incorrectly: ${JSON.stringify(result.choiceRuleFixture.inferredKindFixture)}`);
     assert(JSON.stringify(result.choiceRuleFixture.readingLengthKinds) === JSON.stringify(['long', 'short', 'long', 'short'])
       && JSON.stringify(result.choiceRuleFixture.readingLengthLabels) === JSON.stringify([
         '고유 독서 (긴 독서)',
