@@ -1511,10 +1511,10 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         result.startupAndSourceColors.noticeTitle,
         result.startupAndSourceColors.noticeLanguageTitle,
         result.startupAndSourceColors.noticeAccept,
-        result.startupAndSourceColors.sourceTitle,
-        result.startupAndSourceColors.sourceChoice
-      ].every(color => color === result.startupAndSourceColors.brand),
-    `Startup notice and Vietnamese source selection do not use the official-mark color: ${JSON.stringify(result.startupAndSourceColors)}`);
+        result.startupAndSourceColors.sourceTitle
+      ].every(color => color === result.startupAndSourceColors.brand)
+      && result.startupAndSourceColors.sourceChoice === 'rgb(17, 17, 17)',
+    `Startup accents or Vietnamese source-choice text use the wrong colors: ${JSON.stringify(result.startupAndSourceColors)}`);
     assert(result.floatingTranslation.primary === '전례명 원문'
       && result.floatingTranslation.secondary === 'Translated liturgy name'
       && result.floatingTranslation.secondaryOpacity < 0.9
