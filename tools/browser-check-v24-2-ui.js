@@ -5,7 +5,9 @@ const path = require('path');
 const { chromium } = require('@playwright/test');
 
 const root = path.resolve(__dirname, '..');
-const targetHtml = 'V24.2.html';
+const targetHtml = process.env.ORDO_CHECK_HTML || 'V24.2.html';
+const targetHtmlSource = fs.readFileSync(path.join(root, targetHtml), 'utf8');
+const v25RuntimePath = path.join(root, 'JS file', 'app_v25.js');
 const mime = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -56,10 +58,24 @@ function startServer() {
   });
 
   try {
-    await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'domcontentloaded' });
-    await page.locator('#consent-accept').click({ timeout: 5000 }).catch(() => {});
-    await page.locator('[data-vn-source="hanoi"]').click({ timeout: 5000 }).catch(() => {});
-    await page.waitForFunction(() => typeof render === 'function' && document.querySelectorAll('#missal-root > *').length > 0);
+    if (targetHtml === 'V25.html') {
+      assert(Buffer.byteLength(targetHtmlSource) < 100000, `V25 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
+      assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
+        && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
+        && /JS%20file\/hymn_data\.js\?v=20260812-v25/.test(targetHtmlSource)
+        && /JS%20file\/app_v25\.js\?v=20260812-v25/.test(targetHtmlSource),
+      'V25 data/runtime scripts are not separated in the HTML.');
+      const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
+      assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
+      assert(!runtimeSource.includes('canonicalCatholicHymnTitleTranslations')
+        && !runtimeSource.includes('const prayerSeedData')
+        && !/<script>\s*[\s\S]+<\/script>/u.test(targetHtmlSource),
+      'V25 still embeds prayer/hymn data in the runtime or inline HTML.');
+    }
+    await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    await page.locator('#consent-accept').click({ timeout: 15000 }).catch(() => {});
+    await page.locator('[data-vn-source="hanoi"]').click({ timeout: 15000 }).catch(() => {});
+    await page.waitForFunction(() => typeof render === 'function' && document.querySelectorAll('#missal-root > *').length > 0, null, { timeout: 90000 });
 
     const result = await page.evaluate(async () => {
       const px = selector => parseFloat(getComputedStyle(document.querySelector(selector)).fontSize);
@@ -124,12 +140,20 @@ function startServer() {
         JP: /\u81EA\u8CBB\u30BD\u30F3\u30B0|\u6804\u5149\u30BD\u30F3\u30B0|\u5165\u515A\u30BD\u30F3\u30B0|\u6CE8\u610F|\u4E3B\u4EBA|\u9AD8\u9F62\u8005|[\uAC00-\uD7A3]/u
       };
       const suspiciousTitlesAfterNormalization = [];
+      const suspiciousStoredTitles = [];
+      const storedCanonicalMismatches = [];
       koreanHymns.forEach(entry => {
         Object.entries(suspiciousTitlePatterns).forEach(([lang, pattern]) => {
           const stored = cleanNodeText(entry && entry.translations && entry.translations[lang] && entry.translations[lang].title);
           if (!stored) return;
+          if (pattern.test(stored)) suspiciousStoredTitles.push({ id: entry.id, source: entry.title, lang, stored });
           const normalized = normalizeHymnTranslatedTitle(entry, lang, stored);
           if (pattern.test(normalized)) suspiciousTitlesAfterNormalization.push({ id: entry.id, source: entry.title, lang, stored, normalized });
+        });
+        const canonical = window.ordoCatholicTitleData?.hymn?.[cleanNodeText(entry && entry.title)];
+        if (canonical) Object.entries(canonical).forEach(([lang, expected]) => {
+          const stored = cleanNodeText(entry && entry.translations && entry.translations[lang] && entry.translations[lang].title);
+          if (stored !== cleanNodeText(expected)) storedCanonicalMismatches.push({ id: entry.id, source: entry.title, lang, stored, expected });
         });
       });
       const syntheticHymn = {
@@ -149,15 +173,57 @@ function startServer() {
       state.currentLoc = savedHymnTitleState.currentLoc;
       state.targetLang = savedHymnTitleState.targetLang;
       const hymnTitleTranslationFixture = {
+        usesDataLayer: typeof window.ordoNormalizeCatholicHymnTitle === 'function'
+          && window.ordoCatholicTitleData?.hymn?.['\uC790\uBE44\uC1A1']?.VN === 'Kinh Th\u01B0\u01A1ng X\u00F3t',
         kyrieCount: kyrieEntries.length,
+        storedKyrieCanonical: kyrieEntries.every(entry => entry.translations?.VN?.title === 'Kinh Thương Xót'),
         kyrieCanonical: kyrieEntries.every(entry => (
           normalizeHymnTranslatedTitle(entry, 'VN', entry.translations?.VN?.title) === 'Kinh Th\u01B0\u01A1ng X\u00F3t'
           && normalizeHymnTranslatedTitle(entry, 'EN', entry.translations?.EN?.title) === 'Kyrie (Lord, Have Mercy)'
           && normalizeHymnTranslatedTitle(entry, 'LA', entry.translations?.LA?.title) === 'Kyrie eleison'
           && normalizeHymnTranslatedTitle(entry, 'JP', entry.translations?.JP?.title) === '\u3042\u308F\u308C\u307F\u306E\u8CDB\u6B4C\uFF08\u30AD\u30EA\u30A8\uFF09'
         )),
+        suspiciousStoredTitles,
         suspiciousTitlesAfterNormalization,
+        storedCanonicalMismatches,
         freshTranslationOverridesStored
+      };
+      const prayerApi = window.ordoPrayerDataApi;
+      const normalizedPrayerFixture = prayerApi?.normalizeEntries([{
+        key: 'prayer-data-api-fixture',
+        category: 'monthly',
+        title_vn: 'Kinh th\u1EED',
+        body_vn: '<rubric>H\u01B0\u1EDBng d\u1EABn</rubric>\u0110o\u1EA1n m\u1ED9t',
+        sourceCategory_vn: 'Kinh theo th\u00E1ng k\u00EDnh'
+      }])?.[0];
+      const prayerTranslationSourceFixture = prayerApi?.translationSource(normalizedPrayerFixture, 'KR', 'VN', 'body');
+      const prayerMarkupFixture = formatPrayerMarkupHtml('<rubric>\uC548\uB0B4</rubric>**\uD6C4\uB834**\n1. \uCCAB\uC9F8 \uC808');
+      const prayerDataLayerFixture = {
+        available: !!prayerApi,
+        entryCount: prayerApi?.entries?.length || 0,
+        normalizedId: normalizedPrayerFixture?.id || '',
+        normalizedVietnameseTitle: prayerApi?.valueStrict(normalizedPrayerFixture?.titles, 'VN') || '',
+        monthlyKoreanLabel: prayerApi?.categoryLabel('monthly', 'KR') || '',
+        searchIncludesTitle: prayerApi?.searchText(normalizedPrayerFixture, 'VN', 'KR').includes('Kinh th\u1EED') || false,
+        sourceLang: prayerTranslationSourceFixture?.sourceLang || '',
+        sourceText: prayerTranslationSourceFixture?.sourceText || '',
+        htmlDelegatesData: /ordoPrayerDataApi\.normalizeEntries/.test(getUploadedPrayerData.toString())
+          && /ordoPrayerDataApi\.searchText/.test(prayerEntrySearchText.toString())
+          && /ordoPrayerDataApi\.translationSource/.test(prayerAutomaticTranslationInfo.toString()),
+        displayMarkupPreserved: prayerMarkupFixture.includes('<span class="rubric">\uC548\uB0B4</span>')
+          && prayerMarkupFixture.includes('<strong>\uD6C4\uB834</strong>')
+          && prayerMarkupFixture.includes('<br>1. \uCCAB\uC9F8 \uC808')
+      };
+      const missaCloneFixture = window.ordoMissaDataApi?.cloneEntries?.() || [];
+      const missaOriginalFirstId = window.ordoMissaDataApi?.entries?.[0]?.id || '';
+      if (missaCloneFixture[0]) missaCloneFixture[0].id = 'changed-only-in-clone';
+      const missaDataLayerFixture = {
+        available: !!window.ordoMissaDataApi,
+        entryCount: window.ordoMissaDataApi?.entries?.length || 0,
+        cloneIsolated: !!missaOriginalFirstId && window.ordoMissaDataApi?.entries?.[0]?.id === missaOriginalFirstId,
+        hasSongEntry: !!window.ordoMissaDataApi?.findEucharisticSongEntry?.(),
+        hasPrayerThreeEntry: !!window.ordoMissaDataApi?.findEucharisticPrayerThreeEntry?.(),
+        runtimeDelegatesData: /missaDataApi\.entries/.test(getStartupOrdinaryMassData.toString())
       };
 
       setSelect('set-ui-lang', 'VN');
@@ -1293,6 +1359,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         catholicTerminologyFixture,
         hymnLiturgicalTagFixture,
         hymnTitleTranslationFixture,
+        prayerDataLayerFixture,
+        missaDataLayerFixture,
         settingsLabels: [
           'lbl-settings-title', 'lbl-set-gps', 'lbl-set-loc', 'lbl-set-target',
           'lbl-set-vn-source', 'lbl-set-stacked', 'lbl-set-voice',
@@ -1451,11 +1519,33 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.hymnLiturgicalTagFixture.color === 'rgb(180, 83, 9)'
       && result.hymnLiturgicalTagFixture.oval !== '0px',
     `Hymn liturgical tags are not orange ovals after the hymn title: ${JSON.stringify(result.hymnLiturgicalTagFixture)}`);
-    assert(result.hymnTitleTranslationFixture.kyrieCount > 0
+    assert(result.hymnTitleTranslationFixture.usesDataLayer
+      && result.hymnTitleTranslationFixture.kyrieCount > 0
+      && result.hymnTitleTranslationFixture.storedKyrieCanonical
       && result.hymnTitleTranslationFixture.kyrieCanonical
+      && result.hymnTitleTranslationFixture.suspiciousStoredTitles.length === 0
       && result.hymnTitleTranslationFixture.suspiciousTitlesAfterNormalization.length === 0
+      && result.hymnTitleTranslationFixture.storedCanonicalMismatches.length === 0
       && result.hymnTitleTranslationFixture.freshTranslationOverridesStored,
     `Catholic hymn-title normalization is incomplete: ${JSON.stringify(result.hymnTitleTranslationFixture)}`);
+    assert(result.prayerDataLayerFixture.available
+      && result.prayerDataLayerFixture.entryCount >= 575
+      && result.prayerDataLayerFixture.normalizedId === 'prayer-data-api-fixture'
+      && result.prayerDataLayerFixture.normalizedVietnameseTitle === 'Kinh thử'
+      && result.prayerDataLayerFixture.monthlyKoreanLabel === '성월기도'
+      && result.prayerDataLayerFixture.searchIncludesTitle
+      && result.prayerDataLayerFixture.sourceLang === 'VN'
+      && /Đoạn một/.test(result.prayerDataLayerFixture.sourceText)
+      && result.prayerDataLayerFixture.htmlDelegatesData
+      && result.prayerDataLayerFixture.displayMarkupPreserved,
+    `Prayer data processing did not move cleanly into prayer_data.js: ${JSON.stringify(result.prayerDataLayerFixture)}`);
+    assert(result.missaDataLayerFixture.available
+      && result.missaDataLayerFixture.entryCount > 0
+      && result.missaDataLayerFixture.cloneIsolated
+      && result.missaDataLayerFixture.hasSongEntry
+      && result.missaDataLayerFixture.hasPrayerThreeEntry
+      && result.missaDataLayerFixture.runtimeDelegatesData,
+    `Ordinary Mass data processing did not move cleanly into missa_data.js: ${JSON.stringify(result.missaDataLayerFixture)}`);
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);
     assert(JSON.stringify(result.deviceUiLanguageFixtures) === JSON.stringify({
