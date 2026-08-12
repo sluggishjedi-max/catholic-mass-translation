@@ -4541,6 +4541,7 @@
         await reloadPageDataScript('hymn_data.js', () => {
             if (Array.isArray(window.ordoHymnData)) window.hymnData = window.ordoHymnData;
         });
+        await reloadPageDataScript('hymn_title_data.js');
         hymnTranslationRecords.clear();
         renderHymnPanel();
     }

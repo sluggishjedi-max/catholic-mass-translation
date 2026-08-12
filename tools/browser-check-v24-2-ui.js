@@ -63,6 +63,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25/.test(targetHtmlSource)
+        && /JS%20file\/hymn_title_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/app_v25\.js\?v=20260812-v25/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
