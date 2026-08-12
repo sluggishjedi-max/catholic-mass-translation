@@ -89,6 +89,76 @@ function startServer() {
         vietnamese: vietnameseReadingSourceLabel('hanoi', 'VN'),
         legacyKoreanPresent: document.body.textContent.includes('주교회의 전례위원회(UBPT)')
       };
+      const catholicTerminologyFixture = {
+        korean: enforceCatholicTranslationTerminology(
+          '하나님과 성도들이 여호와로 감람나무 아래에서 평강을 누리며 할렐루야 찬송가를 부르고 침례와 성찬식을 기념한다.',
+          'KR'
+        ),
+        vietnameseUntouched: enforceCatholicTranslationTerminology('하나님 성도 할렐루야', 'VN'),
+        prompt: catholicTranslationStyleInstruction('KR'),
+        nonKoreanPrompt: catholicTranslationStyleInstruction('VN')
+      };
+      const hymnTagProbe = document.createElement('div');
+      hymnTagProbe.innerHTML = '<span class="hymn-title-text">테스트 성가' + hymnTitleTagsHtml({
+        book: '가톨릭성가',
+        tags: ['가톨릭성가', '연중', '봉헌', '연중']
+      }) + '</span>';
+      document.body.appendChild(hymnTagProbe);
+      const hymnTagNodes = Array.from(hymnTagProbe.querySelectorAll('.hymn-title-tag'));
+      const hymnLiturgicalTagFixture = {
+        labels: hymnTagNodes.map(node => node.textContent.trim()),
+        excludesBook: !hymnTagProbe.textContent.includes('가톨릭성가'),
+        followsTitle: hymnTagProbe.querySelector('.hymn-title-text')?.firstChild?.textContent === '테스트 성가',
+        background: hymnTagNodes[0] ? getComputedStyle(hymnTagNodes[0]).backgroundColor : '',
+        color: hymnTagNodes[0] ? getComputedStyle(hymnTagNodes[0]).color : '',
+        oval: hymnTagNodes[0] ? getComputedStyle(hymnTagNodes[0]).borderRadius : ''
+      };
+      hymnTagProbe.remove();
+
+      const koreanHymns = getHymnData().filter(entry => normalizeSelectableLang(entry && entry.country, 'KR') === 'KR');
+      const kyrieEntries = koreanHymns.filter(entry => cleanNodeText(entry && entry.title) === '\uC790\uBE44\uC1A1');
+      const suspiciousTitlePatterns = {
+        VN: /B\u00E0i h\u00E1t (?:Zabi|Gloria|vinh quang|c\u1ED5 v\u0169 ph\u00FAc \u00E2m|\u0111\u1EA7u v\u00E0o|\u0111\u00E1p tr\u1EA3)|k\u1EBFt th\u00FAc b\u00E0i h\u00E1t|Yeongsong/iu,
+        EN: /Zabi Song|Gloria Song|Glory song|Gospel cheer song|Entrance song|Responsorial song|Yeongsong/iu,
+        LA: /Zabi Song|Gloria Song|Byeongin Martyr Song|martyr fidei/iu,
+        JP: /\u81EA\u8CBB\u30BD\u30F3\u30B0|\u6804\u5149\u30BD\u30F3\u30B0|\u5165\u515A\u30BD\u30F3\u30B0|\u6CE8\u610F|\u4E3B\u4EBA|\u9AD8\u9F62\u8005|[\uAC00-\uD7A3]/u
+      };
+      const suspiciousTitlesAfterNormalization = [];
+      koreanHymns.forEach(entry => {
+        Object.entries(suspiciousTitlePatterns).forEach(([lang, pattern]) => {
+          const stored = cleanNodeText(entry && entry.translations && entry.translations[lang] && entry.translations[lang].title);
+          if (!stored) return;
+          const normalized = normalizeHymnTranslatedTitle(entry, lang, stored);
+          if (pattern.test(normalized)) suspiciousTitlesAfterNormalization.push({ id: entry.id, source: entry.title, lang, stored, normalized });
+        });
+      });
+      const syntheticHymn = {
+        id: 'translation-record-precedence-fixture',
+        country: 'KR',
+        title: '\uD14C\uC2A4\uD2B8 \uC131\uAC00',
+        text: '\uD14C\uC2A4\uD2B8',
+        translations: { VN: { title: 'B\u1EA3n d\u1ECBch c\u0169' } }
+      };
+      const savedHymnTitleState = { currentLoc: state.currentLoc, targetLang: state.targetLang };
+      state.currentLoc = 'KR';
+      state.targetLang = 'VN';
+      const syntheticRecordKey = hymnTranslationRecordKey(syntheticHymn, 'VN');
+      hymnTranslationRecords.set(syntheticRecordKey, { status: 'done', targetLang: 'VN', title: 'B\u1EA3n d\u1ECBch ch\u00EDnh th\u1EE9c m\u1EDBi' });
+      const freshTranslationOverridesStored = hymnTranslatedTitle(syntheticHymn, 'KR') === 'B\u1EA3n d\u1ECBch ch\u00EDnh th\u1EE9c m\u1EDBi';
+      hymnTranslationRecords.delete(syntheticRecordKey);
+      state.currentLoc = savedHymnTitleState.currentLoc;
+      state.targetLang = savedHymnTitleState.targetLang;
+      const hymnTitleTranslationFixture = {
+        kyrieCount: kyrieEntries.length,
+        kyrieCanonical: kyrieEntries.every(entry => (
+          normalizeHymnTranslatedTitle(entry, 'VN', entry.translations?.VN?.title) === 'Kinh Th\u01B0\u01A1ng X\u00F3t'
+          && normalizeHymnTranslatedTitle(entry, 'EN', entry.translations?.EN?.title) === 'Kyrie (Lord, Have Mercy)'
+          && normalizeHymnTranslatedTitle(entry, 'LA', entry.translations?.LA?.title) === 'Kyrie eleison'
+          && normalizeHymnTranslatedTitle(entry, 'JP', entry.translations?.JP?.title) === '\u3042\u308F\u308C\u307F\u306E\u8CDB\u6B4C\uFF08\u30AD\u30EA\u30A8\uFF09'
+        )),
+        suspiciousTitlesAfterNormalization,
+        freshTranslationOverridesStored
+      };
 
       setSelect('set-ui-lang', 'VN');
       setSelect('set-font-size', '22px');
@@ -1220,6 +1290,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         fontOptions,
         sourceOptions,
         koreanVietnameseSourceLabels,
+        catholicTerminologyFixture,
+        hymnLiturgicalTagFixture,
+        hymnTitleTranslationFixture,
         settingsLabels: [
           'lbl-settings-title', 'lbl-set-gps', 'lbl-set-loc', 'lbl-set-target',
           'lbl-set-vn-source', 'lbl-set-stacked', 'lbl-set-voice',
@@ -1363,6 +1436,26 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.koreanVietnameseSourceLabels.vietnamese === 'Bản dịch Ủy ban Phụng tự (UBPT) · Sách Bài Đọc'
       && !result.koreanVietnameseSourceLabels.legacyKoreanPresent,
     `Korean Vietnamese-source labels changed incorrectly or altered the Vietnamese label: ${JSON.stringify(result.koreanVietnameseSourceLabels)}`);
+    assert(result.catholicTerminologyFixture.korean === '하느님과 신도들이 주님 때문에 올리브나무 아래에서 평화를 누리며 알렐루야 성가를 부르고 세례와 성찬례를 기념한다.'
+      && result.catholicTerminologyFixture.vietnameseUntouched === '하나님 성도 할렐루야'
+      && /Korean Catholic Bishops/.test(result.catholicTerminologyFixture.prompt)
+      && /“하나님”→“하느님”/.test(result.catholicTerminologyFixture.prompt)
+      && /“성도”→“신도”/.test(result.catholicTerminologyFixture.prompt)
+      && /“도”→“길/.test(result.catholicTerminologyFixture.prompt)
+      && result.catholicTerminologyFixture.nonKoreanPrompt === '',
+    `AI Korean translation is not enforcing Catholic terminology safely: ${JSON.stringify(result.catholicTerminologyFixture)}`);
+    assert(JSON.stringify(result.hymnLiturgicalTagFixture.labels) === JSON.stringify(['연중', '봉헌'])
+      && result.hymnLiturgicalTagFixture.excludesBook
+      && result.hymnLiturgicalTagFixture.followsTitle
+      && result.hymnLiturgicalTagFixture.background === 'rgb(255, 241, 223)'
+      && result.hymnLiturgicalTagFixture.color === 'rgb(180, 83, 9)'
+      && result.hymnLiturgicalTagFixture.oval !== '0px',
+    `Hymn liturgical tags are not orange ovals after the hymn title: ${JSON.stringify(result.hymnLiturgicalTagFixture)}`);
+    assert(result.hymnTitleTranslationFixture.kyrieCount > 0
+      && result.hymnTitleTranslationFixture.kyrieCanonical
+      && result.hymnTitleTranslationFixture.suspiciousTitlesAfterNormalization.length === 0
+      && result.hymnTitleTranslationFixture.freshTranslationOverridesStored,
+    `Catholic hymn-title normalization is incomplete: ${JSON.stringify(result.hymnTitleTranslationFixture)}`);
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);
     assert(JSON.stringify(result.deviceUiLanguageFixtures) === JSON.stringify({

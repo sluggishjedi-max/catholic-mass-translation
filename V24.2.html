@@ -249,6 +249,7 @@
         .hymn-disclosure { color: var(--primary-color); font-size: 0.78rem; transition: transform 0.18s ease; }
         .hymn-list-item.is-selected .hymn-disclosure { transform: rotate(180deg); }
         .hymn-title-button:hover { text-decoration: underline; text-underline-offset: 3px; }
+        .hymn-title-tag { margin-left: 6px; }
         .hymn-list-item.is-selected { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.14); }
         .hymn-title-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
         .hymn-country-title-select { width: auto; min-width: 170px; max-width: min(280px, 100%); padding: 6px 10px; font-size: 0.92rem; }
@@ -3048,6 +3049,96 @@
 
     const hymnTranslationRecords = new Map();
 
+    const canonicalCatholicHymnTitleTranslations = Object.freeze({
+        '자비송': { VN: 'Kinh Thương Xót', EN: 'Kyrie (Lord, Have Mercy)', LA: 'Kyrie eleison', JP: 'あわれみの賛歌（キリエ）' },
+        '대영광송': { VN: 'Kinh Vinh Danh', EN: 'Gloria', LA: 'Gloria', JP: '栄光の賛歌（グロリア）' },
+        '거룩하시도다': { VN: 'Thánh, Thánh, Thánh', EN: 'Sanctus (Holy, Holy, Holy)', LA: 'Sanctus', JP: '感謝の賛歌（サンクトゥス）' },
+        '하느님의 어린양': { VN: 'Kinh Chiên Thiên Chúa', EN: 'Agnus Dei (Lamb of God)', LA: 'Agnus Dei', JP: '平和の賛歌（アニュス・デイ）' },
+        '신앙의 신비여': { VN: 'Mầu nhiệm đức tin', EN: 'The Mystery of Faith', LA: 'Mysterium fidei', JP: '信仰の神秘' },
+        '주님의 기도': { VN: 'Kinh Lạy Cha', EN: 'The Lord’s Prayer', LA: 'Pater noster', JP: '主の祈り' },
+        '주님의 기도 – 주님께 나라와': { VN: 'Kinh Lạy Cha – Vì vương quyền, uy lực và vinh quang là của Chúa', EN: 'The Lord’s Prayer – For the Kingdom, the Power and the Glory Are Yours', LA: 'Pater noster – Quia tuum est regnum et potestas et gloria', JP: '主の祈り－国と力と栄光は限りなくあなたのもの' },
+        '미사시작': { VN: 'Mở đầu Thánh lễ', EN: 'Beginning of Mass', LA: 'Initium Missae', JP: 'ミサの開祭' },
+        '미사 시작': { VN: 'Mở đầu Thánh lễ', EN: 'Beginning of Mass', LA: 'Initium Missae', JP: 'ミサの開祭' },
+        '영광송': { VN: 'Kinh Sáng Danh', EN: 'Doxology', LA: 'Doxologia', JP: '栄唱' },
+        '복음 환호송': { VN: 'Tung hô Tin Mừng', EN: 'Gospel Acclamation', LA: 'Acclamatio ante Evangelium', JP: '福音朗読前のアレルヤ唱' },
+        '복음환호송': { VN: 'Tung hô Tin Mừng', EN: 'Gospel Acclamation', LA: 'Acclamatio ante Evangelium', JP: '福音朗読前のアレルヤ唱' },
+        '봉헌': { VN: 'Dâng lễ', EN: 'Offertory', LA: 'Offertorium', JP: '奉納' },
+        '마침 성가': { VN: 'Ca kết lễ', EN: 'Recessional Hymn', LA: 'Cantus ad recessum', JP: '閉祭の歌' },
+        '미사 끝': { VN: 'Kết lễ', EN: 'Conclusion of Mass', LA: 'Conclusio Missae', JP: 'ミサの閉祭' },
+        '입당송': { VN: 'Ca nhập lễ', EN: 'Entrance Antiphon', LA: 'Antiphona ad introitum', JP: '入祭唱' },
+        '화답송': { VN: 'Thánh vịnh đáp ca', EN: 'Responsorial Psalm', LA: 'Psalmus responsorius', JP: '答唱詩編' },
+        '연송': { VN: 'Thánh ca liên xướng', EN: 'Tract', LA: 'Tractus', JP: '詠唱' },
+        '영성체': { VN: 'Hiệp lễ', EN: 'Holy Communion', LA: 'Communio', JP: '聖体拝領' },
+        '영성체송': { VN: 'Ca hiệp lễ', EN: 'Communion Antiphon', LA: 'Antiphona ad communionem', JP: '拝領唱' },
+        '보편 지향 기도 응답': { VN: 'Đáp lời nguyện tín hữu', EN: 'Response to the Universal Prayer', LA: 'Responsum orationis universalis', JP: '共同祈願の応答' },
+        '보편지향기도 응답': { VN: 'Đáp lời nguyện tín hữu', EN: 'Response to the Universal Prayer', LA: 'Responsum orationis universalis', JP: '共同祈願の応答' },
+        '아멘': { VN: 'Amen', EN: 'Amen', LA: 'Amen', JP: 'アーメン' },
+        '알렐루야': { VN: 'Alleluia', EN: 'Alleluia', LA: 'Alleluia', JP: 'アレルヤ' },
+        '사도신경': { VN: 'Kinh Tin Kính các Tông đồ', EN: 'The Apostles’ Creed', LA: 'Symbolum Apostolorum', JP: '使徒信条' },
+        '평화의 인사': { VN: 'Chúc bình an', EN: 'Sign of Peace', LA: 'Pax Domini', JP: '平和のあいさつ' },
+        '마침영광송 - 아멘': { VN: 'Vinh tụng ca kết thúc – Amen', EN: 'Concluding Doxology – Amen', LA: 'Doxologia finalis – Amen', JP: '結びの栄唱－アーメン' },
+        '마침영광송 – 아멘': { VN: 'Vinh tụng ca kết thúc – Amen', EN: 'Concluding Doxology – Amen', LA: 'Doxologia finalis – Amen', JP: '結びの栄唱－アーメン' },
+        '주님의 몸 주님의 피': { VN: 'Mình và Máu Chúa', EN: 'The Body and Blood of the Lord', LA: 'Corpus et Sanguis Domini', JP: '主の御からだと御血' },
+        '나의 주님 나의 하느님': { VN: 'Lạy Chúa của con, lạy Thiên Chúa của con', EN: 'My Lord and My God', LA: 'Dominus meus et Deus meus', JP: 'わたしの主、わたしの神' },
+        '주님께 나라와 권능과': { VN: 'Vì vương quyền, uy lực và vinh quang là của Chúa', EN: 'For the Kingdom, the Power and the Glory Are Yours', LA: 'Quia tuum est regnum et potestas et gloria', JP: '国と力と栄光は限りなくあなたのもの' },
+        '병인 순교자 노래': { VN: 'Thánh ca các vị tử đạo Bính Dần', EN: 'Hymn of the Byeongin Martyrs', LA: 'Canticum Martyrum Byeongin', JP: '丙寅迫害の殉教者の歌' },
+        '순교자 믿음': { VN: 'Đức tin của các vị tử đạo', EN: 'Faith of the Martyrs', LA: 'Fides martyrum', JP: '殉教者の信仰' },
+        '글로리아 높으신 이의 탄생': { JP: 'グロリア、いと高き方の誕生' },
+        '거룩한 주의 십자가': { JP: '主の聖なる十字架' },
+        '주의 승천 찬미하네': { JP: '主の昇天をたたえよう' },
+        '주의 얼이': { JP: '主の霊が' },
+        '주의 잔치': { JP: '主の宴' },
+        '주의 성심 홀로': { JP: '主の聖心だけが' },
+        '간절한 주의 사랑': { JP: '主の切なる愛' },
+        '주의 영광': { JP: '主の栄光' },
+        '부드러운 주의 손이': { JP: '主の優しい御手が' },
+        '주의 나라 임하면': { JP: '主の国が来るとき' },
+        '우리는 주의 사랑을': { JP: 'わたしたちは主の愛を' },
+        '주의 말씀 듣고': { JP: '主のみことばを聞いて' },
+        '주의 빵을 서로 나누세': { JP: '主のパンを分かち合おう' },
+        '오 나의 자비로운 주여 Spirit song': { JP: 'ああ、慈しみ深い主よ · Spirit Song' },
+        '주의 거룩하심 생각할 때 When I look into Your holiness': { JP: '主の聖性を仰ぐとき · When I Look into Your Holiness' },
+        '주의 길을 버리고': { JP: '主の道を離れて' },
+        '주의 사랑으로 사랑합니다 I love you with the love of the Lord': { JP: '主の愛で愛します · I Love You with the Love of the Lord' },
+        '주의 이름 높이며 Lord I lift Your name on high': { JP: '主のみ名を掲げて · Lord, I Lift Your Name on High' },
+        '주의 인자는 끝이 없고 The steadfast love': { JP: '主の慈しみは尽きることなく · The Steadfast Love' },
+        '주의 자비가 내려와 Mercy is falling': { JP: '主の慈しみが降り注ぐ · Mercy Is Falling' },
+        '주의 정결한 피로': { JP: '主の清い御血によって' },
+        '어둠도 La ténèbre': { JP: '闇も · La ténèbre' },
+        '우리 모일 때 주 성령 As we gather may Your Spirit work': { JP: 'わたしたちが集うとき、主の霊が · As We Gather, May Your Spirit Work' },
+        '경배하리 내 온 맘 다해 You’re worthy of my praise': { JP: '心を尽くして礼拝します · You’re Worthy of My Praise' },
+        '오라 우리가 Come and let us go': { JP: 'さあ、共に行こう · Come and Let Us Go' },
+        '온 맘 다해 With all my heart': { JP: '心を尽くして · With All My Heart' }
+    });
+
+    function canonicalHymnTitleTranslation(entry, targetLang) {
+        const target = normalizeSelectableLang(targetLang, DEFAULT_TARGET_LANG);
+        const sourceTitle = cleanNodeText(entry && entry.title);
+        const direct = canonicalCatholicHymnTitleTranslations[sourceTitle];
+        if (direct && direct[target]) return direct[target];
+        const prefix = ['주님의 기도', '주님께 나라와 권능과', '마침영광송']
+            .find(key => sourceTitle.startsWith(key));
+        if (!prefix) return '';
+        const base = canonicalCatholicHymnTitleTranslations[prefix]
+            || canonicalCatholicHymnTitleTranslations['마침영광송 - 아멘'];
+        if (!base || !base[target]) return '';
+        const suffix = sourceTitle.slice(prefix.length).replace(/^[\s·:–—-]+/u, '').trim();
+        return suffix && /^[\p{L}\p{N}\s'’.,()\-–—]+$/u.test(suffix) ? `${base[target]} · ${suffix}` : base[target];
+    }
+
+    function normalizeHymnTranslatedTitle(entry, targetLang, value) {
+        const canonical = canonicalHymnTitleTranslation(entry, targetLang);
+        if (canonical) return canonical;
+        const target = normalizeSelectableLang(targetLang, DEFAULT_TARGET_LANG);
+        let title = cleanNodeText(value);
+        if (target === 'KR') title = cleanNodeText(enforceCatholicTranslationTerminology(title, 'KR'));
+        if (target === 'VN') title = title.replace(/Bài hát Zabi/giu, 'Kinh Thương Xót').replace(/Bài hát Gloria/giu, 'Kinh Vinh Danh');
+        if (target === 'EN') title = title.replace(/Zabi Song/giu, 'Kyrie (Lord, Have Mercy)').replace(/Gloria Song/giu, 'Gloria');
+        if (target === 'LA') title = title.replace(/Zabi Song/giu, 'Kyrie eleison').replace(/Gloria Song/giu, 'Gloria');
+        if (target === 'JP') title = title.replace(/自費ソング/gu, 'あわれみの賛歌（キリエ）').replace(/注意/gu, '主の').replace(/主人/gu, '主');
+        return title;
+    }
+
     function usesAutomaticHymnTranslation(country) {
         const hymnLang = normalizeSelectableLang(country || 'KR', 'KR');
         return hymnTargetLanguage(hymnLang) !== hymnLang;
@@ -3131,6 +3222,7 @@
             `Translate this Catholic hymn from ${sourceName} into ${targetName}.`,
             `Source language: ${sourceName}. Target language: ${targetName}.`,
             `Translate every ${sourceName} sentence into natural ${targetName}; do not copy the source-language sentences into the result.`,
+            catholicTranslationStyleInstruction(targetLang),
             'Return strict JSON only in this shape: {"title":"target-language title","lyrics":"target-language lyrics"}.',
             'Preserve stanza numbers, refrain labels, and paragraph breaks.',
             'Do not add commentary or Markdown fences.',
@@ -3141,7 +3233,7 @@
                 title: cleanNodeText(entry && entry.title),
                 lyrics: plainTextFromHtml(entry && entry.text)
             })
-        ].join('\n');
+        ].filter(Boolean).join('\n');
         const payload = await fetchGeminiViaFirebase('translate', {
             contents: [{ parts: [{ text: prompt }] }],
             generationConfig: { temperature: 0.2, responseMimeType: 'application/json' }
@@ -3153,7 +3245,10 @@
         if (!hymnTranslationUsesTargetScript(result, targetLang)) {
             throw new Error(`${targetName} translation did not contain the target-language script.`);
         }
-        return result;
+        return {
+            title: normalizeHymnTranslatedTitle(entry, targetLang, result.title),
+            lyrics: enforceCatholicTranslationTerminology(result.lyrics, targetLang)
+        };
     }
 
     const hymnMachineTranslationLanguageCodes = {
@@ -3205,7 +3300,7 @@
             if (!cleanNodeText(translated)) throw new Error('Fallback translation returned an empty result.');
             translatedChunks.push(translated.trim());
         }
-        return translatedChunks.join('\n');
+        return enforceCatholicTranslationTerminology(translatedChunks.join('\n'), targetLang);
     }
 
     async function translateHymnWithFallback(entry, targetLang) {
@@ -3218,7 +3313,7 @@
                     translateHymnTextWithMachineFallback(cleanNodeText(entry && entry.title), sourceLang, targetLang),
                     translateHymnTextWithMachineFallback(plainTextFromHtml(entry && entry.text), sourceLang, targetLang)
                 ]);
-                const result = { title, lyrics };
+                const result = { title: normalizeHymnTranslatedTitle(entry, targetLang, title), lyrics };
                 if (!hymnTranslationUsesTargetScript(result, targetLang)) throw new Error('Fallback result did not contain the target-language script.');
                 return result;
             } catch (fallbackError) {
@@ -3257,11 +3352,11 @@
 
     function hymnTranslatedTitle(entry, country) {
         const targetLang = hymnTargetLanguage(country);
+        const record = hymnTranslationRecord(entry, country);
+        if (record && record.status === 'done' && record.title) return normalizeHymnTranslatedTitle(entry, targetLang, record.title);
         const stored = entry && entry.translations && entry.translations[targetLang];
         const storedTitle = cleanNodeText(stored && stored.title);
-        if (storedTitle) return storedTitle;
-        const record = hymnTranslationRecord(entry, country);
-        if (record && record.status === 'done' && record.title) return record.title;
+        if (storedTitle) return normalizeHymnTranslatedTitle(entry, targetLang, storedTitle);
         return '';
     }
 
@@ -3294,14 +3389,26 @@
             '$1$2<span class="hymn-structure-label">$3</span>');
     }
 
+    function hymnUsageTags(entry) {
+        const book = cleanNodeText(entry && entry.book);
+        const tags = Array.isArray(entry && entry.tags) ? entry.tags : (entry && entry.category ? [entry.category] : []);
+        return tags
+            .map(cleanNodeText)
+            .filter(tag => tag && tag !== book)
+            .filter((tag, index, values) => values.indexOf(tag) === index);
+    }
+
+    function hymnTitleTagsHtml(entry) {
+        return hymnUsageTags(entry)
+            .map(tag => '<span class="aux-prayer-book-tag hymn-title-tag">' + escapeHtml(tag) + '</span>')
+            .join('');
+    }
+
     function renderHymnDetail(entry, country) {
         const labels = hymnDetailLabels();
         const targetLang = hymnTargetLanguage(country);
         const automaticTranslation = usesAutomaticHymnTranslation(country);
         const translationRecord = hymnTranslationRecord(entry, country);
-        const tags = (entry.tags && entry.tags.length ? entry.tags : (entry.category ? [entry.category] : []))
-            .filter(tag => cleanNodeText(tag) && cleanNodeText(tag) !== cleanNodeText(entry.book));
-        const tagsHtml = tags.length ? '<div class="hymn-tags">' + tags.map(tag => '<span class="aux-pill">' + escapeHtml(tag) + '</span>').join('') + '</div>' : '';
         const versesHtml = Array.isArray(entry.verses) && entry.verses.length
             ? entry.verses.map(verse => {
                 const verseText = cleanNodeText(verse && verse.text);
@@ -3367,12 +3474,12 @@
             : '';
 
         const translatedTitle = hymnTranslatedTitle(entry, country);
-        const titleHtml = translatedTitle ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : escapeHtml(entry.displayTitle || entry.title);
+        const sourceTitleHtml = escapeHtml(entry.displayTitle || entry.title) + hymnTitleTagsHtml(entry);
+        const titleHtml = translatedTitle ? sourceTitleHtml + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : sourceTitleHtml;
         const translationPaneTitle = translatedTitle || hymnTranslationUiText(translationRecord && translationRecord.status === 'pending' ? 'pending' : 'action', targetLang);
 
         return [
             '<article class="hymn-detail">',
-            tagsHtml,
             '<h3>' + titleHtml + '</h3>',
             metaHtml,
             '<div class="aux-two-column hymn-translation-grid">',
@@ -3482,9 +3589,10 @@
             const pendingTitle = usesAutomaticHymnTranslation(country) && translationRecord && translationRecord.status === 'pending'
                 ? hymnTranslationUiText('pending', targetLang)
                 : '';
+            const sourceTitleHtml = escapeHtml(entry.displayTitle || entry.title) + hymnTitleTagsHtml(entry);
             const titleHtml = translatedTitle || pendingTitle
-                ? escapeHtml(entry.displayTitle || entry.title) + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle || pendingTitle) + '</span>'
-                : escapeHtml(entry.displayTitle || entry.title);
+                ? sourceTitleHtml + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle || pendingTitle) + '</span>'
+                : sourceTitleHtml;
 
             return [
                 '<article class="hymn-list-item' + selectedClass + '">',
@@ -14203,6 +14311,74 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         LA: 'Latin'
     };
 
+    // Korean Catholic terminology is enforced in both the model prompt and
+    // the final output. The broader prompt list follows the Catholic/Protestant
+    // comparison supplied for this project; only context-safe items are
+    // mechanically replaced so ordinary Korean words are not damaged.
+    const catholicKoreanTerminologyPromptPairs = Object.freeze([
+        ['하나님', '하느님'], ['성도', '신도'], ['여호와', '주님 또는 문맥에 맞는 하느님'],
+        ['갈급하다', '애타하다'], ['갈람나무/감람나무', '올리브나무'], ['열납되다', '반기시다'],
+        ['강팍하다', '완고하다'], ['열방', '나라·만민·세계·세상'], ['거하다', '머물다'],
+        ['영영하다', '영원하다'], ['계수하다', '헤아리다'], ['요동치 아니하다', '흔들리지 아니하다'],
+        ['곤고케 하다', '힘들게 하다'], ['전', '앞(문맥상 위치를 뜻할 때만)'],
+        ['그 발 등상', '그분의 발판'], ['족속', '민족'], ['기사', '기적(초자연적 사건을 뜻할 때만)'],
+        ['초장', '풀밭'], ['능치 못하실 일', '하시지 못할 일'], ['평강', '평안 또는 평화'],
+        ['도', '길(신앙의 길을 뜻할 때만)'], ['민망하다', '불쌍하다'], ['할렐루야', '알렐루야'],
+        ['방언', '언어'], ['합력', '협력'], ['아바', '아빠'], ['희락', '기쁨'],
+        ['찬송가', '성가'], ['침례', '세례'], ['주기도문', '주님의 기도'],
+        ['성찬식', '성찬례'], ['목사', '사제(가톨릭 성직자를 뜻할 때)'], ['예배', '미사 또는 전례(문맥에 따라)']
+    ]);
+
+    const catholicKoreanForcedTermReplacements = Object.freeze([
+        [/여호와로/gu, '주님 때문에'],
+        [/여호와를/gu, '주님을'], [/여호와가/gu, '주님이'], [/여호와는/gu, '주님은'], [/여호와와/gu, '주님과'],
+        [/평강을/gu, '평화를'], [/평강이/gu, '평화가'], [/평강은/gu, '평화는'], [/평강과/gu, '평화와'], [/평강으로/gu, '평화로'],
+        [/방언을/gu, '언어를'], [/방언이/gu, '언어가'], [/방언은/gu, '언어는'], [/방언과/gu, '언어와'], [/방언으로/gu, '언어로'],
+        [/주기도문을/gu, '주님의 기도를'], [/주기도문이/gu, '주님의 기도가'], [/주기도문은/gu, '주님의 기도는'], [/주기도문과/gu, '주님의 기도와'], [/주기도문으로/gu, '주님의 기도로'],
+        [/성찬식을/gu, '성찬례를'], [/성찬식이/gu, '성찬례가'], [/성찬식은/gu, '성찬례는'], [/성찬식과/gu, '성찬례와'], [/성찬식으로/gu, '성찬례로'],
+        [/하나님/gu, '하느님'],
+        [/성도/gu, '신도'],
+        [/여호와/gu, '주님'],
+        [/(?:갈람|감람)나무/gu, '올리브나무'],
+        [/강팍/gu, '완고'],
+        [/열방/gu, '모든 민족'],
+        [/그\s*발\s*등상/gu, '그분의 발판'],
+        [/족속/gu, '민족'],
+        [/초장/gu, '풀밭'],
+        [/평강/gu, '평화'],
+        [/할렐루야/giu, '알렐루야'],
+        [/방언/gu, '언어'],
+        [/합력/gu, '협력'],
+        [/아바/gu, '아빠'],
+        [/희락/gu, '기쁨'],
+        [/찬송가/gu, '성가'],
+        [/침례/gu, '세례'],
+        [/주기도문/gu, '주님의 기도'],
+        [/성찬식/gu, '성찬례']
+    ]);
+
+    function catholicTranslationStyleInstruction(targetLangCode) {
+        if (normalizeSelectableLang(targetLangCode, '') !== 'KR') return '';
+        const pairs = catholicKoreanTerminologyPromptPairs
+            .map(([avoid, use]) => `“${avoid}”→“${use}”`)
+            .join(', ');
+        return [
+            'Use the official terminology and style of the Catholic Church in Korea and the Korean Catholic Bishops’ Conference Bible and Roman Missal.',
+            'Do not use Korean Protestant Bible, worship, hymn, clergy, or church vocabulary.',
+            `Mandatory Catholic terminology (left side is forbidden in the Korean result): ${pairs}.`,
+            'For context-sensitive pairs, choose the listed Catholic expression that preserves the source meaning; never perform a word-for-word Protestant rendering.'
+        ].join(' ');
+    }
+
+    function enforceCatholicTranslationTerminology(value, targetLangCode) {
+        let translated = String(value || '');
+        if (normalizeSelectableLang(targetLangCode, '') !== 'KR') return translated;
+        catholicKoreanForcedTermReplacements.forEach(([pattern, replacement]) => {
+            translated = translated.replace(pattern, replacement);
+        });
+        return translated;
+    }
+
     function plainTextFromHtml(value) {
         const doc = parseHtml(`<div>${String(value || '')}</div>`);
         return cleanNodeText(doc.body ? doc.body.textContent : String(value || ''));
@@ -14245,11 +14421,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!source) throw new Error('번역할 원문이 없습니다.');
         const prompt = [
             `Translate the following Catholic liturgical text into ${targetName}.`,
+            catholicTranslationStyleInstruction(targetLangCode),
             'Return only the translation.',
             'Preserve paragraph breaks. Do not add commentary, headings, or quotation marks.',
             '',
             source
-        ].join('\n');
+        ].filter(Boolean).join('\n');
         const payload = await fetchGeminiViaFirebase('translate', {
             contents: [{ parts: [{ text: prompt }] }],
             generationConfig: { temperature: 0.2 }
@@ -14259,7 +14436,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
         const translated = geminiTextFromPayload(payload);
         if (!translated) throw new Error('AI 번역 결과가 비어 있습니다.');
-        return translated;
+        return enforceCatholicTranslationTerminology(translated, targetLangCode);
     }
 
     const aiTranslationRecords = new Map();
@@ -15170,7 +15347,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             render();
         } catch (error) {
             console.warn('AI translation failed', error);
-            const fallback = cleanNodeText(predefinedAiText);
+            const fallback = enforceCatholicTranslationTerminology(cleanNodeText(predefinedAiText), targetLangCode);
             if (fallback) {
                 aiTranslationRecords.set(key, { status: 'done', text: fallback });
                 applyAITranslationResultToButton(btn, fallback);
