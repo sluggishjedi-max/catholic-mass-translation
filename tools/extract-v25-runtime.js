@@ -7,33 +7,12 @@ const versionPath = path.join(root, 'V25.html');
 const runtimePath = path.join(root, 'JS file', 'app_v25.js');
 const runtimeTag = '<script src="JS%20file/app_v25.js?v=20260812-v25"></script>';
 
-function removeInlineHymnTitleData(runtimeSource) {
-  const startMarker = '    const canonicalCatholicHymnTitleTranslations = Object.freeze({';
-  const endMarker = '    function usesAutomaticHymnTranslation(country) {';
-  const start = runtimeSource.indexOf(startMarker);
-  const end = runtimeSource.indexOf(endMarker, start);
-  if (start < 0 || end <= start) throw new Error('The inline hymn-title data block was not found.');
-  const adapter = [
-    '    function normalizeHymnTranslatedTitle(entry, targetLang, value) {',
-    '        const target = normalizeSelectableLang(targetLang, DEFAULT_TARGET_LANG);',
-    '        const normalized = typeof window.ordoNormalizeCatholicHymnTitle === \'function\'',
-    '            ? window.ordoNormalizeCatholicHymnTitle(entry, target, value)',
-    '            : cleanNodeText(value);',
-    '        return target === \'KR\'',
-    '            ? cleanNodeText(enforceCatholicTranslationTerminology(normalized, \'KR\'))',
-    '            : cleanNodeText(normalized);',
-    '    }',
-    '',
-    ''
-  ].join('\n');
-  return runtimeSource.slice(0, start) + adapter + runtimeSource.slice(end);
-}
-
 if (process.argv.includes('--runtime-only')) {
   const existingRuntime = fs.readFileSync(runtimePath, 'utf8');
-  const cleanedRuntime = removeInlineHymnTitleData(existingRuntime);
-  fs.writeFileSync(runtimePath, cleanedRuntime, 'utf8');
-  console.log(JSON.stringify({ runtimeBytesBefore: Buffer.byteLength(existingRuntime), runtimeBytesAfter: Buffer.byteLength(cleanedRuntime) }, null, 2));
+  if (!existingRuntime.includes('function normalizeHymnTranslatedTitle')) {
+    throw new Error('The V25 hymn-title runtime is missing.');
+  }
+  console.log(JSON.stringify({ runtimeBytes: Buffer.byteLength(existingRuntime), unchanged: true }, null, 2));
   process.exit(0);
 }
 
@@ -44,7 +23,7 @@ if (inlineStart < 0 || inlineEnd <= inlineStart) {
   throw new Error('The main inline runtime script was not found in index.html.');
 }
 
-const runtime = removeInlineHymnTitleData(source.slice(inlineStart + '<script>\n'.length, inlineEnd));
+const runtime = source.slice(inlineStart + '<script>\n'.length, inlineEnd);
 if (!runtime.includes("const APP_VERSION = 'V25-20260812'")) {
   throw new Error('Refusing to extract a runtime that is not marked as V25.');
 }

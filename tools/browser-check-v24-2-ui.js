@@ -8,6 +8,7 @@ const root = path.resolve(__dirname, '..');
 const targetHtml = process.env.ORDO_CHECK_HTML || 'V24.2.html';
 const targetHtmlSource = fs.readFileSync(path.join(root, targetHtml), 'utf8');
 const v25RuntimePath = path.join(root, 'JS file', 'app_v25.js');
+const hymnDataPath = path.join(root, 'JS file', 'hymn_data.js');
 const mime = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -63,15 +64,18 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25/.test(targetHtmlSource)
-        && /JS%20file\/hymn_title_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/app_v25\.js\?v=20260812-v25/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
-      assert(!runtimeSource.includes('canonicalCatholicHymnTitleTranslations')
+      const hymnDataSource = fs.readFileSync(hymnDataPath, 'utf8');
+      assert(runtimeSource.includes('canonicalCatholicHymnTitleTranslations')
+        && runtimeSource.includes('function normalizeHymnTranslatedTitle')
+        && !hymnDataSource.includes('ordoNormalizeCatholicHymnTitle')
+        && !hymnDataSource.includes('ordoCatholicTitleData')
         && !runtimeSource.includes('const prayerSeedData')
         && !/<script>\s*[\s\S]+<\/script>/u.test(targetHtmlSource),
-      'V25 still embeds prayer/hymn data in the runtime or inline HTML.');
+      'V25 hymn data and runtime responsibilities are not separated.');
     }
     await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
     await page.locator('#consent-accept').click({ timeout: 15000 }).catch(() => {});
@@ -151,7 +155,7 @@ function startServer() {
           const normalized = normalizeHymnTranslatedTitle(entry, lang, stored);
           if (pattern.test(normalized)) suspiciousTitlesAfterNormalization.push({ id: entry.id, source: entry.title, lang, stored, normalized });
         });
-        const canonical = window.ordoCatholicTitleData?.hymn?.[cleanNodeText(entry && entry.title)];
+        const canonical = canonicalCatholicHymnTitleTranslations?.[cleanNodeText(entry && entry.title)];
         if (canonical) Object.entries(canonical).forEach(([lang, expected]) => {
           const stored = cleanNodeText(entry && entry.translations && entry.translations[lang] && entry.translations[lang].title);
           if (stored !== cleanNodeText(expected)) storedCanonicalMismatches.push({ id: entry.id, source: entry.title, lang, stored, expected });
@@ -174,8 +178,9 @@ function startServer() {
       state.currentLoc = savedHymnTitleState.currentLoc;
       state.targetLang = savedHymnTitleState.targetLang;
       const hymnTitleTranslationFixture = {
-        usesDataLayer: typeof window.ordoNormalizeCatholicHymnTitle === 'function'
-          && window.ordoCatholicTitleData?.hymn?.['\uC790\uBE44\uC1A1']?.VN === 'Kinh Th\u01B0\u01A1ng X\u00F3t',
+        usesRuntimeLayer: typeof normalizeHymnTranslatedTitle === 'function'
+          && typeof window.ordoNormalizeCatholicHymnTitle === 'undefined'
+          && canonicalCatholicHymnTitleTranslations?.['\uC790\uBE44\uC1A1']?.VN === 'Kinh Th\u01B0\u01A1ng X\u00F3t',
         kyrieCount: kyrieEntries.length,
         storedKyrieCanonical: kyrieEntries.every(entry => entry.translations?.VN?.title === 'Kinh Thương Xót'),
         kyrieCanonical: kyrieEntries.every(entry => (
@@ -1520,7 +1525,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.hymnLiturgicalTagFixture.color === 'rgb(180, 83, 9)'
       && result.hymnLiturgicalTagFixture.oval !== '0px',
     `Hymn liturgical tags are not orange ovals after the hymn title: ${JSON.stringify(result.hymnLiturgicalTagFixture)}`);
-    assert(result.hymnTitleTranslationFixture.usesDataLayer
+    assert(result.hymnTitleTranslationFixture.usesRuntimeLayer
       && result.hymnTitleTranslationFixture.kyrieCount > 0
       && result.hymnTitleTranslationFixture.storedKyrieCanonical
       && result.hymnTitleTranslationFixture.kyrieCanonical
