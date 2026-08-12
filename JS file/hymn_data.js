@@ -174,7 +174,7 @@
       "연중"
     ],
     "category": "가톨릭성가 / 연중",
-    "lyrics": "1) 고맙기 그지 없다 빛의 하느님. 태초에 새 빞으로 세상 이루고, 날마다 빛으로써 날 정하시니, 고맙고 고마워라, 빛의 하느님.\n\n2) 아침과 저녁나절 어우러지면, 하루라 이름하라 명하시었네. 이제 곧 어둔 밤이 다가 오나니, 간절한 이 기도를 들어주소서.\n\n3) 영원을 생각 않는 인간일진대, 제 몸을 죄악에다 묶고 말거늘. 이 영혼 무거운 짐 벗어 던지고 고마운 생명안에 살게하소서.  \n\n4) 성자와 우리 도움 성령과 함께! 세세에 다스리는 성부님이여! 사랑이 지극하신 아버지시여! 눈물로 비는 기도 들어주소서.",
+    "lyrics": "1. 고맙기 그지 없다 빛의 하느님. \n태초에 새 빞으로 세상 이루고, \n날마다 빛으로써 날 정하시니, \n고맙고 고마워라, 빛의 하느님.\n2. 아침과 저녁 나절 어우러지면, \n하루라 이름하라 명하시었네. \n이제 곧 어둔 밤이 다가 오나니, \n간절한 이 기도를 들어주소서.\n3. 영원을 생각 않는 인간일진대, \n제 몸을 죄악에다 묶고 말거늘. \n이 영혼 무거운 짐 벗어 던지고 \n고마운 생명안에 살게하소서.  \n4. 성자와 우리 도움 성령과 함께, \n세세에 다스리는 성부님이여, \n사랑이 지극하신 아버지시여, \n눈물로 비는 기도 들어주소서.",
     "translations": {
       "EN": {
         "title": "God of Light"
@@ -200,21 +200,41 @@
     "scoreNote": "",
     "searchAliases": [
       "빛의 하느님",
-      "1) 고맙기 그지 없다 빛의 하느님. 태초에 새 빞으로 세상 이루고, 날마다 빛으로써 날 정하시니, 고맙고 고마워라, 빛의 하느님.",
+      "1. 고맙기 그지 없다 빛의 하느님.",
       "가톨릭성가 빛의 하느님",
       "가톨릭성가 003",
       "가톨릭성가 3",
       "가톨릭성가 003번",
       "가톨릭성가 3번",
       "연중 빛의 하느님",
+      "1) 고맙기 그지 없다 빛의 하느님. 태초에 새 빞으로 세상 이루고, 날마다 빛으로써 날 정하시니, 고맙고 고마워라, 빛의 하느님.",
       "1) 고맙기 그지 없다 빛의 하느님"
     ],
-    "firstLine": "1) 고맙기 그지 없다 빛의 하느님. 태초에 새 빞으로 세상 이루고, 날마다 빛으로써 날 정하시니, 고맙고 고마워라, 빛의 하느님.",
+    "firstLine": "1. 고맙기 그지 없다 빛의 하느님.",
     "composer": "최병철",
     "lyricist": "수도자의 기도",
     "arranger": "",
     "selector": "",
-    "scripture": ""
+    "scripture": "",
+    "text": "1. 고맙기 그지 없다 빛의 하느님. \n태초에 새 빞으로 세상 이루고, \n날마다 빛으로써 날 정하시니, \n고맙고 고마워라, 빛의 하느님.\n2. 아침과 저녁 나절 어우러지면, \n하루라 이름하라 명하시었네. \n이제 곧 어둔 밤이 다가 오나니, \n간절한 이 기도를 들어주소서.\n3. 영원을 생각 않는 인간일진대, \n제 몸을 죄악에다 묶고 말거늘. \n이 영혼 무거운 짐 벗어 던지고 \n고마운 생명안에 살게하소서.  \n4. 성자와 우리 도움 성령과 함께, \n세세에 다스리는 성부님이여, \n사랑이 지극하신 아버지시여, \n눈물로 비는 기도 들어주소서.",
+    "verses": [
+      {
+        "label": "1절",
+        "text": "고맙기 그지 없다 빛의 하느님.\n태초에 새 빞으로 세상 이루고, \n날마다 빛으로써 날 정하시니, \n고맙고 고마워라, 빛의 하느님."
+      },
+      {
+        "label": "2절",
+        "text": "아침과 저녁 나절 어우러지면,\n하루라 이름하라 명하시었네. \n이제 곧 어둔 밤이 다가 오나니, \n간절한 이 기도를 들어주소서."
+      },
+      {
+        "label": "3절",
+        "text": "영원을 생각 않는 인간일진대,\n제 몸을 죄악에다 묶고 말거늘. \n이 영혼 무거운 짐 벗어 던지고 \n고마운 생명안에 살게하소서."
+      },
+      {
+        "label": "4절",
+        "text": "성자와 우리 도움 성령과 함께,\n세세에 다스리는 성부님이여, \n사랑이 지극하신 아버지시여, \n눈물로 비는 기도 들어주소서."
+      }
+    ]
   },
   {
     "id": "kr-catholic-004",
@@ -228,7 +248,7 @@
       "연중"
     ],
     "category": "가톨릭성가 / 연중",
-    "lyrics": "1) 찬양하라! 전능하신 창조주 천주. 찬미하라 내 영혼아! 우리 구세주. 만민들아, 주의 제단에 모여 깊은 흠숭 드리어라.\n\n2) 찬양하라! 주님 앞에 예물 드리며, 감사하라! 죄와 허물 사해 주신 주. 사제예수 우리 구원 위하여 희생 제물 되시도다.\n\n3) 찬양하라! 영원하신 주님의 사랑. 기뻐하라 온 세상아! 우리의 구원. 백성들아 찬미 노래 부르며 주께 감사드리어라.",
+    "lyrics": "1. 찬양하라! 전능하신 창조주 천주. \n찬미하라 내 영혼아! 우리 구세주. \n만민들아, 주의 제단에 모여 깊은 흠숭 드리어라.\n2. 찬양하라! 주님 앞에 예물 드리며, \n감사하라! 죄와 허물 사해 주신 주. \n사제 예수 우리 구원 위하여 희생 제물 되시도다.\n3. 찬양하라! 영원하신 주님의 사랑. \n기뻐하라 온 세상아! 우리의 구원. \n백성들아, 찬미 노래 부르며 주께 감사드리어라.",
     "translations": {
       "EN": {
         "title": "Praise Him"
@@ -254,20 +274,37 @@
     "scoreNote": "",
     "searchAliases": [
       "찬양하라",
-      "1) 찬양하라! 전능하신 창조주 천주. 찬미하라 내 영혼아! 우리 구세주. 만민들아, 주의 제단에 모여 깊은 흠숭 드리어라.",
+      "1. 찬양하라! 전능하신 창조주 천주.",
       "가톨릭성가 찬양하라",
       "가톨릭성가 004",
       "가톨릭성가 4",
       "가톨릭성가 004번",
       "가톨릭성가 4번",
-      "연중 찬양하라"
+      "연중 찬양하라",
+      "1) 찬양하라! 전능하신 창조주 천주. 찬미하라 내 영혼아! 우리 구세주. 만민들아, 주의 제단에 모여 깊은 흠숭 드리어라."
     ],
-    "firstLine": "1) 찬양하라! 전능하신 창조주 천주. 찬미하라 내 영혼아! 우리 구세주. 만민들아, 주의 제단에 모여 깊은 흠숭 드리어라.",
+    "firstLine": "1. 찬양하라! 전능하신 창조주 천주.",
     "composer": "",
     "lyricist": "Peter Sohren",
     "arranger": "새가톨릭성가편찬위원회",
     "selector": "",
-    "scripture": ""
+    "scripture": "",
+    "text": "1. 찬양하라! 전능하신 창조주 천주. \n찬미하라 내 영혼아! 우리 구세주. \n만민들아, 주의 제단에 모여 깊은 흠숭 드리어라.\n2. 찬양하라! 주님 앞에 예물 드리며, \n감사하라! 죄와 허물 사해 주신 주. \n사제 예수 우리 구원 위하여 희생 제물 되시도다.\n3. 찬양하라! 영원하신 주님의 사랑. \n기뻐하라 온 세상아! 우리의 구원. \n백성들아, 찬미 노래 부르며 주께 감사드리어라.",
+    "verses": [
+      {
+        "label": "1절",
+        "text": "찬양하라! 전능하신 창조주 천주.\n찬미하라 내 영혼아! 우리 구세주. \n만민들아, 주의 제단에 모여 깊은 흠숭 드리어라."
+      },
+      {
+        "label": "2절",
+        "text": "찬양하라! 주님 앞에 예물 드리며,\n감사하라! 죄와 허물 사해 주신 주. \n사제 예수 우리 구원 위하여 희생 제물 되시도다."
+      },
+      {
+        "label": "3절",
+        "text": "찬양하라! 영원하신 주님의 사랑.\n기뻐하라 온 세상아! 우리의 구원. \n백성들아, 찬미 노래 부르며 주께 감사드리어라."
+      }
+    ],
+    "voiceType": "4성부"
   },
   {
     "id": "kr-catholic-005",
@@ -281,7 +318,7 @@
       "연중"
     ],
     "category": "가톨릭성가 / 연중",
-    "lyrics": "1) 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다. 저 풀잎에 찬 이슬, 고요한 아침. 다 함께 모여 경배 드린다.\n\n2) 어둔 밤이 지나 찬란한 이 아침, 나 삶의 그늘 벗어나리라. 저 하늘은 드맑고 참 아름다워. 잠 깨면 기뻐 주와 만나리.\n\n3) 시달린 이 몸 고달파서 쉴때, 나 눈을 감고 주를 뵙는다. 저 땅 위의 참 기쁨 새롭게 솟아, 나 주와 함께 길이 살리라.",
+    "lyrics": "1. 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다. \n저 풀잎에 찬 이슬, 고요한 아침. \n다 함께 모여 경배 드린다.\n2. 어둔 밤이 지나 찬란한 이 아침, 나 삶의 그늘 벗어나리라. \n저 하늘은 드맑고 참 아름다워. \n잠 깨면 기뻐 주와 만나리.\n3. 시달린 이 몸 고달파서 쉴때, 나 눈을 감고 주를 뵙는다.\n저 땅 위의 참 기쁨 새롭게 솟아, \n나 주와 함께 길이 살리라.",
     "translations": {
       "EN": {
         "title": "Prayer of Praise"
@@ -307,17 +344,37 @@
     "scoreNote": "",
     "searchAliases": [
       "찬미의 기도",
-      "1) 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다. 저 풀잎에 찬 이슬, 고요한 아침. 다 함께 모여 경배 드린다.",
+      "1. 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다.",
       "가톨릭성가 찬미의 기도",
       "가톨릭성가 005",
       "가톨릭성가 5",
       "가톨릭성가 005번",
       "가톨릭성가 5번",
-      "연중 찬미의 기도"
+      "연중 찬미의 기도",
+      "1) 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다. 저 풀잎에 찬 이슬, 고요한 아침. 다 함께 모여 경배 드린다."
     ],
-    "firstLine": "1) 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다. 저 풀잎에 찬 이슬, 고요한 아침. 다 함께 모여 경배 드린다.",
+    "firstLine": "1. 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다.",
     "composer": "서행자",
-    "lyricist": ""
+    "lyricist": "",
+    "arranger": "",
+    "selector": "",
+    "scripture": "",
+    "text": "1. 저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다. \n저 풀잎에 찬 이슬, 고요한 아침. \n다 함께 모여 경배 드린다.\n2. 어둔 밤이 지나 찬란한 이 아침, 나 삶의 그늘 벗어나리라. \n저 하늘은 드맑고 참 아름다워. \n잠 깨면 기뻐 주와 만나리.\n3. 시달린 이 몸 고달파서 쉴때, 나 눈을 감고 주를 뵙는다.\n저 땅 위의 참 기쁨 새롭게 솟아, \n나 주와 함께 길이 살리라.",
+    "voiceType": "4성부",
+    "verses": [
+      {
+        "label": "1절",
+        "text": "저 동편하늘 환히 밝아오고, 새들은 깨어 노래 부른다.\n저 풀잎에 찬 이슬, 고요한 아침. \n다 함께 모여 경배 드린다."
+      },
+      {
+        "label": "2절",
+        "text": "어둔 밤이 지나 찬란한 이 아침, 나 삶의 그늘 벗어나리라.\n저 하늘은 드맑고 참 아름다워. \n잠 깨면 기뻐 주와 만나리."
+      },
+      {
+        "label": "3절",
+        "text": "시달린 이 몸 고달파서 쉴때, 나 눈을 감고 주를 뵙는다.\n저 땅 위의 참 기쁨 새롭게 솟아, \n나 주와 함께 길이 살리라."
+      }
+    ]
   },
   {
     "id": "kr-catholic-006",
@@ -23954,7 +24011,7 @@
       "미사곡"
     ],
     "category": "야훼이레 (신판) / 미사곡",
-    "lyrics": "",
+    "lyrics": "주님 자비를 베푸소서.\n주님 자비를 베푸소서.\n그리스도님 자비를 베푸소서.\n그리스도님 자비를 베푸소서.\n주님 자비를 베푸소서.\n주님 자비를 베푸소서.",
     "translations": {
       "EN": {
         "title": "Kyrie (Lord, Have Mercy)"
@@ -23969,14 +24026,18 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "firstLine": "",
-    "composer": "",
+    "firstLine": "주님 자비를 베푸소서.",
+    "composer": "송시웅 필립보",
     "lyricist": "",
     "searchAliases": [
-      "야훼이레 (신판) 5",
+      "자비송",
+      "주님 자비를 베푸소서.",
+      "야훼이레 (신판) 자비송",
       "야훼이레 (신판) 005",
-      "야훼이레 (신판) 5번",
+      "야훼이레 (신판) 5",
       "야훼이레 (신판) 005번",
+      "야훼이레 (신판) 5번",
+      "미사곡 자비송",
       "YJ 5",
       "YJ 005",
       "YJ005"
@@ -23988,7 +24049,13 @@
       }
     ],
     "scoreNote": "",
-    "copyright": ""
+    "copyright": "",
+    "arranger": "",
+    "selector": "",
+    "scripture": "",
+    "text": "주님 자비를 베푸소서.\n주님 자비를 베푸소서.\n그리스도님 자비를 베푸소서.\n그리스도님 자비를 베푸소서.\n주님 자비를 베푸소서.\n주님 자비를 베푸소서.",
+    "voiceType": "단성",
+    "verses": []
   },
   {
     "id": "kr-yj-006",
@@ -53357,7 +53424,7 @@
       "Ca Nguyện"
     ],
     "category": "Tuyển tập Thánh ca Việt Nam quyển 1 / Ca Nguyện",
-    "lyrics": "1. Khi ánh bình minh dâng cao dâng, từng đàn chim đùa vui ca hát.\n2. Khi bóng hoàng hôn rơi lung linh, màn trời đêm đẹp muôn tinh tú.\n3. Khi gió mùa Xuân thơm muôn hương, và ngàn hoa đẹp tươi phô sắc.\n4. Khi nắng hạ điểm tô muôn hoa, màu vàng tươi đẹp trên nương lúa.\n5. Khi gió về biển khơi reo vui, cuồn cuộn dâng trào muôn con sóng.\nĐK. Xin thần thánh trên thiên đình ca lên đi. Xin trần thế muôn phương cùng ca lên đi. Tiếng tán tụng vang cung trời ngợi khen Chúa uy linh muôn đời.",
+    "lyrics": "1. Khi ánh bình minh dâng cao dâng, \ntừng đàn chim đùa vui ca hát. [ĐK]\n2. Khi bóng hoàng hôn rơi lung linh, \nmàn trời đêm đẹp muôn tinh tú. [ĐK]\n3. Khi gió mùa Xuân thơm muôn hương, \nvà ngàn hoa đẹp tươi phô sắc. [ĐK]\n4. Khi nắng hạ điểm tô muôn hoa, \nmàu vàng tươi đẹp trên nương lúa. [ĐK]\n5. Khi gió về biển khơi reo vui, \ncuồn cuộn dâng trào muôn con sóng. [ĐK]\n\nĐK. Xin thần thánh trên thiên đình ca lên đi. \nXin trần thế muôn phương cùng ca lên đi. \nTiếng tán tụng vang cung trời ngợi khen Chúa uy linh muôn đời.",
     "translations": {
       "KR": {
         "title": "노래하여라 6"
@@ -53375,7 +53442,7 @@
         "title": "歌え 6"
       }
     },
-    "firstLine": "Khi ánh bình minh dâng cao dâng,",
+    "firstLine": "1. Khi ánh bình minh dâng cao dâng,",
     "composer": "Kim Long",
     "lyricist": "",
     "sourceFormat": "PDF",
@@ -53383,11 +53450,18 @@
     "originalFileSize": 41198,
     "originalFileAvailable": true,
     "searchAliases": [
+      "Ca lên đi 6",
+      "1. Khi ánh bình minh dâng cao dâng,",
+      "Tuyển tập Thánh ca Việt Nam quyển 1 Ca lên đi 6",
+      "Tuyển tập Thánh ca Việt Nam quyển 1 004",
+      "Tuyển tập Thánh ca Việt Nam quyển 1 4",
+      "Tuyển tập Thánh ca Việt Nam quyển 1 004번",
+      "Tuyển tập Thánh ca Việt Nam quyển 1 4번",
+      "Ca Nguyện Ca lên đi 6",
       "TCVN1 004",
       "TCVN1 4",
       "TCVN1004",
-      "Ca len di 6",
-      "Ca lên đi 6"
+      "Ca len di 6"
     ],
     "scoreImages": [
       {
@@ -53396,7 +53470,38 @@
       }
     ],
     "scoreNote": "",
-    "copyright": "Ủy ban Thánh nhạc HĐGMVN"
+    "copyright": "Ủy ban Thánh nhạc HĐGMVN",
+    "arranger": "",
+    "selector": "",
+    "scripture": "",
+    "text": "1. Khi ánh bình minh dâng cao dâng, \ntừng đàn chim đùa vui ca hát. [ĐK]\n2. Khi bóng hoàng hôn rơi lung linh, \nmàn trời đêm đẹp muôn tinh tú. [ĐK]\n3. Khi gió mùa Xuân thơm muôn hương, \nvà ngàn hoa đẹp tươi phô sắc. [ĐK]\n4. Khi nắng hạ điểm tô muôn hoa, \nmàu vàng tươi đẹp trên nương lúa. [ĐK]\n5. Khi gió về biển khơi reo vui, \ncuồn cuộn dâng trào muôn con sóng. [ĐK]\n\nĐK. Xin thần thánh trên thiên đình ca lên đi. \nXin trần thế muôn phương cùng ca lên đi. \nTiếng tán tụng vang cung trời ngợi khen Chúa uy linh muôn đời.",
+    "verses": [
+      {
+        "label": "1절",
+        "text": "Khi ánh bình minh dâng cao dâng,\ntừng đàn chim đùa vui ca hát. [ĐK]"
+      },
+      {
+        "label": "2절",
+        "text": "Khi bóng hoàng hôn rơi lung linh,\nmàn trời đêm đẹp muôn tinh tú. [ĐK]"
+      },
+      {
+        "label": "3절",
+        "text": "Khi gió mùa Xuân thơm muôn hương,\nvà ngàn hoa đẹp tươi phô sắc. [ĐK]"
+      },
+      {
+        "label": "4절",
+        "text": "Khi nắng hạ điểm tô muôn hoa,\nmàu vàng tươi đẹp trên nương lúa. [ĐK]"
+      },
+      {
+        "label": "5절",
+        "text": "Khi gió về biển khơi reo vui,\ncuồn cuộn dâng trào muôn con sóng. [ĐK]"
+      },
+      {
+        "label": "후렴",
+        "text": "Xin thần thánh trên thiên đình ca lên đi.\nXin trần thế muôn phương cùng ca lên đi. \nTiếng tán tụng vang cung trời ngợi khen Chúa uy linh muôn đời."
+      }
+    ],
+    "voiceType": "화성"
   },
   {
     "id": "vn-tcvn1-005",
@@ -78017,7 +78122,7 @@
       "Ca Nguyện"
     ],
     "category": "Tuyển tập Thánh ca Việt Nam quyển 2 / Ca Nguyện",
-    "lyrics": "0A KHU0 HŨNG ẤN\n1.Hân hoan lời tụng ca dâng Chúa khúc nhạc huyển mơ\n2.ho con mùa hổng ân yêu mến những ngày và đêm\n3.(on dâng Ngài tình yêu năm tháng đã dẩn nhạt phai\n4.Tâm tư một chiểu xưa đoan hứa mến Ngài ngàn thu\n5.ho con lại mùa xuân khi đã lãnh nhận hồng ân\n1Một bài thơ tru mến ân tình đượm nét đơn sơ.\n2.Tình Ngài như trời sáng soi đường nhịp bước êm đểm.\n3/Tình Ngài như hạ nắng hong nổng lại trái tim này.\n4. Nhiều lấn phiêu bạt mất trên dòng đời sóng xa đưa.\n5.Thể nguyên yêu một Chúa cho vẹn tình khúc trì ân.\nl6 + <“ s |? — nh JƑ Ý\nĐK. Hân hoan lời tụng BE. dâng Chúa đêm\nl +=—*_”_—sz-t:z 3z—*%-\nHân hoan lời ngợi ca con dâng\nngày. Hát cho muôn thế | hệ hãy ngợi\nChúa bao đêm ngày. Hát cho muôn thế\n2 = lộ =\nca hồng ân Thiên Chúa. Muôn\nhệ hãy ngợi ca hổng ân Thiên\n¿ E ° — E | ——\nđời Chúa thương con người ôi tình\nChúa. Muôn đời Chúa thương con\nChúa chẳng nhạt Trái tìm thơ trả\nngười tình yêu Ngài chẳng nhạt phai.\nl@ÑỄ E#——®—#-=Ez |\nlại tình œa mến yêu muôn | đời. |\nlệ P—*®—z-£#—E *w——kEz =]\nTrái tim thơ trả lại tình cœa muôn đời.",
+    "lyrics": "1. Hân hoan lời tụng ca dâng Chúa khúc nhạc huyển mơ,\nMột bài thơ tru mến ân tình đượm nét đơn sơ. [ĐK]\n2. Cho con mùa hổng ân yêu mến những ngày và đêm,\nTình Ngài như trời sáng soi đường nhịp bước êm đểm. [ĐK]\n3. Con dâng Ngài tình yêu năm tháng đã dẩn nhạt phai,\nTình Ngài như hạ nắng hong nổng lại trái tim này. [ĐK]\n4. Tâm tư một chiểu xưa đoan hứa mến Ngài ngàn thu,\nNhiều lấn phiêu bạt mất trên dòng đời sóng xa đưa. [ĐK]\n5. Cho con lại mùa xuân khi đã lãnh nhận hồng ân,\nThể nguyên yêu một Chúa cho vẹn tình khúc trì ân. [ĐK]\n\nĐK. Hân hoan lời tụng ca doàn con dâng Chúa đêm ngày.\nHát cho muôn thế hệ hãy ngợi ca hồng ân Thiên Chúa. \nMuôn đời Chúa thương con người ôi tình Chúa chẳng nhạt phai.\nTrái tìm thơ trả lại tình a mến yêu muôn đời.",
     "translations": {
       "KR": {
         "title": "은혜의 노래"
@@ -78035,20 +78140,27 @@
         "title": "恵みの歌"
       }
     },
-    "firstLine": "0A KHU0 HŨNG ẤN",
-    "composer": "Nguyen Duy",
+    "firstLine": "1. Hân hoan lời tụng ca dâng Chúa khúc nhạc huyển mơ,",
+    "composer": "Nguyễn Duy",
     "lyricist": "",
     "sourceFormat": "PDF",
     "originalFileName": "Ca khuc hong an - Nguyen Duy.pdf",
     "originalFileSize": 36942,
     "originalFileAvailable": true,
     "searchAliases": [
+      "Ca khúc hồng ân",
+      "1. Hân hoan lời tụng ca dâng Chúa khúc nhạc huyển mơ,",
+      "Tuyển tập Thánh ca Việt Nam quyển 2 Ca khúc hồng ân",
+      "Tuyển tập Thánh ca Việt Nam quyển 2 004",
+      "Tuyển tập Thánh ca Việt Nam quyển 2 4",
+      "Tuyển tập Thánh ca Việt Nam quyển 2 004번",
+      "Tuyển tập Thánh ca Việt Nam quyển 2 4번",
+      "Ca Nguyện Ca khúc hồng ân",
       "TCVN2 004",
       "TCVN2 4",
       "TCVN2004",
       "Ca khuc hong an",
-      "Ca khúc hồng ấn",
-      "Ca khúc hồng ân"
+      "Ca khúc hồng ấn"
     ],
     "scoreImages": [
       {
@@ -78061,7 +78173,38 @@
       }
     ],
     "scoreNote": "",
-    "copyright": "Ủy ban Thánh nhạc Việt Nam - 10/2022"
+    "copyright": "Ủy ban Thánh nhạc Việt Nam",
+    "arranger": "",
+    "selector": "",
+    "scripture": "",
+    "text": "1. Hân hoan lời tụng ca dâng Chúa khúc nhạc huyển mơ,\nMột bài thơ tru mến ân tình đượm nét đơn sơ. [ĐK]\n2. Cho con mùa hổng ân yêu mến những ngày và đêm,\nTình Ngài như trời sáng soi đường nhịp bước êm đểm. [ĐK]\n3. Con dâng Ngài tình yêu năm tháng đã dẩn nhạt phai,\nTình Ngài như hạ nắng hong nổng lại trái tim này. [ĐK]\n4. Tâm tư một chiểu xưa đoan hứa mến Ngài ngàn thu,\nNhiều lấn phiêu bạt mất trên dòng đời sóng xa đưa. [ĐK]\n5. Cho con lại mùa xuân khi đã lãnh nhận hồng ân,\nThể nguyên yêu một Chúa cho vẹn tình khúc trì ân. [ĐK]\n\nĐK. Hân hoan lời tụng ca doàn con dâng Chúa đêm ngày.\nHát cho muôn thế hệ hãy ngợi ca hồng ân Thiên Chúa. \nMuôn đời Chúa thương con người ôi tình Chúa chẳng nhạt phai.\nTrái tìm thơ trả lại tình a mến yêu muôn đời.",
+    "verses": [
+      {
+        "label": "1절",
+        "text": "Hân hoan lời tụng ca dâng Chúa khúc nhạc huyển mơ,\nMột bài thơ tru mến ân tình đượm nét đơn sơ. [ĐK]"
+      },
+      {
+        "label": "2절",
+        "text": "Cho con mùa hổng ân yêu mến những ngày và đêm,\nTình Ngài như trời sáng soi đường nhịp bước êm đểm. [ĐK]"
+      },
+      {
+        "label": "3절",
+        "text": "Con dâng Ngài tình yêu năm tháng đã dẩn nhạt phai,\nTình Ngài như hạ nắng hong nổng lại trái tim này. [ĐK]"
+      },
+      {
+        "label": "4절",
+        "text": "Tâm tư một chiểu xưa đoan hứa mến Ngài ngàn thu,\nNhiều lấn phiêu bạt mất trên dòng đời sóng xa đưa. [ĐK]"
+      },
+      {
+        "label": "5절",
+        "text": "Cho con lại mùa xuân khi đã lãnh nhận hồng ân,\nThể nguyên yêu một Chúa cho vẹn tình khúc trì ân. [ĐK]"
+      },
+      {
+        "label": "후렴",
+        "text": "Hân hoan lời tụng ca doàn con dâng Chúa đêm ngày.\nHát cho muôn thế hệ hãy ngợi ca hồng ân Thiên Chúa. \nMuôn đời Chúa thương con người ôi tình Chúa chẳng nhạt phai.\nTrái tìm thơ trả lại tình a mến yêu muôn đời."
+      }
+    ],
+    "voiceType": "4성부"
   },
   {
     "id": "vn-tcvn2-005",
