@@ -2593,9 +2593,62 @@
             .filter((tag, index, values) => values.indexOf(tag) === index);
     }
 
-    function hymnTitleTagsHtml(entry) {
+    const hymnMetadataTerms = [
+        [['가톨릭성가'], { KR: '가톨릭성가', VN: 'Thánh ca Công giáo', EN: 'Catholic Hymns', JP: 'カトリック聖歌', LA: 'Cantus catholici' }],
+        [['야훼이레 (신판)'], { KR: '야훼이레 (신판)', VN: 'Gia-vê Di-rê (ấn bản mới)', EN: 'Yahweh Jireh (New Edition)', JP: 'ヤハウェ・イルエ（新版）', LA: 'Iahveh Iireh (editio nova)' }],
+        [['Tuyển tập Thánh ca Việt Nam quyển 1'], { KR: '베트남 성가 선집 제1권', VN: 'Tuyển tập Thánh ca Việt Nam quyển 1', EN: 'Vietnamese Hymn Collection, Vol. 1', JP: 'ベトナム聖歌選集 第1巻', LA: 'Collectio cantuum Vietnamicorum I' }],
+        [['Tuyển tập Thánh ca Việt Nam quyển 2'], { KR: '베트남 성가 선집 제2권', VN: 'Tuyển tập Thánh ca Việt Nam quyển 2', EN: 'Vietnamese Hymn Collection, Vol. 2', JP: 'ベトナム聖歌選集 第2巻', LA: 'Collectio cantuum Vietnamicorum II' }],
+        [['연중', 'Mùa Thường Niên'], { KR: '연중', VN: 'Mùa Thường Niên', EN: 'Ordinary Time', JP: '年間', LA: 'Tempus per annum' }],
+        [['대림', 'Mùa Vọng'], { KR: '대림', VN: 'Mùa Vọng', EN: 'Advent', JP: '待降節', LA: 'Adventus' }],
+        [['성탄', 'Mùa Giáng Sinh', 'Giáng Sinh'], { KR: '성탄', VN: 'Mùa Giáng Sinh', EN: 'Christmas', JP: '降誕節', LA: 'Tempus Nativitatis' }],
+        [['사순', 'Mùa Chay'], { KR: '사순', VN: 'Mùa Chay', EN: 'Lent', JP: '四旬節', LA: 'Quadragesima' }],
+        [['부활', 'Mua Phuc Sinh', 'Phục Sinh'], { KR: '부활', VN: 'Mùa Phục Sinh', EN: 'Easter', JP: '復活節', LA: 'Tempus paschale' }],
+        [['부활/승천'], { KR: '부활/승천', VN: 'Phục Sinh / Thăng Thiên', EN: 'Easter / Ascension', JP: '復活／昇天', LA: 'Pascha / Ascensio' }],
+        [['성령', 'Chúa Thánh Thần'], { KR: '성령', VN: 'Chúa Thánh Thần', EN: 'Holy Spirit', JP: '聖霊', LA: 'Spiritus Sanctus' }],
+        [['성체', 'Thánh Thể'], { KR: '성체', VN: 'Thánh Thể', EN: 'Eucharist', JP: '聖体', LA: 'Eucharistia' }],
+        [['성심', 'Thánh Tâm'], { KR: '성심', VN: 'Thánh Tâm', EN: 'Sacred Heart', JP: '聖心', LA: 'Sacratissimum Cor' }],
+        [['Thánh Thể và Thánh Tâm'], { KR: '성체·성심', VN: 'Thánh Thể và Thánh Tâm', EN: 'Eucharist and Sacred Heart', JP: '聖体・聖心', LA: 'Eucharistia et Sacratissimum Cor' }],
+        [['봉헌', 'Dâng Lễ'], { KR: '봉헌', VN: 'Dâng Lễ', EN: 'Offertory', JP: '奉納', LA: 'Offertorium' }],
+        [['참회'], { KR: '참회', VN: 'Sám Hối', EN: 'Penitential', JP: '回心', LA: 'Paenitentia' }],
+        [['위령', 'Cầu Hồn'], { KR: '위령', VN: 'Cầu Hồn', EN: 'For the Dead', JP: '死者のため', LA: 'Pro defunctis' }],
+        [['성모', 'Đức Mẹ'], { KR: '성모', VN: 'Đức Mẹ', EN: 'Blessed Virgin Mary', JP: '聖母', LA: 'Beata Maria Virgo' }],
+        [['성인', 'Các Thánh'], { KR: '성인', VN: 'Các Thánh', EN: 'Saints', JP: '聖人', LA: 'Sancti' }],
+        [['축가'], { KR: '축가', VN: 'Ca Mừng', EN: 'Festal Hymns', JP: '祝歌', LA: 'Cantus festivi' }],
+        [['미사곡', 'Bộ Lễ'], { KR: '미사곡', VN: 'Bộ Lễ', EN: 'Mass Settings', JP: 'ミサ曲', LA: 'Ordinarium Missae' }],
+        [['떼제'], { KR: '떼제', VN: 'Taizé', EN: 'Taizé', JP: 'テゼ', LA: 'Taizé' }],
+        [['생활성가'], { KR: '생활성가', VN: 'Thánh ca Đương đại', EN: 'Contemporary Hymns', JP: '現代聖歌', LA: 'Cantus hodierni' }],
+        [['Ca Nguyện'], { KR: '기도 성가', VN: 'Ca Nguyện', EN: 'Prayer Hymns', JP: '祈りの聖歌', LA: 'Cantus precum' }],
+        [['Thánh Vịnh'], { KR: '시편 성가', VN: 'Thánh Vịnh', EN: 'Psalms', JP: '詩編', LA: 'Psalmi' }],
+        [['Nhập Lễ'], { KR: '입당', VN: 'Nhập Lễ', EN: 'Entrance', JP: '入祭', LA: 'Introitus' }],
+        [['Hiệp Lễ'], { KR: '영성체', VN: 'Hiệp Lễ', EN: 'Communion', JP: '聖体拝領', LA: 'Communio' }],
+        [['Tuần Thánh'], { KR: '성주간', VN: 'Tuần Thánh', EN: 'Holy Week', JP: '聖週間', LA: 'Hebdomada Sancta' }],
+        [['Hiệp Nhất'], { KR: '일치', VN: 'Hiệp Nhất', EN: 'Christian Unity', JP: '一致', LA: 'Unitas christianorum' }],
+        [['Thánh Hiến'], { KR: '축성 생활', VN: 'Thánh Hiến', EN: 'Consecrated Life', JP: '奉献生活', LA: 'Vita consecrata' }],
+        [['Xuân - Hôn Nhân - Cha Mẹ'], { KR: '봄·혼인·부모', VN: 'Xuân - Hôn Nhân - Cha Mẹ', EN: 'Spring, Marriage and Parents', JP: '春・結婚・両親', LA: 'Ver, matrimonium et parentes' }],
+        [['Linh Mục và Thánh Hiến'], { KR: '사제·축성 생활', VN: 'Linh Mục và Thánh Hiến', EN: 'Priesthood and Consecrated Life', JP: '司祭・奉献生活', LA: 'Sacerdotium et vita consecrata' }],
+        [['Hôn Phối và Cha Mẹ'], { KR: '혼인·부모', VN: 'Hôn Phối và Cha Mẹ', EN: 'Marriage and Parents', JP: '結婚・両親', LA: 'Matrimonium et parentes' }],
+        [['Xuân và Trung Thu'], { KR: '봄·추석', VN: 'Xuân và Trung Thu', EN: 'Spring and Mid-Autumn', JP: '春・中秋', LA: 'Ver et medium autumnum' }],
+        [['Loan Báo Tin Mừng'], { KR: '복음 선포', VN: 'Loan Báo Tin Mừng', EN: 'Evangelization', JP: '福音宣教', LA: 'Evangelizatio' }],
+        [['Kết Lễ'], { KR: '마침', VN: 'Kết Lễ', EN: 'Recessional', JP: '閉祭', LA: 'Recessus' }]
+    ];
+    const hymnMetadataLabelByAlias = new Map();
+    hymnMetadataTerms.forEach(([aliases, labels]) => aliases.forEach((alias) => {
+        hymnMetadataLabelByAlias.set(cleanNodeText(alias).normalize('NFKC').toLocaleLowerCase(), labels);
+    }));
+
+    function localizedHymnMetadataTerm(value, sourceLang, uiLang = state.uiLang) {
+        const raw = cleanNodeText(value);
+        if (!raw) return '';
+        const source = normalizeSelectableLang(sourceLang || 'KR', 'KR');
+        const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
+        if (source === ui) return raw;
+        const labels = hymnMetadataLabelByAlias.get(raw.normalize('NFKC').toLocaleLowerCase());
+        return (labels && labels[ui]) || raw;
+    }
+
+    function hymnTitleTagsHtml(entry, sourceLang = entry && entry.country) {
         return hymnUsageTags(entry)
-            .map(tag => '<span class="aux-prayer-book-tag hymn-title-tag">' + escapeHtml(tag) + '</span>')
+            .map(tag => '<span class="aux-prayer-book-tag hymn-title-tag">' + escapeHtml(localizedHymnMetadataTerm(tag, sourceLang)) + '</span>')
             .join('');
     }
 
@@ -2669,8 +2722,9 @@
             : '';
 
         const translatedTitle = hymnTranslatedTitle(entry, country);
-        const sourceTitleHtml = escapeHtml(entry.displayTitle || entry.title) + hymnTitleTagsHtml(entry);
-        const titleHtml = translatedTitle ? sourceTitleHtml + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : sourceTitleHtml;
+        const sourceTitleHtml = escapeHtml(entry.displayTitle || entry.title);
+        const translatedTitleHtml = translatedTitle ? '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle) + '</span>' : '';
+        const titleHtml = sourceTitleHtml + translatedTitleHtml + hymnTitleTagsHtml(entry, country);
         const translationPaneTitle = translatedTitle || hymnTranslationUiText(translationRecord && translationRecord.status === 'pending' ? 'pending' : 'action', targetLang);
 
         return [
@@ -2737,7 +2791,8 @@
         categories.forEach(tag => {
             const option = document.createElement('option');
             option.value = tag;
-            option.textContent = tag;
+            const sourceLang = rows && rows[0] ? rows[0].country : state.currentLoc;
+            option.textContent = localizedHymnMetadataTerm(tag, sourceLang);
             select.appendChild(option);
         });
         select.value = categories.includes(current) ? current : '';
@@ -2772,7 +2827,7 @@
         const targetLang = hymnTargetLanguage(country);
 
         const listHtml = rows.map(entry => {
-            const tagHtml = entry.book ? '<span class="aux-pill">' + escapeHtml(entry.book) + '</span>' : '';
+            const tagHtml = entry.book ? '<span class="aux-pill">' + escapeHtml(localizedHymnMetadataTerm(entry.book, country)) + '</span>' : '';
             const selectedClass = selected && selected.id === entry.id ? ' is-selected' : '';
             const detailId = 'hymn-detail-' + cleanNodeText(entry.id).replace(/[^\w-]+/g, '-');
             const inlineDetailHtml = selected && selected.id === entry.id
@@ -2784,10 +2839,11 @@
             const pendingTitle = usesAutomaticHymnTranslation(country) && translationRecord && translationRecord.status === 'pending'
                 ? hymnTranslationUiText('pending', targetLang)
                 : '';
-            const sourceTitleHtml = escapeHtml(entry.displayTitle || entry.title) + hymnTitleTagsHtml(entry);
+            const sourceTitleHtml = escapeHtml(entry.displayTitle || entry.title);
+            const titleTagHtml = hymnTitleTagsHtml(entry, country);
             const titleHtml = translatedTitle || pendingTitle
-                ? sourceTitleHtml + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle || pendingTitle) + '</span>'
-                : sourceTitleHtml;
+                ? sourceTitleHtml + '<span class="aux-prayer-translation-title">' + escapeHtml(translatedTitle || pendingTitle) + '</span>' + titleTagHtml
+                : sourceTitleHtml + titleTagHtml;
 
             return [
                 '<article class="hymn-list-item' + selectedClass + '">',

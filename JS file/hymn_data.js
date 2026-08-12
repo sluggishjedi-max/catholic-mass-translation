@@ -43647,8 +43647,8 @@
     "country": "KR",
     "language": "KR",
     "number": "656",
-    "title": "예수 그리스도 1",
-    "displayTitle": "656. 예수 그리스도 1",
+    "title": "예수 그리스도",
+    "displayTitle": "656. 예수 그리스도",
     "book": "야훼이레 (신판)",
     "tags": [
       "야훼이레 (신판)",
@@ -43658,16 +43658,16 @@
     "lyrics": "",
     "translations": {
       "EN": {
-        "title": "jesus christ 1"
+        "title": "jesus christ"
       },
       "VN": {
-        "title": "Chúa Giêsu Kitô 1"
+        "title": "Chúa Giêsu Kitô"
       },
       "LA": {
-        "title": "Jesus Christus 1"
+        "title": "Jesus Christus"
       },
       "JP": {
-        "title": "イエス・キリスト1"
+        "title": "イエス・キリスト"
       }
     },
     "firstLine": "",
@@ -43693,8 +43693,8 @@
     "country": "KR",
     "language": "KR",
     "number": "657",
-    "title": "예수 그리스도 2",
-    "displayTitle": "657. 예수 그리스도 2",
+    "title": "예수 그리스도",
+    "displayTitle": "657. 예수 그리스도",
     "book": "야훼이레 (신판)",
     "tags": [
       "야훼이레 (신판)",
@@ -43704,16 +43704,16 @@
     "lyrics": "",
     "translations": {
       "EN": {
-        "title": "jesus christ 2"
+        "title": "jesus christ"
       },
       "VN": {
-        "title": "Chúa Giêsu Kitô 2"
+        "title": "Chúa Giêsu Kitô"
       },
       "LA": {
-        "title": "Jesus Christus 2"
+        "title": "Jesus Christus"
       },
       "JP": {
-        "title": "イエス・キリスト2"
+        "title": "イエス・キリスト"
       }
     },
     "firstLine": "",
@@ -43877,8 +43877,8 @@
     "country": "KR",
     "language": "KR",
     "number": "661",
-    "title": "예수님을 따르는 사람들 1",
-    "displayTitle": "661. 예수님을 따르는 사람들 1",
+    "title": "예수님을 따르는 사람들",
+    "displayTitle": "661. 예수님을 따르는 사람들",
     "book": "야훼이레 (신판)",
     "tags": [
       "야훼이레 (신판)",
@@ -43888,16 +43888,16 @@
     "lyrics": "",
     "translations": {
       "EN": {
-        "title": "People who follow Jesus 1"
+        "title": "People who follow Jesus"
       },
       "VN": {
-        "title": "Những người theo Chúa Giêsu 1"
+        "title": "Những người theo Chúa Giêsu"
       },
       "LA": {
-        "title": "Homines qui Iesum sequuntur 1"
+        "title": "Homines qui Iesum sequuntur"
       },
       "JP": {
-        "title": "イエスに従う人々 1"
+        "title": "イエスに従う人々"
       }
     },
     "firstLine": "",
@@ -43923,8 +43923,8 @@
     "country": "KR",
     "language": "KR",
     "number": "662",
-    "title": "예수님을 따르는 사람들 2",
-    "displayTitle": "662. 예수님을 따르는 사람들 2",
+    "title": "예수님을 따르는 사람들",
+    "displayTitle": "662. 예수님을 따르는 사람들",
     "book": "야훼이레 (신판)",
     "tags": [
       "야훼이레 (신판)",
@@ -43934,16 +43934,16 @@
     "lyrics": "",
     "translations": {
       "EN": {
-        "title": "People who follow Jesus 2"
+        "title": "People who follow Jesus"
       },
       "VN": {
-        "title": "Những người theo Chúa Giêsu 2"
+        "title": "Những người theo Chúa Giêsu"
       },
       "LA": {
-        "title": "Homines qui Iesum sequuntur 2"
+        "title": "Homines qui Iesum sequuntur"
       },
       "JP": {
-        "title": "イエスに従う人々 2"
+        "title": "イエスに従う人々"
       }
     },
     "firstLine": "",
@@ -53137,8 +53137,8 @@
     "country": "VN",
     "language": "VN",
     "number": "001",
-    "title": "Ca lên đi 2",
-    "displayTitle": "001. Ca lên đi 2",
+    "title": "Ca lên đi",
+    "displayTitle": "001. Ca lên đi",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -53148,19 +53148,19 @@
     "lyrics": "ĐK. Ca lên đi, hỡi muôn dân, cùng chúc tụng Thiên Chúa.\nHát lên đi, ngàn muôn thế hệ mừng Chúa uy quyền.\n\n1. Vì tình Người yêu ta không bờ không bến, \nvì tình Ngài yêu ta bền vững muôn đời. [ĐK]\n2. Kla bầu trời long lanh muôn ngàn tinh tú, \nvì tình Ngài yêu ta bền vững muôn đời. [ĐK]\n3. Rừng chập chùng đua chen cây ngàn hoa núi, \nvì tình Ngài yêu ta bền vững muôn đời. [ĐK]\n4. Ngày lại ngày luôn reo Vui biển dâng sóng, \nvì tình Ngài yêu ta bền vững muôn đời. [ĐK]\n5. Tựa mẹ hiển yêu con trăng tròn khôn ví, \nvì tình Ngài yêu ta bền vững muôn đời. [ĐK]\n6. Ngàn đời rạng danh cao quang một Thiên Chúa, \nvì tình Ngài yêu ta bền vững muôn đời. [ĐK]",
     "translations": {
       "KR": {
-        "title": "노래하여라 2"
+        "title": "노래하여라"
       },
       "EN": {
-        "title": "Sing Out 2"
+        "title": "Sing Out"
       },
       "VN": {
-        "title": "Ca lên đi 2"
+        "title": "Ca lên đi"
       },
       "LA": {
-        "title": "Cantate 2"
+        "title": "Cantate"
       },
       "JP": {
-        "title": "歌え 2"
+        "title": "歌え"
       }
     },
     "firstLine": "ĐK. Ca lên đi, hỡi muôn dân, cùng chúc tụng Thiên Chúa.",
@@ -53232,8 +53232,8 @@
     "country": "VN",
     "language": "VN",
     "number": "002",
-    "title": "Ca lên đi 3",
-    "displayTitle": "002. Ca lên đi 3",
+    "title": "Ca lên đi",
+    "displayTitle": "002. Ca lên đi",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -53243,19 +53243,19 @@
     "lyrics": "1. Ca lên đi, thấn thánh trên thiên đình hiển vinh, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n2. Ca lên đi, mọi thế nhân qua dòng thời gian, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n3. Ca lên đi, trời đất bao la ngợp kỳ công, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n4. Ca lên đi, rừng núi đua chen ngàn cổ hoa, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n5. Ca lên đi, triểu sóng cao dâng đẹp đại dương, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n6. Ca lên đi, ngàn cánh chim tung trời dọc ngang, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n7. Ca lên đi, làn gió xuân thơm nổng hương hoa, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.\n8. Ca lên đi, hỡi ánh trăng thu đẹp trời cao, \nmừng Chúa yêu thương trẩn gan đến muôn ngàn đời. \nCa lên đi, chúc tụng Chúa Cả Uy quyền. \nTrần hoàn ỏi, ca lên đi, truển thắn ỏi ca lên đi.",
     "translations": {
       "KR": {
-        "title": "노래하여라 3"
+        "title": "노래하여라"
       },
       "EN": {
-        "title": "Sing Out 3"
+        "title": "Sing Out"
       },
       "VN": {
-        "title": "Ca lên đi 3"
+        "title": "Ca lên đi"
       },
       "LA": {
-        "title": "Cantate 3"
+        "title": "Cantate"
       },
       "JP": {
-        "title": "歌え 3"
+        "title": "歌え"
       }
     },
     "firstLine": "1. Ca lên đi, thấn thánh trên thiên đình hiển vinh,",
@@ -53332,8 +53332,8 @@
     "country": "VN",
     "language": "VN",
     "number": "003",
-    "title": "Ca lên đi 4",
-    "displayTitle": "003. Ca lên đi 4",
+    "title": "Ca lên đi",
+    "displayTitle": "003. Ca lên đi",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -53343,19 +53343,19 @@
     "lyrics": "1. Ca lên đi hỡi tiểu thấn thánh trên trời. \nHiệp cùng muôn dân, tấu hoà nơi nơ muôn bài ca chan chứa tình yêu. \nMừng Chúa Cha uy quyển, nguồn tác sinh diệu huyển. \nTình Người bao la vững bển thiên thu, ôi tình yêu muôn đời cao sáng. [ĐK]\n2. Ca lên đi hỡi tiểu thấn thánh trên trời. \nHiệp cùng muôn dân, tấu hoà nơi nơ muôn bài ca chan chứa tình yêu. \nCùng hát khen Ngôi Lời đà giáng sinh trên đời. \nTình Người bao la vững bển thiên thu, ôi tình yêu muôn đời cao sáng. [ĐK]\n3. Ca lên đi hỡi tiểu thấn thánh trên trời. \nHiệp cùng muôn dân, tấu hoà nơi nơ muôn bài ca chan chứa tình yêu. \nMừng Thánh Linh nhân hiển trợ giúp ai ưu phiển. \nTình Người bao la vững bển thiên thu, ôi tình yêu muôn đời cao sáng. [ĐK]\n\nĐK. Ca lên đi hỡi thiên cung ca lên đi hỡi nhân trẩn.",
     "translations": {
       "KR": {
-        "title": "노래하여라 4"
+        "title": "노래하여라"
       },
       "EN": {
-        "title": "Sing Out 4"
+        "title": "Sing Out"
       },
       "VN": {
-        "title": "Ca lên đi 4"
+        "title": "Ca lên đi"
       },
       "LA": {
-        "title": "Cantate 4"
+        "title": "Cantate"
       },
       "JP": {
-        "title": "歌え 4"
+        "title": "歌え"
       }
     },
     "firstLine": "1. Ca lên đi hỡi tiểu thấn thánh trên trời.",
@@ -53416,8 +53416,8 @@
     "country": "VN",
     "language": "VN",
     "number": "004",
-    "title": "Ca lên đi 6",
-    "displayTitle": "004. Ca lên đi 6",
+    "title": "Ca lên đi",
+    "displayTitle": "004. Ca lên đi",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -53427,19 +53427,19 @@
     "lyrics": "1. Khi ánh bình minh dâng cao dâng, \ntừng đàn chim đùa vui ca hát. [ĐK]\n2. Khi bóng hoàng hôn rơi lung linh, \nmàn trời đêm đẹp muôn tinh tú. [ĐK]\n3. Khi gió mùa Xuân thơm muôn hương, \nvà ngàn hoa đẹp tươi phô sắc. [ĐK]\n4. Khi nắng hạ điểm tô muôn hoa, \nmàu vàng tươi đẹp trên nương lúa. [ĐK]\n5. Khi gió về biển khơi reo vui, \ncuồn cuộn dâng trào muôn con sóng. [ĐK]\n\nĐK. Xin thần thánh trên thiên đình ca lên đi. \nXin trần thế muôn phương cùng ca lên đi. \nTiếng tán tụng vang cung trời ngợi khen Chúa uy linh muôn đời.",
     "translations": {
       "KR": {
-        "title": "노래하여라 6"
+        "title": "노래하여라"
       },
       "EN": {
-        "title": "Sing Out 6"
+        "title": "Sing Out"
       },
       "VN": {
-        "title": "Ca lên đi 6"
+        "title": "Ca lên đi"
       },
       "LA": {
-        "title": "Cantate 6"
+        "title": "Cantate"
       },
       "JP": {
-        "title": "歌え 6"
+        "title": "歌え"
       }
     },
     "firstLine": "1. Khi ánh bình minh dâng cao dâng,",
@@ -68867,8 +68867,8 @@
     "country": "VN",
     "language": "VN",
     "number": "289",
-    "title": "Đền tạ Trái Tim Mẹ 1",
-    "displayTitle": "289. Đền tạ Trái Tim Mẹ 1",
+    "title": "Đền tạ Trái Tim Mẹ",
+    "displayTitle": "289. Đền tạ Trái Tim Mẹ",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -68878,19 +68878,19 @@
     "lyrics": "1. Vì tội trần gian sa đắm bao lần, làm cho Trái Tim Mẹ đây tan nát trăm phần! Hỡi con là kẻ tri âm, hãy đem hết tình báo đền công ơn.\n2. Lòng Mẹ từ đây đau xót trăm đường, vì tội chúng con say mê theo thói phong trần. Thôi con đừng tiếc sự đời, hãy yêu mến Mẹ hết tình, con ơi!\nĐK. Đời con trước, thôi đã trót vô ân. Rầy con quyết đem hết cả đời sống. Lòng khăng khít, con hết sức trung thành mà báo đáp lòng Mẹ mến yêu.",
     "translations": {
       "KR": {
-        "title": "성모 성심께 드리는 보속 1"
+        "title": "성모 성심께 드리는 보속"
       },
       "EN": {
-        "title": "Reparation to the Immaculate Heart of Mary 1"
+        "title": "Reparation to the Immaculate Heart of Mary"
       },
       "VN": {
-        "title": "Đền tạ Trái Tim Mẹ 1"
+        "title": "Đền tạ Trái Tim Mẹ"
       },
       "LA": {
-        "title": "Reparatio Cordi Immaculato Mariae 1"
+        "title": "Reparatio Cordi Immaculato Mariae"
       },
       "JP": {
-        "title": "聖母の汚れなきみ心への償い 1"
+        "title": "聖母の汚れなきみ心への償い"
       }
     },
     "firstLine": "Vì tội trần gian sa đắm bao lần",
@@ -68921,8 +68921,8 @@
     "country": "VN",
     "language": "VN",
     "number": "290",
-    "title": "Đền tạ Trái Tim Mẹ 2",
-    "displayTitle": "290. Đền tạ Trái Tim Mẹ 2",
+    "title": "Đền tạ Trái Tim Mẹ",
+    "displayTitle": "290. Đền tạ Trái Tim Mẹ",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -68932,19 +68932,19 @@
     "lyrics": "ĐK. Lạy Mẹ Fatima, Mẹ nỉ non bao lần. Tội gian trần để phiền cho Trái Tim Mẹ. Lòng Mẹ thương bao la và thiết tha vô ngần. Con dâng mình đền bao tội lỗi vong ân.\n1. Từ nay lòng con nhớ lời Mẹ tha thiết. Xá gì dầu nguy biến thề chết có Mẹ vui có Mẹ. Dù rằng bao sóng gió con lo gì, con lo gì. Chết bên Mẹ con sợ chi, con sợ chi Mẹ ơi!\n2. Trần gian trụy sa, nhuốm màu tang đắm đuối. Trên đường theo chân lý nào đâu mấy người, đâu mấy người. Đường trần ai say đắm không bến bờ, không bến bờ. Phút gian nan trông vào ai, nương nhờ ai Mẹ ơi!\n3. Mẹ cho lòng con trên đường gai dương thế, tấm lòng luôn tinh tuyết tựa hoa trắng ngần, hoa trắng ngần. Trọn đời con trung tín sống với Mẹ, luôn cho Mẹ. Biết hy sinh quên lợi danh, sống cuộc đời bình an.\n4. Mẹ ơi giờ đây, con thực tình thống hối. Con đường xưa tội lỗi nguyện xa cách rồi, xa cách rồi. Và quỳ đây con muốn không dâng gì, không xin gì. Mắt con trông lên Mẹ yêu, âm thầm nhìn Mẹ thôi.",
     "translations": {
       "KR": {
-        "title": "성모 성심께 드리는 보속 2"
+        "title": "성모 성심께 드리는 보속"
       },
       "EN": {
-        "title": "Reparation to the Immaculate Heart of Mary 2"
+        "title": "Reparation to the Immaculate Heart of Mary"
       },
       "VN": {
-        "title": "Đền tạ Trái Tim Mẹ 2"
+        "title": "Đền tạ Trái Tim Mẹ"
       },
       "LA": {
-        "title": "Reparatio Cordi Immaculato Mariae 2"
+        "title": "Reparatio Cordi Immaculato Mariae"
       },
       "JP": {
-        "title": "聖母の汚れなきみ心への償い 2"
+        "title": "聖母の汚れなきみ心への償い"
       }
     },
     "firstLine": "Lạy Mẹ Fatima, Mẹ nỉ non bao lần",
@@ -77420,8 +77420,8 @@
     "country": "VN",
     "language": "VN",
     "number": "448",
-    "title": "Bộ lễ Ca Lên Đi 2",
-    "displayTitle": "448. Bộ lễ Ca Lên Đi 2",
+    "title": "Bộ lễ Ca Lên Đi",
+    "displayTitle": "448. Bộ lễ Ca Lên Đi",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -77431,19 +77431,19 @@
     "lyrics": "KINH THƯƠNG XÓT\nXin Chúa thương xót chúng con. Xin Chúa thương, xin thương xót chúng con. Xin Chúa Kitô, xin Chúa Kitô thương xót chúng con. Xin Chúa Kitô, xin Chúa Kitô thương xót chúng con. Xin Chúa thương xót chúng con, xin thương xót chúng con, xin thương xót chúng con.\n\nKINH VINH DANH\nVinh danh Thiên Chúa trên các tầng trời. Và bình an dưới thế, bình an dưới thế cho người thiện tâm. Chúng con ca ngợi Chúa. Chúng con chúc tụng Chúa. Chúng con thờ lạy Chúa. Chúng con tôn vinh Chúa. Chúng con cảm tạ Chúa vì vinh quang cao cả Chúa. Lạy Chúa là Thiên Chúa, là Vua trên trời, là Chúa Cha toàn năng. Lạy Con Một Thiên Chúa, Chúa Giêsu Kitô. Lạy Chúa là Thiên Chúa, là Chiên Thiên Chúa, là Con Đức Chúa Cha. Chúa xoá tội trần gian, xin thương, xin thương, xin thương xót chúng con. Chúa xoá tội trần gian, xin nhận lời chúng con cầu khẩn. Chúa ngự bên hữu Đức Chúa Cha, xin thương, xin thương, xin thương xót chúng con. Vì lạy Chúa Giêsu Kitô, chỉ có Chúa là Đấng Thánh, chỉ có Chúa là Chúa, chỉ có Chúa là Đấng Tối Cao, cùng Đức Chúa Thánh Thần trong vinh quang Đức Chúa Cha. Amen. Amen.\n\nTHÁNH, THÁNH, THÁNH\nThánh! Thánh! Thánh! Chúa là Thiên Chúa các đạo binh. Trời đất đầy vinh quang Chúa. Hoan hô Chúa trên các tầng trời. Hoan hô Chúa trên các tầng trời. Chúc tụng Đấng ngự đến nhân danh Chúa. Hoan hô Chúa trên các tầng trời, hoan hô Chúa trên các tầng trời.\n\nLẠY CHIÊN THIÊN CHÚA\nLạy Chiên Thiên Chúa, Đấng xoá tội trần gian, xin thương xót chúng con. Lạy Chiên Thiên Chúa, Đấng xoá tội trần gian, xin thương xót, xin thương xót chúng con. Lạy Chiên Thiên Chúa, Đấng xoá tội trần gian, xin ban bình an cho chúng con.\n\nTUNG HÔ SAU TRUYỀN PHÉP - MẪU 1\nĐây là mầu nhiệm đức tin. Lạy Chúa, chúng con loan truyền Chúa chịu chết, và tuyên xưng Chúa sống lại, cho tới khi Chúa đến.\n\nTUNG HÔ SAU TRUYỀN PHÉP - MẪU 2\nĐây là mầu nhiệm đức tin. Lạy Chúa, mỗi lần ăn bánh và uống chén này, chúng con loan truyền Chúa chịu chết cho tới khi Chúa đến.\n\nTUNG HÔ SAU TRUYỀN PHÉP - MẪU 3\nĐây là mầu nhiệm đức tin. Lạy Chúa Cứu Thế, Chúa đã dùng thánh giá và sự phục sinh của Chúa để giải thoát chúng con, xin cứu độ chúng con.\n\nVINH TỤNG CA - AMEN\nChính nhờ Người, với Người và trong Người mà mọi danh dự và vinh quang đều quy về Chúa là Cha toàn năng, trong sự hợp nhất của Chúa Thánh Thần đến muôn đời. Amen. Amen. Amen.\n\nKINH LẠY CHA\nVâng lệnh Chúa Cứu Thế và theo thể thức Người dạy, chúng ta dám nguyện rằng: Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng, Nước Cha trị đến, Ý Cha thể hiện dưới đất cũng như trên trời. Xin Cha cho chúng con hôm nay lương thực hằng ngày; và tha nợ chúng con như chúng con cũng tha kẻ có nợ chúng con; xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ.\n\nVINH TỤNG CA\nLạy Chúa... Đấng cứu độ chúng con. Vì vương quyền, uy lực và vinh quang là của Chúa đến muôn đời.",
     "translations": {
       "KR": {
-        "title": "「노래하여라」 미사곡 2"
+        "title": "「노래하여라」 미사곡"
       },
       "EN": {
-        "title": "Ca Lên Đi Mass Setting 2"
+        "title": "Ca Lên Đi Mass Setting"
       },
       "VN": {
-        "title": "Bộ lễ Ca Lên Đi 2"
+        "title": "Bộ lễ Ca Lên Đi"
       },
       "LA": {
-        "title": "Ordinarium Missae Ca Lên Đi II"
+        "title": "Ordinarium Missae Ca Lên Đi"
       },
       "JP": {
-        "title": "「Ca Lên Đi」ミサ曲2"
+        "title": "「Ca Lên Đi」ミサ曲"
       }
     },
     "firstLine": "Xin Chúa thương xót chúng con",
@@ -77490,8 +77490,8 @@
     "country": "VN",
     "language": "VN",
     "number": "449",
-    "title": "Bộ lễ Ca Lên Đi 3",
-    "displayTitle": "449. Bộ lễ Ca Lên Đi 3",
+    "title": "Bộ lễ Ca Lên Đi",
+    "displayTitle": "449. Bộ lễ Ca Lên Đi",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 1",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 1",
@@ -77501,19 +77501,19 @@
     "lyrics": "KINH THƯƠNG XÓT\nXin Chúa thương xót chúng con. Xin Chúa thương xót chúng con. Xin Chúa Kitô thương xót chúng con. Xin Chúa Kitô thương xót chúng con. Xin Chúa thương xót chúng con. Xin thương xót chúng con.\n\nKINH VINH DANH\nVinh danh Thiên Chúa trên các tầng trời. Và bình an dưới thế cho người thiện tâm. Chúng con ca ngợi Chúa, chúng con chúc tụng Chúa, chúng con thờ lạy Chúa, chúng con tôn vinh Chúa, chúng con cảm tạ Chúa vì vinh quang cao cả Chúa. Lạy Chúa là Thiên Chúa, là Vua trên trời, là Chúa Cha toàn năng. Lạy Con Một Thiên Chúa, Chúa Giêsu Kitô, lạy Chúa là Thiên Chúa, là Chiên Thiên Chúa, là Con Đức Chúa Cha. Chúa xoá tội trần gian, xin thương xót chúng con. Chúa xoá tội trần gian, xin nhận lời chúng con cầu khẩn. Chúa ngự bên hữu Đức Chúa Cha, xin thương xót chúng con. Vì lạy Chúa Giêsu Kitô, chỉ có Chúa là Đấng Thánh, chỉ có Chúa là Chúa, chỉ có Chúa là Đấng Tối Cao, cùng Đức Chúa Thánh Thần trong vinh quang Đức Chúa Cha. Amen.\n\nTHÁNH, THÁNH, THÁNH\nThánh! Thánh! Thánh! Chúa là Thiên Chúa các đạo binh. Trời đất đầy vinh quang Chúa. Hoan hô Chúa, hoan hô Chúa trên các tầng trời. Chúc tụng Đấng ngự đến nhân danh Chúa. Hoan hô Chúa, hoan hô Chúa trên các tầng trời.\n\nLẠY CHIÊN THIÊN CHÚA\nLạy Chiên Thiên Chúa, Đấng xoá tội trần gian: xin thương xót chúng con. Lạy Chiên Thiên Chúa, Đấng xoá tội trần gian: xin thương xót chúng con. Lạy Chiên Thiên Chúa, Đấng xoá tội trần gian: xin ban bình an cho chúng con.",
     "translations": {
       "KR": {
-        "title": "「노래하여라」 미사곡 3"
+        "title": "「노래하여라」 미사곡"
       },
       "EN": {
-        "title": "Ca Lên Đi Mass Setting 3"
+        "title": "Ca Lên Đi Mass Setting"
       },
       "VN": {
-        "title": "Bộ lễ Ca Lên Đi 3"
+        "title": "Bộ lễ Ca Lên Đi"
       },
       "LA": {
-        "title": "Ordinarium Missae Ca Lên Đi III"
+        "title": "Ordinarium Missae Ca Lên Đi"
       },
       "JP": {
-        "title": "「Ca Lên Đi」ミサ曲3"
+        "title": "「Ca Lên Đi」ミサ曲"
       }
     },
     "firstLine": "Xin Chúa thương xót chúng con",
@@ -86652,8 +86652,8 @@
     "country": "VN",
     "language": "VN",
     "number": "153",
-    "title": "Cầu cho cha mẹ 1",
-    "displayTitle": "153. Cầu cho cha mẹ 1",
+    "title": "Cầu cho cha mẹ",
+    "displayTitle": "153. Cầu cho cha mẹ",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 2",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 2",
@@ -86663,19 +86663,19 @@
     "lyrics": "CÂU H0 HA MẸ 1\n0 h : r2\n1.Xn cảm tạ Chúa xin cám 0n Ngài đã\n2(ha mẹ mồ hôi vất vả đêm ngày giúp\n† T>t † —\n1.ban cho đời con có mẹ cha. Công cha thì cao cao hơn\n2.con no đẩy manh áo hạt cơm. Công cha dạy con đi trên\n1.là Núi Thái, nghĩa mẹ dạt dào như sóng trào Biến\n2. đường mến Phúa, nghĩa mẹ gọi mời con sống đời tình\n1. Đông. on không có mẹ, ai dạy ngày qua? Con\n2.yêu Bao nhiêu gánh nặng, ôi chẳng hể quên. Nưôi\nĐ*2—=szLs—sE2=szL2=lH—=zlz+-#\n1. không có cha, tìm đâu mái nhà?ÐK Xin cho cha, Xin cho\n2.con lớn lên nào mong đáp đển.\n0 l ¬ÕmmAÃ\n@—P=+—g§—#sL#e—s——s—§—I12Z—#—®|\nmẹ được trọn đời mạnh khỏe yên vui. Con tin\nSE :. — ... —-..-.\n¡| Ð® #® # s . ® 2. .\nChúa thiết tha ân tìlh: tình người Cha và trái tim Mẹ hiền.",
     "translations": {
       "KR": {
-        "title": "부모를 위한 기도 1"
+        "title": "부모를 위한 기도"
       },
       "EN": {
-        "title": "Prayer for Parents 1"
+        "title": "Prayer for Parents"
       },
       "VN": {
-        "title": "Cầu cho cha mẹ 1"
+        "title": "Cầu cho cha mẹ"
       },
       "LA": {
-        "title": "Prex pro parentibus 1"
+        "title": "Prex pro parentibus"
       },
       "JP": {
-        "title": "両親のための祈り 1"
+        "title": "両親のための祈り"
       }
     },
     "firstLine": "CÂU H0 HA MẸ 1",
@@ -86706,8 +86706,8 @@
     "country": "VN",
     "language": "VN",
     "number": "154",
-    "title": "Cầu cho cha mẹ 2",
-    "displayTitle": "154. Cầu cho cha mẹ 2",
+    "title": "Cầu cho cha mẹ",
+    "displayTitle": "154. Cầu cho cha mẹ",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 2",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 2",
@@ -86717,19 +86717,19 @@
     "lyrics": "CẤU H0 HA MẸ 2\nlà h) —— } =\n1Xn Chúa í a chúc lành cho đời cha mẹ của\n2.An vui cũng như đau buổn, luôn đẹp tấm lòng mẹ\nÁỶ= . ........\n1.con, công ơn là như núi non, dưỡng nuôi con bao ngày vuông\n2.cha Ai qua là bao chốn xa thấy đâu vui cho bằng mái\n—S—Lz— se s c. s....“-=.\n1.tròn. Con sinh đến trong đời, an vưi nhờ có ơn\n2.nhà? Mai con lớn lên rổ, ra đi tung cánh trong\nĐ—=EES—=—=VL+—\"-2—\"z-£z+mÏi\n1.Trờ, và ơn cha mẹ suốt đời coi nhẹ khổ đau.\n2đờ, dù xa vô bờ vẫn nhờ đến tình mẹ cha.\nĐK. Xin cho cha mẹ con thắm mãi tình son của Chúa Trời.\n®——_T 8| 6 a “è 8T\nCho con giữa gia đình luôn sống theo tình người con ngoan.",
     "translations": {
       "KR": {
-        "title": "부모를 위한 기도 2"
+        "title": "부모를 위한 기도"
       },
       "EN": {
-        "title": "Prayer for Parents 2"
+        "title": "Prayer for Parents"
       },
       "VN": {
-        "title": "Cầu cho cha mẹ 2"
+        "title": "Cầu cho cha mẹ"
       },
       "LA": {
-        "title": "Prex pro parentibus 2"
+        "title": "Prex pro parentibus"
       },
       "JP": {
-        "title": "両親のための祈り 2"
+        "title": "両親のための祈り"
       }
     },
     "firstLine": "CẤU H0 HA MẸ 2",
@@ -86760,8 +86760,8 @@
     "country": "VN",
     "language": "VN",
     "number": "155",
-    "title": "Cầu cho cha mẹ 3",
-    "displayTitle": "155. Cầu cho cha mẹ 3",
+    "title": "Cầu cho cha mẹ",
+    "displayTitle": "155. Cầu cho cha mẹ",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 2",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 2",
@@ -86771,19 +86771,19 @@
     "lyrics": "0ẤU H0 HA MẸ 3\nPhamdicô\n1. 0m tạ Chúa đã ban cho con ngàn ngày\n2 Nguyện cẩu Chúa dẫn đưa con thơ dạy lòng\n1.vui một mái gia đình, cho con an bình nhờ tay cha\n2.con đển đáp ân tình, luôn yêu gia đình và thương cha\n¿ ‡ 2¬ h E——\n1.mẹ, dạt dào dòng sữa thơm từ vành nôi, ngọt ngào từng\n2.mẹ. Vì đời này có bao ngày dẩn qua, một ngày nào\n1.bữa cơm lành tràn vui. Nước mắt mổ hôi, bao ngày tháng\n2.đó không còn mẹ cha (ó6 nhớ tình sâu biết đển đáp\n—=ø——=s—kz \"——z-z-g—z\n1.trôi. Thương con nắng mưa dãi dấu Đẹp\n2.đâu Xin cho những ai còn cha mẹ, vẹn\nn = Ỉ\n1.mầu ân nghĩa biển sâu ĐK. Nguện cầu\n2.tròn nghĩa hiếu tình son.\nỈ —— Í\nChúa xuống ơn cho mẹ cha, dù cuộc\nÍ — I\nsống khó khăn hơn ngày qua (Chúa theo đường\nĨ Í\nXã, giúp cho mẹ cha trung\n+2+‡ ĩ ĩ EE=: =\nˆO— mẽ mxr\nkiên têm tin thiết tha.",
     "translations": {
       "KR": {
-        "title": "부모를 위한 기도 3"
+        "title": "부모를 위한 기도"
       },
       "EN": {
-        "title": "Prayer for parents 3"
+        "title": "Prayer for Parents"
       },
       "VN": {
-        "title": "Cầu cho cha mẹ 3"
+        "title": "Cầu cho cha mẹ"
       },
       "LA": {
-        "title": "Prex pro parentibus 3"
+        "title": "Prex pro parentibus"
       },
       "JP": {
-        "title": "両親のための祈り 3"
+        "title": "両親のための祈り"
       }
     },
     "firstLine": "0ẤU H0 HA MẸ 3",
@@ -86818,8 +86818,8 @@
     "country": "VN",
     "language": "VN",
     "number": "156",
-    "title": "Cầu cho cha mẹ 6",
-    "displayTitle": "156. Cầu cho cha mẹ 6",
+    "title": "Cầu cho cha mẹ",
+    "displayTitle": "156. Cầu cho cha mẹ",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 2",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 2",
@@ -86829,19 +86829,19 @@
     "lyrics": "GẤU H0 HA MẸ 6\nPhaniicô\n§?*°; Ø 17; ðcls ¿ẻ\n1.0on còn bé nên chẳng có gì mà đển\n2.ha mẹ sống gian khổ giữa đời lòng chỉ\n3.Bao ngày tháng con ở gia đình, nguyện lòng\n1đáp ơn cha mẹ mình. on chỉ biết cẩu xin Chúa\n2.muốn cho con nụ cười. Tấm lòng đó là trăng sáng\n3. sống sao cho trọn tình, luôn đển đáp tình cha nghĩa\nb ' n › ‡ — ¬\n1.Trời giúp cha mẹ an vui suốt đời.\n2.ngời, xin Chúa Trời luôn luôn chúc lành.\n3. mẹ với tấm lòng con thơ sáng ngời.\nĐK. Mẹ cha thương con tình như núi non không hao\n' Ù Í\nmòn là không hao” mòn. Dù mai sau đây đời con lớn\nkhôn, chẳng hể quên, xin chẳng lhề quên.",
     "translations": {
       "KR": {
-        "title": "부모를 위한 기도 6"
+        "title": "부모를 위한 기도"
       },
       "EN": {
-        "title": "Prayer for parents 6"
+        "title": "Prayer for Parents"
       },
       "VN": {
-        "title": "Cầu cho cha mẹ 6"
+        "title": "Cầu cho cha mẹ"
       },
       "LA": {
-        "title": "Prex pro parentibus 6"
+        "title": "Prex pro parentibus"
       },
       "JP": {
-        "title": "両親のための祈り 6"
+        "title": "両親のための祈り"
       }
     },
     "firstLine": "GẤU H0 HA MẸ 6",
@@ -90950,8 +90950,8 @@
     "country": "VN",
     "language": "VN",
     "number": "229",
-    "title": "Dâng 1",
-    "displayTitle": "229. Dâng 1",
+    "title": "Dâng",
+    "displayTitle": "229. Dâng",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 2",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 2",
@@ -90961,19 +90961,19 @@
     "lyrics": "1. Nguyện dâng Chúa lễ tình yêu chân thành.\n2. Đoàn con cái đã về đây chung lời.\n3 Nguyện xin Chúa cho người dâng lễ này.\n1 Này tấm bánh đây rượu nho thơm ngát.\n2 Hợp dâng Chúa tâm hồn và thân xác.\n3. Mọi ơn thánh dư đẩy muôn vinh phúc.\nˆ T =: T [ = E T —]\n1. Nguyện dâng Chúa đôi bàn tay con hiến.\n2. Nguyện mãi mãi suốt đời yêu nhau hơn.\n3. Ngài thương đoái linh hổn người đã mất.\nˆ † 1 ¬ E I] : #\n1. 0húa thương chấp nhận ban phước lành tháng năm.\n2. Chúa thương kết hiệp muôn tấm lòng chúng con.\n3. Chóng vể thiên đàng hưởng phúc lành Chúa ban.\nL | Ị\n¿ ‡ \" Eá= ‡ EE : £ 2: —\nĐK. Nguyện dâng Chúa tâm tình con thiết tha.\nXin yêu thưởng ủ ấp trái tim hồng.\n®%>-øz——£#—L7—g TL —_ g —#—T—?2——|\nNguyện dâng Chúa bánh rượu thơm trắng trong.\nệ . : .... Ề\nXn trung kiên mến yêu Ngài hết lòng.",
     "translations": {
       "KR": {
-        "title": "봉헌 1"
+        "title": "봉헌"
       },
       "EN": {
-        "title": "Dedication 1"
+        "title": "Dedication"
       },
       "VN": {
-        "title": "Dâng 1"
+        "title": "Dâng"
       },
       "LA": {
-        "title": "Oblationes 1"
+        "title": "Consecratio"
       },
       "JP": {
-        "title": "奉献 1"
+        "title": "奉献"
       }
     },
     "firstLine": "1. Nguyện dâng Chúa lễ tình yêu chân thành.",
@@ -91009,8 +91009,8 @@
     "country": "VN",
     "language": "VN",
     "number": "230",
-    "title": "Dâng 2",
-    "displayTitle": "230. Dâng 2",
+    "title": "Dâng",
+    "displayTitle": "230. Dâng",
     "book": "Tuyển tập Thánh ca Việt Nam quyển 2",
     "tags": [
       "Tuyển tập Thánh ca Việt Nam quyển 2",
@@ -91020,19 +91020,19 @@
     "lyrics": "1.on xin tiến dâng rượu bánh nơi nương đồng,\n2.0on xin tiến dâng trọn xác thân linh hồn,\n2° E— . EE=T—~Ƒ=\n1do bông lúa thơm và nho chín sạch trong.\n2.con xin tiến dâng hợp với bánh rượu ngon.\n1. Đôi tay tháng ngày gắng công vun trồng,\n2.Xn thương chúc lành lễ dâng chân thành,\n1. của lễ tỏa hương quyện áng mây hồng.\n2rượu bánh trở nên nguồn sống nhân trần.\nĐK. (on xin dâng Ngài này hiến lễ tỉnh tuyển,\ncùng tiếng ngợi ca một tình khúc dịu em.\nXin (Cha thương nhận trọn niểm con yêu mến,\nđến muôn đời nguyện thề không dám quên.",
     "translations": {
       "KR": {
-        "title": "봉헌 2"
+        "title": "봉헌"
       },
       "EN": {
-        "title": "Consecration 2"
+        "title": "Dedication"
       },
       "VN": {
-        "title": "Dâng 2"
+        "title": "Dâng"
       },
       "LA": {
-        "title": "Oblatio2"
+        "title": "Consecratio"
       },
       "JP": {
-        "title": "奉献 2"
+        "title": "奉献"
       }
     },
     "firstLine": "1.on xin tiến dâng rượu bánh nơi nương đồng,",
