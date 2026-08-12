@@ -2680,7 +2680,7 @@
             '<div class="aux-two-column hymn-translation-grid">',
             '<section class="aux-language-block hymn-original-pane">',
             '<div class="aux-language-label">' + escapeHtml(appLanguageName(country)) + '</div>',
-            '<div class="aux-prayer-title">' + escapeHtml(entry.displayTitle || entry.title) + '</div>',
+            '<div class="aux-prayer-title">' + escapeHtml(entry.title || entry.displayTitle) + '</div>',
             lyricsHtml,
             lyricsNoteHtml,
             '</section>',

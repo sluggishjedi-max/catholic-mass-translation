@@ -5,7 +5,7 @@ const root = path.resolve(__dirname, '..');
 const indexPath = path.join(root, 'index.html');
 const versionPath = path.join(root, 'V25.html');
 const runtimePath = path.join(root, 'JS file', 'app_v25.js');
-const runtimeTag = '<script src="JS%20file/app_v25.js?v=20260812-v25"></script>';
+const runtimeTag = '<script src="JS%20file/app_v25.js?v=20260812-v25-r2"></script>';
 
 if (process.argv.includes('--runtime-only')) {
   const existingRuntime = fs.readFileSync(runtimePath, 'utf8');

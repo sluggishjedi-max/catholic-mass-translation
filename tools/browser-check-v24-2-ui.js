@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260812-v25/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260812-v25-r2/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -138,6 +138,16 @@ function startServer() {
 
       const koreanHymns = getHymnData().filter(entry => normalizeSelectableLang(entry && entry.country, 'KR') === 'KR');
       const kyrieEntries = koreanHymns.filter(entry => cleanNodeText(entry && entry.title) === '\uC790\uBE44\uC1A1');
+      const numberedHymn = koreanHymns.find(entry => cleanNodeText(entry?.number) && cleanNodeText(entry?.displayTitle).includes(cleanNodeText(entry.number)));
+      const numberedHymnProbe = document.createElement('div');
+      numberedHymnProbe.innerHTML = numberedHymn ? renderHymnDetail(numberedHymn, 'KR') : '';
+      const hymnOriginalTitleFixture = {
+        available: !!numberedHymn,
+        sourceTitle: cleanNodeText(numberedHymnProbe.querySelector('.hymn-original-pane .aux-prayer-title')?.textContent),
+        expectedTitle: cleanNodeText(numberedHymn?.title),
+        upperTitle: cleanNodeText(numberedHymnProbe.querySelector('.hymn-detail > h3')?.textContent),
+        number: cleanNodeText(numberedHymn?.number)
+      };
       const suspiciousTitlePatterns = {
         VN: /B\u00E0i h\u00E1t (?:Zabi|Gloria|vinh quang|c\u1ED5 v\u0169 ph\u00FAc \u00E2m|\u0111\u1EA7u v\u00E0o|\u0111\u00E1p tr\u1EA3)|k\u1EBFt th\u00FAc b\u00E0i h\u00E1t|Yeongsong/iu,
         EN: /Zabi Song|Gloria Song|Glory song|Gospel cheer song|Entrance song|Responsorial song|Yeongsong/iu,
@@ -1364,6 +1374,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         koreanVietnameseSourceLabels,
         catholicTerminologyFixture,
         hymnLiturgicalTagFixture,
+        hymnOriginalTitleFixture,
         hymnTitleTranslationFixture,
         prayerDataLayerFixture,
         missaDataLayerFixture,
@@ -1525,6 +1536,11 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.hymnLiturgicalTagFixture.color === 'rgb(180, 83, 9)'
       && result.hymnLiturgicalTagFixture.oval !== '0px',
     `Hymn liturgical tags are not orange ovals after the hymn title: ${JSON.stringify(result.hymnLiturgicalTagFixture)}`);
+    assert(result.hymnOriginalTitleFixture.available
+      && result.hymnOriginalTitleFixture.sourceTitle === result.hymnOriginalTitleFixture.expectedTitle
+      && !result.hymnOriginalTitleFixture.sourceTitle.includes(result.hymnOriginalTitleFixture.number)
+      && result.hymnOriginalTitleFixture.upperTitle.includes(result.hymnOriginalTitleFixture.number),
+    `The black original hymn title still contains its hymn number or the upper title changed: ${JSON.stringify(result.hymnOriginalTitleFixture)}`);
     assert(result.hymnTitleTranslationFixture.usesRuntimeLayer
       && result.hymnTitleTranslationFixture.kyrieCount > 0
       && result.hymnTitleTranslationFixture.storedKyrieCanonical
