@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260812-v25-r3/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260814-v25-r4/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -1372,6 +1372,16 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       applyActiveTabState();
       const currentFirstSection = document.querySelector('#missal-root > .section-bar');
       const currentLegend = document.getElementById('role-legend');
+      const previousBishopContext = state.bishopContext;
+      state.bishopContext = bishopContextForDiocese('수원교구');
+      const v25BishopLocalizationFixture = {
+        kr: plainTextFromHtml(formatDynamicLineText('저희 주교 [주교명]와 (협력주교들과)', 'kr')),
+        vn: plainTextFromHtml(formatDynamicLineText('Đức Giám Mục [Tên GM.] chúng con', 'vn')),
+        en: plainTextFromHtml(formatDynamicLineText('[Bishop Name] our Bishop, (and Auxiliary Bishops,)', 'en')),
+        jp: plainTextFromHtml(formatDynamicLineText('わたしたちの司教 [司教名]、', 'jp')),
+        la: plainTextFromHtml(formatDynamicLineText('Epíscopo nostro [Episcopus N.]', 'la'))
+      };
+      state.bishopContext = previousBishopContext;
 
       return {
         baseline,
@@ -1506,6 +1516,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         futureProperFixtures,
         vietnameseMassCopyright,
         pullRefreshFixture,
+        v25BishopLocalizationFixture,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -1599,7 +1610,15 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.missaDataLayerFixture.hasSongEntry
       && result.missaDataLayerFixture.hasPrayerThreeEntry
       && result.missaDataLayerFixture.runtimeDelegatesData,
-    `Ordinary Mass data processing did not move cleanly into missa_data.js: ${JSON.stringify(result.missaDataLayerFixture)}`);
+      `Ordinary Mass data processing did not move cleanly into missa_data.js: ${JSON.stringify(result.missaDataLayerFixture)}`);
+    if (targetHtml === 'V25.html') {
+      assert(result.v25BishopLocalizationFixture.kr === '저희 주교 마티아와, 요한과, 제르마노와'
+        && result.v25BishopLocalizationFixture.vn === 'Đức Giám Mục Mátthia và các Đức Giám Mục phụ tá Gioan và Germanô chúng con'
+        && result.v25BishopLocalizationFixture.en === 'Matthias our Bishop, and John and Germanus, Auxiliary Bishops,'
+        && result.v25BishopLocalizationFixture.jp === 'わたしたちの司教 マティア、補佐司教ヨハネ、ゲルマノ、'
+        && result.v25BishopLocalizationFixture.la === 'Epíscopo nostro Matthias eiusque Episcopis auxiliaribus Ioannes et Germanus',
+      `Auxiliary bishop names are not localized in every V25 language: ${JSON.stringify(result.v25BishopLocalizationFixture)}`);
+    }
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);
     assert(JSON.stringify(result.deviceUiLanguageFixtures) === JSON.stringify({

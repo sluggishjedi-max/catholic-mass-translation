@@ -14707,6 +14707,49 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         })).join(', ');
     }
 
+    function joinLocalizedBishopNames(people, langKey, options = {}) {
+        const html = !!options.html;
+        const names = (Array.isArray(people) ? people : [])
+            .map(person => {
+                const name = localizedBishopName(person, langKey);
+                if (!name) return '';
+                return html ? `<span class="muted-name-placeholder">${escapeHtml(name)}</span>` : name;
+            })
+            .filter(Boolean);
+        if (names.length < 2) return names[0] || '';
+        if (langKey === 'jp') return names.join('、');
+        const conjunction = langKey === 'vn' ? ' và ' : langKey === 'la' ? ' et ' : langKey === 'en' ? ' and ' : ', ';
+        if (names.length === 2) return `${names[0]}${conjunction}${names[1]}`;
+        const last = names.pop();
+        const separator = langKey === 'en' ? ', and ' : conjunction;
+        return `${names.join(', ')}${separator}${last}`;
+    }
+
+    function localizedBishopSequence(context, langKey, options = {}) {
+        if (!context || !context.ordinary) return '';
+        if (langKey === 'kr') return koreanBishopSequence(context, options);
+        const html = !!options.html;
+        const ordinary = joinLocalizedBishopNames([context.ordinary], langKey, { html });
+        const auxiliaries = Array.isArray(context.auxiliaries) ? context.auxiliaries : [];
+        if (!ordinary || !auxiliaries.length) return ordinary;
+        const auxiliaryNames = joinLocalizedBishopNames(auxiliaries, langKey, { html });
+        if (langKey === 'vn') {
+            const title = context.collaboratorSummary
+                ? 'các Đức Giám Mục phụ tá'
+                : auxiliaries.length === 1 ? 'Đức Giám Mục phụ tá' : 'các Đức Giám Mục phụ tá';
+            return context.collaboratorSummary ? `${ordinary} và ${title}` : `${ordinary} và ${title} ${auxiliaryNames}`;
+        }
+        if (langKey === 'jp') {
+            return context.collaboratorSummary ? `${ordinary}、補佐司教団` : `${ordinary}、補佐司教${auxiliaryNames}`;
+        }
+        if (langKey === 'la') {
+            if (context.collaboratorSummary) return `${ordinary} eiusque Episcopis auxiliaribus`;
+            const title = auxiliaries.length === 1 ? 'eiusque Episcopo auxiliari' : 'eiusque Episcopis auxiliaribus';
+            return `${ordinary} ${title} ${auxiliaryNames}`;
+        }
+        return joinLocalizedBishopNames([context.ordinary].concat(auxiliaries), langKey, { html });
+    }
+
     function replaceBishopPlaceholder(html, langKey) {
         const context = state.bishopContext;
         if (!context || !context.ordinary) return String(html || '');
@@ -14728,7 +14771,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             return output.replace(/(?:\[주교명\]|\(주교명\))/gu, ordinaryHtml);
         }
         const bishopPattern = '(?:bishop name|bishop n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|司教名|nomen episcopi|episcopus n\\.?)';
-        output = output.replace(new RegExp(`(?:\\(${bishopPattern}\\)|\\[${bishopPattern}\\])`, 'giu'), ordinaryHtml);
+        const bishopPlaceholder = new RegExp(`(?:\\(${bishopPattern}\\)|\\[${bishopPattern}\\])`, 'giu');
+        if (langKey === 'en') {
+            const auxiliaries = Array.isArray(context.auxiliaries) ? context.auxiliaries : [];
+            const auxiliaryNames = joinLocalizedBishopNames(auxiliaries, 'en', { html: true });
+            output = output.replace(bishopPlaceholder, ordinaryHtml);
+            output = output.replace(/,\s*\\?\(\s*and\s+Auxiliary\s+Bishops?\s*,?\s*\\?\)/giu, () => {
+                if (!auxiliaries.length) return ',';
+                if (context.collaboratorSummary) return ', and the Auxiliary Bishops,';
+                return `, and ${auxiliaryNames}, Auxiliary Bishop${auxiliaries.length === 1 ? '' : 's'},`;
+            });
+            return output;
+        }
+        const sequenceHtml = localizedBishopSequence(context, langKey, { html: true }) || ordinaryHtml;
+        output = output.replace(bishopPlaceholder, sequenceHtml);
+        if (langKey === 'vn' && Array.isArray(context.auxiliaries) && context.auxiliaries.length) {
+            output = output.replace(/\s*,?\s*\\?\(\s*hay\s+Giám\s+Mục\s+khác\s*\\?\)/giu, '');
+        }
         if (langKey === 'vn') output = output.replace(/(Đức\s+Giám\s+Mục\s+)T…/giu, `$1${ordinaryHtml}`);
         if (langKey === 'jp') output = output.replace(/(司教\s*)○{2,}/gu, `$1${ordinaryHtml}`);
         return output;
