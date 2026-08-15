@@ -1367,6 +1367,7 @@
             [/세례자 요한|John the Baptist|Gioan Tẩy Giả|洗礼者.*ヨハネ|Ioannis Baptistae/i, 'john_the_baptist'],
             [/주님 성탄|Nativity of the Lord|Giáng Sinh|主の降誕|Nativitate Domini/i, 'nativity_1'],
             [/부활 대축일|Easter Sunday|Phục Sinh|復活|Pasch|Resurrectionis Domini/i, 'easter_1'],
+            [/성모.*승천|Assumption|Lên Trời|被昇天|Assumptione/i, 'assumption'],
             [/승천|Ascension|Thăng Thiên|昇天|Ascensione/i, 'ascension_1'],
             [/성령 강림|Pentecost|Hiện Xuống|聖霊降臨/i, 'pentecost'],
             [/삼위일체|Trinity|Ba Ngôi|三位一体|Trinit/i, 'holy_trinity'],
@@ -1378,7 +1379,6 @@
             [/베드로.*바오로|Peter and Paul|Phêrô.*Phaolô|ペトロ.*パウロ|Petri.*Pauli/i, 'peter_and_paul'],
             [/변모|Transfiguration|Hiển Dung|変容|Transfiguratione/i, 'transfiguration'],
             [/십자가 현양|Holy Cross|Thánh Giá|十字架|Exaltatione/i, 'holy_cross'],
-            [/성모 승천|Assumption|Lên Trời|被昇天|Assumptione/i, 'assumption'],
             [/원죄 없이|Immaculate Conception|Vô Nhiễm|無原罪|Immaculata/i, 'immaculate_conception'],
             [/모든 성인|All Saints|諸聖人|Omnium Sanctorum/i, 'all_saints'],
             [/위령의 날|All Souls|Các tín hữu đã qua đời|死者の日|Omnium Fidelium Defunctorum/i, 'dead_1'],
@@ -6800,6 +6800,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const out = splitKoreanMarkedLines(content, ['◎', '○']).map(line => line.sp === '○'
             ? parsedLine('○', stripKoreanVerseNumbers(line.text))
             : line);
+        attachPsalmVerseRefs('KR', cleanNodeText(citation.replace(/^화답송\s*/, '')), out);
         return { text: parsedLinesToText(out), lines: out, cit_kr: cleanNodeText(citation.replace(/^화답송\s*/, '')) };
     }
 
@@ -7140,7 +7141,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         for (let i = start + 1; i < lines.length; i++) {
             if (endPatterns.some(pattern => pattern.test(lines[i]))) { end = i; break; }
         }
-        return { heading: lines[start], lines: lines.slice(start + 1, end) };
+        const heading = lines[start];
+        const inlineContentHeading = /^(?:Ca nhập lễ|Lời nguyện nhập lễ|Lời nguyện tiến lễ|Ca hiệp lễ|Lời nguyện (?:hiệp|kết) lễ)(?:\s|$|[:：])/iu.test(heading);
+        const matchedStart = inlineContentHeading
+            ? startPatterns.map(pattern => heading.match(pattern)).find(Boolean)
+            : null;
+        const inlineRest = matchedStart
+            ? cleanNodeText(heading.slice(matchedStart[0].length).replace(/^\s*[:：-]?\s*/, ''))
+            : '';
+        return {
+            heading,
+            lines: (inlineRest ? [inlineRest] : []).concat(lines.slice(start + 1, end))
+        };
     }
 
     function cleanVietnameseReadingLines(lines) {
@@ -7151,7 +7163,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function extractVietnameseDailySections(lines, date) {
-        const body = selectVietnameseCycle(getVietnameseBodyLines(lines), date);
+        const body = splitEmbeddedDailySectionHeadings(selectVietnameseCycle(getVietnameseBodyLines(lines), date), 'VN');
         const result = {};
         const entrance = sliceVietnameseSection(body, [/^Ca nhập lễ/i], [/^Lời nguyện nhập lễ/i]);
         const collect = sliceVietnameseSection(body, [/^Lời nguyện nhập lễ/i], [/^Bài\s+[ĐÐđd]ọc(?:\s|$)/iu, /^Phụng vụ Lời Chúa(?:\s|$)/iu]);
@@ -7185,6 +7197,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (psalm.lines.length) {
             const parsedPsalm = parseVietnamesePsalmLines(psalm.lines);
             const baseCit = extractCitationFromHeading(psalm.heading) || psalm.heading.replace(/^[ĐÐ]áp Ca:\s*/i, '').trim();
+            attachPsalmVerseRefs('VN', baseCit, parsedPsalm.lines);
             result.psalm = { text: parsedLinesToText(parsedPsalm.lines), lines: parsedPsalm.lines, cit_vn: appendVietnameseResponseRef(baseCit, parsedPsalm.responseRef) };
         }
         if (accl.lines.length) result.gospel_accl = { text: formatVietnameseSection('gospel_accl', accl.lines), lines: formatVietnameseSectionLines('gospel_accl', accl.lines) };
@@ -7226,7 +7239,42 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return terminalIndex >= 0 ? lines.slice(0, terminalIndex) : lines;
     }
 
+    const embeddedDailySectionBoundaryPatterns = {
+        KR: /(?:예물\s*기도|감사송|영성체송|영성체\s*후\s*기도)(?=\s|$|[:：])/gu,
+        VN: /(?:Lời\s+nguyện\s+tiến\s+lễ|Lời\s+tiền\s+tụng|Kinh\s+Tiền\s+Tụng|Ca\s+hiệp\s+lễ|Lời\s+nguyện\s+(?:hiệp|kết)\s+lễ)(?=\s|$|[:：])/giu,
+        EN: /(?:Prayer\s+over\s+the\s+Offerings|Preface|Communion\s+Antiphon|Prayer\s+after\s+Communion)(?=\s|$|[:：])/giu,
+        JP: /(?:奉納祈願|奉納文|叙唱|聖体拝領唱|拝領唱|拝領後の祈願|拝領祈願)(?=\s|$|[:：])/gu,
+        LA: /(?:Super\s+oblata|Pr(?:æ|ae)fatio|Antiphona\s+ad\s+communionem|Post\s+communionem)(?=\s|$|[:：])/giu
+    };
+
+    // Some proxy/article sources flatten adjacent headings and their content into
+    // one physical line. Split only the distinctive post-Gospel headings so a
+    // prayer can never absorb a preface or the following Communion section.
+    function splitEmbeddedDailySectionHeadings(lines, lang) {
+        const normalizedLang = normalizeSelectableLang(lang, lang);
+        const pattern = embeddedDailySectionBoundaryPatterns[normalizedLang] || null;
+        if (!pattern) return Array.isArray(lines) ? lines.slice() : [];
+        return (lines || []).flatMap(rawLine => {
+            const raw = String(rawLine || '');
+            const matcher = new RegExp(pattern.source, pattern.flags);
+            const starts = Array.from(raw.matchAll(matcher))
+                .filter(match => {
+                    const index = match.index;
+                    if (index > 0 && !/\s/u.test(raw.charAt(index - 1))) return false;
+                    if (!['VN', 'EN', 'LA'].includes(normalizedLang)) return true;
+                    const first = String(match[0] || '').charAt(0);
+                    return first === first.toUpperCase();
+                })
+                .map(match => match.index)
+                .filter((index, position, values) => position === 0 || index !== values[position - 1]);
+            if (!starts.length) return raw.trim() ? [raw.trim()] : [];
+            const boundaries = starts[0] === 0 ? starts : [0].concat(starts);
+            return boundaries.map((start, index) => raw.slice(start, boundaries[index + 1] || raw.length).trim()).filter(Boolean);
+        });
+    }
+
     function extractRawSections(lines, lang) {
+        lines = splitEmbeddedDailySectionHeadings(lines, lang);
         const markers = dailySectionMarkers[lang] || {};
         const allMarkers = Object.values(markers).flat();
         const result = {};
@@ -9088,7 +9136,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictExtractRawSections(lines, lang, selector) {
-        const scoped = strictScopeLinesForMassVariant(lines, selector);
+        const scoped = splitEmbeddedDailySectionHeadings(strictScopeLinesForMassVariant(lines, selector), lang);
         const result = {};
         let current = null;
         scoped.forEach(line => {
@@ -9186,6 +9234,36 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
         }
         return Array.from(found).filter(Number.isInteger);
+    }
+
+    function psalmCitationVerseGroups(citation) {
+        const raw = String(citation || '');
+        const separatorIndex = raw.search(/[,：:・]/u);
+        if (separatorIndex < 0) return [];
+        const verseText = raw.slice(separatorIndex + 1)
+            .replace(/\((?=[^)]*(?:◎|R\.?|Đ|Ð|℟|答))[^)]*\)/giu, ' ');
+        return verseText.split(/[.,;、]/u).map(token => {
+            const refs = new Set();
+            let remainder = token;
+            for (const match of token.matchAll(/(\d{1,3})[ㄱ-ㅎa-z]*\s*[-─–—]\s*(\d{1,3})/giu)) {
+                const start = Number(match[1]);
+                const end = Number(match[2]);
+                if (end >= start && end - start <= 176) {
+                    for (let verse = start; verse <= end; verse += 1) refs.add(verse);
+                }
+                remainder = remainder.replace(match[0], ' ');
+            }
+            Array.from(remainder.matchAll(/\d{1,3}/g), match => Number(match[0])).forEach(verse => refs.add(verse));
+            return Array.from(refs).filter(Number.isFinite).sort((a, b) => a - b);
+        }).filter(group => group.length);
+    }
+
+    function attachPsalmVerseRefs(lang, citation, lines) {
+        const groups = psalmCitationVerseGroups(citation);
+        const versicles = (lines || []).filter(line => strictShouldAppendPsalmResponse(lang, line && line.sp));
+        if (!groups.length || groups.length !== versicles.length) return lines || [];
+        versicles.forEach((line, index) => { line.verseRefs = groups[index].slice(); });
+        return lines || [];
     }
 
     function strictStripArabicVerseNumbers(text, citation = '') {
@@ -9348,6 +9426,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (text) out.push(strictParsedLine('℣', appendLatinPsalmResponseTail(text)));
             });
         }
+        attachPsalmVerseRefs('LA', finalCitation, out);
         const result = { text: parsedLinesToText(out), lines: out };
         if (finalCitation) result.cit_la = finalCitation;
         return result;
@@ -9382,6 +9461,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (line) verseBuffer.push(line);
         });
         flushVerse(false);
+        attachPsalmVerseRefs('EN', finalCitation, out);
         const result = { text: parsedLinesToText(out), lines: out };
         if (finalCitation) result.cit_en = finalCitation;
         return result;
@@ -9391,7 +9471,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const sp = strictCleanLine(speaker);
         if (lang === 'KR') return sp === '○' || sp === '●';
         if (lang === 'VN') return /^(Xướng|X\.|CV\.)$/iu.test(sp);
-        if (lang === 'EN') return /^(V\.|Verse|Ps\.)$/i.test(sp);
+        if (lang === 'EN') return /^(V\.|Verse|Versicle|Ps\.)$/i.test(sp);
         if (lang === 'JP') return /^(先|詩)$/u.test(sp);
         if (lang === 'LA') return /^(℣\.?|V\.|Ps\.)$/iu.test(sp);
         return false;
@@ -9576,6 +9656,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'VN' && key === 'psalm') {
             const parsedPsalm = parseVietnamesePsalmLines(citationResult.blocks);
             parsedPsalm.lines.forEach(line => out.push(strictParsedLine(line.sp, line.text, '', '', line.rubric)));
+            attachPsalmVerseRefs('VN', citationResult.citation, out);
             const result = { text: parsedLinesToText(out), lines: out };
             const finalCitation = appendVietnameseResponseRef(citationResult.citation, parsedPsalm.responseRef);
             if (finalCitation) result.cit_vn = finalCitation;
@@ -9593,12 +9674,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             splitKoreanMarkedLines(contentBlocks, ['◎', '○', '●']).forEach(line => {
                 out.push(strictParsedLine(line.sp, strictAppendPsalmResponse(lang, key, line.sp, strictStripArabicVerseNumbers(line.text))));
             });
+            if (key === 'psalm') attachPsalmVerseRefs('KR', citationResult.citation, out);
             const result = { text: parsedLinesToText(out), lines: out };
             if (citationResult.citation) result[`cit_${lang.toLowerCase()}`] = citationResult.citation;
             return result;
         }
         if (lang === 'JP' && key === 'psalm') {
             buildJapanesePsalmLines(citationResult.blocks, citationResult.citation).forEach(line => out.push(line));
+            attachPsalmVerseRefs('JP', citationResult.citation, out);
             const result = { text: parsedLinesToText(out), lines: out };
             if (citationResult.citation) result.cit_jp = citationResult.citation;
             return result;
@@ -9631,6 +9714,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 else out.push(strictParsedLine('', line));
             });
         });
+        if (key === 'psalm') attachPsalmVerseRefs(lang, citationResult.citation, out);
         const result = { text: parsedLinesToText(out), lines: out };
         if (citationResult.citation) result[`cit_${lang.toLowerCase()}`] = citationResult.citation;
         return result;
@@ -10056,8 +10140,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function ibreviaryPrayerChoiceTokens(line, lang) {
         let text = strictCleanLine(line);
         const terminalPattern = lang === 'LA'
-            ? /\bPr(?:æ|ae)fatio\s+de\b/iu
-            : /\bPreface\s+of\b/iu;
+            ? /\bPr(?:æ|ae)fatio\b/iu
+            : /\bPreface\b/iu;
         const terminalIndex = text.search(terminalPattern);
         const terminalFound = terminalIndex >= 0;
         if (terminalFound) text = strictCleanLine(text.slice(0, terminalIndex));
@@ -11360,11 +11444,100 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return output;
     }
 
+    function normalizedPsalmVerseRefs(value) {
+        return Array.from(new Set((Array.isArray(value) ? value : [])
+            .map(Number)
+            .filter(Number.isInteger)))
+            .sort((a, b) => a - b);
+    }
+
+    function psalmLineVerseRefs(line, lower = '') {
+        if (!line) return [];
+        if (lower) return normalizedPsalmVerseRefs(line[`verse_refs_${lower}`]);
+        return normalizedPsalmVerseRefs(['kr', 'vn', 'en', 'jp', 'la'].flatMap(candidate => line[`verse_refs_${candidate}`] || []));
+    }
+
+    function psalmVerseRefsOverlap(left, right) {
+        const rightSet = new Set(normalizedPsalmVerseRefs(right));
+        return normalizedPsalmVerseRefs(left).some(verse => rightSet.has(verse));
+    }
+
+    function assignParsedLineToTarget(line, lower, parsed, baseId) {
+        line[`sp_${lower}`] = normalizeDailySpeaker(baseId, lower, parsed.sp, parsed.role || '', parsed.text);
+        line[`text_${lower}`] = parsed.text || '';
+        line[`text_${lower}_ai`] = parsed.ai || '';
+        line[`role_${lower}`] = parsed.role || '';
+        line[`rubric_${lower}`] = parsed.rubric || '';
+        line[`verse_refs_${lower}`] = normalizedPsalmVerseRefs(parsed.verseRefs);
+    }
+
+    function clearParsedLineLanguage(line, lower) {
+        if (!line) return;
+        line[`sp_${lower}`] = '';
+        line[`text_${lower}`] = '';
+        line[`text_${lower}_ai`] = '';
+        line[`role_${lower}`] = '';
+        line[`rubric_${lower}`] = '';
+        line[`verse_refs_${lower}`] = [];
+    }
+
+    function applyParsedPsalmLinesForLanguage(targetLines, lower, parsedLines, baseId) {
+        targetLines
+            .filter(line => !isProtectedParsedTargetLineForLanguage(line, baseId, lower))
+            .forEach(line => clearParsedLineLanguage(line, lower));
+        let usedIndexes = new Set();
+        const shiftUsedIndexes = insertedAt => {
+            usedIndexes = new Set(Array.from(usedIndexes, index => index >= insertedAt ? index + 1 : index));
+        };
+        parsedLines.forEach(parsed => {
+            const refs = normalizedPsalmVerseRefs(parsed && parsed.verseRefs);
+            let targetIndex = -1;
+            if (refs.length) {
+                targetIndex = targetLines.findIndex((line, index) => {
+                    if (usedIndexes.has(index) || isProtectedParsedTargetLineForLanguage(line, baseId, lower)) return false;
+                    const otherRefs = normalizedPsalmVerseRefs(['kr', 'vn', 'en', 'jp', 'la']
+                        .filter(candidate => candidate !== lower)
+                        .flatMap(candidate => line[`verse_refs_${candidate}`] || []));
+                    return otherRefs.length && psalmVerseRefsOverlap(refs, otherRefs);
+                });
+            }
+            if (targetIndex < 0) {
+                targetIndex = targetLines.findIndex((line, index) =>
+                    !usedIndexes.has(index)
+                    && !isProtectedParsedTargetLineForLanguage(line, baseId, lower)
+                    && !psalmLineVerseRefs(line).length
+                    && !lineHasLanguageContent(line, lower)
+                );
+            }
+            if (targetIndex < 0 && refs.length) {
+                const firstVerse = refs[0];
+                targetIndex = targetLines.findIndex(line => {
+                    const existing = psalmLineVerseRefs(line);
+                    return existing.length && existing[0] > firstVerse;
+                });
+            }
+            if (targetIndex < 0) targetIndex = parsedInsertIndexForLanguage(targetLines, baseId);
+            if (!targetLines[targetIndex]
+                || usedIndexes.has(targetIndex)
+                || (refs.length && psalmLineVerseRefs(targetLines[targetIndex]).length && !psalmVerseRefsOverlap(refs, psalmLineVerseRefs(targetLines[targetIndex])))) {
+                const inserted = emptyMassLine();
+                targetLines.splice(targetIndex, 0, inserted);
+                shiftUsedIndexes(targetIndex);
+            }
+            assignParsedLineToTarget(targetLines[targetIndex], lower, parsed, baseId);
+            usedIndexes.add(targetIndex);
+        });
+    }
+
     function applyParsedLinesForLanguage(targetLines, lower, parsedLines, baseId) {
         parsedLines = normalizePrayerParsedLinesBeforeApply(lower, baseId, parsedLines);
         parsedLines = normalizeParsedLinesBeforeApply(lower, baseId, parsedLines);
         parsedLines = consolidateParsedReadingBodyLines(baseId, parsedLines);
         if (!Array.isArray(parsedLines) || !parsedLines.length) return;
+        if (baseId === 'psalm' && parsedLines.some(line => normalizedPsalmVerseRefs(line && line.verseRefs).length)) {
+            applyParsedPsalmLinesForLanguage(targetLines, lower, parsedLines, baseId);
+            return;
+        }
         if (usesReadingRoles(baseId, parsedLines)) {
             const targetsByRole = ensureRoleTargetLines(targetLines, baseId, parsedLines);
             Object.keys(targetsByRole).forEach(role => {
@@ -11403,33 +11576,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 insertAt += 1;
             }
             const line = targetLines[targetIndex];
-            line[`sp_${lower}`] = normalizeDailySpeaker(baseId, lower, parsed.sp, parsed.role || '', parsed.text);
-            line[`text_${lower}`] = parsed.text || '';
-            line[`text_${lower}_ai`] = parsed.ai || '';
-            line[`role_${lower}`] = parsed.role || '';
-            line[`rubric_${lower}`] = parsed.rubric || '';
+            assignParsedLineToTarget(line, lower, parsed, baseId);
         });
         editableIndexes.slice(parsedLines.length).forEach(index => {
             const line = targetLines[index];
             if (!line) return;
-            line[`sp_${lower}`] = '';
-            line[`text_${lower}`] = '';
-            line[`text_${lower}_ai`] = '';
-            line[`role_${lower}`] = '';
-            line[`rubric_${lower}`] = '';
+            clearParsedLineLanguage(line, lower);
         });
     }
 
     function clearParsedLanguageLines(targetLines, lower, baseId) {
         targetLines
             .filter(line => !isProtectedParsedTargetLineForLanguage(line, baseId, lower))
-            .forEach(line => {
-                line[`sp_${lower}`] = '';
-                line[`text_${lower}`] = '';
-                line[`text_${lower}_ai`] = '';
-                line[`role_${lower}`] = '';
-                line[`rubric_${lower}`] = '';
-            });
+            .forEach(line => clearParsedLineLanguage(line, lower));
     }
 
     const dailyVariantKeys = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
@@ -15549,6 +15708,79 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    function psalmDisplayLineHasLanguageContent(line, lower) {
+        return !!cleanNodeText([
+            line && line[`sp_${lower}`],
+            line && line[`text_${lower}`],
+            line && line[`rubric_${lower}`]
+        ].filter(Boolean).join(' '));
+    }
+
+    function isPsalmDisplayVersicle(line, lower) {
+        if (!psalmDisplayLineHasLanguageContent(line, lower)) return false;
+        const language = normalizeSelectableLang(lower, lower).toUpperCase();
+        return strictShouldAppendPsalmResponse(language, line && line[`sp_${lower}`]);
+    }
+
+    function psalmDisplayVerseRefs(line, lower) {
+        return normalizedPsalmVerseRefs(line && line[`verse_refs_${lower}`]);
+    }
+
+    // Sources do not always divide the same cited verse range into the same
+    // number of paragraphs. Keep every source paragraph, but render adjacent
+    // one-sided versicles in a single bilingual stanza group (for example,
+    // two Korean ○ paragraphs beside one Vietnamese X. paragraph).
+    function groupPsalmDisplayLinesForActiveLanguages(lines, leftKey, rightKey) {
+        if (!Array.isArray(lines) || !leftKey || !rightKey || leftKey === rightKey) return lines || [];
+        const grouped = [];
+        for (let index = 0; index < lines.length;) {
+            const first = lines[index];
+            const group = [first];
+            if (isPsalmDisplayVersicle(first, leftKey) && isPsalmDisplayVersicle(first, rightKey)) {
+                let cursor = index + 1;
+                while (cursor < lines.length) {
+                    const candidate = lines[cursor];
+                    const leftVersicle = isPsalmDisplayVersicle(candidate, leftKey);
+                    const rightVersicle = isPsalmDisplayVersicle(candidate, rightKey);
+                    if (leftVersicle === rightVersicle) break;
+                    const populatedKey = leftVersicle ? leftKey : rightKey;
+                    const emptyKey = leftVersicle ? rightKey : leftKey;
+                    if (psalmDisplayLineHasLanguageContent(candidate, emptyKey)) break;
+                    if (cleanNodeText(candidate[`sp_${populatedKey}`]) !== cleanNodeText(first[`sp_${populatedKey}`])) break;
+                    const candidateRefs = psalmDisplayVerseRefs(candidate, populatedKey);
+                    const pairedRefs = psalmDisplayVerseRefs(first, emptyKey);
+                    if (!candidateRefs.length || !pairedRefs.length || !psalmVerseRefsOverlap(candidateRefs, pairedRefs)) break;
+                    group.push(candidate);
+                    cursor += 1;
+                }
+            }
+            grouped.push(group.length > 1 ? { __psalmDisplayGroup: true, lines: group } : first);
+            index += group.length;
+        }
+        return grouped;
+    }
+
+    function psalmDisplayGroupLanguageHTML(lines, lang, baseId, extraClass = '') {
+        const lower = String(lang || '').toLowerCase();
+        return (lines || [])
+            .filter(line => psalmDisplayLineHasLanguageContent(line, lower))
+            .map(line => {
+                const rubric = line[`rubric_${lower}`] || '';
+                const rubricHtml = rubric ? `<span class="rubric${extraClass.includes('translation') ? ' translation' : ''}">${rubric}</span>` : '';
+                const roleClass = roleClassForLine(line, lower);
+                const classes = [extraClass, roleClass].filter(Boolean).join(' ');
+                return rubricHtml + linePairHTML(
+                    line[`sp_${lower}`] || '',
+                    line[`text_${lower}`] || '',
+                    lower,
+                    classes,
+                    shouldSuppressSpeaker(baseId),
+                    false
+                );
+            })
+            .join('');
+    }
+
     function gospelAcclamationAlleluiaText(lower, position) {
         const opening = position === 0;
         const map = {
@@ -15809,7 +16041,34 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             partContainer.appendChild(headerRow);
 
             const displayLines = splitMismatchedDailyLinesForActiveLanguages(data.lines, baseId, data, leftL.toLowerCase(), rightL.toLowerCase());
-            displayLines.forEach(line => {
+            const displayRows = baseId === 'psalm'
+                ? groupPsalmDisplayLinesForActiveLanguages(displayLines, leftL.toLowerCase(), rightL.toLowerCase())
+                : displayLines;
+            displayRows.forEach(displayRow => {
+                if (displayRow && displayRow.__psalmDisplayGroup) {
+                    const groupLines = displayRow.lines || [];
+                    if (isStacked) {
+                        const block = document.createElement('div');
+                        block.className = 'pair-block psalm-stanza-group';
+                        block.innerHTML = psalmDisplayGroupLanguageHTML(groupLines, leftL, baseId)
+                            + psalmDisplayGroupLanguageHTML(groupLines, rightL, baseId, 'translation');
+                        if (block.innerHTML.trim()) partContainer.appendChild(block);
+                    } else {
+                        const lineRow = document.createElement('div');
+                        lineRow.className = 'pc-line-row psalm-stanza-group';
+                        const lCol = document.createElement('div');
+                        lCol.className = 'pc-col';
+                        lCol.innerHTML = psalmDisplayGroupLanguageHTML(groupLines, leftL, baseId);
+                        const rCol = document.createElement('div');
+                        rCol.className = 'pc-col pc-col-sub';
+                        rCol.innerHTML = psalmDisplayGroupLanguageHTML(groupLines, rightL, baseId);
+                        lineRow.appendChild(lCol);
+                        lineRow.appendChild(rCol);
+                        partContainer.appendChild(lineRow);
+                    }
+                    return;
+                }
+                const line = displayRow;
                 if (line && line.isDivider) {
                     appendDottedDividerRow(partContainer, isStacked);
                     return;

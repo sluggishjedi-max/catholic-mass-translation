@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260814-v25-r4/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260815-v25-r5/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -1092,6 +1092,119 @@ function startServer() {
         offerings: aug9PrayerData.prayer_offerings && aug9PrayerData.prayer_offerings.text || '',
         after: aug9PrayerData.prayer_after && aug9PrayerData.prayer_after.text || ''
       };
+      const inlineOfferingBoundarySources = {
+        KR: '예물 기도 주님, 이 예물을 받아 주소서. 감사송 복되신 동정 마리아 감사송 영성체송 주님을 찬미하여라.',
+        VN: 'Lời nguyện tiến lễ Lạy Chúa, xin nhận lễ vật này. Kinh Tiền Tụng Lễ Đức Mẹ Hồn Xác Lên Trời Ca hiệp lễ Hãy ca tụng Chúa.',
+        EN: 'Prayer over the Offerings Receive these gifts, O Lord. Preface of the Assumption Communion Antiphon Blessed are they.',
+        JP: '奉納祈願 主よ、この供えものを受け入れてください。 叙唱 聖母の被昇天 拝領唱 主をたたえよう。'
+      };
+      const offeringBoundaryFixture = Object.fromEntries(Object.entries(inlineOfferingBoundarySources).map(([lang, source]) => {
+        const parsed = strictParseDailyMass(lang, `<p>${source}</p>`, new Date(2026, 7, 15));
+        return [lang, parsed.data.prayer_offerings?.text || ''];
+      }));
+      offeringBoundaryFixture.VN_LEGACY = extractVietnameseDailySections(
+        [inlineOfferingBoundarySources.VN],
+        new Date(2026, 7, 15)
+      ).prayer_offerings?.text || '';
+      offeringBoundaryFixture.LA = parseIbreviaryOfferings(
+        'LA',
+        '<p>Super oblata</p><p>Súscipe, Dómine, múnera nostra. Præfatio de Assumptione Beatæ Mariæ Virginis</p>'
+      ).prayer_offerings?.text || '';
+
+      const savedPrefaceLocation = state.currentLoc;
+      state.currentLoc = 'KR';
+      const assumptionInfo = buildGeneratedLiturgyInfoV15(new Date(2026, 7, 15));
+      const assumptionSelection = defaultPrefaceSelectionForLiturgyInfo(assumptionInfo, new Date(2026, 7, 15));
+      const japaneseAssumptionSelection = explicitPrefaceSelectionFromLiturgyInfo({
+        names: { JP: '聖母の被昇天' },
+        meta: {}
+      }, 'JP');
+      const eucharistFixtureItem = massData.find(item => item && item.songs);
+      const assumptionPrefaceFixture = {
+        key: assumptionSelection?.key || '',
+        japaneseKey: japaneseAssumptionSelection?.key || '',
+        koreanName: assumptionInfo?.names?.KR || '',
+        koreanTitle: getEucharistSongLabel(eucharistFixtureItem, 'assumption', 'KR')
+      };
+      state.currentLoc = savedPrefaceLocation;
+
+      const psalmDisplaySourceLines = [
+        { sp_kr: '◎', text_kr: '후렴', sp_vn: 'Đ.', text_vn: 'Đáp ca' },
+        { sp_kr: '○', text_kr: '들어라, 딸아. ◎', verse_refs_kr: [11], sp_vn: 'X.', text_vn: 'Tôn nương hỡi ... Người là Chúa của bà - Đáp.', verse_refs_vn: [11, 12] },
+        { sp_kr: '○', text_kr: '임금님은 너의 주인이시니, 그분 앞에 엎드려라. ◎', verse_refs_kr: [12] }
+      ];
+      const psalmDisplayGroups = groupPsalmDisplayLinesForActiveLanguages(psalmDisplaySourceLines, 'kr', 'vn');
+      const psalmGroupedRow = psalmDisplayGroups.find(row => row?.__psalmDisplayGroup);
+      const psalmLeftProbe = document.createElement('div');
+      const psalmRightProbe = document.createElement('div');
+      psalmLeftProbe.innerHTML = psalmDisplayGroupLanguageHTML(psalmGroupedRow?.lines, 'KR', 'psalm');
+      psalmRightProbe.innerHTML = psalmDisplayGroupLanguageHTML(psalmGroupedRow?.lines, 'VN', 'psalm', 'translation');
+      const psalmVersicleSpeakers = { kr: '○', vn: 'X.', en: 'V.', jp: '先', la: '℣' };
+      const normalizedPsalmTarget = cloneMassLines(massData.find(item => getBaseId(item.id) === 'psalm')?.lines || []);
+      const normalizedPsalmSources = {
+        kr: [
+          { sp: '◎', text: '후렴' },
+          { sp: '○', text: '10절 ◎', verseRefs: [10] },
+          { sp: '○', text: '11절 ◎', verseRefs: [11] },
+          { sp: '○', text: '12절 ◎', verseRefs: [12] },
+          { sp: '○', text: '16절 ◎', verseRefs: [16] }
+        ],
+        vn: [
+          { sp: 'Đáp', text: 'Đáp ca' },
+          { sp: 'Xướng', text: 'câu 11-12 - Đáp.', verseRefs: [11, 12] },
+          { sp: 'Xướng', text: 'câu 14-15 - Đáp.', verseRefs: [14, 15] },
+          { sp: 'Xướng', text: 'câu 16-17 - Đáp.', verseRefs: [16, 17] }
+        ],
+        en: [
+          { sp: 'R.', text: 'Response' },
+          { sp: 'Versicle', text: 'verse 10 - R.', verseRefs: [10] },
+          { sp: 'Versicle', text: 'verse 11 - R.', verseRefs: [11] },
+          { sp: 'Versicle', text: 'verse 12 - R.', verseRefs: [12] },
+          { sp: 'Versicle', text: 'verse 16 - R.', verseRefs: [16] }
+        ],
+        jp: [
+          { sp: '答', text: '答唱' },
+          { sp: '先', text: '10節 答唱', verseRefs: [10] },
+          { sp: '先', text: '11節 答唱', verseRefs: [11] },
+          { sp: '先', text: '12節 答唱', verseRefs: [12] },
+          { sp: '先', text: '16節 答唱', verseRefs: [16] }
+        ],
+        la: [
+          { sp: '℟', text: 'Responsum' },
+          { sp: '℣', text: 'versus 11-12 - ℟', verseRefs: [11, 12] },
+          { sp: '℣', text: 'versus 14-15 - ℟', verseRefs: [14, 15] },
+          { sp: '℣', text: 'versus 16-17 - ℟', verseRefs: [16, 17] }
+        ]
+      };
+      Object.entries(normalizedPsalmSources).forEach(([lower, parsedLines]) => {
+        applyParsedLinesForLanguage(normalizedPsalmTarget, lower, parsedLines, 'psalm');
+      });
+      const normalizedPsalmDisplayGroups = groupPsalmDisplayLinesForActiveLanguages(normalizedPsalmTarget, 'kr', 'vn');
+      const normalizedElevenTwelveGroup = normalizedPsalmDisplayGroups.find(row => row?.__psalmDisplayGroup
+        && row.lines.some(line => psalmVerseRefsOverlap(line.verse_refs_kr, [11]))
+        && row.lines.some(line => psalmVerseRefsOverlap(line.verse_refs_kr, [12]))
+        && row.lines.some(line => psalmVerseRefsOverlap(line.verse_refs_vn, [11, 12])));
+      const psalmStanzaGroupingFixture = {
+        rowCount: psalmDisplayGroups.length,
+        groupedLineCount: psalmGroupedRow?.lines?.length || 0,
+        koreanParagraphCount: psalmLeftProbe.querySelectorAll('.pair-line').length,
+        vietnameseParagraphCount: psalmRightProbe.querySelectorAll('.pair-line').length,
+        supportedVersicleLanguages: Object.entries(psalmVersicleSpeakers)
+          .filter(([lower, speaker]) => isPsalmDisplayVersicle({ [`sp_${lower}`]: speaker, [`text_${lower}`]: 'verse' }, lower))
+          .map(([lower]) => lower),
+        citationGroups: {
+          kr: psalmCitationVerseGroups('시편 45(44),10.11.12.16(◎ 10ㄷㄹ)'),
+          vn: psalmCitationVerseGroups('Tv 44,11-12.14-15.16-17'),
+          en: psalmCitationVerseGroups('Psalm 45:10, 11-12, 16'),
+          jp: psalmCitationVerseGroups('詩編45・10、11-12、16'),
+          la: psalmCitationVerseGroups('Ps 44,11-12.14-15.16-17')
+        },
+        normalizedGroupLineCount: normalizedElevenTwelveGroup?.lines?.length || 0,
+        preservedVerseParagraphCounts: Object.fromEntries(Object.keys(normalizedPsalmSources).map(lower => [
+          lower,
+          normalizedPsalmTarget.filter(line => psalmLineVerseRefs(line, lower).length).length
+        ]))
+      };
       const aug7OptionMap = { kr: [[{ text: '나훔' }]], vn: [[{ text: '나훔' }], [{ text: '지혜' }], [{ text: '집회' }]] };
       const aug8OptionMap = {
         kr: [[{ text: '하바쿡' }], [{ text: '코린토' }]],
@@ -1503,6 +1616,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         choiceRuleFixture,
         diocesanPrayerFixture,
         aug9PrayerFixture,
+        offeringBoundaryFixture,
+        assumptionPrefaceFixture,
+        psalmStanzaGroupingFixture,
         citationAlignmentFixture,
         koreanProperFixture,
         liturgyTitleParsing: {
@@ -1994,6 +2110,39 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /chấp nhận lễ vật/.test(result.aug9PrayerFixture.offerings)
       && /bí tích này cứu độ/.test(result.aug9PrayerFixture.after),
     `August 9 Vietnamese collect crossed into the readings: ${JSON.stringify(result.aug9PrayerFixture)}`);
+    assert(/예물을 받아/.test(result.offeringBoundaryFixture.KR)
+      && !/감사송|영성체송/.test(result.offeringBoundaryFixture.KR)
+      && /xin nhận lễ vật/.test(result.offeringBoundaryFixture.VN)
+      && !/Tiền Tụng|hiệp lễ/i.test(result.offeringBoundaryFixture.VN)
+      && /xin nhận lễ vật/.test(result.offeringBoundaryFixture.VN_LEGACY)
+      && !/Tiền Tụng|hiệp lễ/i.test(result.offeringBoundaryFixture.VN_LEGACY)
+      && /Receive these gifts/.test(result.offeringBoundaryFixture.EN)
+      && !/Preface|Communion Antiphon/i.test(result.offeringBoundaryFixture.EN)
+      && /供えものを受け入れて/.test(result.offeringBoundaryFixture.JP)
+      && !/叙唱|拝領唱/u.test(result.offeringBoundaryFixture.JP)
+      && /Súscipe/.test(result.offeringBoundaryFixture.LA)
+      && !/Pr(?:æ|ae)fatio/iu.test(result.offeringBoundaryFixture.LA),
+    `An offering prayer absorbed the preface or Communion section: ${JSON.stringify(result.offeringBoundaryFixture)}`);
+    assert(result.assumptionPrefaceFixture.key === 'assumption'
+      && result.assumptionPrefaceFixture.japaneseKey === 'assumption'
+      && result.assumptionPrefaceFixture.koreanName === '성모 승천 대축일'
+      && result.assumptionPrefaceFixture.koreanTitle === '복되신 동정 마리아 감사송 4 : 영광스러운 마리아의 승천',
+    `The Assumption selected the wrong preface: ${JSON.stringify(result.assumptionPrefaceFixture)}`);
+    assert(result.psalmStanzaGroupingFixture.rowCount === 2
+      && result.psalmStanzaGroupingFixture.groupedLineCount === 2
+      && result.psalmStanzaGroupingFixture.koreanParagraphCount === 2
+      && result.psalmStanzaGroupingFixture.vietnameseParagraphCount === 1
+      && JSON.stringify(result.psalmStanzaGroupingFixture.supportedVersicleLanguages) === JSON.stringify(['kr', 'vn', 'en', 'jp', 'la'])
+      && JSON.stringify(result.psalmStanzaGroupingFixture.citationGroups) === JSON.stringify({
+        kr: [[10], [11], [12], [16]],
+        vn: [[11, 12], [14, 15], [16, 17]],
+        en: [[10], [11, 12], [16]],
+        jp: [[10], [11, 12], [16]],
+        la: [[11, 12], [14, 15], [16, 17]]
+      })
+      && result.psalmStanzaGroupingFixture.normalizedGroupLineCount === 2
+      && JSON.stringify(result.psalmStanzaGroupingFixture.preservedVerseParagraphCounts) === JSON.stringify({ kr: 4, vn: 3, en: 4, jp: 4, la: 3 }),
+    `Multilingual psalm stanza grouping is incomplete: ${JSON.stringify(result.psalmStanzaGroupingFixture)}`);
     assert(result.koreanProperFixture.references.length === 1
       && result.koreanProperFixture.references[0].reading === '1코린 2,1-10ㄱ'
       && result.koreanProperFixture.references[0].gospel === '루카 9,57-62'
