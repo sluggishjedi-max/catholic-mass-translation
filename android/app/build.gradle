@@ -1,0 +1,37 @@
+plugins {
+    id "com.android.application"
+}
+
+def externalBuildDirectory = System.getenv("ORDO_ANDROID_BUILD_DIR")
+if (externalBuildDirectory) {
+    layout.buildDirectory.set(file(externalBuildDirectory))
+}
+
+android {
+    namespace "com.sluggishjedimax.ordomissae"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.sluggishjedimax.ordomissae"
+        minSdk 24
+        targetSdk 35
+        versionCode 8
+        versionName "25.0"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ""
+            versionNameSuffix ""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

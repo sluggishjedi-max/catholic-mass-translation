@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260816-v25-r9/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260816-v25-r10/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -78,9 +78,15 @@ function startServer() {
       'V25 hymn data and runtime responsibilities are not separated.');
     }
     await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    const webStartupPrompts = await page.evaluate(() => ({
+      consentVisible: getComputedStyle(document.getElementById('consent-modal')).display !== 'none',
+      consentPending: document.body.classList.contains('consent-pending')
+    }));
     await page.locator('#consent-accept').click({ timeout: 15000 }).catch(() => {});
-    await page.locator('[data-vn-source="hanoi"]').click({ timeout: 15000 }).catch(() => {});
+    const hanoiSourceChoice = page.locator('[data-vn-source="hanoi"]');
+    if (await hanoiSourceChoice.isVisible().catch(() => false)) await hanoiSourceChoice.click();
     await page.waitForFunction(() => typeof render === 'function' && document.querySelectorAll('#missal-root > *').length > 0, null, { timeout: 90000 });
+    const defaultLanguagePair = await page.evaluate(() => ({ left: state.currentLoc, right: state.targetLang }));
 
     const result = await page.evaluate(async () => {
       const px = selector => parseFloat(getComputedStyle(document.querySelector(selector)).fontSize);
@@ -1735,6 +1741,69 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       };
     });
 
+    const androidContext = await browser.newContext({
+      viewport: { width: 412, height: 915 },
+      userAgent: 'Mozilla/5.0 Android WebView OrdoMissaeAndroid/25.0'
+    });
+    await androidContext.addInitScript(savedSettings => {
+      window.fetch = async () => { throw new Error('Remote fetch disabled by Android settings check'); };
+      window.OrdoAndroid = {
+        isAppRuntime: () => true,
+        isStatusBarHidden: () => false,
+        isNavigationBarHidden: () => false,
+        setSystemBarsHidden: () => {}
+      };
+      localStorage.setItem('ordoMass:android:settings', JSON.stringify(savedSettings));
+    }, {
+      consentAccepted: true,
+      useGps: false,
+      selectedLocationCode: 'KR',
+      currentLoc: 'KR',
+      targetLang: 'VN',
+      uiLang: 'KR',
+      layoutStacked: true,
+      fontSize: '22px',
+      vnReadingSource: 'ktcg'
+    });
+    const androidPage = await androidContext.newPage();
+    await androidPage.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    await androidPage.waitForFunction(() => typeof render === 'function'
+      && !document.body.classList.contains('consent-pending')
+      && document.querySelectorAll('#missal-root > *').length > 0, null, { timeout: 90000 });
+    const androidSettingsPersistence = await androidPage.evaluate(() => {
+      const restored = {
+        consentHidden: getComputedStyle(document.getElementById('consent-modal')).display === 'none',
+        sourceChoiceHidden: !document.getElementById('vn-source-modal').classList.contains('is-visible'),
+        state: {
+          useGps: state.useGps,
+          selectedLocationCode: state.selectedLocationCode,
+          currentLoc: state.currentLoc,
+          targetLang: state.targetLang,
+          layoutStacked: state.layoutStacked,
+          fontSize: state.fontSize,
+          vnReadingSource: state.vnReadingSource
+        },
+        controls: {
+          targetLang: document.getElementById('set-target-lang').value,
+          fontSize: document.getElementById('set-font-size').value,
+          vnReadingSource: document.getElementById('set-vn-source').value,
+          fontOptions: Array.from(document.querySelectorAll('#set-font-size option')).map(option => option.textContent.trim())
+        },
+        cssFontSize: parseFloat(getComputedStyle(document.body).fontSize)
+      };
+      document.getElementById('set-target-lang').value = 'EN';
+      document.getElementById('set-font-size').value = '20px';
+      updateSettings();
+      return {
+        restored,
+        savedAfterChange: JSON.parse(localStorage.getItem('ordoMass:android:settings'))
+      };
+    });
+    await androidContext.close();
+    result.webStartupPrompts = webStartupPrompts;
+    result.defaultLanguagePair = defaultLanguagePair;
+    result.androidSettingsPersistence = androidSettingsPersistence;
+
     await page.setViewportSize({ width: 1440, height: 900 });
     const desktopHeaderLayout = await page.evaluate(() => {
       window.scrollTo(0, 0);
@@ -1755,6 +1824,31 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       };
     });
 
+    assert(result.webStartupPrompts.consentVisible && result.webStartupPrompts.consentPending,
+      `Web startup prompts were incorrectly remembered: ${JSON.stringify(result.webStartupPrompts)}`);
+    assert(JSON.stringify(result.defaultLanguagePair) === JSON.stringify({ left: 'KR', right: 'EN' }),
+      `The default language pair is not Korean-English: ${JSON.stringify(result.defaultLanguagePair)}`);
+    assert(result.androidSettingsPersistence.restored.consentHidden
+      && result.androidSettingsPersistence.restored.sourceChoiceHidden
+      && JSON.stringify(result.androidSettingsPersistence.restored.state) === JSON.stringify({
+        useGps: false,
+        selectedLocationCode: 'KR',
+        currentLoc: 'KR',
+        targetLang: 'VN',
+        layoutStacked: true,
+        fontSize: '22px',
+        vnReadingSource: 'ktcg'
+      })
+      && result.androidSettingsPersistence.restored.controls.targetLang === 'VN'
+      && result.androidSettingsPersistence.restored.controls.fontSize === '22px'
+      && result.androidSettingsPersistence.restored.controls.vnReadingSource === 'ktcg'
+      && JSON.stringify(result.androidSettingsPersistence.restored.controls.fontOptions) === JSON.stringify(['작게', '보통', '크게', '더 크게'])
+      && result.androidSettingsPersistence.restored.cssFontSize === 22
+      && result.androidSettingsPersistence.savedAfterChange.consentAccepted
+      && result.androidSettingsPersistence.savedAfterChange.targetLang === 'EN'
+      && result.androidSettingsPersistence.savedAfterChange.fontSize === '20px'
+      && result.androidSettingsPersistence.savedAfterChange.vnReadingSource === 'ktcg',
+    `APK settings were not restored or persisted: ${JSON.stringify(result.androidSettingsPersistence)}`);
     assert(JSON.stringify(result.navTexts) === JSON.stringify(['Thánh lễ', 'Kinh nguyện', 'Thánh ca', 'Nhà thờ']), `Vietnamese header menu mismatch: ${JSON.stringify(result.navTexts)}`);
     assert(JSON.stringify(result.quickTexts) === JSON.stringify(['Thánh lễ', 'Kinh nguyện', 'Thánh ca', 'Nhà thờ']), `Vietnamese quick menu mismatch: ${JSON.stringify(result.quickTexts)}`);
     assert(result.targetOptions.includes('Tiếng Hàn / 한국어') && result.targetOptions.includes('Tiếng Anh / English'), `Localized target options missing: ${JSON.stringify(result.targetOptions)}`);

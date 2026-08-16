@@ -9,6 +9,38 @@
     }
 
     const UI_LANGUAGE_STORAGE_KEY = 'ordoMass:uiLanguage';
+    const ANDROID_SETTINGS_STORAGE_KEY = 'ordoMass:android:settings';
+
+    function isAndroidAppRuntime() {
+        return /\bOrdoMissaeAndroid\/[\d.]+\b/i.test(String(navigator.userAgent || ''));
+    }
+
+    function readInitialAndroidSettings() {
+        if (!isAndroidAppRuntime()) return null;
+        try {
+            const raw = localStorage.getItem(ANDROID_SETTINGS_STORAGE_KEY);
+            const parsed = raw ? JSON.parse(raw) : null;
+            return parsed && typeof parsed === 'object' ? parsed : null;
+        } catch (error) {
+            console.warn('APK 설정값을 불러오지 못했습니다.', error);
+            return null;
+        }
+    }
+
+    const initialAndroidSettings = readInitialAndroidSettings();
+    const initialAndroidLocation = initialAndroidSettings
+        && ['KR', 'VN', 'US', 'JP', 'VA'].includes(initialAndroidSettings.selectedLocationCode)
+        ? initialAndroidSettings.selectedLocationCode
+        : 'KR';
+    const initialAndroidLocationLang = { KR: 'KR', VN: 'VN', US: 'EN', JP: 'JP', VA: 'LA' }[initialAndroidLocation] || 'KR';
+    const initialAndroidTarget = initialAndroidSettings
+        && ['KR', 'VN', 'EN', 'JP', 'LA'].includes(initialAndroidSettings.targetLang)
+        ? initialAndroidSettings.targetLang
+        : 'EN';
+    const initialAndroidFontSize = initialAndroidSettings
+        && ['14px', '18px', '20px', '22px'].includes(initialAndroidSettings.fontSize)
+        ? initialAndroidSettings.fontSize
+        : '18px';
 
     function preferredUiLanguageFromDevice(languageList) {
         const candidates = Array.isArray(languageList)
@@ -43,14 +75,18 @@
     }
 
     let state = {
-        useGps: true,
-        currentLoc: 'KR', // 좌측 (현지어)
-        targetLang: 'VN', // 우측 (번역어)
-        uiLang: initialUiLanguage(), // 최초에는 기기/브라우저 언어를 따르고, 이후에는 사용자의 선택을 기억합니다.
-        layoutStacked: false,
-        fontSize: '18px',
-        vnReadingSource: 'hanoi',
-        vnReadingSourceConfirmed: false,
+        useGps: initialAndroidSettings && typeof initialAndroidSettings.useGps === 'boolean' ? initialAndroidSettings.useGps : true,
+        currentLoc: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA'].includes(initialAndroidSettings.currentLoc)
+            ? initialAndroidSettings.currentLoc
+            : initialAndroidLocationLang, // 좌측 (현지어)
+        targetLang: initialAndroidTarget, // 우측 (번역어)
+        uiLang: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA'].includes(initialAndroidSettings.uiLang)
+            ? initialAndroidSettings.uiLang
+            : initialUiLanguage(), // 최초에는 기기/브라우저 언어를 따르고, 이후에는 사용자의 선택을 기억합니다.
+        layoutStacked: !!(initialAndroidSettings && initialAndroidSettings.layoutStacked),
+        fontSize: initialAndroidFontSize,
+        vnReadingSource: initialAndroidSettings && initialAndroidSettings.vnReadingSource === 'ktcg' ? 'ktcg' : 'hanoi',
+        vnReadingSourceConfirmed: !!initialAndroidSettings,
         aiVoiceOn: false,
         isSunday: false,
         liturgyInfo: { krName: '로딩중...', vnName: 'Đang tải...', names: { KR: '로딩중...', VN: 'Đang tải...', EN: 'Loading...', JP: '読み込み中...', LA: 'Exspecta...' }, color: '#27ae60', dateStr: '로딩중...', meta: {} },
@@ -67,7 +103,7 @@
         startupConsentDeclined: false,
         activeTab: 'mass',
         churchCountry: '',
-        selectedLocationCode: 'KR',
+        selectedLocationCode: initialAndroidLocation,
         gpsTimeZone: '',
         gpsCoordinates: null,
         gpsDiocese: '',
@@ -82,7 +118,7 @@
         dailyReadingCompletedDuringChoice: {},
     };
 
-    const DEFAULT_TARGET_LANG = 'VN';
+    const DEFAULT_TARGET_LANG = 'EN';
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA'];
     const dailySourceCache = {};
@@ -128,6 +164,23 @@
             console.warn(`localStorage 저장 실패: ${key}`, error);
             return false;
         }
+    }
+
+    function persistAndroidAppSettings(overrides = {}) {
+        if (!isAndroidAppRuntime()) return false;
+        const snapshot = {
+            consentAccepted: !!(initialAndroidSettings && initialAndroidSettings.consentAccepted),
+            useGps: !!state.useGps,
+            selectedLocationCode: state.selectedLocationCode || 'KR',
+            currentLoc: state.currentLoc || 'KR',
+            targetLang: state.targetLang || DEFAULT_TARGET_LANG,
+            uiLang: state.uiLang || 'KR',
+            layoutStacked: !!state.layoutStacked,
+            fontSize: state.fontSize || '18px',
+            vnReadingSource: normalizeVietnameseReadingSource(state.vnReadingSource)
+        };
+        Object.assign(snapshot, overrides || {});
+        return writeStorageJSON(ANDROID_SETTINGS_STORAGE_KEY, snapshot);
     }
 
     function isFreshCacheEntry(entry, ttlMs) {
@@ -5060,6 +5113,7 @@
     function chooseVietnameseReadingSource(source) {
         state.vnReadingSource = normalizeVietnameseReadingSource(source);
         state.vnReadingSourceConfirmed = true;
+        persistAndroidAppSettings();
         syncVietnameseReadingSourceSelect();
         const modal = document.getElementById('vn-source-modal');
         if (modal) modal.classList.remove('is-visible');
@@ -5074,6 +5128,7 @@
         if (modal) modal.style.display = 'none';
         document.body.classList.remove('consent-pending');
         startupNoticeDecision = true;
+        persistAndroidAppSettings({ consentAccepted: true });
         if (resolveStartupNoticeDecision) resolveStartupNoticeDecision(true);
         syncFloatingLiturgyBannerVisibility();
         queuePendingLiturgyCompletionAfterChoice();
@@ -5133,6 +5188,7 @@
         syncAuxPanelsWithSettings();
 
         document.documentElement.style.setProperty('--font-size-base', state.fontSize);
+        persistAndroidAppSettings({ consentAccepted: startupNoticeDecision === true });
         if (previousLoc !== state.currentLoc || previousUseGps !== state.useGps || previousTimeZone !== activeLiturgicalTimeZone()) {
             fetchMassData();
             return;
@@ -13732,6 +13788,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         setLocationSelectByLang(state.currentLoc);
         syncTargetLanguageOptions();
         syncAuxPanelsWithSettings();
+        persistAndroidAppSettings({ consentAccepted: startupNoticeDecision === true });
         return previousLoc !== state.currentLoc || previousTargetLang !== state.targetLang || previousTimeZone !== state.gpsTimeZone;
     }
 
@@ -16517,8 +16574,42 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    function applyInitialSettingsToControls() {
+        const gps = document.getElementById('set-gps');
+        const location = document.getElementById('set-loc');
+        const target = document.getElementById('set-target-lang');
+        const source = document.getElementById('set-vn-source');
+        const font = document.getElementById('set-font-size');
+        const ui = document.getElementById('set-ui-lang');
+        const stacked = document.getElementById('set-stacked');
+        const manualLocationRow = document.getElementById('manual-loc-row');
+        if (gps) gps.checked = !!state.useGps;
+        if (location) location.value = state.selectedLocationCode || 'KR';
+        if (target) target.value = state.targetLang || DEFAULT_TARGET_LANG;
+        if (source) source.value = normalizeVietnameseReadingSource(state.vnReadingSource);
+        if (font) font.value = state.fontSize || '18px';
+        if (ui) ui.value = state.uiLang;
+        if (stacked) stacked.checked = !!state.layoutStacked;
+        if (manualLocationRow) manualLocationRow.style.display = state.useGps ? 'none' : 'flex';
+        document.documentElement.style.setProperty('--font-size-base', state.fontSize || '18px');
+        syncTargetLanguageOptions();
+        syncVietnameseReadingSourceSelect();
+        syncAuxPanelsWithSettings();
+    }
+
+    function restoreAndroidSavedStartupDecision() {
+        if (!isAndroidAppRuntime() || !(initialAndroidSettings && initialAndroidSettings.consentAccepted)) return false;
+        const modal = document.getElementById('consent-modal');
+        if (modal) modal.style.display = 'none';
+        document.body.classList.remove('consent-pending');
+        startupNoticeDecision = true;
+        if (resolveStartupNoticeDecision) resolveStartupNoticeDecision(true);
+        return true;
+    }
+
     // 초기 실행: 로컬/캐시 데이터로 먼저 렌더하고 GPS는 백그라운드에서 보정합니다.
-    document.getElementById('set-ui-lang').value = state.uiLang;
+    applyInitialSettingsToControls();
+    restoreAndroidSavedStartupDecision();
     syncLocalizedChromeAndSettings();
     setupFloatingLiturgyBanner();
     setupOrientationPersistence();
