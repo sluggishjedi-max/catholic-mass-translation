@@ -97505,6 +97505,12216 @@
     "scoreImages": [],
     "scoreNote": "ENC 원본을 확인했습니다. 브라우저 표시용 악보 이미지는 별도 변환이 필요합니다.",
     "copyright": "Ủy ban Thánh nhạc - HĐGMVN"
+  },
+  {
+    "id": "en-breaking-bread-2026-111",
+    "country": "EN",
+    "language": "EN",
+    "number": "111",
+    "title": "Mary, Joseph, Pray for Us",
+    "displayTitle": "111. Mary, Joseph, Pray for Us",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Holy Family",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Holy Family / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Angela Birkhead-Flight",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93061.png",
+    "originalFileSize": 191261,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Mary, Joseph, Pray for Us",
+      "Angela Birkhead-Flight",
+      "Breaking Bread 111",
+      "Breaking Bread 2026 111",
+      "BB 2026 111",
+      "BB111"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/111-mary-joseph-pray-for-us-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4871",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93061.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-145",
+    "country": "EN",
+    "language": "EN",
+    "number": "145",
+    "title": "Faithful to the Spirit’s Prompting",
+    "displayTitle": "145. Faithful to the Spirit’s Prompting",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Lent",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Lent / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Scot Crandal, Michael Joncas",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92950.png",
+    "originalFileSize": 194659,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Faithful to the Spirit’s Prompting",
+      "Scot Crandal, Michael Joncas",
+      "Breaking Bread 145",
+      "Breaking Bread 2026 145",
+      "BB 2026 145",
+      "BB145"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/145-faithful-to-the-spirit-s-prompting-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4857",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92950.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-149",
+    "country": "EN",
+    "language": "EN",
+    "number": "149",
+    "title": "Antiphon 2: The Children of Jerusalem",
+    "displayTitle": "149. Antiphon 2: The Children of Jerusalem",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Palm Sunday",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Palm Sunday / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Howard Hughes, SM",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92943.png",
+    "originalFileSize": 68698,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Antiphon 2: The Children of Jerusalem",
+      "Howard Hughes, SM",
+      "Breaking Bread 149",
+      "Breaking Bread 2026 149",
+      "BB 2026 149",
+      "BB149"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/149-antiphon-2-the-children-of-jerusalem-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4856",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92943.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-156",
+    "country": "EN",
+    "language": "EN",
+    "number": "156",
+    "title": "Were You There/Viste Cuando",
+    "displayTitle": "156. Were You There/Viste Cuando",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Good Friday",
+      "Changed in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Good Friday / Changed in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "WERE YOU THERE",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93018.png",
+    "originalFileSize": 222457,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Were You There/Viste Cuando",
+      "WERE YOU THERE",
+      "Breaking Bread 156",
+      "Breaking Bread 2026 156",
+      "BB 2026 156",
+      "BB156"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/156-were-you-there-viste-cuando-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4865",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93018.png",
+    "sourceUpdateType": "changed",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-169",
+    "country": "EN",
+    "language": "EN",
+    "number": "169",
+    "title": "In the Stillness of the Night",
+    "displayTitle": "169. In the Stillness of the Night",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Easter",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Easter / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Dan Schutte",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93004.png",
+    "originalFileSize": 175307,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "In the Stillness of the Night",
+      "Dan Schutte",
+      "Breaking Bread 169",
+      "Breaking Bread 2026 169",
+      "BB 2026 169",
+      "BB169"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/169-in-the-stillness-of-the-night-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4863",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93004.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-187",
+    "country": "EN",
+    "language": "EN",
+    "number": "187",
+    "title": "Alleluia! Love Is Alive/¡Aleluya! Vive el Amor",
+    "displayTitle": "187. Alleluia! Love Is Alive/¡Aleluya! Vive el Amor",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Easter",
+      "Changed in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Easter / Changed in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Steve Angrisano, Jesse Manibusan, Sarah Hart",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92938.png",
+    "originalFileSize": 275104,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Alleluia! Love Is Alive/¡Aleluya! Vive el Amor",
+      "Steve Angrisano, Jesse Manibusan, Sarah Hart",
+      "Breaking Bread 187",
+      "Breaking Bread 2026 187",
+      "BB 2026 187",
+      "BB187"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/187-alleluia-love-is-alive-aleluya-vive-el-amor-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4854",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92938.png",
+    "sourceUpdateType": "changed",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-189",
+    "country": "EN",
+    "language": "EN",
+    "number": "189",
+    "title": "What Light Is Rising",
+    "displayTitle": "189. What Light Is Rising",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Easter",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Easter / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Katie Wills, Sarah Hart",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92933.png",
+    "originalFileSize": 190099,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "What Light Is Rising",
+      "Katie Wills, Sarah Hart",
+      "Breaking Bread 189",
+      "Breaking Bread 2026 189",
+      "BB 2026 189",
+      "BB189"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/189-what-light-is-rising-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4855",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92933.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-194",
+    "country": "EN",
+    "language": "EN",
+    "number": "194",
+    "title": "Good Christians All, Rejoice and Sing",
+    "displayTitle": "194. Good Christians All, Rejoice and Sing",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Easter",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Easter / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "GELOBT SEI GOTT",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92959.png",
+    "originalFileSize": 164147,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Good Christians All, Rejoice and Sing",
+      "GELOBT SEI GOTT",
+      "Breaking Bread 194",
+      "Breaking Bread 2026 194",
+      "BB 2026 194",
+      "BB194"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/194-good-christians-all-rejoice-and-sing-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4859",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92959.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-369",
+    "country": "EN",
+    "language": "EN",
+    "number": "369",
+    "title": "Sing, My Tongue, the Savior’s Glory",
+    "displayTitle": "369. Sing, My Tongue, the Savior’s Glory",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Eucharistic Hymns",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Eucharistic Hymns / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "GAUDENS, Sarah Hart",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93040.png",
+    "originalFileSize": 258156,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Sing, My Tongue, the Savior’s Glory",
+      "GAUDENS, Sarah Hart",
+      "Breaking Bread 369",
+      "Breaking Bread 2026 369",
+      "BB 2026 369",
+      "BB369"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/369-sing-my-tongue-the-savior-s-glory-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4868",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93040.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-376",
+    "country": "EN",
+    "language": "EN",
+    "number": "376",
+    "title": "Jesus, Living Bread",
+    "displayTitle": "376. Jesus, Living Bread",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Eucharistic Hymns",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Eucharistic Hymns / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Tom Booth",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93013.png",
+    "originalFileSize": 185119,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Jesus, Living Bread",
+      "Tom Booth",
+      "Breaking Bread 376",
+      "Breaking Bread 2026 376",
+      "BB 2026 376",
+      "BB376"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/376-jesus-living-bread-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4864",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93013.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-397",
+    "country": "EN",
+    "language": "EN",
+    "number": "397",
+    "title": "O Beloved One",
+    "displayTitle": "397. O Beloved One",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Love",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Love / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Carey Landry",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93054.png",
+    "originalFileSize": 166526,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "O Beloved One",
+      "Carey Landry",
+      "Breaking Bread 397",
+      "Breaking Bread 2026 397",
+      "BB 2026 397",
+      "BB397"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/397-o-beloved-one-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4870",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93054.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-438",
+    "country": "EN",
+    "language": "EN",
+    "number": "438",
+    "title": "Mercy",
+    "displayTitle": "438. Mercy",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Trust",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Trust / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Timothy R. Smith",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93075.png",
+    "originalFileSize": 97321,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Mercy",
+      "Timothy R. Smith",
+      "Breaking Bread 438",
+      "Breaking Bread 2026 438",
+      "BB 2026 438",
+      "BB438"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/438-mercy-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4873",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93075.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-470",
+    "country": "EN",
+    "language": "EN",
+    "number": "470",
+    "title": "Peace on Earth",
+    "displayTitle": "470. Peace on Earth",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Peace",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Peace / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Bob Hurd, Kim Oler, Alison Hubbard, Antonín Dvořák",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93047.png",
+    "originalFileSize": 202886,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Peace on Earth",
+      "Bob Hurd, Kim Oler, Alison Hubbard, Antonín Dvořák",
+      "Breaking Bread 470",
+      "Breaking Bread 2026 470",
+      "BB 2026 470",
+      "BB470"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/470-peace-on-earth-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4869",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93047.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-489",
+    "country": "EN",
+    "language": "EN",
+    "number": "489",
+    "title": "For the Sake of Christ",
+    "displayTitle": "489. For the Sake of Christ",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Faith",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Faith / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Ken Canedo",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "11095.png",
+    "originalFileSize": 198861,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "For the Sake of Christ",
+      "Ken Canedo",
+      "Breaking Bread 489",
+      "Breaking Bread 2026 489",
+      "BB 2026 489",
+      "BB489"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/489-for-the-sake-of-christ-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4282",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/11095.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-536",
+    "country": "EN",
+    "language": "EN",
+    "number": "536",
+    "title": "I Heard the Voice of Jesus Say",
+    "displayTitle": "536. I Heard the Voice of Jesus Say",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Comfort",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Comfort / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "THE MOREEN, Paul A. Tate, Justin Wedgewood",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92997.png",
+    "originalFileSize": 199460,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "I Heard the Voice of Jesus Say",
+      "THE MOREEN, Paul A. Tate, Justin Wedgewood",
+      "Breaking Bread 536",
+      "Breaking Bread 2026 536",
+      "BB 2026 536",
+      "BB536"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/536-i-heard-the-voice-of-jesus-say-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4862",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92997.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-537",
+    "country": "EN",
+    "language": "EN",
+    "number": "537",
+    "title": "Great God of Love",
+    "displayTitle": "537. Great God of Love",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Comfort",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Comfort / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Daniel Partridge, Lynné D. Gray",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92971.png",
+    "originalFileSize": 180604,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Great God of Love",
+      "Daniel Partridge, Lynné D. Gray",
+      "Breaking Bread 537",
+      "Breaking Bread 2026 537",
+      "BB 2026 537",
+      "BB537"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/537-great-god-of-love-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4860",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92971.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-580",
+    "country": "EN",
+    "language": "EN",
+    "number": "580",
+    "title": "All the Ends of the Earth",
+    "displayTitle": "580. All the Ends of the Earth",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Praise",
+      "Changed in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Praise / Changed in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Bob Dufford, SJ",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "10686.png",
+    "originalFileSize": 204090,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "All the Ends of the Earth",
+      "Bob Dufford, SJ",
+      "Breaking Bread 580",
+      "Breaking Bread 2026 580",
+      "BB 2026 580",
+      "BB580"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/580-all-the-ends-of-the-earth-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/3664",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/10686.png",
+    "sourceUpdateType": "changed",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-620",
+    "country": "EN",
+    "language": "EN",
+    "number": "620",
+    "title": "Lift Up Your Hearts",
+    "displayTitle": "620. Lift Up Your Hearts",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Social Concern & Justice",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Social Concern & Justice / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Rick Modlin, Owen Alstott",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93035.png",
+    "originalFileSize": 173669,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Lift Up Your Hearts",
+      "Rick Modlin, Owen Alstott",
+      "Breaking Bread 620",
+      "Breaking Bread 2026 620",
+      "BB 2026 620",
+      "BB620"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/620-lift-up-your-hearts-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4866",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93035.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-634",
+    "country": "EN",
+    "language": "EN",
+    "number": "634",
+    "title": "Homeland",
+    "displayTitle": "634. Homeland",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Nation & Patriotic",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Nation & Patriotic / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Dan Schutte",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "92983.png",
+    "originalFileSize": 155974,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Homeland",
+      "Dan Schutte",
+      "Breaking Bread 634",
+      "Breaking Bread 2026 634",
+      "BB 2026 634",
+      "BB634"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/634-homeland-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4861",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/92983.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-683",
+    "country": "EN",
+    "language": "EN",
+    "number": "683",
+    "title": "Well Done, Faithful Servant",
+    "displayTitle": "683. Well Done, Faithful Servant",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Funeral",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Funeral / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Cyprian Consiglio, OSB Cam",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93028.png",
+    "originalFileSize": 180294,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "Well Done, Faithful Servant",
+      "Cyprian Consiglio, OSB Cam",
+      "Breaking Bread 683",
+      "Breaking Bread 2026 683",
+      "BB 2026 683",
+      "BB683"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/683-well-done-faithful-servant-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4867",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93028.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "en-breaking-bread-2026-688",
+    "country": "EN",
+    "language": "EN",
+    "number": "688",
+    "title": "May the Angels Lead You Home",
+    "displayTitle": "688. May the Angels Lead You Home",
+    "book": "Breaking Bread 2026",
+    "tags": [
+      "Breaking Bread 2026",
+      "Funeral",
+      "Added in 2026"
+    ],
+    "category": "Breaking Bread 2026 / Funeral / Added in 2026",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "Sarah Hart, Francesca LaRosa",
+    "lyricist": "",
+    "sourceFormat": "PNG preview of PDF",
+    "originalFileName": "93068.png",
+    "originalFileSize": 216053,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "May the Angels Lead You Home",
+      "Sarah Hart, Francesca LaRosa",
+      "Breaking Bread 688",
+      "Breaking Bread 2026 688",
+      "BB 2026 688",
+      "BB688"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/en-breaking-bread-2026/688-may-the-angels-lead-you-home-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
+    "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+    "sourceUrl": "https://www.icrmusic.org/en-us/14/cluster/4872",
+    "sourcePreviewUrl": "https://s3.amazonaws.com/snapshot.icrcdn.net/preview/93068.png",
+    "sourceUpdateType": "added",
+    "sourceImageDimensions": "600x776"
+  },
+  {
+    "id": "jp-tenrei-ten001",
+    "country": "JP",
+    "language": "JP",
+    "number": "001",
+    "title": "朝早く週の初めに",
+    "displayTitle": "001. 朝早く週の初めに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "聖霊",
+      "入祭",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 聖霊 / 入祭 / 閉祭",
+    "lyrics": "【答唱】 あさはやく しゅうの はじめに ひの すでに のぼる ころ 主の はかに ついた アレルヤ",
+    "translations": {},
+    "firstLine": "あさはやく しゅうの はじめに ひの すでに のぼる ころ 主の はかに ついた アレルヤ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 68-79 ＋栄 復活祭の朝 主日の朝 復活節 入祭の歌 閉祭の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten001.gif; ten001w.gif",
+    "originalFileSize": 29916,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "朝早く週の初めに",
+      "典礼聖歌 1",
+      "典礼聖歌 001",
+      "典礼聖歌 1番",
+      "ten001",
+      "ルカ1: 68-79 ＋栄 復活祭の朝 主日の朝 復活節 入祭の歌 閉祭の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten001-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten001-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten001.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten002",
+    "country": "JP",
+    "language": "JP",
+    "number": "002",
+    "title": "あかつきと ともに めざめ",
+    "displayTitle": "002. あかつきと ともに めざめ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "入祭",
+      "朝の祈り",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 入祭 / 朝の祈り / 信頼 / 希望",
+    "lyrics": "【答唱】 あかつきと ともに めざめ かみの うつくしさを あおぎみよう",
+    "translations": {},
+    "firstLine": "あかつきと ともに めざめ かみの うつくしさを あおぎみよう",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編27: 1 6 7+8b 13+14 答4cd",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten002.gif; ten002w.gif",
+    "originalFileSize": 23643,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "あかつきと ともに めざめ",
+      "典礼聖歌 2",
+      "典礼聖歌 002",
+      "典礼聖歌 2番",
+      "ten002",
+      "詩編27: 1 6 7+8b 13+14 答4cd"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten002-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten002-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten002.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten003",
+    "country": "JP",
+    "language": "JP",
+    "number": "003",
+    "title": "新しい歌を主にうたえ",
+    "displayTitle": "003. 新しい歌を主にうたえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 入祭",
+    "lyrics": "【答唱】 あたらしい うたを 主に うたえ あたらしい うたを 主に うたえ",
+    "translations": {},
+    "firstLine": "あたらしい うたを 主に うたえ あたらしい うたを 主に うたえ",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編96: 1+2 3a+4a 5a+6b 7+8a 9a+10a 11 12 答1",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten003.gif; ten003w.gif",
+    "originalFileSize": 26828,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "新しい歌を主にうたえ",
+      "典礼聖歌 3",
+      "典礼聖歌 003",
+      "典礼聖歌 3番",
+      "ten003",
+      "詩編96: 1+2 3a+4a 5a+6b 7+8a 9a+10a 11 12 答1"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten003-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten003-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten003.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten004",
+    "country": "JP",
+    "language": "JP",
+    "number": "004",
+    "title": "あたらしい こひつじ",
+    "displayTitle": "004. あたらしい こひつじ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭",
+    "lyrics": "【答唱】 あたらしい こひつじ すぎこしの いけにえ われらの キリストよ アレルヤ",
+    "translations": {},
+    "firstLine": "あたらしい こひつじ すぎこしの いけにえ われらの キリストよ アレルヤ",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編85: 9 10 11 12+13 14",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten004.gif; ten004w.gif",
+    "originalFileSize": 21699,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "あたらしい こひつじ",
+      "典礼聖歌 4",
+      "典礼聖歌 004",
+      "典礼聖歌 4番",
+      "ten004",
+      "詩編85: 9 10 11 12+13 14"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten004-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten004-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten004.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten005",
+    "country": "JP",
+    "language": "JP",
+    "number": "005",
+    "title": "あなたの いきを",
+    "displayTitle": "005. あなたの いきを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 あなたの いきを おくってください すべてが あらたに なるように",
+    "translations": {},
+    "firstLine": "あなたの いきを おくってください すべてが あらたに なるように",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編104: 1-9 10-12 13-15 16-18 19 20-23 24 25+27 28+29 30 31+33",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten005.gif; ten005w.gif",
+    "originalFileSize": 51518,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "あなたの いきを",
+      "典礼聖歌 5",
+      "典礼聖歌 005",
+      "典礼聖歌 5番",
+      "ten005",
+      "詩編104: 1-9 10-12 13-15 16-18 19 20-23 24 25+27 28+29 30 31+33"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten005-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten005-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten005.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten006",
+    "country": "JP",
+    "language": "JP",
+    "number": "006",
+    "title": "あなたの いぶきを うけて",
+    "displayTitle": "006. あなたの いぶきを うけて",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "洗礼",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 洗礼 / 回心",
+    "lyrics": "【答唱】 あなたの いぶきを うけて わたしは あたらしく なる",
+    "translations": {},
+    "firstLine": "あなたの いぶきを うけて わたしは あたらしく なる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編51（前半）: 3+4 5+6cd 7+8 9 10+11",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten006ab.gif; ten006w.gif",
+    "originalFileSize": 29072,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "あなたの いぶきを うけて",
+      "典礼聖歌 6",
+      "典礼聖歌 006",
+      "典礼聖歌 6番",
+      "ten006",
+      "詩編51（前半）: 3+4 5+6cd 7+8 9 10+11"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten006-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten006-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten006.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten007",
+    "country": "JP",
+    "language": "JP",
+    "number": "007",
+    "title": "あなたの いぶきを うけて",
+    "displayTitle": "007. あなたの いぶきを うけて",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "復活節",
+      "年間",
+      "聖霊",
+      "洗礼",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 復活節 / 年間 / 聖霊 / 洗礼 / 回心",
+    "lyrics": "【答唱】 あなたの いぶきを うけて わたしは あたらしく なる",
+    "translations": {},
+    "firstLine": "あなたの いぶきを うけて わたしは あたらしく なる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編51（後半）: 12+13 14+15 18+19 20+21",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten006ab.gif; ten007w.gif",
+    "originalFileSize": 26820,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "あなたの いぶきを うけて",
+      "典礼聖歌 7",
+      "典礼聖歌 007",
+      "典礼聖歌 7番",
+      "ten007",
+      "詩編51（後半）: 12+13 14+15 18+19 20+21"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten007-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten007-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten007.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten008",
+    "country": "JP",
+    "language": "JP",
+    "number": "008",
+    "title": "荒地のかわき果てた土のように",
+    "displayTitle": "008. 荒地のかわき果てた土のように",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼",
+    "lyrics": "【答唱】 あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "translations": {},
+    "firstLine": "あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編54: 3+4 8+6+9a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten008ab.gif; ten008w.gif",
+    "originalFileSize": 17327,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "荒地のかわき果てた土のように",
+      "典礼聖歌 8",
+      "典礼聖歌 008",
+      "典礼聖歌 8番",
+      "ten008",
+      "詩編54: 3+4 8+6+9a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten008-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten008-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten008.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten009",
+    "country": "JP",
+    "language": "JP",
+    "number": "009",
+    "title": "荒地のかわき果てた土のように",
+    "displayTitle": "009. 荒地のかわき果てた土のように",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "translations": {},
+    "firstLine": "あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編62: 2+3 8+9 10+13 信頼 希望 平和 年間8A",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten008ab.gif; ten009w.gif",
+    "originalFileSize": 21356,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "荒地のかわき果てた土のように",
+      "典礼聖歌 9",
+      "典礼聖歌 009",
+      "典礼聖歌 9番",
+      "ten009",
+      "詩編62: 2+3 8+9 10+13 信頼 希望 平和 年間8A"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten009-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten009-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten009.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten010",
+    "country": "JP",
+    "language": "JP",
+    "number": "010",
+    "title": "荒地のかわき果てた土のように",
+    "displayTitle": "010. 荒地のかわき果てた土のように",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝 / 信頼",
+    "lyrics": "【答唱】 あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "translations": {},
+    "firstLine": "あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編63: 2 3+4 5+6 7+8 9+12a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten008ab.gif; ten010w.gif",
+    "originalFileSize": 31542,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "荒地のかわき果てた土のように",
+      "典礼聖歌 10",
+      "典礼聖歌 010",
+      "典礼聖歌 10番",
+      "ten010",
+      "詩編63: 2 3+4 5+6 7+8 9+12a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten010-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten010-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten010.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten011",
+    "country": "JP",
+    "language": "JP",
+    "number": "011",
+    "title": "荒地のかわき果てた土のように",
+    "displayTitle": "011. 荒地のかわき果てた土のように",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝 / 信頼",
+    "lyrics": "【答唱】 あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "translations": {},
+    "firstLine": "あれ地の かわきはてた つちの ように かみよ わたしは あなたを したう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編116: 1+2+3+4 5+6a+7b 8ab+9",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten008ab.gif; ten011w.gif",
+    "originalFileSize": 22521,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "荒地のかわき果てた土のように",
+      "典礼聖歌 11",
+      "典礼聖歌 011",
+      "典礼聖歌 11番",
+      "ten011",
+      "詩編116: 1+2+3+4 5+6a+7b 8ab+9"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten011-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten011-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten011.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten012",
+    "country": "JP",
+    "language": "JP",
+    "number": "012",
+    "title": "アレルヤ",
+    "displayTitle": "012. アレルヤ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 感謝",
+    "lyrics": "【答唱】 アレルヤ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ アレルヤ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編118: 1+2 16+17 22+23 神の救いのわざ 主の死と復活",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten012ab.gif; ten012w.gif",
+    "originalFileSize": 13255,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "アレルヤ",
+      "典礼聖歌 12",
+      "典礼聖歌 012",
+      "典礼聖歌 12番",
+      "ten012",
+      "詩編118: 1+2 16+17 22+23 神の救いのわざ 主の死と復活"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten012-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten012-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten012.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten013",
+    "country": "JP",
+    "language": "JP",
+    "number": "013",
+    "title": "アレルヤ",
+    "displayTitle": "013. アレルヤ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭 / 閉祭",
+    "lyrics": "【答唱】 アレルヤ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ アレルヤ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編149: 1+2 3+4 5+6 7+8+9 神の民の勝利 あかしの共同体",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten012ab.gif; ten013w.gif",
+    "originalFileSize": 18927,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "アレルヤ",
+      "典礼聖歌 13",
+      "典礼聖歌 013",
+      "典礼聖歌 13番",
+      "ten013",
+      "詩編149: 1+2 3+4 5+6 7+8+9 神の民の勝利 あかしの共同体"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten013-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten013-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten013.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten014",
+    "country": "JP",
+    "language": "JP",
+    "number": "014",
+    "title": "アレルヤ",
+    "displayTitle": "014. アレルヤ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 閉祭",
+    "lyrics": "【答唱】 アレルヤ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ アレルヤ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編150: 1+2 3+4 5a+6a+栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten012ab.gif; ten014w.gif",
+    "originalFileSize": 17890,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "アレルヤ",
+      "典礼聖歌 14",
+      "典礼聖歌 014",
+      "典礼聖歌 14番",
+      "ten014",
+      "詩編150: 1+2 3+4 5a+6a+栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten014-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten014-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten014.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten015",
+    "country": "JP",
+    "language": "JP",
+    "number": "015",
+    "title": "アレルヤ（２）",
+    "displayTitle": "015. アレルヤ（２）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 閉祭",
+    "lyrics": "【答唱】 アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編150: 1 2 3+4 5+6",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten015.gif; ten015w.gif",
+    "originalFileSize": 11815,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "アレルヤ（２）",
+      "典礼聖歌 15",
+      "典礼聖歌 015",
+      "典礼聖歌 15番",
+      "ten015",
+      "詩編150: 1 2 3+4 5+6"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten015-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten015-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten015.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten016",
+    "country": "JP",
+    "language": "JP",
+    "number": "016",
+    "title": "あなたは女のなかで",
+    "displayTitle": "016. あなたは女のなかで",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "聖母",
+      "晩の祈り"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 聖母 / 晩の祈り",
+    "lyrics": "【答唱】 あなたは おんなの なかで しゅくされた みこも しゅくされた",
+    "translations": {},
+    "firstLine": "あなたは おんなの なかで しゅくされた みこも しゅくされた",
+    "composer": "佐久間彪",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-55 +栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten016.gif; ten016w.gif",
+    "originalFileSize": 23399,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "あなたは女のなかで",
+      "典礼聖歌 16",
+      "典礼聖歌 016",
+      "典礼聖歌 16番",
+      "ten016",
+      "ルカ1: 46-55 +栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten016-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten016-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten016.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten017",
+    "country": "JP",
+    "language": "JP",
+    "number": "017",
+    "title": "いのちある すべての ものに",
+    "displayTitle": "017. いのちある すべての ものに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 いのちある すべての ものに 主は しょくもつを めぐまれる",
+    "translations": {},
+    "firstLine": "いのちある すべての ものに 主は しょくもつを めぐまれる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編65: 10 11+12 13+14 豊作 祝福 喜び 年間15A",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten017ab.gif; ten017w.gif",
+    "originalFileSize": 20275,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "いのちある すべての ものに",
+      "典礼聖歌 17",
+      "典礼聖歌 017",
+      "典礼聖歌 17番",
+      "ten017",
+      "詩編65: 10 11+12 13+14 豊作 祝福 喜び 年間15A"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten017-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten017-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten017.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten018",
+    "country": "JP",
+    "language": "JP",
+    "number": "018",
+    "title": "いのちある すべての ものに",
+    "displayTitle": "018. いのちある すべての ものに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間 / 感謝",
+    "lyrics": "【答唱】 いのちある すべての ものに 主は しょくもつを めぐまれる",
+    "translations": {},
+    "firstLine": "いのちある すべての ものに 主は しょくもつを めぐまれる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編145: 1+3 4+5 6+7 8+9 10+11 13ab+14 15+16 17+18 19+20 21",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten017ab.gif; ten018w.gif",
+    "originalFileSize": 50232,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "いのちある すべての ものに",
+      "典礼聖歌 18",
+      "典礼聖歌 018",
+      "典礼聖歌 18番",
+      "ten018",
+      "詩編145: 1+3 4+5 6+7 8+9 10+11 13ab+14 15+16 17+18 19+20 21"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten018-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten018-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten018.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten019",
+    "country": "JP",
+    "language": "JP",
+    "number": "019",
+    "title": "いのちある すべての ものは",
+    "displayTitle": "019. いのちある すべての ものは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間 / 信頼",
+    "lyrics": "【答唱】 いのちある すべての ものは かみを たたえよ",
+    "translations": {},
+    "firstLine": "いのちある すべての ものは かみを たたえよ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編146: 1+2+10a 5+6ab 7c+7 8ac+9bc",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten019ab.gif; ten019w.gif",
+    "originalFileSize": 23497,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "いのちある すべての ものは",
+      "典礼聖歌 19",
+      "典礼聖歌 019",
+      "典礼聖歌 19番",
+      "ten019",
+      "詩編146: 1+2+10a 5+6ab 7c+7 8ac+9bc"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten019-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten019-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten019.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten019a",
+    "country": "JP",
+    "language": "JP",
+    "number": "019",
+    "title": "a いのちある すべての ものは",
+    "displayTitle": "019. a いのちある すべての ものは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 感謝",
+    "lyrics": "【答唱】 いのちある すべての ものは かみを たたえよ",
+    "translations": {},
+    "firstLine": "いのちある すべての ものは かみを たたえよ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編145: 8+9 10+11 13ab+14 感謝 復活5C",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten019ab.gif; ten019aw.gif",
+    "originalFileSize": 20884,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "a いのちある すべての ものは",
+      "典礼聖歌 19",
+      "典礼聖歌 019",
+      "典礼聖歌 19番",
+      "ten019a",
+      "詩編145: 8+9 10+11 13ab+14 感謝 復活5C"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten019a-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten019a-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten019a.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten020",
+    "country": "JP",
+    "language": "JP",
+    "number": "020",
+    "title": "いのちある すべての ものは",
+    "displayTitle": "020. いのちある すべての ものは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 いのちある すべての ものは かみを たたえよ",
+    "translations": {},
+    "firstLine": "いのちある すべての ものは かみを たたえよ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編148: 1+2 3+4 5+6 7+8 11+12 13+14",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten019ab.gif; ten020w.gif",
+    "originalFileSize": 37893,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "いのちある すべての ものは",
+      "典礼聖歌 20",
+      "典礼聖歌 020",
+      "典礼聖歌 20番",
+      "ten020",
+      "詩編148: 1+2 3+4 5+6 7+8 11+12 13+14"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten020-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten020-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten020.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten021",
+    "country": "JP",
+    "language": "JP",
+    "number": "021",
+    "title": "うるわしい神の家",
+    "displayTitle": "021. うるわしい神の家",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 うるわしい かみの いえ エルサレム かべも とうも かがやいて たつ",
+    "translations": {},
+    "firstLine": "うるわしい かみの いえ エルサレム かべも とうも かがやいて たつ",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編122: 1+2 3+4ab 4cd+5 6a+8a+9b+7 神の民 神の都 教会 巡礼",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten021ab.gif; ten021w.gif",
+    "originalFileSize": 22811,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "うるわしい神の家",
+      "典礼聖歌 21",
+      "典礼聖歌 021",
+      "典礼聖歌 21番",
+      "ten021",
+      "詩編122: 1+2 3+4ab 4cd+5 6a+8a+9b+7 神の民 神の都 教会 巡礼"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten021-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten021-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten021.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten022",
+    "country": "JP",
+    "language": "JP",
+    "number": "022",
+    "title": "うるわしい神の家",
+    "displayTitle": "022. うるわしい神の家",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 入祭",
+    "lyrics": "【答唱】 うるわしい かみの いえ エルサレム かべも とうも かがやいて たつ",
+    "translations": {},
+    "firstLine": "うるわしい かみの いえ エルサレム かべも とうも かがやいて たつ",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編147: 12+13 14+15 16+17 18+19 20+12",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten021ab.gif; ten022w.gif",
+    "originalFileSize": 27298,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "うるわしい神の家",
+      "典礼聖歌 22",
+      "典礼聖歌 022",
+      "典礼聖歌 22番",
+      "ten022",
+      "詩編147: 12+13 14+15 16+17 18+19 20+12"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten022-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten022-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten022.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten023",
+    "country": "JP",
+    "language": "JP",
+    "number": "023",
+    "title": "栄光は世界におよび",
+    "displayTitle": "023. 栄光は世界におよび",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭",
+      "洗礼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭 / 洗礼",
+    "lyrics": "【答唱】 えいこうは せかいに および すべてを こえて かみは いだい",
+    "translations": {},
+    "firstLine": "えいこうは せかいに および すべてを こえて かみは いだい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編29: 1+2 3+4 9c+10+11",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten023ab.gif; ten023w.gif",
+    "originalFileSize": 19958,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "栄光は世界におよび",
+      "典礼聖歌 23",
+      "典礼聖歌 023",
+      "典礼聖歌 23番",
+      "ten023",
+      "詩編29: 1+2 3+4 9c+10+11"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten023-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten023-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten023.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten024",
+    "country": "JP",
+    "language": "JP",
+    "number": "024",
+    "title": "栄光は世界におよび",
+    "displayTitle": "024. 栄光は世界におよび",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "入祭",
+      "閉祭",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 入祭 / 閉祭 / 感謝",
+    "lyrics": "【答唱】 えいこうは せかいに および すべてを こえて かみは いだい",
+    "translations": {},
+    "firstLine": "えいこうは せかいに および すべてを こえて かみは いだい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編57: 2 3+4 5 8+9 10+11 答6",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten023ab.gif; ten024w.gif",
+    "originalFileSize": 27918,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "栄光は世界におよび",
+      "典礼聖歌 24",
+      "典礼聖歌 024",
+      "典礼聖歌 24番",
+      "ten024",
+      "詩編57: 2 3+4 5 8+9 10+11 答6"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten024-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten024-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten024.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten025",
+    "country": "JP",
+    "language": "JP",
+    "number": "025",
+    "title": "栄光は世界におよび",
+    "displayTitle": "025. 栄光は世界におよび",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "入祭",
+      "閉祭",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 入祭 / 閉祭 / 感謝",
+    "lyrics": "【答唱】 えいこうは せかいに および すべてを こえて かみは いだい",
+    "translations": {},
+    "firstLine": "えいこうは せかいに および すべてを こえて かみは いだい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編97: 1+2 6+9 10+11 8+12 神の正義 支配 喜び",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten023ab.gif; ten025w.gif",
+    "originalFileSize": 24804,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "栄光は世界におよび",
+      "典礼聖歌 25",
+      "典礼聖歌 025",
+      "典礼聖歌 25番",
+      "ten025",
+      "詩編97: 1+2 6+9 10+11 8+12 神の正義 支配 喜び"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten025-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten025-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten025.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten026",
+    "country": "JP",
+    "language": "JP",
+    "number": "026",
+    "title": "栄光は世界におよび",
+    "displayTitle": "026. 栄光は世界におよび",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "閉祭",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 閉祭 / 回心",
+    "lyrics": "【答唱】 えいこうは せかいに および すべてを こえて かみは いだい",
+    "translations": {},
+    "firstLine": "えいこうは せかいに および すべてを こえて かみは いだい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編117: 1+2 栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten023ab.gif; ten026w.gif",
+    "originalFileSize": 13742,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "栄光は世界におよび",
+      "典礼聖歌 26",
+      "典礼聖歌 026",
+      "典礼聖歌 26番",
+      "ten026",
+      "詩編117: 1+2 栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten026-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten026-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten026.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten027",
+    "country": "JP",
+    "language": "JP",
+    "number": "027",
+    "title": "栄光は世界におよび",
+    "displayTitle": "027. 栄光は世界におよび",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "入祭",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 入祭 / 感謝",
+    "lyrics": "【答唱】 えいこうは せかいに および すべてを こえて かみは いだい",
+    "translations": {},
+    "firstLine": "えいこうは せかいに および すべてを こえて かみは いだい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編147（前半）: 1+2 4+5 3+6 7+11",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten023ab.gif; ten027w.gif",
+    "originalFileSize": 23587,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "栄光は世界におよび",
+      "典礼聖歌 27",
+      "典礼聖歌 027",
+      "典礼聖歌 27番",
+      "ten027",
+      "詩編147（前半）: 1+2 4+5 3+6 7+11"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten027-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten027-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten027.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten028",
+    "country": "JP",
+    "language": "JP",
+    "number": "028",
+    "title": "エルサレムよ, おまえを忘れるよりは",
+    "displayTitle": "028. エルサレムよ, おまえを忘れるよりは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "四旬節",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 四旬節 / 回心",
+    "lyrics": "【答唱】 エルサレムよ おまえを わすれるよりは わたしの みぎてが なえたほうが よい エルサレムを おもわず さいじょうの よろこびと しないなら わたしは くちが きけなくなったほうが よい",
+    "translations": {},
+    "firstLine": "エルサレムよ おまえを わすれるよりは わたしの みぎてが なえたほうが よい エルサレムを おもわず さいじょうの よろこびと しないなら わたしは くちが きけなくなったほうが よい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編137: 1+2 3+4 答5+6 エルサレム 信仰共同体 愛と誠実",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten028.gif; ten028p.gif",
+    "originalFileSize": 24979,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "エルサレムよ, おまえを忘れるよりは",
+      "典礼聖歌 28",
+      "典礼聖歌 028",
+      "典礼聖歌 28番",
+      "ten028",
+      "詩編137: 1+2 3+4 答5+6 エルサレム 信仰共同体 愛と誠実"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten028-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten028-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten028.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten029",
+    "country": "JP",
+    "language": "JP",
+    "number": "029",
+    "title": "エルサレムよ ほめたたえよ",
+    "displayTitle": "029. エルサレムよ ほめたたえよ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭 / 閉祭",
+    "lyrics": "【答唱】 エルサレムよ ほめたたえよ 主なる かみに うたえ アレルヤ",
+    "translations": {},
+    "firstLine": "エルサレムよ ほめたたえよ 主なる かみに うたえ アレルヤ",
+    "composer": "さかばやし功",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編147: 1+2 4+5 6+7 12+13 栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten029.gif; ten029w.gif",
+    "originalFileSize": 25995,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "エルサレムよ ほめたたえよ",
+      "典礼聖歌 29",
+      "典礼聖歌 029",
+      "典礼聖歌 29番",
+      "ten029",
+      "詩編147: 1+2 4+5 6+7 12+13 栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten029-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten029-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten029.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten030",
+    "country": "JP",
+    "language": "JP",
+    "number": "030",
+    "title": "かみさまの あいは",
+    "displayTitle": "030. かみさまの あいは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 かみさまの あいは しみとおる わたしたちの こころに ひの ひかりのように",
+    "translations": {},
+    "firstLine": "かみさまの あいは しみとおる わたしたちの こころに ひの ひかりのように",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編148: 1b+2a+3+5b+6 7+8a+9a+10a+6 11+12+13 参照",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten030.gif; ten030w.gif",
+    "originalFileSize": 20890,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "かみさまの あいは",
+      "典礼聖歌 30",
+      "典礼聖歌 030",
+      "典礼聖歌 30番",
+      "ten030",
+      "詩編148: 1b+2a+3+5b+6 7+8a+9a+10a+6 11+12+13 参照"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten030-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten030-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten030.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten031",
+    "country": "JP",
+    "language": "JP",
+    "number": "031",
+    "title": "神は王を たてたもう",
+    "displayTitle": "031. 神は王を たてたもう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭",
+    "lyrics": "【答唱】 かみは おうを たてたもう せいなる シオンの やまのえに",
+    "translations": {},
+    "firstLine": "かみは おうを たてたもう せいなる シオンの やまのえに",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編2: 1+2 4+5 7 8+10 11+12d 栄 答6",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten031.gif; ten031w.gif",
+    "originalFileSize": 26483,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神は王を たてたもう",
+      "典礼聖歌 31",
+      "典礼聖歌 031",
+      "典礼聖歌 31番",
+      "ten031",
+      "詩編2: 1+2 4+5 7 8+10 11+12d 栄 答6"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten031-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten031-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten031.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten032",
+    "country": "JP",
+    "language": "JP",
+    "number": "032",
+    "title": "神に向かって",
+    "displayTitle": "032. 神に向かって",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭",
+    "lyrics": "【答唱】 かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "translations": {},
+    "firstLine": "かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編22（後半）: 26+27a 28a+27b+28b+29 30+31a 31b+32",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten032ab.gif; ten032w.gif",
+    "originalFileSize": 26440,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神に向かって",
+      "典礼聖歌 32",
+      "典礼聖歌 032",
+      "典礼聖歌 32番",
+      "ten032",
+      "詩編22（後半）: 26+27a 28a+27b+28b+29 30+31a 31b+32"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten032-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten032-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten032.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten033",
+    "country": "JP",
+    "language": "JP",
+    "number": "033",
+    "title": "神に向かって",
+    "displayTitle": "033. 神に向かって",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭",
+    "lyrics": "【答唱】 かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "translations": {},
+    "firstLine": "かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編47: 2+3 4+5 7+8 9+10b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten032ab.gif; ten033w.gif",
+    "originalFileSize": 23940,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神に向かって",
+      "典礼聖歌 33",
+      "典礼聖歌 033",
+      "典礼聖歌 33番",
+      "ten033",
+      "詩編47: 2+3 4+5 7+8 9+10b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten033-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten033-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten033.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten034",
+    "country": "JP",
+    "language": "JP",
+    "number": "034",
+    "title": "神に向かって",
+    "displayTitle": "034. 神に向かって",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間 / 入祭",
+    "lyrics": "【答唱】 かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "translations": {},
+    "firstLine": "かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編68: 4+5ab 6+7abc 8+9 10+11 20+27 29+33 34b+35a+36b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten032ab.gif; ten034w.gif",
+    "originalFileSize": 36848,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神に向かって",
+      "典礼聖歌 34",
+      "典礼聖歌 034",
+      "典礼聖歌 34番",
+      "ten034",
+      "詩編68: 4+5ab 6+7abc 8+9 10+11 20+27 29+33 34b+35a+36b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten034-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten034-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten034.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten035",
+    "country": "JP",
+    "language": "JP",
+    "number": "035",
+    "title": "神に向かって",
+    "displayTitle": "035. 神に向かって",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "入祭",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 入祭 / 感謝",
+    "lyrics": "【答唱】 かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "translations": {},
+    "firstLine": "かみに むかって よろこび うたい かんしゃの うたを ささげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編95: 1+2 3+4 5+6 7+8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten032ab.gif; ten035w.gif",
+    "originalFileSize": 21887,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神に向かって",
+      "典礼聖歌 35",
+      "典礼聖歌 035",
+      "典礼聖歌 35番",
+      "ten035",
+      "詩編95: 1+2 3+4 5+6 7+8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten035-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten035-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten035.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten036",
+    "country": "JP",
+    "language": "JP",
+    "number": "036",
+    "title": "神のいつくしみを",
+    "displayTitle": "036. 神のいつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "聖母",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 聖母 / 感謝",
+    "lyrics": "【答唱】 かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "translations": {},
+    "firstLine": "かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編45: 2 3+4 7+8 11+12 17+18",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten036ab.gif; ten036w.gif",
+    "originalFileSize": 30288,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のいつくしみを",
+      "典礼聖歌 36",
+      "典礼聖歌 036",
+      "典礼聖歌 36番",
+      "ten036",
+      "詩編45: 2 3+4 7+8 11+12 17+18"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten036-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten036-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten036.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten037",
+    "country": "JP",
+    "language": "JP",
+    "number": "037",
+    "title": "神のいつくしみを",
+    "displayTitle": "037. 神のいつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "降誕節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 降誕節 / 年間",
+    "lyrics": "【答唱】 かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "translations": {},
+    "firstLine": "かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編89（前半）: 2+3 6+8 14+15 16+17 18+19 答2",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten036ab.gif; ten037w.gif",
+    "originalFileSize": 30786,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のいつくしみを",
+      "典礼聖歌 37",
+      "典礼聖歌 037",
+      "典礼聖歌 37番",
+      "ten037",
+      "詩編89（前半）: 2+3 6+8 14+15 16+17 18+19 答2"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten037-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten037-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten037.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten038",
+    "country": "JP",
+    "language": "JP",
+    "number": "038",
+    "title": "神のいつくしみを",
+    "displayTitle": "038. 神のいつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "translations": {},
+    "firstLine": "かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編89（後半）: 21+22 25+27 29+35 37+38",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten036ab.gif; ten038w.gif",
+    "originalFileSize": 25337,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のいつくしみを",
+      "典礼聖歌 38",
+      "典礼聖歌 038",
+      "典礼聖歌 38番",
+      "ten038",
+      "詩編89（後半）: 21+22 25+27 29+35 37+38"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten038-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten038-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten038.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten039",
+    "country": "JP",
+    "language": "JP",
+    "number": "039",
+    "title": "神のいつくしみを",
+    "displayTitle": "039. 神のいつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "translations": {},
+    "firstLine": "かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編93: 1+2 3+4 5+栄 神の栄光 賛美 王・キリストB",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten036ab.gif; ten039w.gif",
+    "originalFileSize": 20983,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のいつくしみを",
+      "典礼聖歌 39",
+      "典礼聖歌 039",
+      "典礼聖歌 39番",
+      "ten039",
+      "詩編93: 1+2 3+4 5+栄 神の栄光 賛美 王・キリストB"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten039-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten039-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten039.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten040",
+    "country": "JP",
+    "language": "JP",
+    "number": "040",
+    "title": "神のいつくしみを",
+    "displayTitle": "040. 神のいつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝",
+    "lyrics": "【答唱】 かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "translations": {},
+    "firstLine": "かみの いつくしみを とこしえに うたい 主の まことを 代々に つげよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編107: 1+2a 3+8 6+9 17+20 22+43 23+24 28a+19+30 31+32",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten036ab.gif; ten040w.gif",
+    "originalFileSize": 42809,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のいつくしみを",
+      "典礼聖歌 40",
+      "典礼聖歌 040",
+      "典礼聖歌 40番",
+      "ten040",
+      "詩編107: 1+2a 3+8 6+9 17+20 22+43 23+24 28a+19+30 31+32"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten040-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten040-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten040.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten041",
+    "country": "JP",
+    "language": "JP",
+    "number": "041",
+    "title": "神のいつくしみを (2)",
+    "displayTitle": "041. 神のいつくしみを (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 かみの いつくしみを とこしえに うたい その まことを よよに つげよう",
+    "translations": {},
+    "firstLine": "かみの いつくしみを とこしえに うたい その まことを よよに つげよう",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編89: 6+7 9+10 14+15 16+17 神のわざ 正義",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten041.gif; ten041w.gif",
+    "originalFileSize": 27431,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のいつくしみを (2)",
+      "典礼聖歌 41",
+      "典礼聖歌 041",
+      "典礼聖歌 41番",
+      "ten041",
+      "詩編89: 6+7 9+10 14+15 16+17 神のわざ 正義"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten041-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten041-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten041.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten042",
+    "country": "JP",
+    "language": "JP",
+    "number": "042",
+    "title": "神のおきてを喜び",
+    "displayTitle": "042. 神のおきてを喜び",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 回心",
+    "lyrics": "【答唱】 かみの おきてを よろこび こころに おしえを とめるひと かみは そのひとを しゅくされる",
+    "translations": {},
+    "firstLine": "かみの おきてを よろこび こころに おしえを とめるひと かみは そのひとを しゅくされる",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編1: 1 3 4+5 6 栄 答2",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten042.gif; ten042w.gif",
+    "originalFileSize": 22948,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のおきてを喜び",
+      "典礼聖歌 42",
+      "典礼聖歌 042",
+      "典礼聖歌 42番",
+      "ten042",
+      "詩編1: 1 3 4+5 6 栄 答2"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten042-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten042-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten042.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten043",
+    "country": "JP",
+    "language": "JP",
+    "number": "043",
+    "title": "神のことばは主の上に",
+    "displayTitle": "043. 神のことばは主の上に",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 入祭",
+    "lyrics": "【答唱】 かみの ことばは 主の うえに きょう うまれた あなたこそ わたしの子",
+    "translations": {},
+    "firstLine": "かみの ことばは 主の うえに きょう うまれた あなたこそ わたしの子",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編96: 1+2 3+4 11+12 創造の賛美 降誕節 入祭の歌 降誕徹夜",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten043.gif; ten043w.gif",
+    "originalFileSize": 19147,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のことばは主の上に",
+      "典礼聖歌 43",
+      "典礼聖歌 043",
+      "典礼聖歌 43番",
+      "ten043",
+      "詩編96: 1+2 3+4 11+12 創造の賛美 降誕節 入祭の歌 降誕徹夜"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten043-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten043-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten043.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten044",
+    "country": "JP",
+    "language": "JP",
+    "number": "044",
+    "title": "神のことば",
+    "displayTitle": "044. 神のことば",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間",
+    "lyrics": "【答唱】 かみの ことば ただしく わたしの こころの よろこび かみの みむねは きよく わたしの めを ひらく",
+    "translations": {},
+    "firstLine": "かみの ことば ただしく わたしの こころの よろこび かみの みむねは きよく わたしの めを ひらく",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編19: 8 10 12 13 15 神のことば 四旬3B 年間3C 26B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten044.gif; ten044w.gif",
+    "originalFileSize": 29008,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のことば",
+      "典礼聖歌 44",
+      "典礼聖歌 044",
+      "典礼聖歌 44番",
+      "ten044",
+      "詩編19: 8 10 12 13 15 神のことば 四旬3B 年間3C 26B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten044-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten044-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten044.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten045",
+    "country": "JP",
+    "language": "JP",
+    "number": "045",
+    "title": "神の栄えを ほめ歌い",
+    "displayTitle": "045. 神の栄えを ほめ歌い",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間",
+    "lyrics": "【答唱】 かみの さかえを ほめうたい その えいこうを さんびせよ",
+    "translations": {},
+    "firstLine": "かみの さかえを ほめうたい その えいこうを さんびせよ",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編66: 3+4 5+6 7+9 10+12b 13+14 15 16+17 18+19 1+8b+20",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten045.gif; ten045w.gif",
+    "originalFileSize": 46664,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神の栄えを ほめ歌い",
+      "典礼聖歌 45",
+      "典礼聖歌 045",
+      "典礼聖歌 45番",
+      "ten045",
+      "詩編66: 3+4 5+6 7+9 10+12b 13+14 15 16+17 18+19 1+8b+20"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten045-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten045-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten045.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten046",
+    "country": "JP",
+    "language": "JP",
+    "number": "046",
+    "title": "神の注がれる目は",
+    "displayTitle": "046. 神の注がれる目は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "復活節",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 復活節 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 かみの そそがれる めは かみを おそれる ものに かみの あいに きぼうを おくものの うえに",
+    "translations": {},
+    "firstLine": "かみの そそがれる めは かみを おそれる ものに かみの あいに きぼうを おくものの うえに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編33: 4+5 6+11 12+13 14+15 20+21 栄 答18",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten046.gif; ten046w.gif",
+    "originalFileSize": 36841,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神の注がれる目は",
+      "典礼聖歌 46",
+      "典礼聖歌 046",
+      "典礼聖歌 46番",
+      "ten046",
+      "詩編33: 4+5 6+11 12+13 14+15 20+21 栄 答18"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten046-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten046-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten046.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten047",
+    "country": "JP",
+    "language": "JP",
+    "number": "047",
+    "title": "神のそそがれる目は (2)",
+    "displayTitle": "047. 神のそそがれる目は (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "復活節",
+      "年間",
+      "入祭",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 復活節 / 年間 / 入祭 / 信頼 / 希望",
+    "lyrics": "【答唱】 かみの そそがれる 目は かみを おそれるものに かみの あいに きぼうを おく ものの うえに",
+    "translations": {},
+    "firstLine": "かみの そそがれる 目は かみを おそれるものに かみの あいに きぼうを おく ものの うえに",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編33: 4+5 6+11 12+13 14+15 20+21 栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten047.gif; ten047w.gif",
+    "originalFileSize": 27773,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のそそがれる目は (2)",
+      "典礼聖歌 47",
+      "典礼聖歌 047",
+      "典礼聖歌 47番",
+      "ten047",
+      "詩編33: 4+5 6+11 12+13 14+15 20+21 栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten047-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten047-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten047.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten048",
+    "country": "JP",
+    "language": "JP",
+    "number": "048",
+    "title": "神の名は",
+    "displayTitle": "048. 神の名は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 入祭",
+    "lyrics": "【答唱】 かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "translations": {},
+    "firstLine": "かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編8: 4+5 6+7 答2",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten048ab.gif; ten048w.gif",
+    "originalFileSize": 17072,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神の名は",
+      "典礼聖歌 48",
+      "典礼聖歌 048",
+      "典礼聖歌 48番",
+      "ten048",
+      "詩編8: 4+5 6+7 答2"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten048-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten048-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten048.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten049",
+    "country": "JP",
+    "language": "JP",
+    "number": "049",
+    "title": "神の名は",
+    "displayTitle": "049. 神の名は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "translations": {},
+    "firstLine": "かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten048ab.gif; ten049w.gif",
+    "originalFileSize": 29998,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神の名は",
+      "典礼聖歌 49",
+      "典礼聖歌 049",
+      "典礼聖歌 49番",
+      "ten049"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten049-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten049-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten049.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten050",
+    "country": "JP",
+    "language": "JP",
+    "number": "050",
+    "title": "神の名は",
+    "displayTitle": "050. 神の名は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "translations": {},
+    "firstLine": "かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編48: 2+3 4+9 10+11 12+15 神の都 神のすまい 栄光 保護",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten048ab.gif; ten050w.gif",
+    "originalFileSize": 27803,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神の名は",
+      "典礼聖歌 50",
+      "典礼聖歌 050",
+      "典礼聖歌 50番",
+      "ten050",
+      "詩編48: 2+3 4+9 10+11 12+15 神の都 神のすまい 栄光 保護"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten050-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten050-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten050.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten051",
+    "country": "JP",
+    "language": "JP",
+    "number": "051",
+    "title": "神の名は",
+    "displayTitle": "051. 神の名は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "translations": {},
+    "firstLine": "かみの 名は あまねく せかいに かがやき その えいこうは てんに そびえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編113: 1+2 3+4 7+8 9+栄 神の名 賛美 栄光 年間25C マチア",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten048ab.gif; ten051w.gif",
+    "originalFileSize": 25296,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神の名は",
+      "典礼聖歌 51",
+      "典礼聖歌 051",
+      "典礼聖歌 51番",
+      "ten051",
+      "詩編113: 1+2 3+4 7+8 9+栄 神の名 賛美 栄光 年間25C マチア"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten051-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten051-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten051.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten052",
+    "country": "JP",
+    "language": "JP",
+    "number": "052",
+    "title": "神のはからいは",
+    "displayTitle": "052. 神のはからいは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 かみの はからいは かぎりなく しょうがい わたしは そのなかに 生きる",
+    "translations": {},
+    "firstLine": "かみの はからいは かぎりなく しょうがい わたしは そのなかに 生きる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編90: 1+2+4 3+5ab 4+5c+6 11+12 16+17",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten052ab.gif; ten052w.gif",
+    "originalFileSize": 24291,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のはからいは",
+      "典礼聖歌 52",
+      "典礼聖歌 052",
+      "典礼聖歌 52番",
+      "ten052",
+      "詩編90: 1+2+4 3+5ab 4+5c+6 11+12 16+17"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten052-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten052-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten052.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten053",
+    "country": "JP",
+    "language": "JP",
+    "number": "053",
+    "title": "神のはからいは",
+    "displayTitle": "053. 神のはからいは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "洗礼",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 洗礼 / 信頼",
+    "lyrics": "【答唱】 かみの はからいは かぎりなく しょうがい わたしは そのなかに 生きる",
+    "translations": {},
+    "firstLine": "かみの はからいは かぎりなく しょうがい わたしは そのなかに 生きる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編139: 1+2 3+4 9+10 13+14 17+18",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten052ab.gif; ten053w.gif",
+    "originalFileSize": 31902,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のはからいは",
+      "典礼聖歌 53",
+      "典礼聖歌 053",
+      "典礼聖歌 53番",
+      "ten053",
+      "詩編139: 1+2 3+4 9+10 13+14 17+18"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten053-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten053-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten053.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten054",
+    "country": "JP",
+    "language": "JP",
+    "number": "054",
+    "title": "神のみ旨を行うことは",
+    "displayTitle": "054. 神のみ旨を行うことは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝",
+    "lyrics": "【答唱】 かみの みむねを おこなう ことは わたしの こころの よろこび",
+    "translations": {},
+    "firstLine": "かみの みむねを おこなう ことは わたしの こころの よろこび",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編40: 2+4ab 6 10 11ab+12ab 17",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten054ab.gif; ten054w.gif",
+    "originalFileSize": 29736,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のみ旨を行うことは",
+      "典礼聖歌 54",
+      "典礼聖歌 054",
+      "典礼聖歌 54番",
+      "ten054",
+      "詩編40: 2+4ab 6 10 11ab+12ab 17"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten054-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten054-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten054.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten055",
+    "country": "JP",
+    "language": "JP",
+    "number": "055",
+    "title": "神のみ旨を行うことは",
+    "displayTitle": "055. 神のみ旨を行うことは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間",
+      "聖母",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間 / 聖母 / 感謝",
+    "lyrics": "【答唱】 かみの みむねを おこなう ことは わたしの こころの よろこび",
+    "translations": {},
+    "firstLine": "かみの みむねを おこなう ことは わたしの こころの よろこび",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編67: 2+3 4+5 7+8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten054ab.gif; ten055w.gif",
+    "originalFileSize": 20825,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のみ旨を行うことは",
+      "典礼聖歌 55",
+      "典礼聖歌 055",
+      "典礼聖歌 55番",
+      "ten055",
+      "詩編67: 2+3 4+5 7+8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten055-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten055-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten055.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten056",
+    "country": "JP",
+    "language": "JP",
+    "number": "056",
+    "title": "神のみ旨を行うことは",
+    "displayTitle": "056. 神のみ旨を行うことは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 希望",
+    "lyrics": "【答唱】 かみの みむねを おこなう ことは わたしの こころの よろこび",
+    "translations": {},
+    "firstLine": "かみの みむねを おこなう ことは わたしの こころの よろこび",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編119: 57+58 29+30 64+65 73+74 89+90 神のことば 希望と喜び",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten054ab.gif; ten056w.gif",
+    "originalFileSize": 29483,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のみ旨を行うことは",
+      "典礼聖歌 56",
+      "典礼聖歌 056",
+      "典礼聖歌 56番",
+      "ten056",
+      "詩編119: 57+58 29+30 64+65 73+74 89+90 神のことば 希望と喜び"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten056-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten056-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten056.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten057",
+    "country": "JP",
+    "language": "JP",
+    "number": "057",
+    "title": "神のわざ とわに留まれ",
+    "displayTitle": "057. 神のわざ とわに留まれ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 閉祭",
+    "lyrics": "【答唱】 かみの わざ とわに とどまれ われらの うちに エルサレム アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "かみの わざ とわに とどまれ われらの うちに エルサレム アレルヤ アレルヤ",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編96: 1+2+3 4+5+6 7+8+9 10+11 12+13",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten057ab.gif; ten057w.gif",
+    "originalFileSize": 33572,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のわざ とわに留まれ",
+      "典礼聖歌 57",
+      "典礼聖歌 057",
+      "典礼聖歌 57番",
+      "ten057",
+      "詩編96: 1+2+3 4+5+6 7+8+9 10+11 12+13"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten057-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten057-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten057.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten058",
+    "country": "JP",
+    "language": "JP",
+    "number": "058",
+    "title": "神のわざ とわに留まれ",
+    "displayTitle": "058. 神のわざ とわに留まれ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 閉祭",
+    "lyrics": "【答唱】 かみの わざ とわに とどまれ われらの うちに エルサレム アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "かみの わざ とわに とどまれ われらの うちに エルサレム アレルヤ アレルヤ",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編98: 1+4 2+3 5+6+9",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten057ab.gif; ten058w.gif",
+    "originalFileSize": 25035,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のわざ とわに留まれ",
+      "典礼聖歌 58",
+      "典礼聖歌 058",
+      "典礼聖歌 58番",
+      "ten058",
+      "詩編98: 1+4 2+3 5+6+9"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten058-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten058-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten058.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten059",
+    "country": "JP",
+    "language": "JP",
+    "number": "059",
+    "title": "神のわざを思い起こそう",
+    "displayTitle": "059. 神のわざを思い起こそう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "洗礼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 洗礼",
+    "lyrics": "【答唱】 かみの わざを おもいおこそう ちからある ふしぎな わざ",
+    "translations": {},
+    "firstLine": "かみの わざを おもいおこそう ちからある ふしぎな わざ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編78: 1-4 5-7 10-11 12-15 17-18 23-24 26-27 32-35 25+54",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten059.gif; ten059w.gif",
+    "originalFileSize": 59589,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神のわざを思い起こそう",
+      "典礼聖歌 59",
+      "典礼聖歌 059",
+      "典礼聖歌 59番",
+      "ten059",
+      "詩編78: 1-4 5-7 10-11 12-15 17-18 23-24 26-27 32-35 25+54"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten059-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten059-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten059.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten060",
+    "country": "JP",
+    "language": "JP",
+    "number": "060",
+    "title": "神はすべてのものを治め",
+    "displayTitle": "060. 神はすべてのものを治め",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節",
+    "lyrics": "【答唱】 かみは すべての ものを おさめ いだいな ちからに みちて おられる",
+    "translations": {},
+    "firstLine": "かみは すべての ものを おさめ いだいな ちからに みちて おられる",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編72: 1+2 4+7 8+11 12+13 17 18+19a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten060.gif; ten060w.gif",
+    "originalFileSize": 25260,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神はすべてのものを治め",
+      "典礼聖歌 60",
+      "典礼聖歌 060",
+      "典礼聖歌 60番",
+      "ten060",
+      "詩編72: 1+2 4+7 8+11 12+13 17 18+19a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten060-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten060-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten060.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten061",
+    "country": "JP",
+    "language": "JP",
+    "number": "061",
+    "title": "神は残された 不思議なわざの記念を",
+    "displayTitle": "061. 神は残された 不思議なわざの記念を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 神は残された 不思議なわざの記念を",
+    "translations": {},
+    "firstLine": "神は残された 不思議なわざの記念を",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編111: 1+2 3+4b+5b 7+8 9c+10",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten061.gif; ten061w.gif",
+    "originalFileSize": 17360,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神は残された 不思議なわざの記念を",
+      "典礼聖歌 61",
+      "典礼聖歌 061",
+      "典礼聖歌 61番",
+      "ten061",
+      "詩編111: 1+2 3+4b+5b 7+8 9c+10"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten061-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten061-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten061.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten062",
+    "country": "JP",
+    "language": "JP",
+    "number": "062",
+    "title": "神は わたしの唯一の望み",
+    "displayTitle": "062. 神は わたしの唯一の望み",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "入祭",
+      "回心",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 入祭 / 回心 / 信頼 / 希望",
+    "lyrics": "【答唱】 かみは わたしの ゆいつの のぞみ わたしは あなたに よりたのむ",
+    "translations": {},
+    "firstLine": "かみは わたしの ゆいつの のぞみ わたしは あなたに よりたのむ",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編130: 1+2+3 5+6 7+8 答5",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten062.gif; ten062w.gif",
+    "originalFileSize": 21185,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神は わたしの唯一の望み",
+      "典礼聖歌 62",
+      "典礼聖歌 062",
+      "典礼聖歌 62番",
+      "ten062",
+      "詩編130: 1+2+3 5+6 7+8 答5"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten062-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten062-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten062.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten063",
+    "country": "JP",
+    "language": "JP",
+    "number": "063",
+    "title": "神は恵みと あわれみに満ち",
+    "displayTitle": "063. 神は恵みと あわれみに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 かみは めぐみと あわれみに みち いかるに おそく いつくしみ ふかい",
+    "translations": {},
+    "firstLine": "かみは めぐみと あわれみに みち いかるに おそく いつくしみ ふかい",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編145: 7+9 10+11 13cd+14 15+16 17+18 19+20 答8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten063.gif; ten063w.gif",
+    "originalFileSize": 36089,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神は恵みと あわれみに満ち",
+      "典礼聖歌 63",
+      "典礼聖歌 063",
+      "典礼聖歌 63番",
+      "ten063",
+      "詩編145: 7+9 10+11 13cd+14 15+16 17+18 19+20 答8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten063-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten063-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten063.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten064",
+    "country": "JP",
+    "language": "JP",
+    "number": "064",
+    "title": "神はわたしを救われる",
+    "displayTitle": "064. 神はわたしを救われる",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 神は わたしを救われる その慈しみを たたよう",
+    "translations": {},
+    "firstLine": "神は わたしを救われる その慈しみを たたよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編18: 2+3 16+17 23+25 29+31 33+37 47+50",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten064ab.gif; ten064w.gif",
+    "originalFileSize": 33069,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神はわたしを救われる",
+      "典礼聖歌 64",
+      "典礼聖歌 064",
+      "典礼聖歌 64番",
+      "ten064",
+      "詩編18: 2+3 16+17 23+25 29+31 33+37 47+50"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten064-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten064-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten064.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten065",
+    "country": "JP",
+    "language": "JP",
+    "number": "065",
+    "title": "神はわたしを救われる",
+    "displayTitle": "065. 神はわたしを救われる",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "復活節",
+      "入祭",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 復活節 / 入祭 / 感謝",
+    "lyrics": "【答唱】 神は わたしを救われる その慈しみを たたよう",
+    "translations": {},
+    "firstLine": "神は わたしを救われる その慈しみを たたよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編30: 2b+4 6 11+12 13",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten064ab.gif; ten065w.gif",
+    "originalFileSize": 23655,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神はわたしを救われる",
+      "典礼聖歌 65",
+      "典礼聖歌 065",
+      "典礼聖歌 65番",
+      "ten065",
+      "詩編30: 2b+4 6 11+12 13"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten065-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten065-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten065.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten066",
+    "country": "JP",
+    "language": "JP",
+    "number": "066",
+    "title": "神はわたしを救われる",
+    "displayTitle": "066. 神はわたしを救われる",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼",
+    "lyrics": "【答唱】 神は わたしを救われる その慈しみを たたよう",
+    "translations": {},
+    "firstLine": "神は わたしを救われる その慈しみを たたよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編31: 2+3 4+5 6+7 15+16a+17b 20+22 24+25 嘆願 信頼 年間9A",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten064ab.gif; ten066w.gif",
+    "originalFileSize": 26285,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神はわたしを救われる",
+      "典礼聖歌 66",
+      "典礼聖歌 066",
+      "典礼聖歌 66番",
+      "ten066",
+      "詩編31: 2+3 4+5 6+7 15+16a+17b 20+22 24+25 嘆願 信頼 年間9A"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten066-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten066-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten066.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten067",
+    "country": "JP",
+    "language": "JP",
+    "number": "067",
+    "title": "神はわたしを救われる",
+    "displayTitle": "067. 神はわたしを救われる",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 神は わたしを救われる その慈しみを たたよう",
+    "translations": {},
+    "firstLine": "神は わたしを救われる その慈しみを たたよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編41: 2+3 4+5 11+12+13 思いやり 神のあわれみ 年間7B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten064ab.gif; ten067w.gif",
+    "originalFileSize": 22015,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神はわたしを救われる",
+      "典礼聖歌 67",
+      "典礼聖歌 067",
+      "典礼聖歌 67番",
+      "ten067",
+      "詩編41: 2+3 4+5 11+12+13 思いやり 神のあわれみ 年間7B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten067-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten067-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten067.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten068",
+    "country": "JP",
+    "language": "JP",
+    "number": "068",
+    "title": "神よ あなたのいぶきを",
+    "displayTitle": "068. 神よ あなたのいぶきを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭",
+    "lyrics": "【答唱】 神よ あなたのいぶきを 地のおもてに",
+    "translations": {},
+    "firstLine": "神よ あなたのいぶきを 地のおもてに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編104: 1+2a 5+9 10+12 13+14 24+33",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten068ab.gif; ten068w.gif",
+    "originalFileSize": 28450,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よ あなたのいぶきを",
+      "典礼聖歌 68",
+      "典礼聖歌 068",
+      "典礼聖歌 68番",
+      "ten068",
+      "詩編104: 1+2a 5+9 10+12 13+14 24+33"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten068-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten068-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten068.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten069",
+    "country": "JP",
+    "language": "JP",
+    "number": "069",
+    "title": "神よ あなたのいぶきを",
+    "displayTitle": "069. 神よ あなたのいぶきを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 聖霊",
+    "lyrics": "【答唱】 神よ あなたのいぶきを 地のおもてに",
+    "translations": {},
+    "firstLine": "神よ あなたのいぶきを 地のおもてに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編104: 1b+24 29+30 31+34 答30 聖霊 堅信 叙階 聖霊降臨",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten068ab.gif; ten069w.gif",
+    "originalFileSize": 17959,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よ あなたのいぶきを",
+      "典礼聖歌 69",
+      "典礼聖歌 069",
+      "典礼聖歌 69番",
+      "ten069",
+      "詩編104: 1b+24 29+30 31+34 答30 聖霊 堅信 叙階 聖霊降臨"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten069-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten069-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten069.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten070",
+    "country": "JP",
+    "language": "JP",
+    "number": "070",
+    "title": "神よあなたの顔の光を",
+    "displayTitle": "070. 神よあなたの顔の光を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "回心",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 回心 / 信頼",
+    "lyrics": "【答唱】 神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "translations": {},
+    "firstLine": "神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編4: 2 3+4 5+6 8+9 信頼 回心 寝る前の祈り 復活3B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten070ab.gif; ten070w.gif",
+    "originalFileSize": 22773,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よあなたの顔の光を",
+      "典礼聖歌 70",
+      "典礼聖歌 070",
+      "典礼聖歌 70番",
+      "ten070",
+      "詩編4: 2 3+4 5+6 8+9 信頼 回心 寝る前の祈り 復活3B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten070-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten070-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten070.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten071",
+    "country": "JP",
+    "language": "JP",
+    "number": "071",
+    "title": "神よあなたの顔の光を",
+    "displayTitle": "071. 神よあなたの顔の光を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "translations": {},
+    "firstLine": "神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編121: 1+2 3+4 5+6 7+8 神の助け 守り 保護 年間29C",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten070ab.gif; ten071w.gif",
+    "originalFileSize": 20798,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よあなたの顔の光を",
+      "典礼聖歌 71",
+      "典礼聖歌 071",
+      "典礼聖歌 71番",
+      "ten071",
+      "詩編121: 1+2 3+4 5+6 7+8 神の助け 守り 保護 年間29C"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten071-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten071-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten071.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten072",
+    "country": "JP",
+    "language": "JP",
+    "number": "072",
+    "title": "神よあなたの顔の光を",
+    "displayTitle": "072. 神よあなたの顔の光を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "translations": {},
+    "firstLine": "神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編134: 1+2 3+栄 神の祝福 寝る前の祈り",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten070ab.gif; ten072w.gif",
+    "originalFileSize": 12973,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よあなたの顔の光を",
+      "典礼聖歌 72",
+      "典礼聖歌 072",
+      "典礼聖歌 72番",
+      "ten072",
+      "詩編134: 1+2 3+栄 神の祝福 寝る前の祈り"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten072-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten072-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten072.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten073",
+    "country": "JP",
+    "language": "JP",
+    "number": "073",
+    "title": "神よあなたの顔の光を",
+    "displayTitle": "073. 神よあなたの顔の光を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "translations": {},
+    "firstLine": "神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編27: 1 4 6 7+8 9 11 13+14",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten070ab.gif; ten073w.gif",
+    "originalFileSize": 30356,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よあなたの顔の光を",
+      "典礼聖歌 73",
+      "典礼聖歌 073",
+      "典礼聖歌 73番",
+      "ten073",
+      "詩編27: 1 4 6 7+8 9 11 13+14"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten073-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten073-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten073.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten074",
+    "country": "JP",
+    "language": "JP",
+    "number": "074",
+    "title": "神よあなたの顔の光を",
+    "displayTitle": "074. 神よあなたの顔の光を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "translations": {},
+    "firstLine": "神よ あなたの顔の光を わたしたちの上に 照らしてください",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編131: 1+2ab 2cd+3 神の子 信頼 希望 平安 年間31A",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten070ab.gif; ten074w.gif",
+    "originalFileSize": 12358,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よあなたの顔の光を",
+      "典礼聖歌 74",
+      "典礼聖歌 074",
+      "典礼聖歌 74番",
+      "ten074",
+      "詩編131: 1+2ab 2cd+3 神の子 信頼 希望 平安 年間31A"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten074-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten074-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten074.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten075",
+    "country": "JP",
+    "language": "JP",
+    "number": "075",
+    "title": "神よあなたのことばは",
+    "displayTitle": "075. 神よあなたのことばは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼",
+    "lyrics": "【答唱】 神よ あなたのことばは わたしの足のともしび わたしの道の光",
+    "translations": {},
+    "firstLine": "神よ あなたのことばは わたしの足のともしび わたしの道の光",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編119: 1+2b+3b 15+16 10+11b+108b 17+18 答105",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten075.gif; ten075w.gif",
+    "originalFileSize": 26518,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よあなたのことばは",
+      "典礼聖歌 75",
+      "典礼聖歌 075",
+      "典礼聖歌 75番",
+      "ten075",
+      "詩編119: 1+2b+3b 15+16 10+11b+108b 17+18 答105"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten075-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten075-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten075.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten076",
+    "country": "JP",
+    "language": "JP",
+    "number": "076",
+    "title": "神よ あなたの ことばは",
+    "displayTitle": "076. 神よ あなたの ことばは",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 入祭",
+    "lyrics": "【答唱】 かみよ あなたの ことばは わたしの あしの ともしび かみよ あなたの ことばは わたしの みちの ひかり",
+    "translations": {},
+    "firstLine": "かみよ あなたの ことばは わたしの あしの ともしび かみよ あなたの ことばは わたしの みちの ひかり",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編119: 1+2a+3b 15+16 17+18 開祭 入祭の歌 巡礼",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten076.gif; ten076w.gif",
+    "originalFileSize": 25583,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よ あなたの ことばは",
+      "典礼聖歌 76",
+      "典礼聖歌 076",
+      "典礼聖歌 76番",
+      "ten076",
+      "詩編119: 1+2a+3b 15+16 17+18 開祭 入祭の歌 巡礼"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten076-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten076-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten076.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten077",
+    "country": "JP",
+    "language": "JP",
+    "number": "077",
+    "title": "神よ あなたの道をしめし",
+    "displayTitle": "077. 神よ あなたの道をしめし",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "四旬節",
+      "入祭",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 四旬節 / 入祭 / 回心",
+    "lyrics": "【答唱】 かみよ あなたの みちを しめし あなたの こみちを おしえて ください",
+    "translations": {},
+    "firstLine": "かみよ あなたの みちを しめし あなたの こみちを おしえて ください",
+    "composer": "前田菊枝",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編25: 5 6+7 8+9 答4",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten077.gif; ten077w.gif",
+    "originalFileSize": 20890,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よ あなたの道をしめし",
+      "典礼聖歌 77",
+      "典礼聖歌 077",
+      "典礼聖歌 77番",
+      "ten077",
+      "詩編25: 5 6+7 8+9 答4"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten077-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten077-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten077.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten078",
+    "country": "JP",
+    "language": "JP",
+    "number": "078",
+    "title": "神よ いつくしみを",
+    "displayTitle": "078. 神よ いつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 入祭",
+    "lyrics": "【答唱】 かみよ いつくしみを しめし すくいを わたしたちに",
+    "translations": {},
+    "firstLine": "かみよ いつくしみを しめし すくいを わたしたちに",
+    "composer": "R. ジャルシー",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編85: 9ab 10 11 12 13 14 答8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten078.gif; ten078w.gif",
+    "originalFileSize": 21206,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よ いつくしみを",
+      "典礼聖歌 78",
+      "典礼聖歌 078",
+      "典礼聖歌 78番",
+      "ten078",
+      "詩編85: 9ab 10 11 12 13 14 答8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten078-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten078-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten078.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten079",
+    "country": "JP",
+    "language": "JP",
+    "number": "079",
+    "title": "神よ あなたは わたしの力",
+    "displayTitle": "079. 神よ あなたは わたしの力",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節",
+    "lyrics": "【答唱】 かみよ あなたは わたしの ちから わたしの まもり すくい",
+    "translations": {},
+    "firstLine": "かみよ あなたは わたしの ちから わたしの まもり すくい",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten079.gif; ten079w.gif",
+    "originalFileSize": 25690,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よ あなたは わたしの力",
+      "典礼聖歌 79",
+      "典礼聖歌 079",
+      "典礼聖歌 79番",
+      "ten079"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten079-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten079-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten079.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten080",
+    "country": "JP",
+    "language": "JP",
+    "number": "080",
+    "title": "神よわたしに目を注ぎ",
+    "displayTitle": "080. 神よわたしに目を注ぎ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間",
+    "lyrics": "【答唱】 神よ わたしに目をそそぎ つよめてください 手をさしのべて",
+    "translations": {},
+    "firstLine": "神よ わたしに目をそそぎ つよめてください 手をさしのべて",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編80: 2 3+4 5+6 9+10 15+16 18+19 神の民 試練といつくしみ",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten080ab.gif; ten080w.gif",
+    "originalFileSize": 34216,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よわたしに目を注ぎ",
+      "典礼聖歌 80",
+      "典礼聖歌 080",
+      "典礼聖歌 80番",
+      "ten080",
+      "詩編80: 2 3+4 5+6 9+10 15+16 18+19 神の民 試練といつくしみ"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten080-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten080-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten080.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten081",
+    "country": "JP",
+    "language": "JP",
+    "number": "081",
+    "title": "神よわたしに目を注ぎ",
+    "displayTitle": "081. 神よわたしに目を注ぎ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間",
+    "lyrics": "【答唱】 神よ わたしに目をそそぎ つよめてください 手をさしのべて",
+    "translations": {},
+    "firstLine": "神よ わたしに目をそそぎ つよめてください 手をさしのべて",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編85: 2+3 5a+7+8a 9 10+11 12+13+14 罪のゆるし",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten080ab.gif; ten081w.gif",
+    "originalFileSize": 28943,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神よわたしに目を注ぎ",
+      "典礼聖歌 81",
+      "典礼聖歌 081",
+      "典礼聖歌 81番",
+      "ten081",
+      "詩編85: 2+3 5a+7+8a 9 10+11 12+13+14 罪のゆるし"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten081-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten081-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten081.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten082",
+    "country": "JP",
+    "language": "JP",
+    "number": "082",
+    "title": "神を敬う人の死は",
+    "displayTitle": "082. 神を敬う人の死は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "葬儀",
+      "感謝",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 葬儀 / 感謝 / 信頼",
+    "lyrics": "【答唱】 神を敬う人の死は 神の前にとうとい 救いのさかずきをささげ 神の名を呼び求めよう",
+    "translations": {},
+    "firstLine": "神を敬う人の死は 神の前にとうとい 救いのさかずきをささげ 神の名を呼び求めよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編116: 3+4 5+6 7+8 9+12 16+14",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten082.gif; ten082w.gif",
+    "originalFileSize": 35167,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神を敬う人の死は",
+      "典礼聖歌 82",
+      "典礼聖歌 082",
+      "典礼聖歌 82番",
+      "ten082",
+      "詩編116: 3+4 5+6 7+8 9+12 16+14"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten082-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten082-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten082.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083fri",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （金曜日）",
+    "displayTitle": "083. 神をほめたたえよ （金曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神の深いあわれみにより 夜明けの太陽は わたしたちに臨む",
+    "translations": {},
+    "firstLine": "神の深いあわれみにより 夜明けの太陽は わたしたちに臨む",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083fri.gif; ten083p.gif",
+    "originalFileSize": 33123,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （金曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083fri",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083fri-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083fri-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083fri.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083mon",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （月曜日）",
+    "displayTitle": "083. 神をほめたたえよ （月曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は力強い救い主を ダビドの家に立てられた",
+    "translations": {},
+    "firstLine": "神は力強い救い主を ダビドの家に立てられた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083mon.gif; ten083p.gif",
+    "originalFileSize": 33033,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （月曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083mon",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083mon-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083mon-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083mon.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083sat",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （土曜日）",
+    "displayTitle": "083. 神をほめたたえよ （土曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は やみと死の陰にある人を照らし わたしたちの歩みを平和に導かれる",
+    "translations": {},
+    "firstLine": "神は やみと死の陰にある人を照らし わたしたちの歩みを平和に導かれる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083sat.gif; ten083p.gif",
+    "originalFileSize": 33126,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （土曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083sat",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083sat-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083sat-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083sat.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083sun",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （日曜日）",
+    "displayTitle": "083. 神をほめたたえよ （日曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神をほめたたえよ イスラエルの神は 民を訪れて あがなわれた",
+    "translations": {},
+    "firstLine": "神をほめたたえよ イスラエルの神は 民を訪れて あがなわれた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083sun.gif; ten083p.gif",
+    "originalFileSize": 33136,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （日曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083sun",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083sun-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083sun-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083sun.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083thu",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （木曜日）",
+    "displayTitle": "083. 神をほめたたえよ （木曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 幼子よ おまえも神の預言者と呼ばれ 主の前を歩み その道を整える",
+    "translations": {},
+    "firstLine": "幼子よ おまえも神の預言者と呼ばれ 主の前を歩み その道を整える",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083thu.gif; ten083p.gif",
+    "originalFileSize": 33175,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （木曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083thu",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083thu-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083thu-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083thu.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083tue",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （火曜日）",
+    "displayTitle": "083. 神をほめたたえよ （火曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は預言者によって語られたように 契約を心に留められる",
+    "translations": {},
+    "firstLine": "神は預言者によって語られたように 契約を心に留められる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083tue.gif; ten083p.gif",
+    "originalFileSize": 33135,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （火曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083tue",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083tue-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083tue-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083tue.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten083wed",
+    "country": "JP",
+    "language": "JP",
+    "number": "083",
+    "title": "神をほめたたえよ （水曜日）",
+    "displayTitle": "083. 神をほめたたえよ （水曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は先祖アブラハムに誓われたとおり わたしたちを救われた",
+    "translations": {},
+    "firstLine": "神は先祖アブラハムに誓われたとおり わたしたちを救われた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten083wed.gif; ten083p.gif",
+    "originalFileSize": 33038,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ （水曜日）",
+      "典礼聖歌 83",
+      "典礼聖歌 083",
+      "典礼聖歌 83番",
+      "ten083wed",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten083wed-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten083wed-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten083wed.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085fri",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （金曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （金曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神の深いあわれみにより 夜明けの太陽は わたしたちに臨む",
+    "translations": {},
+    "firstLine": "神の深いあわれみにより 夜明けの太陽は わたしたちに臨む",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085fri.gif; ten085p.gif",
+    "originalFileSize": 31289,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （金曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085fri",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085fri-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085fri-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085fri.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085mon",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （月曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （月曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は力強い救い主を ダビドの家に立てられた",
+    "translations": {},
+    "firstLine": "神は力強い救い主を ダビドの家に立てられた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085mon.gif; ten085p.gif",
+    "originalFileSize": 31232,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （月曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085mon",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085mon-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085mon-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085mon.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085sat",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （土曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （土曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は やみと死の陰にある人を照らし わたしたちの歩みを平和に導かれる",
+    "translations": {},
+    "firstLine": "神は やみと死の陰にある人を照らし わたしたちの歩みを平和に導かれる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085sat.gif; ten085p.gif",
+    "originalFileSize": 31285,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （土曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085sat",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085sat-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085sat-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085sat.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085sun",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （日曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （日曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神をほめたたえよ イスラエルの神は 民を訪れて あがなわれた",
+    "translations": {},
+    "firstLine": "神をほめたたえよ イスラエルの神は 民を訪れて あがなわれた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085sun.gif; ten085p.gif",
+    "originalFileSize": 31195,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （日曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085sun",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085sun-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085sun-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085sun.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085thu",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （木曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （木曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 幼子よ おまえも神の預言者と呼ばれ 主の前を歩み その道をととのえる",
+    "translations": {},
+    "firstLine": "幼子よ おまえも神の預言者と呼ばれ 主の前を歩み その道をととのえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085thu.gif; ten085p.gif",
+    "originalFileSize": 31259,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （木曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085thu",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085thu-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085thu-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085thu.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085tue",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （火曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （火曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は預言者によって語られたように 契約を心に留められる",
+    "translations": {},
+    "firstLine": "神は預言者によって語られたように 契約を心に留められる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085tue.gif; ten085p.gif",
+    "originalFileSize": 31295,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （火曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085tue",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085tue-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085tue-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085tue.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten085wed",
+    "country": "JP",
+    "language": "JP",
+    "number": "085",
+    "title": "神をほめたたえよ (3) （水曜日）",
+    "displayTitle": "085. 神をほめたたえよ (3) （水曜日）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖霊",
+    "lyrics": "【交唱】 神は先祖アブラハムに誓われたとおり わたしたちを救われた",
+    "translations": {},
+    "firstLine": "神は先祖アブラハムに誓われたとおり わたしたちを救われた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1:68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten085wed.gif; ten085p.gif",
+    "originalFileSize": 31229,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (3) （水曜日）",
+      "典礼聖歌 85",
+      "典礼聖歌 085",
+      "典礼聖歌 85番",
+      "ten085wed",
+      "ルカ1:68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten085wed-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten085wed-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten085wed.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten086",
+    "country": "JP",
+    "language": "JP",
+    "number": "086",
+    "title": "神をほめたたえよ (4)",
+    "displayTitle": "086. 神をほめたたえよ (4)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "聖霊"
+    ],
+    "category": "典礼聖歌 / 聖霊",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "楠瀬雅子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 68-79 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten086.gif",
+    "originalFileSize": 33208,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "神をほめたたえよ (4)",
+      "典礼聖歌 86",
+      "典礼聖歌 086",
+      "典礼聖歌 86番",
+      "ten086",
+      "ルカ1: 68-79 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten086-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten086.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten087",
+    "country": "JP",
+    "language": "JP",
+    "number": "087",
+    "title": "きょうこそ神が造られた日",
+    "displayTitle": "087. きょうこそ神が造られた日",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "洗礼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 洗礼",
+    "lyrics": "【答唱】 きょうこそ神が造られた日 よろこびうたえ この日をともに",
+    "translations": {},
+    "firstLine": "きょうこそ神が造られた日 よろこびうたえ この日をともに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編118: 1+2 16+17 22+23 答24",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten087.gif; ten087w.gif",
+    "originalFileSize": 18702,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "きょうこそ神が造られた日",
+      "典礼聖歌 87",
+      "典礼聖歌 087",
+      "典礼聖歌 87番",
+      "ten087",
+      "詩編118: 1+2 16+17 22+23 答24"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten087-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten087-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten087.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten088",
+    "country": "JP",
+    "language": "JP",
+    "number": "088",
+    "title": "きょう わたしたちのために",
+    "displayTitle": "088. きょう わたしたちのために",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節",
+    "lyrics": "【答唱】 きょう わたしたちの ために すくいぬしが うまれた すくいぬしが うまれた",
+    "translations": {},
+    "firstLine": "きょう わたしたちの ために すくいぬしが うまれた すくいぬしが うまれた",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編96: 1+2a 2b+3 11+12 13 主の降誕 神の栄光の賛美",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten088.gif; ten088w.gif",
+    "originalFileSize": 21368,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "きょう わたしたちのために",
+      "典礼聖歌 88",
+      "典礼聖歌 088",
+      "典礼聖歌 88番",
+      "ten088",
+      "詩編96: 1+2a 2b+3 11+12 13 主の降誕 神の栄光の賛美"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten088-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten088-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten088.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten089",
+    "country": "JP",
+    "language": "JP",
+    "number": "089",
+    "title": "心静かに わたしは いこう",
+    "displayTitle": "089. 心静かに わたしは いこう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "回心",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 回心 / 信頼",
+    "lyrics": "【答唱】 心静かに わたしは いこう 神よ あなたの 光のうちに 心静かに わたしは いこう 神よ あなたの 平和のうちに",
+    "translations": {},
+    "firstLine": "心静かに わたしは いこう 神よ あなたの 光のうちに 心静かに わたしは いこう 神よ あなたの 平和のうちに",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編4: 2 3+4 5+6 7 8+9 回心 信頼 寝る前の祈り",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten089ab.gif; ten089w.gif",
+    "originalFileSize": 37693,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心静かに わたしは いこう",
+      "典礼聖歌 89",
+      "典礼聖歌 089",
+      "典礼聖歌 89番",
+      "ten089",
+      "詩編4: 2 3+4 5+6 7 8+9 回心 信頼 寝る前の祈り"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten089-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten089-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten089.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten090",
+    "country": "JP",
+    "language": "JP",
+    "number": "090",
+    "title": "心静かに わたしは いこう",
+    "displayTitle": "090. 心静かに わたしは いこう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 信頼 / 希望",
+    "lyrics": "【答唱】 心静かに わたしは いこう 神よ あなたの 光のうちに 心静かに わたしは いこう 神よ あなたの 平和のうちに",
+    "translations": {},
+    "firstLine": "心静かに わたしは いこう 神よ あなたの 光のうちに 心静かに わたしは いこう 神よ あなたの 平和のうちに",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編27: 1 4 7+8 13+14 信頼 希望",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten089ab.gif; ten090w.gif",
+    "originalFileSize": 31497,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心静かに わたしは いこう",
+      "典礼聖歌 90",
+      "典礼聖歌 090",
+      "典礼聖歌 90番",
+      "ten090",
+      "詩編27: 1 4 7+8 13+14 信頼 希望"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten090-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten090-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten090.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten091",
+    "country": "JP",
+    "language": "JP",
+    "number": "091",
+    "title": "心静かに わたしは いこう (2)",
+    "displayTitle": "091. 心静かに わたしは いこう (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "回心",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 回心 / 信頼",
+    "lyrics": "【答唱】 心静かに わたしは いこう 神よ あなたの平和のうちに",
+    "translations": {},
+    "firstLine": "心静かに わたしは いこう 神よ あなたの平和のうちに",
+    "composer": "百本照夫",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編4: 2 3+4 5+6 7 8+9 答9 信頼 正しさ 回心 寝る前の祈り",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten091.gif; ten091w.gif",
+    "originalFileSize": 22005,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心静かに わたしは いこう (2)",
+      "典礼聖歌 91",
+      "典礼聖歌 091",
+      "典礼聖歌 91番",
+      "ten091",
+      "詩編4: 2 3+4 5+6 7 8+9 答9 信頼 正しさ 回心 寝る前の祈り"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten091-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten091-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten091.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten092",
+    "country": "JP",
+    "language": "JP",
+    "number": "092",
+    "title": "心に偽りをもたぬ人",
+    "displayTitle": "092. 心に偽りをもたぬ人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 こころに いつわりを もたぬ ひとこそ さいわい",
+    "translations": {},
+    "firstLine": "こころに いつわりを もたぬ ひとこそ さいわい",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "詩編32: 2 3 5abcd 5ef 7b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten092.gif; ten092w.gif",
+    "originalFileSize": 16847,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心に偽りをもたぬ人",
+      "典礼聖歌 92",
+      "典礼聖歌 092",
+      "典礼聖歌 92番",
+      "ten092",
+      "詩編32: 2 3 5abcd 5ef 7b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten092-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten092-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten092.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten093",
+    "country": "JP",
+    "language": "JP",
+    "number": "093",
+    "title": "心を尽くして神をたたえ",
+    "displayTitle": "093. 心を尽くして神をたたえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 感謝",
+    "lyrics": "【答唱】 心を 尽くして 神を たたえ すべての 恵みを 心に とめよう",
+    "translations": {},
+    "firstLine": "心を 尽くして 神を たたえ すべての 恵みを 心に とめよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編103: 3+4+5 6+7 8+13 11+12 15+16+14 17c+18+19 20+21 答1+2",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten093ab.gif; ten093w.gif",
+    "originalFileSize": 38197,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心を尽くして神をたたえ",
+      "典礼聖歌 93",
+      "典礼聖歌 093",
+      "典礼聖歌 93番",
+      "ten093",
+      "詩編103: 3+4+5 6+7 8+13 11+12 15+16+14 17c+18+19 20+21 答1+2"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten093-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten093-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten093.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten094",
+    "country": "JP",
+    "language": "JP",
+    "number": "094",
+    "title": "心を尽くして神をたたえ",
+    "displayTitle": "094. 心を尽くして神をたたえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 心を 尽くして 神を たたえ すべての 恵みを 心に とめよう",
+    "translations": {},
+    "firstLine": "心を 尽くして 神を たたえ すべての 恵みを 心に とめよう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編105: 1+2 3b+4+5 6+7+8a+10b 39+40 41+42 43+44",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten093ab.gif; ten094w.gif",
+    "originalFileSize": 34816,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心を尽くして神をたたえ",
+      "典礼聖歌 94",
+      "典礼聖歌 094",
+      "典礼聖歌 94番",
+      "ten094",
+      "詩編105: 1+2 3b+4+5 6+7+8a+10b 39+40 41+42 43+44"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten094-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten094-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten094.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten095",
+    "country": "JP",
+    "language": "JP",
+    "number": "095",
+    "title": "心をつくして",
+    "displayTitle": "095. 心をつくして",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間",
+    "lyrics": "【答唱】 こころを つくして かみを ほめ いのちの かぎり かみを たたえよう",
+    "translations": {},
+    "firstLine": "こころを つくして かみを ほめ いのちの かぎり かみを たたえよう",
+    "composer": "前田菊枝",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編146: 5+6ab 6c+7 8+9ab 神のいつくしみ 拝領の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten095.gif; ten095w.gif",
+    "originalFileSize": 20009,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "心をつくして",
+      "典礼聖歌 95",
+      "典礼聖歌 095",
+      "典礼聖歌 95番",
+      "ten095",
+      "詩編146: 5+6ab 6c+7 8+9ab 神のいつくしみ 拝領の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten095-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten095-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten095.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten096",
+    "country": "JP",
+    "language": "JP",
+    "number": "096",
+    "title": "この水を受けた",
+    "displayTitle": "096. この水を受けた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "洗礼",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 洗礼 / 感謝",
+    "lyrics": "【答唱】 この水を受けた すべての人は 救いの喜びに 声あげて歌う アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "この水を受けた すべての人は 救いの喜びに 声あげて歌う アレルヤ アレルヤ",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編42: 2 3a+5ad 5c+6cd 洗礼式 洗礼記念",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten096.gif; ten096w.gif",
+    "originalFileSize": 21638,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "この水を受けた",
+      "典礼聖歌 96",
+      "典礼聖歌 096",
+      "典礼聖歌 96番",
+      "ten096",
+      "詩編42: 2 3a+5ad 5c+6cd 洗礼式 洗礼記念"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten096-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten096-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten096.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten097",
+    "country": "JP",
+    "language": "JP",
+    "number": "097",
+    "title": "このパンを食べ",
+    "displayTitle": "097. このパンを食べ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 このパンを食べ この さかずきを のみ わたしは 主の死を つげしらせる",
+    "translations": {},
+    "firstLine": "このパンを食べ この さかずきを のみ わたしは 主の死を つげしらせる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編116（後半）: 12+13 15+16b 17+18",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten097.gif; ten097w.gif",
+    "originalFileSize": 19654,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "このパンを食べ",
+      "典礼聖歌 97",
+      "典礼聖歌 097",
+      "典礼聖歌 97番",
+      "ten097",
+      "詩編116（後半）: 12+13 15+16b 17+18"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten097-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten097-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten097.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten098",
+    "country": "JP",
+    "language": "JP",
+    "number": "098",
+    "title": "しあわせな人",
+    "displayTitle": "098. しあわせな人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間",
+    "lyrics": "【答唱】 しあわせな人 かみのめぐみをうけ そのよろこびに いきるひと",
+    "translations": {},
+    "firstLine": "しあわせな人 かみのめぐみをうけ そのよろこびに いきるひと",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編16: 5 8 9 10 11 信仰の恵み 神の選び 復活徹夜 復活3A 年間13C 33B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten098ab.gif; ten098w.gif",
+    "originalFileSize": 24165,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "しあわせな人",
+      "典礼聖歌 98",
+      "典礼聖歌 098",
+      "典礼聖歌 98番",
+      "ten098",
+      "詩編16: 5 8 9 10 11 信仰の恵み 神の選び 復活徹夜 復活3A 年間13C 33B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten098-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten098-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten098.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten099",
+    "country": "JP",
+    "language": "JP",
+    "number": "099",
+    "title": "しあわせな人",
+    "displayTitle": "099. しあわせな人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 しあわせな人 かみのめぐみをうけ そのよろこびに いきるひと",
+    "translations": {},
+    "firstLine": "しあわせな人 かみのめぐみをうけ そのよろこびに いきるひと",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編112: 1+2a+3b 4 6+9b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten098ab.gif; ten099w.gif",
+    "originalFileSize": 17879,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "しあわせな人",
+      "典礼聖歌 99",
+      "典礼聖歌 099",
+      "典礼聖歌 99番",
+      "ten099",
+      "詩編112: 1+2a+3b 4 6+9b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten099-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten099-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten099.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten100",
+    "country": "JP",
+    "language": "JP",
+    "number": "100",
+    "title": "しあわせな人",
+    "displayTitle": "100. しあわせな人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 しあわせな人 神をおそれ 主の道を 歩むもの",
+    "translations": {},
+    "firstLine": "しあわせな人 神をおそれ 主の道を 歩むもの",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編1: 1ac+2 3 4+5 6 二つの道 神に従う人 年間6C 入門式",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten100ab.gif; ten100w.gif",
+    "originalFileSize": 22814,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "しあわせな人",
+      "典礼聖歌 100",
+      "典礼聖歌 100番",
+      "ten100",
+      "詩編1: 1ac+2 3 4+5 6 二つの道 神に従う人 年間6C 入門式"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten100-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten100-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten100.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten101",
+    "country": "JP",
+    "language": "JP",
+    "number": "101",
+    "title": "しあわせな人",
+    "displayTitle": "101. しあわせな人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 しあわせな人 神をおそれ 主の道を 歩むもの",
+    "translations": {},
+    "firstLine": "しあわせな人 神をおそれ 主の道を 歩むもの",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編15: 1+2 3+4a+6 正しい人 誠実な対人関係 年間16C 22B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten100ab.gif; ten101w.gif",
+    "originalFileSize": 16216,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "しあわせな人",
+      "典礼聖歌 101",
+      "典礼聖歌 101番",
+      "ten101",
+      "詩編15: 1+2 3+4a+6 正しい人 誠実な対人関係 年間16C 22B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten101-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten101-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten101.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten102",
+    "country": "JP",
+    "language": "JP",
+    "number": "102",
+    "title": "しあわせな人",
+    "displayTitle": "102. しあわせな人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 しあわせな人 神をおそれ 主の道を 歩むもの",
+    "translations": {},
+    "firstLine": "しあわせな人 神をおそれ 主の道を 歩むもの",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編84: 2+3 4 6+7 8+9 10+11ab 11cd+12 巡礼 叙階式 誓願式",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten100ab.gif; ten102w.gif",
+    "originalFileSize": 32441,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "しあわせな人",
+      "典礼聖歌 102",
+      "典礼聖歌 102番",
+      "ten102",
+      "詩編84: 2+3 4 6+7 8+9 10+11ab 11cd+12 巡礼 叙階式 誓願式"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten102-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten102-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten102.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten103",
+    "country": "JP",
+    "language": "JP",
+    "number": "103",
+    "title": "しあわせな人",
+    "displayTitle": "103. しあわせな人",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 しあわせな人 神をおそれ 主の道を 歩むもの",
+    "translations": {},
+    "firstLine": "しあわせな人 神をおそれ 主の道を 歩むもの",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編128: 2 3a 3b 5+6a 答1 結婚 家庭 聖家族 年間27B 33A 結婚式",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten100ab.gif; ten103w.gif",
+    "originalFileSize": 15573,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "しあわせな人",
+      "典礼聖歌 103",
+      "典礼聖歌 103番",
+      "ten103",
+      "詩編128: 2 3a 3b 5+6a 答1 結婚 家庭 聖家族 年間27B 33A 結婚式"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten103-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten103-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten103.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten104",
+    "country": "JP",
+    "language": "JP",
+    "number": "104",
+    "title": "シオンよ 喜べ",
+    "displayTitle": "104. シオンよ 喜べ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 入祭",
+    "lyrics": "【答唱】 シオンよ よろこべ エルサレムよ うたえ 見よ わたしたちの王 主が こられる",
+    "translations": {},
+    "firstLine": "シオンよ よろこべ エルサレムよ うたえ 見よ わたしたちの王 主が こられる",
+    "composer": "佐久間彪",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten104ab.gif; ten104w.gif",
+    "originalFileSize": 18638,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "シオンよ 喜べ",
+      "典礼聖歌 104",
+      "典礼聖歌 104番",
+      "ten104"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten104-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten104-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten104.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten105",
+    "country": "JP",
+    "language": "JP",
+    "number": "105",
+    "title": "シオンよ 喜べ",
+    "displayTitle": "105. シオンよ 喜べ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 シオンよ よろこべ エルサレムよ うたえ 見よ わたしたちの王 主が こられる",
+    "translations": {},
+    "firstLine": "シオンよ よろこべ エルサレムよ うたえ 見よ わたしたちの王 主が こられる",
+    "composer": "佐久間彪",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編68: 2a+4 8+9 10+11 20+21 27+33 34b+36b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten104ab.gif; ten105w.gif",
+    "originalFileSize": 33419,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "シオンよ 喜べ",
+      "典礼聖歌 105",
+      "典礼聖歌 105番",
+      "ten105",
+      "詩編68: 2a+4 8+9 10+11 20+21 27+33 34b+36b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten105-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten105-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten105.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten106",
+    "country": "JP",
+    "language": "JP",
+    "number": "106",
+    "title": "シオンよ 喜べ",
+    "displayTitle": "106. シオンよ 喜べ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭",
+    "lyrics": "【答唱】 シオンよ よろこべ エルサレムよ うたえ 見よ わたしたちの王 主が こられる",
+    "translations": {},
+    "firstLine": "シオンよ よろこべ エルサレムよ うたえ 見よ わたしたちの王 主が こられる",
+    "composer": "佐久間彪",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編149: 1+2 3+4 5+6a+9b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten104ab.gif; ten106w.gif",
+    "originalFileSize": 20412,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "シオンよ 喜べ",
+      "典礼聖歌 106",
+      "典礼聖歌 106番",
+      "ten106",
+      "詩編149: 1+2 3+4 5+6a+9b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten106-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten106-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten106.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten107",
+    "country": "JP",
+    "language": "JP",
+    "number": "107",
+    "title": "主と ともに",
+    "displayTitle": "107. 主と ともに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "四旬節",
+      "年間",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 四旬節 / 年間 / 信頼",
+    "lyrics": "【答唱】 主と ともに はたらく われらは 主と ともに その みのりを あじわう",
+    "translations": {},
+    "firstLine": "主と ともに はたらく われらは 主と ともに その みのりを あじわう",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編126: 1+2 4+5 6+3 神の助け 信頼 喜び",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten107ab.gif; ten107w.gif",
+    "originalFileSize": 20808,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主と ともに",
+      "典礼聖歌 107",
+      "典礼聖歌 107番",
+      "ten107",
+      "詩編126: 1+2 4+5 6+3 神の助け 信頼 喜び"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten107-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten107-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten107.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten108",
+    "country": "JP",
+    "language": "JP",
+    "number": "108",
+    "title": "主と ともに",
+    "displayTitle": "108. 主と ともに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 主と ともに はたらく われらは 主と ともに その みのりを あじわう",
+    "translations": {},
+    "firstLine": "主と ともに はたらく われらは 主と ともに その みのりを あじわう",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編127: 1 2 3+4 神の助け 祝福 家族 奉納の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten107ab.gif; ten108w.gif",
+    "originalFileSize": 19569,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主と ともに",
+      "典礼聖歌 108",
+      "典礼聖歌 108番",
+      "ten108",
+      "詩編127: 1 2 3+4 神の助け 祝福 家族 奉納の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten108-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten108-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten108.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten109",
+    "country": "JP",
+    "language": "JP",
+    "number": "109",
+    "title": "主に近づいて",
+    "displayTitle": "109. 主に近づいて",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "入祭",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 入祭 / 感謝",
+    "lyrics": "【答唱】 主に ちかづいて 主を たたえ かんしゃの まつりを ささげよう",
+    "translations": {},
+    "firstLine": "主に ちかづいて 主を たたえ かんしゃの まつりを ささげよう",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編100: 1+2 3 4 5 栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten109.gif; ten109w.gif",
+    "originalFileSize": 23099,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主に近づいて",
+      "典礼聖歌 109",
+      "典礼聖歌 109番",
+      "ten109",
+      "詩編100: 1+2 3 4 5 栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten109-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten109-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten109.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten110",
+    "country": "JP",
+    "language": "JP",
+    "number": "110",
+    "title": "主の いつくしみを",
+    "displayTitle": "110. 主の いつくしみを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 主の いつくしみを とこしえに うたい 主の まことを よよに つげよう",
+    "translations": {},
+    "firstLine": "主の いつくしみを とこしえに うたい 主の まことを よよに つげよう",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編89: 3+6 9+12+13a 14+15",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten110.gif; ten110w.gif",
+    "originalFileSize": 20771,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主の いつくしみを",
+      "典礼聖歌 110",
+      "典礼聖歌 110番",
+      "ten110",
+      "詩編89: 3+6 9+12+13a 14+15"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten110-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten110-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten110.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten111",
+    "country": "JP",
+    "language": "JP",
+    "number": "111",
+    "title": "主は 来られる",
+    "displayTitle": "111. 主は 来られる",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間",
+      "入祭",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間 / 入祭 / 回心",
+    "lyrics": "【答唱】 主は こられる すぐに こられる われらを へいわに みちびくために",
+    "translations": {},
+    "firstLine": "主は こられる すぐに こられる われらを へいわに みちびくために",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編85: 2+3+4 8+9 10+11+12 13+14+8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten111.gif; ten111p.gif; ten111w.gif",
+    "originalFileSize": 49216,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は 来られる",
+      "典礼聖歌 111",
+      "典礼聖歌 111番",
+      "ten111",
+      "詩編85: 2+3+4 8+9 10+11+12 13+14+8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten111-01.webp",
+        "label": "1/3"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten111-02.webp",
+        "label": "2/3"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten111-03.webp",
+        "label": "3/3"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten111.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten112",
+    "country": "JP",
+    "language": "JP",
+    "number": "112",
+    "title": "主は のぼられた",
+    "displayTitle": "112. 主は のぼられた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 主は のぼられた よろこびの さけびのうちに",
+    "translations": {},
+    "firstLine": "主は のぼられた よろこびの さけびのうちに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編47: 2+3 6+7 8+9 答6a 宇宙の王 奉納の歌 主の昇天",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten112.gif; ten112w.gif",
+    "originalFileSize": 17973,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は のぼられた",
+      "典礼聖歌 112",
+      "典礼聖歌 112番",
+      "ten112",
+      "詩編47: 2+3 6+7 8+9 答6a 宇宙の王 奉納の歌 主の昇天"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten112-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten112-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten112.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten113",
+    "country": "JP",
+    "language": "JP",
+    "number": "113",
+    "title": "主は豊かな あがないに満ち",
+    "displayTitle": "113. 主は豊かな あがないに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 主は 豊かな あがないに 満ち いつくしみ深い",
+    "translations": {},
+    "firstLine": "主は 豊かな あがないに 満ち いつくしみ深い",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編17: 1+2 3+5 6+7 13ab+15 神のさばき 正義 年間32C",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten113ab.gif; ten113w.gif",
+    "originalFileSize": 23343,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は豊かな あがないに満ち",
+      "典礼聖歌 113",
+      "典礼聖歌 113番",
+      "ten113",
+      "詩編17: 1+2 3+5 6+7 13ab+15 神のさばき 正義 年間32C"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten113-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten113-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten113.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten114",
+    "country": "JP",
+    "language": "JP",
+    "number": "114",
+    "title": "主は豊かな あがないに満ち",
+    "displayTitle": "114. 主は豊かな あがないに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "回心",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 回心 / 信頼",
+    "lyrics": "【答唱】 主は 豊かな あがないに 満ち いつくしみ深い",
+    "translations": {},
+    "firstLine": "主は 豊かな あがないに 満ち いつくしみ深い",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編32: 5abef 8 10+11 回心 罪のゆるし 年間6B 11C",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten113ab.gif; ten114w.gif",
+    "originalFileSize": 20622,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は豊かな あがないに満ち",
+      "典礼聖歌 114",
+      "典礼聖歌 114番",
+      "ten114",
+      "詩編32: 5abef 8 10+11 回心 罪のゆるし 年間6B 11C"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten114-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten114-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten114.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten115",
+    "country": "JP",
+    "language": "JP",
+    "number": "115",
+    "title": "主は豊かな あがないに満ち",
+    "displayTitle": "115. 主は豊かな あがないに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 希望",
+    "lyrics": "【答唱】 主は 豊かな あがないに 満ち いつくしみ深い",
+    "translations": {},
+    "firstLine": "主は 豊かな あがないに 満ち いつくしみ深い",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編69: 14 17+18 19+30 31+33 34+35 36abc+37a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten113ab.gif; ten115w.gif",
+    "originalFileSize": 29842,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は豊かな あがないに満ち",
+      "典礼聖歌 115",
+      "典礼聖歌 115番",
+      "ten115",
+      "詩編69: 14 17+18 19+30 31+33 34+35 36abc+37a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten115-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten115-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten115.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten116",
+    "country": "JP",
+    "language": "JP",
+    "number": "116",
+    "title": "主は豊かな あがないに満ち",
+    "displayTitle": "116. 主は豊かな あがないに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 主は 豊かな あがないに 満ち いつくしみ深い",
+    "translations": {},
+    "firstLine": "主は 豊かな あがないに 満ち いつくしみ深い",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編123: 1+2ad 栄 信頼 希望 年間14B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten113ab.gif; ten116w.gif",
+    "originalFileSize": 12067,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は豊かな あがないに満ち",
+      "典礼聖歌 116",
+      "典礼聖歌 116番",
+      "ten116",
+      "詩編123: 1+2ad 栄 信頼 希望 年間14B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten116-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten116-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten116.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten117",
+    "country": "JP",
+    "language": "JP",
+    "number": "117",
+    "title": "主は豊かな あがないに満ち",
+    "displayTitle": "117. 主は豊かな あがないに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "回心",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 回心 / 信頼 / 希望",
+    "lyrics": "【答唱】 主は 豊かな あがないに 満ち いつくしみ深い",
+    "translations": {},
+    "firstLine": "主は 豊かな あがないに 満ち いつくしみ深い",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編130: 1+2 3+4 5+6 7a+8 回心 信頼 希望 四旬5A 年間10B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten113ab.gif; ten117w.gif",
+    "originalFileSize": 19038,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は豊かな あがないに満ち",
+      "典礼聖歌 117",
+      "典礼聖歌 117番",
+      "ten117",
+      "詩編130: 1+2 3+4 5+6 7a+8 回心 信頼 希望 四旬5A 年間10B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten117-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten117-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten117.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten118",
+    "country": "JP",
+    "language": "JP",
+    "number": "118",
+    "title": "主は ゆたかな あがないに満ち",
+    "displayTitle": "118. 主は ゆたかな あがないに満ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "入祭",
+      "回心",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 入祭 / 回心 / 信頼 / 希望",
+    "lyrics": "【答唱】 主は ゆたかな あがないに みち いつくしみ ふかい",
+    "translations": {},
+    "firstLine": "主は ゆたかな あがないに みち いつくしみ ふかい",
+    "composer": "楠瀬雅子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編130: 1+2 3+4 5+6 7+8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten118.gif; ten118w.gif",
+    "originalFileSize": 22382,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は ゆたかな あがないに満ち",
+      "典礼聖歌 118",
+      "典礼聖歌 118番",
+      "ten118",
+      "詩編130: 1+2 3+4 5+6 7+8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten118-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten118-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten118.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten119",
+    "country": "JP",
+    "language": "JP",
+    "number": "119",
+    "title": "主はわたしの光",
+    "displayTitle": "119. 主はわたしの光",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 信頼 / 希望",
+    "lyrics": "【答唱】 主は わたしの ひかり わたしの すくい わたしは だれも おそれない",
+    "translations": {},
+    "firstLine": "主は わたしの ひかり わたしの すくい わたしは だれも おそれない",
+    "composer": "R.ジャルシー",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編27: 1cd 4ab 6cd 7 9ab 13 14 答1ab",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten119.gif; ten119w.gif",
+    "originalFileSize": 26119,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主はわたしの光",
+      "典礼聖歌 119",
+      "典礼聖歌 119番",
+      "ten119",
+      "詩編27: 1cd 4ab 6cd 7 9ab 13 14 答1ab"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten119-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten119-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten119.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten120",
+    "country": "JP",
+    "language": "JP",
+    "number": "120",
+    "title": "主は われらの ささえ",
+    "displayTitle": "120. 主は われらの ささえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "洗礼",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 洗礼 / 信頼",
+    "lyrics": "【答唱】 主は われらの ささえ 主は われらの はしら",
+    "translations": {},
+    "firstLine": "主は われらの ささえ 主は われらの はしら",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編29: 1+2 3+4 10+1 栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten120ab.gif; ten120w.gif",
+    "originalFileSize": 16478,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は われらの ささえ",
+      "典礼聖歌 120",
+      "典礼聖歌 120番",
+      "ten120",
+      "詩編29: 1+2 3+4 10+1 栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten120-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten120-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten120.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten121",
+    "country": "JP",
+    "language": "JP",
+    "number": "121",
+    "title": "主は われらの ささえ",
+    "displayTitle": "121. 主は われらの ささえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 信頼",
+    "lyrics": "【答唱】 主は われらの ささえ 主は われらの はしら",
+    "translations": {},
+    "firstLine": "主は われらの ささえ 主は われらの はしら",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編62: 2+3b 7a+6b 8+9a 13",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten120ab.gif; ten121w.gif",
+    "originalFileSize": 17815,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は われらの ささえ",
+      "典礼聖歌 121",
+      "典礼聖歌 121番",
+      "ten121",
+      "詩編62: 2+3b 7a+6b 8+9a 13"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten121-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten121-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten121.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten122",
+    "country": "JP",
+    "language": "JP",
+    "number": "122",
+    "title": "主よ あなたの愛は",
+    "displayTitle": "122. 主よ あなたの愛は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝",
+    "lyrics": "【答唱】 主よ あなたの あいは えいえん",
+    "translations": {},
+    "firstLine": "主よ あなたの あいは えいえん",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編138: 1 2ab 2cd 4 5 6 7ab 8ab 8d 答8c",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten122.gif; ten122p.gif",
+    "originalFileSize": 19278,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主よ あなたの愛は",
+      "典礼聖歌 122",
+      "典礼聖歌 122番",
+      "ten122",
+      "詩編138: 1 2ab 2cd 4 5 6 7ab 8ab 8d 答8c"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten122-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten122-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten122.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten123",
+    "country": "JP",
+    "language": "JP",
+    "number": "123",
+    "title": "主は われらの牧者",
+    "displayTitle": "123. 主は われらの牧者",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 復活節 / 年間",
+    "lyrics": "【答唱】 主は われらの ぼくしゃ わたしは とぼしいことがない",
+    "translations": {},
+    "firstLine": "主は われらの ぼくしゃ わたしは とぼしいことがない",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編23: 2+3 4 5 6 よい牧者 奉納の歌 拝領の歌 食前・食後 四旬節 復活節",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten123.gif; ten123w.gif",
+    "originalFileSize": 21637,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主は われらの牧者",
+      "典礼聖歌 123",
+      "典礼聖歌 123番",
+      "ten123",
+      "詩編23: 2+3 4 5 6 よい牧者 奉納の歌 拝領の歌 食前・食後 四旬節 復活節"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten123-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten123-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten123.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten124",
+    "country": "JP",
+    "language": "JP",
+    "number": "124",
+    "title": "主よ あなたは永遠のことば",
+    "displayTitle": "124. 主よ あなたは永遠のことば",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 復活節 / 年間",
+    "lyrics": "【答唱】 主よ あなたは えいえんの いのちの ことば",
+    "translations": {},
+    "firstLine": "主よ あなたは えいえんの いのちの ことば",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編19（後半）: 8 9 10 12 神のことば 復活徹夜 四旬3B 年間3C 26B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten124ab.gif; ten124w.gif",
+    "originalFileSize": 18005,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主よ あなたは永遠のことば",
+      "典礼聖歌 124",
+      "典礼聖歌 124番",
+      "ten124",
+      "詩編19（後半）: 8 9 10 12 神のことば 復活徹夜 四旬3B 年間3C 26B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten124-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten124-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten124.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten125",
+    "country": "JP",
+    "language": "JP",
+    "number": "125",
+    "title": "主よ あなたは永遠のことば",
+    "displayTitle": "125. 主よ あなたは永遠のことば",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間",
+    "lyrics": "【答唱】 主よ あなたは えいえんの いのちの ことば",
+    "translations": {},
+    "firstLine": "主よ あなたは えいえんの いのちの ことば",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編119: 57+72 111+124 127+129 160+162",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten124ab.gif; ten125w.gif",
+    "originalFileSize": 21232,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主よ あなたは永遠のことば",
+      "典礼聖歌 125",
+      "典礼聖歌 125番",
+      "ten125",
+      "詩編119: 57+72 111+124 127+129 160+162"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten125-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten125-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten125.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten126",
+    "country": "JP",
+    "language": "JP",
+    "number": "126",
+    "title": "主よ 来たりたまえ",
+    "displayTitle": "126. 主よ 来たりたまえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "入祭",
+      "晩の祈り",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 入祭 / 晩の祈り / 信頼",
+    "lyrics": "【答唱】 主よ きたりたまえ 主よ きたりたまえ あなたの たみの すくいに",
+    "translations": {},
+    "firstLine": "主よ きたりたまえ 主よ きたりたまえ あなたの たみの すくいに",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編141: 1 2 8 9 信頼 晩の祈り 待降節 入祭の歌 奉納の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten126.gif; ten126w.gif",
+    "originalFileSize": 22159,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主よ 来たりたまえ",
+      "典礼聖歌 126",
+      "典礼聖歌 126番",
+      "ten126",
+      "詩編141: 1 2 8 9 信頼 晩の祈り 待降節 入祭の歌 奉納の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten126-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten126-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten126.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten127",
+    "country": "JP",
+    "language": "JP",
+    "number": "127",
+    "title": "主を おそれる者に",
+    "displayTitle": "127. 主を おそれる者に",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節",
+    "lyrics": "【答唱】 主を おそれる ものに すくいは ちかい",
+    "translations": {},
+    "firstLine": "主を おそれる ものに すくいは ちかい",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編85: 2+3 7+8 9 10 11 12+13a+14b 答10a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten127.gif; ten127w.gif",
+    "originalFileSize": 25447,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を おそれる者に",
+      "典礼聖歌 127",
+      "典礼聖歌 127番",
+      "ten127",
+      "詩編85: 2+3 7+8 9 10 11 12+13a+14b 答10a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten127-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten127-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten127.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten128",
+    "country": "JP",
+    "language": "JP",
+    "number": "128",
+    "title": "主を仰ぎ見て",
+    "displayTitle": "128. 主を仰ぎ見て",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 感謝",
+    "lyrics": "【答唱】 主を あおぎみて ひかりを うけよう 主が おとずれる ひとの かおは かがやく",
+    "translations": {},
+    "firstLine": "主を あおぎみて ひかりを うけよう 主が おとずれる ひとの かおは かがやく",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編34: 2+3 4+5 7+8 9+10 16+18 19+23 賛美と感謝 敬神 拝領の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten128ab.gif; ten128w.gif",
+    "originalFileSize": 37811,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を仰ぎ見て",
+      "典礼聖歌 128",
+      "典礼聖歌 128番",
+      "ten128",
+      "詩編34: 2+3 4+5 7+8 9+10 16+18 19+23 賛美と感謝 敬神 拝領の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten128-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten128-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten128.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten129",
+    "country": "JP",
+    "language": "JP",
+    "number": "129",
+    "title": "主を仰ぎ見て",
+    "displayTitle": "129. 主を仰ぎ見て",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "洗礼",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 洗礼 / 信頼",
+    "lyrics": "【答唱】 主を あおぎみて ひかりを うけよう 主が おとずれる ひとの かおは かがやく",
+    "translations": {},
+    "firstLine": "主を あおぎみて ひかりを うけよう 主が おとずれる ひとの かおは かがやく",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編91: 2+4ab 11+12b+10 14+15 信頼 神の導き 保護",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten128ab.gif; ten129w.gif",
+    "originalFileSize": 24710,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を仰ぎ見て",
+      "典礼聖歌 129",
+      "典礼聖歌 129番",
+      "ten129",
+      "詩編91: 2+4ab 11+12b+10 14+15 信頼 神の導き 保護"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten129-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten129-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten129.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten130",
+    "country": "JP",
+    "language": "JP",
+    "number": "130",
+    "title": "主を たたえよう",
+    "displayTitle": "130. 主を たたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間",
+    "lyrics": "【答唱】 主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "translations": {},
+    "firstLine": "主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編66: 1+2+4 5+9 7+8 16+17 19+50 賛美の歌 復活6A 年間14C",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten130ab.gif; ten130w.gif",
+    "originalFileSize": 32156,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を たたえよう",
+      "典礼聖歌 130",
+      "典礼聖歌 130番",
+      "ten130",
+      "詩編66: 1+2+4 5+9 7+8 16+17 19+50 賛美の歌 復活6A 年間14C"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten130-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten130-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten130.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten131",
+    "country": "JP",
+    "language": "JP",
+    "number": "131",
+    "title": "主を たたえよう",
+    "displayTitle": "131. 主を たたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間",
+    "lyrics": "【答唱】 主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "translations": {},
+    "firstLine": "主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編67: 2+3 4+5 6+8a+7 祝福の歌 年始祝詞 神の母 復活6C 年間20A",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten130ab.gif; ten131w.gif",
+    "originalFileSize": 18735,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を たたえよう",
+      "典礼聖歌 131",
+      "典礼聖歌 131番",
+      "ten131",
+      "詩編67: 2+3 4+5 6+8a+7 祝福の歌 年始祝詞 神の母 復活6C 年間20A"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten131-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten131-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten131.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten132",
+    "country": "JP",
+    "language": "JP",
+    "number": "132",
+    "title": "主を たたえよう",
+    "displayTitle": "132. 主を たたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "回心"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 回心",
+    "lyrics": "【答唱】 主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "translations": {},
+    "firstLine": "主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編117: 1+2 栄 賛美への招き 宣教 年間9C 21C パウロ回心 トマ",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten130ab.gif; ten132w.gif",
+    "originalFileSize": 13397,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を たたえよう",
+      "典礼聖歌 132",
+      "典礼聖歌 132番",
+      "ten132",
+      "詩編117: 1+2 栄 賛美への招き 宣教 年間9C 21C パウロ回心 トマ"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten132-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten132-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten132.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten133",
+    "country": "JP",
+    "language": "JP",
+    "number": "133",
+    "title": "主を たたえよう",
+    "displayTitle": "133. 主を たたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "translations": {},
+    "firstLine": "主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編136: 3+4+5+6 16+23+25+26 答1 感謝 賛美 奉納の歌 拝領の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten130ab.gif; ten133w.gif",
+    "originalFileSize": 15185,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を たたえよう",
+      "典礼聖歌 133",
+      "典礼聖歌 133番",
+      "ten133",
+      "詩編136: 3+4+5+6 16+23+25+26 答1 感謝 賛美 奉納の歌 拝領の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten133-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten133-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten133.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten134",
+    "country": "JP",
+    "language": "JP",
+    "number": "134",
+    "title": "主を たたえよう",
+    "displayTitle": "134. 主を たたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝",
+    "lyrics": "【答唱】 主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "translations": {},
+    "firstLine": "主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編138: 1+2ab 4+5+7d 8 感謝の歌 年間5C 17C 21A 三大天使",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten130ab.gif; ten134w.gif",
+    "originalFileSize": 18668,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を たたえよう",
+      "典礼聖歌 134",
+      "典礼聖歌 134番",
+      "ten134",
+      "詩編138: 1+2ab 4+5+7d 8 感謝の歌 年間5C 17C 21A 三大天使"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten134-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten134-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten134.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten135",
+    "country": "JP",
+    "language": "JP",
+    "number": "135",
+    "title": "主を たたえよう",
+    "displayTitle": "135. 主を たたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "translations": {},
+    "firstLine": "主を たたえよう 主は いつくしみふかく そのあわれみは えいえん",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編147（後半）: 12+13 14+15 16+17 18+19 20+12 神のわざの賛美 聖体A",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten130ab.gif; ten135w.gif",
+    "originalFileSize": 23277,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "主を たたえよう",
+      "典礼聖歌 135",
+      "典礼聖歌 135番",
+      "ten135",
+      "詩編147（後半）: 12+13 14+15 16+17 18+19 20+12 神のわざの賛美 聖体A"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten135-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten135-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten135.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten136",
+    "country": "JP",
+    "language": "JP",
+    "number": "136",
+    "title": "すべての王は",
+    "displayTitle": "136. すべての王は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節",
+    "lyrics": "【答唱】 すべての おうは あなたのまえに ひざをかがめ すべての くには あなたに つかえる",
+    "translations": {},
+    "firstLine": "すべての おうは あなたのまえに ひざをかがめ すべての くには あなたに つかえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編72: 2+4 7+8 10+11 12+13 答11 神の顕現 待降2A 主の公現",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten136.gif; ten136w.gif",
+    "originalFileSize": 28165,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "すべての王は",
+      "典礼聖歌 136",
+      "典礼聖歌 136番",
+      "ten136",
+      "詩編72: 2+4 7+8 10+11 12+13 答11 神の顕現 待降2A 主の公現"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten136-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten136-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten136.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten137",
+    "country": "JP",
+    "language": "JP",
+    "number": "137",
+    "title": "すべての人の救いを",
+    "displayTitle": "137. すべての人の救いを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "四旬節",
+      "年間",
+      "洗礼",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 四旬節 / 年間 / 洗礼 / 信頼 / 希望",
+    "lyrics": "【答唱】 すべての ひとの すくいを ねがい わたしは あなたを まちのぞむ",
+    "translations": {},
+    "firstLine": "すべての ひとの すくいを ねがい わたしは あなたを まちのぞむ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編25: 4+5 8+9 10+14 信頼 希望 待降節 四旬節",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten137ab.gif; ten137w.gif",
+    "originalFileSize": 14646,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "すべての人の救いを",
+      "典礼聖歌 137",
+      "典礼聖歌 137番",
+      "ten137",
+      "詩編25: 4+5 8+9 10+14 信頼 希望 待降節 四旬節"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten137-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten137-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten137.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten138",
+    "country": "JP",
+    "language": "JP",
+    "number": "138",
+    "title": "すべての人の救いを",
+    "displayTitle": "138. すべての人の救いを",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間",
+    "lyrics": "【答唱】 すべての ひとの すくいを ねがい わたしは あなたを まちのぞむ",
+    "translations": {},
+    "firstLine": "すべての ひとの すくいを ねがい わたしは あなたを まちのぞむ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編86: 5+6 9+10 15+16 神の恵み いつくしみ",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten137ab.gif; ten138w.gif",
+    "originalFileSize": 16194,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "すべての人の救いを",
+      "典礼聖歌 138",
+      "典礼聖歌 138番",
+      "ten138",
+      "詩編86: 5+6 9+10 15+16 神の恵み いつくしみ"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten138-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten138-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten138.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten139",
+    "country": "JP",
+    "language": "JP",
+    "number": "139",
+    "title": "すべての人の救いを (2)",
+    "displayTitle": "139. すべての人の救いを (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "四旬節",
+      "年間",
+      "入祭",
+      "回心",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 四旬節 / 年間 / 入祭 / 回心 / 信頼 / 希望",
+    "lyrics": "【答唱】 すべての ひとの すくいを ねがい わたしは あなたを まちのぞむ",
+    "translations": {},
+    "firstLine": "すべての ひとの すくいを ねがい わたしは あなたを まちのぞむ",
+    "composer": "R.ジャルシー",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編25: 4 5a 8 9 10 14 信頼 希望 回心 待降節 四旬節 入祭の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten139.gif; ten139w.gif",
+    "originalFileSize": 17462,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "すべての人の救いを (2)",
+      "典礼聖歌 139",
+      "典礼聖歌 139番",
+      "ten139",
+      "詩編25: 4 5a 8 9 10 14 信頼 希望 回心 待降節 四旬節 入祭の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten139-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten139-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten139.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten140",
+    "country": "JP",
+    "language": "JP",
+    "number": "140",
+    "title": "全世界に行って",
+    "displayTitle": "140. 全世界に行って",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 閉祭",
+    "lyrics": "【答唱】 ぜんせかいに 行って ふくいんを のべつたえよ",
+    "translations": {},
+    "firstLine": "ぜんせかいに 行って ふくいんを のべつたえよ",
+    "composer": "前田菊枝",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "マルコ16:15 / 詩編117:1 2 福音宣教 閉祭 派遣",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten140.gif; ten140w.gif",
+    "originalFileSize": 9965,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "全世界に行って",
+      "典礼聖歌 140",
+      "典礼聖歌 140番",
+      "ten140",
+      "マルコ16:15 / 詩編117:1 2 福音宣教 閉祭 派遣"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten140-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten140-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten140.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten141",
+    "country": "JP",
+    "language": "JP",
+    "number": "141",
+    "title": "たてエルサレム",
+    "displayTitle": "141. たてエルサレム",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "聖母",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 聖母 / 感謝",
+    "lyrics": "【答唱】 たて エルサレム 見よ よろこびを かみから くだる よろこびを 見よ",
+    "translations": {},
+    "firstLine": "たて エルサレム 見よ よろこびを かみから くだる よろこびを 見よ",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編67: 2+3 4+5 7+8",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten141ab.gif; ten141w.gif",
+    "originalFileSize": 15420,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "たてエルサレム",
+      "典礼聖歌 141",
+      "典礼聖歌 141番",
+      "ten141",
+      "詩編67: 2+3 4+5 7+8"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten141-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten141-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten141.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten142",
+    "country": "JP",
+    "language": "JP",
+    "number": "142",
+    "title": "たてエルサレム",
+    "displayTitle": "142. たてエルサレム",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 入祭",
+    "lyrics": "【答唱】 たて エルサレム 見よ よろこびを かみから くだる よろこびを 見よ",
+    "translations": {},
+    "firstLine": "たて エルサレム 見よ よろこびを かみから くだる よろこびを 見よ",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編147: 12+13 14+15 16+17 18+19",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten141ab.gif; ten142w.gif",
+    "originalFileSize": 27954,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "たてエルサレム",
+      "典礼聖歌 142",
+      "典礼聖歌 142番",
+      "ten142",
+      "詩編147: 12+13 14+15 16+17 18+19"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten142-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten142-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten142.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten143",
+    "country": "JP",
+    "language": "JP",
+    "number": "143",
+    "title": "たて琴を かなで",
+    "displayTitle": "143. たて琴を かなで",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間 / 感謝",
+    "lyrics": "【答唱】 たてごとを かなで がくの ねに あわせて わたしは かみを ほめうたう",
+    "translations": {},
+    "firstLine": "たてごとを かなで がくの ねに あわせて わたしは かみを ほめうたう",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編92: 2+3+4 5+6+7 13+14+15 賛美 感謝 創造 神に従う人",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten143.gif; ten143w.gif",
+    "originalFileSize": 19980,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "たて琴を かなで",
+      "典礼聖歌 143",
+      "典礼聖歌 143番",
+      "ten143",
+      "詩編92: 2+3+4 5+6+7 13+14+15 賛美 感謝 創造 神に従う人"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten143-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten143-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten143.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten144",
+    "country": "JP",
+    "language": "JP",
+    "number": "144",
+    "title": "谷川の水を求めて",
+    "displayTitle": "144. 谷川の水を求めて",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "入祭",
+      "洗礼",
+      "回心",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 入祭 / 洗礼 / 回心 / 感謝",
+    "lyrics": "【答唱】 谷川の 水を 求めて あえぎさまよう 鹿のように 神よ わたしは あなたを 慕う",
+    "translations": {},
+    "firstLine": "谷川の 水を 求めて あえぎさまよう 鹿のように 神よ わたしは あなたを 慕う",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編42: 3+4 5 6 答2 回心 洗礼 復活徹夜 入祭の歌 奉納の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten144.gif; ten144p.gif",
+    "originalFileSize": 24111,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "谷川の水を求めて",
+      "典礼聖歌 144",
+      "典礼聖歌 144番",
+      "ten144",
+      "詩編42: 3+4 5 6 答2 回心 洗礼 復活徹夜 入祭の歌 奉納の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten144-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten144-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten144.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten145",
+    "country": "JP",
+    "language": "JP",
+    "number": "145",
+    "title": "父よ あなたこそ わたしの神",
+    "displayTitle": "145. 父よ あなたこそ わたしの神",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 信頼",
+    "lyrics": "【答唱】 父よ あなたこそ わたしの かみ わたしの すべてを あなたに",
+    "translations": {},
+    "firstLine": "父よ あなたこそ わたしの かみ わたしの すべてを あなたに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編31: 2+6 12+13 15+16 24+25 嘆願 信頼 主の受難 聖金曜日 ステファノ",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten145ab.gif; ten145w.gif",
+    "originalFileSize": 18730,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "父よ あなたこそ わたしの神",
+      "典礼聖歌 145",
+      "典礼聖歌 145番",
+      "ten145",
+      "詩編31: 2+6 12+13 15+16 24+25 嘆願 信頼 主の受難 聖金曜日 ステファノ"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten145-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten145-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten145.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten146",
+    "country": "JP",
+    "language": "JP",
+    "number": "146",
+    "title": "父よ あなたこそ わたしの神",
+    "displayTitle": "146. 父よ あなたこそ わたしの神",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 希望",
+    "lyrics": "【答唱】 父よ あなたこそ わたしの かみ わたしの すべてを あなたに",
+    "translations": {},
+    "firstLine": "父よ あなたこそ わたしの かみ わたしの すべてを あなたに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編71: 1a+2+3a 3b+4a+5a+6b 15+16 嘆願 救い 希望年間4C",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten145ab.gif; ten146w.gif",
+    "originalFileSize": 14688,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "父よ あなたこそ わたしの神",
+      "典礼聖歌 146",
+      "典礼聖歌 146番",
+      "ten146",
+      "詩編71: 1a+2+3a 3b+4a+5a+6b 15+16 嘆願 救い 希望年間4C"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten146-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten146-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten146.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten147",
+    "country": "JP",
+    "language": "JP",
+    "number": "147",
+    "title": "天は神の栄光を語り",
+    "displayTitle": "147. 天は神の栄光を語り",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 入祭",
+    "lyrics": "【答唱】 てんは かみの えいこうを かたり おおぞらは みての わざを つげる",
+    "translations": {},
+    "firstLine": "てんは かみの えいこうを かたり おおぞらは みての わざを つげる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編19（前半）: 2+3 4+5 6+7 答2 神のことば 栄光 賛美 啓示 顕現",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten147.gif; ten147w.gif",
+    "originalFileSize": 15489,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "天は神の栄光を語り",
+      "典礼聖歌 147",
+      "典礼聖歌 147番",
+      "ten147",
+      "詩編19（前半）: 2+3 4+5 6+7 答2 神のことば 栄光 賛美 啓示 顕現"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten147-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten147-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten147.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten148",
+    "country": "JP",
+    "language": "JP",
+    "number": "148",
+    "title": "遠く地の果てまで",
+    "displayTitle": "148. 遠く地の果てまで",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 年間",
+    "lyrics": "【答唱】 とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "translations": {},
+    "firstLine": "とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編96: 1+2 3+4 7+8 11+12 9+13 宇宙の創造主 降誕節 降誕徹夜",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten148ab.gif; ten148w.gif",
+    "originalFileSize": 21864,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "遠く地の果てまで",
+      "典礼聖歌 148",
+      "典礼聖歌 148番",
+      "ten148",
+      "詩編96: 1+2 3+4 7+8 11+12 9+13 宇宙の創造主 降誕節 降誕徹夜"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten148-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten148-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten148.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten149",
+    "country": "JP",
+    "language": "JP",
+    "number": "149",
+    "title": "遠く地の果てまで",
+    "displayTitle": "149. 遠く地の果てまで",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 復活節 / 年間",
+    "lyrics": "【答唱】 とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "translations": {},
+    "firstLine": "とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編98: 1 2+3a 4+5 6+7b+8b 答3b 救い主への賛美 降誕節",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten148ab.gif; ten149w.gif",
+    "originalFileSize": 17774,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "遠く地の果てまで",
+      "典礼聖歌 149",
+      "典礼聖歌 149番",
+      "ten149",
+      "詩編98: 1 2+3a 4+5 6+7b+8b 答3b 救い主への賛美 降誕節"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten149-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten149-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten149.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten150",
+    "country": "JP",
+    "language": "JP",
+    "number": "150",
+    "title": "遠く地の果てまで (2)",
+    "displayTitle": "150. 遠く地の果てまで (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 年間",
+    "lyrics": "【答唱】 とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "translations": {},
+    "firstLine": "とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "composer": "前田菊枝",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編96: 1+2 3+4 7+8 11+12 9+13 宇宙の創造主",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten150ab.gif; ten150w.gif",
+    "originalFileSize": 20843,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "遠く地の果てまで (2)",
+      "典礼聖歌 150",
+      "典礼聖歌 150番",
+      "ten150",
+      "詩編96: 1+2 3+4 7+8 11+12 9+13 宇宙の創造主"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten150-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten150-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten150.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten151",
+    "country": "JP",
+    "language": "JP",
+    "number": "151",
+    "title": "遠く地の果てまで (2)",
+    "displayTitle": "151. 遠く地の果てまで (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節",
+      "復活節",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節 / 復活節 / 年間",
+    "lyrics": "【答唱】 とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "translations": {},
+    "firstLine": "とおく 地の はてまで すべての ものが かみの すくいを みた",
+    "composer": "前田菊枝",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編98: 1 2+3a 4+5 6+7b+8b 答3b 救い主への賛美",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten150ab.gif; ten151w.gif",
+    "originalFileSize": 16862,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "遠く地の果てまで (2)",
+      "典礼聖歌 151",
+      "典礼聖歌 151番",
+      "ten151",
+      "詩編98: 1 2+3a 4+5 6+7b+8b 答3b 救い主への賛美"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten151-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten151-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten151.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten152",
+    "country": "JP",
+    "language": "JP",
+    "number": "152",
+    "title": "とこしえに",
+    "displayTitle": "152. とこしえに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 聖母",
+    "lyrics": "【答唱】 とこしえに かみと ともに さかえあれ はは マリア アレルヤ",
+    "translations": {},
+    "firstLine": "とこしえに かみと ともに さかえあれ はは マリア アレルヤ",
+    "composer": "国本静三",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編148: 1b+2a+3+5b+6 7+8a+9a+10a+6 11+12+13 聖母の祝日",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten152.gif; ten152w.gif",
+    "originalFileSize": 17411,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "とこしえに",
+      "典礼聖歌 152",
+      "典礼聖歌 152番",
+      "ten152",
+      "詩編148: 1b+2a+3+5b+6 7+8a+9a+10a+6 11+12+13 聖母の祝日"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten152-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten152-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten152.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten153",
+    "country": "JP",
+    "language": "JP",
+    "number": "153",
+    "title": "流れのほとりの木のように",
+    "displayTitle": "153. 流れのほとりの木のように",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "入祭",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 入祭 / 信頼",
+    "lyrics": "【答唱】 ながれの ほとりの 木のように かみに したがう ひとは 実を むすぶ",
+    "translations": {},
+    "firstLine": "ながれの ほとりの 木のように かみに したがう ひとは 実を むすぶ",
+    "composer": "高畠芳子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編1: 1ac+2 3 4+5 答3ab",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten153.gif; ten153w.gif",
+    "originalFileSize": 15929,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "流れのほとりの木のように",
+      "典礼聖歌 153",
+      "典礼聖歌 153番",
+      "ten153",
+      "詩編1: 1ac+2 3 4+5 答3ab"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten153-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten153-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten153.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten154",
+    "country": "JP",
+    "language": "JP",
+    "number": "154",
+    "title": "涙のうちに種まく人は",
+    "displayTitle": "154. 涙のうちに種まく人は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "四旬節",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 四旬節 / 年間 / 感謝",
+    "lyrics": "【答唱１】 なみだの うちに たねまく ひとは よろこびの うちに かりとる",
+    "translations": {},
+    "firstLine": "なみだの うちに たねまく ひとは よろこびの うちに かりとる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編126: 1+2ab 2cd+3 4+6 答5 帰還 収穫 労苦の実り",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten154.gif; ten154w.gif",
+    "originalFileSize": 16334,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "涙のうちに種まく人は",
+      "典礼聖歌 154",
+      "典礼聖歌 154番",
+      "ten154",
+      "詩編126: 1+2ab 2cd+3 4+6 答5 帰還 収穫 労苦の実り"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten154-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten154-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten154.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten155",
+    "country": "JP",
+    "language": "JP",
+    "number": "155",
+    "title": "めざめよエルサレム",
+    "displayTitle": "155. めざめよエルサレム",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 めざめよ エルサレム かがやきを はなて あなたの ひかり 主の さかえが のぼる",
+    "translations": {},
+    "firstLine": "めざめよ エルサレム かがやきを はなて あなたの ひかり 主の さかえが のぼる",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "イザヤ書60: 2+3 4+5ab 5cd+6 答1",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten155.gif; ten155w.gif",
+    "originalFileSize": 21864,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "めざめよエルサレム",
+      "典礼聖歌 155",
+      "典礼聖歌 155番",
+      "ten155",
+      "イザヤ書60: 2+3 4+5ab 5cd+6 答1"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten155-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten155-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten155.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten156",
+    "country": "JP",
+    "language": "JP",
+    "number": "156",
+    "title": "めぐみのパン",
+    "displayTitle": "156. めぐみのパン",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 めぐみの パンは われらを みたし われらは ひとつに むすばれる",
+    "translations": {},
+    "firstLine": "めぐみの パンは われらを みたし われらは ひとつに むすばれる",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編103: 1+2 3+4 6+7 8+13 15+16+14 17c+18+19 20+21 答1+2",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten156ab.gif; ten156w.gif",
+    "originalFileSize": 24883,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "めぐみのパン",
+      "典礼聖歌 156",
+      "典礼聖歌 156番",
+      "ten156",
+      "詩編103: 1+2 3+4 6+7 8+13 15+16+14 17c+18+19 20+21 答1+2"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten156-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten156-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten156.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten157",
+    "country": "JP",
+    "language": "JP",
+    "number": "157",
+    "title": "めぐみのパン",
+    "displayTitle": "157. めぐみのパン",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 めぐみの パンは われらを みたし われらは ひとつに むすばれる",
+    "translations": {},
+    "firstLine": "めぐみの パンは われらを みたし われらは ひとつに むすばれる",
+    "composer": "松本三朗",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編145: 15+16 17+18 19+20a+21b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten156ab.gif; ten157w.gif",
+    "originalFileSize": 16493,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "めぐみのパン",
+      "典礼聖歌 157",
+      "典礼聖歌 157番",
+      "ten157",
+      "詩編145: 15+16 17+18 19+20a+21b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten157-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten157-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten157.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten158",
+    "country": "JP",
+    "language": "JP",
+    "number": "158",
+    "title": "門よ とびらを開け",
+    "displayTitle": "158. 門よ とびらを開け",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 入祭",
+    "lyrics": "【答唱】 もんよ とびらを ひらけ えいえんの とよ あがれ えいこうの おうが はいる",
+    "translations": {},
+    "firstLine": "もんよ とびらを ひらけ えいえんの とよ あがれ えいこうの おうが はいる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編24: 1+2 3+4 5+6 8+10 神の栄光 神の支配",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten158ab.gif; ten158w.gif",
+    "originalFileSize": 22500,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "門よ とびらを開け",
+      "典礼聖歌 158",
+      "典礼聖歌 158番",
+      "ten158",
+      "詩編24: 1+2 3+4 5+6 8+10 神の栄光 神の支配"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten158-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten158-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten158.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten159",
+    "country": "JP",
+    "language": "JP",
+    "number": "159",
+    "title": "門よ とびらを開け",
+    "displayTitle": "159. 門よ とびらを開け",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 もんよ とびらを ひらけ えいえんの とよ あがれ えいこうの おうが はいる",
+    "translations": {},
+    "firstLine": "もんよ とびらを ひらけ えいえんの とよ あがれ えいこうの おうが はいる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編110: 1+2 3+4 5+6 7+栄 王であるキリスト",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten158ab.gif; ten159w.gif",
+    "originalFileSize": 24586,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "門よ とびらを開け",
+      "典礼聖歌 159",
+      "典礼聖歌 159番",
+      "ten159",
+      "詩編110: 1+2 3+4 5+6 7+栄 王であるキリスト"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten159-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten159-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten159.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten160",
+    "country": "JP",
+    "language": "JP",
+    "number": "160",
+    "title": "門よ かまちを上げよ",
+    "displayTitle": "160. 門よ かまちを上げよ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節",
+    "lyrics": "【答唱】 門よ かまちを あげよ えいえんの 戸よ あがれ えいこうの おうが はいる",
+    "translations": {},
+    "firstLine": "門よ かまちを あげよ えいえんの 戸よ あがれ えいこうの おうが はいる",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "詩編24: 1+2 3+4 5 6 8+10 答7 栄光の王 勝利の王",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten160.gif; ten160p.gif",
+    "originalFileSize": 22376,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "門よ かまちを上げよ",
+      "典礼聖歌 160",
+      "典礼聖歌 160番",
+      "ten160",
+      "詩編24: 1+2 3+4 5 6 8+10 答7 栄光の王 勝利の王"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten160-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten160-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten160.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten161",
+    "country": "JP",
+    "language": "JP",
+    "number": "161",
+    "title": "喜びの聖なる油",
+    "displayTitle": "161. 喜びの聖なる油",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 よろこびの せいなる あぶら かみは あなたに そそがれる",
+    "translations": {},
+    "firstLine": "よろこびの せいなる あぶら かみは あなたに そそがれる",
+    "composer": "富山正路",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編45: 2+3 4+5 8+10b 16+17+18",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten161.gif; ten161w.gif",
+    "originalFileSize": 22826,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "喜びの聖なる油",
+      "典礼聖歌 161",
+      "典礼聖歌 161番",
+      "ten161",
+      "詩編45: 2+3 4+5 8+10b 16+17+18"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten161-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten161-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten161.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten162",
+    "country": "JP",
+    "language": "JP",
+    "number": "162",
+    "title": "喜び歌え 神に叫びをあげよ",
+    "displayTitle": "162. 喜び歌え 神に叫びをあげよ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節",
+    "lyrics": "【答唱１】 よろこびうたえ かみに さけびを あげよ\n\n【答唱２】 わたしが うけた かみの ことば",
+    "translations": {},
+    "firstLine": "よろこびうたえ かみに さけびを あげよ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編81: 3+4 5+6 7+8ab 9+10 12+13 14+17",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten162a.gif; ten162b.gif; ten162w.gif",
+    "originalFileSize": 25875,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "喜び歌え 神に叫びをあげよ",
+      "典礼聖歌 162",
+      "典礼聖歌 162番",
+      "ten162",
+      "詩編81: 3+4 5+6 7+8ab 9+10 12+13 14+17"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten162-01.webp",
+        "label": "1/3"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten162-02.webp",
+        "label": "2/3"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten162-03.webp",
+        "label": "3/3"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten162.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten163",
+    "country": "JP",
+    "language": "JP",
+    "number": "163",
+    "title": "よろこびに",
+    "displayTitle": "163. よろこびに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 入祭",
+    "lyrics": "【答唱】 よろこびに こころを はずませ かみの 家に ゆこう",
+    "translations": {},
+    "firstLine": "よろこびに こころを はずませ かみの 家に ゆこう",
+    "composer": "楠瀬雅子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編122: 1+2 3+4ab 4cd+5 6+7 8+9",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten163.gif; ten163w.gif",
+    "originalFileSize": 19859,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "よろこびに",
+      "典礼聖歌 163",
+      "典礼聖歌 163番",
+      "ten163",
+      "詩編122: 1+2 3+4ab 4cd+5 6+7 8+9"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten163-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten163-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten163.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten164",
+    "country": "JP",
+    "language": "JP",
+    "number": "164",
+    "title": "喜びに心をはずませ（救いの）",
+    "displayTitle": "164. 喜びに心をはずませ（救いの）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "復活節",
+      "聖母",
+      "感謝",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 復活節 / 聖母 / 感謝 / 信頼",
+    "lyrics": "【答唱】 よろこびに こころを はずませ すくいの いずみから みずを くむ",
+    "translations": {},
+    "firstLine": "よろこびに こころを はずませ すくいの いずみから みずを くむ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "イザヤ12: 2 4 5 6 答3 救い 喜び 復活節 奉納の歌 拝領の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten164ab.gif; ten164w.gif",
+    "originalFileSize": 16265,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "喜びに心をはずませ（救いの）",
+      "典礼聖歌 164",
+      "典礼聖歌 164番",
+      "ten164",
+      "イザヤ12: 2 4 5 6 答3 救い 喜び 復活節 奉納の歌 拝領の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten164-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten164-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten164.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten165",
+    "country": "JP",
+    "language": "JP",
+    "number": "165",
+    "title": "喜びに心をはずませ（救いの）",
+    "displayTitle": "165. 喜びに心をはずませ（救いの）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節",
+    "lyrics": "【答唱】 よろこびに こころを はずませ すくいの いずみから みずを くむ",
+    "translations": {},
+    "firstLine": "よろこびに こころを はずませ すくいの いずみから みずを くむ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "イザヤ35: 1a+2a 2d 4ab 5+6ab 6cd+7ab 10cd",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten164ab.gif; ten165w.gif",
+    "originalFileSize": 21816,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "喜びに心をはずませ（救いの）",
+      "典礼聖歌 165",
+      "典礼聖歌 165番",
+      "ten165",
+      "イザヤ35: 1a+2a 2d 4ab 5+6ab 6cd+7ab 10cd"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten165-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten165-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten165.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten166",
+    "country": "JP",
+    "language": "JP",
+    "number": "166",
+    "title": "喜びに心をはずませ（救いの）",
+    "displayTitle": "166. 喜びに心をはずませ（救いの）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 信頼",
+    "lyrics": "【答唱】 よろこびに こころを はずませ すくいの いずみから みずを くむ",
+    "translations": {},
+    "firstLine": "よろこびに こころを はずませ すくいの いずみから みずを くむ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編37: 3 4 5a+6b 7a+9b 17b+18b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten164ab.gif; ten166w.gif",
+    "originalFileSize": 17195,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "喜びに心をはずませ（救いの）",
+      "典礼聖歌 166",
+      "典礼聖歌 166番",
+      "ten166",
+      "詩編37: 3 4 5a+6b 7a+9b 17b+18b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten166-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten166-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten166.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten167",
+    "country": "JP",
+    "language": "JP",
+    "number": "167",
+    "title": "わがこころ 喜びに",
+    "displayTitle": "167. わがこころ 喜びに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "感謝",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 感謝 / 信頼 / 希望",
+    "lyrics": "【答唱】 わが こころ よろこびに みちあふれ 主を まちのぞむ",
+    "translations": {},
+    "firstLine": "わが こころ よろこびに みちあふれ 主を まちのぞむ",
+    "composer": "高畠芳子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編63: 2 3+4 5+6 7+8 9+12a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten167.gif; ten167w.gif",
+    "originalFileSize": 20477,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わがこころ 喜びに",
+      "典礼聖歌 167",
+      "典礼聖歌 167番",
+      "ten167",
+      "詩編63: 2 3+4 5+6 7+8 9+12a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten167-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten167-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten167.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten168",
+    "country": "JP",
+    "language": "JP",
+    "number": "168",
+    "title": "わが子よ",
+    "displayTitle": "168. わが子よ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 降誕節",
+    "lyrics": "【答唱】 わが子よ きょう あなたを うむ",
+    "translations": {},
+    "firstLine": "わが子よ きょう あなたを うむ",
+    "composer": "松本三朗",
+    "lyricist": "松本三朗",
+    "scripture": "詩編2: 7+8a 8b+9 10+11 答7b",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten168.gif; ten168p.gif",
+    "originalFileSize": 11986,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わが子よ",
+      "典礼聖歌 168",
+      "典礼聖歌 168番",
+      "ten168",
+      "詩編2: 7+8a 8b+9 10+11 答7b"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten168-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten168-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten168.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten169",
+    "country": "JP",
+    "language": "JP",
+    "number": "169",
+    "title": "わが主をたたえよう",
+    "displayTitle": "169. わが主をたたえよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間",
+      "入祭",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間 / 入祭 / 希望",
+    "lyrics": "【答唱】 わが主を たたえよう こえを あわせて たたえよう",
+    "translations": {},
+    "firstLine": "わが主を たたえよう こえを あわせて たたえよう",
+    "composer": "高畠芳子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編146: 1+2+5b 6+7a 7bc+8ab 9ab+8c+9c 10+栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten169.gif; ten169w.gif",
+    "originalFileSize": 20572,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わが主をたたえよう",
+      "典礼聖歌 169",
+      "典礼聖歌 169番",
+      "ten169",
+      "詩編146: 1+2+5b 6+7a 7bc+8ab 9ab+8c+9c 10+栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten169-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten169-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten169.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten170",
+    "country": "JP",
+    "language": "JP",
+    "number": "170",
+    "title": "わたしたちは魚のよう",
+    "displayTitle": "170. わたしたちは魚のよう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 わたしたちは さかなのよう かみさまの あいの なかで およぐ",
+    "translations": {},
+    "firstLine": "わたしたちは さかなのよう かみさまの あいの なかで およぐ",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten170.gif; ten170p.gif",
+    "originalFileSize": 20498,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしたちは魚のよう",
+      "典礼聖歌 170",
+      "典礼聖歌 170番",
+      "ten170"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten170-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten170-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten170.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten171",
+    "country": "JP",
+    "language": "JP",
+    "number": "171",
+    "title": "わたしたちは神の民",
+    "displayTitle": "171. わたしたちは神の民",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "年間",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 年間 / 入祭",
+    "lyrics": "【答唱】 わたしたちは かみの たみ その まきばの むれ",
+    "translations": {},
+    "firstLine": "わたしたちは かみの たみ その まきばの むれ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編50: 5+6 7 15+23 神の民の集会 契約更新",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten171ab.gif; ten171w.gif",
+    "originalFileSize": 14619,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしたちは神の民",
+      "典礼聖歌 171",
+      "典礼聖歌 171番",
+      "ten171",
+      "詩編50: 5+6 7 15+23 神の民の集会 契約更新"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten171-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten171-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten171.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten172",
+    "country": "JP",
+    "language": "JP",
+    "number": "172",
+    "title": "わたしたちは神の民",
+    "displayTitle": "172. わたしたちは神の民",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "復活節",
+      "年間",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 復活節 / 年間 / 入祭",
+    "lyrics": "【答唱】 わたしたちは かみの たみ その まきばの むれ",
+    "translations": {},
+    "firstLine": "わたしたちは かみの たみ その まきばの むれ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編100: 1+2 3ab 4 5 栄 神の民 礼拝集会",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten171ab.gif; ten172w.gif",
+    "originalFileSize": 16307,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしたちは神の民",
+      "典礼聖歌 172",
+      "典礼聖歌 172番",
+      "ten172",
+      "詩編100: 1+2 3ab 4 5 栄 神の民 礼拝集会"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten172-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten172-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten172.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten173",
+    "country": "JP",
+    "language": "JP",
+    "number": "173",
+    "title": "わたしたちは神の民",
+    "displayTitle": "173. わたしたちは神の民",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 入祭",
+    "lyrics": "【答唱】 わたしたちは かみの たみ その まきばの むれ",
+    "translations": {},
+    "firstLine": "わたしたちは かみの たみ その まきばの むれ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編122: 1+2 3+4ab 4cd+5 6+7 8+9",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten171ab.gif; ten173w.gif",
+    "originalFileSize": 19088,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしたちは神の民",
+      "典礼聖歌 173",
+      "典礼聖歌 173番",
+      "ten173",
+      "詩編122: 1+2 3+4ab 4cd+5 6+7 8+9"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten173-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten173-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten173.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten174",
+    "country": "JP",
+    "language": "JP",
+    "number": "174",
+    "title": "わたしたちは神の民 (2)",
+    "displayTitle": "174. わたしたちは神の民 (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 入祭",
+    "lyrics": "【答唱】 わたしたちは かみの たみ その まきばの むれ",
+    "translations": {},
+    "firstLine": "わたしたちは かみの たみ その まきばの むれ",
+    "composer": "新垣壬敏",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編100: 1+2 3 4 5 神の民 入祭の歌 奉納の歌",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten174.gif; ten174w.gif",
+    "originalFileSize": 14823,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしたちは神の民 (2)",
+      "典礼聖歌 174",
+      "典礼聖歌 174番",
+      "ten174",
+      "詩編100: 1+2 3 4 5 神の民 入祭の歌 奉納の歌"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten174-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten174-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten174.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten175",
+    "country": "JP",
+    "language": "JP",
+    "number": "175",
+    "title": "わたしは神に寄り頼む",
+    "displayTitle": "175. わたしは神に寄り頼む",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "四旬節",
+      "入祭",
+      "信頼"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 四旬節 / 入祭 / 信頼",
+    "lyrics": "【答唱】 わたしは かみに よりたのみ その みことばを たたえよう",
+    "translations": {},
+    "firstLine": "わたしは かみに よりたのみ その みことばを たたえよう",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編56: 2+3 4+10 14 答5a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten175.gif; ten175w.gif",
+    "originalFileSize": 15181,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神に寄り頼む",
+      "典礼聖歌 175",
+      "典礼聖歌 175番",
+      "ten175",
+      "詩編56: 2+3 4+10 14 答5a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten175-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten175-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten175.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten176",
+    "country": "JP",
+    "language": "JP",
+    "number": "176",
+    "title": "わたしの神",
+    "displayTitle": "176. わたしの神",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編"
+    ],
+    "category": "典礼聖歌 / 答唱詩編",
+    "lyrics": "【答唱】 わたしの神 わたしの神 どうして わたしを みすてられるのか",
+    "translations": {},
+    "firstLine": "わたしの神 わたしの神 どうして わたしを みすてられるのか",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編22（前半）: 8+9 17+18 19+20 23+24 答2ab",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten176.gif; ten176w.gif",
+    "originalFileSize": 19920,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしの神",
+      "典礼聖歌 176",
+      "典礼聖歌 176番",
+      "ten176",
+      "詩編22（前半）: 8+9 17+18 19+20 23+24 答2ab"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten176-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten176-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten176.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten177",
+    "country": "JP",
+    "language": "JP",
+    "number": "177",
+    "title": "わたしの心は神のうちに喜ぶ",
+    "displayTitle": "177. わたしの心は神のうちに喜ぶ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 感謝",
+    "lyrics": "【答唱】 わたしの こころは かみの うちに よろこび その すくいに よろこび おどる",
+    "translations": {},
+    "firstLine": "わたしの こころは かみの うちに よろこび その すくいに よろこび おどる",
+    "composer": "高畠芳子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編105: 1+2 3+4 5+7 6+8a+10b 8b+9+10a",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten177.gif; ten177w.gif",
+    "originalFileSize": 25688,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしの心は神のうちに喜ぶ",
+      "典礼聖歌 177",
+      "典礼聖歌 177番",
+      "ten177",
+      "詩編105: 1+2 3+4 5+7 6+8a+10b 8b+9+10a"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten177-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten177-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten177.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178fri",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ（マグニフィカト）（金曜）",
+    "displayTitle": "178. わたしは神をあがめ（マグニフィカト）（金曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 餓えに苦しむ人は よいもので満たされ おごり暮らす者は むなしくなってかえる",
+    "translations": {},
+    "firstLine": "餓えに苦しむ人は よいもので満たされ おごり暮らす者は むなしくなってかえる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178fri.gif; ten178p.gif",
+    "originalFileSize": 24466,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ（マグニフィカト）（金曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178fri",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178fri-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178fri-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178fri.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178mon",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ（マグニフィカト）（月曜）",
+    "displayTitle": "178. わたしは神をあがめ（マグニフィカト）（月曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 神は わたしを顧みられ いつの代の人も わたしを しあわせな人と呼ぶ",
+    "translations": {},
+    "firstLine": "神は わたしを顧みられ いつの代の人も わたしを しあわせな人と呼ぶ",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178mon.gif; ten178p.gif",
+    "originalFileSize": 24436,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ（マグニフィカト）（月曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178mon",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178mon-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178mon-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178mon.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178sat",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ（マグニフィカト）（土曜）",
+    "displayTitle": "178. わたしは神をあがめ（マグニフィカト）（土曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 神は いつくしみを忘れることなく しもべイスラエルを たすけられた",
+    "translations": {},
+    "firstLine": "神は いつくしみを忘れることなく しもべイスラエルを たすけられた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178sat.gif; ten178p.gif",
+    "originalFileSize": 24457,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ（マグニフィカト）（土曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178sat",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178sat-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178sat-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178sat.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178sun",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ (2)（マグニフィカト）（日曜）",
+    "displayTitle": "178. わたしは神をあがめ (2)（マグニフィカト）（日曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 わたしは神をあがめ 神の救いに喜びおどる",
+    "translations": {},
+    "firstLine": "わたしは神をあがめ 神の救いに喜びおどる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178sun.gif; ten178p.gif",
+    "originalFileSize": 24427,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ (2)（マグニフィカト）（日曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178sun",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178sun-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178sun-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178sun.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178thu",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ（マグニフィカト）（木曜）",
+    "displayTitle": "178. わたしは神をあがめ（マグニフィカト）（木曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 神は権力をふるう者を その座からおろし 見捨てられた人を たかめられる",
+    "translations": {},
+    "firstLine": "神は権力をふるう者を その座からおろし 見捨てられた人を たかめられる",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178thu.gif; ten178p.gif",
+    "originalFileSize": 24497,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ（マグニフィカト）（木曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178thu",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178thu-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178thu-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178thu.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178tue",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ（マグニフィカト）（火曜）",
+    "displayTitle": "178. わたしは神をあがめ（マグニフィカト）（火曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 力ある神は わたしに 偉大なわざを おこなわれた",
+    "translations": {},
+    "firstLine": "力ある神は わたしに 偉大なわざを おこなわれた",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178tue.gif; ten178p.gif",
+    "originalFileSize": 24427,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ（マグニフィカト）（火曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178tue",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178tue-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178tue-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178tue.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten178wed",
+    "country": "JP",
+    "language": "JP",
+    "number": "178",
+    "title": "わたしは神をあがめ（マグニフィカト）（水曜）",
+    "displayTitle": "178. わたしは神をあがめ（マグニフィカト）（水曜）",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "交唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 交唱 / 聖母",
+    "lyrics": "【交唱】 神のあわれみは代々 神をおそれ敬う人のうえに",
+    "translations": {},
+    "firstLine": "神のあわれみは代々 神をおそれ敬う人のうえに",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten178wed.gif; ten178p.gif",
+    "originalFileSize": 24364,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ（マグニフィカト）（水曜）",
+      "典礼聖歌 178",
+      "典礼聖歌 178番",
+      "ten178wed",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten178wed-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten178wed-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten178wed.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten179",
+    "country": "JP",
+    "language": "JP",
+    "number": "179",
+    "title": "わたしは神をあがめ (2)",
+    "displayTitle": "179. わたしは神をあがめ (2)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "待降節",
+      "聖母",
+      "晩の祈り",
+      "回心",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 待降節 / 聖母 / 晩の祈り / 回心 / 感謝",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "高田三郎",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄 神のいつくしみ ゆるしの恵み 感謝 待降3B",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten179.gif",
+    "originalFileSize": 25143,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ (2)",
+      "典礼聖歌 179",
+      "典礼聖歌 179番",
+      "ten179",
+      "ルカ1: 46-56 ＋栄 神のいつくしみ ゆるしの恵み 感謝 待降3B"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten179-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten179.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten181",
+    "country": "JP",
+    "language": "JP",
+    "number": "181",
+    "title": "わたしは神をあがめ (4)",
+    "displayTitle": "181. わたしは神をあがめ (4)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 聖母",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "佐久間彪",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-55 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten181.gif",
+    "originalFileSize": 17818,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ (4)",
+      "典礼聖歌 181",
+      "典礼聖歌 181番",
+      "ten181",
+      "ルカ1: 46-55 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten181-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten181.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten182",
+    "country": "JP",
+    "language": "JP",
+    "number": "182",
+    "title": "わたしは神をあがめ (5)",
+    "displayTitle": "182. わたしは神をあがめ (5)",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 聖母",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "楠瀬雅子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "ルカ1: 46-56 ＋栄",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten182.gif",
+    "originalFileSize": 20590,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは神をあがめ (5)",
+      "典礼聖歌 182",
+      "典礼聖歌 182番",
+      "ten182",
+      "ルカ1: 46-56 ＋栄"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten182-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten182.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten183",
+    "country": "JP",
+    "language": "JP",
+    "number": "183",
+    "title": "われらはシオンで神をたたえ",
+    "displayTitle": "183. われらはシオンで神をたたえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "年間",
+      "入祭"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 年間 / 入祭",
+    "lyrics": "【答唱】 われらは シオンで かみを たたえ ゆたかな めぐみを よろこび うたう",
+    "translations": {},
+    "firstLine": "われらは シオンで かみを たたえ ゆたかな めぐみを よろこび うたう",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編65: 3+4 5 6 10 13+14 答2 救いの喜び 神の恵みの賛美",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten183.gif; ten183w.gif",
+    "originalFileSize": 22705,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "われらはシオンで神をたたえ",
+      "典礼聖歌 183",
+      "典礼聖歌 183番",
+      "ten183",
+      "詩編65: 3+4 5 6 10 13+14 答2 救いの喜び 神の恵みの賛美"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten183-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten183-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten183.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-ten184",
+    "country": "JP",
+    "language": "JP",
+    "number": "184",
+    "title": "わたしは静かに神を待つ",
+    "displayTitle": "184. わたしは静かに神を待つ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "答唱詩編",
+      "待降節",
+      "年間",
+      "晩の祈り",
+      "信頼",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 答唱詩編 / 待降節 / 年間 / 晩の祈り / 信頼 / 希望",
+    "lyrics": "【答唱】 わたしは しずかに かみを まつ わたしの すくいは かみから くる",
+    "translations": {},
+    "firstLine": "わたしは しずかに かみを まつ わたしの すくいは かみから くる",
+    "composer": "山中タエ子",
+    "lyricist": "典礼聖歌編集部",
+    "scripture": "詩編62: 3+6b 8+9a 答2 希望 信頼 平和 晩の祈り",
+    "sourceFormat": "GIF",
+    "originalFileName": "ten184.gif; ten184w.gif",
+    "originalFileSize": 12336,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "わたしは静かに神を待つ",
+      "典礼聖歌 184",
+      "典礼聖歌 184番",
+      "ten184",
+      "詩編62: 3+6b 8+9a 答2 希望 信頼 平和 晩の祈り"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/ten184-01.webp",
+        "label": "1/2"
+      },
+      {
+        "src": "assets/hymns/jp-tenrei/ten184-02.webp",
+        "label": "2/2"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/antiphon/ten184.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-tsei255advent1",
+    "country": "JP",
+    "language": "JP",
+    "number": "255",
+    "title": "主よ あなたのいつくしみを示し",
+    "displayTitle": "255. 主よ あなたのいつくしみを示し",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "答唱詩編",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 答唱詩編 / 待降節",
+    "lyrics": "アレルヤ アレルヤ 主よ あなたのいつくしみを 示し 救いを お与えください アレルヤ アレルヤ\n\n詩編85・8",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 主よ あなたのいつくしみを 示し 救いを お与えください アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "主よ あなたのいつくしみを示し",
+      "典礼聖歌 255",
+      "典礼聖歌 255番",
+      "tsei255advent1"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei255advent1.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei255advent2",
+    "country": "JP",
+    "language": "JP",
+    "number": "255",
+    "title": "主の道を備え その小道を",
+    "displayTitle": "255. 主の道を備え その小道を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 待降節",
+    "lyrics": "アレルヤ アレルヤ 主の道を備え その小道を 整えよ すべての人は 神の救いを 見る アレルヤ アレルヤ\n\nルカ3・4+6",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 主の道を備え その小道を 整えよ すべての人は 神の救いを 見る アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "主の道を備え その小道を",
+      "典礼聖歌 255",
+      "典礼聖歌 255番",
+      "tsei255advent2"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei255advent2.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei255advent3",
+    "country": "JP",
+    "language": "JP",
+    "number": "255",
+    "title": "神の霊は わたしの上に",
+    "displayTitle": "255. 神の霊は わたしの上に",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 待降節",
+    "lyrics": "アレルヤ アレルヤ 神の霊は わたしの上に ある 貧しい人に福音を告げるため 神はわたしを選ばれた アレルヤ アレルヤ\n\nイザヤ61・1",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神の霊は わたしの上に ある 貧しい人に福音を告げるため 神はわたしを選ばれた アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神の霊は わたしの上に",
+      "典礼聖歌 255",
+      "典礼聖歌 255番",
+      "tsei255advent3"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei255advent3.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei257advent4a",
+    "country": "JP",
+    "language": "JP",
+    "number": "257",
+    "title": "おとめがみごもって 男の子を",
+    "displayTitle": "257. おとめがみごもって 男の子を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "待降節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 待降節",
+    "lyrics": "アレルヤ アレルヤ おとめが みごもって 男の子を生み その名は「インマヌエル」と 呼ばれる アレルヤ アレルヤ\n\nマタイ1・23",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ おとめが みごもって 男の子を生み その名は「インマヌエル」と 呼ばれる アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "おとめがみごもって 男の子を",
+      "典礼聖歌 257",
+      "典礼聖歌 257番",
+      "tsei257advent4a"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei257advent4a.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei258baptism_of_our_lord",
+    "country": "JP",
+    "language": "JP",
+    "number": "258",
+    "title": "天が開いて父の声が響いた",
+    "displayTitle": "258. 天が開いて父の声が響いた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "降誕節",
+      "洗礼"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 降誕節 / 洗礼",
+    "lyrics": "アレルヤ アレルヤ 天が開いて 父の声が 響いた 「これは わたしの愛する子 かれに 聞け」 アレルヤ アレルヤ\n\nマルコ9・6",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 天が開いて 父の声が 響いた 「これは わたしの愛する子 かれに 聞け」 アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "天が開いて父の声が響いた",
+      "典礼聖歌 258",
+      "典礼聖歌 258番",
+      "tsei258baptism_of_our_lord"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei258baptism_of_our_lord.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei258epiphany",
+    "country": "JP",
+    "language": "JP",
+    "number": "258",
+    "title": "東の空に星を見て",
+    "displayTitle": "258. 東の空に星を見て",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 降誕節",
+    "lyrics": "アレルヤ アレルヤ 東の空に 星を 見て すべてをおいて 神を拝みに 来た アレルヤ アレルヤ\n\nマタイ2・2",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 東の空に 星を 見て すべてをおいて 神を拝みに 来た アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "東の空に星を見て",
+      "典礼聖歌 258",
+      "典礼聖歌 258番",
+      "tsei258epiphany"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei258epiphany.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei258holyfamily",
+    "country": "JP",
+    "language": "JP",
+    "number": "258",
+    "title": "キリストの平和が わたしたちの",
+    "displayTitle": "258. キリストの平和が わたしたちの",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 降誕節",
+    "lyrics": "アレルヤ アレルヤ キリストの平和が わたしたちの心を 治め キリストのことばが 豊かに 宿りますように アレルヤ アレルヤ\n\nコロサイ3・15a+16a",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ キリストの平和が わたしたちの心を 治め キリストのことばが 豊かに 宿りますように アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "キリストの平和が わたしたちの",
+      "典礼聖歌 258",
+      "典礼聖歌 258番",
+      "tsei258holyfamily"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei258holyfamily.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei258mother_of_god",
+    "country": "JP",
+    "language": "JP",
+    "number": "258",
+    "title": "神は昔 預言者を通して先祖に",
+    "displayTitle": "258. 神は昔 預言者を通して先祖に",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 降誕節",
+    "lyrics": "アレルヤ アレルヤ 神は昔 預言者を通して 先祖に 語られたが この終わりの時には ご自分の子を通して わたしたちに 語られた アレルヤ アレルヤ\n\nヘブライ1・1+2",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神は昔 預言者を通して 先祖に 語られたが この終わりの時には ご自分の子を通して わたしたちに 語られた アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神は昔 預言者を通して先祖に",
+      "典礼聖歌 258",
+      "典礼聖歌 258番",
+      "tsei258mother_of_god"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei258mother_of_god.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei258nativity_day",
+    "country": "JP",
+    "language": "JP",
+    "number": "258",
+    "title": "偉大な光が きょう地上に下り",
+    "displayTitle": "258. 偉大な光が きょう地上に下り",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 降誕節",
+    "lyrics": "アレルヤ アレルヤ 偉大な光が きょう地上に下り 聖なるこの日は わたしたちを照らした 諸国の民は 来て 主を 礼拝せよ アレルヤ アレルヤ\n\nルカ2・14",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 偉大な光が きょう地上に下り 聖なるこの日は わたしたちを照らした 諸国の民は 来て 主を 礼拝せよ アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "偉大な光が きょう地上に下り",
+      "典礼聖歌 258",
+      "典礼聖歌 258番",
+      "tsei258nativity_day"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei258nativity_day.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei258nativity_eve",
+    "country": "JP",
+    "language": "JP",
+    "number": "258",
+    "title": "大きな喜びを あなたがたに",
+    "displayTitle": "258. 大きな喜びを あなたがたに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "降誕節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 降誕節",
+    "lyrics": "アレルヤ アレルヤ 大きな喜びを あなたがたに 告げ知らせよう きょう わたしたちに救い主が 生まれた アレルヤ アレルヤ\n\nルカ2・10+11",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 大きな喜びを あなたがたに 告げ知らせよう きょう わたしたちに救い主が 生まれた アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "大きな喜びを あなたがたに",
+      "典礼聖歌 258",
+      "典礼聖歌 258番",
+      "tsei258nativity_eve"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei258nativity_eve.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei260lent_sun1",
+    "country": "JP",
+    "language": "JP",
+    "number": "260",
+    "title": "人はパンによるだけでなく",
+    "displayTitle": "260. 人はパンによるだけでなく",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "四旬節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 四旬節",
+    "lyrics": "人は パンによるだけではなく 神のことばによって 生きている",
+    "translations": {},
+    "firstLine": "人は パンによるだけではなく 神のことばによって 生きている",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "人はパンによるだけでなく",
+      "典礼聖歌 260",
+      "典礼聖歌 260番",
+      "tsei260lent_sun1"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei260lent_sun1.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei260lent_sun2",
+    "country": "JP",
+    "language": "JP",
+    "number": "260",
+    "title": "輝く雲の中から父の声が聞こえた",
+    "displayTitle": "260. 輝く雲の中から父の声が聞こえた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "四旬節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 四旬節",
+    "lyrics": "輝く雲の中から 父の声が 聞こえた 「これはわたしの愛する子 かれに聞け」",
+    "translations": {},
+    "firstLine": "輝く雲の中から 父の声が 聞こえた 「これはわたしの愛する子 かれに聞け」",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "輝く雲の中から父の声が聞こえた",
+      "典礼聖歌 260",
+      "典礼聖歌 260番",
+      "tsei260lent_sun2"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei260lent_sun2.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei260lent_sun3c",
+    "country": "JP",
+    "language": "JP",
+    "number": "260",
+    "title": "「神に立ちもどりなさぃ」",
+    "displayTitle": "260. 「神に立ちもどりなさぃ」",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "四旬節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 四旬節",
+    "lyrics": "「神に 立ちもどりなさぃ 神の国は来ている」と 主は おおせになる",
+    "translations": {},
+    "firstLine": "「神に 立ちもどりなさぃ 神の国は来ている」と 主は おおせになる",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "「神に立ちもどりなさぃ」",
+      "典礼聖歌 260",
+      "典礼聖歌 260番",
+      "tsei260lent_sun3c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei260lent_sun3c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei260lent_sun4c",
+    "country": "JP",
+    "language": "JP",
+    "number": "260",
+    "title": "父のもとに帰って言おう",
+    "displayTitle": "260. 父のもとに帰って言おう",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "四旬節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 四旬節",
+    "lyrics": "父のもとに帰って 言おう 「わたしは 神にも あなたにも 罪をおかしました」",
+    "translations": {},
+    "firstLine": "父のもとに帰って 言おう 「わたしは 神にも あなたにも 罪をおかしました」",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "父のもとに帰って言おう",
+      "典礼聖歌 260",
+      "典礼聖歌 260番",
+      "tsei260lent_sun4c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei260lent_sun4c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei262lent_sun5c",
+    "country": "JP",
+    "language": "JP",
+    "number": "262",
+    "title": "心からわたしに立ちもどりなさぃ",
+    "displayTitle": "262. 心からわたしに立ちもどりなさぃ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "四旬節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 四旬節",
+    "lyrics": "心から わたしに 立ちもどりなさぃ わたしは いつくしみと恵みに あふれる神",
+    "translations": {},
+    "firstLine": "心から わたしに 立ちもどりなさぃ わたしは いつくしみと恵みに あふれる神",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "心からわたしに立ちもどりなさぃ",
+      "典礼聖歌 262",
+      "典礼聖歌 262番",
+      "tsei262lent_sun5c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei262lent_sun5c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei264easter_sun2",
+    "country": "JP",
+    "language": "JP",
+    "number": "264",
+    "title": "トマよ あなたはわたしを見たので信じた",
+    "displayTitle": "264. トマよ あなたはわたしを見たので信じた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "復活節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 復活節",
+    "lyrics": "金管 木管\n\nアレルヤ アレルヤ アレルヤ トマよ あなたはわたしを 見たので信じた 見ないで信じる人は 幸い アレルヤ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "金管 木管",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "トマよ あなたはわたしを見たので信じた",
+      "典礼聖歌 264",
+      "典礼聖歌 264番",
+      "tsei264easter_sun2"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei264easter_sun2.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei266christ_the_king",
+    "country": "JP",
+    "language": "JP",
+    "number": "266",
+    "title": "主の名によって 来られるかたに賛美",
+    "displayTitle": "266. 主の名によって 来られるかたに賛美",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "復活節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 復活節",
+    "lyrics": "アレルヤ アレルヤ 主の名によって 来られるかたに賛美 わたしたちの父 ダビドの国に祝福がありますように アレルヤ アレルヤ\n\nマルコ11・10",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 主の名によって 来られるかたに賛美 わたしたちの父 ダビドの国に祝福がありますように アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "主の名によって 来られるかたに賛美",
+      "典礼聖歌 266",
+      "典礼聖歌 266番",
+      "tsei266christ_the_king"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei266christ_the_king.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei266easter_sun",
+    "country": "JP",
+    "language": "JP",
+    "number": "266",
+    "title": "わたしたちの過越 キリストはほふられた",
+    "displayTitle": "266. わたしたちの過越 キリストはほふられた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "復活節"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 復活節",
+    "lyrics": "金管 木管\n\nアレルヤ アレルヤ わたしたちの過越 キリストは ほふられた 主のうちに ともに喜び 楽しもう アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "金管 木管",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "わたしたちの過越 キリストはほふられた",
+      "典礼聖歌 266",
+      "典礼聖歌 266番",
+      "tsei266easter_sun"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei266easter_sun.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei269sun13c",
+    "country": "JP",
+    "language": "JP",
+    "number": "269",
+    "title": "主よ 話してください、しもべは聞きます",
+    "displayTitle": "269. 主よ 話してください、しもべは聞きます",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 主よ 話してくださぃ， しもべは 聞きます あなたは 永遠の いのちの ことばを 持っておられる アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 主よ 話してくださぃ， しもべは 聞きます あなたは 永遠の いのちの ことばを 持っておられる アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "主よ 話してください、しもべは聞きます",
+      "典礼聖歌 269",
+      "典礼聖歌 269番",
+      "tsei269sun13c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei269sun13c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei269sun15c",
+    "country": "JP",
+    "language": "JP",
+    "number": "269",
+    "title": "主よ あなたのことばは霊でありいのちです",
+    "displayTitle": "269. 主よ あなたのことばは霊でありいのちです",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 主よ あなたのことばは 霊であり いのちです あなたは 永遠の いのちの ことばを 持っておられる アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 主よ あなたのことばは 霊であり いのちです あなたは 永遠の いのちの ことばを 持っておられる アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "主よ あなたのことばは霊でありいのちです",
+      "典礼聖歌 269",
+      "典礼聖歌 269番",
+      "tsei269sun15c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei269sun15c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei269sun17c",
+    "country": "JP",
+    "language": "JP",
+    "number": "269",
+    "title": "神の子とする霊のうちにあって",
+    "displayTitle": "269. 神の子とする霊のうちにあって",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 神の子とする 霊のうちに あって わたしたちは 「アバ，父よ」と 叫ぶ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神の子とする 霊のうちに あって わたしたちは 「アバ，父よ」と 叫ぶ アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神の子とする霊のうちにあって",
+      "典礼聖歌 269",
+      "典礼聖歌 269番",
+      "tsei269sun17c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei269sun17c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei269sun19c",
+    "country": "JP",
+    "language": "JP",
+    "number": "269",
+    "title": "目ざめて用意していなさぃ",
+    "displayTitle": "269. 目ざめて用意していなさぃ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 目ざめて 用意して いなさぃ 人の子は 思いがけない時に 来る アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 目ざめて 用意して いなさぃ 人の子は 思いがけない時に 来る アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "目ざめて用意していなさぃ",
+      "典礼聖歌 269",
+      "典礼聖歌 269番",
+      "tsei269sun19c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei269sun19c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei269sun21c",
+    "country": "JP",
+    "language": "JP",
+    "number": "269",
+    "title": "わたしは道 真理 いのち",
+    "displayTitle": "269. わたしは道 真理 いのち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ わたしは 道 真理 いのち わたしを 通らなければ だれも 父のもとに 行かれない アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ わたしは 道 真理 いのち わたしを 通らなければ だれも 父のもとに 行かれない アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "わたしは道 真理 いのち",
+      "典礼聖歌 269",
+      "典礼聖歌 269番",
+      "tsei269sun21c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei269sun21c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei270sun23c",
+    "country": "JP",
+    "language": "JP",
+    "number": "270",
+    "title": "あなたの顔をわたしの上に輝かせ",
+    "displayTitle": "270. あなたの顔をわたしの上に輝かせ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ あなたの顔を わたしの上に 輝かせ おきてを 授けてくださぃ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ あなたの顔を わたしの上に 輝かせ おきてを 授けてくださぃ アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "あなたの顔をわたしの上に輝かせ",
+      "典礼聖歌 270",
+      "典礼聖歌 270番",
+      "tsei270sun23c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei270sun23c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei270sun25c",
+    "country": "JP",
+    "language": "JP",
+    "number": "270",
+    "title": "イエズス・キリストは富んでおられたのに",
+    "displayTitle": "270. イエズス・キリストは富んでおられたのに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ イエズス・キリストは 富んでおられたのに 貧しく なられた あなたがたが キリストの貧しさによって 富むように アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ イエズス・キリストは 富んでおられたのに 貧しく なられた あなたがたが キリストの貧しさによって 富むように アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "イエズス・キリストは富んでおられたのに",
+      "典礼聖歌 270",
+      "典礼聖歌 270番",
+      "tsei270sun25c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei270sun25c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei270sun27c",
+    "country": "JP",
+    "language": "JP",
+    "number": "270",
+    "title": "あなたがたにのべ伝えられた福音は",
+    "displayTitle": "270. あなたがたにのべ伝えられた福音は",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ あなたがたに のべ伝えられた 福音は 永遠に とどまる神の ことば アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ あなたがたに のべ伝えられた 福音は 永遠に とどまる神の ことば アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "あなたがたにのべ伝えられた福音は",
+      "典礼聖歌 270",
+      "典礼聖歌 270番",
+      "tsei270sun27c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei270sun27c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei270sun29c",
+    "country": "JP",
+    "language": "JP",
+    "number": "270",
+    "title": "神のことばは生きていて力があり",
+    "displayTitle": "270. 神のことばは生きていて力があり",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 神の ことばは 生きていて 力が あり 心の 思いと 計画を 識別する アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神の ことばは 生きていて 力が あり 心の 思いと 計画を 識別する アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神のことばは生きていて力があり",
+      "典礼聖歌 270",
+      "典礼聖歌 270番",
+      "tsei270sun29c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei270sun29c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei270sun31c",
+    "country": "JP",
+    "language": "JP",
+    "number": "270",
+    "title": "神はひとり子をお与えになるほど世を",
+    "displayTitle": "270. 神はひとり子をお与えになるほど世を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 神は ひとり子を お与えになるほど 世を 愛された 神を信じる すべての人が 永遠の いのちを 得るために アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神は ひとり子を お与えになるほど 世を 愛された 神を信じる すべての人が 永遠の いのちを 得るために アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神はひとり子をお与えになるほど世を",
+      "典礼聖歌 270",
+      "典礼聖歌 270番",
+      "tsei270sun31c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei270sun31c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei271sun02a",
+    "country": "JP",
+    "language": "JP",
+    "number": "271",
+    "title": "みことばは人となり わたしたちの",
+    "displayTitle": "271. みことばは人となり わたしたちの",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ みことばは人となり わたしたちのうちに お住みになった 主を受け入れる人には 神の子となる恵みが 与えられた アレルヤ アレルヤ\n\nヨハネ1・14+12b",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ みことばは人となり わたしたちのうちに お住みになった 主を受け入れる人には 神の子となる恵みが 与えられた アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "みことばは人となり わたしたちの",
+      "典礼聖歌 271",
+      "典礼聖歌 271番",
+      "tsei271sun02a"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei271sun02a.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei272sun12c",
+    "country": "JP",
+    "language": "JP",
+    "number": "272",
+    "title": "羊はわたしの声を聞き分け、わたしも",
+    "displayTitle": "272. 羊はわたしの声を聞き分け、わたしも",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 羊は わたしの声を聞き分け， わたしも その羊を知り 羊はわたしに 従う アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 羊は わたしの声を聞き分け， わたしも その羊を知り 羊はわたしに 従う アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "羊はわたしの声を聞き分け、わたしも",
+      "典礼聖歌 272",
+      "典礼聖歌 272番",
+      "tsei272sun12c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei272sun12c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei272sun14c",
+    "country": "JP",
+    "language": "JP",
+    "number": "272",
+    "title": "キリストの平和が あなたがの心を",
+    "displayTitle": "272. キリストの平和が あなたがの心を",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ キリストの平和が あなたがたの心を 満たし キリストのことばが 豊かに 宿りますように アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ キリストの平和が あなたがたの心を 満たし キリストのことばが 豊かに 宿りますように アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "キリストの平和が あなたがの心を",
+      "典礼聖歌 272",
+      "典礼聖歌 272番",
+      "tsei272sun14c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei272sun14c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei272sun16c",
+    "country": "JP",
+    "language": "JP",
+    "number": "272",
+    "title": "よい心で神のことばを保ち",
+    "displayTitle": "272. よい心で神のことばを保ち",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ よい心で 神のことばを保ち 忍耐をもって 実を結ぶ人は 幸い アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ よい心で 神のことばを保ち 忍耐をもって 実を結ぶ人は 幸い アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "よい心で神のことばを保ち",
+      "典礼聖歌 272",
+      "典礼聖歌 272番",
+      "tsei272sun16c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei272sun16c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei272sun18c",
+    "country": "JP",
+    "language": "JP",
+    "number": "272",
+    "title": "心の貧しい人は幸い",
+    "displayTitle": "272. 心の貧しい人は幸い",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 心の貧しい人は 幸い 天の国は その人の もの アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 心の貧しい人は 幸い 天の国は その人の もの アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "心の貧しい人は幸い",
+      "典礼聖歌 272",
+      "典礼聖歌 272番",
+      "tsei272sun18c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei272sun18c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei272sun20c",
+    "country": "JP",
+    "language": "JP",
+    "number": "272",
+    "title": "羊はわたしの声を聞き分け、わたしも",
+    "displayTitle": "272. 羊はわたしの声を聞き分け、わたしも",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間 / 聖母",
+    "lyrics": "アレルヤ アレルヤ 羊は わたしの声を 聞き分け， わたしも その羊を 知り 羊は わたしに 従う アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 羊は わたしの声を 聞き分け， わたしも その羊を 知り 羊は わたしに 従う アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "羊はわたしの声を聞き分け、わたしも",
+      "典礼聖歌 272",
+      "典礼聖歌 272番",
+      "tsei272sun20c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei272sun20c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei272sun22c",
+    "country": "JP",
+    "language": "JP",
+    "number": "272",
+    "title": "わたしは心やさしくへりくだる者",
+    "displayTitle": "272. わたしは心やさしくへりくだる者",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ わたしは 心やさしく へりくだる者 わたしの くびきを 受けて わたしに ならいなさぃ アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ わたしは 心やさしく へりくだる者 わたしの くびきを 受けて わたしに ならいなさぃ アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "わたしは心やさしくへりくだる者",
+      "典礼聖歌 272",
+      "典礼聖歌 272番",
+      "tsei272sun22c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei272sun22c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei273sun24c",
+    "country": "JP",
+    "language": "JP",
+    "number": "273",
+    "title": "神はキリストのうちに世をご自分に和解させ",
+    "displayTitle": "273. 神はキリストのうちに世をご自分に和解させ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 神は キリストのうちに 世を ご自分に 和解させ 和解の ことばを わたしたちに ゆだねられた アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神は キリストのうちに 世を ご自分に 和解させ 和解の ことばを わたしたちに ゆだねられた アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神はキリストのうちに世をご自分に和解させ",
+      "典礼聖歌 273",
+      "典礼聖歌 273番",
+      "tsei273sun24c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei273sun24c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei273sun26c",
+    "country": "JP",
+    "language": "JP",
+    "number": "273",
+    "title": "イエズス・キリストは富んでおられたのに",
+    "displayTitle": "273. イエズス・キリストは富んでおられたのに",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ イエズス・キリストは 富んでおられたのに 貧しく なられた あなたがたが キリストの 貧しさによって 富むように アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ イエズス・キリストは 富んでおられたのに 貧しく なられた あなたがたが キリストの 貧しさによって 富むように アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "イエズス・キリストは富んでおられたのに",
+      "典礼聖歌 273",
+      "典礼聖歌 273番",
+      "tsei273sun26c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei273sun26c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei273sun28c",
+    "country": "JP",
+    "language": "JP",
+    "number": "273",
+    "title": "すべてについて感謝しなさぃ",
+    "displayTitle": "273. すべてについて感謝しなさぃ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間",
+      "感謝"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間 / 感謝",
+    "lyrics": "アレルヤ アレルヤ すべてに ついて 感謝しなさぃ 神は キリスト・イエズスのうちにあって あなたがたに これを 望んでおられる アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ すべてに ついて 感謝しなさぃ 神は キリスト・イエズスのうちにあって あなたがたに これを 望んでおられる アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "すべてについて感謝しなさぃ",
+      "典礼聖歌 273",
+      "典礼聖歌 273番",
+      "tsei273sun28c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei273sun28c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei273sun30c",
+    "country": "JP",
+    "language": "JP",
+    "number": "273",
+    "title": "神はキリストのうちに世をご自分に和解させ",
+    "displayTitle": "273. 神はキリストのうちに世をご自分に和解させ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 神は キリストのうちに 世を ご自分に 和解させ 和解の ことばを わたしたちに ゆだねられた アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 神は キリストのうちに 世を ご自分に 和解させ 和解の ことばを わたしたちに ゆだねられた アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "神はキリストのうちに世をご自分に和解させ",
+      "典礼聖歌 273",
+      "典礼聖歌 273番",
+      "tsei273sun30c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei273sun30c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei274sun32c",
+    "country": "JP",
+    "language": "JP",
+    "number": "274",
+    "title": "イエズス・キリストは死者のうちから",
+    "displayTitle": "274. イエズス・キリストは死者のうちから",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ イエズス・キリストは死者のうちから 最初に生まれたかた 栄光と支配は世々に かれのもの アレルヤ アレルヤ\n\n黙示1・5+6",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ イエズス・キリストは死者のうちから 最初に生まれたかた 栄光と支配は世々に かれのもの アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "イエズス・キリストは死者のうちから",
+      "典礼聖歌 274",
+      "典礼聖歌 274番",
+      "tsei274sun32c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei274sun32c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei274sun33c",
+    "country": "JP",
+    "language": "JP",
+    "number": "274",
+    "title": "恐れずに頭を上げなさぃ",
+    "displayTitle": "274. 恐れずに頭を上げなさぃ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "年間"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 年間",
+    "lyrics": "アレルヤ アレルヤ 恐れずに頭を上げなさぃ あなたがたの救いは 近づいている アレルヤ アレルヤ\n\nルカ21・28",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ 恐れずに頭を上げなさぃ あなたがたの救いは 近づいている アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "恐れずに頭を上げなさぃ",
+      "典礼聖歌 274",
+      "典礼聖歌 274番",
+      "tsei274sun33c"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei274sun33c.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei276assumption",
+    "country": "JP",
+    "language": "JP",
+    "number": "276",
+    "title": "マリアは天にあげられた",
+    "displayTitle": "276. マリアは天にあげられた",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "詠唱",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 詠唱 / 聖母",
+    "lyrics": "アレルヤ アレルヤ マリアは 天に 上げられた 天使の群れは 喜びに 輝く アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "アレルヤ アレルヤ マリアは 天に 上げられた 天使の群れは 喜びに 輝く アレルヤ アレルヤ",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "マリアは天にあげられた",
+      "典礼聖歌 276",
+      "典礼聖歌 276番",
+      "tsei276assumption"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/alleluiah/tsei276assumption.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei317palmsun",
+    "country": "JP",
+    "language": "JP",
+    "number": "317",
+    "title": "キリストは人間の姿で 【聖週間】",
+    "displayTitle": "317. キリストは人間の姿で 【聖週間】",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "聖週間"
+    ],
+    "category": "典礼聖歌 / 聖週間",
+    "lyrics": "■典礼聖歌 #317 キリストは人間の姿で 【聖週間】\n\nキリストは人間の姿であらわれ 死にいたるまで しかも十字架の死にいたるまで 自分を低くして したがう者となった それゆえ 神はキリストを高くあげて すべてにまさる名を おあたえになった",
+    "translations": {},
+    "firstLine": "■典礼聖歌 #317 キリストは人間の姿で 【聖週間】",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "キリストは人間の姿で 【聖週間】",
+      "典礼聖歌 317",
+      "典礼聖歌 317番",
+      "tsei317palmsun"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/tsei317palmsun.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei351eastersequence",
+    "country": "JP",
+    "language": "JP",
+    "number": "351",
+    "title": "復活の続唱",
+    "displayTitle": "351. 復活の続唱",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "復活節",
+      "聖母",
+      "希望"
+    ],
+    "category": "典礼聖歌 / 復活節 / 聖母 / 希望",
+    "lyrics": "■典礼聖歌 #351 復活の続唱\n\n（先唱） キリストを信じるすべての者よ （会衆） 主の過越をたたえよう こひつじは ひつじをあがない 罪のないキリストは 罪の世に 神のゆるしをもたらされた 死といのちとの たたかいで 死を身に受けたいのちの主は いまや生きて治められる マリアよ わたしたちに告げよ あなたが道で見た事を 開かれたキリストの墓 よみがえられた主の栄光 あかしする神の使いと 残された主の衣服を 私の希望 キリストは復活し ガリレアに行き待っておられる ともにたたえ告げ知らせよう 主キリストは復活された 勝利の王キリストよ いつくしみをわたしたちに アーメン アレルヤ",
+    "translations": {},
+    "firstLine": "■典礼聖歌 #351 復活の続唱",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "復活の続唱",
+      "典礼聖歌 351",
+      "典礼聖歌 351番",
+      "tsei351eastersequence"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/tsei351eastersequence.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei371",
+    "country": "JP",
+    "language": "JP",
+    "number": "371",
+    "title": "聖母賛歌 しあわせなかたマリア",
+    "displayTitle": "371. 聖母賛歌 しあわせなかたマリア",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 聖母",
+    "lyrics": "■典礼聖歌 #371 しあわせなかたマリア （前奏つき）\n\nしあわせなかたマリア 恵みあふれるマリア あなたとともに神はおられ 祝福は女のあなたと あなたの子 イエズスに けだかいマリア 神の母 罪深いわたしたちのために いまも死をむかえるときにも 神に祈ってください アーメン",
+    "translations": {},
+    "firstLine": "■典礼聖歌 #371 しあわせなかたマリア （前奏つき）",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "聖母賛歌 しあわせなかたマリア",
+      "典礼聖歌 371",
+      "典礼聖歌 371番",
+      "tsei371"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/tsei371.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei397",
+    "country": "JP",
+    "language": "JP",
+    "number": "397",
+    "title": "すべての国よ神をたたえ",
+    "displayTitle": "397. すべての国よ神をたたえ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "四旬節",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 四旬節 / 閉祭",
+    "lyrics": "前奏つき。四旬節・閉祭（「アレルヤ」なし）。\n\nすべての国よ 神をたたえ すべての民よ 神をほめよ 神の愛は ちから強く そのまことは よよにおよぶ",
+    "translations": {},
+    "firstLine": "前奏つき。四旬節・閉祭（「アレルヤ」なし）。",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "すべての国よ神をたたえ",
+      "典礼聖歌 397",
+      "典礼聖歌 397番",
+      "tsei397"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/tsei397.html",
+    "sourceCollection": "hosanna-supplement"
+  },
+  {
+    "id": "jp-tenrei-tsei407",
+    "country": "JP",
+    "language": "JP",
+    "number": "407",
+    "title": "マリアさまのこころ",
+    "displayTitle": "407. マリアさまのこころ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "聖母"
+    ],
+    "category": "典礼聖歌 / 聖母",
+    "lyrics": "",
+    "translations": {},
+    "firstLine": "",
+    "composer": "佐久間彪",
+    "lyricist": "佐久間彪",
+    "scripture": "",
+    "sourceFormat": "GIF",
+    "originalFileName": "tsei407.gif",
+    "originalFileSize": 11605,
+    "originalFileAvailable": true,
+    "searchAliases": [
+      "マリアさまのこころ",
+      "典礼聖歌 407",
+      "典礼聖歌 407番",
+      "tsei407"
+    ],
+    "scoreImages": [
+      {
+        "src": "assets/hymns/jp-tenrei/tsei407-01.webp",
+        "label": "1"
+      }
+    ],
+    "scoreNote": "",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://tenreiseika.romaaeterna.jp/tseika/tsei407.html",
+    "sourceCollection": "tenreiseika-antiphon"
+  },
+  {
+    "id": "jp-tenrei-tsei410",
+    "country": "JP",
+    "language": "JP",
+    "number": "410",
+    "title": "よろこびうたえアレルヤ",
+    "displayTitle": "410. よろこびうたえアレルヤ",
+    "book": "典礼聖歌",
+    "tags": [
+      "典礼聖歌",
+      "復活節",
+      "閉祭"
+    ],
+    "category": "典礼聖歌 / 復活節 / 閉祭",
+    "lyrics": "前奏つき。復活節・閉祭。\n\n木管 金管 音を低めにしました 1. よろこびうたえ アレルヤ アレルヤ み名のさかえを ほめうたえ 賛美の歌を 賛美の歌を ささげよ わが主に アレルヤ アレルヤ 2. よろこびうたえ アレルヤ アレルヤ みことばのごとく よみがえりぬ 全地よ こぞりて 勝利の歌を ささげよ わが主に アレルヤ アレルヤ Update: Feb 2010\n\n1. よろこびうたえ アレルヤ アレルヤ み名のさかえを ほめうたえ 賛美の歌を 賛美の歌を ささげよ わが主に アレルヤ アレルヤ 2. よろこびうたえ アレルヤ アレルヤ みことばのごとく よみがえりぬ 全地よ こぞりて 勝利の歌を ささげよ わが主に アレルヤ アレルヤ",
+    "translations": {},
+    "firstLine": "前奏つき。復活節・閉祭。",
+    "composer": "",
+    "lyricist": "",
+    "scripture": "",
+    "sourceFormat": "HTML",
+    "originalFileName": "",
+    "originalFileSize": 0,
+    "originalFileAvailable": false,
+    "searchAliases": [
+      "よろこびうたえアレルヤ",
+      "典礼聖歌 410",
+      "典礼聖歌 410番",
+      "tsei410"
+    ],
+    "scoreImages": [],
+    "scoreNote": "Source page publishes chant text/audio only; no score image is available.",
+    "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
+    "sourceUrl": "http://hosanna.romaaeterna.jp/tenreiseika/tsei410.html",
+    "sourceCollection": "hosanna-supplement"
   }
 ];
   global.hymnData = Array.isArray(global.hymnData) && global.hymnData.length
