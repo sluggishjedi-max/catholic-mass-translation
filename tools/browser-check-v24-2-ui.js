@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260816-v25-r11/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260817-v25-r13/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -90,6 +90,16 @@ function startServer() {
 
     const result = await page.evaluate(async () => {
       const px = selector => parseFloat(getComputedStyle(document.querySelector(selector)).fontSize);
+      const selectMetrics = selector => {
+        const node = document.querySelector(selector);
+        const modal = node.closest('#settings-modal');
+        const previousDisplay = modal ? modal.style.display : '';
+        if (modal && node.getBoundingClientRect().height === 0) modal.style.display = 'flex';
+        const style = getComputedStyle(node);
+        const result = { fontSize: parseFloat(style.fontSize), height: node.getBoundingClientRect().height };
+        if (modal) modal.style.display = previousDisplay;
+        return result;
+      };
       const setSelect = (id, value) => {
         const element = document.getElementById(id);
         element.value = value;
@@ -116,6 +126,10 @@ function startServer() {
         settingSelect: px('#set-font-size'),
         inlineSelect: px('.select-inline'),
         quick: px('.quick-home-btn')
+      };
+      const baselineSelectControls = {
+        setting: selectMetrics('#set-font-size'),
+        inline: selectMetrics('.select-inline')
       };
       const koreanVietnameseSourceLabels = {
         popup: vietnameseReadingSourceLabel('hanoi', 'KR'),
@@ -321,7 +335,9 @@ function startServer() {
       const intermediateFontSize = {
         body: px('body'),
         settingSelect: px('#set-font-size'),
-        inlineSelect: px('.select-inline')
+        inlineSelect: px('.select-inline'),
+        settingSelectHeight: selectMetrics('#set-font-size').height,
+        inlineSelectHeight: selectMetrics('.select-inline').height
       };
       setSelect('set-font-size', '22px');
       updateSettings();
@@ -1130,6 +1146,104 @@ function startServer() {
         gospelLengthLabels: Object.values(gospelLengthVariants).map(variant => variant.label.kr),
         gospelLengthKinds: Object.values(gospelLengthVariants).map(variant => variant.__dailyLengthKind)
       };
+      const englishEntranceInstruction = 'The Gloria in excelsis ( Glory to God in the highest ) is said.';
+      const englishEntranceInstructionFixture = {
+        legacy: parseEnglishReadingSection([
+          englishEntranceInstruction,
+          'Let us rejoice and be glad and give glory to God.'
+        ], 'entrance').text,
+        strict: strictAntiphonParagraphs('EN', 'entrance', [
+          englishEntranceInstruction,
+          'Let us rejoice and be glad and give glory to God.'
+        ]).join('\n'),
+        gospelQuestionIsNotAlternative: strictAlternativeMatch('Or am I not free to do as I wish with my own money?') === null,
+        explicitAlternativeStillMatches: strictAlternativeMatch('Or: I am the living bread that came down from heaven.')?.rest
+          === 'I am the living bread that came down from heaven.',
+        mercyRedemptionMatches: localSemanticEquivalent(
+          'communion',
+          '주님께는 자애가 있고 풍요로운 구원이 있네.',
+          'With the Lord there is mercy; in him is plentiful redemption.'
+        )
+      };
+      const savedSourceFirstState = {
+        currentLoc: state.currentLoc,
+        targetLang: state.targetLang,
+        communion: state.options.communion,
+        gospel: state.options.gospel,
+        selections: state.autoDailySourceVariantSelections
+      };
+      const sourceFirstOptionMap = {
+        kr: [
+          [{ text: 'First source antiphon without a translation.' }],
+          [{ text: 'Here is a wise virgin who went forth with lighted lamp to meet Christ.' }]
+        ],
+        en: [[{ text: 'Here is a wise virgin who went forth with lighted lamp to meet Christ.' }]]
+      };
+      state.currentLoc = 'KR';
+      state.targetLang = 'EN';
+      const koreanSourceFirstAlignment = buildFallbackVariantAlignment('communion', sourceFirstOptionMap, {});
+      const sourceFirstVariants = {
+        A: { __dailySourceIndexes: { kr: 0 } },
+        B: { __dailySourceIndexes: { kr: 1, en: 0 } }
+      };
+      state.autoDailySourceVariantSelections = {};
+      state.options.communion = 'B';
+      preferFirstDailySourceVariant(sourceFirstVariants, 'communion');
+      const koreanDefault = state.options.communion;
+      state.currentLoc = 'EN';
+      const englishSourceFirstAlignment = buildFallbackVariantAlignment('communion', sourceFirstOptionMap, {});
+      preferFirstDailySourceVariant(sourceFirstVariants, 'communion');
+      const englishDefault = state.options.communion;
+      state.options.communion = 'A';
+      preferFirstDailySourceVariant(sourceFirstVariants, 'communion');
+      const manualEnglishChoice = state.options.communion;
+      state.currentLoc = 'KR';
+      state.autoDailySourceVariantSelections = {};
+      state.options.gospel = 'B';
+      preferFirstDailySourceVariant({
+        A: { __dailyLengthKind: 'long', __dailyLengthPairKey: 'A:B', __dailySourceIndexes: { kr: 0 } },
+        B: { __dailyLengthKind: 'short', __dailyLengthPairKey: 'A:B', __dailySourceIndexes: { kr: 1 } }
+      }, 'gospel');
+      const gospelShortFirst = state.options.gospel;
+      state.autoDailySourceVariantSelections = {};
+      state.options.gospel = 'C';
+      preferFirstDailySourceVariant({
+        A: { __dailySourceIndexes: { kr: 0 } },
+        B: { __dailyLengthKind: 'long', __dailyLengthPairKey: 'B:C', __dailySourceIndexes: { kr: 1 } },
+        C: { __dailyLengthKind: 'short', __dailyLengthPairKey: 'B:C', __dailySourceIndexes: { kr: 2 } }
+      }, 'gospel');
+      const gospelEarlierSourceFirst = state.options.gospel;
+      const oneOptionPerLanguageMap = {
+        kr: [[{ text: 'A collect asking for faithful love of God.' }]],
+        en: [[{ text: 'A completely different collect for a particular saint and missionary zeal.' }]]
+      };
+      const oneOptionPerLanguageData = {
+        collect: {
+          kr_lines: oneOptionPerLanguageMap.kr[0],
+          en_lines: oneOptionPerLanguageMap.en[0]
+        }
+      };
+      applyCachedVariantAlignments(oneOptionPerLanguageData, new Date(2042, 0, 19));
+      const oneOptionPrompt = buildVariantAlignmentPrompt('collect', oneOptionPerLanguageMap);
+      const sourceFirstVariantFixture = {
+        koreanAlignment: koreanSourceFirstAlignment,
+        englishAlignment: englishSourceFirstAlignment,
+        koreanDefault,
+        englishDefault,
+        manualEnglishChoice,
+        gospelShortFirst,
+        gospelEarlierSourceFirst,
+        oneOptionNeedsAI: needsCrossLanguageVariantAlignment(oneOptionPerLanguageMap, 1),
+        oneOptionProvisionalAlignment: oneOptionPerLanguageData.collect.variantAlignment,
+        oneOptionPromptChecksCompleteTexts: /one option per language does not imply/i.test(oneOptionPrompt)
+          && /same calendar date/i.test(oneOptionPrompt)
+          && /ambiguous, keep/i.test(oneOptionPrompt)
+      };
+      state.currentLoc = savedSourceFirstState.currentLoc;
+      state.targetLang = savedSourceFirstState.targetLang;
+      state.options.communion = savedSourceFirstState.communion;
+      state.options.gospel = savedSourceFirstState.gospel;
+      state.autoDailySourceVariantSelections = savedSourceFirstState.selections;
       const diocesanPrayerSourceFixture = `<p>08/08/2026 BÀI ĐỌC TRONG THÁNH LỄ Thứ bảy tuần 18 THƯỜNG NIÊN Ca nhập lễ Ca thường. Lời nguyện nhập lễ Lạy Chúa, lời nguyện ngày thường. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, lễ vật ngày thường. Chúng con cầu xin… Ca hiệp lễ Ca thường. Lời nguyện hiệp lễ Lạy Chúa, hiệp lễ ngày thường. Chúng con cầu xin… BÀI ĐỌC TRONG THÁNH LỄ Thánh Đa Minh, linh mục Ca nhập lễ Ca riêng. Lời nguyện nhập lễ Lạy Thiên Chúa toàn năng Chúa đã cho xuất hiện trong Hội Thánh một Tông Đồ nhiệt tâm truyền giảng chân lý là thánh Đa-minh. Chúng con cầu xin… Lời nguyện tiến lễ Lạy Chúa, vì lời chuyển cầu của thánh Đa-minh, xin nâng đỡ những người đang chiến đấu bảo vệ đức tin. Chúng con cầu xin… Ca hiệp lễ Ca riêng. Lời nguyện hiệp lễ Lạy Thiên Chúa toàn năng hằng hữu, nhân ngày mừng lễ thánh Đa-minh, xin cho Hội Thánh được thánh nhân cầu thay nguyện giúp. Chúng con cầu xin…</p>`;
       const diocesanPrayerBlocks = vietnameseKtcgPrayerMassBlocks(diocesanPrayerSourceFixture);
       const diocesanPrayerData = parseVietnameseKtcgDiocesanPrayers(
@@ -1639,6 +1753,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         defaultFontSize,
         intermediateFontSize,
         baseline,
+        baselineSelectControls,
         enlarged: {
           nav: px('nav'),
           header: px('.header-title'),
@@ -1648,6 +1763,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           legend: px('.role-legend'),
           settingSelect: px('#set-font-size'),
           inlineSelect: px('.select-inline'),
+          settingSelectHeight: selectMetrics('#set-font-size').height,
+          inlineSelectHeight: selectMetrics('.select-inline').height,
           quick: px('.quick-home-btn')
         },
         navTexts,
@@ -1758,6 +1875,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         readingChoiceFixture,
         duplicateReadingFixture,
         choiceRuleFixture,
+        englishEntranceInstructionFixture,
+        sourceFirstVariantFixture,
         diocesanPrayerFixture,
         aug9PrayerFixture,
         localizedPrayerConclusionFixture,
@@ -1846,6 +1965,20 @@ Nội dung lịch sử không thuộc lời nguyện.`;
     result.defaultLanguagePair = defaultLanguagePair;
     result.androidSettingsPersistence = androidSettingsPersistence;
 
+    const responsiveMassLayout = {};
+    for (const width of [600, 599]) {
+      await page.setViewportSize({ width, height: 900 });
+      responsiveMassLayout[width] = await page.evaluate(() => {
+        state.layoutStacked = false;
+        render();
+        const row = document.querySelector('#missal-root .pc-line-row');
+        return {
+          stackedClass: document.getElementById('missal-root').classList.contains('stacked-mode'),
+          rowDirection: row ? getComputedStyle(row).flexDirection : ''
+        };
+      });
+    }
+
     await page.setViewportSize({ width: 1440, height: 900 });
     const desktopHeaderLayout = await page.evaluate(() => {
       window.scrollTo(0, 0);
@@ -1864,6 +1997,33 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         headerBackground: getComputedStyle(document.getElementById('main-header')).backgroundColor,
         floatingBackground: getComputedStyle(document.getElementById('floating-liturgy-banner')).backgroundColor
       };
+    });
+    const desktopTranslationHeading = await page.evaluate(() => {
+      const savedColor = state.liturgyInfo.color;
+      state.liturgyInfo.color = liturgyColorMap.white;
+      render();
+      const probe = document.createElement('div');
+      probe.innerHTML = `
+        <div class="pc-line-row pc-header-row">
+          <div class="pc-col"><span class="part-title">Source heading</span></div>
+          <div class="pc-col pc-col-sub"><span class="part-title">Translation heading</span></div>
+        </div>
+        <div class="section-bar">
+          <span class="section-bar-primary">Source section</span>
+          <span class="section-bar-secondary">Translation section</span>
+        </div>`;
+      document.body.appendChild(probe);
+      const color = selector => getComputedStyle(probe.querySelector(selector)).color;
+      const result = {
+        sourcePart: color('.pc-col:not(.pc-col-sub) .part-title'),
+        translationPart: color('.pc-col-sub .part-title'),
+        sourceSection: color('.section-bar-primary'),
+        translationSection: color('.section-bar-secondary')
+      };
+      probe.remove();
+      state.liturgyInfo.color = savedColor;
+      render();
+      return result;
     });
 
     assert(result.webStartupPrompts.consentVisible && result.webStartupPrompts.consentPending,
@@ -2036,15 +2196,25 @@ Nội dung lịch sử không thuộc lời nguyện.`;
     `Header, date, liturgy and legend sizes differ: ${JSON.stringify(result.enlarged)}`);
     assert(JSON.stringify(result.defaultFontSize) === JSON.stringify({ state: '18px', select: '18px', css: 18 }),
       `Normal is not the default font size: ${JSON.stringify(result.defaultFontSize)}`);
-    assert(JSON.stringify(result.intermediateFontSize) === JSON.stringify({ body: 20, settingSelect: 20, inlineSelect: 20 }),
-      `The intermediate font size does not scale select controls: ${JSON.stringify(result.intermediateFontSize)}`);
-    assert(Object.entries(result.baseline).every(([key, value]) => value === (key === 'quick' ? 12 : 18)),
-      `Normal chrome or select fonts are incorrect: ${JSON.stringify(result.baseline)}`);
+    assert(result.intermediateFontSize.body === 20
+      && Math.abs(result.intermediateFontSize.settingSelect - (20 * 0.7407)) < 0.1
+      && Math.abs(result.intermediateFontSize.inlineSelect - (20 * 0.7556)) < 0.1,
+    `The intermediate font size does not scale select controls: ${JSON.stringify(result.intermediateFontSize)}`);
+    assert(Object.entries(result.baseline).every(([key, value]) => (
+      ['settingSelect', 'inlineSelect'].includes(key)
+        ? true
+        : value === (key === 'quick' ? 12 : 18)
+    ))
+      && Math.abs(result.baseline.settingSelect - (18 * 0.7407)) < 0.1
+      && Math.abs(result.baseline.inlineSelect - (18 * 0.7556)) < 0.1,
+    `Normal chrome or select fonts are incorrect: ${JSON.stringify(result.baseline)}`);
     assert(result.enlarged.header > result.baseline.header * 1.2
       && result.enlarged.nav > result.baseline.nav * 1.2
       && result.enlarged.legend > result.baseline.legend * 1.2
       && result.enlarged.settingSelect > result.baseline.settingSelect * 1.2
-      && result.enlarged.inlineSelect > result.baseline.inlineSelect * 1.2,
+      && result.enlarged.inlineSelect > result.baseline.inlineSelect * 1.2
+      && result.enlarged.settingSelectHeight > result.baselineSelectControls.setting.height
+      && result.enlarged.inlineSelectHeight > result.baselineSelectControls.inline.height,
     `Chrome fonts did not scale proportionally: ${JSON.stringify({ baseline: result.baseline, enlarged: result.enlarged })}`);
     assert(result.baseline.quick === 12 && result.enlarged.quick === 12,
       `Quick menu font must stay fixed at 12px: ${JSON.stringify({ baseline: result.baseline.quick, enlarged: result.enlarged.quick })}`);
@@ -2088,6 +2258,16 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && desktopHeaderLayout.floatingInnerWidth === desktopHeaderLayout.missalWidth
       && desktopHeaderLayout.headerBackground === desktopHeaderLayout.floatingBackground,
     `Desktop main liturgy color band does not match the floating banner width: ${JSON.stringify(desktopHeaderLayout)}`);
+    assert(!responsiveMassLayout[600].stackedClass
+      && responsiveMassLayout[600].rowDirection === 'row'
+      && responsiveMassLayout[599].stackedClass
+      && responsiveMassLayout[599].rowDirection === 'column',
+    `Foldable/tablet two-column breakpoint is incorrect: ${JSON.stringify(responsiveMassLayout)}`);
+    assert(desktopTranslationHeading.sourcePart === 'rgb(124, 91, 23)'
+      && desktopTranslationHeading.translationPart === 'rgb(169, 139, 69)'
+      && desktopTranslationHeading.sourceSection === 'rgb(124, 91, 23)'
+      && desktopTranslationHeading.translationSection === 'rgb(169, 139, 69)',
+    `Desktop translation headings are not a lighter liturgical-color tint: ${JSON.stringify(desktopTranslationHeading)}`);
     assert(result.ktcgFixture.bodyCount === 1
       && result.ktcgFixture.bodyText === 'Mắt tôi hãy tuôn trào suối lệ cả ngày đêm không ngớt?\\nvì trinh nữ cô gái dân tôi đã bị đánh nhừ đòn!\\nvết trọng thương hết đường cứu chữa.'.replace(/\\n/g, '\n')
       && !/[ \t\u00a0]+[,.;:!?]/.test(result.ktcgFixture.bodyText),
@@ -2298,6 +2478,29 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.choiceRuleFixture.multilingualAlignmentFixture.adjacentEnglishPsalmsDiffer
       && result.choiceRuleFixture.multilingualAlignmentFixture.latinLongVirginAntiphonKey === 'wise_virgin_lamp_meet_christ',
     `Cross-language choice alignment is incomplete or citation-first: ${JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture)}`);
+    assert(result.englishEntranceInstructionFixture.legacy === 'Let us rejoice and be glad and give glory to God.'
+      && result.englishEntranceInstructionFixture.strict === 'Let us rejoice and be glad and give glory to God.'
+      && result.englishEntranceInstructionFixture.gospelQuestionIsNotAlternative
+      && result.englishEntranceInstructionFixture.explicitAlternativeStillMatches
+      && result.englishEntranceInstructionFixture.mercyRedemptionMatches
+      && !/Gloria in excelsis|Glory to God in the highest/i.test(
+        `${result.englishEntranceInstructionFixture.legacy} ${result.englishEntranceInstructionFixture.strict}`
+      ),
+    `English entrance-antiphon rubric was not removed: ${JSON.stringify(result.englishEntranceInstructionFixture)}`);
+    assert(result.sourceFirstVariantFixture.koreanAlignment[0].kr === 0
+      && result.sourceFirstVariantFixture.englishAlignment[0].en === 0
+      && result.sourceFirstVariantFixture.koreanDefault === 'A'
+      && result.sourceFirstVariantFixture.englishDefault === 'B'
+      && result.sourceFirstVariantFixture.manualEnglishChoice === 'A'
+      && result.sourceFirstVariantFixture.gospelShortFirst === 'B'
+      && result.sourceFirstVariantFixture.gospelEarlierSourceFirst === 'A'
+      && result.sourceFirstVariantFixture.oneOptionNeedsAI
+      && result.sourceFirstVariantFixture.oneOptionProvisionalAlignment.length === 2
+      && result.sourceFirstVariantFixture.oneOptionProvisionalAlignment.every(group => (
+        Number.isInteger(group.kr) !== Number.isInteger(group.en)
+      ))
+      && result.sourceFirstVariantFixture.oneOptionPromptChecksCompleteTexts,
+    `Daily choices do not prioritize the first local-source option: ${JSON.stringify(result.sourceFirstVariantFixture)}`);
     assert(result.choiceRuleFixture.labels.commonEntrance.kr === '공통 입당송'
       && result.choiceRuleFixture.labels.commonEntrance.vn === 'Ca nhập lễ chung'
       && result.choiceRuleFixture.labels.properPsalm.kr === '고유 화답송'

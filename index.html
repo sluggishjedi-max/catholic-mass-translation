@@ -18,6 +18,9 @@
             --sub-txt: #6c757d;
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             --font-size-base: 18px;
+            --settings-select-font-size: calc(var(--font-size-base) * 0.7407);
+            --inline-select-font-size: calc(var(--font-size-base) * 0.7556);
+            --hymn-select-font-size: calc(var(--font-size-base) * 0.8178);
             --chrome-font-size: var(--font-size-base);
             --chrome-compact-font-size: var(--font-size-base);
             --fixed-footer-height: 0px;
@@ -78,7 +81,7 @@
         .settings-content h3 { margin-bottom: 15px; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; }
         .setting-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .setting-row label { flex: 1 1 auto; min-width: 0; padding-right: 12px; word-break: keep-all; }
-        .setting-row select { flex: 0 0 220px; min-width: 180px; max-width: 52%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font: inherit; font-size: var(--font-size-base); }
+        .setting-row select { flex: 0 0 220px; min-width: 180px; max-width: 52%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font-size: var(--settings-select-font-size); }
         select option { font-size: inherit; }
         .setting-row input[type="checkbox"] { width: auto; margin-left: auto; cursor: pointer; }
         .setting-note { flex: 0 0 auto; color: var(--sub-txt); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
@@ -193,7 +196,7 @@
         .stacked-citation-translation { color: var(--sub-txt); opacity: 0.82; }
         .part-select-row { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; width: 100%; margin: 0 0 8px; }
         .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
-        .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: var(--font-size-base); outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
+        .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: var(--inline-select-font-size); outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
         .select-block { display: block; margin: 0; text-align: right; }
 
         .aux-panel { display: none; max-width: 1100px; margin: 0 auto; padding: 18px 20px 86px; background: #fff; color: #333; }
@@ -253,7 +256,7 @@
         .hymn-title-tag { margin-left: 6px; }
         .hymn-list-item.is-selected { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.14); }
         .hymn-title-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .hymn-country-title-select { width: auto; min-width: 170px; max-width: min(280px, 100%); padding: 6px 10px; font-size: var(--font-size-base); }
+        .hymn-country-title-select { width: auto; min-width: 170px; max-width: min(280px, 100%); padding: 6px 10px; font-size: var(--hymn-select-font-size); }
         .hymn-detail { border: 1px solid #d9dee5; border-radius: 8px; padding: 14px; background: #fafafa; scroll-margin-top: 76px; }
         .hymn-detail h3 { margin-bottom: 10px; }
         .hymn-detail .aux-prayer-body { white-space: pre-wrap; }
@@ -374,7 +377,7 @@
         .stacked-mode .pair-line.translation { border-top: none; padding-top: 0; margin-top: 0; opacity: 0.72; }
         .stacked-mode .rubric.translation { margin-top: 2px; opacity: 0.72; }
 
-        @media (max-width: 768px) {
+        @media (max-width: 599px) {
             :root { --quick-home-edge-gap: 8px; }
             .runtime-status-stack { left: var(--quick-home-edge-gap); right: calc(var(--quick-home-reserved-width) + var(--quick-home-edge-gap) + var(--quick-home-edge-gap)); bottom: calc(var(--fixed-footer-height) + var(--quick-home-edge-gap) + env(safe-area-inset-bottom, 0px)); width: auto; transform: none; }
             header { padding: 12px 12px 10px; }
@@ -761,6 +764,6 @@
 <script src="JS%20file/bishop_data.js?v=20260812-v25"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260812-v25"></script>
 
-<script src="JS%20file/app_v25.js?v=20260816-v25-r11"></script>
+<script src="JS%20file/app_v25.js?v=20260817-v25-r13"></script>
 </body>
 </html>

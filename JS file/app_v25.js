@@ -93,8 +93,7 @@
         options: { entrance: 'A', greeting: 'A', penitential: 'A', creed: 'A', eucharist: '2', eucharist_song: '', eucharist3_intercession: 'ordinary', dismissal: '' },
         autoEucharistSongKey: '',
         autoDismissalOptionKey: '',
-        autoGospelVariantKey: '',
-        autoGospelVariantSignature: '',
+        autoDailySourceVariantSelections: {},
         autoCreedOptionKey: '',
         autoCreedLocation: '',
         autoBlessingSignature: '',
@@ -1062,7 +1061,7 @@
                 primaryName: '#7c5b17',
                 secondary: '#526173',
                 translation: '#526173',
-                translationHeading: '#526173',
+                translationHeading: '#a98b45',
                 sectionBg: '#f4efe3',
                 border: 'rgba(17, 24, 39, 0.24)',
                 hover: 'rgba(17, 24, 39, 0.08)',
@@ -1075,6 +1074,7 @@
                 bg: liturgyColorMap.gold,
                 text: '#1f1600',
                 accent: '#9a6f00',
+                translationHeading: '#b99c58',
                 border: 'rgba(31, 22, 0, 0.28)',
                 hover: 'rgba(31, 22, 0, 0.10)',
                 settingsBg: 'rgba(255, 255, 255, 0.26)',
@@ -1086,6 +1086,7 @@
                 bg: liturgyColorMap.rose,
                 text: '#34121f',
                 accent: '#b84f7a',
+                translationHeading: '#d08aa6',
                 border: 'rgba(52, 18, 31, 0.25)',
                 hover: 'rgba(52, 18, 31, 0.10)',
                 settingsBg: 'rgba(255, 255, 255, 0.24)',
@@ -1096,6 +1097,11 @@
             bg: colorValue || liturgyColorMap.green,
             text: 'white',
             accent: colorValue || liturgyColorMap.green,
+            translationHeading: name === 'red'
+                ? '#d98076'
+                : (name === 'purple'
+                    ? '#b887cb'
+                    : (name === 'black' ? '#7c8d9a' : '#78c99a')),
             border: 'rgba(255, 255, 255, 0.3)',
             hover: 'rgba(255, 255, 255, 0.13)',
             settingsBg: 'rgba(0, 0, 0, 0.3)',
@@ -7453,8 +7459,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const out = [];
         const intro = buildEnglishReadingIntro(baseId, citationResult.citation);
         if (intro) out.push(parsedLine('', intro, 'intro'));
-        if (citationResult.blocks.length) out.push(parsedLine('', citationResult.blocks.join('\n'), 'body'));
+        const body = baseId === 'entrance'
+            ? removeEnglishEntranceGloriaInstruction(citationResult.blocks.join('\n'))
+            : citationResult.blocks.join('\n');
+        if (body) out.push(parsedLine('', body, 'body'));
         return { text: parsedLinesToText(out), lines: out, cit_en: citationResult.citation };
+    }
+
+    function removeEnglishEntranceGloriaInstruction(value) {
+        return cleanNodeText(String(value || '').replace(
+            /\bThe\s+Gloria\s+in\s+excelsis\s*(?:\(\s*Glory\s+to\s+God\s+in\s+the\s+highest\s*\))?\s+is\s+said\.?/gi,
+            ' '
+        ));
     }
 
     function appendCitationRef(citation, ref) {
@@ -8674,7 +8690,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict80';
+    const STRICT_PARSER_CACHE_VERSION = 'strict81';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9591,7 +9607,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function strictAlternativeMatch(line) {
         const text = strictCleanLine(line).replace(/[<>]/g, ' ').replace(/\s+/g, ' ').trim();
-        const match = text.match(/^(또는|或いは|または|又は|Hoặc|Hoac|Or|Vel)(?:\s*:?\s+|\s*[:：]\s*|\s*$)(.*)$/iu);
+        const standalone = text.match(/^(또는|或いは|または|又は|Hoặc|Hoac|Or|Vel)\s*[:：]?\s*$/iu);
+        if (standalone) return { marker: standalone[1], rest: '' };
+        const match = text.match(/^(또는|或いは|または|又は|Hoặc|Hoac|Or|Vel)\s*[:：]\s*(.+)$/iu)
+            || text.match(/^(Hoặc|Hoac)\s+(?:đọc|doc)\s*[:：]\s*(.+)$/iu);
         if (!match) return null;
         const rest = strictCleanLine((match[2] || '').replace(/^(?:đọc|doc)\b\s*:?\s*/iu, ''));
         return { marker: match[1], rest };
@@ -10123,7 +10142,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictAntiphonParagraphs(lang, key, blocks) {
         const shouldJoin = ['EN', 'LA'].includes(lang) && ['entrance', 'communion'].includes(key);
         if (!shouldJoin) return blocks.map(line => strictCleanLine(line)).filter(Boolean);
-        const text = strictCleanLine(blocks.join(' '));
+        const joined = strictCleanLine(blocks.join(' '));
+        const text = lang === 'EN' && key === 'entrance'
+            ? removeEnglishEntranceGloriaInstruction(joined)
+            : joined;
         return text ? [text] : [];
     }
 
@@ -12047,6 +12069,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (assigned.has(pair.longEntry.key) || assigned.has(pair.shortEntry.key)) return;
                 pair.longEntry.variant.__dailyLengthKind = 'long';
                 pair.shortEntry.variant.__dailyLengthKind = 'short';
+                const pairKey = [pair.longEntry.key, pair.shortEntry.key].sort().join(':');
+                pair.longEntry.variant.__dailyLengthPairKey = pairKey;
+                pair.shortEntry.variant.__dailyLengthPairKey = pairKey;
                 assigned.add(pair.longEntry.key);
                 assigned.add(pair.shortEntry.key);
             });
@@ -12057,26 +12082,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (lengthKind && !entry.kind) entry.variant.label = Object.assign({}, labelGroup[lengthKind]);
         });
         return variants;
-    }
-
-    function preferShortGospelVariant(variants) {
-        const shortEntry = Object.entries(variants || {}).find(([, variant]) =>
-            variant && (variant.__dailyLengthKind === 'short'
-                || (variant.label && variant.label.kr === gospelLengthVariantLabels.short.kr))
-        );
-        if (!shortEntry) return false;
-        const shortKey = shortEntry[0];
-        const signature = formatDateIso(getActiveLiturgicalSourceDate());
-        const current = state.options.gospel;
-        if (state.autoGospelVariantSignature !== signature
-            || !current
-            || current === state.autoGospelVariantKey
-            || !variants[current]) {
-            state.options.gospel = shortKey;
-        }
-        state.autoGospelVariantKey = shortKey;
-        state.autoGospelVariantSignature = signature;
-        return true;
     }
 
     function applyGospelLengthVariantCitations(variants, newData) {
@@ -12129,6 +12134,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             maxOptions = Math.max(maxOptions, options.length);
         });
         return { optionMap, maxOptions };
+    }
+
+    function needsCrossLanguageVariantAlignment(optionMap, maxOptions) {
+        if (maxOptions >= 2) return true;
+        return Object.keys(optionMap || {}).filter(lower => (
+            Array.isArray(optionMap[lower]) && optionMap[lower].length
+        )).length >= 2;
     }
 
     function isAlleluiaOnlyText(text) {
@@ -12228,6 +12240,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['come_to_me_rest', /고생.*무거운\s*짐.*나에게\s*오너라|안식을\s*주리라|kho nhoc.*ganh nang.*den cung ta|den cung ta.*bo s[ứu]c|come to me.*burden|give you rest/i],
             ['taste_see_good_lord', /맛보고.*깨달|주님.*얼마나\s*좋|hay nem.*nhin coi|nem thu.*nhin coi|chua thien hao|taste.*see.*good|gustate.*videte/i],
             ['praise_soul_holy_name', /내\s*영혼.*찬미|거룩하신.*이름|linh hon.*chuc tung|thanh danh nguoi|bless the lord.*soul|holy name/i],
+            ['lord_mercy_plentiful_redemption', /주님.*자애.*풍요로운\s*구원|자애.*풍요로운\s*구원|long chua.*(?:tu bi|thuong xot).*(?:cuu do|ơn cứu độ|on cuu do)|with the lord.*mercy.*(?:plentiful|full).*redemption|apud dominum.*misericordia.*copiosa.*redemptio/i],
             ['my_god_praise_salvation', /당신은\s*저의\s*하느님.*찬송|구원이\s*되어|chua la thien chua cua toi|tro nen phan roi|my god.*praise|become.*salvation/i],
             ['unity_sent_by_father', /하나가\s*되게|아버지.*보내셨다는|nen mot|cha da sai con|be one|sent me|sent con/i],
             ['seed_word_sower_christ', /씨앗.*하느님.*말씀.*씨.*뿌리.*그리스도|hat giong.*loi thien chua.*nguoi gieo giong.*duc\s*ki\s*-?\s*to|seed.*word of god.*sower.*christ/i],
@@ -12286,13 +12299,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
         if (!groups.length) return [];
 
-        const normalized = normalizeVariantAlignmentGroups(optionMap, groups);
-        const { left, right } = currentLeftRightLowerKeys();
-        return normalized.sort((a, b) => {
-            const aPair = Number.isInteger(a[left]) && Number.isInteger(a[right]) ? 0 : 1;
-            const bPair = Number.isInteger(b[left]) && Number.isInteger(b[right]) ? 0 : 1;
-            return aPair - bPair;
-        });
+        return normalizeVariantAlignmentGroups(optionMap, groups);
     }
 
     function strictReadingOptionCitation(section, lower, index) {
@@ -12535,7 +12542,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align2';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align3';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -12595,7 +12602,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 groups.push(group);
             });
         });
-        const anchorLower = optionMap.kr ? 'kr' : lowers[0];
+        const sourceLower = currentLeftRightLowerKeys().left;
+        const anchorLower = optionMap[sourceLower] ? sourceLower : (optionMap.kr ? 'kr' : lowers[0]);
         groups.sort((a, b) => {
             const aAnchor = Number.isInteger(a[anchorLower]) ? a[anchorLower] : 1000 + firstMappedVariantIndex(a, lowers);
             const bAnchor = Number.isInteger(b[anchorLower]) ? b[anchorLower] : 1000 + firstMappedVariantIndex(b, lowers);
@@ -12689,6 +12697,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function buildVariantAlignmentPrompt(baseId, optionMap) {
+        const sourceLower = currentLeftRightLowerKeys().left;
         const sectionNames = {
             psalm: 'responsorial_psalm',
             gospel_accl: 'gospel_acclamation',
@@ -12704,14 +12713,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 'Align semantically equivalent Catholic liturgical options across languages.',
                 'Ignore option labels and source order when they disagree.',
                 'Never align options merely because they have the same position, number, or common/proper label.',
+                'Even when each language has only one option, compare the complete texts; one option per language does not imply that they are translations of each other.',
+                'Do not infer equivalence merely from the same calendar date, section heading, liturgical rank, or Ordinary Time label.',
                 'If the biblical citation, saint, image, or liturgical meaning differs, keep the options in separate groups.',
-                'Use Korean options as anchors when Korean is present.',
+                'When the evidence is ambiguous, keep the source texts in separate groups.',
+                `Use ${sourceLower.toUpperCase()} as the local/original source ordering anchor when it is present.`,
                 'For prayers after Communion, treat authorized translations as equivalent when they share the same Eucharistic memorial and salvation intention, even if one translation explicitly mentions the Resurrection or calls the gift a sacrament of love.',
                 'Do not create a separate option solely because one language ends with “Chúng con cầu xin nhờ…” while Korean uses “성자께서는 성부와 함께 영원히…”. These are equivalent authorized liturgical conclusion formulas.',
                 'Every option index from every language must appear exactly once.',
                 'Use null when a language has no equivalent option in a group.',
                 'Indexes are zero-based.'
             ],
+            sourceLanguage: sourceLower.toUpperCase(),
             options: {}
         };
         Object.keys(optionMap || {}).forEach(lower => {
@@ -12792,10 +12805,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 section.variantAlignment = fallbackAlignment;
                 return;
             }
-            if (maxOptions < 2) return;
+            if (!needsCrossLanguageVariantAlignment(optionMap, maxOptions)) return;
             // Until the asynchronous semantic check finishes, keep unmatched
-            // source options separate. Positional pairing can present two
-            // different antiphons or prayers as if one were a translation.
+            // source texts separate, including one-option-per-language data.
+            // Positional pairing can present two different antiphons or prayers
+            // as if one were a translation.
             section.variantAlignment = normalizeVariantAlignmentGroups(optionMap, []);
         });
     }
@@ -12857,7 +12871,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, cached);
                 return;
             }
-            if (maxOptions < 2) {
+            if (!needsCrossLanguageVariantAlignment(optionMap, maxOptions)) {
                 if (fallbackAlignment.length) section.variantAlignment = fallbackAlignment;
                 return;
             }
@@ -12943,9 +12957,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return [
             'Decide whether these two Catholic liturgical texts are the same prayer/antiphon in different languages.',
             'Be generous with normal translation differences, word order, punctuation, and citation numbering.',
+            'Compare the complete source texts. Do not assume equivalence merely because both occur on the same date or under the same section heading, rank, or common/proper label.',
+            'One text in each language does not imply that the texts are translations of each other.',
             'For a prayer after Communion, compare the central Eucharistic memorial and salvation intention. One authorized translation may explicitly mention the Resurrection or “sacrament of love” where another says the Son’s Passion and saving gift; that alone does not make the prayers different.',
             'For a prayer after Communion, “Chúng con cầu xin nhờ…” and “성자께서는 성부와 함께 영원히…” are equivalent authorized conclusion formulas; never return false only because those conclusions differ.',
-            'Return false only when the liturgical source text is clearly different, such as a different saint, feast, antiphon, or prayer intention.',
+            'Return false when the source text, saint, feast, biblical image, antiphon, or prayer intention is different. If the evidence is ambiguous, return false so the sources remain separate choices.',
             'Return strict JSON only: {"equivalent":true} or {"equivalent":false}.',
             '',
             JSON.stringify({
@@ -13378,6 +13394,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function ensureDailySelectableVariants(item, newData, baseId) {
         normalizeDailySelectableTemplate(item);
         if (item.isEucharist || baseId === 'eucharist') return false;
+        if (!item.__dailyVariantBaseTemplate) {
+            item.__dailyVariantBaseTemplate = {
+                type: item.type,
+                lines: cloneMassLines(item.lines || []),
+                variants: item.variants ? JSON.parse(JSON.stringify(item.variants)) : null
+            };
+        }
         if (baseId === 'gospel') normalizeDailyGospelOptions(newData);
         if (isPrayerPart(baseId) && !item.__dailyPrayerBaseTemplate) {
             item.__dailyPrayerBaseTemplate = {
@@ -13401,6 +13424,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             : null;
         if (alignmentGroups) maxOptions = Math.max(maxOptions, alignmentGroups.length);
         if (maxOptions < 2) {
+            if (item.__dailyGeneratedVariants && item.__dailyVariantBaseTemplate) {
+                item.type = item.__dailyVariantBaseTemplate.type || 'part';
+                item.lines = cloneMassLines(item.__dailyVariantBaseTemplate.lines || []);
+                if (item.__dailyVariantBaseTemplate.variants) {
+                    item.variants = JSON.parse(JSON.stringify(item.__dailyVariantBaseTemplate.variants));
+                } else {
+                    delete item.variants;
+                }
+                item.__dailyGeneratedVariants = false;
+            }
             if (isPrayerPart(baseId) && item.__dailyGeneratedPrayerVariants && item.__dailyPrayerBaseTemplate) {
                 item.type = item.__dailyPrayerBaseTemplate.type || 'part';
                 item.lines = cloneMassLines(item.__dailyPrayerBaseTemplate.lines || []);
@@ -13467,11 +13500,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         applyDailyKindedVariantLabels(variants, baseId);
         if (baseId === 'gospel') {
             applyGospelLengthVariantCitations(variants, newData);
-            preferShortGospelVariant(variants);
         }
+        preferFirstDailySourceVariant(variants, baseId);
         item.type = 'selectable';
         item.variants = variants;
         item.lines = variants.A ? variants.A.lines : Object.values(variants)[0].lines;
+        item.__dailyGeneratedVariants = true;
         if (isPrayerPart(baseId)) item.__dailyGeneratedPrayerVariants = true;
         if (!state.options[baseId] || !variants[state.options[baseId]]) state.options[baseId] = variants.A ? 'A' : Object.keys(variants)[0];
         return true;
@@ -14313,6 +14347,42 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return true;
     }
 
+    function preferFirstDailySourceVariant(variants, baseId) {
+        const sourceLower = currentLeftRightLowerKeys().left;
+        const sourceEntries = Object.entries(variants || {})
+            .filter(([, variant]) => variant && Number.isInteger(variant.__dailySourceIndexes && variant.__dailySourceIndexes[sourceLower]))
+            .sort((left, right) => left[1].__dailySourceIndexes[sourceLower] - right[1].__dailySourceIndexes[sourceLower]);
+        let preferredEntry = sourceEntries[0];
+        if (baseId === 'gospel'
+            && preferredEntry
+            && preferredEntry[1].__dailyLengthKind === 'long'
+            && preferredEntry[1].__dailyLengthPairKey) {
+            const shortEntry = sourceEntries.find(([, variant]) => (
+                variant.__dailyLengthKind === 'short'
+                && variant.__dailyLengthPairKey === preferredEntry[1].__dailyLengthPairKey
+            ));
+            if (shortEntry) preferredEntry = shortEntry;
+        }
+        const fallbackEntry = Object.entries(variants || {})[0];
+        const preferredKey = (preferredEntry || fallbackEntry || [])[0] || '';
+        if (!preferredKey) return false;
+
+        const signature = `${formatDateIso(getActiveLiturgicalSourceDate())}:${sourceLower}`;
+        const selections = state.autoDailySourceVariantSelections
+            || (state.autoDailySourceVariantSelections = {});
+        const previous = selections[baseId];
+        const current = state.options[baseId];
+        if (!previous
+            || previous.signature !== signature
+            || !current
+            || current === previous.key
+            || !variants[current]) {
+            state.options[baseId] = preferredKey;
+        }
+        selections[baseId] = { signature, key: preferredKey };
+        return true;
+    }
+
     function showPendingLiturgyCompletionAfterChoice() {
         if (liturgyChoiceOverlayVisible() || (state.activeTab || 'mass') !== 'mass') return false;
         const pending = state.dailyReadingCompletedDuringChoice || {};
@@ -14918,7 +14988,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         state.options[baseId] = val;
         if (baseId === 'eucharist_song') state.autoEucharistSongKey = '';
         if (baseId === 'dismissal') state.autoDismissalOptionKey = '';
-        if (baseId === 'gospel') state.autoGospelVariantKey = '';
         if (baseId === 'creed') state.autoCreedOptionKey = '';
         render();
     };
@@ -16218,7 +16287,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         updateFooterCopyright();
 
         const root = document.getElementById('missal-root');
-        const isStacked = state.layoutStacked || window.innerWidth <= 768;
+        const isStacked = state.layoutStacked || window.innerWidth < 600;
         root.innerHTML = '';
         root.classList.toggle('stacked-mode', isStacked);
 
