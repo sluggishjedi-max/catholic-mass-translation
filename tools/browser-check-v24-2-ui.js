@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260816-v25-r6/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260816-v25-r7/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -1206,6 +1206,13 @@ function startServer() {
       psalmLeftProbe.innerHTML = psalmDisplayGroupLanguageHTML(psalmGroupedRow?.lines, 'KR', 'psalm');
       psalmRightProbe.innerHTML = psalmDisplayGroupLanguageHTML(psalmGroupedRow?.lines, 'VN', 'psalm', 'translation');
       const psalmVersicleSpeakers = { kr: '○', vn: 'X.', en: 'V.', jp: '先', la: '℣' };
+      const ktcgAssumptionPsalm = ktcgkpvPsalmSection([{
+        INDEXING_2: 'Tv 44,10.11-12.16 Đ. x. c.10b',
+        CONTENT_2: '<p class="response"><span class="body">Nữ hoàng bên hữu Thánh Vương.</span></p>'
+          + '<p>Hàng cung nữ tiến bước. - Đáp.</p>'
+          + '<p>Tôn nương hỡi, xin hãy nghe nào. Quân Vương sủng ái. - Đáp.</p>'
+          + '<p>Lòng hoan hỷ, đoàn người tiến bước. - Đáp.</p>'
+      }]);
       const normalizedPsalmTarget = cloneMassLines(massData.find(item => getBaseId(item.id) === 'psalm')?.lines || []);
       const normalizedPsalmSources = {
         kr: [
@@ -1261,10 +1268,14 @@ function startServer() {
         citationGroups: {
           kr: psalmCitationVerseGroups('시편 45(44),10.11.12.16(◎ 10ㄷㄹ)'),
           vn: psalmCitationVerseGroups('Tv 44,11-12.14-15.16-17'),
+          vnKtcg: psalmCitationVerseGroups('Tv 44,10.11-12.16 Đ. x. c.10b'),
           en: psalmCitationVerseGroups('Psalm 45:10, 11-12, 16'),
           jp: psalmCitationVerseGroups('詩編45・10、11-12、16'),
           la: psalmCitationVerseGroups('Ps 44,11-12.14-15.16-17')
         },
+        ktcgAssumptionVerseRefs: (ktcgAssumptionPsalm?.lines || [])
+          .filter(line => Array.isArray(line.verseRefs) && line.verseRefs.length)
+          .map(line => line.verseRefs),
         normalizedGroupLineCount: normalizedElevenTwelveGroup?.lines?.length || 0,
         preservedVerseParagraphCounts: Object.fromEntries(Object.keys(normalizedPsalmSources).map(lower => [
           lower,
@@ -2216,10 +2227,12 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && JSON.stringify(result.psalmStanzaGroupingFixture.citationGroups) === JSON.stringify({
         kr: [[10], [11], [12], [16]],
         vn: [[11, 12], [14, 15], [16, 17]],
+        vnKtcg: [[10], [11, 12], [16]],
         en: [[10], [11, 12], [16]],
         jp: [[10], [11, 12], [16]],
         la: [[11, 12], [14, 15], [16, 17]]
       })
+      && JSON.stringify(result.psalmStanzaGroupingFixture.ktcgAssumptionVerseRefs) === JSON.stringify([[10], [11, 12], [16]])
       && result.psalmStanzaGroupingFixture.normalizedGroupLineCount === 2
       && JSON.stringify(result.psalmStanzaGroupingFixture.preservedVerseParagraphCounts) === JSON.stringify({ kr: 4, vn: 3, en: 4, jp: 4, la: 3 }),
     `Multilingual psalm stanza grouping is incomplete: ${JSON.stringify(result.psalmStanzaGroupingFixture)}`);

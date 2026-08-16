@@ -5784,7 +5784,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 hanoiStyleLines.push(`${isResponse ? 'Đáp' : 'Xướng'}: ${text}`);
                 if (isResponse) responseAdded = true;
             });
-            lines.push(...parseVietnamesePsalmLines(hanoiStyleLines).lines);
+            const parsedLines = parseVietnamesePsalmLines(hanoiStyleLines).lines;
+            attachPsalmVerseRefs('VN', choice.citation, parsedLines);
+            lines.push(...parsedLines);
         });
         if (!lines.length) return null;
         const cit_vn = optionCits.map(item => item.cit_vn).find(Boolean) || '';
@@ -9241,7 +9243,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const separatorIndex = raw.search(/[,：:・]/u);
         if (separatorIndex < 0) return [];
         const verseText = raw.slice(separatorIndex + 1)
-            .replace(/\((?=[^)]*(?:◎|R\.?|Đ|Ð|℟|答))[^)]*\)/giu, ' ');
+            .replace(/\((?=[^)]*(?:◎|R\.?|Đ|Ð|℟|答))[^)]*\)/giu, ' ')
+            .replace(/\s+(?:Đ|Ð)\s*\.?(?:\s+(?:x|c)\s*\.)?[\s\S]*$/iu, ' ');
         return verseText.split(/[.,;、]/u).map(token => {
             const refs = new Set();
             let remainder = token;
