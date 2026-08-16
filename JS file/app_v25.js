@@ -12136,6 +12136,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/^(?:CĐ\.|CD\.|◎|会)\s*/i, '')
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
+            .normalize('NFC')
             .replace(/[()\[\]{}\-–—,.!?:;、。，\s]/g, '')
             .toLowerCase();
         return /^(?:alleluia|aleluia|haleluia|알렐루야|アレルヤ)+$/i.test(compact);
@@ -12172,6 +12173,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return String(text || '')
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
+            .normalize('NFC')
             .replace(/[ĐÐ]/g, 'D')
             .replace(/[đð]/g, 'd')
             .replace(/\s+/g, ' ')
@@ -15994,29 +15996,84 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .join('');
     }
 
-    function gospelAcclamationAlleluiaText(lower, position) {
-        const opening = position === 0;
-        const map = {
-            kr: '알렐루야.',
-            vn: opening ? 'Alleluia, alleluia!' : 'Alleluia.',
-            en: opening ? 'Alleluia, alleluia!' : 'Alleluia.',
-            jp: opening ? 'アレルヤ、アレルヤ。' : 'アレルヤ。',
-            la: opening ? 'Alleluia, alleluia!' : 'Alleluia.'
-        };
-        return map[lower] || map.en;
+    const gospelAcclamationAlleluiaTokens = Object.freeze({
+        kr: '알렐루야',
+        vn: 'Alleluia',
+        en: 'Alleluia',
+        jp: 'アレルヤ',
+        la: 'Alleluia'
+    });
+
+    function normalizedAlleluiaResponseText(value) {
+        return cleanNodeText(value)
+            .replace(/^(?:CĐ\.|CD\.|◎|会|R\.|℟\.?)\s*/iu, '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[ĐÐ]/g, 'D')
+            .replace(/[đð]/g, 'd');
     }
 
+    function gospelAcclamationAlleluiaProfile(value) {
+        if (!isAlleluiaOnlyText(value)) return null;
+        const normalized = normalizedAlleluiaResponseText(value);
+        const withoutPronunciationGuide = normalized.replace(/\([^)]*\)|\[[^\]]*\]|\{[^}]*\}/g, ' ');
+        const tokenPattern = /(?:alleluia|aleluia|haleluia|ha(?:[\s-]*le[\s-]*lui[\s-]*a)|알렐루야|アレルヤ)/giu;
+        const outsideMatches = withoutPronunciationGuide.match(tokenPattern) || [];
+        const allMatches = normalized.match(tokenPattern) || [];
+        return {
+            count: Math.max(1, outsideMatches.length || allMatches.length),
+            emphatic: /[!！]\s*$/u.test(normalized)
+        };
+    }
+
+    function gospelAcclamationAlleluiaText(lower, profile = {}) {
+        const token = gospelAcclamationAlleluiaTokens[lower] || gospelAcclamationAlleluiaTokens.en;
+        const count = Math.max(1, Number(profile.count) || 1);
+        const words = Array.from({ length: count }, (_, index) => {
+            if (index === 0 || !/^[A-Z]/.test(token)) return token;
+            return token.charAt(0).toLowerCase() + token.slice(1);
+        });
+        const separator = lower === 'jp' ? '、' : ', ';
+        const terminal = profile.emphatic ? (lower === 'jp' ? '！' : '!') : (lower === 'jp' ? '。' : '.');
+        return `${words.join(separator)}${terminal}`;
+    }
+
+    function gospelAcclamationResponseSourceOrder() {
+        return [
+            normalizeSelectableLang(state.currentLoc || '', ''),
+            normalizeSelectableLang(getLiturgicalBaseLang() || '', ''),
+            normalizeSelectableLang(state.targetLang || '', ''),
+            ...SUPPORTED_LANGS
+        ].map(lang => String(lang || '').toLowerCase())
+            .filter((lower, index, list) => lower && list.indexOf(lower) === index);
+    }
+
+    function gospelAcclamationAlleluiaReference(line) {
+        for (const lower of gospelAcclamationResponseSourceOrder()) {
+            const profile = gospelAcclamationAlleluiaProfile(line && line[`text_${lower}`]);
+            if (profile) return { lower, profile };
+        }
+        return null;
+    }
+
+    // Alleluia is a fixed congregational response, not the proper versicle.
+    // Translate its exact source-language repetition locally for every missing
+    // language. Other responses (including Korea-only Lenten formulas such as
+    // “말씀이신 그리스도님…”) deliberately remain empty so the ordinary AI
+    // translation path is still offered for them.
     function fillGospelAcclamationAlleluiaLines(lines) {
         if (!Array.isArray(lines)) return lines || [];
-        const alleluiaIndexes = [];
-        lines.forEach((line, index) => {
-            const hasAlleluia = ['kr', 'vn', 'en', 'jp', 'la'].some(lower => isAlleluiaOnlyText(line && line[`text_${lower}`]));
-            if (hasAlleluia) alleluiaIndexes.push(index);
-        });
-        alleluiaIndexes.forEach((lineIndex, position) => {
-            const line = lines[lineIndex];
-            ['kr', 'vn', 'en', 'jp', 'la'].forEach(lower => {
-                if (!cleanNodeText(line[`text_${lower}`])) line[`text_${lower}`] = gospelAcclamationAlleluiaText(lower, position);
+        const lowers = SUPPORTED_LANGS.map(lang => lang.toLowerCase());
+        const responseLines = lines
+            .map((line, index) => ({ line, index, reference: gospelAcclamationAlleluiaReference(line) }))
+            .filter(entry => entry.reference);
+        responseLines.forEach((entry, position) => {
+            const { line, reference } = entry;
+            lowers.forEach(lower => {
+                if (!cleanNodeText(line[`text_${lower}`])) {
+                    line[`text_${lower}`] = gospelAcclamationAlleluiaText(lower, reference.profile);
+                    line[`text_${lower}_ai`] = '';
+                }
                 if (position === 0 && !cleanNodeText(line[`sp_${lower}`])) line[`sp_${lower}`] = peopleSpeakerByLang[lower] || '';
             });
         });

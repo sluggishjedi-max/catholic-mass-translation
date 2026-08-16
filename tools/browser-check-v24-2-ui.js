@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260816-v25-r10/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260816-v25-r11/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -132,6 +132,47 @@ function startServer() {
         prompt: catholicTranslationStyleInstruction('KR'),
         nonKoreanPrompt: catholicTranslationStyleInstruction('VN')
       };
+      const savedAcclamationLanguages = { currentLoc: state.currentLoc, targetLang: state.targetLang };
+      state.currentLoc = 'VN';
+      state.targetLang = 'KR';
+      const vietnameseAlleluiaLines = [emptyMassLine(), emptyMassLine(), emptyMassLine()];
+      Object.assign(vietnameseAlleluiaLines[0], {
+        sp_vn: 'CĐ.',
+        text_vn: 'Alleluia, alleluia (Ha-le-lui-a, ha-le-lui-a)!'
+      });
+      Object.assign(vietnameseAlleluiaLines[1], {
+        sp_vn: 'X.',
+        text_vn: 'Lạy Chúa, xin mở lòng chúng con, để chúng con lắng nghe lời Con của Chúa.'
+      });
+      Object.assign(vietnameseAlleluiaLines[2], { text_vn: 'Ha-lê-lui-a.' });
+      fillGospelAcclamationAlleluiaLines(vietnameseAlleluiaLines);
+
+      state.currentLoc = 'KR';
+      state.targetLang = 'VN';
+      const koreanSingleAlleluia = emptyMassLine();
+      Object.assign(koreanSingleAlleluia, { sp_kr: '◎', text_kr: '알렐루야.' });
+      fillGospelAcclamationAlleluiaLines([koreanSingleAlleluia]);
+      const koreanLentenResponse = emptyMassLine();
+      Object.assign(koreanLentenResponse, { sp_kr: '◎', text_kr: '말씀이신 그리스도님, 찬미받으소서.' });
+      fillGospelAcclamationAlleluiaLines([koreanLentenResponse]);
+      const lentenFallbackSource = fallbackSourceTextForLine(koreanLentenResponse, 'vn', 'gospel_accl');
+      const gospelAcclamationResponseFixture = {
+        vietnameseOpening: Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang.toLowerCase(), vietnameseAlleluiaLines[0][`text_${lang.toLowerCase()}`] || ''])),
+        vietnameseClosing: Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang.toLowerCase(), vietnameseAlleluiaLines[2][`text_${lang.toLowerCase()}`] || ''])),
+        versicleTargetsRemainEmpty: SUPPORTED_LANGS
+          .map(lang => lang.toLowerCase())
+          .filter(lower => lower !== 'vn')
+          .every(lower => !cleanNodeText(vietnameseAlleluiaLines[1][`text_${lower}`])),
+        versicleFallbackSource: fallbackSourceTextForLine(vietnameseAlleluiaLines[1], 'kr', 'gospel_accl'),
+        koreanSingleVietnamese: koreanSingleAlleluia.text_vn || '',
+        koreanSingleProfile: gospelAcclamationAlleluiaProfile(koreanSingleAlleluia.text_kr),
+        lentenVietnamese: koreanLentenResponse.text_vn || '',
+        lentenProfile: gospelAcclamationAlleluiaProfile(koreanLentenResponse.text_kr),
+        lentenFallbackSource,
+        lentenAllowsAI: !shouldSuppressAIFallbackForLine(koreanLentenResponse, 'gospel_accl', 'vn')
+      };
+      state.currentLoc = savedAcclamationLanguages.currentLoc;
+      state.targetLang = savedAcclamationLanguages.targetLang;
       const hymnTagProbe = document.createElement('div');
       hymnTagProbe.innerHTML = '<span class="hymn-title-text">테스트 성가' + hymnTitleTagsHtml({
         country: state.uiLang,
@@ -1616,6 +1657,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         sourceOptions,
         koreanVietnameseSourceLabels,
         catholicTerminologyFixture,
+        gospelAcclamationResponseFixture,
         hymnLiturgicalTagFixture,
         hymnOriginalTitleFixture,
         hymnMetadataLocalizationFixture,
@@ -1867,6 +1909,27 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /“도”→“길/.test(result.catholicTerminologyFixture.prompt)
       && result.catholicTerminologyFixture.nonKoreanPrompt === '',
     `AI Korean translation is not enforcing Catholic terminology safely: ${JSON.stringify(result.catholicTerminologyFixture)}`);
+    assert(JSON.stringify(result.gospelAcclamationResponseFixture.vietnameseOpening) === JSON.stringify({
+      kr: '알렐루야, 알렐루야!',
+      vn: 'Alleluia, alleluia (Ha-le-lui-a, ha-le-lui-a)!',
+      en: 'Alleluia, alleluia!',
+      jp: 'アレルヤ、アレルヤ！',
+      la: 'Alleluia, alleluia!'
+    })
+      && JSON.stringify(result.gospelAcclamationResponseFixture.vietnameseClosing) === JSON.stringify({
+        kr: '알렐루야.',
+        vn: 'Ha-lê-lui-a.',
+        en: 'Alleluia.',
+        jp: 'アレルヤ。',
+        la: 'Alleluia.'
+      })
+      && result.gospelAcclamationResponseFixture.versicleTargetsRemainEmpty
+      && /Lạy Chúa/u.test(result.gospelAcclamationResponseFixture.versicleFallbackSource)
+      && result.gospelAcclamationResponseFixture.koreanSingleVietnamese === 'Alleluia.'
+      && result.gospelAcclamationResponseFixture.lentenVietnamese === ''
+      && /말씀이신 그리스도님/u.test(result.gospelAcclamationResponseFixture.lentenFallbackSource)
+      && result.gospelAcclamationResponseFixture.lentenAllowsAI,
+    `Gospel-acclamation responses were not translated from their source while preserving AI for the versicle or Korean-only Lenten response: ${JSON.stringify(result.gospelAcclamationResponseFixture)}`);
     assert(JSON.stringify(result.hymnLiturgicalTagFixture.labels) === JSON.stringify(['연중', '봉헌'])
       && result.hymnLiturgicalTagFixture.excludesBook
       && result.hymnLiturgicalTagFixture.followsTitle
