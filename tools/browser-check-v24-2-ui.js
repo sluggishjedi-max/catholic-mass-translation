@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260815-v25-r5/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260816-v25-r6/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -1092,6 +1092,72 @@ function startServer() {
         offerings: aug9PrayerData.prayer_offerings && aug9PrayerData.prayer_offerings.text || '',
         after: aug9PrayerData.prayer_after && aug9PrayerData.prayer_after.text || ''
       };
+      const aug15VietnameseSourceFixture = `<article>
+        <h1>Ngày 15/8: Lễ Đức Mẹ linh hồn và xác lên trời</h1>
+        <h2>Ca nhập lễ</h2><p>Một điềm lạ vĩ đại đã xuất hiện trên trời.</p>
+        <h2>Lời nguyện nhập lễ</h2>
+        <p>Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã đưa lên trời cả hồn lẫn xác Ðức Ma-ri-a là trinh nữ vô nhiễm và là thánh mẫu của Con Chúa. Xin cho chúng con hằng biết hướng lòng về phúc lộc quê trời để mai sau được cùng thánh mẫu chung hưởng vinh quang. Chúng con cầu xin…</p>
+        <h2>Bài Ðọc I: Kh 11, 19a; 12, 1-6a, 10ab</h2><p>Trích sách Khải Huyền của Thánh Gioan.</p>
+        <h2>Ðáp Ca: Tv 44, 10bc. 11. 12ab. 16</h2><p>Ðáp: Hoàng Hậu đứng bên hữu Ðức Vua.</p>
+      </article>`;
+      const aug15VietnameseParsed = strictParseDailyMass('VN', aug15VietnameseSourceFixture, new Date(2026, 7, 15));
+      const aug15VietnameseCollect = aug15VietnameseParsed.data.collect || {};
+
+      const savedPrayerSourceLanguage = state.currentLoc;
+      state.currentLoc = 'KR';
+      const collectBodies = {
+        kr: '전능하시고 영원하신 하느님, 성모 마리아를 하늘로 불러올리셨으니 저희도 천상 영광을 누리게 하소서.',
+        vn: 'Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã đưa lên trời cả hồn lẫn xác Đức Ma-ri-a. Xin cho chúng con được cùng Thánh Mẫu chung hưởng vinh quang.',
+        en: 'Almighty ever-living God, you assumed the Immaculate Virgin Mary into heavenly glory. Grant that we may share in her glory.',
+        jp: '全能永遠の神よ、聖母マリアを天の栄光に上げられたあなたに願います。わたしたちもその栄光にあずからせてください。',
+        la: 'Omnípotens sempitérne Deus, Maríam Vírginem ad cæléstem glóriam assumpsísti; concéde nobis eius glóriæ esse consórtes.'
+      };
+      const collectLowers = ['kr', 'vn', 'en', 'jp', 'la'];
+      const probeLocalizedCollectStyle = style => {
+        const target = [makePrayerOpenerLine(), emptyMassLine(), emptyMassLine(), makePrayerAmenLine()];
+        applyParsedLinesForLanguage(target, 'kr', [
+          { sp: '', text: collectBodies.kr, role: 'body' },
+          { sp: '', text: localizedPrayerConclusionFormulas.collect[style].KR, role: 'conclusion' }
+        ], 'collect');
+        collectLowers.slice(1).forEach(lower => {
+          applyParsedLinesForLanguage(target, lower, [{ sp: '', text: collectBodies[lower], role: 'body' }], 'collect');
+        });
+        ensureLocalizedPrayerConclusions(target, 'collect');
+        normalizeDailySectionLines(target, 'collect');
+        return Object.fromEntries(collectLowers.map(lower => {
+          const conclusion = target.find(line => line[`role_${lower}`] === 'conclusion') || {};
+          const text = conclusion[`text_${lower}`] || '';
+          return [lower, {
+            text,
+            role: conclusion[`role_${lower}`] || '',
+            style: prayerConclusionStyle(langCodeFromLowerKey(lower), 'collect', text)
+          }];
+        }));
+      };
+      const localizedCollectStyles = Object.fromEntries(
+        ['through_son', 'relative_son', 'addressed_son'].map(style => [style, probeLocalizedCollectStyle(style)])
+      );
+
+      const localizedAfterTarget = [emptyMassLine(), emptyMassLine(), makePrayerAmenLine()];
+      applyParsedLinesForLanguage(localizedAfterTarget, 'kr', [
+        { sp: '', text: '주님, 이 성체로 저희를 새롭게 하소서.', role: 'body' },
+        { sp: '', text: localizedPrayerConclusionFormulas.short.through_son.KR, role: 'conclusion' }
+      ], 'prayer_after');
+      applyParsedLinesForLanguage(localizedAfterTarget, 'vn', [
+        { sp: '', text: 'Lạy Chúa, xin cho bí tích này đổi mới chúng con.', role: 'body' }
+      ], 'prayer_after');
+      ensureLocalizedPrayerConclusions(localizedAfterTarget, 'prayer_after');
+      const localizedAfterVietnameseConclusion = localizedAfterTarget
+        .map(line => line.text_vn)
+        .find(text => prayerConclusionStyle('VN', 'prayer_after', text) === 'through_son') || '';
+      state.currentLoc = savedPrayerSourceLanguage;
+      const localizedPrayerConclusionFixture = {
+        aug15Body: aug15VietnameseCollect.lines?.find(line => line.role !== 'conclusion')?.text || '',
+        aug15Conclusion: aug15VietnameseCollect.lines?.find(line => prayerConclusionStyle('VN', 'collect', line.text))?.text || '',
+        aug15ContainsReading: /Kh 11|Khải Huyền|Bài Ðọc/u.test(aug15VietnameseCollect.text || ''),
+        collectStyles: localizedCollectStyles,
+        localizedAfterVietnameseConclusion
+      };
       const inlineOfferingBoundarySources = {
         KR: '예물 기도 주님, 이 예물을 받아 주소서. 감사송 복되신 동정 마리아 감사송 영성체송 주님을 찬미하여라.',
         VN: 'Lời nguyện tiến lễ Lạy Chúa, xin nhận lễ vật này. Kinh Tiền Tụng Lễ Đức Mẹ Hồn Xác Lên Trời Ca hiệp lễ Hãy ca tụng Chúa.',
@@ -1616,6 +1682,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         choiceRuleFixture,
         diocesanPrayerFixture,
         aug9PrayerFixture,
+        localizedPrayerConclusionFixture,
         offeringBoundaryFixture,
         assumptionPrefaceFixture,
         psalmStanzaGroupingFixture,
@@ -2110,6 +2177,19 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /chấp nhận lễ vật/.test(result.aug9PrayerFixture.offerings)
       && /bí tích này cứu độ/.test(result.aug9PrayerFixture.after),
     `August 9 Vietnamese collect crossed into the readings: ${JSON.stringify(result.aug9PrayerFixture)}`);
+    assert(/đưa lên trời cả hồn lẫn xác/u.test(result.localizedPrayerConclusionFixture.aug15Body)
+      && /Chúa Thánh Thần/u.test(result.localizedPrayerConclusionFixture.aug15Conclusion)
+      && !result.localizedPrayerConclusionFixture.aug15ContainsReading,
+    `August 15 Vietnamese collect was parsed outside its section: ${JSON.stringify(result.localizedPrayerConclusionFixture)}`);
+    assert(Object.entries(result.localizedPrayerConclusionFixture.collectStyles).every(([style, conclusions]) =>
+      ['kr', 'vn', 'en', 'jp', 'la'].every(lower => {
+        const conclusion = conclusions[lower];
+        return conclusion.text && conclusion.role === 'conclusion' && conclusion.style === style;
+      })
+    )
+      && /Thiên Chúa Cha/u.test(result.localizedPrayerConclusionFixture.collectStyles.addressed_son.vn.text)
+      && result.localizedPrayerConclusionFixture.localizedAfterVietnameseConclusion === 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.',
+    `Missing localized prayer conclusions were not derived from the source formula: ${JSON.stringify(result.localizedPrayerConclusionFixture)}`);
     assert(/예물을 받아/.test(result.offeringBoundaryFixture.KR)
       && !/감사송|영성체송/.test(result.offeringBoundaryFixture.KR)
       && /xin nhận lễ vật/.test(result.offeringBoundaryFixture.VN)

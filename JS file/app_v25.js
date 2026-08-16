@@ -9899,6 +9899,92 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return (formulas[lang] && formulas[lang][key]) || [];
     }
 
+    const localizedPrayerConclusionFormulas = Object.freeze({
+        collect: {
+            through_son: {
+                KR: '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.',
+                VN: 'Chúng con cầu xin nhờ Đức Giê-su Ki-tô Con Chúa, Thiên Chúa và là Chúa chúng con, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
+                EN: 'Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, God, for ever and ever.',
+                JP: '聖霊の交わりの中で、あなたとともに世々に生き、支配しておられる御子、わたしたちの主イエス・キリストによって。',
+                LA: 'Per Dóminum nostrum Iesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.'
+            },
+            relative_son: {
+                KR: '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.',
+                VN: 'Người là Thiên Chúa hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
+                EN: 'Who lives and reigns with you in the unity of the Holy Spirit, God, for ever and ever.',
+                JP: '御子は聖霊の交わりの中で、あなたとともに世々に生き、支配しておられる。おん名によって。',
+                LA: 'Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.'
+            },
+            addressed_son: {
+                KR: '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.',
+                VN: 'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.',
+                EN: 'Who live and reign with God the Father in the unity of the Holy Spirit, God, for ever and ever.',
+                JP: '主は聖霊の交わりの中で、父である神とともに世々に生き、支配しておられる。おん名によって。',
+                LA: 'Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.'
+            }
+        },
+        short: {
+            through_son: {
+                KR: '우리 주 그리스도를 통하여 비나이다.',
+                VN: 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.',
+                EN: 'Through Christ our Lord.',
+                JP: 'わたしたちの主イエス・キリストによって。',
+                LA: 'Per Christum Dóminum nostrum.'
+            },
+            relative_son: {
+                KR: '성자께서는 성부와 함께 영원히 살아 계시며 다스리시나이다.',
+                VN: 'Người hằng sống và hiển trị muôn đời.',
+                EN: 'Who lives and reigns for ever and ever.',
+                JP: '世々とこしえに生き、治められる御子によって。',
+                LA: 'Qui vivit et regnat in sǽcula sæculórum.'
+            },
+            addressed_son: {
+                KR: '성자께서는 영원히 살아 계시며 다스리시나이다.',
+                VN: 'Chúa hằng sống và hiển trị muôn đời.',
+                EN: 'Who live and reign for ever and ever.',
+                JP: '世々とこしえに生き、治められる主キリストによって。',
+                LA: 'Qui vivis et regnas in sǽcula sæculórum.'
+            }
+        }
+    });
+
+    function prayerConclusionStyle(lang, key, text) {
+        const conclusion = prayerConclusionEndingForText(lang, key, text);
+        if (!conclusion) return '';
+        if (lang === 'KR') {
+            if (/^(?:성부와|우리\s*주\s*그리스도를)/u.test(conclusion)) return 'through_son';
+            if (/^주님께서는/u.test(conclusion)) return 'addressed_son';
+            if (!/^성자께서는/u.test(conclusion)) return '';
+            return key === 'collect' || /성부와\s*함께/u.test(conclusion) ? 'relative_son' : 'addressed_son';
+        }
+        if (lang === 'VN') {
+            if (/^Chúng con cầu xin/iu.test(conclusion)) return 'through_son';
+            if (/^Chúa\b/iu.test(conclusion) && /(?:Thiên Chúa Cha|hiển trị muôn đời)/iu.test(conclusion)) return 'addressed_son';
+            return /^(?:Người|Đấng|Ðấng|Con Một Chúa|(?:Đức|Ðức) Ki-tô|Chúa Ki-tô)/iu.test(conclusion) ? 'relative_son' : '';
+        }
+        if (lang === 'EN') {
+            if (/^Through\b/iu.test(conclusion)) return 'through_son';
+            if (/^Who live\b/iu.test(conclusion)) return 'addressed_son';
+            return /^Who lives\b/iu.test(conclusion) ? 'relative_son' : '';
+        }
+        if (lang === 'JP') {
+            if (/^(?:聖霊の交わり|わたしたちの主)/u.test(conclusion)) return 'through_son';
+            if (/^主は|主キリスト/u.test(conclusion)) return 'addressed_son';
+            return /御子/u.test(conclusion) ? 'relative_son' : '';
+        }
+        if (lang === 'LA') {
+            if (/^Per\b/iu.test(conclusion)) return 'through_son';
+            if (/^Qui vivis\b/iu.test(conclusion)) return 'addressed_son';
+            return /^Qui (?:tecum )?vivit\b/iu.test(conclusion) ? 'relative_son' : '';
+        }
+        return '';
+    }
+
+    function localizedPrayerConclusionFormula(lang, key, style) {
+        const group = key === 'collect' ? localizedPrayerConclusionFormulas.collect : localizedPrayerConclusionFormulas.short;
+        return (group[style] && group[style][lang]) || '';
+    }
+
     function strictPrayerParagraphs(lang, key, blocks) {
         let text = strictCleanLine(blocks.join(' '));
         text = strictExpandPrayerEnding(lang, key, text);
@@ -11332,6 +11418,71 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (firstBodyLine) firstBodyLine[`sp_${lower}`] = celebrantSpeakerByLang[lower] || firstBodyLine[`sp_${lower}`] || '';
             });
         }
+    }
+
+    function prayerConclusionForLanguage(targetLines, lower, baseId) {
+        const lang = langCodeFromLowerKey(lower);
+        for (const line of targetLines || []) {
+            const text = cleanNodeText(line && line[`text_${lower}`]);
+            if (!text) continue;
+            const ending = prayerConclusionEndingForText(lang, baseId, text);
+            const style = ending ? prayerConclusionStyle(lang, baseId, ending) : '';
+            if (ending && style) return { line, ending, style };
+        }
+        return null;
+    }
+
+    function prayerHasBodyForLanguage(targetLines, lower, baseId) {
+        const lang = langCodeFromLowerKey(lower);
+        return (targetLines || []).some(line => {
+            if (!line || line[`rubric_${lower}`]) return false;
+            const text = cleanNodeText(line[`text_${lower}`] || line[`text_${lower}_ai`]);
+            if (!text || isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text)) return false;
+            if (line[`role_${lower}`] === 'conclusion') return false;
+            return prayerConclusionEndingForText(lang, baseId, text) !== text;
+        });
+    }
+
+    // A remote missal often abbreviates a conclusion, and some pages omit it
+    // altogether.  Preserve the theological direction of the source-language
+    // conclusion, then supply the authorized local formula for every other
+    // language that has a prayer body but no conclusion of its own.
+    function ensureLocalizedPrayerConclusions(targetLines, baseId) {
+        if (!strictPrayerKeys.has(baseId) || !Array.isArray(targetLines)) return;
+        const lowers = ['kr', 'vn', 'en', 'jp', 'la'];
+        const preferred = [
+            normalizeSelectableLang(state.currentLoc || '', ''),
+            normalizeSelectableLang(getLiturgicalBaseLang() || '', ''),
+            'KR', 'VN', 'EN', 'JP', 'LA'
+        ].map(lang => String(lang || '').toLowerCase())
+            .filter((lower, index, list) => lowers.includes(lower) && list.indexOf(lower) === index);
+        let reference = null;
+        for (const lower of preferred) {
+            reference = prayerConclusionForLanguage(targetLines, lower, baseId);
+            if (reference) break;
+        }
+        if (!reference) return;
+
+        lowers.forEach(lower => {
+            if (!prayerHasBodyForLanguage(targetLines, lower, baseId)) return;
+            if (prayerConclusionForLanguage(targetLines, lower, baseId)) return;
+            const lang = langCodeFromLowerKey(lower);
+            const formula = localizedPrayerConclusionFormula(lang, baseId, reference.style);
+            if (!formula) return;
+            let conclusionLine = reference.line && !lineHasLanguageContent(reference.line, lower)
+                ? reference.line
+                : targetLines.find(line => lineHasAnyRole(line, 'conclusion') && !lineHasLanguageContent(line, lower));
+            if (!conclusionLine) {
+                conclusionLine = emptyMassLine();
+                targetLines.splice(parsedInsertIndex(targetLines, baseId), 0, conclusionLine);
+            }
+            conclusionLine[`sp_${lower}`] = '';
+            conclusionLine[`text_${lower}`] = formula;
+            conclusionLine[`text_${lower}_ai`] = '';
+            conclusionLine[`role_${lower}`] = 'conclusion';
+            conclusionLine[`rubric_${lower}`] = '';
+            conclusionLine[`verse_refs_${lower}`] = [];
+        });
     }
 
     function normalizedSummaryText(value) {
@@ -13231,6 +13382,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     contentLine[`text_${lower}_ai`] = '';
                 }
             });
+            if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(lines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(lines, baseId);
             normalizeDailySectionLines(lines, baseId);
             removeDailyProclamationEndingLines(lines, baseId);
@@ -13310,6 +13462,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 }
             });
 
+            if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(targetLines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(targetLines, baseId);
             normalizeDailySectionLines(targetLines, baseId);
             removeDailyProclamationEndingLines(targetLines, baseId);
