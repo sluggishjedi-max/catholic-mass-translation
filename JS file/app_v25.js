@@ -12220,6 +12220,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['mercy_sinned', /죄.*불쌍|자비.*죄|xin xot thuong.*pham toi|nguyen thuong.*nhan hau|be merciful.*sinned|have mercy.*sinned|miserere.*peccavimus/i],
             ['praise_soul_lord', /영혼.*찬미|linh hon.*ngoi khen|praise.*soul.*lord|lauda.*anima/i]
         ] : [
+            ['doctor_church_spirit_wisdom_teaching', /베르나르도.*(?:지식|지혜)의 영.*가르침|교회.*입.*(?:지식|지혜)의 영.*영광의 옷|(?:chua da cho nguoi )?len tieng giua cong doan.*tinh than khon ngoan.*(?:ao vinh quang|minh man)|midst of (?:the )?(?:church|assembly).*opened.*mouth.*(?:spirit of wisdom|wisdom and understanding).*(?:robe|garment) of glory|medio ecclesiae.*aperuit os.*spiritu sapientiae.*stolam gloriae/iu],
+            ['god_shield_anointed_courts', /(?:하느님|주님).*(?:방패|보호자).*(?:기름부음|그리스도).*(?:뜰|궁정).*천 날|chua la khien moc.*guong mat.*xuc dau.*mot ngay.*(?:khuon vien|thanh dien).*ngan ngay|(?:turn|look).*(?:eyes|upon).*god.*shield.*face.*anointed.*(?:one day|day within).*(?:courts|house).*thousand|protector noster.*aspice.*respice.*faciem christi.*melior est dies.*atriis.*milia/iu],
             ['wise_virgin_lamp_meet_christ', /슬기(?:롭|로).*동정녀.*등불.*그리스도.*맞|trinh nu.*khon ngoan.*(?:den|ngon den).*don.*duc\s*ki\s*-?\s*to|wise virgin.*lamp.*meet.*christ|sapiens.*prudent.*obviam christ.*lampad|prudent(?:es)?.*virgin(?:es)?.*(?:oleum|lampad)|virgin(?:es)?.*prudentes.*(?:oleum|lampad)|virgin(?:es)?.*prudentes.*lampad.*christ/i],
             ['virgin_beautiful_eternal_crown', /그리스도.*동정녀.*아름.*영원한.*동정.*화관|trinh nu.*xinh dep.*(?:trieu thien|vuong mien).*dong trinh|virgin.*beautiful.*crown.*eternal virgin|beautiful.*virgin.*crown.*(?:eternal|perpetual).*virgin|pulchra.*virgo.*coron.*virginit|virgo.*pulchra.*coron.*virginit/i],
             ['lord_portion_inheritance_cup', /주님.*(?:몫|상속|기업).*잔|chua.*phan san nghiep.*chen(?: phuc)?|lord.*portion.*inheritance.*cup|dominus.*pars.*hereditat.*calic/i],
@@ -12542,7 +12544,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align3';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align4';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -12670,8 +12672,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function buildKnownConflictSourceSeparation(baseId, optionMap, section = {}) {
-        const lowers = ['kr', 'vn', 'en', 'jp', 'la']
-            .filter(lower => Array.isArray(optionMap && optionMap[lower]) && optionMap[lower].length === 1);
+        const populatedLowers = ['kr', 'vn', 'en', 'jp', 'la']
+            .filter(lower => Array.isArray(optionMap && optionMap[lower]) && optionMap[lower].length);
+        // Full separation is only safe when every participating language has
+        // one option. A third language with alternatives can bridge each
+        // otherwise-conflicting source to a different translated option.
+        if (populatedLowers.some(lower => optionMap[lower].length > 1)) return [];
+        const lowers = populatedLowers;
         for (let i = 0; i < lowers.length; i += 1) {
             for (let j = i + 1; j < lowers.length; j += 1) {
                 const left = lowers[i];

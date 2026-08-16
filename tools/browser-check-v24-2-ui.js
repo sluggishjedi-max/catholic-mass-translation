@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260817-v25-r13/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260817-v25-r14/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -954,6 +954,36 @@ function startServer() {
         multilingualEntranceAlignment,
         [{ kr: 0, en: 0, la: 0 }, { kr: 1, en: 1, la: 1 }, { en: 2, la: 2 }]
       );
+      const aug20EntranceOptionMap = {
+        kr: [[{ text: '주님은 복된 베르나르도를 지식의 영으로 가득 채우시어, 하느님 백성에게 풍성한 가르침을 전하게 하셨네.' }]],
+        en: [[{ text: 'Turn your eyes, O God, our shield; and look on the face of your anointed one; one day within your courts is better than a thousand elsewhere.' }]],
+        vn: [
+          [{ text: 'Chúa đã cho người lên tiếng giữa cộng đoàn, ban cho người đầy tinh thần khôn ngoan minh mẫn và mặc cho người áo vinh quang.' }],
+          [{ text: 'Miệng người công chính niệm lẽ khôn ngoan và lưỡi họ nói lên điều chính trực.' }],
+          [{ text: 'Lạy Chúa, Chúa là phần sản nghiệp con được hưởng, là chén phúc lộc dành cho con.' }],
+          [{ text: 'Lạy Chúa là khiên mộc chở che, xin thương xem nhìn đến gương mặt Đấng Ngài đã xức dầu. Một ngày tại khuôn viên thánh điện quý hơn cả ngàn ngày.' }]
+        ]
+      };
+      const aug20EntranceSection = {
+        optionCits_en: [{ cit_en: 'Ps 84 (83): 10-11' }],
+        optionCits_vn: [
+          { cit_vn: 'Hc 15,5' },
+          { cit_vn: 'Tv 36,30-31' },
+          { cit_vn: 'Tv 15,5-6' },
+          { cit_vn: 'Tv 83,10-11' }
+        ],
+        optionKinds_vn: ['proper', 'proper', 'proper', 'common']
+      };
+      const aug20EntranceAlignment = buildFallbackVariantAlignment(
+        'entrance',
+        aug20EntranceOptionMap,
+        aug20EntranceSection
+      );
+      const aug20ForcedSeparation = buildKnownConflictSourceSeparation(
+        'entrance',
+        aug20EntranceOptionMap,
+        aug20EntranceSection
+      );
       const citationPriorityOptionMap = {
         kr: [[{ text: '보라, 신랑이 오신다. 주 그리스도를 맞으러 나가라.' }]],
         la: [
@@ -1119,6 +1149,17 @@ function startServer() {
         },
         multilingualAlignmentFixture: {
           entrance: multilingualEntranceAlignment,
+          aug20Entrance: aug20EntranceAlignment,
+          aug20ForcedSeparation,
+          aug20SemanticKeys: {
+            kr: variantSemanticKey('entrance', variantOptionMeaningText('entrance', aug20EntranceOptionMap.kr[0])),
+            en: variantSemanticKey('entrance', variantOptionMeaningText('entrance', aug20EntranceOptionMap.en[0])),
+            vnProper: variantSemanticKey('entrance', variantOptionMeaningText('entrance', aug20EntranceOptionMap.vn[0])),
+            vnCommon: variantSemanticKey('entrance', variantOptionMeaningText('entrance', aug20EntranceOptionMap.vn[3]))
+          },
+          aug20Kinds: aug20EntranceAlignment.map((group, index) =>
+            dailyVariantKindFromSourceMetadata(aug20EntranceSection, group, index)
+          ),
           citationPriority: citationPriorityAlignment,
           clareOffering: clareOfferingAlignment,
           vietnameseEnglishPsalm: vietnameseEnglishPsalmAlignment,
@@ -2454,6 +2495,17 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         group.kr === 0 && group.en === 0 && group.la === 0)
       && result.choiceRuleFixture.multilingualAlignmentFixture.entrance.some(group =>
         group.kr === 1 && group.en === 1 && group.la === 1)
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20Entrance.some(group =>
+        group.kr === 0 && group.vn === 0 && !Number.isInteger(group.en))
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20Entrance.some(group =>
+        group.en === 0 && group.vn === 3 && !Number.isInteger(group.kr))
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20ForcedSeparation.length === 0
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20SemanticKeys.kr === 'doctor_church_spirit_wisdom_teaching'
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20SemanticKeys.vnProper === 'doctor_church_spirit_wisdom_teaching'
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20SemanticKeys.en === 'god_shield_anointed_courts'
+      && result.choiceRuleFixture.multilingualAlignmentFixture.aug20SemanticKeys.vnCommon === 'god_shield_anointed_courts'
+      && JSON.stringify(result.choiceRuleFixture.multilingualAlignmentFixture.aug20Kinds)
+        === JSON.stringify(['proper', 'proper', 'proper', 'common'])
       && result.choiceRuleFixture.multilingualAlignmentFixture.citationPriority.some(group =>
         group.kr === 0 && group.la === 0)
       && !result.choiceRuleFixture.multilingualAlignmentFixture.citationPriority.some(group =>
