@@ -48,7 +48,7 @@
         targetLang: 'VN', // 우측 (번역어)
         uiLang: initialUiLanguage(), // 최초에는 기기/브라우저 언어를 따르고, 이후에는 사용자의 선택을 기억합니다.
         layoutStacked: false,
-        fontSize: '16px',
+        fontSize: '18px',
         vnReadingSource: 'hanoi',
         vnReadingSourceConfirmed: false,
         aiVoiceOn: false,
@@ -14071,7 +14071,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             voice: '🎙️ 음성 진행 표시', voiceStatus: '준비됨', voiceNote: '※ 주변 환경에 따라 부정확할 수 있습니다.',
             font: '🔍 글자 크기', ui: '⚙️ 설정 언어 (UI)',
             hideStatusBar: '📱 상단 상태바 숨기기', hideNavigationBar: '📱 하단 네비게이션 숨기기', close: '닫기',
-            fonts: { '14px': '작게', '16px': '보통', '18px': '크게', '22px': '아주 크게' }
+            fonts: { '14px': '작게', '18px': '크게', '20px': '더 크게', '22px': '아주 크게' }
         },
         VN: {
             title: 'Cài đặt', gps: '📍 Tự động nhận diện vị trí GPS', loc: '🌐 Quốc gia / Ngôn ngữ bên trái', target: '🔄 Ngôn ngữ dịch (bên phải)',
@@ -14079,7 +14079,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             voice: '🎙️ Theo dõi tiến trình bằng giọng nói', voiceStatus: 'Sẵn sàng', voiceNote: '※ Có thể không chính xác tùy môi trường xung quanh.',
             font: '🔍 Kích thước chữ', ui: '⚙️ Ngôn ngữ cài đặt (UI)',
             hideStatusBar: '📱 Ẩn thanh trạng thái phía trên', hideNavigationBar: '📱 Ẩn thanh điều hướng phía dưới', close: 'Đóng',
-            fonts: { '14px': 'Nhỏ', '16px': 'Bình thường', '18px': 'Lớn', '22px': 'Rất lớn' }
+            fonts: { '14px': 'Nhỏ', '18px': 'Lớn', '20px': 'Lớn hơn', '22px': 'Rất lớn' }
         },
         EN: {
             title: 'Settings', gps: '📍 Automatic GPS location', loc: '🌐 Country / Left language', target: '🔄 Translation language (right)',
@@ -14087,7 +14087,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             voice: '🎙️ Voice progress tracking', voiceStatus: 'Ready', voiceNote: '※ Accuracy may vary with the surrounding environment.',
             font: '🔍 Font size', ui: '⚙️ Settings language (UI)',
             hideStatusBar: '📱 Hide top status bar', hideNavigationBar: '📱 Hide bottom navigation bar', close: 'Close',
-            fonts: { '14px': 'Small', '16px': 'Normal', '18px': 'Large', '22px': 'Extra large' }
+            fonts: { '14px': 'Small', '18px': 'Large', '20px': 'Larger', '22px': 'Extra large' }
         },
         JP: {
             title: '設定', gps: '📍 GPSで位置を自動認識', loc: '🌐 国 / 左側の言語', target: '🔄 翻訳言語（右側）',
@@ -14095,7 +14095,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             voice: '🎙️ 音声による進行表示', voiceStatus: '準備完了', voiceNote: '※ 周囲の環境によって正確でない場合があります。',
             font: '🔍 文字サイズ', ui: '⚙️ 設定言語（UI）',
             hideStatusBar: '📱 上部ステータスバーを隠す', hideNavigationBar: '📱 下部ナビゲーションバーを隠す', close: '閉じる',
-            fonts: { '14px': '小', '16px': '標準', '18px': '大', '22px': '特大' }
+            fonts: { '14px': '小', '18px': '大', '20px': 'より大きい', '22px': '特大' }
         },
         LA: {
             title: 'Ordinationes', gps: '📍 Locus per GPS automatice', loc: '🌐 Civitas / Lingua sinistra', target: '🔄 Lingua translationis (dextra)',
@@ -14103,7 +14103,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             voice: '🎙️ Progressus per vocem', voiceStatus: 'Paratum', voiceNote: '※ Accuratio secundum ambitum variari potest.',
             font: '🔍 Magnitudo litterarum', ui: '⚙️ Lingua ordinationum (UI)',
             hideStatusBar: '📱 Lineam status superiorem cela', hideNavigationBar: '📱 Lineam navigationis inferiorem cela', close: 'Claude',
-            fonts: { '14px': 'Parva', '16px': 'Usitata', '18px': 'Magna', '22px': 'Maxima' }
+            fonts: { '14px': 'Parva', '18px': 'Magna', '20px': 'Maior', '22px': 'Maxima' }
         }
     });
 

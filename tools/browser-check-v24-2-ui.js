@@ -64,7 +64,7 @@ function startServer() {
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260816-v25-r7/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260816-v25-r8/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -93,7 +93,12 @@ function startServer() {
       setSelect('set-loc', 'KR');
       setSelect('set-target-lang', 'VN');
       setSelect('set-ui-lang', 'KR');
-      setSelect('set-font-size', '16px');
+      const defaultFontSize = {
+        state: state.fontSize,
+        select: document.getElementById('set-font-size').value,
+        css: px('body')
+      };
+      setSelect('set-font-size', '18px');
       updateSettings();
       render();
       const baseline = {
@@ -102,6 +107,8 @@ function startServer() {
         date: px('.date-display'),
         liturgy: px('.liturgy-name'),
         legend: px('.role-legend'),
+        settingSelect: px('#set-font-size'),
+        inlineSelect: px('.select-inline'),
         quick: px('.quick-home-btn')
       };
       const koreanVietnameseSourceLabels = {
@@ -261,6 +268,14 @@ function startServer() {
       };
 
       setSelect('set-ui-lang', 'VN');
+      setSelect('set-font-size', '20px');
+      updateSettings();
+      render();
+      const intermediateFontSize = {
+        body: px('body'),
+        settingSelect: px('#set-font-size'),
+        inlineSelect: px('.select-inline')
+      };
       setSelect('set-font-size', '22px');
       updateSettings();
       render();
@@ -1574,6 +1589,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       state.bishopContext = previousBishopContext;
 
       return {
+        defaultFontSize,
+        intermediateFontSize,
         baseline,
         enlarged: {
           nav: px('nav'),
@@ -1582,6 +1599,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           liturgy: px('.liturgy-name'),
           liturgySecondary: px('.liturgy-name-secondary'),
           legend: px('.role-legend'),
+          settingSelect: px('#set-font-size'),
+          inlineSelect: px('.select-inline'),
           quick: px('.quick-home-btn')
         },
         navTexts,
@@ -1739,7 +1758,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
     assert(JSON.stringify(result.navTexts) === JSON.stringify(['Thánh lễ', 'Kinh nguyện', 'Thánh ca', 'Nhà thờ']), `Vietnamese header menu mismatch: ${JSON.stringify(result.navTexts)}`);
     assert(JSON.stringify(result.quickTexts) === JSON.stringify(['Thánh lễ', 'Kinh nguyện', 'Thánh ca', 'Nhà thờ']), `Vietnamese quick menu mismatch: ${JSON.stringify(result.quickTexts)}`);
     assert(result.targetOptions.includes('Tiếng Hàn / 한국어') && result.targetOptions.includes('Tiếng Anh / English'), `Localized target options missing: ${JSON.stringify(result.targetOptions)}`);
-    assert(JSON.stringify(result.fontOptions) === JSON.stringify(['Nhỏ', 'Bình thường', 'Lớn', 'Rất lớn']), `Vietnamese font choices mismatch: ${JSON.stringify(result.fontOptions)}`);
+    assert(JSON.stringify(result.fontOptions) === JSON.stringify(['Nhỏ', 'Lớn', 'Lớn hơn', 'Rất lớn']), `Vietnamese font choices mismatch: ${JSON.stringify(result.fontOptions)}`);
     assert(result.sourceOptions.every(text => /Bản dịch|KTCGKPV/.test(text)), `Vietnamese source choices are not localized: ${JSON.stringify(result.sourceOptions)}`);
     assert(result.koreanVietnameseSourceLabels.popup === '베트남 주교회의 전례위원회 번역 · 미사독서'
       && result.koreanVietnameseSourceLabels.setting === '베트남 주교회의 전례위원회 번역 · 미사독서'
@@ -1858,11 +1877,17 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.enlarged.header === result.enlarged.legend
       && result.enlarged.header === result.enlarged.nav,
     `Header, date, liturgy and legend sizes differ: ${JSON.stringify(result.enlarged)}`);
-    assert(Object.entries(result.baseline).every(([key, value]) => value === (key === 'quick' ? 12 : 16)),
-      `Normal chrome fonts or fixed quick-menu font are incorrect: ${JSON.stringify(result.baseline)}`);
-    assert(result.enlarged.header > result.baseline.header * 1.3
-      && result.enlarged.nav > result.baseline.nav * 1.3
-      && result.enlarged.legend > result.baseline.legend * 1.3,
+    assert(JSON.stringify(result.defaultFontSize) === JSON.stringify({ state: '18px', select: '18px', css: 18 }),
+      `Large is not the default font size: ${JSON.stringify(result.defaultFontSize)}`);
+    assert(JSON.stringify(result.intermediateFontSize) === JSON.stringify({ body: 20, settingSelect: 20, inlineSelect: 20 }),
+      `The intermediate font size does not scale select controls: ${JSON.stringify(result.intermediateFontSize)}`);
+    assert(Object.entries(result.baseline).every(([key, value]) => value === (key === 'quick' ? 12 : 18)),
+      `Large chrome or select fonts are incorrect: ${JSON.stringify(result.baseline)}`);
+    assert(result.enlarged.header > result.baseline.header * 1.2
+      && result.enlarged.nav > result.baseline.nav * 1.2
+      && result.enlarged.legend > result.baseline.legend * 1.2
+      && result.enlarged.settingSelect > result.baseline.settingSelect * 1.2
+      && result.enlarged.inlineSelect > result.baseline.inlineSelect * 1.2,
     `Chrome fonts did not scale proportionally: ${JSON.stringify({ baseline: result.baseline, enlarged: result.enlarged })}`);
     assert(result.baseline.quick === 12 && result.enlarged.quick === 12,
       `Quick menu font must stay fixed at 12px: ${JSON.stringify({ baseline: result.baseline.quick, enlarged: result.enlarged.quick })}`);

@@ -17,7 +17,7 @@
             --rubric-color: #d32f2f;
             --sub-txt: #6c757d;
             --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            --font-size-base: 16px;
+            --font-size-base: 18px;
             --chrome-font-size: var(--font-size-base);
             --chrome-compact-font-size: var(--font-size-base);
             --fixed-footer-height: 0px;
@@ -78,7 +78,8 @@
         .settings-content h3 { margin-bottom: 15px; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; }
         .setting-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
         .setting-row label { flex: 1 1 auto; min-width: 0; padding-right: 12px; word-break: keep-all; }
-        .setting-row select { flex: 0 0 220px; min-width: 180px; max-width: 52%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+        .setting-row select { flex: 0 0 220px; min-width: 180px; max-width: 52%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; font: inherit; font-size: var(--font-size-base); }
+        select option { font-size: inherit; }
         .setting-row input[type="checkbox"] { width: auto; margin-left: auto; cursor: pointer; }
         .setting-note { flex: 0 0 auto; color: var(--sub-txt); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
         .close-btn { width: 100%; padding: 10px; border: 0; border-radius: 6px; background: var(--primary-color); color: white; font-weight: 800; cursor: pointer; }
@@ -192,7 +193,7 @@
         .stacked-citation-translation { color: var(--sub-txt); opacity: 0.82; }
         .part-select-row { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; width: 100%; margin: 0 0 8px; }
         .inline-option-control-row { display: flex; justify-content: flex-end; width: 100%; box-sizing: border-box; margin: 2px 0 6px; padding: 0 20px; }
-        .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: 0.85em; outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
+        .select-inline { display: block; width: fit-content; field-sizing: content; max-width: 100%; box-sizing: border-box; margin: 0; padding: 4px 8px; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 4px; font-size: var(--font-size-base); outline: none; cursor: pointer; font-weight: bold; background: white; text-align: left; text-indent: 0; }
         .select-block { display: block; margin: 0; text-align: right; }
 
         .aux-panel { display: none; max-width: 1100px; margin: 0 auto; padding: 18px 20px 86px; background: #fff; color: #333; }
@@ -252,7 +253,7 @@
         .hymn-title-tag { margin-left: 6px; }
         .hymn-list-item.is-selected { border-color: var(--primary-color); box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.14); }
         .hymn-title-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .hymn-country-title-select { width: auto; min-width: 170px; max-width: min(280px, 100%); padding: 6px 10px; font-size: 0.92rem; }
+        .hymn-country-title-select { width: auto; min-width: 170px; max-width: min(280px, 100%); padding: 6px 10px; font-size: var(--font-size-base); }
         .hymn-detail { border: 1px solid #d9dee5; border-radius: 8px; padding: 14px; background: #fafafa; scroll-margin-top: 76px; }
         .hymn-detail h3 { margin-bottom: 10px; }
         .hymn-detail .aux-prayer-body { white-space: pre-wrap; }
@@ -712,8 +713,8 @@
             <label id="lbl-set-font">🔍 글자 크기</label>
             <select id="set-font-size" onchange="updateSettings()">
                 <option value="14px">작게</option>
-                <option value="16px" selected>보통</option>
-                <option value="18px">크게</option>
+                <option value="18px" selected>크게</option>
+                <option value="20px">더 크게</option>
                 <option value="22px">아주 크게</option>
             </select>
         </div>
@@ -760,6 +761,6 @@
 <script src="JS%20file/bishop_data.js?v=20260812-v25"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260812-v25"></script>
 
-<script src="JS%20file/app_v25.js?v=20260816-v25-r7"></script>
+<script src="JS%20file/app_v25.js?v=20260816-v25-r8"></script>
 </body>
 </html>
