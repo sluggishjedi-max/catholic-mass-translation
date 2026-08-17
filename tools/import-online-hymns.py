@@ -6,6 +6,7 @@ import io
 import json
 import re
 import shutil
+import sys
 import time
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -19,21 +20,28 @@ from bs4 import BeautifulSoup
 from PIL import Image
 
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+
 ROOT = Path(__file__).resolve().parents[1]
 HYMN_DATA = ROOT / "JS file" / "hymn_data.js"
 ASSETS = ROOT / "assets" / "hymns"
 TMP = ROOT / "tmp" / "online-hymn-import"
 
-US_UPDATE_URL = "https://www.icrmusic.org/en-us/14/page/503"
+US_UPDATE_2025_URL = "https://www.icrmusic.org/en-us/14/page/331"
+US_UPDATE_2026_URL = "https://www.icrmusic.org/en-us/14/page/503"
+US_SEARCH_URL = "https://www.icrmusic.org/en-us/14/cluster/search"
 US_CONTENTS_URL = (
     "https://d5uh4t1x1kne0.cloudfront.net/breakingbread/"
     "Breaking%20Bread%202026%20Contents%20Excel.xlsx"
 )
-US_BOOK = "Breaking Bread 2026"
+US_BOOK = "Breaking Bread Digital Music Library"
+US_ATTRIBUTION = "ⓒ Breaking Bread (2026 edition), OCP"
 US_ID_PREFIX = "en-breaking-bread-2026-"
 US_ASSET_DIR = ASSETS / "en-breaking-bread-2026"
-US_EXPECTED = 21
-US_CHANGED_CLUSTERS = {"3664", "4854", "4865"}
+US_EXPECTED = 866
+US_UPDATE_EXPECTED = {2025: 29, 2026: 21}
 
 JP_PRIMARY_INDEX = "http://tenreiseika.romaaeterna.jp/antiphon/index.html"
 JP_SUPPLEMENT_INDEX = "http://hosanna.romaaeterna.jp/tenreiseika/tseika.html"
@@ -219,97 +227,164 @@ def breaking_bread_rows(content: bytes) -> list[dict]:
     return [dict(zip(headers, row)) for row in values[1:] if any(value not in {None, ""} for value in row)]
 
 
-def parse_us_update_links(source_html: str) -> list[dict]:
-    pattern = re.compile(
-        r"<a\s+href=['\"](?P<href>/14/cluster/(?P<cluster>\d+))['\"][^>]*>"
-        r"\s*(?P<title>.*?)</a>\s*</strong>\s*\|\s*(?P<credit>[^<\r\n]+)",
-        flags=re.IGNORECASE | re.DOTALL,
-    )
-    links = []
-    for match in pattern.finditer(source_html):
-        cluster = match.group("cluster")
-        links.append(
-            {
-                "cluster": cluster,
-                "url": "https://www.icrmusic.org/en-us" + match.group("href"),
-                "title": html_text(match.group("title")),
-                "credit": html_text(match.group("credit")),
-                "updateType": "changed" if cluster in US_CHANGED_CLUSTERS else "added",
-            }
-        )
-    deduplicated = list({link["cluster"]: link for link in links}.values())
-    if len(deduplicated) != US_EXPECTED:
-        raise RuntimeError(f"Expected {US_EXPECTED} Breaking Bread update links, found {len(deduplicated)}")
-    return deduplicated
+def parse_us_catalog(source_html: str) -> list[dict]:
+    soup = BeautifulSoup(source_html, "html.parser")
+    links: dict[str, dict] = {}
+    for anchor in soup.select("a[href]"):
+        href = clean_text(anchor.get("href", ""))
+        match = re.fullmatch(r"(?:/en-us)?/14/cluster/(\d+)", href)
+        if not match:
+            continue
+        row = anchor.find_parent("tr")
+        cells = row.find_all("td") if row else []
+        if len(cells) < 2:
+            continue
+        number_text = clean_text(cells[1].get_text(" ", strip=True))
+        if not number_text.isdigit():
+            raise RuntimeError(f"Unexpected Breaking Bread number {number_text!r}")
+        title = clean_text(anchor.get_text(" ", strip=True))
+        title_and_credit = clean_text(cells[0].get_text(" ", strip=True))
+        credit = title_and_credit[len(title):].strip() if title_and_credit.startswith(title) else ""
+        cluster = match.group(1)
+        links[cluster] = {
+            "cluster": cluster,
+            "url": f"https://www.icrmusic.org/en-us/14/cluster/{cluster}",
+            "number": int(number_text),
+            "title": title,
+            "credit": credit,
+        }
+    output = list(links.values())
+    if len(output) != US_EXPECTED:
+        raise RuntimeError(f"Expected {US_EXPECTED} Breaking Bread catalog links, found {len(output)}")
+    numbers = [link["number"] for link in output]
+    if len(numbers) != len(set(numbers)):
+        raise RuntimeError("Breaking Bread catalog contains duplicate hymn numbers")
+    return output
 
 
-def match_breaking_bread_row(link: dict, rows: list[dict]) -> dict:
-    candidates = [row for row in rows if normalized(str(row.get("Title", ""))) == normalized(link["title"])]
-    if not candidates:
-        raise RuntimeError(f"No Breaking Bread contents row found for {link['title']}")
-    if len(candidates) == 1:
-        return candidates[0]
+def parse_us_update_statuses(source_html: str, year: int) -> dict[str, str]:
+    soup = BeautifulSoup(source_html, "html.parser")
+    statuses: dict[str, str] = {}
+    for anchor in soup.select("a[href]"):
+        href = clean_text(anchor.get("href", ""))
+        match = re.fullmatch(r"(?:/en-us)?/14/cluster/(\d+)", href)
+        if not match:
+            continue
+        heading = anchor.find_previous(["h2", "h3"])
+        heading_text = normalized(heading.get_text(" ", strip=True) if heading else "")
+        if "songs added" in heading_text:
+            status = "added"
+        elif "songs being changed" in heading_text or "songs changed" in heading_text:
+            status = "changed"
+        else:
+            continue
+        statuses[match.group(1)] = status
+    expected = US_UPDATE_EXPECTED[year]
+    if len(statuses) != expected:
+        raise RuntimeError(f"Expected {expected} Breaking Bread {year} updates, found {len(statuses)}")
+    return statuses
 
-    credit_tokens = {token for token in normalized(link["credit"]).split() if len(token) > 2}
 
-    def score(row: dict) -> int:
-        composer = normalized(str(row.get("Composer or Hymn Tune", "")))
-        return sum(token in composer for token in credit_tokens)
-
-    ranked = sorted(candidates, key=score, reverse=True)
-    if not score(ranked[0]):
-        raise RuntimeError(f"Ambiguous Breaking Bread contents rows for {link['title']}")
-    return ranked[0]
+def breaking_bread_rows_by_number(rows: list[dict]) -> dict[int, dict]:
+    output = {}
+    for row in rows:
+        value = row.get("Song #")
+        if isinstance(value, (int, float)) and int(value) == value:
+            output[int(value)] = row
+    return output
 
 
 def parse_icr_preview(page_html: str, page_url: str) -> tuple[str, str]:
     soup = BeautifulSoup(page_html, "html.parser")
+    candidates: list[tuple[int, str, str]] = []
     for asset in soup.select(".sidebar_cluster_asset[sku_id]"):
         title_node = asset.select_one(".asset_container_title")
         format_node = asset.select_one(".right")
         asset_title = clean_text(title_node.get_text(" ", strip=True) if title_node else "")
         asset_format = clean_text(format_node.get_text(" ", strip=True) if format_node else "")
-        if asset_title != "Congregational Sheet Music" or asset_format != "PDF":
-            continue
         sku = clean_text(asset.get("sku_id", ""))
         image = soup.select_one(f"#img-{sku}")
         preview = image.get("url", "") if image else ""
-        if sku and preview:
-            return sku, urljoin(page_url, preview)
-    raise RuntimeError(f"No congregational PDF preview found at {page_url}")
+        if not sku or not preview:
+            continue
+        title_key = normalized(asset_title)
+        if title_key == "congregational sheet music":
+            priority = 0
+        elif "lead sheet" in title_key:
+            priority = 1
+        elif "keyboard accompaniment" in title_key:
+            priority = 2
+        elif "guitar accompaniment" in title_key:
+            priority = 3
+        elif asset_format in {"PDF", "GIF"}:
+            priority = 4
+        else:
+            continue
+        candidates.append((priority, sku, urljoin(page_url, preview)))
+    if candidates:
+        _priority, sku, preview = min(candidates)
+        return sku, preview
+    raise RuntimeError(f"No score preview found at {page_url}")
 
 
 def import_us_hymns() -> tuple[list[dict], dict]:
-    print("[US] Fetching the Breaking Bread 2026 indexes...", flush=True)
-    update_response = fetch(US_UPDATE_URL)
-    update_html = decode_html(update_response.content, "utf-8")
+    print("[US] Fetching the complete Breaking Bread catalog...", flush=True)
+    catalog_response = fetch(US_SEARCH_URL)
+    catalog_html = decode_html(catalog_response.content, "utf-8")
+    update_2025_response = fetch(US_UPDATE_2025_URL)
+    update_2025_html = decode_html(update_2025_response.content, "utf-8")
+    update_2026_response = fetch(US_UPDATE_2026_URL)
+    update_2026_html = decode_html(update_2026_response.content, "utf-8")
     contents_response = fetch(US_CONTENTS_URL)
-    rows = breaking_bread_rows(contents_response.content)
-    links = parse_us_update_links(update_html)
+    rows_by_number = breaking_bread_rows_by_number(breaking_bread_rows(contents_response.content))
+    links = parse_us_catalog(catalog_html)
+    update_statuses = {
+        2025: parse_us_update_statuses(update_2025_html, 2025),
+        2026: parse_us_update_statuses(update_2026_html, 2026),
+    }
 
     TMP.mkdir(parents=True, exist_ok=True)
-    (TMP / "breaking-bread-2026-update.html").write_text(update_html, encoding="utf-8")
+    (TMP / "breaking-bread-catalog.html").write_text(catalog_html, encoding="utf-8")
+    (TMP / "breaking-bread-2025-update.html").write_text(update_2025_html, encoding="utf-8")
+    (TMP / "breaking-bread-2026-update.html").write_text(update_2026_html, encoding="utf-8")
     (TMP / "breaking-bread-2026-contents.xlsx").write_bytes(contents_response.content)
+    cluster_cache_dir = TMP / "icr-clusters"
+    cluster_cache_dir.mkdir(parents=True, exist_ok=True)
 
     def build(link: dict) -> dict:
-        row = match_breaking_bread_row(link, rows)
-        page_response = fetch(link["url"])
-        page_html = decode_html(page_response.content, "utf-8")
+        row = rows_by_number.get(link["number"], {})
+        cache_path = cluster_cache_dir / f"{link['cluster']}.html"
+        if cache_path.is_file() and cache_path.stat().st_size > 0:
+            page_html = cache_path.read_text(encoding="utf-8")
+        else:
+            page_response = fetch(link["url"])
+            page_html = decode_html(page_response.content, "utf-8")
+            cache_path.write_text(page_html, encoding="utf-8")
         sku, preview_url = parse_icr_preview(page_html, link["url"])
-        image_response = fetch(preview_url)
 
-        number_value = int(row["Song #"])
+        number_value = link["number"]
         number = f"{number_value:03d}"
-        title = clean_text(str(row.get("Title") or link["title"]))
+        title = link["title"]
         credit = clean_text(link["credit"])
         stem = f"{number}-{slugify(title, link['cluster'])}-01.webp"
         output = US_ASSET_DIR / stem
-        width, height = image_to_webp(image_response.content, output)
+        if output.is_file() and output.stat().st_size > 0:
+            with Image.open(output) as cached_image:
+                width, height = cached_image.size
+            original_size = output.stat().st_size
+        else:
+            image_response = fetch(preview_url)
+            original_size = len(image_response.content)
+            width, height = image_to_webp(image_response.content, output)
 
         book_section = clean_text(str(row.get("Book Section") or ""))
         liturgical_moment = clean_text(str(row.get("Liturgical Moment") or ""))
-        status_tag = "Added in 2026" if link["updateType"] == "added" else "Changed in 2026"
-        tags = unique([US_BOOK, book_section, liturgical_moment, status_tag])
+        source_updates = []
+        for year in sorted(update_statuses):
+            status = update_statuses[year].get(link["cluster"])
+            if status:
+                source_updates.append(f"{status.title()} in {year}")
+        tags = unique([US_BOOK, book_section, liturgical_moment, *source_updates])
         aliases = unique(
             [
                 title,
@@ -337,33 +412,41 @@ def import_us_hymns() -> tuple[list[dict], dict]:
             "lyricist": "",
             "sourceFormat": "PNG preview of PDF",
             "originalFileName": f"{sku}.png",
-            "originalFileSize": len(image_response.content),
+            "originalFileSize": original_size,
             "originalFileAvailable": True,
             "searchAliases": aliases,
             "scoreImages": [{"src": relative(output), "label": "1"}],
             "scoreNote": "Public low-resolution ICR/OCP congregational sheet-music preview.",
-            "copyright": "© 2026 OCP. All rights reserved. Used with permission confirmed by the project owner.",
+            "copyright": US_ATTRIBUTION,
             "sourceUrl": link["url"],
             "sourcePreviewUrl": preview_url,
-            "sourceUpdateType": link["updateType"],
+            "sourceUpdates": source_updates,
             "sourceImageDimensions": f"{width}x{height}",
         }
 
     entries: list[dict] = []
-    with ThreadPoolExecutor(max_workers=3) as executor:
+    with ThreadPoolExecutor(max_workers=12) as executor:
         futures = [executor.submit(build, link) for link in links]
         for future in as_completed(futures):
             entry = future.result()
             entries.append(entry)
-            print(f"[US] {len(entries):02d}/{US_EXPECTED}: {entry['displayTitle']}", flush=True)
+            count = len(entries)
+            if count % 25 == 0 or count == US_EXPECTED:
+                print(f"[US] {count:03d}/{US_EXPECTED}: {entry['displayTitle']}", flush=True)
     entries.sort(key=lambda entry: (int(entry["number"]), entry["title"]))
     if len(entries) != US_EXPECTED or any(not entry["scoreImages"] for entry in entries):
-        raise RuntimeError("Breaking Bread import did not produce every expected score preview")
+        raise RuntimeError("Breaking Bread catalog import did not produce every expected score preview")
     return entries, {
-        "source": US_UPDATE_URL,
+        "source": US_SEARCH_URL,
         "entries": len(entries),
-        "added": sum(entry["sourceUpdateType"] == "added" for entry in entries),
-        "changed": sum(entry["sourceUpdateType"] == "changed" for entry in entries),
+        "updates": {
+            str(year): {
+                "source": US_UPDATE_2025_URL if year == 2025 else US_UPDATE_2026_URL,
+                "added": sum(status == "added" for status in statuses.values()),
+                "changed": sum(status == "changed" for status in statuses.values()),
+            }
+            for year, statuses in update_statuses.items()
+        },
         "scoreImages": sum(len(entry["scoreImages"]) for entry in entries),
     }
 
@@ -660,7 +743,7 @@ def main() -> None:
     validation = validate_current(combined)
 
     report = {
-        "breakingBread2026": us_report,
+        "breakingBreadCatalog": us_report,
         "japanese": jp_report,
         "validation": validation,
         "hymnDataBackup": str(backup) if backup else None,
