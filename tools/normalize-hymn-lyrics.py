@@ -580,8 +580,6 @@ def normalize_japanese_refrain(value: str) -> tuple[str, bool]:
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text).strip()
     has_refrain = any(line.strip() == JAPANESE_REFRAIN for line in text.splitlines())
-    if has_refrain:
-        text = append_marker_to_numbered_paragraphs(text, JAPANESE_REFRAIN)
     return text, has_refrain
 
 
@@ -710,8 +708,20 @@ def validate(entries: list[dict]) -> dict:
             if verse_blocks and any(not block.rstrip().endswith(ENGLISH_REFRAIN) for block in verse_blocks):
                 bad_english.append(entry.get("id"))
         elif language == "JP" and any(line.strip() == JAPANESE_REFRAIN for line in lyrics.splitlines()):
-            verse_blocks = [block for block in lyrics.split("\n\n") if re.match(r"^\d+\s*[.)]\s", block)]
-            if verse_blocks and any(not block.rstrip().endswith(JAPANESE_REFRAIN) for block in verse_blocks):
+            lines = lyrics.splitlines()
+            if any(
+                JAPANESE_REFRAIN in line
+                and line.strip() != JAPANESE_REFRAIN
+                and not line.rstrip().endswith(JAPANESE_REFRAIN)
+                for line in lines
+            ):
+                bad_japanese.append(entry.get("id"))
+            chorus_blocks = [
+                [line.strip() for line in block.splitlines() if line.strip()]
+                for block in lyrics.split("\n\n")
+                if block.strip().startswith(JAPANESE_REFRAIN)
+            ]
+            if any(len(block) < 2 or block[0] != JAPANESE_REFRAIN for block in chorus_blocks):
                 bad_japanese.append(entry.get("id"))
             if "【答唱" in lyrics or "【交唱】" in lyrics:
                 bad_japanese.append(entry.get("id"))
@@ -722,7 +732,7 @@ def validate(entries: list[dict]) -> dict:
     if bad_english:
         raise RuntimeError(f"English refrain markers are missing: {bad_english[:10]}")
     if bad_japanese:
-        raise RuntimeError(f"Japanese refrain markers are missing: {bad_japanese[:10]}")
+        raise RuntimeError(f"Japanese refrain markers are malformed: {bad_japanese[:10]}")
     return {
         "yahweh": len(yahweh),
         "yahwehWithLyrics": yahweh_with_lyrics,

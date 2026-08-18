@@ -63,8 +63,8 @@ function startServer() {
       assert(Buffer.byteLength(targetHtmlSource) < 100000, `V25 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
-        && /JS%20file\/hymn_data\.js\?v=20260812-v25-r3/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260817-v25-r14/.test(targetHtmlSource),
+        && /JS%20file\/hymn_data\.js\?v=20260818-v25-r4/.test(targetHtmlSource)
+        && /JS%20file\/app_v25\.js\?v=20260818-v25-r15/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -290,6 +290,32 @@ function startServer() {
         storedCanonicalMismatches,
         freshTranslationOverridesStored
       };
+      const allHymns = globalThis.ordoHymnData || [];
+      const englishHymns = allHymns.filter(entry => entry.language === 'EN');
+      const japaneseHymns = allHymns.filter(entry => entry.language === 'JP');
+      const firstDayHymn = japaneseHymns.find(entry => entry.id === 'jp-tenrei-ten001');
+      const dawnHymn = japaneseHymns.find(entry => entry.id === 'jp-tenrei-ten002');
+      const japaneseChorus = '[\u30B3\u30FC\u30E9\u30B9]';
+      const lyricMarkupProbe = document.createElement('div');
+      lyricMarkupProbe.innerHTML = hymnLyricsHtml(`1.\n**\u795E**\u3092\u305F\u305F\u3048\u308B\n\n${japaneseChorus}\n\u30A2\u30EC\u30EB\u30E4`, 'JP');
+      document.body.appendChild(lyricMarkupProbe);
+      const lyricEmphasis = lyricMarkupProbe.querySelector('.hymn-lyric-emphasis');
+      const japaneseHymnImportFixture = {
+        englishCount: englishHymns.length,
+        japaneseCount: japaneseHymns.length,
+        completeEnglishTitles: englishHymns.filter(entry => ['KR', 'VN', 'EN', 'JP', 'LA'].every(lang => cleanNodeText(entry.translations?.[lang]?.title))).length,
+        completeJapaneseTitles: japaneseHymns.filter(entry => ['KR', 'VN', 'EN', 'JP', 'LA'].every(lang => cleanNodeText(entry.translations?.[lang]?.title))).length,
+        japaneseLyricsComplete: japaneseHymns.filter(entry => cleanNodeText(entry.lyrics)).length,
+        retainedWordNamedScores: japaneseHymns.filter(entry => /(?:^|;)\s*[^;]*w\.gif(?:;|$)/i.test(entry.originalFileName || '')).map(entry => entry.id),
+        firstDayFinalChorus: cleanNodeText(firstDayHymn?.lyrics).split(japaneseChorus).length - 1 === 1
+          && cleanNodeText(firstDayHymn?.lyrics).includes('**'),
+        dawnRepeatedChorus: cleanNodeText(dawnHymn?.lyrics).split(japaneseChorus).length - 1 === 4,
+        emphasisRendered: lyricMarkupProbe.querySelectorAll('.hymn-lyric-emphasis').length === 1
+          && Number.parseFloat(getComputedStyle(lyricEmphasis).fontWeight) >= 700
+          && !lyricMarkupProbe.textContent.includes('**'),
+        chorusRendered: Array.from(lyricMarkupProbe.querySelectorAll('.hymn-structure-label')).some(node => node.textContent.trim() === japaneseChorus)
+      };
+      lyricMarkupProbe.remove();
       const prayerApi = window.ordoPrayerDataApi;
       const normalizedPrayerFixture = prayerApi?.normalizeEntries([{
         key: 'prayer-data-api-fixture',
@@ -1821,6 +1847,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         hymnMetadataLocalizationFixture,
         numberedTitleUnificationFixture,
         hymnTitleTranslationFixture,
+        japaneseHymnImportFixture,
         prayerDataLayerFixture,
         missaDataLayerFixture,
         settingsLabels: [
@@ -2164,6 +2191,17 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.hymnTitleTranslationFixture.storedCanonicalMismatches.length === 0
       && result.hymnTitleTranslationFixture.freshTranslationOverridesStored,
     `Catholic hymn-title normalization is incomplete: ${JSON.stringify(result.hymnTitleTranslationFixture)}`);
+    assert(result.japaneseHymnImportFixture.englishCount === 866
+      && result.japaneseHymnImportFixture.japaneseCount === 249
+      && result.japaneseHymnImportFixture.completeEnglishTitles === 866
+      && result.japaneseHymnImportFixture.completeJapaneseTitles === 249
+      && result.japaneseHymnImportFixture.japaneseLyricsComplete === 249
+      && JSON.stringify(result.japaneseHymnImportFixture.retainedWordNamedScores) === JSON.stringify(['jp-tenrei-ten014'])
+      && result.japaneseHymnImportFixture.firstDayFinalChorus
+      && result.japaneseHymnImportFixture.dawnRepeatedChorus
+      && result.japaneseHymnImportFixture.emphasisRendered
+      && result.japaneseHymnImportFixture.chorusRendered,
+    `English/Japanese hymn titles, chorus placement, or Japanese lyric emphasis is incomplete: ${JSON.stringify(result.japaneseHymnImportFixture)}`);
     assert(result.prayerDataLayerFixture.available
       && result.prayerDataLayerFixture.entryCount >= 575
       && result.prayerDataLayerFixture.normalizedId === 'prayer-data-api-fixture'

@@ -519,7 +519,7 @@ def parse_scripture(metadata_lines: list[str]) -> str:
     return ""
 
 
-def jp_image_urls(soup: BeautifulSoup, page_url: str) -> list[str]:
+def jp_page_image_urls(soup: BeautifulSoup, page_url: str) -> list[str]:
     urls = []
     for image in soup.find_all("img", src=True):
         url = urljoin(page_url, image["src"])
@@ -530,6 +530,24 @@ def jp_image_urls(soup: BeautifulSoup, page_url: str) -> list[str]:
             continue
         urls.append(url)
     return list(dict.fromkeys(urls))
+
+
+def image_has_staff_lines(content: bytes) -> bool:
+    image = Image.open(io.BytesIO(content)).convert("L")
+    width, height = image.size
+    pixels = image.load()
+    long_rows = []
+    for y in range(height):
+        dark = sum(1 for x in range(width) if pixels[x, y] < 100)
+        if dark >= width * 0.45:
+            long_rows.append(y)
+    groups = []
+    for y in long_rows:
+        if not groups or y > groups[-1][-1] + 1:
+            groups.append([y])
+        else:
+            groups[-1].append(y)
+    return len(groups) >= 5
 
 
 def japanese_page_entry(link: IndexLink) -> dict:
@@ -566,16 +584,22 @@ def japanese_page_entry(link: IndexLink) -> dict:
 
     all_page_text = clean_text(soup.get_text(" ", strip=True))
     tags = jp_categories(f"{metadata} {all_page_text}", lyrics, link.url)
-    image_urls = jp_image_urls(soup, link.url)
+    image_urls = jp_page_image_urls(soup, link.url)
     image_records = []
     original_names = []
     original_size = 0
-    for index, image_url in enumerate(image_urls, start=1):
+    lyrics_image_url = ""
+    for image_url in image_urls:
         image_response = fetch(image_url)
+        image_name = Path(urlparse(image_url).path).name
+        if image_name.lower().endswith("w.gif") and not image_has_staff_lines(image_response.content):
+            lyrics_image_url = image_url
+            continue
+        index = len(image_records) + 1
         output = JP_ASSET_DIR / f"{link.stem}-{index:02d}.webp"
         image_to_webp(image_response.content, output)
         image_records.append({"src": relative(output), "label": str(index)})
-        original_names.append(Path(urlparse(image_url).path).name)
+        original_names.append(image_name)
         original_size += len(image_response.content)
     if len(image_records) > 1:
         for index, record in enumerate(image_records, start=1):
@@ -623,6 +647,7 @@ def japanese_page_entry(link: IndexLink) -> dict:
         "scoreNote": "" if image_records else "Source page publishes chant text/audio only; no score image is available.",
         "copyright": "典礼聖歌 / JASRAC 管理曲. Used with permission confirmed by the project owner.",
         "sourceUrl": link.url,
+        "lyricsImageSourceUrl": lyrics_image_url,
         "sourceCollection": link.source,
     }
 

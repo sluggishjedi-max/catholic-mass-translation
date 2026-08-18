@@ -2638,7 +2638,8 @@
     }
 
     function hymnLyricsHtml(value, langCode = '') {
-        let html = escapeHtml(value).replace(/\[\s*(?:(?:ĐK|ÐK|DK|Đ|Ð|D|R|℟|Ref)\.?|후렴구?|후렴|refrain|chorus|antiphona|antiphon|antífona|ant\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?)(?=\s|:|：|\.|\)|\x5d|-|$)[^\]\n]*\]/giu, '<span class="hymn-structure-label">$&</span>');
+        let html = escapeHtml(value).replace(/\*\*([^*\n]+)\*\*/g, '<strong class="hymn-lyric-emphasis">$1</strong>');
+        html = html.replace(/\[\s*(?:(?:ĐK|ÐK|DK|Đ|Ð|D|R|℟|Ref)\.?|후렴구?|후렴|refrain|chorus|antiphona|antiphon|antífona|ant\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?)(?=\s|:|：|\.|\)|\x5d|-|$)[^\]\n]*\]/giu, '<span class="hymn-structure-label">$&</span>');
         return html.replace(/(^|\r?\n|<br\s*\/?\s*>)(\s*)((?:(?:ĐK|ÐK|DK|Đ|Ð|D|R|℟|Ref)\.|(?:\uD6C4\uB834\uAD6C?|\uD6C4\uB834|コーラス|リフレイン)(?:[):：.]|\s*-)?|(?:refrain|chorus|antiphona|antiphon|antífona|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|答唱(?:詩編|詩篇)?)(?:[:：.)\]-])?|\d{1,2}(?:[A-Z]|[-–]\d{1,2})?[.):]))(?=\s|&nbsp;|$)/giu,
             '$1$2<span class="hymn-structure-label">$3</span>');
     }
