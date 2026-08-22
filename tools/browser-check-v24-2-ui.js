@@ -69,7 +69,7 @@ function startServer() {
     if (targetHtml === 'V26.html') {
       assert(Buffer.byteLength(targetHtmlSource) < 100000, `V26 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
       assert(/JS%20file\/missa_data\.js\?v=20260822-v26/.test(targetHtmlSource)
-        && /JS%20file\/local_missal_prayer_data\.js\?v=20260822-v26-r4/.test(targetHtmlSource)
+        && /JS%20file\/local_missal_prayer_data\.js\?v=20260823-v26-r5/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260822-v26/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260822-v26-r1/.test(targetHtmlSource)
         && /JS%20file\/app_v26\.js\?v=20260822-v26-r3/.test(targetHtmlSource),
@@ -1939,6 +1939,24 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       const vietnameseOrdinarySundayEntry = localMissalEntryForLanguage('VN', ordinarySundayDate);
       const koreanOrdinarySundayEntry = localMissalEntryForLanguage('KR', ordinarySundayDate);
       const englishOrdinarySundayEntry = localMissalEntryForLanguage('EN', ordinarySundayDate);
+      const latinOrdinarySundayEntry = localMissalEntryForLanguage('LA', ordinarySundayDate);
+      const latin2026MissingTemporal = [];
+      let latin2026TemporalDays = 0;
+      for (let cursor = new Date(2026, 0, 1, 9, 0, 0); cursor.getFullYear() === 2026; cursor.setDate(cursor.getDate() + 1)) {
+        state.liturgyInfo = buildGeneratedLiturgyInfo(cursor);
+        if (!['ordinary', 'advent', 'lent', 'easter'].includes(state.liturgyInfo.meta?.season || '')) continue;
+        if (!isGeneratedSeasonalNameForInfo('LA', state.liturgyInfo.names?.LA || '', state.liturgyInfo)) continue;
+        latin2026TemporalDays += 1;
+        const entry = localMissalEntryForLanguage('LA', cursor);
+        if (!entry || !entry.data || !entry.data.collect) {
+          latin2026MissingTemporal.push({
+            date: formatDateIso(cursor),
+            title: state.liturgyInfo.names?.LA || '',
+            entry: entry?.title || ''
+          });
+        }
+      }
+      state.liturgyInfo = buildGeneratedLiturgyInfo(ordinarySundayDate);
       state.currentLoc = 'KR';
       state.targetLang = 'VN';
       state.liturgyInfo = buildGeneratedLiturgyInfo(ordinarySundayDate);
@@ -1978,6 +1996,32 @@ Nội dung lịch sử không thuộc lời nguyện.`;
           kr: ordinaryKoreanEnglishFetched[sectionKey]?.kr || '',
           en: ordinaryKoreanEnglishFetched[sectionKey]?.en || ''
         }])
+      );
+      state.currentLoc = 'KR';
+      state.targetLang = 'LA';
+      state.liturgyInfo = buildGeneratedLiturgyInfo(ordinarySundayDate);
+      const ordinaryKoreanLatinFetched = Object.fromEntries(
+        Array.from(localMissalPrayerSectionIds).map(sectionKey => [sectionKey, {}])
+      );
+      applyLocalMissalPrayerOverlay(ordinaryKoreanLatinFetched, ordinarySundayDate);
+      applyCachedVariantAlignments(ordinaryKoreanLatinFetched, ordinarySundayDate);
+      const ordinaryKoreanLatinCounts = Object.fromEntries(Array.from(localMissalPrayerSectionIds).map(sectionKey => {
+        const section = ordinaryKoreanLatinFetched[sectionKey];
+        const { optionMap } = selectableOptionMapFromData(section, sectionKey);
+        return [sectionKey, {
+          kr: optionMap.kr?.length || 0,
+          la: optionMap.la?.length || 0,
+          groups: section.variantAlignment?.length || 0
+        }];
+      }));
+      const ordinaryKoreanLatinTexts = Object.fromEntries(
+        Array.from(localMissalPrayerSectionIds).map(sectionKey => [sectionKey, {
+          kr: ordinaryKoreanLatinFetched[sectionKey]?.kr || '',
+          la: ordinaryKoreanLatinFetched[sectionKey]?.la || ''
+        }])
+      );
+      const ordinaryKoreanLatinSemantic = Object.fromEntries(
+        Object.entries(ordinaryKoreanLatinTexts).map(([sectionKey, texts]) => [sectionKey, normalizeSemanticText(texts.la)])
       );
       const savedOrdinarySelections = {
         collect: state.options.collect,
@@ -2063,6 +2107,12 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         conclusionSuppressesAi: shouldSuppressAIFallbackForLine(localizedEnglishConclusionLine, 'collect', 'en'),
         lentenEnglishAllowsAi: !shouldSuppressAIFallbackForLine(lentenSourceOnlyLine, 'gospel_accl', 'en')
       };
+      let latinFutureGuarded = false;
+      try {
+        await fetchLatinDailyMass(new Date(2026, 7, 24, 9, 0, 0));
+      } catch (error) {
+        latinFutureGuarded = /iBreviary only serves its current Roman date/i.test(String(error && error.message || error));
+      }
       const ibreviaryDateGuardFixture = {
         sameRomanDay: ibreviarySupportsRequestedDate(
           new Date(2026, 7, 23, 9, 0, 0),
@@ -2071,7 +2121,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         futureRomanDay: ibreviarySupportsRequestedDate(
           new Date(2026, 7, 24, 9, 0, 0),
           new Date('2026-08-23T12:00:00Z')
-        )
+        ),
+        latinFutureGuarded
       };
       const hardWrapViolations = [];
       const allPrayerNormalizationViolations = [];
@@ -2114,6 +2165,9 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         ordinaryOptionCounts,
         ordinaryKoreanEnglishCounts,
         ordinaryKoreanEnglishTexts,
+        ordinaryKoreanLatinCounts,
+        ordinaryKoreanLatinTexts,
+        ordinaryKoreanLatinSemantic,
         stableUiOptions,
         collect: finalOrdinaryPrayer('collect'),
         offerings: finalOrdinaryPrayer('prayer_offerings'),
@@ -2157,6 +2211,13 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         englishOrdinarySundayKind: englishOrdinarySundayEntry?.kind || '',
         englishOrdinarySundaySections: Object.keys(englishOrdinarySundayEntry?.data || {}).sort(),
         englishOrdinarySundayCommunion: englishOrdinarySundayEntry?.data?.communion || '',
+        latinOrdinarySundayTitle: latinOrdinarySundayEntry?.title || '',
+        latinOrdinarySundayKind: latinOrdinarySundayEntry?.kind || '',
+        latinOrdinarySundaySections: Object.keys(latinOrdinarySundayEntry?.data || {}).sort(),
+        latinOrdinarySundayCommunion: latinOrdinarySundayEntry?.data?.communion || '',
+        latin2026TemporalDays,
+        latin2026MissingTemporalCount: latin2026MissingTemporal.length,
+        latin2026MissingTemporal: latin2026MissingTemporal.slice(0, 20),
         vietnameseDateCount: Object.keys(localMissalRoot?.languages?.VN?.calendar || {}).length,
         vietnameseJan20Forms: localMissalRoot?.languages?.VN?.calendar?.['01-20']?.length || 0,
         vietnameseHasTemporal: vietnameseCatalog.some(entry => entry?.kind === 'temporal'),
@@ -2605,6 +2666,14 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         'collect', 'communion', 'entrance', 'prayer_after', 'prayer_offerings'
       ])
       && /\nOr:\nCf\. Jn 6: 54\n/.test(result.localMissalFixture.englishOrdinarySundayCommunion)
+      && result.localMissalFixture.latinOrdinarySundayTitle === 'Dominica XXI per annum'
+      && result.localMissalFixture.latinOrdinarySundayKind === 'temporal'
+      && JSON.stringify(result.localMissalFixture.latinOrdinarySundaySections) === JSON.stringify([
+        'collect', 'communion', 'entrance', 'prayer_after', 'prayer_offerings'
+      ])
+      && /\nVel:\nIo 6, 55\n/.test(result.localMissalFixture.latinOrdinarySundayCommunion)
+      && result.localMissalFixture.latin2026TemporalDays > 200
+      && result.localMissalFixture.latin2026MissingTemporalCount === 0
       && result.localMissalFixture.vietnameseDateCount >= 175
       && result.localMissalFixture.vietnameseJan20Forms === 2
       && result.localMissalFixture.vietnameseHasTemporal
@@ -2613,7 +2682,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.localMissalFixture.sourcePages.KR === '537-1414'
       && result.localMissalFixture.sourcePages.VN === '689-1270, 1483-1508'
       && result.localMissalFixture.sourcePages.EN === '137-509, 799-1113'
-      && result.localMissalFixture.sourcePages.LA === '415-593',
+      && result.localMissalFixture.sourcePages.LA === '82-303, 415-593',
     `Local Roman Missal data or local-vs-live fallback behavior is incomplete: ${JSON.stringify(result.localMissalFixture)}`);
     const normalizedLocal = result.localMissalNormalizationFixture;
     assert(normalizedLocal.hardWrapViolations.length === 0,
@@ -2649,6 +2718,23 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /one sacrifice offered once for all/i.test(normalizedLocal.ordinaryKoreanEnglishTexts.prayer_offerings.en)
       && /Complete within us/i.test(normalizedLocal.ordinaryKoreanEnglishTexts.prayer_after.en),
     `Tomorrow's English Sunday proper was replaced by another liturgy: ${JSON.stringify(normalizedLocal.ordinaryKoreanEnglishTexts)}`);
+    assert(normalizedLocal.ordinaryKoreanLatinCounts.entrance.kr === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.entrance.la === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.entrance.groups === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.collect.kr === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.collect.la === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.collect.groups === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.prayer_offerings.groups === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.prayer_after.groups === 1
+      && normalizedLocal.ordinaryKoreanLatinCounts.communion.kr === 2
+      && normalizedLocal.ordinaryKoreanLatinCounts.communion.la === 2
+      && normalizedLocal.ordinaryKoreanLatinCounts.communion.groups === 2,
+    `Tomorrow's Korean and Latin formulars were grouped incorrectly: ${JSON.stringify(normalizedLocal.ordinaryKoreanLatinCounts)}`);
+    assert(normalizedLocal.ordinaryKoreanLatinSemantic.collect.includes('vera sunt gaudia')
+      && !/regina|mari/i.test(normalizedLocal.ordinaryKoreanLatinSemantic.collect)
+      && normalizedLocal.ordinaryKoreanLatinSemantic.prayer_offerings.includes('una semel hostia')
+      && normalizedLocal.ordinaryKoreanLatinSemantic.prayer_after.includes('plenum'),
+    `Tomorrow's Latin Sunday proper was replaced by another liturgy: ${JSON.stringify(normalizedLocal.ordinaryKoreanLatinTexts)}`);
     assert(!normalizedLocal.stableUiOptions.collectGeneratedOptions
       && !normalizedLocal.stableUiOptions.offeringGeneratedOptions
       && JSON.stringify(normalizedLocal.stableUiOptions.communionKeys) === JSON.stringify(['A', 'B'])
@@ -2679,7 +2765,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && normalizedLocal.aiFallbackSuppressionFixture.lentenEnglishAllowsAi,
     `Missing authorized text or a fixed conclusion still exposes AI output: ${JSON.stringify(normalizedLocal.aiFallbackSuppressionFixture)}`);
     assert(normalizedLocal.ibreviaryDateGuardFixture.sameRomanDay
-      && !normalizedLocal.ibreviaryDateGuardFixture.futureRomanDay,
+      && !normalizedLocal.ibreviaryDateGuardFixture.futureRomanDay
+      && normalizedLocal.ibreviaryDateGuardFixture.latinFutureGuarded,
     `iBreviary date guard did not reject a mismatched requested day: ${JSON.stringify(normalizedLocal.ibreviaryDateGuardFixture)}`);
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);

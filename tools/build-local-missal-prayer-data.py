@@ -513,6 +513,46 @@ def latin_calendar(pages: list[dict[str, object]]) -> dict[str, list[dict[str, o
     return dict(result)
 
 
+def latin_temporal_sunday_catalog(pages: list[dict[str, object]]) -> list[dict[str, object]]:
+    """Extract Sunday formularies across page boundaries with stable titles."""
+    text = page_join(pages)
+    season_pattern = r'(ADVENTUS|(?:IN\s+)?QUADRAGESIM[ÆAE]+|PASCH[ÆAE]+|[“"]?\s*PER\s+ANNUM\s*[”"]?)'
+    sunday_pattern = re.compile(
+        rf'(?im)^\s*DOMINICA\s+([IVXLCDM]+)\s+{season_pattern}\s*$',
+    )
+    boundary_pattern = re.compile(
+        r'(?im)^\s*(?:DOMINICA\b.*|HEBDOMADA\b.*|Feria\s+(?:secunda|tertia|quarta|quinta|sexta|[IVX]+)|Sabbato)\s*$',
+    )
+    entries: list[dict[str, object]] = []
+    for match in sunday_pattern.finditer(text):
+        following = boundary_pattern.search(text, match.end())
+        stop = following.start() if following else len(text)
+        block = text[match.start():stop]
+        season = compact(match.group(2)).replace('“', '').replace('”', '').replace('"', '').upper()
+        if 'PER ANNUM' in season:
+            suffix = 'per annum'
+        elif season.startswith('ADVENTUS'):
+            suffix = 'Adventus'
+        elif 'QUADRAGESIM' in season:
+            suffix = 'Quadragesimae'
+        else:
+            suffix = 'Paschae'
+        title = f'Dominica {match.group(1).upper()} {suffix}'
+        parsed = parse_form_entries(
+            block,
+            'LA',
+            title,
+            source_page_at(text, match.start(), source_page(block)),
+            'temporal',
+        )
+        if parsed:
+            parsed[0]['title'] = title
+            entries.append(parsed[0])
+            if title == 'Dominica II Paschae':
+                entries.append(dict(parsed[0], title='Dominica infra octavam Paschae'))
+    return entries
+
+
 def vietnamese_calendar(pages: list[dict[str, object]]) -> dict[str, list[dict[str, object]]]:
     text = page_join(pages)
     month_pattern = "|".join(sorted((re.escape(name) for name in MONTHS_VN), key=len, reverse=True))
@@ -700,6 +740,7 @@ def main() -> None:
     en_temporal_pages = pdf_pages(PDF_DIR / "영어.pdf", 137, 509, "EN")
     en_proper_pages = pdf_pages(PDF_DIR / "영어.pdf", 799, 1025, "EN")
     en_common_pages = pdf_pages(PDF_DIR / "영어.pdf", 1030, 1113, "EN")
+    la_temporal_pages = pdf_pages(PDF_DIR / "라틴어.pdf", 82, 303, "LA")
     la_proper_pages = pdf_pages(PDF_DIR / "라틴어.pdf", 415, 535, "LA")
     la_common_pages = pdf_pages(PDF_DIR / "라틴어.pdf", 536, 593, "LA")
     vn_temporal_pages = pdf_pages(PDF_DIR / "베트남어 (일부).pdf", 689, 1045, "VN")
@@ -746,9 +787,9 @@ def main() -> None:
                 "catalog": page_catalog(en_temporal_pages, "EN", "temporal") + page_catalog(en_common_pages, "EN", "common"),
             },
             "LA": {
-                "source": source_descriptor("라틴어.pdf", "415-593", "PROPRIUM DE SANCTIS and COMMUNIA"),
+                "source": source_descriptor("라틴어.pdf", "82-303, 415-593", "PROPRIUM DE TEMPORE, PROPRIUM DE SANCTIS, and COMMUNIA"),
                 "calendar": latin_calendar(la_proper_pages),
-                "catalog": page_catalog(la_common_pages, "LA", "common"),
+                "catalog": latin_temporal_sunday_catalog(la_temporal_pages) + page_catalog(la_temporal_pages, "LA", "temporal") + page_catalog(la_common_pages, "LA", "common"),
             },
         },
         "fallbackLanguages": ["JP"],
