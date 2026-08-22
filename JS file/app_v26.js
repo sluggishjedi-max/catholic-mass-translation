@@ -8619,7 +8619,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict82';
+    const STRICT_PARSER_CACHE_VERSION = 'strict83';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9730,22 +9730,30 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictExpandKoreanPrayerEnding(key, text) {
         let out = String(text || '').replace(/\s+/g, ' ').trim();
         if (key === 'collect') {
-            out = out.replace(/성부와\s*성령[과괴].*(?:…+|\.{2,}|⋯+)\.?\s*$/u, '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.');
-            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)\.?\s*$/u, '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
-            out = out.replace(/주님께서는.*(?:…+|\.{2,}|⋯+)\.?\s*$/u, '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
+            out = out.replace(/성부와\s*성령[과괴].*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.');
+            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
+            out = out.replace(/주님께서는.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
+            out = out.replace(/성부와\s*성령[과괴]\s*[,.;]?\s*$/u, '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.');
+            out = out.replace(/성자께서는\s*[,.;]?\s*$/u, '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
+            out = out.replace(/주님께서는\s*[,.;]?\s*$/u, '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
         } else if (key === 'prayer_offerings' || key === 'prayer_after') {
-            out = out.replace(/우리\s*주.*(?:…+|\.{2,}|⋯+)\.?\s*$/u, '우리 주 그리스도를 통하여 비나이다.');
-            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)\.?\s*$/u, source => {
+            out = out.replace(/우리\s*주.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '우리 주 그리스도를 통하여 비나이다.');
+            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, source => {
                 const toSon = /성자(?:이신|예수|그리스도|주님)|주\s*예수/u.test(out.slice(0, Math.max(0, out.length - source.length)));
                 return toSon ? '성자께서는 영원히 살아 계시며 다스리시나이다.' : '성자께서는 성부와 함께 영원히 살아 계시며 다스리시나이다.';
             });
+            out = out.replace(/우리\s*주(?:\s*그리스도를\s*통하여)?\s*[,.;]?\s*$/u, '우리 주 그리스도를 통하여 비나이다.');
         }
+        strictPrayerEndingFormulas('KR', key).forEach(formula => {
+            const withoutPeriod = formula.replace(/\.$/, '');
+            if (out.endsWith(withoutPeriod)) out = `${out.slice(0, -withoutPeriod.length)}${formula}`;
+        });
         return out;
     }
 
     function strictPrayerLooksDirectedToSon(text) {
         const opening = strictCleanLine(text).slice(0, 180);
-        return /^(?:O\s+)?(?:Lord\s+Jesus|Jesus|Christ|Lord,\s*Jesus|O\s+Christ|Son of God|Lạy\s+Chúa\s+Gi[êe]su|主イエス|キリスト)/iu.test(opening);
+        return /^(?:O\s+)?(?:Lord\s+Jesus|Jesus|Christ|Lord,\s*Jesus|O\s+Christ|Son of God|Lạy\s+Chúa\s+Gi[êe]su|Lạy\s+Đức\s+Gi[êe]su|주\s*예수|예수님|그리스도님|성자|主イエス|キリスト|D[oó]mine\s+Iesu|Iesu|Christe|Fili\s+Dei)/iu.test(opening);
     }
 
     function strictExpandVietnamesePrayerEnding(key, text) {
@@ -9754,12 +9762,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             out = out.replace(/Chúng con cầu xin\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Chúng con cầu xin nhờ Đức Giê-su Ki-tô Con Chúa, Thiên Chúa và là Chúa chúng con, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
             out = out.replace(/Người là Thiên Chúa\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Người là Thiên Chúa, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
             out = out.replace(/Chúa hằng sống\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
+            out = out.replace(/Chúng con cầu xin\s*\.?\s*$/iu, 'Chúng con cầu xin nhờ Đức Giê-su Ki-tô Con Chúa, Thiên Chúa và là Chúa chúng con, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
+            out = out.replace(/Người là Thiên Chúa\s*\.?\s*$/iu, 'Người là Thiên Chúa, Người hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
+            out = out.replace(/Chúa hằng sống\s*\.?\s*$/iu, 'Chúa hằng sống và hiển trị cùng Thiên Chúa Cha, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.');
         } else if (key === 'prayer_offerings' || key === 'prayer_after') {
             out = out.replace(/Chúng con cầu xin\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.');
-            out = out.replace(/Chúa là Thiên Chúa,\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Chúa là Thiên Chúa, hằng sống và hiển trị muôn.');
+            out = out.replace(/Chúa là Thiên Chúa,\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Chúa là Thiên Chúa, hằng sống và hiển trị muôn đời.');
             out = out.replace(/Chúa hằng sống\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Chúa hằng sống và hiển trị muôn đời.');
             out = out.replace(/Người hằng sống\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Người hằng sống và hiển trị muôn đời.');
+            out = out.replace(/Chúng con cầu xin\s*\.?\s*$/iu, 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.');
+            out = out.replace(/Chúa là Thiên Chúa,?\s*\.?\s*$/iu, 'Chúa là Thiên Chúa, hằng sống và hiển trị muôn đời.');
+            out = out.replace(/Chúa hằng sống\s*\.?\s*$/iu, 'Chúa hằng sống và hiển trị muôn đời.');
+            out = out.replace(/Người hằng sống\s*\.?\s*$/iu, 'Người hằng sống và hiển trị muôn đời.');
         }
+        strictPrayerEndingFormulas('VN', key).forEach(formula => {
+            const withoutPeriod = formula.replace(/\.$/, '');
+            if (out.endsWith(withoutPeriod)) out = `${out.slice(0, -withoutPeriod.length)}${formula}`;
+        });
         return out;
     }
 
@@ -9767,6 +9786,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let out = String(text || '').replace(/\s+/g, ' ').trim();
         if (key === 'collect') {
             out = out.replace(/Through our Lord Jesus Christ,?\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, God, for ever and ever.');
+            out = out.replace(/Through our Lord Jesus Christ, your Son,\s*who lives and reigns with you in the unity of the Holy Spirit,\s*(?:one\s+)?God,\s*for ever and ever\.?\s*$/iu, 'Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, God, for ever and ever.');
+            out = out.replace(/Through our Lord Jesus Christ\s*\.?\s*$/iu, 'Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, God, for ever and ever.');
             out = out.replace(/Who\s+lives?\s+and\s+reigns?.*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, () =>
                 strictPrayerLooksDirectedToSon(out)
                     ? 'Who live and reign with God the Father in the unity of the Holy Spirit, God, for ever and ever.'
@@ -9774,11 +9795,26 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             );
         } else if (key === 'prayer_offerings' || key === 'prayer_after') {
             out = out.replace(/Through Christ our Lord,?\s*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, 'Through Christ our Lord.');
+            out = out.replace(/Through Christ(?: our Lord)?\s*\.?\s*$/iu, 'Through Christ our Lord.');
             out = out.replace(/Who\s+lives?\s+and\s+reigns?.*(?:…+|\.{2,}|⋯+)\.?\s*$/iu, () =>
                 strictPrayerLooksDirectedToSon(out)
                     ? 'Who live and reign for ever and ever.'
                     : 'Who lives and reigns for ever and ever.'
             );
+        }
+        return out;
+    }
+
+    function strictExpandLatinPrayerEnding(key, text) {
+        let out = String(text || '').replace(/\s+/g, ' ').trim();
+        if (key === 'collect') {
+            out = out.replace(/Per D[oó]minum(?:\s*(?:…+|\.{2,}|⋯+))?\.?\s*$/iu, 'Per Dóminum nostrum Iesum Christum Fílium tuum, qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.');
+            out = out.replace(/Qui tecum(?:\s*(?:…+|\.{2,}|⋯+))?\.?\s*$/iu, 'Qui tecum vivit et regnat in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.');
+            out = out.replace(/Qui vivis(?:\s*(?:…+|\.{2,}|⋯+))?\.?\s*$/iu, 'Qui vivis et regnas cum Deo Patre in unitáte Spíritus Sancti, Deus, per ómnia sǽcula sæculórum.');
+        } else if (key === 'prayer_offerings' || key === 'prayer_after') {
+            out = out.replace(/Per Christum(?:\s+D[oó]minum nostrum)?(?:\s*(?:…+|\.{2,}|⋯+))?\.?\s*$/iu, 'Per Christum Dóminum nostrum.');
+            out = out.replace(/Qui vivit et regnat in s[ǽæ]cula s[ǽæ]cul[oó]rum\.?\s*$/iu, 'Qui vivit et regnat in sǽcula sæculórum.');
+            out = out.replace(/Qui vivis et regnas in s[ǽæ]cula s[ǽæ]cul[oó]rum\.?\s*$/iu, 'Qui vivis et regnas in sǽcula sæculórum.');
         }
         return out;
     }
@@ -9802,6 +9838,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'VN') return strictExpandVietnamesePrayerEnding(key, text);
         if (lang === 'EN') return strictExpandEnglishPrayerEnding(key, text);
         if (lang === 'JP') return strictExpandJapanesePrayerEnding(key, text);
+        if (lang === 'LA') return strictExpandLatinPrayerEnding(key, text);
         return text;
     }
 
@@ -9967,7 +10004,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'VN') {
             if (/^Chúng con cầu xin/iu.test(conclusion)) return 'through_son';
             if (/^Chúa\b/iu.test(conclusion) && /(?:Thiên Chúa Cha|hiển trị muôn đời)/iu.test(conclusion)) return 'addressed_son';
-            return /^(?:Người|Đấng|Ðấng|Con Một Chúa|(?:Đức|Ðức) Ki-tô|Chúa Ki-tô)/iu.test(conclusion) ? 'relative_son' : '';
+            return /^(?:Người|Đấng|Ðấng|Con Một Chúa|(?:Đức|Ðức) Ki-tô|Chúa Ki-tô|Chúa\s+là\s+Thiên Chúa)/iu.test(conclusion) ? 'relative_son' : '';
         }
         if (lang === 'EN') {
             if (/^Through\b/iu.test(conclusion)) return 'through_son';
@@ -10069,7 +10106,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictAntiphonParagraphs(lang, key, blocks) {
-        const shouldJoin = ['EN', 'LA'].includes(lang) && ['entrance', 'communion'].includes(key);
+        const shouldJoin = ['entrance', 'communion'].includes(key);
         if (!shouldJoin) return blocks.map(line => strictCleanLine(line)).filter(Boolean);
         const joined = strictCleanLine(blocks.join(' '));
         const text = lang === 'EN' && key === 'entrance'
@@ -11456,6 +11493,21 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    function inferredPrayerConclusionReference(targetLines, baseId, preferredLowers) {
+        for (const lower of preferredLowers) {
+            if (!prayerHasBodyForLanguage(targetLines, lower, baseId)) continue;
+            const body = (targetLines || [])
+                .map(line => cleanNodeText(line && (line[`text_${lower}`] || line[`text_${lower}_ai`])))
+                .filter(text => text && !isAlternativeText(text) && !isPrayerOpenerText(text) && !isPrayerAmenText(text))
+                .join(' ');
+            return {
+                line: null,
+                style: strictPrayerLooksDirectedToSon(body) ? 'addressed_son' : 'through_son'
+            };
+        }
+        return null;
+    }
+
     // A remote missal often abbreviates a conclusion, and some pages omit it
     // altogether.  Preserve the theological direction of the source-language
     // conclusion, then supply the authorized local formula for every other
@@ -11474,6 +11526,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             reference = prayerConclusionForLanguage(targetLines, lower, baseId);
             if (reference) break;
         }
+        if (!reference) reference = inferredPrayerConclusionReference(targetLines, baseId, preferred);
         if (!reference) return;
 
         lowers.forEach(lower => {
@@ -12188,6 +12241,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!Array.isArray(optionMap && optionMap[left]) || !optionMap[left].length) return [];
         if (!Array.isArray(optionMap && optionMap.kr) || !optionMap.kr.length) return [];
         return normalizeVariantAlignmentGroups(optionMap, [{ [left]: 0, kr: 0 }]);
+    }
+
+    // When two or more displayed languages come from the bundled Missal for
+    // the same liturgical day, their formular order is authoritative.  Pair
+    // those options before the asynchronous semantic check so the UI never
+    // flashes source-only choices and then collapses them after a click.
+    function buildLocalMissalTranslationAlignment(baseId, section, optionMap) {
+        if (!localMissalPrayerSectionIds.has(baseId) || !section || !section.__localMissalOverlays) return [];
+        const lowers = ['kr', 'vn', 'en', 'la']
+            .filter(lower => section.__localMissalOverlays[lower]
+                && Array.isArray(optionMap && optionMap[lower])
+                && optionMap[lower].length);
+        if (lowers.length < 2) return [];
+        const maxOptions = Math.max(...lowers.map(lower => optionMap[lower].length));
+        const groups = Array.from({ length: maxOptions }, (_, index) => Object.fromEntries(
+            lowers.filter(lower => optionMap[lower][index]).map(lower => [lower, index])
+        )).filter(group => Object.keys(group).length);
+        return normalizeVariantAlignmentGroups(optionMap, groups);
     }
 
     const dailyLengthVariantLabels = {
@@ -13002,6 +13073,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 else if (strictReadingAlignment.length) section.variantAlignment = strictReadingAlignment;
                 return;
             }
+            const localMissalTranslationAlignment = buildLocalMissalTranslationAlignment(baseId, section, optionMap);
+            if (localMissalTranslationAlignment.length) {
+                section.variantAlignment = localMissalTranslationAlignment;
+                return;
+            }
             const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
             if (koreanOrdinaryTranslationAlignment.length) {
                 section.variantAlignment = koreanOrdinaryTranslationAlignment;
@@ -13065,6 +13141,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 } catch (error) {
                     console.warn(`${baseId} AI reading alignment failed, keeping citation alignment.`, error);
                 }
+                return;
+            }
+            const localMissalTranslationAlignment = buildLocalMissalTranslationAlignment(baseId, section, optionMap);
+            if (localMissalTranslationAlignment.length) {
+                section.variantAlignment = localMissalTranslationAlignment;
                 return;
             }
             const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);

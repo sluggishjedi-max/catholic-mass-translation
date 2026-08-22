@@ -60,19 +60,19 @@ function startServer() {
 
   try {
     if (targetHtml === 'V25.html') {
-      assert(/JS%20file\/app_v25\.js\?v=20260822-v26-compat-r1/.test(targetHtmlSource),
+      assert(/JS%20file\/app_v25\.js\?v=20260822-v26-compat-r2/.test(targetHtmlSource),
         'V25 compatibility entry point is missing.');
       const compatibilitySource = fs.readFileSync(runtimePath, 'utf8');
-      assert(/app_v26\.js\?v=20260822-v26-r1/.test(compatibilitySource),
+      assert(/app_v26\.js\?v=20260822-v26-r2/.test(compatibilitySource),
         'V25 compatibility entry point does not load V26.');
     }
     if (targetHtml === 'V26.html') {
       assert(Buffer.byteLength(targetHtmlSource) < 100000, `V26 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
       assert(/JS%20file\/missa_data\.js\?v=20260822-v26/.test(targetHtmlSource)
-        && /JS%20file\/local_missal_prayer_data\.js\?v=20260822-v26-r2/.test(targetHtmlSource)
+        && /JS%20file\/local_missal_prayer_data\.js\?v=20260822-v26-r3/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260822-v26/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260822-v26-r1/.test(targetHtmlSource)
-        && /JS%20file\/app_v26\.js\?v=20260822-v26-r1/.test(targetHtmlSource),
+        && /JS%20file\/app_v26\.js\?v=20260822-v26-r2/.test(targetHtmlSource),
       'V26 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(runtimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V26-20260822'"), 'V26 runtime version is missing.');
@@ -1937,6 +1937,133 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       state.liturgyInfo = buildGeneratedLiturgyInfo(ordinarySundayDate);
       const vietnameseOrdinarySundayEntry = localMissalEntryForLanguage('VN', ordinarySundayDate);
       const koreanOrdinarySundayEntry = localMissalEntryForLanguage('KR', ordinarySundayDate);
+      state.currentLoc = 'KR';
+      state.targetLang = 'VN';
+      state.liturgyInfo = buildGeneratedLiturgyInfo(ordinarySundayDate);
+      const ordinaryLocalFetched = Object.fromEntries(
+        Array.from(localMissalPrayerSectionIds).map(sectionKey => [sectionKey, {}])
+      );
+      applyLocalMissalPrayerOverlay(ordinaryLocalFetched, ordinarySundayDate);
+      applyCachedVariantAlignments(ordinaryLocalFetched, ordinarySundayDate);
+      const ordinaryOptionCounts = Object.fromEntries(Array.from(localMissalPrayerSectionIds).map(sectionKey => {
+        const section = ordinaryLocalFetched[sectionKey];
+        const { optionMap } = selectableOptionMapFromData(section, sectionKey);
+        return [sectionKey, {
+          kr: optionMap.kr?.length || 0,
+          vn: optionMap.vn?.length || 0,
+          groups: section.variantAlignment?.length || 0
+        }];
+      }));
+      const savedOrdinarySelections = {
+        collect: state.options.collect,
+        prayer_offerings: state.options.prayer_offerings,
+        communion: state.options.communion,
+        auto: state.autoDailySourceVariantSelections
+      };
+      const clonedDailyItem = sectionKey => JSON.parse(JSON.stringify(
+        massData.find(item => getBaseId(item.id) === sectionKey)
+      ));
+      const collectItem = clonedDailyItem('collect');
+      const offeringItem = clonedDailyItem('prayer_offerings');
+      const communionItem = clonedDailyItem('communion');
+      state.autoDailySourceVariantSelections = {};
+      const collectGeneratedOptions = ensureDailySelectableVariants(collectItem, ordinaryLocalFetched.collect, 'collect');
+      const offeringGeneratedOptions = ensureDailySelectableVariants(offeringItem, ordinaryLocalFetched.prayer_offerings, 'prayer_offerings');
+      ensureDailySelectableVariants(communionItem, ordinaryLocalFetched.communion, 'communion');
+      state.options.communion = 'B';
+      ensureDailySelectableVariants(communionItem, ordinaryLocalFetched.communion, 'communion');
+      const stableUiOptions = {
+        collectGeneratedOptions,
+        offeringGeneratedOptions,
+        communionKeys: Object.keys(communionItem.variants || {}),
+        communionSelectionAfterSecondBuild: state.options.communion
+      };
+      state.options.collect = savedOrdinarySelections.collect;
+      state.options.prayer_offerings = savedOrdinarySelections.prayer_offerings;
+      state.options.communion = savedOrdinarySelections.communion;
+      state.autoDailySourceVariantSelections = savedOrdinarySelections.auto;
+      const finalOrdinaryPrayer = sectionKey => {
+        const section = ordinaryLocalFetched[sectionKey];
+        const target = [makePrayerOpenerLine(), emptyMassLine(), makePrayerAmenLine()];
+        ['kr', 'vn'].forEach(lower => {
+          applyParsedLinesForLanguage(target, lower, section[`${lower}_lines`] || [], sectionKey);
+        });
+        ensureLocalizedPrayerConclusions(target, sectionKey);
+        normalizeDailySectionLines(target, sectionKey);
+        return Object.fromEntries(['kr', 'vn'].map(lower => [lower, {
+          bodies: target.filter(line => line[`role_${lower}`] === 'body' && line[`text_${lower}`]).map(line => line[`text_${lower}`]),
+          conclusions: target.filter(line => line[`role_${lower}`] === 'conclusion' && line[`text_${lower}`]).map(line => line[`text_${lower}`])
+        }]));
+      };
+      const omittedConclusionTarget = [makePrayerOpenerLine(), emptyMassLine(), makePrayerAmenLine()];
+      const omittedBodies = {
+        kr: '하느님, 저희가 언제나 주님의 뜻을 따르게 하소서.',
+        vn: 'Lạy Chúa, xin cho chúng con luôn thi hành thánh ý Chúa.',
+        en: 'O God, grant that we may always do your will.',
+        jp: '神よ、いつもみ旨を行うことができますように。',
+        la: 'Deus, præsta, ut voluntátem tuam semper faciámus.'
+      };
+      Object.entries(omittedBodies).forEach(([lower, text]) => {
+        applyParsedLinesForLanguage(omittedConclusionTarget, lower, [{ sp: '', text, role: 'body' }], 'collect');
+      });
+      ensureLocalizedPrayerConclusions(omittedConclusionTarget, 'collect');
+      normalizeDailySectionLines(omittedConclusionTarget, 'collect');
+      const omittedConclusions = Object.fromEntries(Object.keys(omittedBodies).map(lower => [
+        lower,
+        omittedConclusionTarget.find(line => line[`role_${lower}`] === 'conclusion')?.[`text_${lower}`] || ''
+      ]));
+      const hardWrapViolations = [];
+      const allPrayerNormalizationViolations = [];
+      Object.entries(localMissalRoot?.languages || {}).forEach(([lang, languageData]) => {
+        const lower = lang.toLowerCase();
+        const entries = Object.values(languageData?.calendar || {}).flat().concat(languageData?.catalog || []);
+        entries.forEach(entry => Object.entries(entry?.data || {}).forEach(([sectionKey, value]) => {
+          const lines = String(value || '').split(/\r?\n/).filter(Boolean);
+          for (let index = 1; index < lines.length; index += 1) {
+            const previous = lines[index - 1];
+            const current = lines[index];
+            const deliberate = strictAlternativeMatch(previous) || strictAlternativeMatch(current)
+              || strictLooksLikeCitation(previous, lang) || strictLooksLikeCitation(current, lang);
+            if (!deliberate) hardWrapViolations.push({ lang, title: entry.title, sectionKey, previous, current });
+          }
+          if (!strictPrayerKeys.has(sectionKey)) return;
+          const formatted = formattedLocalMissalSection(lang, sectionKey, value);
+          const options = dedupeParsedAlternatives(sectionKey, splitParsedAlternatives(formatted?.lines || []));
+          options.forEach((option, optionIndex) => {
+            const target = [makePrayerOpenerLine(), emptyMassLine(), makePrayerAmenLine()];
+            applyParsedLinesForLanguage(target, lower, option, sectionKey);
+            ensureLocalizedPrayerConclusions(target, sectionKey);
+            normalizeDailySectionLines(target, sectionKey);
+            const bodies = target.filter(line => line[`role_${lower}`] === 'body' && line[`text_${lower}`]);
+            const conclusions = target.filter(line => line[`role_${lower}`] === 'conclusion' && line[`text_${lower}`]);
+            if (bodies.length !== 1 || conclusions.length !== 1 || bodies.some(line => line[`text_${lower}`].includes('\n'))) {
+              allPrayerNormalizationViolations.push({
+                lang,
+                title: entry.title,
+                sectionKey,
+                optionIndex,
+                bodies: bodies.map(line => line[`text_${lower}`]),
+                conclusions: conclusions.map(line => line[`text_${lower}`])
+              });
+            }
+          });
+        }));
+      });
+      const localMissalNormalizationFixture = {
+        ordinaryOptionCounts,
+        stableUiOptions,
+        collect: finalOrdinaryPrayer('collect'),
+        offerings: finalOrdinaryPrayer('prayer_offerings'),
+        after: finalOrdinaryPrayer('prayer_after'),
+        omittedConclusions,
+        omittedConclusionStyles: Object.fromEntries(Object.entries(omittedConclusions).map(([lower, text]) => [
+          lower,
+          prayerConclusionStyle(langCodeFromLowerKey(lower), 'collect', text)
+        ])),
+        hardWrapViolations: hardWrapViolations.slice(0, 5),
+        allPrayerNormalizationViolationCount: allPrayerNormalizationViolations.length,
+        allPrayerNormalizationViolations: allPrayerNormalizationViolations.slice(0, 5)
+      };
       const localMissalFixture = {
         schemaVersion: localMissalRoot?.schemaVersion,
         languages: Object.keys(localMissalRoot?.languages || {}).sort(),
@@ -2123,6 +2250,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         pullRefreshFixture,
         bishopLocalizationFixture,
         localMissalFixture,
+        localMissalNormalizationFixture,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -2412,6 +2540,43 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.localMissalFixture.sourcePages.EN === '799-1113'
       && result.localMissalFixture.sourcePages.LA === '415-593',
     `Local Roman Missal data or local-vs-live fallback behavior is incomplete: ${JSON.stringify(result.localMissalFixture)}`);
+    const normalizedLocal = result.localMissalNormalizationFixture;
+    assert(normalizedLocal.hardWrapViolations.length === 0,
+      `Bundled Missal PDF hard wraps remain in daily proper texts: ${JSON.stringify(normalizedLocal.hardWrapViolations)}`);
+    assert(normalizedLocal.allPrayerNormalizationViolationCount === 0,
+      `One or more bundled Missal prayers do not have one normalized body and one complete conclusion: ${JSON.stringify(normalizedLocal.allPrayerNormalizationViolations)}`);
+    assert(normalizedLocal.ordinaryOptionCounts.entrance.kr === 1
+      && normalizedLocal.ordinaryOptionCounts.entrance.vn === 1
+      && normalizedLocal.ordinaryOptionCounts.entrance.groups === 1
+      && normalizedLocal.ordinaryOptionCounts.collect.kr === 1
+      && normalizedLocal.ordinaryOptionCounts.collect.vn === 1
+      && normalizedLocal.ordinaryOptionCounts.collect.groups === 1
+      && normalizedLocal.ordinaryOptionCounts.prayer_offerings.groups === 1
+      && normalizedLocal.ordinaryOptionCounts.prayer_after.groups === 1
+      && normalizedLocal.ordinaryOptionCounts.communion.kr === 2
+      && normalizedLocal.ordinaryOptionCounts.communion.vn === 2
+      && normalizedLocal.ordinaryOptionCounts.communion.groups === 2,
+    `Tomorrow's bundled Missal options are not stably aligned by formular order: ${JSON.stringify(normalizedLocal.ordinaryOptionCounts)}`);
+    assert(!normalizedLocal.stableUiOptions.collectGeneratedOptions
+      && !normalizedLocal.stableUiOptions.offeringGeneratedOptions
+      && JSON.stringify(normalizedLocal.stableUiOptions.communionKeys) === JSON.stringify(['A', 'B'])
+      && normalizedLocal.stableUiOptions.communionSelectionAfterSecondBuild === 'B',
+    `A same-form prayer was split or a real antiphon choice collapsed after selection: ${JSON.stringify(normalizedLocal.stableUiOptions)}`);
+    assert(['collect', 'offerings', 'after'].every(section => ['kr', 'vn'].every(lower => (
+      normalizedLocal[section][lower].bodies.length === 1
+      && normalizedLocal[section][lower].conclusions.length === 1
+      && !normalizedLocal[section][lower].bodies[0].includes('\n')
+    ))), `Tomorrow's prayers were not reflowed into one body paragraph plus one conclusion paragraph: ${JSON.stringify(normalizedLocal)}`);
+    assert(/성부와 성령과 함께 천주로서/u.test(normalizedLocal.collect.kr.conclusions[0])
+      && /Chúa Thánh Thần/u.test(normalizedLocal.collect.vn.conclusions[0])
+      && normalizedLocal.offerings.kr.conclusions[0] === '우리 주 그리스도를 통하여 비나이다.'
+      && normalizedLocal.offerings.vn.conclusions[0] === 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.'
+      && normalizedLocal.after.kr.conclusions[0] === '우리 주 그리스도를 통하여 비나이다.'
+      && normalizedLocal.after.vn.conclusions[0] === 'Chúng con cầu xin nhờ Đức Ki-tô, Chúa chúng con.',
+    `Tomorrow's omitted or abbreviated prayer conclusions were not completed: ${JSON.stringify(normalizedLocal)}`);
+    assert(Object.values(normalizedLocal.omittedConclusions).every(Boolean)
+      && Object.values(normalizedLocal.omittedConclusionStyles).every(style => style === 'through_son'),
+    `A wholly omitted conclusion was not derived for every language: ${JSON.stringify(normalizedLocal.omittedConclusions)}`);
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);
     assert(JSON.stringify(result.deviceUiLanguageFixtures) === JSON.stringify({

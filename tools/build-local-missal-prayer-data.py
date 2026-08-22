@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build the V25 local Roman Missal prayer catalog from the supplied PDFs.
+"""Build the V26 local Roman Missal prayer catalog from the supplied PDFs.
 
 The generated browser data contains only the five daily proper parts used by
-V25.  Readings, prefaces, rubrics, and the Order of Mass remain in their
+V26.  Readings, prefaces, rubrics, and the Order of Mass remain in their
 existing data paths.
 """
 
@@ -101,6 +101,10 @@ KOREAN_OCR_REPLACEMENTS = {
     "기뽑에": "기쁨에",
     "기뿔을": "기쁨을",
     "기틈을": "기쁨을",
+    "참기틈": "참기쁨",
+    "기틈이": "기쁨이",
+    "거두\n게": "거두게",
+    "얻\n는다": "얻는다",
     "어돔의": "어둠의",
     "교회를 빚냈": "교회를 빛냈",
     "성령의 빚으로": "성령의 빛으로",
@@ -156,9 +160,61 @@ PRAYER_TERMINATORS = {
     ],
 }
 
+ALTERNATIVE_MARKERS = {
+    "KR": r"(?:또는)",
+    "VN": r"(?:Hoặc|Hoac)(?:\s+(?:đọc|doc))?",
+    "EN": r"(?:Or)",
+    "LA": r"(?:Vel)",
+}
+
 
 def compact(value: str) -> str:
     return re.sub(r"\s+", " ", value or "").strip()
+
+
+def is_alternative_marker(value: str, lang: str) -> bool:
+    marker = ALTERNATIVE_MARKERS.get(lang, r"(?!)")
+    return bool(re.fullmatch(rf"\s*{marker}\s*[:：]?\s*", value or "", re.I))
+
+
+def looks_like_citation(value: str, lang: str) -> bool:
+    text = compact(value).strip("()[]")
+    if not text or len(text) > 120 or not re.search(r"\d", text):
+        return False
+    if lang == "KR":
+        return bool(re.match(r"^(?:참조\s+)?(?:[1-3]\s*)?[가-힣]{1,16}\s*\d", text))
+    if lang == "VN":
+        return bool(re.match(r"^(?:x\.?\s*)?(?:[1-3]\s*)?[A-ZĐÐ][A-Za-zÀ-ỹĐđÐð. ]{0,20}\s*\d", text, re.I))
+    if lang == "EN":
+        return bool(re.match(r"^(?:Cf\.?\s*)?(?:[1-3]\s*)?[A-Z][A-Za-z. ]{0,30}\s+\d", text))
+    if lang == "LA":
+        return bool(re.match(r"^(?:Cf\.?|Cfr\.?)?\s*(?:[1-3]\s*)?[A-ZÆŒ][A-Za-zÀ-ỹÆæŒœ. ]{0,30}\s+\d", text, re.I))
+    return False
+
+
+def reflow_section(value: str, lang: str, key: str) -> str:
+    """Remove PDF hard wraps while retaining real option/citation boundaries."""
+    lines = [compact(line) for line in (value or "").splitlines() if compact(line)]
+    if not lines:
+        return ""
+    paragraphs: list[str] = []
+    current: list[str] = []
+
+    def flush() -> None:
+        if current:
+            paragraphs.append(compact(" ".join(current)))
+            current.clear()
+
+    for line in lines:
+        boundary = is_alternative_marker(line, lang)
+        citation = key in {"entrance", "communion"} and looks_like_citation(line, lang)
+        if boundary or citation:
+            flush()
+            paragraphs.append(line)
+        else:
+            current.append(line)
+    flush()
+    return "\n".join(paragraphs)
 
 
 def clean_text(value: str, lang: str) -> str:
@@ -304,7 +360,7 @@ def remove_rubric_tail(value: str, lang: str, key: str) -> str:
     value = value[:cut]
     if lang == "EN":
         value = re.sub(r"(?im)^The Gloria in excelsis \(Glory to God in the highest\) is said\.\s*", "", value)
-    value = re.sub(r"\n{3,}", "\n\n", value).strip(" \n.;")
+    value = re.sub(r"\n{3,}", "\n\n", value).strip(" \n")
     return value
 
 
@@ -366,7 +422,7 @@ def parse_sections(block: str, lang: str) -> dict[str, str]:
         stop = matches[index + 1][0] if index + 1 < len(matches) else len(block)
         value = remove_rubric_tail(block[end:stop], lang, key)
         if value:
-            data[key] = value
+            data[key] = reflow_section(value, lang, key)
     return data
 
 
