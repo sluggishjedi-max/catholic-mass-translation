@@ -11963,6 +11963,290 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return entry;
     }
 
+    const localMissalPrayerSectionIds = new Set(['entrance', 'collect', 'prayer_offerings', 'communion', 'prayer_after']);
+    const localMissalDataLanguages = new Set(['KR', 'VN', 'EN', 'LA']);
+    const localMissalComparisonTtlMs = 180 * 24 * 60 * 60 * 1000;
+    const pendingLocalMissalComparisonKeys = new Set();
+
+    function localMissalLanguageData(lang) {
+        const code = normalizeSelectableLang(lang, '');
+        const root = globalThis.localMissalPrayerData;
+        return code && root && root.languages ? root.languages[code] || null : null;
+    }
+
+    function localMissalTitleTokens(value) {
+        return normalizeSemanticText(value)
+            .replace(/\b(tuần|tuan|week|hebdomada)\s+([ivxlcdm]+)\b/giu, (full, label, numeral) => {
+                const week = romanNumerals.findIndex(value => value.toUpperCase() === numeral.toUpperCase());
+                return week > 0 ? `${label} ${week}` : full;
+            })
+            .replace(/제\s*(\d+)\s*주(?:일|간)/gu, '제$1주')
+            .replace(/\b(?:solemnity|feast|memorial|optional|proper|common|memoria|festum|sollemnitas)\b/giu, ' ')
+            .replace(/(?:대축일|축일|기념일|고유|공통)/gu, ' ')
+            .match(/[\p{L}\p{N}]+/gu) || [];
+    }
+
+    function localMissalTitleScore(currentTitle, candidateTitle) {
+        const currentKey = normalizeCalendarNameForCompare(currentTitle).replace(/\d+/g, '');
+        const candidateKey = normalizeCalendarNameForCompare(candidateTitle).replace(/\d+/g, '');
+        if (!currentKey || !candidateKey) return 0;
+        if (currentKey === candidateKey) return 1;
+        const shorter = currentKey.length <= candidateKey.length ? currentKey : candidateKey;
+        const longer = currentKey.length > candidateKey.length ? currentKey : candidateKey;
+        if (shorter.length >= 4 && shorter.length / longer.length >= 0.55 && longer.includes(shorter)) return 0.92;
+        const currentTokens = Array.from(new Set(localMissalTitleTokens(currentTitle)));
+        const candidateTokens = Array.from(new Set(localMissalTitleTokens(candidateTitle)));
+        if (!currentTokens.length || !candidateTokens.length) return 0;
+        const candidateSet = new Set(candidateTokens);
+        const matches = currentTokens.filter(token => candidateSet.has(token)).length;
+        const containment = matches / Math.max(1, Math.min(currentTokens.length, candidateTokens.length));
+        const balance = matches / Math.max(currentTokens.length, candidateTokens.length);
+        return containment * 0.75 + balance * 0.25;
+    }
+
+    function bestLocalMissalEntry(entries, currentTitle) {
+        let best = null;
+        (entries || []).forEach((entry, index) => {
+            if (!entry || !entry.data) return;
+            const score = localMissalTitleScore(currentTitle, entry.title || '');
+            const completeness = localMissalPrayerSectionIds.size
+                ? Array.from(localMissalPrayerSectionIds).filter(key => cleanNodeText(entry.data[key])).length
+                : 0;
+            const candidate = { entry, score, completeness, index };
+            if (!best
+                || candidate.score > best.score
+                || (candidate.score === best.score && candidate.completeness > best.completeness)
+                || (candidate.score === best.score && candidate.completeness === best.completeness && candidate.index < best.index)) {
+                best = candidate;
+            }
+        });
+        return best;
+    }
+
+    function localMissalEntryForLanguage(lang, date) {
+        const code = normalizeSelectableLang(lang, '');
+        if (!date || !localMissalDataLanguages.has(code)) return null;
+        const languageData = localMissalLanguageData(code);
+        if (!languageData) return null;
+        const info = state.liturgyInfo || buildGeneratedLiturgyInfo(date);
+        const currentTitle = info.names && info.names[code] || '';
+        const datedEntries = languageData.calendar && languageData.calendar[calendarDateKey(date)] || [];
+        const dated = bestLocalMissalEntry(datedEntries, currentTitle);
+        if (dated && dated.score >= 0.52) return dated.entry;
+        const seasonalTitle = isGeneratedSeasonalNameForInfo(code, currentTitle, info);
+        if (dated && !seasonalTitle && datedEntries.length === 1) return dated.entry;
+        const catalog = bestLocalMissalEntry(languageData.catalog || [], currentTitle);
+        return catalog && catalog.score >= 0.72 ? catalog.entry : null;
+    }
+
+    function localMissalParsedSnapshot(section, lower) {
+        if (!section.__localMissalParsedSnapshots) section.__localMissalParsedSnapshots = {};
+        if (!section.__localMissalParsedSnapshots[lower]) {
+            const fields = [
+                lower,
+                `${lower}_lines`,
+                `optionCits_${lower}`,
+                `optionLabels_${lower}`,
+                `optionKinds_${lower}`,
+                `cit_${lower}`
+            ];
+            section.__localMissalParsedSnapshots[lower] = Object.fromEntries(fields.map(field => {
+                const exists = Object.prototype.hasOwnProperty.call(section, field);
+                return [field, {
+                    exists,
+                    value: exists ? cloneData(section[field]) : null
+                }];
+            }));
+        }
+        return section.__localMissalParsedSnapshots[lower];
+    }
+
+    function localMissalSnapshotText(snapshot, lower) {
+        const direct = snapshot && snapshot[lower];
+        if (direct && direct.exists && cleanNodeText(direct.value)) return cleanNodeText(direct.value);
+        const structured = snapshot && snapshot[`${lower}_lines`];
+        if (!structured || !structured.exists || !Array.isArray(structured.value)) return '';
+        return structured.value.map(line => cleanNodeText(line && line.text)).filter(Boolean).join('\n');
+    }
+
+    function restoreLocalMissalSnapshot(section, snapshot) {
+        Object.entries(snapshot || {}).forEach(([field, saved]) => {
+            if (saved && saved.exists) section[field] = cloneData(saved.value);
+            else delete section[field];
+        });
+    }
+
+    function formattedLocalMissalSection(lang, sectionKey, text) {
+        const source = cleanNodeText(text);
+        if (!source) return null;
+        try {
+            return strictFormatSection(lang, sectionKey, {
+                text: source,
+                lines: String(text).split(/\r?\n/).map(cleanNodeText).filter(Boolean)
+            });
+        } catch (error) {
+            console.warn(`${lang} local Missal ${sectionKey} formatting failed.`, error);
+            return { text: source, lines: [parsedLine('', source, strictPrayerKeys.has(sectionKey) ? 'body' : '')] };
+        }
+    }
+
+    function localMissalComparisonStorageKey(date, lang, sectionKey, localText, parsedText) {
+        return `${STORAGE_PREFIX}localMissal:${formatDateIso(date)}:${lang}:${sectionKey}:${stableTextHash(localText)}:${stableTextHash(parsedText)}`;
+    }
+
+    function readCachedLocalMissalComparison(date, lang, sectionKey, localText, parsedText) {
+        const entry = readStorageJSON(localMissalComparisonStorageKey(date, lang, sectionKey, localText, parsedText));
+        if (!entry || typeof entry.equivalent !== 'boolean' || !isFreshCacheEntry(entry, localMissalComparisonTtlMs)) return null;
+        return entry.equivalent;
+    }
+
+    function writeCachedLocalMissalComparison(date, lang, sectionKey, localText, parsedText, equivalent) {
+        writeStorageJSON(localMissalComparisonStorageKey(date, lang, sectionKey, localText, parsedText), {
+            cachedAt: Date.now(),
+            equivalent: !!equivalent
+        });
+    }
+
+    function applyLocalMissalPrayerOverlay(fetchedData, date) {
+        if (!fetchedData || !date || !globalThis.localMissalPrayerData) return [];
+        if (!fetchedData.__localMissalEntries) fetchedData.__localMissalEntries = {};
+        const applied = [];
+        getActiveDailySourceLanguages().forEach(lang => {
+            if (!localMissalDataLanguages.has(lang)) return;
+            const titleKey = cleanNodeText(state.liturgyInfo && state.liturgyInfo.names && state.liturgyInfo.names[lang]);
+            const cachedEntry = fetchedData.__localMissalEntries[lang];
+            if (!cachedEntry || cachedEntry.titleKey !== titleKey) {
+                fetchedData.__localMissalEntries[lang] = {
+                    titleKey,
+                    entry: localMissalEntryForLanguage(lang, date) || null
+                };
+            }
+            const entry = fetchedData.__localMissalEntries[lang].entry;
+            const lower = lang.toLowerCase();
+            if (!entry || !entry.data) {
+                localMissalPrayerSectionIds.forEach(sectionKey => {
+                    const section = fetchedData[sectionKey];
+                    if (!section || !section.__localMissalOverlays || !section.__localMissalOverlays[lower]) return;
+                    restoreLocalMissalSnapshot(section, section.__localMissalParsedSnapshots && section.__localMissalParsedSnapshots[lower]);
+                    delete section.__localMissalOverlays[lower];
+                });
+                return;
+            }
+            localMissalPrayerSectionIds.forEach(sectionKey => {
+                const localText = cleanNodeText(entry.data[sectionKey]);
+                if (!localText) {
+                    const previousSection = fetchedData[sectionKey];
+                    if (previousSection && previousSection.__localMissalOverlays && previousSection.__localMissalOverlays[lower]) {
+                        restoreLocalMissalSnapshot(
+                            previousSection,
+                            previousSection.__localMissalParsedSnapshots && previousSection.__localMissalParsedSnapshots[lower]
+                        );
+                        delete previousSection.__localMissalOverlays[lower];
+                    }
+                    return;
+                }
+                if (!fetchedData[sectionKey]) fetchedData[sectionKey] = {};
+                const section = fetchedData[sectionKey];
+                const snapshot = localMissalParsedSnapshot(section, lower);
+                const parsedText = localMissalSnapshotText(snapshot, lower);
+                const equivalent = parsedText
+                    ? readCachedLocalMissalComparison(date, lang, sectionKey, localText, parsedText)
+                    : true;
+                if (equivalent === false) {
+                    restoreLocalMissalSnapshot(section, snapshot);
+                    if (section.__localMissalOverlays) delete section.__localMissalOverlays[lower];
+                    return;
+                }
+                const formatted = formattedLocalMissalSection(lang, sectionKey, localText);
+                if (!formatted) return;
+                section[lower] = formatted.text || localText;
+                section[`${lower}_lines`] = Array.isArray(formatted.lines) && formatted.lines.length
+                    ? formatted.lines
+                    : [parsedLine('', localText)];
+                delete section[`optionCits_${lower}`];
+                delete section[`optionLabels_${lower}`];
+                delete section[`optionKinds_${lower}`];
+                if (!section.__localMissalOverlays) section.__localMissalOverlays = {};
+                section.__localMissalOverlays[lower] = {
+                    lang,
+                    sectionKey,
+                    entryTitle: entry.title || '',
+                    page: entry.page || 0,
+                    localText,
+                    parsedText
+                };
+                applied.push(section.__localMissalOverlays[lower]);
+            });
+        });
+        return applied;
+    }
+
+    function collectLocalMissalComparisonTasks(fetchedData, date) {
+        const tasks = [];
+        localMissalPrayerSectionIds.forEach(sectionKey => {
+            const section = fetchedData && fetchedData[sectionKey];
+            Object.values(section && section.__localMissalOverlays || {}).forEach(overlay => {
+                if (!overlay || !overlay.localText || !overlay.parsedText) return;
+                const exactLocal = normalizeSemanticText(overlay.localText).replace(/[^\p{L}\p{N}]+/gu, '');
+                const exactParsed = normalizeSemanticText(overlay.parsedText).replace(/[^\p{L}\p{N}]+/gu, '');
+                if (exactLocal && exactLocal === exactParsed) {
+                    writeCachedLocalMissalComparison(date, overlay.lang, sectionKey, overlay.localText, overlay.parsedText, true);
+                    return;
+                }
+                if (readCachedLocalMissalComparison(date, overlay.lang, sectionKey, overlay.localText, overlay.parsedText) !== null) return;
+                const signature = localMissalComparisonStorageKey(date, overlay.lang, sectionKey, overlay.localText, overlay.parsedText);
+                if (pendingLocalMissalComparisonKeys.has(signature)) return;
+                pendingLocalMissalComparisonKeys.add(signature);
+                tasks.push(Object.assign({}, overlay, { signature }));
+            });
+        });
+        return tasks;
+    }
+
+    function buildLocalMissalComparisonPrompt(task) {
+        return [
+            'Compare a locally stored Roman Missal text with a live website transcription in the same language.',
+            'Return equivalent=true only when they are the same authorized prayer or antiphon.',
+            'Ignore line wrapping, punctuation, citation formatting, abbreviated versus expanded conclusions, and a small number of obvious OCR letter errors.',
+            'Return equivalent=false when the saint, feast, biblical antiphon, central petition, or formular source is different.',
+            'If uncertain, return false so the live parsed text safely replaces the local text.',
+            'Return strict JSON only: {"equivalent":true} or {"equivalent":false}.',
+            '',
+            JSON.stringify({
+                language: task.lang,
+                section: task.sectionKey,
+                localEntryTitle: task.entryTitle,
+                localPdfPage: task.page,
+                localMissalText: task.localText,
+                liveParsedText: task.parsedText
+            }, null, 2)
+        ].join('\n');
+    }
+
+    async function compareLocalMissalPrayersWithAI(fetchedData, date) {
+        const tasks = collectLocalMissalComparisonTasks(fetchedData, date).slice(0, 15);
+        if (!tasks.length) return false;
+        let changed = false;
+        for (const task of tasks) {
+            try {
+                const payload = await fetchGeminiViaFirebase('align', {
+                    contents: [{ parts: [{ text: buildLocalMissalComparisonPrompt(task) }] }],
+                    generationConfig: { temperature: 0 }
+                }, { timeoutMs: 30000, label: 'Local Missal comparison' });
+                const parsed = extractJsonObjectFromText(geminiTextFromPayload(payload));
+                if (typeof parsed.equivalent !== 'boolean') throw new Error('Local Missal comparison returned no boolean decision.');
+                writeCachedLocalMissalComparison(date, task.lang, task.sectionKey, task.localText, task.parsedText, parsed.equivalent);
+                changed = true;
+            } catch (error) {
+                console.warn(`${task.lang} local Missal ${task.sectionKey} comparison failed; kept local text.`, error);
+            } finally {
+                pendingLocalMissalComparisonKeys.delete(task.signature);
+            }
+            await new Promise(resolve => setTimeout(resolve, 180));
+        }
+        return changed;
+    }
+
     function buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap) {
         if (!section || !section.__pairKoreanOrdinaryTranslation) return [];
         const left = normalizeSelectableLang(state.currentLoc || '', '').toLowerCase();
@@ -13637,6 +13921,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const activeDate = getActiveLiturgicalSourceDate();
         applyKoreanMissalForeignProperOverlay(fetchedData, activeDate);
         applyKoreanMissalOrdinaryConflictOverlay(fetchedData, activeDate);
+        applyLocalMissalPrayerOverlay(fetchedData, activeDate);
         // The Korean Missal overlays are added after remote sources merge, so
         // their source-pairing rule must be evaluated at this point as well.
         applyCachedVariantAlignments(fetchedData, activeDate);
@@ -13749,13 +14034,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         render();
 
         if (appliedCount) {
-            alignDailySelectableVariantsWithAI(fetchedData, today).then(() => alignDailyTextEquivalenceWithAI(today)).then(() => {
+            alignDailySelectableVariantsWithAI(fetchedData, today)
+                .then(() => compareLocalMissalPrayersWithAI(fetchedData, today))
+                .then(() => {
+                    if (options.shouldApply && !options.shouldApply()) return false;
+                    finalizeDailyReadingsData(fetchedData);
+                    return alignDailyTextEquivalenceWithAI(today);
+                })
+                .then(() => {
                 if (options.shouldApply && !options.shouldApply()) return;
                 finalizeDailyReadingsData(fetchedData);
                 render();
-            }).catch(error => {
+                }).catch(error => {
                 console.warn('일일 독서 선택지 정렬 보정 실패', error);
-            });
+                });
         }
         return appliedCount > 0 || results.some(result => result.parsed);
     }
@@ -13781,6 +14073,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 localStorage.removeItem(dailyVariantAlignmentStorageKey(date, baseId));
             });
             localStorage.removeItem(dailySemanticEquivalenceStorageKey(date));
+            const localMissalPrefix = `${STORAGE_PREFIX}localMissal:${formatDateIso(date)}:`;
+            for (let index = localStorage.length - 1; index >= 0; index -= 1) {
+                const key = localStorage.key(index);
+                if (key && key.startsWith(localMissalPrefix)) localStorage.removeItem(key);
+            }
         } catch (error) {
             console.warn('전례 선택지 분석 캐시를 비우지 못했습니다.', error);
         }

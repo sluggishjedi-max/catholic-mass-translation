@@ -62,9 +62,10 @@ function startServer() {
     if (targetHtml === 'V25.html') {
       assert(Buffer.byteLength(targetHtmlSource) < 100000, `V25 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
       assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
+        && /JS%20file\/local_missal_prayer_data\.js\?v=20260822-v25-r1/.test(targetHtmlSource)
         && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
         && /JS%20file\/hymn_data\.js\?v=20260818-v25-r4/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260818-v25-r15/.test(targetHtmlSource),
+        && /JS%20file\/app_v25\.js\?v=20260822-v25-r16/.test(targetHtmlSource),
       'V25 data/runtime scripts are not separated in the HTML.');
       const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
       assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
@@ -1816,6 +1817,128 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       };
       state.bishopContext = previousBishopContext;
 
+      const previousLocalMissalState = {
+        currentLoc: state.currentLoc,
+        targetLang: state.targetLang,
+        liturgyInfo: cloneData(state.liturgyInfo)
+      };
+      const localMissalDate = new Date(2026, 0, 2, 9, 0, 0);
+      state.currentLoc = 'EN';
+      state.targetLang = 'KR';
+      state.liturgyInfo = buildGeneratedLiturgyInfo(localMissalDate);
+      const englishMissalEntry = localMissalEntryForLanguage('EN', localMissalDate);
+      const liveDifferentCollect = 'LIVE PARSED DIFFERENT COLLECT';
+      const localMissalFetched = {
+        collect: {
+          en: liveDifferentCollect,
+          en_lines: [parsedLine('', liveDifferentCollect, 'body')]
+        }
+      };
+      applyLocalMissalPrayerOverlay(localMissalFetched, localMissalDate);
+      const englishLocalShown = /O God, who were pleased to give light to your Church/.test(localMissalFetched.collect.en || '');
+      const titleRefreshFetched = {
+        collect: {
+          en: liveDifferentCollect,
+          en_lines: [parsedLine('', liveDifferentCollect, 'body')]
+        }
+      };
+      applyLocalMissalPrayerOverlay(titleRefreshFetched, localMissalDate);
+      state.liturgyInfo = buildGeneratedLiturgyInfo(new Date(2026, 0, 16, 9, 0, 0));
+      const titleChangeEntryTitle = localMissalEntryForLanguage('EN', localMissalDate)?.title || '';
+      applyLocalMissalPrayerOverlay(titleRefreshFetched, localMissalDate);
+      const titleChangeRestoredParsed = titleRefreshFetched.collect.en === liveDifferentCollect
+        && !titleRefreshFetched.collect.__localMissalOverlays?.en;
+      state.liturgyInfo = buildGeneratedLiturgyInfo(localMissalDate);
+      const localOverlay = localMissalFetched.collect.__localMissalOverlays?.en;
+      const differentCacheKey = localOverlay
+        ? localMissalComparisonStorageKey(
+          localMissalDate,
+          'EN',
+          'collect',
+          localOverlay.localText,
+          localOverlay.parsedText
+        )
+        : '';
+      if (localOverlay) {
+        writeCachedLocalMissalComparison(
+          localMissalDate,
+          'EN',
+          'collect',
+          localOverlay.localText,
+          localOverlay.parsedText,
+          false
+        );
+      }
+      applyLocalMissalPrayerOverlay(localMissalFetched, localMissalDate);
+      const parsedRestored = localMissalFetched.collect.en === liveDifferentCollect
+        && !localMissalFetched.collect.__localMissalOverlays?.en;
+      if (differentCacheKey) localStorage.removeItem(differentCacheKey);
+
+      const exactLocalText = englishMissalEntry?.data?.collect || '';
+      const exactMissalFetched = {
+        collect: {
+          en: exactLocalText,
+          en_lines: [parsedLine('', exactLocalText, 'body')]
+        }
+      };
+      applyLocalMissalPrayerOverlay(exactMissalFetched, localMissalDate);
+      const exactComparisonTasks = collectLocalMissalComparisonTasks(exactMissalFetched, localMissalDate);
+      const exactCacheKey = exactLocalText
+        ? localMissalComparisonStorageKey(localMissalDate, 'EN', 'collect', exactLocalText, exactLocalText)
+        : '';
+      if (exactCacheKey) localStorage.removeItem(exactCacheKey);
+
+      const localMissalRoot = globalThis.localMissalPrayerData;
+      const allEnglishEntrances = Object.values(localMissalRoot?.languages?.EN?.calendar || {})
+        .flat()
+        .map(entry => entry?.data?.entrance || '')
+        .concat((localMissalRoot?.languages?.EN?.catalog || []).map(entry => entry?.data?.entrance || ''));
+      const vietnameseCatalog = localMissalRoot?.languages?.VN?.catalog || [];
+      state.liturgyInfo = buildGeneratedLiturgyInfo(localMissalDate);
+      const jan2LocalTitles = Object.fromEntries(['KR', 'VN', 'EN', 'LA'].map(lang => [
+        lang,
+        localMissalEntryForLanguage(lang, localMissalDate)?.title || ''
+      ]));
+      const vietnameseOrdinaryDate = new Date(2026, 7, 18, 9, 0, 0);
+      state.liturgyInfo = buildGeneratedLiturgyInfo(vietnameseOrdinaryDate);
+      const vietnameseOrdinaryCurrentTitle = state.liturgyInfo.names.VN;
+      const vietnameseTuesdayCandidate = vietnameseCatalog.find(entry => entry?.kind === 'temporal' && entry?.title === 'THỨ BA');
+      const vietnameseWeek20Candidate = vietnameseCatalog.find(entry => entry?.kind === 'temporal' && /TUẦN 20 THƯỜNG NIÊN/i.test(entry?.title || ''));
+      const vietnameseOrdinaryEntry = localMissalEntryForLanguage('VN', vietnameseOrdinaryDate);
+      const koreanOrdinaryEntry = localMissalEntryForLanguage('KR', vietnameseOrdinaryDate);
+      const localMissalFixture = {
+        schemaVersion: localMissalRoot?.schemaVersion,
+        languages: Object.keys(localMissalRoot?.languages || {}).sort(),
+        japaneseUsesParser: localMissalLanguageData('JP') === null
+          && (localMissalRoot?.fallbackLanguages || []).includes('JP'),
+        englishEntryTitle: englishMissalEntry?.title || '',
+        englishLocalShown,
+        titleChangeEntryTitle,
+        titleChangeRestoredParsed,
+        parsedRestored,
+        exactComparisonTasks: exactComparisonTasks.length,
+        noEnglishGloriaInstruction: allEnglishEntrances.every(text => !/The Gloria in excelsis/i.test(text)),
+        jan2LocalTitles,
+        vietnameseOrdinaryCurrentTitle,
+        vietnameseOrdinaryScores: {
+          tuesday: localMissalTitleScore(vietnameseOrdinaryCurrentTitle, vietnameseTuesdayCandidate?.title || ''),
+          week20: localMissalTitleScore(vietnameseOrdinaryCurrentTitle, vietnameseWeek20Candidate?.title || '')
+        },
+        vietnameseOrdinaryTitle: vietnameseOrdinaryEntry?.title || '',
+        vietnameseOrdinaryKind: vietnameseOrdinaryEntry?.kind || '',
+        koreanOrdinaryTitle: koreanOrdinaryEntry?.title || '',
+        koreanOrdinaryKind: koreanOrdinaryEntry?.kind || '',
+        vietnameseDateCount: Object.keys(localMissalRoot?.languages?.VN?.calendar || {}).length,
+        vietnameseJan20Forms: localMissalRoot?.languages?.VN?.calendar?.['01-20']?.length || 0,
+        vietnameseHasTemporal: vietnameseCatalog.some(entry => entry?.kind === 'temporal'),
+        vietnameseHasCommons: vietnameseCatalog.some(entry => entry?.kind === 'common'),
+        vietnameseVotiveForms: vietnameseCatalog.filter(entry => entry?.kind === 'votive').length,
+        sourcePages: Object.fromEntries(Object.entries(localMissalRoot?.languages || {}).map(([lang, data]) => [lang, data?.source?.pages || '']))
+      };
+      state.currentLoc = previousLocalMissalState.currentLoc;
+      state.targetLang = previousLocalMissalState.targetLang;
+      state.liturgyInfo = previousLocalMissalState.liturgyInfo;
+
       return {
         defaultFontSize,
         intermediateFontSize,
@@ -1965,6 +2088,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         vietnameseMassCopyright,
         pullRefreshFixture,
         v25BishopLocalizationFixture,
+        localMissalFixture,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
       };
@@ -2228,6 +2352,30 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         && result.v25BishopLocalizationFixture.la === 'Epíscopo nostro Matthias eiusque Episcopis auxiliaribus Ioannes et Germanus',
       `Auxiliary bishop names are not localized in every V25 language: ${JSON.stringify(result.v25BishopLocalizationFixture)}`);
     }
+    assert(result.localMissalFixture.schemaVersion === 1
+      && JSON.stringify(result.localMissalFixture.languages) === JSON.stringify(['EN', 'KR', 'LA', 'VN'])
+      && result.localMissalFixture.japaneseUsesParser
+      && /Basil the Great and Gregory Nazianzen/.test(result.localMissalFixture.englishEntryTitle)
+      && result.localMissalFixture.englishLocalShown
+      && result.localMissalFixture.titleChangeRestoredParsed
+      && result.localMissalFixture.parsedRestored
+      && result.localMissalFixture.exactComparisonTasks === 0
+      && result.localMissalFixture.noEnglishGloriaInstruction
+      && Object.values(result.localMissalFixture.jan2LocalTitles).every(Boolean)
+      && /TUẦN 20 THƯỜNG NIÊN/i.test(result.localMissalFixture.vietnameseOrdinaryTitle)
+      && result.localMissalFixture.vietnameseOrdinaryKind === 'temporal'
+      && /연중.*20/.test(result.localMissalFixture.koreanOrdinaryTitle)
+      && result.localMissalFixture.koreanOrdinaryKind === 'temporal-common-votive'
+      && result.localMissalFixture.vietnameseDateCount >= 175
+      && result.localMissalFixture.vietnameseJan20Forms === 2
+      && result.localMissalFixture.vietnameseHasTemporal
+      && result.localMissalFixture.vietnameseHasCommons
+      && result.localMissalFixture.vietnameseVotiveForms >= 19
+      && result.localMissalFixture.sourcePages.KR === '537-1414'
+      && result.localMissalFixture.sourcePages.VN === '689-1270, 1483-1508'
+      && result.localMissalFixture.sourcePages.EN === '799-1113'
+      && result.localMissalFixture.sourcePages.LA === '415-593',
+    `Local Roman Missal data or local-vs-live fallback behavior is incomplete: ${JSON.stringify(result.localMissalFixture)}`);
     assert(result.settingsLabels.every(text => !/[가-힣]/.test(text)), `Fixed Korean remains in Vietnamese settings: ${JSON.stringify(result.settingsLabels)}`);
     assert(result.htmlLang === 'vi', `Document language should be vi, got ${result.htmlLang}`);
     assert(JSON.stringify(result.deviceUiLanguageFixtures) === JSON.stringify({
