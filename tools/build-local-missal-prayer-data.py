@@ -177,6 +177,14 @@ def is_alternative_marker(value: str, lang: str) -> bool:
     return bool(re.fullmatch(rf"\s*{marker}\s*[:：]?\s*", value or "", re.I))
 
 
+def split_alternative_marker(value: str, lang: str) -> tuple[str, str, str] | None:
+    marker = ALTERNATIVE_MARKERS.get(lang, r"(?!)")
+    match = re.match(rf"^(.*?)(?:\b|^)({marker})\s*[:：]\s*(.*)$", value or "", re.I)
+    if not match:
+        return None
+    return compact(match.group(1)), compact(match.group(2)), compact(match.group(3))
+
+
 def looks_like_citation(value: str, lang: str) -> bool:
     text = compact(value).strip("()[]")
     if not text or len(text) > 120 or not re.search(r"\d", text):
@@ -206,6 +214,19 @@ def reflow_section(value: str, lang: str, key: str) -> str:
             current.clear()
 
     for line in lines:
+        alternative = split_alternative_marker(line, lang)
+        if alternative:
+            before, marker, after = alternative
+            if before:
+                current.append(before)
+            flush()
+            paragraphs.append(f"{marker}:")
+            if after:
+                if key in {"entrance", "communion"} and looks_like_citation(after, lang):
+                    paragraphs.append(after)
+                else:
+                    current.append(after)
+            continue
         boundary = is_alternative_marker(line, lang)
         citation = key in {"entrance", "communion"} and looks_like_citation(line, lang)
         if boundary or citation:
@@ -581,6 +602,13 @@ def page_catalog(pages: list[dict[str, object]], lang: str, kind: str) -> list[d
             if not re.search(rf"(?im)^\s*(?:{HEADINGS[lang]['collect']})(?:\s|$)", next_text):
                 combined += f"\n[[PAGE {pages[index + 1]['page']}]]\n{next_text}"
         page_entries = parse_form_entries(combined, lang, f"{kind} p.{page}", page, kind)
+        if lang == "EN" and kind == "temporal":
+            for entry in page_entries:
+                title = str(entry["title"])
+                title = re.sub(r"^(?:on sundays and weekdays|sunday and daily masses)\s+\d+\s+", "", title, flags=re.I)
+                title = re.sub(r"^(?:advent|christmas time|lent|holy week|easter time)\s+\d+\s+", "", title, flags=re.I)
+                title = re.sub(r"^\d+\s+(?:ORDINARY TIME\s+)?", "", title, flags=re.I)
+                entry["title"] = compact(title)
         if lang == "KR" and page in KOREAN_EASTER_WEEK_BY_PAGE:
             easter_week = KOREAN_EASTER_WEEK_BY_PAGE[page]
             for entry in page_entries:
@@ -669,6 +697,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=OUTPUT)
     options = parser.parse_args()
 
+    en_temporal_pages = pdf_pages(PDF_DIR / "영어.pdf", 137, 509, "EN")
     en_proper_pages = pdf_pages(PDF_DIR / "영어.pdf", 799, 1025, "EN")
     en_common_pages = pdf_pages(PDF_DIR / "영어.pdf", 1030, 1113, "EN")
     la_proper_pages = pdf_pages(PDF_DIR / "라틴어.pdf", 415, 535, "LA")
@@ -712,9 +741,9 @@ def main() -> None:
                 ),
             },
             "EN": {
-                "source": source_descriptor("영어.pdf", "799-1113", "PROPER OF SAINTS and COMMONS"),
+                "source": source_descriptor("영어.pdf", "137-509, 799-1113", "PROPER OF TIME, PROPER OF SAINTS, and COMMONS"),
                 "calendar": english_calendar(en_proper_pages),
-                "catalog": page_catalog(en_common_pages, "EN", "common"),
+                "catalog": page_catalog(en_temporal_pages, "EN", "temporal") + page_catalog(en_common_pages, "EN", "common"),
             },
             "LA": {
                 "source": source_descriptor("라틴어.pdf", "415-593", "PROPRIUM DE SANCTIS and COMMUNIA"),

@@ -8619,7 +8619,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict83';
+    const STRICT_PARSER_CACHE_VERSION = 'strict84';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10447,7 +10447,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return fetchJinaHtml(sourceUrls.IBREVIARY(section, date, lang));
     }
 
+    function ibreviaryCurrentCalendarDate(now = new Date()) {
+        const parts = zonedDateParts(now, 'Europe/Rome');
+        return new Date(parts.year, parts.month - 1, parts.day);
+    }
+
+    function ibreviarySupportsRequestedDate(date, now = new Date()) {
+        return !!date && sameDay(date, ibreviaryCurrentCalendarDate(now));
+    }
+
     async function fetchIbreviaryDailyMass(lang, date, options = {}) {
+        // This endpoint ignores giorno/mese/anno and serves its current Roman
+        // date. Never let today's formulary overwrite a requested past or
+        // future liturgy.
+        if (!ibreviarySupportsRequestedDate(date)) {
+            throw new Error(`iBreviary only serves its current Roman date, not ${formatDateIso(date)}.`);
+        }
         const [antiphonCollect, offerings, communion, readings] = await Promise.all([
             fetchIbreviarySource(lang, date, 'antifona_e_colletta'),
             fetchIbreviarySource(lang, date, 'sulle_offerte'),
@@ -11509,12 +11524,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     // A remote missal often abbreviates a conclusion, and some pages omit it
-    // altogether.  Preserve the theological direction of the source-language
-    // conclusion, then supply the authorized local formula for every other
-    // language that has a prayer body but no conclusion of its own.
+    // altogether. Preserve the theological direction of the source-language
+    // conclusion and supply the authorized local formula without sending any
+    // conclusion through AI translation.
     function ensureLocalizedPrayerConclusions(targetLines, baseId) {
         if (!strictPrayerKeys.has(baseId) || !Array.isArray(targetLines)) return;
         const lowers = ['kr', 'vn', 'en', 'jp', 'la'];
+        targetLines.forEach(line => {
+            if (!line || (!lineHasAnyRole(line, 'conclusion') && !isPrayerConclusionText(combinedLineText(line)))) return;
+            lowers.forEach(lower => { line[`text_${lower}_ai`] = ''; });
+        });
         const preferred = [
             normalizeSelectableLang(state.currentLoc || '', ''),
             normalizeSelectableLang(getLiturgicalBaseLang() || '', ''),
@@ -11530,8 +11549,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!reference) return;
 
         lowers.forEach(lower => {
-            if (!prayerHasBodyForLanguage(targetLines, lower, baseId)) return;
-            if (prayerConclusionForLanguage(targetLines, lower, baseId)) return;
+            const existing = prayerConclusionForLanguage(targetLines, lower, baseId);
+            if (existing) {
+                existing.line[`text_${lower}_ai`] = '';
+                existing.line[`role_${lower}`] = 'conclusion';
+                return;
+            }
             const lang = langCodeFromLowerKey(lower);
             const formula = localizedPrayerConclusionFormula(lang, baseId, reference.style);
             if (!formula) return;
@@ -12010,12 +12033,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return best;
     }
 
+    function localMissalLiturgyInfoForDate(date) {
+        const current = state.liturgyInfo;
+        if (current && current.dateStr === formatKoreanDateString(date)) return current;
+        return buildGeneratedLiturgyInfo(date);
+    }
+
     function localMissalEntryForLanguage(lang, date) {
         const code = normalizeSelectableLang(lang, '');
         if (!date || !localMissalDataLanguages.has(code)) return null;
         const languageData = localMissalLanguageData(code);
         if (!languageData) return null;
-        const info = state.liturgyInfo || buildGeneratedLiturgyInfo(date);
+        const info = localMissalLiturgyInfoForDate(date);
         const currentTitle = info.names && info.names[code] || '';
         const datedEntries = languageData.calendar && languageData.calendar[calendarDateKey(date)] || [];
         const dated = bestLocalMissalEntry(datedEntries, currentTitle);
@@ -12100,7 +12129,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const applied = [];
         getActiveDailySourceLanguages().forEach(lang => {
             if (!localMissalDataLanguages.has(lang)) return;
-            const titleKey = cleanNodeText(state.liturgyInfo && state.liturgyInfo.names && state.liturgyInfo.names[lang]);
+            const info = localMissalLiturgyInfoForDate(date);
+            const titleKey = cleanNodeText(info && info.names && info.names[lang]);
             const cachedEntry = fetchedData.__localMissalEntries[lang];
             if (!cachedEntry || cachedEntry.titleKey !== titleKey) {
                 fetchedData.__localMissalEntries[lang] = {
@@ -15366,10 +15396,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function shouldSuppressAIFallbackForLine(line, baseId, lower) {
         if (shouldSuppressAIFallbackLine(line, baseId)) return true;
-        // A source-choice variant intentionally clears the opposite language.
-        // Keep the AI button available there so the selected original can be
-        // translated into the empty display column on demand.
-        if (line && line.__sourceChoiceOriginal) return false;
+        if (strictPrayerKeys.has(baseId)
+            && (lineHasAnyRole(line, 'conclusion') || isPrayerConclusionText(combinedLineText(line)))) return true;
+        // Korean and English daily-Mass columns must contain authorized source
+        // text only. The Korea-only Lenten acclamation remains the explicit
+        // exception requested for on-demand AI translation.
+        if (['kr', 'en'].includes(lower) && baseId !== 'gospel_accl') return true;
+        // Source-choice variants deliberately leave a language empty when no
+        // authorized text exists. Do not present AI output as source text.
         return displayLanguageWasCleared(line, lower)
             || sourceChoiceLanguageIsEmpty(line, lower);
     }
