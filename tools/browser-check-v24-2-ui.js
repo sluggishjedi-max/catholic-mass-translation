@@ -7,7 +7,7 @@ const { chromium } = require('@playwright/test');
 const root = path.resolve(__dirname, '..');
 const targetHtml = process.env.ORDO_CHECK_HTML || 'V24.2.html';
 const targetHtmlSource = fs.readFileSync(path.join(root, targetHtml), 'utf8');
-const v25RuntimePath = path.join(root, 'JS file', 'app_v25.js');
+const runtimePath = path.join(root, 'JS file', targetHtml === 'V26.html' ? 'app_v26.js' : 'app_v25.js');
 const hymnDataPath = path.join(root, 'JS file', 'hymn_data.js');
 const mime = {
   '.html': 'text/html; charset=utf-8',
@@ -60,15 +60,22 @@ function startServer() {
 
   try {
     if (targetHtml === 'V25.html') {
-      assert(Buffer.byteLength(targetHtmlSource) < 100000, `V25 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
-      assert(/JS%20file\/missa_data\.js\?v=20260812-v25/.test(targetHtmlSource)
-        && /JS%20file\/local_missal_prayer_data\.js\?v=20260822-v25-r1/.test(targetHtmlSource)
-        && /JS%20file\/prayer_data\.js\?v=20260812-v25/.test(targetHtmlSource)
-        && /JS%20file\/hymn_data\.js\?v=20260818-v25-r4/.test(targetHtmlSource)
-        && /JS%20file\/app_v25\.js\?v=20260822-v25-r16/.test(targetHtmlSource),
-      'V25 data/runtime scripts are not separated in the HTML.');
-      const runtimeSource = fs.readFileSync(v25RuntimePath, 'utf8');
-      assert(runtimeSource.includes("const APP_VERSION = 'V25-20260812'"), 'V25 runtime version is missing.');
+      assert(/JS%20file\/app_v25\.js\?v=20260822-v26-compat-r1/.test(targetHtmlSource),
+        'V25 compatibility entry point is missing.');
+      const compatibilitySource = fs.readFileSync(runtimePath, 'utf8');
+      assert(/app_v26\.js\?v=20260822-v26-r1/.test(compatibilitySource),
+        'V25 compatibility entry point does not load V26.');
+    }
+    if (targetHtml === 'V26.html') {
+      assert(Buffer.byteLength(targetHtmlSource) < 100000, `V26 HTML was not reduced: ${Buffer.byteLength(targetHtmlSource)} bytes`);
+      assert(/JS%20file\/missa_data\.js\?v=20260822-v26/.test(targetHtmlSource)
+        && /JS%20file\/local_missal_prayer_data\.js\?v=20260822-v26-r2/.test(targetHtmlSource)
+        && /JS%20file\/prayer_data\.js\?v=20260822-v26/.test(targetHtmlSource)
+        && /JS%20file\/hymn_data\.js\?v=20260822-v26-r1/.test(targetHtmlSource)
+        && /JS%20file\/app_v26\.js\?v=20260822-v26-r1/.test(targetHtmlSource),
+      'V26 data/runtime scripts are not separated in the HTML.');
+      const runtimeSource = fs.readFileSync(runtimePath, 'utf8');
+      assert(runtimeSource.includes("const APP_VERSION = 'V26-20260822'"), 'V26 runtime version is missing.');
       const hymnDataSource = fs.readFileSync(hymnDataPath, 'utf8');
       assert(runtimeSource.includes('canonicalCatholicHymnTitleTranslations')
         && runtimeSource.includes('function normalizeHymnTranslatedTitle')
@@ -76,7 +83,7 @@ function startServer() {
         && !hymnDataSource.includes('ordoCatholicTitleData')
         && !runtimeSource.includes('const prayerSeedData')
         && !/<script>\s*[\s\S]+<\/script>/u.test(targetHtmlSource),
-      'V25 hymn data and runtime responsibilities are not separated.');
+      'V26 hymn data and runtime responsibilities are not separated.');
     }
     await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'domcontentloaded', timeout: 90000 });
     const webStartupPrompts = await page.evaluate(() => ({
@@ -1420,6 +1427,26 @@ function startServer() {
         'LA',
         '<p>Super oblata</p><p>Súscipe, Dómine, múnera nostra. Præfatio de Assumptione Beatæ Mariæ Virginis</p>'
       ).prayer_offerings?.text || '';
+      const vietnameseTomorrowCommunion = strictParsePrayerOrAntiphon('VN', 'communion', {
+        lines: [
+          'Lạy Chúa, do kết quả việc Chúa làm, địa cầu được no phỉ.',
+          'Hoặc đọc:',
+          'Ga 6,54',
+          'Chúa phán: Ai ăn thịt Ta và uống máu Ta, thì sẽ được sống đời đời.'
+        ]
+      });
+      const vietnameseInlineCommunion = splitOptionsByMarker([
+        'Ca hiệp lễ thứ nhất.',
+        'Hoặc đọc: Ca hiệp lễ thứ hai.'
+      ], /^Hoặc\b|^Hoặc đọc/i);
+      const vietnameseCommunionAlternativeFixture = {
+        standaloneMarkerRecognized: !!strictAlternativeMatch('Hoặc đọc:')
+          && !strictAlternativeMatch('Hoặc đọc:').rest,
+        standaloneOptionCount: splitParsedAlternatives(vietnameseTomorrowCommunion.lines).length,
+        inlineOptionCount: vietnameseInlineCommunion.length,
+        inlineSecondText: vietnameseInlineCommunion[1]?.join(' ') || '',
+        optionCitations: vietnameseTomorrowCommunion.optionCits || []
+      };
 
       const savedPrefaceLocation = state.currentLoc;
       state.currentLoc = 'KR';
@@ -1808,7 +1835,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       const currentLegend = document.getElementById('role-legend');
       const previousBishopContext = state.bishopContext;
       state.bishopContext = bishopContextForDiocese('수원교구');
-      const v25BishopLocalizationFixture = {
+      const bishopLocalizationFixture = {
         kr: plainTextFromHtml(formatDynamicLineText('저희 주교 [주교명]와 (협력주교들과)', 'kr')),
         vn: plainTextFromHtml(formatDynamicLineText('Đức Giám Mục [Tên GM.] chúng con', 'vn')),
         en: plainTextFromHtml(formatDynamicLineText('[Bishop Name] our Bishop, (and Auxiliary Bishops,)', 'en')),
@@ -1906,6 +1933,10 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       const vietnameseWeek20Candidate = vietnameseCatalog.find(entry => entry?.kind === 'temporal' && /TUẦN 20 THƯỜNG NIÊN/i.test(entry?.title || ''));
       const vietnameseOrdinaryEntry = localMissalEntryForLanguage('VN', vietnameseOrdinaryDate);
       const koreanOrdinaryEntry = localMissalEntryForLanguage('KR', vietnameseOrdinaryDate);
+      const ordinarySundayDate = new Date(2026, 7, 23, 9, 0, 0);
+      state.liturgyInfo = buildGeneratedLiturgyInfo(ordinarySundayDate);
+      const vietnameseOrdinarySundayEntry = localMissalEntryForLanguage('VN', ordinarySundayDate);
+      const koreanOrdinarySundayEntry = localMissalEntryForLanguage('KR', ordinarySundayDate);
       const localMissalFixture = {
         schemaVersion: localMissalRoot?.schemaVersion,
         languages: Object.keys(localMissalRoot?.languages || {}).sort(),
@@ -1928,6 +1959,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         vietnameseOrdinaryKind: vietnameseOrdinaryEntry?.kind || '',
         koreanOrdinaryTitle: koreanOrdinaryEntry?.title || '',
         koreanOrdinaryKind: koreanOrdinaryEntry?.kind || '',
+        vietnameseOrdinarySundayTitle: vietnameseOrdinarySundayEntry?.title || '',
+        koreanOrdinarySundayTitle: koreanOrdinarySundayEntry?.title || '',
         vietnameseDateCount: Object.keys(localMissalRoot?.languages?.VN?.calendar || {}).length,
         vietnameseJan20Forms: localMissalRoot?.languages?.VN?.calendar?.['01-20']?.length || 0,
         vietnameseHasTemporal: vietnameseCatalog.some(entry => entry?.kind === 'temporal'),
@@ -2072,6 +2105,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         aug9PrayerFixture,
         localizedPrayerConclusionFixture,
         offeringBoundaryFixture,
+        vietnameseCommunionAlternativeFixture,
         assumptionPrefaceFixture,
         psalmStanzaGroupingFixture,
         citationAlignmentFixture,
@@ -2087,7 +2121,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
         futureProperFixtures,
         vietnameseMassCopyright,
         pullRefreshFixture,
-        v25BishopLocalizationFixture,
+        bishopLocalizationFixture,
         localMissalFixture,
         pairedLabels,
         appliedPairedLabels: Object.values(pairedVariants).map(variant => variant.label)
@@ -2096,7 +2130,7 @@ Nội dung lịch sử không thuộc lời nguyện.`;
 
     const androidContext = await browser.newContext({
       viewport: { width: 412, height: 915 },
-      userAgent: 'Mozilla/5.0 Android WebView OrdoMissaeAndroid/25.0'
+      userAgent: `Mozilla/5.0 Android WebView OrdoMissaeAndroid/${targetHtml === 'V26.html' ? '26.0' : '25.0'}`
     });
     await androidContext.addInitScript(savedSettings => {
       window.fetch = async () => { throw new Error('Remote fetch disabled by Android settings check'); };
@@ -2344,13 +2378,13 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.missaDataLayerFixture.hasPrayerThreeEntry
       && result.missaDataLayerFixture.runtimeDelegatesData,
       `Ordinary Mass data processing did not move cleanly into missa_data.js: ${JSON.stringify(result.missaDataLayerFixture)}`);
-    if (targetHtml === 'V25.html') {
-      assert(result.v25BishopLocalizationFixture.kr === '저희 주교 마티아와, 요한과, 제르마노와'
-        && result.v25BishopLocalizationFixture.vn === 'Đức Giám Mục Mátthia và các Đức Giám Mục phụ tá Gioan và Germanô chúng con'
-        && result.v25BishopLocalizationFixture.en === 'Matthias our Bishop, and John and Germanus, Auxiliary Bishops,'
-        && result.v25BishopLocalizationFixture.jp === 'わたしたちの司教 マティア、補佐司教ヨハネ、ゲルマノ、'
-        && result.v25BishopLocalizationFixture.la === 'Epíscopo nostro Matthias eiusque Episcopis auxiliaribus Ioannes et Germanus',
-      `Auxiliary bishop names are not localized in every V25 language: ${JSON.stringify(result.v25BishopLocalizationFixture)}`);
+    if (targetHtml === 'V25.html' || targetHtml === 'V26.html') {
+      assert(result.bishopLocalizationFixture.kr === '저희 주교 마티아와, 요한과, 제르마노와'
+        && result.bishopLocalizationFixture.vn === 'Đức Giám Mục Mátthia và các Đức Giám Mục phụ tá Gioan và Germanô chúng con'
+        && result.bishopLocalizationFixture.en === 'Matthias our Bishop, and John and Germanus, Auxiliary Bishops,'
+        && result.bishopLocalizationFixture.jp === 'わたしたちの司教 マティア、補佐司教ヨハネ、ゲルマノ、'
+        && result.bishopLocalizationFixture.la === 'Epíscopo nostro Matthias eiusque Episcopis auxiliaribus Ioannes et Germanus',
+      `Auxiliary bishop names are not localized in every language: ${JSON.stringify(result.bishopLocalizationFixture)}`);
     }
     assert(result.localMissalFixture.schemaVersion === 1
       && JSON.stringify(result.localMissalFixture.languages) === JSON.stringify(['EN', 'KR', 'LA', 'VN'])
@@ -2366,6 +2400,8 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && result.localMissalFixture.vietnameseOrdinaryKind === 'temporal'
       && /연중.*20/.test(result.localMissalFixture.koreanOrdinaryTitle)
       && result.localMissalFixture.koreanOrdinaryKind === 'temporal-common-votive'
+      && /TUẦN 21 THƯỜNG NIÊN/i.test(result.localMissalFixture.vietnameseOrdinarySundayTitle)
+      && /연중.*21/.test(result.localMissalFixture.koreanOrdinarySundayTitle)
       && result.localMissalFixture.vietnameseDateCount >= 175
       && result.localMissalFixture.vietnameseJan20Forms === 2
       && result.localMissalFixture.vietnameseHasTemporal
@@ -2837,6 +2873,14 @@ Nội dung lịch sử không thuộc lời nguyện.`;
       && /Súscipe/.test(result.offeringBoundaryFixture.LA)
       && !/Pr(?:æ|ae)fatio/iu.test(result.offeringBoundaryFixture.LA),
     `An offering prayer absorbed the preface or Communion section: ${JSON.stringify(result.offeringBoundaryFixture)}`);
+    assert(result.vietnameseCommunionAlternativeFixture.standaloneMarkerRecognized
+      && result.vietnameseCommunionAlternativeFixture.standaloneOptionCount === 2
+      && result.vietnameseCommunionAlternativeFixture.inlineOptionCount === 2
+      && /Ca hiệp lễ thứ hai/u.test(result.vietnameseCommunionAlternativeFixture.inlineSecondText)
+      && result.vietnameseCommunionAlternativeFixture.optionCitations.length === 2
+      && !result.vietnameseCommunionAlternativeFixture.optionCitations[0].cit_vn
+      && result.vietnameseCommunionAlternativeFixture.optionCitations[1].cit_vn === 'Ga 6,54',
+    `Vietnamese “Hoặc đọc” Communion alternatives were not split positionally: ${JSON.stringify(result.vietnameseCommunionAlternativeFixture)}`);
     assert(result.assumptionPrefaceFixture.key === 'assumption'
       && result.assumptionPrefaceFixture.japaneseKey === 'assumption'
       && result.assumptionPrefaceFixture.koreanName === '성모 승천 대축일'

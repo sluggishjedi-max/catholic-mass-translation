@@ -538,11 +538,13 @@ def page_catalog(pages: list[dict[str, object]], lang: str, kind: str) -> list[d
         if lang == "KR" and 933 <= page <= 966:
             ordinary_week = page - 932
             for entry in page_entries:
-                entry["title"] = re.sub(
+                title = re.sub(
                     r"연중\s+제\s*\d+\s*주(?:일|간)",
                     f"연중 제{ordinary_week}주일",
                     str(entry["title"]),
                 )
+                ordinary_titles = list(re.finditer(r"연중 제\d+주일", title))
+                entry["title"] = title[ordinary_titles[-1].start():] if ordinary_titles else title
         entries.extend(page_entries)
     return entries
 
