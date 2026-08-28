@@ -1,0 +1,1 @@
+(function (g) { 'use strict'; g.countryPrayerData = g.countryPrayerData || {}; g.countryPrayerData.ID = Object.freeze({ schemaVersion: 1, jurisdiction: 'ID', jurisdictions: Object.freeze(['ID']), status: 'under-development', statusLabels: Object.freeze({ KR: '(제작중)', EN: '(Under development)' }), entries: Object.freeze([]) }); })(globalThis);

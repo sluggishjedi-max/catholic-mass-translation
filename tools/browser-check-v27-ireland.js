@@ -116,7 +116,7 @@ async function jinaIrelandSource(dateKey) {
       };
     }, { knockSource, weekdaySource });
 
-    assert(result.version === 'V27-20260827-IRELAND-BETA', `Unexpected version: ${result.version}`);
+    assert(result.version === 'V27-20260828-ASIA-CONFERENCE-BETA', `Unexpected version: ${result.version}`);
     result.locations.forEach(location => {
       assert(location.profile === 'IRELAND' && location.calendar === 'IE', `Bad location profile: ${JSON.stringify(location)}`);
       assert(/Beta/i.test(location.betaOption), `Beta label missing for ${location.code}`);
@@ -127,12 +127,12 @@ async function jinaIrelandSource(dateKey) {
     assert(result.counts.mass === 32, `Mass ordinary count changed: ${result.counts.mass}`);
     assert(result.counts.hymns === 3064, `Hymn count changed: ${result.counts.hymns}`);
     assert(result.counts.prayers === 575, `Prayer count changed: ${result.counts.prayers}`);
-    assert(result.counts.churches === 4886, `Church count changed: ${result.counts.churches}`);
+    assert(result.counts.churches === 4897, `Church count changed: ${result.counts.churches}`);
     assert(result.irelandCalendarDates >= 60, `Ireland calendar is incomplete: ${result.irelandCalendarDates}`);
     assert(/Knock/i.test(JSON.stringify(result.knockCalendar)), 'Our Lady of Knock is missing from the Ireland calendar.');
     assert(Object.values(result.urls).every(url => /\/L\/europe\.ireland\/20260817\/mass\.htm$/i.test(url)), `Bad Ireland URL: ${JSON.stringify(result.urls)}`);
     assert(/Knock/i.test(result.knock.title), `Knock title was not selected: ${result.knock.title}`);
-    assert(/Ecclesiasticus 26:1-4,13-16/i.test(result.knock.text), 'Knock memorial first reading was not selected.');
+    assert(/1 John 4:7-16/i.test(result.knock.text), 'Knock memorial first reading was not selected.');
     assert(!/1 Corinthians 1:1-9/i.test(result.knock.text), 'Knock parsing retained the feria first reading.');
     ['reading1', 'psalm', 'gospel_accl', 'gospel'].forEach(key => {
       assert(result.knock.text.includes(`"${key}"`), `Knock parsing is missing ${key}`);

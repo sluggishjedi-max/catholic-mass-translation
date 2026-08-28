@@ -27,11 +27,18 @@
     }
 
     const initialAndroidSettings = readInitialAndroidSettings();
+    const COUNTRY_LOCATION_CODES = Object.freeze([
+        'KR', 'VN', 'US', 'IE', 'GB-NIR', 'JP', 'VA',
+        'TW', 'CN', 'PH', 'ID', 'TH', 'KH', 'SG', 'MY', 'BN', 'HK', 'MO'
+    ]);
     const initialAndroidLocation = initialAndroidSettings
-        && ['KR', 'VN', 'US', 'IE', 'GB-NIR', 'JP', 'VA'].includes(initialAndroidSettings.selectedLocationCode)
+        && COUNTRY_LOCATION_CODES.includes(initialAndroidSettings.selectedLocationCode)
         ? initialAndroidSettings.selectedLocationCode
         : 'KR';
-    const initialAndroidLocationLang = { KR: 'KR', VN: 'VN', US: 'EN', IE: 'EN', 'GB-NIR': 'EN', JP: 'JP', VA: 'LA' }[initialAndroidLocation] || 'KR';
+    const initialAndroidLocationLang = {
+        KR: 'KR', VN: 'VN', US: 'EN', IE: 'EN', 'GB-NIR': 'EN', JP: 'JP', VA: 'LA',
+        TW: 'EN', CN: 'EN', PH: 'EN', ID: 'EN', TH: 'EN', KH: 'EN', SG: 'EN', MY: 'EN', BN: 'EN', HK: 'EN', MO: 'EN'
+    }[initialAndroidLocation] || 'KR';
     const initialAndroidTarget = initialAndroidSettings
         && ['KR', 'VN', 'EN', 'JP', 'LA'].includes(initialAndroidSettings.targetLang)
         ? initialAndroidSettings.targetLang
@@ -120,7 +127,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27-20260827-IRELAND-BETA';
+    const APP_VERSION = 'V27-20260828-ASIA-CONFERENCE-BETA';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DATE_NAV_LIMIT_MESSAGE = '금일 전 후 7일이 초과하는 전례는 조회할 수 없습니다';
@@ -137,6 +144,17 @@
         EN: 'America/New_York',
         IE: 'Europe/Dublin',
         'GB-NIR': 'Europe/London',
+        TW: 'Asia/Taipei',
+        CN: 'Asia/Shanghai',
+        PH: 'Asia/Manila',
+        ID: 'Asia/Jakarta',
+        TH: 'Asia/Bangkok',
+        KH: 'Asia/Phnom_Penh',
+        SG: 'Asia/Singapore',
+        MY: 'Asia/Kuala_Lumpur',
+        BN: 'Asia/Brunei',
+        HK: 'Asia/Hong_Kong',
+        MO: 'Asia/Macau',
         JP: 'Asia/Tokyo',
         LA: 'Europe/Rome'
     };
@@ -449,6 +467,17 @@
         US: Object.freeze({ id: 'US', countryCalendar: 'US', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
         IE: Object.freeze({ id: 'IRELAND', countryCalendar: 'IE', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
         'GB-NIR': Object.freeze({ id: 'IRELAND', countryCalendar: 'IE', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
+        TW: Object.freeze({ id: 'TAIWAN', countryCalendar: 'TW', languageVariant: 'ZH-TW', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        CN: Object.freeze({ id: 'CHINA', countryCalendar: 'CN', languageVariant: 'ZH-CN', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        PH: Object.freeze({ id: 'PHILIPPINES', countryCalendar: 'PH', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        ID: Object.freeze({ id: 'INDONESIA', countryCalendar: 'ID', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
+        TH: Object.freeze({ id: 'THAILAND', countryCalendar: 'TH', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        KH: Object.freeze({ id: 'CAMBODIA', countryCalendar: 'KH', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        SG: Object.freeze({ id: 'SINGAPORE', countryCalendar: 'SG', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
+        MY: Object.freeze({ id: 'MALAYSIA', countryCalendar: 'MY', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
+        BN: Object.freeze({ id: 'BRUNEI', countryCalendar: 'BN', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
+        HK: Object.freeze({ id: 'HONG_KONG', countryCalendar: 'HK', languageVariant: 'ZH-HK', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        MO: Object.freeze({ id: 'MACAO', countryCalendar: 'MO', languageVariant: 'ZH-MO', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
         EN: Object.freeze({ id: 'US', countryCalendar: 'US', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
         JP: Object.freeze({ id: 'JP', countryCalendar: 'JP', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
         LA: Object.freeze({ id: 'GENERAL_ROMAN', countryCalendar: 'LA', epiphany: 'fixed', ascension: 'thursday', corpusChristi: 'thursday' }),
@@ -462,7 +491,8 @@
 
     function getLiturgicalCalendarProfile(langOrJurisdiction = state.selectedLocationCode || state.currentLoc) {
         let key = String(langOrJurisdiction || 'LA').trim().toUpperCase();
-        if (key === 'EN' && ['US', 'IE', 'GB-NIR'].includes(state.selectedLocationCode)) key = state.selectedLocationCode;
+        if (key === 'EN' && locationMeta && locationMeta[state.selectedLocationCode]
+            && locationMeta[state.selectedLocationCode].lang === 'EN') key = state.selectedLocationCode;
         return liturgicalCalendarProfiles[key] || liturgicalCalendarProfiles.LA;
     }
 
@@ -569,6 +599,40 @@
         '12-28': saintEntry('red', { KR: '죄 없는 아기 순교자들 축일', VN: 'Các Thánh Anh Hài, Tử đạo', EN: 'The Holy Innocents, Martyrs', JP: '幼子殉教者', LA: 'Sanctorum Innocentium, martyrum' }, { rank: 'feast' })
     };
 
+    function countryMassModuleForJurisdiction(jurisdiction) {
+        const registry = globalThis.countryMassData;
+        const key = String(jurisdiction || '').trim().toUpperCase();
+        return registry && typeof registry === 'object' ? registry[key] || null : null;
+    }
+
+    function countryMassCalendarAsSaintEntries(jurisdiction) {
+        const module = countryMassModuleForJurisdiction(jurisdiction);
+        return Object.fromEntries(Object.entries((module && module.calendar) || {}).map(([dateKey, entries]) => {
+            const entry = Array.isArray(entries) ? entries[0] : entries;
+            const source = module && module.source || {};
+            return [dateKey, saintEntry(entry.color || 'white', entry.names || { EN: entry.title }, {
+                rank: entry.rank || 'optional',
+                localOnly: true,
+                source: source.title || `${jurisdiction} proper calendar`,
+                sourceUrl: entry.sourceUrl || source.calendarUrl || source.url || '',
+                sourcePage: entry.page,
+                countryProper: true,
+                properTitle: entry.title
+            })];
+        }));
+    }
+
+    function countryMassProperEntriesForDate(jurisdiction, date) {
+        const module = countryMassModuleForJurisdiction(jurisdiction);
+        if (!module || !date) return [];
+        const fixed = module.calendar && module.calendar[calendarDateKey(date)];
+        const dynamic = typeof module.dynamicCalendar === 'function' ? module.dynamicCalendar(date) : [];
+        return [
+            ...(Array.isArray(fixed) ? fixed : (fixed ? [fixed] : [])),
+            ...(Array.isArray(dynamic) ? dynamic : (dynamic ? [dynamic] : []))
+        ].filter(Boolean);
+    }
+
     const countryFixedSaintsCalendar = {
         US: {
             '01-05': saintEntry('white', { KR: '성 요한 노이만 주교 기념일', VN: 'Thánh Gioan Neumann, Giám mục', EN: 'Saint John Neumann, Bishop', JP: '聖ヨハネ・ノイマン司教', LA: 'Sancti Ioannis Neumann' }, { rank: 'memorial', localOnly: true, source: 'US proper calendar' }),
@@ -582,18 +646,18 @@
             '11-13': saintEntry('white', { KR: '성녀 프란체스카 하비에르 카브리니 동정 기념일', VN: 'Thánh Frances Xavier Cabrini, Trinh nữ', EN: 'Saint Frances Xavier Cabrini, Virgin', JP: '聖フランシスカ・ザビエル・カブリニおとめ', LA: 'Sanctae Franciscae Xaveriae Cabrini' }, { rank: 'memorial', localOnly: true, source: 'US proper calendar' }),
             '12-12': saintEntry('white', { KR: '과달루페의 복되신 동정 마리아 축일', VN: 'Đức Mẹ Guadalupe', EN: 'Our Lady of Guadalupe', JP: 'グアダルペの聖母マリア', LA: 'Beatae Mariae Virginis de Guadalupe' }, { rank: 'feast', localOnly: true, source: 'US proper calendar' })
         },
-        IE: Object.fromEntries(Object.entries((globalThis.countryMassData && globalThis.countryMassData.IE && globalThis.countryMassData.IE.calendar) || {})
-            .map(([dateKey, entries]) => {
-                const entry = Array.isArray(entries) ? entries[0] : entries;
-                return [dateKey, saintEntry(entry.color || 'white', entry.names || { EN: entry.title }, {
-                    rank: entry.rank || 'optional',
-                    localOnly: true,
-                    source: 'National Proper and Calendar for Ireland',
-                    sourcePage: entry.page,
-                    irelandProper: true,
-                    properTitle: entry.title
-                })];
-            })),
+        IE: countryMassCalendarAsSaintEntries('IE'),
+        TW: countryMassCalendarAsSaintEntries('TW'),
+        CN: countryMassCalendarAsSaintEntries('CN'),
+        PH: countryMassCalendarAsSaintEntries('PH'),
+        ID: countryMassCalendarAsSaintEntries('ID'),
+        TH: countryMassCalendarAsSaintEntries('TH'),
+        KH: countryMassCalendarAsSaintEntries('KH'),
+        SG: countryMassCalendarAsSaintEntries('SG'),
+        MY: countryMassCalendarAsSaintEntries('MY'),
+        BN: countryMassCalendarAsSaintEntries('BN'),
+        HK: countryMassCalendarAsSaintEntries('HK'),
+        MO: countryMassCalendarAsSaintEntries('MO'),
         JP: {
             '02-03': saintEntry('red', { KR: '복자 유스토 다카야마 우콘 순교자 기념일', VN: 'Chân phước Justo Takayama Ukon, Tử đạo', EN: 'Blessed Justus Takayama Ukon, Martyr', JP: '福者ユスト高山右近殉教者', LA: 'Beati Iusti Takayama Ukon, martyris' }, { rank: 'memorial', localOnly: true, source: 'Japan proper calendar' }),
             '02-05': saintEntry('red', { KR: '일본 26 성인 순교자 축일', VN: 'Hai mươi sáu Thánh Tử đạo Nhật Bản', EN: 'The Twenty-Six Martyrs of Japan', JP: '日本26聖人殉教者（聖パウロ三木と同志殉教者）', LA: 'Viginti sex martyrum Iaponiae' }, { rank: 'feast', localOnly: true, source: 'Japan proper calendar' }),
@@ -873,6 +937,24 @@
         const profile = getLiturgicalCalendarProfile(requested);
         const countryKey = profile.countryCalendar || requested;
         const countryEntries = countryFixedSaintsCalendar[countryKey] || {};
+        const countryModule = countryMassModuleForJurisdiction(countryKey);
+        const dynamicEntries = countryModule && typeof countryModule.dynamicCalendar === 'function'
+            ? countryModule.dynamicCalendar(date)
+            : [];
+        const dynamicEntry = Array.isArray(dynamicEntries) ? dynamicEntries[0] : dynamicEntries;
+        if (dynamicEntry) {
+            const source = countryModule.source || {};
+            const calendarEntry = saintEntry(dynamicEntry.color || 'white', dynamicEntry.names || { EN: dynamicEntry.title }, {
+                rank: dynamicEntry.rank || 'optional',
+                localOnly: true,
+                source: source.title || `${countryKey} proper calendar`,
+                sourceUrl: dynamicEntry.sourceUrl || source.calendarUrl || source.url || '',
+                countryProper: true,
+                properTitle: dynamicEntry.title
+            });
+            if (['solemnity', 'feast', 'feastOfLord'].includes(calendarEntry.meta.rank)
+                || fixedCalendarEntryApplies(date, calendarEntry)) return calendarOverrideFromEntry(calendarEntry);
+        }
         for (const item of transferredFixedCelebrationsForYear(date.getFullYear())) {
             const localEntry = countryEntries[item.key];
             if (!localEntry || calendarDateKey(item.observed) === item.key) continue;
@@ -1832,6 +1914,17 @@
         'US': { lang: 'EN', label: '미국 / English', timeZone: 'America/New_York' },
         'IE': { lang: 'EN', label: '아일랜드 / English (Beta)', timeZone: 'Europe/Dublin', beta: true, dataJurisdiction: 'IE' },
         'GB-NIR': { lang: 'EN', label: '북아일랜드 / English (Beta)', timeZone: 'Europe/London', beta: true, dataJurisdiction: 'IE' },
+        'TW': { lang: 'EN', label: '대만 / ZH-TW · English (Beta)', timeZone: 'Asia/Taipei', beta: true, dataJurisdiction: 'TW', languageVariant: 'ZH-TW' },
+        'CN': { lang: 'EN', label: '중국 / ZH-CN · English (Beta)', timeZone: 'Asia/Shanghai', beta: true, dataJurisdiction: 'CN', languageVariant: 'ZH-CN' },
+        'PH': { lang: 'EN', label: '필리핀 / English (Beta)', timeZone: 'Asia/Manila', beta: true, dataJurisdiction: 'PH' },
+        'ID': { lang: 'EN', label: '인도네시아 / English (Beta)', timeZone: 'Asia/Jakarta', beta: true, dataJurisdiction: 'ID' },
+        'TH': { lang: 'EN', label: '태국 / English (Beta)', timeZone: 'Asia/Bangkok', beta: true, dataJurisdiction: 'TH' },
+        'KH': { lang: 'EN', label: '캄보디아 / English (Beta)', timeZone: 'Asia/Phnom_Penh', beta: true, dataJurisdiction: 'KH' },
+        'SG': { lang: 'EN', label: '싱가포르 / English (Beta)', timeZone: 'Asia/Singapore', beta: true, dataJurisdiction: 'SG' },
+        'MY': { lang: 'EN', label: '말레이시아 / English (Beta)', timeZone: 'Asia/Kuala_Lumpur', beta: true, dataJurisdiction: 'MY' },
+        'BN': { lang: 'EN', label: '브루나이 / English (Beta)', timeZone: 'Asia/Brunei', beta: true, dataJurisdiction: 'BN' },
+        'HK': { lang: 'EN', label: '홍콩 / ZH-HK · English (Beta)', timeZone: 'Asia/Hong_Kong', beta: true, dataJurisdiction: 'HK', languageVariant: 'ZH-HK' },
+        'MO': { lang: 'EN', label: '마카오 / ZH-MO · English (Beta)', timeZone: 'Asia/Macau', beta: true, dataJurisdiction: 'MO', languageVariant: 'ZH-MO' },
         'JP': { lang: 'JP', label: '일본 / 日本語 (Beta)', timeZone: 'Asia/Tokyo' },
         'VA': { lang: 'LA', label: '바티칸 / Latin', timeZone: 'Europe/Rome' }
     };
@@ -1847,6 +1940,20 @@
 
     function isIrelandJurisdiction(locationCode = state.selectedLocationCode) {
         return dataJurisdictionForLocation(locationCode) === 'IE';
+    }
+
+    function activeCountryMassModule(locationCode = state.selectedLocationCode) {
+        return countryMassModuleForJurisdiction(dataJurisdictionForLocation(locationCode));
+    }
+
+    function hasCountryDailyReadings(locationCode = state.selectedLocationCode) {
+        const module = activeCountryMassModule(locationCode);
+        return !!(module && module.dailyReadings && typeof module.dailyReadings.url === 'function');
+    }
+
+    function usesUniversalisCountryReadings(locationCode = state.selectedLocationCode) {
+        const module = activeCountryMassModule(locationCode);
+        return !!(module && module.dailyReadings && /universalis/i.test(module.dailyReadings.provider || ''));
     }
 
     const targetLanguageOrder = ['VN', 'KR', 'EN', 'JP', 'LA'];
@@ -1929,6 +2036,17 @@
         EN: { center: { lat: 40.7128, lng: -74.0060 }, zoom: 12, query: 'Catholic church New York' },
         IE: { center: { lat: 53.3498, lng: -6.2603 }, zoom: 12, query: 'Catholic church Dublin Ireland' },
         'GB-NIR': { center: { lat: 54.5973, lng: -5.9301 }, zoom: 12, query: 'Catholic church Belfast Northern Ireland' },
+        TW: { center: { lat: 25.0330, lng: 121.5654 }, zoom: 11, query: '天主教堂 台北 台灣' },
+        CN: { center: { lat: 39.9042, lng: 116.4074 }, zoom: 11, query: '天主教堂 北京 中國' },
+        PH: { center: { lat: 14.5995, lng: 120.9842 }, zoom: 11, query: 'Catholic church Manila Philippines' },
+        ID: { center: { lat: -6.2088, lng: 106.8456 }, zoom: 11, query: 'gereja Katolik Jakarta Indonesia' },
+        TH: { center: { lat: 13.7563, lng: 100.5018 }, zoom: 11, query: 'โบสถ์คาทอลิก กรุงเทพ ประเทศไทย' },
+        KH: { center: { lat: 11.5564, lng: 104.9282 }, zoom: 11, query: 'ព្រះវិហារកាតូលិក ភ្នំពេញ កម្ពុជា' },
+        SG: { center: { lat: 1.3521, lng: 103.8198 }, zoom: 12, query: 'Catholic church Singapore' },
+        MY: { center: { lat: 3.1390, lng: 101.6869 }, zoom: 11, query: 'Catholic church Kuala Lumpur Malaysia' },
+        BN: { center: { lat: 4.9031, lng: 114.9398 }, zoom: 11, query: 'Catholic church Bandar Seri Begawan Brunei' },
+        HK: { center: { lat: 22.3193, lng: 114.1694 }, zoom: 11, query: '天主教堂 香港' },
+        MO: { center: { lat: 22.1987, lng: 113.5439 }, zoom: 12, query: '天主教堂 澳門' },
         JP: { center: { lat: 35.6895, lng: 139.6917 }, zoom: 12, query: 'カトリック教会 東京' },
         LA: { center: { lat: 41.9029, lng: 12.4534 }, zoom: 13, query: 'chiesa cattolica Vaticano' }
     };
@@ -3848,7 +3966,18 @@
         };
         const regional = {
             IE: ['Catholic church Ireland', 'Catholic parish Ireland'],
-            'GB-NIR': ['Catholic church Northern Ireland', 'Catholic parish Northern Ireland']
+            'GB-NIR': ['Catholic church Northern Ireland', 'Catholic parish Northern Ireland'],
+            TW: ['天主教堂 台灣', '天主教堂 台北'],
+            CN: ['天主教堂 中國', '天主教堂 北京'],
+            PH: ['Catholic church Philippines', 'Catholic parish Philippines'],
+            ID: ['gereja Katolik Indonesia', 'paroki Katolik Indonesia'],
+            TH: ['โบสถ์คาทอลิก ประเทศไทย', 'วัดคาทอลิก ประเทศไทย'],
+            KH: ['ព្រះវិហារកាតូលិក កម្ពុជា', 'Catholic church Cambodia'],
+            SG: ['Catholic church Singapore', 'Catholic parish Singapore'],
+            MY: ['Catholic church Malaysia', 'gereja Katolik Malaysia'],
+            BN: ['Catholic church Brunei', 'Roman Catholic church Brunei'],
+            HK: ['天主教堂 香港', '天主教聖堂 香港'],
+            MO: ['天主教堂 澳門', '天主教聖堂 澳門']
         };
         return Array.from(new Set([...(regional[code] || localized[lang] || localized.EN), 'Catholic church']));
     }
@@ -3863,7 +3992,14 @@
             JP: ['カトリック'],
             LA: ['cattolica']
         };
-        if (code === 'IE' || code === 'GB-NIR') return ['Roman Catholic', 'Catholic parish'];
+        const regional = {
+            IE: ['Roman Catholic', 'Catholic parish'],
+            'GB-NIR': ['Roman Catholic', 'Catholic parish'],
+            TW: ['天主教', '堂區'], CN: ['天主教', '堂區'], HK: ['天主教', '堂區'], MO: ['天主教', '堂區'],
+            PH: ['Catholic', 'Catholic parish'], ID: ['Katolik', 'paroki'], TH: ['คาทอลิก'], KH: ['កាតូលិក'],
+            SG: ['Catholic', 'Catholic parish'], MY: ['Catholic', 'Katolik'], BN: ['Catholic', 'Roman Catholic']
+        };
+        if (regional[code]) return regional[code];
         return Array.from(new Set(localized[lang] || localized.EN));
     }
 
@@ -8967,12 +9103,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictDailySourceEntryUrl(lang, date) {
         if (lang === 'KR') return `https://missa.cbck.or.kr/DailyMissa/${formatDateYmd(date)}`;
         if (lang === 'JP') return `https://higotonofukuin.org/spip.php?page=quotidien&date=${formatDateIso(date)}%2000:00:00`;
-        if (lang === 'EN' && isIrelandJurisdiction()) {
-            const irelandMass = globalThis.countryMassData && globalThis.countryMassData.IE;
-            if (irelandMass && irelandMass.dailyReadings && typeof irelandMass.dailyReadings.url === 'function') {
-                return irelandMass.dailyReadings.url(formatDateYmd(date));
-            }
-            return `https://universalis.com/L/europe.ireland/${formatDateYmd(date)}/mass.htm`;
+        if (lang === 'EN' && hasCountryDailyReadings()) {
+            return activeCountryMassModule().dailyReadings.url(formatDateYmd(date));
         }
         if (lang === 'EN') return `https://bible.usccb.org/bible/readings/${formatDateMmddyy(date)}.cfm`;
         return '';
@@ -9073,7 +9205,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .filter(line => !/^(Title:|URL Source:|Published Time:|Markdown Content:|Image:|MENU|Search|LISTEN|VIEW|Subscribe|Copyright|©)/i.test(line));
     }
 
-    function strictNormalizeIrelandDailyLine(line) {
+    function strictNormalizeUniversalisDailyLine(line) {
         const text = strictCleanLine(line);
         if (!text) return '';
         if (/^\*(?:\s*\*)*$/u.test(text)) return '';
@@ -9091,8 +9223,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return cells.join(' ');
     }
 
-    function strictScopeIrelandDailyLines(lines, date) {
-        const normalized = (lines || []).map(strictNormalizeIrelandDailyLine).filter(Boolean);
+    function strictScopeUniversalisCountryDailyLines(lines, date) {
+        const normalized = (lines || []).map(strictNormalizeUniversalisDailyLine).filter(Boolean);
         const markers = normalized.map((line, index) => {
             const match = strictCleanLine(line).match(/^These are the readings for the\s+(.+)$/i);
             return match ? { index, label: match[1] } : null;
@@ -9141,7 +9273,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictRelevantSourceLinks(lang, source, baseUrl, date) {
-        if (lang === 'EN' && isIrelandJurisdiction()) return [];
+        if (lang === 'EN' && usesUniversalisCountryReadings()) return [];
         const ymd = formatDateYmd(date);
         const iso = formatDateIso(date);
         return extractSourceLinks(source, baseUrl).filter(link => {
@@ -10720,7 +10852,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const selector = getStrictMassSelector(date);
         const metadataTitle = sourceMetadataTitle(source, lang);
         let lines = strictSourceLines(source);
-        if (lang === 'EN' && isIrelandJurisdiction()) lines = strictScopeIrelandDailyLines(lines, date);
+        if (lang === 'EN' && usesUniversalisCountryReadings()) lines = strictScopeUniversalisCountryDailyLines(lines, date);
         if (lang === 'VN') {
             lines = strictScopeVietnameseByCalendarReading(getVietnameseBodyLines(lines), date);
         }
@@ -10731,7 +10863,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!strictDailySectionKeys.has(key)) return;
             const parsed = strictFormatSection(lang, key, rawSections[key]);
             if (lang === 'EN'
-                && isIrelandJurisdiction()
+                && usesUniversalisCountryReadings()
                 && key === 'psalm'
                 && parsed.cit_en
                 && !sourceSectionHasContent(parsed)) {
@@ -11153,7 +11285,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     fetchKoreanDailyMass = date => fetchStrictDailyMass('KR', date);
 
     fetchEnglishDailyMass = async date => {
-        if (isIrelandJurisdiction()) return fetchStrictDailyMass('EN', date);
+        if (hasCountryDailyReadings()) return fetchStrictDailyMass('EN', date);
         let parsed = null;
         let strictError = null;
         try {
@@ -12212,14 +12344,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function localMissalEntryForLanguage(lang, date) {
         const code = normalizeSelectableLang(lang, '');
         if (!date || !localMissalDataLanguages.has(code)) return null;
-        if (code === 'EN' && isIrelandJurisdiction()) {
-            const ireland = globalThis.countryMassData && globalThis.countryMassData.IE;
-            const datedEntries = ireland && ireland.calendar && ireland.calendar[calendarDateKey(date)] || [];
+        if (code === 'EN') {
+            const countryModule = activeCountryMassModule();
+            const countryKey = dataJurisdictionForLocation();
+            const datedEntries = countryModule ? countryMassProperEntriesForDate(countryKey, date) : [];
             const info = localMissalLiturgyInfoForDate(date);
             const currentTitle = info.names && info.names.EN || '';
             const dated = bestLocalMissalEntry(datedEntries, currentTitle);
             if (dated && (dated.score >= 0.52 || datedEntries.length === 1)) return dated.entry;
-            return null;
+            if (countryModule && countryKey !== 'US') return null;
         }
         const languageData = localMissalLanguageData(code);
         if (!languageData) return null;
@@ -14382,11 +14515,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const browserZone = String(timeZone || '').toLowerCase();
         if (browserZone.includes('dublin')) return 'IE';
         if (browserZone.includes('belfast') || browserZone.includes('london')) return 'GB-NIR';
+        if (browserZone.includes('taipei')) return 'TW';
+        if (browserZone.includes('shanghai') || browserZone.includes('chongqing')) return 'CN';
+        if (browserZone.includes('manila')) return 'PH';
+        if (browserZone.includes('jakarta') || browserZone.includes('makassar') || browserZone.includes('jayapura')) return 'ID';
+        if (browserZone.includes('bangkok')) return 'TH';
+        if (browserZone.includes('phnom_penh')) return 'KH';
+        if (browserZone.includes('singapore')) return 'SG';
+        if (browserZone.includes('kuala_lumpur') || browserZone.includes('kuching')) return 'MY';
+        if (browserZone.includes('brunei')) return 'BN';
+        if (browserZone.includes('hong_kong')) return 'HK';
+        if (browserZone.includes('macau')) return 'MO';
         if (browserZone.includes('tokyo')) return 'JP';
-        // Windows maps Vietnam's shared UTC+7 zone to the Bangkok IANA name
-        // on many desktop browsers. The app has no Thai source language, so
-        // Asia/Bangkok is the correct Vietnamese fallback here.
-        if (browserZone.includes('ho_chi_minh') || browserZone.includes('saigon') || browserZone.includes('bangkok')) return 'VN';
+        if (browserZone.includes('ho_chi_minh') || browserZone.includes('saigon')) return 'VN';
         if (browserZone.startsWith('america/')) return 'US';
         if (browserZone.includes('rome') || browserZone.includes('vatican')) return 'VA';
         return 'KR';
@@ -14395,8 +14536,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function gpsLocationForCoordinates(lat, lon) {
         if (lat >= 41.88 && lat <= 41.93 && lon >= 12.43 && lon <= 12.48) return 'VA';
         if (lat > 33 && lat < 39 && lon > 124 && lon < 132) return 'KR';
+        if (lat > 22.05 && lat < 22.25 && lon > 113.45 && lon < 113.65) return 'MO';
+        if (lat > 22.1 && lat < 22.6 && lon > 113.8 && lon < 114.5) return 'HK';
+        if (lat > 21.8 && lat < 25.5 && lon > 119 && lon < 122.2) return 'TW';
+        if (lat > 1.1 && lat < 1.5 && lon > 103.55 && lon < 104.1) return 'SG';
+        if (lat > 4 && lat < 5.2 && lon > 114 && lon < 115.4) return 'BN';
+        if (lat > 4.5 && lat < 21.5 && lon > 116 && lon < 127) return 'PH';
+        if (lat > 0.5 && lat < 7.6 && lon > 99 && lon < 120) return 'MY';
+        if (lat > -11.5 && lat < 6.5 && lon > 95 && lon < 141) return 'ID';
+        if (lat > 10 && lat < 15 && lon > 102 && lon < 108) return 'KH';
         if (lat > 8 && lat < 24 && lon > 102 && lon < 110) return 'VN';
+        if (lat > 5.5 && lat < 20.5 && lon > 97 && lon < 106) return 'TH';
         if (lat > 24 && lat < 46 && lon > 122 && lon < 146) return 'JP';
+        if (lat > 18 && lat < 54 && lon > 73 && lon < 135) return 'CN';
         if (lat > 51.3 && lat < 55.6 && lon > -10.8 && lon < -5.2) {
             const zone = String(Intl.DateTimeFormat().resolvedOptions().timeZone || '').toLowerCase();
             return zone.includes('london') || zone.includes('belfast') ? 'GB-NIR' : 'IE';
@@ -14406,12 +14558,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function gpsTimeZoneForCoordinates(lat, lon, locationCode) {
-        if (locationCode === 'KR') return 'Asia/Seoul';
-        if (locationCode === 'VN') return 'Asia/Ho_Chi_Minh';
-        if (locationCode === 'JP') return 'Asia/Tokyo';
-        if (locationCode === 'VA') return 'Europe/Rome';
-        if (locationCode === 'IE') return 'Europe/Dublin';
-        if (locationCode === 'GB-NIR') return 'Europe/London';
         if (locationCode === 'US') {
             if (lat < 23 && lon < -154) return 'Pacific/Honolulu';
             if (lat > 50 && lon < -130) return 'America/Anchorage';
@@ -14420,8 +14566,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (lon <= -85) return 'America/Chicago';
             return 'America/New_York';
         }
+        if (locationMeta[locationCode] && locationMeta[locationCode].timeZone) return locationMeta[locationCode].timeZone;
         return Intl.DateTimeFormat().resolvedOptions().timeZone
-            || (locationMeta[locationCode] && locationMeta[locationCode].timeZone)
             || liturgicalTimeZoneForLang(getLangFromLocation(locationCode));
     }
 
@@ -14761,11 +14907,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     });
 
     const localizedCountryNames = Object.freeze({
-        KR: { KR: '한국', VN: '베트남', US: '미국', IE: '아일랜드', 'GB-NIR': '북아일랜드', JP: '일본', VA: '바티칸' },
-        VN: { KR: 'Hàn Quốc', VN: 'Việt Nam', US: 'Hoa Kỳ', IE: 'Ireland', 'GB-NIR': 'Bắc Ireland', JP: 'Nhật Bản', VA: 'Vatican' },
-        EN: { KR: 'South Korea', VN: 'Vietnam', US: 'United States', IE: 'Ireland', 'GB-NIR': 'Northern Ireland', JP: 'Japan', VA: 'Vatican City' },
-        JP: { KR: '韓国', VN: 'ベトナム', US: 'アメリカ', IE: 'アイルランド', 'GB-NIR': '北アイルランド', JP: '日本', VA: 'バチカン' },
-        LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', JP: 'Iaponia', VA: 'Civitas Vaticana' }
+        KR: { KR: '한국', VN: '베트남', US: '미국', IE: '아일랜드', 'GB-NIR': '북아일랜드', TW: '대만', CN: '중국', PH: '필리핀', ID: '인도네시아', TH: '태국', KH: '캄보디아', SG: '싱가포르', MY: '말레이시아', BN: '브루나이', HK: '홍콩', MO: '마카오', JP: '일본', VA: '바티칸' },
+        VN: { KR: 'Hàn Quốc', VN: 'Việt Nam', US: 'Hoa Kỳ', IE: 'Ireland', 'GB-NIR': 'Bắc Ireland', TW: 'Đài Loan', CN: 'Trung Quốc', PH: 'Philippines', ID: 'Indonesia', TH: 'Thái Lan', KH: 'Campuchia', SG: 'Singapore', MY: 'Malaysia', BN: 'Brunei', HK: 'Hồng Kông', MO: 'Ma Cao', JP: 'Nhật Bản', VA: 'Vatican' },
+        EN: { KR: 'South Korea', VN: 'Vietnam', US: 'United States', IE: 'Ireland', 'GB-NIR': 'Northern Ireland', TW: 'Taiwan', CN: 'China', PH: 'Philippines', ID: 'Indonesia', TH: 'Thailand', KH: 'Cambodia', SG: 'Singapore', MY: 'Malaysia', BN: 'Brunei', HK: 'Hong Kong', MO: 'Macau', JP: 'Japan', VA: 'Vatican City' },
+        JP: { KR: '韓国', VN: 'ベトナム', US: 'アメリカ', IE: 'アイルランド', 'GB-NIR': '北アイルランド', TW: '台湾', CN: '中国', PH: 'フィリピン', ID: 'インドネシア', TH: 'タイ', KH: 'カンボジア', SG: 'シンガポール', MY: 'マレーシア', BN: 'ブルネイ', HK: '香港', MO: 'マカオ', JP: '日本', VA: 'バチカン' },
+        LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', TW: 'Taiwan', CN: 'Sina', PH: 'Philippinae', ID: 'Indonesia', TH: 'Thailandia', KH: 'Cambodia', SG: 'Singapura', MY: 'Malaysia', BN: 'Bruneium', HK: 'Hongcongum', MO: 'Macaum', JP: 'Iaponia', VA: 'Civitas Vaticana' }
     });
 
     function titleCaseLocalizedLanguageName(value) {
@@ -14830,7 +14976,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const location = locationMeta[option.value];
                 if (!location) return;
                 const country = (localizedCountryNames[ui] && localizedCountryNames[ui][option.value]) || option.value;
-                option.textContent = `${country} / ${localizedLanguageOptionLabel(location.lang, ui)}${location.beta ? ' (Beta)' : ''}`;
+                const language = location.languageVariant
+                    ? `${location.languageVariant} · ${localizedLanguageOptionLabel(location.lang, ui)}`
+                    : localizedLanguageOptionLabel(location.lang, ui);
+                option.textContent = `${country} / ${language}${location.beta ? ' (Beta)' : ''}`;
             });
         }
         const targetSelect = document.getElementById('set-target-lang');
