@@ -14102,6 +14102,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .join('<br>');
     }
 
+    function publicAppVersionLabel(version = APP_VERSION) {
+        const match = String(version || '').trim().match(/^V\d+(?:\.\d+)?/i);
+        return match ? match[0].toUpperCase() : String(version || '').trim();
+    }
+
+    function appVersionFooterHtml() {
+        const version = publicAppVersionLabel();
+        if (!version) return '';
+        document.documentElement.dataset.appVersion = version;
+        return `<span class="app-version-label" data-app-version="${version}" style="display:inline-block;margin-top:2px;color:#bbb;font-weight:700;letter-spacing:.04em;">Ordo Missae ${version}</span>`;
+    }
+
     function updateFooterCopyright() {
         const footer = document.getElementById('main-footer');
         if (!footer) return;
@@ -14117,7 +14129,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if(state.currentLoc === 'JP' || state.targetLang === 'JP') copyright += `© apud Administrationem Patrimonii Sedis Apostolicae in Civitate Vaticana, 2008.<br>`;
             if(state.transMode === 'ai') copyright += `ⓒ Google AI Translation, 2026.`;
         }
-        footer.innerHTML = copyright;
+        const versionHtml = appVersionFooterHtml();
+        const separator = copyright && versionHtml && !copyright.endsWith('<br>') ? '<br>' : '';
+        footer.innerHTML = `${copyright}${separator}${versionHtml}`;
         syncQuickHomeMenuWithFooter();
     }
 
