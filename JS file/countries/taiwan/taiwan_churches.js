@@ -25,7 +25,7 @@
   };
 
   global.rebuildCountryChurchDirectory = global.rebuildCountryChurchDirectory || function rebuildCountryChurchDirectory() {
-    const order = ['KR', 'VN', 'US', 'JP', 'VA', 'IE', 'TW', 'CN', 'PH', 'ID', 'TH', 'KH', 'SG', 'MY', 'BN', 'HK', 'MO'];
+    const order = ['KR', 'VN', 'US', 'JP', 'VA', 'IE', 'GB-EW', 'GB-SCT', 'TW', 'CN', 'PH', 'ID', 'TH', 'KH', 'SG', 'MY', 'BN', 'HK', 'MO'];
     const records = order.flatMap(key => {
       const module = global.countryChurchData[key];
       return module && Array.isArray(module.entries) ? module.entries : [];
