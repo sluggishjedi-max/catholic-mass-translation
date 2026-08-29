@@ -44,7 +44,8 @@
     prayerConclusionDecree: 'https://cbcpnews.net/cbcpnews/wp-content/uploads/2021/11/ECL-Decree-of-Implementation-on-One-God.pdf',
     ordo: 'https://claretianpublications.com/product/ordo-2026-cycle-a-year-ii-regular-bind/',
     creationDay: 'https://cbcp.ph/pastoral-letter-about-the-creation-day-general-instruction/',
-    santoNinoProper: 'https://www.scribd.com/doc/199621614/Principal-Prayers-for-the-Feast-of-the-Sto-Nino-Revised-New-Missal',
+    santoNinoProper: 'https://ssaparish.com/wp-content/uploads/2020/12/feast-of-the-santo-nino.pdf',
+    santoNinoCbcpReference: 'https://cbcpnews.net/cbcpnews/wp-content/uploads/2026/01/CBCP-Monitor-Vol-28-No-1-_-Web-File.pdf',
     simbangGabiSupplement: 'https://dioceseofbrooklyn.org/wp-content/uploads/2024/12/Mass-Supplement-Simbang-Gabi.pdf'
   });
 
@@ -96,7 +97,8 @@ so that we may find favor in your sight.
 Grant this through Jesus Christ our Lord.`
   }, {
     prefaceKey: 'nativity_2',
-    sourceUrl: SOURCE.santoNinoProper
+    sourceUrl: SOURCE.santoNinoProper,
+    authorityReferenceUrl: SOURCE.santoNinoCbcpReference
   });
 
   function dynamicCalendar(date, context = {}) {
@@ -142,6 +144,7 @@ Grant this through Jesus Christ our Lord.`
       generalRomanMissal: romanMissalProperData.source,
       nationalCalendar: SOURCE.ordo,
       santoNino: SOURCE.santoNinoProper,
+      santoNinoCbcpReference: SOURCE.santoNinoCbcpReference,
       simbangGabi: SOURCE.simbangGabiSupplement
     }),
     calendar,

@@ -180,7 +180,7 @@ function startServer() {
     assert(/cbcp\.ph\/readings\/august-29-2026/.test(result.modules.PH.dailyUrl), `CBCP daily URL is wrong: ${result.modules.PH.dailyUrl}`);
     assert(/bible\.usccb\.org\/bible\/readings\/082926\.cfm/.test(result.philippines.fallbackUrl), `Philippines approved-text fallback is wrong: ${result.philippines.fallbackUrl}`);
     assert(!result.philippines.hasUniversalisProperParser, 'Universalis readings-only page must not be treated as a Philippines proper parser.');
-    assert(/Sto-Nino/i.test(result.philippines.santoNinoSource), `Santo Niño source metadata is missing: ${result.philippines.santoNinoSource}`);
+    assert(/feast-of-the-santo-nino\.pdf/i.test(result.philippines.santoNinoSource), `Santo Niño source metadata is missing: ${result.philippines.santoNinoSource}`);
     assert(Object.values(result.philippines.santoNino.data || {}).filter(Boolean).length === 5, 'The Philippines Santo Niño proper is incomplete.');
     assert(!result.philippines.april2 && /Pedro Calungsod/i.test(JSON.stringify(result.philippines.october21)), 'Philippines Pedro Calungsod calendar date is wrong.');
     assert(/Creation Day/i.test(JSON.stringify(result.philippines.creationDay)), 'CBCP Creation Day is missing.');
