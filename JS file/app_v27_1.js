@@ -1510,7 +1510,7 @@
             if ((month === 7 && day === 5) || (month === 9 && day === 20)) return { key: 'kr_proper_1', source: 'perpetual-local-rule' };
         }
         if (lang === 'VN' && month === 11 && day === 24) return { key: 'vn_martyrs', source: 'perpetual-local-rule' };
-        if (lang === 'EN' && getLiturgicalCalendarProfile().id === 'US') {
+        if (lang === 'EN' && getLiturgicalCalendarProfile(lang).id === 'US') {
             if (month === 7 && day === 4) return { key: 'us_independence', source: 'perpetual-local-rule' };
             if (month === 11 && value.getDay() === 4 && day >= 22 && day <= 28) return { key: 'us_thanksgiving', source: 'perpetual-local-rule' };
             if (month === 12 && day === 12) return { key: 'us_guadalupe', source: 'perpetual-local-rule' };
