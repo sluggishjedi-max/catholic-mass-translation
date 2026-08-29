@@ -44,6 +44,7 @@
     prayerConclusionDecree: 'https://cbcpnews.net/cbcpnews/wp-content/uploads/2021/11/ECL-Decree-of-Implementation-on-One-God.pdf',
     ordo: 'https://claretianpublications.com/product/ordo-2026-cycle-a-year-ii-regular-bind/',
     creationDay: 'https://cbcp.ph/pastoral-letter-about-the-creation-day-general-instruction/',
+    careCreationFormulary: 'https://www.cultodivino.va/content/dam/cultodivino/pdf/missa-pro-custodia-creationis/Missa-pro-custodia-creationis-LAT-ITA-ENG-ESP-FRA-POR-GER.pdf',
     santoNinoProper: 'https://ssaparish.com/wp-content/uploads/2020/12/feast-of-the-santo-nino.pdf',
     santoNinoCbcpReference: 'https://cbcpnews.net/cbcpnews/wp-content/uploads/2026/01/CBCP-Monitor-Vol-28-No-1-_-Web-File.pdf',
     simbangGabiSupplement: 'https://dioceseofbrooklyn.org/wp-content/uploads/2024/12/Mass-Supplement-Simbang-Gabi.pdf'
@@ -101,6 +102,32 @@ Grant this through Jesus Christ our Lord.`
     authorityReferenceUrl: SOURCE.santoNinoCbcpReference
   });
 
+  const careOfCreation = proper('Creation Day — Mass for the Care of Creation', '창조의 날 — 피조물 보호를 위한 미사', 'solemnity', 'white', {
+    entrance: 'The heavens declare the glory of God, and the firmament proclaims the work of his hands.',
+    collect: `God our Father,
+who in Christ, the firstborn of all creation, called all things into being,
+grant, we pray, that docile to the life-giving breath of your Spirit,
+we may lovingly care for the work of your hands.
+Through our Lord Jesus Christ, your Son,
+who lives and reigns with you in the unity of the Holy Spirit,
+God, for ever and ever.`,
+    prayer_offerings: `Receive, O Father,
+these fruits of the earth and of our hands:
+bring to completion in them the work of your creation,
+so that, transformed by the Holy Spirit,
+they may be for us the food and drink of eternal life.
+Through Christ our Lord.`,
+    communion: 'All the ends of the earth have seen the salvation of our God.',
+    prayer_after: `May the sacrament of unity which we have received, O Father,
+increase communion with you and with our brothers and sisters,
+so that, as we await the new heavens and the new earth,
+we may learn to live in harmony with all creatures.
+Through Christ our Lord.`
+  }, {
+    sourceUrl: SOURCE.careCreationFormulary,
+    cbcpDirectiveUrl: SOURCE.creationDay
+  });
+
   function dynamicCalendar(date, context = {}) {
     const entries = [];
     if (date.getMonth() === 0 && date.getDay() === 0 && date.getDate() >= 15 && date.getDate() <= 21) {
@@ -110,7 +137,7 @@ Grant this through Jesus Christ our Lord.`
       entries.push(proper('Our Lord Jesus Christ, the Eternal High Priest', '영원한 대사제이신 우리 주 예수 그리스도 축일', 'feast'));
     }
     if (date.getFullYear() >= 2026 && sameDay(date, firstSundayOfSeptember(date.getFullYear()))) {
-      entries.push(proper('Creation Day — Mass for the Care of Creation', '창조의 날 — 피조물 보호를 위한 미사', 'solemnity'));
+      entries.push(careOfCreation);
     }
     return entries;
   }
@@ -143,6 +170,7 @@ Grant this through Jesus Christ our Lord.`
     properSources: Object.freeze({
       generalRomanMissal: romanMissalProperData.source,
       nationalCalendar: SOURCE.ordo,
+      careOfCreation: SOURCE.careCreationFormulary,
       santoNino: SOURCE.santoNinoProper,
       santoNinoCbcpReference: SOURCE.santoNinoCbcpReference,
       simbangGabi: SOURCE.simbangGabiSupplement

@@ -139,6 +139,7 @@ function startServer() {
           hasUniversalisProperParser: Boolean(modules.PH.dailyPropers),
           santoNinoSource: modules.PH.properSources.santoNino,
           santoNino: modules.PH.dynamicCalendar(date(2026, 1, 18), {})[0],
+          careOfCreation: modules.PH.dynamicCalendar(date(2026, 9, 6), {})[0],
           april2: getCountryCalendarOverride(date(2026, 4, 2), 'PH'),
           october21: getCountryCalendarOverride(date(2026, 10, 21), 'PH'),
           creationDay: getCountryCalendarOverride(date(2026, 9, 6), 'PH')
@@ -182,6 +183,7 @@ function startServer() {
     assert(!result.philippines.hasUniversalisProperParser, 'Universalis readings-only page must not be treated as a Philippines proper parser.');
     assert(/feast-of-the-santo-nino\.pdf/i.test(result.philippines.santoNinoSource), `Santo Niño source metadata is missing: ${result.philippines.santoNinoSource}`);
     assert(Object.values(result.philippines.santoNino.data || {}).filter(Boolean).length === 5, 'The Philippines Santo Niño proper is incomplete.');
+    assert(Object.values(result.philippines.careOfCreation.data || {}).filter(Boolean).length === 5, 'The Philippines Care of Creation proper is incomplete.');
     assert(!result.philippines.april2 && /Pedro Calungsod/i.test(JSON.stringify(result.philippines.october21)), 'Philippines Pedro Calungsod calendar date is wrong.');
     assert(/Creation Day/i.test(JSON.stringify(result.philippines.creationDay)), 'CBCP Creation Day is missing.');
     assert(result.gps.manila === 'PH' && result.gps.taipeiUnsupported === 'INTL' && result.gps.parisUnsupported === 'INTL', `Unsupported GPS fallback is wrong: ${JSON.stringify(result.gps)}`);
