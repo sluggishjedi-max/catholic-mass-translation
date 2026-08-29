@@ -1,1 +1,0 @@
-(function (g) { 'use strict'; g.countryHymnData = g.countryHymnData || {}; g.countryHymnData.MO = Object.freeze({ schemaVersion: 1, jurisdiction: 'MO', jurisdictions: Object.freeze(['MO']), status: 'under-development', statusLabels: Object.freeze({ KR: '(제작중)', EN: '(Under development)' }), entries: Object.freeze([]) }); })(globalThis);
