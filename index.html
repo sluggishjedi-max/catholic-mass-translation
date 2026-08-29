@@ -678,12 +678,12 @@
         <span id="settings-version-label" class="settings-version-label" aria-label="App version">V27.2</span>
 
         <div class="setting-row">
-            <label id="lbl-set-gps">📍 GPS 자동 인식</label>
-            <input type="checkbox" id="set-gps" onchange="updateSettings()" checked>
+            <label id="lbl-set-gps">📍 GPS 끄고 현재위치 강제 조정</label>
+            <input type="checkbox" id="set-gps" onchange="updateSettings()">
         </div>
 
         <div class="setting-row" id="manual-loc-row">
-            <label id="lbl-set-loc">🌐 국가 / 좌측 언어</label>
+            <label id="lbl-set-loc">🌐 현재위치 / 원문 언어 (좌측)</label>
             <select id="set-loc" onchange="selectManualLocation()">
                 <optgroup id="automatic-fallback-location-group" label="Automatic fallback" hidden><option value="INTL">Other region / English (automatic)</option></optgroup>
                 <optgroup label="한국천주교주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
@@ -706,7 +706,7 @@
         </div>
 
         <div class="setting-row">
-            <label id="lbl-set-target">🔄 번역 언어 (우측)</label>
+            <label id="lbl-set-target">🔄 번역 희망 언어 (우측)</label>
             <select id="set-target-lang" onchange="updateSettings()">
                 <optgroup label="한국천주교주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
                 <optgroup label="베트남주교회의 (CBCV)"><option value="VN">베트남 / Tiếng Việt</option></optgroup>
@@ -833,6 +833,6 @@
 <script src="JS%20file/bishop_data.js?v=20260822-v26"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260822-v26"></script>
 
-<script src="JS%20file/app_v27_2.js?v=20260830-v27-2-r5-taiwan-final"></script>
+<script src="JS%20file/app_v27_2.js?v=20260830-v27-2-r6-region-target"></script>
 </body>
 </html>

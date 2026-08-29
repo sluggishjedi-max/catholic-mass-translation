@@ -15227,7 +15227,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     const settingsUiText = Object.freeze({
         KR: {
-            title: '설정', gps: '📍 GPS 자동 위치 인식', loc: '🌐 국가 / 좌측 언어', target: '🔄 번역 언어 (우측)',
+            title: '설정', gps: '📍 GPS 끄고 현재위치 강제 조정', loc: '🌐 현재위치 / 원문 언어 (좌측)', target: '🔄 번역 희망 언어 (우측)',
             vnSource: '📖 베트남어 전례독서 번역', stacked: '📱 원문/번역문 상하 배치 (강제)',
             voice: '🎙️ 음성 진행 표시', voiceStatus: '준비됨', voiceNote: '※ 주변 환경에 따라 부정확할 수 있습니다.',
             font: '🔍 글자 크기', ui: '⚙️ 설정 언어 (UI)',
@@ -15235,7 +15235,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             fonts: { '14px': '작게', '18px': '보통', '20px': '크게', '22px': '더 크게' }
         },
         VN: {
-            title: 'Cài đặt', gps: '📍 Tự động nhận diện vị trí GPS', loc: '🌐 Quốc gia / Ngôn ngữ bên trái', target: '🔄 Ngôn ngữ dịch (bên phải)',
+            title: 'Cài đặt', gps: '📍 Tắt GPS và buộc điều chỉnh vị trí hiện tại', loc: '🌐 Vị trí hiện tại / Ngôn ngữ gốc (bên trái)', target: '🔄 Ngôn ngữ muốn dịch sang (bên phải)',
             vnSource: '📖 Bản dịch bài đọc phụng vụ tiếng Việt', stacked: '📱 Bố cục nguyên bản/bản dịch trên-dưới (bắt buộc)',
             voice: '🎙️ Theo dõi tiến trình bằng giọng nói', voiceStatus: 'Sẵn sàng', voiceNote: '※ Có thể không chính xác tùy môi trường xung quanh.',
             font: '🔍 Kích thước chữ', ui: '⚙️ Ngôn ngữ cài đặt (UI)',
@@ -15243,7 +15243,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             fonts: { '14px': 'Nhỏ', '18px': 'Bình thường', '20px': 'Lớn', '22px': 'Lớn hơn' }
         },
         EN: {
-            title: 'Settings', gps: '📍 Automatic GPS location', loc: '🌐 Country / Left language', target: '🔄 Translation language (right)',
+            title: 'Settings', gps: '📍 Turn off GPS and force current location', loc: '🌐 Current location / Original language (left)', target: '🔄 Desired translation language (right)',
             vnSource: '📖 Vietnamese liturgical reading translation', stacked: '📱 Stack original/translation (forced)',
             voice: '🎙️ Voice progress tracking', voiceStatus: 'Ready', voiceNote: '※ Accuracy may vary with the surrounding environment.',
             font: '🔍 Font size', ui: '⚙️ Settings language (UI)',
@@ -15251,7 +15251,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             fonts: { '14px': 'Small', '18px': 'Normal', '20px': 'Large', '22px': 'Larger' }
         },
         JP: {
-            title: '設定', gps: '📍 GPSで位置を自動認識', loc: '🌐 国 / 左側の言語', target: '🔄 翻訳言語（右側）',
+            title: '設定', gps: '📍 GPSを切って現在地を強制指定', loc: '🌐 現在地 / 原文の言語（左側）', target: '🔄 翻訳希望言語（右側）',
             vnSource: '📖 ベトナム語典礼朗読の翻訳', stacked: '📱 原文と訳文を上下に配置（強制）',
             voice: '🎙️ 音声による進行表示', voiceStatus: '準備完了', voiceNote: '※ 周囲の環境によって正確でない場合があります。',
             font: '🔍 文字サイズ', ui: '⚙️ 設定言語（UI）',
@@ -15259,7 +15259,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             fonts: { '14px': '小', '18px': '標準', '20px': '大', '22px': 'より大きい' }
         },
         LA: {
-            title: 'Ordinationes', gps: '📍 Locus per GPS automatice', loc: '🌐 Civitas / Lingua sinistra', target: '🔄 Lingua translationis (dextra)',
+            title: 'Ordinationes', gps: '📍 GPS averte et locum praesentem impone', loc: '🌐 Locus praesens / Lingua originalis (sinistra)', target: '🔄 Lingua translationis desiderata (dextra)',
             vnSource: '📖 Versio lectionum liturgicarum Vietnamica', stacked: '📱 Textus originalis et versio supra/infra (coacte)',
             voice: '🎙️ Progressus per vocem', voiceStatus: 'Paratum', voiceNote: '※ Accuratio secundum ambitum variari potest.',
             font: '🔍 Magnitudo litterarum', ui: '⚙️ Lingua ordinationum (UI)',
