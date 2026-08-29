@@ -48,6 +48,7 @@
         .lang-VN { font-family: 'Segoe UI', Arial, Helvetica, 'Noto Sans VN', 'Roboto', 'One UI Sans', sans-serif; }
         .lang-EN { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Roboto', 'One UI Sans', sans-serif; }
         .lang-JP { font-family: 'Yu Gothic UI', 'Meiryo', 'Noto Sans CJK', 'One UI Sans', sans-serif; }
+        .lang-ZH { font-family: 'Microsoft JhengHei UI', 'PingFang TC', 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif; }
         .lang-LA { font-family: 'Times New Roman', 'Noto Serif', 'One UI Serif', serif; }
 
         /* 상단 이동 탭은 아직 준비 중인 메뉴까지 한곳에서 보여줍니다. */
@@ -583,6 +584,11 @@
                 <div class="role-legend-line psalm-song-note">※ 詩編を歌ってミサを行う場合、歌詞が本文と異なることがあります。</div>
             </div>
         </div>
+        <div class="role-legend-group lang-ZH" data-legend-lang="ZH">
+            <div class="role-legend-lines">
+                <div class="role-legend-line psalm-song-note">※ 彌撒採用歌唱答唱詠時，歌詞可能與經文略有不同。</div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -619,6 +625,7 @@
                 <option value="EN">English Hymns</option>
                 <option value="JP">日本語聖歌</option>
                 <option value="LA">Cantus Latini</option>
+                <option value="ZH">中文聖歌 (製作中)</option>
             </select>
         </h2>
         <div id="hymn-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 한국어/베트남어 성가 작업중으로, 가사 표출이 정상적이지 않습니다.</div>
@@ -682,6 +689,7 @@
                 <optgroup label="한국천주교주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
                 <optgroup label="베트남주교회의 (CBCV)"><option value="VN">베트남 / Tiếng Việt</option></optgroup>
                 <optgroup label="필리핀 주교회의 (CBCP)"><option value="PH">필리핀 / English (Beta)</option></optgroup>
+                <optgroup label="천주교회 대만지구 주교단 (CRBC)"><option value="TW">대만 / 繁體中文 (Beta)</option></optgroup>
                 <optgroup label="일본 천주교주교회의 (CBCJ)"><option value="JP">일본 / 日本語 (Beta)</option></optgroup>
                 <optgroup label="아일랜드 주교회의">
                     <option value="IE">아일랜드 / English (Beta)</option>
@@ -700,11 +708,22 @@
         <div class="setting-row">
             <label id="lbl-set-target">🔄 번역 언어 (우측)</label>
             <select id="set-target-lang" onchange="updateSettings()">
-                <option value="VN">베트남어 / Tiếng Việt</option>
-                <option value="KR">한국어</option>
-                <option value="EN" selected>영어 / English</option>
-                <option value="JP">일본어 / 日本語 (Beta)</option>
-                <option value="LA">라틴어 / Latin</option>
+                <optgroup label="한국천주교주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
+                <optgroup label="베트남주교회의 (CBCV)"><option value="VN">베트남 / Tiếng Việt</option></optgroup>
+                <optgroup label="필리핀 주교회의 (CBCP)"><option value="PH">필리핀 / English (Beta)</option></optgroup>
+                <optgroup label="천주교회 대만지구 주교단 (CRBC)"><option value="TW">대만 / 繁體中文 (Beta)</option></optgroup>
+                <optgroup label="일본 천주교주교회의 (CBCJ)"><option value="JP">일본 / 日本語 (Beta)</option></optgroup>
+                <optgroup label="아일랜드 주교회의">
+                    <option value="IE">아일랜드 / English (Beta)</option>
+                    <option value="GB-NIR">북아일랜드 / English (Beta)</option>
+                </optgroup>
+                <optgroup label="잉글랜드·웨일즈 주교회의 (CBCEW)">
+                    <option value="GB-ENG">잉글랜드 / English (Beta)</option>
+                    <option value="GB-WLS">웨일즈 / English (Beta)</option>
+                </optgroup>
+                <optgroup label="스코틀랜드 주교회의 (BCOS)"><option value="GB-SCT">스코틀랜드 / English (Beta)</option></optgroup>
+                <optgroup label="미국 천주교주교회의 (USCCB)"><option value="US" selected>미국 / English</option></optgroup>
+                <optgroup label="보편 로마 전례"><option value="VA">바티칸 / Latin</option></optgroup>
             </select>
         </div>
 
@@ -777,6 +796,7 @@
 <script src="JS%20file/countries/england_wales/england_wales_mass.js?v=20260829-independent-missal"></script>
 <script src="JS%20file/countries/scotland/scotland_mass.js?v=20260829-independent-missal"></script>
 <script src="JS%20file/countries/philippines/philippines_mass.js?v=20260829-independent-missal-r2"></script>
+<script src="JS%20file/countries/taiwan/taiwan_mass.js?v=20260830-crbc-traditional-chinese-beta"></script>
 <script src="JS%20file/local_missal_prayer_data.js?v=20260823-v26-r5"></script>
 <script src="JS%20file/korean_temporal_data.js?v=20260822-v26"></script>
 <script src="JS%20file/korean_blessing_data.js?v=20260822-v26"></script>
@@ -789,6 +809,7 @@
 <script src="JS%20file/countries/england_wales/england_wales_prayers.js?v=20260828-great-britain-beta"></script>
 <script src="JS%20file/countries/scotland/scotland_prayers.js?v=20260828-great-britain-beta"></script>
 <script src="JS%20file/countries/philippines/philippines_prayers.js?v=20260828-cbcp-english-beta"></script>
+<script src="JS%20file/countries/taiwan/taiwan_prayers.js?v=20260830-crbc-traditional-chinese-beta"></script>
 <script src="JS%20file/countries/korea/korea_hymns.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/vietnam/vietnam_hymns.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/united_states/united_states_hymns.js?v=20260827-country-data"></script>
@@ -798,6 +819,7 @@
 <script src="JS%20file/countries/england_wales/england_wales_hymns.js?v=20260828-great-britain-beta"></script>
 <script src="JS%20file/countries/scotland/scotland_hymns.js?v=20260828-great-britain-beta"></script>
 <script src="JS%20file/countries/philippines/philippines_hymns.js?v=20260828-cbcp-english-beta"></script>
+<script src="JS%20file/countries/taiwan/taiwan_hymns.js?v=20260830-crbc-traditional-chinese-beta"></script>
 <script src="JS%20file/countries/korea/korea_churches.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/vietnam/vietnam_churches.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/united_states/united_states_churches.js?v=20260827-country-data"></script>
@@ -807,9 +829,10 @@
 <script src="JS%20file/countries/england_wales/england_wales_churches.js?v=20260828-great-britain-beta"></script>
 <script src="JS%20file/countries/scotland/scotland_churches.js?v=20260828-great-britain-beta"></script>
 <script src="JS%20file/countries/philippines/philippines_churches.js?v=20260828-cbcp-english-beta"></script>
+<script src="JS%20file/countries/taiwan/taiwan_churches.js?v=20260830-crbc-directory-beta"></script>
 <script src="JS%20file/bishop_data.js?v=20260822-v26"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260822-v26"></script>
 
-<script src="JS%20file/app_v27_2.js?v=20260829-v27-2-r2"></script>
+<script src="JS%20file/app_v27_2.js?v=20260830-v27-2-r5-taiwan-final"></script>
 </body>
 </html>
