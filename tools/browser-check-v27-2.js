@@ -107,6 +107,23 @@ function startServer() {
       selectManualLocation();
       const philippinesGeneralProper = localMissalEntryForLanguage('EN', date(2026, 8, 29));
       const philippinesSantoNinoProper = localMissalEntryForLanguage('EN', date(2026, 1, 18));
+      const cbcpBoundaryFixture = `Title: Today's Readings
+URL Source: https://cbcp.ph/readings/august-29-2026/
+Markdown Content:
+# Today's Readings
+### Reading 1
+1 Corinthians 1:26-31
+Consider your own calling, brothers and sisters.
+### Responsorial Psalm
+Psalm 33:12-13
+R. Blessed the people the Lord has chosen to be his own.
+### Gospel
+Matthew 25:14-30
+Jesus told his disciples this parable.
+### Saint of the Day
+St. Example
+This biography must never be parsed as part of the Gospel.`;
+      const cbcpBoundaryParsed = strictParseDailyMass('EN', cbcpBoundaryFixture, date(2026, 8, 29));
       return {
         version: APP_VERSION,
         versionLabel: document.getElementById('settings-version-label').textContent,
@@ -133,6 +150,10 @@ function startServer() {
           irelandLocalSections: Object.values(irelandLocalProper && irelandLocalProper.data || {}).filter(Boolean).length,
           philippinesGeneralSections: Object.values(philippinesGeneralProper && philippinesGeneralProper.data || {}).filter(Boolean).length,
           philippinesSantoNinoSections: Object.values(philippinesSantoNinoProper && philippinesSantoNinoProper.data || {}).filter(Boolean).length
+        },
+        cbcpBoundary: {
+          hasReading: Boolean(cbcpBoundaryParsed.data && cbcpBoundaryParsed.data.reading1),
+          gospel: JSON.stringify(cbcpBoundaryParsed.data && cbcpBoundaryParsed.data.gospel || {})
         },
         philippines: {
           fallbackUrl: modules.PH.dailyReadings.fallbackUrl('20260829'),
@@ -178,6 +199,8 @@ function startServer() {
     assert(result.properResolution.irelandLocalSections >= 5, `Ireland local/Common proper composition failed: ${JSON.stringify(result.properResolution)}`);
     assert(result.properResolution.philippinesGeneralSections >= 5, `Philippines general Roman Missal proper resolution failed: ${JSON.stringify(result.properResolution)}`);
     assert(result.properResolution.philippinesSantoNinoSections === 5, `Philippines national proper resolution failed: ${JSON.stringify(result.properResolution)}`);
+    assert(result.cbcpBoundary.hasReading, 'CBCP regression fixture did not parse the readings.');
+    assert(!/Saint of the Day|St\. Example|biography/i.test(result.cbcpBoundary.gospel), `CBCP Saint of the Day leaked into the Gospel: ${result.cbcpBoundary.gospel}`);
     assert(/cbcp\.ph\/readings\/august-29-2026/.test(result.modules.PH.dailyUrl), `CBCP daily URL is wrong: ${result.modules.PH.dailyUrl}`);
     assert(/bible\.usccb\.org\/bible\/readings\/082926\.cfm/.test(result.philippines.fallbackUrl), `Philippines approved-text fallback is wrong: ${result.philippines.fallbackUrl}`);
     assert(!result.philippines.hasUniversalisProperParser, 'Universalis readings-only page must not be treated as a Philippines proper parser.');

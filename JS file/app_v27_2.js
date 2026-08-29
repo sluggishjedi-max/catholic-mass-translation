@@ -2006,6 +2006,11 @@
         return !!(module && module.dailyReadings && /universalis/i.test(module.dailyReadings.provider || ''));
     }
 
+    function usesCbcpCountryReadings(locationCode = state.selectedLocationCode) {
+        const module = activeCountryMassModule(locationCode);
+        return !!(module && module.dailyReadings && /\bCBCP\b/i.test(module.dailyReadings.provider || ''));
+    }
+
     const targetLanguageOrder = ['VN', 'KR', 'EN', 'JP', 'LA'];
 
     function fallbackTargetLangFor(leftLang, preferred = DEFAULT_TARGET_LANG) {
@@ -7536,6 +7541,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function trimTerminalDailyContent(lines) {
+        const saintIndex = (lines || []).findIndex(line => /^Saint of the Day\b/i.test(cleanNodeText(line)));
+        if (saintIndex >= 0) lines = lines.slice(0, saintIndex);
         const terminalIndex = (lines || []).findIndex(line => /^(영성체\s*후\s*묵상|오늘의\s*묵상|Suy niệm|LISTEN(?:\s+PODCAST)?|PODCAST|View Calendar|Get Daily Readings|Daily Readings Audio|Post Views|Tìm kiếm|##\s|LỄ KÍNH|Bài liên quan|Tags?:|관련\s*글|이전\s*글|다음\s*글|日ごとの福音|聖書本文|配信停止|プライバシーポリシー|お問合せ)/i.test(line));
         return terminalIndex >= 0 ? lines.slice(0, terminalIndex) : lines;
     }
@@ -9319,6 +9326,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return (title ? [title] : []).concat(normalized.slice(chosen.index, end));
     }
 
+    function strictScopeCbcpDailyLines(lines) {
+        const sourceLines = Array.isArray(lines) ? lines : [];
+        const gospelIndex = sourceLines.findIndex(line => {
+            const marker = strictIdentifySection(line, 'EN');
+            return marker && marker.key === 'gospel';
+        });
+        if (gospelIndex < 0) return sourceLines;
+        const saintIndex = sourceLines.findIndex((line, index) => (
+            index > gospelIndex && /^Saint of the Day\b/i.test(strictCleanLine(line))
+        ));
+        return saintIndex >= 0 ? sourceLines.slice(0, saintIndex) : sourceLines;
+    }
+
     function strictLinkLabel(link) {
         return strictCleanLine([link && link.text, link && link.href].filter(Boolean).join(' '));
     }
@@ -9474,6 +9494,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             /^Meditation/i,
             /^Universal Prayer/i,
             /^Daily Reflection/i,
+            /^Saint of the Day\b/i,
             /^Continue$/i,
             /^You can also view this page/i,
             /^Christian Art$/i,
@@ -10925,6 +10946,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const selector = getStrictMassSelector(date);
         const metadataTitle = sourceMetadataTitle(source, lang);
         let lines = strictSourceLines(source);
+        if (lang === 'EN' && usesCbcpCountryReadings()) lines = strictScopeCbcpDailyLines(lines);
         if (lang === 'EN' && usesUniversalisCountryReadings()) lines = strictScopeUniversalisCountryDailyLines(lines, date);
         if (lang === 'VN') {
             lines = strictScopeVietnameseByCalendarReading(getVietnameseBodyLines(lines), date);
