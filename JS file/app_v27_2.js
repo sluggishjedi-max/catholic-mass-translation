@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.2-20260830-TAIWAN-CRBC-BETA';
+    const APP_VERSION = 'V27.2-20260830-DAILY-PARSER-FIXES';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -9428,7 +9428,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictIsDayMassLabel(label) {
-        return /(낮\s*미사|당일|当日のミサ|日中|Mass during the Day|During the Day|day mass|Ban ngày)/i.test(label);
+        const text = strictCleanLine(label);
+        return /(낮\s*미사|당일|当日のミサ|Mass during the Day|During the Day|day mass|Ban ngày)/i.test(text)
+            || /(?:^|[（(\s:：・—-])日中(?:のミサ)?(?:$|[）)\s:：・—-])/u.test(text);
     }
 
     function strictIsNightMassLabel(label) {
@@ -9565,18 +9567,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['prayer_after', /^Lời nguyện (?:hiệp|kết) lễ(?:\s|$|[:：])/iu]
         ],
         ZH: [
-            ['entrance', /^進堂詠(?:\s|$|[:：（(])/u],
-            ['collect', /^集禱經(?:\s|$|[:：（(])/u],
-            ['reading1', /^讀經一(?:\s|$|[:：（(])/u],
-            ['psalm', /^答唱詠(?:\s|$|[:：（(])/u],
-            ['reading2', /^讀經二(?:\s|$|[:：（(])/u],
-            ['Sequence', /^(?:繼抒詠|讚美詩)(?:\s|$|[:：（(])/u],
-            ['gospel_accl', /^福音前歡呼(?:詞)?(?:\s|$|[:：（(])/u],
-            ['gospel', /^福音(?!前歡呼)(?:\s|$|[:：（(])/u],
-            ['prayer_offerings', /^獻禮經(?:\s|$|[:：（(])/u],
-            ['preface', /^(?:[\p{Script=Han}〇○Ο一二三四五六七八九十]+)?頌謝詞(?:\s|$|[:：（(])/u],
-            ['communion', /^領主詠(?:\s|$|[:：（(])/u],
-            ['prayer_after', /^領聖體後經(?:\s|$|[:：（(])/u]
+            ['entrance', /^進堂詠(?=\s|$|[:：（(])/u],
+            ['collect', /^集禱經(?=\s|$|[:：（(])/u],
+            ['reading1', /^讀經一(?=\s|$|[:：（(])/u],
+            ['psalm', /^答唱詠(?=\s|$|[:：（(])/u],
+            ['reading2', /^讀經二(?=\s|$|[:：（(])/u],
+            ['Sequence', /^(?:繼抒詠|讚美詩)(?=\s|$|[:：（(])/u],
+            ['gospel_accl', /^福音前歡呼(?:詞)?(?=\s|$|[:：（(])/u],
+            ['gospel', /^福音(?!前歡呼)(?=\s|$|[:：（(])/u],
+            ['prayer_offerings', /^獻禮經(?=\s|$|[:：（(])/u],
+            ['preface', /^(?:[\p{Script=Han}〇○Ο一二三四五六七八九十]+)?頌謝詞(?=\s|$|[:：（(])/u],
+            ['communion', /^領主詠(?=\s|$|[:：（(])/u],
+            ['prayer_after', /^領聖體後經(?=\s|$|[:：（(])/u]
         ]
     };
 
@@ -9597,7 +9599,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ],
         JP: [/^叙唱/u, /^今日の/u, /^共同祈願/u],
         VN: [/^Lời tiền tụng/iu, /^Kinh Tiền Tụng/iu, /^Suy niệm/iu, /^Lời nguyện tín hữu/iu, /^Ghi nhận (?:lịch sử|phụng vụ)/iu],
-        ZH: [/^信友禱詞/u, /^默想/u, /^講道/u, /^頁\s*\d+/u]
+        ZH: [/^光榮頌/u, /^信經/u, /^信友禱詞/u, /^默想/u, /^講道/u, /^頁\s*\d+/u]
     };
 
     function strictIdentifySection(line, lang) {
@@ -9915,8 +9917,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const ref = markerIndexes.length ? latinPsalmResponseRef(cleanedBlocks[markerIndexes[0]]) : '';
         if (ref) finalCitation = appendEnglishPsalmResponseRef(finalCitation, ref);
         const out = [];
+        const responseLineCount = markerIndexes.length >= 2
+            ? latinPsalmRepeatedResponseLineCount(cleanedBlocks, markerIndexes)
+            : 1;
+        if (markerIndexes.length) {
+            const response = strictCleanLine(latinPsalmResponseChunks(
+                cleanedBlocks,
+                markerIndexes[0],
+                responseLineCount
+            ).slice(0, responseLineCount).join(' '));
+            if (response) out.push(strictParsedLine('℟', response));
+        }
         if (markerIndexes.length >= 2) {
-            const responseLineCount = latinPsalmRepeatedResponseLineCount(cleanedBlocks, markerIndexes);
             markerIndexes.forEach((markerIndex, markerOrder) => {
                 const start = markerIndex + responseLineCount;
                 const end = markerIndexes[markerOrder + 1] || cleanedBlocks.length;
@@ -10211,16 +10223,31 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             return strictParseLatinPsalm(citationResult.citation, citationResult.blocks);
         }
         if (lang === 'ZH' && key === 'psalm') {
+            let verseBuffer = [];
+            const flushVerse = () => {
+                const verse = strictCleanLine(verseBuffer.join(' ')).replace(/\s*答。?\s*$/u, '').trim();
+                verseBuffer = [];
+                if (verse) out.push(strictParsedLine('領', strictAppendPsalmResponse('ZH', key, '領', verse)));
+            };
             contentBlocks.forEach(line => {
                 const cleaned = strictCleanLine(line);
-                if (!cleaned || /^[一二三四五六七八九十]+[、.]?$/u.test(cleaned)) return;
-                const split = strictSplitLeadingSpeaker('ZH', key, cleaned);
-                if (split.sp === '答') out.push(strictParsedLine('答', split.text));
-                else {
-                    const verse = (split.text || cleaned).replace(/\s*答。?\s*$/u, '').trim();
-                    if (verse) out.push(strictParsedLine(split.sp || '領', strictAppendPsalmResponse('ZH', key, split.sp || '領', verse)));
+                if (!cleaned) return;
+                if (/^[一二三四五六七八九十]+[、.]?$/u.test(cleaned)) {
+                    flushVerse();
+                    return;
                 }
+                const split = strictSplitLeadingSpeaker('ZH', key, cleaned);
+                if (split.sp === '答') {
+                    flushVerse();
+                    if (split.text && !out.some(item => item.sp === '答')) out.push(strictParsedLine('答', split.text));
+                    return;
+                }
+                if (split.sp === '領') flushVerse();
+                verseBuffer.push(split.text || cleaned);
+                if (split.sp === '領' || /\s*答。?\s*$/u.test(cleaned)) flushVerse();
             });
+            flushVerse();
+            attachPsalmVerseRefs('ZH', citationResult.citation, out);
             const result = { text: parsedLinesToText(out), lines: out };
             if (citationResult.citation) result.cit_zh = citationResult.citation;
             return result;
@@ -11985,7 +12012,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function languageTextMatches(line, lower, pattern) {
-        return pattern.test(cleanNodeText(line && line[`text_${lower}`]));
+        return pattern instanceof RegExp && pattern.test(cleanNodeText(line && line[`text_${lower}`]));
     }
 
     function removeDailyProclamationEndingLines(targetLines, baseId) {
@@ -12024,21 +12051,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             vn: /^[ĐÐ]ó là lời Chúa\.?$/i,
             en: /^The word of the Lord\.?$/i,
             jp: /(神|主).{0,6}(ことば|御言葉)/,
-            la: /^Verbum Domini\.?$/i
+            la: /^Verbum Domini\.?$/i,
+            zh: /(?:上主|天主).{0,4}(?:聖言|話)[。！]?$/u
         };
         const gospelIntroPatterns = {
             kr: /전한\s+거룩한\s+복음입니다|복음입니다/,
             vn: /^Tin Mừng Chúa Giêsu Kitô/i,
             en: /(holy )?Gospel according to/i,
             jp: /福音/,
-            la: /(sancti|secundum).{0,20}Evangel/i
+            la: /(sancti|secundum).{0,20}Evangel/i,
+            zh: /恭讀.{0,24}福音/u
         };
         const gospelBodyPatterns = {
             kr: /^그때에/,
             vn: /^(Khi ấy|Hôm ấy|Khi đó)\b/i,
             en: /^(Jesus|At that time|When)/i,
             jp: /^(そのとき|その時|イエス)/,
-            la: /^(In illo tempore|Dixit|Factum est)/i
+            la: /^(In illo tempore|Dixit|Factum est)/i,
+            zh: /^(?:那時候|那時|當時|耶穌)/u
         };
 
         targetLines.forEach(line => {

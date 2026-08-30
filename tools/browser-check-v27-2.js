@@ -68,7 +68,7 @@ function startServer() {
     });
 
     const result = await page.evaluate(() => {
-      const unsupported = ['TW', 'CN', 'ID', 'TH', 'KH', 'SG', 'MY', 'BN', 'HK', 'MO'];
+      const unsupported = ['CN', 'ID', 'TH', 'KH', 'SG', 'MY', 'BN', 'HK', 'MO'];
       const locationSelect = document.getElementById('set-loc');
       const visibleGpsOptions = Array.from(locationSelect.options).filter(option => !option.hidden).map(option => option.value);
       const initial = {
@@ -83,7 +83,7 @@ function startServer() {
       updateSettings();
       const afterRightChange = { useGps: state.useGps, code: state.selectedLocationCode, target: state.targetLang };
 
-      document.getElementById('set-gps').checked = false;
+      document.getElementById('set-gps').checked = true;
       updateSettings();
       const manualEnabled = !locationSelect.disabled;
       locationSelect.value = 'IE';
@@ -124,6 +124,85 @@ Jesus told his disciples this parable.
 St. Example
 This biography must never be parsed as part of the Gospel.`;
       const cbcpBoundaryParsed = strictParseDailyMass('EN', cbcpBoundaryFixture, date(2026, 8, 29));
+      const sharedApplyLines = [Object.assign(emptyMassLine(), {
+        text_kr: '주님의 말씀입니다.',
+        role_kr: 'body',
+        text_vn: 'Đó là lời Chúa.',
+        role_vn: 'body'
+      })];
+      let sharedApplyError = '';
+      try {
+        normalizeDailySectionLines(sharedApplyLines, 'reading1');
+      } catch (error) {
+        sharedApplyError = String(error && (error.stack || error));
+      }
+      const japaneseDayWordFixture = `Markdown Content:
+第一朗読
+エレミヤ20・7-9
+主の言葉のゆえに、わたしは恥を受けねばならない。
+エレミヤの預言
+20・7 わたしは一日中、笑い者にされる。
+答唱詩編
+詩編63・2、3+4
+神よ、わたしはあなたを慕う。
+詩編63
+63・2 神よ、わたしはあなたをしたう。
+第二朗読
+ローマ12・1-2
+自分の体を生けるいけにえとして献げなさい。
+使徒パウロのローマの教会への手紙
+12・1 兄弟たち、神の憐れみによって勧めます。
+福音朗読
+マタイ16・21-27
+アレルヤ、アレルヤ。父がわたしたちの心の目を開いてくださる。アレルヤ、アレルヤ。
+マタイによる福音
+16・21 そのとき、イエスは弟子たちに話された。`;
+      const japaneseDayWordParsed = strictParseDailyMass('JP', japaneseDayWordFixture, date(2026, 8, 30));
+      const latinPsalmParsed = strictFormatSection('LA', 'psalm', {
+        heading: 'Psalmus Responsorialis',
+        lines: [
+          'Ps 62, 2. 3-4',
+          '℟. (2b) Sitívit in te ánima mea, Dómine, Deus meus.',
+          'Deus, Deus meus es tu, ad te de luce vígilo.',
+          '℟. Sitívit in te ánima mea, Dómine, Deus meus.',
+          'In terra desérta et árida et inaquósa.',
+          '℟. Sitívit in te ánima mea, Dómine, Deus meus.'
+        ]
+      });
+      const traditionalChineseFixture = `Markdown Content:
+常年期第廿二主日
+進堂詠 詠八五 3, 5
+上主，求祢憐憫我。
+光榮頌
+天主在天受光榮。
+集禱經
+全能的天主，求祢俯聽我們。
+讀經一（上主的話，為我成為受侮辱和譏笑的因由。）
+恭讀耶肋米亞先知書 二十 7-9
+上主的話天天為我成為受侮辱的原因。──上主的聖言。
+答唱詠 詠六二 2-6
+答：上主，我的天主，我的靈魂渴慕祢。
+一、
+天主，祢是我的天主，我急切尋覓祢；
+我的靈魂渴慕祢。 答
+二、
+我要一生一世讚美祢，
+我的口唇讚美祢。 答
+讀經二（獻上你們的身體，當作生活的祭品。）
+恭讀聖保祿宗徒致羅馬人書 十二 1-2
+獻上你們的身體當作生活的祭品。──上主的聖言。
+福音前歡呼 雅一 21
+答：阿肋路亞。
+領：你們要以柔順的心接受聖言。
+答：阿肋路亞。
+福音（誰願意跟隨我，就該捨棄自己。）
+恭讀聖瑪竇福音 十六 21-27
+那時候，耶穌對門徒說：誰願意跟隨我，就該捨棄自己。──上主的聖言。
+信經
+我信唯一的天主。
+獻禮經
+上主，求祢悅納我們的祭獻。`;
+      const traditionalChineseParsed = strictParseDailyMass('ZH', traditionalChineseFixture, date(2026, 8, 30), 'TW');
       return {
         version: APP_VERSION,
         versionLabel: document.getElementById('settings-version-label').textContent,
@@ -154,6 +233,16 @@ This biography must never be parsed as part of the Gospel.`;
         cbcpBoundary: {
           hasReading: Boolean(cbcpBoundaryParsed.data && cbcpBoundaryParsed.data.reading1),
           gospel: JSON.stringify(cbcpBoundaryParsed.data && cbcpBoundaryParsed.data.gospel || {})
+        },
+        parserRegression: {
+          sharedApplyError,
+          japaneseDayWordIsMassLabel: strictIsDayMassLabel('わたしは一日中、笑い者にされる。'),
+          japaneseDayMassLabelRecognized: strictIsDayMassLabel('主の降誕（日中）'),
+          japaneseSections: Object.keys(japaneseDayWordParsed.data || {}),
+          latinPsalm: latinPsalmParsed.lines,
+          chineseEntrance: JSON.stringify(traditionalChineseParsed.data && traditionalChineseParsed.data.entrance || {}),
+          chinesePsalm: traditionalChineseParsed.data && traditionalChineseParsed.data.psalm && traditionalChineseParsed.data.psalm.lines,
+          chineseGospel: traditionalChineseParsed.data && traditionalChineseParsed.data.gospel
         },
         philippines: {
           fallbackUrl: modules.PH.dailyReadings.fallbackUrl('20260829'),
@@ -201,6 +290,15 @@ This biography must never be parsed as part of the Gospel.`;
     assert(result.properResolution.philippinesSantoNinoSections === 5, `Philippines national proper resolution failed: ${JSON.stringify(result.properResolution)}`);
     assert(result.cbcpBoundary.hasReading, 'CBCP regression fixture did not parse the readings.');
     assert(!/Saint of the Day|St\. Example|biography/i.test(result.cbcpBoundary.gospel), `CBCP Saint of the Day leaked into the Gospel: ${result.cbcpBoundary.gospel}`);
+    assert(!result.parserRegression.sharedApplyError, `Shared multilingual reading application crashed: ${result.parserRegression.sharedApplyError}`);
+    assert(!result.parserRegression.japaneseDayWordIsMassLabel, 'Japanese 一日中 text was mistaken for a daytime Mass label.');
+    assert(result.parserRegression.japaneseDayMassLabelRecognized, 'A real Japanese daytime Mass label was not recognized.');
+    assert(['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel'].every(key => result.parserRegression.japaneseSections.includes(key)), `Japanese day-word fixture lost sections: ${JSON.stringify(result.parserRegression.japaneseSections)}`);
+    assert(result.parserRegression.latinPsalm.length === 3 && result.parserRegression.latinPsalm[0].sp === '℟' && /Sitívit/.test(result.parserRegression.latinPsalm[0].text), `Latin psalm response was not preserved: ${JSON.stringify(result.parserRegression.latinPsalm)}`);
+    assert(!/光榮頌|天主在天受光榮/u.test(result.parserRegression.chineseEntrance), `Chinese Gloria leaked into the Entrance Antiphon: ${result.parserRegression.chineseEntrance}`);
+    assert(result.parserRegression.chinesePsalm.length === 3 && result.parserRegression.chinesePsalm.filter(line => line.sp === '領').length === 2, `Chinese psalm stanzas were not joined: ${JSON.stringify(result.parserRegression.chinesePsalm)}`);
+    assert(result.parserRegression.chineseGospel.lines[0].role === 'summary' && result.parserRegression.chineseGospel.lines[0].text === '誰願意跟隨我，就該捨棄自己。', `Chinese Gospel summary was not preserved: ${JSON.stringify(result.parserRegression.chineseGospel)}`);
+    assert(!/信經|我信唯一/u.test(JSON.stringify(result.parserRegression.chineseGospel)), `Chinese Creed leaked into the Gospel: ${JSON.stringify(result.parserRegression.chineseGospel)}`);
     assert(/cbcp\.ph\/readings\/august-29-2026/.test(result.modules.PH.dailyUrl), `CBCP daily URL is wrong: ${result.modules.PH.dailyUrl}`);
     assert(/bible\.usccb\.org\/bible\/readings\/082926\.cfm/.test(result.philippines.fallbackUrl), `Philippines approved-text fallback is wrong: ${result.philippines.fallbackUrl}`);
     assert(!result.philippines.hasUniversalisProperParser, 'Universalis readings-only page must not be treated as a Philippines proper parser.');
@@ -209,7 +307,7 @@ This biography must never be parsed as part of the Gospel.`;
     assert(Object.values(result.philippines.careOfCreation.data || {}).filter(Boolean).length === 5, 'The Philippines Care of Creation proper is incomplete.');
     assert(!result.philippines.april2 && /Pedro Calungsod/i.test(JSON.stringify(result.philippines.october21)), 'Philippines Pedro Calungsod calendar date is wrong.');
     assert(/Creation Day/i.test(JSON.stringify(result.philippines.creationDay)), 'CBCP Creation Day is missing.');
-    assert(result.gps.manila === 'PH' && result.gps.taipeiUnsupported === 'INTL' && result.gps.parisUnsupported === 'INTL', `Unsupported GPS fallback is wrong: ${JSON.stringify(result.gps)}`);
+    assert(result.gps.manila === 'PH' && result.gps.taipeiUnsupported === 'TW' && result.gps.parisUnsupported === 'INTL', `GPS country resolution is wrong: ${JSON.stringify(result.gps)}`);
     assert(result.church.hasEngland && result.church.hasScotland && result.church.hasPhilippines, `Country church rebuild is incomplete: ${JSON.stringify(result.church)}`);
     assert(pageErrors.length === 0, `Page errors:\n${pageErrors.join('\n')}`);
     console.log(JSON.stringify(result, null, 2));
