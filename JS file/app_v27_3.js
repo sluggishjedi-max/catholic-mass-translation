@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.3-20260830-DAILY-SOURCE-AND-LAYOUT-FIXES';
+    const APP_VERSION = 'V27.3-20260831-COUNTRY-SOURCE-DISPLAY-FIXES';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -11653,9 +11653,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let entryUrl = strictDailySourceEntryUrl(lang, date, locationCode);
         const selector = getStrictMassSelector(date);
         let source;
+        let sourceIsStatic = false;
         if (lang === 'ZH' && hasCountryDailyReadings(locationCode)) {
             try {
                 source = fetchTraditionalChineseDailyStaticSource(date);
+                sourceIsStatic = true;
             } catch (error) {
                 console.warn('CRBC static daily Mass corpus has no matching entry; trying the approved source fallback.', error);
             }
@@ -11671,7 +11673,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 source = await fetchStrictSource(entryUrl);
             }
         }
-        let selectedLink = strictChooseMassLink(lang, source, entryUrl, date, selector, locationCode);
+        // The static corpus already contains the complete PDF text. Its
+        // URL Source line is attribution, not a navigation target; following
+        // it would replace the parsed text with a Drive viewer response.
+        let selectedLink = sourceIsStatic ? null : strictChooseMassLink(lang, source, entryUrl, date, selector, locationCode);
         if (selectedLink && selectedLink.href && selectedLink.href !== entryUrl) {
             source = await fetchStrictSource(selectedLink.href);
         }
@@ -11805,11 +11810,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return `${STORAGE_PREFIX}dailySource:${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
     }
 
+    const coreDailyReadingSectionKeys = Object.freeze(['reading1', 'psalm', 'gospel_accl', 'gospel']);
+
+    function missingCoreDailyReadingSections(parsed) {
+        const data = (parsed && parsed.data) || {};
+        return coreDailyReadingSectionKeys.filter(key => !sourceSectionHasContent(data[key]));
+    }
+
+    function hasCompleteCoreDailyReadings(parsed) {
+        return missingCoreDailyReadingSections(parsed).length === 0;
+    }
+
     function readCachedDailySource(lang, date, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         const entry = readStorageJSON(dailySourceStorageKey(lang, date, locationCode));
         if (!entry || !entry.parsed) return null;
         if (!options.allowStale && !isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)) return null;
+        if (!hasCompleteCoreDailyReadings(entry.parsed)) return null;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(entry.parsed)) return null;
         if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
             && !hasVietnameseKtcgDiocesanPrayers(entry.parsed)) return null;
@@ -11818,6 +11835,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function writeCachedDailySource(lang, date, parsed, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
+        if (!hasCompleteCoreDailyReadings(parsed)) return;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) return;
         if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
             && !hasVietnameseKtcgDiocesanPrayers(parsed)) return;
@@ -11840,6 +11858,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             } else {
                 dailySourceCache[key] = dailySourceFetchers[lang](date, { locationCode })
                     .then(parsed => {
+                        if (!hasCompleteCoreDailyReadings(parsed)) {
+                            throw new Error(`${lang} source is incomplete: ${missingCoreDailyReadingSections(parsed).join(', ')}`);
+                        }
                         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) {
                             throw new Error('VN source is incomplete: ' + missingVietnameseDailySections(parsed).join(', '));
                         }
@@ -15290,11 +15311,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const VOICE_MAX_ALTERNATIVES = 5;
 
     const uiLanguageNames = {
-        KR: { KR: '한국어', VN: '베트남어', EN: '영어', JP: '일본어', LA: '라틴어' },
-        VN: { KR: 'tiếng Hàn', VN: 'tiếng Việt', EN: 'tiếng Anh', JP: 'tiếng Nhật', LA: 'tiếng Latinh' },
-        EN: { KR: 'Korean', VN: 'Vietnamese', EN: 'English', JP: 'Japanese', LA: 'Latin' },
-        JP: { KR: '韓国語', VN: 'ベトナム語', EN: '英語', JP: '日本語', LA: 'ラテン語' },
-        LA: { KR: 'Coreana', VN: 'Vietnamensis', EN: 'Anglica', JP: 'Iaponica', LA: 'Latina' }
+        KR: { KR: '한국어', VN: '베트남어', EN: '영어', JP: '일본어', LA: '라틴어', ZH: '중국어 번체' },
+        VN: { KR: 'tiếng Hàn', VN: 'tiếng Việt', EN: 'tiếng Anh', JP: 'tiếng Nhật', LA: 'tiếng Latinh', ZH: 'tiếng Hoa phồn thể' },
+        EN: { KR: 'Korean', VN: 'Vietnamese', EN: 'English', JP: 'Japanese', LA: 'Latin', ZH: 'Traditional Chinese' },
+        JP: { KR: '韓国語', VN: 'ベトナム語', EN: '英語', JP: '日本語', LA: 'ラテン語', ZH: '繁体字中国語' },
+        LA: { KR: 'Coreana', VN: 'Vietnamensis', EN: 'Anglica', JP: 'Iaponica', LA: 'Latina', ZH: 'Sinica traditionalis' }
     };
 
     const voiceUiText = {
@@ -15452,6 +15473,39 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', 'GB-ENG': 'Anglia', 'GB-WLS': 'Cambria', 'GB-SCT': 'Scotia', PH: 'Philippinae', TW: 'Taivania', JP: 'Iaponia', VA: 'Civitas Vaticana', INTL: 'Alia regio' }
     });
 
+    const localizedConferenceNames = Object.freeze({
+        KR: {
+            CBCK: '한국 천주교 주교회의 (CBCK)', CBCV: '베트남 가톨릭 주교회의 (CBCV)', CBCP: '필리핀 가톨릭 주교회의 (CBCP)',
+            CRBC: '대만 천주교 주교회의 (CRBC)', CBCJ: '일본 천주교 주교회의 (CBCJ)', ICBC: '아일랜드 가톨릭 주교회의 (ICBC)',
+            CBCEW: '잉글랜드·웨일스 가톨릭 주교회의 (CBCEW)', BCOS: '스코틀랜드 가톨릭 주교회의 (BCOS)',
+            USCCB: '미국 가톨릭 주교회의 (USCCB)', ROMAN: '보편 로마 전례', AUTO: '자동 위치 대체'
+        },
+        VN: {
+            CBCK: 'Hội đồng Giám mục Công giáo Hàn Quốc (CBCK)', CBCV: 'Hội đồng Giám mục Công giáo Việt Nam (CBCV)', CBCP: 'Hội đồng Giám mục Công giáo Philippines (CBCP)',
+            CRBC: 'Hội đồng Giám mục Công giáo Đài Loan (CRBC)', CBCJ: 'Hội đồng Giám mục Công giáo Nhật Bản (CBCJ)', ICBC: 'Hội đồng Giám mục Công giáo Ireland (ICBC)',
+            CBCEW: 'Hội đồng Giám mục Công giáo Anh và Wales (CBCEW)', BCOS: 'Hội đồng Giám mục Công giáo Scotland (BCOS)',
+            USCCB: 'Hội đồng Giám mục Công giáo Hoa Kỳ (USCCB)', ROMAN: 'Nghi lễ Rôma phổ quát', AUTO: 'Tự động chọn vị trí thay thế'
+        },
+        EN: {
+            CBCK: "Catholic Bishops' Conference of Korea (CBCK)", CBCV: "Catholic Bishops' Conference of Vietnam (CBCV)", CBCP: "Catholic Bishops' Conference of the Philippines (CBCP)",
+            CRBC: "Taiwan Catholic Bishops' Conference (CRBC)", CBCJ: "Catholic Bishops' Conference of Japan (CBCJ)", ICBC: "Irish Catholic Bishops' Conference (ICBC)",
+            CBCEW: "Catholic Bishops' Conference of England and Wales (CBCEW)", BCOS: "Catholic Bishops' Conference of Scotland (BCOS)",
+            USCCB: 'United States Conference of Catholic Bishops (USCCB)', ROMAN: 'Universal Roman Rite', AUTO: 'Automatic location fallback'
+        },
+        JP: {
+            CBCK: '韓国カトリック司教協議会 (CBCK)', CBCV: 'ベトナムカトリック司教協議会 (CBCV)', CBCP: 'フィリピンカトリック司教協議会 (CBCP)',
+            CRBC: '台湾カトリック司教協議会 (CRBC)', CBCJ: '日本カトリック司教協議会 (CBCJ)', ICBC: 'アイルランドカトリック司教協議会 (ICBC)',
+            CBCEW: 'イングランド・ウェールズカトリック司教協議会 (CBCEW)', BCOS: 'スコットランドカトリック司教協議会 (BCOS)',
+            USCCB: '米国カトリック司教協議会 (USCCB)', ROMAN: '普遍ローマ典礼', AUTO: '現在地の自動代替'
+        },
+        LA: {
+            CBCK: 'Conferentia Episcoporum Catholicorum Coreae (CBCK)', CBCV: 'Conferentia Episcoporum Catholicorum Vietnamiae (CBCV)', CBCP: 'Conferentia Episcoporum Catholicorum Philippinarum (CBCP)',
+            CRBC: 'Conferentia Episcoporum Catholicorum Taivaniae (CRBC)', CBCJ: 'Conferentia Episcoporum Catholicorum Iaponiae (CBCJ)', ICBC: 'Conferentia Episcoporum Catholicorum Hiberniae (ICBC)',
+            CBCEW: 'Conferentia Episcoporum Catholicorum Angliae et Cambriae (CBCEW)', BCOS: 'Conferentia Episcoporum Catholicorum Scotiae (BCOS)',
+            USCCB: 'Conferentia Episcoporum Catholicorum Civitatum Foederatarum (USCCB)', ROMAN: 'Ritus Romanus universalis', AUTO: 'Substitutio loci automatica'
+        }
+    });
+
     function titleCaseLocalizedLanguageName(value) {
         const text = String(value || '');
         return text ? text.charAt(0).toLocaleUpperCase() + text.slice(1) : text;
@@ -15462,7 +15516,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
         const localized = titleCaseLocalizedLanguageName(localizedLanguageNameForUi(lang, ui));
         const native = nativeLanguageNames[lang] || appLanguageName(lang);
-        const beta = ['JP', 'ZH'].includes(lang) ? ' (Beta)' : '';
+        const beta = lang === 'JP' ? ' (Beta)' : '';
         return `${localized}${localized.toLocaleLowerCase() === native.toLocaleLowerCase() ? '' : ` / ${native}`}${beta}`;
     }
 
@@ -15537,6 +15591,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 option.textContent = localizedLocationOptionLabel(option.value, ui);
             });
         }
+        document.querySelectorAll('#set-loc optgroup[data-conference-key], #set-target-lang optgroup[data-conference-key]').forEach(group => {
+            const names = localizedConferenceNames[ui] || localizedConferenceNames.KR;
+            group.label = names[group.dataset.conferenceKey] || group.label;
+        });
         const sourceSelect = document.getElementById('set-vn-source');
         if (sourceSelect) {
             Array.from(sourceSelect.options).forEach(option => {

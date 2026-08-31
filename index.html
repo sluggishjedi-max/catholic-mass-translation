@@ -204,13 +204,13 @@
         .aux-panel { display: none; max-width: 1100px; margin: 0 auto; padding: 18px 20px 86px; background: #fff; color: #333; }
         .aux-panel.active { display: block; }
         .aux-card { border: 1px solid #e1e5ea; border-radius: 12px; padding: 16px; margin-bottom: 14px; background: #fff; box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05); }
-        .aux-panel-header-card { min-height: 218px; box-sizing: border-box; }
-        .aux-panel-header-card > h2 { display: flex; align-items: center; min-height: 44px; margin: 0 0 8px; }
-        .aux-panel-header-card > .aux-dev-warning { min-height: 0; box-sizing: border-box; }
+        .aux-panel-header-card { min-height: 0; box-sizing: border-box; }
+        .aux-panel > h2 { display: flex; align-items: center; min-height: 44px; margin: 0 0 8px; }
+        .aux-panel > .aux-dev-warning { min-height: 0; box-sizing: border-box; }
         .aux-panel h2 { margin-bottom: 8px; color: var(--primary-color); font-size: 1.25rem; }
         .aux-panel h3 { margin-bottom: 8px; color: var(--primary-color); font-size: 1.05rem; }
         .aux-title-secondary { color: var(--sub-txt); opacity: 0.62; font-size: 0.88em; font-weight: 700; }
-        .aux-dev-warning { display: grid; gap: 5px; margin: 0 0 14px; padding: 0; border: 0; border-radius: 0; background: transparent; color: #775700; line-height: 1.45; }
+        .aux-dev-warning { display: grid; gap: 5px; margin: 0 0 14px; padding: 0; border: 0; border-radius: 0; outline: 0; box-shadow: none; background: transparent; color: #775700; line-height: 1.45; }
         .aux-warning-line { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 8px; align-items: start; }
         .aux-warning-language { font-weight: 900; white-space: nowrap; }
         .aux-warning-text { min-width: 0; font-weight: 700; overflow-wrap: anywhere; }
@@ -435,8 +435,8 @@
             #church-panel { padding-bottom: 14px; }
             .aux-card { padding: 13px; }
             .aux-panel-header-card { min-height: 0; padding: 10px 11px; }
-            .aux-panel-header-card > h2 { min-height: 38px; margin-bottom: 6px; }
-            .aux-panel-header-card > .aux-dev-warning { min-height: 0; margin-bottom: 8px; padding: 0; }
+            .aux-panel > h2 { min-height: 38px; margin-bottom: 6px; }
+            .aux-panel > .aux-dev-warning { min-height: 0; margin-bottom: 8px; padding: 0; }
             .aux-panel-header-card .aux-controls { gap: 6px; margin: 8px 0 0; }
             .aux-panel-header-card .aux-search-row,
             .aux-panel-header-card .aux-prayer-row { grid-template-columns: minmax(104px, 0.8fr) minmax(0, 1.2fr); gap: 6px; }
@@ -596,9 +596,9 @@
 </section>
 
 <section id="prayer-panel" class="aux-panel" aria-labelledby="prayer-panel-title">
+    <h2 id="prayer-panel-title">다국어 기도문</h2>
+    <div id="prayer-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.</div>
     <div class="aux-card aux-panel-header-card">
-        <h2 id="prayer-panel-title">다국어 기도문</h2>
-        <div id="prayer-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.</div>
         <div id="prayer-controls-anchor" class="aux-controls-anchor"></div>
         <div id="prayer-controls" class="aux-controls">
             <div class="aux-search-row aux-prayer-row">
@@ -619,19 +619,19 @@
 </section>
 
 <section id="hymn-panel" class="aux-panel" aria-labelledby="hymn-panel-title">
+    <h2 id="hymn-panel-title" class="hymn-title-heading">
+        <span id="hymn-panel-title-label">성가 검색</span>
+        <select id="hymn-country" class="aux-select hymn-country-title-select" aria-label="성가 국가 선택" onchange="renderHymnPanel({ resetCategory: true })">
+            <option value="KR">한국어 성가</option>
+            <option value="VN">Thánh ca tiếng Việt</option>
+            <option value="EN">English Hymns</option>
+            <option value="JP">日本語聖歌</option>
+            <option value="LA">Cantus Latini</option>
+            <option value="ZH">中文聖歌 (製作中)</option>
+        </select>
+    </h2>
+    <div id="hymn-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 한국어/베트남어 성가 작업중으로, 가사 표출이 정상적이지 않습니다.</div>
     <div class="aux-card aux-panel-header-card">
-        <h2 id="hymn-panel-title" class="hymn-title-heading">
-            <span id="hymn-panel-title-label">성가 검색</span>
-            <select id="hymn-country" class="aux-select hymn-country-title-select" aria-label="성가 국가 선택" onchange="renderHymnPanel({ resetCategory: true })">
-                <option value="KR">한국어 성가</option>
-                <option value="VN">Thánh ca tiếng Việt</option>
-                <option value="EN">English Hymns</option>
-                <option value="JP">日本語聖歌</option>
-                <option value="LA">Cantus Latini</option>
-                <option value="ZH">中文聖歌 (製作中)</option>
-            </select>
-        </h2>
-        <div id="hymn-dev-warning" class="aux-dev-warning" role="status" aria-live="polite">현재 한국어/베트남어 성가 작업중으로, 가사 표출이 정상적이지 않습니다.</div>
         <div id="hymn-controls-anchor" class="aux-controls-anchor"></div>
         <div id="hymn-controls" class="aux-controls">
             <div class="aux-search-row">
@@ -688,45 +688,45 @@
         <div class="setting-row" id="manual-loc-row">
             <label id="lbl-set-loc">🌐 현재위치 / 원문 언어 (좌측)</label>
             <select id="set-loc" onchange="selectManualLocation()">
-                <optgroup id="automatic-fallback-location-group" label="Automatic fallback" hidden><option value="INTL">Other region / English (automatic)</option></optgroup>
-                <optgroup label="한국천주교주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
-                <optgroup label="베트남주교회의 (CBCV)"><option value="VN">베트남 / Tiếng Việt</option></optgroup>
-                <optgroup label="필리핀 주교회의 (CBCP)"><option value="PH">필리핀 / English (Beta)</option></optgroup>
-                <optgroup label="천주교회 대만지구 주교단 (CRBC)"><option value="TW">대만 / 繁體中文 (Beta)</option></optgroup>
-                <optgroup label="일본 천주교주교회의 (CBCJ)"><option value="JP">일본 / 日本語 (Beta)</option></optgroup>
-                <optgroup label="아일랜드 주교회의">
-                    <option value="IE">아일랜드 / English (Beta)</option>
-                    <option value="GB-NIR">북아일랜드 / English (Beta)</option>
+                <optgroup id="automatic-fallback-location-group" data-conference-key="AUTO" label="자동 위치 대체" hidden><option value="INTL">기타 지역 / 영어 / English</option></optgroup>
+                <optgroup data-conference-key="CBCK" label="한국 천주교 주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
+                <optgroup data-conference-key="CBCV" label="베트남 가톨릭 주교회의 (CBCV)"><option value="VN">베트남 / 베트남어 / Tiếng Việt</option></optgroup>
+                <optgroup data-conference-key="CBCP" label="필리핀 가톨릭 주교회의 (CBCP)"><option value="PH">필리핀 / 영어 / English (Beta)</option></optgroup>
+                <optgroup data-conference-key="CRBC" label="대만 천주교 주교회의 (CRBC)"><option value="TW">대만 / 중국어 번체 / 繁體中文 (Beta)</option></optgroup>
+                <optgroup data-conference-key="CBCJ" label="일본 천주교 주교회의 (CBCJ)"><option value="JP">일본 / 일본어 / 日本語 (Beta)</option></optgroup>
+                <optgroup data-conference-key="ICBC" label="아일랜드 가톨릭 주교회의 (ICBC)">
+                    <option value="IE">아일랜드 / 영어 / English (Beta)</option>
+                    <option value="GB-NIR">북아일랜드 / 영어 / English (Beta)</option>
                 </optgroup>
-                <optgroup label="잉글랜드·웨일즈 주교회의 (CBCEW)">
-                    <option value="GB-ENG">잉글랜드 / English (Beta)</option>
-                    <option value="GB-WLS">웨일즈 / English (Beta)</option>
+                <optgroup data-conference-key="CBCEW" label="잉글랜드·웨일스 가톨릭 주교회의 (CBCEW)">
+                    <option value="GB-ENG">잉글랜드 / 영어 / English (Beta)</option>
+                    <option value="GB-WLS">웨일스 / 영어 / English (Beta)</option>
                 </optgroup>
-                <optgroup label="스코틀랜드 주교회의 (BCOS)"><option value="GB-SCT">스코틀랜드 / English (Beta)</option></optgroup>
-                <optgroup label="미국 천주교주교회의 (USCCB)"><option value="US">미국 / English</option></optgroup>
-                <optgroup label="보편 로마 전례"><option value="VA">바티칸 / Latin</option></optgroup>
+                <optgroup data-conference-key="BCOS" label="스코틀랜드 가톨릭 주교회의 (BCOS)"><option value="GB-SCT">스코틀랜드 / 영어 / English (Beta)</option></optgroup>
+                <optgroup data-conference-key="USCCB" label="미국 가톨릭 주교회의 (USCCB)"><option value="US">미국 / 영어 / English</option></optgroup>
+                <optgroup data-conference-key="ROMAN" label="보편 로마 전례"><option value="VA">바티칸 / 라틴어 / Latine</option></optgroup>
             </select>
         </div>
 
         <div class="setting-row">
             <label id="lbl-set-target">🔄 번역 희망 언어 (우측)</label>
             <select id="set-target-lang" onchange="updateSettings()">
-                <optgroup label="한국천주교주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
-                <optgroup label="베트남주교회의 (CBCV)"><option value="VN">베트남 / Tiếng Việt</option></optgroup>
-                <optgroup label="필리핀 주교회의 (CBCP)"><option value="PH">필리핀 / English (Beta)</option></optgroup>
-                <optgroup label="천주교회 대만지구 주교단 (CRBC)"><option value="TW">대만 / 繁體中文 (Beta)</option></optgroup>
-                <optgroup label="일본 천주교주교회의 (CBCJ)"><option value="JP">일본 / 日本語 (Beta)</option></optgroup>
-                <optgroup label="아일랜드 주교회의">
-                    <option value="IE">아일랜드 / English (Beta)</option>
-                    <option value="GB-NIR">북아일랜드 / English (Beta)</option>
+                <optgroup data-conference-key="CBCK" label="한국 천주교 주교회의 (CBCK)"><option value="KR">한국 / 한국어</option></optgroup>
+                <optgroup data-conference-key="CBCV" label="베트남 가톨릭 주교회의 (CBCV)"><option value="VN">베트남 / 베트남어 / Tiếng Việt</option></optgroup>
+                <optgroup data-conference-key="CBCP" label="필리핀 가톨릭 주교회의 (CBCP)"><option value="PH">필리핀 / 영어 / English (Beta)</option></optgroup>
+                <optgroup data-conference-key="CRBC" label="대만 천주교 주교회의 (CRBC)"><option value="TW">대만 / 중국어 번체 / 繁體中文 (Beta)</option></optgroup>
+                <optgroup data-conference-key="CBCJ" label="일본 천주교 주교회의 (CBCJ)"><option value="JP">일본 / 일본어 / 日本語 (Beta)</option></optgroup>
+                <optgroup data-conference-key="ICBC" label="아일랜드 가톨릭 주교회의 (ICBC)">
+                    <option value="IE">아일랜드 / 영어 / English (Beta)</option>
+                    <option value="GB-NIR">북아일랜드 / 영어 / English (Beta)</option>
                 </optgroup>
-                <optgroup label="잉글랜드·웨일즈 주교회의 (CBCEW)">
-                    <option value="GB-ENG">잉글랜드 / English (Beta)</option>
-                    <option value="GB-WLS">웨일즈 / English (Beta)</option>
+                <optgroup data-conference-key="CBCEW" label="잉글랜드·웨일스 가톨릭 주교회의 (CBCEW)">
+                    <option value="GB-ENG">잉글랜드 / 영어 / English (Beta)</option>
+                    <option value="GB-WLS">웨일스 / 영어 / English (Beta)</option>
                 </optgroup>
-                <optgroup label="스코틀랜드 주교회의 (BCOS)"><option value="GB-SCT">스코틀랜드 / English (Beta)</option></optgroup>
-                <optgroup label="미국 천주교주교회의 (USCCB)"><option value="US" selected>미국 / English</option></optgroup>
-                <optgroup label="보편 로마 전례"><option value="VA">바티칸 / Latin</option></optgroup>
+                <optgroup data-conference-key="BCOS" label="스코틀랜드 가톨릭 주교회의 (BCOS)"><option value="GB-SCT">스코틀랜드 / 영어 / English (Beta)</option></optgroup>
+                <optgroup data-conference-key="USCCB" label="미국 가톨릭 주교회의 (USCCB)"><option value="US" selected>미국 / 영어 / English</option></optgroup>
+                <optgroup data-conference-key="ROMAN" label="보편 로마 전례"><option value="VA">바티칸 / 라틴어 / Latine</option></optgroup>
             </select>
         </div>
 
@@ -837,6 +837,6 @@
 <script src="JS%20file/bishop_data.js?v=20260822-v26"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260822-v26"></script>
 
-<script src="JS%20file/app_v27_3.js?v=20260831-v27-3-r2-static-taiwan-and-layout-fixes"></script>
+<script src="JS%20file/app_v27_3.js?v=20260831-v27-3-r3-taiwan-display-and-localized-conferences"></script>
 </body>
 </html>

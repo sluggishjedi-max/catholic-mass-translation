@@ -4,6 +4,7 @@ const path = require('path');
 const { chromium } = require('@playwright/test');
 
 const root = path.resolve(__dirname, '..');
+const liveSources = process.env.ORDO_LIVE_SOURCES === '1';
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -40,6 +41,7 @@ function startServer() {
   page.on('pageerror', error => pageErrors.push(error.stack || String(error)));
   await page.addInitScript(() => {
     const originalFetch = window.fetch.bind(window);
+    window.__ordoOriginalFetch = originalFetch;
     window.fetch = async (url, options) => {
       if (String(url).startsWith(location.origin)) return originalFetch(url, options);
       throw new Error('Remote fetch disabled by V27.3 browser check');
@@ -67,7 +69,7 @@ function startServer() {
       timeout: 15000
     });
 
-    const result = await page.evaluate(async () => {
+    const result = await page.evaluate(async liveSourceCheck => {
       const unsupported = ['CN', 'ID', 'TH', 'KH', 'SG', 'MY', 'BN', 'HK', 'MO'];
       const locationSelect = document.getElementById('set-loc');
       const visibleGpsOptions = Array.from(locationSelect.options).filter(option => !option.hidden).map(option => option.value);
@@ -98,6 +100,25 @@ function startServer() {
         targetLabel: document.querySelector('#set-target-lang option[value="JP"]').textContent,
         uiLabel: document.querySelector('#set-ui-lang option[value="JP"]').textContent
       };
+      const savedUiLanguage = state.uiLang;
+      const localizedSettings = {};
+      ['KR', 'VN', 'EN', 'JP', 'LA'].forEach(ui => {
+        state.uiLang = ui;
+        syncLocalizedChromeAndSettings();
+        const groupLabel = (selectId, key) => document.querySelector(`#${selectId} optgroup[data-conference-key="${key}"]`).label;
+        localizedSettings[ui] = {
+          taiwan: document.querySelector('#set-loc option[value="TW"]').textContent,
+          ireland: document.querySelector('#set-loc option[value="IE"]').textContent,
+          cbck: groupLabel('set-loc', 'CBCK'),
+          crbc: groupLabel('set-loc', 'CRBC'),
+          icbc: groupLabel('set-loc', 'ICBC'),
+          cbcp: groupLabel('set-loc', 'CBCP'),
+          targetTaiwan: document.querySelector('#set-target-lang option[value="TW"]').textContent,
+          targetIcbc: groupLabel('set-target-lang', 'ICBC')
+        };
+      });
+      state.uiLang = savedUiLanguage;
+      syncLocalizedChromeAndSettings();
 
       const modules = globalThis.countryMassData;
       const date = (year, month, day) => new Date(year, month - 1, day, 12, 0, 0);
@@ -124,6 +145,36 @@ Jesus told his disciples this parable.
 St. Example
 This biography must never be parsed as part of the Gospel.`;
       const cbcpBoundaryParsed = strictParseDailyMass('EN', cbcpBoundaryFixture, date(2026, 8, 29));
+      const universalisFixture = `Title: Readings at Mass
+URL Source: https://universalis.com/L/europe.ireland/20260831/mass.htm
+Markdown Content:
+| First reading |
+| --- |
+| 1 Corinthians 2:1-5 |
+#### A reading summary
+This is the complete first-reading body used by the parser regression.
+| Responsorial Psalm |
+| --- |
+| Psalm 118:97-102 |
+R. Lord, I love your law.
+The psalm body remains attached to its section.
+| Gospel Acclamation | John 8:12 |
+| --- | --- |
+Alleluia, alleluia.
+The word of the Lord is light.
+Alleluia.
+| Gospel | Luke 4:16-30 |
+| --- | --- |
+#### A Gospel summary
+This is the complete Gospel body used by the parser regression.
+You can also view this page with the New Testament in Greek and English.`;
+      const universalisSharedParser = Object.fromEntries(['IE', 'GB-ENG', 'GB-WLS', 'GB-SCT'].map(code => {
+        const parsed = strictParseDailyMass('EN', universalisFixture, date(2026, 8, 31), code);
+        return [code, {
+          sections: Object.keys(parsed.data || {}),
+          missing: missingCoreDailyReadingSections(parsed)
+        }];
+      }));
       const sharedApplyLines = [Object.assign(emptyMassLine(), {
         text_kr: '주님의 말씀입니다.',
         role_kr: 'body',
@@ -212,7 +263,15 @@ This biography must never be parsed as part of the Gospel.`;
         text: warningElement.innerText,
         lines: warningElement.querySelectorAll('.aux-warning-line').length,
         borderStyle: getComputedStyle(warningElement).borderStyle,
-        backgroundColor: getComputedStyle(warningElement).backgroundColor
+        backgroundColor: getComputedStyle(warningElement).backgroundColor,
+        boxShadow: getComputedStyle(warningElement).boxShadow,
+        insideCard: Boolean(warningElement.closest('.aux-card')),
+        rows: Array.from(warningElement.querySelectorAll('.aux-warning-line')).map(line => ({
+          display: getComputedStyle(line).display,
+          columns: getComputedStyle(line).gridTemplateColumns,
+          label: (line.querySelector('.aux-warning-language') || {}).textContent || '',
+          text: (line.querySelector('.aux-warning-text') || {}).textContent || ''
+        }))
       };
       state.currentLoc = savedDisplayLanguages.currentLoc;
       state.targetLang = savedDisplayLanguages.targetLang;
@@ -259,6 +318,8 @@ This biography must never be parsed as part of the Gospel.`;
       const taiwanStaticLines = strictExpandTraditionalChineseLines(strictSourceLines(taiwanProxySource));
       const taiwanStaticRaw = strictExtractRawSections(taiwanStaticLines, 'ZH', getStrictMassSelector(date(2026, 8, 30)));
       const taiwanStaticParsed = strictParseDailyMass('ZH', taiwanProxySource, date(2026, 8, 30), 'TW');
+      const taiwanActualLoaded = await fetchStrictDailyMass('ZH', date(2026, 8, 31), { locationCode: 'TW' });
+      const taiwanTodayRequiredSections = ['entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'];
       const taiwanFutureBRecord = traditionalChineseStaticMassRecord(date(2027, 8, 29));
       const taiwanBRequiredSections = ['collect', 'reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'];
       const taiwanBFailures = (taiwanStaticData.cycles.sundays.B || []).map(id => {
@@ -276,6 +337,38 @@ This biography must never be parsed as part of the Gospel.`;
         return missing.length ? { id, date: record && record.canonicalDate, title: record && record.title, missing } : null;
       }).filter(Boolean);
       window.fetch = originalFetch;
+      const liveAudit = { enabled: liveSourceCheck, results: {} };
+      if (liveSourceCheck) {
+        const blockedFetch = window.fetch;
+        window.fetch = window.__ordoOriginalFetch;
+        const liveDate = date(2026, 8, 31);
+        const specs = [
+          ['KR', 'KR', () => fetchStrictDailyMass('KR', liveDate, { locationCode: 'KR' })],
+          ['VN', 'VN', () => fetchStrictDailyMass('VN', liveDate, { locationCode: 'VN' })],
+          ['JP', 'JP', () => fetchStrictDailyMass('JP', liveDate, { locationCode: 'JP' })],
+          ['LA', 'VA', () => fetchLatinDailyMass(liveDate)],
+          ['EN-IE', 'IE', () => fetchStrictDailyMass('EN', liveDate, { locationCode: 'IE' })],
+          ['EN-GB-ENG', 'GB-ENG', () => fetchStrictDailyMass('EN', liveDate, { locationCode: 'GB-ENG' })],
+          ['EN-GB-WLS', 'GB-WLS', () => fetchStrictDailyMass('EN', liveDate, { locationCode: 'GB-WLS' })],
+          ['EN-GB-SCT', 'GB-SCT', () => fetchStrictDailyMass('EN', liveDate, { locationCode: 'GB-SCT' })],
+          ['EN-PH', 'PH', () => fetchStrictDailyMass('EN', liveDate, { locationCode: 'PH' })]
+        ];
+        const settled = await Promise.all(specs.map(async ([name, locationCode, load]) => {
+          try {
+            const parsed = await load();
+            return [name, {
+              locationCode,
+              sections: Object.keys(parsed && parsed.data || {}),
+              missing: missingCoreDailyReadingSections(parsed),
+              title: parsed && parsed.title || ''
+            }];
+          } catch (error) {
+            return [name, { locationCode, sections: [], missing: coreDailyReadingSectionKeys.slice(), error: String(error && (error.stack || error)) }];
+          }
+        }));
+        liveAudit.results = Object.fromEntries(settled);
+        window.fetch = blockedFetch;
+      }
       return {
         version: APP_VERSION,
         versionLabel: document.getElementById('settings-version-label').textContent,
@@ -285,6 +378,7 @@ This biography must never be parsed as part of the Gospel.`;
         manualEnabled,
         afterManual,
         jpUi,
+        localizedSettings,
         unsupportedOptions: unsupported.filter(code => document.querySelector(`#set-loc option[value="${code}"]`)),
         unsupportedProfiles: unsupported.filter(code => liturgicalCalendarProfiles[code]),
         modules: Object.fromEntries(['IE', 'GB-ENG', 'GB-WLS', 'GB-SCT', 'PH'].map(code => [code, {
@@ -307,6 +401,7 @@ This biography must never be parsed as part of the Gospel.`;
           hasReading: Boolean(cbcpBoundaryParsed.data && cbcpBoundaryParsed.data.reading1),
           gospel: JSON.stringify(cbcpBoundaryParsed.data && cbcpBoundaryParsed.data.gospel || {})
         },
+        universalisSharedParser,
         parserRegression: {
           sharedApplyError,
           japaneseDayWordIsMassLabel: strictIsDayMassLabel('わたしは一日中、笑い者にされる。'),
@@ -343,9 +438,12 @@ This biography must never be parsed as part of the Gospel.`;
           variantLines: taiwanStaticLines.map(line => ({ line, kind: strictVariantKind(line) })).filter(item => item.kind),
           rawSections: Object.fromEntries(Object.entries(taiwanStaticRaw).map(([key, value]) => [key, value.lines.length])),
           sections: Object.keys(taiwanStaticParsed.data || {}),
+          actualTodaySections: Object.keys(taiwanActualLoaded.data || {}),
+          actualTodayMissing: taiwanTodayRequiredSections.filter(key => !sourceSectionHasContent(taiwanActualLoaded.data && taiwanActualLoaded.data[key])),
           futureBTitle: taiwanFutureBRecord && taiwanFutureBRecord.title,
           bCycleFailures: taiwanBFailures
         },
+        liveAudit,
         philippines: {
           fallbackUrl: modules.PH.dailyReadings.fallbackUrl('20260829'),
           hasUniversalisProperParser: Boolean(modules.PH.dailyPropers),
@@ -368,7 +466,7 @@ This biography must never be parsed as part of the Gospel.`;
           hasPhilippines: globalThis.churchLocalDetailRecords.some(entry => entry.country === 'PH')
         }
       };
-    });
+    }, liveSources);
 
     assert(/^V27\.3-/.test(result.version), `Unexpected runtime version: ${result.version}`);
     assert(result.versionLabel === 'V27.3', `Settings version label is wrong: ${result.versionLabel}`);
@@ -379,6 +477,20 @@ This biography must never be parsed as part of the Gospel.`;
     assert(result.manualEnabled && !result.afterManual.useGps && result.afterManual.code === 'IE', `Manual selection did not unlock correctly: ${JSON.stringify(result.afterManual)}`);
     assert(result.jpUi.settingsTitle === '設定' && result.jpUi.consentTitle === 'ご利用前のご案内', `Japanese beta UI warnings are missing: ${JSON.stringify(result.jpUi)}`);
     assert(/Beta/.test(result.jpUi.targetLabel) && /Beta/.test(result.jpUi.uiLabel), `Japanese beta labels are missing: ${JSON.stringify(result.jpUi)}`);
+    assert(result.localizedSettings.KR.taiwan === '대만 / 중국어 번체 / 繁體中文 (Beta)', `Korean Taiwan label is wrong: ${JSON.stringify(result.localizedSettings.KR)}`);
+    assert(result.localizedSettings.KR.icbc === '아일랜드 가톨릭 주교회의 (ICBC)', `Korean Ireland conference label is wrong: ${JSON.stringify(result.localizedSettings.KR)}`);
+    assert(/천주교 주교회의/.test(result.localizedSettings.KR.cbck)
+      && /천주교 주교회의/.test(result.localizedSettings.KR.crbc)
+      && /가톨릭 주교회의/.test(result.localizedSettings.KR.icbc)
+      && /가톨릭 주교회의/.test(result.localizedSettings.KR.cbcp),
+    `Korean conference naming convention is inconsistent: ${JSON.stringify(result.localizedSettings.KR)}`);
+    assert(new Set(Object.values(result.localizedSettings).map(entry => entry.taiwan)).size === 5
+      && new Set(Object.values(result.localizedSettings).map(entry => entry.icbc)).size === 5,
+    `Country/language/conference labels did not follow the UI language: ${JSON.stringify(result.localizedSettings)}`);
+    Object.entries(result.localizedSettings).forEach(([ui, entry]) => {
+      assert(entry.taiwan === entry.targetTaiwan && entry.icbc === entry.targetIcbc,
+        `${ui} left/right settings labels are inconsistent: ${JSON.stringify(entry)}`);
+    });
     assert(!result.unsupportedOptions.length && !result.unsupportedProfiles.length, `Unsupported country remnants: ${JSON.stringify(result)}`);
     Object.entries(result.modules).forEach(([code, module]) => {
       assert(module.ordinaryLength === 32 && module.independentFromUs, `${code} does not own a complete independent ordinary: ${JSON.stringify(module)}`);
@@ -392,6 +504,9 @@ This biography must never be parsed as part of the Gospel.`;
     assert(result.properResolution.philippinesSantoNinoSections === 5, `Philippines national proper resolution failed: ${JSON.stringify(result.properResolution)}`);
     assert(result.cbcpBoundary.hasReading, 'CBCP regression fixture did not parse the readings.');
     assert(!/Saint of the Day|St\. Example|biography/i.test(result.cbcpBoundary.gospel), `CBCP Saint of the Day leaked into the Gospel: ${result.cbcpBoundary.gospel}`);
+    Object.entries(result.universalisSharedParser).forEach(([code, audit]) => {
+      assert(audit.missing.length === 0, `${code} lost Universalis reading sections: ${JSON.stringify(audit)}`);
+    });
     assert(!result.parserRegression.sharedApplyError, `Shared multilingual reading application crashed: ${result.parserRegression.sharedApplyError}`);
     assert(!result.parserRegression.japaneseDayWordIsMassLabel, 'Japanese 一日中 text was mistaken for a daytime Mass label.');
     assert(result.parserRegression.japaneseDayMassLabelRecognized, 'A real Japanese daytime Mass label was not recognized.');
@@ -402,7 +517,12 @@ This biography must never be parsed as part of the Gospel.`;
     assert(result.parserRegression.chineseGospel.lines[0].role === 'summary' && result.parserRegression.chineseGospel.lines[0].text === '誰願意跟隨我，就該捨棄自己。', `Chinese Gospel summary was not preserved: ${JSON.stringify(result.parserRegression.chineseGospel)}`);
     assert(!/信經|我信唯一/u.test(JSON.stringify(result.parserRegression.chineseGospel)), `Chinese Creed leaked into the Gospel: ${JSON.stringify(result.parserRegression.chineseGospel)}`);
     assert(result.chineseWarning.lines === 2 && /한국어\s*:/.test(result.chineseWarning.text) && /中文\s*:/.test(result.chineseWarning.text), `Chinese paired warning is missing: ${JSON.stringify(result.chineseWarning)}`);
-    assert(result.chineseWarning.borderStyle === 'none' && result.chineseWarning.backgroundColor === 'rgba(0, 0, 0, 0)', `Auxiliary warning is still boxed: ${JSON.stringify(result.chineseWarning)}`);
+    assert(result.chineseWarning.borderStyle === 'none'
+      && result.chineseWarning.backgroundColor === 'rgba(0, 0, 0, 0)'
+      && result.chineseWarning.boxShadow === 'none'
+      && !result.chineseWarning.insideCard
+      && result.chineseWarning.rows.every(row => row.display === 'grid' && row.label && row.text),
+    `Auxiliary warning is still boxed or not aligned: ${JSON.stringify(result.chineseWarning)}`);
     assert(!result.sourceChoiceAi.suppressed && /Lạy Chúa/.test(result.sourceChoiceAi.source) && /btn-ai-trans/.test(result.sourceChoiceAi.button), `Prayer source choice did not expose the Korean AI button: ${JSON.stringify(result.sourceChoiceAi)}`);
     assert(result.alignedReadingFixture.rows === 3
       && ['korean', 'chinese', 'english', 'vietnamese', 'japanese', 'latin'].every(lang => (
@@ -425,9 +545,15 @@ This biography must never be parsed as part of the Gospel.`;
       && /常年期第廿二主日/.test(result.taiwanStatic.title)
       && /讀經一/.test(result.taiwanStatic.source)
       && ['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel'].every(key => result.taiwanStatic.sections.includes(key))
+      && result.taiwanStatic.actualTodayMissing.length === 0
       && /常年期第廿二主日/.test(result.taiwanStatic.futureBTitle)
       && result.taiwanStatic.bCycleFailures.length === 0,
     `Taiwan static daily Mass selection/parsing failed: ${JSON.stringify(result.taiwanStatic)}`);
+    if (result.liveAudit.enabled) {
+      Object.entries(result.liveAudit.results).forEach(([source, audit]) => {
+        assert(!audit.error && audit.missing.length === 0, `${source} live daily source is incomplete: ${JSON.stringify(audit)}`);
+      });
+    }
     assert(/cbcp\.ph\/readings\/august-29-2026/.test(result.modules.PH.dailyUrl), `CBCP daily URL is wrong: ${result.modules.PH.dailyUrl}`);
     assert(/bible\.usccb\.org\/bible\/readings\/082926\.cfm/.test(result.philippines.fallbackUrl), `Philippines approved-text fallback is wrong: ${result.philippines.fallbackUrl}`);
     assert(!result.philippines.hasUniversalisProperParser, 'Universalis readings-only page must not be treated as a Philippines proper parser.');
