@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.4-20260901-ZH-JP-QUOTE-PARSER-FIX';
+    const APP_VERSION = 'V27.4-20260901-REGIONAL-LANGUAGE-SELECTORS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -2094,6 +2094,10 @@
         state.targetLang = normalizeDistinctTargetLang(state.targetLang, left);
         if (!select) return;
         Array.from(select.options).forEach(option => {
+            if (!locationMeta[option.value]) {
+                option.disabled = true;
+                return;
+            }
             const sameAsLeft = targetLanguageForLocationCode(option.value) === left;
             option.hidden = false;
             option.disabled = sameAsLeft;
@@ -2118,9 +2122,10 @@
     ) {
         const lang = normalizeSelectableLang(langCode || DEFAULT_TARGET_LANG, DEFAULT_TARGET_LANG);
         if (!select) return '';
-        const preferred = Array.from(select.options).find(option => option.value === preferredLocationCode);
+        const representativePreferred = representativeLocationSelectionCode(preferredLocationCode);
+        const preferred = Array.from(select.options).find(option => option.value === representativePreferred && locationMeta[option.value]);
         if (preferred && targetLanguageForLocationCode(preferred.value) === lang) return preferred.value;
-        const matched = Array.from(select.options).find(option => targetLanguageForLocationCode(option.value) === lang);
+        const matched = Array.from(select.options).find(option => locationMeta[option.value] && targetLanguageForLocationCode(option.value) === lang);
         return matched ? matched.value : '';
     }
 
@@ -5330,7 +5335,7 @@
 
     function setLocationSelectByCode(locationCode) {
         const select = document.getElementById('set-loc');
-        if (select && locationMeta[locationCode]) select.value = locationCode;
+        if (select && locationMeta[locationCode]) select.value = representativeLocationSelectionCode(locationCode);
     }
 
     function syncLocationControlForGps() {
@@ -5338,7 +5343,9 @@
         const select = document.getElementById('set-loc');
         if (row) row.style.display = 'flex';
         if (!select) return;
-        const selectedCode = locationMeta[state.selectedLocationCode] ? state.selectedLocationCode : 'INTL';
+        const selectedCode = locationMeta[state.selectedLocationCode]
+            ? representativeLocationSelectionCode(state.selectedLocationCode)
+            : 'INTL';
         select.value = selectedCode;
         select.disabled = !!state.useGps;
         select.setAttribute('aria-disabled', state.useGps ? 'true' : 'false');
@@ -15724,8 +15731,55 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         VN: { KR: 'Hàn Quốc', VN: 'Việt Nam', US: 'Hoa Kỳ', IE: 'Ireland', 'GB-NIR': 'Bắc Ireland', 'GB-ENG': 'Anh', 'GB-WLS': 'Wales', 'GB-SCT': 'Scotland', PH: 'Philippines', TW: 'Đài Loan', AU: 'Úc', NZ: 'New Zealand', JP: 'Nhật Bản', VA: 'Vatican', INTL: 'Khu vực khác' },
         EN: { KR: 'South Korea', VN: 'Vietnam', US: 'United States', IE: 'Ireland', 'GB-NIR': 'Northern Ireland', 'GB-ENG': 'England', 'GB-WLS': 'Wales', 'GB-SCT': 'Scotland', PH: 'Philippines', TW: 'Taiwan', AU: 'Australia', NZ: 'New Zealand', JP: 'Japan', VA: 'Vatican City', INTL: 'Other region' },
         JP: { KR: '韓国', VN: 'ベトナム', US: 'アメリカ', IE: 'アイルランド', 'GB-NIR': '北アイルランド', 'GB-ENG': 'イングランド', 'GB-WLS': 'ウェールズ', 'GB-SCT': 'スコットランド', PH: 'フィリピン', TW: '台湾', AU: 'オーストラリア', NZ: 'ニュージーランド', JP: '日本', VA: 'バチカン', INTL: 'その他の地域' },
-        LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', 'GB-ENG': 'Anglia', 'GB-WLS': 'Cambria', 'GB-SCT': 'Scotia', PH: 'Philippinae', TW: 'Taivania', AU: 'Australia', NZ: 'Nova Zelandia', JP: 'Iaponia', VA: 'Civitas Vaticana', INTL: 'Alia regio' }
+        LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', 'GB-ENG': 'Anglia', 'GB-WLS': 'Cambria', 'GB-SCT': 'Scotia', PH: 'Philippinae', TW: 'Taivania', AU: 'Australia', NZ: 'Nova Zelandia', JP: 'Iaponia', VA: 'Civitas Vaticana', INTL: 'Alia regio' },
+        ZH: { KR: '韓國', VN: '越南', US: '美國', IE: '愛爾蘭', 'GB-NIR': '北愛爾蘭', 'GB-ENG': '英格蘭', 'GB-WLS': '威爾斯', 'GB-SCT': '蘇格蘭', PH: '菲律賓', TW: '臺灣', AU: '澳洲', NZ: '紐西蘭', JP: '日本', VA: '梵蒂岡', INTL: '其他地區' }
     });
+
+    const locationRegionOrder = Object.freeze([
+        'ANGLO_AMERICAN', 'WESTERN_EUROPE', 'EASTERN_EUROPE', 'NORTHEAST_ASIA',
+        'SOUTHEAST_ASIA', 'WEST_ASIA', 'LATIN_AMERICA', 'AFRICA'
+    ]);
+
+    const localizedLocationRegionNames = Object.freeze({
+        KR: { ANGLO_AMERICAN: '영미권', WESTERN_EUROPE: '서유럽권', EASTERN_EUROPE: '동유럽권', NORTHEAST_ASIA: '동북아시아', SOUTHEAST_ASIA: '동남아시아', WEST_ASIA: '서아시아', LATIN_AMERICA: '중남미권', AFRICA: '아프리카' },
+        VN: { ANGLO_AMERICAN: 'Khu vực Anh-Mỹ', WESTERN_EUROPE: 'Tây Âu', EASTERN_EUROPE: 'Đông Âu', NORTHEAST_ASIA: 'Đông Bắc Á', SOUTHEAST_ASIA: 'Đông Nam Á', WEST_ASIA: 'Tây Á', LATIN_AMERICA: 'Mỹ Latinh', AFRICA: 'Châu Phi' },
+        EN: { ANGLO_AMERICAN: 'Anglo-American Region', WESTERN_EUROPE: 'Western Europe', EASTERN_EUROPE: 'Eastern Europe', NORTHEAST_ASIA: 'Northeast Asia', SOUTHEAST_ASIA: 'Southeast Asia', WEST_ASIA: 'West Asia', LATIN_AMERICA: 'Latin America', AFRICA: 'Africa' },
+        JP: { ANGLO_AMERICAN: '英米圏', WESTERN_EUROPE: '西ヨーロッパ', EASTERN_EUROPE: '東ヨーロッパ', NORTHEAST_ASIA: '北東アジア', SOUTHEAST_ASIA: '東南アジア', WEST_ASIA: '西アジア', LATIN_AMERICA: '中南米', AFRICA: 'アフリカ' },
+        LA: { ANGLO_AMERICAN: 'Regio Anglica et Americana', WESTERN_EUROPE: 'Europa Occidentalis', EASTERN_EUROPE: 'Europa Orientalis', NORTHEAST_ASIA: 'Asia Boreorientalis', SOUTHEAST_ASIA: 'Asia Austro-Orientalis', WEST_ASIA: 'Asia Occidentalis', LATIN_AMERICA: 'America Latina', AFRICA: 'Africa' },
+        ZH: { ANGLO_AMERICAN: '英美地區', WESTERN_EUROPE: '西歐地區', EASTERN_EUROPE: '東歐地區', NORTHEAST_ASIA: '東北亞', SOUTHEAST_ASIA: '東南亞', WEST_ASIA: '西亞', LATIN_AMERICA: '拉丁美洲', AFRICA: '非洲' }
+    });
+
+    const localizedCombinedJurisdictionNames = Object.freeze({
+        KR: { VA: '보편로마전례', IE: '아일랜드·북아일랜드', 'GB-ENG': '잉글랜드·웨일즈' },
+        VN: { VA: 'Nghi lễ Rôma phổ quát', IE: 'Ireland và Bắc Ireland', 'GB-ENG': 'Anh và Wales' },
+        EN: { VA: 'Universal Roman Rite', IE: 'Ireland & Northern Ireland', 'GB-ENG': 'England & Wales' },
+        JP: { VA: '普遍ローマ典礼', IE: 'アイルランド・北アイルランド', 'GB-ENG': 'イングランド・ウェールズ' },
+        LA: { VA: 'Ritus Romanus universalis', IE: 'Hibernia et Hibernia Septentrionalis', 'GB-ENG': 'Anglia et Cambria' },
+        ZH: { VA: '普世羅馬禮', IE: '愛爾蘭及北愛爾蘭', 'GB-ENG': '英格蘭及威爾斯' }
+    });
+
+    const locationSelectionEntries = Object.freeze([
+        { region: 'ANGLO_AMERICAN', code: 'US', conference: 'USCCB', nativeLanguage: 'English' },
+        { region: 'ANGLO_AMERICAN', code: 'GB-ENG', conference: 'CBCEW', nativeLanguage: 'English', beta: true },
+        { region: 'ANGLO_AMERICAN', code: 'GB-SCT', conference: 'BCOS', nativeLanguage: 'English', beta: true },
+        { region: 'ANGLO_AMERICAN', code: 'IE', conference: 'ICBC', nativeLanguage: 'English', beta: true },
+        { region: 'ANGLO_AMERICAN', code: 'AU', conference: 'ACBC', nativeLanguage: 'English', beta: true },
+        { region: 'ANGLO_AMERICAN', code: 'NZ', conference: 'NZCBC', nativeLanguage: 'English', beta: true },
+        { region: 'NORTHEAST_ASIA', code: 'KR', conference: 'CBCK', nativeLanguage: '한국어' },
+        { region: 'NORTHEAST_ASIA', code: 'JP', conference: 'CBJC', nativeLanguage: '日本語', beta: true },
+        { region: 'NORTHEAST_ASIA', code: 'TW', conference: 'CRCB', nativeLanguage: '繁體中文', beta: true },
+        { region: 'SOUTHEAST_ASIA', code: 'VN', conference: 'CBCV', nativeLanguage: 'Tiếng Việt' },
+        { region: 'SOUTHEAST_ASIA', code: 'PH', conference: 'CBCP', nativeLanguage: 'English', beta: true }
+    ]);
+
+    const representativeLocationSelectionCodes = Object.freeze({
+        'GB-WLS': 'GB-ENG',
+        'GB-NIR': 'IE'
+    });
+
+    function representativeLocationSelectionCode(locationCode) {
+        return representativeLocationSelectionCodes[locationCode] || locationCode;
+    }
 
     const localizedConferenceNames = Object.freeze({
         KR: {
@@ -15776,13 +15830,81 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function localizedLocationOptionLabel(locationCode, uiLang = state.uiLang) {
         const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
-        const location = locationMeta[locationCode];
+        const representativeCode = representativeLocationSelectionCode(locationCode);
+        const location = locationMeta[representativeCode];
         if (!location) return locationCode;
-        const country = (localizedCountryNames[ui] && localizedCountryNames[ui][locationCode]) || locationCode;
-        const language = location.languageVariant
-            ? `${location.languageVariant} · ${localizedLanguageOptionLabel(location.lang, ui)}`
-            : localizedLanguageOptionLabel(location.lang, ui);
-        return `${country} / ${language}${location.beta ? ' (Beta)' : ''}`;
+        const combinedNames = localizedCombinedJurisdictionNames[ui] || localizedCombinedJurisdictionNames.KR;
+        if (representativeCode === 'VA') {
+            return `${combinedNames.VA || 'Universal Roman Rite'} | Lingua Latina`;
+        }
+        if (representativeCode === 'INTL') {
+            const country = (localizedCountryNames[ui] && localizedCountryNames[ui].INTL) || 'Other region';
+            return `${country} | English`;
+        }
+        const entry = locationSelectionEntries.find(candidate => candidate.code === representativeCode);
+        if (!entry) return locationCode;
+        const country = combinedNames[representativeCode]
+            || (localizedCountryNames[ui] && localizedCountryNames[ui][representativeCode])
+            || representativeCode;
+        return `${country}(${entry.conference}) | ${entry.nativeLanguage}${entry.beta ? ' (Beta)' : ''}`;
+    }
+
+    function appendLocationSelectionOption(parent, entry, ui) {
+        const option = document.createElement('option');
+        option.value = entry.code;
+        option.dataset.conferenceKey = entry.conference;
+        option.textContent = localizedLocationOptionLabel(entry.code, ui);
+        parent.appendChild(option);
+        return option;
+    }
+
+    function rebuildSettingsLocationSelect(select, uiLang = state.uiLang) {
+        if (!select) return;
+        const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
+        const desiredCode = representativeLocationSelectionCode(
+            select.id === 'set-target-lang' ? state.targetLocationCode : state.selectedLocationCode
+        );
+        select.replaceChildren();
+
+        const universal = document.createElement('option');
+        universal.value = 'VA';
+        universal.dataset.conferenceKey = 'ROMAN';
+        universal.textContent = localizedLocationOptionLabel('VA', ui);
+        select.appendChild(universal);
+
+        const regionNames = localizedLocationRegionNames[ui] || localizedLocationRegionNames.KR;
+        locationRegionOrder.forEach(regionKey => {
+            const group = document.createElement('optgroup');
+            group.dataset.regionKey = regionKey;
+            group.label = regionNames[regionKey] || regionKey;
+            const entries = locationSelectionEntries.filter(entry => entry.region === regionKey);
+            if (entries.length) {
+                entries.forEach(entry => appendLocationSelectionOption(group, entry, ui));
+            } else {
+                const placeholder = document.createElement('option');
+                placeholder.value = `__EMPTY_REGION_${regionKey}`;
+                placeholder.textContent = '—';
+                placeholder.disabled = true;
+                placeholder.dataset.regionPlaceholder = 'true';
+                group.appendChild(placeholder);
+            }
+            select.appendChild(group);
+        });
+
+        if (select.id === 'set-loc') {
+            const fallbackGroup = document.createElement('optgroup');
+            fallbackGroup.id = 'automatic-fallback-location-group';
+            fallbackGroup.dataset.conferenceKey = 'AUTO';
+            fallbackGroup.label = (localizedConferenceNames[ui] || localizedConferenceNames.KR).AUTO;
+            fallbackGroup.hidden = true;
+            const fallback = document.createElement('option');
+            fallback.value = 'INTL';
+            fallback.textContent = localizedLocationOptionLabel('INTL', ui);
+            fallbackGroup.appendChild(fallback);
+            select.appendChild(fallbackGroup);
+        }
+
+        if (Array.from(select.options).some(option => option.value === desiredCode)) select.value = desiredCode;
     }
 
     function setElementText(id, value) {
@@ -15831,21 +15953,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (settingsVersion) settingsVersion.textContent = publicAppVersionLabel();
 
         const locationSelect = document.getElementById('set-loc');
-        if (locationSelect) {
-            Array.from(locationSelect.options).forEach(option => {
-                option.textContent = localizedLocationOptionLabel(option.value, ui);
-            });
-        }
         const targetSelect = document.getElementById('set-target-lang');
-        if (targetSelect) {
-            Array.from(targetSelect.options).forEach(option => {
-                option.textContent = localizedLocationOptionLabel(option.value, ui);
-            });
-        }
-        document.querySelectorAll('#set-loc optgroup[data-conference-key], #set-target-lang optgroup[data-conference-key]').forEach(group => {
-            const names = localizedConferenceNames[ui] || localizedConferenceNames.KR;
-            group.label = names[group.dataset.conferenceKey] || group.label;
-        });
+        rebuildSettingsLocationSelect(locationSelect, ui);
+        rebuildSettingsLocationSelect(targetSelect, ui);
+        syncTargetLanguageOptions();
         const sourceSelect = document.getElementById('set-vn-source');
         if (sourceSelect) {
             Array.from(sourceSelect.options).forEach(option => {
