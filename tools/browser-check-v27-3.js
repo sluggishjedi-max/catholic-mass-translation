@@ -295,6 +295,13 @@ You can also view this page with the New Testament in Greek and English.`;
 マタイによる福音
 16・21 そのとき、イエスは弟子たちに話された。`;
       const japaneseDayWordParsed = strictParseDailyMass('JP', japaneseDayWordFixture, date(2026, 8, 30));
+      const japaneseVerseSuffixFixture = `Markdown Content:
+第一朗読
+①コリント2・10b-16
+神は霊によって、そのことをわたしたちに明らかにされた。
+使徒パウロのコリントの教会への手紙
+(2・10b) 神は霊によって、そのことをわたしたちに明らかにされた。`;
+      const japaneseVerseSuffixParsed = strictParseDailyMass('JP', japaneseVerseSuffixFixture, date(2026, 9, 1));
       const latinPsalmParsed = strictFormatSection('LA', 'psalm', {
         heading: 'Psalmus Responsorialis',
         lines: [
@@ -388,6 +395,13 @@ You can also view this page with the New Testament in Greek and English.`;
         text_la: 'Haec est prima sententia. Sequitur altera pars; denique tertia pars perficitur.',
         role_la: 'body'
       })], 'reading1');
+      const quotedSentenceSplit = splitSentences(`He answered, "Peace be with you." Then he said, 'Remain here.' Next sentence.`).split('\n');
+      const quotedAlignedReadingFixture = splitDailyReadingBodyRowsByKorean([Object.assign(emptyMassLine(), {
+        text_kr: '예수님께서 평화가 함께하기를 빈다고 말씀하셨다.\n그리고 다음 말씀을 이어 가셨다.',
+        role_kr: 'body',
+        text_en: `Jesus said, "Peace be with you." Then he continued with the next teaching.`,
+        role_en: 'body'
+      })], 'reading1');
 
       const taiwanManifestEntry = traditionalChineseStaticMassRecord(date(2026, 8, 30));
       const originalFetch = window.fetch;
@@ -404,7 +418,45 @@ You can also view this page with the New Testament in Greek and English.`;
       const taiwanStaticLines = strictExpandTraditionalChineseLines(strictSourceLines(taiwanProxySource));
       const taiwanStaticRaw = strictExtractRawSections(taiwanStaticLines, 'ZH', getStrictMassSelector(date(2026, 8, 30)));
       const taiwanStaticParsed = strictParseDailyMass('ZH', taiwanProxySource, date(2026, 8, 30), 'TW');
-      const taiwanActualLoaded = await fetchStrictDailyMass('ZH', date(2026, 8, 31), { locationCode: 'TW' });
+      const taiwanActualLoaded = await fetchStrictDailyMass('ZH', date(2026, 9, 1), { locationCode: 'TW' });
+      const savedTaiwanDisplayState = {
+        selectedLocationCode: state.selectedLocationCode,
+        currentLoc: state.currentLoc,
+        targetLocationCode: state.targetLocationCode,
+        targetLang: state.targetLang,
+        liturgyInfo: cloneData(state.liturgyInfo),
+        isSunday: state.isSunday,
+        options: cloneData(state.options)
+      };
+      const savedMassData = cloneData(massData);
+      state.selectedLocationCode = 'TW';
+      state.currentLoc = 'ZH';
+      state.targetLocationCode = 'KR';
+      state.targetLang = 'KR';
+      state.liturgyInfo = buildGeneratedLiturgyInfo(date(2026, 9, 1));
+      state.isSunday = false;
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      const taiwanDisplayData = createDailyReadingData();
+      mergeSourceData(taiwanDisplayData, taiwanActualLoaded, 'ZH');
+      applyDailyReadingsToMassData(taiwanDisplayData);
+      render();
+      const taiwanDisplayAudit = Object.fromEntries(['collect', 'reading1', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'].map(baseId => {
+        const section = document.querySelector(`.part-container[data-part-id="${baseId}"]`);
+        const sourceLines = section ? Array.from(section.querySelectorAll('.line-zh .text-content')) : [];
+        return [baseId, {
+          sourceText: sourceLines.map(line => line.textContent).join('\n'),
+          sourceButtons: sourceLines.reduce((count, line) => count + line.querySelectorAll('.btn-ai-trans').length, 0)
+        }];
+      }));
+      resetMassDataFrom(savedMassData);
+      state.selectedLocationCode = savedTaiwanDisplayState.selectedLocationCode;
+      state.currentLoc = savedTaiwanDisplayState.currentLoc;
+      state.targetLocationCode = savedTaiwanDisplayState.targetLocationCode;
+      state.targetLang = savedTaiwanDisplayState.targetLang;
+      state.liturgyInfo = savedTaiwanDisplayState.liturgyInfo;
+      state.isSunday = savedTaiwanDisplayState.isSunday;
+      state.options = savedTaiwanDisplayState.options;
+      render();
       const taiwanTodayRequiredSections = ['entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'];
       const taiwanFutureBRecord = traditionalChineseStaticMassRecord(date(2027, 8, 29));
       const taiwanBRequiredSections = ['collect', 'reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'];
@@ -531,6 +583,10 @@ You can also view this page with the New Testament in Greek and English.`;
           japaneseDayWordIsMassLabel: strictIsDayMassLabel('わたしは一日中、笑い者にされる。'),
           japaneseDayMassLabelRecognized: strictIsDayMassLabel('主の降誕（日中）'),
           japaneseSections: Object.keys(japaneseDayWordParsed.data || {}),
+          japaneseVerseSuffix: japaneseVerseSuffixParsed.data && japaneseVerseSuffixParsed.data.reading1,
+          traditionalChineseSourceLabel: sourceChoiceLabelForLower('zh'),
+          quotedSentenceSplit,
+          quotedAlignedReading: quotedAlignedReadingFixture.map(line => line.text_en),
           latinPsalm: latinPsalmParsed.lines,
           chineseEntrance: JSON.stringify(traditionalChineseParsed.data && traditionalChineseParsed.data.entrance || {}),
           chinesePsalm: traditionalChineseParsed.data && traditionalChineseParsed.data.psalm && traditionalChineseParsed.data.psalm.lines,
@@ -564,6 +620,7 @@ You can also view this page with the New Testament in Greek and English.`;
           sections: Object.keys(taiwanStaticParsed.data || {}),
           actualTodaySections: Object.keys(taiwanActualLoaded.data || {}),
           actualTodayMissing: taiwanTodayRequiredSections.filter(key => !sourceSectionHasContent(taiwanActualLoaded.data && taiwanActualLoaded.data[key])),
+          displayAudit: taiwanDisplayAudit,
           futureBTitle: taiwanFutureBRecord && taiwanFutureBRecord.title,
           bCycleFailures: taiwanBFailures
         },
@@ -593,6 +650,130 @@ You can also view this page with the New Testament in Greek and English.`;
     }, liveSources);
 
     result.startupConsent = startupConsent;
+
+    await page.evaluate(() => {
+      document.getElementById('set-gps').checked = true;
+      updateSettings();
+      document.getElementById('set-loc').value = 'TW';
+      selectManualLocation();
+      document.getElementById('set-target-lang').value = 'KR';
+      updateSettings();
+    });
+    await page.waitForFunction(() => (
+      state.selectedLocationCode === 'TW'
+      && state.currentLoc === 'ZH'
+      && !state.dailyReadingsLoading
+      && state.dailyReadingLanguageStatus
+      && state.dailyReadingLanguageStatus.ZH === 'done'
+    ), null, { timeout: 30000 });
+    result.taiwanEndToEnd = await page.evaluate(() => ({
+      location: state.selectedLocationCode,
+      originalLanguage: state.currentLoc,
+      translationLanguage: state.targetLang,
+      languageStatus: Object.assign({}, state.dailyReadingLanguageStatus || {}),
+      liturgyName: state.liturgyInfo && state.liturgyInfo.names && state.liturgyInfo.names.ZH,
+      sections: Object.fromEntries(['entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'].map(baseId => {
+        const section = document.querySelector(`.part-container[data-part-id="${baseId}"]`);
+        const sourceLines = section ? Array.from(section.querySelectorAll('.line-zh')) : [];
+        return [baseId, {
+          originalText: sourceLines
+            .filter(line => !line.classList.contains('ai-pending'))
+            .map(line => (line.querySelector('.text-content') || {}).textContent || '')
+            .filter(Boolean)
+            .join('\n'),
+          aiButtons: sourceLines.reduce((count, line) => count + line.querySelectorAll('.btn-ai-trans').length, 0),
+          citation: section ? Array.from(section.querySelectorAll('.citation')).map(node => node.textContent).join(' | ') : ''
+        }];
+      }))
+    }));
+    await page.evaluate(() => {
+      document.getElementById('set-loc').value = 'KR';
+      selectManualLocation();
+      document.getElementById('set-target-lang').value = 'TW';
+      updateSettings();
+    });
+    await page.waitForFunction(() => (
+      state.selectedLocationCode === 'KR'
+      && state.currentLoc === 'KR'
+      && state.targetLocationCode === 'TW'
+      && state.targetLang === 'ZH'
+      && !state.dailyReadingsLoading
+      && state.dailyReadingLanguageStatus
+      && state.dailyReadingLanguageStatus.ZH === 'done'
+    ), null, { timeout: 30000 });
+    const taiwanTargetSourceChoices = await page.evaluate(() => Object.fromEntries(
+      ['entrance', 'collect', 'prayer_offerings', 'communion', 'prayer_after'].map(baseId => {
+        const section = document.querySelector(`.part-container[data-part-id="${baseId}"]`);
+        const select = section && section.querySelector('.select-inline');
+        return [baseId, select ? Array.from(select.options).map(option => ({ value: option.value, text: option.textContent })) : []];
+      })
+    ));
+    const taiwanTargetVariants = await page.evaluate(() => Object.fromEntries(
+      ['entrance', 'collect', 'prayer_offerings', 'communion', 'prayer_after'].map(baseId => {
+        const item = massData.find(entry => getBaseId(entry.id) === baseId);
+        return [baseId, {
+          selected: state.options[baseId],
+          variants: Object.fromEntries(Object.entries(item && item.variants || {}).map(([key, variant]) => [key, {
+            label: variant.label,
+            sources: variant.__dailySourceIndexes,
+            kind: variant.__dailyOptionKind,
+            hasZh: (variant.lines || []).some(line => cleanNodeText(line.text_zh)
+              && !isPrayerOpenerText(line.text_zh) && !isPrayerAmenText(line.text_zh)),
+            hasKr: (variant.lines || []).some(line => cleanNodeText(line.text_kr)
+              && !isPrayerOpenerText(line.text_kr) && !isPrayerAmenText(line.text_kr))
+          }]))
+        }];
+      })
+    ));
+    await page.evaluate(() => {
+      ['entrance', 'collect', 'prayer_offerings', 'communion', 'prayer_after'].forEach(baseId => {
+        const item = massData.find(entry => getBaseId(entry.id) === baseId);
+        const targetEntry = Object.entries(item && item.variants || {}).find(([, variant]) => (
+          Number.isInteger(variant && variant.__dailySourceIndexes && variant.__dailySourceIndexes.zh)
+        ));
+        if (targetEntry) state.options[baseId] = targetEntry[0];
+      });
+      render();
+    });
+    if (process.env.ORDO_SCREENSHOT === '1') {
+      await page.evaluate(() => {
+        const sourceModal = document.getElementById('vn-source-modal');
+        if (sourceModal) sourceModal.classList.remove('is-visible');
+      });
+      const screenshotDir = path.join(root, 'tmp');
+      fs.mkdirSync(screenshotDir, { recursive: true });
+      await page.screenshot({
+        path: path.join(screenshotDir, 'v27-4-taiwan-traditional-chinese.png'),
+        fullPage: true
+      });
+      await page.locator('.part-container[data-part-id="collect"]').screenshot({
+        path: path.join(screenshotDir, 'v27-4-taiwan-collect.png')
+      });
+      await page.locator('.part-container[data-part-id="reading1"]').screenshot({
+        path: path.join(screenshotDir, 'v27-4-taiwan-reading1.png')
+      });
+    }
+    result.taiwanTargetEndToEnd = await page.evaluate(({ sourceChoices, variants }) => ({
+      location: state.selectedLocationCode,
+      originalLanguage: state.currentLoc,
+      targetLocation: state.targetLocationCode,
+      translationLanguage: state.targetLang,
+      languageStatus: Object.assign({}, state.dailyReadingLanguageStatus || {}),
+      sourceChoices,
+      variants,
+      sections: Object.fromEntries(['entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel', 'prayer_offerings', 'communion', 'prayer_after'].map(baseId => {
+        const section = document.querySelector(`.part-container[data-part-id="${baseId}"]`);
+        const sourceLines = section ? Array.from(section.querySelectorAll('.line-zh')) : [];
+        return [baseId, {
+          originalText: sourceLines
+            .filter(line => !line.classList.contains('ai-pending'))
+            .map(line => (line.querySelector('.text-content') || {}).textContent || '')
+            .filter(Boolean)
+            .join('\n'),
+          aiButtons: sourceLines.reduce((count, line) => count + line.querySelectorAll('.btn-ai-trans').length, 0)
+        }];
+      }))
+    }), { sourceChoices: taiwanTargetSourceChoices, variants: taiwanTargetVariants });
 
     assert(/^V27\.4-/.test(result.version), `Unexpected runtime version: ${result.version}`);
     assert(result.versionLabel === 'V27.4', `Settings version label is wrong: ${result.versionLabel}`);
@@ -685,6 +866,21 @@ You can also view this page with the New Testament in Greek and English.`;
     assert(!result.parserRegression.japaneseDayWordIsMassLabel, 'Japanese 一日中 text was mistaken for a daytime Mass label.');
     assert(result.parserRegression.japaneseDayMassLabelRecognized, 'A real Japanese daytime Mass label was not recognized.');
     assert(['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel'].every(key => result.parserRegression.japaneseSections.includes(key)), `Japanese day-word fixture lost sections: ${JSON.stringify(result.parserRegression.japaneseSections)}`);
+    assert(/①コリント2・10b-16/u.test(result.parserRegression.japaneseVerseSuffix.cit_jp || '')
+      && !/(^|\n)\s*\(?2・10b\)?(?:\s|$)/u.test(result.parserRegression.japaneseVerseSuffix.text || ''),
+    `Japanese verse suffix leaked from the citation into the body: ${JSON.stringify(result.parserRegression.japaneseVerseSuffix)}`);
+    assert(result.parserRegression.traditionalChineseSourceLabel.zh === '繁體中文原文'
+      && result.parserRegression.traditionalChineseSourceLabel.en === 'Traditional Chinese source',
+    `Traditional Chinese source-choice label is wrong: ${JSON.stringify(result.parserRegression.traditionalChineseSourceLabel)}`);
+    assert(result.parserRegression.quotedSentenceSplit.length === 3
+      && result.parserRegression.quotedSentenceSplit[0].endsWith('you."')
+      && result.parserRegression.quotedSentenceSplit[1].endsWith("here.'")
+      && result.parserRegression.quotedSentenceSplit.every((line, index) => index === 0 || !/^["'’”」』]/u.test(line)),
+    `Closing quotation marks were split into the following sentence: ${JSON.stringify(result.parserRegression.quotedSentenceSplit)}`);
+    assert(result.parserRegression.quotedAlignedReading.length === 2
+      && result.parserRegression.quotedAlignedReading[0].includes('you."')
+      && !/^["'’”」』]/u.test(result.parserRegression.quotedAlignedReading[1]),
+    `Closing quotation marks moved to the following aligned row: ${JSON.stringify(result.parserRegression.quotedAlignedReading)}`);
     assert(result.parserRegression.latinPsalm.length === 3 && result.parserRegression.latinPsalm[0].sp === '℟' && /Sitívit/.test(result.parserRegression.latinPsalm[0].text), `Latin psalm response was not preserved: ${JSON.stringify(result.parserRegression.latinPsalm)}`);
     assert(!/光榮頌|天主在天受光榮/u.test(result.parserRegression.chineseEntrance), `Chinese Gloria leaked into the Entrance Antiphon: ${result.parserRegression.chineseEntrance}`);
     assert(result.parserRegression.chinesePsalm.length === 3 && result.parserRegression.chinesePsalm.filter(line => line.sp === '領').length === 2, `Chinese psalm stanzas were not joined: ${JSON.stringify(result.parserRegression.chinesePsalm)}`);
@@ -720,6 +916,7 @@ You can also view this page with the New Testament in Greek and English.`;
       && /讀經一/.test(result.taiwanStatic.source)
       && ['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel'].every(key => result.taiwanStatic.sections.includes(key))
       && result.taiwanStatic.actualTodayMissing.length === 0
+      && Object.values(result.taiwanStatic.displayAudit).every(section => section.sourceText && section.sourceButtons === 0)
       && /常年期第廿二主日/.test(result.taiwanStatic.futureBTitle)
       && result.taiwanStatic.bCycleFailures.length === 0,
     `Taiwan static daily Mass selection/parsing failed: ${JSON.stringify(result.taiwanStatic)}`);
@@ -741,6 +938,20 @@ You can also view this page with the New Testament in Greek and English.`;
     assert(/Creation Day/i.test(JSON.stringify(result.philippines.creationDay)), 'CBCP Creation Day is missing.');
     assert(result.gps.manila === 'PH' && result.gps.taipeiUnsupported === 'TW' && result.gps.parisUnsupported === 'INTL', `GPS country resolution is wrong: ${JSON.stringify(result.gps)}`);
     assert(result.church.hasEngland && result.church.hasScotland && result.church.hasPhilippines, `Country church rebuild is incomplete: ${JSON.stringify(result.church)}`);
+    assert(result.taiwanEndToEnd.location === 'TW'
+      && result.taiwanEndToEnd.originalLanguage === 'ZH'
+      && result.taiwanEndToEnd.languageStatus.ZH === 'done'
+      && Object.values(result.taiwanEndToEnd.sections).every(section => section.originalText && section.aiButtons === 0),
+    `Taiwan settings-to-DOM flow did not render the original readings and propers: ${JSON.stringify(result.taiwanEndToEnd)}`);
+    assert(result.taiwanTargetEndToEnd.location === 'KR'
+      && result.taiwanTargetEndToEnd.targetLocation === 'TW'
+      && result.taiwanTargetEndToEnd.translationLanguage === 'ZH'
+      && result.taiwanTargetEndToEnd.languageStatus.ZH === 'done'
+      && Object.values(result.taiwanTargetEndToEnd.sourceChoices).every(options => (
+        options.some(option => /중국어 번체 원문/u.test(option.text))
+      ))
+      && Object.values(result.taiwanTargetEndToEnd.sections).every(section => section.originalText && section.aiButtons === 0),
+    `Taiwan target-language flow did not render official Traditional Chinese text: ${JSON.stringify(result.taiwanTargetEndToEnd)}`);
     assert(pageErrors.length === 0, `Page errors:\n${pageErrors.join('\n')}`);
     console.log(JSON.stringify(result, null, 2));
   } finally {
