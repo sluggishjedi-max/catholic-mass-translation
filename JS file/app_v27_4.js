@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.4-20260901-MULTILINGUAL-DAILY-MASS-FIX';
+    const APP_VERSION = 'V27.4-20260901-STARTUP-CONSENT-LANGUAGE-ROWS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -13706,12 +13706,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const main = Number(mainChapter);
         const alternate = Number(alternateChapter);
         const firstVerse = Number(verse);
-        const usesVulgateNumbering = normalizedBook === 'tv' || normalizedBook === 'ps';
+        const usesVulgateNumbering = normalizedBook === 'tv'
+            || normalizedBook === 'ps';
         const pairs = [];
         if (Number.isInteger(alternate)) {
-            pairs.push(usesVulgateNumbering
-                ? { hebrew: alternate, vulgate: main }
-                : { hebrew: main, vulgate: alternate });
+            const mainAsHebrew = vulgatePsalmChaptersForHebrew(main, firstVerse).includes(alternate);
+            const alternateAsHebrew = vulgatePsalmChaptersForHebrew(alternate, firstVerse).includes(main);
+            if (mainAsHebrew && !alternateAsHebrew) pairs.push({ hebrew: main, vulgate: alternate });
+            else if (alternateAsHebrew && !mainAsHebrew) pairs.push({ hebrew: alternate, vulgate: main });
+            else {
+                pairs.push(usesVulgateNumbering
+                    ? { hebrew: alternate, vulgate: main }
+                    : { hebrew: main, vulgate: alternate });
+            }
         } else if (usesVulgateNumbering) {
             hebrewPsalmChaptersForVulgate(main).forEach(hebrew => pairs.push({ hebrew, vulgate: main }));
         } else {
@@ -15170,6 +15177,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         syncLocationControlForGps();
         syncTargetLanguageOptions();
         syncAuxPanelsWithSettings();
+        syncStartupConsentControls();
         persistAndroidAppSettings({ consentAccepted: startupNoticeDecision === true });
         return previousLoc !== state.currentLoc || previousLocationCode !== state.selectedLocationCode
             || previousTargetLang !== state.targetLang || previousTargetLocationCode !== state.targetLocationCode
@@ -15584,11 +15592,49 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         VN: { title: 'Thông báo trước khi sử dụng', accept: 'Đồng ý', decline: 'Không đồng ý và thoát', closed: 'Bạn không đồng ý nên ứng dụng đã kết thúc.', dateLimit: 'Không thể xem phụng vụ quá 7 ngày trước hoặc sau hôm nay.' },
         EN: { title: 'Notice Before Use', accept: 'Agree', decline: 'Exit without agreeing', closed: 'You chose not to agree, so this page has been closed.', dateLimit: 'Liturgies more than 7 days before or after today cannot be viewed.' },
         JP: { title: 'ご利用前のご案内', accept: '同意する', decline: '同意せず終了', closed: '同意されなかったため、利用を終了しました。', dateLimit: '本日の前後7日を超える典礼は表示できません。' },
-        LA: { title: 'Monitum ante usum', accept: 'Assentior', decline: 'Non assentior et exeo', closed: 'Quia non assensus es, usus finitus est.', dateLimit: 'Liturgia ultra septem dies ante vel post hodiernum diem inspici non potest.' }
+        LA: { title: 'Monitum ante usum', accept: 'Assentior', decline: 'Non assentior et exeo', closed: 'Quia non assensus es, usus finitus est.', dateLimit: 'Liturgia ultra septem dies ante vel post hodiernum diem inspici non potest.' },
+        ZH: { title: '使用前說明', accept: '同意', decline: '不同意並離開', closed: '因為您不同意，應用程式已結束。', dateLimit: '無法查看今天前後超過七天的禮儀。' }
+    });
+
+    const startupConsentLanguageOrder = Object.freeze(['EN', 'LA', 'KR', 'JP', 'ZH', 'VN']);
+    const startupConsentLanguageLabels = Object.freeze({
+        EN: 'English', LA: 'Latine', KR: '한국어', JP: '日本語', ZH: '繁體中文', VN: 'Tiếng Việt'
+    });
+    const startupConsentWarningText = Object.freeze({
+        EN: "Please note that the <Order of Mass>, <Liturgical Readings>, prayers, and hymns on this site have not been approved by the Catholic Bishops' Conferences of each country or other relevant copyright holders. Some parts may differ in the celebration of Mass; please use this site for reference only.",
+        LA: 'Monemus <Ordinarium Missae>, <Lectiones liturgicas>, preces atque cantus in hoc situ positos non esse approbatos a Conferentiis Episcoporum Catholicorum singularum nationum neque ab aliis iurium auctoralium possessoribus pertinentibus. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.',
+        KR: '<미사통상문> 및 <전례독서>, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의 등 저작권자의 승인을 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.',
+        JP: '本サイトに掲載している<ミサ通常文>、<典礼朗読>、祈祷文および聖歌について、各国のカトリック司教協議会その他の著作権者から承認を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。',
+        ZH: '請注意，本網站所載的<彌撒常用經文>、<禮儀讀經>、祈禱文及聖歌，尚未獲各國天主教主教團或其他相關著作權人核准。舉行彌撒時，部分內容可能有所不同；請僅供參考使用。',
+        VN: 'Xin lưu ý rằng <Nghi thức Thánh lễ>, <Bài đọc phụng vụ>, cũng như các kinh nguyện và thánh ca trên trang này chưa được các Hội đồng Giám mục Công giáo của từng quốc gia hoặc các chủ sở hữu bản quyền liên quan chấp thuận. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.'
     });
 
     function currentNoticeUiText() {
         return noticeUiText[normalizeSelectableLang(state.uiLang || 'KR', 'KR')] || noticeUiText.KR;
+    }
+
+    function regionalNoticeUiText() {
+        return noticeUiText[normalizeSelectableLang(state.currentLoc || 'EN', 'EN')] || noticeUiText.EN;
+    }
+
+    function renderStartupConsentWarnings() {
+        const element = document.getElementById('consent-language-grid');
+        if (!element) return;
+        element.innerHTML = startupConsentLanguageOrder.map(lang => [
+            `<div class="consent-warning-line lang-${lang}">`,
+            `<span class="consent-warning-language">${escapeHtml(startupConsentLanguageLabels[lang] || lang)} :</span>`,
+            `<span class="consent-warning-text">${escapeHtml(startupConsentWarningText[lang])}</span>`,
+            '</div>'
+        ].join('')).join('');
+    }
+
+    function syncStartupConsentControls() {
+        const notice = currentNoticeUiText();
+        const regionalNotice = regionalNoticeUiText();
+        setElementText('consent-title', notice.title);
+        setElementText('consent-accept', regionalNotice.accept);
+        setElementText('consent-decline', regionalNotice.decline);
+        renderStartupConsentWarnings();
     }
 
     const localizedCountryNames = Object.freeze({
@@ -15698,10 +15744,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         setElementText('lbl-set-hide-status-bar', settings.hideStatusBar);
         setElementText('lbl-set-hide-navigation-bar', settings.hideNavigationBar);
         setElementText('lbl-close-btn', settings.close);
-        const notice = currentNoticeUiText();
-        setElementText('consent-title', notice.title);
-        setElementText('consent-accept', notice.accept);
-        setElementText('consent-decline', notice.decline);
+        syncStartupConsentControls();
         const settingsVersion = document.getElementById('settings-version-label');
         if (settingsVersion) settingsVersion.textContent = publicAppVersionLabel();
 

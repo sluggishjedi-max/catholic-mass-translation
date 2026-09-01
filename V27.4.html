@@ -91,10 +91,11 @@
         #consent-modal { display: flex; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         .consent-content { width: min(760px, 96vw); max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; gap: 14px; background: white; color: #333; border-radius: 10px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
         .consent-content h2 { margin: 0; color: var(--brand-logo-color); font-size: 1.15rem; border-bottom: 2px solid var(--brand-logo-color); padding-bottom: 8px; }
-        .consent-language-grid { overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; padding-right: 4px; }
-        .consent-language-block { border: 1px solid #e1e1e1; border-radius: 8px; padding: 10px 12px; background: #fafafa; }
-        .consent-language-title { display: block; margin-bottom: 5px; color: #111; font-weight: 900; }
-        .consent-language-block p { margin: 0; line-height: 1.5; font-size: 0.92rem; }
+        .consent-language-grid { overflow-y: auto; display: grid; gap: 10px; padding-right: 4px; }
+        .consent-warning-line { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 9px; align-items: start; }
+        .consent-warning-line + .consent-warning-line { border-top: 1px solid #ececec; padding-top: 10px; }
+        .consent-warning-language { color: #111; font-weight: 900; white-space: nowrap; }
+        .consent-warning-text { min-width: 0; line-height: 1.5; font-size: 0.92rem; overflow-wrap: anywhere; }
         .consent-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; border-top: 1px solid #e8e8e8; padding-top: 12px; }
         .consent-btn { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 900; }
         .consent-btn.accept { background: var(--brand-logo-color); color: white; }
@@ -471,31 +472,35 @@
 <div id="consent-modal" role="dialog" aria-modal="true" aria-labelledby="consent-title">
     <div class="consent-content">
         <h2 id="consent-title">사용 전 안내 / Notice Before Use</h2>
-        <div class="consent-language-grid">
-            <div class="consent-language-block lang-KR">
-                <strong class="consent-language-title">한국어</strong>
-                <p>&lt;미사통상문&gt; 및 &lt;전례독서&gt;, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의 등 저작권자의 승인을 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.</p>
+        <div id="consent-language-grid" class="consent-language-grid" aria-live="polite">
+            <div class="consent-warning-line lang-EN">
+                <span class="consent-warning-language">English :</span>
+                <span class="consent-warning-text">Please note that the &lt;Order of Mass&gt;, &lt;Liturgical Readings&gt;, prayers, and hymns on this site have not been approved by the Catholic Bishops' Conferences of each country or other relevant copyright holders. Some parts may differ in the celebration of Mass; please use this site for reference only.</span>
             </div>
-            <div class="consent-language-block lang-VN">
-                <strong class="consent-language-title">Tiếng Việt</strong>
-                <p>Xin lưu ý rằng &lt;Nghi thức Thánh lễ&gt;, &lt;Bài đọc phụng vụ&gt;, cũng như các kinh nguyện và thánh ca trên trang này chưa được các Hội đồng Giám mục Công giáo của từng quốc gia hoặc các chủ sở hữu bản quyền liên quan chấp thuận. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.</p>
+            <div class="consent-warning-line lang-LA">
+                <span class="consent-warning-language">Latine :</span>
+                <span class="consent-warning-text">Monemus &lt;Ordinarium Missae&gt;, &lt;Lectiones liturgicas&gt;, preces atque cantus in hoc situ positos non esse approbatos a Conferentiis Episcoporum Catholicorum singularum nationum neque ab aliis iurium auctoralium possessoribus pertinentibus. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.</span>
             </div>
-            <div class="consent-language-block lang-EN">
-                <strong class="consent-language-title">English</strong>
-                <p>Please note that the &lt;Order of Mass&gt;, &lt;Liturgical Readings&gt;, prayers, and hymns on this site have not been approved by the Catholic Bishops' Conferences of each country or other relevant copyright holders. Some parts may differ in the celebration of Mass; please use this site for reference only.</p>
+            <div class="consent-warning-line lang-KR">
+                <span class="consent-warning-language">한국어 :</span>
+                <span class="consent-warning-text">&lt;미사통상문&gt; 및 &lt;전례독서&gt;, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의 등 저작권자의 승인을 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.</span>
             </div>
-            <div class="consent-language-block lang-JP">
-                <strong class="consent-language-title">日本語</strong>
-                <p>本サイトに掲載している&lt;ミサ通常文&gt;、&lt;典礼朗読&gt;、祈祷文および聖歌について、各国のカトリック司教協議会その他の著作権者から承認を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。</p>
+            <div class="consent-warning-line lang-JP">
+                <span class="consent-warning-language">日本語 :</span>
+                <span class="consent-warning-text">本サイトに掲載している&lt;ミサ通常文&gt;、&lt;典礼朗読&gt;、祈祷文および聖歌について、各国のカトリック司教協議会その他の著作権者から承認を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。</span>
             </div>
-            <div class="consent-language-block lang-LA">
-                <strong class="consent-language-title">Latine</strong>
-                <p>Monemus &lt;Ordinarium Missae&gt;, &lt;Lectiones liturgicas&gt;, preces atque cantus in hoc situ positos non esse approbatos a Conferentiis Episcoporum Catholicorum singularum nationum neque ab aliis iurium auctoralium possessoribus pertinentibus. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.</p>
+            <div class="consent-warning-line lang-ZH">
+                <span class="consent-warning-language">繁體中文 :</span>
+                <span class="consent-warning-text">請注意，本網站所載的&lt;彌撒常用經文&gt;、&lt;禮儀讀經&gt;、祈禱文及聖歌，尚未獲各國天主教主教團或其他相關著作權人核准。舉行彌撒時，部分內容可能有所不同；請僅供參考使用。</span>
+            </div>
+            <div class="consent-warning-line lang-VN">
+                <span class="consent-warning-language">Tiếng Việt :</span>
+                <span class="consent-warning-text">Xin lưu ý rằng &lt;Nghi thức Thánh lễ&gt;, &lt;Bài đọc phụng vụ&gt;, cũng như các kinh nguyện và thánh ca trên trang này chưa được các Hội đồng Giám mục Công giáo của từng quốc gia hoặc các chủ sở hữu bản quyền liên quan chấp thuận. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.</span>
             </div>
         </div>
         <div class="consent-actions">
-            <button type="button" id="consent-decline" class="consent-btn decline" onclick="declineStartupNotice()">동의하지 않고 종료 / Exit</button>
-            <button type="button" id="consent-accept" class="consent-btn accept" onclick="acceptStartupNotice()">동의합니다 / Agree</button>
+            <button type="button" id="consent-decline" class="consent-btn decline" onclick="declineStartupNotice()">동의하지 않고 종료</button>
+            <button type="button" id="consent-accept" class="consent-btn accept" onclick="acceptStartupNotice()">동의합니다</button>
         </div>
     </div>
 </div>
@@ -849,6 +854,6 @@
 <script src="JS%20file/bishop_data.js?v=20260822-v26"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260822-v26"></script>
 
-<script src="JS%20file/app_v27_4.js?v=20260901-v27-4-multilingual-daily-mass-fix"></script>
+<script src="JS%20file/app_v27_4.js?v=20260901-v27-4-startup-consent-language-rows"></script>
 </body>
 </html>

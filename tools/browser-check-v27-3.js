@@ -61,6 +61,47 @@ function startServer() {
       waitUntil: 'domcontentloaded',
       timeout: 90000
     });
+    await page.waitForFunction(() => (
+      typeof syncStartupConsentControls === 'function'
+      && state.selectedLocationCode === 'PH'
+    ), null, { timeout: 15000 });
+    const startupConsent = await page.evaluate(() => {
+      const inspectRows = () => Array.from(document.querySelectorAll('#consent-language-grid .consent-warning-line')).map(line => ({
+        lang: Array.from(line.classList).find(name => /^lang-/.test(name)) || '',
+        label: (line.querySelector('.consent-warning-language') || {}).textContent || '',
+        text: (line.querySelector('.consent-warning-text') || {}).textContent || '',
+        display: getComputedStyle(line).display,
+        columns: getComputedStyle(line).gridTemplateColumns
+      }));
+      const englishRegion = {
+        location: state.selectedLocationCode,
+        accept: document.getElementById('consent-accept').textContent,
+        decline: document.getElementById('consent-decline').textContent
+      };
+      applyDetectedLocation('TW', 'Asia/Taipei');
+      const taiwanRegion = {
+        location: state.selectedLocationCode,
+        accept: document.getElementById('consent-accept').textContent,
+        decline: document.getElementById('consent-decline').textContent
+      };
+      const regionalButtons = Object.fromEntries(['PH', 'VA', 'KR', 'JP', 'TW', 'VN'].map(locationCode => {
+        applyDetectedLocation(locationCode);
+        return [locationCode, {
+          accept: document.getElementById('consent-accept').textContent,
+          decline: document.getElementById('consent-decline').textContent
+        }];
+      }));
+      applyDetectedLocation('PH', 'Asia/Manila');
+      const grid = document.getElementById('consent-language-grid');
+      return {
+        rows: inspectRows(),
+        englishRegion,
+        taiwanRegion,
+        regionalButtons,
+        hasLegacyCards: Boolean(grid.querySelector('.consent-language-block')),
+        fitsWidth: grid.scrollWidth <= grid.clientWidth + 1
+      };
+    });
     await page.locator('#consent-accept').click({ timeout: 15000 }).catch(() => {});
     await page.waitForFunction(() => typeof render === 'function' && typeof updateSettings === 'function', null, {
       timeout: 90000
@@ -190,6 +231,32 @@ You can also view this page with the New Testament in Greek and English.`;
           'The Lord is just in all his ways.'
         ]
       });
+      const savedPsalmPair = { currentLoc: state.currentLoc, targetLang: state.targetLang };
+      state.currentLoc = 'KR';
+      state.targetLang = 'EN';
+      const britishPsalmSection = {
+        cit_kr: '시편 145(144),8-9.10-11.12-13ㄱㄴ.13ㄷ-14',
+        cit_en: 'Ps 145(144):8-14',
+        kr_lines: [
+          parsedLine('◎', '주님은 당신의 모든 길에서 의로우시네.'),
+          parsedLine('○', '주님은 너그럽고 자비하시네. - ◎')
+        ],
+        en_lines: [
+          parsedLine('R.', 'The Lord is just in all his ways.'),
+          parsedLine('Versicle', 'The Lord is kind and full of compassion. - R.')
+        ]
+      };
+      const britishPsalmData = { psalm: britishPsalmSection };
+      applyCachedVariantAlignments(britishPsalmData, date(2026, 9, 1));
+      const britishPsalmCitationAlignment = {
+        koreanStarts: citationStartsForCompare(britishPsalmSection.cit_kr),
+        englishStarts: citationStartsForCompare(britishPsalmSection.cit_en),
+        reversedEnglishStarts: citationStartsForCompare('Psalm 144(145):8-14'),
+        different: citationsAreDifferent(britishPsalmSection.cit_kr, britishPsalmSection.cit_en),
+        alignment: britishPsalmSection.variantAlignment
+      };
+      state.currentLoc = savedPsalmPair.currentLoc;
+      state.targetLang = savedPsalmPair.targetLang;
       const vietnameseAlternativeAcclamation = parseVietnameseAcclamationLines([
         'Alleluia, alleluia! – Ai giữ lời Chúa Kitô, thì tình yêu Thiên Chúa đã tuyệt hảo nơi người ấy. – Alleluia.',
         '(Hoặc đọc: Vị ngôn sứ vĩ đại đã xuất hiện giữa chúng ta.)'
@@ -376,16 +443,51 @@ You can also view this page with the New Testament in Greek and English.`;
           try {
             const parsed = await load();
             return [name, {
-              locationCode,
-              sections: Object.keys(parsed && parsed.data || {}),
-              missing: missingCoreDailyReadingSections(parsed),
-              title: parsed && parsed.title || ''
+              parsed,
+              audit: {
+                locationCode,
+                sections: Object.keys(parsed && parsed.data || {}),
+                missing: missingCoreDailyReadingSections(parsed),
+                title: parsed && parsed.title || ''
+              }
             }];
           } catch (error) {
-            return [name, { locationCode, sections: [], missing: coreDailyReadingSectionKeys.slice(), error: String(error && (error.stack || error)) }];
+            return [name, {
+              parsed: null,
+              audit: { locationCode, sections: [], missing: coreDailyReadingSectionKeys.slice(), error: String(error && (error.stack || error)) }
+            }];
           }
         }));
-        liveAudit.results = Object.fromEntries(settled);
+        const loadedByName = Object.fromEntries(settled);
+        liveAudit.results = Object.fromEntries(Object.entries(loadedByName).map(([name, entry]) => [name, entry.audit]));
+        liveAudit.psalmAlignments = {};
+        const koreanPsalm = loadedByName.KR && loadedByName.KR.parsed && loadedByName.KR.parsed.data.psalm;
+        const savedLivePair = { currentLoc: state.currentLoc, targetLang: state.targetLang };
+        state.currentLoc = 'KR';
+        state.targetLang = 'EN';
+        ['EN-IE', 'EN-GB-ENG', 'EN-GB-WLS', 'EN-GB-SCT'].forEach(name => {
+          const englishPsalm = loadedByName[name] && loadedByName[name].parsed && loadedByName[name].parsed.data.psalm;
+          if (!koreanPsalm || !englishPsalm) {
+            liveAudit.psalmAlignments[name] = { joined: false, error: 'Psalm source missing' };
+            return;
+          }
+          const section = {
+            cit_kr: koreanPsalm.cit_kr || '',
+            cit_en: englishPsalm.cit_en || '',
+            kr_lines: koreanPsalm.lines || [],
+            en_lines: englishPsalm.lines || []
+          };
+          applyCachedVariantAlignments({ psalm: section }, liveDate);
+          liveAudit.psalmAlignments[name] = {
+            koreanCitation: section.cit_kr,
+            englishCitation: section.cit_en,
+            joined: Array.isArray(section.variantAlignment)
+              && section.variantAlignment.some(group => group.kr === 0 && group.en === 0),
+            alignment: section.variantAlignment || []
+          };
+        });
+        state.currentLoc = savedLivePair.currentLoc;
+        state.targetLang = savedLivePair.targetLang;
         window.fetch = blockedFetch;
       }
       return {
@@ -424,6 +526,7 @@ You can also view this page with the New Testament in Greek and English.`;
         parserRegression: {
           sharedApplyError,
           unmarkedEnglishPsalm: unmarkedEnglishPsalm.lines,
+          britishPsalmCitationAlignment,
           vietnameseAlternativeAcclamation: vietnameseAlternativeAcclamation.lines,
           japaneseDayWordIsMassLabel: strictIsDayMassLabel('わたしは一日中、笑い者にされる。'),
           japaneseDayMassLabelRecognized: strictIsDayMassLabel('主の降誕（日中）'),
@@ -489,9 +592,33 @@ You can also view this page with the New Testament in Greek and English.`;
       };
     }, liveSources);
 
+    result.startupConsent = startupConsent;
+
     assert(/^V27\.4-/.test(result.version), `Unexpected runtime version: ${result.version}`);
     assert(result.versionLabel === 'V27.4', `Settings version label is wrong: ${result.versionLabel}`);
     assert(!/V27\.4/.test(result.footerText), 'Version must not be displayed in the footer.');
+    assert(JSON.stringify(result.startupConsent.rows.map(row => row.lang)) === JSON.stringify(['lang-EN', 'lang-LA', 'lang-KR', 'lang-JP', 'lang-ZH', 'lang-VN'])
+      && result.startupConsent.rows.length === 6
+      && result.startupConsent.rows.every(row => row.label && row.text && row.display === 'grid' && row.columns !== 'none')
+      && !result.startupConsent.hasLegacyCards
+      && result.startupConsent.fitsWidth,
+    `Startup consent warnings are not six ordered language rows: ${JSON.stringify(result.startupConsent)}`);
+    assert(result.startupConsent.englishRegion.location === 'PH'
+      && result.startupConsent.englishRegion.accept === 'Agree'
+      && result.startupConsent.englishRegion.decline === 'Exit without agreeing'
+      && !/[\/]/.test(`${result.startupConsent.englishRegion.accept}${result.startupConsent.englishRegion.decline}`)
+      && result.startupConsent.taiwanRegion.location === 'TW'
+      && result.startupConsent.taiwanRegion.accept === '同意'
+      && result.startupConsent.taiwanRegion.decline === '不同意並離開',
+    `Startup consent buttons did not follow the GPS region language: ${JSON.stringify(result.startupConsent)}`);
+    assert(JSON.stringify(result.startupConsent.regionalButtons) === JSON.stringify({
+      PH: { accept: 'Agree', decline: 'Exit without agreeing' },
+      VA: { accept: 'Assentior', decline: 'Non assentior et exeo' },
+      KR: { accept: '동의합니다', decline: '동의하지 않고 종료' },
+      JP: { accept: '同意する', decline: '同意せず終了' },
+      TW: { accept: '同意', decline: '不同意並離開' },
+      VN: { accept: 'Đồng ý', decline: 'Không đồng ý và thoát' }
+    }), `Not every GPS-region button pair uses one local language: ${JSON.stringify(result.startupConsent.regionalButtons)}`);
     assert(result.initial.useGps && result.initial.code === 'PH' && result.initial.left === 'EN', `GPS did not select Philippines: ${JSON.stringify(result.initial)}`);
     assert(result.initial.disabled && JSON.stringify(result.initial.visibleGpsOptions) === '["PH"]', `GPS location control is not locked to one country: ${JSON.stringify(result.initial)}`);
     assert(result.afterRightChange.useGps && result.afterRightChange.code === 'PH' && result.afterRightChange.target === 'JP', `Right language changed GPS state: ${JSON.stringify(result.afterRightChange)}`);
@@ -543,6 +670,13 @@ You can also view this page with the New Testament in Greek and English.`;
       && result.parserRegression.unmarkedEnglishPsalm[0].sp === 'R.'
       && result.parserRegression.unmarkedEnglishPsalm.slice(1).every(line => line.sp === 'Versicle' && /- R\.$/.test(line.text)),
     `Unmarked repeated English psalm response was not split: ${JSON.stringify(result.parserRegression.unmarkedEnglishPsalm)}`);
+    assert(!result.parserRegression.britishPsalmCitationAlignment.different
+      && result.parserRegression.britishPsalmCitationAlignment.koreanStarts.some(start => result.parserRegression.britishPsalmCitationAlignment.englishStarts.includes(start))
+      && result.parserRegression.britishPsalmCitationAlignment.koreanStarts.some(start => result.parserRegression.britishPsalmCitationAlignment.reversedEnglishStarts.includes(start))
+      && result.parserRegression.britishPsalmCitationAlignment.alignment.length === 1
+      && result.parserRegression.britishPsalmCitationAlignment.alignment[0].kr === 0
+      && result.parserRegression.britishPsalmCitationAlignment.alignment[0].en === 0,
+    `Matching Korean/UK Psalm citations were split into separate choices: ${JSON.stringify(result.parserRegression.britishPsalmCitationAlignment)}`);
     assert(result.parserRegression.vietnameseAlternativeAcclamation.length === 7
       && result.parserRegression.vietnameseAlternativeAcclamation[4].sp === 'Mọi người'
       && /^Alleluia/i.test(result.parserRegression.vietnameseAlternativeAcclamation[4].text)
@@ -592,6 +726,9 @@ You can also view this page with the New Testament in Greek and English.`;
     if (result.liveAudit.enabled) {
       Object.entries(result.liveAudit.results).forEach(([source, audit]) => {
         assert(!audit.error && audit.missing.length === 0, `${source} live daily source is incomplete: ${JSON.stringify(audit)}`);
+      });
+      Object.entries(result.liveAudit.psalmAlignments).forEach(([source, audit]) => {
+        assert(!audit.error && audit.joined, `${source} live Psalm citation was split into another choice: ${JSON.stringify(audit)}`);
       });
     }
     assert(/cbcp\.ph\/readings\/august-29-2026/.test(result.modules.PH.dailyUrl), `CBCP daily URL is wrong: ${result.modules.PH.dailyUrl}`);
