@@ -44,7 +44,7 @@ function startServer() {
     window.__ordoOriginalFetch = originalFetch;
     window.fetch = async (url, options) => {
       if (String(url).startsWith(location.origin)) return originalFetch(url, options);
-      throw new Error('Remote fetch disabled by V27.3 browser check');
+      throw new Error('Remote fetch disabled by V27.4 browser check');
     };
     Object.defineProperty(navigator, 'geolocation', {
       configurable: true,
@@ -151,8 +151,8 @@ Markdown Content:
 | First reading |
 | --- |
 | 1 Corinthians 2:1-5 |
-#### A reading summary
-This is the complete first-reading body used by the parser regression.
+#### The Spirit reaches even the depths of God
+The Spirit reaches the depths of everything, even the depths of God. After all, this is the complete first-reading body used by the parser regression.
 | Responsorial Psalm |
 | --- |
 | Psalm 118:97-102 |
@@ -172,9 +172,28 @@ You can also view this page with the New Testament in Greek and English.`;
         const parsed = strictParseDailyMass('EN', universalisFixture, date(2026, 8, 31), code);
         return [code, {
           sections: Object.keys(parsed.data || {}),
-          missing: missingCoreDailyReadingSections(parsed)
+          missing: missingCoreDailyReadingSections(parsed),
+          readingLines: parsed.data && parsed.data.reading1 && parsed.data.reading1.lines,
+          gospelLines: parsed.data && parsed.data.gospel && parsed.data.gospel.lines
         }];
       }));
+      const unmarkedEnglishPsalm = strictFormatSection('EN', 'psalm', {
+        heading: 'Responsorial Psalm',
+        lines: [
+          'Psalm 144(145):8-14',
+          'The Lord is just in all his ways.',
+          'The Lord is kind and full of compassion,',
+          'slow to anger, abounding in love.',
+          'The Lord is just in all his ways.',
+          'All your creatures shall thank you, O Lord,',
+          'and your friends shall repeat their blessing.',
+          'The Lord is just in all his ways.'
+        ]
+      });
+      const vietnameseAlternativeAcclamation = parseVietnameseAcclamationLines([
+        'Alleluia, alleluia! – Ai giữ lời Chúa Kitô, thì tình yêu Thiên Chúa đã tuyệt hảo nơi người ấy. – Alleluia.',
+        '(Hoặc đọc: Vị ngôn sứ vĩ đại đã xuất hiện giữa chúng ta.)'
+      ]);
       const sharedApplyLines = [Object.assign(emptyMassLine(), {
         text_kr: '주님의 말씀입니다.',
         role_kr: 'body',
@@ -341,7 +360,7 @@ You can also view this page with the New Testament in Greek and English.`;
       if (liveSourceCheck) {
         const blockedFetch = window.fetch;
         window.fetch = window.__ordoOriginalFetch;
-        const liveDate = date(2026, 8, 31);
+        const liveDate = date(2026, 9, 1);
         const specs = [
           ['KR', 'KR', () => fetchStrictDailyMass('KR', liveDate, { locationCode: 'KR' })],
           ['VN', 'VN', () => fetchStrictDailyMass('VN', liveDate, { locationCode: 'VN' })],
@@ -404,6 +423,8 @@ You can also view this page with the New Testament in Greek and English.`;
         universalisSharedParser,
         parserRegression: {
           sharedApplyError,
+          unmarkedEnglishPsalm: unmarkedEnglishPsalm.lines,
+          vietnameseAlternativeAcclamation: vietnameseAlternativeAcclamation.lines,
           japaneseDayWordIsMassLabel: strictIsDayMassLabel('わたしは一日中、笑い者にされる。'),
           japaneseDayMassLabelRecognized: strictIsDayMassLabel('主の降誕（日中）'),
           japaneseSections: Object.keys(japaneseDayWordParsed.data || {}),
@@ -468,9 +489,9 @@ You can also view this page with the New Testament in Greek and English.`;
       };
     }, liveSources);
 
-    assert(/^V27\.3-/.test(result.version), `Unexpected runtime version: ${result.version}`);
-    assert(result.versionLabel === 'V27.3', `Settings version label is wrong: ${result.versionLabel}`);
-    assert(!/V27\.3/.test(result.footerText), 'Version must not be displayed in the footer.');
+    assert(/^V27\.4-/.test(result.version), `Unexpected runtime version: ${result.version}`);
+    assert(result.versionLabel === 'V27.4', `Settings version label is wrong: ${result.versionLabel}`);
+    assert(!/V27\.4/.test(result.footerText), 'Version must not be displayed in the footer.');
     assert(result.initial.useGps && result.initial.code === 'PH' && result.initial.left === 'EN', `GPS did not select Philippines: ${JSON.stringify(result.initial)}`);
     assert(result.initial.disabled && JSON.stringify(result.initial.visibleGpsOptions) === '["PH"]', `GPS location control is not locked to one country: ${JSON.stringify(result.initial)}`);
     assert(result.afterRightChange.useGps && result.afterRightChange.code === 'PH' && result.afterRightChange.target === 'JP', `Right language changed GPS state: ${JSON.stringify(result.afterRightChange)}`);
@@ -506,8 +527,27 @@ You can also view this page with the New Testament in Greek and English.`;
     assert(!/Saint of the Day|St\. Example|biography/i.test(result.cbcpBoundary.gospel), `CBCP Saint of the Day leaked into the Gospel: ${result.cbcpBoundary.gospel}`);
     Object.entries(result.universalisSharedParser).forEach(([code, audit]) => {
       assert(audit.missing.length === 0, `${code} lost Universalis reading sections: ${JSON.stringify(audit)}`);
+      assert(audit.readingLines[0].role === 'summary'
+        && audit.readingLines[1].role === 'intro'
+        && audit.readingLines[2].role === 'body'
+        && /The Spirit reaches even the depths of God The Spirit reaches the depths of everything, even the depths of God\./.test(audit.readingLines[0].text)
+        && /^After all,/.test(audit.readingLines[2].text),
+      `${code} did not preserve summary-intro-body order: ${JSON.stringify(audit.readingLines)}`);
+      assert(audit.gospelLines[0].role === 'summary'
+        && audit.gospelLines[1].role === 'intro'
+        && audit.gospelLines[2].role === 'body',
+      `${code} Gospel did not preserve summary-intro-body order: ${JSON.stringify(audit.gospelLines)}`);
     });
     assert(!result.parserRegression.sharedApplyError, `Shared multilingual reading application crashed: ${result.parserRegression.sharedApplyError}`);
+    assert(result.parserRegression.unmarkedEnglishPsalm.length === 3
+      && result.parserRegression.unmarkedEnglishPsalm[0].sp === 'R.'
+      && result.parserRegression.unmarkedEnglishPsalm.slice(1).every(line => line.sp === 'Versicle' && /- R\.$/.test(line.text)),
+    `Unmarked repeated English psalm response was not split: ${JSON.stringify(result.parserRegression.unmarkedEnglishPsalm)}`);
+    assert(result.parserRegression.vietnameseAlternativeAcclamation.length === 7
+      && result.parserRegression.vietnameseAlternativeAcclamation[4].sp === 'Mọi người'
+      && /^Alleluia/i.test(result.parserRegression.vietnameseAlternativeAcclamation[4].text)
+      && /^Alleluia/i.test(result.parserRegression.vietnameseAlternativeAcclamation[6].text),
+    `Vietnamese alternative acclamation lost its responses: ${JSON.stringify(result.parserRegression.vietnameseAlternativeAcclamation)}`);
     assert(!result.parserRegression.japaneseDayWordIsMassLabel, 'Japanese 一日中 text was mistaken for a daytime Mass label.');
     assert(result.parserRegression.japaneseDayMassLabelRecognized, 'A real Japanese daytime Mass label was not recognized.');
     assert(['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel'].every(key => result.parserRegression.japaneseSections.includes(key)), `Japanese day-word fixture lost sections: ${JSON.stringify(result.parserRegression.japaneseSections)}`);

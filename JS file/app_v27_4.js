@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.4-20260831-AUSTRALIA-NEW-ZEALAND-BETA';
+    const APP_VERSION = 'V27.4-20260901-MULTILINGUAL-DAILY-MASS-FIX';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -7583,7 +7583,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const alternative = strictAlternativeMatch(cleaned.replace(/^\((.*)\)$/u, '$1'));
             if (alternative) {
                 out.push(parsedLine('', 'Hoặc:'));
-                pushVietnameseAcclamationContent(out, alternative.rest, 'Mọi người');
+                if (/Alleluia/iu.test(alternative.rest)) {
+                    pushVietnameseAcclamationContent(out, alternative.rest, 'Mọi người');
+                } else {
+                    const primaryResponses = out.filter(item => /^Alleluia/iu.test(cleanNodeText(item && item.text)));
+                    const openingResponse = cleanNodeText(primaryResponses[0] && primaryResponses[0].text) || 'Alleluia.';
+                    const closingResponse = cleanNodeText(primaryResponses[primaryResponses.length - 1] && primaryResponses[primaryResponses.length - 1].text)
+                        || openingResponse;
+                    out.push(parsedLine('Mọi người', openingResponse));
+                    pushVietnameseAcclamationContent(out, alternative.rest);
+                    out.push(parsedLine('', closingResponse));
+                }
                 return;
             }
             pushVietnameseAcclamationContent(out, cleaned, hasPrimary ? '' : 'Mọi người');
@@ -9132,7 +9142,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict85';
+    const STRICT_PARSER_CACHE_VERSION = 'strict86';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9418,8 +9428,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return strictCleanLine(clone.textContent);
     }
 
-    function strictHtmlNodeLines(node) {
+    function strictHtmlNodeLines(node, options = {}) {
         if (!node) return [];
+        const nodeTag = (node.tagName || '').toLowerCase();
         if (node.classList && node.classList.contains('title-block')) {
             const lines = [];
             const heading = node.querySelector('h4, h5, h6');
@@ -9428,6 +9439,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if ((child.tagName || '').toLowerCase() === 'span') lines.push(strictCleanLine(child.textContent));
             });
             return lines.filter(Boolean);
+        }
+        if (nodeTag === 'h4' && options.preserveReadingSummaryHeadings) {
+            const heading = strictCleanLine(node.textContent);
+            return heading ? [`ORDO-READING-SUMMARY: ${heading}`] : [];
         }
         const directH5 = Array.from(node.children || []).filter(child => (child.tagName || '').toLowerCase() === 'h5');
         if (directH5.length) {
@@ -9469,7 +9484,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return lines.filter(Boolean);
     }
 
-    function strictHtmlLinesFromDoc(doc) {
+    function strictHtmlLinesFromDoc(doc, options = {}) {
         doc.querySelectorAll('script, style, nav, footer, iframe, noscript').forEach(node => node.remove());
         const usccbLines = strictUsccbHtmlLinesFromDoc(doc);
         if (usccbLines.length) return usccbLines;
@@ -9482,21 +9497,29 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (hasDirectH5) return true;
             return !Array.from(node.children || []).some(child => child.matches && child.matches(blockSelector));
         });
-        return nodes.flatMap(strictHtmlNodeLines)
+        return nodes.flatMap(node => strictHtmlNodeLines(node, options))
             .map(strictCleanLine)
             .filter(Boolean)
-            .filter(line => !/^(Title:|URL Source:|Published Time:|Markdown Content:|Image:|MENU|Search|LISTEN|VIEW|Subscribe|Copyright|©)/i.test(line));
+            .filter(line => !/^(Title:|URL Source:|Published Time:|Markdown Content:|Image:|MENU|Search|LISTEN|VIEW|Subscribe|How to listen|Copyright|©)/i.test(line));
     }
 
     function strictSourceLines(source) {
+        const preserveReadingSummaryHeadings = /(?:universalis\.com|Universalis:\s*Readings at Mass)/i.test(String(source || ''));
         if (!isJinaMarkdownSource(source)) {
             const doc = parseHtml(source);
-            return strictHtmlLinesFromDoc(doc);
+            return strictHtmlLinesFromDoc(doc, { preserveReadingSummaryHeadings });
         }
-        return sourceTextLines(source)
-            .map(strictCleanLine)
+        return String(source || '')
+            .split(/\r?\n/)
+            .map(line => {
+                const raw = String(line || '').replace(/^\s*>\s*/, '').trim();
+                const summaryHeading = raw.match(/^#{4}\s+(.+)$/u);
+                return summaryHeading && preserveReadingSummaryHeadings
+                    ? `ORDO-READING-SUMMARY: ${strictCleanLine(summaryHeading[1])}`
+                    : strictCleanLine(line);
+            })
             .filter(Boolean)
-            .filter(line => !/^(Title:|URL Source:|Published Time:|Markdown Content:|Image:|MENU|Search|LISTEN|VIEW|Subscribe|Copyright|©)/i.test(line));
+            .filter(line => !/^(Title:|URL Source:|Published Time:|Markdown Content:|Image:|MENU|Search|LISTEN|VIEW|Subscribe|How to listen|Copyright|©)/i.test(line));
     }
 
     function strictNormalizeUniversalisDailyLine(line) {
@@ -9787,7 +9810,34 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return splitSourceBlocks(lines || []).map(strictCleanLine).filter(Boolean);
     }
 
+    function strictReadingSummaryWordOverlap(left, right) {
+        const leftWords = Array.from(new Set(normalizedSummaryText(left).split(' ').filter(word => word.length > 1)));
+        const rightWords = new Set(normalizedSummaryText(right).split(' ').filter(word => word.length > 1));
+        if (leftWords.length < 3 || !rightWords.size) return 0;
+        return leftWords.filter(word => rightWords.has(word)).length / leftWords.length;
+    }
+
+    function strictExtractMarkedReadingSummary(blocks) {
+        const sourceBlocks = blocks || [];
+        const index = sourceBlocks.findIndex((line, i) => i < 4 && /^ORDO-READING-SUMMARY:\s*/u.test(line));
+        if (index < 0) return null;
+        let summary = strictCleanLine(sourceBlocks[index].replace(/^ORDO-READING-SUMMARY:\s*/u, ''))
+            .replace(/^[“"'「『〈《*]+|[“”"'」』〉》*.]+$/g, '');
+        const remaining = sourceBlocks.filter((_, i) => i !== index);
+        const nextIndex = Math.min(index, remaining.length - 1);
+        const next = nextIndex >= 0 ? strictCleanLine(remaining[nextIndex]) : '';
+        const sentence = next.match(/^(.+?[.!?])(?:\s+|$)([\s\S]*)$/u);
+        if (sentence && strictReadingSummaryWordOverlap(summary, sentence[1]) >= 0.6) {
+            summary = strictCleanLine(`${summary} ${sentence[1]}`);
+            if (strictCleanLine(sentence[2])) remaining[nextIndex] = strictCleanLine(sentence[2]);
+            else remaining.splice(nextIndex, 1);
+        }
+        return { summary, blocks: remaining };
+    }
+
     function strictExtractQuotedSummary(blocks) {
+        const marked = strictExtractMarkedReadingSummary(blocks);
+        if (marked) return marked;
         const index = (blocks || []).findIndex((line, i) => i < 4 && (
             /^<[^>]{2,300}>$/.test(line) ||
             /^[“"「『〈《].{2,300}[“”"」』〉》]\.?$/.test(line) ||
@@ -10037,6 +10087,52 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function appendLatinPsalmResponseTail(text) {
         const cleaned = strictCleanLine(text);
         return /-\s*℟\s*$/u.test(cleaned) ? cleaned : `${cleaned} - ℟`;
+    }
+
+    function strictUnmarkedPsalmResponseKey(text) {
+        return normalizedSummaryText(text);
+    }
+
+    function strictParseUnmarkedRepeatedPsalm(lang, citation, blocks) {
+        const cleanedBlocks = (blocks || [])
+            .map(strictCleanLine)
+            .filter(Boolean)
+            .filter(line => !strictLooksLikeCitation(line, lang));
+        if (cleanedBlocks.length < 3 || cleanedBlocks.some(line => (
+            /^(?:◎|○|●|R\.|℟\.?|Đáp|Ðáp|Đ\.|Ð\.|答|領)\s*[:.：]?\s*/iu.test(line)
+        ))) return null;
+
+        const firstKey = strictUnmarkedPsalmResponseKey(cleanedBlocks[0]);
+        if (firstKey.length < 4) return null;
+        const markerIndexes = cleanedBlocks
+            .map((line, index) => strictUnmarkedPsalmResponseKey(line) === firstKey ? index : -1)
+            .filter(index => index >= 0);
+        if (markerIndexes.length < 2
+            || markerIndexes[0] !== 0
+            || markerIndexes[markerIndexes.length - 1] !== cleanedBlocks.length - 1) return null;
+
+        const responseSpeakers = { KR: '◎', VN: 'Đáp', EN: 'R.', JP: '答', LA: '℟', ZH: '答' };
+        const versicleSpeakers = { KR: '○', VN: 'Xướng', EN: 'Versicle', JP: '先', LA: '℣', ZH: '領' };
+        const responseSpeaker = responseSpeakers[lang] || '';
+        const versicleSpeaker = versicleSpeakers[lang] || '';
+        const out = [strictParsedLine(responseSpeaker, cleanedBlocks[0])];
+        markerIndexes.slice(0, -1).forEach((markerIndex, order) => {
+            const nextMarker = markerIndexes[order + 1];
+            const verse = strictCleanLine(cleanedBlocks
+                .slice(markerIndex + 1, nextMarker)
+                .map(line => strictStripArabicVerseNumbers(line, citation))
+                .join(' '));
+            if (!verse) return;
+            let text = strictAppendPsalmResponse(lang, 'psalm', versicleSpeaker, verse);
+            if (lang === 'EN') text = /-\s*R\.\s*$/i.test(verse) ? verse : `${verse} - R.`;
+            out.push(strictParsedLine(versicleSpeaker, text));
+        });
+        if (out.length < 2) return null;
+        attachPsalmVerseRefs(lang, citation, out);
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result[`cit_${lang.toLowerCase()}`] = finalCitation;
+        return result;
     }
 
     function strictParseLatinPsalm(citation, blocks) {
@@ -10312,6 +10408,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ? citationResult.blocks.filter(line => !isStandaloneDashText(line))
             : citationResult.blocks;
         const out = [];
+        if (key === 'psalm') {
+            const repeatedPsalm = strictParseUnmarkedRepeatedPsalm(lang, citationResult.citation, citationResult.blocks);
+            if (repeatedPsalm) return repeatedPsalm;
+        }
         if (lang === 'VN' && key === 'psalm') {
             const parsedPsalm = parseVietnamesePsalmLines(citationResult.blocks);
             parsedPsalm.lines.forEach(line => out.push(strictParsedLine(line.sp, line.text, '', '', line.rubric)));
