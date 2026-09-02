@@ -20,7 +20,7 @@ function startServer() {
   };
   const server = http.createServer((request, response) => {
     const url = new URL(request.url, 'http://127.0.0.1');
-    const route = decodeURIComponent(url.pathname === '/' ? '/index.html' : url.pathname);
+    const route = decodeURIComponent(url.pathname === '/' ? '/V27.4.html' : url.pathname);
     const file = path.resolve(root, route.replace(/^\/+/, ''));
     if (!file.startsWith(root)) return response.writeHead(403).end('Forbidden');
     fs.readFile(file, (error, data) => {
@@ -57,7 +57,7 @@ function startServer() {
   });
 
   try {
-    await page.goto(`http://127.0.0.1:${server.address().port}/index.html`, {
+    await page.goto(`http://127.0.0.1:${server.address().port}/V27.4.html`, {
       waitUntil: 'domcontentloaded',
       timeout: 90000
     });
@@ -71,7 +71,8 @@ function startServer() {
         label: (line.querySelector('.consent-warning-language') || {}).textContent || '',
         text: (line.querySelector('.consent-warning-text') || {}).textContent || '',
         display: getComputedStyle(line).display,
-        columns: getComputedStyle(line).gridTemplateColumns
+        columns: getComputedStyle(line).gridTemplateColumns,
+        fontFamily: getComputedStyle(line.querySelector('.consent-warning-text')).fontFamily
       }));
       const englishRegion = {
         location: state.selectedLocationCode,
@@ -102,6 +103,13 @@ function startServer() {
         fitsWidth: grid.scrollWidth <= grid.clientWidth + 1
       };
     });
+    if (process.env.ORDO_SCREENSHOT === '1') {
+      const screenshotDir = path.join(root, 'tmp');
+      fs.mkdirSync(screenshotDir, { recursive: true });
+      await page.locator('#consent-modal .consent-content').screenshot({
+        path: path.join(screenshotDir, 'v27-4-consent-gothic-font.png')
+      });
+    }
     await page.locator('#consent-accept').click({ timeout: 15000 }).catch(() => {});
     await page.waitForFunction(() => typeof render === 'function' && typeof updateSettings === 'function', null, {
       timeout: 90000
@@ -146,16 +154,17 @@ function startServer() {
       ['KR', 'VN', 'EN', 'JP', 'LA'].forEach(ui => {
         state.uiLang = ui;
         syncLocalizedChromeAndSettings();
-        const groupLabel = (selectId, key) => document.querySelector(`#${selectId} optgroup[data-conference-key="${key}"]`).label;
+        const inspectLocationSelect = selectId => {
+          const select = document.getElementById(selectId);
+          return {
+            regions: Object.fromEntries(Array.from(select.querySelectorAll('optgroup[data-region-key]')).map(group => [group.dataset.regionKey, group.label])),
+            order: Array.from(select.options).filter(option => locationMeta[option.value] && option.value !== 'INTL').map(option => option.value),
+            labels: Object.fromEntries(Array.from(select.options).filter(option => locationMeta[option.value] && option.value !== 'INTL').map(option => [option.value, option.textContent]))
+          };
+        };
         localizedSettings[ui] = {
-          taiwan: document.querySelector('#set-loc option[value="TW"]').textContent,
-          ireland: document.querySelector('#set-loc option[value="IE"]').textContent,
-          cbck: groupLabel('set-loc', 'CBCK'),
-          crbc: groupLabel('set-loc', 'CRBC'),
-          icbc: groupLabel('set-loc', 'ICBC'),
-          cbcp: groupLabel('set-loc', 'CBCP'),
-          targetTaiwan: document.querySelector('#set-target-lang option[value="TW"]').textContent,
-          targetIcbc: groupLabel('set-target-lang', 'ICBC')
+          left: inspectLocationSelect('set-loc'),
+          target: inspectLocationSelect('set-target-lang')
         };
       });
       state.uiLang = savedUiLanguage;
@@ -650,6 +659,34 @@ You can also view this page with the New Testament in Greek and English.`;
     }, liveSources);
 
     result.startupConsent = startupConsent;
+    result.locationSelectionAliases = await page.evaluate(() => ({
+      wales: representativeLocationSelectionCode('GB-WLS'),
+      northernIreland: representativeLocationSelectionCode('GB-NIR')
+    }));
+
+    if (process.env.ORDO_SCREENSHOT === '1') {
+      await page.evaluate(() => {
+        state.uiLang = 'KR';
+        syncLocalizedChromeAndSettings();
+        openSettings();
+        const targetSelect = document.getElementById('set-target-lang');
+        targetSelect.size = targetSelect.options.length;
+        targetSelect.style.maxWidth = '100%';
+        targetSelect.style.flexBasis = '100%';
+        targetSelect.closest('.setting-row').style.alignItems = 'flex-start';
+      });
+      await page.locator('#settings-modal .settings-content').screenshot({
+        path: path.join(root, 'tmp', 'v27-4-regional-language-selector.png')
+      });
+      await page.evaluate(() => {
+        closeSettings();
+        const targetSelect = document.getElementById('set-target-lang');
+        targetSelect.removeAttribute('size');
+        targetSelect.style.maxWidth = '';
+        targetSelect.style.flexBasis = '';
+        targetSelect.closest('.setting-row').style.alignItems = '';
+      });
+    }
 
     await page.evaluate(() => {
       document.getElementById('set-gps').checked = true;
@@ -781,6 +818,8 @@ You can also view this page with the New Testament in Greek and English.`;
     assert(JSON.stringify(result.startupConsent.rows.map(row => row.lang)) === JSON.stringify(['lang-EN', 'lang-LA', 'lang-KR', 'lang-JP', 'lang-ZH', 'lang-VN'])
       && result.startupConsent.rows.length === 6
       && result.startupConsent.rows.every(row => row.label && row.text && row.display === 'grid' && row.columns !== 'none')
+      && new Set(result.startupConsent.rows.map(row => row.fontFamily)).size === 1
+      && result.startupConsent.rows.every(row => /sans-serif/i.test(row.fontFamily) && !/Times New Roman/i.test(row.fontFamily))
       && !result.startupConsent.hasLegacyCards
       && result.startupConsent.fitsWidth,
     `Startup consent warnings are not six ordered language rows: ${JSON.stringify(result.startupConsent)}`);
@@ -804,20 +843,33 @@ You can also view this page with the New Testament in Greek and English.`;
     assert(result.initial.disabled && JSON.stringify(result.initial.visibleGpsOptions) === '["PH"]', `GPS location control is not locked to one country: ${JSON.stringify(result.initial)}`);
     assert(result.afterRightChange.useGps && result.afterRightChange.code === 'PH' && result.afterRightChange.target === 'JP', `Right language changed GPS state: ${JSON.stringify(result.afterRightChange)}`);
     assert(result.manualEnabled && !result.afterManual.useGps && result.afterManual.code === 'IE', `Manual selection did not unlock correctly: ${JSON.stringify(result.afterManual)}`);
+    assert(result.locationSelectionAliases.wales === 'GB-ENG' && result.locationSelectionAliases.northernIreland === 'IE',
+      `GPS country aliases did not map to their bishops-conference selections: ${JSON.stringify(result.locationSelectionAliases)}`);
     assert(result.jpUi.settingsTitle === '設定' && result.jpUi.consentTitle === 'ご利用前のご案内', `Japanese beta UI warnings are missing: ${JSON.stringify(result.jpUi)}`);
     assert(/Beta/.test(result.jpUi.targetLabel) && /Beta/.test(result.jpUi.uiLabel), `Japanese beta labels are missing: ${JSON.stringify(result.jpUi)}`);
-    assert(result.localizedSettings.KR.taiwan === '대만 / 중국어 번체 / 繁體中文 (Beta)', `Korean Taiwan label is wrong: ${JSON.stringify(result.localizedSettings.KR)}`);
-    assert(result.localizedSettings.KR.icbc === '아일랜드 가톨릭 주교회의 (ICBC)', `Korean Ireland conference label is wrong: ${JSON.stringify(result.localizedSettings.KR)}`);
-    assert(/천주교 주교회의/.test(result.localizedSettings.KR.cbck)
-      && /천주교 주교회의/.test(result.localizedSettings.KR.crbc)
-      && /가톨릭 주교회의/.test(result.localizedSettings.KR.icbc)
-      && /가톨릭 주교회의/.test(result.localizedSettings.KR.cbcp),
-    `Korean conference naming convention is inconsistent: ${JSON.stringify(result.localizedSettings.KR)}`);
-    assert(new Set(Object.values(result.localizedSettings).map(entry => entry.taiwan)).size === 5
-      && new Set(Object.values(result.localizedSettings).map(entry => entry.icbc)).size === 5,
-    `Country/language/conference labels did not follow the UI language: ${JSON.stringify(result.localizedSettings)}`);
+    const expectedLocationOrder = ['VA', 'US', 'GB-ENG', 'GB-SCT', 'IE', 'AU', 'NZ', 'KR', 'JP', 'TW', 'VN', 'PH'];
+    assert(JSON.stringify(result.localizedSettings.KR.left.order) === JSON.stringify(expectedLocationOrder)
+      && result.localizedSettings.KR.left.labels.VA === '보편로마전례 | Lingua Latina'
+      && result.localizedSettings.KR.left.labels.US === '미국(USCCB) | English'
+      && result.localizedSettings.KR.left.labels['GB-ENG'] === '잉글랜드·웨일즈(CBCEW) | English (Beta)'
+      && result.localizedSettings.KR.left.labels.IE === '아일랜드·북아일랜드(ICBC) | English (Beta)'
+      && result.localizedSettings.KR.left.labels.JP === '일본(CBJC) | 日本語 (Beta)'
+      && result.localizedSettings.KR.left.labels.TW === '대만(CRCB) | 繁體中文 (Beta)',
+    `Korean regional language selection is wrong: ${JSON.stringify(result.localizedSettings.KR)}`);
+    assert(JSON.stringify(Object.values(result.localizedSettings.KR.left.regions)) === JSON.stringify([
+      '영미권', '서유럽권', '동유럽권', '동북아시아', '동남아시아', '서아시아', '중남미권', '아프리카'
+    ]), `Korean region order is wrong: ${JSON.stringify(result.localizedSettings.KR.left.regions)}`);
+    assert(result.localizedSettings.EN.left.labels.US === 'United States(USCCB) | English'
+      && result.localizedSettings.EN.left.labels['GB-ENG'] === 'England & Wales(CBCEW) | English (Beta)'
+      && result.localizedSettings.EN.left.labels.IE === 'Ireland & Northern Ireland(ICBC) | English (Beta)'
+      && result.localizedSettings.EN.left.regions.NORTHEAST_ASIA === 'Northeast Asia',
+    `English regional language selection is wrong: ${JSON.stringify(result.localizedSettings.EN)}`);
+    assert(new Set(Object.values(result.localizedSettings).map(entry => entry.left.labels.TW)).size === 5
+      && new Set(Object.values(result.localizedSettings).map(entry => entry.left.regions.NORTHEAST_ASIA)).size === 5,
+    `Country and region labels did not follow the UI language: ${JSON.stringify(result.localizedSettings)}`);
     Object.entries(result.localizedSettings).forEach(([ui, entry]) => {
-      assert(entry.taiwan === entry.targetTaiwan && entry.icbc === entry.targetIcbc,
+      assert(JSON.stringify(entry.left.labels) === JSON.stringify(entry.target.labels)
+        && JSON.stringify(entry.left.regions) === JSON.stringify(entry.target.regions),
         `${ui} left/right settings labels are inconsistent: ${JSON.stringify(entry)}`);
     });
     assert(!result.unsupportedOptions.length && !result.unsupportedProfiles.length, `Unsupported country remnants: ${JSON.stringify(result)}`);
@@ -948,7 +1000,7 @@ You can also view this page with the New Testament in Greek and English.`;
       && result.taiwanTargetEndToEnd.translationLanguage === 'ZH'
       && result.taiwanTargetEndToEnd.languageStatus.ZH === 'done'
       && Object.values(result.taiwanTargetEndToEnd.sourceChoices).every(options => (
-        options.some(option => /중국어 번체 원문/u.test(option.text))
+        options.some(option => /중국어 번체 (?:원문|입당송|영성체송)/u.test(option.text))
       ))
       && Object.values(result.taiwanTargetEndToEnd.sections).every(section => section.originalText && section.aiButtons === 0),
     `Taiwan target-language flow did not render official Traditional Chinese text: ${JSON.stringify(result.taiwanTargetEndToEnd)}`);

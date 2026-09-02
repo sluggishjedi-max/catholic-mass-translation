@@ -50,6 +50,9 @@
         .lang-EN { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, 'Roboto', 'One UI Sans', sans-serif; }
         .lang-JP { font-family: 'Yu Gothic UI', 'Meiryo', 'Noto Sans CJK', 'One UI Sans', sans-serif; }
         .lang-ZH { font-family: 'Microsoft JhengHei UI', 'PingFang TC', 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif; }
+        .lang-IT { font-family: 'Noto Sans', 'Segoe UI', Arial, sans-serif; }
+        .lang-PT { font-family: 'Noto Sans', 'Segoe UI', Arial, sans-serif; }
+        .lang-ES { font-family: 'Noto Sans', 'Segoe UI', Arial, sans-serif; }
         .lang-LA { font-family: 'Times New Roman', 'Noto Serif', 'One UI Serif', serif; }
 
         /* 상단 이동 탭은 아직 준비 중인 메뉴까지 한곳에서 보여줍니다. */
@@ -605,6 +608,21 @@
                 <div class="role-legend-line psalm-song-note">※ 彌撒採用歌唱答唱詠時，歌詞可能與經文略有不同。</div>
             </div>
         </div>
+        <div class="role-legend-group lang-IT" data-legend-lang="IT">
+            <div class="role-legend-lines">
+                <div class="role-legend-line psalm-song-note">※ Quando la Messa usa un salmo cantato, il testo del canto può differire dal testo qui riportato.</div>
+            </div>
+        </div>
+        <div class="role-legend-group lang-PT" data-legend-lang="PT">
+            <div class="role-legend-lines">
+                <div class="role-legend-line psalm-song-note">※ Quando a Missa é celebrada com um salmo cantado, a letra pode diferir do texto.</div>
+            </div>
+        </div>
+        <div class="role-legend-group lang-ES" data-legend-lang="ES">
+            <div class="role-legend-lines">
+                <div class="role-legend-line psalm-song-note">※ Cuando la Misa se celebra con un salmo cantado, la letra puede diferir del texto.</div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -691,7 +709,7 @@
 <div id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="lbl-settings-title">
     <div class="settings-content">
         <h3 id="lbl-settings-title">설정 (Settings)</h3>
-        <span id="settings-version-label" class="settings-version-label" aria-label="App version">V27.4</span>
+        <span id="settings-version-label" class="settings-version-label" aria-label="App version">V27.5</span>
 
         <div class="setting-row">
             <label id="lbl-set-gps">📍 GPS 끄고 현재위치 강제 조정</label>
@@ -703,12 +721,12 @@
             <select id="set-loc" onchange="selectManualLocation()">
                 <option value="VA">보편로마전례 | Lingua Latina</option>
                 <optgroup data-region-key="ANGLO_AMERICAN" label="영미권"></optgroup>
-                <optgroup data-region-key="WESTERN_EUROPE" label="서유럽권"><option disabled>—</option></optgroup>
+                <optgroup data-region-key="WESTERN_EUROPE" label="서유럽권"><option value="IT">이탈리아(CEI) | Italiano (Beta)</option><option value="PT">포르투갈(CEP) | Português (Beta)</option></optgroup>
                 <optgroup data-region-key="EASTERN_EUROPE" label="동유럽권"><option disabled>—</option></optgroup>
                 <optgroup data-region-key="NORTHEAST_ASIA" label="동북아시아"></optgroup>
                 <optgroup data-region-key="SOUTHEAST_ASIA" label="동남아시아"></optgroup>
                 <optgroup data-region-key="WEST_ASIA" label="서아시아"><option disabled>—</option></optgroup>
-                <optgroup data-region-key="LATIN_AMERICA" label="중남미권"><option disabled>—</option></optgroup>
+                <optgroup data-region-key="LATIN_AMERICA" label="중남미권"><option value="MX">멕시코(CEM) | Español (Beta)</option></optgroup>
                 <optgroup data-region-key="AFRICA" label="아프리카"><option disabled>—</option></optgroup>
             </select>
         </div>
@@ -718,12 +736,12 @@
             <select id="set-target-lang" onchange="updateSettings()">
                 <option value="VA">보편로마전례 | Lingua Latina</option>
                 <optgroup data-region-key="ANGLO_AMERICAN" label="영미권"></optgroup>
-                <optgroup data-region-key="WESTERN_EUROPE" label="서유럽권"><option disabled>—</option></optgroup>
+                <optgroup data-region-key="WESTERN_EUROPE" label="서유럽권"><option value="IT">이탈리아(CEI) | Italiano (Beta)</option><option value="PT">포르투갈(CEP) | Português (Beta)</option></optgroup>
                 <optgroup data-region-key="EASTERN_EUROPE" label="동유럽권"><option disabled>—</option></optgroup>
                 <optgroup data-region-key="NORTHEAST_ASIA" label="동북아시아"></optgroup>
                 <optgroup data-region-key="SOUTHEAST_ASIA" label="동남아시아"></optgroup>
                 <optgroup data-region-key="WEST_ASIA" label="서아시아"><option disabled>—</option></optgroup>
-                <optgroup data-region-key="LATIN_AMERICA" label="중남미권"><option disabled>—</option></optgroup>
+                <optgroup data-region-key="LATIN_AMERICA" label="중남미권"><option value="MX">멕시코(CEM) | Español (Beta)</option></optgroup>
                 <optgroup data-region-key="AFRICA" label="아프리카"><option disabled>—</option></optgroup>
             </select>
         </div>
@@ -763,6 +781,7 @@
                 <option value="EN">English</option>
                 <option value="JP">日本語 (Beta)</option>
                 <option value="LA">Latin</option>
+                <option value="ZH">繁體中文</option>
             </select>
         </div>
 
@@ -801,6 +820,9 @@
 <script src="JS%20file/countries/taiwan/taiwan_daily_mass_data.js?v=20260831-v27-3-static-cycles"></script>
 <script src="JS%20file/countries/australia/australia_mass.js?v=20260831-acbc-english-beta"></script>
 <script src="JS%20file/countries/new_zealand/new_zealand_mass.js?v=20260831-nzcbc-english-beta"></script>
+<script src="JS%20file/countries/italy/italy_mass.js?v=20260901-cei-italian-beta"></script>
+<script src="JS%20file/countries/portugal/portugal_mass.js?v=20260902-cep-portuguese-beta"></script>
+<script src="JS%20file/countries/mexico/mexico_mass.js?v=20260902-cem-mexican-beta"></script>
 <script src="JS%20file/local_missal_prayer_data.js?v=20260823-v26-r5"></script>
 <script src="JS%20file/korean_temporal_data.js?v=20260822-v26"></script>
 <script src="JS%20file/korean_blessing_data.js?v=20260822-v26"></script>
@@ -816,6 +838,9 @@
 <script src="JS%20file/countries/taiwan/taiwan_prayers.js?v=20260830-crbc-traditional-chinese-beta"></script>
 <script src="JS%20file/countries/australia/australia_prayers.js?v=20260831-acbc-english-beta"></script>
 <script src="JS%20file/countries/new_zealand/new_zealand_prayers.js?v=20260831-nzcbc-english-beta"></script>
+<script src="JS%20file/countries/italy/italy_prayers.js?v=20260901-cei-italian-beta"></script>
+<script src="JS%20file/countries/portugal/portugal_prayers.js?v=20260902-cep-portuguese-beta"></script>
+<script src="JS%20file/countries/mexico/mexico_prayers.js?v=20260902-cem-mexican-beta"></script>
 <script src="JS%20file/countries/korea/korea_hymns.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/vietnam/vietnam_hymns.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/united_states/united_states_hymns.js?v=20260827-country-data"></script>
@@ -828,6 +853,9 @@
 <script src="JS%20file/countries/taiwan/taiwan_hymns.js?v=20260830-crbc-traditional-chinese-beta"></script>
 <script src="JS%20file/countries/australia/australia_hymns.js?v=20260831-acbc-english-beta"></script>
 <script src="JS%20file/countries/new_zealand/new_zealand_hymns.js?v=20260831-nzcbc-english-beta"></script>
+<script src="JS%20file/countries/italy/italy_hymns.js?v=20260901-cei-italian-beta"></script>
+<script src="JS%20file/countries/portugal/portugal_hymns.js?v=20260902-cep-portuguese-beta"></script>
+<script src="JS%20file/countries/mexico/mexico_hymns.js?v=20260902-cem-mexican-beta"></script>
 <script src="JS%20file/countries/korea/korea_churches.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/vietnam/vietnam_churches.js?v=20260827-country-data"></script>
 <script src="JS%20file/countries/united_states/united_states_churches.js?v=20260827-country-data"></script>
@@ -840,9 +868,12 @@
 <script src="JS%20file/countries/taiwan/taiwan_churches.js?v=20260830-crbc-directory-beta"></script>
 <script src="JS%20file/countries/australia/australia_churches.js?v=20260831-acbc-directory-beta"></script>
 <script src="JS%20file/countries/new_zealand/new_zealand_churches.js?v=20260831-nzcbc-directory-beta"></script>
+<script src="JS%20file/countries/italy/italy_churches.js?v=20260901-cei-directory-beta"></script>
+<script src="JS%20file/countries/portugal/portugal_churches.js?v=20260902-cep-directory-beta"></script>
+<script src="JS%20file/countries/mexico/mexico_churches.js?v=20260902-cem-directory-beta"></script>
 <script src="JS%20file/bishop_data.js?v=20260822-v26"></script>
 <script src="JS%20file/us_bishop_data.js?v=20260822-v26"></script>
 
-<script src="JS%20file/app_v27_4.js?v=20260901-v27-4-regional-language-selectors"></script>
+<script src="JS%20file/app_v27_5.js?v=20260902-v27-5-cei-italy-cep-portugal-cem-mexico-zh-ui"></script>
 </body>
 </html>

@@ -18,7 +18,55 @@
     return value;
   }
 
-  const ordinary = cloneFrozen(englishMissal.ordinary);
+  function splitEnglishText(value) {
+    const phrases = String(value || '').split(/<br\s*\/?\s*>/i).flatMap(part => part.split(/(?<=[.;!?])\s+(?=[A-Z])/));
+    const output = [];
+    phrases.map(part => part.trim()).filter(Boolean).forEach(phraseValue => {
+      let phrase = phraseValue;
+      while (phrase.length > 520) {
+        let cut = phrase.lastIndexOf(' ', 420);
+        if (cut < 120) cut = 420;
+        output.push(phrase.slice(0, cut).trim());
+        phrase = phrase.slice(cut).trim();
+      }
+      if (phrase) output.push(phrase);
+    });
+    return output;
+  }
+
+  function splitEnglishRows(rows) {
+    return (Array.isArray(rows) ? rows : []).flatMap(row => {
+      const text = typeof row.text_en === 'string' ? splitEnglishText(row.text_en) : null;
+      const rubric = typeof row.rubric_en === 'string' ? row.rubric_en.split(/<br\s*\/?\s*>/i) : null;
+      if ((!text || text.length === 1) && (!rubric || rubric.length === 1)) return [Object.assign({}, row)];
+      const base = Object.assign({}, row);
+      delete base.text_en;
+      delete base.rubric_en;
+      const output = [];
+      (rubric || []).map(value => value.trim()).filter(Boolean).forEach(value => output.push(Object.assign({}, base, { rubric_en: value })));
+      (text || []).map(value => value.trim()).filter(Boolean).forEach((value, index) => output.push(Object.assign({}, base, { sp_en: index ? '' : (row.sp_en || ''), text_en: value })));
+      return output;
+    });
+  }
+
+  function structureEnglishOrdinary(source) {
+    return source.map(entry => {
+      const item = Object.assign({}, entry);
+      ['lines', 'common_dialogue', 'sanctus', 'amen'].forEach(key => {
+        if (Array.isArray(item[key])) item[key] = splitEnglishRows(item[key]);
+      });
+      if (item.variants) item.variants = Object.fromEntries(Object.entries(item.variants).map(([key, variant]) => [key,
+        variant && Array.isArray(variant.lines) ? Object.assign({}, variant, { lines: splitEnglishRows(variant.lines) }) : variant
+      ]));
+      if (item.forms) item.forms = Object.fromEntries(Object.entries(item.forms).map(([key, rows]) => [key, splitEnglishRows(rows)]));
+      if (item.songs) item.songs = Object.fromEntries(Object.entries(item.songs).map(([key, song]) => [key,
+        song && Array.isArray(song.content) ? Object.assign({}, song, { content: splitEnglishRows(song.content) }) : song
+      ]));
+      return item;
+    });
+  }
+
+  const ordinary = cloneFrozen(structureEnglishOrdinary(englishMissal.ordinary));
   const romanMissalProperData = cloneFrozen(englishMissal.romanMissalProperData);
 
   const SOURCE = Object.freeze({
@@ -232,6 +280,7 @@ Through Christ our Lord.`
     conferenceCalendar: 'Australian Catholic Bishops Conference',
     ordinaryLanguage: 'EN',
     ordinary,
+    ordinaryStructure: 'paragraph-rubric-choices-v1',
     romanMissalProperData,
     ordinaryEdition: 'Roman Missal, Third Edition — approved English text for Australia',
     ordinarySource: Object.freeze({ authority: 'ICEL / Australian Catholic Bishops Conference', url: SOURCE.ordinary }),

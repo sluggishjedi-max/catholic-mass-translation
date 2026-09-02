@@ -1,4 +1,4 @@
-// Order of Mass V27.4 application runtime. Liturgical data is loaded from country-owned modules.
+// Order of Mass V27.5 application runtime. Liturgical data is loaded from country-owned modules.
     const missaDataApi = window.ordoMissaDataApi;
     let massData = missaDataApi ? missaDataApi.cloneEntries() : [];
 
@@ -28,25 +28,25 @@
 
     const initialAndroidSettings = readInitialAndroidSettings();
     const COUNTRY_LOCATION_CODES = Object.freeze([
-        'KR', 'VN', 'US', 'IE', 'GB-NIR', 'GB-ENG', 'GB-WLS', 'GB-SCT', 'PH', 'TW', 'AU', 'NZ', 'JP', 'VA', 'INTL'
+        'KR', 'VN', 'US', 'IE', 'GB-NIR', 'GB-ENG', 'GB-WLS', 'GB-SCT', 'PH', 'TW', 'AU', 'NZ', 'JP', 'IT', 'PT', 'MX', 'VA', 'INTL'
     ]);
     const initialAndroidLocation = initialAndroidSettings
         && COUNTRY_LOCATION_CODES.includes(initialAndroidSettings.selectedLocationCode)
         ? initialAndroidSettings.selectedLocationCode
         : 'KR';
     const initialAndroidLocationLang = {
-        KR: 'KR', VN: 'VN', US: 'EN', IE: 'EN', 'GB-NIR': 'EN', 'GB-ENG': 'EN', 'GB-WLS': 'EN', 'GB-SCT': 'EN', JP: 'JP', VA: 'LA',
+        KR: 'KR', VN: 'VN', US: 'EN', IE: 'EN', 'GB-NIR': 'EN', 'GB-ENG': 'EN', 'GB-WLS': 'EN', 'GB-SCT': 'EN', JP: 'JP', IT: 'IT', PT: 'PT', MX: 'ES', VA: 'LA',
         PH: 'EN', TW: 'ZH', AU: 'EN', NZ: 'EN', INTL: 'EN'
     }[initialAndroidLocation] || 'KR';
     const initialAndroidTarget = initialAndroidSettings
-        && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'].includes(initialAndroidSettings.targetLang)
+        && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES'].includes(initialAndroidSettings.targetLang)
         ? initialAndroidSettings.targetLang
         : 'EN';
     const initialAndroidTargetLocation = initialAndroidSettings
         && COUNTRY_LOCATION_CODES.includes(initialAndroidSettings.targetLocationCode)
         && initialAndroidSettings.targetLocationCode !== 'INTL'
         ? initialAndroidSettings.targetLocationCode
-        : ({ KR: 'KR', VN: 'VN', EN: 'US', JP: 'JP', LA: 'VA', ZH: 'TW' }[initialAndroidTarget] || 'US');
+        : ({ KR: 'KR', VN: 'VN', EN: 'US', JP: 'JP', LA: 'VA', ZH: 'TW', IT: 'IT', PT: 'PT', ES: 'MX' }[initialAndroidTarget] || 'US');
     const initialAndroidFontSize = initialAndroidSettings
         && ['14px', '18px', '20px', '22px'].includes(initialAndroidSettings.fontSize)
         ? initialAndroidSettings.fontSize
@@ -58,7 +58,7 @@
             : (Array.isArray(navigator.languages) && navigator.languages.length
                 ? navigator.languages
                 : [navigator.language || '']);
-        const languageMap = { ko: 'KR', vi: 'VN', en: 'EN', ja: 'JP', la: 'LA' };
+        const languageMap = { ko: 'KR', vi: 'VN', en: 'EN', ja: 'JP', la: 'LA', zh: 'ZH' };
         for (const candidate of candidates) {
             const base = String(candidate || '').trim().toLowerCase().split(/[-_]/)[0];
             if (languageMap[base]) return languageMap[base];
@@ -69,7 +69,7 @@
     function initialUiLanguage() {
         try {
             const stored = localStorage.getItem(UI_LANGUAGE_STORAGE_KEY);
-            if (['KR', 'VN', 'EN', 'JP', 'LA'].includes(stored)) return stored;
+            if (['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'].includes(stored)) return stored;
         } catch (error) {
             console.warn('설정 언어 저장값을 불러오지 못했습니다.', error);
         }
@@ -86,12 +86,12 @@
 
     let state = {
         useGps: initialAndroidSettings && typeof initialAndroidSettings.useGps === 'boolean' ? initialAndroidSettings.useGps : true,
-        currentLoc: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'].includes(initialAndroidSettings.currentLoc)
+        currentLoc: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES'].includes(initialAndroidSettings.currentLoc)
             ? initialAndroidSettings.currentLoc
             : initialAndroidLocationLang, // 좌측 (현지어)
         targetLang: initialAndroidTarget, // 우측 (번역어)
         targetLocationCode: initialAndroidTargetLocation, // 우측 번역문에 사용할 국가별 미사/독서 소스
-        uiLang: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA'].includes(initialAndroidSettings.uiLang)
+        uiLang: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'].includes(initialAndroidSettings.uiLang)
             ? initialAndroidSettings.uiLang
             : initialUiLanguage(), // 최초에는 기기/브라우저 언어를 따르고, 이후에는 사용자의 선택을 기억합니다.
         layoutStacked: !!(initialAndroidSettings && initialAndroidSettings.layoutStacked),
@@ -100,7 +100,7 @@
         vnReadingSourceConfirmed: !!initialAndroidSettings,
         aiVoiceOn: false,
         isSunday: false,
-        liturgyInfo: { krName: '로딩중...', vnName: 'Đang tải...', names: { KR: '로딩중...', VN: 'Đang tải...', EN: 'Loading...', JP: '読み込み中...', LA: 'Exspecta...', ZH: '載入中...' }, color: '#27ae60', dateStr: '로딩중...', meta: {} },
+        liturgyInfo: { krName: '로딩중...', vnName: 'Đang tải...', names: { KR: '로딩중...', VN: 'Đang tải...', EN: 'Loading...', JP: '読み込み中...', LA: 'Exspecta...', ZH: '載入中...', IT: 'Caricamento...', PT: 'A carregar...', ES: 'Cargando...' }, color: '#27ae60', dateStr: '로딩중...', meta: {} },
         options: { entrance: 'A', greeting: 'A', penitential: 'A', creed: 'A', eucharist: '2', eucharist_song: '', eucharist3_intercession: 'ordinary', dismissal: '' },
         autoEucharistSongKey: '',
         autoDismissalOptionKey: '',
@@ -130,9 +130,9 @@
 
     const DEFAULT_TARGET_LANG = 'EN';
     const hiddenSelectableLangs = new Set();
-    const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH'];
+    const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.4-20260901-REGIONAL-LANGUAGE-SELECTORS';
+    const APP_VERSION = 'V27.5-20260902-CEI-ITALY-CEP-PORTUGAL-CEM-MEXICO-TRADITIONAL-CHINESE-UI';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -157,6 +157,10 @@
         NZ: 'Pacific/Auckland',
         ZH: 'Asia/Taipei',
         JP: 'Asia/Tokyo',
+        IT: 'Europe/Rome',
+        PT: 'Europe/Lisbon',
+        ES: 'America/Mexico_City',
+        MX: 'America/Mexico_City',
         LA: 'Europe/Rome',
         INTL: 'UTC'
     };
@@ -468,7 +472,10 @@
         EN: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         JP: ['主日', '月曜日', '火曜日', '水曜日', '木曜日', '金曜日', '土曜日'],
         LA: ['Dominica', 'Feria secunda', 'Feria tertia', 'Feria quarta', 'Feria quinta', 'Feria sexta', 'Sabbato'],
-        ZH: ['主日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        ZH: ['主日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+        IT: ['Domenica', 'Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato'],
+        PT: ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'],
+        ES: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
     };
 
     function saintEntry(color, names, meta = {}) {
@@ -511,6 +518,7 @@
         INTL: Object.freeze({ id: 'GENERAL_ROMAN_ENGLISH', countryCalendar: 'INTL', epiphany: 'fixed', ascension: 'thursday', corpusChristi: 'thursday' }),
         EN: Object.freeze({ id: 'US', countryCalendar: 'US', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
         JP: Object.freeze({ id: 'JP', countryCalendar: 'JP', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'sunday' }),
+        IT: Object.freeze({ id: 'ITALY', countryCalendar: 'IT', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
         LA: Object.freeze({ id: 'GENERAL_ROMAN', countryCalendar: 'LA', epiphany: 'fixed', ascension: 'thursday', corpusChristi: 'thursday' }),
         FR: Object.freeze({ id: 'FR', countryCalendar: 'FR', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
         ES: Object.freeze({ id: 'ES', countryCalendar: 'ES', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
@@ -836,12 +844,15 @@
             EN: formatSeasonalName('EN', meta.season, meta.week, meta.day, meta.sundayCycle),
             JP: formatSeasonalName('JP', meta.season, meta.week, meta.day, meta.sundayCycle),
             LA: formatSeasonalName('LA', meta.season, meta.week, meta.day, meta.sundayCycle),
-            ZH: formatSeasonalName('ZH', meta.season, meta.week, meta.day, meta.sundayCycle)
+            ZH: formatSeasonalName('ZH', meta.season, meta.week, meta.day, meta.sundayCycle),
+            IT: formatSeasonalName('IT', meta.season, meta.week, meta.day, meta.sundayCycle),
+            PT: formatSeasonalName('PT', meta.season, meta.week, meta.day, meta.sundayCycle),
+            ES: formatSeasonalName('ES', meta.season, meta.week, meta.day, meta.sundayCycle)
         });
         const colorName = colorNameFromLiturgyColor(special ? special.color : meta.color);
         return {
             names: Object.assign({}, names),
-            colors: { KR: colorName, VN: colorName, EN: colorName, JP: colorName, LA: colorName, ZH: colorName },
+            colors: { KR: colorName, VN: colorName, EN: colorName, JP: colorName, LA: colorName, ZH: colorName, IT: colorName, PT: colorName, ES: colorName },
             meta: Object.assign({ source: 'generated liturgical calendar' }, special && special.meta ? special.meta : {})
         };
     }
@@ -1337,6 +1348,9 @@
             if (lang === 'JP') return sunday ? `年間第${week}主日` : `年間第${week}${weekdayNames.JP[day]}`;
             if (lang === 'LA') return sunday ? `Dominica ${roman} per annum` : `${weekdayNames.LA[day]} hebdomadae ${roman} per annum`;
             if (lang === 'ZH') return sunday ? `常年期第${week}主日` : `常年期第${week}週${weekdayNames.ZH[day]}`;
+            if (lang === 'IT') return sunday ? `${roman} DOMENICA DEL TEMPO ORDINARIO` : `${weekdayNames.IT[day]} DELLA ${roman} SETTIMANA DEL TEMPO ORDINARIO`;
+            if (lang === 'PT') return sunday ? `DOMINGO ${roman} DO TEMPO COMUM` : `${weekdayNames.PT[day]} DA SEMANA ${roman} DO TEMPO COMUM`;
+            if (lang === 'ES') return sunday ? `DOMINGO ${roman} DEL TIEMPO ORDINARIO` : `${weekdayNames.ES[day]} DE LA SEMANA ${roman} DEL TIEMPO ORDINARIO`;
         }
         if (season === 'advent') {
             if (lang === 'KR') return sunday ? `대림 제${week}주일` : `대림 제${week}주간 ${weekdayNames.KR[day]}`;
@@ -1345,6 +1359,9 @@
             if (lang === 'JP') return sunday ? `待降節第${week}主日` : `待降節第${week}${weekdayNames.JP[day]}`;
             if (lang === 'LA') return sunday ? `Dominica ${roman} Adventus` : `${weekdayNames.LA[day]} hebdomadae ${roman} Adventus`;
             if (lang === 'ZH') return sunday ? `將臨期第${week}主日` : `將臨期第${week}週${weekdayNames.ZH[day]}`;
+            if (lang === 'IT') return sunday ? `${roman} DOMENICA DI AVVENTO` : `${weekdayNames.IT[day]} DELLA ${roman} SETTIMANA DI AVVENTO`;
+            if (lang === 'PT') return sunday ? `DOMINGO ${roman} DO ADVENTO` : `${weekdayNames.PT[day]} DA SEMANA ${roman} DO ADVENTO`;
+            if (lang === 'ES') return sunday ? `DOMINGO ${roman} DE ADVIENTO` : `${weekdayNames.ES[day]} DE LA SEMANA ${roman} DE ADVIENTO`;
         }
         if (season === 'lent') {
             if (lang === 'KR') return sunday ? `사순 제${week}주일` : `사순 제${week}주간 ${weekdayNames.KR[day]}`;
@@ -1353,6 +1370,9 @@
             if (lang === 'JP') return sunday ? `四旬節第${week}主日` : `四旬節第${week}${weekdayNames.JP[day]}`;
             if (lang === 'LA') return sunday ? `Dominica ${roman} Quadragesimae` : `${weekdayNames.LA[day]} hebdomadae ${roman} Quadragesimae`;
             if (lang === 'ZH') return sunday ? `四旬期第${week}主日` : `四旬期第${week}週${weekdayNames.ZH[day]}`;
+            if (lang === 'IT') return sunday ? `${roman} DOMENICA DI QUARESIMA` : `${weekdayNames.IT[day]} DELLA ${roman} SETTIMANA DI QUARESIMA`;
+            if (lang === 'PT') return sunday ? `DOMINGO ${roman} DA QUARESMA` : `${weekdayNames.PT[day]} DA SEMANA ${roman} DA QUARESMA`;
+            if (lang === 'ES') return sunday ? `DOMINGO ${roman} DE CUARESMA` : `${weekdayNames.ES[day]} DE LA SEMANA ${roman} DE CUARESMA`;
         }
         if (season === 'easter') {
             if (lang === 'KR') return sunday ? `부활 제${week}주일` : `부활 제${week}주간 ${weekdayNames.KR[day]}`;
@@ -1361,12 +1381,18 @@
             if (lang === 'JP') return sunday ? `復活節第${week}主日` : `復活節第${week}${weekdayNames.JP[day]}`;
             if (lang === 'LA') return sunday ? `Dominica ${roman} Paschae` : `${weekdayNames.LA[day]} hebdomadae ${roman} Paschae`;
             if (lang === 'ZH') return sunday ? `復活期第${week}主日` : `復活期第${week}週${weekdayNames.ZH[day]}`;
+            if (lang === 'IT') return sunday ? `${roman} DOMENICA DI PASQUA` : `${weekdayNames.IT[day]} DELLA ${roman} SETTIMANA DI PASQUA`;
+            if (lang === 'PT') return sunday ? `DOMINGO ${roman} DA PÁSCOA` : `${weekdayNames.PT[day]} DA SEMANA ${roman} DA PÁSCOA`;
+            if (lang === 'ES') return sunday ? `DOMINGO ${roman} DE PASCUA` : `${weekdayNames.ES[day]} DE LA SEMANA ${roman} DE PASCUA`;
         }
         if (lang === 'KR') return `성탄 시기 ${weekdayNames.KR[day]}`;
         if (lang === 'VN') return `${weekdayNames.VN[day]} Mùa Giáng Sinh`;
         if (lang === 'EN') return `${weekdayNames.EN[day]} of Christmas Time`;
         if (lang === 'JP') return `降誕節${weekdayNames.JP[day]}`;
         if (lang === 'ZH') return `聖誕期${weekdayNames.ZH[day]}`;
+        if (lang === 'IT') return `${weekdayNames.IT[day]} DEL TEMPO DI NATALE`;
+        if (lang === 'PT') return `${weekdayNames.PT[day]} DO TEMPO DO NATAL`;
+        if (lang === 'ES') return `${weekdayNames.ES[day]} DEL TIEMPO DE NAVIDAD`;
         return `${weekdayNames.LA[day]} tempore Nativitatis`;
     }
 
@@ -1764,6 +1790,10 @@
             const days = ['Dominica', 'Feria secunda', 'Feria tertia', 'Feria quarta', 'Feria quinta', 'Feria sexta', 'Sabbato'];
             const months = ['Ianuarii', 'Februarii', 'Martii', 'Aprilis', 'Maii', 'Iunii', 'Iulii', 'Augusti', 'Septembris', 'Octobris', 'Novembris', 'Decembris'];
             text = `${days[weekday]}, ${day} ${months[month]} ${year}`;
+        } else if (lang === 'PT') {
+            text = new Intl.DateTimeFormat('pt-PT', {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            }).format(date);
         } else {
             text = label ? formatKoreanDateString(date) : (fallbackText || formatKoreanDateString(date));
         }
@@ -1779,7 +1809,10 @@
             EN: formatSeasonalName('EN', meta.season, meta.week, meta.day, meta.sundayCycle),
             JP: formatSeasonalName('JP', meta.season, meta.week, meta.day, meta.sundayCycle),
             LA: formatSeasonalName('LA', meta.season, meta.week, meta.day, meta.sundayCycle),
-            ZH: formatSeasonalName('ZH', meta.season, meta.week, meta.day, meta.sundayCycle)
+            ZH: formatSeasonalName('ZH', meta.season, meta.week, meta.day, meta.sundayCycle),
+            IT: formatSeasonalName('IT', meta.season, meta.week, meta.day, meta.sundayCycle),
+            PT: formatSeasonalName('PT', meta.season, meta.week, meta.day, meta.sundayCycle),
+            ES: formatSeasonalName('ES', meta.season, meta.week, meta.day, meta.sundayCycle)
         });
         const info = applyLocalCalendarOverrides({
             names,
@@ -1849,12 +1882,14 @@
         if (langCode === 'EN') return `Year ${cycle}`;
         if (langCode === 'VN') return `Năm ${cycle}`;
         if (langCode === 'LA') return `Annus ${cycle}`;
+        if (langCode === 'IT') return `Anno ${cycle}`;
+        if (langCode === 'PT') return `Ano ${cycle}`;
         return '';
     }
 
     function formatDisplayLiturgyTitle(langCode, rawTitle) {
         const title = cleanLiturgyTitle(rawTitle);
-        if (!title || /^(로딩중|Loading|読み込み中|Đang tải|Exspecta)/i.test(title)) return title;
+        if (!title || /^(로딩중|Loading|読み込み中|Đang tải|Exspecta|Caricamento)/i.test(title)) return title;
         const label = liturgicalCycleLabel(langCode);
         if (!label) return title;
         if (langCode === 'KR') return `[${label}] ${title.replace(/^\[(?:가|나|다)해\]\s*/, '')}`;
@@ -1867,20 +1902,22 @@
             return `${withoutCycle} - ${label}`;
         }
         if (langCode === 'LA') return `${title.replace(/\s+-\s+Annus\s+[ABC]\s*$/i, '')} - ${label}`;
+        if (langCode === 'IT') return `${title.replace(/\s+-\s+Anno\s+[ABC]\s*$/i, '')} - ${label}`;
+        if (langCode === 'PT') return `${title.replace(/\s+-\s+Ano\s+[ABC]\s*$/i, '')} - ${label}`;
         return title;
     }
 
     function colorFromSourceTitle(raw, fallbackColor) {
         const title = primaryLiturgyTitle(raw);
-        if (/\[홍\]|순교|성령|수난|성지|사도|Passion|Pentecost|Martyr|Apostle|Apostoli|殉教|聖霊|使徒|tử đạo|Tông\s*Đồ|Đỏ/i.test(title)) return liturgyColorMap.red;
-        if (/\[자\]|대림|사순|Advent|Lent|待降|四旬|Mùa Vọng|Mùa Chay/i.test(title)) return liturgyColorMap.purple;
-        if (/\[백\]|대축일|축일|부활|성탄|Solemnity|Feast|Easter|Christmas|主日|Phục Sinh|Giáng Sinh|Trắng/i.test(title)) return liturgyColorMap.white;
-        if (/\[녹\]|연중|Ordinary Time|年間|Thường Niên|Xanh/i.test(title)) return liturgyColorMap.green;
+        if (/\[홍\]|순교|성령|수난|성지|사도|Passion|Pentecost|Martyr|Apostle|Apostoli|殉教|聖霊|使徒|tử đạo|Tông\s*Đồ|Đỏ|rosso|rojo|vermelho/i.test(title)) return liturgyColorMap.red;
+        if (/\[자\]|대림|사순|Advent|Lent|待降|四旬|Mùa Vọng|Mùa Chay|viola|morado|roxo/i.test(title)) return liturgyColorMap.purple;
+        if (/\[백\]|대축일|축일|부활|성탄|Solemnity|Feast|Easter|Christmas|主日|Phục Sinh|Giáng Sinh|Trắng|bianco|blanco|branco/i.test(title)) return liturgyColorMap.white;
+        if (/\[녹\]|연중|Ordinary Time|年間|Thường Niên|Xanh|verde/i.test(title)) return liturgyColorMap.green;
         return fallbackColor || liturgyColorMap.green;
     }
 
     function colorFromSourceLines(lines, fallbackColor) {
-        const colorLine = (lines || []).find(line => /\[[홍백녹자]\]|Màu phụng vụ/i.test(line));
+        const colorLine = (lines || []).find(line => /\[[홍백녹자]\]|Màu phụng vụ|Colore Liturgico|^(?:Verde|Rojo|Blanco|Morado|Rosa|Vermelho|Branco|Roxo)\.?$/i.test(strictCleanLine(line)));
         return colorLine ? colorFromSourceTitle(colorLine, fallbackColor) : fallbackColor;
     }
 
@@ -1965,7 +2002,10 @@
         'EN': { name: 'English', code: 'en', class: 'lang-EN' },
         'JP': { name: '日本語', code: 'ja', class: 'lang-JP' },
         'LA': { name: 'Latin', code: 'la', class: 'lang-LA' },
-        'ZH': { name: '繁體中文', code: 'zh-Hant', class: 'lang-ZH' }
+        'ZH': { name: '繁體中文', code: 'zh-Hant', class: 'lang-ZH' },
+        'IT': { name: 'Italiano', code: 'it', class: 'lang-IT' },
+        'PT': { name: 'Português', code: 'pt-PT', class: 'lang-PT' },
+        'ES': { name: 'Español', code: 'es-MX', class: 'lang-ES' }
     };
 
     // 위치 선택은 국가 기준이고, 화면 렌더링은 언어 코드 기준이라 둘을 명시적으로 연결합니다.
@@ -1983,18 +2023,21 @@
         'AU': { lang: 'EN', label: '호주 / English (Beta)', timeZone: 'Australia/Sydney', beta: true, dataJurisdiction: 'AU' },
         'NZ': { lang: 'EN', label: '뉴질랜드 / English (Beta)', timeZone: 'Pacific/Auckland', beta: true, dataJurisdiction: 'NZ' },
         'JP': { lang: 'JP', label: '일본 / 日本語 (Beta)', timeZone: 'Asia/Tokyo' },
+        'IT': { lang: 'IT', label: '이탈리아 / Italiano (Beta)', timeZone: 'Europe/Rome', beta: true, dataJurisdiction: 'IT' },
+        'PT': { lang: 'PT', label: '포르투갈 / Português (Beta)', timeZone: 'Europe/Lisbon', beta: true, dataJurisdiction: 'PT' },
+        'MX': { lang: 'ES', label: '멕시코 / Español (Beta)', timeZone: 'America/Mexico_City', beta: true, dataJurisdiction: 'MX' },
         'VA': { lang: 'LA', label: '바티칸 / Latin', timeZone: 'Europe/Rome' },
         'INTL': { lang: 'EN', label: '기타 지역 / English (자동 대체)', timeZone: '', fallback: true, dataJurisdiction: 'INTL' }
     };
     function rebuildCountryChurchDirectory() {
         const registry = globalThis.countryChurchData || {};
-        const order = ['KR', 'VN', 'US', 'JP', 'VA', 'IE', 'GB-EW', 'GB-SCT', 'PH', 'TW', 'AU', 'NZ'];
+        const order = ['KR', 'VN', 'US', 'JP', 'VA', 'IE', 'GB-EW', 'GB-SCT', 'PH', 'TW', 'AU', 'NZ', 'IT', 'PT', 'MX'];
         const records = order.flatMap(key => {
             const module = registry[key];
             return module && Array.isArray(module.entries) ? module.entries : [];
         });
         const normalize = value => String(value || '').normalize('NFKC').toLowerCase()
-            .replace(/(?:천주교|가톨릭|성당|본당|교회|catholic|church|parish)/gu, '')
+            .replace(/(?:천주교|가톨릭|성당|본당|교회|catholic|church|parish|chiesa|parrocchia|cattolica|catedral|parroquia|iglesia|católica)/gu, '')
             .replace(/[^0-9a-z가-힣ぁ-んァ-ヶ一-龯]+/gu, '');
         const index = {};
         records.forEach(record => {
@@ -2009,7 +2052,7 @@
         globalThis.churchLocalDetailRecords = records;
         globalThis.churchLocalDetails = index;
         globalThis.churchLocalDetailsMeta = {
-            generatedAt: '2026-08-29',
+            generatedAt: '2026-09-01',
             recordCount: records.length,
             sourceCounts: Object.fromEntries(order.map(key => [key, (registry[key] && registry[key].entries || []).length]))
         };
@@ -2050,7 +2093,7 @@
         return !!(module && module.dailyReadings && /\bCBCP\b/i.test(module.dailyReadings.provider || ''));
     }
 
-    const targetLanguageOrder = ['VN', 'KR', 'EN', 'JP', 'LA', 'ZH'];
+    const targetLanguageOrder = ['VN', 'KR', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES'];
 
     function fallbackTargetLangFor(leftLang, preferred = DEFAULT_TARGET_LANG) {
         const left = normalizeSelectableLang(leftLang || 'KR', 'KR');
@@ -2172,6 +2215,9 @@
         TW: { center: { lat: 23.6978, lng: 120.9605 }, zoom: 8, query: '天主教堂 台灣' },
         AU: { center: { lat: -25.2744, lng: 133.7751 }, zoom: 4, query: 'Catholic church Australia' },
         NZ: { center: { lat: -41.2866, lng: 174.7756 }, zoom: 5, query: 'Catholic church New Zealand' },
+        IT: { center: { lat: 41.9028, lng: 12.4964 }, zoom: 6, query: 'chiesa cattolica Italia' },
+        PT: { center: { lat: 39.5, lng: -8.0 }, zoom: 6, query: 'igreja católica Portugal' },
+        MX: { center: { lat: 23.6345, lng: -102.5528 }, zoom: 5, query: 'iglesia católica México' },
         ZH: { center: { lat: 23.6978, lng: 120.9605 }, zoom: 8, query: '天主教堂 台灣' },
         INTL: { center: { lat: 20, lng: 0 }, zoom: 2, query: 'Catholic church' },
         JP: { center: { lat: 35.6895, lng: 139.6917 }, zoom: 12, query: 'カトリック教会 東京' },
@@ -2209,7 +2255,10 @@
             EN: 'English',
             JP: '日本語',
             LA: 'Latin',
-            ZH: '繁體中文'
+            ZH: '繁體中文',
+            IT: 'Italiano',
+            PT: 'Português',
+            ES: 'Español'
         };
         return names[normalizeSelectableLang(langCode, 'KR')] || langCode || '';
     }
@@ -2221,19 +2270,24 @@
             EN: 'English Hymns',
             JP: '日本語聖歌',
             LA: 'Cantus Latini',
-            ZH: '中文聖歌'
+            ZH: '中文聖歌',
+            IT: 'Canti italiani',
+            PT: 'Cânticos em português',
+            ES: 'Cantos en español'
         };
         return labels[normalizeSelectableLang(langCode, 'KR')] || labels.KR;
     }
 
     function translatedHymnLabel(langCode, uiLang = state.uiLang) {
         const labels = {
-            KR: { KR: '한국어 성가', VN: 'Thánh ca tiếng Hàn', EN: 'Korean Hymns', JP: '韓国語聖歌', LA: 'Cantus Coreani' },
-            VN: { KR: '베트남어 성가', VN: 'Thánh ca tiếng Việt', EN: 'Vietnamese Hymns', JP: 'ベトナム語聖歌', LA: 'Cantus Vietnamici' },
-            EN: { KR: '영어 성가', VN: 'Thánh ca tiếng Anh', EN: 'English Hymns', JP: '英語聖歌', LA: 'Cantus Anglici' },
-            JP: { KR: '일본어 성가', VN: 'Thánh ca tiếng Nhật', EN: 'Japanese Hymns', JP: '日本語聖歌', LA: 'Cantus Iaponici' },
-            LA: { KR: '라틴어 성가', VN: 'Thánh ca tiếng Latinh', EN: 'Latin Hymns', JP: 'ラテン語聖歌', LA: 'Cantus Latini', ZH: '拉丁聖歌' },
-            ZH: { KR: '중국어 성가', VN: 'Thánh ca tiếng Hoa', EN: 'Chinese Hymns', JP: '中国語聖歌', LA: 'Cantus Sinici', ZH: '中文聖歌' }
+            KR: { KR: '한국어 성가', VN: 'Thánh ca tiếng Hàn', EN: 'Korean Hymns', JP: '韓国語聖歌', LA: 'Cantus Coreani', ZH: '韓語聖歌' },
+            VN: { KR: '베트남어 성가', VN: 'Thánh ca tiếng Việt', EN: 'Vietnamese Hymns', JP: 'ベトナム語聖歌', LA: 'Cantus Vietnamici', ZH: '越南語聖歌' },
+            EN: { KR: '영어 성가', VN: 'Thánh ca tiếng Anh', EN: 'English Hymns', JP: '英語聖歌', LA: 'Cantus Anglici', ZH: '英語聖歌' },
+            JP: { KR: '일본어 성가', VN: 'Thánh ca tiếng Nhật', EN: 'Japanese Hymns', JP: '日本語聖歌', LA: 'Cantus Iaponici', ZH: '日語聖歌' },
+            LA: { KR: '라틴어 성가', VN: 'Thánh ca tiếng Latinh', EN: 'Latin Hymns', JP: 'ラテン語聖歌', LA: 'Cantus Latini', ZH: '拉丁語聖歌' },
+            ZH: { KR: '중국어 번체 성가', VN: 'Thánh ca tiếng Hoa phồn thể', EN: 'Traditional Chinese Hymns', JP: '繁体字中国語聖歌', LA: 'Cantus Sinici traditionales', ZH: '繁體中文聖歌' },
+            IT: { KR: '이탈리아어 성가', VN: 'Thánh ca tiếng Ý', EN: 'Italian Hymns', JP: 'イタリア語聖歌', LA: 'Cantus Italici', ZH: '義大利語聖歌' },
+            PT: { KR: '포르투갈어 성가', VN: 'Thánh ca tiếng Bồ Đào Nha', EN: 'Portuguese Hymns', JP: 'ポルトガル語聖歌', LA: 'Cantus Lusitani', ZH: '葡萄牙語聖歌' }
         };
         const lang = normalizeSelectableLang(langCode, 'KR');
         const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
@@ -2393,6 +2447,69 @@
             churchReady: '',
             churchFallback: '',
             search: '搜尋'
+        },
+        IT: {
+            prayerTitle: 'Preghiere multilingue',
+            prayerNote: '',
+            prayerWarning: 'Le preghiere sono in preparazione; alcuni testi potrebbero non essere ancora disponibili.',
+            prayerPlaceholder: 'Cerca il titolo della preghiera',
+            prayerEmpty: 'Nessuna preghiera trovata. I testi saranno ricercabili quando il file sarà collegato.',
+            prayerBodyPlaceholder: 'Il testo della preghiera apparirà qui quando il file sarà collegato.',
+            hymnTitle: 'Ricerca canti',
+            hymnNote: '',
+            hymnPlaceholder: 'Cerca numero, titolo o testo del canto',
+            hymnWarning: 'Il repertorio dei canti è in preparazione; alcuni testi potrebbero non essere ancora disponibili.',
+            hymnCategoryAll: 'Tutti',
+            hymnEmpty: 'Nessun canto trovato. Numeri, titoli e testi saranno ricercabili quando il file sarà collegato.',
+            hymnBodyPlaceholder: 'Il testo del canto apparirà qui quando il file sarà collegato.',
+            churchTitle: 'Chiese vicine',
+            churchNote: 'Cerca una chiesa per nome qui sotto; con il GPS attivo saranno mostrate le chiese vicine.',
+            churchPlaceholder: 'Cerca il nome della chiesa',
+            churchReady: '',
+            churchFallback: '',
+            search: 'Cerca'
+        },
+        ES: {
+            prayerTitle: 'Oraciones multilingües',
+            prayerNote: '',
+            prayerWarning: 'Las oraciones están en preparación.',
+            prayerPlaceholder: 'Buscar una oración',
+            prayerEmpty: 'Las oraciones están en preparación.',
+            prayerBodyPlaceholder: 'El texto de la oración aparecerá aquí cuando esté disponible.',
+            hymnTitle: 'Buscar cantos',
+            hymnNote: '',
+            hymnPlaceholder: 'Buscar número, título o letra',
+            hymnWarning: 'El cancionero está en preparación.',
+            hymnCategoryAll: 'Todos',
+            hymnEmpty: 'El cancionero está en preparación.',
+            hymnBodyPlaceholder: 'La letra aparecerá aquí cuando esté disponible.',
+            churchTitle: 'Iglesias cercanas',
+            churchNote: 'Busque una iglesia por nombre; con GPS se mostrarán las iglesias cercanas.',
+            churchPlaceholder: 'Buscar iglesia',
+            churchReady: '',
+            churchFallback: '',
+            search: 'Buscar'
+        },
+        PT: {
+            prayerTitle: 'Orações multilingues',
+            prayerNote: '',
+            prayerWarning: 'As orações estão em preparação.',
+            prayerPlaceholder: 'Pesquisar oração',
+            prayerEmpty: 'As orações estão em preparação.',
+            prayerBodyPlaceholder: 'O texto da oração aparecerá aqui quando estiver disponível.',
+            hymnTitle: 'Pesquisar cânticos',
+            hymnNote: '',
+            hymnPlaceholder: 'Pesquisar número, título ou letra',
+            hymnWarning: 'O cancioneiro está em preparação.',
+            hymnCategoryAll: 'Todos',
+            hymnEmpty: 'O cancioneiro está em preparação.',
+            hymnBodyPlaceholder: 'A letra aparecerá aqui quando estiver disponível.',
+            churchTitle: 'Igrejas próximas',
+            churchNote: 'Pesquise uma igreja pelo nome; com o GPS ativo serão mostradas as igrejas próximas.',
+            churchPlaceholder: 'Pesquisar igreja',
+            churchReady: '',
+            churchFallback: '',
+            search: 'Pesquisar'
         }
     };
 
@@ -2406,7 +2523,7 @@
     }
 
     const auxWarningLanguageLabels = Object.freeze({
-        KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latine', ZH: '中文'
+        KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latine', ZH: '中文', IT: 'Italiano', PT: 'Português', ES: 'Español'
     });
 
     function renderAuxWarning(id, field, languageCodes) {
@@ -3773,7 +3890,7 @@
         );
         if (matched) return Object.assign({}, matched);
         const fallback = cleanNodeText(name);
-        return { kr: fallback, vn: fallback, en: fallback, jp: fallback, la: fallback, zh: fallback };
+        return { kr: fallback, vn: fallback, en: fallback, jp: fallback, la: fallback, zh: fallback, it: fallback, es: fallback };
     }
 
     function bishopDirectoryCacheKey(diocese) {
@@ -5792,6 +5909,12 @@
         },
         VN: {
             entrance: [/^Ca nhập lễ/i], collect: [/^Lời nguyện nhập lễ/i], reading1: [/^Bài [ĐÐ]ọc I/i], psalm: [/^[ĐÐ]áp Ca/i, /^[ĐÐ]áp ca/i], reading2: [/^Bài [ĐÐ]ọc II/i], gospel_accl: [/^Alleluia/i, /^Tung hô Tin Mừng/i], gospel: [/^Phúc Âm/i, /^Tin Mừng\s*:/i], prayer_offerings: [/^Lời nguyện tiến lễ/i], preface: [/^Lời tiền tụng/i, /^Kinh Tiền Tụng/i], communion: [/^Ca hiệp lễ/i], meditation_after_communion: [/^Suy niệm sau hiệp lễ/i], prayer_after: [/^Lời nguyện (?:hiệp|kết) lễ/i], meditation: [/^Suy niệm/i]
+        },
+        IT: {
+            entrance: [/^Antifona(?! alla comunione)/i], collect: [/^Colletta/i], reading1: [/^Prima Lettura/i], psalm: [/^Salmo Responsoriale/i], reading2: [/^Seconda Lettura/i], gospel_accl: [/^Acclamazione al Vangelo/i], gospel: [/^Vangelo$/i], prayer_offerings: [/^Sulle offerte/i], communion: [/^Antifona alla comunione/i], prayer_after: [/^Dopo la comunione/i]
+        },
+        ES: {
+            entrance: [/^ANTÍFONA DE ENTRADA/iu], collect: [/^ORACIÓN COLECTA/iu], reading1: [/^PRIMERA LECTURA/iu], psalm: [/^SALMO RESPONSORIAL/iu], reading2: [/^SEGUNDA LECTURA/iu], gospel_accl: [/^ACLAMACIÓN ANTES DEL EVANGELIO/iu], gospel: [/^EVANGELIO$/iu], prayer_offerings: [/^ORACIÓN SOBRE LAS OFRENDAS/iu], preface: [/^PREFACIO$/iu], communion: [/^ANTÍFONA DE LA COMUNIÓN/iu], prayer_after: [/^ORACIÓN DESPUÉS DE LA COMUNIÓN/iu]
         }
     };
 
@@ -9093,6 +9216,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function isMassTitleNoise(value, lang) {
         if (lang === 'KR') return isKoreanMassTitleNoise(value);
         if (lang === 'VN') return isVietnameseMassTitleNoise(value);
+        if (lang === 'IT') return /^(?:Liturgie del\s*\d+|Liturgia del giorno|Messa del Giorno|HomeMessa del Giorno)$/iu.test(cleanNodeText(value));
         return false;
     }
 
@@ -9342,7 +9466,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             EN: formatSeasonalName('EN', meta.season, meta.week, meta.day, meta.sundayCycle),
             JP: formatSeasonalName('JP', meta.season, meta.week, meta.day, meta.sundayCycle),
             LA: formatSeasonalName('LA', meta.season, meta.week, meta.day, meta.sundayCycle),
-            ZH: formatSeasonalName('ZH', meta.season, meta.week, meta.day, meta.sundayCycle)
+            ZH: formatSeasonalName('ZH', meta.season, meta.week, meta.day, meta.sundayCycle),
+            IT: formatSeasonalName('IT', meta.season, meta.week, meta.day, meta.sundayCycle),
+            PT: formatSeasonalName('PT', meta.season, meta.week, meta.day, meta.sundayCycle),
+            ES: formatSeasonalName('ES', meta.season, meta.week, meta.day, meta.sundayCycle)
         };
         const dateStr = new Intl.DateTimeFormat('ko-KR', {
             year: 'numeric', month: 'long', day: 'numeric', weekday: 'short'
@@ -9420,6 +9547,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'KR') return `https://missa.cbck.or.kr/DailyMissa/${formatDateYmd(date)}`;
         if (lang === 'JP') return `https://higotonofukuin.org/spip.php?page=quotidien&date=${formatDateIso(date)}%2000:00:00`;
         if (lang === 'ZH' && hasCountryDailyReadings(locationCode)) {
+            return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(date));
+        }
+        if (lang === 'IT' && hasCountryDailyReadings(locationCode)) {
+            return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(date));
+        }
+        if (lang === 'PT' && hasCountryDailyReadings(locationCode)) {
+            return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(date));
+        }
+        if (lang === 'ES' && hasCountryDailyReadings(locationCode)) {
             return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(date));
         }
         if (lang === 'EN' && hasCountryDailyReadings(locationCode)) {
@@ -9759,6 +9895,47 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['preface', /^(?:[\p{Script=Han}〇○Ο一二三四五六七八九十]+)?頌謝詞(?=\s|$|[:：（(])/u],
             ['communion', /^領主詠(?=\s|$|[:：（(])/u],
             ['prayer_after', /^領聖體後經(?=\s|$|[:：（(])/u]
+        ],
+        IT: [
+            ['communion', /^Antifona alla comunione(?:\s|$|[:：])/iu],
+            ['entrance', /^Antifona(?! alla comunione)(?:\s|$|[:：])/iu],
+            ['collect', /^Colletta(?:\s|$|[:：])/iu],
+            ['reading1', /^Prima Lettura(?:\s|$|[:：])/iu],
+            ['psalm', /^Salmo Responsoriale(?:\s|$|[:：])/iu],
+            ['reading2', /^Seconda Lettura(?:\s|$|[:：])/iu],
+            ['Sequence', /^Sequenza(?:\s|$|[:：])/iu],
+            ['gospel_accl', /^Acclamazione al Vangelo(?:\s|$|[:：])/iu],
+            ['gospel', /^Vangelo(?:\s|$|[:：])/iu],
+            ['prayer_offerings', /^Sulle offerte(?:\s|$|[:：])/iu],
+            ['prayer_after', /^Dopo la comunione(?:\s|$|[:：])/iu]
+        ],
+        PT: [
+            ['communion', /^Antífona da comunhão(?:\s|$|[:：.])/iu],
+            ['entrance', /^Antífona de entrada(?:\s|$|[:：.])/iu],
+            ['collect', /^Oração coleta(?:\s|$|[:：.])/iu],
+            ['reading1', /^LEITURA I(?:\s*\([^)]*\))?(?:\s|$|[:：.])/iu],
+            ['psalm', /^SALMO RESPONSORIAL(?:\s|$|[:：.])/iu],
+            ['reading2', /^LEITURA II(?:\s*\([^)]*\))?(?:\s|$|[:：.])/iu],
+            ['Sequence', /^SEQUÊNCIA(?:\s|$|[:：.])/iu],
+            ['gospel_accl', /^(?:ALELUIA|ACLAMAÇÃO AO EVANGELHO)(?:\s|$|[:：.])/iu],
+            ['gospel', /^EVANGELHO(?=\s+(?:[1-3]\s*)?[A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-Za-zÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç.]{0,12}\s+\d|$|[:：.])/iu],
+            ['prayer_offerings', /^Oração sobre as oblatas(?:\s|$|[:：.])/iu],
+            ['preface', /^Prefácio(?:\s|$|[:：.])/iu],
+            ['prayer_after', /^Oração depois da comunhão(?:\s|$|[:：.])/iu]
+        ],
+        ES: [
+            ['communion', /^ANTÍFONA DE LA COMUNIÓN(?:\s|$|[:：.])/iu],
+            ['entrance', /^ANTÍFONA DE ENTRADA(?:\s|$|[:：.])/iu],
+            ['collect', /^ORACIÓN COLECTA(?:\s|$|[:：.])/iu],
+            ['reading1', /^PRIMERA LECTURA(?:\s|$|[:：.])/iu],
+            ['psalm', /^SALMO RESPONSORIAL(?:\s|$|[:：.])/iu],
+            ['reading2', /^SEGUNDA LECTURA(?:\s|$|[:：.])/iu],
+            ['Sequence', /^SECUENCIA(?:\s|$|[:：.])/iu],
+            ['gospel_accl', /^ACLAMACIÓN ANTES DEL EVANGELIO(?:\s|$|[:：.])/iu],
+            ['gospel', /^EVANGELIO(?:\s|$|[:：.])/iu],
+            ['prayer_offerings', /^ORACIÓN SOBRE LAS OFRENDAS(?:\s|$|[:：.])/iu],
+            ['preface', /^PREFACIO(?:\s|$|[:：.])/iu],
+            ['prayer_after', /^ORACIÓN DESPUÉS DE LA COMUNIÓN(?:\s|$|[:：.])/iu]
         ]
     };
 
@@ -9779,7 +9956,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ],
         JP: [/^叙唱/u, /^今日の/u, /^共同祈願/u],
         VN: [/^Lời tiền tụng/iu, /^Kinh Tiền Tụng/iu, /^Suy niệm/iu, /^Lời nguyện tín hữu/iu, /^Ghi nhận (?:lịch sử|phụng vụ)/iu],
-        ZH: [/^光榮頌/u, /^信經/u, /^信友禱詞/u, /^默想/u, /^講道/u, /^頁\s*\d+/u]
+        ZH: [/^光榮頌/u, /^信經/u, /^信友禱詞/u, /^默想/u, /^講道/u, /^頁\s*\d+/u],
+        IT: [/^Liturgia delle Ore/iu, /^Omelia/iu, /^Preghiera universale/iu, /^Meditazione/iu],
+        PT: [/^Martirológio Romano/iu, /^Liturgia das Horas/iu, /^Oração Universal/iu, /^Homilia/iu, /^Meditação/iu],
+        ES: [/^HOMILÍA/iu, /^PLEGARIA UNIVERSAL/iu, /^PROFESIÓN DE FE/iu, /^RITO DE CONCLUSIÓN/iu, /^DESPEDIDA/iu]
     };
 
     function strictIdentifySection(line, lang) {
@@ -9884,6 +10064,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'JP') return /^(?:[①②③１２３1-3])?[一-龯ァ-ヶー]{1,20}\s*\d/.test(text);
         if (lang === 'VN') return /^(?:[1-3]\s*)?[A-ZĐÐ][A-Za-zÀ-ỹĐđÐð. ]{0,30}\s+\d/i.test(text);
         if (lang === 'LA') return /^(?:[1-3]\s*)?[A-ZÆŒ][A-Za-zÀ-ỹÆæŒœ. ]{0,30}\s+\d/i.test(text);
+        if (lang === 'IT') return /^(?:[1-3]\s*)?[A-Z][A-Za-zÀ-ÿ. ]{0,30}\s+\d/i.test(text);
+        if (lang === 'PT') return /^(?:[1-3]\s*)?[A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-Za-zÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç. ]{0,30}\s+\d/iu.test(text);
+        if (lang === 'ES') return /^(?:[1-3]\s*)?[A-ZÁÉÍÓÚÜÑ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ. ]{0,30}\s+\d/iu.test(text);
         if (lang === 'ZH') return /^(?:[1-3]\s*)?[\p{Script=Han}〇○Ο一二三四五六七八九十]{1,24}\s*[一二三四五六七八九十0-9]/u.test(text);
         return false;
     }
@@ -9896,6 +10079,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 .replace(/^\(?\s*Năm\s+[IVX]+\s*\)?\s*/i, '')
                 .replace(/^((?:[1-3]\s*)?[A-Za-zÀ-ỹĐđÐð.]{1,12})\s*,\s*(?=\d)/u, '$1 ');
         }
+        if (lang === 'IT') text = text.replace(/^Dal\s+(?=Sal\b)/iu, '');
         return text;
     }
 
@@ -10007,7 +10191,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             JP: [/朗読/u, /福音/u],
             VN: [/^Trích/iu, /^Tin Mừng Chúa/iu, /Chúa Giêsu Kitô theo/iu],
             LA: [/^L[eé]ctio/iu, /^✠?\s*L[eé]ctio sancti Evang/iu],
-            ZH: [/^恭讀/u]
+            ZH: [/^恭讀/u],
+            IT: [/^(?:Dal|Dalla|Dalle|Dagli|Dai|Da)\b/iu],
+            PT: [/^Leitura d[ao]\b/iu, /^Evangelho de Nosso Senhor\b/iu],
+            ES: [/^(?:Del|De la|De los|De las)\b/iu]
         };
         const patterns = introPatterns[lang] || [];
         const index = blocks.findIndex((line, i) => i < 3 && patterns.some(pattern => pattern.test(line)));
@@ -10032,6 +10219,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         else if (lang === 'LA') match = cleaned.match(/^(℟\.?|℣\.?|L\.|S\.|P\.)\s*[:.：]?\s*(.*)$/iu);
         else if (lang === 'JP') match = cleaned.match(/^(答|先|会|朗|司(?:\s*\(助\))?)\s*[:.：]?\s*(.*)$/u);
         else if (lang === 'ZH') match = cleaned.match(/^(答|領|主祭|信友|讀經員|全體)\s*[:.：]?\s*(.*)$/u);
+        else if (lang === 'IT') match = cleaned.match(/^(R\.|V\.|L\.|C\.|Tutti)\s*[:.：]?\s*(.*)$/iu);
+        else if (lang === 'PT') match = cleaned.match(/^(R\.|V\.|L\.|C\.|Refrão|Todos)\s*[:.：]?\s*(.*)$/iu);
+        else if (lang === 'ES') match = cleaned.match(/^(R\.?|V\.?|L\.?|C\.?|Todos)\s*[:.：]?\s*(.*)$/iu);
         return match ? { sp: strictCleanLine(match[1]), text: strictCleanLine(match[2]) } : { sp: '', text: cleaned };
     }
 
@@ -10041,7 +10231,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictPsalmResponseTail(lang) {
-        return { KR: '◎', VN: '- Đáp.', EN: '- Response.', JP: '- 答唱。', LA: '- ℟', ZH: '- 答。' }[lang] || '';
+        return { KR: '◎', VN: '- Đáp.', EN: '- Response.', JP: '- 答唱。', LA: '- ℟', ZH: '- 答。', IT: '- R.', PT: '- R.', ES: '- R.' }[lang] || '';
     }
 
     function englishPsalmResponseRef(line) {
@@ -10143,8 +10333,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             || markerIndexes[0] !== 0
             || markerIndexes[markerIndexes.length - 1] !== cleanedBlocks.length - 1) return null;
 
-        const responseSpeakers = { KR: '◎', VN: 'Đáp', EN: 'R.', JP: '答', LA: '℟', ZH: '答' };
-        const versicleSpeakers = { KR: '○', VN: 'Xướng', EN: 'Versicle', JP: '先', LA: '℣', ZH: '領' };
+        const responseSpeakers = { KR: '◎', VN: 'Đáp', EN: 'R.', JP: '答', LA: '℟', ZH: '答', IT: 'R.', PT: 'R.', ES: 'R.' };
+        const versicleSpeakers = { KR: '○', VN: 'Xướng', EN: 'Versicle', JP: '先', LA: '℣', ZH: '領', IT: 'V.', PT: 'V.', ES: 'V.' };
         const responseSpeaker = responseSpeakers[lang] || '';
         const versicleSpeaker = versicleSpeakers[lang] || '';
         const out = [strictParsedLine(responseSpeaker, cleanedBlocks[0])];
@@ -10246,6 +10436,203 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return result;
     }
 
+    function strictParseItalianPsalm(citation, blocks) {
+        const out = [];
+        let responseSeen = false;
+        let verseBuffer = [];
+        const flushVerse = () => {
+            const verse = strictCleanLine(verseBuffer.join(' ')).replace(/\s+R\.\s*$/iu, '').trim();
+            verseBuffer = [];
+            if (verse) out.push(strictParsedLine('V.', `${verse} - R.`));
+        };
+        (blocks || []).forEach(line => {
+            if (strictLooksLikeCitation(line, 'IT')) return;
+            const cleaned = strictCleanLine(line);
+            if (!cleaned) return;
+            const response = cleaned.match(/^R\.\s*(.+)$/iu);
+            if (response) {
+                flushVerse();
+                if (!responseSeen) out.push(strictParsedLine('R.', response[1]));
+                responseSeen = true;
+                return;
+            }
+            verseBuffer.push(cleaned);
+            if (/\sR\.\s*$/iu.test(cleaned)) flushVerse();
+        });
+        flushVerse();
+        attachPsalmVerseRefs('IT', citation, out);
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result.cit_it = finalCitation;
+        return result;
+    }
+
+    function strictParseItalianAcclamation(citation, blocks) {
+        const out = [];
+        const verseBuffer = [];
+        (blocks || []).forEach(line => {
+            if (strictLooksLikeCitation(line, 'IT')) return;
+            const cleaned = strictCleanLine(line);
+            if (!cleaned) return;
+            if (/^Alleluia(?:[,;]\s*alleluia)?[.!]?$/iu.test(cleaned)) {
+                if (verseBuffer.length) {
+                    out.push(strictParsedLine('V.', strictCleanLine(verseBuffer.join(' '))));
+                    verseBuffer.length = 0;
+                }
+                out.push(strictParsedLine('R.', cleaned));
+                return;
+            }
+            verseBuffer.push(cleaned);
+        });
+        if (verseBuffer.length) out.push(strictParsedLine('V.', strictCleanLine(verseBuffer.join(' '))));
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result.cit_it = finalCitation;
+        return result;
+    }
+
+    function strictParseSpanishPsalm(citation, blocks) {
+        const out = [];
+        let response = '';
+        let verseBuffer = [];
+        const flushVerse = () => {
+            const verse = strictCleanLine(verseBuffer.join(' '));
+            verseBuffer = [];
+            if (verse) out.push(strictParsedLine('V.', `${verse} - R.`));
+        };
+        (blocks || []).forEach(rawLine => {
+            if (strictLooksLikeCitation(rawLine, 'ES')) return;
+            const cleaned = strictCleanLine(rawLine).replace(/^[∙•]\s*/u, '');
+            if (!cleaned) return;
+            const marked = cleaned.match(/^R\.\s*(.*)$/iu);
+            if (marked) {
+                flushVerse();
+                if (marked[1] && !response) {
+                    response = strictCleanLine(marked[1]);
+                    out.push(strictParsedLine('R.', response));
+                }
+                return;
+            }
+            const paragraphStanzas = cleaned.split(/\s+R\.(?=\s|$)/iu);
+            paragraphStanzas.forEach((stanza, index) => {
+                const text = strictCleanLine(stanza);
+                if (text) verseBuffer.push(text);
+                if (index < paragraphStanzas.length - 1) flushVerse();
+            });
+        });
+        flushVerse();
+        attachPsalmVerseRefs('ES', citation, out);
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result.cit_es = finalCitation;
+        return result;
+    }
+
+    function strictParseSpanishAcclamation(citation, blocks) {
+        const out = [];
+        let response = '';
+        let verseBuffer = [];
+        const flushVerse = () => {
+            const verse = strictCleanLine(verseBuffer.join(' '));
+            verseBuffer = [];
+            if (verse) out.push(strictParsedLine('V.', verse));
+        };
+        (blocks || []).forEach(rawLine => {
+            if (strictLooksLikeCitation(rawLine, 'ES')) return;
+            const cleaned = strictCleanLine(rawLine);
+            if (!cleaned) return;
+            const marked = cleaned.match(/^R\.\s*(.*)$/iu);
+            if (marked) {
+                flushVerse();
+                if (marked[1]) response = response || strictCleanLine(marked[1]);
+                if (response) out.push(strictParsedLine('R.', response));
+                return;
+            }
+            const responseTail = cleaned.match(/^(.*?)\s+R\.\s*$/iu);
+            verseBuffer.push(strictCleanLine(responseTail ? responseTail[1] : cleaned));
+            if (responseTail) flushVerse();
+        });
+        flushVerse();
+        if (response && out.length && out[out.length - 1].sp !== 'R.') out.push(strictParsedLine('R.', response));
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result.cit_es = finalCitation;
+        return result;
+    }
+
+    function strictPortugueseResponseText(line) {
+        const match = strictCleanLine(line).match(/^Refrão\s*:\s*(.*?)\s*(?:Repete-se)?\.?$/iu);
+        return match ? strictCleanLine(match[1]) : '';
+    }
+
+    function strictParsePortuguesePsalm(citation, blocks) {
+        const out = [];
+        let response = '';
+        let verseBuffer = [];
+        const flushVerse = () => {
+            const verse = strictCleanLine(verseBuffer.join(' '));
+            verseBuffer = [];
+            if (verse) out.push(strictParsedLine('V.', /-\s*R\.?$/iu.test(verse) ? verse : `${verse} - R.`));
+        };
+        (blocks || []).forEach(rawLine => {
+            if (strictLooksLikeCitation(rawLine, 'PT')) return;
+            let cleaned = strictCleanLine(rawLine).replace(/^[∙•]\s*/u, '');
+            if (!cleaned) return;
+            const firstResponse = strictPortugueseResponseText(cleaned);
+            if (firstResponse) {
+                flushVerse();
+                if (!response) {
+                    response = firstResponse;
+                    out.push(strictParsedLine('R.', response));
+                }
+                return;
+            }
+            const responseOnly = /^Refrão\.?$/iu.test(cleaned);
+            cleaned = strictCleanLine(cleaned.replace(/\s+Refrão\.?\s*$/iu, ''));
+            if (cleaned) verseBuffer.push(cleaned);
+            if (responseOnly || /\s+Refrão\.?\s*$/iu.test(strictCleanLine(rawLine))) flushVerse();
+        });
+        flushVerse();
+        attachPsalmVerseRefs('PT', citation, out);
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result.cit_pt = finalCitation;
+        return result;
+    }
+
+    function strictParsePortugueseAcclamation(citation, blocks) {
+        const out = [];
+        let response = '';
+        let verseBuffer = [];
+        const flushVerse = () => {
+            const verse = strictCleanLine(verseBuffer.join(' '));
+            verseBuffer = [];
+            if (verse) out.push(strictParsedLine('V.', verse));
+        };
+        (blocks || []).forEach(rawLine => {
+            if (strictLooksLikeCitation(rawLine, 'PT')) return;
+            let cleaned = strictCleanLine(rawLine);
+            if (!cleaned) return;
+            const firstResponse = strictPortugueseResponseText(cleaned);
+            if (firstResponse) {
+                flushVerse();
+                response = response || firstResponse;
+                if (!out.some(line => line.sp === 'R.')) out.push(strictParsedLine('R.', response));
+                return;
+            }
+            const hasResponseTail = /\s+Refrão\.?\s*$/iu.test(cleaned) || /^Refrão\.?$/iu.test(cleaned);
+            cleaned = strictCleanLine(cleaned.replace(/\s*Refrão\.?\s*$/iu, ''));
+            if (cleaned) verseBuffer.push(cleaned);
+            if (hasResponseTail) flushVerse();
+        });
+        flushVerse();
+        if (response && out.length && out[out.length - 1].sp !== 'R.') out.push(strictParsedLine('R.', response));
+        const result = { text: parsedLinesToText(out), lines: out };
+        const finalCitation = strictCleanCitation(citation, { preserveParentheses: true });
+        if (finalCitation) result.cit_pt = finalCitation;
+        return result;
+    }
+
     function strictShouldAppendPsalmResponse(lang, speaker) {
         const sp = strictCleanLine(speaker);
         if (lang === 'KR') return sp === '○' || sp === '●';
@@ -10254,6 +10641,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'JP') return /^(先|詩)$/u.test(sp);
         if (lang === 'LA') return /^(℣\.?|V\.|Ps\.)$/iu.test(sp);
         if (lang === 'ZH') return /^(領|一|二|三|四|五|六|七|八|九|十)$/u.test(sp);
+        if (lang === 'IT') return /^(V\.|Versetto)$/iu.test(sp);
+        if (lang === 'PT') return /^(V\.|Versículo)$/iu.test(sp);
+        if (lang === 'ES') return /^(V\.|Versículo)$/iu.test(sp);
         return false;
     }
 
@@ -10307,7 +10697,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             EN: 'AI summary translation',
             JP: 'AI要約翻訳',
             LA: 'Summarium AI',
-            ZH: 'AI 摘要翻譯'
+            ZH: 'AI 摘要翻譯',
+            IT: 'Traduzione AI del sommario',
+            PT: 'Tradução AI do resumo',
+            ES: 'Traducción AI del resumen'
         };
         return labels[lang] || labels.EN;
     }
@@ -10355,6 +10748,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (/^(Verbum Domini|Deo gratias|Evangelium Domini|Laus tibi Christe)$/i.test(cleaned)) return true;
         if (/^(神に感謝|主に感謝|キリストに賛美)$/u.test(cleaned)) return true;
         if (/^(上主的聖言|感謝天主|基督，我們讚美祢)$/u.test(cleaned)) return true;
+        if (/^(Palavra de Deus|Palavra do Senhor|Palavra da salvação|Graças a Deus|Glória a Vós, Senhor)$/iu.test(cleaned)) return true;
+        if (/^(Palabra de Dios|Te alabamos, Señor|Palabra del Señor|Gloria a ti, Señor Jesús)$/iu.test(cleaned)) return true;
+        if (/^(Parola di Dio|Rendiamo grazie a Dio|Parola del Signore|Lode a te,?\s*o Cristo)$/iu.test(cleaned)) return true;
         if (/(主|神)の(ことば|御言葉)$/u.test(cleaned)) return true;
         const loose = cleaned.normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
@@ -10378,7 +10774,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const terminalPatterns = strictTerminalSectionPatterns[lang] || [];
         const inlineTailPatterns = lang === 'KR'
             ? [/오늘의\s*묵상/u, /영성체\s*후\s*묵상/u, /보편\s*지향\s*기도/u, /강론/u]
-            : [];
+            : (lang === 'PT'
+                ? [/\bPalavra (?:de Deus|do Senhor|da salvação)\.(?=\s*(?:R\.|$))/iu]
+                : (lang === 'ES'
+                ? [/\bPalabra de Dios\.?(?:\s*R\.\s*Te alabamos,?\s*Señor\.?)?/iu,
+                    /\bPalabra del Señor\.?(?:\s*R\.\s*Gloria a ti,?\s*Señor Jesús\.?)?/iu]
+                : []));
         const trimmed = [];
         for (const line of blocks || []) {
             const cleaned = strictCleanLine(line);
@@ -10401,10 +10802,40 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictParseReadingSection(lang, key, section) {
         let blocks = strictTrimReadingTail(lang, key, strictTrimReadingAfterProclamation(strictSplitBlocks(section.lines)))
             .filter(line => !strictIsProclamationEnding(line));
-        const summaryResult = strictExtractQuotedSummary(blocks);
+        let summaryResult = strictExtractQuotedSummary(blocks);
+        if (lang === 'PT' && !summaryResult.summary) {
+            const summaryStart = blocks.findIndex((line, index) => index < 4 && /^«/u.test(strictCleanLine(line)));
+            if (summaryStart >= 0) {
+                let summaryEnd = summaryStart;
+                while (summaryEnd < blocks.length - 1 && !/»[.!?]?$/u.test(strictCleanLine(blocks[summaryEnd]))) summaryEnd += 1;
+                if (/»[.!?]?$/u.test(strictCleanLine(blocks[summaryEnd]))) {
+                    const summary = strictCleanLine(blocks.slice(summaryStart, summaryEnd + 1).join(' '))
+                        .replace(/^«|»[.!?]?$/gu, '');
+                    summaryResult = {
+                        summary,
+                        blocks: blocks.filter((_, index) => index < summaryStart || index > summaryEnd)
+                    };
+                }
+            }
+        }
+        if (['IT', 'PT', 'ES'].includes(lang) && !summaryResult.summary && blocks.length) {
+            const first = strictCleanLine(blocks[0]);
+            const introLike = lang === 'IT'
+                ? /^(?:Dal|Dalla|Dalle|Dagli|Dai|Da)\b/iu.test(first)
+                : (lang === 'PT'
+                    ? /^(?:Leitura d[ao]|Evangelho de Nosso Senhor)\b/iu.test(first)
+                    : /^(?:Del|De la|De los|De las)\b/iu.test(first));
+            if (first && first.length <= 420 && !introLike && !strictLooksLikeCitation(first, lang)) {
+                summaryResult = { summary: first, blocks: blocks.slice(1) };
+            }
+        }
         blocks = summaryResult.blocks;
         const citationResult = strictExtractCitation(section, blocks, lang);
         blocks = citationResult.blocks;
+        if (lang === 'PT' && summaryResult.summary) {
+            const introIndex = blocks.findIndex((line, index) => index < 5 && /^(?:Leitura d[ao]|Evangelho de Nosso Senhor)\b/iu.test(strictCleanLine(line)));
+            if (introIndex > 0) blocks = blocks.slice(introIndex);
+        }
         const introResult = strictExtractIntro(blocks, lang, key);
         blocks = introResult.blocks;
         const japaneseIntroResult = lang === 'JP' && !introResult.intro && key !== 'gospel'
@@ -10485,6 +10916,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         if (lang === 'EN' && key === 'psalm') {
             return strictParseEnglishPsalm(citationResult.citation, citationResult.blocks);
+        }
+        if (lang === 'IT' && key === 'psalm') {
+            return strictParseItalianPsalm(citationResult.citation, citationResult.blocks);
+        }
+        if (lang === 'IT' && key === 'gospel_accl') {
+            return strictParseItalianAcclamation(citationResult.citation, citationResult.blocks);
+        }
+        if (lang === 'PT' && key === 'psalm') {
+            return strictParsePortuguesePsalm(citationResult.citation, citationResult.blocks);
+        }
+        if (lang === 'PT' && key === 'gospel_accl') {
+            return strictParsePortugueseAcclamation(citationResult.citation, citationResult.blocks);
+        }
+        if (lang === 'ES' && key === 'psalm') {
+            return strictParseSpanishPsalm(citationResult.citation, citationResult.blocks);
+        }
+        if (lang === 'ES' && key === 'gospel_accl') {
+            return strictParseSpanishAcclamation(citationResult.citation, citationResult.blocks);
         }
         if (lang === 'LA' && key === 'psalm') {
             return strictParseLatinPsalm(citationResult.citation, citationResult.blocks);
@@ -10938,11 +11387,35 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return text ? [text] : [];
     }
 
+    function cleanSpanishSectionSourceLines(key, blocks) {
+        const stopPatterns = {
+            entrance: [/\bTerminado el canto de entrada\b/iu, /\bSALUDO\b/u, /\bACTO PENITENCIAL\b/u],
+            collect: [/\bLITURGIA DE LA PALABRA\b/u],
+            preface: [/\bPLEGARIA EUCARÍSTICA I\b/iu]
+        }[key] || [];
+        if (!stopPatterns.length) return blocks;
+        const trimmed = [];
+        for (const line of blocks || []) {
+            const cleaned = strictCleanLine(line);
+            const stopIndex = stopPatterns
+                .map(pattern => cleaned.search(pattern))
+                .filter(index => index >= 0)
+                .sort((a, b) => a - b)[0];
+            if (stopIndex >= 0) {
+                const before = strictCleanLine(cleaned.slice(0, stopIndex));
+                if (before) trimmed.push(before);
+                break;
+            }
+            if (cleaned) trimmed.push(cleaned);
+        }
+        return trimmed;
+    }
+
     function strictParsePrayerOrAntiphon(lang, key, section) {
         const sourceBlocks = strictSplitBlocks(section.lines);
         const blocks = lang === 'VN'
             ? cleanVietnameseSectionSourceLines(key, sourceBlocks)
-            : sourceBlocks;
+            : (lang === 'ES' ? cleanSpanishSectionSourceLines(key, sourceBlocks) : sourceBlocks);
         const parsed = [];
         const optionCits = [];
         const usesOptionCitations = ['entrance', 'communion'].includes(key);
@@ -11359,6 +11832,27 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictFindLiturgyTitle(lines, lang) {
         const japaneseReadingTitle = lang === 'JP' ? japaneseReadingTitleFromLines(lines) : '';
         if (japaneseReadingTitle) return japaneseReadingTitle;
+        if (lang === 'IT') {
+            const italianTitle = (lines || []).map(strictCleanLine).find(line =>
+                /\b(?:DOMENICA|SETTIMANA|SOLENNITÀ|FESTA|MEMORIA|AVVENTO|QUARESIMA|PASQUA|NATALE)\b/u.test(line)
+                && line === line.toLocaleUpperCase('it-IT')
+            );
+            if (italianTitle) return italianTitle;
+        }
+        if (lang === 'PT') {
+            const portugueseTitle = (lines || []).map(strictCleanLine).find(line =>
+                /(?:semana\s+[IVXLCDM]+|domingo|solenidade|festa|memória|Advento|Quaresma|Páscoa|Natal)/iu.test(line)
+                && line.length < 180
+            );
+            if (portugueseTitle) return portugueseTitle;
+        }
+        if (lang === 'ES') {
+            const spanishTitle = (lines || []).map(strictCleanLine).find(line =>
+                /(?:Tiempo Ordinario|Adviento|Cuaresma|Pascua|Navidad|Solemnidad|Fiesta|Memoria)/iu.test(line)
+                && line.length < 180
+            );
+            if (spanishTitle) return spanishTitle;
+        }
         const fromSource = cleanLiturgyTitle(sourceTitleFromLines(lines));
         const hasVietnameseLiturgyWords = value => /(Chúa|Thánh|Lễ|Tuần|Mùa|Ngày|Thứ|Phục Sinh|Giáng Sinh|Vọng)/i.test(value || '');
         if (fromSource
@@ -11384,10 +11878,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }) || '';
     }
 
+    function strictScopeMexicanCemDailySource(source, date) {
+        const text = String(source || '');
+        const target = `${formatDateIso(date)} 00:00:00`;
+        const start = text.indexOf(target);
+        if (start < 0) throw new Error(`CEM daily Mass row is unavailable for ${formatDateIso(date)}.`);
+        const tail = text.slice(start + target.length);
+        const next = tail.search(/\b\d{4}-\d{2}-\d{2} 00:00:00\b/u);
+        const scoped = text.slice(start + target.length, next >= 0 ? start + target.length + next : text.length);
+        return isJinaMarkdownSource(text) ? `Markdown Content:\n${scoped}` : scoped;
+    }
+
     function strictParseDailyMass(lang, source, date, locationCode = dailySourceLocationCode(lang)) {
         const selector = getStrictMassSelector(date);
         const metadataTitle = sourceMetadataTitle(source, lang);
-        let lines = strictSourceLines(source);
+        const scopedSource = lang === 'ES' && dataJurisdictionForLocation(locationCode) === 'MX'
+            ? strictScopeMexicanCemDailySource(source, date)
+            : source;
+        let lines = strictSourceLines(scopedSource);
         if (lang === 'ZH') lines = strictExpandTraditionalChineseLines(lines);
         if (lang === 'EN' && usesCbcpCountryReadings(locationCode)) lines = strictScopeCbcpDailyLines(lines);
         if (lang === 'EN' && usesUniversalisCountryReadings(locationCode)) {
@@ -11784,11 +12292,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
 
         const fetchStrictSource = async url => {
-            if (lang !== 'EN') return fetchTextWithFallbacks(url);
+            if (lang === 'ES') return fetchTextWithFallbacks(url, { timeoutMs: 55000 });
+            if (!['EN', 'IT', 'PT'].includes(lang)) return fetchTextWithFallbacks(url);
             try {
                 return await fetchJinaHtml(url);
             } catch (error) {
-                console.warn('EN HTML source failed, trying markdown source.', error);
+                console.warn(`${lang} HTML source failed, trying markdown source.`, error);
                 return fetchTextWithFallbacks(url);
             }
         };
@@ -11818,7 +12327,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         // The static corpus already contains the complete PDF text. Its
         // URL Source line is attribution, not a navigation target; following
         // it would replace the parsed text with a Drive viewer response.
-        let selectedLink = sourceIsStatic ? null : strictChooseMassLink(lang, source, entryUrl, date, selector, locationCode);
+        let selectedLink = sourceIsStatic || ['PT', 'ES'].includes(lang) ? null : strictChooseMassLink(lang, source, entryUrl, date, selector, locationCode);
         if (selectedLink && selectedLink.href && selectedLink.href !== entryUrl) {
             source = await fetchStrictSource(selectedLink.href);
         }
@@ -11912,6 +12421,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     fetchVietnameseDailyMass = (date, options = {}) => fetchStrictDailyMass('VN', date, options);
     fetchLatinDailyMass = date => fetchIbreviaryDailyMass('LA', date, { includeReadings: true });
     fetchTraditionalChineseDailyMass = (date, options = {}) => fetchStrictDailyMass('ZH', date, options);
+    fetchItalianDailyMass = (date, options = {}) => fetchStrictDailyMass('IT', date, options);
+    const fetchPortugueseDailyMass = (date, options = {}) => {
+        const parts = zonedDateParts(new Date(), 'Europe/Lisbon');
+        const currentPortugalDate = new Date(parts.year, parts.month - 1, parts.day);
+        if (!sameDay(date, currentPortugalDate)) {
+            return Promise.reject(new Error(`Liturgia.pt only serves its current Portuguese date, not ${formatDateIso(date)}.`));
+        }
+        return fetchStrictDailyMass('PT', date, options);
+    };
+    const fetchSpanishDailyMass = (date, options = {}) => fetchStrictDailyMass('ES', date, options);
 
     const dailySourceFetchers = {
         KR: fetchKoreanDailyMass,
@@ -11919,7 +12438,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         EN: fetchEnglishDailyMass,
         JP: fetchJapaneseDailyMass,
         LA: fetchLatinDailyMass,
-        ZH: fetchTraditionalChineseDailyMass
+        ZH: fetchTraditionalChineseDailyMass,
+        IT: fetchItalianDailyMass,
+        PT: fetchPortugueseDailyMass,
+        ES: fetchSpanishDailyMass
     };
 
     function getActiveDailySourceLanguages() {
@@ -11948,7 +12470,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function dailySourceStorageKey(lang, date, locationCode = dailySourceLocationCode(lang)) {
         const sourceVariant = lang === 'VN'
             ? `:${normalizeVietnameseReadingSource(state.vnReadingSource)}`
-            : (['EN', 'ZH'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
+            : (['EN', 'ZH', 'IT', 'PT', 'ES'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         return `${STORAGE_PREFIX}dailySource:${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
     }
 
@@ -11956,6 +12478,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const traditionalChineseDailyMassSectionKeys = Object.freeze([
         'entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel',
         'prayer_offerings', 'communion', 'prayer_after'
+    ]);
+    const italianDailyMassSectionKeys = Object.freeze([
+        'entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel',
+        'prayer_offerings', 'communion', 'prayer_after'
+    ]);
+    const portugueseDailyMassSectionKeys = Object.freeze([
+        'entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel',
+        'prayer_offerings', 'communion', 'prayer_after'
+    ]);
+    const mexicanDailyMassSectionKeys = Object.freeze([
+        'entrance', 'collect', 'reading1', 'psalm', 'gospel_accl', 'gospel',
+        'prayer_offerings', 'preface', 'communion', 'prayer_after'
     ]);
 
     function missingCoreDailyReadingSections(parsed) {
@@ -11973,6 +12507,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return traditionalChineseDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
     }
 
+    function hasCompleteItalianDailyMass(parsed, locationCode) {
+        if (dataJurisdictionForLocation(locationCode) !== 'IT') return true;
+        const data = parsed && parsed.data || {};
+        return italianDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+    }
+
+    function hasCompletePortugueseDailyMass(parsed, locationCode) {
+        if (dataJurisdictionForLocation(locationCode) !== 'PT') return true;
+        const data = parsed && parsed.data || {};
+        return portugueseDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+    }
+
+    function hasCompleteMexicanDailyMass(parsed, locationCode) {
+        if (dataJurisdictionForLocation(locationCode) !== 'MX') return true;
+        const data = parsed && parsed.data || {};
+        return mexicanDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+    }
+
     function readCachedDailySource(lang, date, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         const entry = readStorageJSON(dailySourceStorageKey(lang, date, locationCode));
@@ -11980,6 +12532,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!options.allowStale && !isFreshCacheEntry(entry, DAILY_SOURCE_CACHE_TTL_MS)) return null;
         if (!hasCompleteCoreDailyReadings(entry.parsed)) return null;
         if (lang === 'ZH' && !hasCompleteTraditionalChineseDailyMass(entry.parsed, locationCode)) return null;
+        if (lang === 'IT' && !hasCompleteItalianDailyMass(entry.parsed, locationCode)) return null;
+        if (lang === 'PT' && !hasCompletePortugueseDailyMass(entry.parsed, locationCode)) return null;
+        if (lang === 'ES' && !hasCompleteMexicanDailyMass(entry.parsed, locationCode)) return null;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(entry.parsed)) return null;
         if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
             && !hasVietnameseKtcgDiocesanPrayers(entry.parsed)) return null;
@@ -11990,6 +12545,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         if (!hasCompleteCoreDailyReadings(parsed)) return;
         if (lang === 'ZH' && !hasCompleteTraditionalChineseDailyMass(parsed, locationCode)) return;
+        if (lang === 'IT' && !hasCompleteItalianDailyMass(parsed, locationCode)) return;
+        if (lang === 'PT' && !hasCompletePortugueseDailyMass(parsed, locationCode)) return;
+        if (lang === 'ES' && !hasCompleteMexicanDailyMass(parsed, locationCode)) return;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) return;
         if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
             && !hasVietnameseKtcgDiocesanPrayers(parsed)) return;
@@ -12002,7 +12560,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         const sourceVariant = lang === 'VN'
             ? `:${normalizeVietnameseReadingSource(state.vnReadingSource)}`
-            : (['EN', 'ZH'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
+            : (['EN', 'ZH', 'IT', 'PT', 'ES'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         const key = `${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
         if (options.forceRemote) delete dailySourceCache[key];
         if (!dailySourceCache[key]) {
@@ -12017,6 +12575,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                         }
                         if (lang === 'ZH' && !hasCompleteTraditionalChineseDailyMass(parsed, locationCode)) {
                             throw new Error('ZH Taiwan source is missing one or more daily proper sections.');
+                        }
+                        if (lang === 'IT' && !hasCompleteItalianDailyMass(parsed, locationCode)) {
+                            throw new Error('IT CEI source is missing one or more daily proper sections.');
+                        }
+                        if (lang === 'PT' && !hasCompletePortugueseDailyMass(parsed, locationCode)) {
+                            throw new Error('PT CEP source is missing one or more daily proper sections.');
+                        }
+                        if (lang === 'ES' && !hasCompleteMexicanDailyMass(parsed, locationCode)) {
+                            throw new Error('ES CEM source is missing one or more daily proper sections.');
                         }
                         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) {
                             throw new Error('VN source is incomplete: ' + missingVietnameseDailySections(parsed).join(', '));
@@ -12047,7 +12614,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function emptyMassLine() {
-        return { sp_kr: '', sp_vn: '', sp_en: '', sp_jp: '', sp_la: '', sp_zh: '' };
+        return { sp_kr: '', sp_vn: '', sp_en: '', sp_jp: '', sp_la: '', sp_zh: '', sp_it: '', sp_es: '' };
     }
 
     function isDailyEndingLine(line) {
@@ -12063,11 +12630,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function isPrayerOpenerText(text) {
-        return /기도합시다|Let us pray|Chúng ta dâng lời cầu nguyện|Orémus|祈りましょう|請大家祈禱/.test(cleanNodeText(text));
+        return /기도합시다|Let us pray|Chúng ta dâng lời cầu nguyện|Orémus|祈りましょう|請大家祈禱|Preghiamo|Oremos/.test(cleanNodeText(text));
     }
 
     function isPrayerAmenText(text) {
-        return /^(아멘\.?|Amen\.?|アーメン。?|阿們。?)$/i.test(cleanNodeText(text));
+        return /^(아멘\.?|Amen\.?|Amén\.?|アーメン。?|阿們。?)$/i.test(cleanNodeText(text));
     }
 
     function isPrayerConclusionText(text) {
@@ -12092,10 +12659,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return isPrayerOpenerLine(line) || isPrayerAmenLine(line);
     }
 
-    const celebrantSpeakerByLang = { kr: '✚', vn: 'CT.', en: 'C.', jp: '司', la: 'C.', zh: '主祭' };
-    const lectorSpeakerByLang = { kr: '▥', vn: 'N.', en: 'L.', jp: '朗', la: 'L.', zh: '讀經員' };
-    const peopleSpeakerByLang = { kr: '◎', vn: 'CĐ.', en: 'ALL', jp: '会', la: 'P.', zh: '答' };
-    const gospelSpeakerByLang = { kr: celebrantSpeakerByLang.kr, vn: 'LM. (PT.)', en: 'P. (D.)', jp: '司 (助)', la: celebrantSpeakerByLang.la, zh: '主祭' };
+    const celebrantSpeakerByLang = { kr: '✚', vn: 'CT.', en: 'C.', jp: '司', la: 'C.', zh: '主祭', it: 'C.', pt: 'C.', es: 'C.' };
+    const lectorSpeakerByLang = { kr: '▥', vn: 'N.', en: 'L.', jp: '朗', la: 'L.', zh: '讀經員', it: 'L.', pt: 'L.', es: 'L.' };
+    const peopleSpeakerByLang = { kr: '◎', vn: 'CĐ.', en: 'ALL', jp: '会', la: 'P.', zh: '答', it: 'Tutti', pt: 'Todos', es: 'Todos' };
+    const gospelSpeakerByLang = { kr: celebrantSpeakerByLang.kr, vn: 'LM. (PT.)', en: 'P. (D.)', jp: '司 (助)', la: celebrantSpeakerByLang.la, zh: '主祭', it: 'C. (D.)', pt: 'C. (D.)', es: 'C. (D.)' };
 
     function makePrayerOpenerLine() {
         return {
@@ -12104,7 +12671,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             sp_en: celebrantSpeakerByLang.en, text_en: 'Let us pray.',
             sp_la: celebrantSpeakerByLang.la, text_la: 'Orémus.',
             sp_jp: celebrantSpeakerByLang.jp, text_jp: '祈りましょう。',
-            sp_zh: celebrantSpeakerByLang.zh, text_zh: '請大家祈禱。'
+            sp_zh: celebrantSpeakerByLang.zh, text_zh: '請大家祈禱。',
+            sp_it: celebrantSpeakerByLang.it, text_it: 'Preghiamo.',
+            sp_pt: celebrantSpeakerByLang.pt, text_pt: 'Oremos.',
+            sp_es: celebrantSpeakerByLang.es, text_es: 'Oremos.'
         };
     }
 
@@ -12115,7 +12685,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             sp_en: peopleSpeakerByLang.en, text_en: 'Amen.',
             sp_la: peopleSpeakerByLang.la, text_la: 'Amen.',
             sp_jp: peopleSpeakerByLang.jp, text_jp: 'アーメン。',
-            sp_zh: peopleSpeakerByLang.zh, text_zh: '阿們。'
+            sp_zh: peopleSpeakerByLang.zh, text_zh: '阿們。',
+            sp_it: peopleSpeakerByLang.it, text_it: 'Amen.',
+            sp_pt: peopleSpeakerByLang.pt, text_pt: 'Amen.',
+            sp_es: peopleSpeakerByLang.es, text_es: 'Amén.'
         };
     }
 
@@ -13338,12 +13911,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     const dailyLengthVariantLabels = {
         reading: {
-            long: { kr: '긴 독서', vn: 'Bài đọc dài', en: 'Long Reading', jp: '長い朗読', la: 'Lectio longior', zh: '長式讀經' },
-            short: { kr: '짧은 독서', vn: 'Bài đọc ngắn', en: 'Short Reading', jp: '短い朗読', la: 'Lectio brevior', zh: '短式讀經' }
+            long: { kr: '긴 독서', vn: 'Bài đọc dài', en: 'Long Reading', jp: '長い朗読', la: 'Lectio longior', zh: '長式讀經', it: 'Lettura lunga' },
+            short: { kr: '짧은 독서', vn: 'Bài đọc ngắn', en: 'Short Reading', jp: '短い朗読', la: 'Lectio brevior', zh: '短式讀經', it: 'Lettura breve' }
         },
         gospel: {
-            long: { kr: '긴 복음', vn: 'Bài Tin Mừng dài', en: 'Long Gospel', jp: '長い福音', la: 'Evangelium longum', zh: '長式福音' },
-            short: { kr: '짧은 복음', vn: 'Bài Tin Mừng ngắn', en: 'Short Gospel', jp: '短い福音', la: 'Evangelium breve', zh: '短式福音' }
+            long: { kr: '긴 복음', vn: 'Bài Tin Mừng dài', en: 'Long Gospel', jp: '長い福音', la: 'Evangelium longum', zh: '長式福音', it: 'Vangelo lungo' },
+            short: { kr: '짧은 복음', vn: 'Bài Tin Mừng ngắn', en: 'Short Gospel', jp: '短い福音', la: 'Evangelium breve', zh: '短式福音', it: 'Vangelo breve' }
         }
     };
     const gospelLengthVariantLabels = dailyLengthVariantLabels.gospel;
@@ -14466,21 +15039,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             en: `Option ${number}`,
             jp: `選択肢 ${number}`,
             la: `Optio ${number}`,
-            zh: `選項 ${number}`
+            zh: `選項 ${number}`,
+            it: `Opzione ${number}`
         };
     }
 
     const dailyVariantKindSectionNames = {
-        entrance: { kr: '입당송', vn: 'Ca nhập lễ', en: 'Entrance Antiphon', jp: '入祭唱', la: 'Antiphona ad introitum', zh: '進堂詠' },
-        collect: { kr: '본기도', vn: 'Lời nguyện nhập lễ', en: 'Collect', jp: '集会祈願', la: 'Collecta', zh: '集禱經' },
-        reading1: { kr: '독서', vn: 'Bài đọc', en: 'Reading', jp: '朗読', la: 'Lectio', zh: '讀經' },
-        psalm: { kr: '화답송', vn: 'Đáp ca', en: 'Responsorial Psalm', jp: '答唱詩編', la: 'Psalmus responsorius', zh: '答唱詠' },
-        reading2: { kr: '독서', vn: 'Bài đọc', en: 'Reading', jp: '朗読', la: 'Lectio', zh: '讀經' },
-        gospel_accl: { kr: '복음 환호송', vn: 'Tung hô Tin Mừng', en: 'Gospel Acclamation', jp: '福音朗読前の唱句', la: 'Acclamatio ante Evangelium', zh: '福音前歡呼' },
-        gospel: { kr: '복음', vn: 'Tin Mừng', en: 'Gospel', jp: '福音', la: 'Evangelium', zh: '福音' },
-        prayer_offerings: { kr: '예물 기도', vn: 'Lời nguyện tiến lễ', en: 'Prayer over the Offerings', jp: '奉納祈願', la: 'Oratio super oblata', zh: '獻禮經' },
-        communion: { kr: '영성체송', vn: 'Ca hiệp lễ', en: 'Communion Antiphon', jp: '拝領唱', la: 'Antiphona ad communionem', zh: '領主詠' },
-        prayer_after: { kr: '영성체 후 기도', vn: 'Lời nguyện hiệp lễ', en: 'Prayer after Communion', jp: '拝領祈願', la: 'Oratio post communionem', zh: '領聖體後經' }
+        entrance: { kr: '입당송', vn: 'Ca nhập lễ', en: 'Entrance Antiphon', jp: '入祭唱', la: 'Antiphona ad introitum', zh: '進堂詠', it: "Antifona d'ingresso" },
+        collect: { kr: '본기도', vn: 'Lời nguyện nhập lễ', en: 'Collect', jp: '集会祈願', la: 'Collecta', zh: '集禱經', it: 'Colletta' },
+        reading1: { kr: '독서', vn: 'Bài đọc', en: 'Reading', jp: '朗読', la: 'Lectio', zh: '讀經', it: 'Prima lettura' },
+        psalm: { kr: '화답송', vn: 'Đáp ca', en: 'Responsorial Psalm', jp: '答唱詩編', la: 'Psalmus responsorius', zh: '答唱詠', it: 'Salmo responsoriale' },
+        reading2: { kr: '독서', vn: 'Bài đọc', en: 'Reading', jp: '朗読', la: 'Lectio', zh: '讀經', it: 'Seconda lettura' },
+        gospel_accl: { kr: '복음 환호송', vn: 'Tung hô Tin Mừng', en: 'Gospel Acclamation', jp: '福音朗読前の唱句', la: 'Acclamatio ante Evangelium', zh: '福音前歡呼', it: 'Acclamazione al Vangelo' },
+        gospel: { kr: '복음', vn: 'Tin Mừng', en: 'Gospel', jp: '福音', la: 'Evangelium', zh: '福音', it: 'Vangelo' },
+        prayer_offerings: { kr: '예물 기도', vn: 'Lời nguyện tiến lễ', en: 'Prayer over the Offerings', jp: '奉納祈願', la: 'Oratio super oblata', zh: '獻禮經', it: 'Sulle offerte' },
+        communion: { kr: '영성체송', vn: 'Ca hiệp lễ', en: 'Communion Antiphon', jp: '拝領唱', la: 'Antiphona ad communionem', zh: '領主詠', it: 'Antifona alla comunione' },
+        prayer_after: { kr: '영성체 후 기도', vn: 'Lời nguyện hiệp lễ', en: 'Prayer after Communion', jp: '拝領祈願', la: 'Oratio post communionem', zh: '領聖體後經', it: 'Dopo la comunione' }
     };
 
     function dailyVariantKindFromSourceMetadata(newData, alignmentGroup, fallbackIndex) {
@@ -14498,7 +15072,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function dailyVariantLabelForKind(kind, baseId) {
-        const unit = dailyVariantKindSectionNames[baseId] || { kr: '기도', vn: 'Lời nguyện', en: 'Prayer', jp: '祈願', la: 'Oratio', zh: '禱文' };
+        const unit = dailyVariantKindSectionNames[baseId] || { kr: '기도', vn: 'Lời nguyện', en: 'Prayer', jp: '祈願', la: 'Oratio', zh: '禱文', it: 'Preghiera' };
         return {
             kr: `${kind === 'common' ? '공통' : '고유'} ${unit.kr}`,
             vn: `${unit.vn} ${kind === 'common' ? 'chung' : 'riêng'}`,
@@ -14603,7 +15177,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function dailyVariantLabelForKindDetails(kind, baseId, sourceLower = '', lengthKind = '', ordinal = null) {
-        const unit = dailyVariantKindSectionNames[baseId] || { kr: '기도', vn: 'Lời nguyện', en: 'Prayer', jp: '祈願', la: 'Oratio', zh: '禱文' };
+        const unit = dailyVariantKindSectionNames[baseId] || { kr: '기도', vn: 'Lời nguyện', en: 'Prayer', jp: '祈願', la: 'Oratio', zh: '禱文', it: 'Preghiera' };
         const lengthGroup = baseId === 'gospel' ? dailyLengthVariantLabels.gospel : dailyLengthVariantLabels.reading;
         const lengthLabel = lengthKind && lengthGroup[lengthKind] ? lengthGroup[lengthKind] : null;
         const sourceNames = sourceLower ? {
@@ -15287,12 +15861,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (browserZone.includes('tokyo')) return 'JP';
         if (browserZone.includes('ho_chi_minh') || browserZone.includes('saigon')) return 'VN';
         if (browserZone.includes('seoul')) return 'KR';
-        if (browserZone.includes('rome') || browserZone.includes('vatican')) return 'VA';
+        if (browserZone.includes('mexico_city') || browserZone.includes('tijuana') || browserZone.includes('chihuahua')
+            || browserZone.includes('mazatlan') || browserZone.includes('hermosillo') || browserZone.includes('matamoros')
+            || browserZone.includes('ojinaga') || browserZone.includes('bahia_banderas') || browserZone.includes('merida')
+            || browserZone.includes('cancun')) return 'MX';
+        if (browserZone.includes('lisbon') || browserZone.includes('madeira') || browserZone.includes('azores')) return 'PT';
+        if (browserZone.includes('rome')) return 'IT';
+        if (browserZone.includes('vatican')) return 'VA';
         return 'INTL';
     }
 
     function gpsLocationForCoordinates(lat, lon) {
         if (lat >= 41.88 && lat <= 41.93 && lon >= 12.43 && lon <= 12.48) return 'VA';
+        if (lat > 35.4 && lat < 47.2 && lon > 6.5 && lon < 18.7) return 'IT';
         if (lat > 21.7 && lat < 25.6 && lon > 119 && lon < 122.6) return 'TW';
         if (lat > 33 && lat < 39 && lon > 124 && lon < 132) return 'KR';
         if (lat > 4.5 && lat < 21.5 && lon > 116 && lon < 127) return 'PH';
@@ -15300,6 +15881,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lat > -45 && lat < -9 && lon > 112 && lon < 155) return 'AU';
         if (lat > 8 && lat < 24 && lon > 102 && lon < 110) return 'VN';
         if (lat > 24 && lat < 46 && lon > 122 && lon < 146) return 'JP';
+        if (lat > 14.3 && lat < 32.8 && lon > -118.6 && lon < -86.4) return 'MX';
+        if ((lat > 36.8 && lat < 42.3 && lon > -9.7 && lon < -6.0)
+            || (lat > 36 && lat < 40 && lon > -32 && lon < -24)
+            || (lat > 30 && lat < 33.5 && lon > -17.5 && lon < -15.5)) return 'PT';
         if (lat > 54 && lat < 55.5 && lon > -8.3 && lon < -5.2) return 'GB-NIR';
         if (lat > 51.3 && lat < 55.6 && lon > -10.8 && lon < -5.2) return 'IE';
         if (lat >= 54.63 && lat < 61.1 && lon > -8.2 && lon < -0.5) return 'GB-SCT';
@@ -15365,7 +15950,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         EN: 'English',
         JP: 'Japanese',
         LA: 'Latin',
-        ZH: 'Traditional Chinese'
+        ZH: 'Traditional Chinese',
+        IT: 'Italian',
+        PT: 'Portuguese',
+        ES: 'Spanish'
     };
 
     // Korean Catholic terminology is enforced in both the model prompt and
@@ -15534,11 +16122,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const VOICE_MAX_ALTERNATIVES = 5;
 
     const uiLanguageNames = {
-        KR: { KR: '한국어', VN: '베트남어', EN: '영어', JP: '일본어', LA: '라틴어', ZH: '중국어 번체' },
-        VN: { KR: 'tiếng Hàn', VN: 'tiếng Việt', EN: 'tiếng Anh', JP: 'tiếng Nhật', LA: 'tiếng Latinh', ZH: 'tiếng Hoa phồn thể' },
-        EN: { KR: 'Korean', VN: 'Vietnamese', EN: 'English', JP: 'Japanese', LA: 'Latin', ZH: 'Traditional Chinese' },
-        JP: { KR: '韓国語', VN: 'ベトナム語', EN: '英語', JP: '日本語', LA: 'ラテン語', ZH: '繁体字中国語' },
-        LA: { KR: 'Coreana', VN: 'Vietnamensis', EN: 'Anglica', JP: 'Iaponica', LA: 'Latina', ZH: 'Sinica traditionalis' }
+        KR: { KR: '한국어', VN: '베트남어', EN: '영어', JP: '일본어', LA: '라틴어', ZH: '중국어 번체', IT: '이탈리아어', PT: '포르투갈어', ES: '스페인어' },
+        VN: { KR: 'tiếng Hàn', VN: 'tiếng Việt', EN: 'tiếng Anh', JP: 'tiếng Nhật', LA: 'tiếng Latinh', ZH: 'tiếng Hoa phồn thể', IT: 'tiếng Ý', PT: 'tiếng Bồ Đào Nha', ES: 'tiếng Tây Ban Nha' },
+        EN: { KR: 'Korean', VN: 'Vietnamese', EN: 'English', JP: 'Japanese', LA: 'Latin', ZH: 'Traditional Chinese', IT: 'Italian', PT: 'Portuguese', ES: 'Spanish' },
+        JP: { KR: '韓国語', VN: 'ベトナム語', EN: '英語', JP: '日本語', LA: 'ラテン語', ZH: '繁体字中国語', IT: 'イタリア語', PT: 'ポルトガル語', ES: 'スペイン語' },
+        LA: { KR: 'Coreana', VN: 'Vietnamensis', EN: 'Anglica', JP: 'Iaponica', LA: 'Latina', ZH: 'Sinica traditionalis', IT: 'Italica', PT: 'Lusitana', ES: 'Hispanica' },
+        ZH: { KR: '韓語', VN: '越南語', EN: '英語', JP: '日語', LA: '拉丁語', ZH: '繁體中文', IT: '義大利語', PT: '葡萄牙語', ES: '西班牙語' }
     };
 
     const voiceUiText = {
@@ -15581,6 +16170,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             noSpeech: 'Vox non auditur · loquere vel globulum sistendi preme', unsupported: 'Hic navigator cognitionem vocis continuam non sustinet',
             permission: 'Licentia microphoni necessaria est', error: 'Error cognitionis vocis',
             startFailed: 'Cognitionem vocis incipere non potest', pauseTitle: 'Siste cognitionem vocis', playTitle: 'Perge cognitionem vocis'
+        },
+        ZH: {
+            on: '開啟', off: '關閉', ready: '準備就緒', activeShort: '語音辨識中', pausedShort: '語音辨識已暫停', start: '開始', stop: '關閉',
+            preparing: '正在準備語音辨識', listening: '正在辨識語音 · 位置正確時請按停止', paused: '語音辨識已暫停 · 按播放可繼續',
+            found: text => `正在標示位置 · 聽到：${text}`, searching: text => `正在尋找位置 · 聽到：${text}`,
+            noSpeech: '未聽到語音 · 請繼續說話或按停止', unsupported: '此瀏覽器不支援即時語音辨識',
+            permission: '需要麥克風權限', error: '瀏覽器語音辨識發生錯誤',
+            startFailed: '無法開始語音辨識', pauseTitle: '暫停語音辨識', playTitle: '繼續語音辨識'
         }
     };
 
@@ -15602,7 +16199,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         EN: 'English',
         JP: '日本語',
         LA: 'Latine',
-        ZH: '繁體中文'
+        ZH: '繁體中文',
+        IT: 'Italiano',
+        PT: 'Português',
+        ES: 'Español'
     });
 
     const appChromeUiText = Object.freeze({
@@ -15630,6 +16230,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             nav: { mass: 'Missa', prayers: 'Preces', hymns: 'Cantus', churches: 'Ecclesiae' },
             quick: { mass: 'Missa', prayers: 'Preces', hymns: 'Cantus', churches: 'Ecclesiae' },
             navAria: 'Menu principale', quickAria: 'Compendia domestica', settingsOpen: 'Ordinationes aperi', legendAria: 'Admonitio de psalmo cantato'
+        },
+        ZH: {
+            nav: { mass: '彌撒', prayers: '祈禱文', hymns: '聖歌', churches: '聖堂' },
+            quick: { mass: '彌撒', prayers: '祈禱文', hymns: '聖歌', churches: '聖堂' },
+            navAria: '主要選單', quickAria: '首頁捷徑', settingsOpen: '開啟設定', legendAria: '詠唱聖詠說明'
         }
     });
 
@@ -15673,6 +16278,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             font: '🔍 Magnitudo litterarum', ui: '⚙️ Lingua ordinationum (UI)',
             hideStatusBar: '📱 Lineam status superiorem cela', hideNavigationBar: '📱 Lineam navigationis inferiorem cela', close: 'Claude',
             fonts: { '14px': 'Parva', '18px': 'Usitata', '20px': 'Magna', '22px': 'Maior' }
+        },
+        ZH: {
+            title: '設定', gps: '📍 關閉 GPS 並手動指定目前位置', loc: '🌐 目前位置／原文語言（左側）', target: '🔄 翻譯目標語言（右側）',
+            vnSource: '📖 越南語禮儀讀經譯本', stacked: '📱 原文／譯文上下排列（強制）',
+            voice: '🎙️ 語音進度標示', voiceStatus: '準備就緒', voiceNote: '※ 準確度可能因周遭環境而異。',
+            font: '🔍 字體大小', ui: '⚙️ 設定語言（UI）',
+            hideStatusBar: '📱 隱藏上方狀態列', hideNavigationBar: '📱 隱藏下方導覽列', close: '關閉',
+            fonts: { '14px': '小', '18px': '標準', '20px': '大', '22px': '更大' }
         }
     });
 
@@ -15727,12 +16340,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     const localizedCountryNames = Object.freeze({
-        KR: { KR: '한국', VN: '베트남', US: '미국', IE: '아일랜드', 'GB-NIR': '북아일랜드', 'GB-ENG': '잉글랜드', 'GB-WLS': '웨일즈', 'GB-SCT': '스코틀랜드', PH: '필리핀', TW: '대만', AU: '호주', NZ: '뉴질랜드', JP: '일본', VA: '바티칸', INTL: '기타 지역' },
-        VN: { KR: 'Hàn Quốc', VN: 'Việt Nam', US: 'Hoa Kỳ', IE: 'Ireland', 'GB-NIR': 'Bắc Ireland', 'GB-ENG': 'Anh', 'GB-WLS': 'Wales', 'GB-SCT': 'Scotland', PH: 'Philippines', TW: 'Đài Loan', AU: 'Úc', NZ: 'New Zealand', JP: 'Nhật Bản', VA: 'Vatican', INTL: 'Khu vực khác' },
-        EN: { KR: 'South Korea', VN: 'Vietnam', US: 'United States', IE: 'Ireland', 'GB-NIR': 'Northern Ireland', 'GB-ENG': 'England', 'GB-WLS': 'Wales', 'GB-SCT': 'Scotland', PH: 'Philippines', TW: 'Taiwan', AU: 'Australia', NZ: 'New Zealand', JP: 'Japan', VA: 'Vatican City', INTL: 'Other region' },
-        JP: { KR: '韓国', VN: 'ベトナム', US: 'アメリカ', IE: 'アイルランド', 'GB-NIR': '北アイルランド', 'GB-ENG': 'イングランド', 'GB-WLS': 'ウェールズ', 'GB-SCT': 'スコットランド', PH: 'フィリピン', TW: '台湾', AU: 'オーストラリア', NZ: 'ニュージーランド', JP: '日本', VA: 'バチカン', INTL: 'その他の地域' },
-        LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', 'GB-ENG': 'Anglia', 'GB-WLS': 'Cambria', 'GB-SCT': 'Scotia', PH: 'Philippinae', TW: 'Taivania', AU: 'Australia', NZ: 'Nova Zelandia', JP: 'Iaponia', VA: 'Civitas Vaticana', INTL: 'Alia regio' },
-        ZH: { KR: '韓國', VN: '越南', US: '美國', IE: '愛爾蘭', 'GB-NIR': '北愛爾蘭', 'GB-ENG': '英格蘭', 'GB-WLS': '威爾斯', 'GB-SCT': '蘇格蘭', PH: '菲律賓', TW: '臺灣', AU: '澳洲', NZ: '紐西蘭', JP: '日本', VA: '梵蒂岡', INTL: '其他地區' }
+        KR: { KR: '한국', VN: '베트남', US: '미국', IE: '아일랜드', 'GB-NIR': '북아일랜드', 'GB-ENG': '잉글랜드', 'GB-WLS': '웨일즈', 'GB-SCT': '스코틀랜드', PH: '필리핀', TW: '대만', AU: '호주', NZ: '뉴질랜드', JP: '일본', IT: '이탈리아', PT: '포르투갈', MX: '멕시코', VA: '바티칸', INTL: '기타 지역' },
+        VN: { KR: 'Hàn Quốc', VN: 'Việt Nam', US: 'Hoa Kỳ', IE: 'Ireland', 'GB-NIR': 'Bắc Ireland', 'GB-ENG': 'Anh', 'GB-WLS': 'Wales', 'GB-SCT': 'Scotland', PH: 'Philippines', TW: 'Đài Loan', AU: 'Úc', NZ: 'New Zealand', JP: 'Nhật Bản', IT: 'Ý', PT: 'Bồ Đào Nha', MX: 'Mexico', VA: 'Vatican', INTL: 'Khu vực khác' },
+        EN: { KR: 'South Korea', VN: 'Vietnam', US: 'United States', IE: 'Ireland', 'GB-NIR': 'Northern Ireland', 'GB-ENG': 'England', 'GB-WLS': 'Wales', 'GB-SCT': 'Scotland', PH: 'Philippines', TW: 'Taiwan', AU: 'Australia', NZ: 'New Zealand', JP: 'Japan', IT: 'Italy', PT: 'Portugal', MX: 'Mexico', VA: 'Vatican City', INTL: 'Other region' },
+        JP: { KR: '韓国', VN: 'ベトナム', US: 'アメリカ', IE: 'アイルランド', 'GB-NIR': '北アイルランド', 'GB-ENG': 'イングランド', 'GB-WLS': 'ウェールズ', 'GB-SCT': 'スコットランド', PH: 'フィリピン', TW: '台湾', AU: 'オーストラリア', NZ: 'ニュージーランド', JP: '日本', IT: 'イタリア', PT: 'ポルトガル', MX: 'メキシコ', VA: 'バチカン', INTL: 'その他の地域' },
+        LA: { KR: 'Corea Meridiana', VN: 'Vietnamia', US: 'Civitates Foederatae', IE: 'Hibernia', 'GB-NIR': 'Hibernia Septentrionalis', 'GB-ENG': 'Anglia', 'GB-WLS': 'Cambria', 'GB-SCT': 'Scotia', PH: 'Philippinae', TW: 'Taivania', AU: 'Australia', NZ: 'Nova Zelandia', JP: 'Iaponia', IT: 'Italia', PT: 'Portugallia', MX: 'Mexicum', VA: 'Civitas Vaticana', INTL: 'Alia regio' },
+        ZH: { KR: '韓國', VN: '越南', US: '美國', IE: '愛爾蘭', 'GB-NIR': '北愛爾蘭', 'GB-ENG': '英格蘭', 'GB-WLS': '威爾斯', 'GB-SCT': '蘇格蘭', PH: '菲律賓', TW: '臺灣', AU: '澳洲', NZ: '紐西蘭', JP: '日本', IT: '義大利', PT: '葡萄牙', MX: '墨西哥', VA: '梵蒂岡', INTL: '其他地區' }
     });
 
     const locationRegionOrder = Object.freeze([
@@ -15765,6 +16378,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         { region: 'ANGLO_AMERICAN', code: 'IE', conference: 'ICBC', nativeLanguage: 'English', beta: true },
         { region: 'ANGLO_AMERICAN', code: 'AU', conference: 'ACBC', nativeLanguage: 'English', beta: true },
         { region: 'ANGLO_AMERICAN', code: 'NZ', conference: 'NZCBC', nativeLanguage: 'English', beta: true },
+        { region: 'WESTERN_EUROPE', code: 'IT', conference: 'CEI', nativeLanguage: 'Italiano', beta: true },
+        { region: 'WESTERN_EUROPE', code: 'PT', conference: 'CEP', nativeLanguage: 'Português', beta: true },
+        { region: 'LATIN_AMERICA', code: 'MX', conference: 'CEM', nativeLanguage: 'Español', beta: true },
         { region: 'NORTHEAST_ASIA', code: 'KR', conference: 'CBCK', nativeLanguage: '한국어' },
         { region: 'NORTHEAST_ASIA', code: 'JP', conference: 'CBJC', nativeLanguage: '日本語', beta: true },
         { region: 'NORTHEAST_ASIA', code: 'TW', conference: 'CRCB', nativeLanguage: '繁體中文', beta: true },
@@ -15786,31 +16402,37 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             CBCK: '한국 천주교 주교회의 (CBCK)', CBCV: '베트남 가톨릭 주교회의 (CBCV)', CBCP: '필리핀 가톨릭 주교회의 (CBCP)',
             CRBC: '대만 천주교 주교회의 (CRBC)', CBCJ: '일본 천주교 주교회의 (CBCJ)', ICBC: '아일랜드 가톨릭 주교회의 (ICBC)',
             CBCEW: '잉글랜드·웨일스 가톨릭 주교회의 (CBCEW)', BCOS: '스코틀랜드 가톨릭 주교회의 (BCOS)',
-            USCCB: '미국 가톨릭 주교회의 (USCCB)', ACBC: '호주 천주교 주교회의 (ACBC)', NZCBC: '뉴질랜드 천주교 주교회의 (NZCBC)', ROMAN: '보편 로마 전례', AUTO: '자동 위치 대체'
+            USCCB: '미국 가톨릭 주교회의 (USCCB)', ACBC: '호주 천주교 주교회의 (ACBC)', NZCBC: '뉴질랜드 천주교 주교회의 (NZCBC)', CEI: '이탈리아 주교회의 (CEI)', CEP: '포르투갈 주교회의 (CEP)', CEM: '멕시코 주교회의 (CEM)', ROMAN: '보편 로마 전례', AUTO: '자동 위치 대체'
         },
         VN: {
             CBCK: 'Hội đồng Giám mục Công giáo Hàn Quốc (CBCK)', CBCV: 'Hội đồng Giám mục Công giáo Việt Nam (CBCV)', CBCP: 'Hội đồng Giám mục Công giáo Philippines (CBCP)',
             CRBC: 'Hội đồng Giám mục Công giáo Đài Loan (CRBC)', CBCJ: 'Hội đồng Giám mục Công giáo Nhật Bản (CBCJ)', ICBC: 'Hội đồng Giám mục Công giáo Ireland (ICBC)',
             CBCEW: 'Hội đồng Giám mục Công giáo Anh và Wales (CBCEW)', BCOS: 'Hội đồng Giám mục Công giáo Scotland (BCOS)',
-            USCCB: 'Hội đồng Giám mục Công giáo Hoa Kỳ (USCCB)', ACBC: 'Hội đồng Giám mục Công giáo Úc (ACBC)', NZCBC: 'Hội đồng Giám mục Công giáo New Zealand (NZCBC)', ROMAN: 'Nghi lễ Rôma phổ quát', AUTO: 'Tự động chọn vị trí thay thế'
+            USCCB: 'Hội đồng Giám mục Công giáo Hoa Kỳ (USCCB)', ACBC: 'Hội đồng Giám mục Công giáo Úc (ACBC)', NZCBC: 'Hội đồng Giám mục Công giáo New Zealand (NZCBC)', CEI: 'Hội đồng Giám mục Ý (CEI)', CEP: 'Hội đồng Giám mục Bồ Đào Nha (CEP)', CEM: 'Hội đồng Giám mục Mexico (CEM)', ROMAN: 'Nghi lễ Rôma phổ quát', AUTO: 'Tự động chọn vị trí thay thế'
         },
         EN: {
             CBCK: "Catholic Bishops' Conference of Korea (CBCK)", CBCV: "Catholic Bishops' Conference of Vietnam (CBCV)", CBCP: "Catholic Bishops' Conference of the Philippines (CBCP)",
             CRBC: "Taiwan Catholic Bishops' Conference (CRBC)", CBCJ: "Catholic Bishops' Conference of Japan (CBCJ)", ICBC: "Irish Catholic Bishops' Conference (ICBC)",
             CBCEW: "Catholic Bishops' Conference of England and Wales (CBCEW)", BCOS: "Catholic Bishops' Conference of Scotland (BCOS)",
-            USCCB: 'United States Conference of Catholic Bishops (USCCB)', ACBC: 'Australian Catholic Bishops Conference (ACBC)', NZCBC: 'New Zealand Catholic Bishops Conference (NZCBC)', ROMAN: 'Universal Roman Rite', AUTO: 'Automatic location fallback'
+            USCCB: 'United States Conference of Catholic Bishops (USCCB)', ACBC: 'Australian Catholic Bishops Conference (ACBC)', NZCBC: 'New Zealand Catholic Bishops Conference (NZCBC)', CEI: 'Italian Episcopal Conference (CEI)', CEP: 'Portuguese Episcopal Conference (CEP)', CEM: 'Mexican Episcopal Conference (CEM)', ROMAN: 'Universal Roman Rite', AUTO: 'Automatic location fallback'
         },
         JP: {
             CBCK: '韓国カトリック司教協議会 (CBCK)', CBCV: 'ベトナムカトリック司教協議会 (CBCV)', CBCP: 'フィリピンカトリック司教協議会 (CBCP)',
             CRBC: '台湾カトリック司教協議会 (CRBC)', CBCJ: '日本カトリック司教協議会 (CBCJ)', ICBC: 'アイルランドカトリック司教協議会 (ICBC)',
             CBCEW: 'イングランド・ウェールズカトリック司教協議会 (CBCEW)', BCOS: 'スコットランドカトリック司教協議会 (BCOS)',
-            USCCB: '米国カトリック司教協議会 (USCCB)', ACBC: 'オーストラリア・カトリック司教協議会 (ACBC)', NZCBC: 'ニュージーランド・カトリック司教協議会 (NZCBC)', ROMAN: '普遍ローマ典礼', AUTO: '現在地の自動代替'
+            USCCB: '米国カトリック司教協議会 (USCCB)', ACBC: 'オーストラリア・カトリック司教協議会 (ACBC)', NZCBC: 'ニュージーランド・カトリック司教協議会 (NZCBC)', CEI: 'イタリア司教協議会 (CEI)', CEP: 'ポルトガル司教協議会 (CEP)', CEM: 'メキシコ司教協議会 (CEM)', ROMAN: '普遍ローマ典礼', AUTO: '現在地の自動代替'
         },
         LA: {
             CBCK: 'Conferentia Episcoporum Catholicorum Coreae (CBCK)', CBCV: 'Conferentia Episcoporum Catholicorum Vietnamiae (CBCV)', CBCP: 'Conferentia Episcoporum Catholicorum Philippinarum (CBCP)',
             CRBC: 'Conferentia Episcoporum Catholicorum Taivaniae (CRBC)', CBCJ: 'Conferentia Episcoporum Catholicorum Iaponiae (CBCJ)', ICBC: 'Conferentia Episcoporum Catholicorum Hiberniae (ICBC)',
             CBCEW: 'Conferentia Episcoporum Catholicorum Angliae et Cambriae (CBCEW)', BCOS: 'Conferentia Episcoporum Catholicorum Scotiae (BCOS)',
-            USCCB: 'Conferentia Episcoporum Catholicorum Civitatum Foederatarum (USCCB)', ACBC: 'Conferentia Episcoporum Catholicorum Australiae (ACBC)', NZCBC: 'Conferentia Episcoporum Catholicorum Novae Zelandiae (NZCBC)', ROMAN: 'Ritus Romanus universalis', AUTO: 'Substitutio loci automatica'
+            USCCB: 'Conferentia Episcoporum Catholicorum Civitatum Foederatarum (USCCB)', ACBC: 'Conferentia Episcoporum Catholicorum Australiae (ACBC)', NZCBC: 'Conferentia Episcoporum Catholicorum Novae Zelandiae (NZCBC)', CEI: 'Conferentia Episcoporum Italiae (CEI)', CEP: 'Conferentia Episcoporum Portugalliae (CEP)', CEM: 'Conferentia Episcoporum Mexici (CEM)', ROMAN: 'Ritus Romanus universalis', AUTO: 'Substitutio loci automatica'
+        },
+        ZH: {
+            CBCK: '韓國天主教主教團 (CBCK)', CBCV: '越南天主教主教團 (CBCV)', CBCP: '菲律賓天主教主教團 (CBCP)',
+            CRBC: '臺灣地區主教團 (CRBC)', CBCJ: '日本天主教主教團 (CBCJ)', ICBC: '愛爾蘭天主教主教團 (ICBC)',
+            CBCEW: '英格蘭及威爾斯天主教主教團 (CBCEW)', BCOS: '蘇格蘭天主教主教團 (BCOS)',
+            USCCB: '美國天主教主教團 (USCCB)', ACBC: '澳洲天主教主教團 (ACBC)', NZCBC: '紐西蘭天主教主教團 (NZCBC)', CEI: '義大利主教團 (CEI)', CEP: '葡萄牙主教團 (CEP)', CEM: '墨西哥主教團 (CEM)', ROMAN: '普世羅馬禮', AUTO: '自動位置替代'
         }
     });
 
@@ -16332,7 +16954,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             VN: 'vi-VN',
             EN: 'en-US',
             JP: 'ja-JP',
-            LA: 'it-IT'
+            LA: 'it-IT',
+            ZH: 'zh-TW',
+            IT: 'it-IT',
+            PT: 'pt-PT',
+            ES: 'es-MX'
         }[lang] || 'ko-KR';
     }
 
@@ -17021,12 +17647,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function eucharistInlineLanguageName(lower, langCode) {
         const names = {
-            kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana', zh: '韓文' },
-            vn: { kr: '베트남어', vn: 'tiếng Việt', en: 'Vietnamese', jp: 'ベトナム語', la: 'Vietnamica', zh: '越南文' },
-            en: { kr: '영어', vn: 'tiếng Anh', en: 'English', jp: '英語', la: 'Anglica', zh: '英文' },
-            jp: { kr: '일본어', vn: 'tiếng Nhật', en: 'Japanese', jp: '日本語', la: 'Iaponica', zh: '日文' },
-            la: { kr: '라틴어', vn: 'tiếng Latinh', en: 'Latin', jp: 'ラテン語', la: 'Latina', zh: '拉丁文' },
-            zh: { kr: '중국어 번체', vn: 'tiếng Hoa phồn thể', en: 'Traditional Chinese', jp: '繁体字中国語', la: 'Sinica traditionalis', zh: '繁體中文' }
+            kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana', zh: '韓文', it: 'Coreano' },
+            vn: { kr: '베트남어', vn: 'tiếng Việt', en: 'Vietnamese', jp: 'ベトナム語', la: 'Vietnamica', zh: '越南文', it: 'Vietnamita' },
+            en: { kr: '영어', vn: 'tiếng Anh', en: 'English', jp: '英語', la: 'Anglica', zh: '英文', it: 'Inglese' },
+            jp: { kr: '일본어', vn: 'tiếng Nhật', en: 'Japanese', jp: '日本語', la: 'Iaponica', zh: '日文', it: 'Giapponese' },
+            la: { kr: '라틴어', vn: 'tiếng Latinh', en: 'Latin', jp: 'ラテン語', la: 'Latina', zh: '拉丁文', it: 'Latino' },
+            zh: { kr: '중국어 번체', vn: 'tiếng Hoa phồn thể', en: 'Traditional Chinese', jp: '繁体字中国語', la: 'Sinica traditionalis', zh: '繁體中文', it: 'Cinese tradizionale' },
+            it: { kr: '이탈리아어', vn: 'tiếng Ý', en: 'Italian', jp: 'イタリア語', la: 'Italica', zh: '義大利文', it: 'Italiano' }
         };
         const lowerLang = String(langCode || 'KR').toLowerCase();
         return (names[lower] && (names[lower][lowerLang] || names[lower].en)) || lower;
@@ -17038,7 +17665,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             vn: 'Nguyên bản tiếng Việt',
             en: 'English source',
             jp: '日本語原文',
-            la: 'Textus Latinus'
+            la: 'Textus Latinus',
+            zh: '繁體中文原文',
+            it: 'Testo italiano'
         };
         return {
             kr: `${baseLabel.kr || '죽은 이를 위한 미사'} - ${eucharistInlineLanguageName(sourceLower, 'KR')} 원문`,
@@ -17330,6 +17959,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getEucharistSongHintKey(item) {
         const songs = getEucharistSongMap(item);
+        if ((state.currentLoc === 'IT' || state.targetLang === 'IT') && songs.cei_complete_prefaces) {
+            return 'cei_complete_prefaces';
+        }
+        if ((state.currentLoc === 'PT' || state.targetLang === 'PT') && songs.cep_complete_prefaces) {
+            return 'cep_complete_prefaces';
+        }
+        if ((state.currentLoc === 'ES' || state.targetLang === 'ES') && songs.cem_complete_prefaces) {
+            return 'cem_complete_prefaces';
+        }
         const directKey = state.liturgyInfo && state.liturgyInfo.prefaceKey;
         if (directKey && songs[directKey]) return directKey;
         let hint = state.liturgyInfo && state.liturgyInfo.prefaceHint;
@@ -17798,9 +18436,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         kr: '알렐루야',
         vn: 'Alleluia',
         en: 'Alleluia',
+        es: 'Aleluya',
         jp: 'アレルヤ',
         la: 'Alleluia',
-        zh: '阿肋路亞'
+        zh: '阿肋路亞',
+        it: 'Alleluia'
     });
 
     function normalizedAlleluiaResponseText(value) {
@@ -17883,12 +18523,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function sourceChoiceLabelForLower(sourceLower, sourceOrdinal = null) {
         const names = {
-            kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana', zh: '韓文' },
-            vn: { kr: '베트남어', vn: 'tiếng Việt', en: 'Vietnamese', jp: 'ベトナム語', la: 'Vietnamica', zh: '越南文' },
-            en: { kr: '영어', vn: 'tiếng Anh', en: 'English', jp: '英語', la: 'Anglica', zh: '英文' },
-            jp: { kr: '일본어', vn: 'tiếng Nhật', en: 'Japanese', jp: '日本語', la: 'Iaponica', zh: '日文' },
-            la: { kr: '라틴어', vn: 'tiếng Latinh', en: 'Latin', jp: 'ラテン語', la: 'Latina', zh: '拉丁文' },
-            zh: { kr: '중국어 번체', vn: 'tiếng Hoa phồn thể', en: 'Traditional Chinese', jp: '繁体字中国語', la: 'Sinica traditionalis', zh: '繁體中文' }
+            kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana', zh: '韓文', it: 'Coreano' },
+            vn: { kr: '베트남어', vn: 'tiếng Việt', en: 'Vietnamese', jp: 'ベトナム語', la: 'Vietnamica', zh: '越南文', it: 'Vietnamita' },
+            en: { kr: '영어', vn: 'tiếng Anh', en: 'English', jp: '英語', la: 'Anglica', zh: '英文', it: 'Inglese' },
+            jp: { kr: '일본어', vn: 'tiếng Nhật', en: 'Japanese', jp: '日本語', la: 'Iaponica', zh: '日文', it: 'Giapponese' },
+            la: { kr: '라틴어', vn: 'tiếng Latinh', en: 'Latin', jp: 'ラテン語', la: 'Latina', zh: '拉丁文', it: 'Latino' },
+            zh: { kr: '중국어 번체', vn: 'tiếng Hoa phồn thể', en: 'Traditional Chinese', jp: '繁体字中国語', la: 'Sinica traditionalis', zh: '繁體中文', it: 'Cinese tradizionale' },
+            it: { kr: '이탈리아어', vn: 'tiếng Ý', en: 'Italian', jp: 'イタリア語', la: 'Italica', zh: '義大利文', it: 'Italiano' }
         };
         const name = names[sourceLower] || names.kr;
         const ordinalSuffix = Number.isInteger(sourceOrdinal) && sourceOrdinal > 0 ? ` ${sourceOrdinal}` : '';
@@ -18012,7 +18653,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         document.getElementById('header-main-title').textContent = localizedHeaderMainTitle(uiL);
         document.getElementById('header-date').textContent = localizedHeaderDate(getActiveLiturgicalDateContext(), uiL, state.liturgyInfo.dateStr);
         updateRoleLegend(leftL, rightL);
-        const appNames = { 'KR': '가톨릭 매일미사', 'VN': 'Lời Chúa Mỗi Ngày', 'EN': 'Daily Mass', 'JP': '毎日のミサ', 'LA': 'Daily Mass in Latin' };
+        const appNames = { 'KR': '가톨릭 매일미사', 'VN': 'Lời Chúa Mỗi Ngày', 'EN': 'Daily Mass', 'JP': '毎日のミサ', 'IT': 'Messa quotidiana', 'PT': 'Missa diária', 'ES': 'Misa diaria', 'LA': 'Daily Mass in Latin' };
         document.title = `${appNames[leftL] || 'Ordo Missae'} | ${appNames[rightL] || 'Ordo Missae'} - Ordo Missae`;
         const leftLitName = getLiturgyDisplayName(leftL);
         const rightLitName = getLiturgyDisplayName(rightL);
