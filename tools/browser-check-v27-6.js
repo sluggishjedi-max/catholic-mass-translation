@@ -110,6 +110,16 @@ function startServer() {
       const portugalChurches = globalThis.countryChurchData.PT;
       const brazilMass = globalThis.countryMassData.BR;
       const brazilChurches = globalThis.countryChurchData.BR;
+      const germanSearchTarget = germanyChurches.entries.find(entry => (
+        entry.churchId && entry.churchId.startsWith('DE-DBK-PARISH-')
+        && (globalThis.churchLocalSearchIndex.exactNameMap.get(normalizeChurchLookupKey(entry.name)) || [])
+          .filter(record => record.country === 'DE').length === 1
+      ));
+      const germanSearchMatch = churchLocalDetailsForPlace({
+        name: germanSearchTarget.name,
+        formatted_address: germanSearchTarget.diocese
+      });
+      const germanSearchDiagnostics = { ...globalThis.churchLocalSearchDiagnostics };
       const structuredOrdinaries = Object.fromEntries(['AU', 'NZ', 'IT', 'MX', 'PT', 'DE', 'BR'].map(code => {
         const module = globalThis.countryMassData[code];
         return [code, { marker: module.ordinaryStructure, itemCount: module.ordinary.length }];
@@ -118,6 +128,122 @@ function startServer() {
       state.currentLoc = 'PT';
       syncLocalizedChromeAndSettings();
       const brazilNoticeButtons = [document.getElementById('consent-accept').textContent, document.getElementById('consent-decline').textContent];
+      Object.defineProperty(navigator, 'geolocation', {
+        configurable: true,
+        value: { getCurrentPosition(success) { success({ coords: { latitude: -15.7939, longitude: -47.8828, accuracy: 12 } }); } }
+      });
+      state.useGps = true;
+      const gpsCenter = await getGpsPositionForChurchMap({ forceFresh: true });
+      const targetChurch = brazilChurches.entries.find(entry => (
+        entry.churchId && entry.churchId.startsWith('BR-BRASILIA-') && entry.showOnMap && entry.massTimes.length
+      ));
+      if (!targetChurch) throw new Error('No coordinate-bearing Brasília directory test record');
+      const mock = { markers: [], infoContent: '', mapOptions: null };
+      const bounds = {
+        contains(point) {
+          const lat = Number(typeof point.lat === 'function' ? point.lat() : point.lat);
+          const lng = Number(typeof point.lng === 'function' ? point.lng() : point.lng);
+          return lat >= -35 && lat <= 6 && lng >= -75 && lng <= -30;
+        },
+        getCenter() { return { lat: -15.7939, lng: -47.8828 }; },
+        getNorthEast() { return { lat: -14.8, lng: -46.8 }; }
+      };
+      class MockMap {
+        constructor(node, options) {
+          this.node = node;
+          this.center = options.center;
+          this.zoom = options.zoom;
+          this.listeners = {};
+          mock.mapOptions = options;
+        }
+        addListener(name, handler) { this.listeners[name] = handler; return { remove() {} }; }
+        getBounds() { return bounds; }
+        getCenter() { return this.center; }
+        setCenter(center) { this.center = center; }
+        setZoom(zoom) { this.zoom = zoom; }
+      }
+      class MockMarker {
+        constructor(options) { this.options = options; this.listeners = {}; mock.markers.push(this); }
+        addListener(name, handler) { this.listeners[name] = handler; return { remove() {} }; }
+        setMap(map) { this.options.map = map; }
+      }
+      class MockInfoWindow {
+        constructor() { this.listeners = {}; }
+        addListener(name, handler) { this.listeners[name] = handler; return { remove() {} }; }
+        setContent(content) { mock.infoContent = content; }
+        open() { mock.infoOpened = true; }
+        close() { mock.infoOpened = false; }
+      }
+      class MockPlacesService {
+        getDetails(request, callback) { callback(null, 'ZERO_RESULTS'); }
+        findPlaceFromQuery(request, callback) { callback([], 'ZERO_RESULTS'); }
+        textSearch(request, callback) { callback([], 'ZERO_RESULTS'); }
+        nearbySearch(request, callback) { callback([], 'ZERO_RESULTS'); }
+      }
+      const modernPlaceData = () => ({
+        id: 'mock-brasilia-place',
+        displayName: targetChurch.name,
+        formattedAddress: targetChurch.address,
+        location: { lat: targetChurch.lat, lng: targetChurch.lng },
+        nationalPhoneNumber: targetChurch.phone,
+        websiteURI: targetChurch.website,
+        googleMapsURI: 'https://maps.google.com/?cid=mock-brasilia-place'
+      });
+      class MockPlace {
+        constructor() { Object.assign(this, modernPlaceData()); }
+        async fetchFields() { return { place: this }; }
+        static async searchByText() { return { places: [modernPlaceData()] }; }
+        static async searchNearby() { return { places: [modernPlaceData()] }; }
+      }
+      window.google = { maps: {
+        Map: MockMap,
+        Marker: MockMarker,
+        InfoWindow: MockInfoWindow,
+        places: { PlacesService: MockPlacesService, PlacesServiceStatus: { OK: 'OK' } },
+        importLibrary: async () => ({ Place: MockPlace }),
+        event: { trigger(target, name) { if (target.listeners && target.listeners[name]) target.listeners[name](); } }
+      } };
+      await initializeChurchMap({ gpsCenter });
+      await new Promise(resolve => setTimeout(resolve, 0));
+      const gpsMapCenter = { ...churchMap.center };
+      const bulkPlaces = Array.from({ length: 500 }, (_, index) => ({
+        place_id: `bulk-${index}`,
+        name: `Paróquia de teste ${index}`,
+        geometry: { location: { lat: -15.8 + index * 0.00001, lng: -47.9 } }
+      }));
+      churchInfoWindowOpen = false;
+      renderChurchPlaces(bulkPlaces);
+      const pinnedInBounds = localPinnedChurchPlacesForBounds(bounds).length;
+      const bulkMarkerCount = churchMarkers.length;
+      const searchInput = document.getElementById('church-search');
+      searchInput.value = targetChurch.name;
+      await window.searchChurchByName();
+      await new Promise(resolve => setTimeout(resolve, 0));
+      await new Promise(resolve => setTimeout(resolve, 0));
+      const matchedChurch = churchLocalDetailsForPlace({
+        place_id: 'mock-brasilia-place',
+        name: targetChurch.name,
+        formatted_address: targetChurch.address,
+        geometry: { location: { lat: targetChurch.lat, lng: targetChurch.lng } }
+      });
+      const churchUi = {
+        gpsCenter,
+        gpsMapCenter,
+        bulkMarkerCount,
+        pinnedInBounds,
+        maxRemoteResults: CHURCH_MAX_RESULTS,
+        focusedMarkerCount: churchMarkers.length,
+        focusedZoom: churchMap.zoom,
+        infoOpened: mock.infoOpened,
+        infoHasOfficialDetails: mock.infoContent.includes('Arquidiocese de Brasília') && mock.infoContent.includes(targetChurch.name),
+        matchedChurchId: matchedChurch.churchId,
+        targetChurchId: targetChurch.churchId,
+        diagnostics: { ...globalThis.churchLocalSearchDiagnostics }
+      };
+      const catholicPlaceFilters = {
+        germany: isLikelyCatholicChurchPlace({ displayName: 'Katholische Kirche St. Josef' }),
+        brazil: isLikelyCatholicChurchPlace({ displayName: 'Igreja Católica São José' })
+      };
       return {
         version: APP_VERSION,
         pageVersion: document.getElementById('settings-version-label').textContent,
@@ -139,6 +265,13 @@ function startServer() {
           churchCount: germanyChurches.entries.length,
           exhaustive: germanyChurches.exhaustive,
           runtimeChurchCount: globalThis.churchLocalDetailsMeta.sourceCounts.DE,
+          parishCount: germanyChurches.coverage.parishDirectoryCount,
+          officialLayerCount: germanyChurches.coverage.officialLayerRecordCount,
+          excludedIncompleteCount: germanyChurches.coverage.excludedIncompleteRecordCount,
+          coordinateCount: germanyChurches.coverage.coordinateCount,
+          limitationCount: germanyChurches.coverage.limitations.length,
+          indexedSearchMatch: germanSearchMatch.churchId === germanSearchTarget.churchId,
+          indexedSearchCandidates: germanSearchDiagnostics.lastCandidateCount,
           prayers: globalThis.countryPrayerData.DE,
           hymns: globalThis.countryHymnData.DE
         },
@@ -156,13 +289,20 @@ function startServer() {
           eucharisticPrayerCount: Object.keys(brazilMass.ordinary.find(item => item.id.endsWith('eucharist')).forms).length,
           churchCount: brazilChurches.entries.length,
           runtimeChurchCount: globalThis.churchLocalDetailsMeta.sourceCounts.BR,
+          parishCount: brazilChurches.coverage.parishDirectoryCount,
+          coordinateCount: brazilChurches.coverage.coordinateCount,
+          sourceCounts: brazilChurches.sources.map(source => source.recordCount),
+          coveredArchdioceses: brazilChurches.coverage.coveredArchdioceses,
+          limitationCount: brazilChurches.coverage.limitations.length,
           exhaustive: brazilChurches.exhaustive,
           prayers: globalThis.countryPrayerData.BR,
           hymns: globalThis.countryHymnData.BR,
           noticeButtons: brazilNoticeButtons,
           gps: gpsLocationForCoordinates(-15.7939, -47.8828),
           zone: gpsLanguageForTimeZone('America/Sao_Paulo')
-        }
+        },
+        churchUi,
+        catholicPlaceFilters
       };
     }, { weekday: weekdayFixture, sunday: sundayFixture, brazil: brazilFixture });
     if (process.env.ORDO_DEBUG_V276) console.log(JSON.stringify(result, null, 2));
@@ -205,7 +345,10 @@ function startServer() {
 
     assert(result.germany.beta && result.germany.ordinaryLength >= 30, 'Germany ordinary module incomplete');
     assert(result.germany.corpusLength > 30000 && result.germany.parser === 'strict-german-schott-daily-mass', 'Germany corpus/parser metadata incomplete');
-    assert(result.germany.churchCount === 27 && result.germany.runtimeChurchCount === 27 && result.germany.exhaustive === false, 'Germany DBK church data mismatch');
+    assert(result.germany.churchCount === 7653 && result.germany.runtimeChurchCount === 7653 && result.germany.exhaustive === false, 'Germany DBK church data mismatch');
+    assert(result.germany.parishCount === 7626 && result.germany.officialLayerCount === 7631 && result.germany.excludedIncompleteCount === 5, 'Germany official layer coverage accounting mismatch');
+    assert(result.germany.coordinateCount === 27 && result.germany.limitationCount >= 4, 'Germany coordinate/limitation metadata missing');
+    assert(result.germany.indexedSearchMatch && result.germany.indexedSearchCandidates === 1, 'Germany parish directory indexed search mismatch');
     assert(result.germany.prayers.status === 'under-development' && result.germany.hymns.status === 'under-development', 'Germany prayer/hymn placeholders missing');
     assert(result.portugal.churchCount === 4395 && result.portugal.runtimeChurchCount === 4395, 'Portugal full directory count mismatch');
     assert(result.portugal.parishCount === 4375 && result.portugal.exhaustive === true, 'Portugal parish coverage mismatch');
@@ -215,10 +358,21 @@ function startServer() {
     assert(result.brazil.beta && result.brazil.ordinaryLength === 32 && result.brazil.corpusLength > 100000, 'Brazilian ordinary corpus incomplete');
     assert(result.brazil.eucharisticPrayerCount === 14, 'Brazilian Eucharistic Prayer choices incomplete');
     assert(result.brazil.parser === 'strict-brazilian-pocketterco-daily-mass', 'Brazilian daily parser metadata missing');
-    assert(result.brazil.churchCount === 27 && result.brazil.runtimeChurchCount === 27 && result.brazil.exhaustive === false, 'Brazil CNBB church data mismatch');
+    assert(result.brazil.churchCount === 630 && result.brazil.runtimeChurchCount === 630 && result.brazil.exhaustive === false, 'Brazil official church data mismatch');
+    assert(result.brazil.parishCount === 603 && result.brazil.coordinateCount === 197, 'Brazil parish/coordinate coverage accounting mismatch');
+    assert(result.brazil.sourceCounts.join('|') === '27|172|169|145|117', 'Brazil official source counts mismatch');
+    assert(result.brazil.coveredArchdioceses.length === 4 && result.brazil.limitationCount >= 5, 'Brazil coverage limitations metadata missing');
     assert(result.brazil.prayers.status === 'under-development' && result.brazil.hymns.status === 'under-development', 'Brazil prayer/hymn placeholders missing');
     assert(result.brazil.noticeButtons.join('|') === 'Confirmar|Não concordar e sair', 'Brazilian regional consent buttons missing');
     assert(result.brazil.gps === 'BR' && result.brazil.zone === 'BR', 'Brazilian GPS lookup failed');
+    assert(result.churchUi.gpsCenter.lat === -15.7939 && result.churchUi.gpsCenter.lng === -47.8828 && result.churchUi.gpsMapCenter.lat === -15.7939, 'Church map did not initialize at GPS coordinates');
+    assert(result.churchUi.bulkMarkerCount === result.churchUi.maxRemoteResults + result.churchUi.pinnedInBounds, 'Large result rendering did not enforce the remote marker cap');
+    assert(result.churchUi.focusedMarkerCount === 1 && result.churchUi.focusedZoom === 16, 'Church search did not focus a single selected marker');
+    assert(result.churchUi.infoOpened && result.churchUi.infoHasOfficialDetails, 'Church selection did not open official local directory details');
+    assert(result.churchUi.matchedChurchId === result.churchUi.targetChurchId, 'Indexed local church match selected the wrong directory record');
+    assert(result.churchUi.diagnostics.totalRecordCount > 40000 && result.churchUi.diagnostics.lastCandidateCount < 20, 'Large directory lookup did not use the bounded multilingual index');
+    assert(result.catholicPlaceFilters.germany, 'German Catholic place filtering regressed');
+    assert(result.catholicPlaceFilters.brazil, 'Brazilian Catholic place filtering regressed');
     assert(pageErrors.length === 0, `page errors: ${pageErrors.join('\n')}`);
     console.log(JSON.stringify({
       ok: true,

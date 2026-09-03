@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.6-20260902-PORTUGAL-PARISHES-ROMANCE-UI-GERMANY-BRAZIL';
+    const APP_VERSION = 'V27.6-20260903-DE-BR-OFFICIAL-CHURCH-DIRECTORIES';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -2047,6 +2047,30 @@
         'VA': { lang: 'LA', label: '바티칸 / Latin', timeZone: 'Europe/Rome' },
         'INTL': { lang: 'EN', label: '기타 지역 / English (자동 대체)', timeZone: '', fallback: true, dataJurisdiction: 'INTL' }
     };
+    function normalizeChurchLookupKey(value) {
+        return normalizeSearchText(cleanNodeText(value))
+            .replace(/(?:천주교|가톨릭|성당|본당|교회)/gu, ' ')
+            .replace(/\b(?:roman catholic|catholic|church|parish|nhà thờ|giao xu|giáo xứ|họ đạo|giáo điểm|カトリック|教会|chiesa|parrocchia|cattolica|catedral|igreja|paroquia|catolica|iglesia|parroquia|kirche|pfarrei|katholisch|katholische|dom)\b/gu, ' ')
+            .replace(/[^\p{L}\p{N}]+/gu, '');
+    }
+
+    function normalizeChurchNameTokens(value) {
+        return normalizeSearchText(value)
+            .replace(/(?:천주교|가톨릭|성당|본당|교회)/gu, ' ')
+            .replace(/\b(?:catholic|roman|church|parish|the|of|nhà|thờ|giao|giáo|xứ|họ|đạo|điểm|công|カトリック|教会|chiesa|parrocchia|cattolica|catedral|igreja|paroquia|catolica|iglesia|parroquia|kirche|pfarrei|katholisch|katholische|dom)\b/gu, ' ')
+            .split(/\s+/)
+            .filter(token => token.length >= 2 || /^\d+$/.test(token));
+    }
+
+    function churchRecordNames(record) {
+        return [
+            record && record.name,
+            record && record.directoryName,
+            record && record.officialDirectoryName,
+            ...(Array.isArray(record && record.aliases) ? record.aliases : [])
+        ].filter(Boolean);
+    }
+
     function rebuildCountryChurchDirectory() {
         const registry = globalThis.countryChurchData || {};
         const order = ['KR', 'VN', 'US', 'JP', 'VA', 'IE', 'GB-EW', 'GB-SCT', 'PH', 'TW', 'AU', 'NZ', 'IT', 'PT', 'MX', 'DE', 'BR'];
@@ -2054,25 +2078,70 @@
             const module = registry[key];
             return module && Array.isArray(module.entries) ? module.entries : [];
         });
-        const normalize = value => String(value || '').normalize('NFKC').toLowerCase()
-            .replace(/(?:천주교|가톨릭|성당|본당|교회|catholic|church|parish|chiesa|parrocchia|cattolica|catedral|parroquia|iglesia|católica|kirche|pfarrei|dom)/gu, '')
-            .replace(/[^0-9a-z가-힣ぁ-んァ-ヶ一-龯]+/gu, '');
         const index = {};
+        const exactNameMap = new Map();
+        const tokenMap = new Map();
+        const recordsByCountry = {};
+        const recordSearchMeta = new WeakMap();
+        const mappableRecords = [];
         records.forEach(record => {
+            const country = cleanNodeText(record && record.country);
+            if (country) {
+                recordsByCountry[country] = recordsByCountry[country] || [];
+                recordsByCountry[country].push(record);
+            }
+            if (record && record.showOnMap && churchPointCoordinates(record)) mappableRecords.push(record);
+            const searchNames = churchRecordNames(record).map(value => ({
+                key: normalizeChurchLookupKey(value),
+                tokens: new Set(normalizeChurchNameTokens(value))
+            })).filter(item => item.key);
+            recordSearchMeta.set(record, searchNames);
+            const recordTokens = new Set();
             [record.name, record.directoryName, record.officialDirectoryName, record.address, ...(record.aliases || [])]
                 .filter(Boolean)
                 .forEach(value => {
                     index[String(value).trim().toLowerCase()] = record;
-                    const normalized = normalize(value);
+                    const normalized = normalizeChurchLookupKey(value);
                     if (normalized) index[normalized] = record;
                 });
+            searchNames.forEach(item => {
+                const exact = exactNameMap.get(item.key) || [];
+                if (!exact.includes(record)) exact.push(record);
+                exactNameMap.set(item.key, exact);
+                item.tokens.forEach(token => recordTokens.add(token));
+            });
+            recordTokens.forEach(token => {
+                const bucket = tokenMap.get(token) || [];
+                bucket.push(record);
+                tokenMap.set(token, bucket);
+            });
         });
         globalThis.churchLocalDetailRecords = records;
         globalThis.churchLocalDetails = index;
+        globalThis.churchLocalMappableRecords = mappableRecords;
+        globalThis.churchLocalSearchIndex = { exactNameMap, tokenMap, recordsByCountry, recordSearchMeta };
+        globalThis.churchLocalSearchDiagnostics = {
+            totalRecordCount: records.length,
+            mappableRecordCount: mappableRecords.length,
+            indexedTokenCount: tokenMap.size,
+            lastCandidateCount: 0,
+            lastCountryRecordCount: 0
+        };
+        const sourceMetadata = Object.fromEntries(order.filter(key => registry[key]).map(key => [key, {
+            source: registry[key].source || null,
+            sources: registry[key].sources || [],
+            coverage: registry[key].coverage || null,
+            exhaustive: registry[key].exhaustive === true
+        }]));
+        const snapshotDates = Object.values(sourceMetadata).flatMap(meta => [
+            meta.source && meta.source.snapshotDate,
+            meta.coverage && meta.coverage.snapshotDate
+        ]).filter(Boolean).sort();
         globalThis.churchLocalDetailsMeta = {
-            generatedAt: '2026-09-01',
+            generatedAt: snapshotDates[snapshotDates.length - 1] || '2026-09-03',
             recordCount: records.length,
-            sourceCounts: Object.fromEntries(order.map(key => [key, (registry[key] && registry[key].entries || []).length]))
+            sourceCounts: Object.fromEntries(order.map(key => [key, (registry[key] && registry[key].entries || []).length])),
+            sourceMetadata
         };
         return records;
     }
@@ -3565,11 +3634,6 @@
             : {};
         const placeId = cleanNodeText(place && place.place_id);
         const name = cleanNodeText(place && place.name).toLowerCase();
-        const normalizeChurchLookup = value => cleanNodeText(value).toLowerCase()
-            .normalize('NFKC')
-            .replace(/천주교|가톨릭|catholic|roman catholic|nhà thờ|giao xu|giáo xứ|họ đạo|giáo điểm|カトリック/gu, '')
-            .replace(/성당|본당|교회|church|parish|教会/gu, '')
-            .replace(/[^\p{L}\p{N}]+/gu, '');
         const normalizeChurchContext = value => {
             let normalized = normalizeSearchText(value);
             if (/\b(?:ho chi minh|sai gon|tphcm|tp hcm)\b/.test(normalized)) {
@@ -3580,23 +3644,45 @@
             }
             return normalized;
         };
-        const normalizedName = normalizeChurchLookup(name);
-        const normalizeChurchTokens = value => normalizeSearchText(value)
-            .replace(/\b(?:천주교|가톨릭|성당|본당|교회|catholic|roman|church|parish|the|of|nhà|thờ|giao|giáo|xứ|họ|đạo|điểm|công|カトリック|教会)\b/gu, ' ')
-            .split(/\s+/)
-            .filter(token => token.length >= 2 || /^\d+$/.test(token));
-        const placeNameTokens = new Set(normalizeChurchTokens(name));
-        const candidates = (Array.isArray(globalThis.churchLocalDetailRecords) ? globalThis.churchLocalDetailRecords : [])
+        const normalizedName = normalizeChurchLookupKey(name);
+        const placeNameTokens = new Set(normalizeChurchNameTokens(name));
+        const allRecords = Array.isArray(globalThis.churchLocalDetailRecords) ? globalThis.churchLocalDetailRecords : [];
+        const searchIndex = globalThis.churchLocalSearchIndex || {};
+        const activeCountry = dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc);
+        const countryRecords = searchIndex.recordsByCountry && searchIndex.recordsByCountry[activeCountry]
+            ? searchIndex.recordsByCountry[activeCountry]
+            : allRecords;
+        const candidatePool = new Set();
+        const addCountryRecords = bucket => (bucket || []).forEach(record => {
+            if (countryRecords === allRecords || cleanNodeText(record && record.country) === activeCountry) candidatePool.add(record);
+        });
+        if (normalizedName && searchIndex.exactNameMap instanceof Map) {
+            addCountryRecords(searchIndex.exactNameMap.get(normalizedName));
+        }
+        if (!candidatePool.size && searchIndex.tokenMap instanceof Map) {
+            Array.from(placeNameTokens)
+                .map(token => searchIndex.tokenMap.get(token) || [])
+                .filter(bucket => bucket.length)
+                .sort((a, b) => a.length - b.length)
+                .slice(0, 4)
+                .forEach(addCountryRecords);
+        }
+        const diagnostics = globalThis.churchLocalSearchDiagnostics;
+        if (diagnostics) {
+            diagnostics.lastCandidateCount = candidatePool.size;
+            diagnostics.lastCountryRecordCount = countryRecords.length;
+            diagnostics.lastCountry = activeCountry;
+        }
+        const candidates = Array.from(candidatePool)
             .map(record => {
-                const recordNames = [
-                    record && record.name,
-                    record && record.directoryName,
-                    record && record.officialDirectoryName,
-                    ...(Array.isArray(record && record.aliases) ? record.aliases : [])
-                ].filter(Boolean);
+                const recordNames = churchRecordNames(record);
+                const searchNames = searchIndex.recordSearchMeta instanceof WeakMap
+                    ? searchIndex.recordSearchMeta.get(record)
+                    : null;
                 let nameScore = 0;
-                recordNames.forEach(value => {
-                    const recordKey = normalizeChurchLookup(value);
+                recordNames.forEach((value, nameIndex) => {
+                    const precomputed = searchNames && searchNames[nameIndex];
+                    const recordKey = precomputed ? precomputed.key : normalizeChurchLookupKey(value);
                     if (!recordKey || !normalizedName) return;
                     if (recordKey === normalizedName) {
                         nameScore = Math.max(nameScore, 1000 + recordKey.length);
@@ -3610,7 +3696,7 @@
                         nameScore = Math.max(nameScore, 450 + normalizedName.length);
                         return;
                     }
-                    const recordTokens = new Set(normalizeChurchTokens(value));
+                    const recordTokens = precomputed ? precomputed.tokens : new Set(normalizeChurchNameTokens(value));
                     const shared = Array.from(recordTokens).filter(token => placeNameTokens.has(token));
                     const coverage = shared.length / Math.max(recordTokens.size, placeNameTokens.size, 1);
                     if (shared.length >= 2 && coverage >= 0.72) {
@@ -3653,10 +3739,10 @@
             }).sort((a, b) => b.score - a.score || a.distanceKm - b.distanceKm || a.index - b.index);
             return ranked[0].record;
         }
-        return (placeId && source[placeId])
+        const direct = (placeId && source[placeId])
             || (name && source[name])
-            || (normalizedName && source[normalizedName])
-            || {};
+            || (normalizedName && source[normalizedName]);
+        return direct && (!direct.country || direct.country === activeCountry) ? direct : {};
     }
 
     function churchPointCoordinates(value) {
@@ -4218,8 +4304,8 @@
     }
 
     function localPinnedChurchPlacesForBounds(bounds) {
-        const records = Array.isArray(globalThis.churchLocalDetailRecords)
-            ? globalThis.churchLocalDetailRecords
+        const records = Array.isArray(globalThis.churchLocalMappableRecords)
+            ? globalThis.churchLocalMappableRecords
             : [];
         return records.filter(record => {
             if (!record || !record.showOnMap) return false;
@@ -4230,7 +4316,7 @@
         }).map(record => {
             const point = churchPointCoordinates(record);
             return {
-                place_id: record.placeId || `local:${record.country || ''}:${record.diocese || ''}:${record.directoryName || record.name || ''}`,
+                place_id: record.placeId || `local:${record.churchId || `${record.country || ''}:${record.diocese || ''}:${record.directoryName || record.name || ''}`}`,
                 name: cleanNodeText(record.name || record.directoryName || ''),
                 formatted_address: cleanNodeText(record.address || ''),
                 vicinity: cleanNodeText(record.address || ''),
@@ -4370,7 +4456,7 @@
     function isLikelyCatholicChurchPlace(place) {
         const text = `${place && (place.displayName || place.name) || ''} ${place && (place.formattedAddress || place.formatted_address || place.vicinity) || ''}`;
         if (/tin\s*lành|protestant|baptist|methodist|evangelical/i.test(text)) return false;
-        return /천주교|가톨릭|catholic|công\s*giáo|giáo\s*xứ|giáo\s*phận|cathedral|カトリック|cattolic|parrocchia/i.test(text);
+        return /천주교|가톨릭|catholic|công\s*giáo|giáo\s*xứ|giáo\s*phận|cathedral|catedral|カトリック|cattolic|parrocchia|igreja\s*cat[oó]lica|par[oó]quia|katholisch|pfarrei|kirche/i.test(text);
     }
 
     function isClearlyNonCatholicChurchPlace(place) {
