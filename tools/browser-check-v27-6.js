@@ -105,6 +105,35 @@ function startServer() {
         berlin: gpsLocationForCoordinates(52.52, 13.405),
         zone: gpsLanguageForTimeZone('Europe/Berlin')
       };
+      const germanBishop = await refreshGpsBishopContext(52.52, 13.405, 'DE');
+      const germanBishopPlaceholder = replaceBishopPlaceholder('(Bischofsname)', 'de');
+      const liturgicalPlaceholderChecks = {
+        koreanGospel: isLiturgicalPlaceholderText('(\uC624\uB298\uC758 \uBCF5\uC74C...)'),
+        vietnameseGospel: isLiturgicalPlaceholderText('(Tin Mung hom nay...)'),
+        englishGospel: isLiturgicalPlaceholderText("(Today's Gospel...)"),
+        italianGospel: isLiturgicalPlaceholderText('(Vangelo del giorno...)'),
+        portugueseGospel: isLiturgicalPlaceholderText('(Evangelho do dia...)'),
+        spanishGospel: isLiturgicalPlaceholderText('(Evangelio del dia...)'),
+        germanGospel: isLiturgicalPlaceholderText('(Evangelium des Tages...)'),
+        realTextPreserved: !isLiturgicalPlaceholderText('The child is Emmanuel.')
+      };
+      const gospelTemplate = globalThis.countryMassData.KR.ordinary.find(item => getBaseId(item.id) === 'gospel').lines;
+      const gospelBodyOnly = JSON.parse(JSON.stringify(gospelTemplate));
+      applyParsedLinesForLanguage(gospelBodyOnly, 'kr', [{ text: 'fixture gospel body', role: 'body' }], 'gospel');
+      const bodyOnlyIndex = gospelBodyOnly.findIndex(line => line.role_kr === 'body');
+      const bodyOnlyLastDialogue = gospelBodyOnly.reduce((last, line, index) => isGospelDialogueLine(line) ? index : last, -1);
+      const bodyOnlyEnding = gospelBodyOnly.findIndex(isDailyEndingLine);
+      const gospelMixedLanguages = JSON.parse(JSON.stringify(gospelTemplate));
+      applyParsedLinesForLanguage(gospelMixedLanguages, 'kr', [{ text: 'fixture gospel body', role: 'body' }], 'gospel');
+      applyParsedLinesForLanguage(gospelMixedLanguages, 'vn', [{ text: 'fixture gospel intro', role: 'intro' }, { text: 'fixture gospel body', role: 'body' }], 'gospel');
+      const mixedIntroIndex = gospelMixedLanguages.findIndex(line => line.role_vn === 'intro');
+      const mixedBodyIndex = gospelMixedLanguages.findIndex(line => line.role_vn === 'body');
+      const mixedLastDialogue = gospelMixedLanguages.reduce((last, line, index) => isGospelDialogueLine(line) ? index : last, -1);
+      const gospelOrderingChecks = {
+        bodyOnlyAfterDialogue: bodyOnlyIndex > bodyOnlyLastDialogue && bodyOnlyIndex < bodyOnlyEnding,
+        mixedIntroBeforeResponse: mixedIntroIndex >= 0 && mixedIntroIndex < mixedLastDialogue,
+        mixedBodyAfterResponse: mixedBodyIndex > mixedLastDialogue
+      };
       const germanyMass = globalThis.countryMassData.DE;
       const germanyChurches = globalThis.countryChurchData.DE;
       const portugalChurches = globalThis.countryChurchData.PT;
@@ -248,6 +277,9 @@ function startServer() {
         version: APP_VERSION,
         pageVersion: document.getElementById('settings-version-label').textContent,
         gps: germanyGpsState,
+        germanBishop: { diocese: germanBishop && germanBishop.diocese, name: germanBishop && germanBishop.ordinary && germanBishop.ordinary.de, placeholder: germanBishopPlaceholder },
+        liturgicalPlaceholderChecks,
+        gospelOrderingChecks,
         warningLanguages,
         uiLanguageOptions,
         noticeButtons: germanNoticeButtons,
@@ -312,6 +344,10 @@ function startServer() {
     assert(result.gps.code === 'DE' && result.gps.language === 'DE', 'Berlin GPS did not select Germany/German');
     assert(result.gps.berlin === 'DE' && result.gps.zone === 'DE', 'German GPS lookup failed');
     assert(result.gps.useGps === true && result.gps.checked === false, 'GPS checkbox inversion regressed');
+    assert(/Berlin/i.test(result.germanBishop.diocese) && result.germanBishop.name, 'Local DBK bishop module did not resolve Berlin GPS');
+    assert(!/Bischofsname/i.test(result.germanBishop.placeholder) && result.germanBishop.placeholder.includes(result.germanBishop.name), 'German bishop placeholder was not replaced from local data');
+    assert(Object.values(result.liturgicalPlaceholderChecks).every(Boolean), 'Multilingual liturgical placeholder suppression regressed');
+    assert(Object.values(result.gospelOrderingChecks).every(Boolean), 'Gospel body/dialogue ordering regressed');
     assert(result.warningLanguages.join('|') === 'English|Latine|한국어|日本語|繁體中文|Tiếng Việt|Italiano|Español|Português|Deutsch', 'warning language order/content mismatch');
     assert(['IT', 'ES', 'PT', 'DE'].every(code => result.uiLanguageOptions.includes(code)), 'V27.6 European UI language options are incomplete');
     assert(result.noticeButtons.join('|') === 'Zustimmen|Nicht zustimmen und beenden', 'German regional consent buttons missing');

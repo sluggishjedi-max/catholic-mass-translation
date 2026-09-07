@@ -1,0 +1,141 @@
+{
+  "updatedAt": "2026-09-08",
+  "conferences": [
+    {
+      "id": "CBCK",
+      "file": "cbck.js",
+      "dioceses": 15,
+      "withOrdinary": 14,
+      "polygons": 14,
+      "points": 1
+    },
+    {
+      "id": "CBCV",
+      "file": "cbcv.js",
+      "dioceses": 27,
+      "withOrdinary": 27,
+      "polygons": 26,
+      "points": 1
+    },
+    {
+      "id": "USCCB",
+      "file": "usccb.js",
+      "dioceses": 176,
+      "withOrdinary": 174,
+      "polygons": 176,
+      "points": 0
+    },
+    {
+      "id": "ICBC",
+      "file": "icbc.js",
+      "dioceses": 26,
+      "withOrdinary": 26,
+      "polygons": 26,
+      "points": 0
+    },
+    {
+      "id": "CBCEW",
+      "file": "cbcew.js",
+      "dioceses": 21,
+      "withOrdinary": 21,
+      "polygons": 21,
+      "points": 0
+    },
+    {
+      "id": "BCOS",
+      "file": "bcos.js",
+      "dioceses": 8,
+      "withOrdinary": 8,
+      "polygons": 8,
+      "points": 0
+    },
+    {
+      "id": "CBCP",
+      "file": "cbcp.js",
+      "dioceses": 86,
+      "withOrdinary": 83,
+      "polygons": 83,
+      "points": 3
+    },
+    {
+      "id": "CRBC",
+      "file": "crbc.js",
+      "dioceses": 8,
+      "withOrdinary": 8,
+      "polygons": 7,
+      "points": 1
+    },
+    {
+      "id": "ACBC",
+      "file": "acbc.js",
+      "dioceses": 28,
+      "withOrdinary": 27,
+      "polygons": 28,
+      "points": 0
+    },
+    {
+      "id": "NZCBC",
+      "file": "nzcbc.js",
+      "dioceses": 6,
+      "withOrdinary": 6,
+      "polygons": 6,
+      "points": 0
+    },
+    {
+      "id": "CBCJ",
+      "file": "cbcj.js",
+      "dioceses": 15,
+      "withOrdinary": 15,
+      "polygons": 15,
+      "points": 0
+    },
+    {
+      "id": "CEI",
+      "file": "cei.js",
+      "dioceses": 222,
+      "withOrdinary": 220,
+      "polygons": 213,
+      "points": 9
+    },
+    {
+      "id": "CEP",
+      "file": "cep.js",
+      "dioceses": 20,
+      "withOrdinary": 20,
+      "polygons": 20,
+      "points": 0
+    },
+    {
+      "id": "CEM",
+      "file": "cem.js",
+      "dioceses": 96,
+      "withOrdinary": 93,
+      "polygons": 91,
+      "points": 5
+    },
+    {
+      "id": "DBK",
+      "file": "dbk.js",
+      "dioceses": 27,
+      "withOrdinary": 24,
+      "polygons": 27,
+      "points": 0
+    },
+    {
+      "id": "CNBB",
+      "file": "cnbb.js",
+      "dioceses": 274,
+      "withOrdinary": 265,
+      "polygons": 266,
+      "points": 8
+    },
+    {
+      "id": "HOLY_SEE",
+      "file": "holy_see.js",
+      "dioceses": 1,
+      "withOrdinary": 1,
+      "polygons": 1,
+      "points": 0
+    }
+  ]
+}
