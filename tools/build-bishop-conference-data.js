@@ -300,7 +300,6 @@ async function countryData(country, legacyIndex) {
             ordinary: people.ordinary,
             auxiliaries: people.auxiliaries,
             collaboratorSummary: people.auxiliaries.length > 1,
-            status: people.ordinary ? 'active' : 'vacant',
             sourceUrls: [`${HIERARCHY_ROOT}/diocese/d${diocese.key}.html`, leadershipUrl],
             territory
         });
@@ -344,7 +343,6 @@ function buildHolySee(updatedAt) {
             ordinary: popeLeoPerson(),
             auxiliaries: [],
             collaboratorSummary: false,
-            status: 'active',
             sourceUrls: ['https://www.vatican.va/content/leo-xiv/en.html'],
             territory: { kind: 'polygon', spatialReference: 4326, bounds: [12.4457, 41.9001, 12.4584, 41.9071], center: [12.4534, 41.9036], areaSqKm: 0.49, rings: [[[12.4457, 41.9001], [12.4584, 41.9001], [12.4584, 41.9071], [12.4457, 41.9071], [12.4457, 41.9001]]] }
         }]

@@ -91,8 +91,6 @@ const gpsCases = [
             assert(!seen.has(id), `Duplicate jurisdiction key: ${id}`);
             seen.add(id);
             assert(diocese.name && Array.isArray(diocese.sourceUrls), `Invalid jurisdiction record: ${id}`);
-            assert(['active', 'vacant'].includes(diocese.status), `Invalid ordinary status: ${id}`);
-            assert((diocese.status === 'active') === !!diocese.ordinary, `Ordinary/status mismatch: ${id}`);
             assert(diocese.territory && Array.isArray(diocese.territory.center), `Missing GPS territory: ${id}`);
             if (diocese.territory.kind === 'polygon') {
                 polygons += 1;

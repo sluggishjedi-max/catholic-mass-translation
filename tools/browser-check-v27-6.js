@@ -107,6 +107,21 @@ function startServer() {
       };
       const germanBishop = await refreshGpsBishopContext(52.52, 13.405, 'DE');
       const germanBishopPlaceholder = replaceBishopPlaceholder('(Bischofsname)', 'de');
+      const vacantGermanBishop = await globalThis.ordoBishopDataApi.contextForDiocese('Diocese of Speyer', 'DE');
+      applyGpsBishopContext(vacantGermanBishop);
+      const vacantBishopPlaceholdersPreserved = [
+        ['[\uC8FC\uAD50\uBA85]', 'kr'],
+        ['[Bishop name]', 'en'],
+        ['[t\u00EAn gi\u00E1m m\u1EE5c]', 'vn'],
+        ['[nomen episcopi]', 'la'],
+        ['[\u4E3B\u6559\u540D]', 'zh'],
+        ['[\u53F8\u6559\u540D]', 'jp'],
+        ['[Nome del vescovo]', 'it'],
+        ['[Nome do bispo]', 'pt'],
+        ['[Nombre del obispo]', 'es'],
+        ['[Bischofsname]', 'de']
+      ].every(([placeholder, language]) => replaceBishopPlaceholder(placeholder, language) === placeholder);
+      applyGpsBishopContext(germanBishop);
       const liturgicalPlaceholderChecks = {
         koreanGospel: isLiturgicalPlaceholderText('(\uC624\uB298\uC758 \uBCF5\uC74C...)'),
         vietnameseGospel: isLiturgicalPlaceholderText('(Tin Mung hom nay...)'),
@@ -278,6 +293,7 @@ function startServer() {
         pageVersion: document.getElementById('settings-version-label').textContent,
         gps: germanyGpsState,
         germanBishop: { diocese: germanBishop && germanBishop.diocese, name: germanBishop && germanBishop.ordinary && germanBishop.ordinary.de, placeholder: germanBishopPlaceholder },
+        vacantBishop: { diocese: vacantGermanBishop && vacantGermanBishop.diocese, ordinary: vacantGermanBishop && vacantGermanBishop.ordinary, placeholdersPreserved: vacantBishopPlaceholdersPreserved },
         liturgicalPlaceholderChecks,
         gospelOrderingChecks,
         warningLanguages,
@@ -346,6 +362,8 @@ function startServer() {
     assert(result.gps.useGps === true && result.gps.checked === false, 'GPS checkbox inversion regressed');
     assert(/Berlin/i.test(result.germanBishop.diocese) && result.germanBishop.name, 'Local DBK bishop module did not resolve Berlin GPS');
     assert(!/Bischofsname/i.test(result.germanBishop.placeholder) && result.germanBishop.placeholder.includes(result.germanBishop.name), 'German bishop placeholder was not replaced from local data');
+    assert(/Speyer/i.test(result.vacantBishop.diocese) && !result.vacantBishop.ordinary, 'Vacant diocese fixture did not resolve without an ordinary');
+    assert(result.vacantBishop.placeholdersPreserved, 'Language-specific bishop placeholders must remain for a diocese without an ordinary');
     assert(Object.values(result.liturgicalPlaceholderChecks).every(Boolean), 'Multilingual liturgical placeholder suppression regressed');
     assert(Object.values(result.gospelOrderingChecks).every(Boolean), 'Gospel body/dialogue ordering regressed');
     assert(result.warningLanguages.join('|') === 'English|Latine|한국어|日本語|繁體中文|Tiếng Việt|Italiano|Español|Português|Deutsch', 'warning language order/content mismatch');

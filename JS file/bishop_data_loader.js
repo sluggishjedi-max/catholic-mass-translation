@@ -80,7 +80,6 @@
         return {
             diocese: diocese.name,
             ordinary: diocese.ordinary || null,
-            status: diocese.status || (diocese.ordinary ? 'active' : 'vacant'),
             auxiliaries: Array.isArray(diocese.auxiliaries) ? diocese.auxiliaries : [],
             collaboratorSummary: !!diocese.collaboratorSummary,
             sourceUrls: Array.isArray(diocese.sourceUrls) ? diocese.sourceUrls : [],
