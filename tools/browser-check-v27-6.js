@@ -4,6 +4,8 @@ const path = require('path');
 const { chromium } = require('@playwright/test');
 
 const root = path.resolve(__dirname, '..');
+const checkHtml = process.env.ORDO_CHECK_HTML || 'V27.6.html';
+const expectedVersion = checkHtml.replace(/\.html$/, '');
 const weekdayFixture = fs.readFileSync(path.join(root, 'tools', 'fixtures', 'schott-2026-09-02.md'), 'utf8');
 const sundayFixture = fs.readFileSync(path.join(root, 'tools', 'fixtures', 'schott-2026-08-30.md'), 'utf8');
 const brazilFixture = `<!doctype html><html><body><main>
@@ -32,7 +34,7 @@ function startServer() {
   const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8' };
   const server = http.createServer((request, response) => {
     const url = new URL(request.url, 'http://127.0.0.1');
-    const route = decodeURIComponent(url.pathname === '/' ? '/V27.6.html' : url.pathname);
+    const route = decodeURIComponent(url.pathname === '/' ? '/' + checkHtml : url.pathname);
     const file = path.resolve(root, route.replace(/^\/+/, ''));
     if (!file.startsWith(root)) return response.writeHead(403).end('Forbidden');
     fs.readFile(file, (error, data) => {
@@ -63,7 +65,7 @@ function startServer() {
   });
 
   try {
-    await page.goto(`http://127.0.0.1:${server.address().port}/V27.6.html`, {
+    await page.goto(`http://127.0.0.1:${server.address().port}/${checkHtml}`, {
       waitUntil: 'domcontentloaded', timeout: 120000
     });
     await page.waitForFunction(() => (
@@ -355,8 +357,8 @@ function startServer() {
     }, { weekday: weekdayFixture, sunday: sundayFixture, brazil: brazilFixture });
     if (process.env.ORDO_DEBUG_V276) console.log(JSON.stringify(result, null, 2));
 
-    assert(result.version.startsWith('V27.6-'), 'V27.6 runtime version missing');
-    assert(result.pageVersion === 'V27.6', 'V27.6 settings label missing');
+    assert(result.version.startsWith(expectedVersion + '-'), 'Runtime version missing');
+    assert(result.pageVersion === expectedVersion, 'Settings version label missing');
     assert(result.gps.code === 'DE' && result.gps.language === 'DE', 'Berlin GPS did not select Germany/German');
     assert(result.gps.berlin === 'DE' && result.gps.zone === 'DE', 'German GPS lookup failed');
     assert(result.gps.useGps === true && result.gps.checked === false, 'GPS checkbox inversion regressed');

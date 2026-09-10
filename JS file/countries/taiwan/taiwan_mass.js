@@ -113,6 +113,83 @@
     part('4.4 final_song', '禮成詠', [rubric('唱合適的禮成詠。')])
   ]);
 
+  // V27.7: sentence/phrase rows follow the Korean ordinary's slots. Keep
+  // the CRBC wording and word order; an empty row is preferable to repeating
+  // a whole prayer beside every Korean sentence. Creed keys are A=apostles,
+  // B=Nicene in the shared schema, unlike the order in the printed appendix.
+  const byPart = suffix => ordinary.find(item => item.id.endsWith(' ' + suffix));
+  const phraseRows = (text, speaker = '全體') => text.split('|').map((text, index) => z(index === 0 ? speaker : '', text));
+  const setRows = (id, text, speaker) => { byPart(id).lines = phraseRows(text, speaker); };
+  byPart('sequence').id = '2.4 Sequence';
+  byPart('universal_prayer').id = '2.9 universal';
+  byPart('entrance').lines = [rubric('見專有彌撒經文。會眾起立。'), z('', '（當日進堂詠）')];
+  for (const option of Object.values(byPart('greeting').variants)) {
+    option.lines.unshift(z('主祭', '因父、及子、及聖神之名。'), z('信友', '阿們。'));
+  }
+  setRows('gloria', '天主在天受光榮：|主愛的人在世享平安。|主、天主、天上的君王，|全能的天主聖父，|我們為了祢無上的光榮、|讚美祢、稱頌祢、|朝拜祢、顯揚祢、感謝祢。||主、耶穌基督、獨生子；|主、天主、天主的羔羊，|聖父之子；|除免世罪者，求祢垂憐我們。|除免世罪者，求祢俯聽我們的祈禱，|坐在聖父之右者，求祢垂憐我們，|因為只有祢是聖的，只有祢是主，只有祢是至高無上的。|耶穌基督，祢和聖神，同享天主聖父的光榮。|阿們。');
+  const creed = byPart('creed');
+  creed.variants = {
+    A: variant('宗徒信經', phraseRows('我信全能的天主父，|天地萬物的創造者。|我信父的唯一子，我們的主耶穌基督。|祂因聖神降孕，由童貞瑪利亞誕生。|祂在比拉多執政時蒙難，|被釘在十字架上，死而安葬。|祂下降陰府，第三日從死者中復活。|祂升了天，坐在全能天主父的右邊。|祂要從天降來，審判生者死者。|我信聖神。|我信聖而公教會，諸聖的相通。|罪過的赦免。肉身的復活。|永恆的生命。|阿們。')),
+    B: variant('尼西亞・君士坦丁堡信經', phraseRows('我信唯一的天主，||全能的聖父，天地萬物，無論有形無形，都是祂所創造的。|我信唯一的主、耶穌基督、天主的獨生子。|祂在萬世之前，由聖父所生。|祂是出自天主的天主，出自光明的光明，|出自真天主的真天主。祂是聖父所生，而非聖父所造，|與聖父同性同體，萬物是藉著祂而造成的。|祂為了我們人類，並為了我們的得救，|從天降下。|祂因聖神由童貞瑪利亞取得肉軀，而成為人。|祂在般雀比拉多執政時，|為我們被釘在十字架上，受難而被埋葬。|祂正如聖經所載，第三日復活了。|祂升了天，坐在聖父的右邊。|祂還要光榮地降來，審判生者死者，|祂的神國萬世無疆。|我信聖神，祂是主及賦予生命者，|由聖父聖子所共發。|祂和聖父聖子，同受欽崇，同享光榮，|祂曾藉先知們發言。|我信唯一、至聖、至公、從宗徒傳下來的教會。|我承認赦罪的聖洗，只有一個。|我期待死人的復活，及來世的生命。|阿們。'))
+  };
+  creed.variants.B.lines[10].rubric_zh = '鞠躬。';
+  setRows('lords_prayer', '我們既遵從救主的訓示，|又承受祂的教導，才敢說：|我們的天父，|願祢的名受顯揚，|願祢的國來臨，|願祢的旨意奉行在人間，如同在天上。|求祢今天賞給我們日用的食糧；|求祢寬恕我們的罪過，|如同我們寬恕別人一樣；|不要讓我們陷於誘惑；|但救我們免於凶惡。|上主，求祢從一切災禍中拯救我們，|恩賜我們的時代得享平安；|更求祢大發慈悲，保佑我們脫免罪惡，|並在一切困擾中，獲得安全，|使我們虔誠期待永生的幸福，|和救主耶穌的來臨。|天下萬國，普世權威，一切榮耀，永歸於祢。', '主祭');
+  for (const index of [2, 17]) byPart('lords_prayer').lines[index].sp_zh = '信友';
+  byPart('lords_prayer').lines[11].sp_zh = '主祭';
+  setRows('peace', '主耶穌基督，|祢曾對宗徒們說：|「我將平安留給你們，|將我的平安賞給你們。」|求祢不要看我們的罪過，|但看祢教會的信德，|並按照祢的聖意，使教會安定團結，|祢是天主，永生永王。|阿們。|願主的平安常與你們同在。|也與你的心靈同在。|請大家互祝平安。|', '主祭');
+  for (const index of [8, 10]) byPart('peace').lines[index].sp_zh = '信友';
+  for (const index of [9, 11]) byPart('peace').lines[index].sp_zh = '主祭';
+  byPart('peace').lines[12] = rubric('主祭與信友互相鞠躬；然後信友可分二邊，相對鞠躬。');
+  const lambRubric = byPart('lamb').lines[0].rubric_zh;
+  setRows('lamb', '除免世罪的天主羔羊，|求祢垂憐我們。|除免世罪的天主羔羊，|求祢垂憐我們。|除免世罪的天主羔羊，|求祢賜給我們平安。');
+  byPart('lamb').lines[0].rubric_zh = lambRubric;
+  setRows('communion_rite', '請看，天主的羔羊；|請看，除免世罪者。|蒙召來赴聖宴的人是有福的。|主，我當不起祢到我心裡來，|只要祢說一句話，|我的靈魂就會痊癒。|', '主祭');
+  byPart('communion_rite').lines[0].rubric_zh = '主祭默念領聖體前經。';
+  byPart('communion_rite').lines[3].sp_zh = '全體';
+  byPart('communion_rite').lines[6] = rubric('信友前往恭領聖體。');
+  for (const id of ['collect', 'prayer_after']) byPart(id).lines = [z('主祭', '請大家祈禱。'), z('', ''), z('', ''), z('信友', '阿們。')];
+  byPart('collect').lines[1].rubric_zh = '默禱片刻。見專有彌撒經文。';
+  byPart('prayer_after').lines[1].rubric_zh = '見專有彌撒經文。';
+  byPart('prayer_offerings').lines = [rubric('見專有彌撒經文。'), z('', ''), z('信友', '阿們。')];
+  for (const id of ['reading1', 'reading2']) byPart(id).lines = [z('', ''), z('讀經員', '恭讀……'), z('', ''), z('讀經員', '上主的聖言。'), z('信友', '感謝天主。')];
+  byPart('reading1').lines[0].rubric_zh = '坐下。';
+
+  const penitential = byPart('penitential');
+  const invitation = [z('主祭', '各位兄弟姊妹，'), z('', '現在我們大家認罪，虔誠地舉行聖祭。'), rubric('靜默片刻。')];
+  const absolution = [z('主祭', '願全能的天主垂憐我們，赦免我們的罪，'), z('', '使我們得到永生。'), z('信友', '阿們。')];
+  penitential.variants.A.lines = [...invitation, ...phraseRows('我向全能的天主|和各位教友，|承認我思、言、行為上的過失。||我罪、我罪、我的重罪。|為此，懇請|終身童貞聖母瑪利亞、天使、聖人、和你們各位教友，|為我祈求上主，我們的天主。'), ...absolution];
+  penitential.variants.A.lines[7].rubric_zh = '搥胸。';
+  penitential.variants.B.lines = [...invitation, ...penitential.variants.B.lines.slice(0, 4), ...absolution];
+  penitential.variants.C.lines = [...invitation, ...penitential.variants.C.lines.slice(2, 8), ...absolution];
+  const offertoryRubrics = byPart('offertory').lines.filter(line => line.rubric_zh).map(line => line.rubric_zh);
+  setRows('offertory', '|上主，萬有的天主，|祢賜給我們食糧，我們讚美祢；|我們將大地和人類勞苦的果實──麥麵餅，呈獻給祢，|使成為我們的生命之糧。|願天主永受讚美。|上主，萬有的天主，|祢賜給我們飲料，我們讚美祢；|我們將葡萄樹和人類勞苦的果實──葡萄酒，呈獻給祢，|使成為我們的精神飲料。|願天主永受讚美。||各位兄弟姊妹：|請你們祈禱，|望全能的天主聖父，收納我和你們共同奉獻的聖祭。|望上主從你的手中，收納這個聖祭，|為讚美並光榮祂的聖名，|也為我們和祂整個聖教會的益處。', '');
+  for (const index of [1, 6, 12]) byPart('offertory').lines[index].sp_zh = '主祭';
+  for (const index of [5, 10, 15]) byPart('offertory').lines[index].sp_zh = '信友';
+  byPart('offertory').lines[0].rubric_zh = offertoryRubrics[0];
+  byPart('offertory').lines[6].rubric_zh = offertoryRubrics[1];
+  byPart('offertory').lines[11].rubric_zh = offertoryRubrics[2];
+  byPart('kyrie').lines[1].rubric_zh = byPart('kyrie').lines[0].rubric_zh;
+  byPart('kyrie').lines.shift();
+  byPart('eucharist').sanctus = phraseRows('聖、聖、聖，|上主，萬有的天主，|祢的光榮充滿天地。|歡呼之聲，響徹雲霄。|奉上主名而來的，當受讚美。|歡呼之聲，響徹雲霄。');
+  // PDF line endings are physical wraps, not prayer sentence boundaries.
+  // Reflow spoken passages while retaining every rubric and speaker change.
+  const sentenceRows = lines => {
+    const reflowed = [];
+    for (const line of lines) {
+      const last = reflowed[reflowed.length - 1];
+      if (last && last.text_zh && line.text_zh && !line.sp_zh && !line.rubric_zh && !/[。！？：」]$/u.test(last.text_zh)) last.text_zh += line.text_zh;
+      else reflowed.push({ ...line });
+    }
+    return reflowed.flatMap(line => {
+      if (!line.text_zh) return [line];
+      const phrases = line.text_zh.match(/[^。！？；]+[。！？；]?[」』]?/gu) || [line.text_zh];
+      return phrases.map((text, index) => ({ ...line, text_zh: text, sp_zh: index ? '' : line.sp_zh || '', rubric_zh: index ? '' : line.rubric_zh || '' }));
+    });
+  };
+  const eucharist = byPart('eucharist');
+  eucharist.forms = Object.fromEntries(Object.entries(eucharist.forms).map(([key, lines]) => [key, sentenceRows(lines)]));
+  byPart('blessing').variants.A.lines = [z('主祭', '願主與你們同在。'), z('信友', '也與你的心靈同在。'), z('', ''), z('主祭', '願全能的天主，聖父、聖子 ✠、聖神，'), z('', '降福你們。'), z('信友', '阿們。')];
+
   function dailyPdfUrl(ymd) {
     const entries = dailyManifest[String(ymd || '')] || [];
     const selected = entries[0];
@@ -130,6 +207,7 @@
     ordinaryLanguage: 'ZH',
     ordinary,
     ordinaryEdition: '感恩祭常用經文及附錄二：感恩經第一式至第四式',
+    ordinarySegmentation: Object.freeze({ version: 'V27.7', basis: 'Korean ordinary phrase slots; CRBC wording/order retained', creedKeys: 'A: Apostles; B: Nicene', sourceLanguage: 'zh-Hant' }),
     ordinarySource: Object.freeze({ authority: '天主教會台灣地區主教團禮儀委員會', url: OFFICIAL.ordinary, appendixUrl: OFFICIAL.eucharisticPrayers }),
     beta: true,
     source: Object.freeze({ title: '天主教會台灣地區主教團禮儀委員會', url: OFFICIAL.commission, calendarUrl: OFFICIAL.dailyIndex }),
