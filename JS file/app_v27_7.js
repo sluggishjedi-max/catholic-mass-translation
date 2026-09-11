@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260910-LANGUAGE-CITATIONS';
+    const APP_VERSION = 'V27.7-20260911-PASSAGES-PRAYERS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -9163,7 +9163,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict88';
+    const STRICT_PARSER_CACHE_VERSION = 'strict89';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11190,6 +11190,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictExpandPrayerEnding(lang, key, text) {
+        if (lang === 'DE' && key === 'collect') {
+            return String(text || '').replace(/Darum bitten wir durch Jesus Christus\.\s*$/u,
+                () => localizedPrayerConclusionFormula('DE', key, 'through_son'));
+        }
         if (lang === 'KR') return strictExpandKoreanPrayerEnding(key, text);
         if (lang === 'VN') return strictExpandVietnamesePrayerEnding(key, text);
         if (lang === 'EN') return strictExpandEnglishPrayerEnding(key, text);
@@ -11296,8 +11300,75 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 ]
             }
         };
-        return (formulas[lang] && formulas[lang][key]) || [];
+        const additional = additionalPrayerConclusions[lang];
+        return ((formulas[lang] && formulas[lang][key]) || [])
+            .concat(additional ? additional[key === 'collect' ? 'collect' : 'short'] : []);
     }
+
+    // Verified local formulas: see docs/v27-7-followup.md. Existing source text wins.
+    const additionalPrayerConclusions = {
+        "ZH": {
+            "collect": [
+                "以上所求，是因祢的子，我們的主天主、耶穌基督，祂和祢及聖神，永生永王。",
+                "祂是天主，和祢及聖神，永生永王。",
+                "祢是天主，和聖父及聖神，永生永王。"
+            ],
+            "short": [
+                "以上所求，是因我們的主基督。",
+                "祂是天主，永生永王。",
+                "祢是天主，永生永王。"
+            ]
+        },
+        "IT": {
+            "collect": [
+                "Per il nostro Signore Gesù Cristo, tuo Figlio, che è Dio, e vive e regna con te, nell’unità dello Spirito Santo, per tutti i secoli dei secoli.",
+                "Egli è Dio, e vive e regna con te, nell’unità dello Spirito Santo, per tutti i secoli dei secoli.",
+                "Tu sei Dio, e vivi e regni con Dio Padre, nell’unità dello Spirito Santo, per tutti i secoli dei secoli."
+            ],
+            "short": [
+                "Per Cristo nostro Signore.",
+                "Egli vive e regna nei secoli dei secoli.",
+                "Tu che vivi e regni nei secoli dei secoli."
+            ]
+        },
+        "PT": {
+            "collect": [
+                "Por nosso Senhor Jesus Cristo, vosso Filho, que é Deus e convosco vive e reina, na unidade do Espírito Santo, por todos os séculos dos séculos.",
+                "Ele que é Deus e convosco vive e reina, na unidade do Espírito Santo, por todos os séculos dos séculos.",
+                "Vós que sois Deus e viveis e reinais com o Pai, na unidade do Espírito Santo, por todos os séculos dos séculos."
+            ],
+            "short": [
+                "Por Cristo nosso Senhor.",
+                "Ele que vive e reina pelos séculos dos séculos.",
+                "Vós que viveis e reinais pelos séculos dos séculos."
+            ]
+        },
+        "ES": {
+            "collect": [
+                "Por nuestro Señor Jesucristo, tu Hijo, que vive y reina contigo en la unidad del Espíritu Santo y es Dios por los siglos de los siglos.",
+                "Él, que vive y reina contigo en la unidad del Espíritu Santo y es Dios por los siglos de los siglos.",
+                "Tú que vives y reinas con el Padre en la unidad del Espíritu Santo y eres Dios por los siglos de los siglos."
+            ],
+            "short": [
+                "Por Jesucristo, nuestro Señor.",
+                "Él, que vive y reina por los siglos de los siglos.",
+                "Tú que vives y reinas por los siglos de los siglos."
+            ]
+        },
+        "DE": {
+            "collect": [
+                "Darum bitten wir durch Jesus Christus, deinen Sohn, unseren Herrn und Gott, der in der Einheit des Heiligen Geistes mit dir lebt und herrscht in alle Ewigkeit.",
+                "Der in der Einheit des Heiligen Geistes mit dir lebt und herrscht in alle Ewigkeit.",
+                "Der du in der Einheit des Heiligen Geistes mit Gott dem Vater lebst und herrschest in alle Ewigkeit."
+            ],
+            "short": [
+                "Darum bitten wir durch Christus, unseren Herrn.",
+                "Der mit dir lebt und herrscht in alle Ewigkeit.",
+                "Der du lebst und herrschst in alle Ewigkeit."
+            ]
+        }
+    };
+
 
     const localizedPrayerConclusionFormulas = Object.freeze({
         collect: {
@@ -11351,6 +11422,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function prayerConclusionStyle(lang, key, text) {
         const conclusion = prayerConclusionEndingForText(lang, key, text);
         if (!conclusion) return '';
+        if (additionalPrayerConclusions[lang]) {
+            if (/^(?:以上所求|Per\b|Por\b|Darum\b|Durch\b)/iu.test(conclusion)) return 'through_son';
+            if (/^(?:祢|你|Tu\b|Tú(?:\s|,)|Vós\b|Der du\b)/iu.test(conclusion)) return 'addressed_son';
+            return 'relative_son';
+        }
         if (lang === 'KR') {
             if (/^(?:성부와|우리\s*주\s*그리스도를)/u.test(conclusion)) return 'through_son';
             if (/^주님께서는/u.test(conclusion)) return 'addressed_son';
@@ -11381,6 +11457,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function localizedPrayerConclusionFormula(lang, key, style) {
+        const additional = additionalPrayerConclusions[lang];
+        if (additional) return additional[key === 'collect' ? 'collect' : 'short'][['through_son', 'relative_son', 'addressed_son'].indexOf(style)] || '';
         const group = key === 'collect' ? localizedPrayerConclusionFormulas.collect : localizedPrayerConclusionFormulas.short;
         return (group[style] && group[style][lang]) || '';
     }
@@ -11395,6 +11473,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictPrayerConclusionPattern(lang, key) {
+        // Anchored endings only: never consume the preceding prayer petition.
+        // Accept punctuation/orthography in the official source and preserve it.
+        const additionalPatterns = {
+            ZH: /((?:以上所求[，,]?\s*是(?:因|靠)[\s\S]*?|[祂祢你]是天主[，,]?[\s\S]*?)永生永王[。.]|以上所求[，,]?\s*是(?:因|靠)我們的主基督[。.])$/u,
+            IT: /((?:Per (?:il nostro Signore Gesù Cristo|Cristo (?:nostro Signore|Signore nostro))|Egli (?:è Dio|vive)|Tu (?:sei Dio|che vivi))[^]*?(?:secoli dei secoli|nostro Signore|Signore nostro)\.)$/iu,
+            PT: /((?:Por (?:nosso Senhor Jesus Cristo|Cristo)|Ele que|Vós que sois Deus|Vós que viveis)[^]*?(?:séculos dos séculos|nosso Senhor)\.)$/iu,
+            ES: /((?:Por (?:nuestro Señor Jesucristo|Jesucristo)|Él,? que|Tú,? que)[^]*?(?:siglos de los siglos|nuestro Señor)\.)$/iu,
+            DE: /((?:Darum bitten wir durch (?:Jesus )?Christus|Durch (?:Jesus Christus|unseren Herrn Jesus Christus)|Der (?:du |in der Einheit|mit dir))[^]*?(?:Ewigkeit|unseren Herrn|Jesus Christus)\.)$/iu
+        };
+        if (additionalPatterns[lang]) return additionalPatterns[lang];
         if (lang === 'VN' && key === 'collect') {
             return /((?:Chúng con cầu xin nhờ Đức Gi[êe]-su Ki-tô[\s\S]*?|(?:Chúa|Đức|Ðức)\s+Ki-tô\s+là\s+Thiên Chúa\s+|(?:Người|Chúa)(?:\s+là\s+Thiên Chúa,?\s*)?)hằng sống và hiển trị[\s\S]*?muôn (?:thuở\s+)?muôn đời\.)$/iu;
         }
@@ -11496,7 +11584,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictParsePrayerOrAntiphon(lang, key, section) {
-        const sourceBlocks = strictSplitBlocks(section.lines);
+        const sourceLines = lang === 'ZH' && ['entrance', 'communion'].includes(key)
+            ? (section.lines || []).flatMap(line => String(line).replace(/\s*或[:：]\s*/gu, '\nOr:\n').split('\n'))
+                .flatMap(line => {
+                    const inline = strictCleanLine(line).match(/^([\p{Script=Han}]+\d[0-9a-f,，.、:：;；\s\-–—]*)([\p{Script=Han}「『].*)$/u);
+                    return inline && strictLooksLikeCitation(inline[1], 'ZH') ? [inline[1], inline[2]] : [line];
+                })
+            : section.lines;
+        const sourceBlocks = strictSplitBlocks(sourceLines);
         const blocks = lang === 'VN'
             ? cleanVietnameseSectionSourceLines(key, sourceBlocks)
             : (lang === 'ES' ? cleanSpanishSectionSourceLines(key, sourceBlocks) : sourceBlocks);
@@ -13290,7 +13385,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const preferred = [
             normalizeSelectableLang(state.currentLoc || '', ''),
             normalizeSelectableLang(getLiturgicalBaseLang() || '', ''),
-            'KR', 'VN', 'EN', 'JP', 'LA'
+            ...SUPPORTED_LANGS
         ].map(lang => String(lang || '').toLowerCase())
             .filter((lower, index, list) => lowers.includes(lower) && list.indexOf(lower) === index);
         let reference = null;
@@ -14373,7 +14468,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['teach_paths_truth', /길.*가르|진리.*이끌|당신.*길|day bao.*loi buoc|loi buoc.*chua|huong dan.*chan ly|teach me.*paths|guide me.*truth|vias tuas|veritatem tuam|doce me/i],
             ['speak_lord_life', /말씀하소서|생명의 말씀|xin hay phan|dang lang tai nghe|su song doi doi|speak lord|servant.*listening|words.*everlasting life/i],
             ['poor_in_spirit_kingdom', /마음이\s*가난|하늘\s*나라.*그들의\s*것|phuc thay.*tam hon ngheo kho|nuoc troi.*cua ho|blessed.*poor in spirit|kingdom of heaven.*theirs/i],
-            ['light_world_life', /세상의\s*빛|생명의\s*빛|su sang the gian|anh sang.*su song|light of the world|light of life|lux mundi/i],
+            ['light_world_life', /세상의\s*빛|생명의\s*빛|su sang the gian|anh sang.*su song|light of the world|light of life|lux mundi|我是世界的光.*生命的光/i],
             ['savior_destroyed_death_life', /구원자.*죽음.*복음.*생명|죽음을\s*없애.*생명|dang cuu do.*tieu diet.*than chet|tieu diet.*than chet.*tin mung|tin mung.*phuc truong sinh|savior.*destroyed.*death.*gospel.*life|abolished death.*gospel.*life/i],
             ['faithful_holy_works', /주님.*넘어지는.*붙들|주님.*일으켜|chua trung thanh.*viec chua|nang do.*nga quy|thien hao.*loai nguoi|lord.*faithful.*works|raises.*bowed down/i],
             ['kingdom_near_repent_gospel', /하느님\s*나라.*가까.*회개.*복음|trieu dai thien chua.*den gan.*sam hoi.*tin mung|nuoc thien chua.*den gan.*sam hoi.*tin mung|kingdom.*(?:near|at hand).*repent.*gospel/i],
@@ -14384,7 +14479,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['my_god_praise_salvation', /당신은\s*저의\s*하느님.*찬송|구원이\s*되어|chua la thien chua cua toi|tro nen phan roi|my god.*praise|become.*salvation/i],
             ['unity_sent_by_father', /하나가\s*되게|아버지.*보내셨다는|nen mot|cha da sai con|be one|sent me|sent con/i],
             ['seed_word_sower_christ', /씨앗.*하느님.*말씀.*씨.*뿌리.*그리스도|hat giong.*loi thien chua.*nguoi gieo giong.*duc\s*ki\s*-?\s*to|seed.*word of god.*sower.*christ/i],
-            ['father_word_truth_sanctify', /아버지.*말씀.*진리|진리로.*거룩|loi cha.*chan ly|thanh hoa.*su that|father.*word.*truth|sanctify.*truth/i]
+            ['father_word_truth_sanctify', /아버지.*말씀.*진리|진리로.*거룩|loi cha.*chan ly|thanh hoa.*su that|father.*word.*truth|sanctify.*truth|話.*真理.*真理聖化|话.*真理.*真理圣化/i]
         ];
         const haystack = `${normalized}\n${raw}`;
         const matched = patterns.find(([, pattern]) => pattern.test(haystack));
@@ -14392,6 +14487,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function buildFallbackVariantAlignment(baseId, optionMap, section = {}) {
+        const parallel = buildParallelPassageAlignment(baseId, optionMap, section);
+        if (parallel.length) return parallel;
         const groups = [];
         const used = new Set();
         const semanticGroups = {};
@@ -14450,8 +14547,48 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return cleanNodeText(optionCitation || (index === 0 ? directCitationForLower(section, lower) : ''));
     }
 
+    // Exact citations remain distinct; this controls only side-by-side display.
+    // Never coalesce explicit long/short options from the same source.
+    function buildParallelPassageAlignment(baseId, optionMap, section = {}) {
+        if (!['reading1', 'reading2', 'psalm', 'gospel'].includes(baseId)) return [];
+        const lowers = Object.keys(optionMap || {}).filter(lower => optionMap[lower]?.length);
+        if (lowers.length < 2 || lowers.some(lower => optionMap[lower].length !== 1)) return [];
+        const parsed = lowers.map(lower => bibleCitation.parse(strictReadingOptionCitation(section, lower, 0), lower));
+        if (parsed.some(item => !item)) return [];
+        const wholeVerses = item => {
+            if (/[:;]/.test(item.verses)) return ''; // Cross-chapter: exact matching only.
+            const verses = new Set();
+            for (const part of item.verses.replace(/[a-f]/g, '').split('.')) {
+                const match = part.match(/^(\d+)(?:-(\d+))?$/);
+                if (!match) return '';
+                const start = Number(match[1]), end = Number(match[2] || match[1]);
+                if (end < start || end - start > 180) return '';
+                for (let n = start; n <= end; n++) verses.add(n);
+            }
+            return [...verses].sort((a,b) => a-b).join(',');
+        };
+        const anchor = parsed[0];
+        if (!parsed.every(item => {
+            if (item.id !== anchor.id) return false;
+            const chapters = new Set([anchor.chapter, anchor.alternateChapter].filter(Boolean));
+            if (![item.chapter, item.alternateChapter].filter(Boolean).some(chapter => chapters.has(chapter))) return false;
+            const a = wholeVerses(anchor), b = wholeVerses(item);
+            if (!a || !b) return anchor.key === item.key;
+            if (a === b) return true;
+            // Reviewed KR/TW Psalm 84(83): same refrain and four stanzas.
+            // TW adds verse 8 to stanza 3. Preserve both texts and citations.
+            // No general "overlapping verses = same psalm" heuristic.
+            return baseId === 'psalm' && chapters.has(83)
+                && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(a)
+                && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(b);
+        })) return [];
+        return normalizeVariantAlignmentGroups(optionMap, [Object.fromEntries(lowers.map(lower => [lower, 0]))]);
+    }
+
     function buildStrictReadingCitationAlignment(baseId, optionMap, section = {}) {
         if (!strictReadingKeys.has(baseId)) return [];
+        const parallel = buildParallelPassageAlignment(baseId, optionMap, section);
+        if (parallel.length) return parallel;
         const lowers = Object.keys(optionMap || {}).filter(lower => Array.isArray(optionMap[lower]) && optionMap[lower].length);
         if (!lowers.length) return [];
         const groupsByCitation = {};
@@ -14563,7 +14700,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function citationStartsForCompare(value, lang) {
         // Legacy name: compare full ranges, never only the first verse.
         const parsed = globalThis.bibleCitation.parse(value, lang);
-        return parsed ? [parsed.key] : [];
+        if (!parsed) return [];
+        // Only explicitly printed dual numbering creates an alias; do not
+        // infer Hebrew/LXX numbers (or verse offsets) for unqualified citations.
+        if (parsed.id === 'PSA') return [parsed.chapter, parsed.alternateChapter]
+            .filter(Boolean).map(chapter => 'PSA:' + chapter + ':' + parsed.verses);
+        return [parsed.key];
     }
 
     function directCitationForLower(section, lower) {
@@ -14575,6 +14717,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function citationsAreDifferent(leftCitation, rightCitation, leftLang, rightLang) {
+        const leftKeys = citationStartsForCompare(leftCitation, leftLang);
+        const rightKeys = citationStartsForCompare(rightCitation, rightLang);
+        if (leftKeys.some(key => rightKeys.includes(key))) return false;
         const left = normalizedCitationForCompare(leftCitation, leftLang);
         const right = normalizedCitationForCompare(rightCitation, rightLang);
         return !!(left && right && left !== right);
@@ -14634,7 +14779,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align5-language-tables';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align6-parallel-passages';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -14762,6 +14907,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function buildKnownConflictSourceSeparation(baseId, optionMap, section = {}) {
+        if (buildParallelPassageAlignment(baseId, optionMap, section).length) return [];
+        if (baseId === 'gospel_accl' && activeOptionsHaveSemanticMatches(baseId, optionMap)) return [];
         const populatedLowers = SUPPORTED_LANGS.map(lang => lang.toLowerCase())
             .filter(lower => Array.isArray(optionMap && optionMap[lower]) && optionMap[lower].length);
         // Full separation is only safe when every participating language has
@@ -18980,6 +19127,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 data.header = Object.assign({}, item.header || {}, variantHeader);
                 data.cit = sel.cit && typeof sel.cit === 'object' ? Object.assign({}, sel.cit) : Object.assign({}, item.cit || {});
                 data.lines = sel.lines ? JSON.parse(JSON.stringify(sel.lines)) : [];
+                data.__dailySourceIndexes = sel.__dailySourceIndexes;
                 data.label = sel.label || item.label;
             } else {
                 data.header = item.header || {};
@@ -19033,7 +19181,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!isStacked) headerRow.appendChild(hColR);
             partContainer.appendChild(headerRow);
 
-            const paragraphAlignedLines = splitDailyReadingBodyRowsByKorean(data.lines, baseId);
+            // Missing official text in an actual source-only option may have an
+            // explicitly labelled AI translation in either language column.
+            const sourceOnly = data.__dailySourceIndexes && dailyVariantSourceLower(data, baseId);
+            const sourceLines = sourceOnly && ['reading1', 'reading2', 'psalm', 'gospel'].includes(baseId)
+                ? (data.lines || []).map(line => Object.assign({}, line, {__sourceChoiceOriginal:true}))
+                : data.lines;
+            const paragraphAlignedLines = splitDailyReadingBodyRowsByKorean(sourceLines, baseId);
             const displayLines = splitMismatchedDailyLinesForActiveLanguages(paragraphAlignedLines, baseId, data, leftL.toLowerCase(), rightL.toLowerCase());
             const displayRows = baseId === 'psalm'
                 ? groupPsalmDisplayLinesForActiveLanguages(displayLines, leftL.toLowerCase(), rightL.toLowerCase())

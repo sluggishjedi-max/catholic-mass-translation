@@ -108,7 +108,104 @@ const root = path.resolve(__dirname, '..');
         check((visibleGospel.match(/마태오가 전한 거룩한 복음입니다/g) || []).length === 1, lang + ' rendered intro duplicated');
         repeated.push(lang);
       }
-      return {version: APP_VERSION, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
+      // Same liturgical passage is not necessarily a byte-identical verse range.
+      const sept11 = {
+        reading1:{cit_kr:'1코린 9,16-19.22ㄴ-27',cit_zh:'聖保祿宗徒致格林多人前書 9,16-19, 22-27',kr_lines:[parsedLine('','한국어 독서 본문')],zh_lines:[parsedLine('','中文讀經正文')]},
+        psalm:{cit_kr:'시편 84(83),3.4.5-6.12(◎ 2)',cit_zh:'詠八三3-6, 8, 12',kr_lines:[parsedLine('','만군의 주님, 당신 계신 곳 사랑하나이다!')],zh_lines:[parsedLine('','萬有的上主，祢的殿宇多麼可愛。')]},
+        gospel_accl:{cit_kr:'요한 17,17 참조',cit_zh:'若十七7, 17',kr_lines:[parsedLine('','주님, 당신 말씀은 진리이시니 저희를 진리로 거룩하게 해 주소서.')],zh_lines:[parsedLine('','主，祢的話就是真理，求祢以真理聖化我們。')]}
+      };
+      state.targetLang='ZH'; state.targetLocationCode='TW';
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyCachedVariantAlignments(sept11,date);
+      await alignDailySelectableVariantsWithAI(sept11,date);
+      applyDailyReadingsToMassData(sept11); render();
+      for(const id of Object.keys(sept11)) {
+        check(sept11[id].variantAlignment.length===1,id+' Sept 11 split');
+        const element=document.querySelector('section[data-part-id="'+id+'"]');
+        check(!element.querySelector('select.select-inline'),id+' unnecessary choice');
+        check(element.textContent.includes(id==='reading1'?'中文讀經正文':id==='psalm'?'殿宇':'真理聖化'),id+' official target lost');
+      }
+      check(buildParallelPassageAlignment('psalm',sameOptions,{cit_kr:'시편 84(83),3-6.12',cit_zh:'詠八三3-6,9,12'}).length===0,'Unreviewed Psalm difference collapsed');
+      check(buildParallelPassageAlignment('reading1',{kr:[[],[]],zh:[[]]},sept11.reading1).length===0,'Explicit alternatives collapsed');
+      // Actual source-only choices must offer AI on either side, including KR.
+      for(const id of ['reading1','psalm']) {
+        aiTranslationRecords.clear();
+        const data={[id]:{cit_kr:'1코린 9,16-19',cit_zh:'聖保祿宗徒致格林多人前書 10,1-5',
+          kr_lines:[{text:'서로 다른 한국어 원문',role:'body'}],zh_lines:[{text:'另一篇中文原文',role:'body'}],
+          variantAlignment:[{kr:0,zh:null},{kr:null,zh:0}]}};
+        resetMassDataFrom(getStartupOrdinaryMassData());
+        applyDailyReadingsToMassData(data);
+        for(const choice of ['A','B']) {
+          state.options[id]=choice; render();
+          check(document.querySelector('section[data-part-id="'+id+'"] .btn-ai-trans'),id+' '+choice+' missing opposite AI');
+        }
+        const originalTranslator=translateWithGemini;
+        try {
+          translateWithGemini=async(text,lang)=>{
+            check(lang==='KR' && text.includes('另一篇中文原文'),'Wrong AI direction/source');
+            return '확인용 AI 번역';
+          };
+          document.querySelector('section[data-part-id="'+id+'"] .btn-ai-trans').click();
+          await new Promise(resolve=>setTimeout(resolve,0));
+          const element=document.querySelector('section[data-part-id="'+id+'"]');
+          check(element.querySelector('.ai-badge') && element.textContent.includes('확인용 AI 번역'),id+' labelled AI output missing');
+          check(element.textContent.includes('另一篇中文原文'),id+' original overwritten by AI');
+        } finally { translateWithGemini=originalTranslator; aiTranslationRecords.clear(); }
+      }
+      // Antiphons: dual Psalm numbering and the Chinese inline "or" marker.
+      check(!citationsAreDifferent('시편 119(118),137.124','詠一一八137, 124','KR','ZH'),'Entrance Psalm numbering split');
+      const communionZh=strictParsePrayerOrAntiphon('ZH','communion',{heading:'領主詠',lines:[
+        '詠四一2-3','天主，我的心渴慕祢，就像小鹿渴望清泉。我的心靈渴慕天主，生活的天主。',
+        '或：若八12主說：我是世界的光；跟隨我的，決不在黑暗中行走，必有生命的光。'
+      ]});
+      check(splitParsedAlternatives(communionZh.lines).length===2,'Chinese communion options not split');
+      check(communionZh.optionCits[1].cit_zh==='若八12','Chinese second citation lost');
+      const antiphons={
+        entrance:{cit_kr:'시편 119(118),137.124',cit_zh:'詠一一八137, 124',
+          kr_lines:[parsedLine('','주님, 당신은 의로우시고 당신 법규는 바르옵니다. 당신 종에게 자애를 베푸소서.')],
+          zh_lines:[parsedLine('','上主，只有祢大公無私，祢的判斷非常正直。祢是仁慈的，求祢恩待祢的僕人。')]},
+        communion:{cit_kr:'시편 42(41),2-3',cit_zh:communionZh.cit_zh,
+          kr_lines:[parsedLine('','사슴이 시냇물을 그리워하듯, 하느님, 제 영혼이 당신을 그리나이다.'),parsedLine('','Or:'),parsedLine('','나는 세상의 빛이다. 생명의 빛을 얻으리라.')],
+          zh_lines:communionZh.lines,optionCits_zh:communionZh.optionCits,
+          optionCits_kr:[{cit_kr:'시편 42(41),2-3'},{cit_kr:'요한 8,12'}]}
+      };
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyCachedVariantAlignments(antiphons,date);
+      await alignDailySelectableVariantsWithAI(antiphons,date);
+      applyDailyReadingsToMassData(antiphons); render();
+      check(!document.querySelector('section[data-part-id="entrance"] select.select-inline'),'Entrance unnecessary variants');
+      check(antiphons.communion.variantAlignment.length===2 && antiphons.communion.variantAlignment.every(g=>Number.isInteger(g.kr)&&Number.isInteger(g.zh)),'Communion 2 parallel options');
+      for(const choice of ['A','B']) {
+        state.options.communion=choice;render();
+        const element=document.querySelector('section[data-part-id="communion"]');
+        check(element.querySelector('select.select-inline').options.length===2,'Communion choices multiplied');
+        check(element.textContent.includes(choice==='A'?'渴慕':'生命的光'),'Communion Chinese choice missing');
+        check(!element.querySelector('.btn-ai-trans'),'Official communion replaced with AI');
+      }
+      // Three conclusions × three prayer types × all supported languages.
+      let conclusionCases=0;
+      for(const key of ['collect','prayer_offerings','prayer_after']) {
+        for(const style of ['through_son','relative_son','addressed_son']) {
+          for(const lang of SUPPORTED_LANGS) {
+            const formula=localizedPrayerConclusionFormula(lang,key,style);
+            check(!!formula,lang+' '+key+' '+style+' missing formula');
+            check(prayerConclusionStyle(lang,key,formula)===style,lang+' '+key+' '+style+' detection');
+            const parsed=splitPrayerParsedLineByConclusion({text:'BODY. '+formula,role:'body'},lang,key);
+            check(parsed.length===2 && parsed[1].role==='conclusion',lang+' ending not split');
+            const lines=[];
+            applyParsedLinesForLanguage(lines,'kr',[{text:'본문',role:'body'},{text:localizedPrayerConclusionFormula('KR',key,style),role:'conclusion'}],key);
+            for(let n=0;n<3;n++) {
+              applyParsedLinesForLanguage(lines,lang.toLowerCase(),[{text:'BODY. '+formula,role:'body'}],key);
+              ensureLocalizedPrayerConclusions(lines,key);
+            }
+            check(lines.filter(line=>line['role_'+lang.toLowerCase()]==='conclusion' && line['text_'+lang.toLowerCase()]).length===1,lang+' duplicate ending');
+            check(!lines.some(line=>line['role_'+lang.toLowerCase()]==='conclusion' && line['text_'+lang.toLowerCase()+'_ai']),lang+' ending AI');
+            conclusionCases++;
+          }
+        }
+      }
+      check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
+      return {version: APP_VERSION, conclusionCases, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
     await page.setViewportSize({width:412,height:915});

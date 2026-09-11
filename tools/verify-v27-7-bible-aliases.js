@@ -27,4 +27,9 @@ assert.equal(bible.key('시편 13,6ㄱㄴ.6ㄷㄹ','KR'),bible.key('詠一三6ab
 assert.equal(bible.key('2코린 5,20-6,2','KR'),bible.key('聖保祿宗徒致格林多人後書五20-六2','ZH'));
 assert.equal(bible.key('미카 5,1-4','KR'),bible.key('米該亞先知書五1-4','ZH'));
 for (const [han,number] of [['一二',12],['十二',12],['廿三',23],['卅四',34],['一百五十',150]]) assert.equal(bible.hanNumber(han),number);
-console.log('10 language tables × 73 books; collisions, full ranges, Chinese chapters and withdrawn source checks passed.');
+assert.equal(bible.parse('1코린 9,16-19.22ㄴ-27','KR').verses,'16-19.22b-27');
+assert.equal(bible.parse('聖保祿宗徒致格林多人前書 9,16-19, 22-27','ZH').verses,'16-19.22-27');
+assert.equal(bible.parse('시편 84(83),3.4.5-6.12(◎ 2)','KR').alternateChapter,83);
+assert.equal(bible.parse('詠八三3-6, 8, 12','ZH').verses,'3-6.8.12');
+assert.equal(bible.parse('1코린 8,1-7,11-13','KR').verses,'1-7.11-13');
+console.log('10 language tables × 73 books; collisions, discontinuous verses, Psalm response notes and cross-chapter checks passed.');

@@ -1,6 +1,7 @@
 // Brazil hymn-book module placeholder (Beta).
 (function registerBrazilHymns(global) {
   'use strict';
+
   global.countryHymnData = global.countryHymnData || {};
   global.countryHymnData.BR = Object.freeze({
     schemaVersion: 1,

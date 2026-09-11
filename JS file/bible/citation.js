@@ -39,7 +39,7 @@
   function parse(value, lang) {
     const code = language(lang);
     const koreanSuffixes = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f'};
-    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => koreanSuffixes[c])).replace(/\s*(?:참고|참조)$/u,'').replace(/^(?:cf\.?|cfr\.?|x\.?|see)\s+/,'')
+    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => koreanSuffixes[c])).replace(/\s*[（(]◎[^)）]*[)）]\s*$/u,'').replace(/\s*(?:참고|참조)$/u,'').replace(/^(?:cf\.?|cfr\.?|x\.?|see)\s+/,'')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
@@ -52,13 +52,17 @@
       if (!Number.isInteger(chapter) || chapter < 1) return null;
       const suffixes = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f'};
       const verses = match[3].replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => suffixes[c])
-        .replace(/[–—−~～]/g,'-').replace(/-(\d+)[,.:](\d+)/g,'-$1:$2')
+        // Dots separate verses. In comma-style notation a descending endpoint
+        // followed by a comma denotes a chapter boundary: 5,20-6,2.
+        .replace(/[–—−~～]/g,'-')
+        .replace(/(\d+)([a-f]*)-(\d+),(\d+)/g, (all,start,suffix,end,verse) =>
+          Number(end) < Number(start) ? start+suffix+'-'+end+':'+verse : all)
         .replace(/[,、]/g,'.').replace(/[。.]$/,'');
       if (!/^[0-9a-f.:;+-]+$/i.test(verses)) return null;
       // Retain the entire range, subverses, cross-chapter boundaries and explicit
       // alternate Psalm number. No inferred Hebrew/LXX verse equivalence.
       const reference = chapter + (match[2] ? '('+match[2]+')' : '') + ':' + verses;
-      return {id:entry.id, kr:entry.kr, reference, key:entry.id+':'+reference};
+      return {id:entry.id, kr:entry.kr, chapter, alternateChapter:match[2] ? Number(match[2]) : null, verses, reference, key:entry.id+':'+reference};
     }
     return null;
   }
