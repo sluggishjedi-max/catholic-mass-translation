@@ -28,10 +28,40 @@ const root = path.resolve(__dirname, '..');
       check(!citationsAreDifferent('마르 1,1-8', 'Mk 1:1-8', 'KR', 'DE'), 'German Mk confused with Vietnamese Micah');
       check(!citationsAreDifferent('요한 3,16-18', 'Gv 3,16-18', 'KR', 'IT'), 'Italian John confused with Vietnamese Ecclesiastes');
       check(citationsAreDifferent('마태 1,1-25', '聖瑪竇福音 1,1-23', 'KR', 'ZH'), 'Long and short readings incorrectly merged');
+      const allLanguageOptions = {}, allLanguageSection = {};
+      for (const lang of SUPPORTED_LANGS) {
+        const lower = lang.toLowerCase();
+        const table = globalThis.bibleLanguageTables[lang];
+        const citation = `${table.books.MAT.name} 1,18-23`;
+        allLanguageOptions[lower] = [[parsedLine('', `${lang} official text`)]];
+        allLanguageSection[`cit_${lower}`] = citation;
+      }
+      const allLanguageAlignment = buildStrictReadingCitationAlignment('gospel', allLanguageOptions, allLanguageSection);
+      check(allLanguageAlignment.length === 1 && SUPPORTED_LANGS.every(lang => allLanguageAlignment[0][lang.toLowerCase()] === 0), 'Ten-language passage did not form one option');
       const sameOptions = {kr:[[{text:'본문'}]], zh:[[{text:'正文'}]]};
       const sameSection = {cit_kr:'마태 1,18-23', cit_zh:'聖瑪竇福音 1,18-23'};
       const sameAlignment = buildStrictReadingCitationAlignment('gospel', sameOptions, sameSection);
       check(sameAlignment.length === 1 && sameAlignment[0].kr === 0 && sameAlignment[0].zh === 0, 'Identical readings offered as language-separated alternatives');
+      const unknownCitationAlignment = buildStrictReadingCitationAlignment('gospel', sameOptions, {cit_kr:'알 수 없는 표기',cit_zh:'新增語言格式'});
+      check(unknownCitationAlignment.length === 1 && unknownCitationAlignment[0].kr === 0 && unknownCitationAlignment[0].zh === 0, 'Unknown future-language notation created a false option');
+      const shuffledOptions = {
+        kr:[[parsedLine('','한국어 바오로')],[parsedLine('','한국어 마태오')]],
+        zh:[[parsedLine('','中文瑪竇')],[parsedLine('','中文保祿')]],
+        en:[[parsedLine('','English Paul')],[parsedLine('','English Matthew')]],
+        jp:[[parsedLine('','日本語マタイ')],[parsedLine('','日本語パウロ')]]
+      };
+      const shuffledSection = {
+        optionCits_kr:[{cit_kr:'1코린 9,16-19.22ㄴ-27'},{cit_kr:'마태 1,18-23'}],
+        optionCits_zh:[{cit_zh:'聖瑪竇福音 1,18-23'},{cit_zh:'聖保祿宗徒致格林多人前書 9,16-19,22-27'}],
+        optionCits_en:[{cit_en:'1 Corinthians 9:16-19,22-27'},{cit_en:'Matthew 1:18-23'}],
+        optionCits_jp:[{cit_jp:'新言語の未登録表記 A'},{cit_jp:'新言語の未登録表記 B'}],
+        optionKinds_kr:['common','proper'], optionKinds_zh:['proper','common'],
+        optionKinds_en:['common','proper'], optionKinds_jp:['proper','common']
+      };
+      const shuffledAlignment = buildStrictReadingCitationAlignment('reading1', shuffledOptions, shuffledSection);
+      check(shuffledAlignment.length === 2, 'Multilingual alternatives were multiplied');
+      check(shuffledAlignment.some(group => group.kr === 0 && group.zh === 1 && group.en === 0 && group.jp === 1), 'Paul reading was not aligned across languages');
+      check(shuffledAlignment.some(group => group.kr === 1 && group.zh === 0 && group.en === 1 && group.jp === 0), 'Matthew reading was not aligned across languages');
       const differentAlignment = buildStrictReadingCitationAlignment('gospel', sameOptions, {...sameSection, cit_zh:'聖瑪竇福音 1,18-25'});
       check(differentAlignment.length === 2, 'Different ranges need separate options');
       state.liturgicalDateContext = {date, localDate:date};
@@ -125,8 +155,9 @@ const root = path.resolve(__dirname, '..');
         check(!element.querySelector('select.select-inline'),id+' unnecessary choice');
         check(element.textContent.includes(id==='reading1'?'中文讀經正文':id==='psalm'?'殿宇':'真理聖化'),id+' official target lost');
       }
-      check(buildParallelPassageAlignment('psalm',sameOptions,{cit_kr:'시편 84(83),3-6.12',cit_zh:'詠八三3-6,9,12'}).length===0,'Unreviewed Psalm difference collapsed');
-      check(buildParallelPassageAlignment('reading1',{kr:[[],[]],zh:[[]]},sept11.reading1).length===0,'Explicit alternatives collapsed');
+      check(buildParallelPassageAlignment('psalm',sameOptions,{cit_kr:'시편 84(83),3-6.12',cit_zh:'詠八三3-6,9,12'}).length===1,'Same responsorial Psalm split by stanza notation');
+      const explicitAlternatives=buildParallelPassageAlignment('reading1',{kr:[[],[]],zh:[[]]},sept11.reading1);
+      check(explicitAlternatives.length===2 && explicitAlternatives.some(group=>group.kr===0&&group.zh===0) && explicitAlternatives.some(group=>group.kr===1&&group.zh===null),'Explicit source alternative was lost');
       // Actual source-only choices must offer AI on either side, including KR.
       for(const id of ['reading1','psalm']) {
         aiTranslationRecords.clear();

@@ -39,7 +39,10 @@
   function parse(value, lang) {
     const code = language(lang);
     const koreanSuffixes = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f'};
-    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => koreanSuffixes[c])).replace(/\s*[（(]◎[^)）]*[)）]\s*$/u,'').replace(/\s*(?:참고|참조)$/u,'').replace(/^(?:cf\.?|cfr\.?|x\.?|see)\s+/,'')
+    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => koreanSuffixes[c]))
+      .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
+      .replace(/\s*(?:참고|참조|参照|參照|參閱)$/u,'')
+      .replace(/^(?:cf\.?|cfr\.?|x\.?|see|vgl\.?)\s+/,'')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
@@ -55,10 +58,10 @@
         // Dots separate verses. In comma-style notation a descending endpoint
         // followed by a comma denotes a chapter boundary: 5,20-6,2.
         .replace(/[–—−~～]/g,'-')
-        .replace(/(\d+)([a-f]*)-(\d+),(\d+)/g, (all,start,suffix,end,verse) =>
+        .replace(/(\d+)([a-z]*)-(\d+),(\d+)/g, (all,start,suffix,end,verse) =>
           Number(end) < Number(start) ? start+suffix+'-'+end+':'+verse : all)
         .replace(/[,、]/g,'.').replace(/[。.]$/,'');
-      if (!/^[0-9a-f.:;+-]+$/i.test(verses)) return null;
+      if (!/^[0-9a-z.:;+-]+$/i.test(verses)) return null;
       // Retain the entire range, subverses, cross-chapter boundaries and explicit
       // alternate Psalm number. No inferred Hebrew/LXX verse equivalence.
       const reference = chapter + (match[2] ? '('+match[2]+')' : '') + ':' + verses;
@@ -66,11 +69,44 @@
     }
     return null;
   }
+  function wholeVerseCoverage(parsed) {
+    if (!parsed || !parsed.verses) return '';
+    const source = parsed.verses.toLowerCase()
+      .replace(/(\d+)[a-z]-[a-z](?!\d)/g,'$1')
+      .replace(/[a-z]/g,'')
+      .replace(/[;+]/g,'.');
+    // A colon inside the verse expression marks a cross-chapter boundary.
+    // Keep that boundary exact because expanding it would require knowing the
+    // verse count of every chapter in every canon/translation.
+    if (source.includes(':')) return source.replace(/\.+/g,'.').replace(/^\.|\.$/g,'');
+    const verses = new Set();
+    for (const part of source.split('.').filter(Boolean)) {
+      const match = part.match(/^(\d+)(?:-(\d+))?$/);
+      if (!match) return '';
+      const start = Number(match[1]), end = Number(match[2] || match[1]);
+      if (end < start || end-start > 200) return '';
+      for (let number=start; number<=end; number+=1) verses.add(number);
+    }
+    return [...verses].sort((a,b) => a-b).join(',');
+  }
+  function comparisonKeys(value,lang,options={}) {
+    const parsed=parse(value,lang);
+    if (!parsed) return [];
+    const verses=options.ignoreSubverses ? wholeVerseCoverage(parsed) : parsed.verses;
+    if (!verses) return [];
+    return [...new Set([parsed.chapter,parsed.alternateChapter].filter(Number.isInteger))]
+      .map(chapter => parsed.id+':'+chapter+':'+verses);
+  }
+  function equivalent(left,leftLang,right,rightLang,options={}) {
+    const leftKeys=comparisonKeys(left,leftLang,options);
+    const rightKeys=new Set(comparisonKeys(right,rightLang,options));
+    return leftKeys.length>0 && leftKeys.some(key => rightKeys.has(key));
+  }
   function key(value,lang) {
     if (!String(value || '').trim()) return '';
     const parsed=parse(value,lang);
     return parsed ? parsed.key : '?'+language(lang)+':'+fold(value).replace(/\s+/g,'');
   }
-  root.bibleCitation = Object.freeze({language, entries, resolve, parse, key, hanNumber});
+  root.bibleCitation = Object.freeze({language, entries, resolve, parse, key, hanNumber, wholeVerseCoverage, comparisonKeys, equivalent});
   if (typeof module !== 'undefined' && module.exports) module.exports = root.bibleCitation;
 })(globalThis);

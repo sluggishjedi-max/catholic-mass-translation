@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260911-PASSAGES-PRAYERS';
+    const APP_VERSION = 'V27.7-20260916-CANONICAL-PASSAGES';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -12382,7 +12382,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             : options.map((_, index) => index === 0 && section.cit_kr ? { cit_kr: section.cit_kr } : {});
         const duplicate = existingCits.some(entry => {
             const citation = entry && entry.cit_kr;
-            return citation && !citationsAreDifferent(citation, properSection.cit_kr, 'KR', 'KR');
+            return citation && passageCitationsEquivalent(baseId, citation, properSection.cit_kr, 'KR', 'KR');
         });
         if (duplicate) return section;
         const labels = Array.isArray(section.optionLabels) ? section.optionLabels.slice() : [];
@@ -14488,9 +14488,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function buildFallbackVariantAlignment(baseId, optionMap, section = {}) {
         const parallel = buildParallelPassageAlignment(baseId, optionMap, section);
-        if (parallel.length) return parallel;
-        const groups = [];
+        if (parallel.length && !variantAlignmentNeedsSemanticCompletion(parallel)) return parallel;
+        const groups = matchedVariantAlignmentGroups(parallel).map(group => Object.assign({}, group));
         const used = new Set();
+        groups.forEach(group => Object.keys(group).forEach(lower => {
+            if (Number.isInteger(group[lower])) used.add(`${lower}:${group[lower]}`);
+        }));
         const semanticGroups = {};
         Object.keys(optionMap || {}).forEach(lower => {
             optionMap[lower].forEach((option, index) => {
@@ -14547,42 +14550,134 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return cleanNodeText(optionCitation || (index === 0 ? directCitationForLower(section, lower) : ''));
     }
 
-    // Exact citations remain distinct; this controls only side-by-side display.
-    // Never coalesce explicit long/short options from the same source.
+    function parsedCitationChapters(parsed) {
+        return new Set([parsed && parsed.chapter, parsed && parsed.alternateChapter].filter(Number.isInteger));
+    }
+
+    function parsedCitationsShareChapter(left, right) {
+        if (!left || !right || left.id !== right.id) return false;
+        const rightChapters = parsedCitationChapters(right);
+        return [...parsedCitationChapters(left)].some(chapter => rightChapters.has(chapter));
+    }
+
+    function passageCitationsEquivalent(baseId, leftCitation, rightCitation, leftLang, rightLang) {
+        if (globalThis.bibleCitation.equivalent(
+            leftCitation,
+            leftLang,
+            rightCitation,
+            rightLang,
+            { ignoreSubverses: true }
+        )) return true;
+        const left = globalThis.bibleCitation.parse(leftCitation, leftLang);
+        const right = globalThis.bibleCitation.parse(rightCitation, rightLang);
+        if (baseId !== 'psalm' || !parsedCitationsShareChapter(left, right) || left.id !== 'PSA') return false;
+        const a = globalThis.bibleCitation.wholeVerseCoverage(left);
+        const b = globalThis.bibleCitation.wholeVerseCoverage(right);
+        const chapters = parsedCitationChapters(left);
+        // Reviewed KR/TW Psalm 84(83): the same refrain and four stanzas are
+        // printed with verse 8 included only by the Taiwan source.
+        return chapters.has(83)
+            && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(a)
+            && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(b);
+    }
+
+    // Unknown syntax is not evidence that two official sources chose different
+    // passages. A difference is trusted only when both citations parse. For a
+    // responsorial Psalm, different stanza lists within the same Psalm are also
+    // inconclusive because conferences print verse numbering and stanza detail
+    // differently.
+    function passageCitationsConflict(baseId, leftCitation, rightCitation, leftLang, rightLang) {
+        const left = globalThis.bibleCitation.parse(leftCitation, leftLang);
+        const right = globalThis.bibleCitation.parse(rightCitation, rightLang);
+        if (!left || !right) return false;
+        if (passageCitationsEquivalent(baseId, leftCitation, rightCitation, leftLang, rightLang)) return false;
+        if (baseId === 'psalm' && left.id === 'PSA' && parsedCitationsShareChapter(left, right)) return false;
+        return true;
+    }
+
+    function orderedPassageOptionLowers(optionMap) {
+        const active = currentLeftRightLowerKeys();
+        return [active.left, 'kr', active.right, ...SUPPORTED_LANGS.map(lang => lang.toLowerCase())]
+            .filter((lower, index, list) => lower && list.indexOf(lower) === index && Array.isArray(optionMap[lower]) && optionMap[lower].length);
+    }
+
+    // Align every supported language through the same canonical passage path.
+    // A source's own alternatives are never coalesced with each other. With a
+    // single option per language, section identity is the fallback for the five
+    // Scripture proclamation sections whenever no parsed pair proves a conflict;
+    // this also makes future language additions resilient while aliases mature.
     function buildParallelPassageAlignment(baseId, optionMap, section = {}) {
-        if (!['reading1', 'reading2', 'psalm', 'gospel'].includes(baseId)) return [];
-        const lowers = Object.keys(optionMap || {}).filter(lower => optionMap[lower]?.length);
-        if (lowers.length < 2 || lowers.some(lower => optionMap[lower].length !== 1)) return [];
-        const parsed = lowers.map(lower => bibleCitation.parse(strictReadingOptionCitation(section, lower, 0), lower));
-        if (parsed.some(item => !item)) return [];
-        const wholeVerses = item => {
-            if (/[:;]/.test(item.verses)) return ''; // Cross-chapter: exact matching only.
-            const verses = new Set();
-            for (const part of item.verses.replace(/[a-f]/g, '').split('.')) {
-                const match = part.match(/^(\d+)(?:-(\d+))?$/);
-                if (!match) return '';
-                const start = Number(match[1]), end = Number(match[2] || match[1]);
-                if (end < start || end - start > 180) return '';
-                for (let n = start; n <= end; n++) verses.add(n);
+        const scriptureSectionIds = ['reading1', 'reading2', 'psalm', 'gospel_accl', 'gospel'];
+        if (![...scriptureSectionIds, 'entrance', 'communion'].includes(baseId)) return [];
+        const lowers = orderedPassageOptionLowers(optionMap);
+        if (lowers.length < 2) return [];
+        if (lowers.every(lower => optionMap[lower].length === 1)) {
+            const parsed = lowers.map(lower => globalThis.bibleCitation.parse(strictReadingOptionCitation(section, lower, 0), lower));
+            if (!scriptureSectionIds.includes(baseId) && parsed.some(item => !item)) return [];
+            for (let i = 0; i < lowers.length; i += 1) {
+                for (let j = i + 1; j < lowers.length; j += 1) {
+                    const left = lowers[i], right = lowers[j];
+                    if (passageCitationsConflict(
+                        baseId,
+                        strictReadingOptionCitation(section, left, 0),
+                        strictReadingOptionCitation(section, right, 0),
+                        left,
+                        right
+                    )) return [];
+                }
             }
-            return [...verses].sort((a,b) => a-b).join(',');
-        };
-        const anchor = parsed[0];
-        if (!parsed.every(item => {
-            if (item.id !== anchor.id) return false;
-            const chapters = new Set([anchor.chapter, anchor.alternateChapter].filter(Boolean));
-            if (![item.chapter, item.alternateChapter].filter(Boolean).some(chapter => chapters.has(chapter))) return false;
-            const a = wholeVerses(anchor), b = wholeVerses(item);
-            if (!a || !b) return anchor.key === item.key;
-            if (a === b) return true;
-            // Reviewed KR/TW Psalm 84(83): same refrain and four stanzas.
-            // TW adds verse 8 to stanza 3. Preserve both texts and citations.
-            // No general "overlapping verses = same psalm" heuristic.
-            return baseId === 'psalm' && chapters.has(83)
-                && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(a)
-                && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(b);
-        })) return [];
-        return normalizeVariantAlignmentGroups(optionMap, [Object.fromEntries(lowers.map(lower => [lower, 0]))]);
+            return normalizeVariantAlignmentGroups(optionMap, [Object.fromEntries(lowers.map(lower => [lower, 0]))]);
+        }
+
+        const groups = [];
+        lowers.forEach(lower => {
+            optionMap[lower].forEach((_, index) => {
+                const citation = strictReadingOptionCitation(section, lower, index);
+                if (!globalThis.bibleCitation.parse(citation, lower)) return;
+                const candidates = groups.filter(group => !Number.isInteger(group.mapping[lower]) && group.records.some(record =>
+                    passageCitationsEquivalent(baseId, citation, record.citation, lower, record.lower)
+                ));
+                if (candidates.length !== 1) {
+                    groups.push({ mapping: { [lower]: index }, records: [{ lower, index, citation }] });
+                    return;
+                }
+                candidates[0].mapping[lower] = index;
+                candidates[0].records.push({ lower, index, citation });
+            });
+        });
+        const matched = groups
+            .filter(group => Object.keys(group.mapping).length >= 2)
+            .map(group => group.mapping);
+        const used = new Set();
+        matched.forEach(group => Object.keys(group).forEach(lower => {
+            if (Number.isInteger(group[lower])) used.add(`${lower}:${group[lower]}`);
+        }));
+        ['common', 'proper'].forEach(kind => {
+            const compatibleGroups = matched.filter(group => {
+                const kinds = new Set(Object.keys(group).map(lower => {
+                    const values = section[`optionKinds_${lower}`];
+                    return Array.isArray(values) ? values[group[lower]] : '';
+                }).filter(Boolean));
+                return kinds.size === 1 && kinds.has(kind);
+            });
+            if (compatibleGroups.length > 1) return;
+            const target = compatibleGroups.length === 1 ? compatibleGroups[0] : {};
+            let additions = 0;
+            lowers.forEach(lower => {
+                if (Number.isInteger(target[lower])) return;
+                const kinds = section[`optionKinds_${lower}`];
+                if (!Array.isArray(kinds)) return;
+                const candidates = kinds
+                    .map((value, index) => value === kind && !used.has(`${lower}:${index}`) ? index : -1)
+                    .filter(index => index >= 0);
+                if (candidates.length !== 1) return;
+                target[lower] = candidates[0];
+                used.add(`${lower}:${candidates[0]}`);
+                additions += 1;
+            });
+            if (!compatibleGroups.length && additions >= 2) matched.push(target);
+        });
+        return matched.length ? normalizeVariantAlignmentGroups(optionMap, matched) : [];
     }
 
     function buildStrictReadingCitationAlignment(baseId, optionMap, section = {}) {
@@ -14591,28 +14686,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (parallel.length) return parallel;
         const lowers = Object.keys(optionMap || {}).filter(lower => Array.isArray(optionMap[lower]) && optionMap[lower].length);
         if (!lowers.length) return [];
-        const groupsByCitation = {};
-        let citedOptions = 0;
         let maxOptions = 0;
-        lowers.forEach(lower => {
-            maxOptions = Math.max(maxOptions, optionMap[lower].length);
-            optionMap[lower].forEach((_, index) => {
-                const citation = strictReadingOptionCitation(section, lower, index);
-                if (!citation) return;
-                const keys = citationStartsForCompare(citation, lower);
-                const key = keys[0] || normalizedCitationForCompare(citation, lower);
-                if (!key) return;
-                citedOptions += 1;
-                if (!groupsByCitation[key]) groupsByCitation[key] = {};
-                if (!Number.isInteger(groupsByCitation[key][lower])) groupsByCitation[key][lower] = index;
-            });
-        });
-        const proposed = Object.values(groupsByCitation).filter(group => Object.keys(group).length >= 2);
-        const normalized = normalizeVariantAlignmentGroups(optionMap, proposed);
-        const totalOptions = lowers.reduce((sum, lower) => sum + optionMap[lower].length, 0);
-        if (totalOptions < 2) return [];
-        if (!proposed.length && maxOptions < 2 && citedOptions < 2) return [];
-        return normalized;
+        lowers.forEach(lower => { maxOptions = Math.max(maxOptions, optionMap[lower].length); });
+        if (maxOptions >= 2) return normalizeVariantAlignmentGroups(optionMap, []);
+        for (let i = 0; i < lowers.length; i += 1) {
+            for (let j = i + 1; j < lowers.length; j += 1) {
+                const left = lowers[i], right = lowers[j];
+                if (passageCitationsConflict(
+                    baseId,
+                    strictReadingOptionCitation(section, left, 0),
+                    strictReadingOptionCitation(section, right, 0),
+                    left,
+                    right
+                )) return normalizeVariantAlignmentGroups(optionMap, []);
+            }
+        }
+        return [];
     }
 
     function normalizeBibleAliasForCompare(value) {
@@ -14698,14 +14787,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function citationStartsForCompare(value, lang) {
-        // Legacy name: compare full ranges, never only the first verse.
-        const parsed = globalThis.bibleCitation.parse(value, lang);
-        if (!parsed) return [];
-        // Only explicitly printed dual numbering creates an alias; do not
-        // infer Hebrew/LXX numbers (or verse offsets) for unqualified citations.
-        if (parsed.id === 'PSA') return [parsed.chapter, parsed.alternateChapter]
-            .filter(Boolean).map(chapter => 'PSA:' + chapter + ':' + parsed.verses);
-        return [parsed.key];
+        // Legacy name: compare complete whole-verse coverage, never only the
+        // first verse. Subverse letters differ among authorized lectionaries.
+        return globalThis.bibleCitation.comparisonKeys(value, lang, { ignoreSubverses: true });
     }
 
     function directCitationForLower(section, lower) {
@@ -14716,13 +14800,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return '';
     }
 
-    function citationsAreDifferent(leftCitation, rightCitation, leftLang, rightLang) {
-        const leftKeys = citationStartsForCompare(leftCitation, leftLang);
-        const rightKeys = citationStartsForCompare(rightCitation, rightLang);
-        if (leftKeys.some(key => rightKeys.includes(key))) return false;
-        const left = normalizedCitationForCompare(leftCitation, leftLang);
-        const right = normalizedCitationForCompare(rightCitation, rightLang);
-        return !!(left && right && left !== right);
+    function citationsAreDifferent(leftCitation, rightCitation, leftLang, rightLang, baseId = '') {
+        return passageCitationsConflict(baseId, leftCitation, rightCitation, leftLang, rightLang);
     }
 
     function currentLeftRightLowerKeys() {
@@ -14757,7 +14836,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (fallbackAlignment.some(group => Number.isInteger(group[left]) && Number.isInteger(group[right]))) return [];
         const leftCitation = directCitationForLower(section, left);
         const rightCitation = directCitationForLower(section, right);
-        if (!citationsAreDifferent(leftCitation, rightCitation, left, right)) return [];
+        if (!citationsAreDifferent(leftCitation, rightCitation, left, right, baseId)) return [];
         const groups = [
             { [left]: 0 },
             { [right]: 0 }
@@ -14779,7 +14858,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align6-parallel-passages';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align7-canonical-passages';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -14925,7 +15004,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const leftCitation = strictReadingOptionCitation(section, left, 0);
                 const rightCitation = strictReadingOptionCitation(section, right, 0);
                 if ((leftKey && rightKey && leftKey !== rightKey)
-                    || (leftCitation && rightCitation && citationsAreDifferent(leftCitation, rightCitation, left, right))) {
+                    || (leftCitation && rightCitation && citationsAreDifferent(leftCitation, rightCitation, left, right, baseId))) {
                     return normalizeVariantAlignmentGroups(optionMap, []);
                 }
             }
@@ -18593,7 +18672,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!leftKey || !rightKey || leftKey === rightKey) return false;
         const leftCitation = citationForDisplayData(data, leftKey);
         const rightCitation = citationForDisplayData(data, rightKey);
-        return !!(leftCitation && rightCitation && !citationsAreDifferent(leftCitation, rightCitation, leftKey, rightKey));
+        return !!(leftCitation && rightCitation && passageCitationsEquivalent('', leftCitation, rightCitation, leftKey, rightKey));
     }
 
     function hasLocalProperNameMarker(text) {

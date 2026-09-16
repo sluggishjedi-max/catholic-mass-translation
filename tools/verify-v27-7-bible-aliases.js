@@ -9,8 +9,11 @@ for (const table of Object.values(globalThis.bibleLanguageTables)) {
     for (const alias of book.aliases) {
       const actual = bible.resolve(alias,table.appLanguage);
       assert(!actual || actual.id === id,'Wrong-language or ambiguous alias silently selected: '+alias);
+      if (actual) assert.equal(bible.parse(`${alias} 1,1`,table.appLanguage)?.id,id,`Citation parser rejected ${table.appLanguage}: ${alias}`);
     }
   }
+  const matthew = `${table.books.MAT.name} 1,18-23`;
+  assert(bible.equivalent(matthew,table.appLanguage,'Matthew 1:18-23','EN',{ignoreSubverses:true}),`${table.appLanguage} Matthew comparison`);
 }
 for (const [lang,alias,id] of [['DE','Mk','MRK'],['VN','Mk','MIC'],['IT','Gv','JHN'],['VN','Gv','ECC'],['PT','Jo','JHN'],['ES','Hch','ACT'],['ZH','若蘇厄書','JOS'],['ZH','聖瑪谷福音','MRK'],['EN','Mark','MRK']]) assert.equal(bible.resolve(alias,lang)?.id,id);
 for (const alias of ['若','瑪','厄','雅','Jud']) assert.equal(bible.resolve(alias,'ZH'),null,alias+' must remain ambiguous');
@@ -32,4 +35,13 @@ assert.equal(bible.parse('聖保祿宗徒致格林多人前書 9,16-19, 22-27','
 assert.equal(bible.parse('시편 84(83),3.4.5-6.12(◎ 2)','KR').alternateChapter,83);
 assert.equal(bible.parse('詠八三3-6, 8, 12','ZH').verses,'3-6.8.12');
 assert.equal(bible.parse('1코린 8,1-7,11-13','KR').verses,'1-7.11-13');
-console.log('10 language tables × 73 books; collisions, discontinuous verses, Psalm response notes and cross-chapter checks passed.');
+assert(bible.equivalent('1코린 9,16-19.22ㄴ-27','KR','聖保祿宗徒致格林多人前書 9,16-19, 22-27','ZH',{ignoreSubverses:true}),'Whole-verse subletter equivalence');
+assert(bible.equivalent('시편 84(83),3.4.5-6.12(◎ 2)','KR','Ps 83:3-6,12','EN',{ignoreSubverses:true}),'Explicit dual Psalm numbering');
+assert(!bible.equivalent('마태 1,1-25','KR','Matthew 1:1-23','EN',{ignoreSubverses:true}),'Long/short range distinction');
+assert.equal(bible.wholeVerseCoverage(bible.parse('1코린 9,16-19.22ㄴ-27','KR')),'16,17,18,19,22,23,24,25,26,27');
+assert.equal(bible.wholeVerseCoverage(bible.parse('마태 1,3a-c','KR')),'3');
+assert(bible.equivalent('Tv 95,1-3 (Đ. x. 7b)','VN','Ps 95:1-3','EN',{ignoreSubverses:true}),'Vietnamese Psalm response marker');
+assert(bible.equivalent('Vgl. Mt 1,18-23','DE','Matthew 1:18-23','EN',{ignoreSubverses:true}),'German reference prefix');
+assert(bible.equivalent('マタ 1,18-23 参照','JP','Matthew 1:18-23','EN',{ignoreSubverses:true}),'Japanese reference suffix');
+assert(bible.equivalent('Ps 95:1-3 (see 7b)','EN','Ps 95:1-3','EN',{ignoreSubverses:true}),'English Psalm response reference');
+console.log('10 language tables × 73 books; all resolvable aliases, whole-verse coverage, collisions, Psalm numbering and cross-chapter checks passed.');
