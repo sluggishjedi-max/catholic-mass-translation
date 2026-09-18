@@ -75,6 +75,11 @@
         return !allowed.length || allowed.includes(locationCode);
     }
 
+    function isArchdioceseRecord(diocese) {
+        const labels = [diocese && diocese.name].concat(diocese && diocese.aliases || []).join(' ');
+        return /\barchdiocese\b|\barcidiocesi\b|\barquidiocese\b|\barquidiócesis\b|\berzbistum\b|tổng\s+giáo\s+phận|대교구|大司教区|總教區/iu.test(labels);
+    }
+
     function contextForRecord(diocese, conference) {
         if (!diocese) return null;
         return {
@@ -82,6 +87,7 @@
             ordinary: diocese.ordinary || null,
             auxiliaries: Array.isArray(diocese.auxiliaries) ? diocese.auxiliaries : [],
             collaboratorSummary: !!diocese.collaboratorSummary,
+            isArchdiocese: isArchdioceseRecord(diocese),
             sourceUrls: Array.isArray(diocese.sourceUrls) ? diocese.sourceUrls : [],
             conference: conference ? { id: conference.id, name: conference.name } : null
         };

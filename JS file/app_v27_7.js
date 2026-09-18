@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260918-UNIFIED-VARIANTS-EP4';
+    const APP_VERSION = 'V27.7-20260918-BISHOPS-EP1-4';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -18151,9 +18151,60 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/(교황\s*)(?:\[[^\]]*\]|\([^)]*\)|\?{1,4})(\s*와(?:\(과\))?)/gu, `$1${popeNameHtml}$2`);
     }
 
+    const bishopBaptismalNameLocalizations = Object.freeze({
+        simon: { kr: '시몬', vn: 'Simôn', en: 'Simon', jp: 'シモン', la: 'Simon', zh: '西滿', it: 'Simone', pt: 'Simão', es: 'Simón', de: 'Simon' },
+        mathias: { kr: '마티아', vn: 'Mátthia', en: 'Matthias', jp: 'マティア', la: 'Matthias', zh: '瑪弟亞', it: 'Mattia', pt: 'Matias', es: 'Matías', de: 'Matthias' },
+        matthias: { kr: '마티아', vn: 'Mátthia', en: 'Matthias', jp: 'マティア', la: 'Matthias', zh: '瑪弟亞', it: 'Mattia', pt: 'Matias', es: 'Matías', de: 'Matthias' },
+        germanus: { kr: '제르마노', vn: 'Germanô', en: 'Germanus', jp: 'ゲルマノ', la: 'Germanus', zh: '日爾曼', it: 'Germano', pt: 'Germano', es: 'Germán', de: 'Germanus' },
+        peter: { kr: '베드로', vn: 'Phêrô', en: 'Peter', jp: 'ペトロ', la: 'Petrus', zh: '伯多祿', it: 'Pietro', pt: 'Pedro', es: 'Pedro', de: 'Petrus' },
+        job: { kr: '욥', vn: 'Gióp', en: 'Job', jp: 'ヨブ', la: 'Iob', zh: '約伯', it: 'Giobbe', pt: 'Jó', es: 'Job', de: 'Ijob' },
+        paul: { kr: '바오로', vn: 'Phaolô', en: 'Paul', jp: 'パウロ', la: 'Paulus', zh: '保祿', it: 'Paolo', pt: 'Paulo', es: 'Pablo', de: 'Paulus' },
+        augustine: { kr: '아우구스티노', vn: 'Augustinô', en: 'Augustine', jp: 'アウグスティノ', la: 'Augustinus', zh: '奧思定', it: 'Agostino', pt: 'Agostinho', es: 'Agustín', de: 'Augustinus' },
+        stephen: { kr: '스테파노', vn: 'Stêphanô', en: 'Stephen', jp: 'ステファノ', la: 'Stephanus', zh: '斯德望', it: 'Stefano', pt: 'Estêvão', es: 'Esteban', de: 'Stephanus' },
+        thaddeus: { kr: '타대오', vn: 'Tađêô', en: 'Thaddeus', jp: 'タデオ', la: 'Thaddaeus', zh: '達陡', it: 'Taddeo', pt: 'Tadeu', es: 'Tadeo', de: 'Thaddäus' },
+        johnbosco: { kr: '요한 보스코', vn: 'Gioan Bosco', en: 'John Bosco', jp: 'ヨハネ・ボスコ', la: 'Ioannes Bosco', zh: '若望·鮑思高', it: 'Giovanni Bosco', pt: 'João Bosco', es: 'Juan Bosco', de: 'Johannes Bosco' },
+        joseph: { kr: '요셉', vn: 'Giuse', en: 'Joseph', jp: 'ヨセフ', la: 'Ioseph', zh: '若瑟', it: 'Giuseppe', pt: 'José', es: 'José', de: 'Josef' },
+        jose: { kr: '요셉', vn: 'Giuse', en: 'Joseph', jp: 'ヨセフ', la: 'Ioseph', zh: '若瑟', it: 'Giuseppe', pt: 'José', es: 'José', de: 'Josef' },
+        pius: { kr: '비오', vn: 'Piô', en: 'Pius', jp: 'ピオ', la: 'Pius', zh: '庇護', it: 'Pio', pt: 'Pio', es: 'Pío', de: 'Pius' },
+        johnchrysostom: { kr: '요한 크리소스토모', vn: 'Gioan Kim Khẩu', en: 'John Chrysostom', jp: 'ヨハネ・クリゾストモ', la: 'Ioannes Chrysostomus', zh: '金口若望', it: 'Giovanni Crisostomo', pt: 'João Crisóstomo', es: 'Juan Crisóstomo', de: 'Johannes Chrysostomos' },
+        linus: { kr: '리노', vn: 'Linô', en: 'Linus', jp: 'リノ', la: 'Linus', zh: '理諾', it: 'Lino', pt: 'Lino', es: 'Lino', de: 'Linus' },
+        johnbaptist: { kr: '요한 세례자', vn: 'Gioan Tẩy Giả', en: 'John Baptist', jp: '洗礼者ヨハネ', la: 'Ioannes Baptista', zh: '洗者若翰', it: 'Giovanni Battista', pt: 'João Batista', es: 'Juan Bautista', de: 'Johannes Baptist' },
+        benedict: { kr: '베네딕토', vn: 'Bênêđictô', en: 'Benedict', jp: 'ベネディクト', la: 'Benedictus', zh: '本篤', it: 'Benedetto', pt: 'Bento', es: 'Benedicto', de: 'Benedikt' },
+        titus: { kr: '티토', vn: 'Titô', en: 'Titus', jp: 'ティト', la: 'Titus', zh: '弟鐸', it: 'Tito', pt: 'Tito', es: 'Tito', de: 'Titus' },
+        john: { kr: '요한', vn: 'Gioan', en: 'John', jp: 'ヨハネ', la: 'Ioannes', zh: '若望', it: 'Giovanni', pt: 'João', es: 'Juan', de: 'Johannes' },
+        basil: { kr: '바실리오', vn: 'Basiliô', en: 'Basil', jp: 'バジリオ', la: 'Basilius', zh: '巴西略', it: 'Basilio', pt: 'Basílio', es: 'Basilio', de: 'Basilius' },
+        emmanuel: { kr: '임마누엘', vn: 'Emmanuel', en: 'Emmanuel', jp: 'エマヌエル', la: 'Emmanuel', zh: '厄瑪奴耳', it: 'Emanuele', pt: 'Emanuel', es: 'Emmanuel', de: 'Immanuel' },
+        tarcisius: { kr: '타르치시오', vn: 'Tarcisiô', en: 'Tarcisius', jp: 'タルチシオ', la: 'Tarcisius', zh: '達西修', it: 'Tarcisio', pt: 'Tarcísio', es: 'Tarsicio', de: 'Tarcisius' },
+        andrea: { kr: '안드레아', vn: 'Anrê', en: 'Andrea', jp: 'アンドレア', la: 'Andreas', zh: '安德肋', it: 'Andrea', pt: 'André', es: 'Andrés', de: 'Andreas' },
+        thomasaquinas: { kr: '토마스 아퀴나스', vn: 'Tôma Aquinô', en: 'Thomas Aquinas', jp: 'トマス・アクィナス', la: 'Thomas Aquinas', zh: '多瑪斯·阿奎納', it: "Tommaso d'Aquino", pt: 'Tomás de Aquino', es: 'Tomás de Aquino', de: 'Thomas von Aquin' },
+        michael: { kr: '미카엘', vn: 'Micae', en: 'Michael', jp: 'ミカエル', la: 'Michael', zh: '彌額爾', it: 'Michele', pt: 'Miguel', es: 'Miguel', de: 'Michael' },
+        josepmaria: { kr: '요셉 마리아', vn: 'Giuse Maria', en: 'Josep Maria', jp: 'ヨゼフ・マリア', la: 'Ioseph Maria', zh: '若瑟·瑪利亞', it: 'Giuseppe Maria', pt: 'José Maria', es: 'José María', de: 'Josef Maria' },
+        bernard: { kr: '베르나르도', vn: 'Bênađô', en: 'Bernard', jp: 'ベルナルド', la: 'Bernardus', zh: '伯爾納鐸', it: 'Bernardo', pt: 'Bernardo', es: 'Bernardo', de: 'Bernhard' },
+        dominic: { kr: '도미니코', vn: 'Đaminh', en: 'Dominic', jp: 'ドミニコ', la: 'Dominicus', zh: '道明', it: 'Domenico', pt: 'Domingos', es: 'Domingo', de: 'Dominikus' },
+        vincent: { kr: '빈첸시오', vn: 'Vinh Sơn', en: 'Vincent', jp: 'ヴィンセンシオ', la: 'Vincentius', zh: '文生', it: 'Vincenzo', pt: 'Vicente', es: 'Vicente', de: 'Vinzenz' },
+        alphonse: { kr: '알폰소', vn: 'Alphongsô', en: 'Alphonse', jp: 'アルフォンソ', la: 'Alphonsus', zh: '亞豐索', it: 'Alfonso', pt: 'Afonso', es: 'Alfonso', de: 'Alfons' },
+        louis: { kr: '루도비코', vn: 'Louis', en: 'Louis', jp: 'ルイ', la: 'Ludovicus', zh: '類斯', it: 'Luigi', pt: 'Luís', es: 'Luis', de: 'Ludwig' },
+        matthew: { kr: '마태오', vn: 'Matthêô', en: 'Matthew', jp: 'マタイ', la: 'Matthaeus', zh: '瑪竇', it: 'Matteo', pt: 'Mateus', es: 'Mateo', de: 'Matthäus' },
+        aloysius: { kr: '알로이시오', vn: 'Aloisiô', en: 'Aloysius', jp: 'アロイシオ', la: 'Aloysius', zh: '類思', it: 'Aloisio', pt: 'Aloísio', es: 'Aloisio', de: 'Aloisius' }
+    });
+
+    function bishopBaptismalNameKey(person) {
+        return cleanNodeText(person && (person.en || person.la || person.fullName))
+            .normalize('NFD').replace(/[\u0300-\u036f]/gu, '').toLowerCase().replace(/[^a-z]+/gu, '');
+    }
+
     function localizedBishopName(person, langKey) {
         if (!person) return '';
-        return cleanNodeText(person[langKey] || person.en || person.kr || person.vn || person.la || person.jp);
+        const localized = bishopBaptismalNameLocalizations[bishopBaptismalNameKey(person)];
+        return cleanNodeText((localized && localized[langKey]) || person[langKey] || person.en || person.kr || person.vn || person.la || person.jp);
+    }
+
+    function bishopContextIsArchdiocese(context) {
+        if (!context) return false;
+        if (context.isArchdiocese) return true;
+        const diocese = cleanNodeText(context.diocese);
+        if (diocese) return /\barchdiocese\b|\barcidiocesi\b|\barquidiocese\b|\barquidiócesis\b|\berzbistum\b|tổng\s+giáo\s+phận|대교구|大司教区|總教區/iu.test(diocese);
+        return !!context.collaboratorSummary;
     }
 
     function koreanNameParticle(name) {
@@ -18174,7 +18225,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const ordinary = `${renderName(context.ordinary)}${koreanNameParticle(ordinaryName)}`;
         const auxiliaries = includeAuxiliaries && Array.isArray(context.auxiliaries) ? context.auxiliaries : [];
         if (!auxiliaries.length) return ordinary;
-        if (context.collaboratorSummary) return `${ordinary}, 협력주교들과`;
+        if (bishopContextIsArchdiocese(context)) return `${ordinary} 협력 주교들과`;
         return [ordinary].concat(auxiliaries.map(person => {
             const name = localizedBishopName(person, 'kr');
             return `${renderName(person)}${koreanNameParticle(name)}`;
@@ -18192,7 +18243,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .filter(Boolean);
         if (names.length < 2) return names[0] || '';
         if (langKey === 'jp') return names.join('、');
-        const conjunction = langKey === 'vn' ? ' và ' : langKey === 'la' ? ' et ' : langKey === 'en' ? ' and ' : ', ';
+        const conjunction = ({ vn: ' và ', la: ' et ', en: ' and ', zh: '及', it: ' e ', pt: ' e ', es: ' y ', de: ' und ' })[langKey] || ', ';
         if (names.length === 2) return `${names[0]}${conjunction}${names[1]}`;
         const last = names.pop();
         const separator = langKey === 'en' ? ', and ' : conjunction;
@@ -18204,23 +18255,40 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (langKey === 'kr') return koreanBishopSequence(context, options);
         const html = !!options.html;
         const ordinary = joinLocalizedBishopNames([context.ordinary], langKey, { html });
-        const auxiliaries = Array.isArray(context.auxiliaries) ? context.auxiliaries : [];
+        const auxiliaries = options.includeAuxiliaries === false ? [] : (Array.isArray(context.auxiliaries) ? context.auxiliaries : []);
         if (!ordinary || !auxiliaries.length) return ordinary;
         const auxiliaryNames = joinLocalizedBishopNames(auxiliaries, langKey, { html });
+        const collaboratorSummary = bishopContextIsArchdiocese(context);
         if (langKey === 'vn') {
-            const title = context.collaboratorSummary
-                ? 'các Đức Giám Mục phụ tá'
-                : auxiliaries.length === 1 ? 'Đức Giám Mục phụ tá' : 'các Đức Giám Mục phụ tá';
-            return context.collaboratorSummary ? `${ordinary} và ${title}` : `${ordinary} và ${title} ${auxiliaryNames}`;
+            const title = collaboratorSummary
+                ? 'các Đức Giám mục phụ tá'
+                : auxiliaries.length === 1 ? 'Đức Giám mục phụ tá' : 'các Đức Giám mục phụ tá';
+            return collaboratorSummary ? `${ordinary} và ${title}` : `${ordinary} và ${title} ${auxiliaryNames}`;
         }
         if (langKey === 'jp') {
-            return context.collaboratorSummary ? `${ordinary}、補佐司教団` : `${ordinary}、補佐司教${auxiliaryNames}`;
+            return collaboratorSummary ? `${ordinary}、補佐司教団` : `${ordinary}、補佐司教${auxiliaryNames}`;
         }
         if (langKey === 'la') {
-            if (context.collaboratorSummary) return `${ordinary} eiusque Episcopis auxiliaribus`;
+            if (collaboratorSummary) return `${ordinary} eiusque Episcopis auxiliaribus`;
             const title = auxiliaries.length === 1 ? 'eiusque Episcopo auxiliari' : 'eiusque Episcopis auxiliaribus';
             return `${ordinary} ${title} ${auxiliaryNames}`;
         }
+        if (langKey === 'en') return collaboratorSummary
+            ? `${ordinary} and the Auxiliary Bishops`
+            : `${ordinary} and ${auxiliaryNames}, Auxiliary Bishop${auxiliaries.length === 1 ? '' : 's'}`;
+        if (langKey === 'zh') return collaboratorSummary ? `${ordinary}及輔理主教們` : `${ordinary}及輔理主教${auxiliaryNames}`;
+        if (langKey === 'it') return collaboratorSummary
+            ? `${ordinary} e i Vescovi ausiliari`
+            : `${ordinary} e ${auxiliaryNames}, Vescov${auxiliaries.length === 1 ? 'o ausiliario' : 'i ausiliari'}`;
+        if (langKey === 'pt') return collaboratorSummary
+            ? `${ordinary} e os Bispos auxiliares`
+            : `${ordinary} e ${auxiliaryNames}, Bispo${auxiliaries.length === 1 ? ' auxiliar' : 's auxiliares'}`;
+        if (langKey === 'es') return collaboratorSummary
+            ? `${ordinary} y los Obispos auxiliares`
+            : `${ordinary} y ${auxiliaryNames}, Obispo${auxiliaries.length === 1 ? ' auxiliar' : 's auxiliares'}`;
+        if (langKey === 'de') return collaboratorSummary
+            ? `${ordinary} und den Weihbischöfen`
+            : `${ordinary} und ${auxiliaryNames}, Weihbischof${auxiliaries.length === 1 ? '' : 'e'}`;
         return joinLocalizedBishopNames([context.ordinary].concat(auxiliaries), langKey, { html });
     }
 
@@ -18236,13 +18304,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const koreanPlaceholder = '(?:\\[(?:주교명|세례명)\\]|\\((?:주교명|세례명)\\)|아무|\\?{1,4})';
             output = output.replace(
                 new RegExp(`(저희\\s*주교\\s*)${koreanPlaceholder}\\s*(?:와(?:\\(과\\))?|과(?:\\(와\\))?)?`, 'gu'),
-                (match, prefix, offset, source) => {
-                    const remaining = source.slice(offset + match.length);
-                    const includeAuxiliaries = !/^\s*,?\s*세계의\s*모든\s*주교/u.test(remaining);
-                    return `${prefix}${koreanBishopSequence(context, { html: true, includeAuxiliaries })}`;
-                }
+                (match, prefix) => `${prefix}${koreanBishopSequence(context, { html: true })}`
             );
-            return output.replace(/(?:\[주교명\]|\(주교명\))/gu, ordinaryHtml);
+            return output.replace(/(?:\[주교명\]|\(주교명\))/gu, localizedBishopSequence(context, 'kr', { html: true }) || ordinaryHtml);
         }
         const bishopPattern = '(?:bishop name|bishop n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|司教名|\u4E3B\u6559\u540D|nome (?:do |del )?(?:bispo|vescovo)|nombre (?:del )?obispo|bischofsname|name des bischofs|nomen episcopi|episcopus n\\.?)';
         const bishopPlaceholder = new RegExp(`(?:\\(${bishopPattern}\\)|\\[${bishopPattern}\\])`, 'giu');
@@ -18250,11 +18314,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const auxiliaries = Array.isArray(context.auxiliaries) ? context.auxiliaries : [];
             const auxiliaryNames = joinLocalizedBishopNames(auxiliaries, 'en', { html: true });
             output = output.replace(bishopPlaceholder, ordinaryHtml);
+            output = output.replace(/(\b(?:our\s+)?Bishop\s+)N\.(?!\p{L})/giu, `$1${ordinaryHtml}`);
+            let auxiliaryDirectiveFound = false;
             output = output.replace(/,\s*\\?\(\s*and\s+Auxiliary\s+Bishops?\s*,?\s*\\?\)/giu, () => {
+                auxiliaryDirectiveFound = true;
                 if (!auxiliaries.length) return ',';
-                if (context.collaboratorSummary) return ', and the Auxiliary Bishops,';
+                if (bishopContextIsArchdiocese(context)) return ', and the Auxiliary Bishops,';
                 return `, and ${auxiliaryNames}, Auxiliary Bishop${auxiliaries.length === 1 ? '' : 's'},`;
             });
+            if (auxiliaries.length && !auxiliaryDirectiveFound) {
+                const auxiliaryPhrase = bishopContextIsArchdiocese(context)
+                    ? 'the Auxiliary Bishops'
+                    : `${auxiliaryNames}, Auxiliary Bishop${auxiliaries.length === 1 ? '' : 's'}`;
+                output = output.replace(
+                    /(<span class="muted-name-placeholder">[^<]*<\/span>\s+our\s+Bishop|our\s+Bishop\s+<span class="muted-name-placeholder">[^<]*<\/span>)/iu,
+                    `$1, and ${auxiliaryPhrase}`
+                );
+            }
             return output;
         }
         const sequenceHtml = localizedBishopSequence(context, langKey, { html: true }) || ordinaryHtml;
@@ -18262,8 +18338,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (langKey === 'vn' && Array.isArray(context.auxiliaries) && context.auxiliaries.length) {
             output = output.replace(/\s*,?\s*\\?\(\s*hay\s+Giám\s+Mục\s+khác\s*\\?\)/giu, '');
         }
-        if (langKey === 'vn') output = output.replace(/(Đức\s+Giám\s+Mục\s+)T…/giu, `$1${ordinaryHtml}`);
-        if (langKey === 'jp') output = output.replace(/(司教\s*)○{2,}/gu, `$1${ordinaryHtml}`);
+        if (langKey === 'vn') output = output.replace(/(Đức\s+Giám\s+Mục\s+)T…/giu, `$1${sequenceHtml}`);
+        if (langKey === 'jp') output = output.replace(/(司教\s*)○{2,}/gu, `$1${sequenceHtml}`);
+        if (langKey === 'la') output = output.replace(/((?:Ep[ií]scop[oi]|Ant[ií]stite)\s+nostr[oi]\s+)N\.(?!\p{L})/giu, `$1${sequenceHtml}`);
+        if (langKey === 'it') output = output.replace(/(\bvescovo\s+)N\.(?!\p{L})/giu, `$1${sequenceHtml}`);
+        if (langKey === 'pt') output = output.replace(/(\bbispo\s+)N\.(?!\p{L})/giu, `$1${sequenceHtml}`);
+        if (langKey === 'es') output = output.replace(/(\bobispo\s+)N\.(?!\p{L})/giu, `$1${sequenceHtml}`);
+        if (langKey === 'de') output = output.replace(/(\bBischof\s+)N\.(?!\p{L})/giu, `$1${sequenceHtml}`);
+        if (langKey === 'zh') {
+            output = output.replace(/台北總教區的主教若翰/gu, `我們的主教${sequenceHtml}`);
+            output = output.replace(/(我們的主教)(?!\s*<span class="muted-name-placeholder">)/gu, `$1${sequenceHtml}`);
+        }
         return output;
     }
 

@@ -146,6 +146,65 @@ const root = path.resolve(__dirname, '..');
       };
       restoreDailyVariantSelection(reorderedVariants,'collect',capturedSelection);
       check(state.options.collect === 'A', 'Manual daily choice stayed on a stale letter instead of its source text');
+      // One shared bishop renderer handles all language columns and Eucharistic
+      // Prayers I-IV. Archdioceses retain the collective auxiliary-bishop wording;
+      // dioceses name every auxiliary in the language of the rendered column.
+      const previousBishopContext = state.bishopContext;
+      await globalThis.ordoBishopDataApi.loadForLocation('KR');
+      const seoulBishops = bishopContextForDiocese('서울대교구','KR');
+      const suwonBishops = bishopContextForDiocese('수원교구','KR');
+      check(seoulBishops && seoulBishops.isArchdiocese, 'Seoul archdiocese context missing');
+      check(suwonBishops && !suwonBishops.isArchdiocese && suwonBishops.auxiliaries.length === 2, 'Suwon auxiliary-bishop context missing');
+      const expectedSeoulOrdinary = {
+        kr:'베드로',vn:'Phêrô',en:'Peter',jp:'ペトロ',la:'Petrus',zh:'伯多祿',it:'Pietro',pt:'Pedro',es:'Pedro',de:'Petrus'
+      };
+      const collaboratorLabels = {
+        kr:'협력 주교들과',vn:'các Đức Giám mục phụ tá',en:'the Auxiliary Bishops',jp:'補佐司教団',la:'Episcopis auxiliaribus',
+        zh:'輔理主教們',it:'Vescovi ausiliari',pt:'Bispos auxiliares',es:'Obispos auxiliares',de:'Weihbischöfen'
+      };
+      const bishopPrayerTemplates = {
+        kr:['저희 주교 [주교명]와 (협력주교들과)','저희 주교 [주교명]와(과) (협력 주교들과)','저희 주교 [주교명]와(과) (협력 주교들과)','저희 주교 [주교명]와(과) (협력 주교들과)'],
+        vn:['Đức Giám Mục [Tên GM.] chúng con','Đức Giám Mục [Tên GM.], (hay Giám Mục khác) chúng con','Đức Giám Mục [Ten GM.], (hay Giám Mục khác) chúng con','Đức Giám Mục T… chúng con'],
+        en:['[Bishop Name] our Bishop, (and Auxiliary Bishops,)','[Bishop N.] our Bishop, (and Auxiliary Bishops,)','our Bishop N.','[Bishop Name] our Bishop'],
+        jp:['わたしたちの司教 [司教名]、','わたしたちの司教 [司教名]、','わたしたちの司教○○○○、','わたしたちの司教○○○○、'],
+        la:['Antístite nostro [Nomen Episcopi]','Epíscopo nostro [Episcopus N.]','Episcopo nostro N.','Epíscopi nostri N.'],
+        zh:['我們的主教與所有主教','台北總教區的主教若翰,與所有主教','我們的主教、所有主教','我們的主教、所有主教'],
+        it:['il nostro vescovo N.*','il nostro vescovo N.','il nostro vescovo N.*, l’ordine episcopale','del nostro vescovo N.*, dell’ordine episcopale'],
+        pt:['o nosso bispo N.','o nosso bispo N.','o nosso bispo N.','o nosso bispo N.'],
+        es:['con nuestro obispo N.','con nuestro Obispo N.','a nuestro obispo N.','de nuestro obispo N.'],
+        de:['mit unserem Bischof N.','unserem Bischof N. und allen Bischöfen','unseren Bischof N.','unseren Bischof N.']
+      };
+      state.bishopContext = seoulBishops;
+      let bishopPrayerCases = 0;
+      for (const [lang, templates] of Object.entries(bishopPrayerTemplates)) {
+        check(localizedBishopName(seoulBishops.ordinary,lang) === expectedSeoulOrdinary[lang], `${lang} Seoul bishop name is not localized`);
+        for (const [index, template] of templates.entries()) {
+          const renderedBishops = plainTextFromHtml(replaceBishopPlaceholder(template,lang));
+          check(renderedBishops.includes(expectedSeoulOrdinary[lang]), `${lang} Eucharistic Prayer ${index + 1} ordinary missing`);
+          check(renderedBishops.includes(collaboratorLabels[lang]), `${lang} Eucharistic Prayer ${index + 1} collaborators missing`);
+          bishopPrayerCases++;
+        }
+      }
+      const koreanPrayerForms = eucharisticPrayerEntry(countryMassData.KR.ordinary).forms;
+      check(koreanPrayerForms['3'].some(line => (line.text_kr || '') === '주님의 일꾼, 교황 [교황명]와(과)')
+        && koreanPrayerForms['3'].some(line => (line.text_kr || '') === '저희 주교 [주교명]와(과) (협력 주교들과)'),
+      'Local Korean Eucharistic Prayer III placeholders were not preserved');
+      for (const number of ['1','2','3','4']) {
+        const bishopLine = koreanPrayerForms[number].find(line => /저희\s*주교/u.test(line.text_kr || ''));
+        check(!!bishopLine, `Korean Eucharistic Prayer ${number} bishop line missing`);
+        const renderedBishops = plainTextFromHtml(formatDynamicLineText(bishopLine.text_kr,'kr'));
+        check(renderedBishops.includes('베드로') && renderedBishops.includes('협력 주교들과'), `Korean Eucharistic Prayer ${number} bishop rendering failed`);
+      }
+      state.bishopContext = suwonBishops;
+      const expectedSuwonNames = {
+        kr:['마티아','요한','제르마노'],vn:['Mátthia','Gioan','Germanô'],en:['Matthias','John','Germanus'],jp:['マティア','ヨハネ','ゲルマノ'],
+        la:['Matthias','Ioannes','Germanus'],zh:['瑪弟亞','若望','日爾曼'],it:['Mattia','Giovanni','Germano'],pt:['Matias','João','Germano'],es:['Matías','Juan','Germán'],de:['Matthias','Johannes','Germanus']
+      };
+      for (const [lang, names] of Object.entries(expectedSuwonNames)) {
+        const renderedBishops = plainTextFromHtml(replaceBishopPlaceholder(bishopPrayerTemplates[lang][0],lang));
+        check(names.every(name => renderedBishops.includes(name)), `${lang} named auxiliary bishops missing`);
+      }
+      state.bishopContext = previousBishopContext;
       // Eucharistic Prayer IV is normalized to the Korean 88-clause layout in
       // every jurisdiction before ordinary data is merged by row.
       const koreanPrayerFour = eucharisticPrayerEntry(countryMassData.KR.ordinary).forms['4'];
@@ -299,7 +358,7 @@ const root = path.resolve(__dirname, '..');
         }
       }
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
-      return {version: APP_VERSION, conclusionCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
+      return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
     await page.setViewportSize({width:412,height:915});
