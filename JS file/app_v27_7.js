@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260918-BISHOPS-EP1-4';
+    const APP_VERSION = 'V27.7-20260918-TW-PREFACE-SELECTORS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -312,12 +312,16 @@
         mergeLocalEucharist3Intercession();
     }
 
+    function isEucharistSongMap(value) {
+        return !!(value && typeof value === 'object' && !Array.isArray(value));
+    }
+
     function mergeLocalOnlyEucharistSongs() {
         const localEucharist = missaDataApi ? missaDataApi.findEucharisticSongEntry() : null;
-        const activeEucharist = massData.find(item => item && item.songs);
+        const activeEucharist = eucharisticPrayerEntry(massData);
         if (!localEucharist || !activeEucharist) return;
         const localSongs = localEucharist.songs || {};
-        if (!activeEucharist.songs || typeof activeEucharist.songs !== 'object') activeEucharist.songs = {};
+        if (!isEucharistSongMap(activeEucharist.songs)) activeEucharist.songs = {};
         Object.keys(localSongs).forEach(key => {
             if (!activeEucharist.songs[key]) activeEucharist.songs[key] = cloneData(localSongs[key]);
         });
@@ -518,8 +522,15 @@
         const entryIndex = ordinary.findIndex(item => item && item.forms && Array.isArray(item.forms['4']));
         const entry = entryIndex >= 0 ? cloneData(ordinary[entryIndex]) : null;
         const lower = eucharisticPrayerLanguageLower(module, locationCode);
-        if (!entry || !lower || !Array.isArray(koreanRows) || koreanRows.length !== EUCHARISTIC_PRAYER_FOUR_ROW_COUNT) return ordinary;
+        if (!entry) return ordinary;
         ordinary[entryIndex] = entry;
+        // Independent missal modules sometimes use a legacy Eucharist type or
+        // an empty array as a "no local preface catalogue" placeholder. Those
+        // values must not erase the shared form/preface selectors when merged.
+        entry.type = 'selectable';
+        entry.isEucharist = true;
+        if (!isEucharistSongMap(entry.songs)) entry.songs = {};
+        if (!lower || !Array.isArray(koreanRows) || koreanRows.length !== EUCHARISTIC_PRAYER_FOUR_ROW_COUNT) return ordinary;
         let rows = entry.forms['4'];
         if ((locationCode === 'AU' || locationCode === 'NZ') && window.countryMassData) {
             const englishReference = window.countryMassData['GB-ENG'] || window.countryMassData.US;
@@ -19689,7 +19700,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let selectHtml = '';
         let secondarySelectHtml = '';
 
-        if (orig.type === 'selectable' && orig.variants) {
+        const hasSelectableVariants = orig && orig.variants && (
+            orig.type === 'selectable' || baseId === 'eucharist' || orig.isEucharist
+        );
+        if (hasSelectableVariants) {
             const variantKeys = Object.keys(orig.variants).sort();
             if (variantKeys.length > 1) {
                 selectHtml = `<select class="select-inline" onchange="optChange('${optionKey}', this.value)">`;

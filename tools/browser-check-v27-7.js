@@ -112,6 +112,23 @@ const root = path.resolve(__dirname, '..');
       const creed = tw.find(x => getBaseId(x.id) === 'creed');
       check(creed.variants.A.lines.length === 14 && creed.variants.B.lines.length === 25, 'Creed phrase rows');
       check(creed.variants.A.label.zh === '宗徒信經', 'Creed option identity');
+      const taiwanSourceEucharist = eucharisticPrayerEntry(tw);
+      check(taiwanSourceEucharist.type === 'selectable' && taiwanSourceEucharist.isEucharist, 'Taiwan Eucharist is not a selectable part');
+      check(isEucharistSongMap(taiwanSourceEucharist.songs), 'Taiwan preface placeholder is not merge-safe');
+      const taiwanMergedEucharist = eucharisticPrayerEntry(massData);
+      check(getEucharistSongKeys(taiwanMergedEucharist).length >= 80, 'Taiwan merge erased the shared preface catalogue');
+      state.options.eucharist = '2';
+      state.options.eucharist_song = 'ordinary_1';
+      state.autoEucharistSongKey = '';
+      state.liturgyInfo.prefaceKey = 'ordinary_1';
+      render();
+      const taiwanEucharistSection = document.querySelector('section[data-part-id="eucharist"]');
+      const taiwanEucharistSelects = Array.from(taiwanEucharistSection.querySelectorAll('select.select-inline'));
+      const taiwanPrayerSelect = taiwanEucharistSelects.find(select => (select.getAttribute('onchange') || '').includes("'eucharist'"));
+      const taiwanPrefaceSelect = taiwanEucharistSelects.find(select => (select.getAttribute('onchange') || '').includes("'eucharist_song'"));
+      check(taiwanPrayerSelect && taiwanPrayerSelect.options.length === 4, 'Taiwan Eucharistic Prayer I-IV selector missing');
+      check(taiwanPrefaceSelect && taiwanPrefaceSelect.options.length >= 80, 'Taiwan preface selector missing');
+      check(taiwanEucharistSection.textContent.includes('파스카의 신비로'), 'Selected Taiwan preface was not rendered');
       // All six proper-text sections use one deterministic alignment engine.
       const unifiedSectionIds = ['entrance','collect','gospel_accl','prayer_offerings','communion','prayer_after'];
       for (const id of unifiedSectionIds) {
