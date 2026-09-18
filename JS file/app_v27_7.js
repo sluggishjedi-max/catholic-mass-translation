@@ -1,4 +1,4 @@
-// Order of Mass V27.6 application runtime. Liturgical data is loaded from country-owned modules.
+// Order of Mass V27.7 application runtime. Liturgical data is loaded from country-owned modules.
     const missaDataApi = window.ordoMissaDataApi;
     let massData = missaDataApi ? missaDataApi.cloneEntries() : [];
 
@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260916-CANONICAL-PASSAGES';
+    const APP_VERSION = 'V27.7-20260918-UNIFIED-VARIANTS-EP4';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -350,6 +350,192 @@
         if (localIndex >= 0) activeLines.splice(localIndex, activeLines.length - localIndex, cloneData(localBlock));
     }
 
+    const EUCHARISTIC_PRAYER_FOUR_ROW_COUNT = 88;
+    const EUCHARISTIC_PRAYER_FOUR_LEGACY_SPLITS = Object.freeze([
+        1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
+        2, 2, 3, 2, 2, 3, 2, 4, 3, 2, 3, 2, 4,
+        1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+        3, 2, 5, 7, 2, 4, 4
+    ]);
+    const EUCHARISTIC_PRAYER_FOUR_TARGET_BLOCKS = Object.freeze([
+        [0, 3], [4, 9], [10, 34], [35, 56], [57, 60], [61, 87]
+    ]);
+    const EUCHARISTIC_PRAYER_FOUR_SOURCE_BLOCKS = Object.freeze({
+        TW: [[8, 10], [11, 14], [16, 22], [23, 31], [32, 39], [40, 47]],
+        IT: [[9, 25], [26, 31], [34, 68], [69, 109], [110, 123], [124, 182]],
+        PT: [[7, 24], [25, 30], [33, 66], [67, 106], [107, 127], [128, 176]],
+        MX: [[11, 13], [14, 18], [21, 28], [29, 41], [42, 52], [53, 63]],
+        DE: [null, null, [3, 48], [49, 80], [81, 84], [85, 139]],
+        BR: [[7, 13], [14, 14], [17, 29], [30, 54], [55, 67], [68, 114]]
+    });
+
+    function eucharisticPrayerEntry(ordinary) {
+        return (Array.isArray(ordinary) ? ordinary : []).find(item => (
+            item && item.forms && Array.isArray(item.forms['4'])
+        )) || null;
+    }
+
+    function eucharisticPrayerLanguageLower(module, locationCode) {
+        const language = module && module.language || {
+            KR: 'KR', VN: 'VN', US: 'EN', IE: 'EN', 'GB-NIR': 'EN', 'GB-ENG': 'EN',
+            'GB-WLS': 'EN', 'GB-SCT': 'EN', PH: 'EN', TW: 'ZH', AU: 'EN', NZ: 'EN',
+            JP: 'JP', IT: 'IT', PT: 'PT', MX: 'ES', DE: 'DE', BR: 'PT', VA: 'LA'
+        }[locationCode];
+        return String(language || '').toLowerCase();
+    }
+
+    function eucharisticPrayerLineWeight(line, lower) {
+        const visible = [`text_${lower}`, `rubric_${lower}`]
+            .map(key => String(line && line[key] || ''))
+            .join(' ')
+            .replace(/<[^>]*>/g, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+        return Math.max(visible.length, 1);
+    }
+
+    function nearestEucharisticPrayerTextBoundary(text, approximate) {
+        if (approximate <= 0) return 0;
+        if (approximate >= text.length) return text.length;
+        const boundary = /[\s,;:，；：、.!?。！？]/u;
+        for (let distance = 0; distance <= Math.min(48, text.length); distance += 1) {
+            const right = approximate + distance;
+            const left = approximate - distance;
+            if (right < text.length && boundary.test(text[right])) return right + 1;
+            if (left > 0 && boundary.test(text[left])) return left + 1;
+        }
+        return approximate;
+    }
+
+    function sliceEucharisticPrayerText(value, fromRatio, toRatio) {
+        const raw = String(value || '');
+        if (fromRatio <= 0 && toRatio >= 1) return raw;
+        // Partial HTML slices can leave unbalanced formatting tags. The
+        // independent Missal modules use plain text here; strip any wrapper
+        // only for the exceptional row that must be divided.
+        const text = raw.replace(/<[^>]*>/g, '');
+        let start = nearestEucharisticPrayerTextBoundary(text, Math.round(text.length * fromRatio));
+        let end = nearestEucharisticPrayerTextBoundary(text, Math.round(text.length * toRatio));
+        if (end <= start && toRatio > fromRatio && text.length) {
+            start = Math.min(Math.floor(text.length * fromRatio), text.length - 1);
+            end = Math.max(start + 1, Math.ceil(text.length * toRatio));
+        }
+        return text.slice(Math.min(start, end), Math.max(start, end)).trim();
+    }
+
+    function mergeEucharisticPrayerFragments(target, fragment, lower) {
+        const output = target || {};
+        Object.entries(fragment || {}).forEach(([key, value]) => {
+            if (value === undefined || value === null || value === '') return;
+            if (key === `text_${lower}` || key === `rubric_${lower}`) {
+                output[key] = output[key] ? `${output[key]} ${value}` : value;
+                return;
+            }
+            if (key === `sp_${lower}`) {
+                if (!output[key]) output[key] = value;
+                return;
+            }
+            if (!(key in output)) output[key] = cloneData(value);
+        });
+        return output;
+    }
+
+    function sliceEucharisticPrayerLine(line, lower, fromRatio, toRatio, keepSpeaker) {
+        const fragment = cloneData(line || {});
+        [`text_${lower}`, `rubric_${lower}`].forEach(key => {
+            if (typeof fragment[key] !== 'string') return;
+            fragment[key] = sliceEucharisticPrayerText(fragment[key], fromRatio, toRatio);
+            if (!fragment[key]) delete fragment[key];
+        });
+        if (!keepSpeaker && `sp_${lower}` in fragment) fragment[`sp_${lower}`] = '';
+        return fragment;
+    }
+
+    function resampleEucharisticPrayerRows(sourceRows, targetRows, lower) {
+        const sources = (Array.isArray(sourceRows) ? sourceRows : []).filter(Boolean);
+        const targets = Array.isArray(targetRows) ? targetRows : [];
+        if (!targets.length) return [];
+        if (!sources.length) return targets.map(() => ({}));
+        const sourceWeights = sources.map(line => eucharisticPrayerLineWeight(line, lower));
+        const targetWeights = targets.map(line => eucharisticPrayerLineWeight(line, 'kr'));
+        const sourceTotal = sourceWeights.reduce((sum, value) => sum + value, 0);
+        const targetTotal = targetWeights.reduce((sum, value) => sum + value, 0);
+        const sourceStarts = [];
+        let sourceCursor = 0;
+        sourceWeights.forEach(weight => {
+            sourceStarts.push(sourceCursor);
+            sourceCursor += weight;
+        });
+        let targetCursor = 0;
+        return targetWeights.map(targetWeight => {
+            const intervalStart = sourceTotal * targetCursor / targetTotal;
+            targetCursor += targetWeight;
+            const intervalEnd = sourceTotal * targetCursor / targetTotal;
+            let merged = {};
+            sources.forEach((line, sourceIndex) => {
+                const sourceStart = sourceStarts[sourceIndex];
+                const sourceEnd = sourceStart + sourceWeights[sourceIndex];
+                const overlapStart = Math.max(intervalStart, sourceStart);
+                const overlapEnd = Math.min(intervalEnd, sourceEnd);
+                if (overlapEnd <= overlapStart) return;
+                const fromRatio = (overlapStart - sourceStart) / sourceWeights[sourceIndex];
+                const toRatio = (overlapEnd - sourceStart) / sourceWeights[sourceIndex];
+                const fragment = sliceEucharisticPrayerLine(line, lower, fromRatio, toRatio, fromRatio === 0);
+                merged = mergeEucharisticPrayerFragments(merged, fragment, lower);
+            });
+            return merged;
+        });
+    }
+
+    function normalizeLegacyEucharisticPrayerFour(rows, koreanRows, lower) {
+        const output = [];
+        let targetIndex = 0;
+        for (let sourceIndex = 0; sourceIndex < EUCHARISTIC_PRAYER_FOUR_LEGACY_SPLITS.length; sourceIndex += 1) {
+            const targetCount = EUCHARISTIC_PRAYER_FOUR_LEGACY_SPLITS[sourceIndex];
+            if (!targetCount) continue;
+            const sourceGroup = sourceIndex === 3 ? rows.slice(3, 5) : [rows[sourceIndex]];
+            const targetGroup = koreanRows.slice(targetIndex, targetIndex + targetCount);
+            output.push(...resampleEucharisticPrayerRows(sourceGroup, targetGroup, lower));
+            targetIndex += targetCount;
+        }
+        return output;
+    }
+
+    function normalizeProfiledEucharisticPrayerFour(rows, koreanRows, lower, locationCode) {
+        const sourceBlocks = EUCHARISTIC_PRAYER_FOUR_SOURCE_BLOCKS[locationCode];
+        if (!sourceBlocks) return null;
+        return sourceBlocks.flatMap((range, index) => {
+            const [targetStart, targetEnd] = EUCHARISTIC_PRAYER_FOUR_TARGET_BLOCKS[index];
+            const targetRows = koreanRows.slice(targetStart, targetEnd + 1);
+            const sourceRows = range ? rows.slice(range[0], range[1] + 1) : [];
+            return resampleEucharisticPrayerRows(sourceRows, targetRows, lower);
+        });
+    }
+
+    function normalizedOrdinaryForMerge(module, locationCode, koreanRows) {
+        if (!module || !Array.isArray(module.ordinary)) return [];
+        const ordinary = module.ordinary.slice();
+        const entryIndex = ordinary.findIndex(item => item && item.forms && Array.isArray(item.forms['4']));
+        const entry = entryIndex >= 0 ? cloneData(ordinary[entryIndex]) : null;
+        const lower = eucharisticPrayerLanguageLower(module, locationCode);
+        if (!entry || !lower || !Array.isArray(koreanRows) || koreanRows.length !== EUCHARISTIC_PRAYER_FOUR_ROW_COUNT) return ordinary;
+        ordinary[entryIndex] = entry;
+        let rows = entry.forms['4'];
+        if ((locationCode === 'AU' || locationCode === 'NZ') && window.countryMassData) {
+            const englishReference = window.countryMassData['GB-ENG'] || window.countryMassData.US;
+            const englishEntry = englishReference && eucharisticPrayerEntry(englishReference.ordinary);
+            if (englishEntry) rows = cloneData(englishEntry.forms['4']);
+        }
+        let normalized = null;
+        if (locationCode === 'KR' && rows.length === EUCHARISTIC_PRAYER_FOUR_ROW_COUNT) normalized = rows;
+        else if (rows.length === 47) normalized = normalizeLegacyEucharisticPrayerFour(rows, koreanRows, lower);
+        else normalized = normalizeProfiledEucharisticPrayerFour(rows, koreanRows, lower, locationCode);
+        if (Array.isArray(normalized) && normalized.length === EUCHARISTIC_PRAYER_FOUR_ROW_COUNT) {
+            entry.forms['4'] = normalized;
+        }
+        return ordinary;
+    }
+
     function mergeIndependentOrdinary(base, jurisdiction) {
         if (Array.isArray(base) || Array.isArray(jurisdiction)) {
             const left = Array.isArray(base) ? base : [];
@@ -371,14 +557,25 @@
     }
 
     function getStartupOrdinaryMassData() {
-        const base = missaDataApi ? missaDataApi.entries : [];
+        const registry = window.countryMassData || {};
+        const koreanModule = registry.KR;
+        const koreanEntry = koreanModule && eucharisticPrayerEntry(koreanModule.ordinary);
+        const koreanRows = koreanEntry && koreanEntry.forms['4'];
+        const coreCodes = ['KR', 'VN', 'US', 'JP', 'VA'];
+        const rebuiltCore = coreCodes.reduce((merged, code) => {
+            const module = registry[code];
+            const ordinary = normalizedOrdinaryForMerge(module, code, koreanRows);
+            return ordinary.length ? mergeIndependentOrdinary(merged, ordinary) : merged;
+        }, []);
+        const base = rebuiltCore.length ? rebuiltCore : (missaDataApi ? missaDataApi.entries : []);
         if (typeof activeCountryMassModule !== 'function') return base;
         const locationCodes = [state.selectedLocationCode, state.targetLocationCode]
             .filter((code, index, list) => code && list.indexOf(code) === index);
         return locationCodes.reduce((merged, locationCode) => {
+            if (coreCodes.includes(locationCode)) return merged;
             const module = activeCountryMassModule(locationCode);
             return module && Array.isArray(module.ordinary) && module.ordinary.length
-                ? mergeIndependentOrdinary(merged, module.ordinary)
+                ? mergeIndependentOrdinary(merged, normalizedOrdinaryForMerge(module, locationCode, koreanRows))
                 : merged;
         }, base);
     }
@@ -14352,7 +14549,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
-    const aiAlignedVariantSectionIds = new Set(['psalm', 'gospel_accl', 'entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
+    const commonDailyVariantSectionIds = new Set(['entrance', 'collect', 'gospel_accl', 'prayer_offerings', 'communion', 'prayer_after']);
+    const aiAlignedVariantSectionIds = new Set(['psalm', ...commonDailyVariantSectionIds]);
 
     function selectableOptionMapFromData(newData, baseId = '') {
         const optionMap = {};
@@ -14603,20 +14801,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     // Align every supported language through the same canonical passage path.
     // A source's own alternatives are never coalesced with each other. With a
-    // single option per language, section identity is the fallback for the five
-    // Scripture proclamation sections whenever no parsed pair proves a conflict;
-    // this also makes future language additions resilient while aliases mature.
+    // With a single option per language, section identity is the shared
+    // fallback whenever no parsed citation or known semantic key proves a
+    // conflict. This applies equally to readings, antiphons, and prayers and
+    // keeps future language additions resilient while aliases mature.
     function buildParallelPassageAlignment(baseId, optionMap, section = {}) {
         const scriptureSectionIds = ['reading1', 'reading2', 'psalm', 'gospel_accl', 'gospel'];
-        if (![...scriptureSectionIds, 'entrance', 'communion'].includes(baseId)) return [];
+        if (![...scriptureSectionIds, ...commonDailyVariantSectionIds].includes(baseId)) return [];
         const lowers = orderedPassageOptionLowers(optionMap);
         if (lowers.length < 2) return [];
         if (lowers.every(lower => optionMap[lower].length === 1)) {
-            const parsed = lowers.map(lower => globalThis.bibleCitation.parse(strictReadingOptionCitation(section, lower, 0), lower));
-            if (!scriptureSectionIds.includes(baseId) && parsed.some(item => !item)) return [];
             for (let i = 0; i < lowers.length; i += 1) {
                 for (let j = i + 1; j < lowers.length; j += 1) {
                     const left = lowers[i], right = lowers[j];
+                    const leftKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[left][0]));
+                    const rightKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[right][0]));
+                    if (leftKey && rightKey && leftKey !== rightKey) return [];
                     if (passageCitationsConflict(
                         baseId,
                         strictReadingOptionCitation(section, left, 0),
@@ -14858,7 +15058,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align7-canonical-passages';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align8-unified-sections';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -15036,7 +15236,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 'Align semantically equivalent Catholic liturgical options across languages.',
                 'Ignore option labels and source order when they disagree.',
                 'Never align options merely because they have the same position, number, or common/proper label.',
-                'Even when each language has only one option, compare the complete texts; one option per language does not imply that they are translations of each other.',
+                'Single official texts with no contradictory citation or recognized meaning are already paired by the deterministic engine; this request concerns unresolved alternatives.',
                 'Do not infer equivalence merely from the same calendar date, section heading, liturgical rank, or Ordinary Time label.',
                 'If the biblical citation, saint, image, or liturgical meaning differs, keep the options in separate groups.',
                 'When the evidence is ambiguous, keep the source texts in separate groups.',
@@ -15090,54 +15290,62 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     const dailyVariantAlignmentSectionIds = new Set([...aiAlignedVariantSectionIds, ...strictReadingKeys]);
 
+    // Every daily selectable section enters through this deterministic engine.
+    // Section-specific evidence is kept as an input rule, not as a separate UI
+    // path, so prayers and antiphons cannot drift into language-only choices
+    // while readings use a different grouping lifecycle.
+    function buildDeterministicDailyVariantAlignment(baseId, section, optionMap) {
+        if (strictReadingKeys.has(baseId)) {
+            const alignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            return { alignment, terminal: !!alignment.length, source: 'scripture' };
+        }
+        const authoritativeBuilders = [
+            () => buildLocalMissalTranslationAlignment(baseId, section, optionMap),
+            () => buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap),
+            () => buildLeftCitationFirstAlignment(baseId, section, optionMap),
+            () => buildKnownConflictSourceSeparation(baseId, optionMap, section)
+        ];
+        for (const build of authoritativeBuilders) {
+            const alignment = build();
+            if (alignment.length) return { alignment, terminal: true, source: 'authoritative' };
+        }
+        const alignment = buildFallbackVariantAlignment(baseId, optionMap, section);
+        return {
+            alignment,
+            terminal: !!(alignment.length && !variantAlignmentNeedsSemanticCompletion(alignment)),
+            source: 'shared-fallback'
+        };
+    }
+
     function applyCachedVariantAlignments(fetchedData, date) {
         dailyVariantAlignmentSectionIds.forEach(baseId => {
             const section = fetchedData && fetchedData[baseId];
             if (!section) return;
             const { optionMap, maxOptions } = selectableOptionMapFromData(section, baseId);
             const signature = variantAlignmentSignature(baseId, optionMap);
-            const strictReadingAlignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            const deterministic = buildDeterministicDailyVariantAlignment(baseId, section, optionMap);
             if (strictReadingKeys.has(baseId)) {
                 // Recompute even a single shared group; discard stale language splits.
-                if (strictReadingAlignment.length) section.variantAlignment = strictReadingAlignment;
+                if (deterministic.alignment.length) section.variantAlignment = deterministic.alignment;
                 else delete section.variantAlignment;
                 return;
             }
-            const localMissalTranslationAlignment = buildLocalMissalTranslationAlignment(baseId, section, optionMap);
-            if (localMissalTranslationAlignment.length) {
-                section.variantAlignment = localMissalTranslationAlignment;
+            if (deterministic.terminal) {
+                section.variantAlignment = deterministic.alignment;
                 return;
             }
-            const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
-            if (koreanOrdinaryTranslationAlignment.length) {
-                section.variantAlignment = koreanOrdinaryTranslationAlignment;
-                return;
-            }
-            const forcedAlignment = buildLeftCitationFirstAlignment(baseId, section, optionMap);
-            if (forcedAlignment.length) {
-                section.variantAlignment = forcedAlignment;
-                return;
-            }
-            const knownConflictAlignment = buildKnownConflictSourceSeparation(baseId, optionMap, section);
-            if (knownConflictAlignment.length) {
-                section.variantAlignment = knownConflictAlignment;
-                return;
-            }
-            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
-                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, cached);
+                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached);
                 return;
             }
-            if (fallbackAlignment.length) {
-                section.variantAlignment = fallbackAlignment;
+            if (deterministic.alignment.length) {
+                section.variantAlignment = deterministic.alignment;
                 return;
             }
             if (!needsCrossLanguageVariantAlignment(optionMap, maxOptions)) return;
-            // Until the asynchronous semantic check finishes, keep unmatched
-            // source texts separate, including one-option-per-language data.
-            // Positional pairing can present two different antiphons or prayers
-            // as if one were a translation.
+            // Genuine unresolved alternatives stay separate until semantic
+            // completion. Single official texts already share one group above.
             section.variantAlignment = normalizeVariantAlignmentGroups(optionMap, []);
         });
     }
@@ -15148,23 +15356,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!section) return;
             const { optionMap, maxOptions } = selectableOptionMapFromData(section, baseId);
             const signature = variantAlignmentSignature(baseId, optionMap);
-            const strictReadingAlignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            const deterministic = buildDeterministicDailyVariantAlignment(baseId, section, optionMap);
             if (strictReadingKeys.has(baseId)) {
-                if (strictReadingAlignment.length) {
-                    section.variantAlignment = strictReadingAlignment;
-                    writeCachedDailyVariantAlignment(date, baseId, signature, strictReadingAlignment);
+                if (deterministic.alignment.length) {
+                    section.variantAlignment = deterministic.alignment;
+                    writeCachedDailyVariantAlignment(date, baseId, signature, deterministic.alignment);
                     return;
                 }
                 delete section.variantAlignment;
                 const cached = readCachedDailyVariantAlignment(date, baseId, signature);
                 if (cached) {
-                    section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, strictReadingAlignment, cached);
+                    section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached);
                     return;
                 }
-                if (maxOptions < 2 && !strictReadingAlignment.length) return;
+                if (maxOptions < 2) return;
                 try {
                     const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap);
-                    const alignment = combineTrustedVariantAlignments(baseId, optionMap, strictReadingAlignment, proposed);
+                    const alignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, proposed);
                     if (alignment.length) {
                         section.variantAlignment = alignment;
                         writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
@@ -15174,44 +15382,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 }
                 return;
             }
-            const localMissalTranslationAlignment = buildLocalMissalTranslationAlignment(baseId, section, optionMap);
-            if (localMissalTranslationAlignment.length) {
-                section.variantAlignment = localMissalTranslationAlignment;
-                return;
-            }
-            const koreanOrdinaryTranslationAlignment = buildKoreanOrdinaryTranslationAlignment(baseId, section, optionMap);
-            if (koreanOrdinaryTranslationAlignment.length) {
-                section.variantAlignment = koreanOrdinaryTranslationAlignment;
-                return;
-            }
-            const forcedAlignment = buildLeftCitationFirstAlignment(baseId, section, optionMap);
-            if (forcedAlignment.length) {
-                section.variantAlignment = forcedAlignment;
-                return;
-            }
-            const knownConflictAlignment = buildKnownConflictSourceSeparation(baseId, optionMap, section);
-            if (knownConflictAlignment.length) {
-                section.variantAlignment = knownConflictAlignment;
-                return;
-            }
-            const fallbackAlignment = buildFallbackVariantAlignment(baseId, optionMap, section);
-            if (fallbackAlignment.length && !variantAlignmentNeedsSemanticCompletion(fallbackAlignment)) {
-                section.variantAlignment = fallbackAlignment;
-                writeCachedDailyVariantAlignment(date, baseId, signature, fallbackAlignment);
+            if (deterministic.terminal) {
+                section.variantAlignment = deterministic.alignment;
+                writeCachedDailyVariantAlignment(date, baseId, signature, deterministic.alignment);
                 return;
             }
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
-                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, cached);
+                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached);
                 return;
             }
             if (!needsCrossLanguageVariantAlignment(optionMap, maxOptions)) {
-                if (fallbackAlignment.length) section.variantAlignment = fallbackAlignment;
+                if (deterministic.alignment.length) section.variantAlignment = deterministic.alignment;
                 return;
             }
             try {
                 const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap);
-                const alignment = combineTrustedVariantAlignments(baseId, optionMap, fallbackAlignment, proposed);
+                const alignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, proposed);
                 if (alignment.length) {
                     section.variantAlignment = alignment;
                     writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
@@ -15736,7 +15923,39 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         item.lines = cloneMassLines(item.variants.A.lines);
     }
 
+    function captureDailyVariantSelection(item, baseId) {
+        const selectedKey = state.options[baseId];
+        const selected = item && item.variants && item.variants[selectedKey];
+        const indexes = selected && selected.__dailySourceIndexes;
+        if (!indexes || !Object.values(indexes).some(Number.isInteger)) return null;
+        const automatic = state.autoDailySourceVariantSelections
+            && state.autoDailySourceVariantSelections[baseId];
+        return {
+            indexes: Object.fromEntries(Object.entries(indexes).filter(([, index]) => Number.isInteger(index))),
+            manual: !automatic || automatic.key !== selectedKey
+        };
+    }
+
+    function restoreDailyVariantSelection(variants, baseId, previousSelection) {
+        if (!previousSelection || !previousSelection.manual) return false;
+        const active = currentLeftRightLowerKeys();
+        const weights = { [active.left]: 100, [active.right]: 40 };
+        let best = null;
+        Object.entries(variants || {}).forEach(([key, variant]) => {
+            const indexes = variant && variant.__dailySourceIndexes || {};
+            let score = 0;
+            Object.entries(previousSelection.indexes).forEach(([lower, index]) => {
+                if (indexes[lower] === index) score += weights[lower] || 1;
+            });
+            if (score > 0 && (!best || score > best.score)) best = { key, score };
+        });
+        if (!best) return false;
+        state.options[baseId] = best.key;
+        return true;
+    }
+
     function ensureDailySelectableVariants(item, newData, baseId) {
+        const previousSelection = captureDailyVariantSelection(item, baseId);
         normalizeDailySelectableTemplate(item);
         if (item.isEucharist || baseId === 'eucharist') return false;
         if (!item.__dailyVariantBaseTemplate) {
@@ -15847,6 +16066,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             applyGospelLengthVariantCitations(variants, newData);
         }
         preferFirstDailySourceVariant(variants, baseId);
+        restoreDailyVariantSelection(variants, baseId, previousSelection);
         item.type = 'selectable';
         item.variants = variants;
         item.lines = variants.A ? variants.A.lines : Object.values(variants)[0].lines;

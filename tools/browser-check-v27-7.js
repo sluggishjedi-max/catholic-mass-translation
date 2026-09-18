@@ -112,6 +112,69 @@ const root = path.resolve(__dirname, '..');
       const creed = tw.find(x => getBaseId(x.id) === 'creed');
       check(creed.variants.A.lines.length === 14 && creed.variants.B.lines.length === 25, 'Creed phrase rows');
       check(creed.variants.A.label.zh === '宗徒信經', 'Creed option identity');
+      // All six proper-text sections use one deterministic alignment engine.
+      const unifiedSectionIds = ['entrance','collect','gospel_accl','prayer_offerings','communion','prayer_after'];
+      for (const id of unifiedSectionIds) {
+        const section = {};
+        for (const lang of SUPPORTED_LANGS) section[`${lang.toLowerCase()}_lines`] = [parsedLine('', `${lang} ${id} official text`)];
+        applyCachedVariantAlignments({[id]: section}, date);
+        check(section.variantAlignment.length === 1, `${id} single official texts split`);
+        check(SUPPORTED_LANGS.every(lang => section.variantAlignment[0][lang.toLowerCase()] === 0), `${id} did not align all languages`);
+        const twoOptions = Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang.toLowerCase(), [
+          [parsedLine('', `${lang} ${id} common`)], [parsedLine('', `${lang} ${id} proper`)]
+        ]]));
+        const kinds = Object.fromEntries(SUPPORTED_LANGS.flatMap(lang => [[`optionKinds_${lang.toLowerCase()}`, ['common','proper']]]));
+        const alignment = buildFallbackVariantAlignment(id, twoOptions, kinds);
+        check(alignment.length === 2, `${id} parallel alternatives multiplied`);
+        check(alignment.every(group => SUPPORTED_LANGS.every(lang => Number.isInteger(group[lang.toLowerCase()]))), `${id} alternatives lost a language`);
+      }
+      const conflictSection = {
+        kr_lines:[parsedLine('', '행복하여라, 마음이 가난한 사람들! 하늘 나라가 그들의 것이다.')],
+        en_lines:[parsedLine('', 'I am the light of the world; whoever follows me will have the light of life.')]
+      };
+      applyCachedVariantAlignments({gospel_accl:conflictSection}, date);
+      check(conflictSection.variantAlignment.length === 2, 'Known acclamation conflict was over-merged');
+      // A manual choice follows the same source option when group letters are reordered.
+      const selectionItem = {variants:{
+        A:{__dailySourceIndexes:{kr:0,en:1}}, B:{__dailySourceIndexes:{kr:1,en:0}}
+      }};
+      state.currentLoc='KR'; state.targetLang='EN'; state.options.collect='B';
+      state.autoDailySourceVariantSelections.collect={key:'A',signature:'test'};
+      const capturedSelection = captureDailyVariantSelection(selectionItem,'collect');
+      const reorderedVariants = {
+        A:{__dailySourceIndexes:{kr:1,en:0}}, B:{__dailySourceIndexes:{kr:0,en:1}}
+      };
+      restoreDailyVariantSelection(reorderedVariants,'collect',capturedSelection);
+      check(state.options.collect === 'A', 'Manual daily choice stayed on a stale letter instead of its source text');
+      // Eucharistic Prayer IV is normalized to the Korean 88-clause layout in
+      // every jurisdiction before ordinary data is merged by row.
+      const koreanPrayerFour = eucharisticPrayerEntry(countryMassData.KR.ordinary).forms['4'];
+      check(koreanPrayerFour.length === 88, 'Korean Eucharistic Prayer IV clause count');
+      const ep4Locations = ['KR','VN','US','IE','GB-ENG','GB-WLS','GB-SCT','PH','TW','AU','NZ','JP','IT','PT','MX','DE','BR','VA'];
+      const ep4Language = {KR:'KR',VN:'VN',US:'EN',IE:'EN','GB-ENG':'EN','GB-WLS':'EN','GB-SCT':'EN',PH:'EN',TW:'ZH',AU:'EN',NZ:'EN',JP:'JP',IT:'IT',PT:'PT',MX:'ES',DE:'DE',BR:'PT',VA:'LA'};
+      const ep4EmptyRows = {};
+      for (const code of ep4Locations) {
+        const module = countryMassData[code] || (code === 'GB-WLS' ? countryMassData['GB-ENG'] : null);
+        check(!!module, `${code} Mass module missing`);
+        const normalizedOrdinary = normalizedOrdinaryForMerge(module,code,koreanPrayerFour);
+        const normalizedPrayer = eucharisticPrayerEntry(normalizedOrdinary).forms['4'];
+        check(normalizedPrayer.length === 88, `${code} Eucharistic Prayer IV is not on the shared layout`);
+        const lower = eucharisticPrayerLanguageLower(module,code);
+        ep4EmptyRows[code] = normalizedPrayer.filter(row => !(row[`text_${lower}`] || row[`rubric_${lower}`])).length;
+        check(ep4EmptyRows[code] === (code === 'DE' ? 10 : 0), `${code} unexpected empty Eucharistic Prayer IV clauses`);
+        const bodyText = normalizedPrayer.slice(10,35).map(row => row[`text_${lower}`] || '').join(' ');
+        const epiclesisText = normalizedPrayer.slice(35,57).map(row => row[`text_${lower}`] || row[`rubric_${lower}`] || '').join(' ');
+        const endingText = normalizedPrayer.slice(61).map(row => row[`text_${lower}`] || '').join(' ');
+        check(bodyText.trim().length > 20, `${code} salvation-history clauses missing`);
+        check(epiclesisText.trim().length > 20, `${code} institution clauses missing`);
+        check(endingText.trim().length > 20, `${code} intercession clauses missing`);
+        state.selectedLocationCode='KR'; state.currentLoc='KR';
+        state.targetLocationCode=code; state.targetLang=ep4Language[code];
+        resetMassDataFrom(getStartupOrdinaryMassData());
+        const mergedPrayer = eucharisticPrayerEntry(massData).forms['4'];
+        check(mergedPrayer.length === 88, `${code} merged Eucharistic Prayer IV row count`);
+        check(mergedPrayer.some(row => row[`text_${lower}`] || row[`rubric_${lower}`]), `${code} merged language text missing`);
+      }
       const repeated = [];
       for (const [lang, locationCode] of [['VN','VN'], ['EN','US'], ['ZH','TW']]) {
         state.targetLang = lang; state.targetLocationCode = locationCode;
@@ -236,7 +299,7 @@ const root = path.resolve(__dirname, '..');
         }
       }
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
-      return {version: APP_VERSION, conclusionCases, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
+      return {version: APP_VERSION, conclusionCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
     await page.setViewportSize({width:412,height:915});
