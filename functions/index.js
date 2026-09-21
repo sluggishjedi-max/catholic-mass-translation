@@ -888,7 +888,7 @@ async function callGeminiWithFallback(promptConfig, apiKey, kind) {
 
 function normalizeMachineTranslationLang(value, fallback) {
   const lang = String(value || "").trim().toLowerCase();
-  return ["auto", "ko", "vi", "en", "ja", "la"].includes(lang) ? lang : fallback;
+  return ["auto", "ko", "vi", "en", "ja", "la", "zh-tw", "zh", "it", "pt", "es", "de"].includes(lang) ? lang : fallback;
 }
 
 function enforceCatholicKoreanFallbackTerms(value, targetLang) {
