@@ -11,16 +11,38 @@ const hymnDataPath = process.env.HYMN_DATA_PATH
   : defaultHymnDataPath;
 const usesCountryModules = path.normalize(hymnDataPath).toLowerCase()
   === path.normalize(defaultHymnDataPath).toLowerCase();
-const countryHymnModules = [
-  ['KR', 'korea', 'korea_hymns.js'],
-  ['VN', 'vietnam', 'vietnam_hymns.js'],
-  ['US', 'united_states', 'united_states_hymns.js'],
-  ['JP', 'japan', 'japan_hymns.js'],
-  ['VA', 'vatican', 'vatican_hymns.js']
-].map(([jurisdiction, directory, filename]) => ({
-  jurisdiction,
-  path: path.join(root, 'JS file', 'countries', directory, filename)
-}));
+
+function discoverCountryHymnModules() {
+  const indexPath = path.join(root, 'index.html');
+  const indexSource = fs.readFileSync(indexPath, 'utf8');
+  const modules = [];
+  const seen = new Set();
+  const scriptPattern = /JS%20file\/countries\/([^/"?]+)\/([^/"?]+_hymns\.js)(?:\?[^"']*)?/gu;
+
+  for (const match of indexSource.matchAll(scriptPattern)) {
+    const modulePath = path.join(root, 'JS file', 'countries', decodeURIComponent(match[1]), decodeURIComponent(match[2]));
+    const normalizedPath = path.normalize(modulePath).toLowerCase();
+    if (seen.has(normalizedPath)) continue;
+    seen.add(normalizedPath);
+
+    const source = fs.readFileSync(modulePath, 'utf8');
+    const jurisdictionMatch = source.match(/\bjurisdiction\s*:\s*["']([^"']+)["']/u);
+    if (!jurisdictionMatch) {
+      throw new Error(`Could not find the jurisdiction in ${modulePath}`);
+    }
+    modules.push({ jurisdiction: jurisdictionMatch[1], path: modulePath });
+  }
+
+  if (!modules.length) {
+    throw new Error(`No country hymn modules were found in ${indexPath}`);
+  }
+  return modules;
+}
+
+const countryHymnModules = usesCountryModules ? discoverCountryHymnModules() : [];
+const hymnDataDisplayPath = usesCountryModules
+  ? path.join(root, 'JS file', 'countries', '*', '*_hymns.js')
+  : hymnDataPath;
 const DEFAULT_PORT = 5227;
 const DEFAULT_HOST = '127.0.0.1';
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
@@ -64,13 +86,20 @@ function runCountryModuleSources(sources) {
   for (const source of sources) {
     vm.runInContext(source.code, sandbox, { filename: source.path });
   }
-  const data = sandbox.hymnData || sandbox.ordoHymnData;
-  if (!Array.isArray(data)) {
-    throw new Error('globalThis.hymnData was not loaded from the country hymn modules');
-  }
+  const registeredCountries = sandbox.countryHymnData || {};
+  const countries = {};
+  const data = sources.flatMap(source => {
+    const countryModule = registeredCountries[source.jurisdiction]
+      || Object.values(registeredCountries).find(module => module && module.jurisdiction === source.jurisdiction);
+    if (!countryModule || !Array.isArray(countryModule.entries)) {
+      throw new Error(`Country hymn module ${source.path} did not register ${source.jurisdiction}`);
+    }
+    countries[source.jurisdiction] = countryModule;
+    return countryModule.entries;
+  });
   return {
     data,
-    countries: sandbox.countryHymnData || {}
+    countries
   };
 }
 
@@ -464,7 +493,8 @@ function seasonRows(data) {
 
 function statePayload(data) {
   return {
-    file: hymnDataPath,
+    file: hymnDataDisplayPath,
+    ...(usesCountryModules ? { countryModules: countryHymnModules.length } : {}),
     count: data.length,
     books: bookRows(data),
     seasons: seasonRows(data),
@@ -712,8 +742,8 @@ function replaceCountryEntries(source, entries, filename) {
 function jurisdictionForEntry(entry, existingOwners) {
   const id = cleanLine(entry && entry.id);
   if (id && existingOwners.has(id)) return existingOwners.get(id);
-  const code = cleanLine(entry && (entry.country || entry.language)).toUpperCase();
-  const jurisdiction = {
+  const code = cleanLine(entry && (entry.jurisdiction || entry.country || entry.language)).toUpperCase();
+  const languageJurisdiction = {
     KR: 'KR',
     VN: 'VN',
     US: 'US',
@@ -722,6 +752,8 @@ function jurisdictionForEntry(entry, existingOwners) {
     VA: 'VA',
     LA: 'VA'
   }[code];
+  const knownJurisdictions = new Set(countryHymnModules.map(module => module.jurisdiction));
+  const jurisdiction = knownJurisdictions.has(code) ? code : languageJurisdiction;
   if (!jurisdiction) {
     throw new Error(`Cannot choose a country hymn module for ${id || '(entry without id)'} (${code || 'no country'})`);
   }
@@ -745,10 +777,16 @@ function prepareCountryModuleSources(data, sources = readCountryModuleSources())
     grouped.get(jurisdictionForEntry(entry, existingOwners)).push(entry);
   }
 
-  const nextSources = sources.map(source => ({
-    ...source,
-    code: replaceCountryEntries(source.code, grouped.get(source.jurisdiction), source.path)
-  }));
+  const nextSources = sources.map(source => {
+    const entries = grouped.get(source.jurisdiction);
+    const currentEntries = current.countries[source.jurisdiction].entries;
+    return {
+      ...source,
+      code: JSON.stringify(entries) === JSON.stringify(currentEntries)
+        ? source.code
+        : replaceCountryEntries(source.code, entries, source.path)
+    };
+  });
   const roundTrip = runCountryModuleSources(nextSources).data;
   validateData(roundTrip);
   if (roundTrip.length !== data.length) {
@@ -1815,7 +1853,7 @@ async function main() {
     if (usesCountryModules) prepareCountryModuleSources(data);
     console.log(JSON.stringify({
       ok: true,
-      file: hymnDataPath,
+      file: hymnDataDisplayPath,
       ...(usesCountryModules ? { countryModules: countryHymnModules.length } : {}),
       ...stats
     }, null, 2));
@@ -1827,7 +1865,18 @@ async function main() {
   console.log(`Hymn Data Entry Tool: http://${address.address}:${address.port}/`);
 }
 
-main().catch(error => {
-  console.error(error && error.stack ? error.stack : error);
-  process.exit(1);
-});
+module.exports = {
+  countryHymnModules,
+  loadHymnData,
+  prepareCountryModuleSources,
+  readCountryModuleSources,
+  runCountryModuleSources,
+  validateData
+};
+
+if (require.main === module) {
+  main().catch(error => {
+    console.error(error && error.stack ? error.stack : error);
+    process.exit(1);
+  });
+}
