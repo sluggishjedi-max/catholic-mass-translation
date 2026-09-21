@@ -7,6 +7,8 @@ const root = path.resolve(__dirname, '..');
 const DEFAULT_HOST = '127.0.0.1';
 const DEFAULT_PORT = 5237;
 const MAX_BODY_BYTES = 2 * 1024 * 1024;
+const OVERRIDES_START = '// MASS_DATA_EDITOR_OVERRIDES_START';
+const OVERRIDES_END = '// MASS_DATA_EDITOR_OVERRIDES_END';
 const GEMINI_PROXY_ENDPOINT = process.env.GEMINI_PROXY_ENDPOINT
   || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/geminiProxy';
 const LANGUAGE_NAMES = {
@@ -343,6 +345,36 @@ function valuesAtPath(value, dataPath) {
   return dataPath.reduce((current, part) => current && current[part], value);
 }
 
+function ordinaryOverrideBlock(source) {
+  const markerStart = source.indexOf(OVERRIDES_START);
+  if (markerStart === -1) return null;
+  const markerEnd = source.indexOf(OVERRIDES_END, markerStart + OVERRIDES_START.length);
+  if (markerEnd === -1) throw new Error('Mass editor override end marker is missing');
+  const region = source.slice(markerStart, markerEnd);
+  const assignment = /\bconst\s+ordinaryEditorOverrides\s*=\s*/u.exec(region);
+  if (!assignment) throw new Error('Mass editor override array is missing');
+  const arrayStart = source.indexOf('[', markerStart + assignment.index + assignment[0].length);
+  if (arrayStart === -1 || arrayStart > markerEnd) throw new Error('Mass editor override array is invalid');
+  const arrayNode = parseArrayNode(source, arrayStart);
+  if (arrayNode.end > markerEnd) throw new Error('Mass editor override array crosses its end marker');
+  const entries = vm.runInNewContext(source.slice(arrayStart, arrayNode.end));
+  if (!Array.isArray(entries) || entries.some(entry => !entry || !Array.isArray(entry.path))) {
+    throw new Error('Mass editor overrides must contain path arrays');
+  }
+  return { start: arrayStart, end: arrayNode.end, entries: Array.from(entries, entry => ({ path: Array.from(entry.path), value: cleanText(entry.value) })) };
+}
+
+function setOrdinaryOverride(entries, dataPath, value) {
+  const pathKey = JSON.stringify(dataPath);
+  const existing = entries.find(entry => JSON.stringify(entry.path) === pathKey);
+  if (existing) existing.value = value;
+  else entries.push({ path: Array.from(dataPath), value });
+}
+
+function formatOrdinaryOverrides(entries) {
+  return JSON.stringify(entries, null, 2).replace(/\n/gu, '\n  ');
+}
+
 const editabilityCache = new Map();
 
 function sourceEditability(source) {
@@ -350,7 +382,9 @@ function sourceEditability(source) {
   if (cached && cached.code === source.code) return cached.result;
   let result;
   const ordinaryStart = findOrdinaryArrayStart(source.code);
-  if (ordinaryStart === -1) {
+  if (ordinaryOverrideBlock(source.code)) {
+    result = { editable: true, reason: '' };
+  } else if (ordinaryStart === -1) {
     result = { editable: false, reason: '공통 데이터에서 파생되는 모듈입니다.' };
   } else if (/\bordinary\.find\s*\(/u.test(source.code.slice(ordinaryStart))) {
     result = { editable: false, reason: '실행 중 재구성되는 데이터이므로 원본 보호를 위해 읽기 전용입니다.' };
@@ -424,8 +458,10 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
   const block = collectMassBlocks(module.ordinary, country.language).find(item => item.key === selectedBlockKey);
   if (!block) throw Object.assign(new Error('The selected Mass passage was not found in this country'), { statusCode: 404 });
 
+  const overrideBlock = ordinaryOverrideBlock(source.code);
   const ordinaryStart = findOrdinaryArrayStart(source.code);
-  const ordinaryNode = parseArrayNode(source.code, ordinaryStart);
+  const ordinaryNode = overrideBlock ? null : parseArrayNode(source.code, ordinaryStart);
+  const overrideEntries = overrideBlock ? overrideBlock.entries : [];
   const rowsByKey = new Map(block.rows.map(row => [row.key, row]));
   const replacements = [];
   const changed = [];
@@ -439,8 +475,11 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
       throw Object.assign(new Error(`The text changed after it was loaded: ${update.key}`), { statusCode: 409 });
     }
     if (row.text !== nextText) {
-      const textNode = nodeAtPath(ordinaryNode, row.textPath);
-      replacements.push({ start: textNode.start, end: textNode.end, value: nextText });
+      if (overrideBlock) setOrdinaryOverride(overrideEntries, row.textPath, nextText);
+      else {
+        const textNode = nodeAtPath(ordinaryNode, row.textPath);
+        replacements.push({ start: textNode.start, end: textNode.end, value: nextText });
+      }
       changed.push({ path: row.textPath, value: nextText, key: row.key, field: 'text' });
     }
 
@@ -451,15 +490,20 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
         throw Object.assign(new Error(`The speaker changed after it was loaded: ${update.key}`), { statusCode: 409 });
       }
       if (row.speaker !== nextSpeaker) {
-        const speakerNode = nodeAtPath(ordinaryNode, row.speakerPath);
-        replacements.push({ start: speakerNode.start, end: speakerNode.end, value: nextSpeaker });
+        if (overrideBlock) setOrdinaryOverride(overrideEntries, row.speakerPath, nextSpeaker);
+        else {
+          const speakerNode = nodeAtPath(ordinaryNode, row.speakerPath);
+          replacements.push({ start: speakerNode.start, end: speakerNode.end, value: nextSpeaker });
+        }
         changed.push({ path: row.speakerPath, value: nextSpeaker, key: row.key, field: 'speaker' });
       }
     }
   });
 
-  if (!replacements.length) return { sources, sourceIndex, changed: [], nextCode: source.code, country, block };
-  const nextCode = replaceSourceRanges(source.code, replacements);
+  if (!changed.length) return { sources, sourceIndex, changed: [], nextCode: source.code, country, block };
+  const nextCode = overrideBlock
+    ? `${source.code.slice(0, overrideBlock.start)}${formatOrdinaryOverrides(overrideEntries)}${source.code.slice(overrideBlock.end)}`
+    : replaceSourceRanges(source.code, replacements);
   const nextSources = sources.map((item, index) => index === sourceIndex ? { ...item, code: nextCode } : item);
   const nextRuntime = runCountryMassSources(nextSources);
   const nextOrdinary = nextRuntime.countries[jurisdiction].ordinary;

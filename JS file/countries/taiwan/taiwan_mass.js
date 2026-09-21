@@ -3854,6 +3854,23 @@
   const eucharist = byPart('eucharist');
   eucharist.forms = Object.fromEntries(Object.entries(eucharist.forms).map(([key, lines]) => [key, sentenceRows(lines)]));
   byPart('blessing').variants.A.lines = [z('主祭', '願主與你們同在。'), z('信友', '也與你的心靈同在。'), z('', ''), z('主祭', '願全能的天主，聖父、聖子 ✠、聖神，'), z('', '降福你們。'), z('信友', '阿們。')];
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) {
+        throw new Error(`Taiwan Mass editor override path is stale: ${JSON.stringify(editPath)}`);
+      }
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
+  applyOrdinaryEditorOverrides(ordinary);
   function dailyPdfUrl(ymd) {
     const entries = dailyManifest[String(ymd || '')] || [];
     const selected = entries[0];

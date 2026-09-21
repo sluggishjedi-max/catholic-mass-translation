@@ -64,7 +64,23 @@
       return item;
     });
   }
-  const ordinary = cloneFrozen(structureEnglishOrdinary(englishMissal.ordinary));
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) {
+        throw new Error(`New Zealand Mass editor override path is stale: ${JSON.stringify(editPath)}`);
+      }
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
+  const ordinary = cloneFrozen(applyOrdinaryEditorOverrides(structureEnglishOrdinary(englishMissal.ordinary)));
   const romanMissalProperData = cloneFrozen(englishMissal.romanMissalProperData);
   const SOURCE = Object.freeze({
     ordinary: 'https://www.icelweb.org/RomanMissal.htm',

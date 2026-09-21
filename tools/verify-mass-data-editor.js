@@ -58,22 +58,37 @@ function verifyInMemoryEdit(sources, loaded, jurisdiction) {
       expectedSpeaker: row.speaker
     }]
   }, sources), error => error && error.statusCode === 409, `${jurisdiction}: stale edits must be rejected`);
+  return prepared;
 }
 
 function main() {
   const sources = readCountryMassSources();
   const loaded = getLoadedState(sources);
   assert.equal(loaded.countries.length, 17, 'all country Mass modules should load');
-  assert.ok(loaded.countries.filter(country => country.editable).length >= 10, 'direct country modules should remain editable');
-  assert.equal(loaded.countries.find(country => country.jurisdiction === 'TW').editable, false, 'runtime-restructured Taiwan data should be protected');
-  assert.equal(loaded.countries.find(country => country.jurisdiction === 'AU').editable, false, 'derived Australia data should be protected');
-  assert.equal(loaded.countries.find(country => country.jurisdiction === 'NZ').editable, false, 'derived New Zealand data should be protected');
-  assert.throws(() => prepareMassSourceEdit({ jurisdiction: 'TW', blockKey: '', updates: [] }, sources), error => error && error.statusCode === 409, 'protected Taiwan data must reject writes');
+  assert.equal(loaded.countries.filter(country => country.editable).length, 17, 'all country Mass modules should be editable');
 
   const verifiedEdits = loaded.countries
-    .filter(country => country.editable)
     .map(country => {
-      verifyInMemoryEdit(sources, loaded, country.jurisdiction);
+      const prepared = verifyInMemoryEdit(sources, loaded, country.jurisdiction);
+      if (['TW', 'AU', 'NZ'].includes(country.jurisdiction)) {
+        assert.match(prepared.nextCode, /MASS_DATA_EDITOR_OVERRIDES_START/u, `${country.jurisdiction}: derived edits should use an override block`);
+        assert.match(prepared.nextCode, /\[편집기 검증\]/u, `${country.jurisdiction}: override value should be serialized`);
+        const reloaded = getLoadedState(prepared.sources);
+        const reloadedBlock = blocksForCountry(reloaded, country.jurisdiction).find(block => block.key === prepared.block.key);
+        const reloadedRow = reloadedBlock.rows.find(row => row.key === prepared.changed[0].key);
+        const revised = prepareMassSourceEdit({
+          jurisdiction: country.jurisdiction,
+          blockKey: reloadedBlock.key,
+          updates: [{
+            key: reloadedRow.key,
+            text: `${reloadedRow.text} [재수정]`,
+            expectedText: reloadedRow.text,
+            speaker: reloadedRow.speaker,
+            expectedSpeaker: reloadedRow.speaker
+          }]
+        }, prepared.sources);
+        assert.match(revised.nextCode, /\[재수정\]/u, `${country.jurisdiction}: an existing override should be updateable`);
+      }
       return country.jurisdiction;
     });
 
