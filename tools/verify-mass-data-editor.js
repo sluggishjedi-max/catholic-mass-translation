@@ -61,6 +61,32 @@ function verifyInMemoryEdit(sources, loaded, jurisdiction) {
   return prepared;
 }
 
+function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, sourceBlock, translatedText) {
+  const beforeHashes = new Map(sources.map(source => [source.path, digest(source.path)]));
+  const pair = blockPair(loaded, 'KR', targetJurisdiction, sourceBlock.key);
+  const missing = pair.rows.find(item => item.right && item.right.virtual);
+  assert.ok(missing, `${targetJurisdiction}: a missing translation input should be available`);
+  const updates = pair.rows.map(item => ({
+    key: item.right.key,
+    text: item.key === missing.key ? translatedText : item.right.text,
+    expectedText: item.right.text,
+    speaker: item.right.speaker,
+    expectedSpeaker: item.right.speaker,
+    create: item.right.create || null
+  }));
+  const prepared = prepareMassSourceEdit({
+    jurisdiction: targetJurisdiction,
+    blockKey: pair.rightBlockKey,
+    updates
+  }, sources);
+  assert.match(prepared.nextCode, /MASS_DATA_EDITOR_OVERRIDES_START/u, `${targetJurisdiction}: missing text should use an override section`);
+  const reloaded = getLoadedState(prepared.sources);
+  const after = blockPair(reloaded, 'KR', targetJurisdiction, sourceBlock.key).rows.find(item => item.key === missing.key);
+  assert.equal(after.right.text, translatedText, `${targetJurisdiction}: created translation should round-trip`);
+  assert.equal(Boolean(after.right.virtual), false, `${targetJurisdiction}: created translation should become a regular row`);
+  sources.forEach(source => assert.equal(digest(source.path), beforeHashes.get(source.path), `${targetJurisdiction}: missing-row verification wrote a live file`));
+}
+
 function main() {
   const sources = readCountryMassSources();
   const loaded = getLoadedState(sources);
@@ -99,6 +125,22 @@ function main() {
   const pair = blockPair(loaded, 'KR', 'VN', shared.key);
   assert.ok(pair.rows.length > 0, 'the side-by-side passage should contain rows');
   assert.ok(pair.rows.some(row => row.left && row.right), 'the paired passage should align at least one row');
+
+  const koreanBlocks = blocksForCountry(loaded, 'KR');
+  verifyMissingTranslationCreation(
+    sources,
+    loaded,
+    'IT',
+    koreanBlocks.find(block => block.entryId === '3.3 eucharist' && block.relativePath.includes('ordinary_1')),
+    'Santo, Santo, Santo.'
+  );
+  verifyMissingTranslationCreation(
+    sources,
+    loaded,
+    'TW',
+    koreanBlocks.find(block => block.entryId === '1.5 gloria'),
+    '新增譯文。'
+  );
 
   const report = {
     ok: true,

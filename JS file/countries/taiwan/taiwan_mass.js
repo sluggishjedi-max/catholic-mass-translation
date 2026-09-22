@@ -3859,6 +3859,23 @@
   // MASS_DATA_EDITOR_OVERRIDES_END
   function applyOrdinaryEditorOverrides(target) {
     ordinaryEditorOverrides.forEach(override => {
+      if (override.create) {
+        const entry = target.find(item => item && item.id === override.create.entryId);
+        if (!entry) throw new Error(`Taiwan Mass editor entry is missing: ${override.create.entryId}`);
+        let rows = entry;
+        for (const part of override.create.relativePath) {
+          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};
+          rows = rows[part];
+        }
+        if (!Array.isArray(rows)) throw new Error(`Taiwan Mass editor block is invalid: ${override.create.entryId}`);
+        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);
+        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];
+        if (!row) { row = {}; rows.push(row); }
+        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });
+        row[override.create.field] = String(override.value ?? '');
+        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
+        return;
+      }
       const editPath = Array.isArray(override.path) ? override.path : [];
       let parent = target;
       for (const part of editPath.slice(0, -1)) parent = parent && parent[part];

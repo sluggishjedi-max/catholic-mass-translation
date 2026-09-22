@@ -160,8 +160,9 @@ function collectMassBlocks(ordinary, language) {
           value.forEach((row, rowIndex) => {
             const speakerField = speakerFieldForRow(row, language);
             rowContentFields(row, language).forEach(({ field, kind }) => {
+              const pairedKey = row.__massEditorPairKeys && row.__massEditorPairKeys[field];
               rows.push({
-                key: `${rowIndex}:${kind}`,
+                key: pairedKey || `${rowIndex}:${kind}`,
                 rowIndex,
                 kind,
                 text: cleanText(row[field]),
@@ -358,10 +359,10 @@ function ordinaryOverrideBlock(source) {
   const arrayNode = parseArrayNode(source, arrayStart);
   if (arrayNode.end > markerEnd) throw new Error('Mass editor override array crosses its end marker');
   const entries = vm.runInNewContext(source.slice(arrayStart, arrayNode.end));
-  if (!Array.isArray(entries) || entries.some(entry => !entry || !Array.isArray(entry.path))) {
-    throw new Error('Mass editor overrides must contain path arrays');
+  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create))) {
+    throw new Error('Mass editor overrides must contain a path or create descriptor');
   }
-  return { start: arrayStart, end: arrayNode.end, entries: Array.from(entries, entry => ({ path: Array.from(entry.path), value: cleanText(entry.value) })) };
+  return { start: arrayStart, end: arrayNode.end, entries: JSON.parse(JSON.stringify(entries)) };
 }
 
 function setOrdinaryOverride(entries, dataPath, value) {
@@ -371,8 +372,46 @@ function setOrdinaryOverride(entries, dataPath, value) {
   else entries.push({ path: Array.from(dataPath), value });
 }
 
+function setCreationOverride(entries, create, value, speaker, language) {
+  const field = `${create.kind}_${language.toLowerCase()}`;
+  const descriptor = {
+    entryId: create.entryId,
+    relativePath: Array.from(create.relativePath),
+    rowKey: create.rowKey,
+    preferredIndex: create.preferredIndex,
+    field,
+    speakerField: `sp_${language.toLowerCase()}`
+  };
+  const descriptorKey = JSON.stringify([descriptor.entryId, descriptor.relativePath, descriptor.rowKey, descriptor.field]);
+  const existing = entries.find(entry => entry.create && JSON.stringify([
+    entry.create.entryId,
+    entry.create.relativePath,
+    entry.create.rowKey,
+    entry.create.field
+  ]) === descriptorKey);
+  if (existing) {
+    existing.value = value;
+    existing.speaker = speaker;
+  } else {
+    entries.push({ create: descriptor, value, speaker });
+  }
+}
+
 function formatOrdinaryOverrides(entries) {
   return JSON.stringify(entries, null, 2).replace(/\n/gu, '\n  ');
+}
+
+function injectedOverrideSection(jurisdiction) {
+  const label = JSON.stringify(jurisdiction);
+  return `  ${OVERRIDES_START}\n  const ordinaryEditorOverrides = [];\n  ${OVERRIDES_END}\n  function applyOrdinaryEditorOverrides(target) {\n    ordinaryEditorOverrides.forEach(override => {\n      if (override.create) {\n        const entry = target.find(item => item && item.id === override.create.entryId);\n        if (!entry) throw new Error(${label} + ' Mass editor entry is missing: ' + override.create.entryId);\n        let rows = entry;\n        for (const part of override.create.relativePath) {\n          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};\n          rows = rows[part];\n        }\n        if (!Array.isArray(rows)) throw new Error(${label} + ' Mass editor block is invalid: ' + override.create.entryId);\n        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);\n        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];\n        if (!row) { row = {}; rows.push(row); }\n        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });\n        row[override.create.field] = String(override.value ?? '');\n        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');\n        return;\n      }\n      const editPath = Array.isArray(override.path) ? override.path : [];\n      let parent = target;\n      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];\n      const field = editPath[editPath.length - 1];\n      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error(${label} + ' Mass editor override path is stale: ' + JSON.stringify(editPath));\n      parent[field] = String(override.value ?? '');\n    });\n    return target;\n  }\n  applyOrdinaryEditorOverrides(ordinary);\n`;
+}
+
+function ensureOrdinaryOverrideSection(source, jurisdiction) {
+  if (ordinaryOverrideBlock(source)) return source;
+  const registrations = Array.from(source.matchAll(/\n[ \t]*global\.countryMassData(?:\[[^\r\n]+\]|\.[A-Za-z0-9_$-]+)\s*=/gu));
+  if (!registrations.length) throw new Error(`Could not locate ${jurisdiction} Mass module registration`);
+  const insertAt = registrations[0].index + 1;
+  return `${source.slice(0, insertAt)}${injectedOverrideSection(jurisdiction)}${source.slice(insertAt)}`;
 }
 
 const editabilityCache = new Map();
@@ -423,12 +462,72 @@ function blocksForCountry(loaded, jurisdiction) {
   return collectMassBlocks(module.ordinary, country.language);
 }
 
+function pathTokens(relativePath) {
+  const ignored = new Set(['lines', 'content', 'variants', 'forms', 'songs']);
+  return relativePath.filter(part => typeof part === 'string' && !ignored.has(part));
+}
+
+function counterpartBlock(reference, candidates) {
+  if (!reference) return null;
+  const exact = candidates.find(block => block.key === reference.key);
+  if (exact) return exact;
+  const sameEntry = candidates.filter(block => block.entryId === reference.entryId);
+  if (sameEntry.length === 1) return sameEntry[0];
+  const referenceTokens = pathTokens(reference.relativePath);
+  const ranked = sameEntry.map(block => ({
+    block,
+    score: pathTokens(block.relativePath).filter(token => referenceTokens.includes(token)).length
+  })).sort((left, right) => right.score - left.score);
+  if (!ranked.length || ranked[0].score < 1 || (ranked[1] && ranked[0].score === ranked[1].score)) return null;
+  return ranked[0].block;
+}
+
+function virtualBlockFor(reference, module, language) {
+  if (!reference) return null;
+  const entryIndex = module.ordinary.findIndex(entry => entry && String(entry.id || '') === reference.entryId);
+  if (entryIndex === -1) return null;
+  const entry = module.ordinary[entryIndex];
+  return {
+    key: blockKey(reference.entryId, reference.relativePath),
+    entryId: reference.entryId,
+    title: blockTitle(entry, language, reference.relativePath),
+    entryIndex,
+    relativePath: Array.from(reference.relativePath),
+    rows: [],
+    virtual: true
+  };
+}
+
+function virtualRowFor(template, block) {
+  if (!template || !block) return null;
+  return {
+    key: template.key,
+    rowIndex: template.rowIndex,
+    kind: template.kind,
+    text: '',
+    speaker: '',
+    textPath: null,
+    speakerPath: null,
+    virtual: true,
+    create: {
+      entryId: block.entryId,
+      relativePath: Array.from(block.relativePath),
+      rowKey: template.key,
+      preferredIndex: template.rowIndex,
+      kind: template.kind
+    }
+  };
+}
+
 function blockPair(loaded, leftJurisdiction, rightJurisdiction, key) {
   const leftCountry = loaded.countries.find(item => item.jurisdiction === leftJurisdiction);
   const rightCountry = loaded.countries.find(item => item.jurisdiction === rightJurisdiction);
   if (!leftCountry || !rightCountry) throw Object.assign(new Error('Choose both countries'), { statusCode: 400 });
-  const leftBlock = blocksForCountry(loaded, leftJurisdiction).find(block => block.key === key);
-  const rightBlock = blocksForCountry(loaded, rightJurisdiction).find(block => block.key === key);
+  const leftBlocks = blocksForCountry(loaded, leftJurisdiction);
+  const rightBlocks = blocksForCountry(loaded, rightJurisdiction);
+  const leftBlock = leftBlocks.find(block => block.key === key);
+  let rightBlock = counterpartBlock(leftBlock, rightBlocks);
+  if (!rightBlock) rightBlock = virtualBlockFor(leftBlock, loaded.runtime.countries[rightJurisdiction], rightCountry.language);
   if (!leftBlock && !rightBlock) throw Object.assign(new Error('The selected Mass passage was not found'), { statusCode: 404 });
   const rowKeys = [];
   [...(leftBlock?.rows || []), ...(rightBlock?.rows || [])].forEach(row => {
@@ -443,7 +542,17 @@ function blockPair(loaded, leftJurisdiction, rightJurisdiction, key) {
     rightCountry,
     leftExists: Boolean(leftBlock),
     rightExists: Boolean(rightBlock),
-    rows: rowKeys.map(rowKey => ({ key: rowKey, left: leftRows.get(rowKey) || null, right: rightRows.get(rowKey) || null }))
+    leftBlockKey: leftBlock?.key || '',
+    rightBlockKey: rightBlock?.key || '',
+    rows: rowKeys.map(rowKey => {
+      const left = leftRows.get(rowKey) || null;
+      const right = rightRows.get(rowKey) || null;
+      return {
+        key: rowKey,
+        left: left || virtualRowFor(right, leftBlock),
+        right: right || virtualRowFor(left, rightBlock)
+      };
+    })
   };
 }
 
@@ -455,22 +564,57 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
   const sourceIndex = sources.findIndex(source => source.jurisdiction === jurisdiction);
   const source = sources[sourceIndex];
   const module = loaded.runtime.countries[jurisdiction];
-  const block = collectMassBlocks(module.ordinary, country.language).find(item => item.key === selectedBlockKey);
+  let block = collectMassBlocks(module.ordinary, country.language).find(item => item.key === selectedBlockKey);
+  if (!block) {
+    let parsedKey;
+    try { parsedKey = JSON.parse(selectedBlockKey); } catch { parsedKey = null; }
+    if (Array.isArray(parsedKey) && Array.isArray(parsedKey[1])) {
+      block = virtualBlockFor({ entryId: String(parsedKey[0] || ''), relativePath: parsedKey[1] }, module, country.language);
+    }
+  }
   if (!block) throw Object.assign(new Error('The selected Mass passage was not found in this country'), { statusCode: 404 });
 
-  const overrideBlock = ordinaryOverrideBlock(source.code);
-  const ordinaryStart = findOrdinaryArrayStart(source.code);
-  const ordinaryNode = overrideBlock ? null : parseArrayNode(source.code, ordinaryStart);
+  const requestedUpdates = Array.isArray(updates) ? updates : [];
+  const needsCreation = requestedUpdates.some(update => update.create && (
+    cleanText(update.text) !== cleanText(update.expectedText)
+    || cleanText(update.speaker) !== cleanText(update.expectedSpeaker)
+  ));
+  const workingCode = needsCreation ? ensureOrdinaryOverrideSection(source.code, jurisdiction) : source.code;
+  const overrideBlock = ordinaryOverrideBlock(workingCode);
+  const ordinaryStart = findOrdinaryArrayStart(workingCode);
+  const ordinaryNode = overrideBlock ? null : parseArrayNode(workingCode, ordinaryStart);
   const overrideEntries = overrideBlock ? overrideBlock.entries : [];
   const rowsByKey = new Map(block.rows.map(row => [row.key, row]));
   const replacements = [];
   const changed = [];
 
-  (Array.isArray(updates) ? updates : []).forEach(update => {
+  requestedUpdates.forEach(update => {
     const row = rowsByKey.get(String(update.key || ''));
-    if (!row) throw Object.assign(new Error(`Unknown row: ${update.key}`), { statusCode: 400 });
     const nextText = cleanText(update.text);
     const expectedText = cleanText(update.expectedText);
+    const nextSpeaker = cleanText(update.speaker);
+    const expectedSpeaker = cleanText(update.expectedSpeaker);
+
+    if (!row) {
+      const create = update.create;
+      const validKinds = new Set(['text', 'rubric', 'cit']);
+      if (!create || create.entryId !== block.entryId || JSON.stringify(create.relativePath) !== JSON.stringify(block.relativePath)
+        || create.rowKey !== String(update.key || '') || !validKinds.has(create.kind)
+        || !Number.isInteger(create.preferredIndex) || create.preferredIndex < 0) {
+        throw Object.assign(new Error(`Unknown row: ${update.key}`), { statusCode: 400 });
+      }
+      if (expectedText || expectedSpeaker) {
+        throw Object.assign(new Error(`The empty translation row changed after it was loaded: ${update.key}`), { statusCode: 409 });
+      }
+      if (nextText || nextSpeaker) {
+        if (!overrideBlock) throw new Error('Mass editor override initialization failed');
+        setCreationOverride(overrideEntries, create, nextText, nextSpeaker, country.language);
+        changed.push({ blockKey: block.key, rowKey: create.rowKey, value: nextText, key: create.rowKey, field: 'text', virtual: true });
+        if (nextSpeaker) changed.push({ blockKey: block.key, rowKey: create.rowKey, value: nextSpeaker, key: create.rowKey, field: 'speaker', virtual: true });
+      }
+      return;
+    }
+
     if (row.text !== expectedText) {
       throw Object.assign(new Error(`The text changed after it was loaded: ${update.key}`), { statusCode: 409 });
     }
@@ -484,8 +628,6 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
     }
 
     if (row.speakerPath) {
-      const nextSpeaker = cleanText(update.speaker);
-      const expectedSpeaker = cleanText(update.expectedSpeaker);
       if (row.speaker !== expectedSpeaker) {
         throw Object.assign(new Error(`The speaker changed after it was loaded: ${update.key}`), { statusCode: 409 });
       }
@@ -502,13 +644,18 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
 
   if (!changed.length) return { sources, sourceIndex, changed: [], nextCode: source.code, country, block };
   const nextCode = overrideBlock
-    ? `${source.code.slice(0, overrideBlock.start)}${formatOrdinaryOverrides(overrideEntries)}${source.code.slice(overrideBlock.end)}`
-    : replaceSourceRanges(source.code, replacements);
+    ? `${workingCode.slice(0, overrideBlock.start)}${formatOrdinaryOverrides(overrideEntries)}${workingCode.slice(overrideBlock.end)}`
+    : replaceSourceRanges(workingCode, replacements);
   const nextSources = sources.map((item, index) => index === sourceIndex ? { ...item, code: nextCode } : item);
   const nextRuntime = runCountryMassSources(nextSources);
   const nextOrdinary = nextRuntime.countries[jurisdiction].ordinary;
   changed.forEach(change => {
-    if (cleanText(valuesAtPath(nextOrdinary, change.path)) !== change.value) {
+    if (change.virtual) {
+      const nextBlock = collectMassBlocks(nextOrdinary, country.language).find(item => item.key === change.blockKey);
+      const nextRow = nextBlock && nextBlock.rows.find(row => row.key === change.rowKey);
+      const actual = change.field === 'speaker' ? nextRow?.speaker : nextRow?.text;
+      if (cleanText(actual) !== change.value) throw new Error(`Saved Mass data did not create translation row ${change.rowKey}`);
+    } else if (cleanText(valuesAtPath(nextOrdinary, change.path)) !== change.value) {
       throw new Error(`Saved Mass data did not round-trip at ${JSON.stringify(change.path)}`);
     }
   });
@@ -763,6 +910,8 @@ const INDEX_HTML = String.raw`<!doctype html>
     .kind { display:inline-flex; padding:4px 8px; border-radius:999px; color:#536078; background:#eef1f6; font-size:11px; font-weight:800; }
     .speaker { max-width:110px; padding:7px 9px !important; font-weight:800; text-align:center; }
     .speak { margin-left:auto; padding:7px 10px; white-space:nowrap; }
+    .editor.virtual textarea { border-style:dashed; background:#fffdf2; }
+    .editor.virtual .kind::after { content:' · 새 번역'; color:#9a6800; }
     textarea { min-height:116px; resize:vertical; line-height:1.65; }
     .missing { min-height:154px; display:grid; place-items:center; border:1px dashed #ccd3df; border-radius:12px; color:#8a93a7; background:#fafbfc; }
     .translate-stack { display:flex; flex-direction:column; justify-content:center; gap:7px; }
@@ -838,14 +987,14 @@ const INDEX_HTML = String.raw`<!doctype html>
     function kindLabel(kind) { return {text:'본문',rubric:'지시문',cit:'인용'}[kind]||kind; }
     function editorHtml(side,row) {
       if(!row) return '<div class="missing">해당 언어에 대응 구절이 없습니다.</div>';
-      const disabled=row.speakerPath?'':'disabled';
+      const disabled=row.speakerPath||row.virtual?'':'disabled'; const placeholder=row.virtual?'비어 있는 번역 구문을 입력하세요.':'';
       return '<div class="editor-meta"><span class="kind">'+escapeHtml(kindLabel(row.kind))+'</span><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.speaker)+'" '+disabled+' title="화자"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
-        '<textarea data-side="'+side+'" data-role="text" data-row="'+escapeHtml(row.key)+'">'+escapeHtml(row.text)+'</textarea>';
+        '<textarea data-side="'+side+'" data-role="text" data-row="'+escapeHtml(row.key)+'" placeholder="'+placeholder+'">'+escapeHtml(row.text)+'</textarea>';
     }
     function rowHtml(pair,index) {
       const leftButtons=pair.left&&pair.right?'<button class="translate" data-mode="ai" data-direction="right" data-row="'+escapeHtml(pair.key)+'">AI →</button><button class="translate" data-mode="google" data-direction="right" data-row="'+escapeHtml(pair.key)+'">Google →</button>':'';
       const rightButtons=pair.left&&pair.right?'<button class="translate" data-mode="ai" data-direction="left" data-row="'+escapeHtml(pair.key)+'">← AI</button><button class="translate" data-mode="google" data-direction="left" data-row="'+escapeHtml(pair.key)+'">← Google</button>':'';
-      return '<article class="row-card" data-row-card="'+escapeHtml(pair.key)+'"><div class="editor">'+editorHtml('left',pair.left)+'</div><div class="translate-stack">'+leftButtons+rightButtons+'</div><div class="editor">'+editorHtml('right',pair.right)+'</div></article>';
+      return '<article class="row-card" data-row-card="'+escapeHtml(pair.key)+'"><div class="editor '+(pair.left&&pair.left.virtual?'virtual':'')+'">'+editorHtml('left',pair.left)+'</div><div class="translate-stack">'+leftButtons+rightButtons+'</div><div class="editor '+(pair.right&&pair.right.virtual?'virtual':'')+'">'+editorHtml('right',pair.right)+'</div></article>';
     }
     async function loadBlock() {
       if(!el.block.value) return; setStatus('선택한 구절을 불러오는 중입니다.');
@@ -873,11 +1022,11 @@ const INDEX_HTML = String.raw`<!doctype html>
     }
     function updatesFor(side) {
       const sourceRows=new Map(state.block.rows.map(pair=>[pair.key,pair[side]])); const updates=[];
-      sourceRows.forEach((row,key)=>{ if(!row)return; const text=inputFor(side,'text',key); const speaker=inputFor(side,'speaker',key); updates.push({key,text:text.value,expectedText:row.text,speaker:speaker?speaker.value:row.speaker,expectedSpeaker:row.speaker}); }); return updates;
+      sourceRows.forEach((row,key)=>{ if(!row)return; const text=inputFor(side,'text',key); const speaker=inputFor(side,'speaker',key); updates.push({key,text:text.value,expectedText:row.text,speaker:speaker?speaker.value:row.speaker,expectedSpeaker:row.speaker,create:row.create||null}); }); return updates;
     }
     async function saveSide(side) {
       if(!state.block)return; const country=selectedCountry(side); if(!country.editable)throw new Error('이 국가는 다른 모듈에서 파생되어 읽기 전용입니다.');
-      setStatus(countryLabel(country)+' 저장 중…'); const body=await api('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jurisdiction:country.jurisdiction,blockKey:state.block.key,updates:updatesFor(side)})});
+      setStatus(countryLabel(country)+' 저장 중…'); const body=await api('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jurisdiction:country.jurisdiction,blockKey:state.block[side+'BlockKey']||state.block.key,updates:updatesFor(side)})});
       setStatus(body.changed.length?body.changed.length+'개 필드를 저장했습니다. 백업: '+body.backup:'변경된 내용이 없습니다.','ok'); await loadBlock();
     }
     el.leftCountry.addEventListener('change',()=>loadBlocks().catch(e=>setStatus(e.message,'error')));
