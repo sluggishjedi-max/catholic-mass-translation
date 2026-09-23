@@ -87,6 +87,60 @@ function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, s
   sources.forEach(source => assert.equal(digest(source.path), beforeHashes.get(source.path), `${targetJurisdiction}: missing-row verification wrote a live file`));
 }
 
+function verifyRowTypeAndAddition(sources, loaded, jurisdiction) {
+  const beforeHashes = new Map(sources.map(source => [source.path, digest(source.path)]));
+  const { block, row } = firstEditableRow(loaded, jurisdiction);
+  const nextKind = row.kind === 'rubric' ? 'text' : 'rubric';
+  const renamed = prepareMassSourceEdit({
+    jurisdiction,
+    blockKey: block.key,
+    updates: [{
+      key: row.key,
+      text: row.text,
+      expectedText: row.text,
+      speaker: row.speaker,
+      expectedSpeaker: row.speaker,
+      kind: nextKind,
+      expectedKind: row.kind
+    }]
+  }, sources);
+  const renamedState = getLoadedState(renamed.sources);
+  const renamedRow = blocksForCountry(renamedState, jurisdiction)
+    .find(candidate => candidate.key === block.key)?.rows.find(candidate => candidate.key === row.key);
+  assert.equal(renamedRow?.kind, nextKind, `${jurisdiction}: row type should round-trip`);
+  assert.equal(renamedRow?.text, row.text, `${jurisdiction}: changing row type should preserve text`);
+
+  const rowKey = `verify-added-${Date.now()}:rubric`;
+  const preferredIndex = Math.max(...block.rows.map(candidate => candidate.rowIndex), -1) + 1;
+  const added = prepareMassSourceEdit({
+    jurisdiction,
+    blockKey: block.key,
+    updates: [{
+      key: rowKey,
+      text: '',
+      expectedText: '',
+      speaker: '',
+      expectedSpeaker: '',
+      kind: 'rubric',
+      create: {
+        entryId: block.entryId,
+        relativePath: block.relativePath,
+        rowKey,
+        preferredIndex,
+        kind: 'rubric',
+        forceCreate: true
+      }
+    }]
+  }, sources);
+  const addedState = getLoadedState(added.sources);
+  const addedRow = blocksForCountry(addedState, jurisdiction)
+    .find(candidate => candidate.key === block.key)?.rows.find(candidate => candidate.key === rowKey);
+  assert.ok(addedRow, `${jurisdiction}: an explicitly added blank row should round-trip`);
+  assert.equal(addedRow.kind, 'rubric', `${jurisdiction}: added row type should round-trip`);
+  assert.equal(addedRow.text, '', `${jurisdiction}: added blank row should stay blank`);
+  sources.forEach(source => assert.equal(digest(source.path), beforeHashes.get(source.path), `${jurisdiction}: row controls verification wrote a live file`));
+}
+
 function main() {
   const sources = readCountryMassSources();
   const loaded = getLoadedState(sources);
@@ -141,6 +195,7 @@ function main() {
     koreanBlocks.find(block => block.entryId === '1.5 gloria'),
     '新增譯文。'
   );
+  ['KR', 'TW', 'AU', 'NZ'].forEach(jurisdiction => verifyRowTypeAndAddition(sources, loaded, jurisdiction));
 
   const report = {
     ok: true,

@@ -12,10 +12,12 @@ const OVERRIDES_END = '// MASS_DATA_EDITOR_OVERRIDES_END';
 const GEMINI_PROXY_ENDPOINT = process.env.GEMINI_PROXY_ENDPOINT
   || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/geminiProxy';
 const LANGUAGE_NAMES = {
+  AUTO: '자동 감지',
   KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latina',
   ZH: '繁體中文', IT: 'Italiano', PT: 'Português', ES: 'Español', DE: 'Deutsch'
 };
 const TRANSLATION_CODES = {
+  AUTO: 'auto',
   KR: 'ko', VN: 'vi', EN: 'en', JP: 'ja', LA: 'la', ZH: 'zh-tw',
   IT: 'it', PT: 'pt', ES: 'es', DE: 'de'
 };
@@ -359,8 +361,8 @@ function ordinaryOverrideBlock(source) {
   const arrayNode = parseArrayNode(source, arrayStart);
   if (arrayNode.end > markerEnd) throw new Error('Mass editor override array crosses its end marker');
   const entries = vm.runInNewContext(source.slice(arrayStart, arrayNode.end));
-  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create))) {
-    throw new Error('Mass editor overrides must contain a path or create descriptor');
+  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create && !entry.rename))) {
+    throw new Error('Mass editor overrides must contain a path, create, or rename descriptor');
   }
   return { start: arrayStart, end: arrayNode.end, entries: JSON.parse(JSON.stringify(entries)) };
 }
@@ -397,21 +399,53 @@ function setCreationOverride(entries, create, value, speaker, language) {
   }
 }
 
+function setRenameOverride(entries, row, kind, value, language) {
+  const rowPath = row.textPath.slice(0, -1);
+  const currentField = row.textPath[row.textPath.length - 1];
+  const targetField = `${kind}_${language.toLowerCase()}`;
+  const existing = entries.find(entry => entry.rename
+    && entry.rename.rowKey === row.key
+    && JSON.stringify(entry.rename.rowPath) === JSON.stringify(rowPath));
+  if (existing) {
+    existing.rename.toField = targetField;
+    existing.value = value;
+    return;
+  }
+  entries.push({
+    rename: {
+      rowPath: Array.from(rowPath),
+      rowKey: row.key,
+      fromField: currentField,
+      toField: targetField
+    },
+    value
+  });
+}
+
 function formatOrdinaryOverrides(entries) {
   return JSON.stringify(entries, null, 2).replace(/\n/gu, '\n  ');
 }
 
-function injectedOverrideSection(jurisdiction) {
+function injectedOverrideSection(jurisdiction, applyToOrdinary = true) {
   const label = JSON.stringify(jurisdiction);
-  return `  ${OVERRIDES_START}\n  const ordinaryEditorOverrides = [];\n  ${OVERRIDES_END}\n  function applyOrdinaryEditorOverrides(target) {\n    ordinaryEditorOverrides.forEach(override => {\n      if (override.create) {\n        const entry = target.find(item => item && item.id === override.create.entryId);\n        if (!entry) throw new Error(${label} + ' Mass editor entry is missing: ' + override.create.entryId);\n        let rows = entry;\n        for (const part of override.create.relativePath) {\n          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};\n          rows = rows[part];\n        }\n        if (!Array.isArray(rows)) throw new Error(${label} + ' Mass editor block is invalid: ' + override.create.entryId);\n        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);\n        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];\n        if (!row) { row = {}; rows.push(row); }\n        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });\n        row[override.create.field] = String(override.value ?? '');\n        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');\n        return;\n      }\n      const editPath = Array.isArray(override.path) ? override.path : [];\n      let parent = target;\n      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];\n      const field = editPath[editPath.length - 1];\n      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error(${label} + ' Mass editor override path is stale: ' + JSON.stringify(editPath));\n      parent[field] = String(override.value ?? '');\n    });\n    return target;\n  }\n  applyOrdinaryEditorOverrides(ordinary);\n`;
+  const applyLine = applyToOrdinary ? '  applyOrdinaryEditorOverrides(ordinary);\n' : '';
+  return `  ${OVERRIDES_START}\n  const ordinaryEditorOverrides = [];\n  ${OVERRIDES_END}\n  function applyOrdinaryEditorOverrides(target) {\n    ordinaryEditorOverrides.forEach(override => {\n      if (override.create) {\n        const entry = target.find(item => item && item.id === override.create.entryId);\n        if (!entry) throw new Error(${label} + ' Mass editor entry is missing: ' + override.create.entryId);\n        let rows = entry;\n        for (const part of override.create.relativePath) {\n          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};\n          rows = rows[part];\n        }\n        if (!Array.isArray(rows)) throw new Error(${label} + ' Mass editor block is invalid: ' + override.create.entryId);\n        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);\n        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];\n        if (!row) { row = {}; rows.push(row); }\n        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });\n        row[override.create.field] = String(override.value ?? '');\n        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');\n        return;\n      }\n      if (override.rename) {\n        let row = target;\n        for (const part of override.rename.rowPath) row = row && row[part];\n        if (!row || typeof row !== 'object') throw new Error(${label} + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));\n        const fromField = override.rename.fromField;\n        const toField = override.rename.toField;\n        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error(${label} + ' Mass editor rename field is stale: ' + fromField);\n        if (fromField !== toField) delete row[fromField];\n        row[toField] = String(override.value ?? '');\n        const keys = Object.assign({}, row.__massEditorPairKeys);\n        delete keys[fromField];\n        keys[toField] = override.rename.rowKey;\n        row.__massEditorPairKeys = keys;\n        return;\n      }\n      const editPath = Array.isArray(override.path) ? override.path : [];\n      let parent = target;\n      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];\n      const field = editPath[editPath.length - 1];\n      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error(${label} + ' Mass editor override path is stale: ' + JSON.stringify(editPath));\n      parent[field] = String(override.value ?? '');\n    });\n    return target;\n  }\n${applyLine}`;
 }
 
 function ensureOrdinaryOverrideSection(source, jurisdiction) {
   if (ordinaryOverrideBlock(source)) return source;
+  const ordinaryStart = findOrdinaryArrayStart(source);
+  const directProperty = ordinaryStart !== -1 && /\bordinary\s*:\s*$/u.test(source.slice(Math.max(0, ordinaryStart - 80), ordinaryStart));
   const registrations = Array.from(source.matchAll(/\n[ \t]*global\.countryMassData(?:\[[^\r\n]+\]|\.[A-Za-z0-9_$-]+)\s*=/gu));
   if (!registrations.length) throw new Error(`Could not locate ${jurisdiction} Mass module registration`);
   const insertAt = registrations[0].index + 1;
-  return `${source.slice(0, insertAt)}${injectedOverrideSection(jurisdiction)}${source.slice(insertAt)}`;
+  let output = `${source.slice(0, insertAt)}${injectedOverrideSection(jurisdiction, !directProperty)}${source.slice(insertAt)}`;
+  if (directProperty) {
+    const nextStart = findOrdinaryArrayStart(output);
+    const arrayNode = parseArrayNode(output, nextStart);
+    output = `${output.slice(0, nextStart)}applyOrdinaryEditorOverrides(${output.slice(nextStart, arrayNode.end)})${output.slice(arrayNode.end)}`;
+  }
+  return output;
 }
 
 const editabilityCache = new Map();
@@ -544,6 +578,14 @@ function blockPair(loaded, leftJurisdiction, rightJurisdiction, key) {
     rightExists: Boolean(rightBlock),
     leftBlockKey: leftBlock?.key || '',
     rightBlockKey: rightBlock?.key || '',
+    leftCreateBase: leftBlock ? {
+      entryId: leftBlock.entryId,
+      relativePath: Array.from(leftBlock.relativePath)
+    } : null,
+    rightCreateBase: rightBlock ? {
+      entryId: rightBlock.entryId,
+      relativePath: Array.from(rightBlock.relativePath)
+    } : null,
     rows: rowKeys.map(rowKey => {
       const left = leftRows.get(rowKey) || null;
       const right = rightRows.get(rowKey) || null;
@@ -575,16 +617,23 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
   if (!block) throw Object.assign(new Error('The selected Mass passage was not found in this country'), { statusCode: 404 });
 
   const requestedUpdates = Array.isArray(updates) ? updates : [];
-  const needsCreation = requestedUpdates.some(update => update.create && (
-    cleanText(update.text) !== cleanText(update.expectedText)
-    || cleanText(update.speaker) !== cleanText(update.expectedSpeaker)
-  ));
-  const workingCode = needsCreation ? ensureOrdinaryOverrideSection(source.code, jurisdiction) : source.code;
+  const currentRowsByKey = new Map(block.rows.map(row => [row.key, row]));
+  const validKinds = new Set(['text', 'rubric', 'cit']);
+  const needsOverride = requestedUpdates.some(update => {
+    const row = currentRowsByKey.get(String(update.key || ''));
+    const requestedKind = String(update.kind || row?.kind || update.create?.kind || '');
+    return Boolean(update.create && (
+      update.create.forceCreate
+      || cleanText(update.text) !== cleanText(update.expectedText)
+      || cleanText(update.speaker) !== cleanText(update.expectedSpeaker)
+    )) || Boolean(row && validKinds.has(requestedKind) && requestedKind !== row.kind);
+  });
+  const workingCode = needsOverride ? ensureOrdinaryOverrideSection(source.code, jurisdiction) : source.code;
   const overrideBlock = ordinaryOverrideBlock(workingCode);
   const ordinaryStart = findOrdinaryArrayStart(workingCode);
   const ordinaryNode = overrideBlock ? null : parseArrayNode(workingCode, ordinaryStart);
   const overrideEntries = overrideBlock ? overrideBlock.entries : [];
-  const rowsByKey = new Map(block.rows.map(row => [row.key, row]));
+  const rowsByKey = currentRowsByKey;
   const replacements = [];
   const changed = [];
 
@@ -594,10 +643,13 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
     const expectedText = cleanText(update.expectedText);
     const nextSpeaker = cleanText(update.speaker);
     const expectedSpeaker = cleanText(update.expectedSpeaker);
+    const nextKind = String(update.kind || row?.kind || update.create?.kind || '');
+    if (!validKinds.has(nextKind)) {
+      throw Object.assign(new Error(`Unknown row type: ${nextKind || '(empty)'}`), { statusCode: 400 });
+    }
 
     if (!row) {
-      const create = update.create;
-      const validKinds = new Set(['text', 'rubric', 'cit']);
+      const create = update.create ? { ...update.create, kind: nextKind } : null;
       if (!create || create.entryId !== block.entryId || JSON.stringify(create.relativePath) !== JSON.stringify(block.relativePath)
         || create.rowKey !== String(update.key || '') || !validKinds.has(create.kind)
         || !Number.isInteger(create.preferredIndex) || create.preferredIndex < 0) {
@@ -606,19 +658,28 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
       if (expectedText || expectedSpeaker) {
         throw Object.assign(new Error(`The empty translation row changed after it was loaded: ${update.key}`), { statusCode: 409 });
       }
-      if (nextText || nextSpeaker) {
+      if (nextText || nextSpeaker || create.forceCreate) {
         if (!overrideBlock) throw new Error('Mass editor override initialization failed');
         setCreationOverride(overrideEntries, create, nextText, nextSpeaker, country.language);
-        changed.push({ blockKey: block.key, rowKey: create.rowKey, value: nextText, key: create.rowKey, field: 'text', virtual: true });
+        changed.push({ blockKey: block.key, rowKey: create.rowKey, value: nextText, key: create.rowKey, field: 'text', kind: nextKind, virtual: true });
         if (nextSpeaker) changed.push({ blockKey: block.key, rowKey: create.rowKey, value: nextSpeaker, key: create.rowKey, field: 'speaker', virtual: true });
       }
       return;
     }
 
+    const expectedKind = String(update.expectedKind || row.kind);
+    if (row.kind !== expectedKind) {
+      throw Object.assign(new Error(`The row type changed after it was loaded: ${update.key}`), { statusCode: 409 });
+    }
+
     if (row.text !== expectedText) {
       throw Object.assign(new Error(`The text changed after it was loaded: ${update.key}`), { statusCode: 409 });
     }
-    if (row.text !== nextText) {
+    if (row.kind !== nextKind) {
+      if (!overrideBlock) throw new Error('Mass editor override initialization failed');
+      setRenameOverride(overrideEntries, row, nextKind, nextText, country.language);
+      changed.push({ blockKey: block.key, rowKey: row.key, value: nextText, key: row.key, field: 'text', kind: nextKind, virtual: true });
+    } else if (row.text !== nextText) {
       if (overrideBlock) setOrdinaryOverride(overrideEntries, row.textPath, nextText);
       else {
         const textNode = nodeAtPath(ordinaryNode, row.textPath);
@@ -655,6 +716,7 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
       const nextRow = nextBlock && nextBlock.rows.find(row => row.key === change.rowKey);
       const actual = change.field === 'speaker' ? nextRow?.speaker : nextRow?.text;
       if (cleanText(actual) !== change.value) throw new Error(`Saved Mass data did not create translation row ${change.rowKey}`);
+      if (change.kind && nextRow?.kind !== change.kind) throw new Error(`Saved Mass data did not preserve row type ${change.rowKey}`);
     } else if (cleanText(valuesAtPath(nextOrdinary, change.path)) !== change.value) {
       throw new Error(`Saved Mass data did not round-trip at ${JSON.stringify(change.path)}`);
     }
@@ -888,7 +950,7 @@ const INDEX_HTML = String.raw`<!doctype html>
     .top h1 { margin:0 0 5px; font-size:21px; }
     .top p { margin:0; color:#dce5ff; font-size:13px; }
     main { max-width:1500px; margin:auto; padding:20px; }
-    .controls,.status,.row-card,.draft { background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 24px #1720330b; }
+    .controls,.status,.row-card,.translator { background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 24px #1720330b; }
     .controls { padding:16px; display:grid; grid-template-columns:minmax(170px,1fr) minmax(170px,1fr) minmax(260px,2fr) auto; gap:12px; align-items:end; }
     label { display:grid; gap:6px; color:var(--muted); font-size:12px; font-weight:700; }
     select,input[type=search],input[type=text],textarea { width:100%; border:1px solid #cbd3e2; border-radius:10px; background:white; color:var(--ink); padding:10px 12px; outline:none; }
@@ -907,19 +969,28 @@ const INDEX_HTML = String.raw`<!doctype html>
     .row-card { display:grid; grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr); gap:12px; padding:14px; margin-bottom:12px; }
     .editor { min-width:0; }
     .editor-meta { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
-    .kind { display:inline-flex; padding:4px 8px; border-radius:999px; color:#536078; background:#eef1f6; font-size:11px; font-weight:800; }
+    .kind { width:auto; min-width:82px; padding:7px 30px 7px 10px; border-radius:999px; color:#43506a; background:#eef1f6; border:1px solid #d8deea; font-size:12px; font-weight:800; }
     .speaker { max-width:110px; padding:7px 9px !important; font-weight:800; text-align:center; }
     .speak { margin-left:auto; padding:7px 10px; white-space:nowrap; }
     .editor.virtual textarea { border-style:dashed; background:#fffdf2; }
-    .editor.virtual .kind::after { content:' · 새 번역'; color:#9a6800; }
+    .editor.virtual .kind { color:#8a5c00; background:#fff6d9; }
     textarea { min-height:116px; resize:vertical; line-height:1.65; }
     .missing { min-height:154px; display:grid; place-items:center; border:1px dashed #ccd3df; border-radius:12px; color:#8a93a7; background:#fafbfc; }
     .translate-stack { display:flex; flex-direction:column; justify-content:center; gap:7px; }
+    .addbar { display:grid; grid-template-columns:1fr 118px 1fr; gap:12px; margin:12px 0 4px; }
+    .addbar button { border:1px dashed #aeb9cd; background:#f9fbff; color:#315078; }
     .savebar { position:sticky; bottom:12px; z-index:4; display:grid; grid-template-columns:1fr 118px 1fr; gap:12px; margin:18px 0; }
     .savebar button { box-shadow:0 8px 20px #17203320; }
-    .draft { padding:15px; margin-top:18px; }
-    .draft h2 { margin:0 0 8px; font-size:15px; }
-    .draft textarea { min-height:90px; background:#fbfcff; }
+    .translator { padding:18px; margin-top:18px; }
+    .translator h2 { margin:0; font-size:18px; }
+    .translator-head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; }
+    .translator-head p { margin:4px 0 0; color:var(--muted); font-size:12px; }
+    .translator-languages { display:grid; grid-template-columns:1fr auto 1fr; gap:10px; align-items:end; margin-bottom:10px; }
+    .swap { min-width:44px; padding:10px; }
+    .translator-boxes { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .translator textarea { min-height:150px; background:#fbfcff; }
+    .translator textarea[readonly] { background:#f4f7fd; }
+    .translator-foot { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:10px; color:var(--muted); font-size:12px; }
     .empty { padding:50px 20px; text-align:center; color:var(--muted); }
     @media (max-width:850px) {
       .controls { grid-template-columns:1fr; }
@@ -928,8 +999,11 @@ const INDEX_HTML = String.raw`<!doctype html>
       .columns-head span:nth-child(2) { display:none; }
       .row-card { grid-template-columns:1fr; }
       .translate-stack { flex-direction:row; flex-wrap:wrap; }
+      .addbar { grid-template-columns:1fr 1fr; }
+      .addbar span { display:none; }
       .savebar { grid-template-columns:1fr 1fr; }
       .savebar span { display:none; }
+      .translator-boxes { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -951,28 +1025,55 @@ const INDEX_HTML = String.raw`<!doctype html>
     <div id="status" class="status">데이터를 불러오는 중입니다.</div>
     <div class="columns-head"><span id="left-title">원문</span><span>번역</span><span id="right-title">번역문</span></div>
     <section id="rows"></section>
+    <div class="addbar">
+      <button id="add-left" class="secondary" type="button">＋ 왼쪽 줄 추가</button><span></span>
+      <button id="add-right" class="secondary" type="button">＋ 오른쪽 줄 추가</button>
+    </div>
     <div class="savebar">
       <button id="save-left" class="primary" type="button">왼쪽 원문 저장</button><span></span>
       <button id="save-right" class="primary" type="button">오른쪽 번역문 저장</button>
     </div>
-    <section class="draft">
-      <h2>번역 초안 / 작업 메모</h2>
-      <textarea id="draft" placeholder="AI 또는 Google 번역 결과가 여기에 함께 표시됩니다. 자유롭게 메모해도 됩니다."></textarea>
+    <section class="translator" aria-label="자동 번역기">
+      <div class="translator-head"><div><h2>자동 번역기</h2><p>문장을 입력하면 언어를 자동으로 감지해 선택한 언어로 번역합니다.</p></div><button id="translator-ai" class="translate" type="button">AI로 다시 번역</button></div>
+      <div class="translator-languages">
+        <label>원문 언어<select id="translator-source-language"></select></label>
+        <button id="translator-swap" class="secondary swap" type="button" title="언어와 문장 바꾸기">⇄</button>
+        <label>번역 언어<select id="translator-target-language"></select></label>
+      </div>
+      <div class="translator-boxes">
+        <textarea id="translator-source" aria-label="번역할 원문" placeholder="번역할 문장을 입력하세요."></textarea>
+        <textarea id="translator-output" aria-label="번역 결과" placeholder="번역 결과" readonly></textarea>
+      </div>
+      <div class="translator-foot"><span id="translator-status">원문 언어는 자동으로 감지됩니다.</span><button id="translator-copy" class="secondary" type="button">결과 복사</button></div>
     </section>
   </main>
   <script>
-    const state = { countries:[], blocks:[], visibleBlocks:[], block:null };
-    const el = Object.fromEntries(['left-country','right-country','search','block','reload','status','rows','save-left','save-right','left-title','right-title','draft'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
+    const state = { countries:[], blocks:[], visibleBlocks:[], block:null, rowSequence:0, translationSequence:0, translationTimer:null };
+    const el = Object.fromEntries(['left-country','right-country','search','block','reload','status','rows','add-left','add-right','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
     async function api(url, options) { const response=await fetch(url,options); const body=await response.json(); if(!response.ok||!body.ok) throw new Error(body.error||('HTTP '+response.status)); return body; }
     function setStatus(message, kind='') { el.status.textContent=message; el.status.className='status '+kind; }
     function countryLabel(country) { return country.name+' · '+country.languageName+' ('+country.jurisdiction+')'+(country.editable?'':' · 읽기 전용'); }
     function selectedCountry(side) { return state.countries.find(c=>c.jurisdiction===el[side+'Country'].value); }
     function countryOptions(selected) { return state.countries.map(c=>'<option value="'+escapeHtml(c.jurisdiction)+'" '+(c.jurisdiction===selected?'selected':'')+'>'+escapeHtml(countryLabel(c))+'</option>').join(''); }
+    function languageOptions(selected,allowAuto=false) {
+      const languages=[]; state.countries.forEach(country=>{ if(!languages.some(item=>item.code===country.language)) languages.push({code:country.language,name:country.languageName}); });
+      if(allowAuto) languages.unshift({code:'AUTO',name:'자동 감지'});
+      return languages.map(item=>'<option value="'+escapeHtml(item.code)+'" '+(item.code===selected?'selected':'')+'>'+escapeHtml(item.name)+'</option>').join('');
+    }
+    function syncTranslatorLanguages(forceTarget=false) {
+      const source=el.translatorSourceLanguage.value||'AUTO';
+      const target=forceTarget?(selectedCountry('right')?.language||'EN'):(el.translatorTargetLanguage.value||selectedCountry('right')?.language||'EN');
+      el.translatorSourceLanguage.innerHTML=languageOptions(source,true);
+      el.translatorTargetLanguage.innerHTML=languageOptions(target,false);
+      if(!el.translatorSourceLanguage.value) el.translatorSourceLanguage.value='AUTO';
+      if(!el.translatorTargetLanguage.value) el.translatorTargetLanguage.value=selectedCountry('right')?.language||'EN';
+    }
     async function loadState() {
       const body=await api('/api/state'); state.countries=body.countries;
       el.leftCountry.innerHTML=countryOptions(state.countries.some(c=>c.jurisdiction==='KR')?'KR':state.countries[0].jurisdiction);
       el.rightCountry.innerHTML=countryOptions(state.countries.some(c=>c.jurisdiction==='VN')?'VN':state.countries[1].jurisdiction);
+      syncTranslatorLanguages(true);
       await loadBlocks(); setStatus(state.countries.length+'개 국가 모듈을 불러왔습니다.','ok');
     }
     async function loadBlocks(preferredKey='') {
@@ -985,10 +1086,11 @@ const INDEX_HTML = String.raw`<!doctype html>
       if(el.block.value) loadBlock().catch(error=>setStatus(error.message,'error')); else { el.rows.innerHTML='<div class="empty">검색 결과가 없습니다.</div>'; state.block=null; }
     }
     function kindLabel(kind) { return {text:'본문',rubric:'지시문',cit:'인용'}[kind]||kind; }
+    function kindOptions(selected) { return ['text','rubric','cit'].map(kind=>'<option value="'+kind+'" '+(kind===selected?'selected':'')+'>'+kindLabel(kind)+'</option>').join(''); }
     function editorHtml(side,row) {
       if(!row) return '<div class="missing">해당 언어에 대응 구절이 없습니다.</div>';
       const disabled=row.speakerPath||row.virtual?'':'disabled'; const placeholder=row.virtual?'비어 있는 번역 구문을 입력하세요.':'';
-      return '<div class="editor-meta"><span class="kind">'+escapeHtml(kindLabel(row.kind))+'</span><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.speaker)+'" '+disabled+' title="화자"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
+      return '<div class="editor-meta"><select class="kind" data-side="'+side+'" data-role="kind" data-row="'+escapeHtml(row.key)+'" title="본문 또는 지시문 선택">'+kindOptions(row.kind)+'</select><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.speaker)+'" '+disabled+' title="화자"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
         '<textarea data-side="'+side+'" data-role="text" data-row="'+escapeHtml(row.key)+'" placeholder="'+placeholder+'">'+escapeHtml(row.text)+'</textarea>';
     }
     function rowHtml(pair,index) {
@@ -996,14 +1098,31 @@ const INDEX_HTML = String.raw`<!doctype html>
       const rightButtons=pair.left&&pair.right?'<button class="translate" data-mode="ai" data-direction="left" data-row="'+escapeHtml(pair.key)+'">← AI</button><button class="translate" data-mode="google" data-direction="left" data-row="'+escapeHtml(pair.key)+'">← Google</button>':'';
       return '<article class="row-card" data-row-card="'+escapeHtml(pair.key)+'"><div class="editor '+(pair.left&&pair.left.virtual?'virtual':'')+'">'+editorHtml('left',pair.left)+'</div><div class="translate-stack">'+leftButtons+rightButtons+'</div><div class="editor '+(pair.right&&pair.right.virtual?'virtual':'')+'">'+editorHtml('right',pair.right)+'</div></article>';
     }
+    function renderRows() {
+      el.rows.innerHTML=state.block.rows.map(rowHtml).join('')||'<div class="empty">편집 가능한 본문이 없습니다.</div>';
+      document.querySelectorAll('button.translate').forEach(button=>button.addEventListener('click',()=>translateRow(button).catch(error=>setStatus(error.message,'error'))));
+      document.querySelectorAll('button.speak').forEach(button=>button.addEventListener('click',()=>speakRow(button)));
+    }
+    function addRow(side) {
+      if(!state.block)return;
+      const base=state.block[side+'CreateBase']; const country=selectedCountry(side);
+      if(!base||!country?.editable){ setStatus('선택한 쪽에는 줄을 추가할 수 없습니다.','error'); return; }
+      const indices=state.block.rows.map(pair=>pair[side]?.rowIndex).filter(Number.isInteger);
+      const rowIndex=indices.length?Math.max(...indices)+1:0;
+      const key='editor-'+Date.now()+'-'+(++state.rowSequence)+':text';
+      const row={key,rowIndex,kind:'text',text:'',speaker:'',textPath:null,speakerPath:null,virtual:true,create:{entryId:base.entryId,relativePath:Array.from(base.relativePath),rowKey:key,preferredIndex:rowIndex,kind:'text',forceCreate:true}};
+      state.block.rows.push({key,left:side==='left'?row:null,right:side==='right'?row:null});
+      renderRows();
+      const input=inputFor(side,'text',key); if(input)input.focus();
+      setStatus((side==='left'?'왼쪽':'오른쪽')+'에 새 줄을 추가했습니다. 유형과 내용을 선택한 뒤 저장하세요.','ok');
+    }
     async function loadBlock() {
       if(!el.block.value) return; setStatus('선택한 구절을 불러오는 중입니다.');
       const url='/api/block?left='+encodeURIComponent(el.leftCountry.value)+'&right='+encodeURIComponent(el.rightCountry.value)+'&key='+encodeURIComponent(el.block.value);
-      state.block=(await api(url)).block; el.rows.innerHTML=state.block.rows.map(rowHtml).join('')||'<div class="empty">편집 가능한 본문이 없습니다.</div>';
+      state.block=(await api(url)).block; renderRows();
       el.leftTitle.textContent=countryLabel(state.block.leftCountry); el.rightTitle.textContent=countryLabel(state.block.rightCountry);
-      el.saveLeft.disabled=!state.block.leftCountry.editable||!state.block.leftExists; el.saveRight.disabled=!state.block.rightCountry.editable||!state.block.rightExists;
-      document.querySelectorAll('button.translate').forEach(button=>button.addEventListener('click',()=>translateRow(button).catch(error=>setStatus(error.message,'error'))));
-      document.querySelectorAll('button.speak').forEach(button=>button.addEventListener('click',()=>speakRow(button)));
+      el.saveLeft.disabled=!state.block.leftCountry.editable||!state.block.leftCreateBase; el.saveRight.disabled=!state.block.rightCountry.editable||!state.block.rightCreateBase;
+      el.addLeft.disabled=el.saveLeft.disabled; el.addRight.disabled=el.saveRight.disabled;
       setStatus(state.block.title,'ok');
     }
     function inputFor(side,role,rowKey) { return document.querySelector('[data-side="'+side+'"][data-role="'+role+'"][data-row="'+CSS.escape(rowKey)+'"]'); }
@@ -1017,23 +1136,48 @@ const INDEX_HTML = String.raw`<!doctype html>
       const direction=button.dataset.direction; const from=direction==='right'?'left':'right'; const to=direction==='right'?'right':'left'; const rowKey=button.dataset.row;
       const source=inputFor(from,'text',rowKey); const target=inputFor(to,'text',rowKey); if(!source||!target) return;
       const sourceCountry=selectedCountry(from); const targetCountry=selectedCountry(to); button.disabled=true; setStatus((button.dataset.mode==='ai'?'AI':'Google')+' 번역 중…');
-      try { const body=await api('/api/translate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({mode:button.dataset.mode,text:source.value,sourceLanguage:sourceCountry.language,targetLanguage:targetCountry.language})}); target.value=body.text; el.draft.value=body.text; setStatus('번역 초안을 반대쪽 편집창에 넣었습니다. 저장 전 반드시 전례문과 대조하세요.','ok'); }
+      try { const body=await api('/api/translate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({mode:button.dataset.mode,text:source.value,sourceLanguage:sourceCountry.language,targetLanguage:targetCountry.language})}); target.value=body.text; el.translatorSource.value=source.value; el.translatorOutput.value=body.text; el.translatorSourceLanguage.value=sourceCountry.language; el.translatorTargetLanguage.value=targetCountry.language; setStatus('번역 초안을 반대쪽 편집창에 넣었습니다. 저장 전 반드시 전례문과 대조하세요.','ok'); }
       finally { button.disabled=false; }
     }
     function updatesFor(side) {
       const sourceRows=new Map(state.block.rows.map(pair=>[pair.key,pair[side]])); const updates=[];
-      sourceRows.forEach((row,key)=>{ if(!row)return; const text=inputFor(side,'text',key); const speaker=inputFor(side,'speaker',key); updates.push({key,text:text.value,expectedText:row.text,speaker:speaker?speaker.value:row.speaker,expectedSpeaker:row.speaker,create:row.create||null}); }); return updates;
+      sourceRows.forEach((row,key)=>{ if(!row)return; const text=inputFor(side,'text',key); const speaker=inputFor(side,'speaker',key); const kind=inputFor(side,'kind',key); const create=row.create?Object.assign({},row.create,{kind:kind.value}):null; updates.push({key,text:text.value,expectedText:row.text,speaker:speaker?speaker.value:row.speaker,expectedSpeaker:row.speaker,kind:kind.value,expectedKind:row.kind,create}); }); return updates;
     }
     async function saveSide(side) {
       if(!state.block)return; const country=selectedCountry(side); if(!country.editable)throw new Error('이 국가는 다른 모듈에서 파생되어 읽기 전용입니다.');
       setStatus(countryLabel(country)+' 저장 중…'); const body=await api('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jurisdiction:country.jurisdiction,blockKey:state.block[side+'BlockKey']||state.block.key,updates:updatesFor(side)})});
       setStatus(body.changed.length?body.changed.length+'개 필드를 저장했습니다. 백업: '+body.backup:'변경된 내용이 없습니다.','ok'); await loadBlock();
     }
+    async function runTranslator(mode='google') {
+      const text=el.translatorSource.value.trim(); const sequence=++state.translationSequence;
+      if(!text){ el.translatorOutput.value=''; el.translatorStatus.textContent='원문 언어는 자동으로 감지됩니다.'; return; }
+      const sourceLanguage=el.translatorSourceLanguage.value||'AUTO'; const targetLanguage=el.translatorTargetLanguage.value;
+      el.translatorStatus.textContent=(mode==='ai'?'AI':'자동')+' 번역 중…';
+      try {
+        const body=await api('/api/translate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({mode,text,sourceLanguage,targetLanguage})});
+        if(sequence!==state.translationSequence)return;
+        el.translatorOutput.value=body.text; el.translatorStatus.textContent=(sourceLanguage==='AUTO'?'원문 언어 자동 감지 · ':'')+(mode==='ai'?'AI':'Google')+' 번역 완료';
+      } catch(error) {
+        if(sequence!==state.translationSequence)return;
+        el.translatorStatus.textContent='번역 실패: '+error.message;
+      }
+    }
+    function scheduleTranslation() { clearTimeout(state.translationTimer); state.translationTimer=setTimeout(()=>runTranslator('google'),700); }
+    function swapTranslator() {
+      const oldSource=el.translatorSource.value; const oldOutput=el.translatorOutput.value; const oldSourceLanguage=el.translatorSourceLanguage.value; const oldTargetLanguage=el.translatorTargetLanguage.value;
+      el.translatorSource.value=oldOutput; el.translatorOutput.value=oldSource;
+      el.translatorSourceLanguage.value=oldTargetLanguage;
+      if(oldSourceLanguage!=='AUTO'&&Array.from(el.translatorTargetLanguage.options).some(option=>option.value===oldSourceLanguage)) el.translatorTargetLanguage.value=oldSourceLanguage;
+      scheduleTranslation();
+    }
     el.leftCountry.addEventListener('change',()=>loadBlocks().catch(e=>setStatus(e.message,'error')));
-    el.rightCountry.addEventListener('change',()=>loadBlock().catch(e=>setStatus(e.message,'error')));
+    el.rightCountry.addEventListener('change',()=>{ syncTranslatorLanguages(true); loadBlock().catch(e=>setStatus(e.message,'error')); });
     el.search.addEventListener('input',()=>filterBlocks()); el.block.addEventListener('change',()=>loadBlock().catch(e=>setStatus(e.message,'error')));
     el.reload.addEventListener('click',()=>loadBlocks(el.block.value).catch(e=>setStatus(e.message,'error')));
+    el.addLeft.addEventListener('click',()=>addRow('left')); el.addRight.addEventListener('click',()=>addRow('right'));
     el.saveLeft.addEventListener('click',()=>saveSide('left').catch(e=>setStatus(e.message,'error'))); el.saveRight.addEventListener('click',()=>saveSide('right').catch(e=>setStatus(e.message,'error')));
+    el.translatorSource.addEventListener('input',scheduleTranslation); el.translatorSourceLanguage.addEventListener('change',scheduleTranslation); el.translatorTargetLanguage.addEventListener('change',scheduleTranslation);
+    el.translatorSwap.addEventListener('click',swapTranslator); el.translatorAi.addEventListener('click',()=>runTranslator('ai')); el.translatorCopy.addEventListener('click',async()=>{ if(!el.translatorOutput.value)return; await navigator.clipboard.writeText(el.translatorOutput.value); el.translatorStatus.textContent='번역 결과를 복사했습니다.'; });
     loadState().catch(error=>setStatus(error.message,'error'));
   </script>
 </body>

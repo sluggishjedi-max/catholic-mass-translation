@@ -982,7 +982,7 @@ const INDEX_HTML = String.raw`<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>성가 JS 입력 도구</title>
+  <title>성가 데이터 편집기</title>
   <style>
     :root {
       color-scheme: light;
@@ -1118,6 +1118,20 @@ const INDEX_HTML = String.raw`<!doctype html>
       gap: 14px;
       align-content: start;
     }
+    .workflow {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 12px 14px;
+      border: 1px solid #cfe3da;
+      border-radius: 10px;
+      background: var(--panel-strong);
+      color: var(--accent-dark);
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+    .workflow span { display:inline-flex; align-items:center; gap:5px; }
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1128,6 +1142,16 @@ const INDEX_HTML = String.raw`<!doctype html>
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
+    }
+    .toolbar.actions {
+      position: sticky;
+      bottom: 10px;
+      z-index: 3;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 8px 24px rgba(15,23,42,0.12);
     }
     .meta {
       display: flex;
@@ -1272,11 +1296,12 @@ const INDEX_HTML = String.raw`<!doctype html>
 </head>
 <body>
   <header>
-    <h1>성가 JS 입력 도구</h1>
+    <h1>성가 데이터 편집기</h1>
     <div id="status" class="status" role="status" aria-live="polite">불러오는 중</div>
   </header>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <main>
+    <div class="workflow" aria-label="작업 순서"><span>① 오른쪽에서 성가 검색</span><span>→</span><span>② 선택 후 왼쪽 내용 수정</span><span>→</span><span>③ 전체 저장</span><span>· 새 성가는 ‘새 성가’부터</span></div>
     <section class="form" aria-label="성가 입력">
       <div class="grid">
         <label>책이름
@@ -1326,13 +1351,13 @@ const INDEX_HTML = String.raw`<!doctype html>
       <label>가사
         <textarea id="lyrics" spellcheck="false"></textarea>
       </label>
-      <div class="toolbar">
-        <button id="save" class="primary" type="button">저장</button>
+      <div class="toolbar actions">
+        <button id="save" class="primary" type="button">전체 내용 저장</button>
         <button id="save-number" class="secondary" type="button">성가번호 수정</button>
         <button id="save-tags" class="secondary" type="button">기타 태그 수정</button>
         <button id="save-voice-type" class="secondary" type="button">성부 구분 수정</button>
         <button id="delete" class="secondary" type="button">삭제</button>
-        <button id="new" class="secondary" type="button">새 항목</button>
+        <button id="new" class="secondary" type="button">＋ 새 성가</button>
         <button id="reload" class="secondary" type="button">새로고침</button>
       </div>
       <div class="meta">

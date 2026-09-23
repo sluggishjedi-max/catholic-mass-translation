@@ -2254,7 +2254,7 @@ const SPLIT_INDEX_HTML = `<!doctype html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prayer Data Merge Tool</title>
+  <title>기도문 데이터 편집·병합 도구</title>
   <style>
     :root {
       --bg: #f5f7fb;
@@ -2332,8 +2332,20 @@ const SPLIT_INDEX_HTML = `<!doctype html>
     }
 
     .status-section,
-    .merge-actions {
+    .merge-actions,
+    .workflow-guide {
       grid-column: 1 / -1;
+    }
+
+    .workflow-guide {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 12px 14px;
+      border-color: #b9d9dc;
+      background: #edf8f8;
+      color: var(--accent-strong);
+      font-weight: 750;
     }
 
     .status-section {
@@ -2682,7 +2694,7 @@ const SPLIT_INDEX_HTML = `<!doctype html>
   <header>
     <div class="topbar">
       <div>
-        <h1>Prayer Data Merge Tool</h1>
+        <h1>기도문 데이터 편집·병합 도구</h1>
         <div class="file-path" id="filePath"></div>
       </div>
       <button class="secondary" id="reloadButton" type="button">새로고침</button>
@@ -2691,6 +2703,7 @@ const SPLIT_INDEX_HTML = `<!doctype html>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <main>
+    <section class="workflow-guide" aria-label="작업 순서"><span>① 기도문 검색·선택</span><span>→</span><span>② 내용을 직접 수정하고 개별 저장</span><span>→</span><span>③ 필요할 때 두 언어 항목 병합</span></section>
     <section class="status-section" aria-label="상태">
       <div class="panel-body">
         <div class="status" id="status">대기 중</div>
@@ -2699,7 +2712,7 @@ const SPLIT_INDEX_HTML = `<!doctype html>
 
     <section class="item-panel" aria-label="기준 항목">
       <div class="panel-title">
-        <span>기준 항목</span>
+        <span>① 기준 기도문</span>
         <span class="meta">남길 항목</span>
       </div>
       <div class="panel-body panel-stack">
@@ -2707,7 +2720,7 @@ const SPLIT_INDEX_HTML = `<!doctype html>
           <select id="targetSearchLang" aria-label="기준 항목 검색 언어"></select>
           <input id="targetSearch" autocomplete="off" placeholder="기도명 검색">
           <button class="secondary" id="targetSearchButton" type="button">검색</button>
-          <button class="secondary" id="targetNewButton" type="button">새 항목</button>
+          <button class="secondary" id="targetNewButton" type="button">＋ 새 기도문</button>
         </div>
         <div class="matches" id="targetMatches"></div>
 
@@ -2735,14 +2748,14 @@ const SPLIT_INDEX_HTML = `<!doctype html>
 
         <div class="actions">
           <button class="danger" id="targetDeleteButton" type="button">ID 항목 삭제</button>
-          <button class="secondary" id="targetSaveButton" type="button">기준항목만 수정하기</button>
+          <button class="secondary" id="targetSaveButton" type="button">이 기도문만 저장</button>
         </div>
       </div>
     </section>
 
     <section class="item-panel" aria-label="합칠 항목">
       <div class="panel-title">
-        <span>합칠 항목</span>
+        <span>② 가져올 기도문</span>
         <span class="meta">가져올 항목</span>
       </div>
       <div class="panel-body panel-stack">
@@ -2777,13 +2790,13 @@ const SPLIT_INDEX_HTML = `<!doctype html>
 
         <div class="actions">
           <button class="danger" id="sourceDeleteButton" type="button">ID 항목 삭제</button>
-          <button class="secondary" id="sourceSaveButton" type="button">합칠항목만 수정하기</button>
+          <button class="secondary" id="sourceSaveButton" type="button">이 기도문만 저장</button>
         </div>
       </div>
     </section>
 
     <section class="merge-actions" aria-label="병합 실행">
-      <div class="panel-title">병합 실행</div>
+      <div class="panel-title">③ 저장 및 병합</div>
       <div class="panel-body merge-body">
         <div>
           <label class="check-row" for="mergeOverwrite">
@@ -2795,7 +2808,7 @@ const SPLIT_INDEX_HTML = `<!doctype html>
             <span>합친 뒤 합칠 항목 제거</span>
           </label>
         </div>
-        <button id="mergeButton" type="button">해당 항목 합치기</button>
+        <button id="mergeButton" type="button">선택한 두 기도문 병합</button>
       </div>
     </section>
   </main>

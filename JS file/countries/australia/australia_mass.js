@@ -86,6 +86,21 @@
         if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
         return;
       }
+      if (override.rename) {
+        let row = target;
+        for (const part of override.rename.rowPath) row = row && row[part];
+        if (!row || typeof row !== 'object') throw new Error(`Australia Mass editor rename path is stale: ${JSON.stringify(override.rename.rowPath)}`);
+        const fromField = override.rename.fromField;
+        const toField = override.rename.toField;
+        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error(`Australia Mass editor rename field is stale: ${fromField}`);
+        if (fromField !== toField) delete row[fromField];
+        row[toField] = String(override.value ?? '');
+        const keys = Object.assign({}, row.__massEditorPairKeys);
+        delete keys[fromField];
+        keys[toField] = override.rename.rowKey;
+        row.__massEditorPairKeys = keys;
+        return;
+      }
       const editPath = Array.isArray(override.path) ? override.path : [];
       let parent = target;
       for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
