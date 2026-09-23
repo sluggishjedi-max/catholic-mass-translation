@@ -9,6 +9,7 @@ const GOOGLE_MAPS_BROWSER_KEY = defineSecret("GOOGLE_MAPS_BROWSER_KEY");
 const ALLOWED_ORIGINS = defineString("ALLOWED_ORIGINS", { default: "" });
 
 const GEMINI_API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/";
+const GEMINI_PROXY_REVISION = "secret-v2-2026-09-23";
 const PRIMARY_MODEL = "gemini-2.5-flash-lite";
 const FALLBACK_MODEL = "gemini-flash-latest";
 const KTCG_MASS_READING_URL = "https://ktcgkpv.org/readings/mass-reading";
@@ -43,6 +44,7 @@ exports.geminiProxy = onRequest(
     const origin = req.get("origin") || "";
     const allowedOrigin = resolveAllowedOrigin(origin);
     setCorsHeaders(res, allowedOrigin);
+    res.set("X-Ordo-Gemini-Proxy-Revision", GEMINI_PROXY_REVISION);
 
     if (req.method === "OPTIONS") {
       res.status(204).send("");
