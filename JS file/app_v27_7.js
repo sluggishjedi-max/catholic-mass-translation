@@ -1192,10 +1192,53 @@
         }));
     }
 
+    const koreanLunarNewYearNames = Object.freeze({
+        KR: '설',
+        VN: 'Tết Nguyên Đán Hàn Quốc',
+        EN: 'Korean Lunar New Year',
+        JP: '韓国の旧正月（ソルラル）',
+        LA: 'Novus Annus Lunaris Coreanus',
+        ZH: '韓國農曆新年（春節）',
+        IT: 'Capodanno lunare coreano',
+        PT: 'Ano-Novo Lunar Coreano',
+        ES: 'Año Nuevo Lunar Coreano',
+        DE: 'Koreanisches Mondneujahr'
+    });
+
+    const koreanChuseokNames = Object.freeze({
+        KR: '한가위',
+        VN: 'Lễ Chuseok của Hàn Quốc',
+        EN: 'Chuseok, the Korean Harvest Festival',
+        JP: '韓国の秋夕（チュソク）',
+        LA: 'Chuseok, festum messis Coreanum',
+        ZH: '韓國秋夕（中秋節）',
+        IT: 'Chuseok, festa coreana del raccolto',
+        PT: 'Chuseok, festa coreana das colheitas',
+        ES: 'Chuseok, fiesta coreana de la cosecha',
+        DE: 'Chuseok, koreanisches Erntedankfest'
+    });
+
+    function koreanLunarCalendarOverride(date, countryKey) {
+        if (countryKey !== 'KR') return null;
+        const lunar = koreanLunarMonthDay(date);
+        const names = lunar && lunar.month === 1 && lunar.day === 1
+            ? koreanLunarNewYearNames
+            : (lunar && lunar.month === 8 && lunar.day === 15 ? koreanChuseokNames : null);
+        if (!names) return null;
+        return calendarOverrideFromEntry(saintEntry('white', names, {
+            rank: 'feast',
+            localOnly: true,
+            source: 'Korean proper lunar calendar',
+            countryProper: true
+        }));
+    }
+
     function getCountryCalendarOverride(date, countryLang = state.selectedLocationCode || state.currentLoc) {
         const requested = String(countryLang || state.selectedLocationCode || state.currentLoc || '').trim().toUpperCase();
         const profile = getLiturgicalCalendarProfile(requested);
         const countryKey = profile.countryCalendar || requested;
+        const koreanLunarOverride = koreanLunarCalendarOverride(date, countryKey);
+        if (koreanLunarOverride) return koreanLunarOverride;
         const countryEntries = countryFixedSaintsCalendar[countryKey] || {};
         const countryModule = countryMassModuleForJurisdiction(countryKey);
         const dynamicEntries = countryModule && typeof countryModule.dynamicCalendar === 'function'

@@ -24,6 +24,25 @@ const root = path.resolve(__dirname, '..');
     const result = await page.evaluate(async () => {
       const date = new Date(2026, 8, 8, 12);
       const check = (value, message) => { if (!value) throw new Error(message); };
+      const originalCalendarState = {
+        currentLoc: state.currentLoc,
+        selectedLocationCode: state.selectedLocationCode
+      };
+      state.currentLoc = 'KR'; state.selectedLocationCode = 'KR';
+      const chuseokDate = new Date(2026, 8, 25, 12);
+      const chuseokInfo = buildGeneratedLiturgyInfo(chuseokDate);
+      check(koreanLunarMonthDay(chuseokDate)?.month === 8 && koreanLunarMonthDay(chuseokDate)?.day === 15, '2026 Chuseok lunar date');
+      check(chuseokInfo.names.KR === '한가위', `Chuseok Korean title: ${chuseokInfo.names.KR}`);
+      check(chuseokInfo.localCalendar?.lang === 'KR', 'Chuseok Korean local calendar marker');
+      check(chuseokInfo.prefaceKey === 'kr_proper_3_chuseok', `Chuseok proper preface: ${chuseokInfo.prefaceKey}`);
+      check(chuseokInfo.color === liturgyColorMap.white, `Chuseok liturgical color: ${chuseokInfo.color}`);
+      const lunarNewYearDate = new Date(2026, 1, 17, 12);
+      const lunarNewYearInfo = buildGeneratedLiturgyInfo(lunarNewYearDate);
+      check(koreanLunarMonthDay(lunarNewYearDate)?.month === 1 && koreanLunarMonthDay(lunarNewYearDate)?.day === 1, '2026 Korean Lunar New Year date');
+      check(lunarNewYearInfo.names.KR === '설', `Korean Lunar New Year title: ${lunarNewYearInfo.names.KR}`);
+      check(lunarNewYearInfo.prefaceKey === 'kr_proper_2_lunar_new_year', `Korean Lunar New Year proper preface: ${lunarNewYearInfo.prefaceKey}`);
+      state.currentLoc = originalCalendarState.currentLoc;
+      state.selectedLocationCode = originalCalendarState.selectedLocationCode;
       check(!citationsAreDifferent('마태 1,18-23', '聖瑪竇福音 一,18-23', 'KR', 'ZH'), 'Chinese identical passage compared as different');
       check(!citationsAreDifferent('마르 1,1-8', 'Mk 1:1-8', 'KR', 'DE'), 'German Mk confused with Vietnamese Micah');
       check(!citationsAreDifferent('요한 3,16-18', 'Gv 3,16-18', 'KR', 'IT'), 'Italian John confused with Vietnamese Ecclesiastes');
