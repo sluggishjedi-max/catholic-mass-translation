@@ -6036,9 +6036,54 @@
             entrance: [/^Antifona(?! alla comunione)/i], collect: [/^Colletta/i], reading1: [/^Prima Lettura/i], psalm: [/^Salmo Responsoriale/i], reading2: [/^Seconda Lettura/i], gospel_accl: [/^Acclamazione al Vangelo/i], gospel: [/^Vangelo$/i], prayer_offerings: [/^Sulle offerte/i], communion: [/^Antifona alla comunione/i], prayer_after: [/^Dopo la comunione/i]
         },
         ES: {
-            entrance: [/^ANTÍFONA DE ENTRADA/iu], collect: [/^ORACIÓN COLECTA/iu], reading1: [/^PRIMERA LECTURA/iu], psalm: [/^SALMO RESPONSORIAL/iu], reading2: [/^SEGUNDA LECTURA/iu], gospel_accl: [/^ACLAMACIÓN ANTES DEL EVANGELIO/iu], gospel: [/^EVANGELIO$/iu], prayer_offerings: [/^ORACIÓN SOBRE LAS OFRENDAS/iu], preface: [/^PREFACIO$/iu], communion: [/^ANTÍFONA DE LA COMUNIÓN/iu], prayer_after: [/^ORACIÓN DESPUÉS DE LA COMUNIÓN/iu]
+            entrance: [/^ANTÍFONA DE ENTRADA/iu], collect: [/^ORACIÓN COLECTA/iu], reading1: [/^(?:PRIMERA LECTURA|LECTURA\s*(?:I|1))/iu], psalm: [/^SALMO RESPONSORIAL/iu], reading2: [/^(?:SEGUNDA LECTURA|LECTURA\s*(?:II|2))/iu], gospel_accl: [/^ACLAMACIÓN ANTES DEL EVANGELIO/iu], gospel: [/^EVANGELIO$/iu], prayer_offerings: [/^ORACIÓN SOBRE LAS OFRENDAS/iu], preface: [/^PREFACIO$/iu], communion: [/^ANTÍFONA DE LA COMUNIÓN/iu], prayer_after: [/^ORACIÓN DESPUÉS DE LA COMUNIÓN/iu]
         }
     };
+
+    // The Korean calendar celebrates the Korean Martyrs as a solemnity. On a
+    // Sunday the ordinary dated feeds in other countries therefore point at
+    // the Sunday Mass, even though their official Lectionaries publish this
+    // celebration's proper readings separately. Only sources whose complete
+    // liturgical text is publicly retrievable are listed here; a same-passage
+    // Bible page or an unrelated calendar date is deliberately not a source.
+    const koreanLocalLectionaryProperSources = Object.freeze({
+        '09-20': Object.freeze({
+            EN: Object.freeze({
+                jurisdictions: Object.freeze(['US']),
+                url: 'https://bible.usccb.org/bible/readings/0920-memorial-andrew-kim-taegon.cfm',
+                parseLocationCode: 'US',
+                authority: 'United States Conference of Catholic Bishops',
+                lectionary: '642A'
+            }),
+            ES: Object.freeze({
+                jurisdictions: Object.freeze(['MX']),
+                url: 'https://bible.usccb.org/es/bible/lecturas/0920-memorial-andrew-kim-taegon.cfm',
+                // Parse the standalone USCCB page directly instead of applying
+                // the date-row scoping used by the regular CEM daily feed.
+                parseLocationCode: 'US',
+                authority: 'Conferencia del Episcopado Mexicano / USCCB',
+                lectionary: '642A'
+            })
+        })
+    });
+
+    function activeKoreanLocalLectionaryProperKey(date) {
+        if (!date) return '';
+        const profile = getLiturgicalCalendarProfile(state.selectedLocationCode || state.currentLoc || 'KR');
+        if ((profile.countryCalendar || '') !== 'KR') return '';
+        const key = calendarDateKey(date);
+        return koreanLocalLectionaryProperSources[key] ? key : '';
+    }
+
+    function koreanLocalLectionaryProperSource(lang, date, locationCode) {
+        const key = activeKoreanLocalLectionaryProperKey(date);
+        const source = key && koreanLocalLectionaryProperSources[key]
+            ? koreanLocalLectionaryProperSources[key][normalizeSelectableLang(lang, '')]
+            : null;
+        if (!source) return null;
+        const jurisdiction = dataJurisdictionForLocation(locationCode || dailySourceLocationCode(lang));
+        return source.jurisdictions.includes(jurisdiction) ? Object.assign({ key }, source) : null;
+    }
 
     const sourceUrls = {
         KR: date => `https://missa.cbck.or.kr/DailyMissa/${formatDateYmd(date)}`,
@@ -8515,6 +8560,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
         const lower = lang.toLowerCase();
+        const officialLocalProperSections = new Set(
+            parsed.officialLocalProper && Array.isArray(parsed.officialLocalProper.sectionKeys)
+                ? parsed.officialLocalProper.sectionKeys
+                : []
+        );
         const allowExternalLiturgy = options.allowExternalLiturgy === true;
         const calendarContext = allowExternalLiturgy && parsed.calendarContext && parsed.calendarContext.confirmed
             ? parsed.calendarContext
@@ -8531,8 +8581,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const suppressNonLeftProper = calendarPriority ? false : isNonLeftLocalProperSource(lang, parsed.title);
         if (allowExternalLiturgy && parsed.title && !options.suppressTitle) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
         Object.keys(parsed.data || {}).forEach(key => {
-            if (suppressNonLeftProper && properLocalDailySectionIds.has(key)) return;
-            if (shouldSuppressMismatchedLocalProperSection(lang, key)) return;
+            const isOfficialLocalProperSection = officialLocalProperSections.has(key);
+            if (officialLocalProperSections.size && properLocalDailySectionIds.has(key) && !isOfficialLocalProperSection) return;
+            if (suppressNonLeftProper && properLocalDailySectionIds.has(key) && !isOfficialLocalProperSection) return;
+            if (shouldSuppressMismatchedLocalProperSection(lang, key) && !isOfficialLocalProperSection) return;
             const value = parsed.data[key];
             if (!sourceSectionHasContent(value)) return;
             if (key === 'preface') {
@@ -9414,7 +9466,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict89';
+    const STRICT_PARSER_CACHE_VERSION = 'strict90';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9662,6 +9714,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const selector = getStrictMassSelector(date);
         return [
             STRICT_PARSER_CACHE_VERSION,
+            activeKoreanLocalLectionaryProperKey(date) ? `kr-proper-${calendarDateKey(date)}` : '',
             selector.slot || 'day',
             selector.specialVigil || '',
             selector.allSoulsChoice ? `all-souls-${selector.allSoulsChoice}` : ''
@@ -10055,9 +10108,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['communion', /^ANTÍFONA DE LA COMUNIÓN(?:\s|$|[:：.])/iu],
             ['entrance', /^ANTÍFONA DE ENTRADA(?:\s|$|[:：.])/iu],
             ['collect', /^ORACIÓN COLECTA(?:\s|$|[:：.])/iu],
-            ['reading1', /^PRIMERA LECTURA(?:\s|$|[:：.])/iu],
+            ['reading1', /^(?:PRIMERA LECTURA|LECTURA\s*(?:I|1))(?:\s|$|[:：.])/iu],
             ['psalm', /^SALMO RESPONSORIAL(?:\s|$|[:：.])/iu],
-            ['reading2', /^SEGUNDA LECTURA(?:\s|$|[:：.])/iu],
+            ['reading2', /^(?:SEGUNDA LECTURA|LECTURA\s*(?:II|2))(?:\s|$|[:：.])/iu],
             ['Sequence', /^SECUENCIA(?:\s|$|[:：.])/iu],
             ['gospel_accl', /^ACLAMACIÓN ANTES DEL EVANGELIO(?:\s|$|[:：.])/iu],
             ['gospel', /^EVANGELIO(?:\s|$|[:：.])/iu],
@@ -10295,6 +10348,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 .replace(/^((?:[1-3]\s*)?[A-Za-zÀ-ỹĐđÐð.]{1,12})\s*,\s*(?=\d)/u, '$1 ');
         }
         if (lang === 'IT') text = text.replace(/^Dal\s+(?=Sal\b)/iu, '');
+        if (lang === 'ES') text = text.replace(/ί/gu, 'í');
         if (lang === 'DE') text = text.replace(/^Vers\s*:\s*(?:vgl\.?\s*)?/iu, '').replace(/^vgl\.?\s*/iu, '');
         return text;
     }
@@ -10328,7 +10382,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
         }
         return {
-            citation: strictCleanCitation(citationSource, options),
+            citation: strictCleanCitation(lang === 'ES' ? strictCitationCandidate(citationSource, lang) : citationSource, options),
             blocks: blocks.filter((_, i) => i !== index)
         };
     }
@@ -11002,9 +11056,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function strictAlternativeMatch(line) {
         const text = strictCleanLine(line).replace(/[<>]/g, ' ').replace(/\s+/g, ' ').trim();
-        const standalone = text.match(/^(또는|或いは|または|又は|Hoặc|Hoac|Or|Vel)(?:\s+(?:đọc|doc|read))?\s*[:：]?\s*$/iu);
+        const standalone = text.match(/^(또는|或いは|または|又は|或|Hoặc|Hoac|O bien|Oppure|Ou|Oder|Or|Vel)(?:\s+(?:đọc|doc|read))?\s*[:：]?\s*$/iu);
         if (standalone) return { marker: standalone[1], rest: '' };
-        const match = text.match(/^(또는|或いは|または|又は|Hoặc|Hoac|Or|Vel)\s*[:：]\s*(.+)$/iu)
+        const match = text.match(/^(또는|或いは|または|又は|或|Hoặc|Hoac|O bien|Oppure|Ou|Oder|Or|Vel)\s*[:：]\s*(.+)$/iu)
             || text.match(/^(Hoặc|Hoac)\s+(?:đọc|doc)\s*[:：]\s*(.+)$/iu);
         if (!match) return null;
         const rest = strictCleanLine((match[2] || '').replace(/^(?:đọc|doc)\b\s*:?\s*/iu, ''));
@@ -11115,7 +11169,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictParseReadingSection(lang, key, section) {
-        let blocks = strictTrimReadingTail(lang, key, strictTrimReadingAfterProclamation(strictSplitBlocks(section.lines)))
+        const sourceBlocks = strictSplitBlocks(section.lines);
+        const joinedCitationBlocks = [];
+        for (let index = 0; index < sourceBlocks.length; index += 1) {
+            const current = sourceBlocks[index];
+            const next = sourceBlocks[index + 1];
+            const joined = next && /^\d+\s*[,.:・]\s*\d/u.test(next)
+                ? strictCleanLine(`${current} ${next}`)
+                : '';
+            if (joined && !/\d/u.test(current) && strictLooksLikeCitation(joined, lang)) {
+                joinedCitationBlocks.push(joined);
+                index += 1;
+            } else {
+                joinedCitationBlocks.push(current);
+            }
+        }
+        let blocks = strictTrimReadingTail(lang, key, strictTrimReadingAfterProclamation(joinedCitationBlocks))
             .filter(line => !strictIsProclamationEnding(line));
         let summaryResult = strictExtractQuotedSummary(blocks);
         if (lang === 'PT' && !summaryResult.summary) {
@@ -12229,7 +12298,21 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             if (options.length) return options[0];
         }
-        if (strictReadingKeys.has(key)) return strictParseReadingSection(lang, key, section);
+        if (strictReadingKeys.has(key)) {
+            const groups = strictGroupAlternativeBlocks(section.lines || []);
+            if (groups.length > 1) {
+                const citationKey = `cit_${lang.toLowerCase()}`;
+                const options = groups.map(lines => strictParseReadingSection(lang, key, { ...section, lines }));
+                const lines = options.flatMap((option, index) => index ? [strictParsedLine('', 'Or:'), ...option.lines] : option.lines);
+                return {
+                    text: parsedLinesToText(lines),
+                    lines,
+                    [citationKey]: options[0][citationKey] || '',
+                    optionCits: options.map(option => ({ [citationKey]: option[citationKey] || '' }))
+                };
+            }
+            return strictParseReadingSection(lang, key, section);
+        }
         if (key === 'psalm' || key === 'gospel_accl') return strictParsePsalmOrAcclamation(lang, key, section);
         return strictParsePrayerOrAntiphon(lang, key, section);
     }
@@ -12378,6 +12461,55 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             color: colorFromSourceTitle(title, colorFromSourceLines(lines, state.liturgyInfo.color)),
             data
         }, lang);
+    }
+
+    function promoteKoreanSolemnitySecondReading(parsed, lang) {
+        const data = parsed && parsed.data;
+        const firstReading = data && data.reading1;
+        if (!firstReading || sourceSectionHasContent(data.reading2)) return parsed;
+        const options = splitParsedAlternatives(firstReading.lines || []).filter(option => option.length);
+        const citations = Array.isArray(firstReading.optionCits) ? firstReading.optionCits : [];
+        if (options.length < 2 || citations.length < 2) return parsed;
+        const citationKey = `cit_${lang.toLowerCase()}`;
+        const makeReading = (lines, citation) => {
+            const clonedLines = cloneData(lines);
+            const section = { lines: clonedLines, text: parsedLinesToText(clonedLines) };
+            if (citation) section[citationKey] = citation;
+            return section;
+        };
+        data.reading1 = makeReading(options[0], citations[0] && citations[0][citationKey]);
+        data.reading2 = makeReading(options[1], citations[1] && citations[1][citationKey]);
+        return parsed;
+    }
+
+    async function applyOfficialKoreanLocalProperReadings(parsed, lang, date, locationCode, fetchSource) {
+        const sourceInfo = koreanLocalLectionaryProperSource(lang, date, locationCode);
+        if (!sourceInfo || typeof fetchSource !== 'function') return parsed;
+        try {
+            const source = await fetchSource(sourceInfo.url);
+            const proper = promoteKoreanSolemnitySecondReading(
+                strictParseDailyMass(lang, source, date, sourceInfo.parseLocationCode || locationCode),
+                lang
+            );
+            const sectionKeys = ['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel']
+                .filter(key => sourceSectionHasContent(proper.data && proper.data[key]));
+            if (!['reading1', 'psalm', 'reading2', 'gospel'].every(key => sectionKeys.includes(key))) {
+                throw new Error(`Official proper Lectionary source is incomplete: ${sectionKeys.join(', ')}`);
+            }
+            parsed.data = Object.assign({}, parsed.data || {});
+            sectionKeys.forEach(key => { parsed.data[key] = proper.data[key]; });
+            parsed.officialLocalProper = {
+                countryCalendar: 'KR',
+                dateKey: sourceInfo.key,
+                sectionKeys,
+                sourceUrl: sourceInfo.url,
+                sourceAuthority: sourceInfo.authority,
+                lectionary: sourceInfo.lectionary
+            };
+        } catch (error) {
+            console.warn(`${lang} 한국 순교자 고유 독서집 본문을 불러오지 못했습니다: ${sourceInfo.url}`, error);
+        }
+        return parsed;
     }
 
     const vietnameseProperOverrideSectionKeys = new Set(['entrance', 'collect', 'prayer_offerings', 'preface', 'communion', 'prayer_after']);
@@ -12868,6 +13000,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 }
             }
         }
+        parsed = await applyOfficialKoreanLocalProperReadings(parsed, lang, date, locationCode, fetchStrictSource);
         const fixedTitle = strictFixedDailyTitle(lang, date);
         if (fixedTitle) parsed.title = fixedTitle;
         return parsed;

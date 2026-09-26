@@ -41,6 +41,88 @@ const root = path.resolve(__dirname, '..');
       check(koreanLunarMonthDay(lunarNewYearDate)?.month === 1 && koreanLunarMonthDay(lunarNewYearDate)?.day === 1, '2026 Korean Lunar New Year date');
       check(lunarNewYearInfo.names.KR === '설', `Korean Lunar New Year title: ${lunarNewYearInfo.names.KR}`);
       check(lunarNewYearInfo.prefaceKey === 'kr_proper_2_lunar_new_year', `Korean Lunar New Year proper preface: ${lunarNewYearInfo.prefaceKey}`);
+      const koreanMartyrsDate = new Date(2026, 8, 20, 12);
+      const englishKoreanMartyrsProper = `Title: Memorial of Saint Andrew Kim Taegon and Companions, Martyrs
+URL Source: https://bible.usccb.org/bible/readings/0920-memorial-andrew-kim-taegon.cfm
+Markdown Content:
+### Reading 1
+Wisdom 3:1-9
+The souls of the just are in the hand of God.
+### Or
+Romans
+8:31b-39
+If God is for us, who can be against us?
+### Responsorial Psalm
+Psalm 126:1-2, 4-6
+R. Those who sow in tears shall reap rejoicing.
+Those who go forth weeping shall return rejoicing. R.
+### Alleluia
+1 Peter 4:14
+R. Alleluia, alleluia.
+The Spirit of God rests upon you.
+R. Alleluia, alleluia.
+### Gospel
+Luke 9:23-26
+Jesus said, take up your cross daily and follow me.`;
+      const spanishKoreanMartyrsProper = `Title: Memoria de San Andrés Kim Taegon y compañeros, mártires
+URL Source: https://bible.usccb.org/es/bible/lecturas/0920-memorial-andrew-kim-taegon.cfm
+Markdown Content:
+### Lectura I
+Sabidurίa 3, 1-9
+Las almas de los justos están en las manos de Dios.
+### O bien:
+Romanos 8, 31-39
+Si Dios está a nuestro favor, ¿quién estará en contra nuestra?
+### Salmo Responsorial
+Del Salmo 125
+R. Entre gritos de júbilo cosecharán aquellos que siembran con dolor.
+Al regresar, cantando vendrán con sus gavillas. R.
+### Aclamación antes del Evangelio
+1 Pedro 4, 14
+R. Aleluya, aleluya.
+El Espíritu de Dios descansa en ustedes.
+R. Aleluya.
+### Evangelio
+Lucas 9, 23-26
+Jesús dijo: tome su cruz de cada día y me siga.`;
+      const ordinarySundayParsed = () => ({
+        title: 'Twenty-fifth Sunday in Ordinary Time',
+        data: {
+          collect: {text:'Ordinary Sunday prayer',lines:[parsedLine('', 'Ordinary Sunday prayer')]},
+          reading1: {text:'Ordinary Sunday reading',lines:[parsedLine('', 'Ordinary Sunday reading')]},
+          psalm: {text:'Ordinary Sunday psalm',lines:[parsedLine('', 'Ordinary Sunday psalm')]},
+          gospel_accl: {text:'Ordinary Sunday acclamation',lines:[parsedLine('', 'Ordinary Sunday acclamation')]},
+          gospel: {text:'Ordinary Sunday gospel',lines:[parsedLine('', 'Ordinary Sunday gospel')]}
+        }
+      });
+      state.targetLang = 'EN'; state.targetLocationCode = 'US';
+      state.liturgicalDateContext = {date:koreanMartyrsDate,localDate:koreanMartyrsDate};
+      state.liturgyInfo = buildGeneratedLiturgyInfo(koreanMartyrsDate);
+      check(activeKoreanLocalLectionaryProperKey(koreanMartyrsDate) === '09-20', 'Korean Martyrs proper Lectionary key');
+      const englishProperParsed = await applyOfficialKoreanLocalProperReadings(
+        ordinarySundayParsed(), 'EN', koreanMartyrsDate, 'US', async () => englishKoreanMartyrsProper
+      );
+      check(englishProperParsed.officialLocalProper?.lectionary === '642A', 'English official proper source metadata');
+      check(englishProperParsed.data.reading1.cit_en === 'Wisdom 3:1-9', `English proper first reading: ${englishProperParsed.data.reading1.cit_en}`);
+      check(englishProperParsed.data.reading2.cit_en === 'Romans 8:31b-39', `English proper second reading: ${englishProperParsed.data.reading2.cit_en}`);
+      check(englishProperParsed.data.gospel.cit_en === 'Luke 9:23-26', `English proper Gospel: ${englishProperParsed.data.gospel.cit_en}`);
+      const englishProperMerged = {};
+      mergeSourceData(englishProperMerged, englishProperParsed, 'EN');
+      check(!!englishProperMerged.reading2 && !englishProperMerged.collect, 'English proper readings did not replace mismatched Sunday formulary');
+      state.targetLang = 'ES'; state.targetLocationCode = 'MX';
+      const spanishProperParsed = await applyOfficialKoreanLocalProperReadings(
+        ordinarySundayParsed(), 'ES', koreanMartyrsDate, 'MX', async () => spanishKoreanMartyrsProper
+      );
+      check(spanishProperParsed.data.reading1.cit_es === 'Sabiduría 3, 1-9', `Spanish proper first reading: ${spanishProperParsed.data.reading1.cit_es}`);
+      check(spanishProperParsed.data.reading2.cit_es === 'Romanos 8, 31-39', `Spanish proper second reading: ${spanishProperParsed.data.reading2.cit_es}`);
+      check(spanishProperParsed.data.gospel.cit_es === 'Lucas 9, 23-26', `Spanish proper Gospel: ${spanishProperParsed.data.gospel.cit_es}`);
+      const spanishProperMerged = {};
+      mergeSourceData(spanishProperMerged, spanishProperParsed, 'ES');
+      check(!!spanishProperMerged.reading2 && !spanishProperMerged.collect, 'Spanish proper readings did not replace mismatched Sunday formulary');
+      check(!citationsAreDifferent('지혜 3,1-9', englishProperParsed.data.reading1.cit_en, 'KR', 'EN'), 'English proper first reading did not align with Korean');
+      check(!citationsAreDifferent('로마 8,31ㄴ-39', englishProperParsed.data.reading2.cit_en, 'KR', 'EN'), 'English proper second reading did not align with Korean');
+      check(!citationsAreDifferent('로마 8,31ㄴ-39', spanishProperParsed.data.reading2.cit_es, 'KR', 'ES'), 'Spanish proper second reading did not align with Korean');
+      check(!citationsAreDifferent('루카 9,23-26', spanishProperParsed.data.gospel.cit_es, 'KR', 'ES'), 'Spanish proper Gospel did not align with Korean');
       state.currentLoc = originalCalendarState.currentLoc;
       state.selectedLocationCode = originalCalendarState.selectedLocationCode;
       check(!citationsAreDifferent('마태 1,18-23', '聖瑪竇福音 一,18-23', 'KR', 'ZH'), 'Chinese identical passage compared as different');
