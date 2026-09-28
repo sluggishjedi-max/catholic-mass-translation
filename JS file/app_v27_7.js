@@ -13332,6 +13332,176 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const peopleSpeakerByLang = { kr: '◎', vn: 'CĐ.', en: 'ALL', jp: '会', la: 'P.', zh: '答', it: 'Tutti', pt: 'Todos', es: 'Todos', de: 'A.' };
     const gospelSpeakerByLang = { kr: celebrantSpeakerByLang.kr, vn: 'LM. (PT.)', en: 'P. (D.)', jp: '司 (助)', la: celebrantSpeakerByLang.la, zh: '主祭', it: 'C. (D.)', pt: 'C. (D.)', es: 'C. (D.)', de: 'P. (D.)' };
 
+    // Keep a stable localized frame for the biblical source line. Official
+    // source wording always wins; these templates are used only when that
+    // language did not yield an intro and another language identifies the
+    // canonical book. {particle} is used only by the Korean Gospel formula.
+    const readingIntroDefaultTemplates = Object.freeze({
+        KR: Object.freeze({ reading: '{book}의 말씀입니다.', gospel: '{gospel}{particle} 전하는 거룩한 복음입니다.' }),
+        VN: Object.freeze({ reading: 'Bài trích {book}.', gospel: 'Tin Mừng Chúa Giêsu Kitô theo thánh {gospel}.' }),
+        EN: Object.freeze({ reading: 'A reading from {book}.', gospel: 'A reading from the holy Gospel according to {gospel}.' }),
+        JP: Object.freeze({ reading: '{book}からの朗読です。', gospel: '{gospel}による福音。' }),
+        LA: Object.freeze({ reading: 'Léctio libri {book}.', gospel: 'Léctio sancti Evangélii secúndum {gospel}.' }),
+        ZH: Object.freeze({ reading: '恭讀{book}。', gospel: '恭讀{gospel}福音。' }),
+        IT: Object.freeze({ reading: 'Lettura da {book}.', gospel: 'Dal Vangelo secondo {gospel}.' }),
+        PT: Object.freeze({ reading: 'Leitura de {book}.', gospel: 'Evangelho de Nosso Senhor Jesus Cristo segundo {gospel}.' }),
+        ES: Object.freeze({ reading: 'Lectura de {book}.', gospel: 'Lectura del santo Evangelio según {gospel}.' }),
+        DE: Object.freeze({ reading: 'Lesung aus {book}.', gospel: 'Aus dem heiligen Evangelium nach {gospel}.' })
+    });
+
+    const localizedGospelNames = Object.freeze({
+        MAT: Object.freeze({ KR: '마태오', VN: 'Mát-thêu', EN: 'Matthew', JP: 'マタイ', LA: 'Matthǽum', ZH: '聖瑪竇', IT: 'Matteo', PT: 'São Mateus', ES: 'san Mateo', DE: 'Matthäus' }),
+        MRK: Object.freeze({ KR: '마르코', VN: 'Mác-cô', EN: 'Mark', JP: 'マルコ', LA: 'Marcum', ZH: '聖馬爾谷', IT: 'Marco', PT: 'São Marcos', ES: 'san Marcos', DE: 'Markus' }),
+        LUK: Object.freeze({ KR: '루카', VN: 'Lu-ca', EN: 'Luke', JP: 'ルカ', LA: 'Lucam', ZH: '聖路加', IT: 'Luca', PT: 'São Lucas', ES: 'san Lucas', DE: 'Lukas' }),
+        JHN: Object.freeze({ KR: '요한', VN: 'Gio-an', EN: 'John', JP: 'ヨハネ', LA: 'Ioánnem', ZH: '聖若望', IT: 'Giovanni', PT: 'São João', ES: 'san Juan', DE: 'Johannes' })
+    });
+
+    const vietnameseIntroBookPatterns = Object.freeze([
+        [/thư\s+thứ\s+nhất\s+của\s+thánh\s+phê[\s-]*rô/iu, '1PE'],
+        [/thư\s+thứ\s+hai\s+của\s+thánh\s+phê[\s-]*rô/iu, '2PE'],
+        [/thư\s+thứ\s+nhất\s+của\s+thánh\s+gio[\s-]*an/iu, '1JN'],
+        [/thư\s+thứ\s+hai\s+của\s+thánh\s+gio[\s-]*an/iu, '2JN'],
+        [/thư\s+thứ\s+ba\s+của\s+thánh\s+gio[\s-]*an/iu, '3JN']
+    ]);
+
+    function localizedBibleBookName(bookId, langCode) {
+        const lang = normalizeSelectableLang(langCode, '');
+        const table = globalThis.bibleLanguageTables && globalThis.bibleLanguageTables[lang];
+        const book = table && table.books && table.books[bookId];
+        return cleanNodeText(book && (book.name || book.koreanName) || '');
+    }
+
+    function koreanSubjectParticle(value) {
+        const last = Array.from(String(value || '').trim()).pop() || '';
+        const code = last.charCodeAt(0);
+        return code >= 0xac00 && code <= 0xd7a3 && (code - 0xac00) % 28 ? '이' : '가';
+    }
+
+    function localizedReadingIntroText(baseId, langCode, bookId) {
+        if (!strictReadingKeys.has(baseId) || !bookId) return '';
+        const lang = normalizeSelectableLang(langCode, '');
+        const templateSet = readingIntroDefaultTemplates[lang];
+        if (!templateSet) return '';
+        if (baseId === 'gospel') {
+            const gospel = localizedGospelNames[bookId] && localizedGospelNames[bookId][lang];
+            if (!gospel) return '';
+            return templateSet.gospel
+                .replace('{gospel}', gospel)
+                .replace('{particle}', lang === 'KR' ? koreanSubjectParticle(gospel) : '');
+        }
+        const book = localizedBibleBookName(bookId, lang);
+        if (!book) return '';
+        if (lang === 'EN') {
+            const generated = buildEnglishReadingIntro(baseId, `${book} 1:1`);
+            if (generated) return generated;
+        }
+        return templateSet.reading.replace('{book}', book).replace('{particle}', '');
+    }
+
+    function canonicalBookIdFromReadingCitations(citations) {
+        const source = citations || {};
+        for (const lang of SUPPORTED_LANGS) {
+            const lower = lang.toLowerCase();
+            const values = [source[`cit_${lower}`]];
+            const options = source[`optionCits_${lower}`];
+            if (Array.isArray(options)) {
+                options.forEach(option => values.push(option && option[`cit_${lower}`]));
+            }
+            for (const citation of values.filter(Boolean)) {
+                const parsed = globalThis.bibleCitation && globalThis.bibleCitation.parse(citation, lang);
+                if (parsed && parsed.id) return parsed.id;
+            }
+        }
+        return '';
+    }
+
+    function normalizedReadingIntroLookup(value) {
+        return String(value || '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[đð]/gi, 'd')
+            .replace(/[^\p{L}\p{N}]+/gu, ' ')
+            .replace(/\s+/g, ' ')
+            .trim()
+            .toLowerCase();
+    }
+
+    function canonicalBookIdFromReadingIntro(text, langCode, baseId) {
+        const lang = normalizeSelectableLang(langCode, '');
+        const raw = cleanNodeText(text);
+        if (!raw) return '';
+        if (lang === 'VN') {
+            const special = vietnameseIntroBookPatterns.find(([pattern]) => pattern.test(raw));
+            if (special) return special[1];
+        }
+        if (baseId === 'gospel') {
+            const normalized = normalizedReadingIntroLookup(raw);
+            const match = Object.entries(localizedGospelNames).find(([, names]) => {
+                const name = normalizedReadingIntroLookup(names[lang]);
+                return name && normalized.includes(name);
+            });
+            if (match) return match[0];
+        }
+        const table = globalThis.bibleLanguageTables && globalThis.bibleLanguageTables[lang];
+        if (!table || !table.books) return '';
+        const normalized = normalizedReadingIntroLookup(raw);
+        const candidates = Object.entries(table.books).flatMap(([id, book]) =>
+            [book.name, ...(book.aliases || [])]
+                .map(name => ({ id, name: normalizedReadingIntroLookup(name) }))
+                .filter(candidate => candidate.name.length >= 3)
+        ).sort((left, right) => right.name.length - left.name.length);
+        const found = candidates.find(candidate => normalized.includes(candidate.name));
+        return found ? found.id : '';
+    }
+
+    function canonicalBookIdFromReadingLines(lines, baseId) {
+        for (const lang of SUPPORTED_LANGS) {
+            const lower = lang.toLowerCase();
+            const intro = (lines || []).find(line => line && line[`role_${lower}`] === 'intro' && cleanNodeText(line[`text_${lower}`]));
+            if (!intro) continue;
+            const bookId = canonicalBookIdFromReadingIntro(intro[`text_${lower}`], lang, baseId);
+            if (bookId) return bookId;
+        }
+        return '';
+    }
+
+    function readingIntroInsertionIndex(lines, baseId) {
+        if (baseId === 'gospel') {
+            const gloryIndex = (lines || []).findIndex(line => /^(?:주님\s*영광\s*받으소서)[.!。]?$/u.test(cleanNodeText(line && line.text_kr)));
+            if (gloryIndex >= 0) return gloryIndex;
+        }
+        const bodyIndex = (lines || []).findIndex(line => lineHasAnyRole(line, 'body'));
+        if (bodyIndex >= 0) return bodyIndex;
+        return parsedInsertIndex(lines || [], baseId);
+    }
+
+    function ensureLocalizedReadingIntros(lines, baseId, citations = {}) {
+        if (!strictReadingKeys.has(baseId) || !Array.isArray(lines)) return;
+        const bookId = canonicalBookIdFromReadingCitations(citations)
+            || canonicalBookIdFromReadingLines(lines, baseId);
+        if (!bookId) return;
+        let introLine = lines.find(line => lineHasAnyRole(line, 'intro'));
+        if (!introLine) {
+            introLine = emptyMassLine();
+            lines.splice(readingIntroInsertionIndex(lines, baseId), 0, introLine);
+        }
+        SUPPORTED_LANGS.forEach(lang => {
+            const lower = lang.toLowerCase();
+            const existing = lines.find(line => line && line[`role_${lower}`] === 'intro' && cleanNodeText(line[`text_${lower}`]));
+            if (existing) return;
+            const text = localizedReadingIntroText(baseId, lang, bookId);
+            if (!text) return;
+            introLine[`sp_${lower}`] = baseId === 'gospel'
+                ? (gospelSpeakerByLang[lower] || celebrantSpeakerByLang[lower] || '')
+                : (lectorSpeakerByLang[lower] || '');
+            introLine[`text_${lower}`] = text;
+            introLine[`text_${lower}_ai`] = '';
+            introLine[`role_${lower}`] = 'intro';
+            introLine[`rubric_${lower}`] = '';
+            introLine[`intro_origin_${lower}`] = 'derived';
+        });
+    }
+
     function makePrayerOpenerLine() {
         return {
             sp_kr: celebrantSpeakerByLang.kr, text_kr: '기도합시다',
@@ -13979,6 +14149,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         line[`role_${lower}`] = parsed.role || '';
         line[`rubric_${lower}`] = parsed.rubric || '';
         line[`verse_refs_${lower}`] = normalizedPsalmVerseRefs(parsed.verseRefs);
+        line[`intro_origin_${lower}`] = parsed.role === 'intro' && parsed.text ? 'source' : '';
     }
 
     function clearParsedLineLanguage(line, lower) {
@@ -13989,6 +14160,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         line[`role_${lower}`] = '';
         line[`rubric_${lower}`] = '';
         line[`verse_refs_${lower}`] = [];
+        line[`intro_origin_${lower}`] = '';
     }
 
     function applyParsedPsalmLinesForLanguage(targetLines, lower, parsedLines, baseId) {
@@ -14062,6 +14234,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 line[`text_${lower}_ai`] = parsed.ai || '';
                 line[`role_${lower}`] = role;
                 line[`rubric_${lower}`] = parsed.rubric || '';
+                line[`intro_origin_${lower}`] = role === 'intro' && parsed.text ? 'source' : '';
             });
             return;
         }
@@ -16263,9 +16436,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             });
             if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(lines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(lines, baseId);
+            const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
+            ensureLocalizedReadingIntros(lines, baseId, cit);
             normalizeDailySectionLines(lines, baseId);
             removeDailyProclamationEndingLines(lines, baseId);
-            const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
             const baseLabel = alignmentGroup
                 ? dailyVariantLabelForAlignment(alignmentGroup, i, alignmentGroups, baseId)
                 : dailyVariantLabel(i);
@@ -16345,6 +16519,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
             if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(targetLines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(targetLines, baseId);
+            ensureLocalizedReadingIntros(targetLines, baseId, newData);
             normalizeDailySectionLines(targetLines, baseId);
             removeDailyProclamationEndingLines(targetLines, baseId);
             if (item.type === 'selectable' && item.variants && item.variants.A) item.lines = item.variants.A.lines;
@@ -18642,7 +18817,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function sourceOnlyReadingWholeText(lines, lower, baseId, field = 'text') {
-        return (lines || []).filter(line => !isProtectedParsedTargetLineForLanguage(line, baseId, lower)).flatMap(line => {
+        return (lines || []).filter(line => !isProtectedParsedTargetLineForLanguage(line, baseId, lower)
+            && line && line[`role_${lower}`] !== 'intro').flatMap(line => {
             const key = field === 'text_ai' ? `text_${lower}_ai` : `${field}_${lower}`;
             const value = line && line[key];
             return String(value || '').replace(/<br\s*\/?>/giu, '\n').split(/\n+/);
@@ -18674,9 +18850,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const lastGospelDialogueIndex = baseId === 'gospel'
             ? sourceLines.reduce((last, line, index) => isGospelDialogueLine(line) ? index : last, -1)
             : -1;
+        const lastIntroIndex = sourceLines.reduce((last, line, index) =>
+            line && line[`role_${lower}`] === 'intro' ? index : last, -1);
+        const lastFrameIndex = Math.max(lastGospelDialogueIndex, lastIntroIndex);
         const endingIndex = sourceLines.findIndex(isDailyEndingLine);
         let aiInsertIndex = sourceLines.findIndex((line, index) =>
-            index > lastGospelDialogueIndex
+            index > lastFrameIndex
             && (endingIndex < 0 || index < endingIndex)
             && !isProtectedParsedTargetLineForLanguage(line, baseId, lower)
         );
@@ -18689,7 +18868,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 lineHtml += linePairHTML('', aiHtml, lower, extraClass, true, false);
                 inserted = true;
             }
-            if (!isProtectedParsedTargetLineForLanguage(line, baseId, lower)) return lineHtml;
+            const isIntro = line && line[`role_${lower}`] === 'intro';
+            if (!isIntro && !isProtectedParsedTargetLineForLanguage(line, baseId, lower)) return lineHtml;
             const speaker = line && line[`sp_${lower}`] || '';
             const text = line && line[`text_${lower}`] || '';
             const rubric = line && line[`rubric_${lower}`] || '';

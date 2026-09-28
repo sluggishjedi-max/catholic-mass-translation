@@ -6,6 +6,7 @@ const { chromium } = require('@playwright/test');
 
 const root = path.resolve(__dirname, '..');
 const iso = process.env.ORDO_AUDIT_DATE || '2026-09-28';
+const targetHtml = process.env.ORDO_CHECK_HTML || 'index.html';
 
 (async () => {
   const [year, month, day] = iso.split('-').map(Number);
@@ -37,7 +38,7 @@ const iso = process.env.ORDO_AUDIT_DATE || '2026-09-28';
     const vietnamesePayload = await vietnameseResponse.json();
     const page = await browser.newPage();
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
-    await page.goto(`http://127.0.0.1:${server.address().port}/V27.7.html`, { waitUntil: 'load' });
+    await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, { waitUntil: 'load' });
     await page.waitForFunction(() => typeof strictParseDailyMass === 'function');
     const result = await page.evaluate(({ koreanSource, vietnameseData, iso }) => {
       const [year, month, day] = iso.split('-').map(Number);
@@ -63,6 +64,35 @@ const iso = process.env.ORDO_AUDIT_DATE || '2026-09-28';
       mergeSourceData(merged, vietnamese, 'VN');
       applyCachedVariantAlignments(merged, date);
       const optionMap = selectableOptionMapFromData(merged.psalm, 'psalm').optionMap;
+      const readingDiagnostics = Object.fromEntries(['reading1', 'reading2', 'gospel'].map(baseId => {
+        const section = merged[baseId] || {};
+        const selectable = selectableOptionMapFromData(section, baseId);
+        return [baseId, {
+          optionCounts: Object.fromEntries(Object.entries(selectable.optionMap).map(([lang, options]) => [lang, options.length])),
+          alignment: section.variantAlignment || [],
+          citations: Object.fromEntries(Object.entries(section).filter(([key, value]) => /^cit_/.test(key) && value))
+        }];
+      }));
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData(merged);
+      for (const baseId of Object.keys(readingDiagnostics)) {
+        const item = massData.find(candidate => getBaseId(candidate.id) === baseId);
+        readingDiagnostics[baseId].renderType = item && item.type;
+        readingDiagnostics[baseId].renderedChoices = Object.fromEntries(Object.entries(item && item.variants || {}).map(([key, variant]) => [
+          key,
+          {
+            label: variant.label,
+            sourceIndexes: variant.__dailySourceIndexes,
+            koreanIntro: (variant.lines || []).find(line => line.role_kr === 'intro')?.text_kr || '',
+            vietnameseIntro: (variant.lines || []).find(line => line.role_vn === 'intro')?.text_vn || ''
+          }
+        ]));
+      }
+      render();
+      for (const baseId of ['reading1', 'gospel']) {
+        const selector = document.querySelector(`section[data-part-id="${baseId}"] select.select-inline`);
+        readingDiagnostics[baseId].visibleSelectorChoices = selector ? selector.options.length : 0;
+      }
       return {
         koreanTitle: korean.title,
         vietnameseChoiceTitles: choices.map(ktcgkpvChoiceTitle),
@@ -73,6 +103,7 @@ const iso = process.env.ORDO_AUDIT_DATE || '2026-09-28';
           options.map(option => variantOptionMeaningText('psalm', option))
         ])),
         alignment: merged.psalm.variantAlignment,
+        readingDiagnostics,
         parsedCitations: {
           kr: (merged.psalm.optionCits_kr?.length ? merged.psalm.optionCits_kr : [{ cit_kr: merged.psalm.cit_kr }])
             .map(entry => globalThis.bibleCitation.parse(entry.cit_kr, 'KR')),

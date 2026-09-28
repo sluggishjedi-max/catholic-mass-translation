@@ -481,6 +481,53 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       ]}});
       render();
       check(document.querySelectorAll('section[data-part-id="reading1"] .btn-ai-trans').length===1,'Single source-only reading split AI by sentence');
+      const vietnamesePeterIntro='Bài trích thư thứ nhất của thánh Phê-rô tông đồ.';
+      state.currentLoc='KR'; state.selectedLocationCode='KR'; state.targetLang='VN'; state.targetLocationCode='VN';
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({reading1:{cit_vn:'1 Pr 1,3-9',vn_lines:[
+        {sp:'N.',text:vietnamesePeterIntro,role:'intro'},
+        {text:'Chúc tụng Thiên Chúa là Thân Phụ Đức Giê-su Ki-tô, Chúa chúng ta.',role:'body'}
+      ]}});
+      const peterReading=massData.find(item=>getBaseId(item.id)==='reading1');
+      const peterLines=peterReading.type==='selectable' ? peterReading.variants[state.options.reading1||'A'].lines : peterReading.lines;
+      const sourcePeterIntro=peterLines.find(line=>line.role_vn==='intro');
+      const koreanPeterIntro=peterLines.find(line=>line.role_kr==='intro');
+      check(sourcePeterIntro && sourcePeterIntro.text_vn===vietnamesePeterIntro,'Parsed Vietnamese reading intro was replaced');
+      check(sourcePeterIntro.intro_origin_vn==='source','Parsed Vietnamese reading intro lost source provenance');
+      check(koreanPeterIntro && koreanPeterIntro.sp_kr==='▥' && koreanPeterIntro.text_kr==='베드로 1서의 말씀입니다.','Vietnamese 1 Peter intro did not produce the Korean default');
+      check(SUPPORTED_LANGS.every(lang=>peterLines.some(line=>line['role_'+lang.toLowerCase()]==='intro'&&line['text_'+lang.toLowerCase()])), 'Reading intro defaults were not stored for every supported language');
+      check(canonicalBookIdFromReadingIntro(vietnamesePeterIntro,'VN','reading1')==='1PE','Vietnamese intro-only book recognition failed');
+      check(localizedReadingIntroText('gospel','KR','JHN')==='요한이 전하는 거룩한 복음입니다.','Korean Gospel subject particle fallback failed');
+      render();
+      const vietnameseSourceOnlyReading=document.querySelector('section[data-part-id="reading1"]');
+      check(vietnameseSourceOnlyReading.textContent.includes(vietnamesePeterIntro),'Parsed Vietnamese intro missing from rendering');
+      check(vietnameseSourceOnlyReading.textContent.includes('베드로 1서의 말씀입니다.'),'Derived Korean intro missing from rendering');
+      check(vietnameseSourceOnlyReading.querySelectorAll('.btn-ai-trans').length===1,'Derived intro suppressed whole-reading AI fallback');
+      const multiReading={reading1:{
+        cit_kr:'욥 1,6-22',cit_vn:'G 1,6-22',
+        optionCits_kr:[{cit_kr:'욥 1,6-22'}],
+        optionCits_vn:[{cit_vn:'G 1,6-22'},{cit_vn:'1 Pr 1,3-9'},{cit_vn:'2 Mcb 7,1-2.9-14'}],
+        optionKinds_vn:['common','common','common'],
+        kr_lines:[{text:'욥기의 말씀입니다.',role:'intro'},{text:'한국어 욥기 본문',role:'body'}],
+        vn_lines:[
+          {text:'Bài trích sách Gióp.',role:'intro'},{text:'Bài đọc ngày thường.',role:'body'},
+          {text:'Hoặc:'},
+          {text:vietnamesePeterIntro,role:'intro'},{text:'Bài đọc chung thứ nhất.',role:'body'},
+          {text:'Hoặc:'},
+          {text:'Bài trích sách Ma-ca-bê quyển thứ hai.',role:'intro'},{text:'Bài đọc chung thứ hai.',role:'body'}
+        ]
+      }};
+      applyCachedVariantAlignments(multiReading,date);
+      check(multiReading.reading1.variantAlignment.length===3,'Three reading sources collapsed before rendering');
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData(multiReading);
+      state.options.reading1='A'; render();
+      const multiReadingItem=massData.find(item=>getBaseId(item.id)==='reading1');
+      const multiReadingSelect=document.querySelector('section[data-part-id="reading1"] select.select-inline');
+      check(multiReadingItem.type==='selectable' && Object.keys(multiReadingItem.variants).length===3,'Reading variants collapsed to one part');
+      check(multiReadingSelect && multiReadingSelect.options.length===3,'Reading choice selector disappeared');
+      state.options.reading1='B'; render();
+      check(document.querySelector('section[data-part-id="reading1"]').textContent.includes('베드로 1서의 말씀입니다.'),'Second reading choice lost its translated intro');
       aiTranslationRecords.clear();
       state.currentLoc='KR'; state.selectedLocationCode='KR'; state.targetLang='ZH'; state.targetLocationCode='TW'; state.layoutStacked=false;
       check(isGospelDialogueLine({text_kr:'주님께서 여러분과 함께.'}),'Korean Gospel dialogue recognition');
@@ -495,6 +542,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       const koreanGospelFrame=sourceOnlyGospel.querySelector('.source-only-reading-whole .pc-col').textContent;
       check(sourceOnlyGospel.querySelectorAll('.btn-ai-trans').length===1,'Source-only Gospel split AI by sentence');
       check(sourceOnlyGospel.textContent.includes('那時候，耶穌上了山'),'Source-only Gospel original missing');
+      check(koreanGospelFrame.includes('마태오가 전하는 거룩한 복음입니다.'),'Source-only Gospel missing derived Korean intro');
       for(const phrase of ['주님께서 여러분과 함께','또한 사제(부제)의 영과 함께','주님 영광 받으소서','주님의 말씀입니다','그리스도님 찬미합니다']) {
         check(koreanGospelFrame.includes(phrase),'Source-only Gospel lost fixed response: '+phrase);
       }
@@ -550,6 +598,18 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
           }
         }
       }
+      const missingCollectConclusion=[];
+      applyParsedLinesForLanguage(missingCollectConclusion,'kr',[
+        {text:'한국어 본기도 본문',role:'body'},
+        {text:localizedPrayerConclusionFormula('KR','collect','relative_son'),role:'conclusion'}
+      ],'collect');
+      applyParsedLinesForLanguage(missingCollectConclusion,'vn',[
+        {text:'Lời nguyện nhập lễ tiếng Việt không có câu kết.',role:'body'}
+      ],'collect');
+      ensureLocalizedPrayerConclusions(missingCollectConclusion,'collect');
+      const suppliedVietnameseCollect=missingCollectConclusion.find(line=>line.role_vn==='conclusion');
+      check(suppliedVietnameseCollect && suppliedVietnameseCollect.text_vn===localizedPrayerConclusionFormula('VN','collect','relative_son'),'Missing collect conclusion did not follow the adjacent language');
+      check(!suppliedVietnameseCollect.text_vn_ai,'Supplied collect conclusion was marked as AI');
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
