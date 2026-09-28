@@ -396,24 +396,66 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         check(element.textContent.includes(id==='reading1'?'中文讀經正文':id==='psalm'?'殿宇':'真理聖化'),id+' official target lost');
       }
       check(buildParallelPassageAlignment('psalm',sameOptions,{cit_kr:'시편 84(83),3-6.12',cit_zh:'詠八三3-6,9,12'}).length===1,'Same responsorial Psalm split by stanza notation');
+      const koreanVietnamesePsalmAlignment=buildParallelPassageAlignment('psalm',{
+        kr:[[parsedLine('','주님, 귀 기울여 제 말씀 들어 주소서.')]],
+        vn:[[parsedLine('','Xin Chúa lắng tai và nghe tiếng con cầu.')],[parsedLine('','Ai nghẹn ngào ra đi gieo giống.')]]
+      },{
+        cit_kr:'시편 17(16),1.2-3.6-7(◎ 6ㄷ 참조)',
+        optionCits_vn:[{cit_vn:'Tv 16,1.2-3.6-7 Đ. c.6b'},{cit_vn:'Tv 125,1-2ab.2cd-3.4-5.6 Đ. c.5'}]
+      });
+      check(koreanVietnamesePsalmAlignment.some(group=>group.kr===0&&group.vn===0),'Same Korean/Vietnamese responsorial Psalm stayed split');
       const explicitAlternatives=buildParallelPassageAlignment('reading1',{kr:[[],[]],zh:[[]]},sept11.reading1);
       check(explicitAlternatives.length===2 && explicitAlternatives.some(group=>group.kr===0&&group.zh===0) && explicitAlternatives.some(group=>group.kr===1&&group.zh===null),'Explicit source alternative was lost');
+      // The KTCG core response is complete enough to render and cache.  The
+      // slower diocesan prayer supplement must not be awaited by first load.
+      const originalVietnameseSource=state.vnReadingSource;
+      const originalKtcgLoader=fetchVietnameseKtcgDailyMass;
+      const originalPrayerSupplement=applyVietnameseKtcgDiocesanPrayers;
+      const completeSection=text=>({text,lines:[parsedLine('',text)]});
+      const ktcgCore={title:'Ngày thường',data:Object.fromEntries(
+        ['entrance','reading1','psalm','gospel_accl','gospel','communion'].map(id=>[id,completeSection(id)])
+      )};
+      let prayerSupplementCalls=0;
+      try {
+        state.vnReadingSource='ktcg';
+        fetchVietnameseKtcgDailyMass=async()=>ktcgCore;
+        applyVietnameseKtcgDiocesanPrayers=async parsed=>{ prayerSupplementCalls+=1; return parsed; };
+        const firstLoad=await fetchStrictDailyMass('VN',date);
+        check(firstLoad===ktcgCore&&prayerSupplementCalls===0,'KTCG first load still awaited diocesan prayers');
+        writeCachedDailySource('VN',date,ktcgCore,{locationCode:'VN'});
+        const cachedKtcgCore=readCachedDailySource('VN',date,{locationCode:'VN'});
+        check(cachedKtcgCore?.data?.gospel?.text==='gospel','KTCG core response was not cacheable');
+        localStorage.removeItem(dailySourceStorageKey('VN',date,'VN'));
+      } finally {
+        fetchVietnameseKtcgDailyMass=originalKtcgLoader;
+        applyVietnameseKtcgDiocesanPrayers=originalPrayerSupplement;
+        state.vnReadingSource=originalVietnameseSource;
+      }
       // Actual source-only choices must offer AI on either side, including KR.
       for(const id of ['reading1','psalm']) {
         aiTranslationRecords.clear();
         const data={[id]:{cit_kr:'1코린 9,16-19',cit_zh:'聖保祿宗徒致格林多人前書 10,1-5',
-          kr_lines:[{text:'서로 다른 한국어 원문',role:'body'}],zh_lines:[{text:'另一篇中文原文',role:'body'}],
+          kr_lines:[{text:'서로 다른 한국어 원문 첫 문단',role:'body'},{text:'한국어 원문 둘째 문단',role:'body'}],
+          zh_lines:[{text:'另一篇中文原文第一段',role:'body'},{text:'中文原文第二段',role:'body'}],
           variantAlignment:[{kr:0,zh:null},{kr:null,zh:0}]}};
         resetMassDataFrom(getStartupOrdinaryMassData());
         applyDailyReadingsToMassData(data);
         for(const choice of ['A','B']) {
           state.options[id]=choice; render();
-          check(document.querySelector('section[data-part-id="'+id+'"] .btn-ai-trans'),id+' '+choice+' missing opposite AI');
+          const buttons=document.querySelectorAll('section[data-part-id="'+id+'"] .btn-ai-trans');
+          check(buttons.length===(id==='reading1'?1:2),id+' '+choice+' AI must cover the whole source choice (found '+buttons.length+')');
+        }
+        if(id==='reading1') {
+          state.layoutStacked=true; render();
+          check(document.querySelectorAll('section[data-part-id="reading1"] .btn-ai-trans').length===1,'Mobile source-only reading split AI by sentence');
+          check(document.querySelector('section[data-part-id="reading1"]').textContent.includes('另一篇中文原文第一段'),'Mobile source-only original missing');
+          state.layoutStacked=false; render();
         }
         const originalTranslator=translateWithGemini;
         try {
           translateWithGemini=async(text,lang)=>{
-            check(lang==='KR' && text.includes('另一篇中文原文'),'Wrong AI direction/source');
+            check(lang==='KR' && text.includes('另一篇中文原文第一段'),'Wrong AI direction/source');
+            if(id==='reading1') check(text.includes('中文原文第二段'),'Whole source-only reading was not sent for AI translation');
             return '확인용 AI 번역';
           };
           document.querySelector('section[data-part-id="'+id+'"] .btn-ai-trans').click();
@@ -423,6 +465,14 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
           check(element.textContent.includes('另一篇中文原文'),id+' original overwritten by AI');
         } finally { translateWithGemini=originalTranslator; aiTranslationRecords.clear(); }
       }
+      aiTranslationRecords.clear();
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({reading1:{cit_kr:'창세 1,1-2',kr_lines:[
+        {text:'한 언어에만 있는 첫 문단',role:'body'},
+        {text:'한 언어에만 있는 둘째 문단',role:'body'}
+      ]}});
+      render();
+      check(document.querySelectorAll('section[data-part-id="reading1"] .btn-ai-trans').length===1,'Single source-only reading split AI by sentence');
       // Antiphons: dual Psalm numbering and the Chinese inline "or" marker.
       check(!citationsAreDifferent('시편 119(118),137.124','詠一一八137, 124','KR','ZH'),'Entrance Psalm numbering split');
       const communionZh=strictParsePrayerOrAntiphon('ZH','communion',{heading:'領主詠',lines:[

@@ -41,6 +41,8 @@ assert(!bible.equivalent('마태 1,1-25','KR','Matthew 1:1-23','EN',{ignoreSubve
 assert.equal(bible.wholeVerseCoverage(bible.parse('1코린 9,16-19.22ㄴ-27','KR')),'16,17,18,19,22,23,24,25,26,27');
 assert.equal(bible.wholeVerseCoverage(bible.parse('마태 1,3a-c','KR')),'3');
 assert(bible.equivalent('Tv 95,1-3 (Đ. x. 7b)','VN','Ps 95:1-3','EN',{ignoreSubverses:true}),'Vietnamese Psalm response marker');
+assert(bible.equivalent('시편 17(16),1.2-3.6-7(◎ 6ㄷ 참조)','KR','Tv 16,1.2-3.6-7 Đ. c.6b','VN',{ignoreSubverses:true}),'Vietnamese bare Psalm response marker');
+assert.equal(bible.parse('Tv 33,2-3.4-5.6-7.8-9 Đ. x. c.5','VN')?.verses,'2-3.4-5.6-7.8-9','Vietnamese response cross-reference suffix');
 assert(bible.equivalent('Vgl. Mt 1,18-23','DE','Matthew 1:18-23','EN',{ignoreSubverses:true}),'German reference prefix');
 assert(bible.equivalent('マタ 1,18-23 参照','JP','Matthew 1:18-23','EN',{ignoreSubverses:true}),'Japanese reference suffix');
 assert(bible.equivalent('Ps 95:1-3 (see 7b)','EN','Ps 95:1-3','EN',{ignoreSubverses:true}),'English Psalm response reference');

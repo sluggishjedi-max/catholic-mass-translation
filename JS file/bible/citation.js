@@ -41,6 +41,10 @@
     const koreanSuffixes = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f'};
     let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => koreanSuffixes[c]))
       .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
+      // Vietnamese lectionaries also append the response reference without
+      // parentheses (for example "Đ. c.6b" or "Đ. x. c.5").  It is metadata
+      // for the refrain, not part of the Psalm stanza range.
+      .replace(/\s+(?:đ|dap|r(?:esp)?|response|refrain)\.?\s*(?:x\.?\s*)?(?:c\.?\s*)?\d+[a-z]?(?:\s*[-–—.]\s*\d+[a-z]?)?\s*$/iu,'')
       .replace(/\s*(?:참고|참조|参照|參照|參閱)$/u,'')
       .replace(/^(?:cf\.?|cfr\.?|x\.?|see|vgl\.?)\s+/,'')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');

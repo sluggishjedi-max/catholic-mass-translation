@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260918-TW-PREFACE-SELECTORS';
+    const APP_VERSION = 'V27.7-20260928-VN-LOAD-ALIGNMENT';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -6363,16 +6363,26 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const body = ktcgkpvFormBody(date);
         const cacheDate = formatDateIso(date);
         const endpoint = `${KTCG_PROXY_ENDPOINT}${KTCG_PROXY_ENDPOINT.includes('?') ? '&' : '?'}date=${encodeURIComponent(cacheDate)}`;
-        const response = await fetchWithTimeout(endpoint, {
-            method: 'POST',
-            cache: 'no-cache',
+        let response = await fetchWithTimeout(endpoint, {
+            method: 'GET',
+            cache: 'default',
             timeoutMs: KTCG_CITATION_TIMEOUT_MS,
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
+            headers: { 'Accept': 'application/json' }
         });
+        // Keep the client compatible while an older Firebase revision is still
+        // serving POST-only requests during a rolling deployment.
+        if (response.status === 405) {
+            response = await fetchWithTimeout(endpoint, {
+                method: 'POST',
+                cache: 'no-cache',
+                timeoutMs: KTCG_CITATION_TIMEOUT_MS,
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            });
+        }
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const payload = await response.json();
         if (!payload || !payload.success || !payload.data) throw new Error('KTCG mass-reading JSON is empty');
@@ -6774,6 +6784,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const VIETNAMESE_KTCG_DIOCESAN_INDEX_URL = 'https://gpbanmethuot.net/loi-chua-moi-ngay/';
     const VIETNAMESE_KTCG_DIOCESAN_RSS_URL = 'https://gpbanmethuot.net/rss/loi-chua-moi-ngay/';
     let vietnameseKtcgDiocesanFeedPromise = null;
+    const vietnameseKtcgPrayerEnrichmentPromises = new Map();
 
     function normalizeVietnameseDiocesanMatchText(value) {
         let text = String(value || '');
@@ -6973,6 +6984,28 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             console.warn('Vietnamese diocesan prayer supplement failed; keeping KTCG sections.', error);
         }
         return parsed;
+    }
+
+    function queueVietnameseKtcgPrayerEnrichment(parsed, date) {
+        if (!parsed || !parsed.data || hasVietnameseKtcgDiocesanPrayers(parsed)) return Promise.resolve(parsed);
+        const key = formatDateIso(date);
+        if (vietnameseKtcgPrayerEnrichmentPromises.has(key)) {
+            return vietnameseKtcgPrayerEnrichmentPromises.get(key);
+        }
+        const promise = applyVietnameseKtcgDiocesanPrayers(parsed, date)
+            .then(enriched => {
+                if (hasVietnameseKtcgDiocesanPrayers(enriched)) {
+                    writeCachedDailySource('VN', date, enriched, { locationCode: dailySourceLocationCode('VN') });
+                }
+                return enriched;
+            })
+            .catch(error => {
+                console.warn('Vietnamese diocesan prayer background enrichment failed.', error);
+                return parsed;
+            })
+            .finally(() => vietnameseKtcgPrayerEnrichmentPromises.delete(key));
+        vietnameseKtcgPrayerEnrichmentPromises.set(key, promise);
+        return promise;
     }
 
     function ktcgkpvCitationFromEntry(entry) {
@@ -12810,8 +12843,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         await loadAllSoulsMassConfigIfNeeded(date);
         if (lang === 'VN') {
             if (normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg') {
-                const parsed = await fetchVietnameseKtcgDailyMass(date);
-                return applyVietnameseKtcgDiocesanPrayers(parsed, date);
+                // KTCG already supplies every required reading and antiphon.
+                // Optional diocesan Roman-Missal prayers are enriched only
+                // after the first render, so their slower relay lookup never
+                // blocks the Vietnamese lectionary from appearing.
+                return fetchVietnameseKtcgDailyMass(date);
             }
             const temporalFallback = vietnameseTemporalFallbackParsed(date);
             if (temporalFallback) {
@@ -13163,8 +13199,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'ES' && !hasCompleteMexicanDailyMass(entry.parsed, locationCode)) return null;
         if (lang === 'DE' && !hasCompleteGermanDailyMass(entry.parsed, locationCode)) return null;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(entry.parsed)) return null;
-        if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
-            && !hasVietnameseKtcgDiocesanPrayers(entry.parsed)) return null;
         return entry.parsed;
     }
 
@@ -13177,8 +13211,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'ES' && !hasCompleteMexicanDailyMass(parsed, locationCode)) return;
         if (lang === 'DE' && !hasCompleteGermanDailyMass(parsed, locationCode)) return;
         if (lang === 'VN' && !hasCompleteVietnameseParsedMass(parsed)) return;
-        if (lang === 'VN' && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
-            && !hasVietnameseKtcgDiocesanPrayers(parsed)) return;
         if (parsed && parsed.data) {
             writeStorageJSON(dailySourceStorageKey(lang, date, locationCode), { cachedAt: Date.now(), parsed });
         }
@@ -16519,6 +16551,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         render();
 
+        const vietnameseResult = results.find(result => result && result.lang === 'VN' && result.parsed);
+        if (vietnameseResult
+            && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg'
+            && !hasVietnameseKtcgDiocesanPrayers(vietnameseResult.parsed)) {
+            // Yield the first complete render before starting the optional,
+            // slower diocesan-prayer lookup.
+            setTimeout(() => queueVietnameseKtcgPrayerEnrichment(vietnameseResult.parsed, today), 250);
+        }
+
         if (appliedCount) {
             alignDailySelectableVariantsWithAI(fetchedData, today)
                 .then(() => compareLocalMissalPrayersWithAI(fetchedData, today))
@@ -18591,6 +18632,85 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return `<div class="${className}">${speakerHTML(sp, langKey, aiLine || forceNoSpeaker)}<div class="text-content">${displayText || ''}</div></div>`;
     }
 
+    function sourceOnlyReadingWholeText(lines, lower, baseId, field = 'text') {
+        return (lines || []).filter(line => !isProtectedParsedTargetLineForLanguage(line, baseId, lower)).flatMap(line => {
+            const key = field === 'text_ai' ? `text_${lower}_ai` : `${field}_${lower}`;
+            const value = line && line[key];
+            return String(value || '').replace(/<br\s*\/?>/giu, '\n').split(/\n+/);
+        }).map(part => plainTextFromHtml(part).trim())
+            .filter(part => part && !isLiturgicalPlaceholderText(part))
+            .join('\n\n');
+    }
+
+    function sourceOnlyReadingLanguageHtml(lines, lower, baseId, extraClass = '') {
+        return (lines || []).map(line => {
+            const speaker = line && line[`sp_${lower}`] || '';
+            const text = line && line[`text_${lower}`] || '';
+            const rubric = line && line[`rubric_${lower}`] || '';
+            const rubricHtml = rubric ? `<span class="rubric${extraClass.includes('translation') ? ' translation' : ''}">${rubric}</span>` : '';
+            if (isLiturgicalPlaceholderText(text)) return rubricHtml;
+            return rubricHtml + linePairHTML(
+                speaker,
+                text,
+                lower,
+                [extraClass, roleClassForLine(line, lower)].filter(Boolean).join(' '),
+                shouldSuppressSpeaker(baseId),
+                false
+            );
+        }).join('');
+    }
+
+    function appendSourceOnlyReadingWholeDisplay(partContainer, data, baseId, leftLang, rightLang, isStacked) {
+        if (!strictReadingKeys.has(baseId) || !data) return false;
+        const leftLower = leftLang.toLowerCase();
+        const rightLower = rightLang.toLowerCase();
+        const bodyText = {
+            [leftLower]: sourceOnlyReadingWholeText(data.lines, leftLower, baseId),
+            [rightLower]: sourceOnlyReadingWholeText(data.lines, rightLower, baseId)
+        };
+        let sourceLower = data.__dailySourceIndexes ? dailyVariantSourceLower(data, baseId) : '';
+        if (!sourceLower) {
+            const bodyLanguages = [leftLower, rightLower].filter(lower => bodyText[lower]);
+            if (bodyLanguages.length !== 1) return false;
+            sourceLower = bodyLanguages[0];
+        }
+        if (!sourceLower || ![leftLower, rightLower].includes(sourceLower)) return false;
+        const targetLower = sourceLower === leftLower ? rightLower : leftLower;
+        const sourceText = bodyText[sourceLower];
+        const targetText = bodyText[targetLower];
+        if (!sourceText || targetText) return false;
+
+        const predefinedAiText = sourceOnlyReadingWholeText(data.lines, targetLower, baseId, 'text_ai');
+        const targetLang = targetLower === leftLower ? leftLang : rightLang;
+        const htmlFor = lower => {
+            const extraClass = lower === rightLower ? 'translation' : '';
+            if (lower === sourceLower) {
+                return sourceOnlyReadingLanguageHtml(data.lines, lower, baseId, extraClass);
+            }
+            return linePairHTML('', makeAIButton(sourceText, predefinedAiText, targetLang), lower, extraClass, true, false);
+        };
+
+        if (isStacked) {
+            const block = document.createElement('div');
+            block.className = 'pair-block source-only-reading-whole';
+            block.innerHTML = htmlFor(leftLower) + htmlFor(rightLower);
+            partContainer.appendChild(block);
+        } else {
+            const row = document.createElement('div');
+            row.className = 'pc-line-row source-only-reading-whole';
+            const leftColumn = document.createElement('div');
+            leftColumn.className = 'pc-col';
+            leftColumn.innerHTML = htmlFor(leftLower);
+            const rightColumn = document.createElement('div');
+            rightColumn.className = 'pc-col pc-col-sub';
+            rightColumn.innerHTML = htmlFor(rightLower);
+            row.appendChild(leftColumn);
+            row.appendChild(rightColumn);
+            partContainer.appendChild(row);
+        }
+        return true;
+    }
+
     function dottedDividerHTML(extraClass = '') {
         return `<div class="dotted-divider${extraClass ? ` ${extraClass}` : ''}"></div>`;
     }
@@ -19751,6 +19871,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             headerRow.appendChild(hColL);
             if (!isStacked) headerRow.appendChild(hColR);
             partContainer.appendChild(headerRow);
+
+            if (appendSourceOnlyReadingWholeDisplay(partContainer, data, baseId, leftL, rightL, isStacked)) {
+                root.appendChild(partContainer);
+                return;
+            }
 
             // Missing official text in an actual source-only option may have an
             // explicitly labelled AI translation in either language column.

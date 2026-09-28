@@ -19,7 +19,10 @@ const CATHOLIC_HIERARCHY_BASE_URL = "https://www.catholic-hierarchy.org";
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
 const RATE_WINDOW_MS = 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 30;
+const KTCG_MASS_READING_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 const requestBuckets = new Map();
+const ktcgMassReadingCache = new Map();
+const ktcgMassReadingRequests = new Map();
 const massTimesCache = new Map();
 const bishopDirectoryCache = new Map();
 
@@ -142,7 +145,7 @@ exports.ktcgProxy = onRequest(
       return;
     }
 
-    if (req.method !== "POST") {
+    if (!["GET", "POST"].includes(req.method)) {
       res.status(405).json({ error: "Method not allowed." });
       return;
     }
@@ -152,8 +155,8 @@ exports.ktcgProxy = onRequest(
       return;
     }
 
-    const requestBody = parseBody(req);
-    if (requestBody.kind === "vietnameseDiocesanPage") {
+    const requestBody = req.method === "GET" ? (req.query || {}) : parseBody(req);
+    if (req.method === "POST" && requestBody.kind === "vietnameseDiocesanPage") {
       const sourceUrl = parseVietnameseDiocesanUrl(requestBody.url);
       if (!sourceUrl) {
         res.status(400).json({ error: "A permitted Vietnamese diocesan page URL is required." });
@@ -181,11 +184,14 @@ exports.ktcgProxy = onRequest(
     }
 
     try {
-      const payload = await fetchKtcgMassReading(dateParts);
-      // The request date lives in the POST body. Shared HTTP caches generally
-      // do not vary POST responses by body, so public caching can return the
-      // previous date's readings (for example, Song of Songs on Jeremiah day).
-      res.set("Cache-Control", "private, no-store, max-age=0");
+      const { payload, cacheStatus } = await cachedKtcgMassReading(dateParts);
+      res.set("X-Ordo-KTCG-Cache", cacheStatus);
+      // GET includes the date in the URL, so browser and shared caches cannot
+      // confuse readings from different dates. Keep POST private for older
+      // clients whose date still lives only in the request body.
+      res.set("Cache-Control", req.method === "GET"
+        ? "public, max-age=300, s-maxage=21600, stale-while-revalidate=86400"
+        : "private, no-store, max-age=0");
       res.status(200).json(payload);
     } catch (error) {
       logger.error("KTCG proxy failed", {
@@ -386,9 +392,10 @@ function parseBody(req) {
 }
 
 function parseKtcgDate(body) {
-  const day = Number(body.day);
-  const month = Number(body.month);
-  const year = Number(body.year);
+  const isoMatch = String(body.date || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  const day = Number(isoMatch ? isoMatch[3] : body.day);
+  const month = Number(isoMatch ? isoMatch[2] : body.month);
+  const year = Number(isoMatch ? isoMatch[1] : body.year);
   if (![day, month, year].every(Number.isInteger) || year < 2000 || year > 2100) return null;
 
   const date = new Date(Date.UTC(year, month - 1, day));
@@ -400,6 +407,25 @@ function parseKtcgDate(body) {
     return null;
   }
   return { day, month, year };
+}
+
+async function cachedKtcgMassReading(dateParts) {
+  const key = `${dateParts.year}-${String(dateParts.month).padStart(2, "0")}-${String(dateParts.day).padStart(2, "0")}`;
+  const cached = ktcgMassReadingCache.get(key);
+  if (cached && Date.now() - cached.cachedAt < KTCG_MASS_READING_CACHE_TTL_MS) {
+    return { payload: cached.payload, cacheStatus: "HIT" };
+  }
+  if (ktcgMassReadingRequests.has(key)) {
+    return { payload: await ktcgMassReadingRequests.get(key), cacheStatus: "COALESCED" };
+  }
+  const request = fetchKtcgMassReading(dateParts)
+    .then(payload => {
+      ktcgMassReadingCache.set(key, { cachedAt: Date.now(), payload });
+      return payload;
+    })
+    .finally(() => ktcgMassReadingRequests.delete(key));
+  ktcgMassReadingRequests.set(key, request);
+  return { payload: await request, cacheStatus: "MISS" };
 }
 
 async function fetchKtcgMassReading({ day, month, year }) {
