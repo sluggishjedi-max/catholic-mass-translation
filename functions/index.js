@@ -9,9 +9,9 @@ const GOOGLE_MAPS_BROWSER_KEY = defineSecret("GOOGLE_MAPS_BROWSER_KEY");
 const ALLOWED_ORIGINS = defineString("ALLOWED_ORIGINS", { default: "" });
 
 const GEMINI_API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/";
-const GEMINI_PROXY_REVISION = "secret-v2-2026-09-23";
-const PRIMARY_MODEL = "gemini-2.5-flash-lite";
-const FALLBACK_MODEL = "gemini-flash-latest";
+const GEMINI_PROXY_REVISION = "secret-v3-model35-2026-09-28";
+const PRIMARY_MODEL = "gemini-3.5-flash-lite";
+const FALLBACK_MODEL = "gemini-3.5-flash";
 const KTCG_MASS_READING_URL = "https://ktcgkpv.org/readings/mass-reading";
 const MASS_TIMES_CHURCH_URL = "https://masstimes.org/Churchs/";
 const USCCB_DIOCESES_URL = "https://www.usccb.org/about/bishops-and-dioceses/all-dioceses";
