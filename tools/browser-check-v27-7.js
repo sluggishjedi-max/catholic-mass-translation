@@ -432,6 +432,14 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         state.vnReadingSource=originalVietnameseSource;
       }
       // Actual source-only choices must offer AI on either side, including KR.
+      const originalFontSize=state.fontSize;
+      const originalUiLanguage=state.uiLang;
+      const fontSelect=document.getElementById('set-font-size');
+      state.fontSize='18px'; fontSelect.value='14px'; state.uiLang='VN';
+      syncLocalizedChromeAndSettings();
+      check(fontSelect.value==='18px','UI language change reset the normal font size');
+      state.fontSize=originalFontSize; state.uiLang=originalUiLanguage;
+      syncLocalizedChromeAndSettings();
       for(const id of ['reading1','psalm']) {
         aiTranslationRecords.clear();
         const data={[id]:{cit_kr:'1코린 9,16-19',cit_zh:'聖保祿宗徒致格林多人前書 10,1-5',
@@ -473,6 +481,23 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       ]}});
       render();
       check(document.querySelectorAll('section[data-part-id="reading1"] .btn-ai-trans').length===1,'Single source-only reading split AI by sentence');
+      aiTranslationRecords.clear();
+      state.currentLoc='KR'; state.selectedLocationCode='KR'; state.targetLang='ZH'; state.targetLocationCode='TW'; state.layoutStacked=false;
+      check(isGospelDialogueLine({text_kr:'주님께서 여러분과 함께.'}),'Korean Gospel dialogue recognition');
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({gospel:{cit_zh:'瑪竇福音 5,1-12',zh_lines:[
+        {text:'真福八端',role:'summary'},
+        {text:'恭讀聖瑪竇福音',role:'intro'},
+        {text:'那時候，耶穌上了山，開始教訓門徒。',role:'body'}
+      ]}});
+      render();
+      const sourceOnlyGospel=document.querySelector('section[data-part-id="gospel"]');
+      const koreanGospelFrame=sourceOnlyGospel.querySelector('.source-only-reading-whole .pc-col').textContent;
+      check(sourceOnlyGospel.querySelectorAll('.btn-ai-trans').length===1,'Source-only Gospel split AI by sentence');
+      check(sourceOnlyGospel.textContent.includes('那時候，耶穌上了山'),'Source-only Gospel original missing');
+      for(const phrase of ['주님께서 여러분과 함께','또한 사제(부제)의 영과 함께','주님 영광 받으소서','주님의 말씀입니다','그리스도님 찬미합니다']) {
+        check(koreanGospelFrame.includes(phrase),'Source-only Gospel lost fixed response: '+phrase);
+      }
       // Antiphons: dual Psalm numbering and the Chinese inline "or" marker.
       check(!citationsAreDifferent('시편 119(118),137.124','詠一一八137, 124','KR','ZH'),'Entrance Psalm numbering split');
       const communionZh=strictParsePrayerOrAntiphon('ZH','communion',{heading:'領主詠',lines:[

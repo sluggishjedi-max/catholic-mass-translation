@@ -13288,7 +13288,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function isGospelDialogueLine(line) {
-        return !line?.role_kr && /^(?:주님께서\s*여러분과\s*함께|또한\s*사제(?:\(부제\))?의\s*영과\s*함께|주님\s*영광\s*받으소서)[.!。]?$/u.test(cleanNodeText(line?.text_kr));
+        const koreanText = cleanNodeText(line?.text_kr);
+        if (!line?.role_kr && /^(?:주님께서[ \t]*여러분과[ \t]*함께|또한[ \t]*사제(?:[(]부제[)])?의[ \t]*영과[ \t]*함께|주님[ \t]*영광[ \t]*받으소서)[.!。]?$/.test(koreanText)) return true;
+        return false;
     }
 
     function isPrayerPart(baseId) {
@@ -17523,9 +17525,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         const fontSelect = document.getElementById('set-font-size');
         if (fontSelect) {
+            const selectedFontSize = ['14px', '18px', '20px', '22px'].includes(state.fontSize)
+                ? state.fontSize
+                : '18px';
             Array.from(fontSelect.options).forEach(option => {
                 option.textContent = settings.fonts[option.value] || option.textContent;
             });
+            // Some WebViews reset a select to its first option when option
+            // labels are localized. Font size is independent of language, so
+            // restore the user's current choice after relabelling the options.
+            fontSelect.value = selectedFontSize;
         }
         const uiSelect = document.getElementById('set-ui-lang');
         if (uiSelect) {
@@ -18660,6 +18669,44 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }).join('');
     }
 
+    function sourceOnlyReadingTargetHtml(lines, lower, baseId, aiHtml, extraClass = '') {
+        const sourceLines = Array.isArray(lines) ? lines : [];
+        const lastGospelDialogueIndex = baseId === 'gospel'
+            ? sourceLines.reduce((last, line, index) => isGospelDialogueLine(line) ? index : last, -1)
+            : -1;
+        const endingIndex = sourceLines.findIndex(isDailyEndingLine);
+        let aiInsertIndex = sourceLines.findIndex((line, index) =>
+            index > lastGospelDialogueIndex
+            && (endingIndex < 0 || index < endingIndex)
+            && !isProtectedParsedTargetLineForLanguage(line, baseId, lower)
+        );
+        if (aiInsertIndex < 0) aiInsertIndex = endingIndex >= 0 ? endingIndex : sourceLines.length;
+
+        let inserted = false;
+        const html = sourceLines.map((line, index) => {
+            let lineHtml = '';
+            if (index === aiInsertIndex) {
+                lineHtml += linePairHTML('', aiHtml, lower, extraClass, true, false);
+                inserted = true;
+            }
+            if (!isProtectedParsedTargetLineForLanguage(line, baseId, lower)) return lineHtml;
+            const speaker = line && line[`sp_${lower}`] || '';
+            const text = line && line[`text_${lower}`] || '';
+            const rubric = line && line[`rubric_${lower}`] || '';
+            const rubricHtml = rubric ? `<span class="rubric${extraClass.includes('translation') ? ' translation' : ''}">${rubric}</span>` : '';
+            if (isLiturgicalPlaceholderText(text)) return lineHtml + rubricHtml;
+            return lineHtml + rubricHtml + linePairHTML(
+                speaker,
+                text,
+                lower,
+                [extraClass, roleClassForLine(line, lower)].filter(Boolean).join(' '),
+                shouldSuppressSpeaker(baseId),
+                false
+            );
+        }).join('');
+        return inserted ? html : html + linePairHTML('', aiHtml, lower, extraClass, true, false);
+    }
+
     function appendSourceOnlyReadingWholeDisplay(partContainer, data, baseId, leftLang, rightLang, isStacked) {
         if (!strictReadingKeys.has(baseId) || !data) return false;
         const leftLower = leftLang.toLowerCase();
@@ -18687,7 +18734,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (lower === sourceLower) {
                 return sourceOnlyReadingLanguageHtml(data.lines, lower, baseId, extraClass);
             }
-            return linePairHTML('', makeAIButton(sourceText, predefinedAiText, targetLang), lower, extraClass, true, false);
+            return sourceOnlyReadingTargetHtml(
+                data.lines,
+                lower,
+                baseId,
+                makeAIButton(sourceText, predefinedAiText, targetLang),
+                extraClass
+            );
         };
 
         if (isStacked) {
