@@ -16427,6 +16427,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     return;
                 }
                 if (newData[lower] && String(newData[lower]).trim()) {
+                    if (isPrayerPart(baseId)) {
+                        applyParsedLinesForLanguage(lines, lower, [parsedLine('', newData[lower])], baseId);
+                        return;
+                    }
                     const contentLine = lines.find(line => !isProtectedParsedTargetLine(line, baseId)) || emptyMassLine();
                     if (!lines.includes(contentLine)) lines.splice(parsedInsertIndex(lines, baseId), 0, contentLine);
                     contentLine[`sp_${lower}`] = normalizeDailySpeaker(baseId, lower, contentLine[`sp_${lower}`], '', newData[lower]);
@@ -16511,6 +16515,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             SUPPORTED_LANGS.map(lang => lang.toLowerCase()).forEach(lower => {
                 if (Array.isArray(newData[`${lower}_lines`]) && newData[`${lower}_lines`].length) return;
                 if (newData[lower] && String(newData[lower]).trim()) {
+                    if (isPrayerPart(baseId)) {
+                        applyParsedLinesForLanguage(targetLines, lower, [parsedLine('', newData[lower])], baseId);
+                        return;
+                    }
                     contentLine[`text_${lower}`] = newData[lower];
                     contentLine[`text_${lower}_ai`] = '';
                     contentLine[`sp_${lower}`] = normalizeDailySpeaker(baseId, lower, contentLine[`sp_${lower}`], '', newData[lower]);
@@ -18542,6 +18550,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return patterns.some(pattern => pattern.test(normalized));
     }
 
+    function aiFallbackSourceText(value, sourceLower, baseId) {
+        const raw = String(value || '');
+        if (!strictPrayerKeys.has(baseId)) return raw;
+        const plain = plainTextFromHtml(raw);
+        if (!plain) return '';
+        const lang = langCodeFromLowerKey(sourceLower);
+        const expanded = strictExpandPrayerEnding(lang, baseId, plain);
+        const ending = prayerConclusionEndingForText(lang, baseId, expanded);
+        return ending ? expanded.slice(0, expanded.length - ending.length).trim() : expanded;
+    }
+
     function fallbackSourceTextForLine(line, targetLower, baseId) {
         if (!allowsAIFallback(baseId) && !isEucharistPrefaceLine(line, baseId)) return '';
         const active = currentLeftRightLowerKeys();
@@ -18549,7 +18568,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .filter((lower, index, array) => lower && lower !== targetLower && array.indexOf(lower) === index);
         for (const lower of preferred) {
             const text = line && line[`text_${lower}`];
-            if (cleanNodeText(text) && !isAIButton(text) && !isLiturgicalPlaceholderText(text)) return text;
+            if (cleanNodeText(text) && !isAIButton(text) && !isLiturgicalPlaceholderText(text)) {
+                const sourceText = aiFallbackSourceText(text, lower, baseId);
+                if (sourceText) return sourceText;
+            }
         }
         return '';
     }
@@ -18887,6 +18909,72 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return inserted ? html : html + linePairHTML('', aiHtml, lower, extraClass, true, false);
     }
 
+    function appendSourceOnlyReadingPcRow(partContainer, leftHtml, rightHtml, extraClass = '') {
+        if (!cleanNodeText(leftHtml) && !cleanNodeText(rightHtml)) return;
+        const row = document.createElement('div');
+        row.className = `pc-line-row source-only-reading-whole${extraClass ? ` ${extraClass}` : ''}`;
+        const leftColumn = document.createElement('div');
+        leftColumn.className = 'pc-col';
+        leftColumn.innerHTML = leftHtml;
+        const rightColumn = document.createElement('div');
+        rightColumn.className = 'pc-col pc-col-sub';
+        rightColumn.innerHTML = rightHtml;
+        row.appendChild(leftColumn);
+        row.appendChild(rightColumn);
+        partContainer.appendChild(row);
+    }
+
+    // In the two-column layout, keep the fixed proclamation frames on their
+    // own shared rows.  A source-only body may be much taller than its single
+    // AI button, so putting the whole column in one flex row makes the intro
+    // and ending appear at unrelated vertical positions.
+    function appendSourceOnlyReadingPcDisplay(partContainer, lines, baseId, leftLower, rightLower, sourceLower, targetLower, aiHtml) {
+        const sourceBodyIndexes = (lines || []).reduce((indexes, line, index) => {
+            const text = cleanNodeText(line && line[`text_${sourceLower}`]);
+            if (text
+                && line[`role_${sourceLower}`] !== 'intro'
+                && !isProtectedParsedTargetLineForLanguage(line, baseId)
+                && !isLiturgicalPlaceholderText(text)) indexes.push(index);
+            return indexes;
+        }, []);
+        if (!sourceBodyIndexes.length) return false;
+        const sourceBodySet = new Set(sourceBodyIndexes);
+        const firstBodyIndex = sourceBodyIndexes[0];
+        (lines || []).forEach((line, index) => {
+            if (index === firstBodyIndex) {
+                const bodyLines = sourceBodyIndexes.map(bodyIndex => lines[bodyIndex]);
+                const sourceHtml = sourceOnlyReadingLanguageHtml(
+                    bodyLines,
+                    sourceLower,
+                    baseId,
+                    sourceLower === rightLower ? 'translation' : ''
+                );
+                const targetHtml = linePairHTML(
+                    '',
+                    aiHtml,
+                    targetLower,
+                    targetLower === rightLower ? 'translation' : '',
+                    true,
+                    false
+                );
+                appendSourceOnlyReadingPcRow(
+                    partContainer,
+                    leftLower === sourceLower ? sourceHtml : targetHtml,
+                    rightLower === sourceLower ? sourceHtml : targetHtml,
+                    'source-only-reading-body-row'
+                );
+            }
+            if (sourceBodySet.has(index)) return;
+            appendSourceOnlyReadingPcRow(
+                partContainer,
+                sourceOnlyReadingLanguageHtml([line], leftLower, baseId),
+                sourceOnlyReadingLanguageHtml([line], rightLower, baseId, 'translation'),
+                'source-only-reading-frame-row'
+            );
+        });
+        return true;
+    }
+
     function appendSourceOnlyReadingWholeDisplay(partContainer, data, baseId, leftLang, rightLang, isStacked) {
         if (!strictReadingKeys.has(baseId) || !data) return false;
         const leftLower = leftLang.toLowerCase();
@@ -18929,17 +19017,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             block.innerHTML = htmlFor(leftLower) + htmlFor(rightLower);
             partContainer.appendChild(block);
         } else {
-            const row = document.createElement('div');
-            row.className = 'pc-line-row source-only-reading-whole';
-            const leftColumn = document.createElement('div');
-            leftColumn.className = 'pc-col';
-            leftColumn.innerHTML = htmlFor(leftLower);
-            const rightColumn = document.createElement('div');
-            rightColumn.className = 'pc-col pc-col-sub';
-            rightColumn.innerHTML = htmlFor(rightLower);
-            row.appendChild(leftColumn);
-            row.appendChild(rightColumn);
-            partContainer.appendChild(row);
+            appendSourceOnlyReadingPcDisplay(
+                partContainer,
+                data.lines,
+                baseId,
+                leftLower,
+                rightLower,
+                sourceLower,
+                targetLower,
+                makeAIButton(sourceText, predefinedAiText, targetLang)
+            );
         }
         return true;
     }
@@ -20168,12 +20255,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const suppressLeftAiFallback = shouldSuppressAIFallbackForLine(line, baseId, leftKey);
                 const suppressRightAiFallback = shouldSuppressAIFallbackForLine(line, baseId, rightKey);
 
-                if (!suppressLeftAiFallback && (!leftTxt || leftTxt.trim() === '') && rightTxt) leftTxt = makeAIButton(rightTxt, leftAi, leftL);
+                if (!suppressLeftAiFallback && (!leftTxt || leftTxt.trim() === '') && rightTxt) {
+                    const sourceText = aiFallbackSourceText(rightTxt, rightKey, baseId);
+                    if (sourceText) leftTxt = makeAIButton(sourceText, leftAi, leftL);
+                }
                 if (!suppressLeftAiFallback && (!leftTxt || leftTxt.trim() === '')) {
                     const sourceText = fallbackSourceTextForLine(line, leftKey, baseId);
                     if (sourceText) leftTxt = makeAIButton(sourceText, leftAi, leftL);
                 }
-                if (!suppressRightAiFallback && (!rightTxt || rightTxt.trim() === '') && leftTxt && !isAIButton(leftTxt)) rightTxt = makeAIButton(leftTxt, rightAi, rightL);
+                if (!suppressRightAiFallback && (!rightTxt || rightTxt.trim() === '') && leftTxt && !isAIButton(leftTxt)) {
+                    const sourceText = aiFallbackSourceText(leftTxt, leftKey, baseId);
+                    if (sourceText) rightTxt = makeAIButton(sourceText, rightAi, rightL);
+                }
                 if (!suppressRightAiFallback && (!rightTxt || rightTxt.trim() === '')) {
                     const sourceText = fallbackSourceTextForLine(line, rightKey, baseId);
                     if (sourceText) rightTxt = makeAIButton(sourceText, rightAi, rightL);
@@ -20334,7 +20427,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const suppressAiFallback = shouldSuppressAIFallbackForLine(line, baseId, lowerLang);
         if ((!txt || txt.trim() === '') && otherTxt && !suppressAiFallback) {
             const aiTxt = line['text_' + lowerLang + '_ai'];
-            txt = makeAIButton(otherTxt, aiTxt, lang);
+            const sourceText = aiFallbackSourceText(otherTxt, otherLang.toLowerCase(), baseId);
+            if (sourceText) txt = makeAIButton(sourceText, aiTxt, lang);
         }
         if ((!txt || txt.trim() === '') && !suppressAiFallback) {
             const aiTxt = line['text_' + lowerLang + '_ai'];

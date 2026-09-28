@@ -503,6 +503,13 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(vietnameseSourceOnlyReading.textContent.includes(vietnamesePeterIntro),'Parsed Vietnamese intro missing from rendering');
       check(vietnameseSourceOnlyReading.textContent.includes('베드로 1서의 말씀입니다.'),'Derived Korean intro missing from rendering');
       check(vietnameseSourceOnlyReading.querySelectorAll('.btn-ai-trans').length===1,'Derived intro suppressed whole-reading AI fallback');
+      const peterRows=[...vietnameseSourceOnlyReading.querySelectorAll('.source-only-reading-whole')];
+      const peterIntroRow=peterRows.find(row=>row.textContent.includes(vietnamesePeterIntro)&&row.textContent.includes('베드로 1서의 말씀입니다.'));
+      const peterBodyRow=peterRows.find(row=>row.classList.contains('source-only-reading-body-row'));
+      const peterEndingRow=peterRows.find(row=>row.textContent.includes('주님의 말씀입니다'));
+      check(peterIntroRow && !peterIntroRow.textContent.includes('Chúc tụng Thiên Chúa'),'Source-only reading intro did not stay on its own aligned PC row');
+      check(peterBodyRow && peterBodyRow.textContent.includes('Chúc tụng Thiên Chúa') && peterBodyRow.querySelector('.btn-ai-trans'),'Source-only reading body row missing');
+      check(peterEndingRow && peterEndingRow!==peterIntroRow && !peterEndingRow.textContent.includes('Chúc tụng Thiên Chúa'),'Source-only reading ending did not stay on its own aligned PC row');
       const multiReading={reading1:{
         cit_kr:'욥 1,6-22',cit_vn:'G 1,6-22',
         optionCits_kr:[{cit_kr:'욥 1,6-22'}],
@@ -539,13 +546,20 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       ]}});
       render();
       const sourceOnlyGospel=document.querySelector('section[data-part-id="gospel"]');
-      const koreanGospelFrame=sourceOnlyGospel.querySelector('.source-only-reading-whole .pc-col').textContent;
+      const koreanGospelFrame=sourceOnlyGospel.textContent;
       check(sourceOnlyGospel.querySelectorAll('.btn-ai-trans').length===1,'Source-only Gospel split AI by sentence');
       check(sourceOnlyGospel.textContent.includes('那時候，耶穌上了山'),'Source-only Gospel original missing');
       check(koreanGospelFrame.includes('마태오가 전하는 거룩한 복음입니다.'),'Source-only Gospel missing derived Korean intro');
       for(const phrase of ['주님께서 여러분과 함께','또한 사제(부제)의 영과 함께','주님 영광 받으소서','주님의 말씀입니다','그리스도님 찬미합니다']) {
         check(koreanGospelFrame.includes(phrase),'Source-only Gospel lost fixed response: '+phrase);
       }
+      const gospelRows=[...sourceOnlyGospel.querySelectorAll('.source-only-reading-whole')];
+      const gospelIntroRow=gospelRows.find(row=>row.textContent.includes('마태오가 전하는 거룩한 복음입니다.')&&row.textContent.includes('恭讀聖瑪竇福音'));
+      const gospelBodyRow=gospelRows.find(row=>row.classList.contains('source-only-reading-body-row'));
+      const gospelEndingRow=gospelRows.find(row=>row.textContent.includes('주님의 말씀입니다'));
+      check(gospelIntroRow && !gospelIntroRow.textContent.includes('那時候，耶穌上了山'),'Source-only Gospel intro did not stay on its own aligned PC row');
+      check(gospelBodyRow && gospelBodyRow.textContent.includes('那時候，耶穌上了山') && gospelBodyRow.querySelector('.btn-ai-trans'),'Source-only Gospel body row missing');
+      check(gospelEndingRow && gospelEndingRow!==gospelIntroRow && !gospelEndingRow.textContent.includes('那時候，耶穌上了山'),'Source-only Gospel ending did not stay on its own aligned PC row');
       // Antiphons: dual Psalm numbering and the Chinese inline "or" marker.
       check(!citationsAreDifferent('시편 119(118),137.124','詠一一八137, 124','KR','ZH'),'Entrance Psalm numbering split');
       const communionZh=strictParsePrayerOrAntiphon('ZH','communion',{heading:'領主詠',lines:[
@@ -610,6 +624,35 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       const suppliedVietnameseCollect=missingCollectConclusion.find(line=>line.role_vn==='conclusion');
       check(suppliedVietnameseCollect && suppliedVietnameseCollect.text_vn===localizedPrayerConclusionFormula('VN','collect','relative_son'),'Missing collect conclusion did not follow the adjacent language');
       check(!suppliedVietnameseCollect.text_vn_ai,'Supplied collect conclusion was marked as AI');
+      aiTranslationRecords.clear();
+      state.currentLoc='KR'; state.selectedLocationCode='KR'; state.targetLang='VN'; state.targetLocationCode='VN'; state.layoutStacked=false;
+      const koreanCollectBody='평화의 은총을 저희에게 내려 주소서.';
+      const koreanCollectEnding=localizedPrayerConclusionFormula('KR','collect','through_son');
+      check(aiFallbackSourceText(koreanCollectBody+' '+koreanCollectEnding,'kr','collect')===koreanCollectBody,'Prayer AI render guard did not remove a combined conclusion');
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({collect:{kr:koreanCollectBody+' '+koreanCollectEnding}});
+      const flatCollect=massData.find(item=>getBaseId(item.id)==='collect');
+      const flatCollectLines=flatCollect.type==='selectable' ? flatCollect.variants[state.options.collect||'A'].lines : flatCollect.lines;
+      check(flatCollectLines.some(line=>line.role_kr==='body' && line.text_kr===koreanCollectBody),'Flat collect body was not separated from its conclusion');
+      check(flatCollectLines.some(line=>line.role_kr==='conclusion' && line.text_kr===koreanCollectEnding),'Flat collect conclusion was not stored separately');
+      render();
+      const flatCollectElement=document.querySelector('section[data-part-id="collect"]');
+      const flatCollectButton=flatCollectElement.querySelector('.btn-ai-trans');
+      check(flatCollectButton,'Flat collect body has no AI translation button');
+      const originalPrayerTranslator=translateWithGemini;
+      try {
+        translateWithGemini=async(text,lang)=>{
+          check(lang==='VN','Flat collect AI target language changed');
+          check(text.includes(koreanCollectBody),'Flat collect AI lost its body');
+          check(!text.includes(koreanCollectEnding),'Flat collect AI still included the conclusion');
+          return 'Bản dịch phần thân lời nguyện.';
+        };
+        flatCollectButton.click();
+        await new Promise(resolve=>setTimeout(resolve,0));
+        const vietnameseEnding=localizedPrayerConclusionFormula('VN','collect','through_son');
+        check(flatCollectElement.textContent.includes('Bản dịch phần thân lời nguyện.'),'Flat collect AI body result missing');
+        check((flatCollectElement.textContent.match(new RegExp(vietnameseEnding.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length===1,'Flat collect official conclusion was lost or duplicated');
+      } finally { translateWithGemini=originalPrayerTranslator; aiTranslationRecords.clear(); }
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
