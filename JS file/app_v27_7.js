@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260928-VN-LOAD-ALIGNMENT';
+    const APP_VERSION = 'V27.7-20260928-PRAYER-END-ROW-ALIGN-R2';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
