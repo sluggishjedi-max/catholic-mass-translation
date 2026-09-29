@@ -29,8 +29,66 @@ const root = path.resolve(__dirname, '..');
         selectedLocationCode: state.selectedLocationCode,
         targetLang: state.targetLang,
         targetLocationCode: state.targetLocationCode,
+        uiLang: state.uiLang,
         gpsCoordinates: state.gpsCoordinates
       };
+      const prayerFallbackLocations = {
+        IE: 'EN', 'GB-ENG': 'EN', 'GB-SCT': 'EN', PH: 'EN', TW: 'ZH', AU: 'EN', NZ: 'EN',
+        IT: 'IT', PT: 'PT', MX: 'ES', DE: 'DE', BR: 'PT', INTL: 'EN'
+      };
+      for (const [locationCode, languageCode] of Object.entries(prayerFallbackLocations)) {
+        state.selectedLocationCode = locationCode;
+        state.currentLoc = languageCode;
+        state.targetLang = languageCode === 'KR' ? 'EN' : 'KR';
+        const fallbackPrayers = getPrayerData();
+        check(fallbackPrayers.length >= 15, `${locationCode} has no fallback prayer places`);
+        check(fallbackPrayers.every(entry => entry.__aiPrayerFallback && entry.__aiPrayerFallbackSourceJurisdiction === 'VA'), `${locationCode} prayer fallback escaped the universal Latin source`);
+        const firstPrayer = fallbackPrayers[0];
+        const translation = prayerAutomaticTranslationInfo(firstPrayer, languageCode, 'KR', 'body');
+        check(translation && translation.targetLang === languageCode && translation.sourceLang === 'LA', `${locationCode} prayer fallback did not target ${languageCode} from Latin`);
+        if (languageCode === 'EN') {
+          check(fallbackPrayers.every(entry => !localizedPrayerValueStrict(entry.texts, 'EN')), `${locationCode} reused a United States English prayer`);
+        }
+      }
+      state.selectedLocationCode = 'AU';
+      state.currentLoc = 'EN';
+      state.targetLang = 'KR';
+      renderPrayerPanel();
+      const australianPrayerPanel = document.getElementById('prayer-results');
+      check(australianPrayerPanel.querySelectorAll('details.aux-prayer-list-item').length >= 15, 'Australian prayer places were not rendered');
+      check(australianPrayerPanel.querySelectorAll('.btn-ai-trans').length >= 30, 'AI translation actions were not rendered for the country prayer fallback');
+      check(!australianPrayerPanel.textContent.includes('기도문 본문은 업로드 파일이 연결되면 이 자리에 표시됩니다.'), 'Uploaded-file prayer placeholder is still visible');
+      check(prayerBodyHtml({ texts: {} }, 'EN', 'LA') === '', 'Missing prayer body still renders an uploaded-file placeholder');
+      state.uiLang = 'IT';
+      state.currentLoc = 'EN';
+      state.targetLang = 'DE';
+      localizeAuxPanels();
+      const prayerWarningLines = [...document.querySelectorAll('#prayer-dev-warning .aux-warning-line')];
+      check(prayerWarningLines.length === 2, 'Prayer warning did not render the UI and translation languages');
+      check(prayerWarningLines[0].textContent.includes('Italiano') && prayerWarningLines[0].textContent.includes(auxUiText.IT.prayerWarning), 'Prayer warning omitted the UI language');
+      check(prayerWarningLines[1].textContent.includes('Deutsch') && prayerWarningLines[1].textContent.includes(auxUiText.DE.prayerWarning), 'Prayer warning omitted the translation language');
+      check(!document.getElementById('prayer-dev-warning').textContent.includes('English'), 'Prayer warning incorrectly used the country language');
+      state.uiLang = originalCalendarState.uiLang;
+      state.currentLoc = 'EN';
+      state.targetLang = 'KR';
+      const australianFallbackPrayer = getPrayerData()[0];
+      const originalPrayerFallbackTranslator = translatePrayerTextWithFallback;
+      try {
+        translatePrayerTextWithFallback = async (text, sourceLang, targetLang) => {
+          check(sourceLang === 'LA', 'Country prayer AI translation did not use Latin as its source');
+          return `${targetLang} AI prayer translation`;
+        };
+        openPrayerEntryKeys.add(prayerEntryKey(australianFallbackPrayer));
+        check(requestAutomaticPrayerTranslations(australianFallbackPrayer, 'EN', 'KR'), 'Country prayer AI translation did not start');
+        await new Promise(resolve => setTimeout(resolve, 0));
+        await new Promise(resolve => setTimeout(resolve, 0));
+        check(prayerAutomaticTranslatedText(australianFallbackPrayer, 'EN', 'KR', 'body') === 'EN AI prayer translation', 'Country-language AI prayer body was not displayed automatically');
+      } finally {
+        translatePrayerTextWithFallback = originalPrayerFallbackTranslator;
+        openPrayerEntryKeys.delete(prayerEntryKey(australianFallbackPrayer));
+        aiTranslationRecords.clear();
+      }
+      Object.assign(state, originalCalendarState);
       check(vietnameseKpvProfileForCoordinates({lat:21.0285,lon:105.8542}) === KPV_PROFILE_NORTH, 'Hanoi did not select the northern KPV calendar');
       check(vietnameseKpvProfileForCoordinates({lat:10.7769,lon:106.7009}) === KPV_PROFILE_SOUTH, 'Ho Chi Minh City did not select the southern KPV calendar');
       check(vietnameseKpvProfileForCoordinates({lat:17.47,lon:106.62}) === KPV_PROFILE_NORTH, 'Vietnam north of the regional boundary did not select the northern calendar');

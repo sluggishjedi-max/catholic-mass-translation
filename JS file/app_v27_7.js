@@ -58,7 +58,7 @@
             : (Array.isArray(navigator.languages) && navigator.languages.length
                 ? navigator.languages
                 : [navigator.language || '']);
-        const languageMap = { ko: 'KR', vi: 'VN', en: 'EN', ja: 'JP', la: 'LA', zh: 'ZH', it: 'IT', pt: 'PT', es: 'ES' };
+        const languageMap = { ko: 'KR', vi: 'VN', en: 'EN', ja: 'JP', la: 'LA', zh: 'ZH', it: 'IT', pt: 'PT', es: 'ES', de: 'DE' };
         for (const candidate of candidates) {
             const base = String(candidate || '').trim().toLowerCase().split(/[-_]/)[0];
             if (languageMap[base]) return languageMap[base];
@@ -69,7 +69,7 @@
     function initialUiLanguage() {
         try {
             const stored = localStorage.getItem(UI_LANGUAGE_STORAGE_KEY);
-            if (['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES'].includes(stored)) return stored;
+            if (['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(stored)) return stored;
         } catch (error) {
             console.warn('설정 언어 저장값을 불러오지 못했습니다.', error);
         }
@@ -91,7 +91,7 @@
             : initialAndroidLocationLang, // 좌측 (현지어)
         targetLang: initialAndroidTarget, // 우측 (번역어)
         targetLocationCode: initialAndroidTargetLocation, // 우측 번역문에 사용할 국가별 미사/독서 소스
-        uiLang: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES'].includes(initialAndroidSettings.uiLang)
+        uiLang: initialAndroidSettings && ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(initialAndroidSettings.uiLang)
             ? initialAndroidSettings.uiLang
             : initialUiLanguage(), // 최초에는 기기/브라우저 언어를 따르고, 이후에는 사용자의 선택을 기억합니다.
         layoutStacked: !!(initialAndroidSettings && initialAndroidSettings.layoutStacked),
@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260929-KPV-REGIONAL-CALENDAR';
+    const APP_VERSION = 'V27.7-20260929-COUNTRY-PRAYER-AI-FALLBACK';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -2686,7 +2686,6 @@
             prayerWarning: '현재 기도문 작업중으로, 본문 표출이 정상적이지 않을 수 있습니다.',
             prayerPlaceholder: '기도문 제목 검색',
             prayerEmpty: '기도문 검색 결과가 없습니다. 업로드 기도문 파일을 연결하면 이 영역에서 제목과 본문을 검색합니다.',
-            prayerBodyPlaceholder: '기도문 본문은 업로드 파일이 연결되면 이 자리에 표시됩니다.',
             hymnTitle: '성가 검색',
             hymnNote: '',
             hymnPlaceholder: '성가 번호, 제목, 가사 검색',
@@ -2707,7 +2706,6 @@
             prayerWarning: 'Hiện đang xử lý phần kinh nguyện, nên nội dung có thể hiển thị chưa chính xác.',
             prayerPlaceholder: 'Tìm tên kinh nguyện',
             prayerEmpty: 'Không có kết quả tìm kiếm kinh nguyện. Khi nối tệp đã tải lên, bạn có thể tìm theo tên và nội dung tại đây.',
-            prayerBodyPlaceholder: 'Nội dung kinh nguyện sẽ hiển thị ở đây sau khi nối tệp đã tải lên.',
             hymnTitle: 'Tìm thánh ca',
             hymnNote: '',
             hymnPlaceholder: 'Tìm số, tên, hoặc lời ca',
@@ -2728,7 +2726,6 @@
             prayerWarning: 'Prayers are currently being worked on, so text may not display correctly.',
             prayerPlaceholder: 'Search prayer title',
             prayerEmpty: 'No prayer results. Connect uploaded prayer files to search by title and body here.',
-            prayerBodyPlaceholder: 'Prayer text will appear here once an uploaded file is connected.',
             hymnTitle: 'Hymn Search',
             hymnNote: '',
             hymnPlaceholder: 'Search hymn number, title, or lyrics',
@@ -2749,7 +2746,6 @@
             prayerWarning: '現在、祈り文を作業中のため、本文の表示が正常でない場合があります。',
             prayerPlaceholder: '祈りの題名を検索',
             prayerEmpty: '祈りの検索結果がありません。アップロードファイルを接続すると題名と本文を検索できます。',
-            prayerBodyPlaceholder: 'アップロードファイルを接続すると祈りの本文がここに表示されます。',
             hymnTitle: '聖歌検索',
             hymnNote: '',
             hymnPlaceholder: '聖歌番号、題名、歌詞を検索',
@@ -2770,7 +2766,6 @@
             prayerWarning: 'Preces nunc parantur; textus non semper recte ostendi possunt.',
             prayerPlaceholder: 'Quaere titulum precis',
             prayerEmpty: 'Nullus exitus precum inventus est. Fasciculis additis coniunctis titulum et textum quaerere poteris.',
-            prayerBodyPlaceholder: 'Textus precis hic apparebit cum fasciculus additus coniungetur.',
             hymnTitle: 'Cantus quaerere',
             hymnNote: '',
             hymnPlaceholder: 'Quaere numerum, titulum, vel verba',
@@ -2791,7 +2786,6 @@
             prayerWarning: '祈禱文仍在整理中，部分正文可能無法正常顯示。',
             prayerPlaceholder: '搜尋祈禱文標題',
             prayerEmpty: '找不到祈禱文。連接已上傳的祈禱文檔案後，可在此搜尋標題與正文。',
-            prayerBodyPlaceholder: '連接已上傳的檔案後，祈禱文正文會顯示在這裡。',
             hymnTitle: '聖歌搜尋',
             hymnNote: '',
             hymnPlaceholder: '搜尋聖歌編號、標題或歌詞',
@@ -2812,7 +2806,6 @@
             prayerWarning: 'Le preghiere sono in preparazione; alcuni testi potrebbero non essere ancora disponibili.',
             prayerPlaceholder: 'Cerca il titolo della preghiera',
             prayerEmpty: 'Nessuna preghiera trovata. I testi saranno ricercabili quando il file sarà collegato.',
-            prayerBodyPlaceholder: 'Il testo della preghiera apparirà qui quando il file sarà collegato.',
             hymnTitle: 'Ricerca canti',
             hymnNote: '',
             hymnPlaceholder: 'Cerca numero, titolo o testo del canto',
@@ -2833,7 +2826,6 @@
             prayerWarning: 'Las oraciones están en preparación.',
             prayerPlaceholder: 'Buscar una oración',
             prayerEmpty: 'Las oraciones están en preparación.',
-            prayerBodyPlaceholder: 'El texto de la oración aparecerá aquí cuando esté disponible.',
             hymnTitle: 'Buscar cantos',
             hymnNote: '',
             hymnPlaceholder: 'Buscar número, título o letra',
@@ -2854,7 +2846,6 @@
             prayerWarning: 'As orações estão em preparação.',
             prayerPlaceholder: 'Pesquisar oração',
             prayerEmpty: 'As orações estão em preparação.',
-            prayerBodyPlaceholder: 'O texto da oração aparecerá aqui quando estiver disponível.',
             hymnTitle: 'Pesquisar cânticos',
             hymnNote: '',
             hymnPlaceholder: 'Pesquisar número, título ou letra',
@@ -2868,6 +2859,26 @@
             churchReady: '',
             churchFallback: '',
             search: 'Pesquisar'
+        },
+        DE: {
+            prayerTitle: 'Mehrsprachige Gebete',
+            prayerNote: '',
+            prayerWarning: 'Die Gebetstexte werden derzeit bearbeitet; einige Inhalte werden möglicherweise nicht korrekt angezeigt.',
+            prayerPlaceholder: 'Gebetstitel suchen',
+            prayerEmpty: 'Keine Gebete gefunden.',
+            hymnTitle: 'Liedersuche',
+            hymnNote: '',
+            hymnPlaceholder: 'Nummer, Titel oder Liedtext suchen',
+            hymnWarning: 'Das Gesangbuch wird derzeit bearbeitet; einige Liedtexte sind möglicherweise noch nicht verfügbar.',
+            hymnCategoryAll: 'Alle',
+            hymnEmpty: 'Keine Lieder gefunden.',
+            hymnBodyPlaceholder: 'Der Liedtext wird hier angezeigt, sobald er verfügbar ist.',
+            churchTitle: 'Kirchen in der Nähe',
+            churchNote: 'Suchen Sie unten nach dem Namen einer Kirche. Bei aktiviertem GPS werden Kirchen in Ihrer Nähe angezeigt.',
+            churchPlaceholder: 'Kirchennamen suchen',
+            churchReady: '',
+            churchFallback: '',
+            search: 'Suchen'
         }
     };
 
@@ -2881,7 +2892,7 @@
     }
 
     const auxWarningLanguageLabels = Object.freeze({
-        KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latine', ZH: '中文', IT: 'Italiano', PT: 'Português', ES: 'Español'
+        KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latine', ZH: '中文', IT: 'Italiano', PT: 'Português', ES: 'Español', DE: 'Deutsch'
     });
 
     function renderAuxWarning(id, field, languageCodes) {
@@ -2920,7 +2931,7 @@
         const dict = auxText();
         setTextIfExists('prayer-panel-title', dict.prayerTitle);
         setTextIfExists('prayer-panel-note', dict.prayerNote);
-        renderAuxWarning('prayer-dev-warning', 'prayerWarning', [state.currentLoc, state.targetLang]);
+        renderAuxWarning('prayer-dev-warning', 'prayerWarning', [state.uiLang, state.targetLang]);
         setTextIfExists('prayer-search-button', dict.search);
         setHymnPanelTitleText(dict.hymnTitle);
         const hymnLanguage = normalizeSelectableLang((document.getElementById('hymn-country') || {}).value || state.currentLoc || 'KR', 'KR');
@@ -3311,7 +3322,12 @@
         VN: 'vi',
         EN: 'en',
         JP: 'ja',
-        LA: 'la'
+        LA: 'la',
+        ZH: 'zh-tw',
+        IT: 'it',
+        PT: 'pt',
+        ES: 'es',
+        DE: 'de'
     };
 
     function splitHymnTranslationText(value, maxLength = 3000) {
@@ -4763,17 +4779,50 @@
         return window.ordoPrayerDataApi.normalizeEntries(data, { uploaded: hasUploadedPrayerData });
     }
 
+    const fallbackPrayerDataByJurisdiction = new Map();
+
+    function buildCountryPrayerFallbackData(jurisdiction) {
+        const key = cleanNodeText(jurisdiction || 'INTL') || 'INTL';
+        if (fallbackPrayerDataByJurisdiction.has(key)) return fallbackPrayerDataByJurisdiction.get(key);
+        const universalModule = globalThis.countryPrayerData && globalThis.countryPrayerData.VA;
+        const universalEntries = universalModule && Array.isArray(universalModule.entries) ? universalModule.entries : [];
+        const entries = window.ordoPrayerDataApi.normalizeEntries(universalEntries)
+            .filter(entry => localizedPrayerValueStrict(entry.titles, 'LA') && localizedPrayerValueStrict(entry.texts, 'LA'))
+            .map(entry => Object.assign({}, entry, {
+                source: { LA: 'Universal Latin prayer text · AI translation source' },
+                __aiPrayerFallback: true,
+                __aiPrayerFallbackJurisdiction: key,
+                __aiPrayerFallbackSourceJurisdiction: 'VA'
+            }));
+        fallbackPrayerDataByJurisdiction.set(key, entries);
+        return entries;
+    }
+
     function getPrayerData() {
-        const uploaded = getUploadedPrayerData();
-        return uploaded;
+        if (Array.isArray(window.uploadedPrayerData)) return getUploadedPrayerData();
+        const module = activeCountryAuxModule('countryPrayerData');
+        if (!module || module.status === 'under-development' || !Array.isArray(module.entries) || !module.entries.length) {
+            return buildCountryPrayerFallbackData(dataJurisdictionForLocation());
+        }
+        return getUploadedPrayerData();
     }
 
     function localizedPrayerValueStrict(value, langCode) {
-        return window.ordoPrayerDataApi.valueStrict(value, langCode);
+        if (!value) return '';
+        if (typeof value === 'string') return cleanNodeText(value);
+        const lang = normalizeSelectableLang(langCode || '', '');
+        return lang ? cleanNodeText(value[lang] || value[lang.toLowerCase()] || '') : '';
     }
 
     function localizedPrayerValue(value, langCode) {
-        return window.ordoPrayerDataApi.value(value, langCode);
+        const direct = localizedPrayerValueStrict(value, langCode);
+        if (direct || !value || typeof value === 'string') return direct;
+        const fallbackOrder = ['KR', 'VN', 'EN', 'JP', 'LA', ...SUPPORTED_LANGS];
+        for (const lang of fallbackOrder) {
+            const fallback = localizedPrayerValueStrict(value, lang);
+            if (fallback) return fallback;
+        }
+        return cleanNodeText(Object.values(value).find(Boolean) || '');
     }
 
     function prayerCategoryLabel(categoryKey, langCode = state.uiLang || 'KR') {
@@ -4809,10 +4858,6 @@
         if (Array.from(select.options).some(option => option.value === current)) select.value = current;
     }
 
-    function prayerPlaceholder(entry, langCode) {
-        return `${appLanguageName(langCode)} ${auxText().prayerBodyPlaceholder}`;
-    }
-
     const openPrayerEntryKeys = new Set();
 
     function prayerEntryKey(entry) {
@@ -4820,8 +4865,22 @@
     }
 
     function prayerAutomaticTranslationInfo(entry, targetLang, otherLang, field) {
-        const source = window.ordoPrayerDataApi.translationSource(entry, targetLang, otherLang, field);
-        if (!source) return null;
+        const collection = field === 'title' ? entry && entry.titles : entry && entry.texts;
+        const target = normalizeSelectableLang(targetLang || '', '');
+        if (!target || localizedPrayerValueStrict(collection, target)) return null;
+        const preferred = normalizeSelectableLang(otherLang || '', '');
+        const sourceOrder = [
+            preferred,
+            entry && entry.__aiPrayerFallback ? 'LA' : '',
+            ...SUPPORTED_LANGS
+        ].filter((lang, index, values) => lang && lang !== target && values.indexOf(lang) === index);
+        const sourceLang = sourceOrder.find(lang => localizedPrayerValueStrict(collection, lang));
+        if (!sourceLang) return null;
+        const source = {
+            sourceLang,
+            sourceText: localizedPrayerValueStrict(collection, sourceLang),
+            targetLang: target
+        };
         const key = aiTranslationKey(source.sourceText, source.targetLang);
         return Object.assign({}, source, { key, record: aiTranslationRecords.get(key) || null });
     }
@@ -4880,7 +4939,7 @@
         if (directBody) return formatPrayerMarkupHtml(directBody);
         const automaticInfo = prayerAutomaticTranslationInfo(entry, langCode, otherLangCode, 'body');
         if (automaticInfo && automaticInfo.sourceText) return makeAIButton(automaticInfo.sourceText, '', langCode);
-        return escapeHtml(prayerPlaceholder(entry, langCode));
+        return '';
     }
 
     function prayerMetaHtml(entry, leftLang, rightLang) {
@@ -4895,6 +4954,7 @@
     }
 
     function prayerVisibleForLeftLanguage(entry, leftLang) {
+        if (entry && entry.__aiPrayerFallback) return true;
         return window.ordoPrayerDataApi.visibleForLeftLanguage(entry, leftLang);
     }
 
@@ -4975,12 +5035,6 @@
         const root = document.getElementById('prayer-results');
         const dict = auxText();
         if (!root) return;
-        const countryModule = activeCountryAuxModule('countryPrayerData');
-        if (countryModule && countryModule.status === 'under-development') {
-            root.innerHTML = `<div class="aux-empty">${escapeHtml(countryAuxDevelopmentMessage('prayers'))}</div>`;
-            requestAuxSearchSync();
-            return;
-        }
         const rows = getPrayerData()
             .filter(entry => prayerVisibleForLeftLanguage(entry, leftLang))
             .filter(entry => !category || cleanNodeText(entry.category || 'national') === category)
