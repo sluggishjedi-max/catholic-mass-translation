@@ -26,8 +26,68 @@ const root = path.resolve(__dirname, '..');
       const check = (value, message) => { if (!value) throw new Error(message); };
       const originalCalendarState = {
         currentLoc: state.currentLoc,
-        selectedLocationCode: state.selectedLocationCode
+        selectedLocationCode: state.selectedLocationCode,
+        targetLang: state.targetLang,
+        targetLocationCode: state.targetLocationCode,
+        gpsCoordinates: state.gpsCoordinates
       };
+      check(vietnameseKpvProfileForCoordinates({lat:21.0285,lon:105.8542}) === KPV_PROFILE_NORTH, 'Hanoi did not select the northern KPV calendar');
+      check(vietnameseKpvProfileForCoordinates({lat:10.7769,lon:106.7009}) === KPV_PROFILE_SOUTH, 'Ho Chi Minh City did not select the southern KPV calendar');
+      check(vietnameseKpvProfileForCoordinates({lat:17.47,lon:106.62}) === KPV_PROFILE_NORTH, 'Vietnam north of the regional boundary did not select the northern calendar');
+      check(vietnameseKpvProfileForCoordinates({lat:16.054,lon:108.202}) === KPV_PROFILE_SOUTH, 'Vietnam south of the regional boundary did not select the southern calendar');
+      check(vietnameseKpvProfileForCoordinates({lat:37.5665,lon:126.9780}) === KPV_PROFILE_SOUTH, 'Foreign GPS location did not default to the southern KPV calendar');
+      check(vietnameseKpvProfileForCoordinates({lat:17.9757,lon:102.6331}) === KPV_PROFILE_SOUTH, 'Laos was incorrectly classified as northern Vietnam');
+      check(vietnameseKpvProfileForCoordinates({lat:11.5564,lon:104.9282}) === KPV_PROFILE_SOUTH, 'Cambodia was incorrectly classified as southern Vietnam');
+      check(gpsLocationForCoordinates(17.9757,102.6331) !== 'VN'&&gpsLocationForCoordinates(11.5564,104.9282) !== 'VN','Legacy GPS country detection still classified neighboring countries as Vietnam');
+      const kpvMockContent = (code, ref, text, extra = {}) => ({code,ref,text,html:`<p>${text}</p>`,heading:extra.heading||null,lead:extra.lead||null});
+      const kpvTemporalMass = {
+        setCode:'ot-w26-monday-ii',via:'temporal',celebrationCode:null,celebration:null,
+        templates:[{units:[
+          {options:[{contents:{'entrance_antiphon/1':kpvMockContent('e1','Tv 1,1','Ca nhập lễ ngày thường')}}]},
+          {options:[{contents:{
+            'reading/1':kpvMockContent('r1','G 1,6-22','Bài đọc ngày thường',{heading:'Đức Chúa đã ban cho.',lead:'Bài trích sách Gióp.'}),
+            'responsorial_psalm/1':kpvMockContent('p1','Tv 16,1-7','Xướng 1'),
+            'antiphon/1':kpvMockContent('a1',null,'Xin Chúa lắng tai.')
+          }}]},
+          {options:[{contents:{
+            'gospel_acclamation/1':kpvMockContent('ga1','Mc 10,45b','Ha-lê-lui-a. Con Người đến để phục vụ. Ha-lê-lui-a.'),
+            'gospel/1':kpvMockContent('g1','Lc 9,46-50','Tin Mừng ngày thường',{heading:'Ai là người nhỏ nhất.',lead:'✠ Tin Mừng Chúa Giê-su Ki-tô theo thánh Lu-ca.'})
+          }}]},
+          {options:[{contents:{'communion_antiphon/1':kpvMockContent('c1','Tv 118,49-50','Ca hiệp lễ ngày thường')}}]}
+        ]}]
+      };
+      const kpvSaintMass = JSON.parse(JSON.stringify(kpvTemporalMass));
+      kpvSaintMass.setCode='saint-proper'; kpvSaintMass.via='celebration'; kpvSaintMass.celebrationCode='saint-proper';
+      kpvSaintMass.celebration={name:'Thánh thử nghiệm',rank:'memorial'};
+      kpvSaintMass.templates[0].units[1].options[0].contents['reading/1'].text='Bài đọc riêng của thánh';
+      kpvSaintMass.templates[0].units[1].options[0].contents['reading/1'].html='<p>Bài đọc riêng của thánh</p>';
+      const kpvPayload={profile:KPV_PROFILE_SOUTH,primary:kpvTemporalMass,alternatives:[kpvSaintMass]};
+      state.currentLoc='VN'; state.selectedLocationCode='VN'; state.gpsCoordinates={lat:10.7769,lon:106.7009};
+      check(selectKpvMassCandidate(kpvPayload,new Date(2026,8,28,12))===kpvTemporalMass,'Vietnam weekday incorrectly selected a saint alternative');
+      const normalizedVietnamKpv=normalizeKpvMassReadingPayload(kpvPayload,new Date(2026,8,28,12));
+      check(normalizedVietnamKpv.mass_reading.length===1&&normalizedVietnamKpv.kpvSelectedVia==='temporal','Vietnam weekday exposed multiple KPV Masses');
+      const kpvParsedSections=ktcgkpvDailySectionsFromChoices(normalizedVietnamKpv.mass_reading,normalizedVietnamKpv.mass_reading,new Date(2026,8,28,12));
+      check(kpvParsedSections.reading1?.text.includes('Bài đọc ngày thường')&&!kpvParsedSections.reading1.text.includes('riêng của thánh'),'Saint proper leaked into Vietnam weekday reading');
+      check(kpvParsedSections.psalm?.text.includes('Xin Chúa lắng tai.'),'KPV responsorial antiphon was not parsed');
+      const koreanMartyrsSelectionDate=new Date(2026,8,20,12);
+      state.currentLoc='KR'; state.selectedLocationCode='KR'; state.gpsCoordinates={lat:37.5665,lon:126.9780};
+      const expectedKoreanProperNames=kpvExpectedCelebrationNames(koreanMartyrsSelectionDate);
+      check(expectedKoreanProperNames.length>0,'Korean local celebration names unavailable for KPV matching');
+      const foreignSaintMass=JSON.parse(JSON.stringify(kpvSaintMass));
+      foreignSaintMass.celebration.name=expectedKoreanProperNames[0];
+      check(selectKpvMassCandidate({primary:kpvTemporalMass,alternatives:[foreignSaintMass]},koreanMartyrsSelectionDate)===foreignSaintMass,'Foreign-country saint proper did not select the matching KPV translation');
+      const foreignOrdinaryDate=new Date(2026,8,22,12);
+      check(kpvExpectedCelebrationNames(foreignOrdinaryDate).length===0,'Foreign ordinary-day test unexpectedly has a proper celebration');
+      check(selectKpvMassCandidate({primary:kpvSaintMass,alternatives:[kpvTemporalMass]},foreignOrdinaryDate)===kpvTemporalMass,'Vietnamese saint proper replaced a foreign ordinary weekday');
+      check(selectKpvMassCandidate({primary:kpvSaintMass,alternatives:[]},foreignOrdinaryDate)===null,'Unmatched Vietnamese saint proper was exposed outside Vietnam');
+      check(selectKpvMassCandidate({primary:kpvTemporalMass,alternatives:[kpvSaintMass]},koreanMartyrsSelectionDate)===null,'Different Vietnamese saint proper was used for a foreign local celebration');
+      const originalFetch=window.fetch;
+      let kpvRequestUrl='';
+      window.fetch=async url=>{kpvRequestUrl=String(url);return new Response(JSON.stringify({success:true,data:kpvPayload}),{status:200,headers:{'Content-Type':'application/json'}});};
+      state.gpsCoordinates={lat:21.0285,lon:105.8542};
+      await fetchKtcgkpvMassReadingJson(new Date(2026,8,28,12));
+      window.fetch=originalFetch;
+      check(kpvRequestUrl.includes('profile=VIETNAM_NORTH'),'KPV proxy request omitted the GPS-selected northern profile');
       state.currentLoc = 'KR'; state.selectedLocationCode = 'KR';
       const chuseokDate = new Date(2026, 8, 25, 12);
       const chuseokInfo = buildGeneratedLiturgyInfo(chuseokDate);
@@ -125,6 +185,9 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(!citationsAreDifferent('루카 9,23-26', spanishProperParsed.data.gospel.cit_es, 'KR', 'ES'), 'Spanish proper Gospel did not align with Korean');
       state.currentLoc = originalCalendarState.currentLoc;
       state.selectedLocationCode = originalCalendarState.selectedLocationCode;
+      state.targetLang = originalCalendarState.targetLang;
+      state.targetLocationCode = originalCalendarState.targetLocationCode;
+      state.gpsCoordinates = originalCalendarState.gpsCoordinates;
       check(!citationsAreDifferent('마태 1,18-23', '聖瑪竇福音 一,18-23', 'KR', 'ZH'), 'Chinese identical passage compared as different');
       check(!citationsAreDifferent('마르 1,1-8', 'Mk 1:1-8', 'KR', 'DE'), 'German Mk confused with Vietnamese Micah');
       check(!citationsAreDifferent('요한 3,16-18', 'Gv 3,16-18', 'KR', 'IT'), 'Italian John confused with Vietnamese Ecclesiastes');

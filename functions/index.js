@@ -12,17 +12,17 @@ const GEMINI_API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/mo
 const GEMINI_PROXY_REVISION = "secret-v3-model35-2026-09-28";
 const PRIMARY_MODEL = "gemini-3.5-flash-lite";
 const FALLBACK_MODEL = "gemini-3.5-flash";
-const KTCG_MASS_READING_URL = "https://ktcgkpv.org/readings/mass-reading";
+const KPV_MASS_READING_URL = "https://kpv.vn/api/liturgical/mass-readings";
 const MASS_TIMES_CHURCH_URL = "https://masstimes.org/Churchs/";
 const USCCB_DIOCESES_URL = "https://www.usccb.org/about/bishops-and-dioceses/all-dioceses";
 const CATHOLIC_HIERARCHY_BASE_URL = "https://www.catholic-hierarchy.org";
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
 const RATE_WINDOW_MS = 60 * 1000;
 const MAX_REQUESTS_PER_WINDOW = 30;
-const KTCG_MASS_READING_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+const KPV_MASS_READING_CACHE_TTL_MS = 6 * 60 * 60 * 1000;
 const requestBuckets = new Map();
-const ktcgMassReadingCache = new Map();
-const ktcgMassReadingRequests = new Map();
+const kpvMassReadingCache = new Map();
+const kpvMassReadingRequests = new Map();
 const massTimesCache = new Map();
 const bishopDirectoryCache = new Map();
 
@@ -182,10 +182,12 @@ exports.ktcgProxy = onRequest(
       res.status(400).json({ error: "A valid day, month, and year are required." });
       return;
     }
+    const profile = parseKpvLiturgicalProfile(requestBody.profile);
 
     try {
-      const { payload, cacheStatus } = await cachedKtcgMassReading(dateParts);
-      res.set("X-Ordo-KTCG-Cache", cacheStatus);
+      const { payload, cacheStatus } = await cachedKpvMassReading(dateParts, profile);
+      res.set("X-Ordo-KPV-Cache", cacheStatus);
+      res.set("X-Ordo-KPV-Profile", profile);
       // GET includes the date in the URL, so browser and shared caches cannot
       // confuse readings from different dates. Keep POST private for older
       // clients whose date still lives only in the request body.
@@ -194,12 +196,13 @@ exports.ktcgProxy = onRequest(
         : "private, no-store, max-age=0");
       res.status(200).json(payload);
     } catch (error) {
-      logger.error("KTCG proxy failed", {
+      logger.error("KPV proxy failed", {
         date: dateParts,
+        profile,
         status: error.status || 502,
         message: error.message,
       });
-      res.status(502).json({ error: "KTCG mass-reading request failed." });
+      res.status(error.status || 502).json({ error: "KPV mass-reading request failed." });
     }
   }
 );
@@ -409,52 +412,55 @@ function parseKtcgDate(body) {
   return { day, month, year };
 }
 
-async function cachedKtcgMassReading(dateParts) {
-  const key = `${dateParts.year}-${String(dateParts.month).padStart(2, "0")}-${String(dateParts.day).padStart(2, "0")}`;
-  const cached = ktcgMassReadingCache.get(key);
-  if (cached && Date.now() - cached.cachedAt < KTCG_MASS_READING_CACHE_TTL_MS) {
+function parseKpvLiturgicalProfile(value) {
+  return String(value || "").trim().toUpperCase() === "VIETNAM_NORTH"
+    ? "VIETNAM_NORTH"
+    : "VIETNAM_SOUTH";
+}
+
+async function cachedKpvMassReading(dateParts, profile) {
+  const isoDate = `${dateParts.year}-${String(dateParts.month).padStart(2, "0")}-${String(dateParts.day).padStart(2, "0")}`;
+  const key = `${isoDate}:${profile}`;
+  const cached = kpvMassReadingCache.get(key);
+  if (cached && Date.now() - cached.cachedAt < KPV_MASS_READING_CACHE_TTL_MS) {
     return { payload: cached.payload, cacheStatus: "HIT" };
   }
-  if (ktcgMassReadingRequests.has(key)) {
-    return { payload: await ktcgMassReadingRequests.get(key), cacheStatus: "COALESCED" };
+  if (kpvMassReadingRequests.has(key)) {
+    return { payload: await kpvMassReadingRequests.get(key), cacheStatus: "COALESCED" };
   }
-  const request = fetchKtcgMassReading(dateParts)
+  const request = fetchKpvMassReading(isoDate, profile)
     .then(payload => {
-      ktcgMassReadingCache.set(key, { cachedAt: Date.now(), payload });
+      kpvMassReadingCache.set(key, { cachedAt: Date.now(), payload });
       return payload;
     })
-    .finally(() => ktcgMassReadingRequests.delete(key));
-  ktcgMassReadingRequests.set(key, request);
+    .finally(() => kpvMassReadingRequests.delete(key));
+  kpvMassReadingRequests.set(key, request);
   return { payload: await request, cacheStatus: "MISS" };
 }
 
-async function fetchKtcgMassReading({ day, month, year }) {
-  const response = await fetch(KTCG_MASS_READING_URL, {
-    method: "POST",
+async function fetchKpvMassReading(isoDate, profile) {
+  const url = new URL(KPV_MASS_READING_URL);
+  url.searchParams.set("date", isoDate);
+  url.searchParams.set("profile", profile);
+  const response = await fetch(url, {
+    method: "GET",
     headers: {
-      "Accept": "application/json, text/javascript, */*; q=0.01",
-      "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-      "X-Requested-With": "XMLHttpRequest",
+      "Accept": "application/json",
+      "User-Agent": "ordinary-mass-app/27.7 (+https://sluggishjedi-max.github.io/catholic-mass-translation/)",
     },
-    body: new URLSearchParams({
-      day: String(day),
-      month: String(month),
-      year: String(year),
-      seldate: "",
-    }),
   });
 
   if (!response.ok) {
-    const error = new Error(`KTCG returned HTTP ${response.status}.`);
+    const error = new Error(`KPV returned HTTP ${response.status}.`);
     error.status = response.status;
     throw error;
   }
 
   const payload = await response.json();
-  if (!payload || !payload.success || !payload.data) {
-    throw new Error("KTCG returned an empty mass-reading payload.");
+  if (!payload || !payload.primary || !Array.isArray(payload.primary.templates)) {
+    throw new Error("KPV returned an empty mass-reading payload.");
   }
-  return payload;
+  return { success: true, provider: "kpv.vn", data: payload };
 }
 
 function parseVietnameseDiocesanUrl(value) {

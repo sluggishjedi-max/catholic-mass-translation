@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260929-PROPER-READING-LABELS';
+    const APP_VERSION = 'V27.7-20260929-KPV-REGIONAL-CALENDAR';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -142,6 +142,22 @@
     const REMOTE_FETCH_TIMEOUT_MS = 8000;
     const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 60000;
     const KTCG_CITATION_TIMEOUT_MS = 10000;
+    const KPV_PROFILE_NORTH = 'VIETNAM_NORTH';
+    const KPV_PROFILE_SOUTH = 'VIETNAM_SOUTH';
+    // KPV exposes two Vietnamese calendars. The 17th parallel is the stable
+    // GPS boundary between the northern and southern profiles; unknown or
+    // non-Vietnamese coordinates deliberately fall back to the southern one.
+    const KPV_NORTH_PROFILE_MIN_LATITUDE = 17;
+    // A compact mainland outline prevents the broad legacy Vietnam rectangle
+    // from treating Laos or Cambodia as northern/southern Vietnam. Phú Quốc is
+    // handled separately because it sits west of the mainland outline.
+    const VIETNAM_GPS_MAINLAND_POLYGON = Object.freeze([
+        [102.1, 22.4], [102.8, 23.4], [105.5, 23.4], [106.8, 22.5], [107.9, 21.5],
+        [108.4, 20], [107.2, 18], [108.2, 16], [109.5, 13], [109.2, 11],
+        [107, 8.4], [104.5, 8.4], [104.7, 10.5], [105.8, 11], [106.5, 11.8],
+        [107.5, 14.5], [107.1, 16], [106.5, 16.9], [105.7, 18], [104.8, 19],
+        [103, 20]
+    ]);
     const liturgicalTimeZones = {
         KR: 'Asia/Seoul',
         VN: 'Asia/Ho_Chi_Minh',
@@ -5669,11 +5685,11 @@
             LA: 'Versio Commissionis Liturgicae Episcoporum Vietnamiae (UBPT) · Lectiones Missae'
         },
         ktcg: {
-            KR: '베트남 성무일도번역위원회 번역 · 미사전례독서',
-            VN: 'Bản dịch KTCGKPV · Sách Bài Đọc trong Thánh Lễ',
-            EN: 'KTCGKPV translation · Liturgical Readings for Mass',
-            JP: 'KTCGKPV訳 · ミサ典礼朗読',
-            LA: 'Versio KTCGKPV · Lectiones liturgicae Missae'
+            KR: 'KPV 성무일도번역위원회 번역 · 미사 독서',
+            VN: 'Bản dịch KPV · Bài đọc Thánh lễ',
+            EN: 'KPV translation · Mass Readings',
+            JP: 'KPV訳 · ミサ朗読',
+            LA: 'Versio KPV · Lectiones Missae'
         }
     });
 
@@ -6269,11 +6285,55 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return {
             day: String(date.getDate()),
             month: String(date.getMonth() + 1),
-            year: String(date.getFullYear())
+            year: String(date.getFullYear()),
+            profile: currentVietnameseKpvProfile()
         };
     }
 
     const KTCG_PROXY_ENDPOINT = window.ORDO_KTCG_PROXY_ENDPOINT || 'https://us-central1-ordinary-mass-app.cloudfunctions.net/ktcgProxy';
+
+    function gpsPointInPolygon(lat, lon, polygon) {
+        let inside = false;
+        for (let index = 0, previous = polygon.length - 1; index < polygon.length; previous = index++) {
+            const [x, y] = polygon[index];
+            const [previousX, previousY] = polygon[previous];
+            const crossesLatitude = (y > lat) !== (previousY > lat);
+            const boundaryLongitude = (previousX - x) * (lat - y) / ((previousY - y) || Number.EPSILON) + x;
+            if (crossesLatitude && lon < boundaryLongitude) inside = !inside;
+        }
+        return inside;
+    }
+
+    function gpsCoordinatesAreInVietnam(lat, lon) {
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
+        const phuQuoc = lat >= 9.75 && lat <= 10.55 && lon >= 103.75 && lon <= 104.15;
+        return phuQuoc || gpsPointInPolygon(lat, lon, VIETNAM_GPS_MAINLAND_POLYGON);
+    }
+
+    function vietnameseKpvProfileForCoordinates(coordinates = state.gpsCoordinates) {
+        const lat = Number(coordinates && coordinates.lat);
+        const lon = Number(coordinates && coordinates.lon);
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return KPV_PROFILE_SOUTH;
+        if (!gpsCoordinatesAreInVietnam(lat, lon)) return KPV_PROFILE_SOUTH;
+        return lat >= KPV_NORTH_PROFILE_MIN_LATITUDE ? KPV_PROFILE_NORTH : KPV_PROFILE_SOUTH;
+    }
+
+    function currentVietnameseKpvProfile() {
+        return vietnameseKpvProfileForCoordinates(state.gpsCoordinates);
+    }
+
+    function vietnameseKpvSelectionContext(date) {
+        const location = dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc || 'INTL');
+        const info = date instanceof Date && !Number.isNaN(date.getTime()) ? buildGeneratedLiturgyInfo(date) : null;
+        const properName = info && hasPriorityCelebrationForLookup(date, info)
+            ? Object.entries(lookupLiturgyNamesForDate(date, info))
+                .filter(([lang, title]) => title && !isGeneratedSeasonalNameForInfo(lang, title, info))
+                .map(([, title]) => normalizeCalendarNameForCompare(title))
+                .filter(Boolean)
+                .sort()[0] || 'proper'
+            : 'temporal';
+        return `${currentVietnameseKpvProfile()}:${location}:${properName}`;
+    }
 
     function traditionalChineseStaticMassData() {
         const data = globalThis.taiwanDailyMassTextData;
@@ -6362,7 +6422,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     async function fetchKtcgkpvMassReadingJson(date) {
         const body = ktcgkpvFormBody(date);
         const cacheDate = formatDateIso(date);
-        const endpoint = `${KTCG_PROXY_ENDPOINT}${KTCG_PROXY_ENDPOINT.includes('?') ? '&' : '?'}date=${encodeURIComponent(cacheDate)}`;
+        const endpoint = `${KTCG_PROXY_ENDPOINT}${KTCG_PROXY_ENDPOINT.includes('?') ? '&' : '?'}date=${encodeURIComponent(cacheDate)}&profile=${encodeURIComponent(body.profile)}`;
         let response = await fetchWithTimeout(endpoint, {
             method: 'GET',
             cache: 'default',
@@ -6385,8 +6445,130 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const payload = await response.json();
-        if (!payload || !payload.success || !payload.data) throw new Error('KTCG mass-reading JSON is empty');
+        if (!payload || !payload.success || !payload.data || !payload.data.primary) throw new Error('KPV mass-reading JSON is empty');
         return payload.data;
+    }
+
+    function kpvMassCandidateTitle(mass, date) {
+        const celebration = mass && mass.celebration;
+        const celebrationName = cleanLiturgyTitle(celebration && (celebration.name || (celebration.names && celebration.names.vi)) || '');
+        return celebrationName || vietnameseSeasonalLookupTitle(date) || cleanLiturgyTitle(buildGeneratedLiturgyInfo(date).names.VN || '');
+    }
+
+    function kpvExpectedCelebrationNames(date) {
+        const info = buildGeneratedLiturgyInfo(date);
+        if (!hasPriorityCelebrationForLookup(date, info)) return [];
+        return Object.entries(lookupLiturgyNamesForDate(date, info))
+            .filter(([lang, title]) => title && !isGeneratedSeasonalNameForInfo(lang, title, info))
+            .map(([, title]) => cleanLiturgyTitle(title))
+            .filter((title, index, list) => title && list.indexOf(title) === index);
+    }
+
+    function kpvMassCandidateMatchScore(mass, expectedNames, date) {
+        if (!mass || mass.via !== 'celebration') return 0;
+        const title = kpvMassCandidateTitle(mass, date);
+        return (expectedNames || []).reduce((best, expected) => Math.max(
+            best,
+            vietnameseDiocesanTextMatchScore(title, expected, date),
+            vietnameseMeaningScore(title, expected)
+        ), 0);
+    }
+
+    function selectKpvMassCandidate(payload, date) {
+        const primary = payload && payload.primary;
+        if (!primary) return null;
+        // Inside Vietnam the KPV primary Mass is authoritative. In particular,
+        // a weekday remains the only displayed Mass when optional saint propers
+        // are supplied in `alternatives`.
+        if (dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) === 'VN') return primary;
+        const candidates = [primary].concat(Array.isArray(payload.alternatives) ? payload.alternatives : []);
+        const expectedNames = kpvExpectedCelebrationNames(date);
+        // Outside Vietnam, a Vietnamese saint proper is never allowed to
+        // replace an ordinary weekday. Conversely, if the current country's
+        // calendar celebrates a saint, only the matching KPV proper is valid;
+        // a different Vietnamese proper or the temporal Mass would mistranslate
+        // that country's liturgy and must be left for the translation fallback.
+        if (!expectedNames.length) return candidates.find(mass => mass && mass.via === 'temporal') || null;
+        const scored = candidates
+            .map((mass, index) => ({ mass, index, score: kpvMassCandidateMatchScore(mass, expectedNames, date) }))
+            .sort((a, b) => b.score - a.score || a.index - b.index);
+        return scored[0] && scored[0].score >= 0.45 ? scored[0].mass : null;
+    }
+
+    function kpvContentHtml(content) {
+        if (!content || typeof content !== 'object') return '';
+        if (content.html) return String(content.html);
+        return String(content.text || '').split(/\n{2,}/).map(paragraph => `<p>${escapeHtml(paragraph).replace(/\n/g, '<br>')}</p>`).join('');
+    }
+
+    function kpvPsalmHtml(psalm, antiphon) {
+        let html = kpvContentHtml(psalm);
+        const response = cleanNodeText(antiphon && antiphon.text || '');
+        if (!response) return html;
+        const responseHtml = `<p class="response"><span class="body">${escapeHtml(response).replace(/\n/g, '<br>')}</span></p>`;
+        if (/data-kpv-slot=["']antiphon["']/i.test(html)) {
+            return html.replace(/<div\b[^>]*data-kpv-slot=["']antiphon["'][^>]*>\s*<\/div>/i, responseHtml);
+        }
+        return responseHtml + html;
+    }
+
+    function kpvMassSlotEntries(mass, slotKey, supplementKey = '', responseKey = '') {
+        const entries = [];
+        const seen = new Set();
+        (mass && Array.isArray(mass.templates) ? mass.templates : []).forEach(template => {
+            (Array.isArray(template.units) ? template.units : []).forEach(unit => {
+                (Array.isArray(unit.options) ? unit.options : []).forEach(option => {
+                    const contents = option && option.contents || {};
+                    const content = contents[slotKey];
+                    if (!content) return;
+                    const supplement = supplementKey ? contents[supplementKey] : null;
+                    const response = responseKey ? contents[responseKey] : null;
+                    const key = `${content.code || ''}\u0000${content.ref || ''}\u0000${cleanNodeText(content.text || content.html || '')}`;
+                    if (seen.has(key)) return;
+                    seen.add(key);
+                    entries.push({
+                        INDEXING: cleanCitation(content.ref || ''),
+                        EPITOMIZE: cleanNodeText(content.heading || ''),
+                        LEAD: String(content.lead || ''),
+                        CONTENT: kpvContentHtml(content),
+                        INDEXING_2: cleanCitation(supplement && supplement.ref || ''),
+                        CONTENT_2: supplementKey === 'responsorial_psalm/1'
+                            ? kpvPsalmHtml(supplement, response)
+                            : kpvContentHtml(supplement)
+                    });
+                });
+            });
+        });
+        return entries;
+    }
+
+    function kpvMassCandidateAsLegacyChoice(mass, date) {
+        if (!mass) return null;
+        const title = kpvMassCandidateTitle(mass, date);
+        return {
+            display_text: title,
+            date_info: { daily_title: title },
+            is_special: mass.via === 'celebration',
+            kpvVia: mass.via || '',
+            kpvCelebrationCode: mass.celebrationCode || '',
+            introit: kpvMassSlotEntries(mass, 'entrance_antiphon/1'),
+            reading1: kpvMassSlotEntries(mass, 'reading/1', 'responsorial_psalm/1', 'antiphon/1'),
+            reading2: kpvMassSlotEntries(mass, 'reading/2'),
+            gospel: kpvMassSlotEntries(mass, 'gospel/1', 'gospel_acclamation/1'),
+            communion: kpvMassSlotEntries(mass, 'communion_antiphon/1')
+        };
+    }
+
+    function normalizeKpvMassReadingPayload(payload, date) {
+        if (payload && Array.isArray(payload.mass_reading)) return payload;
+        const selected = selectKpvMassCandidate(payload, date);
+        const choice = kpvMassCandidateAsLegacyChoice(selected, date);
+        return {
+            mass_reading: choice ? [choice] : [],
+            kpvProfile: payload && payload.profile || currentVietnameseKpvProfile(),
+            kpvSelectedVia: selected && selected.via || '',
+            kpvSelectedCelebrationCode: selected && selected.celebrationCode || ''
+        };
     }
 
     function ktcgkpvChoiceTitle(choice) {
@@ -6760,18 +6942,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     async function fetchVietnameseKtcgDailyMass(date) {
-        const payload = await fetchKtcgkpvMassReadingJson(date);
+        const payload = normalizeKpvMassReadingPayload(await fetchKtcgkpvMassReadingJson(date), date);
         const choices = ktcgkpvOrderedReadingChoices(payload, date, null);
         const liturgyChoices = ktcgkpvOrderedLiturgyChoices(payload, date, null);
-        if (!choices.length) throw new Error('KTCG mass-reading choices are empty');
+        if (!choices.length) throw new Error('KPV mass-reading choices are empty');
         const data = ktcgkpvDailySectionsFromChoices(choices, liturgyChoices, date);
         const internalInfo = buildGeneratedLiturgyInfo(date);
-        const title = cleanLiturgyTitle(internalInfo.names.VN || getLiturgyDisplayName('VN'));
+        const title = ktcgkpvChoiceTitle(choices[0]) || cleanLiturgyTitle(internalInfo.names.VN || getLiturgyDisplayName('VN'));
         const parsed = {
             title,
             color: internalInfo.color,
-            titleSource: 'internal-calendar',
+            titleSource: 'kpv-calendar',
+            sourceName: 'KPV · Bài đọc Thánh lễ',
+            sourceUrl: 'https://kpv.vn/liturgy/mass-readings',
+            calendarSourceUrl: 'https://kpv.vn/liturgy/calendar',
             ktcgChoiceTitles: choices.map(ktcgkpvChoiceTitle).filter(Boolean),
+            kpvProfile: payload.kpvProfile,
+            kpvSelectedVia: payload.kpvSelectedVia,
+            kpvSelectedCelebrationCode: payload.kpvSelectedCelebrationCode,
             data
         };
         return strictEnsureReadingSummarySlots(parsed, 'VN');
@@ -6988,7 +7176,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function queueVietnameseKtcgPrayerEnrichment(parsed, date) {
         if (!parsed || !parsed.data || hasVietnameseKtcgDiocesanPrayers(parsed)) return Promise.resolve(parsed);
-        const key = formatDateIso(date);
+        const key = `${formatDateIso(date)}:${vietnameseKpvSelectionContext(date)}`;
         if (vietnameseKtcgPrayerEnrichmentPromises.has(key)) {
             return vietnameseKtcgPrayerEnrichmentPromises.get(key);
         }
@@ -7129,10 +7317,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     async function applyKtcgkpvCitationSource(parsed, date) {
         try {
-            const [data, calendarContext] = await Promise.all([
+            const [rawData, calendarContext] = await Promise.all([
                 fetchKtcgkpvMassReadingJson(date),
                 ensureVietnameseCalendarContext(date).catch(() => null)
             ]);
+            const data = normalizeKpvMassReadingPayload(rawData, date);
             const choice = ktcgkpvReadingChoice(data, date, calendarContext);
             if (!choice || !parsed || !parsed.data) return parsed;
             const map = {
@@ -7148,7 +7337,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 applyKtcgkpvCitationToParsed(parsed, key, optionCits, ktcgkpvCitationOptions(entries));
             });
         } catch (error) {
-            console.warn('KTCG mass-reading citation source failed; keeping existing VN citations.', error);
+            console.warn('KPV mass-reading citation source failed; keeping existing VN citations.', error);
         }
         return parsed;
     }
@@ -13120,8 +13309,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function dailySourceStorageKey(lang, date, locationCode = dailySourceLocationCode(lang)) {
+        const vietnameseSource = normalizeVietnameseReadingSource(state.vnReadingSource);
         const sourceVariant = lang === 'VN'
-            ? `:${normalizeVietnameseReadingSource(state.vnReadingSource)}`
+            ? `:${vietnameseSource}${vietnameseSource === 'ktcg' ? `:${vietnameseKpvSelectionContext(date)}` : ''}`
             : (['EN', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         return `${STORAGE_PREFIX}dailySource:${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
     }
@@ -13218,8 +13408,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     async function fetchParsedDailyMass(lang, date, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
+        const vietnameseSource = normalizeVietnameseReadingSource(state.vnReadingSource);
         const sourceVariant = lang === 'VN'
-            ? `:${normalizeVietnameseReadingSource(state.vnReadingSource)}`
+            ? `:${vietnameseSource}${vietnameseSource === 'ktcg' ? `:${vietnameseKpvSelectionContext(date)}` : ''}`
             : (['EN', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         const key = `${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
         if (options.forceRemote) delete dailySourceCache[key];
@@ -16929,7 +17120,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lat > 4.5 && lat < 21.5 && lon > 116 && lon < 127) return 'PH';
         if (lat > -48 && lat < -33 && lon > 165 && lon < 180) return 'NZ';
         if (lat > -45 && lat < -9 && lon > 112 && lon < 155) return 'AU';
-        if (lat > 8 && lat < 24 && lon > 102 && lon < 110) return 'VN';
+        if (gpsCoordinatesAreInVietnam(lat, lon)) return 'VN';
         if (lat > 24 && lat < 46 && lon > 122 && lon < 146) return 'JP';
         if (lat > 14.3 && lat < 32.8 && lon > -118.6 && lon < -86.4) return 'MX';
         if ((lat > 36.8 && lat < 42.3 && lon > -9.7 && lon < -6.0)
@@ -16979,10 +17170,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         navigator.geolocation.getCurrentPosition(pos => {
             const lat = pos.coords.latitude;
             const lon = pos.coords.longitude;
+            const previousKpvProfile = currentVietnameseKpvProfile();
             state.gpsCoordinates = { lat, lon };
+            const kpvProfileChanged = previousKpvProfile !== currentVietnameseKpvProfile();
             const nextLoc = gpsLocationForCoordinates(lat, lon);
             const detectedTimeZone = gpsTimeZoneForCoordinates(lat, lon, nextLoc);
-            if (applyDetectedLocation(nextLoc, detectedTimeZone)) fetchMassData();
+            if (applyDetectedLocation(nextLoc, detectedTimeZone) || kpvProfileChanged) fetchMassData();
             else render();
             refreshGpsBishopContext(lat, lon, nextLoc);
         }, () => {
