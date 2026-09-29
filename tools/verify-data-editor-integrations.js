@@ -62,8 +62,26 @@ async function verifyPrayerCountryUi() {
     const state = await (await fetch(`${base}/api/state`)).json();
     assert(state.ok && state.countries.length >= 10, 'Prayer editor country state is missing');
     assert(state.countries.some(country => country.jurisdiction === 'KR' && country.language === 'KR'));
+    assert.deepStrictEqual(state.categories.slice(0, 9), [
+      'common', 'rosary', 'stations_of_cross', 'litany', 'Various',
+      'sacrament', 'blessing_household', 'funeral', 'monthly'
+    ], 'Prayer categories are out of the requested order');
     const list = await (await fetch(`${base}/api/prayers?country=KR&language=KR`)).json();
     assert(list.ok && list.prayers.length > 0, 'Korean prayer list is empty');
+    const sortedIds = list.prayers.map(prayer => prayer.id)
+      .slice()
+      .sort(prayerTool.comparePrayerIds);
+    assert.deepStrictEqual(list.prayers.map(prayer => prayer.id), sortedIds, 'Prayer list must use natural id order');
+    const signOfCross = list.prayers.findIndex(prayer => prayer.id === '001.sign_of_cross');
+    const doubleSignOfCross = list.prayers.findIndex(prayer => prayer.id === '001-1.sign_of_cross_double');
+    const lordsPrayer = list.prayers.findIndex(prayer => prayer.id === '002.lords_prayer');
+    assert(signOfCross < doubleSignOfCross && doubleSignOfCross < lordsPrayer, 'Base and sub-number prayer ids are out of order');
+    const sharedPrayer = list.prayers.find(prayer => prayer.id === '001.sign_of_cross');
+    assert(sharedPrayer.jurisdictions.includes('KR'), 'Prayer country tags must include the selected country');
+    assert(sharedPrayer.jurisdictions.length > 1, 'Shared prayers must expose every owning country tag');
+    const titleOnlyPrayer = list.prayers.find(prayer => prayer.id === 'kr_10_99');
+    assert(titleOnlyPrayer && !titleOnlyPrayer.hasText, 'Title-only prayer fixture is missing');
+    assert(!titleOnlyPrayer.jurisdictions.includes('KR'), 'A title-only country must not appear in prayer country tags');
     const first = list.prayers[0];
     const detail = await (await fetch(`${base}/api/prayer?country=KR&lang=KR&id=${encodeURIComponent(first.id)}`)).json();
     assert(detail.ok && detail.prayer.id === first.id && detail.prayer.lang === 'KR');
@@ -89,6 +107,20 @@ function verifyExplicitCountryOwnership() {
   assert.deepStrictEqual(changed, ['AU'], 'Explicit country ownership must route a new prayer to Australia');
 }
 
+function verifyPrayerCategoryEditing() {
+  const data = JSON.parse(JSON.stringify(prayerTool.loadPrayerData()));
+  const target = data.prayers.find(prayer => prayer.titles && prayer.titles.KR);
+  assert(target, 'Korean prayer category fixture is missing');
+  const nextCategory = target.category === 'common' ? 'rosary' : 'common';
+  const updated = prayerTool.updatePrayerCategory(data, {
+    targetId: target.id,
+    targetLang: 'KR',
+    category: nextCategory
+  });
+  assert.strictEqual(updated.category, nextCategory);
+  assert.strictEqual(data.prayers.find(prayer => prayer.id === target.id).category, nextCategory);
+}
+
 function verifyFirebasePayloadCompatibility() {
   const payload = buildFirebaseUploadPayload({
     collectionName: 'test',
@@ -103,9 +135,10 @@ function verifyFirebasePayloadCompatibility() {
 async function main() {
   verifyFirebasePayloadCompatibility();
   verifyExplicitCountryOwnership();
+  verifyPrayerCategoryEditing();
   await verifyServer('prayer', prayerTool.createServer, {
     collectionName: 'prayer_data',
-    html: ['국가별 기도문 편집기', '언어별 기도문 목록', '앱 표시 미리보기', '다른 언어 추가', '두 기도문 병합', '로컬에 저장', 'Firebase에 업로드']
+    html: ['국가별 기도문 편집기', '언어별 기도문 목록', '앱 표시 미리보기', '다른 언어 추가', '두 기도문 병합', '카테고리만 수정', '로컬에 저장', 'Firebase에 업로드']
   });
   await verifyPrayerCountryUi();
   await verifyServer('hymn', hymnTool.createServer, {

@@ -14,6 +14,18 @@ const usesCountryModules = path.normalize(prayerDataPath).toLowerCase()
 const LANGUAGES = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
 const SEARCH_RESULT_LANGUAGE_ORDER = ['KR', 'VN', 'EN', 'LA', 'JP', 'ZH', 'IT', 'PT', 'ES', 'DE'];
 const DEFAULT_PORT = 5217;
+const PRAYER_ID_COLLATOR = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
+const CATEGORY_ORDER = [
+  'common',
+  'rosary',
+  'stations_of_cross',
+  'litany',
+  'Various',
+  'sacrament',
+  'blessing_household',
+  'funeral',
+  'monthly'
+];
 const LANGUAGE_NAMES = {
   KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latina',
   ZH: '繁體中文', IT: 'Italiano', PT: 'Português', ES: 'Español', DE: 'Deutsch'
@@ -116,7 +128,7 @@ function runCountryModuleSources(sources) {
   const countries = {};
   const categoryLabels = {};
   const mergedEntries = new Map();
-  const countryOwners = { entries: {}, fields: {} };
+  const countryOwners = { entries: {}, textEntries: {}, fields: {} };
 
   for (const source of sources) {
     const countryModule = registeredCountries[source.jurisdiction]
@@ -132,6 +144,9 @@ function runCountryModuleSources(sources) {
     countryModule.entries.forEach(entry => {
       const id = String(entry.id || '');
       countryOwners.entries[id] = unique([].concat(countryOwners.entries[id] || [], source.jurisdiction));
+      if (Object.values(entry.texts || {}).some(value => Boolean(String(value || '').trim()))) {
+        countryOwners.textEntries[id] = unique([].concat(countryOwners.textEntries[id] || [], source.jurisdiction));
+      }
       countryOwners.fields[id] = countryOwners.fields[id] || {};
       for (const field of ['titles', 'texts', 'sourceCategory']) {
         countryOwners.fields[id][field] = countryOwners.fields[id][field] || {};
@@ -248,9 +263,15 @@ function prayersForCountry(loaded, jurisdiction, requestedLanguage) {
       sourceCategory: (entry.sourceCategory || {})[language] || '',
       hasText: Boolean((entry.texts || {})[language]),
       textLength: String((entry.texts || {})[language] || '').length,
-      textLanguages: SEARCH_RESULT_LANGUAGE_ORDER.filter(code => Boolean((entry.texts || {})[code]))
+      textLanguages: SEARCH_RESULT_LANGUAGE_ORDER.filter(code => Boolean((entry.texts || {})[code])),
+      jurisdictions: loaded.data.countryOwners
+        ? unique([].concat(loaded.data.countryOwners.textEntries[entry.id] || []))
+        : (Object.values(entry.texts || {}).some(value => Boolean(String(value || '').trim()))
+          ? [country.jurisdiction]
+          : [])
     }))
-    .sort((left, right) => left.title.localeCompare(right.title));
+    .sort((left, right) => comparePrayerIds(left.id, right.id)
+      || left.title.localeCompare(right.title));
 }
 
 function prayerDetailForCountry(loaded, jurisdiction, id, requestedLanguage) {
@@ -305,6 +326,24 @@ function unique(values) {
   return output;
 }
 
+function comparePrayerIds(leftValue, rightValue) {
+  const left = String(leftValue || '');
+  const right = String(rightValue || '');
+  const leftMatch = left.match(/^(\d+)(.*)$/u);
+  const rightMatch = right.match(/^(\d+)(.*)$/u);
+  if (leftMatch && rightMatch) {
+    const numberDifference = Number(leftMatch[1]) - Number(rightMatch[1]);
+    if (numberDifference) return numberDifference;
+    const variantRank = suffix => suffix.startsWith('.') ? 0 : suffix.startsWith('-') ? 1 : 2;
+    const rankDifference = variantRank(leftMatch[2]) - variantRank(rightMatch[2]);
+    if (rankDifference) return rankDifference;
+    return PRAYER_ID_COLLATOR.compare(leftMatch[2], rightMatch[2]);
+  }
+  if (leftMatch) return -1;
+  if (rightMatch) return 1;
+  return PRAYER_ID_COLLATOR.compare(left, right);
+}
+
 function ensureLanguage(value) {
   const lang = String(value || '').trim().toUpperCase();
   if (!lang) return '';
@@ -315,10 +354,16 @@ function ensureLanguage(value) {
 }
 
 function allCategories(categoryLabels, prayers) {
-  return unique([
+  const categories = unique([
     ...Object.keys(categoryLabels || {}),
     ...prayers.map(prayer => prayer.category)
-  ]).sort((a, b) => a.localeCompare(b));
+  ]);
+  const ranks = new Map(CATEGORY_ORDER.map((category, index) => [category, index]));
+  return categories.sort((left, right) => {
+    const leftRank = ranks.has(left) ? ranks.get(left) : CATEGORY_ORDER.length;
+    const rightRank = ranks.has(right) ? ranks.get(right) : CATEGORY_ORDER.length;
+    return leftRank - rightRank || left.localeCompare(right);
+  });
 }
 
 function publicPrayer(prayer, categoryLabels) {
@@ -544,8 +589,9 @@ function buildTags(prayer, categoryLabels) {
 }
 
 function ensureCountryOwners(data) {
-  data.countryOwners = data.countryOwners || { entries: {}, fields: {} };
+  data.countryOwners = data.countryOwners || { entries: {}, textEntries: {}, fields: {} };
   data.countryOwners.entries = data.countryOwners.entries || {};
+  data.countryOwners.textEntries = data.countryOwners.textEntries || {};
   data.countryOwners.fields = data.countryOwners.fields || {};
   return data.countryOwners;
 }
@@ -567,14 +613,17 @@ function setPrayerFieldOwner(data, id, field, language, jurisdiction) {
   owners.fields[id] = owners.fields[id] || {};
   owners.fields[id][field] = owners.fields[id][field] || {};
   owners.fields[id][field][language] = owner;
+  if (field === 'texts') owners.textEntries[id] = unique([].concat(owners.textEntries[id] || [], owner));
 }
 
 function renamePrayerOwners(data, previousId, nextId) {
   if (!previousId || previousId === nextId || !data.countryOwners) return;
   const owners = ensureCountryOwners(data);
   if (owners.entries[previousId]) owners.entries[nextId] = owners.entries[previousId];
+  if (owners.textEntries[previousId]) owners.textEntries[nextId] = owners.textEntries[previousId];
   if (owners.fields[previousId]) owners.fields[nextId] = owners.fields[previousId];
   delete owners.entries[previousId];
+  delete owners.textEntries[previousId];
   delete owners.fields[previousId];
 }
 
@@ -582,14 +631,20 @@ function deletePrayerOwners(data, id) {
   if (!data.countryOwners) return;
   const owners = ensureCountryOwners(data);
   delete owners.entries[id];
+  delete owners.textEntries[id];
   delete owners.fields[id];
 }
 
 function deletePrayerFieldOwner(data, id, language) {
   if (!data.countryOwners || !data.countryOwners.fields[id]) return;
+  const owners = ensureCountryOwners(data);
   const fields = data.countryOwners.fields[id];
+  const removedTextOwner = fields.texts && fields.texts[language];
   for (const field of ['titles', 'texts', 'sourceCategory']) {
     if (fields[field]) delete fields[field][language];
+  }
+  if (removedTextOwner && !Object.values(fields.texts || {}).includes(removedTextOwner)) {
+    owners.textEntries[id] = (owners.textEntries[id] || []).filter(owner => owner !== removedTextOwner);
   }
 }
 
@@ -3485,6 +3540,7 @@ async function main() {
 }
 
 module.exports = {
+  comparePrayerIds,
   countryPrayerModules,
   createServer,
   loadPrayerData,
@@ -3493,6 +3549,7 @@ module.exports = {
   prepareCountryModuleSources,
   readCountryModuleSources,
   runCountryModuleSources,
+  updatePrayerCategory,
   updatePrayerDetail,
   validateData
 };

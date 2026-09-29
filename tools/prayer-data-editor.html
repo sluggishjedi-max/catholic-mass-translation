@@ -40,6 +40,8 @@
     .prayer-row:hover,.prayer-row.selected { border-color:var(--blue); background:#f8faff; box-shadow:0 0 0 3px #315ee813; }
     .row-title { font-weight:900; overflow-wrap:anywhere; }
     .row-meta,.hint { color:var(--muted); font-size:12px; overflow-wrap:anywhere; }
+    .country-tags { display:flex; flex-wrap:wrap; gap:4px; }
+    .country-tag { display:inline-flex; align-items:center; min-height:20px; padding:2px 7px; border-radius:999px; color:#2349b8; background:#eef3ff; font-size:10px; font-weight:900; letter-spacing:.02em; }
     .empty { padding:32px 16px; color:var(--muted); text-align:center; line-height:1.6; }
     .editor-body { display:grid; gap:12px; padding:16px; }
     .field-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
@@ -110,6 +112,7 @@
 
           <div class="actions">
             <button id="save-local" class="primary" type="button">로컬에 저장</button>
+            <button id="save-category" class="secondary" type="button">카테고리만 수정</button>
             <button id="firebase-upload" class="soft" type="button">Firebase에 업로드</button>
             <button id="add-language" class="secondary" type="button">＋ 다른 언어 추가</button>
             <button id="delete-language" class="danger" type="button">이 언어 삭제</button>
@@ -156,7 +159,7 @@
 
   <script>
     const state = { countries:[], languages:[], languageNames:{}, categories:[], categoryLabels:{}, rows:[], mergeRows:[], selectedId:'', originalId:'', mergeSource:null };
-    const ids = ['country','language','category-filter','search','new-prayer','reload','status','prayer-list','list-title','list-count','edit-scope','prayer-id','prayer-category','prayer-title','source-category','prayer-text','save-local','firebase-upload','add-language','language-adder','add-country','add-language-select','start-language','delete-language','delete-entry','file-path','preview-summary','preview-pills','preview-language','preview-title','preview-body','merge-target','merge-country','merge-language','merge-search','merge-list','merge-overwrite','merge-remove','merge'];
+    const ids = ['country','language','category-filter','search','new-prayer','reload','status','prayer-list','list-title','list-count','edit-scope','prayer-id','prayer-category','prayer-title','source-category','prayer-text','save-local','save-category','firebase-upload','add-language','language-adder','add-country','add-language-select','start-language','delete-language','delete-entry','file-path','preview-summary','preview-pills','preview-language','preview-title','preview-body','merge-target','merge-country','merge-language','merge-search','merge-list','merge-overwrite','merge-remove','merge'];
     const el = Object.fromEntries(ids.map(id => [id.replace(/-([a-z])/g,(_,letter)=>letter.toUpperCase()), document.getElementById(id)]));
 
     function escapeHtml(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
@@ -201,11 +204,13 @@
       return rows.filter(row=>(!category||row.category===category)&&(!normalized||[row.id,row.title,row.sourceCategory,row.categoryLabel].join(' ').toLowerCase().includes(normalized)));
     }
 
+    function countryBadges(row) { return (row.jurisdictions||[]).map(code=>'<span class="country-tag">'+escapeHtml(code)+'</span>').join(''); }
+
     function renderPrayerList() {
       const rows=visibleRows(state.rows,el.search.value,el.categoryFilter.value);
       el.listTitle.textContent=languageName(el.language.value)+' 기도문 목록'; el.listCount.textContent=rows.length+'개';
       if(!rows.length){ el.prayerList.innerHTML='<div class="empty">선택한 국가·언어에 등록된 기도문이 없습니다.<br>새 기도문 또는 다른 언어 항목을 추가할 수 있습니다.</div>'; return; }
-      el.prayerList.innerHTML=rows.map((row,index)=>'<button class="prayer-row '+(row.id===state.selectedId?'selected':'')+'" type="button" data-index="'+index+'"><span class="row-title">'+escapeHtml(row.title)+'</span><span class="row-meta">'+escapeHtml(row.categoryLabel)+' · '+escapeHtml(row.id)+(row.hasText?' · '+row.textLength+'자':' · 본문 없음')+'</span></button>').join('');
+      el.prayerList.innerHTML=rows.map((row,index)=>'<button class="prayer-row '+(row.id===state.selectedId?'selected':'')+'" type="button" data-index="'+index+'"><span class="row-title">'+escapeHtml(row.title)+'</span><span class="row-meta">'+escapeHtml(row.categoryLabel)+' · '+escapeHtml(row.id)+(row.hasText?' · '+row.textLength+'자':' · 본문 없음')+'</span><span class="country-tags">'+countryBadges(row)+'</span></button>').join('');
       Array.from(el.prayerList.querySelectorAll('.prayer-row')).forEach(button=>button.addEventListener('click',()=>loadPrayer(rows[Number(button.dataset.index)].id).catch(error=>setStatus(error.message,'error'))));
     }
 
@@ -231,6 +236,14 @@
       const payload=editorPayload(); validatePayload(payload); if(showMessage!==false)setStatus('국가별 원본 파일에 저장 중입니다.');
       const body=await api('/api/update',{method:'POST',body:JSON.stringify(payload)}); state.originalId=body.updated.id; state.selectedId=body.updated.id; el.prayerId.value=body.updated.id;
       await loadPrayerList(body.updated.id); if(showMessage!==false)setStatus('로컬 저장 완료: '+body.updated.id+' / '+body.updated.lang,'ok'); return body.updated;
+    }
+
+    async function saveCategoryOnly() {
+      if(!state.originalId)throw new Error('카테고리를 수정할 기도문을 먼저 선택하세요.');
+      if(!el.prayerCategory.value)throw new Error('카테고리를 선택하세요.');
+      setStatus('카테고리를 수정하는 중입니다.');
+      const body=await api('/api/category',{method:'POST',body:JSON.stringify({targetId:state.originalId,targetLang:el.language.value,language:el.language.value,prayerName:el.prayerTitle.value.trim()||state.originalId,category:el.prayerCategory.value})});
+      await loadPrayerList(body.updated.id); setStatus('카테고리 수정 완료: '+categoryLabel(body.updated.category,el.language.value),'ok');
     }
 
     async function deleteLanguage() {
@@ -277,7 +290,7 @@
     function renderMergeList() {
       const rows=visibleRows(state.mergeRows,el.mergeSearch.value,'').filter(row=>row.id!==state.originalId);
       if(!rows.length){ el.mergeList.innerHTML='<div class="empty">가져올 기도문이 없습니다.</div>'; return; }
-      el.mergeList.innerHTML=rows.map((row,index)=>'<button class="prayer-row '+(state.mergeSource&&state.mergeSource.id===row.id?'selected':'')+'" type="button" data-index="'+index+'"><span class="row-title">'+escapeHtml(row.title)+'</span><span class="row-meta">'+escapeHtml(row.id)+' · '+escapeHtml(row.categoryLabel)+'</span></button>').join('');
+      el.mergeList.innerHTML=rows.map((row,index)=>'<button class="prayer-row '+(state.mergeSource&&state.mergeSource.id===row.id?'selected':'')+'" type="button" data-index="'+index+'"><span class="row-title">'+escapeHtml(row.title)+'</span><span class="row-meta">'+escapeHtml(row.id)+' · '+escapeHtml(row.categoryLabel)+'</span><span class="country-tags">'+countryBadges(row)+'</span></button>').join('');
       Array.from(el.mergeList.querySelectorAll('.prayer-row')).forEach(button=>button.addEventListener('click',()=>{ state.mergeSource=rows[Number(button.dataset.index)]; renderMergeList(); setStatus('가져올 기도문을 선택했습니다: '+state.mergeSource.id,'ok'); }));
     }
 
@@ -295,6 +308,7 @@
     el.newPrayer.addEventListener('click',()=>{ clearEditor(false); setStatus('새 ID와 기도문을 입력한 뒤 로컬에 저장하세요.','ok'); el.prayerId.focus(); });
     el.reload.addEventListener('click',()=>loadState().catch(error=>setStatus(error.message,'error')));
     el.saveLocal.addEventListener('click',()=>saveLocal(true).catch(error=>setStatus(error.message,'error')));
+    el.saveCategory.addEventListener('click',()=>saveCategoryOnly().catch(error=>setStatus(error.message,'error')));
     el.firebaseUpload.addEventListener('click',()=>window.ordoFirebaseUploader.upload({button:el.firebaseUpload,setStatus:setStatus}).catch(error=>setStatus(error.message,'error')));
     el.addLanguage.addEventListener('click',()=>{ el.languageAdder.classList.toggle('show'); el.addCountry.value=el.country.value; el.addLanguageSelect.value=el.language.value; });
     el.addCountry.addEventListener('change',()=>{ const country=selectedCountry(el.addCountry); if(country)el.addLanguageSelect.value=country.language; });
