@@ -278,20 +278,23 @@ function prayerDetailForCountry(loaded, jurisdiction, id, requestedLanguage) {
   const country = loaded.countries.find(item => item.jurisdiction === jurisdiction) || loaded.countries[0];
   if (!country) throw Object.assign(new Error('No country prayer modules are available'), { statusCode: 404 });
   const entry = prayerEntryForCountry(loaded, country.jurisdiction, id);
-  if (!entry) throw Object.assign(new Error(`Prayer id not found in ${country.jurisdiction}: ${id}`), { statusCode: 404 });
+  const mergedEntry = loaded.data.prayers.find(prayer => prayer.id === id);
+  if (!entry && !mergedEntry) throw Object.assign(new Error(`Prayer id not found: ${id}`), { statusCode: 404 });
   const lang = ensureLanguage(requestedLanguage) || country.language;
+  const detail = entry || mergedEntry;
   return {
-    id: entry.id,
+    id: detail.id,
     lang,
     jurisdiction: country.jurisdiction,
-    category: entry.category,
-    categoryLabel: (loaded.data.categoryLabels[entry.category] || {})[lang] || entry.category,
-    titles: entry.titles || {},
-    title: (entry.titles || {})[lang] || '',
-    sourceCategory: entry.sourceCategory || {},
-    sourceCategoryText: (entry.sourceCategory || {})[lang] || '',
-    text: (entry.texts || {})[lang] || '',
-    textLength: String((entry.texts || {})[lang] || '').length
+    existsInCountry: Boolean(entry),
+    category: detail.category,
+    categoryLabel: (loaded.data.categoryLabels[detail.category] || {})[lang] || detail.category,
+    titles: entry ? (entry.titles || {}) : {},
+    title: entry ? ((entry.titles || {})[lang] || '') : '',
+    sourceCategory: entry ? (entry.sourceCategory || {}) : {},
+    sourceCategoryText: entry ? ((entry.sourceCategory || {})[lang] || '') : '',
+    text: entry ? ((entry.texts || {})[lang] || '') : '',
+    textLength: entry ? String((entry.texts || {})[lang] || '').length : 0
   };
 }
 
@@ -366,7 +369,8 @@ function allCategories(categoryLabels, prayers) {
   });
 }
 
-function publicPrayer(prayer, categoryLabels) {
+function publicPrayer(prayer, categoryLabels, countryOwners) {
+  const owners = countryOwners || { entries: {}, textEntries: {} };
   return {
     id: prayer.id,
     category: prayer.category,
@@ -374,7 +378,9 @@ function publicPrayer(prayer, categoryLabels) {
     titles: prayer.titles || {},
     sourceCategory: prayer.sourceCategory || {},
     hasText: Object.fromEntries(LANGUAGES.map(lang => [lang, Boolean((prayer.texts || {})[lang])])),
-    textLength: Object.fromEntries(LANGUAGES.map(lang => [lang, String((prayer.texts || {})[lang] || '').length]))
+    textLength: Object.fromEntries(LANGUAGES.map(lang => [lang, String((prayer.texts || {})[lang] || '').length])),
+    countryEntries: unique([].concat(owners.entries && owners.entries[prayer.id] || [])),
+    countryTextEntries: unique([].concat(owners.textEntries && owners.textEntries[prayer.id] || []))
   };
 }
 
@@ -1193,6 +1199,254 @@ function prepareCountryModuleSources(data, sources = readCountryModuleSources())
   return nextSources;
 }
 
+function cloneSerializable(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function prepareCountrySourceMutation(sources, mutate) {
+  const current = runCountryModuleSources(sources);
+  const entriesByJurisdiction = new Map(sources.map(source => [
+    source.jurisdiction,
+    cloneSerializable(current.countries[source.jurisdiction].entries || [])
+  ]));
+  const updated = mutate({ current, entriesByJurisdiction });
+  const nextSources = sources.map(source => {
+    const entries = entriesByJurisdiction.get(source.jurisdiction) || [];
+    const ids = entries.map(entry => String(entry.id || ''));
+    if (ids.some((id, index) => !id || ids.indexOf(id) !== index)) {
+      throw new Error(`Country mutation produced an empty or duplicate prayer id in ${source.jurisdiction}`);
+    }
+    return {
+      ...source,
+      code: JSON.stringify(entries) === JSON.stringify(current.countries[source.jurisdiction].entries)
+        ? source.code
+        : replaceCountryEntries(source.code, entries, source.path)
+    };
+  });
+  validateData(runCountryModuleSources(nextSources).data);
+  return { sources, nextSources, updated };
+}
+
+function countryMutationLanguage(current, jurisdiction) {
+  const module = current.countries[jurisdiction];
+  if (!module) throw Object.assign(new Error(`Unknown jurisdiction: ${jurisdiction}`), { statusCode: 400 });
+  return prayerModuleLanguage(module, jurisdiction);
+}
+
+function updateCountryEntryTags(entry, categoryLabels) {
+  entry.tags = buildTags(entry, categoryLabels);
+}
+
+function prepareCountryPrayerUpdate(body, sources = readCountryModuleSources()) {
+  const jurisdiction = ensureKnownJurisdiction(body.jurisdiction);
+  if (!jurisdiction) throw Object.assign(new Error('Choose a country'), { statusCode: 400 });
+  const originalId = String(body.originalId || body.targetId || '').trim();
+  const nextId = String(body.id || originalId).trim();
+  const category = String(body.category || '').trim();
+  const title = normalizeStoredText(body.title || body.prayerName);
+  const text = normalizeText(body.text);
+  const sourceCategory = normalizeStoredText(body.sourceCategory);
+  if (!nextId) throw Object.assign(new Error('Prayer id is required'), { statusCode: 400 });
+  if (!category) throw Object.assign(new Error('Choose a category'), { statusCode: 400 });
+  if (!title) throw Object.assign(new Error('Prayer title is required'), { statusCode: 400 });
+
+  return prepareCountrySourceMutation(sources, ({ current, entriesByJurisdiction }) => {
+    const allEntries = Array.from(entriesByJurisdiction.values()).flat();
+    const touchedEntries = new Set();
+    const existingOriginal = originalId && allEntries.some(entry => entry.id === originalId);
+    if (originalId && !existingOriginal) {
+      throw Object.assign(new Error(`Prayer id not found: ${originalId}`), { statusCode: 404 });
+    }
+    if (!originalId && allEntries.some(entry => entry.id === nextId)) {
+      throw Object.assign(new Error(`Prayer id already exists: ${nextId}`), { statusCode: 409 });
+    }
+    if (originalId && nextId !== originalId && allEntries.some(entry => entry.id === nextId)) {
+      throw Object.assign(new Error(`Prayer id already exists: ${nextId}`), { statusCode: 409 });
+    }
+
+    if (originalId && nextId !== originalId) {
+      for (const entries of entriesByJurisdiction.values()) {
+        entries.filter(entry => entry.id === originalId).forEach(entry => {
+          entry.id = nextId;
+          touchedEntries.add(entry);
+        });
+      }
+    }
+
+    const language = countryMutationLanguage(current, jurisdiction);
+    const selectedEntries = entriesByJurisdiction.get(jurisdiction);
+    let entry = selectedEntries.find(candidate => candidate.id === nextId);
+    if (!entry) {
+      entry = { id: nextId, category, titles: {}, texts: {}, sourceCategory: {}, tags: [] };
+      selectedEntries.push(entry);
+      touchedEntries.add(entry);
+    }
+
+    for (const entries of entriesByJurisdiction.values()) {
+      entries.filter(candidate => candidate.id === nextId).forEach(candidate => {
+        if (candidate.category !== category) {
+          candidate.category = category;
+          touchedEntries.add(candidate);
+        }
+        candidate.titles = candidate.titles || {};
+        candidate.texts = candidate.texts || {};
+        candidate.sourceCategory = candidate.sourceCategory || {};
+      });
+    }
+    entry.titles[language] = title;
+    entry.texts[language] = text;
+    if (sourceCategory) entry.sourceCategory[language] = sourceCategory;
+    else delete entry.sourceCategory[language];
+    touchedEntries.add(entry);
+
+    touchedEntries.forEach(candidate => updateCountryEntryTags(candidate, current.data.categoryLabels));
+    return {
+      previousId: originalId || null,
+      id: nextId,
+      lang: language,
+      jurisdiction,
+      title,
+      category,
+      sourceCategory,
+      textLength: text.length
+    };
+  });
+}
+
+function prepareCountryPrayerLanguageDelete(body, sources = readCountryModuleSources()) {
+  const jurisdiction = ensureKnownJurisdiction(body.jurisdiction);
+  const id = String(body.originalId || body.id || body.targetId || '').trim();
+  if (!jurisdiction) throw Object.assign(new Error('Choose a country'), { statusCode: 400 });
+  if (!id) throw Object.assign(new Error('Prayer id is required'), { statusCode: 400 });
+  return prepareCountrySourceMutation(sources, ({ current, entriesByJurisdiction }) => {
+    const language = countryMutationLanguage(current, jurisdiction);
+    const entries = entriesByJurisdiction.get(jurisdiction);
+    const index = entries.findIndex(entry => entry.id === id);
+    if (index === -1) throw Object.assign(new Error(`Prayer id not found in ${jurisdiction}: ${id}`), { statusCode: 404 });
+    const entry = entries[index];
+    const removed = [];
+    for (const field of ['titles', 'texts', 'sourceCategory']) {
+      entry[field] = entry[field] || {};
+      if (entry[field][language]) {
+        delete entry[field][language];
+        removed.push(`${field}.${language}`);
+      }
+    }
+    if (!removed.length) throw Object.assign(new Error('Nothing to delete for the selected country'), { statusCode: 409 });
+    const hasLocalizedData = ['titles', 'texts', 'sourceCategory']
+      .some(field => Object.values(entry[field] || {}).some(value => Boolean(String(value || '').trim())));
+    if (hasLocalizedData) updateCountryEntryTags(entry, current.data.categoryLabels);
+    else entries.splice(index, 1);
+    return { id, lang: language, jurisdiction, category: entry.category, removed };
+  });
+}
+
+function prepareCountryPrayerEntryDelete(body, sources = readCountryModuleSources()) {
+  const id = String(body.originalId || body.id || body.targetId || '').trim();
+  if (!id) throw Object.assign(new Error('Prayer id is required'), { statusCode: 400 });
+  return prepareCountrySourceMutation(sources, ({ current, entriesByJurisdiction }) => {
+    const prayer = current.data.prayers.find(entry => entry.id === id);
+    if (!prayer) throw Object.assign(new Error(`Prayer id not found: ${id}`), { statusCode: 404 });
+    let removedCountries = 0;
+    for (const entries of entriesByJurisdiction.values()) {
+      const nextEntries = entries.filter(entry => entry.id !== id);
+      removedCountries += entries.length - nextEntries.length;
+      entries.splice(0, entries.length, ...nextEntries);
+    }
+    return {
+      id,
+      title: bestTitle(prayer, body.lang || 'KR'),
+      category: prayer.category,
+      removedCountries
+    };
+  });
+}
+
+function prepareCountryPrayerCategoryUpdate(body, sources = readCountryModuleSources()) {
+  const id = String(body.originalId || body.id || body.targetId || '').trim();
+  const category = String(body.category || '').trim();
+  if (!id) throw Object.assign(new Error('Prayer id is required'), { statusCode: 400 });
+  if (!category) throw Object.assign(new Error('Choose a category'), { statusCode: 400 });
+  return prepareCountrySourceMutation(sources, ({ current, entriesByJurisdiction }) => {
+    let previousCategory = '';
+    let changedCountries = 0;
+    for (const entries of entriesByJurisdiction.values()) {
+      entries.filter(entry => entry.id === id).forEach(entry => {
+        previousCategory = previousCategory || entry.category;
+        entry.category = category;
+        updateCountryEntryTags(entry, current.data.categoryLabels);
+        changedCountries += 1;
+      });
+    }
+    if (!changedCountries) throw Object.assign(new Error(`Prayer id not found: ${id}`), { statusCode: 404 });
+    return { id, previousCategory, category, changedCountries };
+  });
+}
+
+function prepareCountryPrayerMerge(body, sources = readCountryModuleSources()) {
+  const targetId = String(body.targetId || '').trim();
+  const sourceId = String(body.sourceId || '').trim();
+  const overwrite = Boolean(body.overwrite);
+  const removeSource = body.removeSource !== false;
+  if (!targetId || !sourceId) throw Object.assign(new Error('Target and source ids are required'), { statusCode: 400 });
+  if (targetId === sourceId) throw Object.assign(new Error('Target and source must be different'), { statusCode: 400 });
+  return prepareCountrySourceMutation(sources, ({ current, entriesByJurisdiction }) => {
+    const targetPrayer = current.data.prayers.find(prayer => prayer.id === targetId);
+    const sourcePrayer = current.data.prayers.find(prayer => prayer.id === sourceId);
+    if (!targetPrayer) throw Object.assign(new Error(`Target id not found: ${targetId}`), { statusCode: 404 });
+    if (!sourcePrayer) throw Object.assign(new Error(`Source id not found: ${sourceId}`), { statusCode: 404 });
+    const copied = [];
+    for (const [jurisdiction, entries] of entriesByJurisdiction) {
+      const source = entries.find(entry => entry.id === sourceId);
+      if (!source) continue;
+      let target = entries.find(entry => entry.id === targetId);
+      if (!target) {
+        target = { id: targetId, category: targetPrayer.category, titles: {}, texts: {}, sourceCategory: {}, tags: [] };
+        entries.push(target);
+      }
+      for (const field of ['titles', 'texts', 'sourceCategory']) {
+        target[field] = target[field] || {};
+        for (const [language, value] of Object.entries(source[field] || {})) {
+          if (!value || (!overwrite && target[field][language])) continue;
+          target[field][language] = value;
+          copied.push(`${jurisdiction}:${field}.${language}`);
+        }
+      }
+      updateCountryEntryTags(target, current.data.categoryLabels);
+      if (removeSource) entries.splice(entries.indexOf(source), 1);
+    }
+    if (!copied.length && !removeSource) {
+      throw Object.assign(new Error('Nothing to merge: target already has all data from source'), { statusCode: 409 });
+    }
+    return { targetId, sourceId, copied, removedSource: removeSource };
+  });
+}
+
+function savePreparedCountryMutation(prepared) {
+  const changed = prepared.nextSources.filter((source, index) => source.code !== prepared.sources[index].code);
+  if (!changed.length) return '';
+  const backupRoot = path.join(root, 'tmp', `prayer-data-backup-${timestamp()}`);
+  const backups = [];
+  fs.mkdirSync(backupRoot, { recursive: true });
+  try {
+    for (const source of changed) {
+      const relativePath = path.relative(root, source.path);
+      const backup = path.join(backupRoot, relativePath);
+      fs.mkdirSync(path.dirname(backup), { recursive: true });
+      fs.copyFileSync(source.path, backup);
+      backups.push({ target: source.path, backup });
+      const nextPath = `${source.path}.next-${process.pid}`;
+      fs.writeFileSync(nextPath, source.code, 'utf8');
+      fs.renameSync(nextPath, source.path);
+    }
+    validateData(runCountryModuleSources(readCountryModuleSources()).data);
+    return backupRoot;
+  } catch (error) {
+    for (const item of backups.reverse()) fs.copyFileSync(item.backup, item.target);
+    throw error;
+  }
+}
+
 function saveCountryPrayerData(data) {
   const sources = readCountryModuleSources();
   const nextSources = prepareCountryModuleSources(data, sources);
@@ -1322,7 +1576,7 @@ function createServer() {
           countries: loaded.countries,
           categories: allCategories(data.categoryLabels, data.prayers),
           categoryLabels: data.categoryLabels,
-          prayers: data.prayers.map(prayer => publicPrayer(prayer, data.categoryLabels))
+          prayers: data.prayers.map(prayer => publicPrayer(prayer, data.categoryLabels, data.countryOwners))
         });
         return;
       }
@@ -1380,9 +1634,17 @@ function createServer() {
 
       if (req.method === 'POST' && url.pathname === '/api/update') {
         const body = await readJson(req);
-        const data = loadPrayerData();
-        const updated = updatePrayerDetail(data, body);
-        const backupPath = savePrayerData(data);
+        let updated;
+        let backupPath;
+        if (usesCountryModules && body.jurisdiction) {
+          const prepared = prepareCountryPrayerUpdate(body);
+          updated = prepared.updated;
+          backupPath = savePreparedCountryMutation(prepared);
+        } else {
+          const data = loadPrayerData();
+          updated = updatePrayerDetail(data, body);
+          backupPath = savePrayerData(data);
+        }
         jsonResponse(res, 200, {
           ok: true,
           updated,
@@ -1394,9 +1656,17 @@ function createServer() {
 
       if (req.method === 'POST' && url.pathname === '/api/delete-language') {
         const body = await readJson(req);
-        const data = loadPrayerData();
-        const updated = deletePrayerLanguage(data, body);
-        const backupPath = savePrayerData(data);
+        let updated;
+        let backupPath;
+        if (usesCountryModules && body.jurisdiction) {
+          const prepared = prepareCountryPrayerLanguageDelete(body);
+          updated = prepared.updated;
+          backupPath = savePreparedCountryMutation(prepared);
+        } else {
+          const data = loadPrayerData();
+          updated = deletePrayerLanguage(data, body);
+          backupPath = savePrayerData(data);
+        }
         jsonResponse(res, 200, {
           ok: true,
           updated,
@@ -1408,9 +1678,17 @@ function createServer() {
 
       if (req.method === 'POST' && url.pathname === '/api/delete-entry') {
         const body = await readJson(req);
-        const data = loadPrayerData();
-        const updated = deletePrayerEntry(data, body);
-        const backupPath = savePrayerData(data);
+        let updated;
+        let backupPath;
+        if (usesCountryModules) {
+          const prepared = prepareCountryPrayerEntryDelete(body);
+          updated = prepared.updated;
+          backupPath = savePreparedCountryMutation(prepared);
+        } else {
+          const data = loadPrayerData();
+          updated = deletePrayerEntry(data, body);
+          backupPath = savePrayerData(data);
+        }
         jsonResponse(res, 200, {
           ok: true,
           updated,
@@ -1450,9 +1728,17 @@ function createServer() {
 
       if (req.method === 'POST' && url.pathname === '/api/category') {
         const body = await readJson(req);
-        const data = loadPrayerData();
-        const updated = updatePrayerCategory(data, body);
-        const backupPath = savePrayerData(data);
+        let updated;
+        let backupPath;
+        if (usesCountryModules) {
+          const prepared = prepareCountryPrayerCategoryUpdate(body);
+          updated = prepared.updated;
+          backupPath = savePreparedCountryMutation(prepared);
+        } else {
+          const data = loadPrayerData();
+          updated = updatePrayerCategory(data, body);
+          backupPath = savePrayerData(data);
+        }
         jsonResponse(res, 200, {
           ok: true,
           updated,
@@ -1464,9 +1750,17 @@ function createServer() {
 
       if (req.method === 'POST' && url.pathname === '/api/merge') {
         const body = await readJson(req);
-        const data = loadPrayerData();
-        const updated = mergePrayerEntries(data, body);
-        const backupPath = savePrayerData(data);
+        let updated;
+        let backupPath;
+        if (usesCountryModules) {
+          const prepared = prepareCountryPrayerMerge(body);
+          updated = prepared.updated;
+          backupPath = savePreparedCountryMutation(prepared);
+        } else {
+          const data = loadPrayerData();
+          updated = mergePrayerEntries(data, body);
+          backupPath = savePrayerData(data);
+        }
         jsonResponse(res, 200, {
           ok: true,
           updated,
@@ -3547,6 +3841,11 @@ module.exports = {
   prayerEditorState,
   prayersForCountry,
   prepareCountryModuleSources,
+  prepareCountryPrayerCategoryUpdate,
+  prepareCountryPrayerEntryDelete,
+  prepareCountryPrayerLanguageDelete,
+  prepareCountryPrayerMerge,
+  prepareCountryPrayerUpdate,
   readCountryModuleSources,
   runCountryModuleSources,
   updatePrayerCategory,

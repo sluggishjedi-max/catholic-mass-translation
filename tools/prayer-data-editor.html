@@ -176,7 +176,7 @@
     <section class="new-row">
       <div>
         <strong>새 기도문 추가</strong>
-        <span class="hint">빈 편집창을 열고 ID, 카테고리, 언어별 본문을 입력합니다.</span>
+        <span class="hint">빈 편집창을 열고 ID, 카테고리, 국가별 본문을 입력합니다.</span>
       </div>
       <button id="new-prayer" class="soft" type="button">+ 새 기도문 작성</button>
     </section>
@@ -199,11 +199,11 @@
         </div>
         <div class="editor-body">
           <div class="language-picker">
-            <label>언어별 본문
-              <select id="editor-language"></select>
+            <label>국가별 본문
+              <select id="editor-country"></select>
             </label>
-            <div id="language-help" class="language-help">
-              이 ID에 저장된 언어는 바로 불러옵니다. 저장되지 않은 언어를 선택해 작성하면 해당 언어가 새로 추가됩니다.
+            <div id="country-help" class="language-help">
+              이 ID에 저장된 국가 본문은 바로 불러옵니다. 같은 언어라도 국가가 다르면 별도 본문으로 저장됩니다.
             </div>
           </div>
           <div class="field-grid">
@@ -226,7 +226,7 @@
           <div class="actions">
             <button id="save-local" class="primary" type="button">로컬에 저장</button>
             <button id="firebase-upload" class="soft" type="button">Firebase에 업로드</button>
-            <button id="delete-language" class="danger" type="button">이 언어 삭제</button>
+            <button id="delete-country" class="danger" type="button">이 국가 본문 삭제</button>
             <button id="delete-entry" class="danger" type="button">기도문 전체 삭제</button>
           </div>
         </div>
@@ -306,9 +306,9 @@
 
     const el = Object.fromEntries([
       'country','category-filter','search','search-button','new-prayer','reload','status',
-      'prayer-list','result-count','edit-mode','editor-language','language-help',
+      'prayer-list','result-count','edit-mode','editor-country','country-help',
       'prayer-id','editor-category','title','source-category','text',
-      'save-local','firebase-upload','delete-language','delete-entry',
+      'save-local','firebase-upload','delete-country','delete-entry',
       'preview-summary','preview-id','preview-category','preview-language','preview-title','preview-body',
       'merge-target-title','merge-target-id','merge-country','merge-search','merge-search-button',
       'merge-source-list','merge-overwrite','merge-remove-source','merge-button'
@@ -334,6 +334,10 @@
 
     function selectedCountry(code) {
       return state.countries.find(country => country.jurisdiction === (code || el.country.value)) || state.countries[0];
+    }
+
+    function selectedBodyCountry() {
+      return selectedCountry(el.editorCountry.value);
     }
 
     function selectedPrayerMeta(id) {
@@ -380,33 +384,38 @@
         state.categories.map(category => '<option value="' + escapeHtml(category) + '">' +
           escapeHtml(categoryLabel(category, selectedCountry()?.language || 'KR')) + '</option>').join('');
       el.editorCategory.innerHTML = categoryOptions(el.editorCategory.value);
-      fillEditorLanguages(el.editorLanguage.value || selectedCountry()?.language);
+      fillEditorCountries(el.editorCountry.value || selectedCountry()?.jurisdiction);
     }
 
-    function fillEditorLanguages(preferred) {
+    function fillEditorCountries(preferred) {
       const meta = selectedPrayerMeta(state.originalId || el.prayerId.value.trim());
-      const options = state.languages.map(code => {
-        const hasBody = Boolean(meta && meta.hasText && meta.hasText[code]);
-        const hasTitle = Boolean(meta && meta.titles && meta.titles[code]);
-        const stateLabel = hasBody ? '본문 있음' : hasTitle ? '제목만 있음' : '새 언어 추가';
-        return '<option value="' + code + '">' + escapeHtml(languageLabel(code) + ' · ' + stateLabel) + '</option>';
+      const options = state.countries.map(country => {
+        const hasBody = Boolean(meta && (meta.countryTextEntries || []).includes(country.jurisdiction));
+        const hasEntry = Boolean(meta && (meta.countryEntries || []).includes(country.jurisdiction));
+        const stateLabel = hasBody ? '본문 있음' : hasEntry ? '제목만 있음' : '새 국가 추가';
+        return '<option value="' + escapeHtml(country.jurisdiction) + '">' +
+          escapeHtml(country.name + ' · ' + country.jurisdiction + ' · ' + languageLabel(country.language) + ' · ' + stateLabel) +
+          '</option>';
       });
-      el.editorLanguage.innerHTML = options.join('');
-      const fallback = state.languages.includes(preferred) ? preferred : selectedCountry()?.language || state.languages[0];
-      if (fallback) el.editorLanguage.value = fallback;
-      updateLanguageHelp();
+      el.editorCountry.innerHTML = options.join('');
+      const fallback = state.countries.some(country => country.jurisdiction === preferred)
+        ? preferred
+        : selectedCountry()?.jurisdiction || state.countries[0]?.jurisdiction;
+      if (fallback) el.editorCountry.value = fallback;
+      updateCountryHelp();
     }
 
-    function updateLanguageHelp() {
-      const code = el.editorLanguage.value;
+    function updateCountryHelp() {
+      const country = selectedBodyCountry();
       const meta = selectedPrayerMeta(state.originalId || el.prayerId.value.trim());
-      const hasBody = Boolean(meta && meta.hasText && meta.hasText[code]);
-      const hasTitle = Boolean(meta && meta.titles && meta.titles[code]);
-      el.languageHelp.textContent = hasBody
-        ? languageLabel(code) + ' 본문을 불러왔습니다. 수정 후 로컬에 저장할 수 있습니다.'
-        : hasTitle
-          ? languageLabel(code) + ' 제목만 있습니다. 본문을 입력해 저장하면 완성된 언어로 추가됩니다.'
-          : languageLabel(code) + '는 아직 이 ID에 없습니다. 제목과 본문을 작성해 로컬에 저장하면 새 언어로 추가됩니다.';
+      const hasBody = Boolean(meta && (meta.countryTextEntries || []).includes(country?.jurisdiction));
+      const hasEntry = Boolean(meta && (meta.countryEntries || []).includes(country?.jurisdiction));
+      const label = country ? country.name + ' · ' + languageLabel(country.language) : '국가';
+      el.countryHelp.textContent = hasBody
+        ? label + ' 본문을 불러왔습니다. 다른 영어권 국가의 본문과 독립적으로 수정됩니다.'
+        : hasEntry
+          ? label + '에는 제목만 있습니다. 본문을 입력해 저장하면 이 국가 본문이 완성됩니다.'
+          : label + '에는 아직 이 ID가 없습니다. 저장하면 이 국가에 별도 본문으로 추가됩니다.';
     }
 
     function filteredList(items, query) {
@@ -465,7 +474,7 @@
       el.title.value = '';
       el.sourceCategory.value = '';
       el.text.value = '';
-      fillEditorLanguages(selectedCountry()?.language);
+      fillEditorCountries(selectedCountry()?.jurisdiction);
       el.editMode.textContent = '새 기도문';
       el.mergeTargetTitle.textContent = '새 기도문은 병합할 수 없습니다';
       el.mergeTargetId.textContent = '먼저 로컬에 저장하세요';
@@ -475,25 +484,26 @@
       el.prayerId.focus();
     }
 
-    async function loadPrayer(id, preferredLanguage) {
+    async function loadPrayer(id, preferredJurisdiction) {
       state.originalId = id;
-      const countryLanguage = selectedCountry()?.language;
-      fillEditorLanguages(preferredLanguage || countryLanguage);
-      await loadPrayerLanguage(el.editorLanguage.value);
+      fillEditorCountries(preferredJurisdiction || selectedCountry()?.jurisdiction);
+      await loadPrayerCountry(el.editorCountry.value);
       renderList();
     }
 
-    async function loadPrayerLanguage(language) {
+    async function loadPrayerCountry(jurisdiction) {
       if (!state.originalId) {
         el.title.value = '';
         el.sourceCategory.value = '';
         el.text.value = '';
-        updateLanguageHelp();
+        updateCountryHelp();
         updatePreview();
         return;
       }
+      const country = selectedCountry(jurisdiction);
       const body = await api('/api/prayer?id=' + encodeURIComponent(state.originalId) +
-        '&lang=' + encodeURIComponent(language));
+        '&country=' + encodeURIComponent(country.jurisdiction) +
+        '&lang=' + encodeURIComponent(country.language));
       const prayer = body.prayer;
       state.currentPrayer = prayer;
       el.prayerId.value = prayer.id;
@@ -502,10 +512,10 @@
       el.title.value = prayer.title || '';
       el.sourceCategory.value = prayer.sourceCategoryText || '';
       el.text.value = prayer.text || '';
-      el.editMode.textContent = prayer.id + ' · ' + languageLabel(prayer.lang);
+      el.editMode.textContent = prayer.id + ' · ' + country.name + ' · ' + languageLabel(prayer.lang);
       el.mergeTargetTitle.textContent = prayer.title || bestTitle(selectedPrayerMeta(prayer.id), prayer.lang) || prayer.id;
       el.mergeTargetId.textContent = prayer.id + ' · 유지할 ID';
-      updateLanguageHelp();
+      updateCountryHelp();
       updatePreview();
     }
 
@@ -524,33 +534,29 @@
     }
 
     function updatePreview() {
-      const code = el.editorLanguage.value || selectedCountry()?.language || '';
+      const country = selectedBodyCountry() || selectedCountry();
+      const code = country?.language || '';
       const title = el.title.value.trim() || '기도문 제목';
       const category = el.editorCategory.value || '카테고리';
       el.previewSummary.textContent = title;
       el.previewId.textContent = el.prayerId.value.trim() || 'ID';
       el.previewCategory.textContent = categoryLabel(category, code);
-      el.previewLanguage.textContent = languageLabel(code);
+      el.previewLanguage.textContent = (country ? country.name + ' · ' + country.jurisdiction + ' · ' : '') + languageLabel(code);
       el.previewTitle.textContent = title;
       el.previewBody.innerHTML = formatPreviewText(el.text.value);
     }
 
     function savePayload() {
-      const lang = el.editorLanguage.value;
-      const country = selectedCountry();
-      const isNewLanguage = !selectedPrayerMeta(state.originalId)?.titles?.[lang] &&
-        !selectedPrayerMeta(state.originalId)?.hasText?.[lang];
+      const country = selectedBodyCountry();
       return {
         originalId: state.originalId,
         id: el.prayerId.value.trim(),
-        lang,
+        lang: country?.language || '',
         category: el.editorCategory.value,
         title: el.title.value.trim(),
         sourceCategory: el.sourceCategory.value.trim(),
         text: el.text.value,
-        jurisdiction: (!state.originalId || isNewLanguage) && country && country.language === lang
-          ? country.jurisdiction
-          : ''
+        jurisdiction: country?.jurisdiction || ''
       };
     }
 
@@ -574,26 +580,26 @@
       await refreshMetadata();
       fillControls();
       await loadList();
-      await loadPrayer(body.updated.id, body.updated.lang);
+      await loadPrayer(body.updated.id, body.updated.jurisdiction);
       await loadMergeList();
-      if (showStatus) setStatus('로컬 파일에 저장했습니다 · ' + body.updated.id + ' · ' + body.updated.lang, 'ok');
+      if (showStatus) setStatus('로컬 파일에 저장했습니다 · ' + body.updated.id + ' · ' + body.updated.jurisdiction + ' · ' + body.updated.lang, 'ok');
       return body;
     }
 
-    async function deleteLanguage() {
+    async function deleteCountryBody() {
       if (!state.originalId) return setStatus('삭제할 기도문을 먼저 선택하세요.', 'warn');
-      const lang = el.editorLanguage.value;
-      if (!confirm(state.originalId + '의 ' + languageLabel(lang) + ' 제목과 본문을 삭제할까요?')) return;
+      const country = selectedBodyCountry();
+      if (!confirm(state.originalId + '의 ' + country.name + ' 제목과 본문을 삭제할까요?')) return;
       await api('/api/delete-language', {
         method:'POST', headers:{'content-type':'application/json'},
-        body:JSON.stringify({ id:state.originalId, lang })
+        body:JSON.stringify({ id:state.originalId, lang:country.language, jurisdiction:country.jurisdiction })
       });
       await refreshMetadata();
       fillControls();
       await loadList();
-      fillEditorLanguages(lang);
-      await loadPrayerLanguage(lang);
-      setStatus('선택한 언어를 삭제했습니다 · ' + state.originalId + ' · ' + lang, 'ok');
+      fillEditorCountries(country.jurisdiction);
+      await loadPrayerCountry(country.jurisdiction);
+      setStatus('선택한 국가 본문을 삭제했습니다 · ' + state.originalId + ' · ' + country.jurisdiction, 'ok');
     }
 
     async function deleteEntry() {
@@ -602,7 +608,7 @@
       if (!confirm(id + ' 전체를 삭제할까요? 모든 언어의 제목과 본문이 삭제됩니다.')) return;
       await api('/api/delete-entry', {
         method:'POST', headers:{'content-type':'application/json'},
-        body:JSON.stringify({ id, lang:el.editorLanguage.value })
+        body:JSON.stringify({ id, lang:selectedBodyCountry()?.language })
       });
       await refreshMetadata();
       fillControls();
@@ -666,7 +672,7 @@
       fillControls();
       await loadList();
       await loadMergeList();
-      await loadPrayer(targetId, el.editorLanguage.value);
+      await loadPrayer(targetId, el.editorCountry.value);
       setStatus('병합했습니다 · ' + body.updated.sourceId + ' → ' + targetId, 'ok');
     }
 
@@ -683,7 +689,7 @@
       el.categoryFilter.innerHTML = '<option value="">전체 카테고리</option>' +
         state.categories.map(category => '<option value="' + escapeHtml(category) + '">' +
           escapeHtml(categoryLabel(category, selectedCountry()?.language || 'KR')) + '</option>').join('');
-      fillEditorLanguages(selectedCountry()?.language);
+      fillEditorCountries(selectedCountry()?.jurisdiction);
       await loadList({ resetSearch:true });
       clearEditor();
     });
@@ -694,7 +700,7 @@
     });
     el.newPrayer.addEventListener('click', clearEditor);
     el.reload.addEventListener('click', () => initialize().catch(error => setStatus(error.message, 'error')));
-    el.editorLanguage.addEventListener('change', () => loadPrayerLanguage(el.editorLanguage.value)
+    el.editorCountry.addEventListener('change', () => loadPrayerCountry(el.editorCountry.value)
       .catch(error => setStatus(error.message, 'error')));
     [el.prayerId,el.editorCategory,el.title,el.sourceCategory,el.text].forEach(input =>
       input.addEventListener('input', updatePreview));
@@ -702,7 +708,7 @@
     el.firebaseUpload.addEventListener('click', () => window.ordoFirebaseUploader.upload({
       button:el.firebaseUpload, endpoint:'/api/firebase-export', setStatus
     }).catch(error => setStatus(error.message, 'error')));
-    el.deleteLanguage.addEventListener('click', () => deleteLanguage().catch(error => setStatus(error.message, 'error')));
+    el.deleteCountry.addEventListener('click', () => deleteCountryBody().catch(error => setStatus(error.message, 'error')));
     el.deleteEntry.addEventListener('click', () => deleteEntry().catch(error => setStatus(error.message, 'error')));
     el.mergeCountry.addEventListener('change', () => {
       el.mergeSearch.value = '';

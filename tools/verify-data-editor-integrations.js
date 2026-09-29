@@ -86,10 +86,15 @@ async function verifyPrayerCountryUi() {
     const first = list.prayers[0];
     const detail = await (await fetch(`${base}/api/prayer?country=KR&lang=KR&id=${encodeURIComponent(first.id)}`)).json();
     assert(detail.ok && detail.prayer.id === first.id && detail.prayer.lang === 'KR');
-    const unusedLanguage = state.languages.find(language => !state.prayers.find(prayer => prayer.id === first.id)?.hasText?.[language]) || 'DE';
-    const globalDetail = await (await fetch(`${base}/api/prayer?lang=${unusedLanguage}&id=${encodeURIComponent(first.id)}`)).json();
-    assert(globalDetail.ok && globalDetail.prayer.id === first.id && globalDetail.prayer.lang === unusedLanguage,
-      'Prayer editor must load an empty language slot for the selected id');
+    const firstMeta = state.prayers.find(prayer => prayer.id === first.id);
+    assert(Array.isArray(firstMeta.countryEntries) && Array.isArray(firstMeta.countryTextEntries),
+      'Prayer state must expose country-specific entry status');
+    const unusedCountry = state.countries.find(country => !firstMeta.countryEntries.includes(country.jurisdiction));
+    if (unusedCountry) {
+      const countryDetail = await (await fetch(`${base}/api/prayer?country=${unusedCountry.jurisdiction}&lang=${unusedCountry.language}&id=${encodeURIComponent(first.id)}`)).json();
+      assert(countryDetail.ok && countryDetail.prayer.id === first.id && !countryDetail.prayer.existsInCountry,
+        'Prayer editor must load an empty country slot for the selected id');
+    }
   } finally {
     await close(server);
   }
@@ -126,25 +131,37 @@ function verifyPrayerCategoryEditing() {
   assert.strictEqual(data.prayers.find(prayer => prayer.id === target.id).category, nextCategory);
 }
 
-function verifyMissingLanguageSaveRouting() {
+function verifyCountrySpecificSaveRouting() {
   const sources = prayerTool.readCountryModuleSources();
-  const data = JSON.parse(JSON.stringify(prayerTool.loadPrayerData()));
-  const target = data.prayers.find(prayer => !(prayer.titles || {}).JP && !(prayer.texts || {}).JP);
-  assert(target, 'Prayer missing-language fixture is unavailable');
-  prayerTool.updatePrayerDetail(data, {
-    originalId: target.id,
-    id: target.id,
-    lang: 'JP',
-    category: target.category,
-    title: '新しい言語の保存確認',
-    text: 'アーメン。',
-    sourceCategory: ''
-  });
-  const prepared = prayerTool.prepareCountryModuleSources(data, sources);
-  const changed = prepared.filter((source, index) => source.code !== sources[index].code).map(source => source.jurisdiction);
-  assert(changed.includes('JP'), 'A newly selected language must save to its default country module');
-  assert(prepared.find(source => source.jurisdiction === 'JP').code.includes('新しい言語の保存確認'),
-    'The newly entered language title must be written to its country module');
+  const data = prayerTool.runCountryModuleSources(sources).data;
+  const target = data.prayers.find(prayer => prayer.titles && prayer.titles.EN);
+  assert(target, 'English prayer fixture is unavailable');
+  const us = prayerTool.prepareCountryPrayerUpdate({
+    originalId: target.id, id: target.id, jurisdiction: 'US', category: target.category,
+    title: 'US country variant', text: 'US country-specific body', sourceCategory: ''
+  }, sources);
+  assert.deepStrictEqual(us.nextSources.filter((source, index) => source.code !== sources[index].code)
+    .map(source => source.jurisdiction), ['US'], 'US editing must touch only the US country module');
+  const au = prayerTool.prepareCountryPrayerUpdate({
+    originalId: target.id, id: target.id, jurisdiction: 'AU', category: target.category,
+    title: 'AU country variant', text: 'AU country-specific body', sourceCategory: ''
+  }, us.nextSources);
+  assert.deepStrictEqual(au.nextSources.filter((source, index) => source.code !== us.nextSources[index].code)
+    .map(source => source.jurisdiction), ['AU'], 'AU editing must touch only the AU country module');
+  const runtime = prayerTool.runCountryModuleSources(au.nextSources);
+  const usEntry = runtime.countries.US.entries.find(prayer => prayer.id === target.id);
+  const auEntry = runtime.countries.AU.entries.find(prayer => prayer.id === target.id);
+  assert.strictEqual(usEntry.texts.EN, 'US country-specific body');
+  assert.strictEqual(auEntry.texts.EN, 'AU country-specific body');
+  assert.notStrictEqual(usEntry.texts.EN, auEntry.texts.EN, 'English prayer variants must remain independent by country');
+  const deletedUs = prayerTool.prepareCountryPrayerLanguageDelete({
+    id: target.id, jurisdiction: 'US'
+  }, au.nextSources);
+  const afterDelete = prayerTool.runCountryModuleSources(deletedUs.nextSources);
+  const remainingUs = afterDelete.countries.US.entries.find(prayer => prayer.id === target.id);
+  const remainingAu = afterDelete.countries.AU.entries.find(prayer => prayer.id === target.id);
+  assert(!remainingUs || !remainingUs.texts.EN, 'Deleting the US body must remove only the US variant');
+  assert.strictEqual(remainingAu.texts.EN, 'AU country-specific body', 'Deleting the US body must preserve the AU variant');
 }
 
 function verifyFirebasePayloadCompatibility() {
@@ -162,15 +179,16 @@ async function main() {
   verifyFirebasePayloadCompatibility();
   verifyExplicitCountryOwnership();
   verifyPrayerCategoryEditing();
-  verifyMissingLanguageSaveRouting();
+  verifyCountrySpecificSaveRouting();
   await verifyServer('prayer', prayerTool.createServer, {
     collectionName: 'prayer_data',
     html: [
-      '국가별 기도문 편집기', '국가별 기도문 목록', '언어별 본문', '새 언어 추가',
+      '국가별 기도문 편집기', '국가별 기도문 목록', '국가별 본문', '새 국가 추가',
       '새 기도문 추가', '앱 표시 미리보기', '중복 기도문 하나로 합치기',
-      '남길 기도문', '오른쪽 기도문을 왼쪽 ID로 합치기', '로컬에 저장', 'Firebase에 업로드'
+      '남길 기도문', '오른쪽 기도문을 왼쪽 ID로 합치기', '이 국가 본문 삭제',
+      '로컬에 저장', 'Firebase에 업로드'
     ],
-    absent: ['id="language"', 'id="add-language"', 'id="save-category"', '다른 언어 추가']
+    absent: ['id="language"', 'id="editor-language"', 'id="add-language"', 'id="save-category"', '다른 언어 추가']
   });
   await verifyPrayerCountryUi();
   await verifyServer('hymn', hymnTool.createServer, {
