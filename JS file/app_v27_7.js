@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260928-PRAYER-END-ROW-ALIGN-R2';
+    const APP_VERSION = 'V27.7-20260929-PROPER-READING-LABELS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -14840,10 +14840,41 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return matched / shortTokens.length;
     }
 
+    function dailyVariantMappedLanguages(variant) {
+        return Object.entries(variant && variant.__dailySourceIndexes || {})
+            .filter(([, index]) => Number.isInteger(index))
+            .map(([lower]) => lower);
+    }
+
+    function dailyVariantCitationForLanguage(variant, lower) {
+        const citations = variant && variant.cit || {};
+        return cleanNodeText(citations[`cit_${lower}`] || (lower === 'kr' ? citations.cit : ''));
+    }
+
+    function dailyVariantCitationsAllowLengthPair(first, second, sharedLanguages) {
+        for (const lower of sharedLanguages) {
+            const firstCitation = dailyVariantCitationForLanguage(first.variant, lower);
+            const secondCitation = dailyVariantCitationForLanguage(second.variant, lower);
+            if (!firstCitation || !secondCitation || !globalThis.bibleCitation) continue;
+            const lang = normalizeSelectableLang(lower.toUpperCase(), lower.toUpperCase());
+            const firstParsed = globalThis.bibleCitation.parse(firstCitation, lang);
+            const secondParsed = globalThis.bibleCitation.parse(secondCitation, lang);
+            if (firstParsed && secondParsed && !parsedCitationsShareChapter(firstParsed, secondParsed)) return false;
+        }
+        return true;
+    }
+
     function dailyVariantLengthPair(first, second, baseId) {
-        const firstLanguages = dailyVariantContentLanguages(first.variant, baseId);
-        const secondLanguages = dailyVariantContentLanguages(second.variant, baseId);
+        const firstMappedLanguages = dailyVariantMappedLanguages(first.variant);
+        const secondMappedLanguages = dailyVariantMappedLanguages(second.variant);
+        const firstLanguages = firstMappedLanguages.length
+            ? firstMappedLanguages
+            : dailyVariantContentLanguages(first.variant, baseId);
+        const secondLanguages = secondMappedLanguages.length
+            ? secondMappedLanguages
+            : dailyVariantContentLanguages(second.variant, baseId);
         const sharedLanguages = firstLanguages.filter(lower => secondLanguages.includes(lower));
+        if (!sharedLanguages.length || !dailyVariantCitationsAllowLengthPair(first, second, sharedLanguages)) return null;
         let best = null;
         sharedLanguages.forEach(lower => {
             const firstText = dailyVariantBodyText(first.variant, lower);
@@ -16071,7 +16102,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     const fixedCelebrationImplicitProperPartIds = new Set([
         'entrance',
+        'reading1',
+        'reading2',
         'gospel_accl',
+        'gospel',
         'communion'
     ]);
 

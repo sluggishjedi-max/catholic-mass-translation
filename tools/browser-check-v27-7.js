@@ -264,6 +264,38 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       };
       restoreDailyVariantSelection(reorderedVariants,'collect',capturedSelection);
       check(state.options.collect === 'A', 'Manual daily choice stayed on a stale letter instead of its source text');
+      // Distinct proper passages are alternatives, never long/short forms.
+      // The fixed-celebration fallback must also produce the same labels when
+      // one source (such as USCCB) does not publish common/proper metadata.
+      const archangelsDate=new Date(2026,8,29,12);
+      const properVariantFixture=(targetLower,withSourceKind)=>({
+        A:{
+          lines:[{role_kr:'body',text_kr:'같은 낱말을 포함한 매우 긴 첫째 고유 독서 본문입니다.',["role_"+targetLower]:'body',["text_"+targetLower]:'A deliberately long first proper reading containing shared words.'}],
+          cit:{cit_kr:'다니 7,9-10.13-14',["cit_"+targetLower]:targetLower==='en'?'Daniel 7:9-10, 13-14':'Đn 7,9-10.13-14'},
+          __dailySourceIndexes:{kr:0,[targetLower]:0},
+          ...(withSourceKind?{__dailyOptionKind:'proper'}:{})
+        },
+        B:{
+          lines:[{role_kr:'body',text_kr:'같은 낱말을 포함한 본문입니다.',["role_"+targetLower]:'body',["text_"+targetLower]:'shared words.'}],
+          cit:{cit_kr:'묵시 12,7-12ㄱ',["cit_"+targetLower]:targetLower==='en'?'Revelation 12:7-12ab':'Kh 12,7-12a'},
+          __dailySourceIndexes:{kr:1,[targetLower]:1},
+          ...(withSourceKind?{__dailyOptionKind:'proper'}:{})
+        }
+      });
+      state.currentLoc='KR'; state.targetLang='EN';
+      const krEnProperVariants=properVariantFixture('en',false);
+      applyDailyLengthVariantLabels(krEnProperVariants,'reading1');
+      check(!Object.values(krEnProperVariants).some(variant=>variant.__dailyLengthKind),'Different Bible passages were classified as long/short readings');
+      inferDailyVariantKinds(krEnProperVariants,'reading1',archangelsDate);
+      applyDailyKindedVariantLabels(krEnProperVariants,'reading1');
+      state.currentLoc='KR'; state.targetLang='VN';
+      const krVnProperVariants=properVariantFixture('vn',true);
+      applyDailyLengthVariantLabels(krVnProperVariants,'reading1');
+      inferDailyVariantKinds(krVnProperVariants,'reading1',archangelsDate);
+      applyDailyKindedVariantLabels(krVnProperVariants,'reading1');
+      check(krEnProperVariants.A.label.kr==='고유 독서 1'&&krEnProperVariants.B.label.kr==='고유 독서 2','KR-EN proper readings were not numbered');
+      check(krVnProperVariants.A.label.kr===krEnProperVariants.A.label.kr&&krVnProperVariants.B.label.kr===krEnProperVariants.B.label.kr,'KR-EN and KR-VN proper reading labels diverged');
+      check(krEnProperVariants.A.label.en==='Proper Reading 1'&&krVnProperVariants.A.label.vn==='Bài đọc riêng 1','Localized proper reading labels missing');
       // One shared bishop renderer handles all language columns and Eucharistic
       // Prayers I-IV. Archdioceses retain the collective auxiliary-bishop wording;
       // dioceses name every auxiliary in the language of the rendered column.
