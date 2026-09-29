@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const path = require('path');
 const vm = require('vm');
+const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
 
 const root = path.resolve(__dirname, '..');
 const defaultPrayerDataPath = path.join(root, 'JS file', 'prayer_data.js');
@@ -13,6 +14,21 @@ const usesCountryModules = path.normalize(prayerDataPath).toLowerCase()
 const LANGUAGES = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
 const SEARCH_RESULT_LANGUAGE_ORDER = ['KR', 'VN', 'EN', 'LA', 'JP', 'ZH', 'IT', 'PT', 'ES', 'DE'];
 const DEFAULT_PORT = 5217;
+const LANGUAGE_NAMES = {
+  KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latina',
+  ZH: '繁體中文', IT: 'Italiano', PT: 'Português', ES: 'Español', DE: 'Deutsch'
+};
+const JURISDICTION_NAMES = {
+  KR: '대한민국', VN: '베트남', US: '미국', JP: '일본', VA: '바티칸', TW: '대만',
+  IT: '이탈리아', PT: '포르투갈', MX: '멕시코', DE: '독일', BR: '브라질',
+  AU: '호주', NZ: '뉴질랜드', PH: '필리핀', IE: '아일랜드',
+  'GB-EW': '잉글랜드·웨일스', 'GB-SCT': '스코틀랜드'
+};
+const JURISDICTION_LANGUAGES = {
+  KR: 'KR', VN: 'VN', US: 'EN', JP: 'JP', VA: 'LA', TW: 'ZH', IT: 'IT', PT: 'PT',
+  MX: 'ES', DE: 'DE', BR: 'PT', AU: 'EN', NZ: 'EN', PH: 'EN', IE: 'EN',
+  'GB-EW': 'EN', 'GB-SCT': 'EN'
+};
 
 function discoverCountryPrayerModules() {
   const indexPath = path.join(root, 'index.html');
@@ -45,6 +61,7 @@ const countryPrayerModules = usesCountryModules ? discoverCountryPrayerModules()
 const prayerDataDisplayPath = usesCountryModules
   ? path.join(root, 'JS file', 'countries', '*', '*_prayers.js')
   : prayerDataPath;
+const prayerEditorHtmlPath = path.join(__dirname, 'prayer-data-editor.html');
 
 function parseArgs(argv) {
   const args = {
@@ -99,6 +116,7 @@ function runCountryModuleSources(sources) {
   const countries = {};
   const categoryLabels = {};
   const mergedEntries = new Map();
+  const countryOwners = { entries: {}, fields: {} };
 
   for (const source of sources) {
     const countryModule = registeredCountries[source.jurisdiction]
@@ -112,6 +130,15 @@ function runCountryModuleSources(sources) {
       categoryLabels[category] = Object.assign(categoryLabels[category] || {}, translations || {});
     });
     countryModule.entries.forEach(entry => {
+      const id = String(entry.id || '');
+      countryOwners.entries[id] = unique([].concat(countryOwners.entries[id] || [], source.jurisdiction));
+      countryOwners.fields[id] = countryOwners.fields[id] || {};
+      for (const field of ['titles', 'texts', 'sourceCategory']) {
+        countryOwners.fields[id][field] = countryOwners.fields[id][field] || {};
+        Object.keys(entry[field] || {}).forEach(language => {
+          countryOwners.fields[id][field][language] = source.jurisdiction;
+        });
+      }
       const current = mergedEntries.get(entry.id) || {};
       mergedEntries.set(entry.id, Object.assign({}, current, entry, {
         titles: Object.assign({}, current.titles || {}, entry.titles || {}),
@@ -125,7 +152,8 @@ function runCountryModuleSources(sources) {
   return {
     data: {
       categoryLabels,
-      prayers: Array.from(mergedEntries.values())
+      prayers: Array.from(mergedEntries.values()),
+      countryOwners
     },
     countries
   };
@@ -136,6 +164,114 @@ function loadPrayerData() {
     return runCountryModuleSources(readCountryModuleSources()).data;
   }
   return runPrayerDataCode(fs.readFileSync(prayerDataPath, 'utf8'));
+}
+
+function prayerModuleLanguage(module, jurisdiction) {
+  const direct = String(module && module.language || '').trim().toUpperCase();
+  if (LANGUAGES.includes(direct)) return direct;
+  const counts = {};
+  for (const entry of module && Array.isArray(module.entries) ? module.entries : []) {
+    for (const field of ['titles', 'texts', 'sourceCategory']) {
+      Object.keys(entry[field] || {}).forEach(language => {
+        const code = String(language).toUpperCase();
+        if (LANGUAGES.includes(code)) counts[code] = (counts[code] || 0) + 1;
+      });
+    }
+  }
+  return Object.entries(counts).sort((left, right) => right[1] - left[1])[0]?.[0]
+    || JURISDICTION_LANGUAGES[jurisdiction]
+    || 'EN';
+}
+
+function prayerEditorState(sources = readCountryModuleSources()) {
+  if (!usesCountryModules) {
+    const data = loadPrayerData();
+    return {
+      data,
+      runtime: null,
+      countries: [{
+        jurisdiction: 'INTL',
+        name: '다국어 통합 파일',
+        language: LANGUAGES[0],
+        languageName: LANGUAGE_NAMES[LANGUAGES[0]],
+        languages: LANGUAGES.slice(),
+        entries: data.prayers.length,
+        status: 'available'
+      }]
+    };
+  }
+  const runtime = runCountryModuleSources(sources);
+  const countries = sources.map(source => {
+    const module = runtime.countries[source.jurisdiction];
+    const language = prayerModuleLanguage(module, source.jurisdiction);
+    const languages = unique([
+      language,
+      ...(module.entries || []).flatMap(entry => ['titles', 'texts', 'sourceCategory']
+        .flatMap(field => Object.keys(entry[field] || {}).map(code => String(code).toUpperCase())))
+    ]).filter(code => LANGUAGES.includes(code));
+    return {
+      jurisdiction: source.jurisdiction,
+      name: module.jurisdictionName || module.name || JURISDICTION_NAMES[source.jurisdiction] || source.jurisdiction,
+      language,
+      languageName: LANGUAGE_NAMES[language] || language,
+      languages,
+      entries: module.entries.length,
+      status: module.status || (module.entries.length ? 'available' : 'under-development'),
+      file: source.path
+    };
+  });
+  return { data: runtime.data, runtime, countries };
+}
+
+function prayerEntryForCountry(loaded, jurisdiction, id) {
+  if (!loaded.runtime) return loaded.data.prayers.find(entry => entry.id === id) || null;
+  const module = loaded.runtime.countries[jurisdiction];
+  if (!module) throw Object.assign(new Error(`Unknown jurisdiction: ${jurisdiction}`), { statusCode: 404 });
+  return module.entries.find(entry => entry.id === id) || null;
+}
+
+function prayersForCountry(loaded, jurisdiction, requestedLanguage) {
+  const country = loaded.countries.find(item => item.jurisdiction === jurisdiction) || loaded.countries[0];
+  if (!country) return [];
+  const language = ensureLanguage(requestedLanguage) || country.language;
+  const entries = loaded.runtime
+    ? loaded.runtime.countries[country.jurisdiction].entries
+    : loaded.data.prayers;
+  return entries
+    .filter(entry => (entry.titles || {})[language] || (entry.texts || {})[language])
+    .map(entry => ({
+      id: entry.id,
+      lang: language,
+      title: (entry.titles || {})[language] || bestTitle(entry, language),
+      category: entry.category,
+      categoryLabel: (loaded.data.categoryLabels[entry.category] || {})[language] || entry.category,
+      sourceCategory: (entry.sourceCategory || {})[language] || '',
+      hasText: Boolean((entry.texts || {})[language]),
+      textLength: String((entry.texts || {})[language] || '').length,
+      textLanguages: SEARCH_RESULT_LANGUAGE_ORDER.filter(code => Boolean((entry.texts || {})[code]))
+    }))
+    .sort((left, right) => left.title.localeCompare(right.title));
+}
+
+function prayerDetailForCountry(loaded, jurisdiction, id, requestedLanguage) {
+  const country = loaded.countries.find(item => item.jurisdiction === jurisdiction) || loaded.countries[0];
+  if (!country) throw Object.assign(new Error('No country prayer modules are available'), { statusCode: 404 });
+  const entry = prayerEntryForCountry(loaded, country.jurisdiction, id);
+  if (!entry) throw Object.assign(new Error(`Prayer id not found in ${country.jurisdiction}: ${id}`), { statusCode: 404 });
+  const lang = ensureLanguage(requestedLanguage) || country.language;
+  return {
+    id: entry.id,
+    lang,
+    jurisdiction: country.jurisdiction,
+    category: entry.category,
+    categoryLabel: (loaded.data.categoryLabels[entry.category] || {})[lang] || entry.category,
+    titles: entry.titles || {},
+    title: (entry.titles || {})[lang] || '',
+    sourceCategory: entry.sourceCategory || {},
+    sourceCategoryText: (entry.sourceCategory || {})[lang] || '',
+    text: (entry.texts || {})[lang] || '',
+    textLength: String((entry.texts || {})[lang] || '').length
+  };
 }
 
 function normalizeText(value) {
@@ -407,6 +543,63 @@ function buildTags(prayer, categoryLabels) {
   ]);
 }
 
+function ensureCountryOwners(data) {
+  data.countryOwners = data.countryOwners || { entries: {}, fields: {} };
+  data.countryOwners.entries = data.countryOwners.entries || {};
+  data.countryOwners.fields = data.countryOwners.fields || {};
+  return data.countryOwners;
+}
+
+function ensureKnownJurisdiction(jurisdiction) {
+  const value = String(jurisdiction || '').trim();
+  if (!value || !usesCountryModules) return '';
+  if (!countryPrayerModules.some(module => module.jurisdiction === value)) {
+    throw Object.assign(new Error(`Unknown jurisdiction: ${value}`), { statusCode: 400 });
+  }
+  return value;
+}
+
+function setPrayerFieldOwner(data, id, field, language, jurisdiction) {
+  const owner = ensureKnownJurisdiction(jurisdiction);
+  if (!owner) return;
+  const owners = ensureCountryOwners(data);
+  owners.entries[id] = unique([].concat(owners.entries[id] || [], owner));
+  owners.fields[id] = owners.fields[id] || {};
+  owners.fields[id][field] = owners.fields[id][field] || {};
+  owners.fields[id][field][language] = owner;
+}
+
+function renamePrayerOwners(data, previousId, nextId) {
+  if (!previousId || previousId === nextId || !data.countryOwners) return;
+  const owners = ensureCountryOwners(data);
+  if (owners.entries[previousId]) owners.entries[nextId] = owners.entries[previousId];
+  if (owners.fields[previousId]) owners.fields[nextId] = owners.fields[previousId];
+  delete owners.entries[previousId];
+  delete owners.fields[previousId];
+}
+
+function deletePrayerOwners(data, id) {
+  if (!data.countryOwners) return;
+  const owners = ensureCountryOwners(data);
+  delete owners.entries[id];
+  delete owners.fields[id];
+}
+
+function deletePrayerFieldOwner(data, id, language) {
+  if (!data.countryOwners || !data.countryOwners.fields[id]) return;
+  const fields = data.countryOwners.fields[id];
+  for (const field of ['titles', 'texts', 'sourceCategory']) {
+    if (fields[field]) delete fields[field][language];
+  }
+}
+
+function copyPrayerFieldOwner(data, targetId, sourceId, field, targetLang, sourceLang, fallbackJurisdiction) {
+  const sourceOwner = data.countryOwners && data.countryOwners.fields[sourceId]
+    && data.countryOwners.fields[sourceId][field]
+    && data.countryOwners.fields[sourceId][field][sourceLang];
+  setPrayerFieldOwner(data, targetId, field, targetLang, fallbackJurisdiction || sourceOwner);
+}
+
 function upsertPrayerText(data, body) {
   const text = normalizeText(body.text);
   const category = String(body.category || '').trim();
@@ -482,15 +675,19 @@ function updatePrayerDetail(data, body) {
   }
 
   prayer.id = nextId;
+  renamePrayerOwners(data, previousId, nextId);
   prayer.category = category;
   prayer.titles = prayer.titles || {};
   prayer.texts = prayer.texts || {};
   prayer.sourceCategory = prayer.sourceCategory || {};
   prayer.titles[lang] = title;
   prayer.texts[lang] = text;
+  setPrayerFieldOwner(data, nextId, 'titles', lang, body.jurisdiction);
+  setPrayerFieldOwner(data, nextId, 'texts', lang, body.jurisdiction);
 
   if (sourceCategory) {
     prayer.sourceCategory[lang] = sourceCategory;
+    setPrayerFieldOwner(data, nextId, 'sourceCategory', lang, body.jurisdiction);
   } else {
     delete prayer.sourceCategory[lang];
   }
@@ -543,6 +740,7 @@ function deletePrayerLanguage(data, body) {
   }
 
   prayer.tags = buildTags(prayer, data.categoryLabels);
+  deletePrayerFieldOwner(data, prayer.id, lang);
 
   return {
     id: prayer.id,
@@ -562,6 +760,7 @@ function deletePrayerEntry(data, body) {
 
   const index = findPrayerIndexById(data, id);
   const [removedPrayer] = data.prayers.splice(index, 1);
+  deletePrayerOwners(data, removedPrayer.id);
 
   return {
     id: removedPrayer.id,
@@ -654,19 +853,34 @@ function mergePrayerEntries(data, body) {
   }
 
   const copied = [];
+  function copyOwnedField(fieldName, nextTargetLang, nextSourceLang, fallbackJurisdiction) {
+    const before = copied.length;
+    copyField(fieldName, target, source, nextTargetLang, nextSourceLang, overwrite, copied);
+    if (copied.length > before) {
+      copyPrayerFieldOwner(
+        data,
+        targetId,
+        sourceId,
+        fieldName,
+        nextTargetLang,
+        nextSourceLang,
+        fallbackJurisdiction
+      );
+    }
+  }
 
   // First, if user maps across languages (e.g. EN -> KR), try to copy that specific mapping
   if (sourceLang !== targetLang) {
-    copyField('titles', target, source, targetLang, sourceLang, overwrite, copied);
-    copyField('texts', target, source, targetLang, sourceLang, overwrite, copied);
-    copyField('sourceCategory', target, source, targetLang, sourceLang, overwrite, copied);
+    copyOwnedField('titles', targetLang, sourceLang, body.targetJurisdiction);
+    copyOwnedField('texts', targetLang, sourceLang, body.targetJurisdiction);
+    copyOwnedField('sourceCategory', targetLang, sourceLang, body.targetJurisdiction);
   }
 
   // Then, always copy all languages from source to target (same lang→same lang)
   for (const lang of sourceLangs) {
-    copyField('titles', target, source, lang, lang, overwrite, copied);
-    copyField('texts', target, source, lang, lang, overwrite, copied);
-    copyField('sourceCategory', target, source, lang, lang, overwrite, copied);
+    copyOwnedField('titles', lang, lang, '');
+    copyOwnedField('texts', lang, lang, '');
+    copyOwnedField('sourceCategory', lang, lang, '');
   }
 
   if (!copied.length && !removeSource) {
@@ -677,6 +891,7 @@ function mergePrayerEntries(data, body) {
 
   if (removeSource) {
     data.prayers.splice(sourceIndex, 1);
+    deletePrayerOwners(data, sourceId);
   } else {
     source.tags = buildTags(source, data.categoryLabels);
   }
@@ -847,7 +1062,11 @@ function prepareCountryModuleSources(data, sources = readCountryModuleSources())
     for (const field of localizedFields) {
       for (const [language, value] of Object.entries(prayer[field] || {})) {
         const ownerKey = `${prayer.id}\u0000${field}\u0000${language}`;
-        const jurisdiction = fieldOwners.get(ownerKey) || defaultJurisdictionForLanguage(language);
+        const requestedOwner = data.countryOwners && data.countryOwners.fields
+          && data.countryOwners.fields[prayer.id]
+          && data.countryOwners.fields[prayer.id][field]
+          && data.countryOwners.fields[prayer.id][field][language];
+        const jurisdiction = requestedOwner || fieldOwners.get(ownerKey) || defaultJurisdictionForLanguage(language);
         if (!jurisdiction || !assignments.has(jurisdiction)) {
           throw new Error(`Cannot choose a country prayer module for ${prayer.id} ${field}.${language}`);
         }
@@ -1027,17 +1246,25 @@ function createServer() {
 
       if (req.method === 'GET' && url.pathname === '/') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
-        res.end(SPLIT_INDEX_HTML);
+        res.end(fs.readFileSync(prayerEditorHtmlPath, 'utf8'));
+        return;
+      }
+
+      if (req.method === 'GET' && url.pathname === '/firebase-upload-client.js') {
+        serveFirebaseUploadClient(res);
         return;
       }
 
       if (req.method === 'GET' && url.pathname === '/api/state') {
-        const data = loadPrayerData();
+        const loaded = prayerEditorState();
+        const data = loaded.data;
         jsonResponse(res, 200, {
           ok: true,
           file: prayerDataDisplayPath,
           ...(usesCountryModules ? { countryModules: countryPrayerModules.length } : {}),
           languages: LANGUAGES,
+          languageNames: LANGUAGE_NAMES,
+          countries: loaded.countries,
           categories: allCategories(data.categoryLabels, data.prayers),
           categoryLabels: data.categoryLabels,
           prayers: data.prayers.map(prayer => publicPrayer(prayer, data.categoryLabels))
@@ -1045,11 +1272,37 @@ function createServer() {
         return;
       }
 
-      if (req.method === 'GET' && url.pathname === '/api/prayer') {
-        const data = loadPrayerData();
+      if (req.method === 'GET' && url.pathname === '/api/prayers') {
+        const loaded = prayerEditorState();
+        const jurisdiction = url.searchParams.get('country') || loaded.countries[0]?.jurisdiction || '';
         jsonResponse(res, 200, {
           ok: true,
-          prayer: prayerDetail(data, url.searchParams.get('id'), url.searchParams.get('lang'))
+          jurisdiction,
+          prayers: prayersForCountry(loaded, jurisdiction, url.searchParams.get('language'))
+        });
+        return;
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/firebase-export') {
+        const data = loadPrayerData();
+        jsonResponse(res, 200, buildFirebaseUploadPayload({
+          collectionName: 'prayer_data',
+          label: '다국어 기도문',
+          items: data.prayers,
+          idPrefix: 'prayer'
+        }));
+        return;
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/prayer') {
+        const country = url.searchParams.get('country');
+        const loaded = country ? prayerEditorState() : null;
+        const data = loaded ? loaded.data : loadPrayerData();
+        jsonResponse(res, 200, {
+          ok: true,
+          prayer: loaded
+            ? prayerDetailForCountry(loaded, country, url.searchParams.get('id'), url.searchParams.get('lang'))
+            : prayerDetail(data, url.searchParams.get('id'), url.searchParams.get('lang'))
         });
         return;
       }
@@ -3233,7 +3486,10 @@ async function main() {
 
 module.exports = {
   countryPrayerModules,
+  createServer,
   loadPrayerData,
+  prayerEditorState,
+  prayersForCountry,
   prepareCountryModuleSources,
   readCountryModuleSources,
   runCountryModuleSources,

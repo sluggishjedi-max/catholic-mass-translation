@@ -3,6 +3,7 @@ const fs = require('fs');
 const http = require('http');
 const path = require('path');
 const vm = require('vm');
+const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
 
 const root = path.resolve(__dirname, '..');
 const defaultHymnDataPath = path.join(root, 'JS file', 'hymn_data.js');
@@ -901,8 +902,23 @@ function createServer() {
         return;
       }
 
+      if (req.method === 'GET' && url.pathname === '/firebase-upload-client.js') {
+        serveFirebaseUploadClient(res);
+        return;
+      }
+
       if (req.method === 'GET' && url.pathname === '/api/state') {
         sendJson(res, 200, { ok: true, ...statePayload(loadHymnData()) });
+        return;
+      }
+
+      if (req.method === 'GET' && url.pathname === '/api/firebase-export') {
+        sendJson(res, 200, buildFirebaseUploadPayload({
+          collectionName: 'hymn_data',
+          label: '성가 데이터',
+          items: loadHymnData(),
+          idPrefix: 'hymn'
+        }));
         return;
       }
 
@@ -1301,7 +1317,7 @@ const INDEX_HTML = String.raw`<!doctype html>
   </header>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <main>
-    <div class="workflow" aria-label="작업 순서"><span>① 오른쪽에서 성가 검색</span><span>→</span><span>② 선택 후 왼쪽 내용 수정</span><span>→</span><span>③ 전체 저장</span><span>· 새 성가는 ‘새 성가’부터</span></div>
+    <div class="workflow" aria-label="작업 순서"><span>① 오른쪽에서 성가 검색</span><span>→</span><span>② 선택 후 왼쪽 내용 수정</span><span>→</span><span>③ 로컬 저장</span><span>→</span><span>④ 필요할 때 Firebase 업로드</span><span>· 새 성가는 ‘새 성가’부터</span></div>
     <section class="form" aria-label="성가 입력">
       <div class="grid">
         <label>책이름
@@ -1352,7 +1368,8 @@ const INDEX_HTML = String.raw`<!doctype html>
         <textarea id="lyrics" spellcheck="false"></textarea>
       </label>
       <div class="toolbar actions">
-        <button id="save" class="primary" type="button">전체 내용 저장</button>
+        <button id="save" class="primary" type="button">로컬에 저장</button>
+        <button id="firebase-upload" class="secondary" type="button">Firebase에 업로드</button>
         <button id="save-number" class="secondary" type="button">성가번호 수정</button>
         <button id="save-tags" class="secondary" type="button">기타 태그 수정</button>
         <button id="save-voice-type" class="secondary" type="button">성부 구분 수정</button>
@@ -1422,6 +1439,7 @@ const INDEX_HTML = String.raw`<!doctype html>
       voiceType: document.getElementById('voice-type'),
       lyrics: document.getElementById('lyrics'),
       save: document.getElementById('save'),
+      firebaseUpload: document.getElementById('firebase-upload'),
       saveNumber: document.getElementById('save-number'),
       saveTags: document.getElementById('save-tags'),
       saveVoiceType: document.getElementById('save-voice-type'),
@@ -1857,6 +1875,10 @@ const INDEX_HTML = String.raw`<!doctype html>
     el.searchQuery.addEventListener('input', debounceSuggest);
     el.searchButton.addEventListener('click', () => suggest().catch(error => setStatus(error.message, 'error')));
     el.save.addEventListener('click', () => save().catch(error => setStatus(error.message, 'error')));
+    el.firebaseUpload.addEventListener('click', () => window.ordoFirebaseUploader.upload({
+      button: el.firebaseUpload,
+      setStatus: (message, kind) => setStatus(message, kind)
+    }).catch(error => setStatus(error.message, 'error')));
     el.saveNumber.addEventListener('click', () => saveNumberOnly().catch(error => setStatus(error.message, 'error')));
     el.saveTags.addEventListener('click', () => saveTagsOnly().catch(error => setStatus(error.message, 'error')));
     el.saveVoiceType.addEventListener('click', () => saveVoiceTypeOnly().catch(error => setStatus(error.message, 'error')));
@@ -1866,6 +1888,7 @@ const INDEX_HTML = String.raw`<!doctype html>
 
     loadState().catch(error => setStatus(error.message, 'error'));
   </script>
+  <script src="/firebase-upload-client.js"></script>
 </body>
 </html>`;
 
@@ -1891,6 +1914,7 @@ async function main() {
 }
 
 module.exports = {
+  createServer,
   countryHymnModules,
   loadHymnData,
   prepareCountryModuleSources,

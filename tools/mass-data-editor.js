@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const path = require('path');
 const vm = require('vm');
+const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
 
 const root = path.resolve(__dirname, '..');
 const DEFAULT_HOST = '127.0.0.1';
@@ -87,7 +88,10 @@ function runCountryMassSources(sources) {
     }
     countries[source.jurisdiction] = module;
   });
-  return { countries, registry };
+  const entries = Array.isArray(sandbox.missaData)
+    ? sandbox.missaData
+    : sources.flatMap(source => countries[source.jurisdiction].ordinary || []);
+  return { countries, registry, entries };
 }
 
 function cleanText(value) {
@@ -841,9 +845,23 @@ function createServer() {
         res.end(INDEX_HTML);
         return;
       }
+      if (req.method === 'GET' && url.pathname === '/firebase-upload-client.js') {
+        serveFirebaseUploadClient(res);
+        return;
+      }
       if (req.method === 'GET' && url.pathname === '/api/state') {
         const loaded = getLoadedState();
         sendJson(res, 200, { ok: true, countries: loaded.countries, translationEndpoint: GEMINI_PROXY_ENDPOINT });
+        return;
+      }
+      if (req.method === 'GET' && url.pathname === '/api/firebase-export') {
+        const runtime = runCountryMassSources(readCountryMassSources());
+        sendJson(res, 200, buildFirebaseUploadPayload({
+          collectionName: 'order_of_mass',
+          label: '미사통상문',
+          items: runtime.entries,
+          idPrefix: 'section'
+        }));
         return;
       }
       if (req.method === 'GET' && url.pathname === '/api/blocks') {
@@ -919,6 +937,7 @@ module.exports = {
   blockPair,
   blocksForCountry,
   collectMassBlocks,
+  createServer,
   countryMassModules,
   findOrdinaryArrayStart,
   getLoadedState,
@@ -956,6 +975,7 @@ const INDEX_HTML = String.raw`<!doctype html>
     select,input[type=search],input[type=text],textarea { width:100%; border:1px solid #cbd3e2; border-radius:10px; background:white; color:var(--ink); padding:10px 12px; outline:none; }
     select:focus,input:focus,textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px #315ee820; }
     .section-tools { display:grid; grid-template-columns:minmax(180px,1fr) minmax(260px,2fr); gap:10px; }
+    .control-actions { display:flex; gap:8px; align-items:end; }
     .primary,.secondary,.translate { border:0; border-radius:10px; padding:10px 14px; font-weight:800; }
     .primary { color:white; background:var(--blue); }
     .secondary { color:#263451; background:#e9edf5; }
@@ -1020,7 +1040,7 @@ const INDEX_HTML = String.raw`<!doctype html>
         <label>구절 검색<input id="search" type="search" placeholder="예: 인사, greeting, eucharist"></label>
         <label>미사통상문 구절<select id="block"></select></label>
       </div>
-      <button id="reload" class="secondary" type="button">새로고침</button>
+      <div class="control-actions"><button id="reload" class="secondary" type="button">새로고침</button><button id="firebase-upload" class="secondary" type="button">Firebase에 업로드</button></div>
     </section>
     <div id="status" class="status">데이터를 불러오는 중입니다.</div>
     <div class="columns-head"><span id="left-title">원문</span><span>번역</span><span id="right-title">번역문</span></div>
@@ -1030,8 +1050,8 @@ const INDEX_HTML = String.raw`<!doctype html>
       <button id="add-right" class="secondary" type="button">＋ 오른쪽 줄 추가</button>
     </div>
     <div class="savebar">
-      <button id="save-left" class="primary" type="button">왼쪽 원문 저장</button><span></span>
-      <button id="save-right" class="primary" type="button">오른쪽 번역문 저장</button>
+      <button id="save-left" class="primary" type="button">왼쪽 로컬 저장</button><span></span>
+      <button id="save-right" class="primary" type="button">오른쪽 로컬 저장</button>
     </div>
     <section class="translator" aria-label="자동 번역기">
       <div class="translator-head"><div><h2>자동 번역기</h2><p>문장을 입력하면 언어를 자동으로 감지해 선택한 언어로 번역합니다.</p></div><button id="translator-ai" class="translate" type="button">AI로 다시 번역</button></div>
@@ -1049,7 +1069,7 @@ const INDEX_HTML = String.raw`<!doctype html>
   </main>
   <script>
     const state = { countries:[], blocks:[], visibleBlocks:[], block:null, rowSequence:0, translationSequence:0, translationTimer:null };
-    const el = Object.fromEntries(['left-country','right-country','search','block','reload','status','rows','add-left','add-right','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
+    const el = Object.fromEntries(['left-country','right-country','search','block','reload','firebase-upload','status','rows','add-left','add-right','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
     async function api(url, options) { const response=await fetch(url,options); const body=await response.json(); if(!response.ok||!body.ok) throw new Error(body.error||('HTTP '+response.status)); return body; }
     function setStatus(message, kind='') { el.status.textContent=message; el.status.className='status '+kind; }
@@ -1174,11 +1194,13 @@ const INDEX_HTML = String.raw`<!doctype html>
     el.rightCountry.addEventListener('change',()=>{ syncTranslatorLanguages(true); loadBlock().catch(e=>setStatus(e.message,'error')); });
     el.search.addEventListener('input',()=>filterBlocks()); el.block.addEventListener('change',()=>loadBlock().catch(e=>setStatus(e.message,'error')));
     el.reload.addEventListener('click',()=>loadBlocks(el.block.value).catch(e=>setStatus(e.message,'error')));
+    el.firebaseUpload.addEventListener('click',()=>window.ordoFirebaseUploader.upload({button:el.firebaseUpload,setStatus:(message,kind)=>setStatus(message,kind)}).catch(e=>setStatus(e.message,'error')));
     el.addLeft.addEventListener('click',()=>addRow('left')); el.addRight.addEventListener('click',()=>addRow('right'));
     el.saveLeft.addEventListener('click',()=>saveSide('left').catch(e=>setStatus(e.message,'error'))); el.saveRight.addEventListener('click',()=>saveSide('right').catch(e=>setStatus(e.message,'error')));
     el.translatorSource.addEventListener('input',scheduleTranslation); el.translatorSourceLanguage.addEventListener('change',scheduleTranslation); el.translatorTargetLanguage.addEventListener('change',scheduleTranslation);
     el.translatorSwap.addEventListener('click',swapTranslator); el.translatorAi.addEventListener('click',()=>runTranslator('ai')); el.translatorCopy.addEventListener('click',async()=>{ if(!el.translatorOutput.value)return; await navigator.clipboard.writeText(el.translatorOutput.value); el.translatorStatus.textContent='번역 결과를 복사했습니다.'; });
     loadState().catch(error=>setStatus(error.message,'error'));
   </script>
+  <script src="/firebase-upload-client.js"></script>
 </body>
 </html>`;
