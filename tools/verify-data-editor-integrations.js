@@ -33,6 +33,7 @@ async function verifyServer(label, createServer, expected) {
     assert.strictEqual(htmlResponse.status, 200, `${label}: root response`);
     const html = await htmlResponse.text();
     expected.html.forEach(text => assert(html.includes(text), `${label}: missing UI text ${text}`));
+    (expected.absent || []).forEach(text => assert(!html.includes(text), `${label}: obsolete UI text or control remains: ${text}`));
     assert(html.includes('/firebase-upload-client.js'), `${label}: Firebase client is not linked`);
     compileInlineScripts(html, label);
 
@@ -85,6 +86,10 @@ async function verifyPrayerCountryUi() {
     const first = list.prayers[0];
     const detail = await (await fetch(`${base}/api/prayer?country=KR&lang=KR&id=${encodeURIComponent(first.id)}`)).json();
     assert(detail.ok && detail.prayer.id === first.id && detail.prayer.lang === 'KR');
+    const unusedLanguage = state.languages.find(language => !state.prayers.find(prayer => prayer.id === first.id)?.hasText?.[language]) || 'DE';
+    const globalDetail = await (await fetch(`${base}/api/prayer?lang=${unusedLanguage}&id=${encodeURIComponent(first.id)}`)).json();
+    assert(globalDetail.ok && globalDetail.prayer.id === first.id && globalDetail.prayer.lang === unusedLanguage,
+      'Prayer editor must load an empty language slot for the selected id');
   } finally {
     await close(server);
   }
@@ -121,6 +126,27 @@ function verifyPrayerCategoryEditing() {
   assert.strictEqual(data.prayers.find(prayer => prayer.id === target.id).category, nextCategory);
 }
 
+function verifyMissingLanguageSaveRouting() {
+  const sources = prayerTool.readCountryModuleSources();
+  const data = JSON.parse(JSON.stringify(prayerTool.loadPrayerData()));
+  const target = data.prayers.find(prayer => !(prayer.titles || {}).JP && !(prayer.texts || {}).JP);
+  assert(target, 'Prayer missing-language fixture is unavailable');
+  prayerTool.updatePrayerDetail(data, {
+    originalId: target.id,
+    id: target.id,
+    lang: 'JP',
+    category: target.category,
+    title: '新しい言語の保存確認',
+    text: 'アーメン。',
+    sourceCategory: ''
+  });
+  const prepared = prayerTool.prepareCountryModuleSources(data, sources);
+  const changed = prepared.filter((source, index) => source.code !== sources[index].code).map(source => source.jurisdiction);
+  assert(changed.includes('JP'), 'A newly selected language must save to its default country module');
+  assert(prepared.find(source => source.jurisdiction === 'JP').code.includes('新しい言語の保存確認'),
+    'The newly entered language title must be written to its country module');
+}
+
 function verifyFirebasePayloadCompatibility() {
   const payload = buildFirebaseUploadPayload({
     collectionName: 'test',
@@ -136,9 +162,15 @@ async function main() {
   verifyFirebasePayloadCompatibility();
   verifyExplicitCountryOwnership();
   verifyPrayerCategoryEditing();
+  verifyMissingLanguageSaveRouting();
   await verifyServer('prayer', prayerTool.createServer, {
     collectionName: 'prayer_data',
-    html: ['국가별 기도문 편집기', '언어별 기도문 목록', '앱 표시 미리보기', '다른 언어 추가', '두 기도문 병합', '카테고리만 수정', '로컬에 저장', 'Firebase에 업로드']
+    html: [
+      '국가별 기도문 편집기', '국가별 기도문 목록', '언어별 본문', '새 언어 추가',
+      '새 기도문 추가', '앱 표시 미리보기', '중복 기도문 하나로 합치기',
+      '남길 기도문', '오른쪽 기도문을 왼쪽 ID로 합치기', '로컬에 저장', 'Firebase에 업로드'
+    ],
+    absent: ['id="language"', 'id="add-language"', 'id="save-category"', '다른 언어 추가']
   });
   await verifyPrayerCountryUi();
   await verifyServer('hymn', hymnTool.createServer, {

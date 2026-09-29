@@ -5,23 +5,47 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>국가별 기도문 편집기</title>
   <style>
-    :root { color-scheme:light; --ink:#172033; --muted:#687188; --line:#d8deea; --panel:#fff; --blue:#315ee8; --blue2:#eef3ff; --green:#16845b; --red:#ad2434; --amber:#946200; --bg:#f3f5fa; }
+    :root {
+      color-scheme:light;
+      --ink:#172033; --muted:#687188; --line:#d8deea; --panel:#fff;
+      --blue:#315ee8; --blue2:#eef3ff; --green:#16845b; --red:#ad2434;
+      --amber:#946200; --bg:#f3f5fa;
+    }
     * { box-sizing:border-box; }
     body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,"Noto Sans KR","Malgun Gothic",sans-serif; }
     button,input,select,textarea { font:inherit; }
     button { cursor:pointer; }
-    .top { position:sticky; top:0; z-index:8; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px 22px 14px; color:white; background:linear-gradient(135deg,#18233b,#315ee8); box-shadow:0 4px 20px #18233b33; }
+    .top {
+      position:sticky; top:0; z-index:8; display:flex; align-items:center;
+      justify-content:space-between; gap:16px; padding:18px 22px 14px;
+      color:#fff; background:linear-gradient(135deg,#18233b,#315ee8);
+      box-shadow:0 4px 20px #18233b33;
+    }
     .top h1 { margin:0 0 5px; font-size:21px; }
     .top p { margin:0; color:#dce5ff; font-size:13px; }
     main { max-width:1580px; margin:auto; padding:20px; }
-    .controls,.status,.browser,.editor-card,.preview-card,.merge-card { background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:0 8px 24px #1720330b; }
-    .controls { padding:16px; display:grid; grid-template-columns:minmax(180px,1fr) minmax(150px,.7fr) minmax(170px,.8fr) minmax(220px,1.3fr) auto; gap:12px; align-items:end; }
+    .filter-card,.new-row,.status,.browser,.editor-card,.preview-card,.merge-card {
+      background:var(--panel); border:1px solid var(--line); border-radius:16px;
+      box-shadow:0 8px 24px #1720330b;
+    }
+    .filter-card {
+      display:grid; grid-template-columns:minmax(240px,.8fr) minmax(190px,.65fr) minmax(380px,2fr) auto;
+      gap:12px; align-items:end; padding:16px;
+    }
+    .search-group { display:grid; grid-template-columns:minmax(280px,1fr) auto; gap:8px; align-items:end; }
+    .new-row { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-top:12px; padding:13px 16px; }
+    .new-row strong { display:block; margin-bottom:3px; font-size:14px; }
     label { display:grid; gap:6px; color:var(--muted); font-size:12px; font-weight:800; }
-    select,input,textarea { width:100%; border:1px solid #cbd3e2; border-radius:10px; background:white; color:var(--ink); padding:10px 12px; outline:none; }
+    select,input,textarea {
+      width:100%; border:1px solid #cbd3e2; border-radius:10px; background:#fff;
+      color:var(--ink); padding:10px 12px; outline:none;
+    }
     select:focus,input:focus,textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px #315ee820; }
     textarea { min-height:330px; resize:vertical; line-height:1.65; }
-    .primary,.secondary,.danger,.soft { border:0; border-radius:10px; padding:10px 14px; font-weight:850; white-space:nowrap; }
-    .primary { color:white; background:var(--blue); }
+    .primary,.secondary,.danger,.soft {
+      border:0; border-radius:10px; padding:10px 14px; font-weight:850; white-space:nowrap;
+    }
+    .primary { color:#fff; background:var(--blue); }
     .secondary { color:#263451; background:#e9edf5; }
     .soft { color:#2349b8; background:var(--blue2); }
     .danger { color:var(--red); background:#fff0f2; }
@@ -30,28 +54,53 @@
     .status.ok { color:var(--green); border-color:#bce4d4; background:#f1fbf7; }
     .status.warn { color:var(--amber); border-color:#edd99b; background:#fffbec; }
     .status.error { color:var(--red); border-color:#f0c3c8; background:#fff5f6; }
-    .workspace { display:grid; grid-template-columns:minmax(250px,.72fr) minmax(420px,1.35fr) minmax(300px,.92fr); gap:14px; align-items:start; }
+    .workspace {
+      display:grid; grid-template-columns:minmax(260px,.72fr) minmax(440px,1.35fr) minmax(310px,.92fr);
+      gap:14px; align-items:start;
+    }
     .browser,.editor-card,.preview-card,.merge-card { overflow:hidden; }
-    .panel-head { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:15px 16px; border-bottom:1px solid var(--line); }
+    .panel-head {
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding:15px 16px; border-bottom:1px solid var(--line);
+    }
     .panel-head h2 { margin:0; font-size:16px; }
     .panel-head span { color:var(--muted); font-size:12px; }
-    .list { display:grid; gap:7px; max-height:680px; overflow:auto; padding:12px; }
-    .prayer-row { display:grid; gap:5px; width:100%; padding:11px 12px; text-align:left; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:11px; white-space:normal; }
-    .prayer-row:hover,.prayer-row.selected { border-color:var(--blue); background:#f8faff; box-shadow:0 0 0 3px #315ee813; }
+    .list { display:grid; gap:7px; max-height:710px; overflow:auto; padding:12px; }
+    .prayer-row {
+      display:grid; gap:5px; width:100%; padding:11px 12px; text-align:left;
+      color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:11px; white-space:normal;
+    }
+    .prayer-row:hover,.prayer-row.selected {
+      border-color:var(--blue); background:#f8faff; box-shadow:0 0 0 3px #315ee813;
+    }
     .row-title { font-weight:900; overflow-wrap:anywhere; }
     .row-meta,.hint { color:var(--muted); font-size:12px; overflow-wrap:anywhere; }
     .country-tags { display:flex; flex-wrap:wrap; gap:4px; }
-    .country-tag { display:inline-flex; align-items:center; min-height:20px; padding:2px 7px; border-radius:999px; color:#2349b8; background:#eef3ff; font-size:10px; font-weight:900; letter-spacing:.02em; }
+    .country-tag {
+      display:inline-flex; align-items:center; min-height:20px; padding:2px 7px;
+      border-radius:999px; color:#2349b8; background:#eef3ff; font-size:10px;
+      font-weight:900; letter-spacing:.02em;
+    }
     .empty { padding:32px 16px; color:var(--muted); text-align:center; line-height:1.6; }
     .editor-body { display:grid; gap:12px; padding:16px; }
+    .language-picker {
+      display:grid; grid-template-columns:minmax(210px,.8fr) minmax(260px,1.2fr);
+      gap:12px; padding:13px; border:1px solid #cbd7f9; border-radius:12px; background:#f7f9ff;
+    }
+    .language-help { align-self:center; color:#51617d; font-size:12px; line-height:1.55; }
     .field-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
     .field-wide { grid-column:1/-1; }
-    .actions { position:sticky; bottom:10px; z-index:4; display:flex; flex-wrap:wrap; gap:8px; padding:11px; border:1px solid var(--line); border-radius:12px; background:#fffffff2; box-shadow:0 8px 24px #17203318; }
+    .actions {
+      position:sticky; bottom:10px; z-index:4; display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr)); gap:8px; padding:11px;
+      border:1px solid var(--line); border-radius:12px; background:#fffffff2;
+      box-shadow:0 8px 24px #17203318;
+    }
     .preview-card { position:sticky; top:104px; }
     .preview-shell { padding:16px; background:#fafbfe; }
     .app-preview { overflow:hidden; border:1px solid #e0e5ec; border-radius:14px; background:#fff; box-shadow:0 3px 12px #1720330c; }
     .app-summary { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:14px 16px; color:#315ee8; font-weight:900; }
-    .app-summary::after { content:'▼'; font-size:12px; }
+    .app-summary::after { content:"▼"; font-size:12px; }
     .app-detail { padding:12px 16px 18px; border-top:1px solid #edf0f3; }
     .pills { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:15px; }
     .pill { display:inline-flex; padding:4px 9px; border-radius:999px; color:#536078; background:#eef1f6; font-size:11px; font-weight:800; }
@@ -59,265 +108,614 @@
     .preview-title { margin-bottom:8px; font-weight:900; line-height:1.4; }
     .preview-body { color:#444; line-height:1.65; overflow-wrap:anywhere; }
     .preview-body .rubric { display:block; margin:5px 0 2px; color:#9a5b00; font-style:italic; }
-    .language-adder { display:none; grid-template-columns:1fr 1fr auto; gap:8px; padding:12px; border:1px solid #cbd7f9; border-radius:12px; background:#f7f9ff; }
-    .language-adder.show { display:grid; }
     .merge-card { margin-top:16px; }
-    .merge-body { display:grid; grid-template-columns:minmax(180px,.8fr) minmax(150px,.6fr) minmax(220px,1fr) minmax(250px,1.1fr); gap:12px; padding:16px; align-items:end; }
-    .merge-list { grid-column:1/-1; display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:8px; max-height:220px; overflow:auto; }
-    .merge-options { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap; }
+    .merge-intro { padding:15px 16px; color:#51617d; background:#f7f9ff; border-bottom:1px solid var(--line); font-size:13px; line-height:1.55; }
+    .merge-flow {
+      display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+      gap:14px; align-items:stretch; padding:16px;
+    }
+    .merge-side { min-width:0; padding:15px; border:1px solid var(--line); border-radius:14px; }
+    .merge-side.target { border-color:#b8c9ff; background:#f8faff; }
+    .merge-side h3 { margin:0 0 4px; font-size:15px; }
+    .merge-side p { margin:0 0 12px; color:var(--muted); font-size:12px; line-height:1.5; }
+    .target-summary { display:grid; gap:8px; padding:12px; border-radius:11px; background:#fff; border:1px solid var(--line); }
+    .merge-search { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; margin-bottom:10px; }
+    .merge-source-list { display:grid; gap:7px; max-height:300px; overflow:auto; }
+    .merge-arrow { display:grid; place-items:center; color:var(--blue); font-size:26px; font-weight:900; }
+    .merge-options {
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      flex-wrap:wrap; padding:0 16px 16px;
+    }
     .checks { display:flex; gap:16px; flex-wrap:wrap; }
     .check { display:flex; grid-template-columns:auto 1fr; align-items:center; gap:7px; color:#43506a; }
     .check input { width:auto; }
-    @media (max-width:1120px) { .workspace { grid-template-columns:minmax(240px,.75fr) minmax(420px,1.25fr); } .preview-card { position:static; grid-column:1/-1; } .controls { grid-template-columns:1fr 1fr 1fr; } .merge-body { grid-template-columns:1fr 1fr; } }
-    @media (max-width:760px) { .top { align-items:flex-start; } main { padding:12px; } .controls,.workspace,.merge-body { grid-template-columns:1fr; } .preview-card { grid-column:auto; } .field-grid,.language-adder { grid-template-columns:1fr; } .field-wide,.merge-list,.merge-options { grid-column:auto; } .controls button,.actions button { width:100%; } .actions { position:static; } }
+    @media (max-width:1120px) {
+      .workspace { grid-template-columns:minmax(240px,.75fr) minmax(420px,1.25fr); }
+      .preview-card { position:static; grid-column:1/-1; }
+      .filter-card { grid-template-columns:1fr 1fr; }
+      .search-group { grid-column:1/-1; }
+    }
+    @media (max-width:760px) {
+      .top { align-items:flex-start; } main { padding:12px; }
+      .filter-card,.workspace,.language-picker,.field-grid,.merge-flow { grid-template-columns:1fr; }
+      .search-group { grid-column:auto; grid-template-columns:1fr; }
+      .new-row { align-items:stretch; flex-direction:column; }
+      .preview-card { grid-column:auto; }
+      .field-wide { grid-column:auto; }
+      .actions { position:static; grid-template-columns:1fr; }
+      .merge-arrow { transform:rotate(90deg); }
+      .filter-card button,.new-row button,.actions button,.merge-options button { width:100%; }
+    }
   </style>
 </head>
 <body>
   <header class="top">
-    <div><h1>국가별 기도문 편집기</h1><p>국가와 언어를 고르면 해당 기도문 목록을 바로 표시하고 국가별 원본 파일에 저장합니다.</p></div>
+    <div>
+      <h1>국가별 기도문 편집기</h1>
+      <p>국가를 고르면 그 국가의 언어와 기도문 목록을 함께 불러옵니다.</p>
+    </div>
     <button id="reload" class="secondary" type="button">새로고침</button>
   </header>
+
   <main>
-    <section class="controls" aria-label="기도문 선택">
-      <label>국가<select id="country"></select></label>
-      <label>언어<select id="language"></select></label>
-      <label>카테고리<select id="category-filter"></select></label>
-      <label>목록에서 검색<input id="search" type="search" placeholder="기도명, ID, 출처분류"></label>
-      <button id="new-prayer" class="secondary" type="button">＋ 새 기도문</button>
+    <section class="filter-card" aria-label="기도문 목록 조건">
+      <label>국가
+        <select id="country"></select>
+      </label>
+      <label>카테고리
+        <select id="category-filter"></select>
+      </label>
+      <div class="search-group">
+        <label>목록에서 검색
+          <input id="search" autocomplete="off" placeholder="기도문 ID 또는 제목을 입력하세요">
+        </label>
+        <button id="search-button" class="primary" type="button">확인</button>
+      </div>
     </section>
-    <div id="status" class="status">데이터를 불러오는 중입니다.</div>
+
+    <section class="new-row">
+      <div>
+        <strong>새 기도문 추가</strong>
+        <span class="hint">빈 편집창을 열고 ID, 카테고리, 언어별 본문을 입력합니다.</span>
+      </div>
+      <button id="new-prayer" class="soft" type="button">+ 새 기도문 작성</button>
+    </section>
+
+    <div id="status" class="status">데이터를 불러오는 중입니다…</div>
 
     <div class="workspace">
-      <section class="browser" aria-label="언어별 기도문 목록">
-        <div class="panel-head"><h2 id="list-title">기도문 목록</h2><span id="list-count">0개</span></div>
+      <section class="browser" aria-label="국가별 기도문 목록">
+        <div class="panel-head">
+          <h2>기도문 목록</h2>
+          <span id="result-count">0개</span>
+        </div>
         <div id="prayer-list" class="list"></div>
       </section>
 
-      <section class="editor-card" aria-label="기도문 편집">
-        <div class="panel-head"><h2>기도문 편집</h2><span id="edit-scope">항목을 선택하세요</span></div>
+      <section class="editor-card">
+        <div class="panel-head">
+          <h2>기도문 편집</h2>
+          <span id="edit-mode">목록에서 기도문을 선택하세요</span>
+        </div>
         <div class="editor-body">
+          <div class="language-picker">
+            <label>언어별 본문
+              <select id="editor-language"></select>
+            </label>
+            <div id="language-help" class="language-help">
+              이 ID에 저장된 언어는 바로 불러옵니다. 저장되지 않은 언어를 선택해 작성하면 해당 언어가 새로 추가됩니다.
+            </div>
+          </div>
           <div class="field-grid">
-            <label>ID<input id="prayer-id" autocomplete="off" placeholder="예: hail_mary"></label>
-            <label>카테고리<select id="prayer-category"></select></label>
-            <label class="field-wide">기도명<input id="prayer-title" autocomplete="off"></label>
-            <label class="field-wide">출처분류<input id="source-category" autocomplete="off" placeholder="기도서 분류 또는 출처"></label>
-            <label class="field-wide">기도문<textarea id="prayer-text" spellcheck="false" placeholder="앱에 표시할 기도문을 입력하세요."></textarea></label>
+            <label>기도문 ID
+              <input id="prayer-id" autocomplete="off" placeholder="예: 001.sign_of_cross">
+            </label>
+            <label>카테고리
+              <select id="editor-category"></select>
+            </label>
+            <label class="field-wide">기도문 제목
+              <input id="title" autocomplete="off">
+            </label>
+            <label class="field-wide">출처·세부 분류
+              <input id="source-category" autocomplete="off" placeholder="선택 입력">
+            </label>
+            <label class="field-wide">기도문 본문
+              <textarea id="text" placeholder="기도문 본문을 입력하세요"></textarea>
+            </label>
           </div>
-
-          <div id="language-adder" class="language-adder">
-            <label>추가할 국가<select id="add-country"></select></label>
-            <label>추가할 언어<select id="add-language-select"></select></label>
-            <button id="start-language" class="soft" type="button">추가 시작</button>
-          </div>
-
           <div class="actions">
             <button id="save-local" class="primary" type="button">로컬에 저장</button>
-            <button id="save-category" class="secondary" type="button">카테고리만 수정</button>
             <button id="firebase-upload" class="soft" type="button">Firebase에 업로드</button>
-            <button id="add-language" class="secondary" type="button">＋ 다른 언어 추가</button>
             <button id="delete-language" class="danger" type="button">이 언어 삭제</button>
             <button id="delete-entry" class="danger" type="button">기도문 전체 삭제</button>
           </div>
-          <div id="file-path" class="hint"></div>
         </div>
       </section>
 
-      <aside class="preview-card" aria-label="앱 표시 미리보기">
-        <div class="panel-head"><h2>앱 표시 미리보기</h2><span>입력 즉시 반영</span></div>
+      <aside class="preview-card">
+        <div class="panel-head">
+          <h2>앱 표시 미리보기</h2>
+          <span>입력과 동시에 반영</span>
+        </div>
         <div class="preview-shell">
           <div class="app-preview">
             <div id="preview-summary" class="app-summary">기도문 제목</div>
             <div class="app-detail">
-              <div id="preview-pills" class="pills"></div>
-              <div id="preview-language" class="language-label"></div>
+              <div class="pills">
+                <span id="preview-id" class="pill">ID</span>
+                <span id="preview-category" class="pill">카테고리</span>
+              </div>
+              <div id="preview-language" class="language-label">언어</div>
               <div id="preview-title" class="preview-title">기도문 제목</div>
-              <div id="preview-body" class="preview-body">기도문을 입력하면 앱에서 보이는 형태를 여기에서 확인할 수 있습니다.</div>
+              <div id="preview-body" class="preview-body">기도문 본문이 이곳에 표시됩니다.</div>
             </div>
           </div>
         </div>
       </aside>
     </div>
 
-    <section class="merge-card" aria-label="기도문 병합">
-      <div class="panel-head"><h2>두 기도문 병합</h2><span id="merge-target">편집 중인 기도문이 기준 항목입니다.</span></div>
-      <div class="merge-body">
-        <label>가져올 국가<select id="merge-country"></select></label>
-        <label>가져올 언어<select id="merge-language"></select></label>
-        <label>가져올 기도문 검색<input id="merge-search" type="search" placeholder="기도명 또는 ID"></label>
-        <div class="hint">아래 목록에서 하나를 선택한 뒤 병합하세요.</div>
-        <div id="merge-list" class="merge-list"></div>
-        <div class="merge-options">
-          <div class="checks">
-            <label class="check"><input id="merge-overwrite" type="checkbox"><span>기존 번역 덮어쓰기</span></label>
-            <label class="check"><input id="merge-remove" type="checkbox" checked><span>병합 뒤 가져온 항목 삭제</span></label>
+    <section class="merge-card">
+      <div class="panel-head">
+        <h2>중복 기도문 하나로 합치기</h2>
+        <span>왼쪽 ID를 유지합니다</span>
+      </div>
+      <div class="merge-intro">
+        현재 편집 중인 기도문을 남기고, 오른쪽에서 고른 중복 기도문의 모든 언어별 제목과 본문을 옮깁니다.
+        기본 설정에서는 병합이 끝난 뒤 오른쪽 중복 ID를 삭제합니다.
+      </div>
+      <div class="merge-flow">
+        <div class="merge-side target">
+          <h3>남길 기도문</h3>
+          <p>현재 편집 중인 기도문의 ID와 기존 내용은 유지됩니다.</p>
+          <div class="target-summary">
+            <strong id="merge-target-title">기도문을 먼저 선택하세요</strong>
+            <span id="merge-target-id" class="hint">ID 없음</span>
           </div>
-          <button id="merge" class="primary" type="button">선택한 두 기도문 병합</button>
         </div>
+        <div class="merge-arrow" aria-hidden="true">←</div>
+        <div class="merge-side">
+          <h3>내용을 가져올 중복 기도문</h3>
+          <p>국가를 고른 뒤 ID 또는 제목으로 검색하고 한 항목을 선택하세요.</p>
+          <label>국가
+            <select id="merge-country"></select>
+          </label>
+          <div class="merge-search">
+            <input id="merge-search" autocomplete="off" placeholder="중복 기도문 ID 또는 제목">
+            <button id="merge-search-button" class="secondary" type="button">확인</button>
+          </div>
+          <div id="merge-source-list" class="merge-source-list"></div>
+        </div>
+      </div>
+      <div class="merge-options">
+        <div class="checks">
+          <label class="check"><input id="merge-overwrite" type="checkbox"> 같은 언어의 기존 내용도 덮어쓰기</label>
+          <label class="check"><input id="merge-remove-source" type="checkbox" checked> 병합 후 오른쪽 중복 ID 삭제</label>
+        </div>
+        <button id="merge-button" class="primary" type="button">오른쪽 기도문을 왼쪽 ID로 합치기</button>
       </div>
     </section>
   </main>
 
+  <script src="/firebase-upload-client.js"></script>
   <script>
-    const state = { countries:[], languages:[], languageNames:{}, categories:[], categoryLabels:{}, rows:[], mergeRows:[], selectedId:'', originalId:'', mergeSource:null };
-    const ids = ['country','language','category-filter','search','new-prayer','reload','status','prayer-list','list-title','list-count','edit-scope','prayer-id','prayer-category','prayer-title','source-category','prayer-text','save-local','save-category','firebase-upload','add-language','language-adder','add-country','add-language-select','start-language','delete-language','delete-entry','file-path','preview-summary','preview-pills','preview-language','preview-title','preview-body','merge-target','merge-country','merge-language','merge-search','merge-list','merge-overwrite','merge-remove','merge'];
-    const el = Object.fromEntries(ids.map(id => [id.replace(/-([a-z])/g,(_,letter)=>letter.toUpperCase()), document.getElementById(id)]));
+    const state = {
+      countries: [], languages: [], languageNames: {}, categories: [], categoryLabels: {},
+      prayers: [], list: [], mergeList: [], selectedMergeId: '',
+      originalId: '', currentPrayer: null, appliedSearch: ''
+    };
 
-    function escapeHtml(value) { return String(value == null ? '' : value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
-    async function api(url, options) { const response=await fetch(url,Object.assign({headers:{'content-type':'application/json'}},options||{})); const body=await response.json(); if(!response.ok||!body.ok)throw new Error(body.error||('HTTP '+response.status)); return body; }
-    function setStatus(message,kind) { el.status.textContent=message; el.status.className='status'+(kind?' '+kind:''); }
-    function selectedCountry(select) { return state.countries.find(country=>country.jurisdiction===select.value); }
-    function languageName(code) { return state.languageNames[code]||code; }
-    function countryLabel(country) { return country.name+' · '+languageName(country.language)+' ('+country.jurisdiction+')'+(country.status==='under-development'?' · 제작중':''); }
-    function categoryLabel(key,language) { const labels=state.categoryLabels[key]||{}; return labels[language]||labels.KR||labels.EN||key; }
-    function countryOptions(selected) { return state.countries.map(country=>'<option value="'+escapeHtml(country.jurisdiction)+'" '+(country.jurisdiction===selected?'selected':'')+'>'+escapeHtml(countryLabel(country))+'</option>').join(''); }
-    function languageOptions(selected) { return state.languages.map(code=>'<option value="'+code+'" '+(code===selected?'selected':'')+'>'+escapeHtml(languageName(code))+' ('+code+')</option>').join(''); }
-    function categoryOptions(selected,includeAll) { const first=includeAll?'<option value="">전체 카테고리</option>':''; return first+state.categories.map(key=>'<option value="'+escapeHtml(key)+'" '+(key===selected?'selected':'')+'>'+escapeHtml(categoryLabel(key,el.language.value))+' ('+escapeHtml(key)+')</option>').join(''); }
+    const el = Object.fromEntries([
+      'country','category-filter','search','search-button','new-prayer','reload','status',
+      'prayer-list','result-count','edit-mode','editor-language','language-help',
+      'prayer-id','editor-category','title','source-category','text',
+      'save-local','firebase-upload','delete-language','delete-entry',
+      'preview-summary','preview-id','preview-category','preview-language','preview-title','preview-body',
+      'merge-target-title','merge-target-id','merge-country','merge-search','merge-search-button',
+      'merge-source-list','merge-overwrite','merge-remove-source','merge-button'
+    ].map(id => [id.replace(/-([a-z])/g, (_, c) => c.toUpperCase()), document.getElementById(id)]));
+
+    function escapeHtml(value) {
+      return String(value == null ? '' : value)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+
+    async function api(url, options) {
+      const response = await fetch(url, options);
+      const body = await response.json();
+      if (!response.ok || !body.ok) throw new Error(body.error || '요청을 처리하지 못했습니다.');
+      return body;
+    }
+
+    function setStatus(message, type) {
+      el.status.textContent = message;
+      el.status.className = 'status' + (type ? ' ' + type : '');
+    }
+
+    function selectedCountry(code) {
+      return state.countries.find(country => country.jurisdiction === (code || el.country.value)) || state.countries[0];
+    }
+
+    function selectedPrayerMeta(id) {
+      return state.prayers.find(prayer => prayer.id === id) || null;
+    }
+
+    function languageLabel(code) {
+      return code + ' · ' + (state.languageNames[code] || code);
+    }
+
+    function categoryLabel(category, language) {
+      const labels = state.categoryLabels[category] || {};
+      return labels[language] || labels.KR || labels.EN || category;
+    }
+
+    function bestTitle(meta, language) {
+      if (!meta) return '';
+      const titles = meta.titles || {};
+      return titles[language] || titles.KR || titles.EN || titles.VN || titles.JP || titles.LA || meta.id;
+    }
+
+    function categoryOptions(selected) {
+      return state.categories.map(category =>
+        '<option value="' + escapeHtml(category) + '"' + (category === selected ? ' selected' : '') + '>' +
+        escapeHtml(categoryLabel(category, selectedCountry()?.language || 'KR')) + ' · ' + escapeHtml(category) +
+        '</option>'
+      ).join('');
+    }
 
     function fillControls() {
-      const defaultCountry=state.countries.some(country=>country.jurisdiction==='KR')?'KR':state.countries[0].jurisdiction;
-      el.country.innerHTML=countryOptions(defaultCountry);
-      el.mergeCountry.innerHTML=countryOptions(state.countries.some(country=>country.jurisdiction==='VN')?'VN':defaultCountry);
-      el.addCountry.innerHTML=countryOptions(defaultCountry);
-      el.language.innerHTML=languageOptions((selectedCountry(el.country)||{}).language||state.languages[0]);
-      el.mergeLanguage.innerHTML=languageOptions((selectedCountry(el.mergeCountry)||{}).language||state.languages[0]);
-      el.addLanguageSelect.innerHTML=languageOptions(state.languages[0]);
-      el.categoryFilter.innerHTML=categoryOptions('',true);
-      el.prayerCategory.innerHTML=categoryOptions(state.categories[0]||'',false);
+      const currentCountry = el.country.value;
+      const currentMergeCountry = el.mergeCountry.value;
+      const countryOptions = state.countries.map(country =>
+        '<option value="' + escapeHtml(country.jurisdiction) + '">' +
+        escapeHtml(country.name) + ' · ' + escapeHtml(languageLabel(country.language)) +
+        '</option>'
+      ).join('');
+      el.country.innerHTML = countryOptions;
+      el.mergeCountry.innerHTML = countryOptions;
+      if (state.countries.some(country => country.jurisdiction === currentCountry)) el.country.value = currentCountry;
+      if (state.countries.some(country => country.jurisdiction === currentMergeCountry)) el.mergeCountry.value = currentMergeCountry;
+      else el.mergeCountry.value = el.country.value;
+      el.categoryFilter.innerHTML = '<option value="">전체 카테고리</option>' +
+        state.categories.map(category => '<option value="' + escapeHtml(category) + '">' +
+          escapeHtml(categoryLabel(category, selectedCountry()?.language || 'KR')) + '</option>').join('');
+      el.editorCategory.innerHTML = categoryOptions(el.editorCategory.value);
+      fillEditorLanguages(el.editorLanguage.value || selectedCountry()?.language);
     }
 
-    async function loadState() {
-      setStatus('국가별 기도문 데이터를 불러오는 중입니다.');
-      const body=await api('/api/state');
-      state.countries=body.countries; state.languages=body.languages; state.languageNames=body.languageNames||{}; state.categories=body.categories; state.categoryLabels=body.categoryLabels;
-      el.filePath.textContent='저장 위치: '+body.file; fillControls(); await loadPrayerList(); await loadMergeList();
-      setStatus(state.countries.length+'개 국가 모듈 · '+body.prayers.length+'개 기도문을 불러왔습니다.','ok');
+    function fillEditorLanguages(preferred) {
+      const meta = selectedPrayerMeta(state.originalId || el.prayerId.value.trim());
+      const options = state.languages.map(code => {
+        const hasBody = Boolean(meta && meta.hasText && meta.hasText[code]);
+        const hasTitle = Boolean(meta && meta.titles && meta.titles[code]);
+        const stateLabel = hasBody ? '본문 있음' : hasTitle ? '제목만 있음' : '새 언어 추가';
+        return '<option value="' + code + '">' + escapeHtml(languageLabel(code) + ' · ' + stateLabel) + '</option>';
+      });
+      el.editorLanguage.innerHTML = options.join('');
+      const fallback = state.languages.includes(preferred) ? preferred : selectedCountry()?.language || state.languages[0];
+      if (fallback) el.editorLanguage.value = fallback;
+      updateLanguageHelp();
     }
 
-    async function loadPrayerList(preferredId) {
-      const url='/api/prayers?country='+encodeURIComponent(el.country.value)+'&language='+encodeURIComponent(el.language.value);
-      state.rows=(await api(url)).prayers; renderPrayerList();
-      if(preferredId&&state.rows.some(row=>row.id===preferredId)) await loadPrayer(preferredId);
+    function updateLanguageHelp() {
+      const code = el.editorLanguage.value;
+      const meta = selectedPrayerMeta(state.originalId || el.prayerId.value.trim());
+      const hasBody = Boolean(meta && meta.hasText && meta.hasText[code]);
+      const hasTitle = Boolean(meta && meta.titles && meta.titles[code]);
+      el.languageHelp.textContent = hasBody
+        ? languageLabel(code) + ' 본문을 불러왔습니다. 수정 후 로컬에 저장할 수 있습니다.'
+        : hasTitle
+          ? languageLabel(code) + ' 제목만 있습니다. 본문을 입력해 저장하면 완성된 언어로 추가됩니다.'
+          : languageLabel(code) + '는 아직 이 ID에 없습니다. 제목과 본문을 작성해 로컬에 저장하면 새 언어로 추가됩니다.';
     }
 
-    function visibleRows(rows,query,category) {
-      const normalized=String(query||'').trim().toLowerCase();
-      return rows.filter(row=>(!category||row.category===category)&&(!normalized||[row.id,row.title,row.sourceCategory,row.categoryLabel].join(' ').toLowerCase().includes(normalized)));
+    function filteredList(items, query) {
+      const filter = (query || '').trim().toLocaleLowerCase();
+      const category = el.categoryFilter.value;
+      return items.filter(item => {
+        if (category && item.category !== category) return false;
+        if (!filter) return true;
+        return [item.id, item.title, item.categoryLabel, item.sourceCategory]
+          .some(value => String(value || '').toLocaleLowerCase().includes(filter));
+      });
     }
 
-    function countryBadges(row) { return (row.jurisdictions||[]).map(code=>'<span class="country-tag">'+escapeHtml(code)+'</span>').join(''); }
-
-    function renderPrayerList() {
-      const rows=visibleRows(state.rows,el.search.value,el.categoryFilter.value);
-      el.listTitle.textContent=languageName(el.language.value)+' 기도문 목록'; el.listCount.textContent=rows.length+'개';
-      if(!rows.length){ el.prayerList.innerHTML='<div class="empty">선택한 국가·언어에 등록된 기도문이 없습니다.<br>새 기도문 또는 다른 언어 항목을 추가할 수 있습니다.</div>'; return; }
-      el.prayerList.innerHTML=rows.map((row,index)=>'<button class="prayer-row '+(row.id===state.selectedId?'selected':'')+'" type="button" data-index="'+index+'"><span class="row-title">'+escapeHtml(row.title)+'</span><span class="row-meta">'+escapeHtml(row.categoryLabel)+' · '+escapeHtml(row.id)+(row.hasText?' · '+row.textLength+'자':' · 본문 없음')+'</span><span class="country-tags">'+countryBadges(row)+'</span></button>').join('');
-      Array.from(el.prayerList.querySelectorAll('.prayer-row')).forEach(button=>button.addEventListener('click',()=>loadPrayer(rows[Number(button.dataset.index)].id).catch(error=>setStatus(error.message,'error'))));
+    function prayerRow(item, selected, dataRole) {
+      const tags = (item.jurisdictions || []).map(code =>
+        '<span class="country-tag">' + escapeHtml(code) + '</span>').join('');
+      return '<button class="prayer-row' + (selected ? ' selected' : '') + '" type="button" ' +
+        dataRole + '="' + escapeHtml(item.id) + '">' +
+        '<span class="row-title">' + escapeHtml(item.id + ' · ' + (item.title || item.id)) + '</span>' +
+        '<span class="row-meta">' + escapeHtml(item.categoryLabel || item.category) +
+        ' · ' + (item.hasText ? escapeHtml(String(item.textLength || 0)) + '자' : '제목만') + '</span>' +
+        (tags ? '<span class="country-tags">' + tags + '</span>' : '') +
+        '</button>';
     }
 
-    async function loadPrayer(id) {
-      const url='/api/prayer?country='+encodeURIComponent(el.country.value)+'&id='+encodeURIComponent(id)+'&lang='+encodeURIComponent(el.language.value);
-      const prayer=(await api(url)).prayer; state.selectedId=prayer.id; state.originalId=prayer.id;
-      el.prayerId.value=prayer.id; el.prayerCategory.value=prayer.category; el.prayerTitle.value=prayer.title||''; el.sourceCategory.value=prayer.sourceCategoryText||''; el.prayerText.value=prayer.text||'';
-      el.editScope.textContent=countryLabel(selectedCountry(el.country))+' · '+languageName(prayer.lang); el.mergeTarget.textContent='기준: '+(prayer.title||prayer.id)+' ('+prayer.id+')';
-      renderPrayerList(); renderPreview(); setStatus('기도문을 불러왔습니다: '+prayer.id,'ok');
+    function renderList() {
+      const items = filteredList(state.list, state.appliedSearch);
+      el.resultCount.textContent = items.length + '개';
+      el.prayerList.innerHTML = items.length
+        ? items.map(item => prayerRow(item, item.id === state.originalId, 'data-prayer-id')).join('')
+        : '<div class="empty">조건에 맞는 기도문이 없습니다.<br>검색어를 지우고 확인을 눌러보세요.</div>';
+      el.prayerList.querySelectorAll('[data-prayer-id]').forEach(button => {
+        button.addEventListener('click', () => loadPrayer(button.dataset.prayerId));
+      });
     }
 
-    function clearEditor(keepIdentity) {
-      if(!keepIdentity){ state.selectedId=''; state.originalId=''; el.prayerId.value=''; }
-      el.prayerTitle.value=''; el.sourceCategory.value=''; el.prayerText.value='';
-      if(!el.prayerCategory.value)el.prayerCategory.value=state.categories[0]||'';
-      el.editScope.textContent=countryLabel(selectedCountry(el.country))+' · '+languageName(el.language.value); el.mergeTarget.textContent=keepIdentity?'기준: '+el.prayerId.value:'편집 중인 기도문이 기준 항목입니다.';
-      renderPrayerList(); renderPreview();
+    async function loadList(options = {}) {
+      const country = selectedCountry();
+      if (!country) return;
+      const body = await api('/api/prayers?country=' + encodeURIComponent(country.jurisdiction) +
+        '&language=' + encodeURIComponent(country.language));
+      state.list = body.prayers;
+      if (options.resetSearch) {
+        state.appliedSearch = '';
+        el.search.value = '';
+      }
+      renderList();
+      setStatus(country.name + ' · ' + languageLabel(country.language) + ' · ' + state.list.length + '개를 불러왔습니다.', 'ok');
     }
 
-    function editorPayload() { return { originalId:state.originalId,id:el.prayerId.value.trim(),jurisdiction:el.country.value,lang:el.language.value,category:el.prayerCategory.value,title:el.prayerTitle.value.trim(),sourceCategory:el.sourceCategory.value.trim(),text:el.prayerText.value }; }
-    function validatePayload(payload) { if(!payload.id)throw new Error('기도문 ID가 필요합니다.'); if(!payload.category)throw new Error('카테고리를 선택하세요.'); if(!payload.title)throw new Error('기도명을 입력하세요.'); }
-    async function saveLocal(showMessage) {
-      const payload=editorPayload(); validatePayload(payload); if(showMessage!==false)setStatus('국가별 원본 파일에 저장 중입니다.');
-      const body=await api('/api/update',{method:'POST',body:JSON.stringify(payload)}); state.originalId=body.updated.id; state.selectedId=body.updated.id; el.prayerId.value=body.updated.id;
-      await loadPrayerList(body.updated.id); if(showMessage!==false)setStatus('로컬 저장 완료: '+body.updated.id+' / '+body.updated.lang,'ok'); return body.updated;
+    function clearEditor() {
+      state.originalId = '';
+      state.currentPrayer = null;
+      el.prayerId.value = '';
+      el.editorCategory.innerHTML = categoryOptions(state.categories[0] || '');
+      el.title.value = '';
+      el.sourceCategory.value = '';
+      el.text.value = '';
+      fillEditorLanguages(selectedCountry()?.language);
+      el.editMode.textContent = '새 기도문';
+      el.mergeTargetTitle.textContent = '새 기도문은 병합할 수 없습니다';
+      el.mergeTargetId.textContent = '먼저 로컬에 저장하세요';
+      state.selectedMergeId = '';
+      renderMergeList();
+      updatePreview();
+      el.prayerId.focus();
     }
 
-    async function saveCategoryOnly() {
-      if(!state.originalId)throw new Error('카테고리를 수정할 기도문을 먼저 선택하세요.');
-      if(!el.prayerCategory.value)throw new Error('카테고리를 선택하세요.');
-      setStatus('카테고리를 수정하는 중입니다.');
-      const body=await api('/api/category',{method:'POST',body:JSON.stringify({targetId:state.originalId,targetLang:el.language.value,language:el.language.value,prayerName:el.prayerTitle.value.trim()||state.originalId,category:el.prayerCategory.value})});
-      await loadPrayerList(body.updated.id); setStatus('카테고리 수정 완료: '+categoryLabel(body.updated.category,el.language.value),'ok');
+    async function loadPrayer(id, preferredLanguage) {
+      state.originalId = id;
+      const countryLanguage = selectedCountry()?.language;
+      fillEditorLanguages(preferredLanguage || countryLanguage);
+      await loadPrayerLanguage(el.editorLanguage.value);
+      renderList();
+    }
+
+    async function loadPrayerLanguage(language) {
+      if (!state.originalId) {
+        el.title.value = '';
+        el.sourceCategory.value = '';
+        el.text.value = '';
+        updateLanguageHelp();
+        updatePreview();
+        return;
+      }
+      const body = await api('/api/prayer?id=' + encodeURIComponent(state.originalId) +
+        '&lang=' + encodeURIComponent(language));
+      const prayer = body.prayer;
+      state.currentPrayer = prayer;
+      el.prayerId.value = prayer.id;
+      el.editorCategory.innerHTML = categoryOptions(prayer.category);
+      el.editorCategory.value = prayer.category;
+      el.title.value = prayer.title || '';
+      el.sourceCategory.value = prayer.sourceCategoryText || '';
+      el.text.value = prayer.text || '';
+      el.editMode.textContent = prayer.id + ' · ' + languageLabel(prayer.lang);
+      el.mergeTargetTitle.textContent = prayer.title || bestTitle(selectedPrayerMeta(prayer.id), prayer.lang) || prayer.id;
+      el.mergeTargetId.textContent = prayer.id + ' · 유지할 ID';
+      updateLanguageHelp();
+      updatePreview();
+    }
+
+    function applySearch() {
+      state.appliedSearch = el.search.value.trim();
+      renderList();
+      if (state.appliedSearch) setStatus('“' + state.appliedSearch + '” 검색 결과를 표시합니다.', 'ok');
+      else setStatus('검색 필터를 해제하고 전체 목록을 표시합니다.', 'ok');
+    }
+
+    function formatPreviewText(text) {
+      const safe = escapeHtml(text || '기도문 본문이 이곳에 표시됩니다.');
+      return safe
+        .replace(/\[([^\]]+)\]/g, '<span class="rubric">[$1]</span>')
+        .replace(/\n/g, '<br>');
+    }
+
+    function updatePreview() {
+      const code = el.editorLanguage.value || selectedCountry()?.language || '';
+      const title = el.title.value.trim() || '기도문 제목';
+      const category = el.editorCategory.value || '카테고리';
+      el.previewSummary.textContent = title;
+      el.previewId.textContent = el.prayerId.value.trim() || 'ID';
+      el.previewCategory.textContent = categoryLabel(category, code);
+      el.previewLanguage.textContent = languageLabel(code);
+      el.previewTitle.textContent = title;
+      el.previewBody.innerHTML = formatPreviewText(el.text.value);
+    }
+
+    function savePayload() {
+      const lang = el.editorLanguage.value;
+      const country = selectedCountry();
+      const isNewLanguage = !selectedPrayerMeta(state.originalId)?.titles?.[lang] &&
+        !selectedPrayerMeta(state.originalId)?.hasText?.[lang];
+      return {
+        originalId: state.originalId,
+        id: el.prayerId.value.trim(),
+        lang,
+        category: el.editorCategory.value,
+        title: el.title.value.trim(),
+        sourceCategory: el.sourceCategory.value.trim(),
+        text: el.text.value,
+        jurisdiction: (!state.originalId || isNewLanguage) && country && country.language === lang
+          ? country.jurisdiction
+          : ''
+      };
+    }
+
+    async function refreshMetadata() {
+      const body = await api('/api/state');
+      state.countries = body.countries;
+      state.languages = body.languages;
+      state.languageNames = body.languageNames;
+      state.categories = body.categories;
+      state.categoryLabels = body.categoryLabels;
+      state.prayers = body.prayers;
+      return body;
+    }
+
+    async function saveLocal(showStatus = true) {
+      const payload = savePayload();
+      const body = await api('/api/update', {
+        method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify(payload)
+      });
+      state.originalId = body.updated.id;
+      await refreshMetadata();
+      fillControls();
+      await loadList();
+      await loadPrayer(body.updated.id, body.updated.lang);
+      await loadMergeList();
+      if (showStatus) setStatus('로컬 파일에 저장했습니다 · ' + body.updated.id + ' · ' + body.updated.lang, 'ok');
+      return body;
     }
 
     async function deleteLanguage() {
-      if(!state.originalId)throw new Error('삭제할 기도문을 먼저 선택하세요.');
-      if(!window.confirm(languageName(el.language.value)+' 기도명·본문·출처분류를 삭제할까요?'))return;
-      await api('/api/delete-language',{method:'POST',body:JSON.stringify({originalId:state.originalId,lang:el.language.value,jurisdiction:el.country.value})}); clearEditor(false); await loadPrayerList(); setStatus('선택한 언어 기도문을 삭제했습니다.','ok');
+      if (!state.originalId) return setStatus('삭제할 기도문을 먼저 선택하세요.', 'warn');
+      const lang = el.editorLanguage.value;
+      if (!confirm(state.originalId + '의 ' + languageLabel(lang) + ' 제목과 본문을 삭제할까요?')) return;
+      await api('/api/delete-language', {
+        method:'POST', headers:{'content-type':'application/json'},
+        body:JSON.stringify({ id:state.originalId, lang })
+      });
+      await refreshMetadata();
+      fillControls();
+      await loadList();
+      fillEditorLanguages(lang);
+      await loadPrayerLanguage(lang);
+      setStatus('선택한 언어를 삭제했습니다 · ' + state.originalId + ' · ' + lang, 'ok');
     }
 
     async function deleteEntry() {
-      if(!state.originalId)throw new Error('삭제할 기도문을 먼저 선택하세요.');
-      if(!window.confirm('ID '+state.originalId+' 기도문을 모든 국가·언어 모듈에서 삭제할까요?\n이 작업은 로컬 원본 파일에 즉시 반영됩니다.'))return;
-      await api('/api/delete-entry',{method:'POST',body:JSON.stringify({originalId:state.originalId,lang:el.language.value})}); clearEditor(false); await loadPrayerList(); await loadMergeList(); setStatus('기도문 전체 항목을 삭제했습니다.','ok');
-    }
-
-    function startLanguageAdd() {
-      if(!state.originalId)throw new Error('다른 언어를 추가할 기준 기도문을 먼저 선택하세요.');
-      const id=state.originalId; const category=el.prayerCategory.value; el.country.value=el.addCountry.value; el.language.value=el.addLanguageSelect.value; state.selectedId=id; state.originalId=id; el.prayerId.value=id; el.prayerCategory.innerHTML=categoryOptions(category,false); el.prayerCategory.value=category; clearEditor(true); el.languageAdder.classList.remove('show');
-      loadPrayerList().then(()=>setStatus(id+'에 '+languageName(el.language.value)+' 기도문을 추가할 수 있습니다. 내용을 입력하고 로컬에 저장하세요.','ok')).catch(error=>setStatus(error.message,'error'));
-    }
-
-    function formatPrayerMarkup(value) {
-      let html=escapeHtml(value);
-      html=html.replace(/&lt;rubric&gt;([\s\S]*?)&lt;\/rubric&gt;/gi,(_,inside)=>'<span class="rubric">'+inside+'</span>');
-      html=html.replace(/&lt;(b|strong)&gt;([\s\S]*?)&lt;\/(?:b|strong)&gt;/gi,'<strong>$2</strong>');
-      html=html.replace(/&lt;(i|em)&gt;([\s\S]*?)&lt;\/(?:i|em)&gt;/gi,'<em>$2</em>');
-      html=html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi,'<u>$1</u>');
-      html=html.replace(/\*\*([\s\S]*?)\*\*/g,'<strong>$1</strong>');
-      return html.replace(/\r?\n/g,'<br>');
-    }
-
-    function renderPreview() {
-      const title=el.prayerTitle.value.trim()||'기도문 제목'; const category=categoryLabel(el.prayerCategory.value||'national',el.language.value); const source=el.sourceCategory.value.trim();
-      el.previewSummary.textContent=title; el.previewTitle.textContent=title; el.previewLanguage.textContent=languageName(el.language.value);
-      el.previewPills.innerHTML=[category,source].filter(Boolean).map(value=>'<span class="pill">'+escapeHtml(value)+'</span>').join('');
-      el.previewBody.innerHTML=el.prayerText.value.trim()?formatPrayerMarkup(el.prayerText.value):'기도문을 입력하면 앱에서 보이는 형태를 여기에서 확인할 수 있습니다.';
-    }
-
-    async function loadMergeList() {
-      if(!el.mergeCountry.value||!el.mergeLanguage.value)return;
-      const url='/api/prayers?country='+encodeURIComponent(el.mergeCountry.value)+'&language='+encodeURIComponent(el.mergeLanguage.value);
-      state.mergeRows=(await api(url)).prayers; renderMergeList();
+      if (!state.originalId) return setStatus('삭제할 기도문을 먼저 선택하세요.', 'warn');
+      const id = state.originalId;
+      if (!confirm(id + ' 전체를 삭제할까요? 모든 언어의 제목과 본문이 삭제됩니다.')) return;
+      await api('/api/delete-entry', {
+        method:'POST', headers:{'content-type':'application/json'},
+        body:JSON.stringify({ id, lang:el.editorLanguage.value })
+      });
+      await refreshMetadata();
+      fillControls();
+      await loadList();
+      await loadMergeList();
+      clearEditor();
+      setStatus('기도문 전체를 삭제했습니다 · ' + id, 'ok');
     }
 
     function renderMergeList() {
-      const rows=visibleRows(state.mergeRows,el.mergeSearch.value,'').filter(row=>row.id!==state.originalId);
-      if(!rows.length){ el.mergeList.innerHTML='<div class="empty">가져올 기도문이 없습니다.</div>'; return; }
-      el.mergeList.innerHTML=rows.map((row,index)=>'<button class="prayer-row '+(state.mergeSource&&state.mergeSource.id===row.id?'selected':'')+'" type="button" data-index="'+index+'"><span class="row-title">'+escapeHtml(row.title)+'</span><span class="row-meta">'+escapeHtml(row.id)+' · '+escapeHtml(row.categoryLabel)+'</span><span class="country-tags">'+countryBadges(row)+'</span></button>').join('');
-      Array.from(el.mergeList.querySelectorAll('.prayer-row')).forEach(button=>button.addEventListener('click',()=>{ state.mergeSource=rows[Number(button.dataset.index)]; renderMergeList(); setStatus('가져올 기도문을 선택했습니다: '+state.mergeSource.id,'ok'); }));
+      const query = el.mergeSearch.value.trim().toLocaleLowerCase();
+      const items = state.mergeList.filter(item => {
+        if (item.id === state.originalId) return false;
+        if (!query) return true;
+        return [item.id,item.title,item.categoryLabel,item.sourceCategory]
+          .some(value => String(value || '').toLocaleLowerCase().includes(query));
+      });
+      el.mergeSourceList.innerHTML = items.length
+        ? items.map(item => prayerRow(item, item.id === state.selectedMergeId, 'data-merge-id')).join('')
+        : '<div class="empty">합칠 기도문을 검색해 선택하세요.</div>';
+      el.mergeSourceList.querySelectorAll('[data-merge-id]').forEach(button => {
+        button.addEventListener('click', () => {
+          state.selectedMergeId = button.dataset.mergeId;
+          renderMergeList();
+        });
+      });
     }
 
-    async function mergePrayers() {
-      if(!state.originalId)throw new Error('기준 기도문을 먼저 선택하세요.'); if(!state.mergeSource)throw new Error('가져올 기도문을 아래 목록에서 선택하세요.');
-      const target=await saveLocal(false); setStatus('두 기도문을 병합하는 중입니다.');
-      const body=await api('/api/merge',{method:'POST',body:JSON.stringify({targetId:target.id,sourceId:state.mergeSource.id,sourceLang:state.mergeSource.lang,targetLang:target.lang,targetJurisdiction:el.country.value,sourceJurisdiction:el.mergeCountry.value,overwrite:el.mergeOverwrite.checked,removeSource:el.mergeRemove.checked})});
-      state.mergeSource=null; await loadPrayerList(target.id); await loadMergeList(); setStatus('병합 완료: '+body.updated.targetId+' · '+(body.updated.copied.join(', ')||'기존 데이터 유지'),'ok');
+    async function loadMergeList() {
+      const country = selectedCountry(el.mergeCountry.value);
+      if (!country) return;
+      const body = await api('/api/prayers?country=' + encodeURIComponent(country.jurisdiction) +
+        '&language=' + encodeURIComponent(country.language));
+      state.mergeList = body.prayers;
+      if (!state.mergeList.some(item => item.id === state.selectedMergeId)) state.selectedMergeId = '';
+      renderMergeList();
     }
 
-    function changeCountry(select,languageSelect,loader) { const country=selectedCountry(select); if(country)languageSelect.value=country.language; loader().catch(error=>setStatus(error.message,'error')); }
-    el.country.addEventListener('change',()=>{ el.prayerCategory.innerHTML=categoryOptions(el.prayerCategory.value,false); el.categoryFilter.innerHTML=categoryOptions(el.categoryFilter.value,true); changeCountry(el.country,el.language,()=>loadPrayerList()); clearEditor(false); });
-    el.language.addEventListener('change',()=>{ const language=el.language.value; const current=selectedCountry(el.country); if(!current||current.language!==language){ const matching=state.countries.find(country=>country.language===language&&country.entries>0)||state.countries.find(country=>country.language===language); if(matching)el.country.value=matching.jurisdiction; } el.prayerCategory.innerHTML=categoryOptions(el.prayerCategory.value,false); el.categoryFilter.innerHTML=categoryOptions(el.categoryFilter.value,true); clearEditor(false); loadPrayerList().catch(error=>setStatus(error.message,'error')); });
-    el.categoryFilter.addEventListener('change',renderPrayerList); el.search.addEventListener('input',renderPrayerList);
-    el.newPrayer.addEventListener('click',()=>{ clearEditor(false); setStatus('새 ID와 기도문을 입력한 뒤 로컬에 저장하세요.','ok'); el.prayerId.focus(); });
-    el.reload.addEventListener('click',()=>loadState().catch(error=>setStatus(error.message,'error')));
-    el.saveLocal.addEventListener('click',()=>saveLocal(true).catch(error=>setStatus(error.message,'error')));
-    el.saveCategory.addEventListener('click',()=>saveCategoryOnly().catch(error=>setStatus(error.message,'error')));
-    el.firebaseUpload.addEventListener('click',()=>window.ordoFirebaseUploader.upload({button:el.firebaseUpload,setStatus:setStatus}).catch(error=>setStatus(error.message,'error')));
-    el.addLanguage.addEventListener('click',()=>{ el.languageAdder.classList.toggle('show'); el.addCountry.value=el.country.value; el.addLanguageSelect.value=el.language.value; });
-    el.addCountry.addEventListener('change',()=>{ const country=selectedCountry(el.addCountry); if(country)el.addLanguageSelect.value=country.language; });
-    el.startLanguage.addEventListener('click',()=>{ try{startLanguageAdd();}catch(error){setStatus(error.message,'error');} });
-    el.deleteLanguage.addEventListener('click',()=>deleteLanguage().catch(error=>setStatus(error.message,'error'))); el.deleteEntry.addEventListener('click',()=>deleteEntry().catch(error=>setStatus(error.message,'error')));
-    [el.prayerTitle,el.sourceCategory,el.prayerText,el.prayerCategory].forEach(input=>input.addEventListener('input',renderPreview));
-    el.mergeCountry.addEventListener('change',()=>changeCountry(el.mergeCountry,el.mergeLanguage,loadMergeList)); el.mergeLanguage.addEventListener('change',()=>loadMergeList().catch(error=>setStatus(error.message,'error'))); el.mergeSearch.addEventListener('input',renderMergeList); el.merge.addEventListener('click',()=>mergePrayers().catch(error=>setStatus(error.message,'error')));
-    loadState().catch(error=>setStatus(error.message,'error'));
+    async function mergePrayer() {
+      if (!state.originalId) return setStatus('왼쪽에서 남길 기도문을 먼저 선택하세요.', 'warn');
+      if (!state.selectedMergeId) return setStatus('오른쪽에서 내용을 가져올 중복 기도문을 선택하세요.', 'warn');
+      const source = state.mergeList.find(item => item.id === state.selectedMergeId);
+      const sourceCountry = selectedCountry(el.mergeCountry.value);
+      const message = '“' + state.selectedMergeId + '”의 모든 언어별 내용을 “' + state.originalId +
+        '”로 옮길까요?' + (el.mergeRemoveSource.checked ? '\\n병합 후 오른쪽 ID는 삭제됩니다.' : '');
+      if (!confirm(message)) return;
+      const body = await api('/api/merge', {
+        method:'POST', headers:{'content-type':'application/json'},
+        body:JSON.stringify({
+          targetId:state.originalId,
+          sourceId:state.selectedMergeId,
+          sourceLang:(source && source.lang) || sourceCountry.language,
+          targetLang:(source && source.lang) || sourceCountry.language,
+          overwrite:el.mergeOverwrite.checked,
+          removeSource:el.mergeRemoveSource.checked
+        })
+      });
+      const targetId = body.updated.targetId;
+      state.selectedMergeId = '';
+      await refreshMetadata();
+      fillControls();
+      await loadList();
+      await loadMergeList();
+      await loadPrayer(targetId, el.editorLanguage.value);
+      setStatus('병합했습니다 · ' + body.updated.sourceId + ' → ' + targetId, 'ok');
+    }
+
+    async function initialize() {
+      await refreshMetadata();
+      fillControls();
+      await loadList({ resetSearch:true });
+      await loadMergeList();
+      clearEditor();
+      setStatus('준비되었습니다. 국가를 선택하거나 목록에서 기도문을 고르세요.', 'ok');
+    }
+
+    el.country.addEventListener('change', async () => {
+      el.categoryFilter.innerHTML = '<option value="">전체 카테고리</option>' +
+        state.categories.map(category => '<option value="' + escapeHtml(category) + '">' +
+          escapeHtml(categoryLabel(category, selectedCountry()?.language || 'KR')) + '</option>').join('');
+      fillEditorLanguages(selectedCountry()?.language);
+      await loadList({ resetSearch:true });
+      clearEditor();
+    });
+    el.categoryFilter.addEventListener('change', renderList);
+    el.searchButton.addEventListener('click', applySearch);
+    el.search.addEventListener('keydown', event => {
+      if (event.key === 'Enter') { event.preventDefault(); applySearch(); }
+    });
+    el.newPrayer.addEventListener('click', clearEditor);
+    el.reload.addEventListener('click', () => initialize().catch(error => setStatus(error.message, 'error')));
+    el.editorLanguage.addEventListener('change', () => loadPrayerLanguage(el.editorLanguage.value)
+      .catch(error => setStatus(error.message, 'error')));
+    [el.prayerId,el.editorCategory,el.title,el.sourceCategory,el.text].forEach(input =>
+      input.addEventListener('input', updatePreview));
+    el.saveLocal.addEventListener('click', () => saveLocal().catch(error => setStatus(error.message, 'error')));
+    el.firebaseUpload.addEventListener('click', () => window.ordoFirebaseUploader.upload({
+      button:el.firebaseUpload, endpoint:'/api/firebase-export', setStatus
+    }).catch(error => setStatus(error.message, 'error')));
+    el.deleteLanguage.addEventListener('click', () => deleteLanguage().catch(error => setStatus(error.message, 'error')));
+    el.deleteEntry.addEventListener('click', () => deleteEntry().catch(error => setStatus(error.message, 'error')));
+    el.mergeCountry.addEventListener('change', () => {
+      el.mergeSearch.value = '';
+      state.selectedMergeId = '';
+      loadMergeList().catch(error => setStatus(error.message, 'error'));
+    });
+    el.mergeSearchButton.addEventListener('click', renderMergeList);
+    el.mergeSearch.addEventListener('keydown', event => {
+      if (event.key === 'Enter') { event.preventDefault(); renderMergeList(); }
+    });
+    el.mergeButton.addEventListener('click', () => mergePrayer().catch(error => setStatus(error.message, 'error')));
+
+    initialize().catch(error => setStatus(error.message, 'error'));
   </script>
-  <script src="/firebase-upload-client.js"></script>
 </body>
 </html>
