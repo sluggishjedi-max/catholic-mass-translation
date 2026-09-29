@@ -40,19 +40,50 @@ const root = path.resolve(__dirname, '..');
         state.selectedLocationCode = locationCode;
         state.currentLoc = languageCode;
         state.targetLang = languageCode === 'KR' ? 'EN' : 'KR';
+        state.targetLocationCode = state.targetLang === 'KR' ? 'KR' : 'US';
         const fallbackPrayers = getPrayerData();
         check(fallbackPrayers.length >= 15, `${locationCode} has no fallback prayer places`);
-        check(fallbackPrayers.every(entry => entry.__aiPrayerFallback && entry.__aiPrayerFallbackSourceJurisdiction === 'VA'), `${locationCode} prayer fallback escaped the universal Latin source`);
-        const firstPrayer = fallbackPrayers[0];
-        const translation = prayerAutomaticTranslationInfo(firstPrayer, languageCode, 'KR', 'body');
-        check(translation && translation.targetLang === languageCode && translation.sourceLang === 'LA', `${locationCode} prayer fallback did not target ${languageCode} from Latin`);
+        check(fallbackPrayers.every(entry => entry.__aiPrayerFallback), `${locationCode} prayer fallback contains an unscoped entry`);
+        const latinPrayer = fallbackPrayers.find(entry => localizedPrayerValueStrict(entry.texts, 'LA') && localizedPrayerValueStrict(entry.texts, 'KR'));
+        const translation = prayerAutomaticTranslationInfo(latinPrayer, languageCode, 'KR', 'body');
+        check(translation && translation.targetLang === languageCode && translation.sourceLang === 'LA', `${locationCode} prayer fallback did not prioritize Latin`);
         if (languageCode === 'EN') {
           check(fallbackPrayers.every(entry => !localizedPrayerValueStrict(entry.texts, 'EN')), `${locationCode} reused a United States English prayer`);
         }
       }
+      state.selectedLocationCode = 'TW';
+      state.currentLoc = 'ZH';
+      state.targetLang = 'KR';
+      state.targetLocationCode = 'KR';
+      const taiwanFallbackPrayers = getPrayerData();
+      const koreanOnlyPrayer = taiwanFallbackPrayers.find(entry => localizedPrayerValueStrict(entry.texts, 'KR') && !localizedPrayerValueStrict(entry.texts, 'LA'));
+      check(koreanOnlyPrayer, 'Taiwan fallback has no Korean-only prayer source');
+      const taiwanTranslation = prayerAutomaticTranslationInfo(koreanOnlyPrayer, 'ZH', 'KR', 'body');
+      check(taiwanTranslation && taiwanTranslation.sourceLang === 'KR' && taiwanTranslation.targetLang === 'ZH', 'Taiwan fallback did not translate the available Korean prayer into Traditional Chinese');
+      check(!localizedPrayerValueStrict(koreanOnlyPrayer.texts, 'ZH'), 'Taiwan fallback duplicated Korean text into the Traditional Chinese field');
+      check(prayerBodyHtml(koreanOnlyPrayer, 'ZH', 'KR').includes('btn-ai-trans'), 'Taiwan fallback did not offer AI translation in the missing language');
+      const koreanSourceBodyHtml = prayerBodyHtml(koreanOnlyPrayer, 'KR', 'ZH');
+      check(koreanSourceBodyHtml.length > 10 && !koreanSourceBodyHtml.includes('btn-ai-trans'), 'Taiwan fallback lost the available Korean prayer');
+      const originalTaiwanPrayerTranslator = translatePrayerTextWithFallback;
+      try {
+        translatePrayerTextWithFallback = async (text, sourceLang, targetLang) => {
+          check(sourceLang === 'KR' && targetLang === 'ZH', 'Taiwan prayer used the wrong AI translation direction');
+          return targetLang === 'ZH' ? '繁體中文祈禱譯文' : `${targetLang} prayer translation`;
+        };
+        openPrayerEntryKeys.add(prayerEntryKey(koreanOnlyPrayer));
+        check(requestAutomaticPrayerTranslations(koreanOnlyPrayer, 'ZH', 'KR'), 'Taiwan Korean-source prayer translation did not start');
+        await new Promise(resolve => setTimeout(resolve, 0));
+        await new Promise(resolve => setTimeout(resolve, 0));
+        check(prayerAutomaticTranslatedText(koreanOnlyPrayer, 'ZH', 'KR', 'body') === '繁體中文祈禱譯文', 'Taiwan Korean-source prayer did not produce a Traditional Chinese body');
+      } finally {
+        translatePrayerTextWithFallback = originalTaiwanPrayerTranslator;
+        openPrayerEntryKeys.delete(prayerEntryKey(koreanOnlyPrayer));
+        aiTranslationRecords.clear();
+      }
       state.selectedLocationCode = 'AU';
       state.currentLoc = 'EN';
       state.targetLang = 'KR';
+      state.targetLocationCode = 'KR';
       renderPrayerPanel();
       const australianPrayerPanel = document.getElementById('prayer-results');
       check(australianPrayerPanel.querySelectorAll('details.aux-prayer-list-item').length >= 15, 'Australian prayer places were not rendered');

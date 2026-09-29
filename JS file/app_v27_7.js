@@ -132,7 +132,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V27.7-20260929-COUNTRY-PRAYER-AI-FALLBACK';
+    const APP_VERSION = 'V27.7-20260929-PRAYER-COUNTERPART-FALLBACK';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -4781,20 +4781,66 @@
 
     const fallbackPrayerDataByJurisdiction = new Map();
 
+    function prayerModuleEntries(module) {
+        return window.ordoPrayerDataApi.normalizeEntries(module && Array.isArray(module.entries) ? module.entries : []);
+    }
+
+    function mergeCountryPrayerFallbackEntry(current, incoming, sourceJurisdiction) {
+        if (!current) {
+            return Object.assign({}, incoming, {
+                titles: Object.assign({}, incoming.titles || {}),
+                texts: Object.assign({}, incoming.texts || {}),
+                sourceCategory: Object.assign({}, incoming.sourceCategory || {}),
+                source: Object.assign({}, incoming.source || {}),
+                tags: Array.from(new Set(incoming.tags || [])),
+                __aiPrayerFallbackSourceJurisdictions: [sourceJurisdiction]
+            });
+        }
+        return Object.assign({}, incoming, current, {
+            titles: Object.assign({}, incoming.titles || {}, current.titles || {}),
+            texts: Object.assign({}, incoming.texts || {}, current.texts || {}),
+            sourceCategory: Object.assign({}, incoming.sourceCategory || {}, current.sourceCategory || {}),
+            source: Object.assign({}, incoming.source || {}, current.source || {}),
+            tags: Array.from(new Set([].concat(current.tags || [], incoming.tags || []))),
+            __aiPrayerFallbackSourceJurisdictions: Array.from(new Set([].concat(current.__aiPrayerFallbackSourceJurisdictions || [], sourceJurisdiction)))
+        });
+    }
+
     function buildCountryPrayerFallbackData(jurisdiction) {
         const key = cleanNodeText(jurisdiction || 'INTL') || 'INTL';
-        if (fallbackPrayerDataByJurisdiction.has(key)) return fallbackPrayerDataByJurisdiction.get(key);
-        const universalModule = globalThis.countryPrayerData && globalThis.countryPrayerData.VA;
-        const universalEntries = universalModule && Array.isArray(universalModule.entries) ? universalModule.entries : [];
-        const entries = window.ordoPrayerDataApi.normalizeEntries(universalEntries)
-            .filter(entry => localizedPrayerValueStrict(entry.titles, 'LA') && localizedPrayerValueStrict(entry.texts, 'LA'))
-            .map(entry => Object.assign({}, entry, {
-                source: { LA: 'Universal Latin prayer text · AI translation source' },
-                __aiPrayerFallback: true,
-                __aiPrayerFallbackJurisdiction: key,
-                __aiPrayerFallbackSourceJurisdiction: 'VA'
-            }));
-        fallbackPrayerDataByJurisdiction.set(key, entries);
+        const targetJurisdiction = dataJurisdictionForLocation(state.targetLocationCode || state.targetLang);
+        const cacheKey = [key, state.currentLoc, targetJurisdiction, state.targetLang].map(value => cleanNodeText(value)).join('|');
+        if (fallbackPrayerDataByJurisdiction.has(cacheKey)) return fallbackPrayerDataByJurisdiction.get(cacheKey);
+        const registry = globalThis.countryPrayerData || {};
+        const modules = [
+            { jurisdiction: 'VA', module: registry.VA },
+            { jurisdiction: key, module: registry[key] },
+            { jurisdiction: targetJurisdiction, module: registry[targetJurisdiction] }
+        ].filter((item, index, values) => item.module && values.findIndex(candidate => candidate.module === item.module) === index);
+        const mergedEntries = new Map();
+        modules.forEach(({ jurisdiction: sourceJurisdiction, module }) => {
+            prayerModuleEntries(module).forEach(entry => {
+                const entryKey = prayerEntryKey(entry);
+                if (!entryKey) return;
+                mergedEntries.set(entryKey, mergeCountryPrayerFallbackEntry(mergedEntries.get(entryKey), entry, sourceJurisdiction));
+            });
+        });
+        const entries = Array.from(mergedEntries.values())
+            .filter(entry => SUPPORTED_LANGS.some(lang => localizedPrayerValueStrict(entry.texts, lang)))
+            .map(entry => {
+                const hasLatinBody = !!localizedPrayerValueStrict(entry.texts, 'LA');
+                const source = Object.assign({}, entry.source || {});
+                if (hasLatinBody) source.LA = 'Universal Latin prayer text · AI translation source';
+                return Object.assign({}, entry, {
+                    source,
+                    __aiPrayerFallback: true,
+                    __aiPrayerFallbackJurisdiction: key,
+                    __aiPrayerFallbackSourceJurisdiction: hasLatinBody
+                        ? 'VA'
+                        : (localizedPrayerValueStrict(entry.texts, state.targetLang) ? targetJurisdiction : key)
+                });
+            });
+        fallbackPrayerDataByJurisdiction.set(cacheKey, entries);
         return entries;
     }
 
@@ -4870,8 +4916,8 @@
         if (!target || localizedPrayerValueStrict(collection, target)) return null;
         const preferred = normalizeSelectableLang(otherLang || '', '');
         const sourceOrder = [
-            preferred,
             entry && entry.__aiPrayerFallback ? 'LA' : '',
+            preferred,
             ...SUPPORTED_LANGS
         ].filter((lang, index, values) => lang && lang !== target && values.indexOf(lang) === index);
         const sourceLang = sourceOrder.find(lang => localizedPrayerValueStrict(collection, lang));
