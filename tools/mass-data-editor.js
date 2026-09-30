@@ -41,22 +41,25 @@ function parseArgs(argv) {
 }
 
 function discoverCountryMassModules() {
-  const indexPath = path.join(root, 'index.html');
-  const indexSource = fs.readFileSync(indexPath, 'utf8');
-  const modules = [];
-  const seen = new Set();
-  const scriptPattern = /JS%20file\/countries\/([^/"?]+)\/([^/"?]+_mass\.js)(?:\?[^"']*)?/gu;
-  for (const match of indexSource.matchAll(scriptPattern)) {
-    const modulePath = path.join(root, 'JS file', 'countries', decodeURIComponent(match[1]), decodeURIComponent(match[2]));
-    const normalized = path.normalize(modulePath).toLowerCase();
-    if (seen.has(normalized)) continue;
-    seen.add(normalized);
+  const countriesRoot = path.join(root, 'JS file', 'countries');
+  const modulePaths = fs.readdirSync(countriesRoot, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .flatMap(entry => fs.readdirSync(path.join(countriesRoot, entry.name), { withFileTypes: true })
+      .filter(file => file.isFile() && file.name.endsWith('_mass.js'))
+      .map(file => path.join(countriesRoot, entry.name, file.name)));
+  const preferredOrder = ['KR','VN','US','JP','VA','IE','GB-ENG','GB-SCT','PH','TW','AU','NZ','IT','PT','MX','DE','BR'];
+  const modules = modulePaths.map(modulePath => {
     const source = fs.readFileSync(modulePath, 'utf8');
     const jurisdictionMatch = source.match(/\bjurisdiction\s*:\s*["']([^"']+)["']/u);
     if (!jurisdictionMatch) throw new Error(`Could not find jurisdiction in ${modulePath}`);
-    modules.push({ jurisdiction: jurisdictionMatch[1], path: modulePath });
-  }
-  if (!modules.length) throw new Error(`No country Mass modules were found in ${indexPath}`);
+    return { jurisdiction: jurisdictionMatch[1], path: modulePath };
+  }).sort((left, right) => {
+    const leftIndex = preferredOrder.indexOf(left.jurisdiction);
+    const rightIndex = preferredOrder.indexOf(right.jurisdiction);
+    return (leftIndex < 0 ? preferredOrder.length : leftIndex) - (rightIndex < 0 ? preferredOrder.length : rightIndex)
+      || left.path.localeCompare(right.path, 'en');
+  });
+  if (!modules.length) throw new Error(`No country Mass modules were found in ${countriesRoot}`);
   return modules;
 }
 

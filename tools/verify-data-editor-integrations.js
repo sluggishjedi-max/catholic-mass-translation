@@ -6,6 +6,7 @@ const vm = require('vm');
 const prayerTool = require('./prayer-data-insert-tool');
 const hymnTool = require('./hymn-data-entry-tool');
 const massTool = require('./mass-data-editor');
+const countryMetadataTool = require('./country-metadata-upload-tool');
 const { buildFirebaseUploadPayload } = require('./firebase-upload-support');
 
 function compileInlineScripts(html, label) {
@@ -201,20 +202,32 @@ function verifyFirebasePayloadCompatibility() {
 async function verifyHomepageFirebaseBridge() {
   const root = path.resolve(__dirname, '..');
   const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const versionedPage = fs.readFileSync(path.join(root, 'V28.html'), 'utf8');
   const loader = fs.readFileSync(path.join(root, 'JS file', 'firebase_data_loader.js'), 'utf8');
-  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v27_7.js'), 'utf8');
+  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v28.js'), 'utf8');
   new vm.Script(loader, { filename: 'firebase_data_loader.js' });
   assert(index.includes('firebase-firestore-compat.js') && index.includes('firebase_data_loader.js'),
     'Homepage must load Firestore and the published-data bridge');
-  assert(index.indexOf('firebase_data_loader.js') < index.indexOf('app_v27_7.js'),
+  assert(index.includes('app_v28.js') && index.indexOf('firebase_data_loader.js') < index.indexOf('app_v28.js'),
     'Published Firebase data must start loading before the app runtime');
-  ['uploadedCountryPrayerData', 'uploadedCountryHymnData', 'uploadedCountryMassData']
+  assert.strictEqual(versionedPage, index, 'V28.html must be the versioned snapshot of index.html');
+  assert(!/countries\/[^/"?]+\/[^/"?]+_mass\.js/u.test(index),
+    'V28 homepage must not load local country Order of Mass modules');
+  ['uploadedCountryPrayerData', 'uploadedCountryHymnData', 'uploadedCountryMassData', 'uploadedCountryMassMetadata']
     .forEach(name => assert(loader.includes(name) && app.includes(name), `Homepage bridge is missing ${name}`));
   assert(app.includes('ordoFirebaseDataReady'), 'App runtime must refresh after Firebase data is ready');
+  assert(app.includes('let massData = [];'), 'V28 must start without bundled Order of Mass data');
+  assert(!app.includes('missaDataApi'), 'V28 must not use the bundled Order of Mass API');
+  assert(!app.includes('window.uploadedCountryMassData || window.countryMassData'),
+    'V28 must not fall back to bundled Order of Mass content');
+  assert(!app.includes('countryMassData'), 'V28 runtime must not read local country Order of Mass modules');
+  assert(app.includes('firebaseDailyReadingUrl') && app.includes('dynamicCalendarByDate'),
+    'V28 must rebuild country URL adapters and dynamic calendars from Firebase metadata');
   const fixtures = {
     prayer_data: [{ order:10, jurisdiction:'US', id:'firebase-prayer', category:'common', titles:{ EN:'Firebase prayer' }, texts:{ EN:'Amen.' } }],
     hymn_data: [{ order:10, jurisdiction:'US', id:'firebase-hymn', country:'EN', title:'Firebase hymn' }],
-    order_of_mass: [{ order:10, jurisdiction:'US', id:'firebase-mass', type:'section', en:'Firebase Mass' }]
+    order_of_mass: [{ order:10, jurisdiction:'US', id:'firebase-mass', type:'section', en:'Firebase Mass' }],
+    country_mass_metadata: [{ order:10, jurisdiction:'US', jurisdictionName:'United States', calendar:{ '01-01':[{ title:'Mary, Mother of God' }] } }]
   };
   const context = {
     console,
@@ -232,10 +245,15 @@ async function verifyHomepageFirebaseBridge() {
   context.globalThis = context;
   vm.runInNewContext(loader, context, { filename: 'firebase_data_loader.js' });
   const status = await context.ordoFirebaseDataReady;
-  assert.deepStrictEqual([status.prayerCount, status.hymnCount, status.massCount], [1, 1, 1]);
+  assert.deepStrictEqual([status.prayerCount, status.hymnCount, status.massCount, status.countryMetadataCount], [1, 1, 1, 1]);
   assert.strictEqual(context.uploadedCountryPrayerData.US.entries[0].id, 'firebase-prayer');
   assert.strictEqual(context.uploadedHymnData[0].id, 'firebase-hymn');
   assert.strictEqual(context.uploadedCountryMassData.US.ordinary[0].id, 'firebase-mass');
+  assert.strictEqual(context.uploadedCountryMassMetadata.US.jurisdictionName, 'United States');
+  const archiveRoot = path.join(root, 'Order of Mass 정리 보관함', 'V27.7 로컬 통상문', 'JS file', 'countries');
+  const archivedMassFiles = fs.readdirSync(archiveRoot, { recursive:true })
+    .filter(name => String(name).endsWith('_mass.js'));
+  assert.strictEqual(archivedMassFiles.length, 17, 'The V27.7 local Order of Mass archive must contain 17 source modules');
 }
 
 async function main() {
@@ -268,6 +286,12 @@ async function main() {
     countryScoped: true,
     toast: true,
     html: ['미사통상문 원문 · 번역문 편집기', '왼쪽 로컬 저장', '오른쪽 로컬 저장', 'Firebase에 업로드']
+  });
+  await verifyServer('country metadata', countryMetadataTool.createServer, {
+    collectionName: 'country_mass_metadata',
+    countryScoped: true,
+    toast: true,
+    html: ['국가별 전례력·메타데이터 업로드', 'Firebase에 수동 업로드', '통상문 본문은 제외']
   });
   console.log('Data editor UI and Firebase integration checks passed.');
 }

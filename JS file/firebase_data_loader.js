@@ -51,13 +51,24 @@
     return registry;
   }
 
+  function metadataByJurisdiction(items) {
+    return items.reduce((registry, item) => {
+      const jurisdiction = String(item && item.jurisdiction || '').trim().toUpperCase();
+      if (!jurisdiction) return registry;
+      const metadata = Object.assign({}, item);
+      delete metadata.jurisdiction;
+      registry[jurisdiction] = Object.assign({ jurisdiction }, metadata);
+      return registry;
+    }, {});
+  }
+
   async function load() {
     if (!global.firebase || !global.firebase.initializeApp || !global.firebase.firestore) {
       throw new Error('Firebase SDK is unavailable.');
     }
     if (!global.firebase.apps.length) global.firebase.initializeApp(firebaseConfig);
     const db = global.firebase.firestore();
-    const names = ['prayer_data', 'hymn_data', 'order_of_mass'];
+    const names = ['prayer_data', 'hymn_data', 'order_of_mass', 'country_mass_metadata'];
     const settled = await Promise.allSettled(names.map(name => readCollection(db, name)));
     const output = {};
     settled.forEach((result, index) => {
@@ -69,6 +80,7 @@
     const prayers = output.prayer_data || [];
     const hymns = output.hymn_data || [];
     const mass = output.order_of_mass || [];
+    const countryMetadata = output.country_mass_metadata || [];
     if (prayers.length) {
       const registry = groupByJurisdiction(prayers, 'entries');
       if (Object.keys(registry).length) global.uploadedCountryPrayerData = registry;
@@ -84,11 +96,15 @@
       if (Object.keys(registry).length) global.uploadedCountryMassData = registry;
       else global.uploadedMassData = mass;
     }
+    if (countryMetadata.length) {
+      global.uploadedCountryMassMetadata = metadataByJurisdiction(countryMetadata);
+    }
 
     const detail = {
       prayerCount: prayers.length,
       hymnCount: hymns.length,
       massCount: mass.length,
+      countryMetadataCount: countryMetadata.length,
       loadedAt: new Date().toISOString()
     };
     global.ordoFirebaseDataStatus = Object.freeze(detail);
@@ -98,6 +114,6 @@
 
   global.ordoFirebaseDataReady = load().catch(error => {
     console.warn('Firebase published data is unavailable; bundled data will be used.', error);
-    return { prayerCount:0, hymnCount:0, massCount:0, error:error.message || String(error) };
+    return { prayerCount:0, hymnCount:0, massCount:0, countryMetadataCount:0, error:error.message || String(error) };
   });
 })(globalThis);
