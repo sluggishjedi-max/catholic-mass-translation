@@ -94,6 +94,17 @@ function runCountryMassSources(sources) {
   return { countries, registry, entries };
 }
 
+function firebaseMassItems() {
+  const runtime = runCountryMassSources(readCountryMassSources());
+  return countryMassModules.flatMap(module => (
+    runtime.countries[module.jurisdiction].ordinary || []
+  ).map((entry, index) => ({
+    ...JSON.parse(JSON.stringify(entry)),
+    jurisdiction: module.jurisdiction,
+    __firebaseDocId: `${module.jurisdiction}__${entry.id || `section_${index}`}`
+  })));
+}
+
 function cleanText(value) {
   return String(value === undefined || value === null ? '' : value)
     .replace(/\r\n?/g, '\n')
@@ -855,11 +866,10 @@ function createServer() {
         return;
       }
       if (req.method === 'GET' && url.pathname === '/api/firebase-export') {
-        const runtime = runCountryMassSources(readCountryMassSources());
         sendJson(res, 200, buildFirebaseUploadPayload({
           collectionName: 'order_of_mass',
           label: '미사통상문',
-          items: runtime.entries,
+          items: firebaseMassItems(),
           idPrefix: 'section'
         }));
         return;
@@ -981,7 +991,8 @@ const INDEX_HTML = String.raw`<!doctype html>
     .secondary { color:#263451; background:#e9edf5; }
     .translate { color:#2349b8; background:var(--blue2); padding:7px 10px; font-size:12px; }
     button:disabled { opacity:.45; cursor:not-allowed; }
-    .status { margin:12px 0; padding:11px 14px; color:var(--muted); font-size:13px; }
+    .status { position:fixed; left:50%; bottom:24px; z-index:1000; width:max-content; max-width:min(620px,calc(100vw - 32px)); margin:0; padding:12px 18px; color:white; background:#263451; border-color:#263451; font-size:13px; font-weight:800; text-align:center; pointer-events:none; opacity:0; visibility:hidden; transform:translate(-50%,18px); transition:opacity .18s ease,transform .18s ease,visibility .18s; }
+    .status.show { opacity:1; visibility:visible; transform:translate(-50%,0); }
     .status.ok { color:var(--green); border-color:#bce4d4; background:#f1fbf7; }
     .status.error { color:#ad2434; border-color:#f0c3c8; background:#fff5f6; }
     .columns-head { display:grid; grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr); gap:12px; margin:16px 0 8px; padding:0 14px; color:#39445c; font-weight:900; }
@@ -1068,11 +1079,11 @@ const INDEX_HTML = String.raw`<!doctype html>
     </section>
   </main>
   <script>
-    const state = { countries:[], blocks:[], visibleBlocks:[], block:null, rowSequence:0, translationSequence:0, translationTimer:null };
+    const state = { countries:[], blocks:[], visibleBlocks:[], block:null, rowSequence:0, translationSequence:0, translationTimer:null, statusTimer:null };
     const el = Object.fromEntries(['left-country','right-country','search','block','reload','firebase-upload','status','rows','add-left','add-right','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
     async function api(url, options) { const response=await fetch(url,options); const body=await response.json(); if(!response.ok||!body.ok) throw new Error(body.error||('HTTP '+response.status)); return body; }
-    function setStatus(message, kind='') { el.status.textContent=message; el.status.className='status '+kind; }
+    function setStatus(message, kind='') { clearTimeout(state.statusTimer); el.status.textContent=message; el.status.className='status show '+kind; state.statusTimer=setTimeout(()=>{ el.status.className='status'; },kind==='error'?6000:3600); }
     function countryLabel(country) { return country.name+' · '+country.languageName+' ('+country.jurisdiction+')'+(country.editable?'':' · 읽기 전용'); }
     function selectedCountry(side) { return state.countries.find(c=>c.jurisdiction===el[side+'Country'].value); }
     function countryOptions(selected) { return state.countries.map(c=>'<option value="'+escapeHtml(c.jurisdiction)+'" '+(c.jurisdiction===selected?'selected':'')+'>'+escapeHtml(countryLabel(c))+'</option>').join(''); }

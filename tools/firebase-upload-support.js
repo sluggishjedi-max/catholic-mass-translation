@@ -71,8 +71,19 @@ const FIREBASE_UPLOAD_CLIENT = String.raw`(function () {
         await batch.commit();
         setStatus('Firebase 업로드 중… ' + Math.min(start + chunk.length, items.length) + ' / ' + items.length);
       }
-      setStatus('Firebase 업로드 완료 · ' + payload.collectionName + ' · ' + items.length + '개', 'ok');
-      return { cancelled: false, uploaded: items.length, collectionName: payload.collectionName };
+      const expectedIds = new Set(items.map(item => item.docId));
+      const snapshot = await db.collection(payload.collectionName).get();
+      const stale = snapshot.docs.filter(doc => !expectedIds.has(doc.id));
+      for (let start = 0; start < stale.length; start += chunkSize) {
+        const chunk = stale.slice(start, start + chunkSize);
+        const batch = db.batch();
+        chunk.forEach(doc => batch.delete(doc.ref));
+        await batch.commit();
+        setStatus('Firebase 이전 데이터 정리 중… ' + Math.min(start + chunk.length, stale.length) + ' / ' + stale.length);
+      }
+      setStatus('Firebase 업로드 완료 · 홈페이지 반영 데이터 ' + items.length + '개' +
+        (stale.length ? ' · 이전 데이터 ' + stale.length + '개 정리' : ''), 'ok');
+      return { cancelled: false, uploaded: items.length, removed: stale.length, collectionName: payload.collectionName };
     } finally {
       if (button) button.disabled = false;
     }
@@ -82,11 +93,13 @@ const FIREBASE_UPLOAD_CLIENT = String.raw`(function () {
 })();`;
 
 function cloneForUpload(value) {
-  return JSON.parse(JSON.stringify(value || {}));
+  const clone = JSON.parse(JSON.stringify(value || {}));
+  delete clone.__firebaseDocId;
+  return clone;
 }
 
 function firebaseDocumentId(item, idPrefix, index) {
-  const raw = item && item.id ? item.id : `${idPrefix}_${index}`;
+  const raw = item && (item.__firebaseDocId || item.id) ? (item.__firebaseDocId || item.id) : `${idPrefix}_${index}`;
   return String(raw).replace(/\//gu, '%2F');
 }
 

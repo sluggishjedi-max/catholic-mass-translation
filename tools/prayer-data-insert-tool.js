@@ -238,6 +238,18 @@ function prayerEditorState(sources = readCountryModuleSources()) {
   return { data: runtime.data, runtime, countries };
 }
 
+function firebasePrayerItems() {
+  const loaded = prayerEditorState();
+  if (!loaded.runtime) return loaded.data.prayers;
+  return loaded.countries.flatMap(country => (
+    loaded.runtime.countries[country.jurisdiction].entries || []
+  ).map(entry => ({
+    ...cloneSerializable(entry),
+    jurisdiction: country.jurisdiction,
+    __firebaseDocId: `${country.jurisdiction}__${entry.id}`
+  })));
+}
+
 function prayerEntryForCountry(loaded, jurisdiction, id) {
   if (!loaded.runtime) return loaded.data.prayers.find(entry => entry.id === id) || null;
   const module = loaded.runtime.countries[jurisdiction];
@@ -1593,11 +1605,10 @@ function createServer() {
       }
 
       if (req.method === 'GET' && url.pathname === '/api/firebase-export') {
-        const data = loadPrayerData();
         jsonResponse(res, 200, buildFirebaseUploadPayload({
           collectionName: 'prayer_data',
           label: '다국어 기도문',
-          items: data.prayers,
+          items: firebasePrayerItems(),
           idPrefix: 'prayer'
         }));
         return;

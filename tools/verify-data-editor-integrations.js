@@ -1,4 +1,6 @@
 const assert = require('assert');
+const fs = require('fs');
+const path = require('path');
 const vm = require('vm');
 
 const prayerTool = require('./prayer-data-insert-tool');
@@ -34,12 +36,18 @@ async function verifyServer(label, createServer, expected) {
     const html = await htmlResponse.text();
     expected.html.forEach(text => assert(html.includes(text), `${label}: missing UI text ${text}`));
     (expected.absent || []).forEach(text => assert(!html.includes(text), `${label}: obsolete UI text or control remains: ${text}`));
+    if (expected.toast) {
+      assert(/position:\s*fixed/u.test(html) && /\.(?:status|toast)\.show/u.test(html),
+        `${label}: bottom popup status styling is missing`);
+    }
     assert(html.includes('/firebase-upload-client.js'), `${label}: Firebase client is not linked`);
     compileInlineScripts(html, label);
 
     const clientResponse = await fetch(`${base}/firebase-upload-client.js`);
     assert.strictEqual(clientResponse.status, 200, `${label}: Firebase client response`);
-    new vm.Script(await clientResponse.text(), { filename: `${label}-firebase-client.js` });
+    const firebaseClient = await clientResponse.text();
+    new vm.Script(firebaseClient, { filename: `${label}-firebase-client.js` });
+    assert(firebaseClient.includes('batch.delete(doc.ref)'), `${label}: Firebase upload must remove stale documents`);
 
     const uploadResponse = await fetch(`${base}/api/firebase-export`);
     assert.strictEqual(uploadResponse.status, 200, `${label}: Firebase export response`);
@@ -48,6 +56,10 @@ async function verifyServer(label, createServer, expected) {
     assert(upload.items.length > 0, `${label}: Firebase export is empty`);
     assert(upload.items.every(item => item.docId && item.data && Number.isFinite(item.data.order)), `${label}: invalid Firebase documents`);
     assert.strictEqual(new Set(upload.items.map(item => item.docId)).size, upload.items.length, `${label}: duplicate Firebase document ids`);
+    if (expected.countryScoped) {
+      assert(upload.items.every(item => item.data.jurisdiction), `${label}: Firebase documents must retain their country jurisdiction`);
+      assert(upload.items.some(item => item.docId.includes('__')), `${label}: country-scoped Firebase document ids are missing`);
+    }
 
     return { html, base };
   } finally {
@@ -114,7 +126,12 @@ function verifyExplicitCountryOwnership() {
   });
   const prepared = prayerTool.prepareCountryModuleSources(data, sources);
   const changed = prepared.filter((source, index) => source.code !== sources[index].code).map(source => source.jurisdiction);
-  assert.deepStrictEqual(changed, ['AU'], 'Explicit country ownership must route a new prayer to Australia');
+  assert(changed.includes('AU'), 'Explicit country ownership must route a new prayer to Australia');
+  const runtime = prayerTool.runCountryModuleSources(prepared);
+  const owners = Object.entries(runtime.countries)
+    .filter(([, module]) => module.entries.some(entry => entry.id === 'codex.country.owner.check'))
+    .map(([jurisdiction]) => jurisdiction);
+  assert.deepStrictEqual(owners, ['AU'], 'The new explicitly owned prayer must exist only in Australia');
 }
 
 function verifyPrayerCategoryEditing() {
@@ -173,15 +190,64 @@ function verifyFirebasePayloadCompatibility() {
   });
   assert.deepStrictEqual(payload.items.map(item => item.docId), ['same', 'item_2']);
   assert.strictEqual(payload.items[0].data.value, 2, 'Later duplicate ids must match the legacy uploader overwrite behavior');
+  const scoped = buildFirebaseUploadPayload({
+    collectionName: 'test', label: '검증', idPrefix: 'item',
+    items: [{ id: 'same', __firebaseDocId: 'US__same', jurisdiction: 'US' }]
+  });
+  assert.strictEqual(scoped.items[0].docId, 'US__same');
+  assert(!('__firebaseDocId' in scoped.items[0].data), 'Internal Firebase document ids must not leak into app data');
+}
+
+async function verifyHomepageFirebaseBridge() {
+  const root = path.resolve(__dirname, '..');
+  const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const loader = fs.readFileSync(path.join(root, 'JS file', 'firebase_data_loader.js'), 'utf8');
+  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v27_7.js'), 'utf8');
+  new vm.Script(loader, { filename: 'firebase_data_loader.js' });
+  assert(index.includes('firebase-firestore-compat.js') && index.includes('firebase_data_loader.js'),
+    'Homepage must load Firestore and the published-data bridge');
+  assert(index.indexOf('firebase_data_loader.js') < index.indexOf('app_v27_7.js'),
+    'Published Firebase data must start loading before the app runtime');
+  ['uploadedCountryPrayerData', 'uploadedCountryHymnData', 'uploadedCountryMassData']
+    .forEach(name => assert(loader.includes(name) && app.includes(name), `Homepage bridge is missing ${name}`));
+  assert(app.includes('ordoFirebaseDataReady'), 'App runtime must refresh after Firebase data is ready');
+  const fixtures = {
+    prayer_data: [{ order:10, jurisdiction:'US', id:'firebase-prayer', category:'common', titles:{ EN:'Firebase prayer' }, texts:{ EN:'Amen.' } }],
+    hymn_data: [{ order:10, jurisdiction:'US', id:'firebase-hymn', country:'EN', title:'Firebase hymn' }],
+    order_of_mass: [{ order:10, jurisdiction:'US', id:'firebase-mass', type:'section', en:'Firebase Mass' }]
+  };
+  const context = {
+    console,
+    Date,
+    CustomEvent: class CustomEvent { constructor(type, options) { this.type = type; this.detail = options.detail; } },
+    dispatchEvent() {},
+    firebase: {
+      apps: [],
+      initializeApp() { this.apps.push({}); },
+      firestore() {
+        return { collection: name => ({ get: async () => ({ docs: (fixtures[name] || []).map(data => ({ data: () => data })) }) }) };
+      }
+    }
+  };
+  context.globalThis = context;
+  vm.runInNewContext(loader, context, { filename: 'firebase_data_loader.js' });
+  const status = await context.ordoFirebaseDataReady;
+  assert.deepStrictEqual([status.prayerCount, status.hymnCount, status.massCount], [1, 1, 1]);
+  assert.strictEqual(context.uploadedCountryPrayerData.US.entries[0].id, 'firebase-prayer');
+  assert.strictEqual(context.uploadedHymnData[0].id, 'firebase-hymn');
+  assert.strictEqual(context.uploadedCountryMassData.US.ordinary[0].id, 'firebase-mass');
 }
 
 async function main() {
   verifyFirebasePayloadCompatibility();
+  await verifyHomepageFirebaseBridge();
   verifyExplicitCountryOwnership();
   verifyPrayerCategoryEditing();
   verifyCountrySpecificSaveRouting();
   await verifyServer('prayer', prayerTool.createServer, {
     collectionName: 'prayer_data',
+    countryScoped: true,
+    toast: true,
     html: [
       '국가별 기도문 편집기', '국가별 기도문 목록', '국가별 본문', '새 국가 추가',
       '새 기도문 추가', '앱 표시 미리보기', '중복 기도문 하나로 합치기',
@@ -193,10 +259,14 @@ async function main() {
   await verifyPrayerCountryUi();
   await verifyServer('hymn', hymnTool.createServer, {
     collectionName: 'hymn_data',
+    countryScoped: true,
+    toast: true,
     html: ['성가 데이터 편집기', '로컬에 저장', 'Firebase에 업로드']
   });
   await verifyServer('mass', massTool.createServer, {
     collectionName: 'order_of_mass',
+    countryScoped: true,
+    toast: true,
     html: ['미사통상문 원문 · 번역문 편집기', '왼쪽 로컬 저장', '오른쪽 로컬 저장', 'Firebase에 업로드']
   });
   console.log('Data editor UI and Firebase integration checks passed.');

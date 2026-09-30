@@ -548,8 +548,9 @@
         if (!isEucharistSongMap(entry.songs)) entry.songs = {};
         if (!lower || !Array.isArray(koreanRows) || koreanRows.length !== EUCHARISTIC_PRAYER_FOUR_ROW_COUNT) return ordinary;
         let rows = entry.forms['4'];
-        if ((locationCode === 'AU' || locationCode === 'NZ') && window.countryMassData) {
-            const englishReference = window.countryMassData['GB-ENG'] || window.countryMassData.US;
+        const activeMassRegistry = window.uploadedCountryMassData || window.countryMassData;
+        if ((locationCode === 'AU' || locationCode === 'NZ') && activeMassRegistry) {
+            const englishReference = activeMassRegistry['GB-ENG'] || activeMassRegistry.US;
             const englishEntry = englishReference && eucharisticPrayerEntry(englishReference.ordinary);
             if (englishEntry) rows = cloneData(englishEntry.forms['4']);
         }
@@ -584,7 +585,10 @@
     }
 
     function getStartupOrdinaryMassData() {
-        const registry = window.countryMassData || {};
+        if (Array.isArray(window.uploadedMassData) && window.uploadedMassData.length) {
+            return cloneData(window.uploadedMassData);
+        }
+        const registry = window.uploadedCountryMassData || window.countryMassData || {};
         const koreanModule = registry.KR;
         const koreanEntry = koreanModule && eucharisticPrayerEntry(koreanModule.ordinary);
         const koreanRows = koreanEntry && koreanEntry.forms['4'];
@@ -868,9 +872,11 @@
     };
 
     function countryMassModuleForJurisdiction(jurisdiction) {
-        const registry = globalThis.countryMassData;
         const key = String(jurisdiction || '').trim().toUpperCase();
-        return registry && typeof registry === 'object' ? registry[key] || null : null;
+        const bundled = globalThis.countryMassData && globalThis.countryMassData[key];
+        const uploaded = globalThis.uploadedCountryMassData && globalThis.uploadedCountryMassData[key];
+        if (!uploaded) return bundled || null;
+        return Object.assign({}, bundled || {}, uploaded, { ordinary: uploaded.ordinary || [] });
     }
 
     function countryMassCalendarAsSaintEntries(jurisdiction) {
@@ -3677,7 +3683,13 @@
     }
 
     function activeCountryAuxModule(registryName) {
-        const registry = globalThis[registryName];
+        const uploadedRegistryName = {
+            countryHymnData: 'uploadedCountryHymnData',
+            countryPrayerData: 'uploadedCountryPrayerData'
+        }[registryName];
+        const registry = uploadedRegistryName && globalThis[uploadedRegistryName]
+            ? globalThis[uploadedRegistryName]
+            : globalThis[registryName];
         if (!registry || typeof registry !== 'object') return null;
         return registry[dataJurisdictionForLocation()] || null;
     }
@@ -4811,7 +4823,7 @@
         const targetJurisdiction = dataJurisdictionForLocation(state.targetLocationCode || state.targetLang);
         const cacheKey = [key, state.currentLoc, targetJurisdiction, state.targetLang].map(value => cleanNodeText(value)).join('|');
         if (fallbackPrayerDataByJurisdiction.has(cacheKey)) return fallbackPrayerDataByJurisdiction.get(cacheKey);
-        const registry = globalThis.countryPrayerData || {};
+        const registry = globalThis.uploadedCountryPrayerData || globalThis.countryPrayerData || {};
         const modules = [
             { jurisdiction: 'VA', module: registry.VA },
             { jurisdiction: key, module: registry[key] },
@@ -4845,6 +4857,12 @@
     }
 
     function getPrayerData() {
+        if (globalThis.uploadedCountryPrayerData) {
+            const uploadedModule = activeCountryAuxModule('countryPrayerData');
+            if (uploadedModule && Array.isArray(uploadedModule.entries) && uploadedModule.entries.length) {
+                return buildCountryPrayerFallbackData(dataJurisdictionForLocation());
+            }
+        }
         if (Array.isArray(window.uploadedPrayerData)) return getUploadedPrayerData();
         const module = activeCountryAuxModule('countryPrayerData');
         if (!module || module.status === 'under-development' || !Array.isArray(module.entries) || !module.entries.length) {
@@ -20903,3 +20921,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     setupLiturgicalDateRolloverWatch();
     fetchMassData();
     simulateGPS();
+    if (window.ordoFirebaseDataReady && typeof window.ordoFirebaseDataReady.then === 'function') {
+        window.ordoFirebaseDataReady.then(status => {
+            if (!status || status.error) return;
+            fallbackPrayerDataByJurisdiction.clear();
+            if (status.hymnCount) renderHymnPanel({ resetCategory: true });
+            if (status.prayerCount) renderPrayerPanel();
+            if (status.massCount && startupNoticeDecision === true) {
+                fetchMassData({ skipStartupPrompts: true });
+            }
+        }).catch(error => console.warn('Firebase published data refresh failed.', error));
+    }

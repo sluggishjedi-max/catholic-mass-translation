@@ -118,6 +118,18 @@ function loadHymnData() {
   return runHymnDataCode(fs.readFileSync(hymnDataPath, 'utf8'));
 }
 
+function firebaseHymnItems() {
+  if (!usesCountryModules) return loadHymnData();
+  const runtime = runCountryModuleSources(readCountryModuleSources());
+  return countryHymnModules.flatMap(module => (
+    runtime.countries[module.jurisdiction].entries || []
+  ).map(entry => ({
+    ...JSON.parse(JSON.stringify(entry)),
+    jurisdiction: module.jurisdiction,
+    __firebaseDocId: `${module.jurisdiction}__${entry.id}`
+  })));
+}
+
 function cleanText(value) {
   return String(value || '')
     .replace(/\r\n?/g, '\n')
@@ -916,7 +928,7 @@ function createServer() {
         sendJson(res, 200, buildFirebaseUploadPayload({
           collectionName: 'hymn_data',
           label: '성가 데이터',
-          items: loadHymnData(),
+          items: firebaseHymnItems(),
           idPrefix: 'hymn'
         }));
         return;
@@ -1092,13 +1104,15 @@ const INDEX_HTML = String.raw`<!doctype html>
     button.primary:hover { background: var(--accent-dark); }
     button.secondary { background: var(--panel); }
     .status {
-      max-width: 55vw;
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
       overflow: hidden;
-      text-overflow: ellipsis;
+      clip: rect(0, 0, 0, 0);
       white-space: nowrap;
-      color: var(--muted);
-      font-size: 0.88rem;
-      font-weight: 800;
+      border: 0;
     }
     .status.ok { color: var(--ok); }
     .status.warn { color: var(--warn); }
@@ -1305,7 +1319,6 @@ const INDEX_HTML = String.raw`<!doctype html>
       main { grid-template-columns: minmax(0, 1fr); padding: 12px; }
       .grid { grid-template-columns: minmax(0, 1fr); }
       .search-row { grid-template-columns: minmax(0, 1fr); }
-      .status { max-width: 100%; white-space: normal; }
       textarea { min-height: 300px; }
     }
   </style>
@@ -1468,6 +1481,7 @@ const INDEX_HTML = String.raw`<!doctype html>
     function setStatus(message, kind) {
       el.status.textContent = message;
       el.status.className = 'status' + (kind ? ' ' + kind : '');
+      showToast(message, kind);
     }
 
     function showToast(message, kind) {
@@ -1476,7 +1490,7 @@ const INDEX_HTML = String.raw`<!doctype html>
       el.toast.className = 'toast show' + (kind ? ' ' + kind : '');
       state.toastTimer = setTimeout(() => {
         el.toast.className = 'toast';
-      }, 2400);
+      }, kind === 'error' ? 6000 : 3600);
     }
 
     async function api(url, options) {

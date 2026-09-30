@@ -50,7 +50,13 @@
     .soft { color:#2349b8; background:var(--blue2); }
     .danger { color:var(--red); background:#fff0f2; }
     button:disabled { opacity:.45; cursor:not-allowed; }
-    .status { margin:12px 0; padding:11px 14px; color:var(--muted); font-size:13px; }
+    .status {
+      position:fixed; left:50%; bottom:24px; z-index:1000; width:max-content; max-width:min(620px,calc(100vw - 32px));
+      margin:0; padding:12px 18px; color:#fff; background:#263451; border-color:#263451;
+      font-size:13px; font-weight:800; text-align:center; pointer-events:none; opacity:0; visibility:hidden;
+      transform:translate(-50%,18px); transition:opacity .18s ease,transform .18s ease,visibility .18s;
+    }
+    .status.show { opacity:1; visibility:visible; transform:translate(-50%,0); }
     .status.ok { color:var(--green); border-color:#bce4d4; background:#f1fbf7; }
     .status.warn { color:var(--amber); border-color:#edd99b; background:#fffbec; }
     .status.error { color:var(--red); border-color:#f0c3c8; background:#fff5f6; }
@@ -301,7 +307,7 @@
     const state = {
       countries: [], languages: [], languageNames: {}, categories: [], categoryLabels: {},
       prayers: [], list: [], mergeList: [], selectedMergeId: '',
-      originalId: '', currentPrayer: null, appliedSearch: ''
+      originalId: '', currentPrayer: null, appliedSearch: '', statusTimer: null
     };
 
     const el = Object.fromEntries([
@@ -328,8 +334,10 @@
     }
 
     function setStatus(message, type) {
+      clearTimeout(state.statusTimer);
       el.status.textContent = message;
-      el.status.className = 'status' + (type ? ' ' + type : '');
+      el.status.className = 'status show' + (type ? ' ' + type : '');
+      state.statusTimer = setTimeout(() => { el.status.className = 'status'; }, type === 'error' ? 6000 : 3600);
     }
 
     function selectedCountry(code) {
