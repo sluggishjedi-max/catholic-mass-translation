@@ -248,6 +248,67 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
           check(pairedJerome[id].variantAlignment.every(group=>Number.isInteger(group.kr)&&Number.isInteger(group.vn)),id+' memorial counterpart was not paired by citation');
         }
         check(state.liturgyInfo.names.KR.includes('예로니모'),'Korean memorial title changed to a weekday');
+        // Exercise the default Hanoi fetch path, not just the KPV adapter.
+        const hanoiParagraphs=[
+          'Ca nhập lễ','Ca nhập lễ thánh Giêrônimô.',
+          'Lời nguyện nhập lễ','Lạy Chúa, xin cho chúng con yêu mến lời Chúa. Chúng con cầu xin...',
+          'Bài Ðọc I: G 9,1-12.14-16','Bài trích sách Gióp.','Bản văn ngày thường từ Hà Nội.','Đó là lời Chúa.',
+          'Đáp ca: Tv 87,10-15','Đáp: Xin Chúa nghe lời con.','Xướng: Con kêu cầu Chúa.',
+          'Alleluia: Pl 3,8-9','Alleluia. Alleluia. Lời Chúa là sự sống. Alleluia.',
+          'Phúc Âm: Lc 9,57-62','Tin Mừng Chúa Giêsu Kitô theo thánh Luca.','Khi ấy, bản văn Tin Mừng ngày thường từ Hà Nội.','Đó là lời Chúa.',
+          'Lời nguyện tiến lễ','Lạy Chúa, xin nhận lễ vật của chúng con. Chúng con cầu xin...',
+          'Ca hiệp lễ','Chúa là nguồn sống của chúng con.',
+          'Lời nguyện hiệp lễ','Lạy Chúa, xin ban bình an cho chúng con. Chúng con cầu xin...'
+        ];
+        const hanoiSource='<html><body><h1>Thánh Giêrônimô, Linh mục, Tiến sĩ Hội Thánh</h1>'+hanoiParagraphs.map(text=>'<p>'+text+'</p>').join('')+'</body></html>';
+        const originalUrls=resolveVietnameseDailyUrls;
+        const originalTextFetcher=fetchTextWithFallbacks;
+        const originalCalendarContext=ensureVietnameseCalendarContext;
+        try {
+          resolveVietnameseDailyUrls=async()=>['https://www.tonggiaophanhanoi.org/ngay-30-9-thanh-gieronimo/'];
+          fetchTextWithFallbacks=async()=>hanoiSource;
+          ensureVietnameseCalendarContext=async()=>null;
+          for(const source of ['hanoi','ktcg']) {
+            state.vnReadingSource=source;
+            const vnFromFetcher=await fetchParsedDailyMass('VN',jeromeDate,{forceRemote:true});
+            const combined={};
+            mergeSourceData(combined,koreanJerome,'KR');mergeSourceData(combined,vnFromFetcher,'VN');
+            resetMassDataFrom(getStartupOrdinaryMassData());finalizeDailyReadingsData(combined);
+            for(const id of ['reading1','gospel']) {
+              const item=massData.find(part=>getBaseId(part.id)===id);
+              const proper=Object.entries(item.variants).find(([,variant])=>variant.__dailyOptionKind==='proper');
+              check(proper&&proper[1].__dailySourceIndexes.kr===1&&Number.isInteger(proper[1].__dailySourceIndexes.vn),source+' '+id+' proper counterpart lost in finalization');
+              state.options[id]=proper[0];
+            }
+            render();
+            check(document.querySelector('section[data-part-id="reading1"]').textContent.includes('Bài đọc riêng của thánh'),source+' proper reading was not rendered');
+            check(document.querySelector('section[data-part-id="gospel"]').textContent.includes('Tin Mừng riêng của thánh'),source+' proper Gospel was not rendered');
+            if(source==='hanoi') {
+              check(vnFromFetcher.data.reading1.text.includes('Bản văn ngày thường từ Hà Nội'),'Hanoi weekday text was replaced despite matching citations');
+              check(vnFromFetcher.data.collect.text.includes('yêu mến lời Chúa'),'KPV readings replaced Hanoi prayers');
+            }
+          }
+          state.vnReadingSource='hanoi';
+          const krCountryCache=dailySourceStorageKey('KR',jeromeDate,'KR');
+          const hanoiCountryCache=dailySourceStorageKey('VN',jeromeDate,'VN');
+          state.currentLoc='VN';state.selectedLocationCode='VN';state.targetLang='KR';state.targetLocationCode='KR';state.vnReadingSource='hanoi';
+          check(dailySourceStorageKey('KR',jeromeDate,'KR')!==krCountryCache,'Korean source cache reused another primary calendar');
+          check(dailySourceStorageKey('VN',jeromeDate,'VN')!==hanoiCountryCache,'Hanoi source cache reused another primary calendar');
+          state.liturgyInfo=buildGeneratedLiturgyInfo(jeromeDate);
+          const beforeHanoi=properPassageRequests;
+          const krForHanoi=await appendKoreanProperReadingOptions(koreanWeekday(),jeromeNote,jeromeDate);
+          const vnHanoi=await fetchParsedDailyMass('VN',jeromeDate);
+          const combined={};mergeSourceData(combined,krForHanoi,'KR');mergeSourceData(combined,vnHanoi,'VN');
+          resetMassDataFrom(getStartupOrdinaryMassData());finalizeDailyReadingsData(combined);render();
+          check(properPassageRequests===beforeHanoi,'Hanoi primary fetched Korean memorial passages');
+          check(state.liturgyInfo.names.KR.includes('연중'),'Hanoi primary did not keep the temporal title');
+          for(const id of ['reading1','gospel']) {
+            check(splitParsedAlternatives(vnHanoi.data[id].lines).length===1,'Hanoi primary kept optional proper readings');
+            check(!document.querySelector('section[data-part-id="'+id+'"]').textContent.includes('riêng của thánh'),'Hanoi primary rendered a memorial alternative');
+          }
+        } finally {
+          resolveVietnameseDailyUrls=originalUrls;fetchTextWithFallbacks=originalTextFetcher;ensureVietnameseCalendarContext=originalCalendarContext;
+        }
         state.currentLoc='VN';state.selectedLocationCode='VN';state.targetLang='KR';state.targetLocationCode='KR';state.vnReadingSource='ktcg';
         state.liturgyInfo=buildGeneratedLiturgyInfo(jeromeDate);
         const requestsBefore=properPassageRequests;
@@ -957,6 +1018,56 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         check((flatCollectElement.textContent.match(new RegExp(vietnameseEnding.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length===1,'Flat collect official conclusion was lost or duplicated');
       } finally { translateWithGemini=originalPrayerTranslator; aiTranslationRecords.clear(); }
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
+      // Standard endings stay together even when a stale AI decision says
+      // their translations differ. They never participate in AI comparison.
+      for(const target of ['EN','VN']) {
+        state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang=target;state.targetLocationCode=target==='EN'?'US':'VN';
+        for(const key of ['collect','prayer_offerings','prayer_after']) {
+          const endingKR=localizedPrayerConclusionFormula('KR',key,'through_son');
+          const endingTarget=localizedPrayerConclusionFormula(target,key,'through_son');
+          const lower=target.toLowerCase();
+          const lines=[{text_kr:'본문',role_kr:'body',['text_'+lower]:'Same prayer body',['role_'+lower]:'body'},
+            {text_kr:endingKR,role_kr:'conclusion'}, {['text_'+lower]:endingTarget,['role_'+lower]:'conclusion'}];
+          ensureLocalizedPrayerConclusions(lines,key);ensureLocalizedPrayerConclusions(lines,key);
+          const endings=lines.filter(line=>lineHasAnyRole(line,'conclusion'));
+          check(endings.length===1&&endings[0].text_kr===endingKR&&endings[0]['text_'+lower]===endingTarget,key+' '+target+' endings were not on one row');
+          writeCachedDailySemanticEquivalence(getActiveLiturgicalSourceDate(),key,endingKR,endingTarget,false);
+          check(sourceChoiceMismatchIndexes(lines,key,{},'kr',lower).length===0,key+' '+target+' ending created source choices');
+          check(!buildSourceChoiceDisplayData({lines},key,'kr',lower),key+' '+target+' same prayer split by endings');
+          resetMassDataFrom(getStartupOrdinaryMassData());
+          const item=massData.find(part=>getBaseId(part.id)===key);item.type='part';delete item.variants;item.lines=lines;
+          check(!collectDailySemanticEquivalenceTasks(getActiveLiturgicalSourceDate()).some(task=>task.baseId===key&&isPrayerConclusionText(task.leftText)),key+' ending sent to semantic AI');
+          render();
+          const section=document.querySelector('section[data-part-id="'+key+'"]');
+          check(!section.querySelector('select.select-inline'),key+' '+target+' rendered source selection for a standard ending');
+          check(!section.querySelector('.prayer-conclusion .btn-ai-trans'),key+' '+target+' ending offered AI');
+        }
+      }
+      const vnIntros=globalThis.bibleLanguageTables.VN.readingIntros;
+      check(Object.keys(vnIntros).length===73,'Vietnamese full intros do not cover all Catholic books');
+      for(const id of Object.keys(globalThis.bibleLanguageTables.VN.books)) {
+        const baseId=['MAT','MRK','LUK','JHN'].includes(id)?'gospel':'reading1';
+        const full=localizedReadingIntroText(baseId,'VN',id);
+        check(full===vnIntros[id]&&/^(Bài trích (sách|thư)|Tin Mừng Chúa)/u.test(full),id+' has no full Vietnamese intro');
+        check(canonicalBookIdFromReadingIntro(full,'VN',baseId)===id,id+' full intro does not identify its book');
+      }
+      check(vnIntros.ISA==='Bài trích sách ngôn sứ I-sai-a.','Isaiah intro wording');
+      check(vnIntros['2TI'].includes('thư thứ hai')&&vnIntros['2TI'].includes('ông Ti-mô-thê'),'Second Timothy intro lost its ordinal or recipient');
+      state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang='VN';state.targetLocationCode='VN';
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({reading1:{cit_kr:'2티모 3,14-17',kr_lines:[parsedLine('','티모테오에게 보낸 둘째 서간의 말씀입니다.','intro'),parsedLine('','번역 없는 독서 본문','body')]},
+        gospel:{cit_kr:'마태 13,47-52',kr_lines:[parsedLine('','마태오가 전한 거룩한 복음입니다.','intro'),parsedLine('','번역 없는 복음 본문','body')]}});
+      for(const stacked of [false,true]) {
+        state.layoutStacked=stacked;render();
+        check(document.querySelector('section[data-part-id="reading1"]').textContent.includes(vnIntros['2TI']),'Source-only reading did not render the full Vietnamese intro');
+        check(document.querySelector('section[data-part-id="gospel"]').textContent.includes(vnIntros.MAT),'Source-only Gospel did not render the full Vietnamese intro');
+      }
+      const abbreviatedIntro=[{text_vn:'Bài trích 2 Tm.',role_vn:'intro'}];
+      ensureLocalizedReadingIntros(abbreviatedIntro,'reading1',{cit_kr:'2티모 3,14-17'});
+      check(abbreviatedIntro[0].text_vn===vnIntros['2TI'],'Abbreviated cached intro was preserved');
+      const wrongOrdinalIntro=[{text_vn:vnIntros['1TI'],role_vn:'intro'}];
+      ensureLocalizedReadingIntros(wrongOrdinalIntro,'reading1',{cit_vn:'2 Tm 3,14-17'});
+      check(wrongOrdinalIntro[0].text_vn===vnIntros['2TI'],'Source intro ordinal contradicted the selected Scripture citation');
       // Chuseok-style source-only readings: the summary is a separate row,
       // followed by the proclamation frame, then the body and its AI button.
       state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang='EN';state.targetLocationCode='US';

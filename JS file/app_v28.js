@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20261001-COUNTRY-MEMORIAL-READINGS';
+    const APP_VERSION = 'V28-20261001-PRAYER-FRAMES-VN-PROPERS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -7463,6 +7463,41 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         parsed.data[key].cit_vn = optionCits.map(item => item.cit_vn).find(Boolean) || parsed.data[key].cit_vn || '';
     }
 
+    function applyKtcgkpvReadingCounterparts(parsed, payload, date, calendarContext) {
+        const choices = ktcgkpvOrderedReadingChoices(payload, date, calendarContext);
+        const supplemental = ktcgkpvDailySectionsFromChoices(choices, [], date);
+        const primaryTemporal = dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) === 'VN'
+            && payload.kpvSelectedVia === 'temporal';
+        ['reading1', 'reading2', 'psalm', 'gospel_accl', 'gospel'].forEach(key => {
+            const section = supplemental[key];
+            if (!section) return;
+            const existing = parsed.data[key];
+            const kinds = section.optionKinds || [];
+            const hasMemorialOptions = kinds.includes('common') && kinds.includes('proper');
+            if (!sourceSectionHasContent(existing)) {
+                parsed.data[key] = section;
+                return;
+            }
+            if (!primaryTemporal && !hasMemorialOptions) return;
+            const existingOptions = splitParsedAlternatives(existing.lines || []);
+            const existingCitations = existing.optionCits || [{ cit_vn: existing.cit_vn || '' }];
+            const options = splitParsedAlternatives(section.lines).map((option, index) => {
+                const citation = section.optionCits[index]?.cit_vn || '';
+                const sourceIndex = existingCitations.findIndex(entry => entry?.cit_vn && citation
+                    && passageCitationsEquivalent(key, entry.cit_vn, citation, 'vn', 'vn'));
+                return sourceIndex >= 0 && existingOptions[sourceIndex]?.length
+                    ? existingOptions[sourceIndex]
+                    : option;
+            });
+            const lines = options.flatMap((option, index) =>
+                (index ? [parsedLine('', 'Hoặc:')] : []).concat(option)
+            );
+            parsed.data[key] = Object.assign({}, section, { lines, text: parsedLinesToText(lines) });
+        });
+        parsed.calendarForm = payload.kpvSelectedVia || parsed.calendarForm;
+        return strictEnsureReadingSummarySlots(parsed, 'VN');
+    }
+
     async function applyKtcgkpvCitationSource(parsed, date) {
         try {
             const [rawData, calendarContext] = await Promise.all([
@@ -7484,6 +7519,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const optionCits = ktcgkpvOptionCitations(entries);
                 applyKtcgkpvCitationToParsed(parsed, key, optionCits, ktcgkpvCitationOptions(entries));
             });
+            // Hanoi supplies the prayers; KPV also supplies memorial passages
+            // absent from Hanoi's weekday article. Keep Hanoi's matching text
+            // and add the missing counterparts by canonical citation.
+            applyKtcgkpvReadingCounterparts(parsed, data, date, calendarContext);
         } catch (error) {
             console.warn('KPV mass-reading citation source failed; keeping existing VN citations.', error);
         }
@@ -9853,7 +9892,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict91';
+    const STRICT_PARSER_CACHE_VERSION = 'strict92';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10101,6 +10140,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const selector = getStrictMassSelector(date);
         return [
             STRICT_PARSER_CACHE_VERSION,
+            `calendar-${dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc || 'INTL')}`,
             activeKoreanLocalLectionaryProperKey(date) ? `kr-proper-${calendarDateKey(date)}` : '',
             selector.slot || 'day',
             selector.specialVigil || '',
@@ -13177,8 +13217,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     async function appendKoreanProperReadingOptions(parsed, source, date = getActiveLiturgicalSourceDate()) {
         if (!parsed || !parsed.data) return parsed;
         const pairs = koreanProperReadingReferencePairs(source);
-        if (pairs.length && dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) === 'VN'
-            && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg') {
+        if (pairs.length && dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) === 'VN') {
             // The Vietnamese primary Mass decides whether a foreign optional
             // memorial passage is relevant. Avoid even fetching it for a feria.
             try {
@@ -13488,7 +13527,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function dailySourceStorageKey(lang, date, locationCode = dailySourceLocationCode(lang)) {
         const vietnameseSource = normalizeVietnameseReadingSource(state.vnReadingSource);
         const sourceVariant = lang === 'VN'
-            ? `:${vietnameseSource}${vietnameseSource === 'ktcg' ? `:${vietnameseKpvSelectionContext(date)}` : ''}`
+            ? `:${vietnameseSource}:${vietnameseKpvSelectionContext(date)}`
             : (['EN', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         return `${STORAGE_PREFIX}dailySource:${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
     }
@@ -13587,7 +13626,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         const vietnameseSource = normalizeVietnameseReadingSource(state.vnReadingSource);
         const sourceVariant = lang === 'VN'
-            ? `:${vietnameseSource}${vietnameseSource === 'ktcg' ? `:${vietnameseKpvSelectionContext(date)}` : ''}`
+            ? `:${vietnameseSource}:${vietnameseKpvSelectionContext(date)}`
             : (['EN', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         const key = `${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
         if (options.forceRemote) delete dailySourceCache[key];
@@ -13750,6 +13789,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const lang = normalizeSelectableLang(langCode, '');
         const templateSet = readingIntroDefaultTemplates[lang];
         if (!templateSet) return '';
+        if (lang === 'VN') {
+            return globalThis.bibleLanguageTables?.VN?.readingIntros?.[bookId] || '';
+        }
         if (baseId === 'gospel') {
             const gospel = localizedGospelNames[bookId] && localizedGospelNames[bookId][lang];
             if (!gospel) return '';
@@ -13799,6 +13841,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const raw = cleanNodeText(text);
         if (!raw) return '';
         if (lang === 'VN') {
+            const normalized = normalizedReadingIntroLookup(raw);
+            const intros = globalThis.bibleLanguageTables?.VN?.readingIntros || {};
+            const full = Object.entries(intros).find(([, intro]) =>
+                normalized.includes(normalizedReadingIntroLookup(intro))
+            );
+            if (full) return full[0];
             const special = vietnameseIntroBookPatterns.find(([pattern]) => pattern.test(raw));
             if (special) return special[1];
         }
@@ -13856,9 +13904,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         SUPPORTED_LANGS.forEach(lang => {
             const lower = lang.toLowerCase();
             const existing = lines.find(line => line && line[`role_${lower}`] === 'intro' && cleanNodeText(line[`text_${lower}`]));
-            if (existing) return;
             const text = localizedReadingIntroText(baseId, lang, bookId);
             if (!text) return;
+            if (existing) {
+                // Old derived/cached frames used citation abbreviations such
+                // as “Bài trích 2 Tm.”, which are not proclamation formulas.
+                const abbreviated = lang === 'VN' && /^Bài\s+trích\s+[^.]+[.]?$/iu.test(cleanNodeText(existing.text_vn))
+                    && !/^Bài\s+trích\s+(?:sách|thư|thơ)\b/iu.test(cleanNodeText(existing.text_vn));
+                const sourceBook = canonicalBookIdFromReadingIntro(existing[`text_${lower}`], lang, baseId);
+                if (existing[`intro_origin_${lower}`] === 'derived' || abbreviated || (sourceBook && sourceBook !== bookId)) {
+                    existing[`text_${lower}`] = text;
+                    existing[`text_${lower}_ai`] = '';
+                }
+                return;
+            }
             introLine[`sp_${lower}`] = baseId === 'gospel'
                 ? (gospelSpeakerByLang[lower] || celebrantSpeakerByLang[lower] || '')
                 : (lectorSpeakerByLang[lower] || '');
@@ -14368,23 +14427,35 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!reference) reference = inferredPrayerConclusionReference(targetLines, baseId, preferred);
         if (!reference) return;
 
-        lowers.forEach(lower => {
-            const existing = prayerConclusionForLanguage(targetLines, lower, baseId);
-            if (existing) {
-                existing.line[`text_${lower}_ai`] = '';
-                existing.line[`role_${lower}`] = 'conclusion';
-                return;
-            }
+        const endings = Object.fromEntries(lowers.map(lower => [lower,
+            prayerConclusionForLanguage(targetLines, lower, baseId)?.ending || ''
+        ]));
+        const touched = new Set();
+        targetLines.forEach(line => lowers.forEach(lower => {
+            const text = cleanNodeText(line && line[`text_${lower}`]);
+            if (!text) return;
             const lang = langCodeFromLowerKey(lower);
-            const formula = localizedPrayerConclusionFormula(lang, baseId, reference.style);
-            if (!formula) return;
-            let conclusionLine = reference.line && !lineHasLanguageContent(reference.line, lower)
-                ? reference.line
-                : targetLines.find(line => lineHasAnyRole(line, 'conclusion') && !lineHasLanguageContent(line, lower));
-            if (!conclusionLine) {
-                conclusionLine = emptyMassLine();
-                targetLines.splice(parsedInsertIndex(targetLines, baseId), 0, conclusionLine);
+            const ending = prayerConclusionEndingForText(lang, baseId, text);
+            if (!ending) return;
+            const expanded = strictExpandPrayerEnding(lang, baseId, text);
+            const body = expanded.slice(0, expanded.length - ending.length).trim();
+            clearParsedLineLanguage(line, lower);
+            if (body) {
+                line[`text_${lower}`] = body;
+                line[`role_${lower}`] = 'body';
             }
+            touched.add(line);
+        }));
+        for (let index = targetLines.length - 1; index >= 0; index -= 1) {
+            const line = targetLines[index];
+            if (touched.has(line) && !lowers.some(lower => lineHasLanguageContent(line, lower))) targetLines.splice(index, 1);
+        }
+        const conclusionLine = emptyMassLine();
+        targetLines.splice(parsedInsertIndex(targetLines, baseId), 0, conclusionLine);
+        lowers.forEach(lower => {
+            const lang = langCodeFromLowerKey(lower);
+            const formula = endings[lower] || localizedPrayerConclusionFormula(lang, baseId, reference.style);
+            if (!formula) return;
             conclusionLine[`sp_${lower}`] = '';
             conclusionLine[`text_${lower}`] = formula;
             conclusionLine[`text_${lower}_ai`] = '';
@@ -15367,7 +15438,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         SUPPORTED_LANGS.map(lang => lang.toLowerCase()).forEach(lower => {
             const structured = newData && newData[`${lower}_lines`];
             if (!Array.isArray(structured) || !structured.length) return;
-            const options = dedupeParsedAlternatives(baseId, splitParsedAlternatives(structured))
+            const normalized = normalizePrayerParsedLinesBeforeApply(lower, baseId, structured);
+            const options = dedupeParsedAlternatives(baseId, splitParsedAlternatives(normalized))
                 .filter(option => Array.isArray(option) && option.length);
             if (!options.length) return;
             optionMap[lower] = options;
@@ -15396,6 +15468,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function variantOptionMeaningText(baseId, optionLines) {
         let parts = (optionLines || [])
+            .filter(line => !strictPrayerKeys.has(baseId) || (line?.role !== 'conclusion'
+                && !isPrayerOpenerText(line?.text) && !isPrayerAmenText(line?.text)
+                && !isPrayerConclusionText(line?.text)))
             .map(line => cleanNodeText([line && line.rubric, line && line.text].filter(Boolean).join(' ')))
             .filter(Boolean);
         if (baseId === 'gospel_accl') {
@@ -16300,6 +16375,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function localSemanticEquivalent(baseId, leftText, rightText) {
+        if (strictPrayerKeys.has(baseId) && isPrayerConclusionText(leftText) && isPrayerConclusionText(rightText)) return true;
         if (baseId === 'prayer_after'
             && isPrayerAfterConclusionLine(leftText)
             && isPrayerAfterConclusionLine(rightText)) {
@@ -16381,7 +16457,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             lineSets.forEach(lines => {
                 (lines || []).forEach(line => {
-                    if (!line || isPrayerFrameLine(line) || lineHasAnyRubric(line)) return;
+                    if (!line || isPrayerFrameLine(line) || lineHasAnyRubric(line)
+                        || (strictPrayerKeys.has(baseId) && lineHasAnyRole(line, 'conclusion'))) return;
                     for (let i = 0; i < lowers.length; i += 1) {
                         for (let j = i + 1; j < lowers.length; j += 1) {
                             const leftLower = lowers[i];
@@ -16831,7 +16908,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         lowerLangs.forEach(lower => {
             const structured = newData[`${lower}_lines`];
             if (!Array.isArray(structured) || !structured.length) return;
-            let options = dedupeParsedAlternatives(baseId, splitParsedAlternatives(structured));
+            const normalized = normalizePrayerParsedLinesBeforeApply(lower, baseId, structured);
+            let options = dedupeParsedAlternatives(baseId, splitParsedAlternatives(normalized));
             if (baseId === 'gospel') options = options.map(option => normalizeGospelAlternativeOption(option, lower));
             optionMap[lower] = options;
             maxOptions = Math.max(maxOptions, options.length);
@@ -20445,7 +20523,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function sourceChoiceMismatchIndexes(lines, baseId, data, leftKey, rightKey) {
         if (!sourceChoiceVariantPartIds.has(baseId) || !Array.isArray(lines) || leftKey === rightKey) return [];
         return lines.reduce((indexes, line, index) => {
-            if (!line || isPrayerFrameLine(line) || lineHasAnyRubric(line)) return indexes;
+            if (!line || isPrayerFrameLine(line) || lineHasAnyRubric(line)
+                || (strictPrayerKeys.has(baseId) && lineHasAnyRole(line, 'conclusion'))) return indexes;
             const leftText = cleanNodeText(line[`text_${leftKey}`]);
             const rightText = cleanNodeText(line[`text_${rightKey}`]);
             if (!leftText || !rightText) return indexes;
