@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Preserve the project's existing access for the public app and local editors.
+    match /{document=**} {
+      allow read, create, update: if true;
+    }
+
+    // Each editor replaces its collection, including removing obsolete entries.
+    match /{collection}/{document} {
+      allow delete: if collection in [
+        'prayer_data',
+        'hymn_data',
+        'order_of_mass',
+        'country_mass_metadata'
+      ];
+    }
+  }
+}

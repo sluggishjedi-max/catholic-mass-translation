@@ -7,7 +7,7 @@ const prayerTool = require('./prayer-data-insert-tool');
 const hymnTool = require('./hymn-data-entry-tool');
 const massTool = require('./mass-data-editor');
 const countryMetadataTool = require('./country-metadata-upload-tool');
-const { buildFirebaseUploadPayload } = require('./firebase-upload-support');
+const { buildFirebaseUploadPayload, FIREBASE_UPLOAD_CLIENT } = require('./firebase-upload-support');
 
 function compileInlineScripts(html, label) {
   const scripts = Array.from(html.matchAll(/<script(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/giu));
@@ -86,10 +86,9 @@ async function verifyPrayerCountryUi() {
       .slice()
       .sort(prayerTool.comparePrayerIds);
     assert.deepStrictEqual(list.prayers.map(prayer => prayer.id), sortedIds, 'Prayer list must use natural id order');
-    const signOfCross = list.prayers.findIndex(prayer => prayer.id === '001.sign_of_cross');
-    const doubleSignOfCross = list.prayers.findIndex(prayer => prayer.id === '001-1.sign_of_cross_double');
-    const lordsPrayer = list.prayers.findIndex(prayer => prayer.id === '002.lords_prayer');
-    assert(signOfCross < doubleSignOfCross && doubleSignOfCross < lordsPrayer, 'Base and sub-number prayer ids are out of order');
+    // Merging prayers can remove a former sample id from the editable data.
+    assert.deepStrictEqual(['002.lords_prayer', '001-1.sign_of_cross_double', '001.sign_of_cross'].sort(prayerTool.comparePrayerIds),
+      ['001.sign_of_cross', '001-1.sign_of_cross_double', '002.lords_prayer'], 'Base and sub-number prayer ids are out of order');
     const sharedPrayer = list.prayers.find(prayer => prayer.id === '001.sign_of_cross');
     assert(sharedPrayer.jurisdictions.includes('KR'), 'Prayer country tags must include the selected country');
     assert(sharedPrayer.jurisdictions.length > 1, 'Shared prayers must expose every owning country tag');
@@ -182,6 +181,78 @@ function verifyCountrySpecificSaveRouting() {
   assert.strictEqual(remainingAu.texts.EN, 'AU country-specific body', 'Deleting the US body must preserve the AU variant');
 }
 
+function uploadClientContext(db, payload) {
+  const context = {
+    document: {
+      scripts:[],
+      createElement:() => ({ dataset:{}, addEventListener(event, callback) { this[event] = callback; } }),
+      head:{ appendChild:script => { context.document.scripts.push(script); queueMicrotask(() => script.load()); } }
+    },
+    confirm:() => true,
+    fetch:async () => ({ ok:true, json:async () => payload }),
+    firebase:{ apps:[], initializeApp() { this.apps.push({}); }, firestore:() => db }
+  };
+  context.window = context;
+  vm.createContext(context);
+  vm.runInContext(FIREBASE_UPLOAD_CLIENT, context);
+  return context;
+}
+
+async function verifyFirebaseCollectionReplacement() {
+  for (const collectionName of ['prayer_data', 'hymn_data', 'order_of_mass', 'country_mass_metadata']) {
+    const payload = buildFirebaseUploadPayload({ collectionName, label:'검증', idPrefix:'item',
+      items:Array.from({ length:401 }, (_, index) => ({ id:`current-${index}`, value:index })) });
+    const documents = new Map(Array.from({ length:401 }, (_, index) => [`stale-${index}`, { value:'old' }]));
+    documents.set('current-0', { value:'old', previousField:true });
+    const commits = [];
+    let allowDelete = collectionName !== 'prayer_data';
+    const db = {
+      collection:name => {
+        assert.strictEqual(name, collectionName, 'Uploader selected the wrong collection');
+        return { doc:id => ({ id }), get:async () => ({ docs:Array.from(documents.keys(), id => ({ id, ref:{ id } })) }) };
+      },
+      batch:() => {
+        const writes = [];
+        return {
+          set:(ref, data) => writes.push({ ref, data }),
+          delete:ref => writes.push({ ref, delete:true }),
+          commit:async () => {
+            assert(writes.length <= 500, 'Firestore batch limit exceeded');
+            if (!allowDelete && writes.some(write => write.delete)) {
+              throw Object.assign(new Error('Missing or insufficient permissions.'), { code:'permission-denied' });
+            }
+            writes.forEach(write => {
+              if (write.delete) documents.delete(write.ref.id);
+              else documents.set(write.ref.id, JSON.parse(JSON.stringify(write.data)));
+            });
+            commits.push(writes);
+          }
+        };
+      }
+    };
+    const context = uploadClientContext(db, payload);
+    const button = { disabled:false };
+    if (!allowDelete) {
+      await assert.rejects(context.ordoFirebaseUploader.upload({ button }), { code:'permission-denied' });
+      assert.strictEqual(documents.size, 802, 'Denied cleanup must retain stale documents after successful writes');
+      assert.strictEqual(button.disabled, false, 'Failed upload must re-enable the button');
+      allowDelete = true;
+      commits.length = 0;
+    }
+    const statuses = [];
+    const result = await context.ordoFirebaseUploader.upload({ button, setStatus:(text, type) => statuses.push({ text, type }) });
+    assert.strictEqual(result.uploaded, 401);
+    assert.strictEqual(result.removed, 401);
+    assert.strictEqual(documents.size, 401, 'Collection must contain exactly the uploaded entries');
+    assert(!documents.has('stale-0'), 'Obsolete entries were not removed');
+    assert(!('previousField' in documents.get('current-0')), 'Existing entries must be replaced');
+    assert.strictEqual(commits.length, 4, 'Both upload and cleanup must handle multiple batches');
+    assert.strictEqual(statuses.at(-1).type, 'ok');
+    assert.strictEqual(button.disabled, false);
+    assert.strictEqual((await context.ordoFirebaseUploader.upload()).removed, 0, 'Repeating an upload must not remove active entries');
+  }
+}
+
 function verifyFirebasePayloadCompatibility() {
   const payload = buildFirebaseUploadPayload({
     collectionName: 'test',
@@ -258,6 +329,7 @@ async function verifyHomepageFirebaseBridge() {
 
 async function main() {
   verifyFirebasePayloadCompatibility();
+  await verifyFirebaseCollectionReplacement();
   await verifyHomepageFirebaseBridge();
   verifyExplicitCountryOwnership();
   verifyPrayerCategoryEditing();
