@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20260930-FIREBASE-ORDER-OF-MASS';
+    const APP_VERSION = 'V28-20261001-COUNTRY-MEMORIAL-READINGS';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -6542,7 +6542,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ].join('\n');
     }
 
-    async function fetchKtcgkpvMassReadingJson(date) {
+    const kpvMassReadingRequests = new Map();
+
+    function fetchKtcgkpvMassReadingJson(date) {
+        const key = `${formatDateIso(date)}:${currentVietnameseKpvProfile()}`;
+        if (!kpvMassReadingRequests.has(key)) {
+            kpvMassReadingRequests.set(key, requestKtcgkpvMassReadingJson(date).catch(error => {
+                kpvMassReadingRequests.delete(key);
+                throw error;
+            }));
+        }
+        return kpvMassReadingRequests.get(key);
+    }
+
+    async function requestKtcgkpvMassReadingJson(date) {
         const body = ktcgkpvFormBody(date);
         const cacheDate = formatDateIso(date);
         const endpoint = `${KTCG_PROXY_ENDPOINT}${KTCG_PROXY_ENDPOINT.includes('?') ? '&' : '?'}date=${encodeURIComponent(cacheDate)}&profile=${encodeURIComponent(body.profile)}`;
@@ -6686,8 +6699,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (payload && Array.isArray(payload.mass_reading)) return payload;
         const selected = selectKpvMassCandidate(payload, date);
         const choice = kpvMassCandidateAsLegacyChoice(selected, date);
+        const candidates = [payload && payload.primary].concat(payload && payload.alternatives || []).filter(Boolean);
+        const info = buildGeneratedLiturgyInfo(date);
+        const includeWeekday = dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) !== 'VN'
+            && selected && selected.via === 'celebration'
+            && info.meta && info.meta.rank === 'memorial'
+            && getSeasonMeta(date).season === 'ordinary' && date.getDay() !== 0;
+        const temporal = includeWeekday ? candidates.find(mass => mass.via === 'temporal') : null;
         return {
-            mass_reading: choice ? [choice] : [],
+            mass_reading: choice ? [choice].concat(temporal ? [kpvMassCandidateAsLegacyChoice(temporal, date)] : []) : [],
+            // Prayers and antiphons belong to the selected formulary even when
+            // a memorial permits the seasonal weekday readings as alternatives.
+            liturgy_reading: choice ? [choice] : [],
             kpvProfile: payload && payload.profile || currentVietnameseKpvProfile(),
             kpvSelectedVia: selected && selected.via || '',
             kpvSelectedCelebrationCode: selected && selected.celebrationCode || ''
@@ -6783,6 +6806,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function ktcgkpvOrderedLiturgyChoices(data, date = null, calendarContext = null) {
+        if (data && Array.isArray(data.liturgy_reading)) return data.liturgy_reading;
         const choices = data && Array.isArray(data.mass_reading)
             ? data.mass_reading.filter(choice => choice && ktcgkpvChoiceMatchesRequestedDate(choice, date))
             : [];
@@ -7083,6 +7107,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             kpvProfile: payload.kpvProfile,
             kpvSelectedVia: payload.kpvSelectedVia,
             kpvSelectedCelebrationCode: payload.kpvSelectedCelebrationCode,
+            calendarForm: payload.kpvSelectedVia,
             data
         };
         return strictEnsureReadingSummarySlots(parsed, 'VN');
@@ -8905,6 +8930,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
         const lower = lang.toLowerCase();
+        const isPrimarySource = lang === normalizeSelectableLang(state.currentLoc, '');
+        const currentRank = state.liturgyInfo.meta && state.liturgyInfo.meta.rank;
+        if (isPrimarySource && parsed.calendarForm === 'temporal' && !state.liturgyInfo.isSolemnity
+            && (!currentRank || ['memorial', 'optional'].includes(currentRank))) {
+            const date = getActiveLiturgicalSourceDate();
+            const meta = getSeasonMeta(date);
+            const names = Object.fromEntries(SUPPORTED_LANGS.map(code => [code,
+                formatSeasonalName(code, meta.season, meta.week, meta.day, meta.sundayCycle)
+            ]));
+            names[lang] = parsed.title || names[lang];
+            state.liturgyInfo = ensureDefaultPrefaceHint({
+                names, krName: names.KR, vnName: names.VN,
+                meta, color: meta.color, dateStr: state.liturgyInfo.dateStr,
+                isSunday: date.getDay() === 0, isSolemnity: false
+            }, date);
+        }
         const officialLocalProperSections = new Set(
             parsed.officialLocalProper && Array.isArray(parsed.officialLocalProper.sectionKeys)
                 ? parsed.officialLocalProper.sectionKeys
@@ -8941,6 +8982,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return;
             }
             if (!target[key]) target[key] = {};
+            if (isPrimarySource && parsed.calendarForm) target[key].__primaryCalendarForm = parsed.calendarForm;
             if (typeof value === 'object' && value !== null) {
                 if (value.text) target[key][lower] = value.text;
                 if (Array.isArray(value.lines) && value.lines.length) target[key][`${lower}_lines`] = value.lines;
@@ -9811,7 +9853,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
     const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict90';
+    const STRICT_PARSER_CACHE_VERSION = 'strict91';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -12959,7 +13001,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const koreanBibleChapterPromiseCache = new Map();
 
     function koreanProperReadingReferencePairs(source) {
-        const text = sourceTextLines(source).join('\n');
+        const text = strictSourceLines(source).join('\n');
         const pattern = /(?:기념일\s*)?(?:고유\s*)?독서\s*\(\s*([^)]+?)\s*\)\s*와\s*(?:기념일\s*)?(?:고유\s*)?복음\s*\(\s*([^)]+?)\s*\)/gu;
         const seen = new Set();
         return Array.from(text.matchAll(pattern)).reduce((pairs, match) => {
@@ -13132,9 +13174,21 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return section;
     }
 
-    async function appendKoreanProperReadingOptions(parsed, source) {
+    async function appendKoreanProperReadingOptions(parsed, source, date = getActiveLiturgicalSourceDate()) {
         if (!parsed || !parsed.data) return parsed;
         const pairs = koreanProperReadingReferencePairs(source);
+        if (pairs.length && dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) === 'VN'
+            && normalizeVietnameseReadingSource(state.vnReadingSource) === 'ktcg') {
+            // The Vietnamese primary Mass decides whether a foreign optional
+            // memorial passage is relevant. Avoid even fetching it for a feria.
+            try {
+                const payload = await fetchKtcgkpvMassReadingJson(date);
+                if (payload.primary && payload.primary.via === 'temporal') return parsed;
+            } catch (error) {
+                console.warn('Primary Mass form unavailable; keeping the Korean weekday readings.', error);
+                return parsed;
+            }
+        }
         for (const pair of pairs) {
             try {
                 const [reading, gospel] = await Promise.all([
@@ -13301,7 +13355,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!Object.keys(parsed.data || {}).length && lang === 'EN') {
             return strictEnsureReadingSummarySlots(parseEnglishDailyMass(source, date), lang);
         }
-        if (lang === 'KR') parsed = await appendKoreanProperReadingOptions(parsed, source);
+        if (lang === 'KR') parsed = await appendKoreanProperReadingOptions(parsed, source, date);
         if (lang === 'EN') {
             const module = activeCountryMassModule(locationCode);
             const properSource = module && module.dailyPropers;
@@ -14160,7 +14214,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
     }
 
+    function normalizeDailyReadingFrameOrder(targetLines, baseId) {
+        if (!strictReadingKeys.has(baseId) || !Array.isArray(targetLines)) return;
+        const order = line => {
+            if (isDailyEndingLine(line)) return 6;
+            if (lineHasAnyRole(line, 'summary')) return 1;
+            if (baseId === 'gospel' && isGospelDialogueLine(line)) {
+                return /주님\s*영광\s*받으소서/u.test(cleanNodeText(line.text_kr)) ? 4 : 2;
+            }
+            if (lineHasAnyRole(line, 'intro')) return 3;
+            if (lineHasAnyRole(line, 'body')) return 5;
+            return 0;
+        };
+        targetLines.sort((a, b) => order(a) - order(b));
+    }
+
     function normalizeDailySectionLines(targetLines, baseId) {
+        normalizeDailyReadingFrameOrder(targetLines, baseId);
         const lowers = SUPPORTED_LANGS.map(lang => lang.toLowerCase());
         const readingEndingPatterns = {
             kr: /주님의\s*말씀입니다/,
@@ -16056,7 +16126,48 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         };
     }
 
+    function scopeSupplementalReadingOptionsToPrimary(fetchedData) {
+        const primary = currentLeftRightLowerKeys().left;
+        ['reading1', 'reading2', 'psalm', 'gospel_accl', 'gospel'].forEach(baseId => {
+            const section = fetchedData && fetchedData[baseId];
+            if (!section || !Array.isArray(section[`${primary}_lines`])) return;
+            const primaryOptions = splitParsedAlternatives(section[`${primary}_lines`]).filter(option => option.length);
+            const primaryKinds = section[`optionKinds_${primary}`] || [];
+            if (section.__primaryCalendarForm !== 'temporal'
+                && !(primaryKinds.includes('common') && primaryKinds.includes('proper'))) return;
+            const primaryCitations = primaryOptions.map((_, index) => strictReadingOptionCitation(section, primary, index));
+            if (!primaryCitations.some(citation => globalThis.bibleCitation.parse(citation, primary))) return;
+            SUPPORTED_LANGS.map(lang => lang.toLowerCase()).filter(lower => lower !== primary).forEach(lower => {
+                const kinds = section[`optionKinds_${lower}`];
+                const lines = section[`${lower}_lines`];
+                if (!Array.isArray(kinds) || !kinds.includes('common') || !Array.isArray(lines)) return;
+                const options = splitParsedAlternatives(lines).filter(option => option.length);
+                const kept = options.map((_, index) => index).filter(index => {
+                    if (kinds[index] !== 'proper') return true;
+                    const citation = strictReadingOptionCitation(section, lower, index);
+                    if (!globalThis.bibleCitation.parse(citation, lower)) return true;
+                    return primaryCitations.some(primaryCitation =>
+                        passageCitationsEquivalent(baseId, citation, primaryCitation, lower, primary)
+                    );
+                });
+                if (kept.length === options.length) return;
+                const scopedLines = kept.flatMap((index, order) =>
+                    (order ? [parsedLine('', '또는:')] : []).concat(options[index])
+                );
+                section[`${lower}_lines`] = scopedLines;
+                section[lower] = parsedLinesToText(scopedLines);
+                ['optionCits', 'optionLabels', 'optionKinds'].forEach(field => {
+                    const values = section[`${field}_${lower}`];
+                    if (Array.isArray(values)) section[`${field}_${lower}`] = kept.map(index => values[index]);
+                });
+                section[`cit_${lower}`] = section[`optionCits_${lower}`]?.[0]?.[`cit_${lower}`] || '';
+                delete section.variantAlignment;
+            });
+        });
+    }
+
     function applyCachedVariantAlignments(fetchedData, date) {
+        scopeSupplementalReadingOptionsToPrimary(fetchedData);
         dailyVariantAlignmentSectionIds.forEach(baseId => {
             const section = fetchedData && fetchedData[baseId];
             if (!section) return;
@@ -17160,6 +17271,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         if (loadId !== activeMassDataLoadId) return;
         if (options.forceRemote) clearDailyAnalysisCachesForRefresh(today);
+        if (options.forceRemote) kpvMassReadingRequests.clear();
         state.options.eucharist_song = '';
         state.autoEucharistSongKey = '';
 
@@ -18840,6 +18952,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         // language. Keep that distinction in the stored data, but offer an
         // on-demand translation in the empty display column.
         if (line && line.__sourceChoiceOriginal && sourceChoiceLanguageIsEmpty(line, lower)) return false;
+        if (baseId === 'psalm' || isEucharistPrefaceLine(line, baseId)) return false;
         // Korean and English daily-Mass columns must contain authorized source
         // text only. The Korea-only Lenten acclamation remains the explicit
         // exception requested for on-demand AI translation.
@@ -19282,7 +19395,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const sourceBodyIndexes = (lines || []).reduce((indexes, line, index) => {
             const text = cleanNodeText(line && line[`text_${sourceLower}`]);
             if (text
-                && line[`role_${sourceLower}`] !== 'intro'
+                && !['summary', 'intro'].includes(line[`role_${sourceLower}`])
                 && !isProtectedParsedTargetLineForLanguage(line, baseId)
                 && !isLiturgicalPlaceholderText(text)) indexes.push(index);
             return indexes;
@@ -20524,6 +20637,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
             const sourceChoiceData = buildSourceChoiceDisplayData(data, baseId, leftL.toLowerCase(), rightL.toLowerCase());
             if (sourceChoiceData) Object.assign(data, sourceChoiceData);
+            // Source-only prayer choices still share the authorized conclusion
+            // formula. Supply it after clearing the opposite display language.
+            if (strictPrayerKeys.has(baseId)) ensureLocalizedPrayerConclusions(data.lines, baseId);
             if (baseId === 'gospel_accl') fillGospelAcclamationAlleluiaLines(data.lines);
 
             const partContainer = document.createElement('section');

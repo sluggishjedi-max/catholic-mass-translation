@@ -199,6 +199,96 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
       check(selectKpvMassCandidate({primary:kpvSaintMass,alternatives:[kpvTemporalMass]},foreignOrdinaryDate)===kpvTemporalMass,'Vietnamese saint proper replaced a foreign ordinary weekday');
       check(selectKpvMassCandidate({primary:kpvSaintMass,alternatives:[]},foreignOrdinaryDate)===null,'Unmatched Vietnamese saint proper was exposed outside Vietnam');
       check(selectKpvMassCandidate({primary:kpvTemporalMass,alternatives:[kpvSaintMass]},koreanMartyrsSelectionDate)===null,'Different Vietnamese saint proper was used for a foreign local celebration');
+      // A country may keep weekday readings inside a memorial, while KPV
+      // publishes the temporal and memorial formularies as separate Masses.
+      const jeromeDate=new Date(2026,8,30,12);
+      const jeromeTemporal=JSON.parse(JSON.stringify(kpvTemporalMass));
+      jeromeTemporal.setCode='ot-w26-wednesday-ii';
+      jeromeTemporal.templates[0].units[1].options[0].contents['reading/1']=kpvMockContent('job','G 9,1-12.14-16','Bài đọc ngày thường');
+      jeromeTemporal.templates[0].units[2].options[0].contents['gospel/1']=kpvMockContent('luke','Lc 9,57-62','Tin Mừng ngày thường');
+      const jeromeProper=JSON.parse(JSON.stringify(kpvSaintMass));
+      jeromeProper.celebration.name='Thánh Giê‑rô‑ni‑mô, linh mục, tiến sĩ Hội Thánh';
+      jeromeProper.celebrationCode='st-jerome';
+      jeromeProper.templates[0].units[0].options[0].contents['entrance_antiphon/1']=kpvMockContent('proper-entrance','Gs 1,8','Ca nhập lễ thánh Giêrônimô');
+      jeromeProper.templates[0].units[1].options[0].contents['reading/1']=kpvMockContent('timothy','2 Tm 3,14-17','Bài đọc riêng của thánh');
+      jeromeProper.templates[0].units[2].options[0].contents['gospel/1']=kpvMockContent('matthew','Mt 13,47-52','Tin Mừng riêng của thánh');
+      const jeromePayload={primary:jeromeTemporal,alternatives:[jeromeProper]};
+      const jeromeNote='<html><body><p>매일미사</p><div><div>&lt;또는, 기념일 독서(2티모 3,14-17)와 복음(마태 13,47-52)을 봉독할 수 있다.&gt;</div></div></body></html>';
+      check(koreanProperReadingReferencePairs(jeromeNote).length===1,'Nested Korean memorial reading note was missed');
+      const originalSourceDate=getActiveLiturgicalSourceDate;
+      const originalProperFetcher=fetchKoreanProperPassageSection;
+      const originalKpvFetcher=fetchKtcgkpvMassReadingJson;
+      const originalJeromeInfo=state.liturgyInfo;
+      const originalVnSource=state.vnReadingSource;
+      let properPassageRequests=0;
+      try {
+        getActiveLiturgicalSourceDate=()=>jeromeDate;
+        fetchKtcgkpvMassReadingJson=async()=>jeromePayload;
+        fetchKoreanProperPassageSection=async(citation,isGospel)=>{
+          properPassageRequests++;
+          return {cit_kr:citation,lines:[parsedLine('',isGospel?'예로니모 고유 복음 본문':'예로니모 고유 독서 본문','body')]};
+        };
+        const koreanWeekday=()=>({title:'성 예로니모 사제 학자 기념일',data:{
+          reading1:{cit_kr:'욥 9,1-12.14-16',lines:[parsedLine('','한국 평일 독서 본문','body')]},
+          gospel:{cit_kr:'루카 9,57-62',lines:[parsedLine('','한국 평일 복음 본문','body')]}
+        }});
+        state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang='VN';state.targetLocationCode='VN';
+        state.liturgyInfo=buildGeneratedLiturgyInfo(jeromeDate);
+        const koreanJerome=await appendKoreanProperReadingOptions(koreanWeekday(),jeromeNote,jeromeDate);
+        const koreanKpv=normalizeKpvMassReadingPayload(jeromePayload,jeromeDate);
+        const koreanKpvChoices=ktcgkpvOrderedReadingChoices(koreanKpv,jeromeDate);
+        check(koreanKpvChoices.length===2&&koreanKpvChoices[0].kpvVia==='temporal','Korean memorial lost its default weekday KPV readings');
+        const vietnameseJerome=ktcgkpvDailySectionsFromChoices(koreanKpvChoices,ktcgkpvOrderedLiturgyChoices(koreanKpv,jeromeDate),jeromeDate);
+        check(vietnameseJerome.entrance.text.includes('thánh Giêrônimô')&&!vietnameseJerome.entrance.text.includes('ngày thường'),'Korean memorial mixed temporal antiphons into its proper formulary');
+        const pairedJerome={};
+        mergeSourceData(pairedJerome,koreanJerome,'KR');mergeSourceData(pairedJerome,{data:vietnameseJerome},'VN');
+        applyCachedVariantAlignments(pairedJerome,jeromeDate);
+        for(const id of ['reading1','gospel']) {
+          check(pairedJerome[id].variantAlignment.length===2,id+' memorial did not keep weekday/proper choices');
+          check(pairedJerome[id].variantAlignment.every(group=>Number.isInteger(group.kr)&&Number.isInteger(group.vn)),id+' memorial counterpart was not paired by citation');
+        }
+        check(state.liturgyInfo.names.KR.includes('예로니모'),'Korean memorial title changed to a weekday');
+        state.currentLoc='VN';state.selectedLocationCode='VN';state.targetLang='KR';state.targetLocationCode='KR';state.vnReadingSource='ktcg';
+        state.liturgyInfo=buildGeneratedLiturgyInfo(jeromeDate);
+        const requestsBefore=properPassageRequests;
+        const koreanForVietnam=await appendKoreanProperReadingOptions(koreanWeekday(),jeromeNote,jeromeDate);
+        check(properPassageRequests===requestsBefore,'Vietnam temporal Mass fetched optional Korean memorial passages');
+        check(!koreanForVietnam.data.reading1.optionKinds,'Vietnam temporal Mass appended Korean memorial options');
+        const vietnamKpv=normalizeKpvMassReadingPayload(jeromePayload,jeromeDate);
+        const vietnamData=ktcgkpvDailySectionsFromChoices(vietnamKpv.mass_reading,vietnamKpv.liturgy_reading,jeromeDate);
+        const vietnamPaired={};
+        mergeSourceData(vietnamPaired,{title:kpvMassCandidateTitle(jeromeTemporal,jeromeDate),calendarForm:'temporal',data:vietnamData},'VN');
+        // Also cover old cached Korean alternatives and every future source
+        // using the same common/proper option metadata.
+        mergeSourceData(vietnamPaired,koreanJerome,'KR');
+        applyCachedVariantAlignments(vietnamPaired,jeromeDate);
+        for(const id of ['reading1','gospel']) {
+          check(splitParsedAlternatives(vietnamPaired[id].kr_lines).length===1,id+' cached Korean proper leaked into Vietnam feria');
+          check(!vietnamPaired[id].variantAlignment||vietnamPaired[id].variantAlignment.length===1,id+' Vietnam weekday split into memorial alternatives');
+        }
+        check(state.liturgyInfo.names.KR.includes('연중')&&!state.liturgyInfo.names.KR.includes('예로니모'),'Vietnam feria kept the Korean memorial title');
+        check(state.liturgyInfo.names.VN.includes('Thường niên'),'Vietnam feria lost its source title');
+        for(const other of ['en','jp']) {
+          const sharedScope={reading1:{__primaryCalendarForm:'temporal',vn_lines:[parsedLine('','Weekday','body')],cit_vn:'G 9,1-12.14-16',
+            [other+'_lines']:[parsedLine('','Weekday translation','body'),parsedLine('','또는:'),parsedLine('','Memorial alternative','body')],
+            ['optionCits_'+other]:[{['cit_'+other]:other==='en'?'Job 9:1-12,14-16':'ヨブ 9,1-12.14-16'},{['cit_'+other]:other==='en'?'2 Timothy 3:14-17':'テモ二 3,14-17'}],
+            ['optionKinds_'+other]:['common','proper']}};
+          scopeSupplementalReadingOptionsToPrimary(sharedScope);
+          check(splitParsedAlternatives(sharedScope.reading1[other+'_lines']).length===1,other+' optional memorial bypassed the shared country rule');
+        }
+        const feastNames={...state.liturgyInfo.names,KR:'주님 성탄 대축일'};
+        state.liturgyInfo={...state.liturgyInfo,names:feastNames,isSolemnity:true,meta:{special:true,rank:'solemnity'}};
+        mergeSourceData({}, {title:'Lễ Giáng Sinh',calendarForm:'temporal',data:vietnamData},'VN');
+        check(state.liturgyInfo.names.KR==='주님 성탄 대축일','Temporal provider classification erased a higher-rank celebration');
+        const celebrationPayload={primary:jeromeProper,alternatives:[jeromeTemporal]};
+        fetchKtcgkpvMassReadingJson=async()=>celebrationPayload;
+        await appendKoreanProperReadingOptions(koreanWeekday(),jeromeNote,jeromeDate);
+        check(properPassageRequests>requestsBefore,'Vietnam celebration could not use matching Korean proper readings');
+      } finally {
+        getActiveLiturgicalSourceDate=originalSourceDate;fetchKoreanProperPassageSection=originalProperFetcher;fetchKtcgkpvMassReadingJson=originalKpvFetcher;
+        state.liturgyInfo=originalJeromeInfo;state.vnReadingSource=originalVnSource;
+        state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang='VN';state.targetLocationCode='VN';
+      }
       const originalFetch=window.fetch;
       let kpvRequestUrl='';
       window.fetch=async url=>{kpvRequestUrl=String(url);return new Response(JSON.stringify({success:true,data:kpvPayload}),{status:200,headers:{'Content-Type':'application/json'}});};
@@ -867,6 +957,64 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         check((flatCollectElement.textContent.match(new RegExp(vietnameseEnding.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g'))||[]).length===1,'Flat collect official conclusion was lost or duplicated');
       } finally { translateWithGemini=originalPrayerTranslator; aiTranslationRecords.clear(); }
       check(strictExpandPrayerEnding('DE','collect','Gebet. Darum bitten wir durch Jesus Christus.').includes('Heiligen Geistes'),'DE abbreviated conclusion');
+      // Chuseok-style source-only readings: the summary is a separate row,
+      // followed by the proclamation frame, then the body and its AI button.
+      state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang='EN';state.targetLocationCode='US';
+      const frameBodies={reading1:'한가위 독서 본문입니다.',gospel:'한가위 복음 본문입니다.'};
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({
+        reading1:{cit_kr:'요엘 2,21-24.26-27',kr_lines:[parsedLine('','한가위 독서 요약','summary'),parsedLine('▥','요엘 예언서의 말씀입니다.','intro'),parsedLine('',frameBodies.reading1,'body')]},
+        gospel:{cit_kr:'루카 12,15-21',kr_lines:[parsedLine('','한가위 복음 요약','summary'),parsedLine('✠','루카가 전한 거룩한 복음입니다.','intro'),parsedLine('',frameBodies.gospel,'body')]},
+        psalm:{cit_kr:'시편 67(66),2.4.5.7',kr_lines:[parsedLine('◎','하느님, 모든 민족들이 당신을 찬송하게 하소서.'),parsedLine('○','하느님은 저희에게 자비를 베푸시고 복을 내리소서.') ]}
+      });
+      for(const stacked of [false,true]) {
+        state.layoutStacked=stacked;render();
+        for(const id of ['reading1','gospel']) {
+          const element=document.querySelector('section[data-part-id="'+id+'"]');
+          const text=element.textContent;
+          const intro=id==='reading1'?'요엘 예언서의 말씀입니다.':'루카가 전한 거룩한 복음입니다.';
+          check(text.indexOf(intro)<text.indexOf(frameBodies[id]),id+' intro appeared below its body');
+          if(id==='gospel') check(text.indexOf('주님께서 여러분과 함께')<text.indexOf(frameBodies[id]),'Gospel greeting appeared below its body');
+          if(!stacked) {
+            const bodyRow=element.querySelector('.source-only-reading-body-row');
+            check(bodyRow&&!bodyRow.textContent.includes('요약'),'Reading summary was merged into the body row before the intro');
+          }
+        }
+        check(document.querySelectorAll('section[data-part-id="psalm"] .btn-ai-trans').length===2,'Chuseok KR-EN Psalm lost response/verse AI buttons');
+      }
+      state.layoutStacked=false;render();
+      const psalmTranslator=translateWithGemini;
+      try {
+        translateWithGemini=async(text,lang)=>{
+          check(lang==='EN'&&text.includes('모든 민족'),'Psalm AI used the wrong source or language');
+          return 'Let all the peoples praise you, O God.';
+        };
+        document.querySelector('section[data-part-id="psalm"] .btn-ai-trans').click();
+        await new Promise(resolve=>setTimeout(resolve,0));
+        const psalmElement=document.querySelector('section[data-part-id="psalm"]');
+        check(psalmElement.querySelector('.ai-badge')&&psalmElement.textContent.includes('Let all the peoples'),'Psalm AI result missing');
+        check(psalmElement.textContent.includes('모든 민족들이'),'Psalm AI replaced the original');
+      } finally {translateWithGemini=psalmTranslator;aiTranslationRecords.clear();}
+      // The same preface rendering path permits an AI counterpart regardless
+      // of which country's language supplied the proper (including EN/KR).
+      for(const lang of SUPPORTED_LANGS) {
+        const opposite=lang==='EN'?'KR':'EN';
+        state.currentLoc=lang;state.targetLang=opposite;
+        const prefaceLine=markEucharistLines([{['text_'+lang.toLowerCase()]:'Local proper preface '+lang}], 'preface')[0];
+        check(genLineHTML(prefaceLine,opposite,'eucharist').includes('btn-ai-trans'),lang+' national preface has no opposite-language AI');
+        check(!genLineHTML(prefaceLine,lang,'eucharist').includes('btn-ai-trans'),lang+' national preface original was replaced by AI');
+      }
+      state.currentLoc='KR';state.selectedLocationCode='KR';state.targetLang='EN';state.targetLocationCode='US';
+      const exactCollectEnding='성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.';
+      const exactCollectBody='주님, 저희에게 풍성한 은총을 내려 주소서.';
+      resetMassDataFrom(getStartupOrdinaryMassData());
+      applyDailyReadingsToMassData({collect:{kr_lines:[parsedLine('',exactCollectBody+' '+exactCollectEnding,'body')]}});
+      render();
+      const exactCollectElement=document.querySelector('section[data-part-id="collect"]');
+      const officialEnglishEnding=localizedPrayerConclusionFormula('EN','collect','through_son');
+      check(exactCollectElement.textContent.includes(officialEnglishEnding),'Quoted Korean collect ending did not use its local English formula');
+      check(!exactCollectElement.querySelector('.prayer-conclusion .btn-ai-trans'),'Official collect conclusion offered AI translation');
+      check(aiFallbackSourceText(exactCollectBody+' '+exactCollectEnding,'kr','collect')===exactCollectBody,'Quoted collect conclusion was sent for AI translation');
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
