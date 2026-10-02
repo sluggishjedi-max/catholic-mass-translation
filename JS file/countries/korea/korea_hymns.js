@@ -9,6 +9,8 @@
     status: "available",
     entries: [{
       "id": "kr-catholic-001",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=1","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-001"],
       "country": "KR",
       "language": "KR",
       "number": "001",
@@ -138,6 +140,8 @@
       }]
     }, {
       "id": "kr-catholic-002",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=2"},
+      "mergedIds": ["kr-hymn-002"],
       "country": "KR",
       "language": "KR",
       "number": "002",
@@ -240,6 +244,8 @@
       "voiceType": "4성부"
     }, {
       "id": "kr-catholic-003",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=3","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-003"],
       "country": "KR",
       "language": "KR",
       "number": "003",
@@ -319,6 +325,8 @@
       }]
     }, {
       "id": "kr-catholic-004",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=4","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-004"],
       "country": "KR",
       "language": "KR",
       "number": "004",
@@ -390,6 +398,8 @@
       "voiceType": "4성부"
     }, {
       "id": "kr-catholic-005",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=5","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-005"],
       "country": "KR",
       "language": "KR",
       "number": "005",
@@ -482,6 +492,8 @@
       }]
     }, {
       "id": "kr-catholic-006",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=6","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-006"],
       "country": "KR",
       "language": "KR",
       "number": "006",
@@ -540,6 +552,8 @@
       }]
     }, {
       "id": "kr-catholic-007",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=7","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-007"],
       "country": "KR",
       "language": "KR",
       "number": "007",
@@ -645,6 +659,8 @@
       }]
     }, {
       "id": "kr-catholic-008",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=8"},
+      "mergedIds": ["kr-hymn-008"],
       "country": "KR",
       "language": "KR",
       "number": "008",
@@ -721,6 +737,8 @@
       }]
     }, {
       "id": "kr-catholic-009",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=9","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-009"],
       "country": "KR",
       "language": "KR",
       "number": "009",
@@ -779,6 +797,8 @@
       }]
     }, {
       "id": "kr-catholic-010",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=10","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-010"],
       "country": "KR",
       "language": "KR",
       "number": "010",
@@ -867,6 +887,8 @@
       }]
     }, {
       "id": "kr-catholic-011",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=11","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-011"],
       "country": "KR",
       "language": "KR",
       "number": "011",
@@ -948,6 +970,8 @@
       }]
     }, {
       "id": "kr-catholic-012",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=12","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-012"],
       "country": "KR",
       "language": "KR",
       "number": "012",
@@ -1055,6 +1079,8 @@
       }]
     }, {
       "id": "kr-catholic-013",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=13","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-013"],
       "country": "KR",
       "language": "KR",
       "number": "013",
@@ -1152,6 +1178,8 @@
       }]
     }, {
       "id": "kr-catholic-014",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=14","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-014"],
       "country": "KR",
       "language": "KR",
       "number": "014",
@@ -1231,6 +1259,8 @@
       }]
     }, {
       "id": "kr-catholic-015",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=15","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-015"],
       "country": "KR",
       "language": "KR",
       "number": "015",
@@ -1313,6 +1343,8 @@
       }]
     }, {
       "id": "kr-catholic-016",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=16"},
+      "mergedIds": ["kr-hymn-016"],
       "country": "KR",
       "language": "KR",
       "number": "016",
@@ -1401,6 +1433,8 @@
       }]
     }, {
       "id": "kr-catholic-017",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=17","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-017"],
       "country": "KR",
       "language": "KR",
       "number": "017",
@@ -1483,6 +1517,8 @@
       }]
     }, {
       "id": "kr-catholic-018",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=18"},
+      "mergedIds": ["kr-hymn-018"],
       "country": "KR",
       "language": "KR",
       "number": "018",
@@ -1562,6 +1598,8 @@
       }]
     }, {
       "id": "kr-catholic-019",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=19","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-019"],
       "country": "KR",
       "language": "KR",
       "number": "019",
@@ -1623,6 +1661,8 @@
       }]
     }, {
       "id": "kr-catholic-020",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=20","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-020"],
       "country": "KR",
       "language": "KR",
       "number": "020",
@@ -1693,6 +1733,8 @@
       }]
     }, {
       "id": "kr-catholic-021",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=21","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-021"],
       "country": "KR",
       "language": "KR",
       "number": "021",
@@ -1760,6 +1802,8 @@
       }]
     }, {
       "id": "kr-catholic-022",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=22","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-022"],
       "country": "KR",
       "language": "KR",
       "number": "022",
@@ -1833,6 +1877,8 @@
       }]
     }, {
       "id": "kr-catholic-023",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=23","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-023"],
       "country": "KR",
       "language": "KR",
       "number": "023",
@@ -1924,6 +1970,8 @@
       }]
     }, {
       "id": "kr-catholic-024",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=24","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-024"],
       "country": "KR",
       "language": "KR",
       "number": "024",
@@ -2006,6 +2054,8 @@
       }]
     }, {
       "id": "kr-catholic-025",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=25","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-025"],
       "country": "KR",
       "language": "KR",
       "number": "025",
@@ -2079,6 +2129,8 @@
       }]
     }, {
       "id": "kr-catholic-026",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=26"},
+      "mergedIds": ["kr-hymn-026"],
       "country": "KR",
       "language": "KR",
       "number": "026",
@@ -2152,6 +2204,8 @@
       }]
     }, {
       "id": "kr-catholic-027",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=27"},
+      "mergedIds": ["kr-hymn-027"],
       "country": "KR",
       "language": "KR",
       "number": "027",
@@ -2208,6 +2262,8 @@
       }]
     }, {
       "id": "kr-catholic-028",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=28","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-028"],
       "country": "KR",
       "language": "KR",
       "number": "028",
@@ -2264,6 +2320,8 @@
       }]
     }, {
       "id": "kr-catholic-029",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=29","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-029"],
       "country": "KR",
       "language": "KR",
       "number": "029",
@@ -2329,6 +2387,8 @@
       }]
     }, {
       "id": "kr-catholic-030",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=30","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-030"],
       "country": "KR",
       "language": "KR",
       "number": "030",
@@ -2403,6 +2463,8 @@
       }]
     }, {
       "id": "kr-catholic-031",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=31","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-031"],
       "country": "KR",
       "language": "KR",
       "number": "031",
@@ -2459,6 +2521,8 @@
       }]
     }, {
       "id": "kr-catholic-032",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=32"},
+      "mergedIds": ["kr-hymn-032"],
       "country": "KR",
       "language": "KR",
       "number": "032",
@@ -2536,6 +2600,8 @@
       }]
     }, {
       "id": "kr-catholic-033",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=33"},
+      "mergedIds": ["kr-hymn-033"],
       "country": "KR",
       "language": "KR",
       "number": "033",
@@ -2601,6 +2667,8 @@
       }]
     }, {
       "id": "kr-catholic-034",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=34"},
+      "mergedIds": ["kr-hymn-034"],
       "country": "KR",
       "language": "KR",
       "number": "034",
@@ -2675,6 +2743,8 @@
       }]
     }, {
       "id": "kr-catholic-035",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=35","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-035"],
       "country": "KR",
       "language": "KR",
       "number": "035",
@@ -2758,6 +2828,8 @@
       }]
     }, {
       "id": "kr-catholic-036",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=36","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-036"],
       "country": "KR",
       "language": "KR",
       "number": "036",
@@ -2854,6 +2926,8 @@
       }]
     }, {
       "id": "kr-catholic-037",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=37"},
+      "mergedIds": ["kr-hymn-037"],
       "country": "KR",
       "language": "KR",
       "number": "037",
@@ -2931,6 +3005,8 @@
       }]
     }, {
       "id": "kr-catholic-038",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=38","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-038"],
       "country": "KR",
       "language": "KR",
       "number": "038",
@@ -3050,6 +3126,8 @@
       }]
     }, {
       "id": "kr-catholic-039",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=39","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-039"],
       "country": "KR",
       "language": "KR",
       "number": "039",
@@ -3115,6 +3193,8 @@
       }]
     }, {
       "id": "kr-catholic-040",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=40","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-040"],
       "country": "KR",
       "language": "KR",
       "number": "040",
@@ -3156,6 +3236,8 @@
       }]
     }, {
       "id": "kr-catholic-041",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=41","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-041"],
       "country": "KR",
       "language": "KR",
       "number": "041",
@@ -3230,6 +3312,8 @@
       }]
     }, {
       "id": "kr-catholic-042",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=42","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-042"],
       "country": "KR",
       "language": "KR",
       "number": "042",
@@ -3298,6 +3382,8 @@
       }]
     }, {
       "id": "kr-catholic-043",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=43","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-043"],
       "country": "KR",
       "language": "KR",
       "number": "043",
@@ -3363,6 +3449,8 @@
       }]
     }, {
       "id": "kr-catholic-044",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=44","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-044"],
       "country": "KR",
       "language": "KR",
       "number": "044",
@@ -3437,6 +3525,8 @@
       }]
     }, {
       "id": "kr-catholic-045",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=45","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-045"],
       "country": "KR",
       "language": "KR",
       "number": "045",
@@ -3493,6 +3583,8 @@
       }]
     }, {
       "id": "kr-catholic-046",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=46","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-046"],
       "country": "KR",
       "language": "KR",
       "number": "046",
@@ -3567,6 +3659,8 @@
       }]
     }, {
       "id": "kr-catholic-047",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=47","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-047"],
       "country": "KR",
       "language": "KR",
       "number": "047",
@@ -3623,6 +3717,8 @@
       }]
     }, {
       "id": "kr-catholic-048",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=48","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-048"],
       "country": "KR",
       "language": "KR",
       "number": "048",
@@ -3697,6 +3793,8 @@
       }]
     }, {
       "id": "kr-catholic-049",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=49","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-049"],
       "country": "KR",
       "language": "KR",
       "number": "049",
@@ -3753,6 +3851,8 @@
       }]
     }, {
       "id": "kr-catholic-050",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=50","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-050"],
       "country": "KR",
       "language": "KR",
       "number": "050",
@@ -3845,6 +3945,8 @@
       }]
     }, {
       "id": "kr-catholic-051",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=51"},
+      "mergedIds": ["kr-hymn-051"],
       "country": "KR",
       "language": "KR",
       "number": "051",
@@ -3928,6 +4030,8 @@
       }]
     }, {
       "id": "kr-catholic-052",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=52"},
+      "mergedIds": ["kr-hymn-052"],
       "country": "KR",
       "language": "KR",
       "number": "052",
@@ -4020,6 +4124,8 @@
       }]
     }, {
       "id": "kr-catholic-053",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=53","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-053"],
       "country": "KR",
       "language": "KR",
       "number": "053",
@@ -4097,6 +4203,8 @@
       }]
     }, {
       "id": "kr-catholic-054",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=54"},
+      "mergedIds": ["kr-hymn-054"],
       "country": "KR",
       "language": "KR",
       "number": "054",
@@ -4162,6 +4270,8 @@
       }]
     }, {
       "id": "kr-catholic-055",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=55","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-055"],
       "country": "KR",
       "language": "KR",
       "number": "055",
@@ -4245,6 +4355,8 @@
       }]
     }, {
       "id": "kr-catholic-056",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=56"},
+      "mergedIds": ["kr-hymn-056"],
       "country": "KR",
       "language": "KR",
       "number": "056",
@@ -4310,6 +4422,8 @@
       }]
     }, {
       "id": "kr-catholic-057",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=57"},
+      "mergedIds": ["kr-hymn-057"],
       "country": "KR",
       "language": "KR",
       "number": "057",
@@ -4378,6 +4492,8 @@
       }]
     }, {
       "id": "kr-catholic-058",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=58","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-058"],
       "country": "KR",
       "language": "KR",
       "number": "058",
@@ -4446,6 +4562,8 @@
       }]
     }, {
       "id": "kr-catholic-059",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=59","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-059"],
       "country": "KR",
       "language": "KR",
       "number": "059",
@@ -4511,6 +4629,8 @@
       }]
     }, {
       "id": "kr-catholic-060",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=60","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-060"],
       "country": "KR",
       "language": "KR",
       "number": "060",
@@ -4576,6 +4696,8 @@
       }]
     }, {
       "id": "kr-catholic-061",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=61","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-061"],
       "country": "KR",
       "language": "KR",
       "number": "061",
@@ -4644,6 +4766,8 @@
       }]
     }, {
       "id": "kr-catholic-062",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=62","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-062"],
       "country": "KR",
       "language": "KR",
       "number": "062",
@@ -4718,6 +4842,8 @@
       }]
     }, {
       "id": "kr-catholic-063",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=63","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-063"],
       "country": "KR",
       "language": "KR",
       "number": "063",
@@ -4777,6 +4903,8 @@
       }]
     }, {
       "id": "kr-catholic-064",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=64","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-064"],
       "country": "KR",
       "language": "KR",
       "number": "064",
@@ -4842,6 +4970,8 @@
       }]
     }, {
       "id": "kr-catholic-065",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=65"},
+      "mergedIds": ["kr-hymn-065"],
       "country": "KR",
       "language": "KR",
       "number": "065",
@@ -4907,6 +5037,8 @@
       }]
     }, {
       "id": "kr-catholic-066",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=66"},
+      "mergedIds": ["kr-hymn-066"],
       "country": "KR",
       "language": "KR",
       "number": "066",
@@ -4963,6 +5095,8 @@
       }]
     }, {
       "id": "kr-catholic-067",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=67","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-067"],
       "country": "KR",
       "language": "KR",
       "number": "067",
@@ -5004,6 +5138,8 @@
       }]
     }, {
       "id": "kr-catholic-068",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=68","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-068"],
       "country": "KR",
       "language": "KR",
       "number": "068",
@@ -5078,6 +5214,8 @@
       }]
     }, {
       "id": "kr-catholic-069",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=69","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-069"],
       "country": "KR",
       "language": "KR",
       "number": "069",
@@ -5161,6 +5299,8 @@
       }]
     }, {
       "id": "kr-catholic-070",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=70","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-070"],
       "country": "KR",
       "language": "KR",
       "number": "070",
@@ -5247,6 +5387,8 @@
       }]
     }, {
       "id": "kr-catholic-071",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=71","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-071"],
       "country": "KR",
       "language": "KR",
       "number": "071",
@@ -5324,6 +5466,8 @@
       }]
     }, {
       "id": "kr-catholic-072",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=72"},
+      "mergedIds": ["kr-hymn-072"],
       "country": "KR",
       "language": "KR",
       "number": "072",
@@ -5389,6 +5533,8 @@
       }]
     }, {
       "id": "kr-catholic-073",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=73","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-073"],
       "country": "KR",
       "language": "KR",
       "number": "073",
@@ -5463,6 +5609,8 @@
       }]
     }, {
       "id": "kr-catholic-074",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=74","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-074"],
       "country": "KR",
       "language": "KR",
       "number": "074",
@@ -5540,6 +5688,8 @@
       }]
     }, {
       "id": "kr-catholic-075",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=75","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-075"],
       "country": "KR",
       "language": "KR",
       "number": "075",
@@ -5605,6 +5755,8 @@
       }]
     }, {
       "id": "kr-catholic-076",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=76","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-076"],
       "country": "KR",
       "language": "KR",
       "number": "076",
@@ -5661,6 +5813,8 @@
       }]
     }, {
       "id": "kr-catholic-077",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=77","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-077"],
       "country": "KR",
       "language": "KR",
       "number": "077",
@@ -5744,6 +5898,8 @@
       }]
     }, {
       "id": "kr-catholic-078",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=78","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-078"],
       "country": "KR",
       "language": "KR",
       "number": "078",
@@ -5827,6 +5983,8 @@
       }]
     }, {
       "id": "kr-catholic-079",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=79"},
+      "mergedIds": ["kr-hymn-079"],
       "country": "KR",
       "language": "KR",
       "number": "079",
@@ -5904,6 +6062,8 @@
       }]
     }, {
       "id": "kr-catholic-080",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=80","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-080"],
       "country": "KR",
       "language": "KR",
       "number": "080",
@@ -5969,6 +6129,8 @@
       }]
     }, {
       "id": "kr-catholic-081",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=81"},
+      "mergedIds": ["kr-hymn-081"],
       "country": "KR",
       "language": "KR",
       "number": "081",
@@ -6043,6 +6205,8 @@
       }]
     }, {
       "id": "kr-catholic-082",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=82"},
+      "mergedIds": ["kr-hymn-082"],
       "country": "KR",
       "language": "KR",
       "number": "082",
@@ -6120,6 +6284,8 @@
       }]
     }, {
       "id": "kr-catholic-083",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=83","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-083"],
       "country": "KR",
       "language": "KR",
       "number": "083",
@@ -6164,6 +6330,8 @@
       }]
     }, {
       "id": "kr-catholic-084",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=84","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-084"],
       "country": "KR",
       "language": "KR",
       "number": "084",
@@ -6208,6 +6376,8 @@
       }]
     }, {
       "id": "kr-catholic-085",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=85"},
+      "mergedIds": ["kr-hymn-085"],
       "country": "KR",
       "language": "KR",
       "number": "085",
@@ -6370,6 +6540,8 @@
       }]
     }, {
       "id": "kr-catholic-086",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=86","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-086"],
       "country": "KR",
       "language": "KR",
       "number": "086",
@@ -6435,6 +6607,8 @@
       }]
     }, {
       "id": "kr-catholic-087",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=87","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-087"],
       "country": "KR",
       "language": "KR",
       "number": "087",
@@ -6509,6 +6683,8 @@
       }]
     }, {
       "id": "kr-catholic-088",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=88","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-088"],
       "country": "KR",
       "language": "KR",
       "number": "088",
@@ -6583,6 +6759,8 @@
       }]
     }, {
       "id": "kr-catholic-089",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=89","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-089"],
       "country": "KR",
       "language": "KR",
       "number": "089",
@@ -6657,6 +6835,8 @@
       }]
     }, {
       "id": "kr-catholic-090",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=90"},
+      "mergedIds": ["kr-hymn-090"],
       "country": "KR",
       "language": "KR",
       "number": "090",
@@ -6731,6 +6911,8 @@
       }]
     }, {
       "id": "kr-catholic-091",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=91"},
+      "mergedIds": ["kr-hymn-091"],
       "country": "KR",
       "language": "KR",
       "number": "091",
@@ -6808,6 +6990,8 @@
       }]
     }, {
       "id": "kr-catholic-092",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=92"},
+      "mergedIds": ["kr-hymn-092"],
       "country": "KR",
       "language": "KR",
       "number": "092",
@@ -6882,6 +7066,8 @@
       }]
     }, {
       "id": "kr-catholic-093",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=93","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-093"],
       "country": "KR",
       "language": "KR",
       "number": "093",
@@ -6956,6 +7142,8 @@
       }]
     }, {
       "id": "kr-catholic-094",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=94","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-094"],
       "country": "KR",
       "language": "KR",
       "number": "094",
@@ -7042,6 +7230,8 @@
       }]
     }, {
       "id": "kr-catholic-095",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=95","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-095"],
       "country": "KR",
       "language": "KR",
       "number": "095",
@@ -7107,6 +7297,8 @@
       }]
     }, {
       "id": "kr-catholic-096",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=96","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-096"],
       "country": "KR",
       "language": "KR",
       "number": "096",
@@ -7181,6 +7373,8 @@
       }]
     }, {
       "id": "kr-catholic-097",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=97"},
+      "mergedIds": ["kr-hymn-097"],
       "country": "KR",
       "language": "KR",
       "number": "097",
@@ -7246,6 +7440,8 @@
       }]
     }, {
       "id": "kr-catholic-098",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=98","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-098"],
       "country": "KR",
       "language": "KR",
       "number": "098",
@@ -7320,6 +7516,8 @@
       }]
     }, {
       "id": "kr-catholic-099",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=99","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-099"],
       "country": "KR",
       "language": "KR",
       "number": "099",
@@ -7394,6 +7592,8 @@
       }]
     }, {
       "id": "kr-catholic-100",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=100"},
+      "mergedIds": ["kr-hymn-100"],
       "country": "KR",
       "language": "KR",
       "number": "100",
@@ -7468,6 +7668,8 @@
       }]
     }, {
       "id": "kr-catholic-101",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=101","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-101"],
       "country": "KR",
       "language": "KR",
       "number": "101",
@@ -7551,6 +7753,8 @@
       }]
     }, {
       "id": "kr-catholic-102",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=102","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-102"],
       "country": "KR",
       "language": "KR",
       "number": "102",
@@ -7616,6 +7820,8 @@
       }]
     }, {
       "id": "kr-catholic-103",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=103","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-103"],
       "country": "KR",
       "language": "KR",
       "number": "103",
@@ -7681,6 +7887,8 @@
       }]
     }, {
       "id": "kr-catholic-104",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=104"},
+      "mergedIds": ["kr-hymn-104"],
       "country": "KR",
       "language": "KR",
       "number": "104",
@@ -7755,6 +7963,8 @@
       }]
     }, {
       "id": "kr-catholic-105",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=105","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-105"],
       "country": "KR",
       "language": "KR",
       "number": "105",
@@ -7829,6 +8039,8 @@
       }]
     }, {
       "id": "kr-catholic-106",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=106","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-106"],
       "country": "KR",
       "language": "KR",
       "number": "106",
@@ -7894,6 +8106,8 @@
       }]
     }, {
       "id": "kr-catholic-107",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=107","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-107"],
       "country": "KR",
       "language": "KR",
       "number": "107",
@@ -7962,6 +8176,8 @@
       }]
     }, {
       "id": "kr-catholic-108",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=108","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-108"],
       "country": "KR",
       "language": "KR",
       "number": "108",
@@ -8036,6 +8252,8 @@
       }]
     }, {
       "id": "kr-catholic-109",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=109","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-109"],
       "country": "KR",
       "language": "KR",
       "number": "109",
@@ -8110,6 +8328,8 @@
       }]
     }, {
       "id": "kr-catholic-110",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=110","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-110"],
       "country": "KR",
       "language": "KR",
       "number": "110",
@@ -8187,6 +8407,8 @@
       }]
     }, {
       "id": "kr-catholic-111",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=111","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-111"],
       "country": "KR",
       "language": "KR",
       "number": "111",
@@ -8246,6 +8468,8 @@
       }]
     }, {
       "id": "kr-catholic-112",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=112","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-112"],
       "country": "KR",
       "language": "KR",
       "number": "112",
@@ -8377,6 +8601,8 @@
       }]
     }, {
       "id": "kr-catholic-113",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=113"},
+      "mergedIds": ["kr-hymn-113"],
       "country": "KR",
       "language": "KR",
       "number": "113",
@@ -8445,6 +8671,8 @@
       }]
     }, {
       "id": "kr-catholic-114",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=114"},
+      "mergedIds": ["kr-hymn-114"],
       "country": "KR",
       "language": "KR",
       "number": "114",
@@ -8510,6 +8738,8 @@
       }]
     }, {
       "id": "kr-catholic-115",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=115"},
+      "mergedIds": ["kr-hymn-115"],
       "country": "KR",
       "language": "KR",
       "number": "115",
@@ -8593,6 +8823,8 @@
       }]
     }, {
       "id": "kr-catholic-116",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=116"},
+      "mergedIds": ["kr-hymn-116"],
       "country": "KR",
       "language": "KR",
       "number": "116",
@@ -8667,6 +8899,8 @@
       }]
     }, {
       "id": "kr-catholic-117",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=117","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-117"],
       "country": "KR",
       "language": "KR",
       "number": "117",
@@ -8741,6 +8975,8 @@
       }]
     }, {
       "id": "kr-catholic-118",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=118","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-118"],
       "country": "KR",
       "language": "KR",
       "number": "118",
@@ -8815,6 +9051,8 @@
       }]
     }, {
       "id": "kr-catholic-119",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=119","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-119"],
       "country": "KR",
       "language": "KR",
       "number": "119",
@@ -8889,6 +9127,8 @@
       }]
     }, {
       "id": "kr-catholic-120",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=120","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-120"],
       "country": "KR",
       "language": "KR",
       "number": "120",
@@ -8954,6 +9194,8 @@
       }]
     }, {
       "id": "kr-catholic-121",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=121","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-121"],
       "country": "KR",
       "language": "KR",
       "number": "121",
@@ -9037,6 +9279,8 @@
       }]
     }, {
       "id": "kr-catholic-122",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=122"},
+      "mergedIds": ["kr-hymn-122"],
       "country": "KR",
       "language": "KR",
       "number": "122",
@@ -9120,6 +9364,8 @@
       }]
     }, {
       "id": "kr-catholic-123",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=123"},
+      "mergedIds": ["kr-hymn-123"],
       "country": "KR",
       "language": "KR",
       "number": "123",
@@ -9199,6 +9445,8 @@
       }]
     }, {
       "id": "kr-catholic-124",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=124"},
+      "mergedIds": ["kr-hymn-124"],
       "country": "KR",
       "language": "KR",
       "number": "124",
@@ -9255,6 +9503,8 @@
       }]
     }, {
       "id": "kr-catholic-125",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=125"},
+      "mergedIds": ["kr-hymn-125"],
       "country": "KR",
       "language": "KR",
       "number": "125",
@@ -9338,6 +9588,8 @@
       }]
     }, {
       "id": "kr-catholic-126",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=126","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-126"],
       "country": "KR",
       "language": "KR",
       "number": "126",
@@ -9397,6 +9649,8 @@
       }]
     }, {
       "id": "kr-catholic-127",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=127","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-127"],
       "country": "KR",
       "language": "KR",
       "number": "127",
@@ -9453,6 +9707,8 @@
       }]
     }, {
       "id": "kr-catholic-128",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=128","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-128"],
       "country": "KR",
       "language": "KR",
       "number": "128",
@@ -9527,6 +9783,8 @@
       }]
     }, {
       "id": "kr-catholic-129",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=129"},
+      "mergedIds": ["kr-hymn-129"],
       "country": "KR",
       "language": "KR",
       "number": "129",
@@ -9601,6 +9859,8 @@
       }]
     }, {
       "id": "kr-catholic-130",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=130","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-130"],
       "country": "KR",
       "language": "KR",
       "number": "130",
@@ -9675,6 +9935,8 @@
       }]
     }, {
       "id": "kr-catholic-131",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=131","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-131"],
       "country": "KR",
       "language": "KR",
       "number": "131",
@@ -9740,6 +10002,8 @@
       }]
     }, {
       "id": "kr-catholic-132",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=132"},
+      "mergedIds": ["kr-hymn-132"],
       "country": "KR",
       "language": "KR",
       "number": "132",
@@ -9814,6 +10078,8 @@
       }]
     }, {
       "id": "kr-catholic-133",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=133","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-133"],
       "country": "KR",
       "language": "KR",
       "number": "133",
@@ -9870,6 +10136,8 @@
       }]
     }, {
       "id": "kr-catholic-134",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=134","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-134"],
       "country": "KR",
       "language": "KR",
       "number": "134",
@@ -9953,6 +10221,8 @@
       }]
     }, {
       "id": "kr-catholic-135",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=135","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-135"],
       "country": "KR",
       "language": "KR",
       "number": "135",
@@ -10018,6 +10288,8 @@
       }]
     }, {
       "id": "kr-catholic-136",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=136","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-136"],
       "country": "KR",
       "language": "KR",
       "number": "136",
@@ -10092,6 +10364,8 @@
       }]
     }, {
       "id": "kr-catholic-137",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=137"},
+      "mergedIds": ["kr-hymn-137"],
       "country": "KR",
       "language": "KR",
       "number": "137",
@@ -10157,6 +10431,8 @@
       }]
     }, {
       "id": "kr-catholic-138",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=138","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-138"],
       "country": "KR",
       "language": "KR",
       "number": "138",
@@ -10231,6 +10507,8 @@
       }]
     }, {
       "id": "kr-catholic-139",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=139","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-139"],
       "country": "KR",
       "language": "KR",
       "number": "139",
@@ -10314,6 +10592,8 @@
       }]
     }, {
       "id": "kr-catholic-140",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=140"},
+      "mergedIds": ["kr-hymn-140"],
       "country": "KR",
       "language": "KR",
       "number": "140",
@@ -10379,6 +10659,8 @@
       }]
     }, {
       "id": "kr-catholic-141",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=141","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-141"],
       "country": "KR",
       "language": "KR",
       "number": "141",
@@ -10462,6 +10744,8 @@
       }]
     }, {
       "id": "kr-catholic-142",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=142","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-142"],
       "country": "KR",
       "language": "KR",
       "number": "142",
@@ -10572,6 +10856,8 @@
       }]
     }, {
       "id": "kr-catholic-143",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=143"},
+      "mergedIds": ["kr-hymn-143"],
       "country": "KR",
       "language": "KR",
       "number": "143",
@@ -10646,6 +10932,8 @@
       }]
     }, {
       "id": "kr-catholic-144",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=144"},
+      "mergedIds": ["kr-hymn-144"],
       "country": "KR",
       "language": "KR",
       "number": "144",
@@ -10720,6 +11008,8 @@
       }]
     }, {
       "id": "kr-catholic-145",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=145"},
+      "mergedIds": ["kr-hymn-145"],
       "country": "KR",
       "language": "KR",
       "number": "145",
@@ -10788,6 +11078,8 @@
       }]
     }, {
       "id": "kr-catholic-146",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=146","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-146"],
       "country": "KR",
       "language": "KR",
       "number": "146",
@@ -10892,6 +11184,8 @@
       }]
     }, {
       "id": "kr-catholic-147",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=147","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-147"],
       "country": "KR",
       "language": "KR",
       "number": "147",
@@ -10966,6 +11260,8 @@
       }]
     }, {
       "id": "kr-catholic-148",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=148","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-148"],
       "country": "KR",
       "language": "KR",
       "number": "148",
@@ -11067,6 +11363,8 @@
       }]
     }, {
       "id": "kr-catholic-149",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=149","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-149"],
       "country": "KR",
       "language": "KR",
       "number": "149",
@@ -11141,6 +11439,8 @@
       }]
     }, {
       "id": "kr-catholic-150",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=150","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-150"],
       "country": "KR",
       "language": "KR",
       "number": "150",
@@ -11215,6 +11515,8 @@
       }]
     }, {
       "id": "kr-catholic-151",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=151"},
+      "mergedIds": ["kr-hymn-151"],
       "country": "KR",
       "language": "KR",
       "number": "151",
@@ -11280,6 +11582,8 @@
       }]
     }, {
       "id": "kr-catholic-152",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=152"},
+      "mergedIds": ["kr-hymn-152"],
       "country": "KR",
       "language": "KR",
       "number": "152",
@@ -11363,6 +11667,8 @@
       }]
     }, {
       "id": "kr-catholic-153",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=153"},
+      "mergedIds": ["kr-hymn-153"],
       "country": "KR",
       "language": "KR",
       "number": "153",
@@ -11446,6 +11752,8 @@
       }]
     }, {
       "id": "kr-catholic-154",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=154","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-154"],
       "country": "KR",
       "language": "KR",
       "number": "154",
@@ -11520,6 +11828,8 @@
       }]
     }, {
       "id": "kr-catholic-155",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=155","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-155"],
       "country": "KR",
       "language": "KR",
       "number": "155",
@@ -11594,6 +11904,8 @@
       }]
     }, {
       "id": "kr-catholic-156",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=156","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-156"],
       "country": "KR",
       "language": "KR",
       "number": "156",
@@ -11662,6 +11974,8 @@
       }]
     }, {
       "id": "kr-catholic-157",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=157"},
+      "mergedIds": ["kr-hymn-157"],
       "country": "KR",
       "language": "KR",
       "number": "157",
@@ -11727,6 +12041,8 @@
       }]
     }, {
       "id": "kr-catholic-158",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=158","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-158"],
       "country": "KR",
       "language": "KR",
       "number": "158",
@@ -11783,6 +12099,8 @@
       }]
     }, {
       "id": "kr-catholic-159",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=159","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-159"],
       "country": "KR",
       "language": "KR",
       "number": "159",
@@ -11848,6 +12166,8 @@
       }]
     }, {
       "id": "kr-catholic-160",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=160"},
+      "mergedIds": ["kr-hymn-160"],
       "country": "KR",
       "language": "KR",
       "number": "160",
@@ -11940,6 +12260,8 @@
       }]
     }, {
       "id": "kr-catholic-161",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=161","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-161"],
       "country": "KR",
       "language": "KR",
       "number": "161",
@@ -12041,6 +12363,8 @@
       }]
     }, {
       "id": "kr-catholic-162",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=162","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-162"],
       "country": "KR",
       "language": "KR",
       "number": "162",
@@ -12118,6 +12442,8 @@
       }]
     }, {
       "id": "kr-catholic-163",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=163","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-163"],
       "country": "KR",
       "language": "KR",
       "number": "163",
@@ -12192,6 +12518,8 @@
       }]
     }, {
       "id": "kr-catholic-164",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=164","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-164"],
       "country": "KR",
       "language": "KR",
       "number": "164",
@@ -12257,6 +12585,8 @@
       }]
     }, {
       "id": "kr-catholic-165",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=165","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-165"],
       "country": "KR",
       "language": "KR",
       "number": "165",
@@ -12340,6 +12670,8 @@
       }]
     }, {
       "id": "kr-catholic-166",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=166"},
+      "mergedIds": ["kr-hymn-166"],
       "country": "KR",
       "language": "KR",
       "number": "166",
@@ -12414,6 +12746,8 @@
       }]
     }, {
       "id": "kr-catholic-167",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=167"},
+      "mergedIds": ["kr-hymn-167"],
       "country": "KR",
       "language": "KR",
       "number": "167",
@@ -12488,6 +12822,8 @@
       }]
     }, {
       "id": "kr-catholic-168",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=168","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-168"],
       "country": "KR",
       "language": "KR",
       "number": "168",
@@ -12571,6 +12907,8 @@
       }]
     }, {
       "id": "kr-catholic-169",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=169"},
+      "mergedIds": ["kr-hymn-169"],
       "country": "KR",
       "language": "KR",
       "number": "169",
@@ -12648,6 +12986,8 @@
       }]
     }, {
       "id": "kr-catholic-170",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=170"},
+      "mergedIds": ["kr-hymn-170"],
       "country": "KR",
       "language": "KR",
       "number": "170",
@@ -12722,6 +13062,8 @@
       }]
     }, {
       "id": "kr-catholic-171",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=171","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-171"],
       "country": "KR",
       "language": "KR",
       "number": "171",
@@ -12778,6 +13120,8 @@
       }]
     }, {
       "id": "kr-catholic-172",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=172","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-172"],
       "country": "KR",
       "language": "KR",
       "number": "172",
@@ -12834,6 +13178,8 @@
       }]
     }, {
       "id": "kr-catholic-173",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=173"},
+      "mergedIds": ["kr-hymn-173"],
       "country": "KR",
       "language": "KR",
       "number": "173",
@@ -12875,6 +13221,8 @@
       }]
     }, {
       "id": "kr-catholic-174",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=174","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-174"],
       "country": "KR",
       "language": "KR",
       "number": "174",
@@ -12949,6 +13297,8 @@
       }]
     }, {
       "id": "kr-catholic-175",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=175","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-175"],
       "country": "KR",
       "language": "KR",
       "number": "175",
@@ -13005,6 +13355,8 @@
       }]
     }, {
       "id": "kr-catholic-176",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=176","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-176"],
       "country": "KR",
       "language": "KR",
       "number": "176",
@@ -13073,6 +13425,8 @@
       }]
     }, {
       "id": "kr-catholic-177",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=177","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-177"],
       "country": "KR",
       "language": "KR",
       "number": "177",
@@ -13155,6 +13509,8 @@
       }]
     }, {
       "id": "kr-catholic-178",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=178","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-178"],
       "country": "KR",
       "language": "KR",
       "number": "178",
@@ -13229,6 +13585,8 @@
       }]
     }, {
       "id": "kr-catholic-179",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=179"},
+      "mergedIds": ["kr-hymn-179"],
       "country": "KR",
       "language": "KR",
       "number": "179",
@@ -13306,6 +13664,8 @@
       }]
     }, {
       "id": "kr-catholic-180",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=180"},
+      "mergedIds": ["kr-hymn-180"],
       "country": "KR",
       "language": "KR",
       "number": "180",
@@ -13374,6 +13734,8 @@
       }]
     }, {
       "id": "kr-catholic-181",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=181","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-181"],
       "country": "KR",
       "language": "KR",
       "number": "181",
@@ -13451,6 +13813,8 @@
       }]
     }, {
       "id": "kr-catholic-182",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=182","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-182"],
       "country": "KR",
       "language": "KR",
       "number": "182",
@@ -13519,6 +13883,8 @@
       }]
     }, {
       "id": "kr-catholic-183",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=183"},
+      "mergedIds": ["kr-hymn-183"],
       "country": "KR",
       "language": "KR",
       "number": "183",
@@ -13575,6 +13941,8 @@
       }]
     }, {
       "id": "kr-catholic-184",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=184","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-184"],
       "country": "KR",
       "language": "KR",
       "number": "184",
@@ -13636,6 +14004,8 @@
       }]
     }, {
       "id": "kr-catholic-185",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=185","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-185"],
       "country": "KR",
       "language": "KR",
       "number": "185",
@@ -13695,6 +14065,8 @@
       }]
     }, {
       "id": "kr-catholic-186",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=186","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-186"],
       "country": "KR",
       "language": "KR",
       "number": "186",
@@ -13751,6 +14123,8 @@
       }]
     }, {
       "id": "kr-catholic-187",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=187"},
+      "mergedIds": ["kr-hymn-187"],
       "country": "KR",
       "language": "KR",
       "number": "187",
@@ -13807,6 +14181,8 @@
       }]
     }, {
       "id": "kr-catholic-188",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=188"},
+      "mergedIds": ["kr-hymn-188"],
       "country": "KR",
       "language": "KR",
       "number": "188",
@@ -13866,6 +14242,8 @@
       }]
     }, {
       "id": "kr-catholic-189",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=189","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-189"],
       "country": "KR",
       "language": "KR",
       "number": "189",
@@ -13925,6 +14303,8 @@
       }]
     }, {
       "id": "kr-catholic-190",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=190"},
+      "mergedIds": ["kr-hymn-190"],
       "country": "KR",
       "language": "KR",
       "number": "190",
@@ -13984,6 +14364,8 @@
       }]
     }, {
       "id": "kr-catholic-191",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=191","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-191"],
       "country": "KR",
       "language": "KR",
       "number": "191",
@@ -14043,6 +14425,8 @@
       }]
     }, {
       "id": "kr-catholic-192",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=192","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-192"],
       "country": "KR",
       "language": "KR",
       "number": "192",
@@ -14099,6 +14483,8 @@
       }]
     }, {
       "id": "kr-catholic-193",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=193","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-193"],
       "country": "KR",
       "language": "KR",
       "number": "193",
@@ -14155,6 +14541,8 @@
       }]
     }, {
       "id": "kr-catholic-194",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=194","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-194"],
       "country": "KR",
       "language": "KR",
       "number": "194",
@@ -14199,6 +14587,8 @@
       }]
     }, {
       "id": "kr-catholic-195",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=195","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-195"],
       "country": "KR",
       "language": "KR",
       "number": "195",
@@ -14303,6 +14693,8 @@
       }]
     }, {
       "id": "kr-catholic-196",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=196"},
+      "mergedIds": ["kr-hymn-196"],
       "country": "KR",
       "language": "KR",
       "number": "196",
@@ -14344,6 +14736,8 @@
       }]
     }, {
       "id": "kr-catholic-197",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=197"},
+      "mergedIds": ["kr-hymn-197"],
       "country": "KR",
       "language": "KR",
       "number": "197",
@@ -14409,6 +14803,8 @@
       }]
     }, {
       "id": "kr-catholic-198",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=198","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-198"],
       "country": "KR",
       "language": "KR",
       "number": "198",
@@ -14465,6 +14861,8 @@
       }]
     }, {
       "id": "kr-catholic-199",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=199","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-199"],
       "country": "KR",
       "language": "KR",
       "number": "199",
@@ -14548,6 +14946,8 @@
       }]
     }, {
       "id": "kr-catholic-200",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=200","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-200"],
       "country": "KR",
       "language": "KR",
       "number": "200",
@@ -14632,6 +15032,8 @@
       }]
     }, {
       "id": "kr-catholic-201",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=201"},
+      "mergedIds": ["kr-hymn-201"],
       "country": "KR",
       "language": "KR",
       "number": "201",
@@ -14693,6 +15095,8 @@
       }]
     }, {
       "id": "kr-catholic-202",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=202","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-202"],
       "country": "KR",
       "language": "KR",
       "number": "202",
@@ -14767,6 +15171,8 @@
       }]
     }, {
       "id": "kr-catholic-203",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=203"},
+      "mergedIds": ["kr-hymn-203"],
       "country": "KR",
       "language": "KR",
       "number": "203",
@@ -14841,6 +15247,8 @@
       }]
     }, {
       "id": "kr-catholic-204",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=204","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-204"],
       "country": "KR",
       "language": "KR",
       "number": "204",
@@ -14915,6 +15323,8 @@
       }]
     }, {
       "id": "kr-catholic-205",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=205"},
+      "mergedIds": ["kr-hymn-205"],
       "country": "KR",
       "language": "KR",
       "number": "205",
@@ -14994,6 +15404,8 @@
       }]
     }, {
       "id": "kr-catholic-206",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=206"},
+      "mergedIds": ["kr-hymn-206"],
       "country": "KR",
       "language": "KR",
       "number": "206",
@@ -15062,6 +15474,8 @@
       }]
     }, {
       "id": "kr-catholic-207",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=207","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-207"],
       "country": "KR",
       "language": "KR",
       "number": "207",
@@ -15118,6 +15532,8 @@
       }]
     }, {
       "id": "kr-catholic-208",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=208","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-208"],
       "country": "KR",
       "language": "KR",
       "number": "208",
@@ -15192,6 +15608,8 @@
       }]
     }, {
       "id": "kr-catholic-209",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=209"},
+      "mergedIds": ["kr-hymn-209"],
       "country": "KR",
       "language": "KR",
       "number": "209",
@@ -15265,6 +15683,8 @@
       }]
     }, {
       "id": "kr-catholic-210",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=210"},
+      "mergedIds": ["kr-hymn-210"],
       "country": "KR",
       "language": "KR",
       "number": "210",
@@ -15353,6 +15773,8 @@
       }]
     }, {
       "id": "kr-catholic-211",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=211","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-211"],
       "country": "KR",
       "language": "KR",
       "number": "211",
@@ -15427,6 +15849,8 @@
       }]
     }, {
       "id": "kr-catholic-212",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=212"},
+      "mergedIds": ["kr-hymn-212"],
       "country": "KR",
       "language": "KR",
       "number": "212",
@@ -15492,6 +15916,8 @@
       }]
     }, {
       "id": "kr-catholic-213",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=213","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-213"],
       "country": "KR",
       "language": "KR",
       "number": "213",
@@ -15548,6 +15974,8 @@
       }]
     }, {
       "id": "kr-catholic-214",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=214","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-214"],
       "country": "KR",
       "language": "KR",
       "number": "214",
@@ -15622,6 +16050,8 @@
       }]
     }, {
       "id": "kr-catholic-215",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=215"},
+      "mergedIds": ["kr-hymn-215"],
       "country": "KR",
       "language": "KR",
       "number": "215",
@@ -15678,6 +16108,8 @@
       }]
     }, {
       "id": "kr-catholic-216",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=216"},
+      "mergedIds": ["kr-hymn-216"],
       "country": "KR",
       "language": "KR",
       "number": "216",
@@ -15752,6 +16184,8 @@
       }]
     }, {
       "id": "kr-catholic-217",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=217","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-217"],
       "country": "KR",
       "language": "KR",
       "number": "217",
@@ -15826,6 +16260,8 @@
       }]
     }, {
       "id": "kr-catholic-218",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=218","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-218"],
       "country": "KR",
       "language": "KR",
       "number": "218",
@@ -15894,6 +16330,8 @@
       }]
     }, {
       "id": "kr-catholic-219",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=219"},
+      "mergedIds": ["kr-hymn-219"],
       "country": "KR",
       "language": "KR",
       "number": "219",
@@ -15950,6 +16388,8 @@
       }]
     }, {
       "id": "kr-catholic-220",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=220"},
+      "mergedIds": ["kr-hymn-220"],
       "country": "KR",
       "language": "KR",
       "number": "220",
@@ -16015,6 +16455,8 @@
       }]
     }, {
       "id": "kr-catholic-221",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=221"},
+      "mergedIds": ["kr-hymn-221"],
       "country": "KR",
       "language": "KR",
       "number": "221",
@@ -16083,6 +16525,8 @@
       }]
     }, {
       "id": "kr-catholic-222",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=222"},
+      "mergedIds": ["kr-hymn-222"],
       "country": "KR",
       "language": "KR",
       "number": "222",
@@ -16178,6 +16622,8 @@
       }]
     }, {
       "id": "kr-catholic-223",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=223"},
+      "mergedIds": ["kr-hymn-223"],
       "country": "KR",
       "language": "KR",
       "number": "223",
@@ -16300,6 +16746,8 @@
       }]
     }, {
       "id": "kr-catholic-224",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=224"},
+      "mergedIds": ["kr-hymn-224"],
       "country": "KR",
       "language": "KR",
       "number": "224",
@@ -16525,6 +16973,8 @@
       }]
     }, {
       "id": "kr-catholic-225",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=225","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-225"],
       "country": "KR",
       "language": "KR",
       "number": "225",
@@ -16620,6 +17070,8 @@
       }]
     }, {
       "id": "kr-catholic-226",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=226","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-226"],
       "country": "KR",
       "language": "KR",
       "number": "226",
@@ -16703,6 +17155,8 @@
       }]
     }, {
       "id": "kr-catholic-227",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=227","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-227"],
       "country": "KR",
       "language": "KR",
       "number": "227",
@@ -16768,6 +17222,8 @@
       }]
     }, {
       "id": "kr-catholic-228",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=228","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-228"],
       "country": "KR",
       "language": "KR",
       "number": "228",
@@ -16842,6 +17298,8 @@
       }]
     }, {
       "id": "kr-catholic-229",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=229","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-229"],
       "country": "KR",
       "language": "KR",
       "number": "229",
@@ -16928,6 +17386,8 @@
       }]
     }, {
       "id": "kr-catholic-230",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=230","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-230"],
       "country": "KR",
       "language": "KR",
       "number": "230",
@@ -16993,6 +17453,8 @@
       }]
     }, {
       "id": "kr-catholic-231",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=231","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-231"],
       "country": "KR",
       "language": "KR",
       "number": "231",
@@ -17076,6 +17538,8 @@
       }]
     }, {
       "id": "kr-catholic-232",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=232"},
+      "mergedIds": ["kr-hymn-232"],
       "country": "KR",
       "language": "KR",
       "number": "232",
@@ -17132,6 +17596,8 @@
       }]
     }, {
       "id": "kr-catholic-233",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=233"},
+      "mergedIds": ["kr-hymn-233"],
       "country": "KR",
       "language": "KR",
       "number": "233",
@@ -17197,6 +17663,8 @@
       }]
     }, {
       "id": "kr-catholic-234",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=234","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-234"],
       "country": "KR",
       "language": "KR",
       "number": "234",
@@ -17271,6 +17739,8 @@
       }]
     }, {
       "id": "kr-catholic-235",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=235"},
+      "mergedIds": ["kr-hymn-235"],
       "country": "KR",
       "language": "KR",
       "number": "235",
@@ -17345,6 +17815,8 @@
       }]
     }, {
       "id": "kr-catholic-236",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=236"},
+      "mergedIds": ["kr-hymn-236"],
       "country": "KR",
       "language": "KR",
       "number": "236",
@@ -17419,6 +17891,8 @@
       }]
     }, {
       "id": "kr-catholic-237",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=237","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-237"],
       "country": "KR",
       "language": "KR",
       "number": "237",
@@ -17493,6 +17967,8 @@
       }]
     }, {
       "id": "kr-catholic-238",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=238","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-238"],
       "country": "KR",
       "language": "KR",
       "number": "238",
@@ -17558,6 +18034,8 @@
       }]
     }, {
       "id": "kr-catholic-239",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=239","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-239"],
       "country": "KR",
       "language": "KR",
       "number": "239",
@@ -17623,6 +18101,8 @@
       }]
     }, {
       "id": "kr-catholic-240",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=240"},
+      "mergedIds": ["kr-hymn-240"],
       "country": "KR",
       "language": "KR",
       "number": "240",
@@ -17697,6 +18177,8 @@
       }]
     }, {
       "id": "kr-catholic-241",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=241","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-241"],
       "country": "KR",
       "language": "KR",
       "number": "241",
@@ -17780,6 +18262,8 @@
       }]
     }, {
       "id": "kr-catholic-242",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=242","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-242"],
       "country": "KR",
       "language": "KR",
       "number": "242",
@@ -17863,6 +18347,8 @@
       }]
     }, {
       "id": "kr-catholic-243",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=243","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-243"],
       "country": "KR",
       "language": "KR",
       "number": "243",
@@ -17928,6 +18414,8 @@
       }]
     }, {
       "id": "kr-catholic-244",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=244","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-244"],
       "country": "KR",
       "language": "KR",
       "number": "244",
@@ -18011,6 +18499,8 @@
       }]
     }, {
       "id": "kr-catholic-245",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=245","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-245"],
       "country": "KR",
       "language": "KR",
       "number": "245",
@@ -18085,6 +18575,8 @@
       }]
     }, {
       "id": "kr-catholic-246",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=246","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-246"],
       "country": "KR",
       "language": "KR",
       "number": "246",
@@ -18159,6 +18651,8 @@
       }]
     }, {
       "id": "kr-catholic-247",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=247","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-247"],
       "country": "KR",
       "language": "KR",
       "number": "247",
@@ -18242,6 +18736,8 @@
       }]
     }, {
       "id": "kr-catholic-248",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=248"},
+      "mergedIds": ["kr-hymn-248"],
       "country": "KR",
       "language": "KR",
       "number": "248",
@@ -18316,6 +18812,8 @@
       }]
     }, {
       "id": "kr-catholic-249",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=249"},
+      "mergedIds": ["kr-hymn-249"],
       "country": "KR",
       "language": "KR",
       "number": "249",
@@ -18375,6 +18873,8 @@
       }]
     }, {
       "id": "kr-catholic-250",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=250","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-250"],
       "country": "KR",
       "language": "KR",
       "number": "250",
@@ -18434,6 +18934,8 @@
       }]
     }, {
       "id": "kr-catholic-251",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=251","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-251"],
       "country": "KR",
       "language": "KR",
       "number": "251",
@@ -18502,6 +19004,8 @@
       }]
     }, {
       "id": "kr-catholic-252",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=252"},
+      "mergedIds": ["kr-hymn-252"],
       "country": "KR",
       "language": "KR",
       "number": "252",
@@ -18576,6 +19080,8 @@
       }]
     }, {
       "id": "kr-catholic-253",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=253","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-253"],
       "country": "KR",
       "language": "KR",
       "number": "253",
@@ -18655,6 +19161,8 @@
       }]
     }, {
       "id": "kr-catholic-254",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=254","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-254"],
       "country": "KR",
       "language": "KR",
       "number": "254",
@@ -18732,6 +19240,8 @@
       }]
     }, {
       "id": "kr-catholic-255",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=255","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-255"],
       "country": "KR",
       "language": "KR",
       "number": "255",
@@ -18806,6 +19316,8 @@
       }]
     }, {
       "id": "kr-catholic-256",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=256","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-256"],
       "country": "KR",
       "language": "KR",
       "number": "256",
@@ -18871,6 +19383,8 @@
       }]
     }, {
       "id": "kr-catholic-257",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=257","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-257"],
       "country": "KR",
       "language": "KR",
       "number": "257",
@@ -18945,6 +19459,8 @@
       }]
     }, {
       "id": "kr-catholic-258",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=258","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-258"],
       "country": "KR",
       "language": "KR",
       "number": "258",
@@ -19035,6 +19551,8 @@
       }]
     }, {
       "id": "kr-catholic-259",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=259","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-259"],
       "country": "KR",
       "language": "KR",
       "number": "259",
@@ -19115,6 +19633,8 @@
       }]
     }, {
       "id": "kr-catholic-260",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=260","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-260"],
       "country": "KR",
       "language": "KR",
       "number": "260",
@@ -19180,6 +19700,8 @@
       }]
     }, {
       "id": "kr-catholic-261",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=261"},
+      "mergedIds": ["kr-hymn-261"],
       "country": "KR",
       "language": "KR",
       "number": "261",
@@ -19254,6 +19776,8 @@
       }]
     }, {
       "id": "kr-catholic-262",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=262","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-262"],
       "country": "KR",
       "language": "KR",
       "number": "262",
@@ -19310,6 +19834,8 @@
       }]
     }, {
       "id": "kr-catholic-263",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=263","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-263"],
       "country": "KR",
       "language": "KR",
       "number": "263",
@@ -19539,6 +20065,8 @@
       }]
     }, {
       "id": "kr-catholic-264",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=264","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-264"],
       "country": "KR",
       "language": "KR",
       "number": "264",
@@ -19625,6 +20153,10 @@
       }]
     }, {
       "id": "kr-catholic-265",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=265","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=265",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-265"],
       "country": "KR",
       "language": "KR",
       "number": "265",
@@ -19669,6 +20201,10 @@
       }]
     }, {
       "id": "kr-catholic-266",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=266",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=266"},
+      "mergedIds": ["kr-hymn-266"],
       "country": "KR",
       "language": "KR",
       "number": "266",
@@ -19713,6 +20249,10 @@
       }]
     }, {
       "id": "kr-catholic-267",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=267",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=267"},
+      "mergedIds": ["kr-hymn-267"],
       "country": "KR",
       "language": "KR",
       "number": "267",
@@ -19769,6 +20309,8 @@
       }]
     }, {
       "id": "kr-catholic-268",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=268","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-268"],
       "country": "KR",
       "language": "KR",
       "number": "268",
@@ -19810,6 +20352,10 @@
       }]
     }, {
       "id": "kr-catholic-269",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=269","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=269",
+      "mergedIds": ["kr-hymn-269"],
       "country": "KR",
       "language": "KR",
       "number": "269",
@@ -19938,6 +20484,10 @@
       }]
     }, {
       "id": "kr-catholic-270",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=270","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=270",
+      "mergedIds": ["kr-hymn-270"],
       "country": "KR",
       "language": "KR",
       "number": "270",
@@ -20038,6 +20588,10 @@
       }]
     }, {
       "id": "kr-catholic-271",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=271",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=271","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-271"],
       "country": "KR",
       "language": "KR",
       "number": "271",
@@ -20097,6 +20651,10 @@
       }]
     }, {
       "id": "kr-catholic-272",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=272",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=272"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-272"],
       "country": "KR",
       "language": "KR",
       "number": "272",
@@ -20147,6 +20705,10 @@
       }]
     }, {
       "id": "kr-catholic-273",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=273",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=273","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-273"],
       "country": "KR",
       "language": "KR",
       "number": "273",
@@ -20191,6 +20753,10 @@
       }]
     }, {
       "id": "kr-catholic-274",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=274",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=274"},
+      "mergedIds": ["kr-hymn-274"],
       "country": "KR",
       "language": "KR",
       "number": "274",
@@ -20235,6 +20801,10 @@
       }]
     }, {
       "id": "kr-catholic-275",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=275",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=275","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-275"],
       "country": "KR",
       "language": "KR",
       "number": "275",
@@ -20309,6 +20879,10 @@
       }]
     }, {
       "id": "kr-catholic-276",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=276","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=276",
+      "mergedIds": ["kr-hymn-276"],
       "country": "KR",
       "language": "KR",
       "number": "276",
@@ -20383,6 +20957,10 @@
       }]
     }, {
       "id": "kr-catholic-277",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=277",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=277"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-277"],
       "country": "KR",
       "language": "KR",
       "number": "277",
@@ -20457,6 +21035,10 @@
       }]
     }, {
       "id": "kr-catholic-278",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=278"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=278",
+      "mergedIds": ["kr-hymn-278"],
       "country": "KR",
       "language": "KR",
       "number": "278",
@@ -20504,6 +21086,10 @@
       }]
     }, {
       "id": "kr-catholic-279",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=279","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=279",
+      "mergedIds": ["kr-hymn-279"],
       "country": "KR",
       "language": "KR",
       "number": "279",
@@ -20548,6 +21134,10 @@
       }]
     }, {
       "id": "kr-catholic-280",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=280","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=280",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-280"],
       "country": "KR",
       "language": "KR",
       "number": "280",
@@ -20622,6 +21212,10 @@
       }]
     }, {
       "id": "kr-catholic-281",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=281"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=281",
+      "mergedIds": ["kr-hymn-281"],
       "country": "KR",
       "language": "KR",
       "number": "281",
@@ -20678,6 +21272,10 @@
       }]
     }, {
       "id": "kr-catholic-282",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=282","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=282",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-282"],
       "country": "KR",
       "language": "KR",
       "number": "282",
@@ -20753,6 +21351,10 @@
       }]
     }, {
       "id": "kr-catholic-283",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=283",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=283","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-283"],
       "country": "KR",
       "language": "KR",
       "number": "283",
@@ -20830,6 +21432,10 @@
       }]
     }, {
       "id": "kr-catholic-284",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=284",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=284","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-284"],
       "country": "KR",
       "language": "KR",
       "number": "284",
@@ -20940,6 +21546,10 @@
       }]
     }, {
       "id": "kr-catholic-285",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=285",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=285","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-285"],
       "country": "KR",
       "language": "KR",
       "number": "285",
@@ -21008,6 +21618,10 @@
       }]
     }, {
       "id": "kr-catholic-286",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=286",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=286","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-286"],
       "country": "KR",
       "language": "KR",
       "number": "286",
@@ -21085,6 +21699,10 @@
       }]
     }, {
       "id": "kr-catholic-287",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=287","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=287",
+      "mergedIds": ["kr-hymn-287"],
       "country": "KR",
       "language": "KR",
       "number": "287",
@@ -21171,6 +21789,10 @@
       }]
     }, {
       "id": "kr-catholic-288",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=288",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=288","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-288"],
       "country": "KR",
       "language": "KR",
       "number": "288",
@@ -21248,6 +21870,10 @@
       }]
     }, {
       "id": "kr-catholic-289",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=289","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=289",
+      "mergedIds": ["kr-hymn-289"],
       "country": "KR",
       "language": "KR",
       "number": "289",
@@ -21325,6 +21951,10 @@
       }]
     }, {
       "id": "kr-catholic-290",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=290",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=290"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-290"],
       "country": "KR",
       "language": "KR",
       "number": "290",
@@ -21390,6 +22020,10 @@
       }]
     }, {
       "id": "kr-catholic-291",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=291","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=291",
+      "mergedIds": ["kr-hymn-291"],
       "country": "KR",
       "language": "KR",
       "number": "291",
@@ -21464,6 +22098,10 @@
       }]
     }, {
       "id": "kr-catholic-292",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=292","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=292",
+      "mergedIds": ["kr-hymn-292"],
       "country": "KR",
       "language": "KR",
       "number": "292",
@@ -21559,6 +22197,10 @@
       }]
     }, {
       "id": "kr-catholic-293",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=293"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=293",
+      "mergedIds": ["kr-hymn-293"],
       "country": "KR",
       "language": "KR",
       "number": "293",
@@ -21633,6 +22275,10 @@
       }]
     }, {
       "id": "kr-catholic-294",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=294","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=294",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-294"],
       "country": "KR",
       "language": "KR",
       "number": "294",
@@ -21698,6 +22344,10 @@
       }]
     }, {
       "id": "kr-catholic-295",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=295"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=295",
+      "mergedIds": ["kr-hymn-295"],
       "country": "KR",
       "language": "KR",
       "number": "295",
@@ -21782,6 +22432,10 @@
       }]
     }, {
       "id": "kr-catholic-296",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=296",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=296","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-296"],
       "country": "KR",
       "language": "KR",
       "number": "296",
@@ -21856,6 +22510,10 @@
       }]
     }, {
       "id": "kr-catholic-297",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=297",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=297"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-297"],
       "country": "KR",
       "language": "KR",
       "number": "297",
@@ -21939,6 +22597,10 @@
       }]
     }, {
       "id": "kr-catholic-298",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=298",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=298","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-298"],
       "country": "KR",
       "language": "KR",
       "number": "298",
@@ -22004,6 +22666,10 @@
       }]
     }, {
       "id": "kr-catholic-299",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=299",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=299"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-299"],
       "country": "KR",
       "language": "KR",
       "number": "299",
@@ -22069,6 +22735,10 @@
       }]
     }, {
       "id": "kr-catholic-300",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=300",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=300","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-300"],
       "country": "KR",
       "language": "KR",
       "number": "300",
@@ -22150,6 +22820,10 @@
       }]
     }, {
       "id": "kr-catholic-301",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=301","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=301",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-301"],
       "country": "KR",
       "language": "KR",
       "number": "301",
@@ -22212,6 +22886,10 @@
       }]
     }, {
       "id": "kr-catholic-302",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=302",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=302"},
+      "mergedIds": ["kr-hymn-302"],
       "country": "KR",
       "language": "KR",
       "number": "302",
@@ -22280,6 +22958,10 @@
       }]
     }, {
       "id": "kr-catholic-303",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=303","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=303",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-303"],
       "country": "KR",
       "language": "KR",
       "number": "303",
@@ -22353,6 +23035,10 @@
       }]
     }, {
       "id": "kr-catholic-304",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=304"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=304",
+      "mergedIds": ["kr-hymn-304"],
       "country": "KR",
       "language": "KR",
       "number": "304",
@@ -22397,6 +23083,10 @@
       }]
     }, {
       "id": "kr-catholic-305",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=305","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=305",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-305"],
       "country": "KR",
       "language": "KR",
       "number": "305",
@@ -22441,6 +23131,10 @@
       }]
     }, {
       "id": "kr-catholic-306",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=306","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=306",
+      "mergedIds": ["kr-hymn-306"],
       "country": "KR",
       "language": "KR",
       "number": "306",
@@ -22485,6 +23179,10 @@
       }]
     }, {
       "id": "kr-catholic-307",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=307","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=307",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-307"],
       "country": "KR",
       "language": "KR",
       "number": "307",
@@ -22541,6 +23239,10 @@
       }]
     }, {
       "id": "kr-catholic-308",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=308","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=308",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-308"],
       "country": "KR",
       "language": "KR",
       "number": "308",
@@ -22585,6 +23287,10 @@
       }]
     }, {
       "id": "kr-catholic-309",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=309",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=309","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-309"],
       "country": "KR",
       "language": "KR",
       "number": "309",
@@ -22626,6 +23332,10 @@
       }]
     }, {
       "id": "kr-catholic-310",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=310",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=310","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-310"],
       "country": "KR",
       "language": "KR",
       "number": "310",
@@ -22667,6 +23377,10 @@
       }]
     }, {
       "id": "kr-catholic-311",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=311","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=311",
+      "mergedIds": ["kr-hymn-311"],
       "country": "KR",
       "language": "KR",
       "number": "311",
@@ -22720,6 +23434,10 @@
       }]
     }, {
       "id": "kr-catholic-312",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=312",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=312","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-312"],
       "country": "KR",
       "language": "KR",
       "number": "312",
@@ -22764,6 +23482,10 @@
       }]
     }, {
       "id": "kr-catholic-313",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=313","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=313",
+      "mergedIds": ["kr-hymn-313"],
       "country": "KR",
       "language": "KR",
       "number": "313",
@@ -22805,6 +23527,10 @@
       }]
     }, {
       "id": "kr-catholic-314",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=314",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=314","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-314"],
       "country": "KR",
       "language": "KR",
       "number": "314",
@@ -22846,6 +23572,10 @@
       }]
     }, {
       "id": "kr-catholic-315",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=315","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=315",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-315"],
       "country": "KR",
       "language": "KR",
       "number": "315",
@@ -22890,6 +23620,10 @@
       }]
     }, {
       "id": "kr-catholic-316",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=316",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=316"},
+      "mergedIds": ["kr-hymn-316"],
       "country": "KR",
       "language": "KR",
       "number": "316",
@@ -22943,6 +23677,10 @@
       }]
     }, {
       "id": "kr-catholic-317",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=317","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=317",
+      "mergedIds": ["kr-hymn-317"],
       "country": "KR",
       "language": "KR",
       "number": "317",
@@ -22987,6 +23725,10 @@
       }]
     }, {
       "id": "kr-catholic-318",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=318","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=318",
+      "mergedIds": ["kr-hymn-318"],
       "country": "KR",
       "language": "KR",
       "number": "318",
@@ -23034,6 +23776,10 @@
       }]
     }, {
       "id": "kr-catholic-319",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=319",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=319","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-319"],
       "country": "KR",
       "language": "KR",
       "number": "319",
@@ -23078,6 +23824,10 @@
       }]
     }, {
       "id": "kr-catholic-320",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=320",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=320","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-320"],
       "country": "KR",
       "language": "KR",
       "number": "320",
@@ -23122,6 +23872,10 @@
       }]
     }, {
       "id": "kr-catholic-321",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=321",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=321","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-321"],
       "country": "KR",
       "language": "KR",
       "number": "321",
@@ -23175,6 +23929,10 @@
       }]
     }, {
       "id": "kr-catholic-322",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=322","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=322",
+      "mergedIds": ["kr-hymn-322"],
       "country": "KR",
       "language": "KR",
       "number": "322",
@@ -23219,6 +23977,10 @@
       }]
     }, {
       "id": "kr-catholic-323",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=323"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=323",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-323"],
       "country": "KR",
       "language": "KR",
       "number": "323",
@@ -23281,6 +24043,10 @@
       }]
     }, {
       "id": "kr-catholic-324",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=324",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=324"},
+      "mergedIds": ["kr-hymn-324"],
       "country": "KR",
       "language": "KR",
       "number": "324",
@@ -23322,6 +24088,10 @@
       }]
     }, {
       "id": "kr-catholic-325",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=325","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=325",
+      "mergedIds": ["kr-hymn-325"],
       "country": "KR",
       "language": "KR",
       "number": "325",
@@ -23366,6 +24136,10 @@
       }]
     }, {
       "id": "kr-catholic-326",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=326",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=326","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-326"],
       "country": "KR",
       "language": "KR",
       "number": "326",
@@ -23422,6 +24196,10 @@
       }]
     }, {
       "id": "kr-catholic-327",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=327",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=327","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-327"],
       "country": "KR",
       "language": "KR",
       "number": "327",
@@ -23466,6 +24244,10 @@
       }]
     }, {
       "id": "kr-catholic-328",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=328","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=328",
+      "mergedIds": ["kr-hymn-328"],
       "country": "KR",
       "language": "KR",
       "number": "328",
@@ -23510,6 +24292,10 @@
       }]
     }, {
       "id": "kr-catholic-329",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=329"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=329",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-329"],
       "country": "KR",
       "language": "KR",
       "number": "329",
@@ -23575,6 +24361,10 @@
       }]
     }, {
       "id": "kr-catholic-330",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=330","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=330",
+      "mergedIds": ["kr-hymn-330"],
       "country": "KR",
       "language": "KR",
       "number": "330",
@@ -23631,6 +24421,10 @@
       }]
     }, {
       "id": "kr-catholic-331",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=331"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=331",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-331"],
       "country": "KR",
       "language": "KR",
       "number": "331",
@@ -23696,6 +24490,10 @@
       }]
     }, {
       "id": "kr-catholic-332",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=332",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=332","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-332"],
       "country": "KR",
       "language": "KR",
       "number": "332",
@@ -23761,6 +24559,10 @@
       }]
     }, {
       "id": "kr-catholic-333",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=333",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=333","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-333"],
       "country": "KR",
       "language": "KR",
       "number": "333",
@@ -23829,6 +24631,10 @@
       }]
     }, {
       "id": "kr-catholic-334",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=334",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=334","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-334"],
       "country": "KR",
       "language": "KR",
       "number": "334",
@@ -23885,6 +24691,10 @@
       }]
     }, {
       "id": "kr-catholic-335",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=335","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=335",
+      "mergedIds": ["kr-hymn-335"],
       "country": "KR",
       "language": "KR",
       "number": "335",
@@ -23950,6 +24760,10 @@
       }]
     }, {
       "id": "kr-catholic-336",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=336"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=336",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-336"],
       "country": "KR",
       "language": "KR",
       "number": "336",
@@ -23994,6 +24808,10 @@
       }]
     }, {
       "id": "kr-catholic-337",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=337",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=337","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-337"],
       "country": "KR",
       "language": "KR",
       "number": "337",
@@ -24038,6 +24856,10 @@
       }]
     }, {
       "id": "kr-catholic-338",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=338","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=338",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-338"],
       "country": "KR",
       "language": "KR",
       "number": "338",
@@ -24079,6 +24901,10 @@
       }]
     }, {
       "id": "kr-catholic-339",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=339",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=339","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-339"],
       "country": "KR",
       "language": "KR",
       "number": "339",
@@ -24120,6 +24946,10 @@
       }]
     }, {
       "id": "kr-catholic-340",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=340"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=340",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-340"],
       "country": "KR",
       "language": "KR",
       "number": "340",
@@ -24176,6 +25006,10 @@
       }]
     }, {
       "id": "kr-catholic-341",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=341",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=341","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-341"],
       "country": "KR",
       "language": "KR",
       "number": "341",
@@ -24217,6 +25051,10 @@
       }]
     }, {
       "id": "kr-catholic-342",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=342",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=342"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-342"],
       "country": "KR",
       "language": "KR",
       "number": "342",
@@ -24261,6 +25099,10 @@
       }]
     }, {
       "id": "kr-catholic-343",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=343","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=343",
+      "mergedIds": ["kr-hymn-343"],
       "country": "KR",
       "language": "KR",
       "number": "343",
@@ -24305,6 +25147,10 @@
       }]
     }, {
       "id": "kr-catholic-344",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=344","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=344",
+      "mergedIds": ["kr-hymn-344"],
       "country": "KR",
       "language": "KR",
       "number": "344",
@@ -24349,6 +25195,10 @@
       }]
     }, {
       "id": "kr-catholic-345",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=345","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=345",
+      "mergedIds": ["kr-hymn-345"],
       "country": "KR",
       "language": "KR",
       "number": "345",
@@ -24393,6 +25243,10 @@
       }]
     }, {
       "id": "kr-catholic-346",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=346",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=346","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-346"],
       "country": "KR",
       "language": "KR",
       "number": "346",
@@ -24461,6 +25315,10 @@
       }]
     }, {
       "id": "kr-catholic-347",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=347",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=347","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-347"],
       "country": "KR",
       "language": "KR",
       "number": "347",
@@ -24520,6 +25378,10 @@
       }]
     }, {
       "id": "kr-catholic-348",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=348"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=348",
+      "mergedIds": ["kr-hymn-348"],
       "country": "KR",
       "language": "KR",
       "number": "348",
@@ -24582,6 +25444,10 @@
       }]
     }, {
       "id": "kr-catholic-349",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=349","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=349",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-349"],
       "country": "KR",
       "language": "KR",
       "number": "349",
@@ -24650,6 +25516,10 @@
       }]
     }, {
       "id": "kr-catholic-350",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=350"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=350",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-350"],
       "country": "KR",
       "language": "KR",
       "number": "350",
@@ -24694,6 +25564,10 @@
       }]
     }, {
       "id": "kr-catholic-351",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=351",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=351","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-351"],
       "country": "KR",
       "language": "KR",
       "number": "351",
@@ -24738,6 +25612,10 @@
       }]
     }, {
       "id": "kr-catholic-352",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=352",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=352","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-352"],
       "country": "KR",
       "language": "KR",
       "number": "352",
@@ -24782,6 +25660,10 @@
       }]
     }, {
       "id": "kr-catholic-353",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=353"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=353",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-353"],
       "country": "KR",
       "language": "KR",
       "number": "353",
@@ -24826,6 +25708,10 @@
       }]
     }, {
       "id": "kr-catholic-354",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=354",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=354"},
+      "mergedIds": ["kr-hymn-354"],
       "country": "KR",
       "language": "KR",
       "number": "354",
@@ -24870,6 +25756,10 @@
       }]
     }, {
       "id": "kr-catholic-355",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=355"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=355",
+      "mergedIds": ["kr-hymn-355"],
       "country": "KR",
       "language": "KR",
       "number": "355",
@@ -24914,6 +25804,10 @@
       }]
     }, {
       "id": "kr-catholic-356",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=356",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=356","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-356"],
       "country": "KR",
       "language": "KR",
       "number": "356",
@@ -24958,6 +25852,10 @@
       }]
     }, {
       "id": "kr-catholic-357",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=357","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=357",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-357"],
       "country": "KR",
       "language": "KR",
       "number": "357",
@@ -25002,6 +25900,10 @@
       }]
     }, {
       "id": "kr-catholic-358",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=358","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=358",
+      "mergedIds": ["kr-hymn-358"],
       "country": "KR",
       "language": "KR",
       "number": "358",
@@ -25049,6 +25951,10 @@
       }]
     }, {
       "id": "kr-catholic-359",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=359",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=359"},
+      "mergedIds": ["kr-hymn-359"],
       "country": "KR",
       "language": "KR",
       "number": "359",
@@ -25093,6 +25999,10 @@
       }]
     }, {
       "id": "kr-catholic-360",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=360","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=360",
+      "mergedIds": ["kr-hymn-360"],
       "country": "KR",
       "language": "KR",
       "number": "360",
@@ -25179,6 +26089,10 @@
       }]
     }, {
       "id": "kr-catholic-361",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=361","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=361",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-361"],
       "country": "KR",
       "language": "KR",
       "number": "361",
@@ -25220,6 +26134,10 @@
       }]
     }, {
       "id": "kr-catholic-362",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=362",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=362","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-362"],
       "country": "KR",
       "language": "KR",
       "number": "362",
@@ -25261,6 +26179,10 @@
       }]
     }, {
       "id": "kr-catholic-363",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=363",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=363","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-363"],
       "country": "KR",
       "language": "KR",
       "number": "363",
@@ -25317,6 +26239,10 @@
       }]
     }, {
       "id": "kr-catholic-364",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=364",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=364","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-364"],
       "country": "KR",
       "language": "KR",
       "number": "364",
@@ -25358,6 +26284,10 @@
       }]
     }, {
       "id": "kr-catholic-365",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=365",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=365"},
+      "mergedIds": ["kr-hymn-365"],
       "country": "KR",
       "language": "KR",
       "number": "365",
@@ -25399,6 +26329,10 @@
       }]
     }, {
       "id": "kr-catholic-366",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=366"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=366",
+      "mergedIds": ["kr-hymn-366"],
       "country": "KR",
       "language": "KR",
       "number": "366",
@@ -25440,6 +26374,10 @@
       }]
     }, {
       "id": "kr-catholic-367",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=367","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=367",
+      "mergedIds": ["kr-hymn-367"],
       "country": "KR",
       "language": "KR",
       "number": "367",
@@ -25505,6 +26443,10 @@
       }]
     }, {
       "id": "kr-catholic-368",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=368",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=368","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-368"],
       "country": "KR",
       "language": "KR",
       "number": "368",
@@ -25570,6 +26512,10 @@
       }]
     }, {
       "id": "kr-catholic-369",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=369",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=369","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-369"],
       "country": "KR",
       "language": "KR",
       "number": "369",
@@ -25635,6 +26581,10 @@
       }]
     }, {
       "id": "kr-catholic-370",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=370",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=370","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-370"],
       "country": "KR",
       "language": "KR",
       "number": "370",
@@ -25700,6 +26650,10 @@
       }]
     }, {
       "id": "kr-catholic-371",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=371",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=371"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-371"],
       "country": "KR",
       "language": "KR",
       "number": "371",
@@ -25741,6 +26695,10 @@
       }]
     }, {
       "id": "kr-catholic-372",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=372",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=372"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-372"],
       "country": "KR",
       "language": "KR",
       "number": "372",
@@ -25782,6 +26740,10 @@
       }]
     }, {
       "id": "kr-catholic-373",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=373","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=373",
+      "mergedIds": ["kr-hymn-373"],
       "country": "KR",
       "language": "KR",
       "number": "373",
@@ -25856,6 +26818,10 @@
       }]
     }, {
       "id": "kr-catholic-374",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=374",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=374","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-374"],
       "country": "KR",
       "language": "KR",
       "number": "374",
@@ -25930,6 +26896,10 @@
       }]
     }, {
       "id": "kr-catholic-375",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=375",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=375"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-375"],
       "country": "KR",
       "language": "KR",
       "number": "375",
@@ -26002,6 +26972,10 @@
       }]
     }, {
       "id": "kr-catholic-376",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=376",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=376","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-376"],
       "country": "KR",
       "language": "KR",
       "number": "376",
@@ -26076,6 +27050,10 @@
       }]
     }, {
       "id": "kr-catholic-377",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=377",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=377"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-377"],
       "country": "KR",
       "language": "KR",
       "number": "377",
@@ -26117,6 +27095,10 @@
       }]
     }, {
       "id": "kr-catholic-378",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=378",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=378"},
+      "mergedIds": ["kr-hymn-378"],
       "country": "KR",
       "language": "KR",
       "number": "378",
@@ -26158,6 +27140,10 @@
       }]
     }, {
       "id": "kr-catholic-379",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=379",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=379","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-379"],
       "country": "KR",
       "language": "KR",
       "number": "379",
@@ -26199,6 +27185,10 @@
       }]
     }, {
       "id": "kr-catholic-380",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=380",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=380"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-380"],
       "country": "KR",
       "language": "KR",
       "number": "380",
@@ -26240,6 +27230,10 @@
       }]
     }, {
       "id": "kr-catholic-381",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=381","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=381",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-381"],
       "country": "KR",
       "language": "KR",
       "number": "381",
@@ -26281,6 +27275,10 @@
       }]
     }, {
       "id": "kr-catholic-382",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=382","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=382",
+      "mergedIds": ["kr-hymn-382"],
       "country": "KR",
       "language": "KR",
       "number": "382",
@@ -26322,6 +27320,10 @@
       }]
     }, {
       "id": "kr-catholic-383",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=383",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=383","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-383"],
       "country": "KR",
       "language": "KR",
       "number": "383",
@@ -26363,6 +27365,10 @@
       }]
     }, {
       "id": "kr-catholic-384",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=384","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=384",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-384"],
       "country": "KR",
       "language": "KR",
       "number": "384",
@@ -26404,6 +27410,10 @@
       }]
     }, {
       "id": "kr-catholic-385",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=385",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=385"},
+      "mergedIds": ["kr-hymn-385"],
       "country": "KR",
       "language": "KR",
       "number": "385",
@@ -26445,6 +27455,10 @@
       }]
     }, {
       "id": "kr-catholic-386",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=386",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=386","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-386"],
       "country": "KR",
       "language": "KR",
       "number": "386",
@@ -26486,6 +27500,10 @@
       }]
     }, {
       "id": "kr-catholic-387",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=387",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=387","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-387"],
       "country": "KR",
       "language": "KR",
       "number": "387",
@@ -26530,6 +27548,10 @@
       }]
     }, {
       "id": "kr-catholic-388",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=388",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=388","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-388"],
       "country": "KR",
       "language": "KR",
       "number": "388",
@@ -26586,6 +27608,10 @@
       }]
     }, {
       "id": "kr-catholic-389",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=389","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=389",
+      "mergedIds": ["kr-hymn-389"],
       "country": "KR",
       "language": "KR",
       "number": "389",
@@ -26627,6 +27653,10 @@
       }]
     }, {
       "id": "kr-catholic-390",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=390"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=390",
+      "mergedIds": ["kr-hymn-390"],
       "country": "KR",
       "language": "KR",
       "number": "390",
@@ -26668,6 +27698,10 @@
       }]
     }, {
       "id": "kr-catholic-391",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=391","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=391",
+      "mergedIds": ["kr-hymn-391"],
       "country": "KR",
       "language": "KR",
       "number": "391",
@@ -26706,6 +27740,10 @@
       "firstLine": ""
     }, {
       "id": "kr-catholic-392",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=392","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=392",
+      "mergedIds": ["kr-hymn-392"],
       "country": "KR",
       "language": "KR",
       "number": "392",
@@ -26744,6 +27782,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-393",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=393",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=393","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-393"],
       "country": "KR",
       "language": "KR",
       "number": "393",
@@ -26782,6 +27824,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-394",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=394",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=394"},
+      "mergedIds": ["kr-hymn-394"],
       "country": "KR",
       "language": "KR",
       "number": "394",
@@ -26820,6 +27866,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-395",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=395",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=395","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-395"],
       "country": "KR",
       "language": "KR",
       "number": "395",
@@ -26858,6 +27908,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-396",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=396","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=396",
+      "mergedIds": ["kr-hymn-396"],
       "country": "KR",
       "language": "KR",
       "number": "396",
@@ -26896,6 +27950,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-397",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=397","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=397",
+      "mergedIds": ["kr-hymn-397"],
       "country": "KR",
       "language": "KR",
       "number": "397",
@@ -26934,6 +27992,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-398",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=398","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=398",
+      "mergedIds": ["kr-hymn-398"],
       "country": "KR",
       "language": "KR",
       "number": "398",
@@ -26972,6 +28034,10 @@
       "verses": []
     }, {
       "id": "kr-catholic-399",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=399","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=399",
+      "mergedIds": ["kr-hymn-399"],
       "country": "KR",
       "language": "KR",
       "number": "399",
@@ -27037,6 +28103,10 @@
       }]
     }, {
       "id": "kr-catholic-400",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=400",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=400","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-400"],
       "country": "KR",
       "language": "KR",
       "number": "400",
@@ -27109,6 +28179,10 @@
       }]
     }, {
       "id": "kr-catholic-401",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=401"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=401",
+      "mergedIds": ["kr-hymn-401"],
       "country": "KR",
       "language": "KR",
       "number": "401",
@@ -27183,6 +28257,10 @@
       }]
     }, {
       "id": "kr-catholic-402",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=402",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=402","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-402"],
       "country": "KR",
       "language": "KR",
       "number": "402",
@@ -27282,6 +28360,10 @@
       }]
     }, {
       "id": "kr-catholic-403",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=403"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=403",
+      "mergedIds": ["kr-hymn-403"],
       "country": "KR",
       "language": "KR",
       "number": "403",
@@ -27356,6 +28438,10 @@
       }]
     }, {
       "id": "kr-catholic-404",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=404","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=404",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-404"],
       "country": "KR",
       "language": "KR",
       "number": "404",
@@ -27430,6 +28516,10 @@
       }]
     }, {
       "id": "kr-catholic-405",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=405","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=405",
+      "mergedIds": ["kr-hymn-405"],
       "country": "KR",
       "language": "KR",
       "number": "405",
@@ -27495,6 +28585,10 @@
       }]
     }, {
       "id": "kr-catholic-406",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=406"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=406",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-406"],
       "country": "KR",
       "language": "KR",
       "number": "406",
@@ -27536,6 +28630,10 @@
       }]
     }, {
       "id": "kr-catholic-407",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=407",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=407","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-407"],
       "country": "KR",
       "language": "KR",
       "number": "407",
@@ -27620,6 +28718,10 @@
       }]
     }, {
       "id": "kr-catholic-408",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=408",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=408","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-408"],
       "country": "KR",
       "language": "KR",
       "number": "408",
@@ -27697,6 +28799,10 @@
       }]
     }, {
       "id": "kr-catholic-409",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=409","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=409",
+      "mergedIds": ["kr-hymn-409"],
       "country": "KR",
       "language": "KR",
       "number": "409",
@@ -27771,6 +28877,10 @@
       }]
     }, {
       "id": "kr-catholic-410",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=410",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=410"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-410"],
       "country": "KR",
       "language": "KR",
       "number": "410",
@@ -27845,6 +28955,10 @@
       }]
     }, {
       "id": "kr-catholic-411",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=411","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=411",
+      "mergedIds": ["kr-hymn-411"],
       "country": "KR",
       "language": "KR",
       "number": "411",
@@ -27920,6 +29034,10 @@
       }]
     }, {
       "id": "kr-catholic-412",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=412",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=412","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-412"],
       "country": "KR",
       "language": "KR",
       "number": "412",
@@ -27992,6 +29110,10 @@
       }]
     }, {
       "id": "kr-catholic-413",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=413",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=413"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-413"],
       "country": "KR",
       "language": "KR",
       "number": "413",
@@ -28066,6 +29188,10 @@
       }]
     }, {
       "id": "kr-catholic-414",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=414","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=414",
+      "mergedIds": ["kr-hymn-414"],
       "country": "KR",
       "language": "KR",
       "number": "414",
@@ -28147,6 +29273,10 @@
       }]
     }, {
       "id": "kr-catholic-415",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=415",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=415"},
+      "mergedIds": ["kr-hymn-415"],
       "country": "KR",
       "language": "KR",
       "number": "415",
@@ -28230,6 +29360,10 @@
       }]
     }, {
       "id": "kr-catholic-416",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=416",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=416","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-416"],
       "country": "KR",
       "language": "KR",
       "number": "416",
@@ -28316,6 +29450,10 @@
       }]
     }, {
       "id": "kr-catholic-417",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=417"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=417",
+      "mergedIds": ["kr-hymn-417"],
       "country": "KR",
       "language": "KR",
       "number": "417",
@@ -28429,6 +29567,10 @@
       }]
     }, {
       "id": "kr-catholic-418",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=418",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=418","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-418"],
       "country": "KR",
       "language": "KR",
       "number": "418",
@@ -28546,6 +29688,10 @@
       }]
     }, {
       "id": "kr-catholic-419",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=419"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=419",
+      "mergedIds": ["kr-hymn-419"],
       "country": "KR",
       "language": "KR",
       "number": "419",
@@ -28638,6 +29784,10 @@
       }]
     }, {
       "id": "kr-catholic-420",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=420"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=420",
+      "mergedIds": ["kr-hymn-420"],
       "country": "KR",
       "language": "KR",
       "number": "420",
@@ -28758,6 +29908,10 @@
       }]
     }, {
       "id": "kr-catholic-421",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=421"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=421",
+      "mergedIds": ["kr-hymn-421"],
       "country": "KR",
       "language": "KR",
       "number": "421",
@@ -28823,6 +29977,10 @@
       }]
     }, {
       "id": "kr-catholic-422",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=422",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=422","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-422"],
       "country": "KR",
       "language": "KR",
       "number": "422",
@@ -28925,6 +30083,10 @@
       }]
     }, {
       "id": "kr-catholic-423",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=423",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=423","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-423"],
       "country": "KR",
       "language": "KR",
       "number": "423",
@@ -29011,6 +30173,10 @@
       }]
     }, {
       "id": "kr-catholic-424",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=424"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=424",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-424"],
       "country": "KR",
       "language": "KR",
       "number": "424",
@@ -29097,6 +30263,10 @@
       }]
     }, {
       "id": "kr-catholic-425",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=425",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=425","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-425"],
       "country": "KR",
       "language": "KR",
       "number": "425",
@@ -29201,6 +30371,10 @@
       }]
     }, {
       "id": "kr-catholic-426",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=426"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=426",
+      "mergedIds": ["kr-hymn-426"],
       "country": "KR",
       "language": "KR",
       "number": "426",
@@ -29275,6 +30449,10 @@
       }]
     }, {
       "id": "kr-catholic-427",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=427","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=427",
+      "mergedIds": ["kr-hymn-427"],
       "country": "KR",
       "language": "KR",
       "number": "427",
@@ -29368,6 +30546,10 @@
       }]
     }, {
       "id": "kr-catholic-428",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=428",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=428","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-428"],
       "country": "KR",
       "language": "KR",
       "number": "428",
@@ -29412,6 +30594,10 @@
       }]
     }, {
       "id": "kr-catholic-429",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=429","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=429",
+      "mergedIds": ["kr-hymn-429"],
       "country": "KR",
       "language": "KR",
       "number": "429",
@@ -29516,6 +30702,10 @@
       }]
     }, {
       "id": "kr-catholic-430",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=430",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=430","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-430"],
       "country": "KR",
       "language": "KR",
       "number": "430",
@@ -29602,6 +30792,10 @@
       }]
     }, {
       "id": "kr-catholic-431",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=431"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=431",
+      "mergedIds": ["kr-hymn-431"],
       "country": "KR",
       "language": "KR",
       "number": "431",
@@ -29667,6 +30861,10 @@
       }]
     }, {
       "id": "kr-catholic-432",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=432"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=432",
+      "mergedIds": ["kr-hymn-432"],
       "country": "KR",
       "language": "KR",
       "number": "432",
@@ -29732,6 +30930,10 @@
       }]
     }, {
       "id": "kr-catholic-433",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=433",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=433","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-433"],
       "country": "KR",
       "language": "KR",
       "number": "433",
@@ -29797,6 +30999,10 @@
       }]
     }, {
       "id": "kr-catholic-434",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=434","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=434",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-434"],
       "country": "KR",
       "language": "KR",
       "number": "434",
@@ -29869,6 +31075,10 @@
       }]
     }, {
       "id": "kr-catholic-435",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=435"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=435",
+      "mergedIds": ["kr-hymn-435"],
       "country": "KR",
       "language": "KR",
       "number": "435",
@@ -29943,6 +31153,10 @@
       }]
     }, {
       "id": "kr-catholic-436",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=436",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=436"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-436"],
       "country": "KR",
       "language": "KR",
       "number": "436",
@@ -30017,6 +31231,10 @@
       }]
     }, {
       "id": "kr-catholic-437",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=437",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=437","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-437"],
       "country": "KR",
       "language": "KR",
       "number": "437",
@@ -30100,6 +31318,10 @@
       }]
     }, {
       "id": "kr-catholic-438",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=438",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=438","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-438"],
       "country": "KR",
       "language": "KR",
       "number": "438",
@@ -30165,6 +31387,10 @@
       }]
     }, {
       "id": "kr-catholic-439",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=439",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=439"},
+      "mergedIds": ["kr-hymn-439"],
       "country": "KR",
       "language": "KR",
       "number": "439",
@@ -30242,6 +31468,10 @@
       }]
     }, {
       "id": "kr-catholic-440",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=440","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=440",
+      "mergedIds": ["kr-hymn-440"],
       "country": "KR",
       "language": "KR",
       "number": "440",
@@ -30307,6 +31537,10 @@
       }]
     }, {
       "id": "kr-catholic-441",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=441",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=441","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-441"],
       "country": "KR",
       "language": "KR",
       "number": "441",
@@ -30408,6 +31642,10 @@
       }]
     }, {
       "id": "kr-catholic-442",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=442"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=442",
+      "mergedIds": ["kr-hymn-442"],
       "country": "KR",
       "language": "KR",
       "number": "442",
@@ -30476,6 +31714,10 @@
       }]
     }, {
       "id": "kr-catholic-443",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=443",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=443"},
+      "mergedIds": ["kr-hymn-443"],
       "country": "KR",
       "language": "KR",
       "number": "443",
@@ -30577,6 +31819,10 @@
       }]
     }, {
       "id": "kr-catholic-444",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=444",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=444","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-444"],
       "country": "KR",
       "language": "KR",
       "number": "444",
@@ -30660,6 +31906,10 @@
       }]
     }, {
       "id": "kr-catholic-445",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=445",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=445"},
+      "mergedIds": ["kr-hymn-445"],
       "country": "KR",
       "language": "KR",
       "number": "445",
@@ -30732,6 +31982,10 @@
       }]
     }, {
       "id": "kr-catholic-446",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=446"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=446",
+      "mergedIds": ["kr-hymn-446"],
       "country": "KR",
       "language": "KR",
       "number": "446",
@@ -30806,6 +32060,10 @@
       }]
     }, {
       "id": "kr-catholic-447",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=447",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=447","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-447"],
       "country": "KR",
       "language": "KR",
       "number": "447",
@@ -30878,6 +32136,10 @@
       }]
     }, {
       "id": "kr-catholic-448",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=448"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=448",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-448"],
       "country": "KR",
       "language": "KR",
       "number": "448",
@@ -30943,6 +32205,10 @@
       }]
     }, {
       "id": "kr-catholic-449",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=449",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=449","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-449"],
       "country": "KR",
       "language": "KR",
       "number": "449",
@@ -31017,6 +32283,10 @@
       }]
     }, {
       "id": "kr-catholic-450",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=450"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=450",
+      "mergedIds": ["kr-hymn-450"],
       "country": "KR",
       "language": "KR",
       "number": "450",
@@ -31091,6 +32361,10 @@
       }]
     }, {
       "id": "kr-catholic-451",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=451"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=451",
+      "mergedIds": ["kr-hymn-451"],
       "country": "KR",
       "language": "KR",
       "number": "451",
@@ -31162,6 +32436,10 @@
       }]
     }, {
       "id": "kr-catholic-452",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=452",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=452","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-452"],
       "country": "KR",
       "language": "KR",
       "number": "452",
@@ -31236,6 +32514,10 @@
       }]
     }, {
       "id": "kr-catholic-453",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=453","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=453",
+      "mergedIds": ["kr-hymn-453"],
       "country": "KR",
       "language": "KR",
       "number": "453",
@@ -31310,6 +32592,10 @@
       }]
     }, {
       "id": "kr-catholic-454",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=454","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=454",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-454"],
       "country": "KR",
       "language": "KR",
       "number": "454",
@@ -31375,6 +32661,10 @@
       }]
     }, {
       "id": "kr-catholic-455",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=455","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=455",
+      "mergedIds": ["kr-hymn-455"],
       "country": "KR",
       "language": "KR",
       "number": "455",
@@ -31440,6 +32730,10 @@
       }]
     }, {
       "id": "kr-catholic-456",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=456",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=456","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-456"],
       "country": "KR",
       "language": "KR",
       "number": "456",
@@ -31521,6 +32815,10 @@
       }]
     }, {
       "id": "kr-catholic-457",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=457",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=457"},
+      "mergedIds": ["kr-hymn-457"],
       "country": "KR",
       "language": "KR",
       "number": "457",
@@ -31577,6 +32875,10 @@
       }]
     }, {
       "id": "kr-catholic-458",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=458","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=458",
+      "mergedIds": ["kr-hymn-458"],
       "country": "KR",
       "language": "KR",
       "number": "458",
@@ -31633,6 +32935,10 @@
       }]
     }, {
       "id": "kr-catholic-459",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=459","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=459",
+      "mergedIds": ["kr-hymn-459"],
       "country": "KR",
       "language": "KR",
       "number": "459",
@@ -31703,6 +33009,10 @@
       }]
     }, {
       "id": "kr-catholic-460",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=460",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=460","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-460"],
       "country": "KR",
       "language": "KR",
       "number": "460",
@@ -31780,6 +33090,10 @@
       }]
     }, {
       "id": "kr-catholic-461",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=461",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=461"},
+      "mergedIds": ["kr-hymn-461"],
       "country": "KR",
       "language": "KR",
       "number": "461",
@@ -31866,6 +33180,10 @@
       }]
     }, {
       "id": "kr-catholic-462",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=462","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=462",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-462"],
       "country": "KR",
       "language": "KR",
       "number": "462",
@@ -31938,6 +33256,10 @@
       }]
     }, {
       "id": "kr-catholic-463",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=463",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=463","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-463"],
       "country": "KR",
       "language": "KR",
       "number": "463",
@@ -32012,6 +33334,10 @@
       }]
     }, {
       "id": "kr-catholic-464",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=464","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=464",
+      "mergedIds": ["kr-hymn-464"],
       "country": "KR",
       "language": "KR",
       "number": "464",
@@ -32086,6 +33412,10 @@
       }]
     }, {
       "id": "kr-catholic-465",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=465"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=465",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-465"],
       "country": "KR",
       "language": "KR",
       "number": "465",
@@ -32208,6 +33538,10 @@
       }]
     }, {
       "id": "kr-catholic-466",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=466",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=466","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-466"],
       "country": "KR",
       "language": "KR",
       "number": "466",
@@ -32300,6 +33634,10 @@
       }]
     }, {
       "id": "kr-catholic-467",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=467",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=467"},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-467"],
       "country": "KR",
       "language": "KR",
       "number": "467",
@@ -32383,6 +33721,10 @@
       }]
     }, {
       "id": "kr-catholic-468",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=468"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=468",
+      "mergedIds": ["kr-hymn-468"],
       "country": "KR",
       "language": "KR",
       "number": "468",
@@ -32469,6 +33811,10 @@
       }]
     }, {
       "id": "kr-catholic-469",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=469"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=469",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-469"],
       "country": "KR",
       "language": "KR",
       "number": "469",
@@ -32535,6 +33881,10 @@
       }]
     }, {
       "id": "kr-catholic-470",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=470","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=470",
+      "mergedIds": ["kr-hymn-470"],
       "country": "KR",
       "language": "KR",
       "number": "470",
@@ -32579,6 +33929,10 @@
       }]
     }, {
       "id": "kr-catholic-471",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=471",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=471","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-471"],
       "country": "KR",
       "language": "KR",
       "number": "471",
@@ -32644,6 +33998,10 @@
       }]
     }, {
       "id": "kr-catholic-472",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=472",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=472","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-472"],
       "country": "KR",
       "language": "KR",
       "number": "472",
@@ -32711,6 +34069,10 @@
       }]
     }, {
       "id": "kr-catholic-473",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=473",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=473","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-473"],
       "country": "KR",
       "language": "KR",
       "number": "473",
@@ -32776,6 +34138,10 @@
       }]
     }, {
       "id": "kr-catholic-474",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=474"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=474",
+      "mergedIds": ["kr-hymn-474"],
       "country": "KR",
       "language": "KR",
       "number": "474",
@@ -32878,6 +34244,10 @@
       }]
     }, {
       "id": "kr-catholic-475",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=475","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=475",
+      "mergedIds": ["kr-hymn-475"],
       "country": "KR",
       "language": "KR",
       "number": "475",
@@ -32934,6 +34304,10 @@
       }]
     }, {
       "id": "kr-catholic-476",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=476"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=476",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-476"],
       "country": "KR",
       "language": "KR",
       "number": "476",
@@ -33017,6 +34391,10 @@
       }]
     }, {
       "id": "kr-catholic-477",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=477","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=477",
+      "mergedIds": ["kr-hymn-477"],
       "country": "KR",
       "language": "KR",
       "number": "477",
@@ -33185,6 +34563,10 @@
       }]
     }, {
       "id": "kr-catholic-478",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=478",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=478","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-478"],
       "country": "KR",
       "language": "KR",
       "number": "478",
@@ -33250,6 +34632,10 @@
       }]
     }, {
       "id": "kr-catholic-479",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=479",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=479"},
+      "mergedIds": ["kr-hymn-479"],
       "country": "KR",
       "language": "KR",
       "number": "479",
@@ -33336,6 +34722,10 @@
       }]
     }, {
       "id": "kr-catholic-480",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=480",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=480","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-480"],
       "country": "KR",
       "language": "KR",
       "number": "480",
@@ -33417,6 +34807,10 @@
       }]
     }, {
       "id": "kr-catholic-481",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=481"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=481",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-481"],
       "country": "KR",
       "language": "KR",
       "number": "481",
@@ -33482,6 +34876,10 @@
       }]
     }, {
       "id": "kr-catholic-482",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=482"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=482",
+      "mergedIds": ["kr-hymn-482"],
       "country": "KR",
       "language": "KR",
       "number": "482",
@@ -33556,6 +34954,10 @@
       }]
     }, {
       "id": "kr-catholic-483",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=483","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=483",
+      "mergedIds": ["kr-hymn-483"],
       "country": "KR",
       "language": "KR",
       "number": "483",
@@ -33648,6 +35050,10 @@
       }]
     }, {
       "id": "kr-catholic-484",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=484",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=484","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-484"],
       "country": "KR",
       "language": "KR",
       "number": "484",
@@ -33725,6 +35131,10 @@
       }]
     }, {
       "id": "kr-catholic-485",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=485",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=485","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-485"],
       "country": "KR",
       "language": "KR",
       "number": "485",
@@ -33793,6 +35203,10 @@
       }]
     }, {
       "id": "kr-catholic-486",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=486","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=486",
+      "mergedIds": ["kr-hymn-486"],
       "country": "KR",
       "language": "KR",
       "number": "486",
@@ -33861,6 +35275,10 @@
       }]
     }, {
       "id": "kr-catholic-487",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=487"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=487",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-487"],
       "country": "KR",
       "language": "KR",
       "number": "487",
@@ -33956,6 +35374,10 @@
       }]
     }, {
       "id": "kr-catholic-488",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=488"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=488",
+      "mergedIds": ["kr-hymn-488"],
       "country": "KR",
       "language": "KR",
       "number": "488",
@@ -34030,6 +35452,10 @@
       }]
     }, {
       "id": "kr-catholic-489",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=489"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=489",
+      "mergedIds": ["kr-hymn-489"],
       "country": "KR",
       "language": "KR",
       "number": "489",
@@ -34095,6 +35521,10 @@
       }]
     }, {
       "id": "kr-catholic-490",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=490"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=490",
+      "mergedIds": ["kr-hymn-490"],
       "country": "KR",
       "language": "KR",
       "number": "490",
@@ -34183,6 +35613,10 @@
       }]
     }, {
       "id": "kr-catholic-491",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=491",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=491","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-491"],
       "country": "KR",
       "language": "KR",
       "number": "491",
@@ -34248,6 +35682,10 @@
       }]
     }, {
       "id": "kr-catholic-492",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=492"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=492",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-492"],
       "country": "KR",
       "language": "KR",
       "number": "492",
@@ -34330,6 +35768,10 @@
       }]
     }, {
       "id": "kr-catholic-493",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=493",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=493","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-493"],
       "country": "KR",
       "language": "KR",
       "number": "493",
@@ -34400,6 +35842,10 @@
       }]
     }, {
       "id": "kr-catholic-494",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=494"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=494",
+      "mergedIds": ["kr-hymn-494"],
       "country": "KR",
       "language": "KR",
       "number": "494",
@@ -34465,6 +35911,10 @@
       }]
     }, {
       "id": "kr-catholic-495",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=495"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=495",
+      "mergedIds": ["kr-hymn-495"],
       "country": "KR",
       "language": "KR",
       "number": "495",
@@ -34555,6 +36005,10 @@
       }]
     }, {
       "id": "kr-catholic-496",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=496",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=496","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-496"],
       "country": "KR",
       "language": "KR",
       "number": "496",
@@ -34637,6 +36091,10 @@
       }]
     }, {
       "id": "kr-catholic-497",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=497"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=497",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-497"],
       "country": "KR",
       "language": "KR",
       "number": "497",
@@ -34714,6 +36172,10 @@
       }]
     }, {
       "id": "kr-catholic-498",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=498","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=498",
+      "mergedIds": ["kr-hymn-498"],
       "country": "KR",
       "language": "KR",
       "number": "498",
@@ -34806,6 +36268,10 @@
       }]
     }, {
       "id": "kr-catholic-499",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=499","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=499",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-499"],
       "country": "KR",
       "language": "KR",
       "number": "499",
@@ -34871,6 +36337,10 @@
       }]
     }, {
       "id": "kr-catholic-500",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=500",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=500"},
+      "mergedIds": ["kr-hymn-500"],
       "country": "KR",
       "language": "KR",
       "number": "500",
@@ -34945,6 +36415,10 @@
       }]
     }, {
       "id": "kr-catholic-501",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=501",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=501"},
+      "mergedIds": ["kr-hymn-501"],
       "country": "KR",
       "language": "KR",
       "number": "501",
@@ -35019,6 +36493,10 @@
       }]
     }, {
       "id": "kr-catholic-502",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=502","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=502",
+      "mergedIds": ["kr-hymn-502"],
       "country": "KR",
       "language": "KR",
       "number": "502",
@@ -35093,6 +36571,10 @@
       }]
     }, {
       "id": "kr-catholic-503",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=503"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=503",
+      "mergedIds": ["kr-hymn-503"],
       "country": "KR",
       "language": "KR",
       "number": "503",
@@ -35171,6 +36653,10 @@
       }]
     }, {
       "id": "kr-catholic-504",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=504","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=504",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-504"],
       "country": "KR",
       "language": "KR",
       "number": "504",
@@ -35254,6 +36740,10 @@
       }]
     }, {
       "id": "kr-catholic-505",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=505","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=505",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-505"],
       "country": "KR",
       "language": "KR",
       "number": "505",
@@ -35310,6 +36800,10 @@
       }]
     }, {
       "id": "kr-catholic-506",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=506",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=506","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-506"],
       "country": "KR",
       "language": "KR",
       "number": "506",
@@ -35384,6 +36878,10 @@
       }]
     }, {
       "id": "kr-catholic-507",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=507",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=507","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-507"],
       "country": "KR",
       "language": "KR",
       "number": "507",
@@ -35458,6 +36956,10 @@
       }]
     }, {
       "id": "kr-catholic-508",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=508","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=508",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-508"],
       "country": "KR",
       "language": "KR",
       "number": "508",
@@ -35507,6 +37009,10 @@
       }]
     }, {
       "id": "kr-catholic-509",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=509","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=509",
+      "mergedIds": ["kr-hymn-509"],
       "country": "KR",
       "language": "KR",
       "number": "509",
@@ -35600,6 +37106,10 @@
       }]
     }, {
       "id": "kr-catholic-510",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=510",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=510","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-510"],
       "country": "KR",
       "language": "KR",
       "number": "510",
@@ -35668,6 +37178,10 @@
       }]
     }, {
       "id": "kr-catholic-511",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=511",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=511","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-511"],
       "country": "KR",
       "language": "KR",
       "number": "511",
@@ -35742,6 +37256,10 @@
       }]
     }, {
       "id": "kr-catholic-512",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=512"},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=512",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-512"],
       "country": "KR",
       "language": "KR",
       "number": "512",
@@ -35826,6 +37344,10 @@
       }]
     }, {
       "id": "kr-catholic-513",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=513",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=513","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-513"],
       "country": "KR",
       "language": "KR",
       "number": "513",
@@ -35891,6 +37413,10 @@
       }]
     }, {
       "id": "kr-catholic-514",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=514",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=514","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-514"],
       "country": "KR",
       "language": "KR",
       "number": "514",
@@ -35991,6 +37517,10 @@
       }]
     }, {
       "id": "kr-catholic-515",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=515",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=515","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-515"],
       "country": "KR",
       "language": "KR",
       "number": "515",
@@ -36086,6 +37616,10 @@
       }]
     }, {
       "id": "kr-catholic-516",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=516","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=516",
+      "mergedIds": ["kr-hymn-516"],
       "country": "KR",
       "language": "KR",
       "number": "516",
@@ -36215,6 +37749,10 @@
       }]
     }, {
       "id": "kr-catholic-517",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=517","youtubeUrl":""},
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=517",
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-517"],
       "country": "KR",
       "language": "KR",
       "number": "517",
@@ -36289,6 +37827,10 @@
       }]
     }, {
       "id": "kr-catholic-518",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=518","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=518",
+      "mergedIds": ["kr-hymn-518"],
       "country": "KR",
       "language": "KR",
       "number": "518",
@@ -36363,6 +37905,10 @@
       }]
     }, {
       "id": "kr-catholic-519",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=519",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=519"},
+      "mergedIds": ["kr-hymn-519"],
       "country": "KR",
       "language": "KR",
       "number": "519",
@@ -36419,6 +37965,10 @@
       }]
     }, {
       "id": "kr-catholic-520",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=520","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=520",
+      "mergedIds": ["kr-hymn-520"],
       "country": "KR",
       "language": "KR",
       "number": "520",
@@ -36484,6 +38034,10 @@
       }]
     }, {
       "id": "kr-catholic-521",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=521"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=521",
+      "mergedIds": ["kr-hymn-521"],
       "country": "KR",
       "language": "KR",
       "number": "521",
@@ -36552,6 +38106,10 @@
       }]
     }, {
       "id": "kr-catholic-522",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=522",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=522","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "mergedIds": ["kr-hymn-522"],
       "country": "KR",
       "language": "KR",
       "number": "522",
@@ -36611,6 +38169,10 @@
       }]
     }, {
       "id": "kr-catholic-523",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=523"},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=523",
+      "mergedIds": ["kr-hymn-523"],
       "country": "KR",
       "language": "KR",
       "number": "523",
@@ -36676,6 +38238,10 @@
       }]
     }, {
       "id": "kr-catholic-524",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=524",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=524"},
+      "mergedIds": ["kr-hymn-524"],
       "country": "KR",
       "language": "KR",
       "number": "524",
@@ -36764,6 +38330,10 @@
       }]
     }, {
       "id": "kr-catholic-525",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=525",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=525"},
+      "mergedIds": ["kr-hymn-525"],
       "country": "KR",
       "language": "KR",
       "number": "525",
@@ -36829,6 +38399,10 @@
       }]
     }, {
       "id": "kr-catholic-526",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=526",
+      "source": "GoodNews Catholic Hymn Search",
+      "media": {"youtubeUrl":"","scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=526"},
+      "mergedIds": ["kr-hymn-526"],
       "country": "KR",
       "language": "KR",
       "number": "526",
@@ -36894,6 +38468,10 @@
       }]
     }, {
       "id": "kr-catholic-527",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=527","youtubeUrl":""},
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=527",
+      "mergedIds": ["kr-hymn-527"],
       "country": "KR",
       "language": "KR",
       "number": "527",
@@ -36994,6 +38572,10 @@
       }]
     }, {
       "id": "kr-catholic-528",
+      "source": "GoodNews Catholic Hymn Search",
+      "sourceUrl": "https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=528",
+      "media": {"scoreUrl":"https://maria.catholic.or.kr/sungga/search/sungga_view.asp?ctxtIndex=528","youtubeUrl":""},
+      "mergedIds": ["kr-hymn-528"],
       "country": "KR",
       "language": "KR",
       "number": "528",

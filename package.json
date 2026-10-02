@@ -19,6 +19,7 @@
     "preface:titles:update": "node tools/update-v225-preface-titles.js",
     "hymn:tool": "node tools/hymn-data-entry-tool.js",
     "hymn:tool:check": "node tools/hymn-data-entry-tool.js --check",
+    "hymn:merge:check": "node tools/verify-hymn-merge.js",
     "hymn:titles:vn-ko": "node tools/add-vn-hymn-korean-titles.js",
     "hymn:titles:vn-scores": "python tools/repair-vn-hymn-titles-from-scores.py",
     "prayer:tool": "node tools/prayer-data-insert-tool.js",
