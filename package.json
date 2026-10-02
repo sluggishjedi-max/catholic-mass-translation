@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "browser:check": "node tools/browser-check-v22.js",
+    "browser:check:daily-memorial": "node tools/browser-check-daily-memorial.js",
     "browser:check:v21": "node tools/browser-check-v21.js",
     "browser:check:v21.1-antigravity": "node tools/browser-check-v21-1-antigravity.js",
     "browser:check:v22.5": "node tools/browser-check-v22-5.js",
