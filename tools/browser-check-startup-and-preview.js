@@ -149,18 +149,29 @@ async function checkPreview(browser, editorBase, appBase) {
     for (const country of countries) {
       await page.selectOption('#editor-country', country.jurisdiction);
       await page.waitForFunction(code => state.currentPrayer?.jurisdiction === code, country.jurisdiction);
-      await page.fill('#source-category', country.language + ' 출처 분류');
+      await page.fill('#source-category', country.language + ' 출처 분류; ' + country.language + ' 다른 출처 ; ; ' + country.language + ' 출처 분류');
       await page.fill('#text', '<rubric>안내</rubric> ' + country.language + ' 기도문\n<indent>들여쓰기</indent>\n다음 문장');
       await page.evaluate(code => {
-        state.currentPrayer.source = { [code]: code + ' 원문 출처' };
+        state.currentPrayer.source = { [code]: code + ' 원문 출처; ' + code + ' 추가 원문; ;' + code + ' 원문 출처' };
         updatePreview();
       }, country.language);
       await frame.waitForFunction(code => {
         const card = document.querySelector('#prayer-results details');
         const pane = card?.querySelector('.aux-prayer-body');
-        return pane?.textContent.includes(code + ' 기도문') && card.textContent.includes(code + ' 원문 출처')
-          && card.querySelector('.aux-prayer-title').textContent.includes(code + ' 출처 분류');
+        return pane?.textContent.includes(code + ' 기도문') && card.textContent.includes(code + ' 추가 원문')
+          && card.querySelector('.aux-prayer-title').textContent.includes(code + ' 다른 출처');
       }, country.language);
+      const sources = await frame.evaluate(() => {
+        const card = document.querySelector('#prayer-results details');
+        return {
+          tags: [...card.querySelector('.aux-prayer-title').querySelectorAll('.aux-prayer-book-tag')].map(tag => tag.textContent),
+          pills: [...card.querySelectorAll('.aux-result-meta .aux-pill')].map(pill => pill.textContent)
+        };
+      });
+      assert.deepEqual(sources.tags, [country.language + ' 출처 분류', country.language + ' 다른 출처'], 'Semicolon-separated source categories did not become individual tags');
+      for (const source of [country.language + ' 원문 출처', country.language + ' 추가 원문']) {
+        assert.equal(sources.pills.filter(pill => pill === source).length, 1, 'Sources were not split or deduplicated');
+      }
     }
     assert.deepEqual(errors, [], 'Editor preview produced a script error');
     console.log(`Editor preview: actual app DOM/styles, source metadata, markup and indent spacing matched in ${countries.length} languages.`);
@@ -175,8 +186,10 @@ async function checkPreview(browser, editorBase, appBase) {
   let browser;
   try {
     browser = await chromium.launch({ headless: true });
-    for (const filename of ['index.html', 'V28.html']) {
-      for (const decision of ['accept', 'late-accept', 'decline']) await checkStartup(browser, appBase, filename, decision);
+    if (!process.argv.includes('--preview-only')) {
+      for (const filename of ['index.html', 'V28.html']) {
+        for (const decision of ['accept', 'late-accept', 'decline']) await checkStartup(browser, appBase, filename, decision);
+      }
     }
     await checkPreview(browser, editorBase, appBase);
   } finally {

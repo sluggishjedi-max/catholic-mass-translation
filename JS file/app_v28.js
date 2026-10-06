@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20261006-PRAYER-PREVIEW-STARTUP';
+    const APP_VERSION = 'V28-20261006-PRAYER-SOURCES';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -4908,8 +4908,18 @@
         return window.ordoPrayerDataApi.categoryLabel(categoryKey, langCode);
     }
 
+    function prayerSourceItems(value) {
+        return Array.from(new Set(String(value || '').split(';').map(cleanNodeText).filter(Boolean)));
+    }
+
+    function prayerOfficialCategories(entry, langCode) {
+        return prayerSourceItems(localizedPrayerValueStrict(entry && entry.sourceCategory, langCode))
+            .map(category => window.ordoPrayerDataApi.officialCategory({ sourceCategory: { KR: category } }, 'KR'))
+            .filter(Boolean);
+    }
+
     function prayerOfficialCategory(entry, langCode) {
-        return window.ordoPrayerDataApi.officialCategory({ sourceCategory: { KR: localizedPrayerValueStrict(entry && entry.sourceCategory, langCode) } }, 'KR');
+        return prayerOfficialCategories(entry, langCode).join('; ');
     }
 
     function prayerSourceText(entry, langCode) {
@@ -4972,8 +4982,8 @@
     function prayerTitleHtml(entry, langCode, otherLangCode, isTranslation = false) {
         const directTitle = localizedPrayerValueStrict(entry.titles, langCode);
         const automaticTitle = directTitle ? '' : prayerAutomaticTranslatedText(entry, langCode, otherLangCode, 'title');
-        const category = prayerOfficialCategory(entry, langCode);
-        const officialTag = category ? `<span class="aux-prayer-book-tag">${escapeHtml(category)}</span>` : '';
+        const officialTag = prayerOfficialCategories(entry, langCode)
+            .map(category => `<span class="aux-prayer-book-tag">${escapeHtml(category)}</span>`).join('');
         if (isTranslation) {
             if (directTitle) return `${escapeHtml(directTitle)}${officialTag}`;
             return automaticTitle ? `<span class="ai-badge">AI</span>${escapeHtml(automaticTitle)}${officialTag}` : '';
@@ -5056,8 +5066,9 @@
         const categoryLabel = prayerCategoryLabel(entry.category, state.uiLang || 'KR');
         if (categoryLabel) pills.push(categoryLabel);
         [leftLang, rightLang].forEach(lang => {
-            const source = prayerSourceText(entry, lang);
-            if (source && !pills.includes(source)) pills.push(source);
+            prayerSourceItems(prayerSourceText(entry, lang)).forEach(source => {
+                if (!pills.includes(source)) pills.push(source);
+            });
         });
         return pills.map(value => `<span class="aux-pill">${escapeHtml(value)}</span>`).join('');
     }
