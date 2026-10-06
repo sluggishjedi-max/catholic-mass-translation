@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20261002-MEMORIAL-SOURCE-PARSING';
+    const APP_VERSION = 'V28-20261006-PRAYER-IMAGES-ORDER';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -4990,8 +4990,33 @@
         return '';
     }
 
+    function prayerImageMarkupHtml(markup) {
+        const template = document.createElement('template');
+        template.innerHTML = markup;
+        const image = template.content.querySelector('img');
+        const src = image && (image.getAttribute('src') || '').trim();
+        if (!src) return escapeHtml(markup);
+        try {
+            if (!/^https?:$/.test(new URL(src, document.baseURI).protocol)) return escapeHtml(markup);
+        } catch (_) {
+            return escapeHtml(markup);
+        }
+        const alt = image.getAttribute('alt') || '';
+        const title = image.getAttribute('title');
+        return `<img class="aux-prayer-image" src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"${title ? ` title="${escapeAttr(title)}"` : ''} loading="lazy" decoding="async">`;
+    }
+
     function formatPrayerMarkupHtml(value) {
-        let html = escapeHtml(value);
+        const source = value == null ? '' : String(value);
+        const images = [];
+        let imageToken = '\uE000prayer-image:';
+        while (source.includes(imageToken)) imageToken += ':';
+        // Keep image attributes out of the text formatting replacements.
+        const text = source.replace(/<img\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi, markup => {
+            const index = images.push(prayerImageMarkupHtml(markup)) - 1;
+            return `${imageToken}${index}\uE001`;
+        });
+        let html = escapeHtml(text);
         html = html.replace(/&lt;rubric&gt;([\s\S]*?)&lt;\/rubric&gt;/gi, (_, inner) => {
             const text = cleanNodeText(inner);
             return text ? `<span class="rubric">${text}</span>` : '';
@@ -4999,8 +5024,13 @@
         html = html.replace(/&lt;(b|strong)&gt;([\s\S]*?)&lt;\/(?:b|strong)&gt;/gi, '<strong>$2</strong>');
         html = html.replace(/&lt;(i|em)&gt;([\s\S]*?)&lt;\/(?:i|em)&gt;/gi, '<em>$2</em>');
         html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u>$1</u>');
+        html = html.replace(/&lt;indent&gt;([\s\S]*?)&lt;\/indent&gt;/gi, '<div class="aux-prayer-indent">$1</div>');
         html = html.replace(/\*\*([\s\S]*?)\*\*/g, (_, inner) => `<strong>${inner}</strong>`);
-        return html.replace(/\r?\n/g, '<br>');
+        html = html.replace(/\r?\n/g, '<br>');
+        images.forEach((image, index) => {
+            html = html.replace(`${imageToken}${index}\uE001`, () => image);
+        });
+        return html;
     }
 
     function prayerBodyHtml(entry, langCode, otherLangCode) {
@@ -5093,6 +5123,25 @@
         }
     };
 
+    const prayerIdCollator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
+
+    function comparePrayerEntryIds(leftEntry, rightEntry) {
+        const left = cleanNodeText(leftEntry && leftEntry.id || '');
+        const right = cleanNodeText(rightEntry && rightEntry.id || '');
+        const leftMatch = left.match(/^(\d+)(.*)$/u);
+        const rightMatch = right.match(/^(\d+)(.*)$/u);
+        if (leftMatch && rightMatch) {
+            const numberDifference = Number(leftMatch[1]) - Number(rightMatch[1]);
+            if (numberDifference) return numberDifference;
+            const variantRank = suffix => suffix.startsWith('.') ? 0 : suffix.startsWith('-') ? 1 : 2;
+            return variantRank(leftMatch[2]) - variantRank(rightMatch[2])
+                || prayerIdCollator.compare(leftMatch[2], rightMatch[2]);
+        }
+        if (leftMatch) return -1;
+        if (rightMatch) return 1;
+        return prayerIdCollator.compare(left, right);
+    }
+
     function renderPrayerPanel() {
         localizeAuxPanels();
         updateFooterCopyright();
@@ -5111,7 +5160,8 @@
                 if (!query) return true;
                 const haystack = prayerEntrySearchText(entry, leftLang, rightLang);
                 return normalizeAuxSearch(haystack).includes(query);
-            });
+            })
+            .sort(comparePrayerEntryIds);
         if (!rows.length) {
             root.innerHTML = `<div class="aux-empty">${escapeHtml(dict.prayerEmpty)}</div>`;
             requestAuxSearchSync();

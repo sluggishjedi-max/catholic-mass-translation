@@ -253,7 +253,9 @@
         .aux-language-label { margin-bottom: 6px; color: var(--primary-color); font-size: 0.82rem; font-weight: 900; }
         .aux-prayer-title { margin-bottom: 6px; font-weight: 900; line-height: 1.35; }
         .aux-prayer-body { white-space: normal; line-height: 1.58; color: #444; }
-        .aux-prayer-body .rubric { margin: 4px 0 2px; }
+        .aux-prayer-body .rubric { display: inline; margin: 0; }
+        .aux-prayer-body .aux-prayer-image { display: block; max-width: 100%; height: auto; margin: 12px auto; }
+        .aux-prayer-body .aux-prayer-indent { margin-inline-start: 1.5em; }
         .aux-prayer-body u { text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; }
         .aux-prayer-list-item { padding: 0; overflow: hidden; }
         .aux-prayer-list-item > summary { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 14px 16px; cursor: pointer; list-style: none; }
@@ -912,6 +914,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="JS%20file/firebase_data_loader.js?v=20260930-country-metadata"></script>
-<script src="JS%20file/app_v28.js?v=20261002-memorial-source-parsing"></script>
+<script src="JS%20file/app_v28.js?v=20261006-prayer-images-order"></script>
 </body>
 </html>

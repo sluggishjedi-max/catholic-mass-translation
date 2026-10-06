@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "browser:check:prayers": "node tools/browser-check-prayer-display.js",
     "browser:check": "node tools/browser-check-v22.js",
     "browser:check:daily-memorial": "node tools/browser-check-daily-memorial.js",
     "browser:check:v21": "node tools/browser-check-v21.js",
