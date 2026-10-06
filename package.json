@@ -26,6 +26,7 @@
     "hymn:titles:vn-scores": "python tools/repair-vn-hymn-titles-from-scores.py",
     "prayer:tool": "node tools/prayer-data-insert-tool.js",
     "prayer:tool:check": "node tools/prayer-data-insert-tool.js --check",
+    "prayer:bulk:check": "node tools/verify-prayer-bulk-selection.js",
     "mass:tool": "node tools/mass-data-editor.js",
     "mass:tool:check": "node tools/mass-data-editor.js --check",
     "mass:tool:verify": "node tools/verify-mass-data-editor.js",
