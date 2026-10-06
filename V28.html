@@ -255,7 +255,7 @@
         .aux-prayer-body { white-space: normal; line-height: 1.58; color: #444; }
         .aux-prayer-body .rubric { display: inline; margin: 0; }
         .aux-prayer-body .aux-prayer-image { display: block; max-width: 100%; height: auto; margin: 12px auto; }
-        .aux-prayer-body .aux-prayer-indent { margin-inline-start: 1.5em; }
+        .aux-prayer-body .aux-prayer-indent { display: inline-block; vertical-align: top; max-width: calc(100% - 1.5em); margin-inline-start: 1.5em; }
         .aux-prayer-body u { text-decoration-thickness: 0.08em; text-underline-offset: 0.16em; }
         .aux-prayer-list-item { padding: 0; overflow: hidden; }
         .aux-prayer-list-item > summary { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 14px 16px; cursor: pointer; list-style: none; }
@@ -538,6 +538,8 @@
         </div>
     </div>
 </div>
+
+<script src="JS%20file/startup_notice.js?v=20261006-early-consent"></script>
 
 <div id="vn-source-modal" role="dialog" aria-modal="true" aria-labelledby="vn-source-title" aria-describedby="vn-source-description">
     <div class="vn-source-content">
@@ -914,6 +916,6 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="JS%20file/firebase_data_loader.js?v=20260930-country-metadata"></script>
-<script src="JS%20file/app_v28.js?v=20261006-prayer-images-order"></script>
+<script src="JS%20file/app_v28.js?v=20261006-prayer-preview-startup"></script>
 </body>
 </html>

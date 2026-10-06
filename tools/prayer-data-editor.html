@@ -104,16 +104,8 @@
     }
     .preview-card { position:sticky; top:104px; }
     .preview-shell { padding:16px; background:#fafbfe; }
-    .app-preview { overflow:hidden; border:1px solid #e0e5ec; border-radius:14px; background:#fff; box-shadow:0 3px 12px #1720330c; }
-    .app-summary { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:14px 16px; color:#315ee8; font-weight:900; }
-    .app-summary::after { content:"▼"; font-size:12px; }
-    .app-detail { padding:12px 16px 18px; border-top:1px solid #edf0f3; }
-    .pills { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:15px; }
-    .pill { display:inline-flex; padding:4px 9px; border-radius:999px; color:#536078; background:#eef1f6; font-size:11px; font-weight:800; }
-    .language-label { margin-bottom:8px; color:#6d7689; font-size:11px; font-weight:900; text-transform:uppercase; }
-    .preview-title { margin-bottom:8px; font-weight:900; line-height:1.4; }
-    .preview-body { color:#444; line-height:1.65; overflow-wrap:anywhere; }
-    .preview-body .rubric { display:block; margin:5px 0 2px; color:#9a5b00; font-style:italic; }
+    .app-preview { display:block; width:100%; height:650px; border:1px solid #e0e5ec; border-radius:14px; background:#fff; }
+    .preview-shell > label { margin-bottom:12px; }
     .merge-card { margin-top:16px; }
     .merge-intro { padding:15px 16px; color:#51617d; background:#f7f9ff; border-bottom:1px solid var(--line); font-size:13px; line-height:1.55; }
     .merge-flow {
@@ -241,21 +233,13 @@
       <aside class="preview-card">
         <div class="panel-head">
           <h2>앱 표시 미리보기</h2>
-          <span>입력과 동시에 반영</span>
+          <span>실제 앱 화면 · 입력과 동시에 반영</span>
         </div>
         <div class="preview-shell">
-          <div class="app-preview">
-            <div id="preview-summary" class="app-summary">기도문 제목</div>
-            <div class="app-detail">
-              <div class="pills">
-                <span id="preview-id" class="pill">ID</span>
-                <span id="preview-category" class="pill">카테고리</span>
-              </div>
-              <div id="preview-language" class="language-label">언어</div>
-              <div id="preview-title" class="preview-title">기도문 제목</div>
-              <div id="preview-body" class="preview-body">기도문 본문이 이곳에 표시됩니다.</div>
-            </div>
-          </div>
+          <label>함께 표시할 국가·언어
+            <select id="preview-target-country"></select>
+          </label>
+          <iframe id="app-preview-frame" class="app-preview" src="/app-preview.html" title="실제 앱 기도문 표시 미리보기"></iframe>
         </div>
       </aside>
     </div>
@@ -307,7 +291,7 @@
     const state = {
       countries: [], languages: [], languageNames: {}, categories: [], categoryLabels: {},
       prayers: [], list: [], mergeList: [], selectedMergeId: '',
-      originalId: '', currentPrayer: null, appliedSearch: '', statusTimer: null
+      originalId: '', currentPrayer: null, appliedSearch: '', statusTimer: null, previewReady: false
     };
 
     const el = Object.fromEntries([
@@ -315,7 +299,7 @@
       'prayer-list','result-count','edit-mode','editor-country','country-help',
       'prayer-id','editor-category','title','source-category','text',
       'save-local','firebase-upload','delete-country','delete-entry',
-      'preview-summary','preview-id','preview-category','preview-language','preview-title','preview-body',
+      'app-preview-frame','preview-target-country',
       'merge-target-title','merge-target-id','merge-country','merge-search','merge-search-button',
       'merge-source-list','merge-overwrite','merge-remove-source','merge-button'
     ].map(id => [id.replace(/-([a-z])/g, (_, c) => c.toUpperCase()), document.getElementById(id)]));
@@ -534,24 +518,32 @@
       else setStatus('검색 필터를 해제하고 전체 목록을 표시합니다.', 'ok');
     }
 
-    function formatPreviewText(text) {
-      const safe = escapeHtml(text || '기도문 본문이 이곳에 표시됩니다.');
-      return safe
-        .replace(/\[([^\]]+)\]/g, '<span class="rubric">[$1]</span>')
-        .replace(/\n/g, '<br>');
-    }
-
     function updatePreview() {
       const country = selectedBodyCountry() || selectedCountry();
-      const code = country?.language || '';
-      const title = el.title.value.trim() || '기도문 제목';
-      const category = el.editorCategory.value || '카테고리';
-      el.previewSummary.textContent = title;
-      el.previewId.textContent = el.prayerId.value.trim() || 'ID';
-      el.previewCategory.textContent = categoryLabel(category, code);
-      el.previewLanguage.textContent = (country ? country.name + ' · ' + country.jurisdiction + ' · ' : '') + languageLabel(code);
-      el.previewTitle.textContent = title;
-      el.previewBody.innerHTML = formatPreviewText(el.text.value);
+      if (!country || !state.previewReady) return;
+      const previousTarget = el.previewTargetCountry.value;
+      el.previewTargetCountry.innerHTML = state.countries.filter(item => item.language !== country.language)
+        .map(item => '<option value="' + escapeHtml(item.jurisdiction) + '">' +
+          escapeHtml(item.name + ' · ' + languageLabel(item.language)) + '</option>').join('');
+      el.previewTargetCountry.value = previousTarget;
+      if (!el.previewTargetCountry.value) el.previewTargetCountry.value = country.language === 'KR' ? 'US' : 'KR';
+      const target = selectedCountry(el.previewTargetCountry.value);
+      const code = country.language;
+      const prayer = state.currentPrayer || {};
+      const entry = {
+        id: el.prayerId.value.trim() || 'preview-draft',
+        category: el.editorCategory.value,
+        titles: { ...(prayer.titles || {}), [code]: el.title.value.trim() || '기도문 제목' },
+        texts: { ...(prayer.texts || {}), [code]: el.text.value },
+        sourceCategory: { ...(prayer.sourceCategory || {}), [code]: el.sourceCategory.value.trim() },
+        source: prayer.source || {}, sourceUrl: prayer.sourceUrl || {}
+      };
+      el.appPreviewFrame.contentWindow.postMessage({
+        type: 'ordo:prayer-preview', entry,
+        registry: prayer.previewCountryData || {},
+        jurisdiction: country.jurisdiction, language: code,
+        targetJurisdiction: target?.jurisdiction || 'US', targetLanguage: target?.language || 'EN'
+      }, location.origin);
     }
 
     function savePayload() {
@@ -712,6 +704,14 @@
       .catch(error => setStatus(error.message, 'error')));
     [el.prayerId,el.editorCategory,el.title,el.sourceCategory,el.text].forEach(input =>
       input.addEventListener('input', updatePreview));
+    el.previewTargetCountry.addEventListener('change', updatePreview);
+    window.addEventListener('message', event => {
+      if (event.source !== el.appPreviewFrame.contentWindow || event.origin !== location.origin) return;
+      if (event.data?.type === 'ordo:prayer-preview-ready') {
+        state.previewReady = true;
+        updatePreview();
+      }
+    });
     el.saveLocal.addEventListener('click', () => saveLocal().catch(error => setStatus(error.message, 'error')));
     el.firebaseUpload.addEventListener('click', () => window.ordoFirebaseUploader.upload({
       button:el.firebaseUpload, endpoint:'/api/firebase-export', setStatus

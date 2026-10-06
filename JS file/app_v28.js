@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20261006-PRAYER-IMAGES-ORDER';
+    const APP_VERSION = 'V28-20261006-PRAYER-PREVIEW-STARTUP';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -4790,16 +4790,29 @@
         }
     };
 
+    function normalizeAppPrayerEntries(data, options = {}) {
+        return (Array.isArray(data) ? data : []).flatMap(entry => {
+            const normalized = window.ordoPrayerDataApi.normalizeEntries([entry], options)[0];
+            if (!normalized) return [];
+            return [Object.assign({}, normalized, {
+                titles: localizedObjectFromFlatEntry(entry, entry.titles || entry.title || entry.name || {}, ['title', 'name']),
+                texts: localizedObjectFromFlatEntry(entry, entry.texts || entry.text || entry.body || {}, ['text', 'body', 'content', 'prayer']),
+                sourceCategory: localizedObjectFromFlatEntry(entry, entry.sourceCategory || entry.sourceCategories || {}, ['sourceCategory', 'source_category']),
+                source: localizedObjectFromFlatEntry(entry, entry.source || entry.sources || (options.uploaded ? entry.fileName || '업로드 기도문 파일' : ''), ['source', 'sources', 'fileName'])
+            })];
+        });
+    }
+
     function getUploadedPrayerData() {
         const hasUploadedPrayerData = Array.isArray(window.uploadedPrayerData);
         const data = hasUploadedPrayerData ? window.uploadedPrayerData : (Array.isArray(window.prayerData) ? window.prayerData : []);
-        return window.ordoPrayerDataApi.normalizeEntries(data, { uploaded: hasUploadedPrayerData });
+        return normalizeAppPrayerEntries(data, { uploaded: hasUploadedPrayerData });
     }
 
     const fallbackPrayerDataByJurisdiction = new Map();
 
     function prayerModuleEntries(module) {
-        return window.ordoPrayerDataApi.normalizeEntries(module && Array.isArray(module.entries) ? module.entries : []);
+        return normalizeAppPrayerEntries(module && Array.isArray(module.entries) ? module.entries : []);
     }
 
     function mergeCountryPrayerFallbackEntry(current, incoming, sourceJurisdiction) {
@@ -4846,10 +4859,7 @@
             .filter(entry => SUPPORTED_LANGS.some(lang => localizedPrayerValueStrict(entry.texts, lang)))
             .map(entry => {
                 const hasLatinBody = !!localizedPrayerValueStrict(entry.texts, 'LA');
-                const source = Object.assign({}, entry.source || {});
-                if (hasLatinBody) source.LA = 'Universal Latin prayer text · AI translation source';
                 return Object.assign({}, entry, {
-                    source,
                     __aiPrayerFallback: true,
                     __aiPrayerFallbackJurisdiction: key,
                     __aiPrayerFallbackSourceJurisdiction: hasLatinBody
@@ -4899,11 +4909,11 @@
     }
 
     function prayerOfficialCategory(entry, langCode) {
-        return window.ordoPrayerDataApi.officialCategory(entry, langCode);
+        return window.ordoPrayerDataApi.officialCategory({ sourceCategory: { KR: localizedPrayerValueStrict(entry && entry.sourceCategory, langCode) } }, 'KR');
     }
 
     function prayerSourceText(entry, langCode) {
-        return window.ordoPrayerDataApi.sourceText(entry, langCode);
+        return localizedPrayerValue(entry && entry.source, langCode);
     }
 
     function prayerEntrySearchText(entry, leftLang, rightLang) {
@@ -5024,7 +5034,7 @@
         html = html.replace(/&lt;(b|strong)&gt;([\s\S]*?)&lt;\/(?:b|strong)&gt;/gi, '<strong>$2</strong>');
         html = html.replace(/&lt;(i|em)&gt;([\s\S]*?)&lt;\/(?:i|em)&gt;/gi, '<em>$2</em>');
         html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u>$1</u>');
-        html = html.replace(/&lt;indent&gt;([\s\S]*?)&lt;\/indent&gt;/gi, '<div class="aux-prayer-indent">$1</div>');
+        html = html.replace(/&lt;indent&gt;([\s\S]*?)&lt;\/indent&gt;/gi, '<span class="aux-prayer-indent">$1</span>');
         html = html.replace(/\*\*([\s\S]*?)\*\*/g, (_, inner) => `<strong>${inner}</strong>`);
         html = html.replace(/\r?\n/g, '<br>');
         images.forEach((image, index) => {
@@ -5833,7 +5843,8 @@
     }
     function closeSettings() { document.getElementById('settings-modal').style.display = 'none'; }
 
-    let startupNoticeDecision = null;
+    let startupNoticeDecision = typeof window.ordoStartupNoticeDecision === 'boolean'
+        ? window.ordoStartupNoticeDecision : null;
     let resolveStartupNoticeDecision = null;
     const startupNoticeDecisionPromise = new Promise(resolve => { resolveStartupNoticeDecision = resolve; });
     let vietnameseSourceChoicePromise = null;
@@ -21181,33 +21192,38 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         syncAuxPanelsWithSettings();
     }
 
-    function restoreAndroidSavedStartupDecision() {
-        if (!isAndroidAppRuntime() || !(initialAndroidSettings && initialAndroidSettings.consentAccepted)) return false;
+    function restoreStartupNoticeDecision() {
+        if (startupNoticeDecision === false) return false;
+        if (startupNoticeDecision !== true
+            && (!isAndroidAppRuntime() || !(initialAndroidSettings && initialAndroidSettings.consentAccepted))) return false;
         const modal = document.getElementById('consent-modal');
         if (modal) modal.style.display = 'none';
         document.body.classList.remove('consent-pending');
         startupNoticeDecision = true;
+        persistAndroidAppSettings({ consentAccepted: true });
         if (resolveStartupNoticeDecision) resolveStartupNoticeDecision(true);
         return true;
     }
 
     // 초기 실행: 로컬/캐시 데이터로 먼저 렌더하고 GPS는 백그라운드에서 보정합니다.
-    applyInitialSettingsToControls();
-    restoreAndroidSavedStartupDecision();
-    syncLocalizedChromeAndSettings();
-    setupFloatingLiturgyBanner();
-    setupOrientationPersistence();
-    setupLiturgicalDateRolloverWatch();
-    fetchMassData();
-    simulateGPS();
-    if (window.ordoFirebaseDataReady && typeof window.ordoFirebaseDataReady.then === 'function') {
-        window.ordoFirebaseDataReady.then(status => {
-            if (!status || status.error) return;
-            fallbackPrayerDataByJurisdiction.clear();
-            if (status.hymnCount) renderHymnPanel({ resetCategory: true });
-            if (status.prayerCount) renderPrayerPanel();
-            if (status.massCount && startupNoticeDecision === true) {
-                fetchMassData({ skipStartupPrompts: true });
-            }
-        }).catch(error => console.warn('Firebase published data refresh failed.', error));
+    if (!window.ordoPrayerEditorPreview && startupNoticeDecision !== false) {
+        applyInitialSettingsToControls();
+        restoreStartupNoticeDecision();
+        syncLocalizedChromeAndSettings();
+        setupFloatingLiturgyBanner();
+        setupOrientationPersistence();
+        setupLiturgicalDateRolloverWatch();
+        fetchMassData();
+        simulateGPS();
+        if (window.ordoFirebaseDataReady && typeof window.ordoFirebaseDataReady.then === 'function') {
+            window.ordoFirebaseDataReady.then(status => {
+                if (!status || status.error || startupNoticeDecision === false) return;
+                fallbackPrayerDataByJurisdiction.clear();
+                if (status.hymnCount) renderHymnPanel({ resetCategory: true });
+                if (status.prayerCount) renderPrayerPanel();
+                if (status.massCount && startupNoticeDecision === true) {
+                    fetchMassData({ skipStartupPrompts: true });
+                }
+            }).catch(error => console.warn('Firebase published data refresh failed.', error));
+        }
     }

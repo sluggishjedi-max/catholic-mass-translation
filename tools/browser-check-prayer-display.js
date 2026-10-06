@@ -65,11 +65,9 @@ const imagePath = '/prayer-test-wide.svg';
           state.targetLang = lang === 'KR' ? 'EN' : 'KR';
           renderPrayerPanel();
           check(JSON.stringify(ids()) === JSON.stringify(expected), `${lang}: prayers are not in numeric ID order`);
-          const nativeLanguage = window.ordoPrayerDataApi.languages.includes(lang);
-          const expectedImages = entries.length * (nativeLanguage ? 4 : 2);
+          const expectedImages = entries.length * 4;
           check(document.querySelectorAll('#prayer-results img.aux-prayer-image').length === expectedImages, `${lang}: images missing from available source panes`);
-          // Exercise the shared renderer for every app language, including those
-          // whose country prayer books currently use AI fallback sources.
+          // Exercise the shared renderer for every app language.
           const directBody = document.createElement('div');
           directBody.innerHTML = prayerBodyHtml(entries[0], lang, 'KR');
           check(directBody.querySelectorAll('img').length === 2 && directBody.querySelector('.aux-prayer-indent'), `${lang}: shared body rendering failed`);

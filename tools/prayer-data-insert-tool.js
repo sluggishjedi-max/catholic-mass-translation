@@ -305,6 +305,17 @@ function prayerDetailForCountry(loaded, jurisdiction, id, requestedLanguage) {
     title: entry ? ((entry.titles || {})[lang] || '') : '',
     sourceCategory: entry ? (entry.sourceCategory || {}) : {},
     sourceCategoryText: entry ? ((entry.sourceCategory || {})[lang] || '') : '',
+    texts: entry ? (entry.texts || {}) : {},
+    source: entry ? (entry.source || {}) : {},
+    sourceUrl: entry ? (entry.sourceUrl || {}) : {},
+    previewCountryData: Object.fromEntries(loaded.countries.map(owner => {
+      const module = loaded.runtime && loaded.runtime.countries[owner.jurisdiction];
+      return [owner.jurisdiction, {
+        jurisdiction: owner.jurisdiction,
+        language: owner.language,
+        entries: (module && module.entries || []).filter(item => item.id === detail.id)
+      }];
+    })),
     text: entry ? ((entry.texts || {})[lang] || '') : '',
     textLength: entry ? String((entry.texts || {})[lang] || '').length : 0
   };
@@ -1560,10 +1571,49 @@ function handleError(res, error) {
   });
 }
 
+function prayerAppPreviewHtml() {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const scripts = Array.from(html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/giu))
+    .filter(match => /_prayers\.js(?:\?|$)|\/app_v28\.js(?:\?|$)/u.test(match[1]))
+    .map(match => match[0]).join('\n');
+  return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/giu, '')
+    .replace('</head>', `<style>
+      body > :not(#prayer-panel) { display: none !important; }
+      #prayer-panel { display: block; }
+      #prayer-panel > :not(#prayer-results) { display: none; }
+    </style></head>`)
+    .replace('</body>', `<script>window.ordoPrayerEditorPreview = true;</script>
+      ${scripts}
+      <script src="/JS%20file/prayer_editor_preview.js"></script></body>`);
+}
+
+function servePrayerPreviewAsset(url, res) {
+  const pathname = decodeURIComponent(url.pathname);
+  const publicRoots = ['JS file', 'assets'].map(folder => path.resolve(root, folder) + path.sep);
+  const file = path.resolve(root, '.' + pathname);
+  const mime = {
+    '.js': 'application/javascript; charset=utf-8', '.svg': 'image/svg+xml',
+    '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+    '.gif': 'image/gif', '.webp': 'image/webp', '.ico': 'image/x-icon'
+  }[path.extname(file).toLowerCase()];
+  if (!mime || !publicRoots.some(folder => file.startsWith(folder))) return false;
+  if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return false;
+  res.writeHead(200, { 'content-type': mime, 'cache-control': 'no-store' });
+  res.end(fs.readFileSync(file));
+  return true;
+}
+
 function createServer() {
   return http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url, 'http://127.0.0.1');
+
+      if (req.method === 'GET' && url.pathname === '/app-preview.html') {
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        res.end(prayerAppPreviewHtml());
+        return;
+      }
+      if (req.method === 'GET' && servePrayerPreviewAsset(url, res)) return;
 
       if (req.method === 'GET' && url.pathname === '/') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
