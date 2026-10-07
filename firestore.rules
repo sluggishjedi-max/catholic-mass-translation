@@ -12,7 +12,8 @@ service cloud.firestore {
         'prayer_data',
         'hymn_data',
         'order_of_mass',
-        'country_mass_metadata'
+        'country_mass_metadata',
+        'country_special_liturgies'
       ];
     }
   }

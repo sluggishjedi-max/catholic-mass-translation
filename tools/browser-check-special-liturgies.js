@@ -95,7 +95,7 @@ const metadata = Object.fromEntries(metadataTool.countryMetadataItems().map(item
         const date = getTargetDate();
         state.liturgyInfo = buildGeneratedLiturgyInfo(date);
         check(getStrictMassSelector(date).allSoulsChoice === expected, 'Arrow selector mismatch');
-        check(state.liturgyInfo.names.KR === ['위령의날 첫째미사', '위령의날 둘째미사', '위령의날 셋째미사'][index], 'Mass title mismatch');
+        check(state.liturgyInfo.names.KR === specialLiturgyProfile('KR').allSouls[expected].names.KR, 'Mass title mismatch');
         document.getElementById('header-liturgy-name').innerHTML = liturgyDateNavigationHtml(state.liturgyInfo.names.KR, state.liturgyInfo.names.EN);
         cacheKeys.push(strictDailySourceCacheVariant(date));
         document.querySelector('.liturgy-nav-next').click();

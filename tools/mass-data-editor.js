@@ -3,6 +3,7 @@ const http = require('http');
 const path = require('path');
 const vm = require('vm');
 const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
+const { createSpecialEditorBackend } = require('./special-liturgy-editor');
 
 const root = path.resolve(__dirname, '..');
 const DEFAULT_HOST = '127.0.0.1';
@@ -850,10 +851,28 @@ function sendJson(res, statusCode, payload) {
   res.end(JSON.stringify(payload));
 }
 
-function createServer() {
+function createServer(options = {}) {
+  const specials = createSpecialEditorBackend({ root: options.specialRoot || root });
   return http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url, `http://${DEFAULT_HOST}`);
+      if (req.method === 'GET' && url.pathname === '/special-liturgies') {
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        res.end(fs.readFileSync(path.join(__dirname, 'special-liturgy-editor.html'), 'utf8'));
+        return;
+      }
+      if (req.method === 'GET' && url.pathname === '/api/special/state') {
+        sendJson(res, 200, { ok: true, ...specials.state() }); return;
+      }
+      if (req.method === 'GET' && url.pathname === '/api/special/entries') {
+        sendJson(res, 200, { ok: true, entries: specials.entries(url.searchParams.get('country') || 'KR') }); return;
+      }
+      if (req.method === 'POST' && url.pathname === '/api/special/save') {
+        sendJson(res, 200, { ok: true, ...specials.save(await readJson(req)) }); return;
+      }
+      if (req.method === 'GET' && url.pathname === '/api/special/firebase-export') {
+        sendJson(res, 200, specials.firebaseExport()); return;
+      }
       if (req.method === 'GET' && url.pathname === '/') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
         res.end(INDEX_HTML);
@@ -1045,6 +1064,7 @@ const INDEX_HTML = String.raw`<!doctype html>
   <header class="top">
     <h1>미사통상문 원문 · 번역문 편집기</h1>
     <p>같은 구절을 양쪽에서 비교하고 국가별 원본 파일에 직접 저장합니다.</p>
+    <p><a href="/special-liturgies">성주간 · 성야 · 전야미사 · 위령의 날 편집 →</a></p>
   </header>
   <main>
     <section class="controls">
