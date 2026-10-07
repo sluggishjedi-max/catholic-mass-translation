@@ -1129,7 +1129,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
-    assert.match(result.version, /^V28-/);
+    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29-/ : /^V28-/);
     await page.setViewportSize({width:412,height:915});
     const mobile = await page.evaluate(() => {
       render();

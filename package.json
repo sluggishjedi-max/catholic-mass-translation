@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "browser:check:v29": "set ORDO_CHECK_HTML=V29.html&& node tools/browser-check-v28.js",
+    "browser:check:holy-week": "node tools/browser-check-holy-week-orders.js",
     "browser:check:admin-review": "node tools/browser-check-admin-date-review.js",
     "admin:auth:check": "node tools/check-admin-review-auth.js",
     "browser:check:startup-preview": "node tools/browser-check-startup-and-preview.js",

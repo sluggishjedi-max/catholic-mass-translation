@@ -41,7 +41,7 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
         }
         return url.hostname==='127.0.0.1'?route.continue():route.abort();
       });
-      await page.goto(`http://127.0.0.1:${server.address().port}/V28.html?reviewDate=2030-11-02`,{waitUntil:'load'});
+      await page.goto(`http://127.0.0.1:${server.address().port}/${process.env.ORDO_CHECK_HTML || 'V28.html'}?reviewDate=2030-11-02`,{waitUntil:'load'});
       await page.waitForFunction(()=>typeof getStrictDateBase==='function' && !document.getElementById('admin-review-login').disabled);
       await page.evaluate(()=>{
         document.getElementById('consent-modal').style.display='none';document.body.classList.remove('consent-pending');
