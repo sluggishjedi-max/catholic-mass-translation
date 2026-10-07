@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "browser:check:admin-review": "node tools/browser-check-admin-date-review.js",
+    "admin:auth:check": "node tools/check-admin-review-auth.js",
     "browser:check:startup-preview": "node tools/browser-check-startup-and-preview.js",
     "browser:check:prayers": "node tools/browser-check-prayer-display.js",
     "browser:check": "node tools/browser-check-v22.js",

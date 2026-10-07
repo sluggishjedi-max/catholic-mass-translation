@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20261007-SPECIAL-LITURGIES';
+    const APP_VERSION = 'V28-20261007-ADMIN-DATE-REVIEW';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -10032,6 +10032,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getStrictDateBase(now = new Date()) {
         const leftTimeZone = activeLiturgicalTimeZone();
+        const reviewDate = globalThis.ordoAdminReview?.getReviewDate();
+        if (reviewDate) {
+            const [year, month, day] = reviewDate.split('-').map(Number);
+            const localDay = new Date(0);
+            localDay.setFullYear(year, month - 1, day);
+            localDay.setHours(0, 0, 0, 0);
+            return { localDay, hour:12, timeZone:leftTimeZone };
+        }
         const parts = zonedDateParts(now, leftTimeZone);
         const localDate = dateFromZonedParts(parts);
         const hour = parts.hour || 0;
@@ -10159,7 +10167,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const currentIndex = entries.findIndex(entry => sameNavigationEntry(entry, current));
         const nextEntry = entries[currentIndex + delta];
         if (!nextEntry) {
-            alert(currentNoticeUiText().dateLimit);
+            alert(globalThis.ordoAdminReview?.getReviewDate()
+                ? globalThis.ordoAdminReview.dateLimitMessage() : currentNoticeUiText().dateLimit);
             return;
         }
         state.dayOffset = nextEntry.offset;
@@ -18442,6 +18451,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function syncLocalizedChromeAndSettings() {
         const ui = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        if (globalThis.ordoAdminReview) {
+            const liveDate = dateFromZonedParts(zonedDateParts(new Date(), activeLiturgicalTimeZone()));
+            globalThis.ordoAdminReview.syncChrome(ui, formatDateIso(liveDate));
+        }
         const chrome = appChromeUiText[ui] || appChromeUiText.KR;
         const settings = settingsUiText[ui] || settingsUiText.KR;
         document.documentElement.lang = (langMeta[ui] && langMeta[ui].code) || 'ko';
@@ -21355,6 +21368,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         window.addEventListener('focus', refreshIfChanged);
         document.addEventListener('visibilitychange', () => {
             if (!document.hidden) refreshIfChanged();
+        });
+        window.addEventListener('ordo:review-date-changed', () => {
+            state.dayOffset = 0;
+            state.liturgyNavSlot = '';
+            state.allSoulsNavChoice = '';
+            state.specialVigilNavKey = '';
+            state.liturgicalDateContext = null;
+            lastSignature = signature();
+            fetchMassData({ skipStartupPrompts:true });
         });
     }
 

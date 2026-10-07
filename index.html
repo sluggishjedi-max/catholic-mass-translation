@@ -83,7 +83,7 @@
 
         /* 설정창은 화면 전체를 덮는 모달이고, 내부만 흰 패널로 둡니다. */
         #settings-modal { display: none; position: fixed; inset: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 10020; justify-content: center; align-items: center; }
-        .settings-content { position: relative; background: white; padding: 22px; border-radius: 10px; width: 94%; max-width: 540px; color: #333; }
+        .settings-content { position: relative; box-sizing: border-box; background: white; padding: 22px; border-radius: 10px; width: 94%; max-width: 540px; max-height: calc(100dvh - 32px); overflow-y: auto; color: #333; }
         .settings-content h3 { margin-bottom: 15px; border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; }
         .settings-version-label { position: absolute; top: 26px; right: 22px; color: #999; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
         .setting-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
@@ -478,7 +478,15 @@
             .church-map-js,
             .church-map-frame { min-height: 360px; }
         }
-    </style>
+        .admin-review-settings { margin: 16px 0; padding: 12px; border: 1px solid #bbb; border-radius: 8px; }
+    .admin-review-settings h4 { margin: 0 0 10px; }
+    .admin-review-settings button, .admin-review-banner button { min-height: 36px; padding: 6px 10px; cursor: pointer; }
+    .admin-review-settings input { display: block; box-sizing: border-box; width: 100%; margin: 6px 0 10px; min-height: 40px; font: inherit; }
+    .admin-review-settings p { font-size: .85em; margin: 8px 0 0; }
+    .admin-review-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .admin-review-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 10px; font-size: .85em; }
+    .admin-review-banner[hidden], .admin-review-settings [hidden] { display: none !important; }
+</style>
 </head>
 <body class="consent-pending">
 
@@ -584,6 +592,10 @@
             <div id="header-date" class="date-display">로딩중...</div>
         </div>
         <div id="header-liturgy-name" class="liturgy-name"></div>
+        <div id="admin-review-banner" class="admin-review-banner" hidden>
+            <span id="admin-review-anchor"></span>
+            <button id="admin-review-header-today" type="button">오늘로 돌아가기</button>
+        </div>
     </div>
 </header>
 
@@ -744,6 +756,21 @@
     <div class="settings-content">
         <h3 id="lbl-settings-title">설정 (Settings)</h3>
         <span id="settings-version-label" class="settings-version-label" aria-label="App version">V28</span>
+        <section class="admin-review-settings" aria-labelledby="admin-review-title">
+            <h4 id="admin-review-title">관리자 전례 검토</h4>
+            <button id="admin-review-login" type="button" disabled>Google로 관리자 로그인</button>
+            <button id="admin-review-logout" type="button" hidden>로그아웃</button>
+            <p id="admin-review-status" role="status" aria-live="polite"></p>
+            <form id="admin-review-controls" hidden>
+                <label id="admin-review-date-label" for="admin-review-date">검토 날짜</label>
+                <input id="admin-review-date" type="date" min="0001-01-01" max="9999-12-31" required>
+                <div class="admin-review-actions">
+                    <button id="admin-review-submit" type="submit">검토하기</button>
+                    <button id="admin-review-today" type="button">오늘로 돌아가기</button>
+                </div>
+                <p id="admin-review-help">선택한 날짜 전후 7일까지 조회할 수 있습니다.</p>
+            </form>
+        </section>
 
         <div class="setting-row">
             <label id="lbl-set-gps">📍 GPS 끄고 현재위치 강제 조정</label>
@@ -915,9 +942,11 @@
 <script src="JS%20file/bible/citation.js?v=20261002-psalm-response-reference"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="JS%20file/firebase_data_loader.js?v=20260930-country-metadata"></script>
+<script src="JS%20file/admin_date_review.js?v=20261007"></script>
 <script src="JS%20file/country_special_liturgies.js?v=20261007"></script>
 <script src="JS%20file/missal_preface_index.js?v=20261007"></script>
-<script src="JS%20file/app_v28.js?v=20261007-special-liturgies"></script>
+<script src="JS%20file/app_v28.js?v=20261007-admin-date-review"></script>
 </body>
 </html>

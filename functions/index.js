@@ -1,12 +1,16 @@
 const { onRequest } = require("firebase-functions/v2/https");
 const { defineSecret, defineString } = require("firebase-functions/params");
 const logger = require("firebase-functions/logger");
+const { getApps, initializeApp } = require("firebase-admin/app");
+const { getAuth } = require("firebase-admin/auth");
+const { createAdminReviewHandler } = require("./admin-review-auth");
 
 const GEMINI_API_KEY_TRANSLATE = defineSecret("GEMINI_API_KEY_TRANSLATE");
 const GEMINI_API_KEY_SYNTAX = defineSecret("GEMINI_API_KEY_SYNTAX");
 const GEMINI_API_KEY_VOICE = defineSecret("GEMINI_API_KEY_VOICE");
 const GOOGLE_MAPS_BROWSER_KEY = defineSecret("GOOGLE_MAPS_BROWSER_KEY");
 const ALLOWED_ORIGINS = defineString("ALLOWED_ORIGINS", { default: "" });
+const ADMIN_REVIEW_EMAILS = defineSecret("ADMIN_REVIEW_EMAILS");
 
 const GEMINI_API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/";
 const GEMINI_PROXY_REVISION = "secret-v3-model35-2026-09-28";
@@ -31,6 +35,19 @@ const proxyKinds = {
   align: GEMINI_API_KEY_SYNTAX,
   voice: GEMINI_API_KEY_VOICE,
 };
+
+exports.adminReviewAccess = onRequest(
+  { region:"us-central1", timeoutSeconds:30, memory:"256MiB", secrets:[ADMIN_REVIEW_EMAILS] },
+  createAdminReviewHandler({
+    verifyIdToken: (token, checkRevoked) => {
+      if (!getApps().length) initializeApp();
+      return getAuth().verifyIdToken(token, checkRevoked);
+    },
+    configuredEmails: () => ADMIN_REVIEW_EMAILS.value(),
+    allowedOrigin: resolveAllowedOrigin,
+    rateLimit: checkRateLimit,
+  })
+);
 
 exports.geminiProxy = onRequest(
   {
