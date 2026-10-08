@@ -88,6 +88,8 @@
     if (input) { input.disabled = !approved || busy; if (document.activeElement !== input) input.value = reviewDate || today; }
     const submit = byId('admin-review-submit'); if (submit) submit.disabled = !approved || busy;
     const status = byId('admin-review-status'); if (status) status.textContent = messageIndex >= 0 ? text(messageIndex) : '';
+    const panel = document.querySelector('.admin-review-settings');
+    if (panel) panel.dataset.authState = busy ? 'pending' : approved ? 'verified' : [7,8].includes(messageIndex) ? 'error' : 'guest';
     const banner = byId('admin-review-banner'); if (banner) banner.hidden = !approved || !reviewDate;
     const anchor = byId('admin-review-anchor'); if (anchor) anchor.textContent = text(10) + ': ' + reviewDate;
   }

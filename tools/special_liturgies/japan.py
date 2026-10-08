@@ -2,3 +2,5 @@
 from common import country_profile
 
 SPECIAL_LITURGIES = country_profile('JP')
+from _vigils import country_vigils
+SPECIAL_LITURGIES['vigils'].extend(country_vigils(['pentecost', 'assumption', 'peter_paul', 'john_baptist']))

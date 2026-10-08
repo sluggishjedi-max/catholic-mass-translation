@@ -478,14 +478,34 @@
             .church-map-js,
             .church-map-frame { min-height: 360px; }
         }
-        .admin-review-settings { margin: 16px 0; padding: 12px; border: 1px solid #bbb; border-radius: 8px; }
-    .admin-review-settings h4 { margin: 0 0 10px; }
-    .admin-review-settings button, .admin-review-banner button { min-height: 36px; padding: 6px 10px; cursor: pointer; }
-    .admin-review-settings input { display: block; box-sizing: border-box; width: 100%; margin: 6px 0 10px; min-height: 40px; font: inherit; }
-    .admin-review-settings p { font-size: .85em; margin: 8px 0 0; }
-    .admin-review-actions { display: flex; flex-wrap: wrap; gap: 8px; }
-    .admin-review-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 10px; font-size: .85em; }
-    .admin-review-banner[hidden], .admin-review-settings [hidden] { display: none !important; }
+        .admin-review-settings { margin: 20px 0; padding: 16px; border: 1px solid var(--liturgy-border-color, #d8dee8); border-radius: 14px; background: #fff; color: #243247; }
+        .admin-review-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .admin-review-settings h4 { margin: 0; font-size: 1em; line-height: 1.4; }
+        .admin-review-auth-actions, .admin-review-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+        .admin-review-settings button, .admin-review-banner button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 1px solid #d0d8e4; border-radius: 9px; background: #f6f8fb; color: #243247; font: inherit; font-size: .85em; font-weight: 600; line-height: 1.4; cursor: pointer; transition: background .15s, box-shadow .15s; }
+        .admin-review-settings button:hover:not(:disabled), .admin-review-banner button:hover { background: #eaf0f8; }
+        .admin-review-settings button:focus-visible, .admin-review-settings input:focus-visible, .admin-review-banner button:focus-visible { outline: 3px solid var(--primary-color, #4369a0); outline-offset: 3px; }
+        .admin-review-settings button:disabled { opacity: .5; cursor: wait; }
+        #admin-review-login { background: #fff; box-shadow: 0 1px 3px #21334d12; }
+        #admin-review-login::before { content: 'G'; display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; color: #4285f4; font: 700 17px Arial, sans-serif; }
+        #admin-review-submit { background: #2f5f92; border-color: #2f5f92; color: #fff; }
+        #admin-review-submit:hover:not(:disabled) { background: #244d77; }
+        #admin-review-status { display: flex; align-items: flex-start; gap: 7px; color: #526175; }
+        #admin-review-status:empty { display: none; }
+        #admin-review-status:not(:empty)::before { content: ''; flex: 0 0 7px; width: 7px; height: 7px; border-radius: 50%; margin-top: .5em; background: #94a3b8; }
+        .admin-review-settings[data-auth-state="verified"] #admin-review-status { color: #24613e; }
+        .admin-review-settings[data-auth-state="verified"] #admin-review-status::before { background: #2d8c54; }
+        .admin-review-settings[data-auth-state="error"] #admin-review-status { color: #9b3540; }
+        .admin-review-settings[data-auth-state="error"] #admin-review-status::before { background: #b74452; }
+        #admin-review-controls { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5eaf0; }
+        .admin-review-date-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 12px; }
+        .admin-review-date-field label { display: block; font-size: .85em; font-weight: 600; }
+        .admin-review-settings input { display: block; box-sizing: border-box; width: 100%; margin: 6px 0 0; min-height: 44px; padding: 9px 11px; border: 1px solid #c9d3df; border-radius: 9px; background: #fff; color: #243247; font: inherit; }
+        .admin-review-settings p { font-size: .82em; line-height: 1.6; margin: 10px 0 0; overflow-wrap: anywhere; }
+        #admin-review-help { color: #617084; text-align: justify; text-wrap: pretty; }
+        .admin-review-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 10px; font-size: .85em; }
+        .admin-review-banner[hidden], .admin-review-settings [hidden] { display: none !important; }
+        @media (max-width: 600px) { .admin-review-date-row { grid-template-columns: 1fr; } .admin-review-actions { display: grid; grid-template-columns: 1fr 1fr; } .admin-review-heading { align-items: stretch; } .admin-review-auth-actions { width: 100%; } .admin-review-auth-actions button { flex: 1; } }
 </style>
 </head>
 <body class="consent-pending">
@@ -757,16 +777,24 @@
         <h3 id="lbl-settings-title">설정 (Settings)</h3>
         <span id="settings-version-label" class="settings-version-label" aria-label="App version">V29</span>
         <section class="admin-review-settings" aria-labelledby="admin-review-title">
+            <div class="admin-review-heading">
             <h4 id="admin-review-title">관리자 전례 검토</h4>
+            <div class="admin-review-auth-actions">
             <button id="admin-review-login" type="button" disabled>Google로 관리자 로그인</button>
             <button id="admin-review-logout" type="button" hidden>로그아웃</button>
+            </div>
+            </div>
             <p id="admin-review-status" role="status" aria-live="polite"></p>
             <form id="admin-review-controls" hidden>
+                <div class="admin-review-date-row">
+                <div class="admin-review-date-field">
                 <label id="admin-review-date-label" for="admin-review-date">검토 날짜</label>
                 <input id="admin-review-date" type="date" min="0001-01-01" max="9999-12-31" required>
+                </div>
                 <div class="admin-review-actions">
                     <button id="admin-review-submit" type="submit">검토하기</button>
                     <button id="admin-review-today" type="button">오늘로 돌아가기</button>
+                </div>
                 </div>
                 <p id="admin-review-help">선택한 날짜 전후 7일까지 조회할 수 있습니다.</p>
             </form>
@@ -943,11 +971,11 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="JS%20file/firebase_data_loader.js?v=20261007-special-mass-editor"></script>
-<script src="JS%20file/admin_date_review.js?v=20261007"></script>
-<script src="JS%20file/country_special_liturgies_v29.js?v=20261007-special-mass-editor"></script>
-<script src="JS%20file/special_liturgy_order.js?v=20261007"></script>
+<script src="JS%20file/firebase_data_loader.js?v=20261008-country-vigils"></script>
+<script src="JS%20file/admin_date_review.js?v=20261008"></script>
+<script src="JS%20file/country_special_liturgies_v29.js?v=20261008-country-vigils"></script>
+<script src="JS%20file/special_liturgy_order.js?v=20261008"></script>
 <script src="JS%20file/missal_preface_index.js?v=20261007"></script>
-<script src="JS%20file/app_v29.js?v=20261007-special-mass-editor"></script>
+<script src="JS%20file/app_v29.js?v=20261008-country-vigils"></script>
 </body>
 </html>

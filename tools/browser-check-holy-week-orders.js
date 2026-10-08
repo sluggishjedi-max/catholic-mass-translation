@@ -37,6 +37,7 @@ if(process.env.ORDO_HOLY_WEEK_SOURCE_ROOT){
     for(const viewport of [{width:1280,height:900},{width:390,height:844}]){
       const page=await browser.newPage({viewport});
       const errors=[];page.on('pageerror',error=>errors.push(error.message));
+      page.on('console',msg=>{if(msg.text().startsWith('Holy Week check:'))console.log(msg.text());});
       await page.addInitScript(({registry,metadata})=>{globalThis.countryMassData=registry;globalThis.uploadedCountryMassData=registry;globalThis.uploadedCountryMassMetadata=metadata;},{registry,metadata});
       await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
       await page.goto(`http://127.0.0.1:${server.address().port}/V29.html`,{waitUntil:'load'});
@@ -58,7 +59,8 @@ if(process.env.ORDO_HOLY_WEEK_SOURCE_ROOT){
         const select=async(offset,kind,slot='day',forceRemote=false)=>{
           selectedDate=addDays(computeEasterSunday(2026),offset);source=kind;
           state.dayOffset=0;state.liturgyNavSlot=slot;state.specialVigilNavKey=slot==='vigil'?'easter_vigil':'';state.allSoulsNavChoice='';state.liturgicalDateContext=null;
-          await fetchMassData({skipStartupPrompts:true,forceRemote});
+          console.log('Holy Week check: '+kind+' '+slot);
+          await Promise.race([fetchMassData({skipStartupPrompts:true,forceRemote}),new Promise((_,reject)=>setTimeout(()=>reject(Error('Mass load timed out: '+kind+' '+slot)),60000))]);
         };
         const ids=()=>Array.from(document.querySelectorAll('#missal-root .part-container')).map(item=>item.dataset.partId);
         await select(-7,'palm');

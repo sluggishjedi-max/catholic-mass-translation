@@ -6,7 +6,7 @@
   const localized = (map, lang) => (map || {})[lang] || (map || {}).EN || (map || {}).KR || '';
   const header = names => Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang.toLowerCase(), localized(names, lang)]));
   const missingText = lang => localized({KR:'이 구역의 국가별 전례문을 아직 등록하지 않았습니다.',EN:'The approved text for this country has not yet been registered.'}, lang);
-  let activeRecord = null, gospelDialogues = new Set();
+  let activeRecord = null, activeCountryRecords = {}, gospelDialogues = new Set();
 
   function riteData(record, lang, key, date) {
     const data = clone(record?.riteData?.[lang]?.[key] || {});
@@ -17,11 +17,14 @@
   function build(date, ordinary) {
     const record = countrySpecialMassRecord(date, state.selectedLocationCode || state.currentLoc);
     activeRecord = record && Array.isArray(record.order) ? record : null;
+    activeCountryRecords = {};
     if (!activeRecord) return null;
     const templates = new Map(ordinary.map(item => [getBaseId(item.id), item]));
     const gospel = templates.get('gospel');
     gospelDialogues = new Set([0,1,3].flatMap(index => SUPPORTED_LANGS.map(lang => norm(gospel?.lines?.[index]?.[`text_${lang.toLowerCase()}`]))).filter(Boolean));
     const records = Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang, countrySpecialMassRecord(date, dailySourceLocationCode(lang))]));
+    activeCountryRecords = records;
+    const activeLanguages = new Set(getActiveDailySourceLanguages());
     const result = [];
     for (const raw of activeRecord.order) {
       const node = typeof raw === 'string' ? {use:raw} : raw;
@@ -67,7 +70,7 @@
           if (!node.choices && !lines.length) lines = [{rubric:missingText(lang)}];
           return [lang,lines];
         }));
-        const length = Math.max(1, ...Object.values(bodies).map(lines => lines.length));
+        const length = Math.max(1, ...Object.entries(bodies).filter(([lang])=>activeLanguages.has(lang)).map(([,lines])=>lines.length));
         return Array.from({length}, (_, index) => Object.fromEntries(SUPPORTED_LANGS.flatMap(lang => {
           const line = bodies[lang][index] || {};
           const lower = lang.toLowerCase();
@@ -100,7 +103,7 @@
     }).filter(line => Object.keys(line).some(key => /^(text|rubric)_/.test(key) && line[key]));
   }
   function eucharistLines(lines, form) {
-    const edits = activeRecord?.eucharistEdits || {};
+    const edits = Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang,activeCountryRecords[lang]?.eucharistEdits?.[lang] || []]));
     return lines.map(line => {
       const result = {...line};
       for (const [lang, rules] of Object.entries(edits)) {

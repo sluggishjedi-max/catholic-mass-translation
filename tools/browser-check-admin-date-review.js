@@ -60,11 +60,19 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
       await page.evaluate(()=>{globalThis.fixtureAccount='administrator';});
       await page.locator('#admin-review-login').click();
       await page.waitForFunction(()=>ordoAdminReview.isVerified());
+      if(process.env.ORDO_CHECK_HTML==='V29.html') {
+        const panel=page.locator('.admin-review-settings');
+        assert.equal(await panel.getAttribute('data-auth-state'),'verified');
+        assert(await page.locator('#admin-review-submit').evaluate(el=>el.getBoundingClientRect().height>=44));
+        assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
+        fs.mkdirSync(path.join(root,'tmp/admin-review-check'),{recursive:true});
+        await panel.screenshot({path:path.join(root,`tmp/admin-review-check/${viewport.width}.png`)});
+      }
       await page.locator('#admin-review-date').fill('2030-11-02');
       await page.locator('#admin-review-submit').click();
       await page.waitForFunction(()=>ordoAdminReview.getReviewDate()==='2030-11-02');
       const selected=await page.evaluate(()=>({anchor:formatDateIso(getStrictDateBase().localDay),day:formatDateIso(getTargetDate()),title:state.liturgyInfo.names.KR,offset:state.dayOffset,choice:getStrictDateContext().allSoulsChoice}));
-      assert.deepEqual(selected,{anchor:'2030-11-02',day:'2030-11-02',title:'위령의날 첫째미사',offset:0,choice:'first'});
+      assert.deepEqual(selected,{anchor:'2030-11-02',day:'2030-11-02',title:process.env.ORDO_CHECK_HTML==='V29.html'?'죽은 모든 이를 위한 위령의 날 - 첫째 미사':'위령의날 첫째미사',offset:0,choice:'first'});
       await page.locator('#lbl-close-btn').click();
       for(const expected of ['second','third']) {
         await page.locator('.liturgy-nav-next').click();assert.equal(await page.evaluate(()=>getStrictDateContext().allSoulsChoice),expected);
@@ -98,6 +106,8 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
         check(alerts===1 && formatDateIso(getTargetDate())===before,'Review edge exceeded');
         return {countries:11,languages:10};
       });
+      await page.evaluate(()=>globalThis.fixtureRefreshToken());await page.waitForFunction(()=>ordoAdminReview.isVerified());
+      await page.evaluate(()=>ordoAdminReview.selectDate('2031-01-01'));
       await page.locator('#admin-review-header-today').click();assert.equal(await page.evaluate(()=>ordoAdminReview.getReviewDate()),'');
       await page.evaluate(()=>ordoAdminReview.selectDate('2030-11-02'));
       permitted=false;await page.evaluate(()=>globalThis.dispatchEvent(new Event('focus')));

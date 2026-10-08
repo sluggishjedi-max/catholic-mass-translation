@@ -4,6 +4,10 @@ from _holy_week import names, PALM_ORDER, rite
 from copy import deepcopy
 
 SPECIAL_LITURGIES = country_profile('KR')
+from _vigils import country_vigils
+SPECIAL_LITURGIES['vigils'].extend(country_vigils(['epiphany', 'ascension', 'pentecost', 'assumption', 'peter_paul', 'john_baptist']))
+# Korea uses the usual Easter-week Mass rather than a Pentecost Vigil entry.
+next(entry for entry in SPECIAL_LITURGIES['vigils'] if entry['id']=='pentecost_vigil')['enabled'] = False
 
 # Source: the user-supplied Korean third-edition Roman Missal, PDF pages 539-648.
 # PDF page numbers (not printed folios) accompany each group below.
