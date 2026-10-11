@@ -39,3423 +39,2258 @@
         "KR": "위령·장례기도"
       }
     },
-    entries: [{
-      "id": "001.sign_of_cross",
-      "category": "common",
-      "titles": {
-        "KR": "성호경"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>십자성호를 그으며</rubric>성부와 성자와 성령의 이름으로.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["001.sign_of_cross", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "성호경", "Dấu Thánh Giá", "Dấu Thánh Giá (đơn)", "Sign of the Cross", "十字架のしるし", "Signum Crucis", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers", "日々の祈り", "Generalia"]
-    }, {
-      "id": "001-1.sign_of_cross_double",
-      "category": "common",
-      "titles": {
-        "KR": "큰 성호경"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["001-1.sign_of_cross_double", "common", "Kinh nguyện chung", "Dấu Thánh Giá (kép)", "Kinh Hằng Ngày", "공통기도문", "Common Prayers", "共通の祈り", "Preces communes", "큰 성호경", "Double Sign of the Cross", "二重十字架のしるし", "Signum Crucis Duplex"]
-    }, {
-      "id": "002.lords_prayer",
-      "category": "common",
-      "titles": {
-        "KR": "주님의 기도"
-      },
-      "texts": {
-        "KR": (
-          "하늘에 계신 우리 아버지,\n"
-          + "아버지의 이름이 거룩히 빛나시며\n"
-          + "아버지의 나라가 오시며\n"
-          + "아버지의 뜻이 하늘에서와 같이\n"
-          + "땅에서도 이루어지소서!\n"
-          + "오늘 저희에게 일용할 양식을 주시고\n"
-          + "저희에게 잘못한 이를 저희가 용서하오니\n"
-          + "저희 죄를 용서하시고\n"
-          + "저희를 유혹에 빠지지 않게 하시고\n"
-          + "악에서 구하소서.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["002.lords_prayer", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "주님의 기도", "Kinh Lạy Cha", "Our Father", "主の祈り", "Pater Noster", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers", "日々の祈り", "Generalia"]
-    }, {
-      "id": "003.hail_mary",
-      "category": "common",
-      "titles": {
-        "KR": "성모송"
-      },
-      "texts": {
-        "KR": (
-          "은총이 가득하신 마리아님, 기뻐하소서!\n"
-          + "주님께서 함께 계시니 여인 중에 복되시며\n"
-          + "태중의 아들 예수님 또한 복되시나이다.\n"
-          + "천주의 성모 마리아님,\n"
-          + "이제와 저희 죽을 때에\n"
-          + "저희 죄인을 위하여 빌어주소서.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["003.hail_mary", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "성모송", "Kinh Kính Mừng", "Hail Mary", "アヴェ・マリアの祈り", "Ave Maria", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers", "日々の祈り", "Generalia"]
-    }, {
-      "id": "004.glory_be",
-      "category": "common",
-      "titles": {
-        "KR": "영광송"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>밑줄 부분에서 고개를 숙이며</rubric><U>영광이 성부와 성자와 성령께</U>\n"
-          + "처음과 같이\n"
-          + "이제와 항상 영원히.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["004.glory_be", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "영광송", "Kinh Sáng Danh", "Glory Be", "栄唱", "Gloria Patri", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers", "日々の祈り", "Generalia"]
-    }, {
-      "id": "005.apostles_creed",
-      "category": "common",
-      "titles": {
-        "KR": "사도 신경"
-      },
-      "texts": {
-        "KR": (
-          "전능하신 천주 성부\n"
-          + "천지의 창조주를 저는 믿나이다.\n"
-          + "그 외아들 우리 주 예수 그리스도님\n"
-          + "<rubric>밑줄 부분에서 모두 깊은 절을 한다.</rubric><U>성령으로 인하여 동정 마리아께 잉태되어 나시고</U>\n"
-          + "본시오 빌라도 통치 아래서 고난을 받으시고\n"
-          + "십자가에 못 박혀 돌아가시고 묻히셨으며\n"
-          + "저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고\n"
-          + "하늘에 올라 전능하신 천주 성부 오른편에 앉으시며\n"
-          + "그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다.\n"
-          + "성령을 믿으며\n"
-          + "거룩하고 보편된 교회와 모든 성인의 통공을 믿으며\n"
-          + "죄의 용서와 육신의 부활을 믿으며\n"
-          + "영원한 삶을 믿나이다.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["005.apostles_creed", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "사도 신경", "Kinh Tin Kính", "Kinh Tin Kính Các Thánh Tông Đồ", "Apostles' Creed", "使徒信条", "Symbolum Apostolorum", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers", "日々の祈り", "Symbolum fidei", "Kinh Tin Kính"]
-    }, {
-      "id": "006.nicene_creed",
-      "category": "common",
-      "titles": {
-        "KR": "니케아-콘스탄티노폴리스 신경"
-      },
-      "texts": {
-        "KR": (
-          "한 분이신 하느님을\n"
-          + "저는 믿나이다.\n"
-          + "전능하신 아버지,\n"
-          + "하늘과 땅과 유형무형한 만물의 창조주를 믿나이다.\n"
-          + "또한 한 분이신 주 예수 그리스도, 하느님의 외아들\n"
-          + "영원으로부터 성부에게서 나신 분을 믿나이다.\n"
-          + "하느님에게서 나신 하느님, 빛에서 나신 빛\n"
-          + "참 하느님에게서 나신 참 하느님으로서,\n"
-          + "창조되지 않고 나시어\n"
-          + "성부와 한 본체로서 만물을 창조하셨음을 믿나이다.\n"
-          + "성자께서는 저희 인간을 위하여, 저희 구원을 위하여\n"
-          + "하늘에서 내려오셨음을 믿나이다.\n"
-          + "<rubric>밑줄 부분에서 모두 고개를 깊이 숙인다.</rubric><U>또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어 사람이 되셨음을 믿나이다.</u>\n"
-          + "본시오 빌라도 통치 아래서 저희를 위하여\n"
-          + "십자가에 못박혀 수난하고 묻히셨으며\n"
-          + "성서 말씀대로 사흗날에 부활하시어\n"
-          + "하늘에 올라 성부 오른편에 앉아계심을 믿나이다.\n"
-          + "그분께서는 산 이와 죽은 이를 심판하러\n"
-          + "영광 속에 다시 오시리니\n"
-          + "그분의 나라는 끝이 없으리이다.\n"
-          + "또한 주님이시며 생명을 주시는 성령을 믿나이다.\n"
-          + "성령께서는 성부와 성자에게서 발하시고\n"
-          + "성부와 성자와 더불어 영광과 흠숭을 받으시며\n"
-          + "예언자들을 통하여 말씀하셨나이다.\n"
-          + "하나이고 거룩하고 보편되며\n"
-          + "사도로부터 이어오는 교회를 믿나이다.\n"
-          + "죄를 씻는 유일한 세례를 믿으며\n"
-          + "죽은 이들의 부활과 내세의 삶을 기다리나이다.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["006.nicene_creed", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "니케아-콘스탄티노폴리스 신경", "Kinh Tin Kính", "Kinh Tin Kính Nicêa - Constantinôpôli", "Nicene Creed", "ニケア・コンスタンチノープル信条", "Symbolum Nicaenum", "주요 기도", "Basic Prayers", "日々の祈り", "Symbolum fidei", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "008.ten_commandments",
-      "category": "common",
-      "titles": {
-        "KR": "십계명"
-      },
-      "texts": {
-        "KR": (
-          "일. "
-          + "한 분이신 하느님을 흠숭하여라.\n"
-          + "이. "
-          + "하느님의 이름을 함부로 부르지 마라.\n"
-          + "삼. "
-          + "주일을 거룩히 지내라.\n"
-          + "사. "
-          + "부모에게 효도하여라.\n"
-          + "오. "
-          + "사람을 죽이지 마라.\n"
-          + "육. "
-          + "간음하지 마라.\n"
-          + "칠. "
-          + "도둑질을 하지 마라.\n"
-          + "팔. "
-          + "거짓 증언을 하지 마라.\n"
-          + "구. "
-          + "남의 아내를 탐내지 마라.\n"
-          + "십. "
-          + "남의 재물을 탐내지 마라."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["008.ten_commandments", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "십계명", "Kinh Mười Điều Răn", "Ten Commandments", "주요 기도", "Kinh Ngày Chúa Nhật", "Catechism"]
-    }, {
-      "id": "007.examination_of_conscience",
-      "category": "common",
-      "titles": {
-        "KR": "반성 기도"
-      },
-      "texts": {
-        "KR": (
-          "주님, 오늘 생각과 말과 행위로 지은 죄와\n"
-          + "의무를 소홀히 한 죄를 자세히 살피고\n"
-          + "그 가운데 버릇이 된 죄를 깨닫게 하소서.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["007.examination_of_conscience", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "반성 기도", "Kinh Trước Khi Xét Mình", "주요 기도", "Kinh Hằng Ngày"]
-    }, {
-      "id": "009.confiteor",
-      "category": "common",
-      "titles": {
-        "KR": "고백 기도"
-      },
-      "texts": {
-        "KR": (
-          "전능하신 하느님과 형제들에게 고백하오니\n"
-          + "생각과 말과 행위로 죄를 많이 지었으며\n"
-          + "자주 의무를 소홀히 하였나이다.\n"
-          + "<rubric>가슴을 치며</rubric>제 탓이요\n"
-          + "<rubric>가슴을 치며</rubric>제 탓이요\n"
-          + "<rubric>가슴을 치며</rubric>저의 큰 탓이옵니다.\n"
-          + "그러므로 간절히 바라오니\n"
-          + "평생 동정이신 성모 마리아와\n"
-          + "모든 천사와 성인과 형제들은\n"
-          + "저를 위하여 하느님께 빌어 주소서.\n"
-          + "(<b>✚</b> 전능하신 하느님, 저희에게 자비를 베푸시어\n"
-          + "죄를 용서하시고\n"
-          + "영원한 생명으로 이끌어 주소서.)\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["009.confiteor", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "고백 기도", "Kinh Thú Nhận", "Confiteor", "주요 기도", "Kinh Hằng Ngày"]
-    }, {
-      "id": "010.act_of_contrition",
-      "category": "common",
-      "titles": {
-        "KR": "통회 기도"
-      },
-      "texts": {
-        "KR": (
-          "하느님,\n"
-          + "제가 죄를 지어\n"
-          + "참으로 사랑받으셔야 할 하느님의 마음을 아프게 하였기에\n"
-          + "악을 저지르고 선을 멀리한 모든 잘못을\n"
-          + "진심으로 뉘우치나이다.\n"
-          + "하느님의 은총으로 속죄하고\n"
-          + "다시는 죄를 짓지 않으며\n"
-          + "죄지을 기회를 피하기로 굳게 다짐하오니\n"
-          + "우리 구세주 예수 그리스도의 수난 공로를 보시고\n"
-          + "저에게 자비를 베풀어 주소서.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["010.act_of_contrition", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "통회 기도", "Act of Contrition", "Kinh Ăn Năn Tội", "Actus Contritionis", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers", "日々の祈り", "Generalia"]
-    }, {
-      "id": "011a.act_of_faith",
-      "category": "common",
-      "titles": {
-        "KR": "신덕송"
-      },
-      "texts": {
-        "KR": (
-          "하느님, 하느님께서는 진리의 근원이시며\n"
-          + "그르침이 없으시므로\n"
-          + "계시하신 진리를\n"
-          + "교회가 가르치는 대로 굳게 믿나이다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["011a.act_of_faith", "011.acts_of_faith_hope_love", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "삼덕송", "신덕송", "Kinh Tin", "Act of Faith", "주요 기도", "Kinh Hằng Ngày", "Actus Fidei", "Basic Prayers", "Generalia"]
-    }, {
-      "id": "011b.act_of_hope",
-      "category": "common",
-      "titles": {
-        "KR": "망덕송"
-      },
-      "texts": {
-        "KR": (
-          "하느님, 하느님께서는 자비의 근원이시며\n"
-          + "저버림이 없으시므로\n"
-          + "예수 그리스도의 공로를 통하여 주실\n"
-          + "구원의 은총과 영원한 생명을 바라나이다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["011b.act_of_hope", "011.acts_of_faith_hope_love", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "삼덕송", "망덕송", "Kinh Cậy", "Act of Hope", "주요 기도", "Kinh Hằng Ngày", "Actus Spei", "Basic Prayers", "Generalia"]
-    }, {
-      "id": "011c.act_of_love",
-      "category": "common",
-      "titles": {
-        "KR": "애덕송"
-      },
-      "texts": {
-        "KR": (
-          "하느님, 하느님께서는 사랑의 근원이시며\n"
-          + "한없이 좋으시므로\n"
-          + "마음을 다하여 주님을 사랑하며\n"
-          + "이웃을 제 몸같이 사랑하나이다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["011c.act_of_love", "011.acts_of_faith_hope_love", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "삼덕송", "애덕송", "Kinh Mến", "Act of Love", "주요 기도", "Kinh Kính Mến", "Actus Caritatis", "Kinh Hằng Ngày", "Basic Prayers", "Generalia"]
-    }, {
-      "id": "012.offering_prayer",
-      "category": "common",
-      "titles": {
-        "KR": "봉헌 기도"
-      },
-      "texts": {
-        "KR": (
-          "하느님, 저를 사랑으로 내시고\n"
-          + "저에게 영혼 육신을 주시어\n"
-          + "주님만을 섬기고 사람을 도우라 하셨나이다.\n"
-          + "저는 비록 죄가 많사오나\n"
-          + "주님께 받은 몸과 마음을 오롯이 도로 바쳐\n"
-          + "찬미와 봉사의 제물로 드리오니\n"
-          + "어여삐 여기시어 받아 주소서.\n"
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["012.offering_prayer", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "봉헌 기도", "Kinh Phú Dâng", "Offering Prayer", "주요 기도", "Kinh Hằng Ngày", "Basic Prayers"]
-    }, {
-      "id": "013.angelus",
-      "category": "common",
-      "titles": {
-        "KR": "삼종 기도"
-      },
-      "texts": {
-        "KR": ((
-          "<b>○</b> 주님의 천사가 마리아께 아뢰니\n"
-          + "<b>●</b> 성령으로 잉태하셨나이다.\n"
-          + "<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n"
-          + "주님께서 함께 하시니 여인 중에 복되시며\n"
-          + "태중의 아들 예수님 또한 복되시나이다.\n"
-          + "<b>●</b> 천주의 성모 마리아님,\n"
-          + "이제와 저희 죽을 때에\n"
-          + "저희 죄인을 위하여 빌어주소서.\n"
-          + "아멘.\n"
-          + "<b>○</b> “주님의 종이오니\n"
-          + "<b>●</b> 그대로 제게 이루어지소서!”\n"
-          + "<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n"
-          + "주님께서 함께 하시니 여인 중에 복되시며\n"
-          + "태중의 아들 예수님 또한 복되시나이다.\n"
-          + "<b>●</b> 천주의 성모 마리아님,\n"
-          + "이제와 저희 죽을 때에\n"
-          + "저희 죄인을 위하여 빌어주소서.\n"
-          + "아멘.\n"
-        )
-         + (
-          "<b>○</b> 이에 말씀이 사람이 되시어\n"
-          + "<b>●</b> 저희 가운데 계시나이다.\n"
-          + "<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n"
-          + "주님께서 함께 하시니 여인 중에 복되시며\n"
-          + "태중의 아들 예수님 또한 복되시나이다.\n"
-          + "<b>●</b> 천주의 성모 마리아님,\n"
-          + "이제와 저희 죽을 때에\n"
-          + "저희 죄인을 위하여 빌어주소서.\n"
-          + "아멘.\n"
-          + "<b>○</b> 천주의 성모님, 저희를 위하여 빌어주시어\n"
-          + "<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n"
-          + "<b>✚</b> 기도합시다.\n"
-          + "하느님, 천사의 아룀으로\n"
-          + "성자께서 사람이 되심을 알았으니\n"
-          + "성자의 수난과 십자가로\n"
-          + "부활의 영광에 이르는 은총을\n"
-          + "저희에게 내려 주소서.\n"
-          + "우리 주 그리스도를 통하여 비나이다.\n"
-          + "<b>◎</b> 아멘."
-        ))
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["013.angelus", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "삼종 기도", "Kinh Truyền Tin", "Angelus", "お告げの祈り", "주요 기도", "Các Kinh Cầu", "Basic Prayers", "日々の祈り", "Maria"]
-    }, {
-      "id": "014.regina_caeli",
-      "category": "common",
-      "titles": {
-        "KR": "부활 삼종 기도"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>주님 부활 대축일부터 성령 강림 대축일까지</rubric><b>○</b> 하늘의 모후님, 기뻐하소서. "
-          + "알렐루야.\n"
-          + "<b>●</b> 태중에 모시던 아드님께서, 알렐루야.\n"
-          + "<b>○</b> 말씀하신 대로 부활하셨나이다. "
-          + "알렐루야.\n"
-          + "<b>●</b> 저희를 위하여 하느님께 빌어 주소서. "
-          + "알렐루야.\n"
-          + "<b>○</b> 동정 마리아님, 기뻐하시며 즐거워하소서. "
-          + "알렐루야.\n"
-          + "<b>●</b> 주님께서 참으로 부활하셨나이다. "
-          + "알렐루야.\n"
-          + "<b>✚</b> 기도합시다.\n"
-          + "하느님, 성자 우리 주 예수 그리스도의 부활로\n"
-          + "온 세상을 기쁘게 하셨으니\n"
-          + "성자의 어머니 동정 마리아의 도움으로\n"
-          + "영생의 즐거움을 얻게 하소서.\n"
-          + "우리 주 그리스도를 통하여 비나이다.\n"
-          + "<b>◎</b> 아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["014.regina_caeli", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "부활 삼종 기도", "레지나 첼리", "Regina Caeli", "Kinh Lạy Nữ Vương Thiên Đàng", "주요 기도", "Basic Prayers", "日々の祈り", "Maria", "アレルヤの祈り", "Các Kinh Cầu"]
-    }, {
-      "id": "015.fatima_prayer",
-      "category": "common",
-      "titles": {
-        "KR": "구원을 비는 기도"
-      },
-      "texts": {
-        "KR": (
-          "예수님,\n"
-          + "저희 죄를 용서하시며\n"
-          + "저희를 지옥 불에서 구하시고\n"
-          + "연옥 영혼을 돌보시며\n"
-          + "가장 버림받은 영혼을 돌보소서."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["015.fatima_prayer", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "구원을 비는 기도", "Fatima Prayer", "Oratio Fatimae", "주요 기도", "Kinh Mân Côi", "Basic Prayers", "日々の祈り", "Rosarium"]
-    }, {
-      "id": "016.prayer_before_meals",
-      "category": "common",
-      "titles": {
-        "KR": "식사 전 기도"
-      },
-      "texts": {
-        "KR": (
-          "<b>✚</b> 주님, 은혜로이 내려 주신 이 음식과\n"
-          + "저희에게 강복하소서.\n"
-          + "우리 주 그리스도를 통하여 비나이다.\n"
-          + "<b>◎</b> 아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["016.prayer_before_meals", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "식사 전 기도", "Prayer Before Meals", "Kinh Trước Bữa Ăn", "Benedic, Domine", "주요 기도", "Basic Prayers", "日々の祈り", "Preces ad mensam"]
-    }, {
-      "id": "017.prayer_after_meals",
-      "category": "common",
-      "titles": {
-        "KR": "식사 후 기도"
-      },
-      "texts": {
-        "KR": (
-          "<b>✚</b> 전능하신 하느님,\n"
-          + "저희에게 베풀어 주신\n"
-          + "모든 은혜에 감사하나이다.\n"
-          + "<b>◎</b> 아멘.\n"
-          + "<b>✚</b> 주님의 이름은 찬미를 받으소서.\n"
-          + "<b>◎</b> 이제와 영원히 받으소서.\n"
-          + "<b>✚</b> 세상을 떠난 모든 이가\n"
-          + "하느님의 자비로 평화의 안식을 얻게 하소서.\n"
-          + "<b>◎</b> 아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["017.prayer_after_meals", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "식사 후 기도", "Prayer After Meals", "Kinh Sau Bữa Ăn", "Agimus Tibi Gratias", "주요 기도", "Basic Prayers", "日々の祈り", "Preces ad mensam"]
-    }, {
-      "id": "018.prayer_before_work",
-      "category": "common",
-      "titles": {
-        "KR": "일을 시작하며 바치는 기도"
-      },
-      "texts": {
-        "KR": (
-          "<b>○</b> 오소서, 성령님.\n"
-          + "저희 마음을 성령으로 가득 채우시어\n"
-          + "저희 안에 사랑의 불이 타오르게 하소서.\n"
-          + "<b>●</b> 주님의 성령을 보내소서. "
-          + "저희가 새로워지리이다.\n"
-          + "또한 온 누리가 새롭게 되리이다.\n"
-          + "<b>✚</b> 기도합시다.\n"
-          + "하느님, 성령의 빛으로 저희 마음을 이끄시어\n"
-          + "바르게 생각하고\n"
-          + "언제나 성령의 위로를 받아 누리게 하소서.\n"
-          + "우리 주 그리스도를 통하여 비나이다.\n"
-          + "<b>◎</b> 아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["018.prayer_before_work", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "일을 시작하며 바치는 기도", "주요 기도"]
-    }, {
-      "id": "019.sub_tuum_praesidium",
-      "category": "common",
-      "titles": {
-        "KR": "일을 마치고 바치는 기도 (성모님께 보호를 청하는 기도)"
-      },
-      "texts": {
-        "KR": (
-          "천주의 성모님, 당신의 보호에 저희를 맡기오니\n"
-          + "어려울 때에 저희의 간절한 기도를 외면하지 마시고\n"
-          + "항상 모든 위험에서 저희를 구하소서.\n"
-          + "영화롭고 복되신 동정녀시여."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["019.sub_tuum_praesidium", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "일을 마치고 바치는 기도", "성모님께 보호를 청하는 기도", "Kinh Trông Cậy", "주요 기도", "Kinh Hằng Ngày"]
-    }, {
-      "id": "020.morning_prayer",
-      "category": "common",
-      "titles": {
-        "KR": "아침 기도"
-      },
-      "texts": {
-        "KR": (
-          "십자 성호를 그으며\n"
-          + "<b>✚</b> 성부와 성자와 성령의 이름으로.\n"
-          + "<b>◎</b> 아멘.\n"
-          + "<b>○</b> 하늘에 계신 우리 아버지,\n"
-          + "아버지의 이름이 거룩히 빛나시며\n"
-          + "아버지의 나라가 오시며\n"
-          + "아버지의 뜻이 하늘에서와 같이\n"
-          + "땅에서도 이루어지소서!\n"
-          + "<b>●</b> 오늘 저희에게 일용할 양식을 주시고\n"
-          + "저희에게 잘못한 이를 저희가 용서하오니\n"
-          + "저희 죄를 용서하시고\n"
-          + "저희를 유혹에 빠지지 않게 하시고\n"
-          + "악에서 구하소서.\n"
-          + "<b>◎</b> 아멘.\n"
-          + "<b>◎</b> 하느님, 저를 사랑으로 내시고\n"
-          + "저에게 영혼 육신을 주시어\n"
-          + "주님만을 섬기고 사람을 도우라 하셨나이다.\n"
-          + "저는 비록 죄가 많사오나\n"
-          + "주님께 받은 몸과 마음을 오롯이 도로 바쳐\n"
-          + "찬미와 봉사의 제물로 드리오니\n"
-          + "어여삐 여기시어 받아 주소서.\n"
-          + "아멘.\n"
-          + "<b>✚</b> 우리 주 하느님께 권능과 영광\n"
-          + "지혜와 굳셈이 있사오니\n"
-          + "찬미와 감사와 흠숭을 영원히 받으소서.\n"
-          + "<b>◎</b> 아멘.\n"
-          + "<b>✚</b> 전능하신 하느님,\n"
-          + "오늘도 저희 생각과 말과 행위를\n"
-          + "주님의 평화로 이끌어 주소서.\n"
-          + "<b>◎</b> 아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["020.morning_prayer", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "아침 기도", "Morning Prayer", "Kinh Sáng", "주요 기도", "jp_朝の祈り", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "朝の祈り", "日々の祈り"]
-    }, {
-      "id": "021.evening_prayer",
-      "category": "common",
-      "titles": {
-        "KR": "저녁 기도"
-      },
-      "texts": {
-        "KR": ((
-          "십자 성호를 그으며\n"
-          + "<b>✚</b> 성부와 성자와 성령의 이름으로.\n"
-          + "<b>◎</b> 아멘.\n"
-          + "<b>✚</b> 주님, 오늘 생각과 말과 행위로 지은 죄와\n"
-          + "의무를 소홀히 한 죄를 자세히 살피고\n"
-          + "그 가운데 버릇이 된 죄를 깨닫게 하소서.\n"
-          + "잠깐 반성한다.\n"
-          + "<b>◎</b> 하느님,\n"
-          + "제가 죄를 지어\n"
-          + "참으로 사랑받으셔야 할\n"
-          + "하느님의 마음을 아프게 하였기에\n"
-          + "악을 저지르고 선을 멀리한 모든 잘못을\n"
-          + "진심으로 뉘우치나이다.\n"
-          + "하느님의 은총으로 속죄하고\n"
-          + "다시는 죄를 짓지 않으며\n"
-          + "죄지을 기회를 피하기로 굳게 다짐하오니\n"
-          + "우리 구세주 예수 그리스도의 수난 공로를 보시고\n"
-          + "저에게 자비를 베풀어 주소서.\n"
-          + "아멘.\n"
-          + "<b>○</b> 하느님, 하느님께서는 진리의 근원이시며\n"
-          + "그르침이 없으시므로\n"
-        )
-         + (
-          "계시하신 진리를\n"
-          + "교회가 가르치는 대로 굳게 믿나이다.\n"
-          + "<b>●</b> 하느님, 하느님께서는 자비의 근원이시며\n"
-          + "저버림이 없으시므로\n"
-          + "예수 그리스도의 공로를 통하여 주실\n"
-          + "구원의 은총과 영원한 생명을 바라나이다.\n"
-          + "<b>○</b> 하느님, 하느님께서는 사랑의 근원이시며\n"
-          + "한없이 좋으시므로\n"
-          + "마음을 다하여 주님을 사랑하며\n"
-          + "이웃을 제 몸같이 사랑하나이다.\n"
-          + "<b>✚</b> 하늘에 계신 우리 아버지,\n"
-          + "오늘 하루도 이미 저물었나이다.\n"
-          + "이제 저희는 구세주 예수 그리스도를 통하여\n"
-          + "모든 천사와 성인과 함께 주님을 흠숭하며\n"
-          + "지금 이 순간까지 베풀어 주신\n"
-          + "주님의 사랑에 감사하나이다.\n"
-          + "<b>◎</b> 아멘.\n"
-          + "<b>✚</b> 전능하신 천주\n"
-          + "십자 성호를 그으며\n"
-          + "성부와 성자와 성령께서는\n"
-          + "저희에게 강복하시고 지켜 주소서.\n"
-          + "<b>◎</b> 아멘."
-        ))
-      },
-      "sourceCategory": {
-        "KR": "주요 기도"
-      },
-      "tags": ["021.evening_prayer", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "저녁 기도", "Evening Prayer", "Kinh Tối", "주요 기도"]
-    }, {
-      "id": "000.guardian_angel",
-      "category": "common",
-      "titles": {
-        "KR": "수호천사에게 바치는 기도"
-      },
-      "texts": {
-        "KR": (
-          "저를 지켜 주시는 수호천사여, 하느님께서 당신께 맡기신 저를 오늘 비추고 지켜 주시며 다스리고 이끌어 주소서. "
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "민간전승"
-      },
-      "tags": ["guardian_angel", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "수호천사에게 바치는 기도", "Kinh Thiên Thần Bản Mệnh", "Guardian Angel Prayer", "守護の天使への祈り", "Angele Dei", "주요 기도", "Basic Prayers", "日々の祈り", "Angeli", "en_prayer_to_your_guardian_angel", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "Prayer to Your Guardian Angel"]
-    }, {
-      "id": "000. rosary_the_joyful_mysteries",
-      "category": "rosary",
-      "titles": {
-        "KR": "환희의 신비"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>월·토요일에 바친다.</rubric>\n"
-          + "1단 마리아께서 예수님을 잉태하심을 묵상합시다.\n"
-          + "2단 마리아께서 엘리사벳을 찾아보심을 묵상합시다.\n"
-          + "3단 마리아께서 예수님을 낳으심을 묵상합시다.\n"
-          + "4단 마리아께서 예수님을 성전에 바치심을 묵상합시다.\n"
-          + "5단 마리아께서 잃으셨던 예수님을 성전에서 찾으심을 묵상합시다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "묵주기도"
-      },
-      "tags": ["000. rosary_the_joyful_mysteries", "rosary", "묵주기도", "Kinh Mân Côi", "Rosary", "ロザリオ", "Rosarium", "환희의 신비", "The Joyful Mysteries", "The Rosary", "Năm Sự Vui", "Chuỗi Mân Côi"]
-    }, {
-      "id": "kr_30_213",
-      "category": "rosary",
-      "titles": {
-        "KR": "묵주 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_213", "rosary", "묵주기도", "Kinh Mân Côi", "Rosary", "ロザリオ", "Rosarium", "묵주 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_8_70",
-      "category": "rosary",
-      "titles": {
-        "KR": "묵주기도 바치는 방법"
-      },
-      "texts": {
-        "KR": (
-          "1. "
-          + "묵주에 달린 십자가를 잡은 채 십자성호(성호경)를 이마, 가슴, 양 어깨 순으로 긋고 십자가 발 부분에 친구(입맞춤)한 다음, 사도신경을 바칩니다.\n"
-          + "2. "
-          + "큰 알(또는 간격이 넓은 알)에서 주님의 기도 1번, 작은 알 3개에서 성모송 각 1번씩, 그리고 맨 마지막 알에서 영광송을 바칩니다. "
-          + "이어서 구원을 위한 기도(구원송)를 바칠 수 있습니다.\n"
-          + "3. "
-          + "그리고 같은 자리에서 신비 제1단(환희의 신비, 빛의 신비, 고통의 신비, 영광의 신비 중에서 하나를 선택)을 묵상한 후 주님의 기도를 1번 드립니다.\n"
-          + "4. "
-          + "이어서 다음의 작은 묵주 알에서 각각 1번씩 성모송 10번을 바칩니다.\n"
-          + "5. "
-          + "10개의 작은 묵주 알을 지나 하나의 큰 묵주 알(또는 간격이 넓은 알)에서 영광송을 바칩니다. "
-          + "이어서 구원을 위한 기도(구원송)를 바칠 수 있습니다. "
-          + "그리고 다시 전과 같이 신비 제2단을 묵상한 후 주님의 기도를 1번 드립니다.\n"
-          + "6. "
-          + "이와 같이 매 단마다 그 신비를 묵상하면서 제3단, 제4단, 제5단을 계속 바칩니다.\n"
-          + "7. "
-          + "마지막 제5단의 묵주기도가 끝나면 마침 성호경을 하기 전에 묵주기도성월 기도인 성모찬송을 바칠 수도 있습니다.\n"
-          + "8. "
-          + "한 바퀴를 돌아 다시 돌아온 십자가를 잡고 성호경으로 끝을 맺습니다. "
-          + "이때 십자가에 친구(입맞춤)하며 마칠 수 있습니다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "묵주기도"
-      },
-      "tags": ["kr_8_70", "rosary", "묵주기도", "Kinh Mân Côi", "Rosary", "ロザリオ", "Rosarium", "묵주기도 바치는 방법", "How to Pray the Rosary"]
-    }, {
-      "id": "kr_5_30",
-      "category": "litany",
-      "titles": {
-        "KR": "103위 한국 성인 호칭 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도"
-      },
-      "tags": ["kr_5_30", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "103위 한국 성인 호칭 기도", "호칭 기도"]
-    }, {
-      "id": "kr_5_128",
-      "category": "litany",
-      "titles": {
-        "KR": "124위 한국 순교 복자 호칭 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도"
-      },
-      "tags": ["kr_5_128", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "124위 한국 순교 복자 호칭 기도", "호칭 기도"]
-    }, {
-      "id": "kr_5_29",
-      "category": "litany",
-      "titles": {
-        "KR": "복되신 동정 마리아의 배필 성 요셉 호칭 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도"
-      },
-      "tags": ["kr_5_29", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "복되신 동정 마리아의 배필 성 요셉 호칭 기도", "호칭 기도"]
-    }, {
-      "id": "kr_5_28",
-      "category": "litany",
-      "titles": {
-        "KR": "성모 호칭 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도"
-      },
-      "tags": ["kr_5_28", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "성모 호칭 기도", "호칭 기도"]
-    }, {
-      "id": "kr_5_31",
-      "category": "litany",
-      "titles": {
-        "KR": "일상적으로 바치는 성인 호칭 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도"
-      },
-      "tags": ["kr_5_31", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "일상적으로 바치는 성인 호칭 기도", "호칭 기도"]
-    }, {
-      "id": "kr_4_21",
-      "category": "monthly",
-      "titles": {
-        "KR": "성 요셉 성월"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "성월 기도"
-      },
-      "tags": ["kr_4_21", "monthly", "성월기도", "Kinh theo tháng kính", "Monthly Devotions", "信心月の祈り", "Preces mensium", "성 요셉 성월", "성월 기도"]
-    }, {
-      "id": "kr_4_22",
-      "category": "monthly",
-      "titles": {
-        "KR": "성모 성월"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "성월 기도"
-      },
-      "tags": ["kr_4_22", "monthly", "성월기도", "Kinh theo tháng kính", "Monthly Devotions", "信心月の祈り", "Preces mensium", "성모 성월", "성월 기도"]
-    }, {
-      "id": "kr_4_24",
-      "category": "monthly",
-      "titles": {
-        "KR": "순교자 성월"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "성월 기도"
-      },
-      "tags": ["kr_4_24", "monthly", "성월기도", "Kinh theo tháng kính", "Monthly Devotions", "信心月の祈り", "Preces mensium", "순교자 성월", "성월 기도"]
-    }, {
-      "id": "kr_4_23",
-      "category": "monthly",
-      "titles": {
-        "KR": "예수 성심 성월"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "성월 기도"
-      },
-      "tags": ["kr_4_23", "monthly", "성월기도", "Kinh theo tháng kính", "Monthly Devotions", "信心月の祈り", "Preces mensium", "예수 성심 성월", "성월 기도"]
-    }, {
-      "id": "kr_4_26",
-      "category": "monthly",
-      "titles": {
-        "KR": "위령 성월"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "성월 기도"
-      },
-      "tags": ["kr_4_26", "monthly", "성월기도", "Kinh theo tháng kính", "Monthly Devotions", "信心月の祈り", "Preces mensium", "위령 성월", "성월 기도"]
-    }, {
-      "id": "kr_29_214",
-      "category": "sacrament",
-      "titles": {
-        "KR": "THE RITE OF PENANCE"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_214", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "THE RITE OF PENANCE", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_7_20",
-      "category": "sacrament",
-      "titles": {
-        "KR": "고해 성사"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "고해성사"
-      },
-      "tags": ["kr_7_20", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "고해 성사", "고해성사", "kr_29_185", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_11_68",
-      "category": "sacrament",
-      "titles": {
-        "KR": "공소 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "공소 예절"
-      },
-      "tags": ["kr_11_68", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "공소 예식", "공소 예절"]
-    }, {
-      "id": "kr_29_186",
-      "category": "sacrament",
-      "titles": {
-        "KR": "병자 영성체 짧은 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_186", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "병자 영성체 짧은 예식", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_29_187",
-      "category": "sacrament",
-      "titles": {
-        "KR": "병자 영성체 통상 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_187", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "병자 영성체 통상 예식", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_29_189",
-      "category": "sacrament",
-      "titles": {
-        "KR": "병자도유 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_189", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "병자도유 예식", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_29_188",
-      "category": "sacrament",
-      "titles": {
-        "KR": "죽을 위험에 놓인 병자에게 거행하는 견진예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_188", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "죽을 위험에 놓인 병자에게 거행하는 견진예식", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_29_184",
-      "category": "sacrament",
-      "titles": {
-        "KR": "죽을 위험에 있거나 죽음이 임박한 때에 사용하는 짧은 어른 입교 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_184", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "죽을 위험에 있거나 죽음이 임박한 때에 사용하는 짧은 어른 입교 예식", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_22_166",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "(어린 자녀) 선생님을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_166", "blessing_household", "(어린 자녀) 선생님을 위한 기도", "자녀"]
-    }, {
-      "id": "kr_22_164",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "(어린 자녀) 아빠를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_164", "blessing_household", "(어린 자녀) 아빠를 위한 기도", "자녀"]
-    }, {
-      "id": "kr_22_165",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "(어린 자녀) 엄마를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_165", "blessing_household", "(어린 자녀) 엄마를 위한 기도", "자녀"]
-    }, {
-      "id": "kr_22_163",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "(어린 자녀) 할머니, 할아버지를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_163", "blessing_household", "(어린 자녀) 할머니, 할아버지를 위한 기도", "자녀"]
-    }, {
-      "id": "kr_30_194",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "가정 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_194", "blessing_household", "가정 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_6_54",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "가정을 위한 기도 1"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_54", "blessing_household", "가정을 위한 기도 1", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_55",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "가정을 위한 기도 2"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_55", "blessing_household", "가정을 위한 기도 2", "여러 가지 기도"]
-    }, {
-      "id": "kr_25_175",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "가족의 안전을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "가정"
-      },
-      "tags": ["kr_25_175", "blessing_household", "가족의 안전을 위한 기도", "가정"]
-    }, {
-      "id": "kr_20_151",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "갈등을 겪고 있는 부부의(부부를 위한) 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "부부"
-      },
-      "tags": ["kr_20_151", "blessing_household", "갈등을 겪고 있는 부부의(부부를 위한) 기도", "부부"]
-    }, {
-      "id": "kr_30_208",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "거동하지 못하는 노인 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_208", "blessing_household", "거동하지 못하는 노인 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_20_149",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "결혼기념일에 바치는 부부의 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "부부"
-      },
-      "tags": ["kr_20_149", "blessing_household", "결혼기념일에 바치는 부부의 기도", "부부"]
-    }, {
-      "id": "kr_30_198",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "공장, 사무실, 상점 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_198", "blessing_household", "공장, 사무실, 상점 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_210",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "교리 교사 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_210", "blessing_household", "교리 교사 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_211",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "교리 교육이나 기도 모임 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_211", "blessing_household", "교리 교육이나 기도 모임 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_199",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "교통수단 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_199", "blessing_household", "교통수단 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_29_193",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "무덤 축복"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅲ. "
-          + "성사(예식)"
-        )
-      },
-      "tags": ["kr_29_193", "blessing_household", "무덤 축복", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_19_144",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "미래의 배우자를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "혼인"
-      },
-      "tags": ["kr_19_144", "blessing_household", "미래의 배우자를 위한 기도", "혼인"]
-    }, {
-      "id": "kr_30_201",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "미사 밖에서 거행하는 성수 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_201", "blessing_household", "미사 밖에서 거행하는 성수 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_23_168",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "부모를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "부모"
-      },
-      "tags": ["kr_23_168", "blessing_household", "부모를 위한 기도", "부모", "kr_6_56", "여러 가지 기도"]
-    }, {
-      "id": "kr_30_203",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "부부 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_203", "blessing_household", "부부 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_20_150",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "부부가 하는 매일의 축복"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "부부"
-      },
-      "tags": ["kr_20_150", "blessing_household", "부부가 하는 매일의 축복", "부부"]
-    }, {
-      "id": "kr_6_58",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "부부의 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_58", "blessing_household", "부부의 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_30_209",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "부활 계란 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_209", "blessing_household", "부활 계란 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_197",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "새 집 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_197", "blessing_household", "새 집 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_21_156",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "새로 맞이하는 자녀를 위한 축복 (출산/입양)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "임신,출산,입양"
-      },
-      "tags": ["kr_21_156", "blessing_household", "새로 맞이하는 자녀를 위한 축복 (출산/입양)", "임신,출산,입양"]
-    }, {
-      "id": "kr_30_200",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "생업 관련 기기 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_200", "blessing_household", "생업 관련 기기 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_22_162",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "성인이 되는 자녀를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_162", "blessing_household", "성인이 되는 자녀를 위한 기도", "자녀"]
-    }, {
-      "id": "kr_6_63",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "세상을 떠난 부모를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_63", "blessing_household", "세상을 떠난 부모를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_30_202",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "신심 증진을 위한 성물 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_202", "blessing_household", "신심 증진을 위한 성물 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_19_146",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "신혼부부의 기도 1"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "혼인"
-      },
-      "tags": ["kr_19_146", "blessing_household", "신혼부부의 기도 1", "혼인"]
-    }, {
-      "id": "kr_19_147",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "신혼부부의 기도 2"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "혼인"
-      },
-      "tags": ["kr_19_147", "blessing_household", "신혼부부의 기도 2", "혼인"]
-    }, {
-      "id": "kr_30_205",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "아직 세례 받지 못한 어린이 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_205", "blessing_household", "아직 세례 받지 못한 어린이 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_25_176",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "아픈 가족을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "가정"
-      },
-      "tags": ["kr_25_176", "blessing_household", "아픈 가족을 위한 기도", "가정"]
-    }, {
-      "id": "kr_30_195",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "어른 병자 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_195", "blessing_household", "어른 병자 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_196",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "어린이 병자 축복 예식"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_196", "blessing_household", "어린이 병자 축복 예식", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_22_167",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "어린이 봉사자의 기도 (복사단, 전례단, 성가대 등)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_167", "blessing_household", "어린이 봉사자의 기도 (복사단, 전례단, 성가대 등)", "자녀"]
-    }, {
-      "id": "kr_20_152",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "영명 축일에 바치는 부부의 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "부부"
-      },
-      "tags": ["kr_20_152", "blessing_household", "영명 축일에 바치는 부부의 기도", "부부"]
-    }, {
-      "id": "kr_25_177",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "위기를 겪고 있는 가정의(가정을 위한) 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "가정"
-      },
-      "tags": ["kr_25_177", "blessing_household", "위기를 겪고 있는 가정의(가정을 위한) 기도", "가정"]
-    }, {
-      "id": "kr_30_204",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "이미 세례 받은 어린이 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_204", "blessing_household", "이미 세례 받은 어린이 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_21_155",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀를 낳은 가정의 감사기도 (출산/입양)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "임신,출산,입양"
-      },
-      "tags": ["kr_21_155", "blessing_household", "자녀를 낳은 가정의 감사기도 (출산/입양)", "임신,출산,입양"]
-    }, {
-      "id": "kr_21_153",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀를 바라는 기도 (임신/입양)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "임신,출산,입양"
-      },
-      "tags": ["kr_21_153", "blessing_household", "자녀를 바라는 기도 (임신/입양)", "임신,출산,입양"]
-    }, {
-      "id": "kr_6_57",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_57", "blessing_household", "자녀를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_22_157",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀를 위한 기도 1"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_157", "blessing_household", "자녀를 위한 기도 1", "자녀"]
-    }, {
-      "id": "kr_22_158",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀를 위한 기도 2"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_158", "blessing_household", "자녀를 위한 기도 2", "자녀"]
-    }, {
-      "id": "kr_24_171",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀를 잃은 이들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "슬퍼하는 이들을 위한 기도"
-      },
-      "tags": ["kr_24_171", "blessing_household", "자녀를 잃은 이들을 위한 기도", "슬퍼하는 이들을 위한 기도"]
-    }, {
-      "id": "kr_22_159",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀에게 하는 매일의 축복"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_159", "blessing_household", "자녀에게 하는 매일의 축복", "자녀"]
-    }, {
-      "id": "kr_22_160",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀의 생일에 하는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_160", "blessing_household", "자녀의 생일에 하는 기도", "자녀"]
-    }, {
-      "id": "kr_22_161",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "자녀의 영명 축일에 하는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "자녀"
-      },
-      "tags": ["kr_22_161", "blessing_household", "자녀의 영명 축일에 하는 기도", "자녀"]
-    }, {
-      "id": "kr_23_169",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "조부모를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "부모"
-      },
-      "tags": ["kr_23_169", "blessing_household", "조부모를 위한 기도", "부모"]
-    }, {
-      "id": "kr_30_212",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "출발하는 순례자 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_212", "blessing_household", "출발하는 순례자 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_206",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "출산 전 어머니 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_206", "blessing_household", "출산 전 어머니 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_30_207",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "출산 후 어머니 축복 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": (
-          "Ⅳ. "
-          + "축복 예식과 기도"
-        )
-      },
-      "tags": ["kr_30_207", "blessing_household", "출산 후 어머니 축복 기도", (
-        "Ⅳ. "
-        + "축복 예식과 기도"
-      )]
-    }, {
-      "id": "kr_21_154",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "태아를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "임신,출산,입양"
-      },
-      "tags": ["kr_21_154", "blessing_household", "태아를 위한 기도", "임신,출산,입양"]
-    }, {
-      "id": "kr_19_145",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "혼인을 준비하며 바치는 기도(약혼자의 기도)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "혼인"
-      },
-      "tags": ["kr_19_145", "blessing_household", "혼인을 준비하며 바치는 기도(약혼자의 기도)", "혼인"]
-    }, {
-      "id": "kr_19_148",
-      "category": "blessing_household",
-      "titles": {
-        "KR": "혼인하는 이들(가족, 지인 등)을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "혼인"
-      },
-      "tags": ["kr_19_148", "blessing_household", "혼인하는 이들(가족, 지인 등)을 위한 기도", "혼인"]
-    }, {
-      "id": "kr_10_99",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 납골 또는 자연장(세상을 떠난 이들)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_99", "funeral", "- 납골 또는 자연장(세상을 떠난 이들)", "상장 예식"]
-    }, {
-      "id": "kr_10_74",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 성인 호칭 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_74", "funeral", "- 성인 호칭 기도", "상장 예식"]
-    }, {
-      "id": "kr_10_98",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 쇄골 또는 습골(욥의 기도)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_98", "funeral", "- 쇄골 또는 습골(욥의 기도)", "상장 예식"]
-    }, {
-      "id": "kr_10_80",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 113 / 마침기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_80", "funeral", "- 시편 113 / 마침기도", "상장 예식"]
-    }, {
-      "id": "kr_10_86",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 117"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_86", "funeral", "- 시편 117", "상장 예식"]
-    }, {
-      "id": "kr_10_90",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 118/마침기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_90", "funeral", "- 시편 118/마침기도", "상장 예식"]
-    }, {
-      "id": "kr_10_72",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 129(130)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_72", "funeral", "- 시편 129(130)", "상장 예식", "kr_10_77"]
-    }, {
-      "id": "kr_10_83",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 22(23) / 마침기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_83", "funeral", "- 시편 22(23) / 마침기도", "상장 예식"]
-    }, {
-      "id": "kr_10_89",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 24"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_89", "funeral", "- 시편 24", "상장 예식"]
-    }, {
-      "id": "kr_10_87",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 41"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_87", "funeral", "- 시편 41", "상장 예식"]
-    }, {
-      "id": "kr_10_73",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 50(51),3-21"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_73", "funeral", "- 시편 50(51),3-21", "상장 예식", "kr_10_78", "- 시편50(51),3-21"]
-    }, {
-      "id": "kr_10_71",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 62(63),2-8"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_71", "funeral", "- 시편 62(63),2-8", "상장 예식"]
-    }, {
-      "id": "kr_10_84",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 83(84)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_84", "funeral", "- 시편 83(84)", "상장 예식"]
-    }, {
-      "id": "kr_10_88",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편 92"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_88", "funeral", "- 시편 92", "상장 예식"]
-    }, {
-      "id": "kr_10_82",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 시편41(42),2-3.5;42(43),3-5"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_82", "funeral", "- 시편41(42),2-3.5;42(43),3-5", "상장 예식"]
-    }, {
-      "id": "kr_10_94",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 유가족을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_94", "funeral", "- 유가족을 위한 기도", "상장 예식"]
-    }, {
-      "id": "kr_10_92",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 자비송"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_92", "funeral", "- 자비송", "상장 예식"]
-    }, {
-      "id": "kr_10_95",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 즈카르야의 노래"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_95", "funeral", "- 즈카르야의 노래", "상장 예식"]
-    }, {
-      "id": "kr_10_75",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 찬미가"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_75", "funeral", "- 찬미가", "상장 예식"]
-    }, {
-      "id": "kr_10_93",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 청원기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_93", "funeral", "- 청원기도", "상장 예식"]
-    }, {
-      "id": "kr_10_97",
-      "category": "funeral",
-      "titles": {
-        "KR": "- 화답송"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_97", "funeral", "- 화답송", "상장 예식"]
-    }, {
-      "id": "kr_10_79",
-      "category": "funeral",
-      "titles": {
-        "KR": "염습과 입관"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_79", "funeral", "염습과 입관", "상장 예식"]
-    }, {
-      "id": "kr_10_218",
-      "category": "funeral",
-      "titles": {
-        "KR": "우제"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_218", "funeral", "우제", "상장 예식"]
-    }, {
-      "id": "kr_10_85",
-      "category": "funeral",
-      "titles": {
-        "KR": "운구"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_85", "funeral", "운구", "상장 예식"]
-    }, {
-      "id": "eternal_rest",
-      "category": "funeral",
-      "titles": {
-        "KR": "위령 기도"
-      },
-      "texts": {
-        "KR": (
-          "주님, 세상을 떠난 이들에게 영원한 안식을 주소서. "
-          + "영원한 빛을 그들에게 비추소서. "
-          + "세상을 떠난 이들이 하느님의 자비로 평화의 안식을 얻게 하소서. "
-          + "아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["eternal_rest", "funeral", "위령 기도", "Nghỉ yên muôn đời", "Eternal Rest", "死者のための祈り", "Requiem Aeternam", "상장 예식", "Basic Prayers", "日々の祈り", "Generalia", "kr_6_138", "여러 가지 기도"]
-    }, {
-      "id": "kr_10_33",
-      "category": "funeral",
-      "titles": {
-        "KR": "위령기도 1"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_33", "funeral", "위령기도 1", "상장 예식"]
-    }, {
-      "id": "kr_10_69",
-      "category": "funeral",
-      "titles": {
-        "KR": "위령기도 2(짧은 위령 기도)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_69", "funeral", "위령기도 2(짧은 위령 기도)", "상장 예식"]
-    }, {
-      "id": "kr_10_215",
-      "category": "funeral",
-      "titles": {
-        "KR": "임종과 운명"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_215", "funeral", "임종과 운명", "상장 예식", "kr_29_191", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_10_81",
-      "category": "funeral",
-      "titles": {
-        "KR": "출관"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_81", "funeral", "출관", "상장 예식"]
-    }, {
-      "id": "kr_10_91",
-      "category": "funeral",
-      "titles": {
-        "KR": "하관"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_91", "funeral", "하관", "상장 예식", "kr_29_190", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_10_96",
-      "category": "funeral",
-      "titles": {
-        "KR": "화장"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "상장 예식"
-      },
-      "tags": ["kr_10_96", "funeral", "화장", "상장 예식", "kr_29_192", (
-        "Ⅲ. "
-        + "성사(예식)"
-      )]
-    }, {
-      "id": "kr_6_183",
-      "category": "national",
-      "titles": {
-        "KR": "2025년 희년 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_183", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "2025년 희년 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_216",
-      "category": "national",
-      "titles": {
-        "KR": "2027 서울 세계청년대회 공식기도문"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_216", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "2027 서울 세계청년대회 공식기도문", "여러 가지 기도"]
-    }, {
-      "id": "000.the_salve_regina",
-      "category": "common",
-      "titles": {
-        "KR": "성모 찬송 (묵주 기도 성월)"
-      },
-      "texts": {
-        "KR": (
-          "<b>○</b> 모후이시며 사랑이 넘친 어머니,\n"
-          + "우리의 생명, 기쁨, 희망이시여,\n"
-          + "<b>●</b> 당신 우러러 하와의 그 자손들이\n"
-          + "눈물을 흘리며 부르짖나이다,\n"
-          + "슬픔의 골짜기에서.\n"
-          + "<b>○</b> 우리들의 보호자 성모님,\n"
-          + "불쌍한 저희를\n"
-          + "인자로운 눈으로 굽어보소서.\n"
-          + "<b>●</b> 귀양살이 끝날 때에\n"
-          + "당신의 아들 우리 주 예수님 뵙게 하소서.\n"
-          + "너그러우시고, 자애로우시며\n"
-          + "오! "
-          + "아름다우신 동정 마리아님.\n"
-          + "<b>○</b> 천주의 성모님, 저희를 위하여 빌어 주시어\n"
-          + "<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n"
-          + " ✚ 기도합시다.\n"
-          + "하느님,\n"
-          + "외아드님께서 삶과 죽음과 부활로\n"
-          + "저희에게 영원한 구원을 마련해 주셨나이다.\n"
-          + "복되신 동정 마리아와 함께 이 신비를 묵상하며\n"
-          + "묵주 기도를 바치오니\n"
-          + "저희가 그 가르침을 따라\n"
-          + "영원한 생명을 얻게 하소서.\n"
-          + "우리 주 그리스도를 통하여 비나이다.\n"
-          + "<b>◎</b> 아멘."
-        )
-      },
-      "sourceCategory": {
-        "KR": "성월기도; 묵주기도"
-      },
-      "tags": ["000.the_salve_regina", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "성모 찬송 (묵주 기도 성월)", "Kinh Lạy Nữ Vương", "Hail, Holy Queen (The Salve Regina)", "元后あわれみの母（Salve Regina）", "Salve Regina", "성월기도", "묵주기도", "Lần Hạt Mân Côi", "Basic Prayers", "日々の祈り", "성월기도; 묵주기도", "Các Kinh Cầu", "Generalia"]
-    }, {
-      "id": "kr_6_66",
-      "category": "national",
-      "titles": {
-        "KR": "가뭄과 장마 때에 바치는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_66", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "가뭄과 장마 때에 바치는 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_40",
-      "category": "national",
-      "titles": {
-        "KR": "교황이나 주교를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_40", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "교황이나 주교를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_60",
-      "category": "national",
-      "titles": {
-        "KR": "군인을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_60", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "군인을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_59",
-      "category": "national",
-      "titles": {
-        "KR": "군인의 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_59", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "군인의 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_48",
-      "category": "national",
-      "titles": {
-        "KR": "그리스도교 일치를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_48", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "그리스도교 일치를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_24_172",
-      "category": "national",
-      "titles": {
-        "KR": "낙태로 아파하는 이들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "슬퍼하는 이들을 위한 기도"
-      },
-      "tags": ["kr_24_172", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "낙태로 아파하는 이들을 위한 기도", "슬퍼하는 이들을 위한 기도"]
-    }, {
-      "id": "kr_6_129",
-      "category": "national",
-      "titles": {
-        "KR": "농민을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_129", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "농민을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_52",
-      "category": "national",
-      "titles": {
-        "KR": "대중 매체 선용을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_52", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "대중 매체 선용을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_142",
-      "category": "national",
-      "titles": {
-        "KR": "레지오 마리애 기도문"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_142", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "레지오 마리애 기도문", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_49",
-      "category": "national",
-      "titles": {
-        "KR": "민족의 화해와 일치를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_49", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "민족의 화해와 일치를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_24_173",
-      "category": "national",
-      "titles": {
-        "KR": "반려동물을 떠나보낸 가족의 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "슬퍼하는 이들을 위한 기도"
-      },
-      "tags": ["kr_24_173", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "반려동물을 떠나보낸 가족의 기도", "슬퍼하는 이들을 위한 기도"]
-    }, {
-      "id": "kr_6_61",
-      "category": "national",
-      "titles": {
-        "KR": "병자를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_61", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "병자를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_51",
-      "category": "national",
-      "titles": {
-        "KR": "복음화를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_51", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "복음화를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_46",
-      "category": "national",
-      "titles": {
-        "KR": "비신자들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_46", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "비신자들을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_41",
-      "category": "national",
-      "titles": {
-        "KR": "사제들을 위한 기도 1"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_41", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "사제들을 위한 기도 1", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_42",
-      "category": "national",
-      "titles": {
-        "KR": "사제들을 위한 기도 2"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_42", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "사제들을 위한 기도 2", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_65",
-      "category": "national",
-      "titles": {
-        "KR": "새해를 맞이하며 바치는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_65", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "새해를 맞이하며 바치는 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_178",
-      "category": "national",
-      "titles": {
-        "KR": "생명을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_178", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "생명을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_62",
-      "category": "national",
-      "titles": {
-        "KR": "선종을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_62", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "선종을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_39",
-      "category": "national",
-      "titles": {
-        "KR": "성 암브로시오의 사은 찬미가 (Te Deum)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_39", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성 암브로시오의 사은 찬미가 (Te Deum)", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_38",
-      "category": "national",
-      "titles": {
-        "KR": "성 토마스의 성체 찬미가"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_38", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성 토마스의 성체 찬미가", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_102",
-      "category": "national",
-      "titles": {
-        "KR": "성령 송가"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_102", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성령 송가", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_36",
-      "category": "national",
-      "titles": {
-        "KR": "성모 성심께 바치는 봉헌 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_36", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성모 성심께 바치는 봉헌 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_37",
-      "category": "national",
-      "titles": {
-        "KR": "성모님께 자기를 바치는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_37", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성모님께 자기를 바치는 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_50",
-      "category": "national",
-      "titles": {
-        "KR": "성서 사도직을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_50", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성서 사도직을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_47",
-      "category": "national",
-      "titles": {
-        "KR": "성소를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_47", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성소를 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_34",
-      "category": "national",
-      "titles": {
-        "KR": "성수 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_34", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성수 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_53",
-      "category": "national",
-      "titles": {
-        "KR": "성전 건립 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_53", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "성전 건립 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_24_170",
-      "category": "national",
-      "titles": {
-        "KR": "세상을 떠난 가족을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "슬퍼하는 이들을 위한 기도"
-      },
-      "tags": ["kr_24_170", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "세상을 떠난 가족을 위한 기도", "슬퍼하는 이들을 위한 기도"]
-    }, {
-      "id": "kr_6_64",
-      "category": "national",
-      "titles": {
-        "KR": "세상을 떠난 형제, 친척, 친구, 은인을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_64", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "세상을 떠난 형제, 친척, 친구, 은인을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_43",
-      "category": "national",
-      "titles": {
-        "KR": "수도자들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_43", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "수도자들을 위한 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_217",
-      "category": "national",
-      "titles": {
-        "KR": "시노드 기도문"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_217", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "시노드 기도문", "여러 가지 기도"]
-    }, {
-      "id": "kr_9_32",
-      "category": "stations_of_cross",
-      "titles": {
-        "KR": "십자가의 길"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "십자가의 길"
-      },
-      "tags": ["kr_9_32", "stations_of_cross", "십자가의 길", "Đàng Thánh Giá", "Stations of the Cross", "十字架の道行き", "Via Crucis", "Ngắm Đàng Thánh Giá", "Các Kinh Cầu"]
-    }, {
-      "id": "kr_6_35",
-      "category": "national",
-      "titles": {
-        "KR": "예수 성심께 바치는 봉헌 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_35", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "예수 성심께 바치는 봉헌 기도", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_179",
-      "category": "national",
-      "titles": {
-        "KR": "젊은이를 위한 기도(WYD 기도문)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_179", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "젊은이를 위한 기도(WYD 기도문)", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_44",
-      "category": "national",
-      "titles": {
-        "KR": "평신도 사도직을 위한 기도 1"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_44", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "평신도 사도직을 위한 기도 1", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_45",
-      "category": "national",
-      "titles": {
-        "KR": "평신도 사도직을 위한 기도 2"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_45", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "평신도 사도직을 위한 기도 2", "여러 가지 기도"]
-    }, {
-      "id": "kr_6_143",
-      "category": "national",
-      "titles": {
-        "KR": "하느님 자비를 구하는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "여러 가지 기도"
-      },
-      "tags": ["kr_6_143", "national", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "하느님 자비를 구하는 기도", "여러 가지 기도"]
-    }, {
-      "id": "000. rosary_the_luminous_mysteries",
-      "category": "rosary",
-      "titles": {
-        "KR": "빛의 신비"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>목요일에 바친다.</rubric>\n"
-          + "1단 예수님께서 세례 받으심을 묵상합시다.\n"
-          + "2단 예수님께서 카나에서 첫 기적을 행하심을 묵상합시다.\n"
-          + "3단 예수님께서 하느님 나라를 선포하심을 묵상합시다.\n"
-          + "4단 예수님께서 거룩하게 변모하심을 묵상합시다.\n"
-          + "5단 예수님께서 성체성사를 세우심을 묵상합시다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "묵주기도"
-      },
-      "tags": ["000. rosary_the_luminous_mysteries", "rosary", "묵주기도", "Kinh Mân Côi", "Rosary", "ロザリオ", "Rosarium", "빛의 신비", "The Luminous Mysteries", "The Rosary", "Năm Sự Sáng", "Chuỗi Mân Côi"]
-    }, {
-      "id": "000. rosary_the_glorious_mysteries",
-      "category": "rosary",
-      "titles": {
-        "KR": "영광의 신비"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>수·일요일에 바친다.</rubric>\n"
-          + "1단 예수님께서 부활하심을 묵상합시다.\n"
-          + "2단 예수님께서 승천하심을 묵상합시다.\n"
-          + "3단 예수님께서 성령을 보내심을 묵상합시다.\n"
-          + "4단 예수님께서 마리아를 하늘에 불러올리심을 묵상합시다.\n"
-          + "5단 예수님께서 마리아께 천상 모후의 관을 씌우심을 묵상합시다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "묵주기도"
-      },
-      "tags": ["000. rosary_the_glorious_mysteries", "rosary", "묵주기도", "Kinh Mân Côi", "Rosary", "ロザリオ", "Rosarium", "영광의 신비", "The Glorious Mysteries", "The Rosary", "Năm Sự Mừng", "Chuỗi Mân Côi"]
-    }, {
-      "id": "000. rosary_the_sorrowful_mysteries",
-      "category": "rosary",
-      "titles": {
-        "KR": "고통의 신비"
-      },
-      "texts": {
-        "KR": (
-          "<rubric>화·금요일에 바친다.</rubric>\n"
-          + "1단 예수님께서 우리를 위하여 피땀 흘리심을 묵상합시다.\n"
-          + "2단 예수님께서 우리를 위하여 매 맞으심을 묵상합시다.\n"
-          + "3단 예수님께서 우리를 위하여 가시관 쓰심을 묵상합시다.\n"
-          + "4단 예수님께서 우리를 위하여 십자가 지심을 묵상합시다.\n"
-          + "5단 예수님께서 우리를 위하여 십자가에 못 박혀 돌아가심을 묵상합시다."
-        )
-      },
-      "sourceCategory": {
-        "KR": "묵주기도"
-      },
-      "tags": ["000. rosary_the_sorrowful_mysteries", "rosary", "묵주기도", "Kinh Mân Côi", "Rosary", "ロザリオ", "Rosarium", "고통의 신비", "The Sorrowful Mysteries", "The Rosary", "Năm Sự Thương", "Chuỗi Mân Côi"]
-    }, {
-      "id": "vn_ocr_003_kinh_sang_soi",
-      "category": "common",
-      "titles": {
-        "KR": "하느님의 빛을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_003_kinh_sang_soi", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "하느님의 빛을 위한 기도", "Kinh Sáng Soi", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_004_kinh_duc_chua_thanh_than",
-      "category": "common",
-      "titles": {
-        "KR": "성령께 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_004_kinh_duc_chua_thanh_than", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "성령께 드리는 기도", "Kinh Đức Chúa Thánh Thần", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_016_kinh_cam_on",
-      "category": "common",
-      "titles": {
-        "KR": "감사기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_016_kinh_cam_on", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "감사기도", "Kinh Cám Ơn", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_018_ba_cau_lay",
-      "category": "common",
-      "titles": {
-        "KR": "삼주기도문"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_018_ba_cau_lay", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "삼주기도문", "Ba Câu Lạy", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_019_kinh_dang_ngay_cua_thieu_nhi",
-      "category": "common",
-      "titles": {
-        "KR": "어린이날 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_019_kinh_dang_ngay_cua_thieu_nhi", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "어린이날 기도", "Kinh Dâng Ngày Của Thiếu Nhi", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_020_kinh_dang_minh_cua_nhi_dong",
-      "category": "common",
-      "titles": {
-        "KR": "어린이 봉헌기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_020_kinh_dang_minh_cua_nhi_dong", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "어린이 봉헌기도", "Kinh Dâng Mình Của Nhi Đồng", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_021_kinh_dang_minh_cua_thieu_nhi_nam",
-      "category": "common",
-      "titles": {
-        "KR": "어린이 봉헌기도 (남아)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_021_kinh_dang_minh_cua_thieu_nhi_nam", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "어린이 봉헌기도 (남아)", "Kinh Dâng Mình Của Thiếu Nhi Nam", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_022_kinh_dang_minh_cua_thieu_nhi_nu",
-      "category": "common",
-      "titles": {
-        "KR": "어린이 봉헌기도 (여아)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_022_kinh_dang_minh_cua_thieu_nhi_nu", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "어린이 봉헌기도 (여아)", "Kinh Dâng Mình Của Thiếu Nhi Nữ", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_023_kinh_thieu_nhi_cau_cho_cha_me",
-      "category": "common",
-      "titles": {
-        "KR": "부모님을 위한 어린이 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_023_kinh_thieu_nhi_cau_cho_cha_me", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "부모님을 위한 어린이 기도", "Kinh Thiếu Nhi Cầu Cho Cha Mẹ", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_024_kinh_thieu_nhi_don_minh_ruoc_le",
-      "category": "common",
-      "titles": {
-        "KR": "성체성사 준비를 위한 어린이 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_024_kinh_thieu_nhi_don_minh_ruoc_le", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "성체성사 준비를 위한 어린이 기도", "Kinh Thiếu Nhi Dọn Mình Rước Lễ", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_025_kinh_thieu_nhi_cam_on_sau_ruoc_le",
-      "category": "common",
-      "titles": {
-        "KR": "성체성사 후 감사 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_025_kinh_thieu_nhi_cam_on_sau_ruoc_le", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "성체성사 후 감사 기도", "Kinh Thiếu Nhi Cám Ơn Sau Rước Lễ", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_026_chuc_lanh",
-      "category": "common",
-      "titles": {
-        "KR": "축복"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_026_chuc_lanh", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "축복", "Chúc Lành", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_027_kinh_nghia_duc_tin",
-      "category": "common",
-      "titles": {
-        "KR": "신앙의 의미에 대한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_027_kinh_nghia_duc_tin", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "신앙의 의미에 대한 기도", "Kinh Nghĩa Đức Tin", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_029_kinh_sau_dieu_ran_hoi_thanh",
-      "category": "common",
-      "titles": {
-        "KR": "교회의 여섯 가르침"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_029_kinh_sau_dieu_ran_hoi_thanh", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "교회의 여섯 가르침", "Kinh Sáu Điều Răn Hội Thánh", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_030_kinh_nam_dieu_ran_hoi_thanh",
-      "category": "common",
-      "titles": {
-        "KR": "교회의 다섯 가르침"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_030_kinh_nam_dieu_ran_hoi_thanh", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "교회의 다섯 가르침", "Kinh Năm Điều Răn Hội Thánh", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_031_kinh_cai_toi_bay_moi",
-      "category": "common",
-      "titles": {
-        "KR": "일곱가지 대죄"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_031_kinh_cai_toi_bay_moi", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "일곱가지 대죄", "Kinh Cải Tội Bảy Mối", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_032_kinh_muoi_bon_moi_thuong_nguoi",
-      "category": "common",
-      "titles": {
-        "KR": "자비에 대한 기도 (열네가지 자비의 행위)"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_032_kinh_muoi_bon_moi_thuong_nguoi", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "자비에 대한 기도 (열네가지 자비의 행위)", "Kinh Mười Bốn Mối Thương Người", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_033_kinh_tam_moi_phuc_that",
-      "category": "common",
-      "titles": {
-        "KR": "팔복선언"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_033_kinh_tam_moi_phuc_that", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "팔복선언", "Kinh Tám Mối Phúc Thật", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_038_kinh_cau_ten_rat_thanh_duc_chua_gie_su",
-      "category": "litany",
-      "titles": {
-        "KR": "예수님의 거룩한 이름에 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_038_kinh_cau_ten_rat_thanh_duc_chua_gie_su", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "예수님의 거룩한 이름에 드리는 기도", "Kinh Cầu Tên Rất Thánh Đức Chúa Giê-su", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_039_kinh_cau_trai_tim_duc_chua_gie_su",
-      "category": "litany",
-      "titles": {
-        "KR": "예수성심호칭기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "호칭 기도"
-      },
-      "tags": ["vn_ocr_039_kinh_cau_trai_tim_duc_chua_gie_su", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "예수성심호칭기도", "Kinh Cầu Trái Tim Đức Chúa Giê-su", "Các Kinh Cầu", "kr_5_27", "예수 성심 호칭 기도", "호칭 기도"]
-    }, {
-      "id": "vn_ocr_040_kinh_cau_duc_ba",
-      "category": "litany",
-      "titles": {
-        "KR": "복되신 동정 마리아께 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_040_kinh_cau_duc_ba", "litany", "호칭기도", "Kinh cầu", "Litanies", "連祷", "Litaniae", "복되신 동정 마리아께 드리는 기도", "Kinh Cầu Đức Bà", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_043_kinh_vuc_sau",
-      "category": "common",
-      "titles": {
-        "KR": "심연에 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_043_kinh_vuc_sau", "common", "공통기도문", "Kinh nguyện chung", "Common Prayers", "共通の祈り", "Preces communes", "심연에 드리는 기도", "Kinh Vực Sâu", "Kinh Hằng Ngày"]
-    }, {
-      "id": "000.cac_cau_lay",
-      "category": "national",
-      "titles": {
-        "KR": "호칭기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["000.cac_cau_lay", "국가별·기타 기도문", "Kinh theo từng nước và kinh khác", "Local and Other Prayers", "各国・その他の祈り", "Preces locales et aliae", "호칭기도", "Các Câu Lạy", "Kinh Hằng Ngày"]
-    }, {
-      "id": "vn_ocr_045_kinh_bay_phep_bi_tich",
-      "category": "sacrament",
-      "titles": {
-        "KR": "칠성사에 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_045_kinh_bay_phep_bi_tich", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "칠성사에 드리는 기도", "Kinh Bảy Phép Bí Tích", "Kinh Ngày Chúa Nhật"]
-    }, {
-      "id": "vn_ocr_047_kinh_den_ta_trai_tim_cuc_trong_duc_chua_gie_su",
-      "category": "Various",
-      "titles": {
-        "KR": "예수 성심께 드리는 보속 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_047_kinh_den_ta_trai_tim_cuc_trong_duc_chua_gie_su", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "예수 성심께 드리는 보속 기도", "Kinh Đền Tạ Trái Tim Cực Trọng Đức Chúa Giê-su", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_048_kinh_dang_moi_nguoi_nuoc_viet_nam_cho_duc_ba",
-      "category": "national",
-      "titles": {
-        "KR": "베트남 모든 백성을 복되신 동정 마리아께 봉헌하는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_048_kinh_dang_moi_nguoi_nuoc_viet_nam_cho_duc_ba", "national", "국가별 고유 기도문", "Kinh Nguyện Riêng Từng Nước", "Local Prayers", "各国の祈り", "Preces locales", "베트남 모든 백성을 복되신 동정 마리아께 봉헌하는 기도", "Kinh Dâng Mọi Người Nước Việt Nam Cho Đức Bà", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_050_kinh_trai_tim_vo_nhiem_me",
-      "category": "Various",
-      "titles": {
-        "KR": "성모 마리아의 티 없는 성심에 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_050_kinh_trai_tim_vo_nhiem_me", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "성모 마리아의 티 없는 성심에 드리는 기도", "Kinh Trái Tim Vô Nhiễm Mẹ", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_051_kinh_thanh_giu_se",
-      "category": "Various",
-      "titles": {
-        "KR": "성 요셉께 드리는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_051_kinh_thanh_giu_se", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "성 요셉께 드리는 기도", "Kinh Thánh Giu-se", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_052_kinh_thanh_giu_se_bau_cu",
-      "category": "Various",
-      "titles": {
-        "KR": "성 요셉께 전구를 청하는 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_052_kinh_thanh_giu_se_bau_cu", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "성 요셉께 전구를 청하는 기도", "Kinh Thánh Giu-se Bầu Cử", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_053_kinh_cac_thanh_tu_dao_viet_nam",
-      "category": "national",
-      "titles": {
-        "KR": "베트남 순교자들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_053_kinh_cac_thanh_tu_dao_viet_nam", "national", "국가별 고유 기도문", "Kinh Nguyện Riêng Từng Nước", "Local Prayers", "各国の祈り", "Preces locales", "베트남 순교자들을 위한 기도", "Kinh Các Thánh Tử Đạo Việt Nam", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_054_kinh_cau_xin_cho_duoc_binh_an",
-      "category": "Various",
-      "titles": {
-        "KR": "평화를 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_054_kinh_cau_xin_cho_duoc_binh_an", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "평화를 위한 기도", "Kinh Cầu Xin Cho Được Bình An", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_055_kinh_cam_on_sau_ruoc_le",
-      "category": "Various",
-      "titles": {
-        "KR": "영성체 후 감사 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_055_kinh_cam_on_sau_ruoc_le", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "영성체 후 감사 기도", "Kinh Cám Ơn Sau Rước Lễ", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_056_kinh_dang_minh_khi_thuc_day",
-      "category": "Various",
-      "titles": {
-        "KR": "기상 시 봉헌 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_056_kinh_dang_minh_khi_thuc_day", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "기상 시 봉헌 기도", "Kinh Dâng Mình Khi Thức Dậy", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_057_kinh_dang_minh_khi_ngu_dem",
-      "category": "Various",
-      "titles": {
-        "KR": "잠자기 전 봉헌 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_057_kinh_dang_minh_khi_ngu_dem", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "잠자기 전 봉헌 기도", "Kinh Dâng Mình Khi Ngủ Đêm", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_058_kinh_cau_cho_linh_muc",
-      "category": "Various",
-      "titles": {
-        "KR": "사제들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_058_kinh_cau_cho_linh_muc", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "사제들을 위한 기도", "Kinh Cầu Cho Linh Mục", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_059_kinh_hon_nhan_gia_dinh",
-      "category": "sacrament",
-      "titles": {
-        "KR": "혼인과 가정을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_059_kinh_hon_nhan_gia_dinh", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "혼인과 가정을 위한 기도", "Kinh Hôn Nhân Gia Đình", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_060_kinh_cau_nguyen_cho_gia_dinh",
-      "category": "Various",
-      "titles": {
-        "KR": "가정을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": "가정"
-      },
-      "tags": ["vn_ocr_060_kinh_cau_nguyen_cho_gia_dinh", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "가정을 위한 기도", "Kinh Cầu Nguyện Cho Gia Đình", "Các Kinh Cầu", "kr_25_174", "blessing_household", "가정"]
-    }, {
-      "id": "vn_ocr_061_kinh_dang_con",
-      "category": "Various",
-      "titles": {
-        "KR": "봉헌 기도 어린이들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_061_kinh_dang_con", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "봉헌 기도 어린이들을 위한 기도", "Kinh Dâng Con", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_062_kinh_lap_lai_loi_hon_uoc",
-      "category": "sacrament",
-      "titles": {
-        "KR": "혼인 서약 갱신 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_062_kinh_lap_lai_loi_hon_uoc", "sacrament", "성사·예식", "Bí tích và nghi thức", "Sacraments and Rites", "秘跡・式次第", "Sacramenta et ritus", "혼인 서약 갱신 기도", "Kinh Lập Lại Lời Hôn Ước", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_063_kinh_cua_nguoi_tre",
-      "category": "Various",
-      "titles": {
-        "KR": "청소년들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_063_kinh_cua_nguoi_tre", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "청소년들을 위한 기도", "Kinh Của Người Trẻ", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_064_kinh_cua_giao_ly_vien",
-      "category": "Various",
-      "titles": {
-        "KR": "교리교사들을 위한 기도"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_064_kinh_cua_giao_ly_vien", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "교리교사들을 위한 기도", "Kinh Của Giáo Lý Viên", "Các Kinh Cầu"]
-    }, {
-      "id": "vn_ocr_065_ngam_bay_su_dau_don_duc_ba",
-      "category": "Various",
-      "titles": {
-        "KR": "복되신 동정 마리아의 일곱 가지 슬픔 묵상"
-      },
-      "texts": {
-        "KR": ""
-      },
-      "sourceCategory": {
-        "KR": ""
-      },
-      "tags": ["vn_ocr_065_ngam_bay_su_dau_don_duc_ba", "Various", "여러가지 기도", "Các Kinh Nguyện Khá", "Various Prayers", "種々の祈り", "Preces Variae", "복되신 동정 마리아의 일곱 가지 슬픔 묵상", "Ngắm Bảy Sự Đau Đớn Đức Bà", "Các Kinh Cầu"]
-    }]
+    entries: [
+      {
+        id: "001.sign_of_cross",
+        category: "common",
+        titles: {
+          KR: "성호경"
+        },
+        texts: {
+          KR: "<rubric>십자성호를 그으며</rubric>성부와 성자와 성령의 이름으로.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "001.sign_of_cross",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "성호경",
+          "Dấu Thánh Giá",
+          "Dấu Thánh Giá (đơn)",
+          "Sign of the Cross",
+          "十字架のしるし",
+          "Signum Crucis",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Basic Prayers",
+          "日々の祈り",
+          "Generalia"
+        ]
+      },
+      {
+        id: "002.lords_prayer",
+        category: "common",
+        titles: {
+          KR: "주님의 기도"
+        },
+        texts: {
+          KR: "하늘에 계신 우리 아버지,\n아버지의 이름이 거룩히 빛나시며\n아버지의 나라가 오시며\n아버지의 뜻이 하늘에서와 같이\n땅에서도 이루어지소서!\n오늘 저희에게 일용할 양식을 주시고\n저희에게 잘못한 이를 저희가 용서하오니\n저희 죄를 용서하시고\n저희를 유혹에 빠지지 않게 하시고\n악에서 구하소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "002.lords_prayer",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "주님의 기도",
+          "Kinh Lạy Cha",
+          "Our Father",
+          "主の祈り",
+          "Pater Noster",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Basic Prayers",
+          "日々の祈り",
+          "Generalia"
+        ]
+      },
+      {
+        id: "003.hail_mary",
+        category: "common",
+        titles: {
+          KR: "성모송"
+        },
+        texts: {
+          KR: "은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 계시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "003.hail_mary",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "성모송",
+          "Kinh Kính Mừng",
+          "Hail Mary",
+          "アヴェ・マリアの祈り",
+          "Ave Maria",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Basic Prayers",
+          "日々の祈り",
+          "Generalia"
+        ]
+      },
+      {
+        id: "004.glory_be",
+        category: "common",
+        titles: {
+          KR: "영광송"
+        },
+        texts: {
+          KR: "<rubric>밑줄 부분에서 고개를 숙이며</rubric><U>영광이 성부와 성자와 성령께</U>\n처음과 같이\n이제와 항상 영원히.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "004.glory_be",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "영광송",
+          "Kinh Sáng Danh",
+          "Glory Be",
+          "栄唱",
+          "Gloria Patri",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Basic Prayers",
+          "日々の祈り",
+          "Generalia"
+        ]
+      },
+      {
+        id: "005.apostles_creed",
+        category: "common",
+        titles: {
+          KR: "사도 신경"
+        },
+        texts: {
+          KR: "전능하신 천주 성부\n천지의 창조주를 저는 믿나이다.\n그 외아들 우리 주 예수 그리스도님\n<rubric>밑줄 부분에서 모두 깊은 절을 한다.</rubric><U>성령으로 인하여 동정 마리아께 잉태되어 나시고</U>\n본시오 빌라도 통치 아래서 고난을 받으시고\n십자가에 못 박혀 돌아가시고 묻히셨으며\n저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고\n하늘에 올라 전능하신 천주 성부 오른편에 앉으시며\n그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다.\n성령을 믿으며\n거룩하고 보편된 교회와 모든 성인의 통공을 믿으며\n죄의 용서와 육신의 부활을 믿으며\n영원한 삶을 믿나이다.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "005.apostles_creed",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "사도 신경",
+          "Kinh Tin Kính",
+          "Kinh Tin Kính Các Thánh Tông Đồ",
+          "Apostles' Creed",
+          "使徒信条",
+          "Symbolum Apostolorum",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Basic Prayers",
+          "日々の祈り",
+          "Symbolum fidei",
+          "Kinh Tin Kính"
+        ]
+      },
+      {
+        id: "006.nicene_creed",
+        category: "common",
+        titles: {
+          KR: "니케아-콘스탄티노폴리스 신경"
+        },
+        texts: {
+          KR: "한 분이신 하느님을\n저는 믿나이다.\n전능하신 아버지,\n하늘과 땅과 유형무형한 만물의 창조주를 믿나이다.\n또한 한 분이신 주 예수 그리스도, 하느님의 외아들\n영원으로부터 성부에게서 나신 분을 믿나이다.\n하느님에게서 나신 하느님, 빛에서 나신 빛\n참 하느님에게서 나신 참 하느님으로서,\n창조되지 않고 나시어\n성부와 한 본체로서 만물을 창조하셨음을 믿나이다.\n성자께서는 저희 인간을 위하여, 저희 구원을 위하여\n하늘에서 내려오셨음을 믿나이다.\n<rubric>밑줄 부분에서 모두 고개를 깊이 숙인다.</rubric><U>또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어 사람이 되셨음을 믿나이다.</u>\n본시오 빌라도 통치 아래서 저희를 위하여\n십자가에 못박혀 수난하고 묻히셨으며\n성서 말씀대로 사흗날에 부활하시어\n하늘에 올라 성부 오른편에 앉아계심을 믿나이다.\n그분께서는 산 이와 죽은 이를 심판하러\n영광 속에 다시 오시리니\n그분의 나라는 끝이 없으리이다.\n또한 주님이시며 생명을 주시는 성령을 믿나이다.\n성령께서는 성부와 성자에게서 발하시고\n성부와 성자와 더불어 영광과 흠숭을 받으시며\n예언자들을 통하여 말씀하셨나이다.\n하나이고 거룩하고 보편되며\n사도로부터 이어오는 교회를 믿나이다.\n죄를 씻는 유일한 세례를 믿으며\n죽은 이들의 부활과 내세의 삶을 기다리나이다.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "006.nicene_creed",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "니케아-콘스탄티노폴리스 신경",
+          "Kinh Tin Kính",
+          "Kinh Tin Kính Nicêa - Constantinôpôli",
+          "Nicene Creed",
+          "ニケア・コンスタンチノープル信条",
+          "Symbolum Nicaenum",
+          "주요 기도",
+          "Basic Prayers",
+          "日々の祈り",
+          "Symbolum fidei",
+          "Kinh Ngày Chúa Nhật"
+        ]
+      },
+      {
+        id: "008.ten_commandments",
+        category: "common",
+        titles: {
+          KR: "십계명"
+        },
+        texts: {
+          KR: "일. 한 분이신 하느님을 흠숭하여라.\n이. 하느님의 이름을 함부로 부르지 마라.\n삼. 주일을 거룩히 지내라.\n사. 부모에게 효도하여라.\n오. 사람을 죽이지 마라.\n육. 간음하지 마라.\n칠. 도둑질을 하지 마라.\n팔. 거짓 증언을 하지 마라.\n구. 남의 아내를 탐내지 마라.\n십. 남의 재물을 탐내지 마라."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "008.ten_commandments",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "십계명",
+          "Kinh Mười Điều Răn",
+          "Ten Commandments",
+          "주요 기도",
+          "Kinh Ngày Chúa Nhật",
+          "Catechism"
+        ]
+      },
+      {
+        id: "007.examination_of_conscience",
+        category: "common",
+        titles: {
+          KR: "반성 기도"
+        },
+        texts: {
+          KR: "주님, 오늘 생각과 말과 행위로 지은 죄와\n의무를 소홀히 한 죄를 자세히 살피고\n그 가운데 버릇이 된 죄를 깨닫게 하소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "007.examination_of_conscience",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "반성 기도",
+          "Kinh Trước Khi Xét Mình",
+          "주요 기도",
+          "Kinh Hằng Ngày"
+        ]
+      },
+      {
+        id: "009.confiteor",
+        category: "common",
+        titles: {
+          KR: "고백 기도"
+        },
+        texts: {
+          KR: "전능하신 하느님과 형제들에게 고백하오니\n생각과 말과 행위로 죄를 많이 지었으며\n자주 의무를 소홀히 하였나이다.\n<rubric>가슴을 치며</rubric>제 탓이요\n<rubric>가슴을 치며</rubric>제 탓이요\n<rubric>가슴을 치며</rubric>저의 큰 탓이옵니다.\n그러므로 간절히 바라오니\n평생 동정이신 성모 마리아와\n모든 천사와 성인과 형제들은\n저를 위하여 하느님께 빌어 주소서.\n(<b>✚</b> 전능하신 하느님, 저희에게 자비를 베푸시어\n죄를 용서하시고\n영원한 생명으로 이끌어 주소서.)\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "009.confiteor",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "고백 기도",
+          "Kinh Thú Nhận",
+          "Confiteor",
+          "주요 기도",
+          "Kinh Hằng Ngày"
+        ]
+      },
+      {
+        id: "010.act_of_contrition",
+        category: "common",
+        titles: {
+          KR: "통회 기도"
+        },
+        texts: {
+          KR: "하느님,\n제가 죄를 지어\n참으로 사랑받으셔야 할 하느님의 마음을 아프게 하였기에\n악을 저지르고 선을 멀리한 모든 잘못을\n진심으로 뉘우치나이다.\n하느님의 은총으로 속죄하고\n다시는 죄를 짓지 않으며\n죄지을 기회를 피하기로 굳게 다짐하오니\n우리 구세주 예수 그리스도의 수난 공로를 보시고\n저에게 자비를 베풀어 주소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도; 고해성사"
+        },
+        tags: [
+          "010.act_of_contrition",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "통회 기도",
+          "주요 기도; 고해성사"
+        ]
+      },
+      {
+        id: "011a.act_of_faith",
+        category: "common",
+        titles: {
+          KR: "신덕송"
+        },
+        texts: {
+          KR: "하느님, 하느님께서는 진리의 근원이시며\n그르침이 없으시므로\n계시하신 진리를\n교회가 가르치는 대로 굳게 믿나이다."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "011a.act_of_faith",
+          "011.acts_of_faith_hope_love",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "삼덕송",
+          "신덕송",
+          "Kinh Tin",
+          "Act of Faith",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Actus Fidei",
+          "Basic Prayers",
+          "Generalia"
+        ]
+      },
+      {
+        id: "011b.act_of_hope",
+        category: "common",
+        titles: {
+          KR: "망덕송"
+        },
+        texts: {
+          KR: "하느님, 하느님께서는 자비의 근원이시며\n저버림이 없으시므로\n예수 그리스도의 공로를 통하여 주실\n구원의 은총과 영원한 생명을 바라나이다."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "011b.act_of_hope",
+          "011.acts_of_faith_hope_love",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "삼덕송",
+          "망덕송",
+          "Kinh Cậy",
+          "Act of Hope",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Actus Spei",
+          "Basic Prayers",
+          "Generalia"
+        ]
+      },
+      {
+        id: "011c.act_of_love",
+        category: "common",
+        titles: {
+          KR: "애덕송"
+        },
+        texts: {
+          KR: "하느님, 하느님께서는 사랑의 근원이시며\n한없이 좋으시므로\n마음을 다하여 주님을 사랑하며\n이웃을 제 몸같이 사랑하나이다."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "011c.act_of_love",
+          "011.acts_of_faith_hope_love",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "삼덕송",
+          "애덕송",
+          "Kinh Mến",
+          "Act of Love",
+          "주요 기도",
+          "Kinh Kính Mến",
+          "Actus Caritatis",
+          "Kinh Hằng Ngày",
+          "Basic Prayers",
+          "Generalia"
+        ]
+      },
+      {
+        id: "012.offering_prayer",
+        category: "common",
+        titles: {
+          KR: "봉헌 기도"
+        },
+        texts: {
+          KR: "하느님, 저를 사랑으로 내시고\n저에게 영혼 육신을 주시어\n주님만을 섬기고 사람을 도우라 하셨나이다.\n저는 비록 죄가 많사오나\n주님께 받은 몸과 마음을 오롯이 도로 바쳐\n찬미와 봉사의 제물로 드리오니\n어여삐 여기시어 받아 주소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "012.offering_prayer",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "봉헌 기도",
+          "Kinh Phú Dâng",
+          "Offering Prayer",
+          "주요 기도",
+          "Kinh Hằng Ngày",
+          "Basic Prayers"
+        ]
+      },
+      {
+        id: "013.angelus",
+        category: "common",
+        titles: {
+          KR: "삼종 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 주님의 천사가 마리아께 아뢰니\n<b>●</b> 성령으로 잉태하셨나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> “주님의 종이오니\n<b>●</b> 그대로 제게 이루어지소서!”\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 이에 말씀이 사람이 되시어\n<b>●</b> 저희 가운데 계시나이다.\n<rubric>성모송</rubric><b>○</b> 은총이 가득하신 마리아님, 기뻐하소서!\n주님께서 함께 하시니 여인 중에 복되시며\n태중의 아들 예수님 또한 복되시나이다.\n<b>●</b> 천주의 성모 마리아님,\n이제와 저희 죽을 때에\n저희 죄인을 위하여 빌어주소서.\n아멘.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>✚</b> 기도합시다.\n하느님, 천사의 아룀으로\n성자께서 사람이 되심을 알았으니\n성자의 수난과 십자가로\n부활의 영광에 이르는 은총을\n저희에게 내려 주소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "013.angelus",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "삼종 기도",
+          "Kinh Truyền Tin",
+          "Angelus",
+          "お告げの祈り",
+          "주요 기도",
+          "Các Kinh Cầu",
+          "Basic Prayers",
+          "日々の祈り",
+          "Maria"
+        ]
+      },
+      {
+        id: "014.regina_caeli",
+        category: "common",
+        titles: {
+          KR: "부활 삼종 기도"
+        },
+        texts: {
+          KR: "<rubric>주님 부활 대축일부터 성령 강림 대축일까지</rubric><b>○</b> 하늘의 모후님, 기뻐하소서. 알렐루야.\n<b>●</b> 태중에 모시던 아드님께서, 알렐루야.\n<b>○</b> 말씀하신 대로 부활하셨나이다. 알렐루야.\n<b>●</b> 저희를 위하여 하느님께 빌어 주소서. 알렐루야.\n<b>○</b> 동정 마리아님, 기뻐하시며 즐거워하소서. 알렐루야.\n<b>●</b> 주님께서 참으로 부활하셨나이다. 알렐루야.\n<b>✚</b> 기도합시다.\n하느님, 성자 우리 주 예수 그리스도의 부활로\n온 세상을 기쁘게 하셨으니\n성자의 어머니 동정 마리아의 도움으로\n영생의 즐거움을 얻게 하소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "014.regina_caeli",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "부활 삼종 기도",
+          "레지나 첼리",
+          "Regina Caeli",
+          "Kinh Lạy Nữ Vương Thiên Đàng",
+          "주요 기도",
+          "Basic Prayers",
+          "日々の祈り",
+          "Maria",
+          "アレルヤの祈り",
+          "Các Kinh Cầu"
+        ]
+      },
+      {
+        id: "015.fatima_prayer",
+        category: "common",
+        titles: {
+          KR: "구원을 비는 기도"
+        },
+        texts: {
+          KR: "예수님,\n저희 죄를 용서하시며\n저희를 지옥 불에서 구하시고\n연옥 영혼을 돌보시며\n가장 버림받은 영혼을 돌보소서."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "015.fatima_prayer",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "구원을 비는 기도",
+          "Fatima Prayer",
+          "Oratio Fatimae",
+          "주요 기도",
+          "Kinh Mân Côi",
+          "Basic Prayers",
+          "日々の祈り",
+          "Rosarium"
+        ]
+      },
+      {
+        id: "016.prayer_before_meals",
+        category: "common",
+        titles: {
+          KR: "식사 전 기도"
+        },
+        texts: {
+          KR: "<b>✚</b> 주님, 은혜로이 내려 주신 이 음식과\n저희에게 강복하소서.\n우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "016.prayer_before_meals",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "식사 전 기도",
+          "Prayer Before Meals",
+          "Kinh Trước Bữa Ăn",
+          "Benedic, Domine",
+          "주요 기도",
+          "Basic Prayers",
+          "日々の祈り",
+          "Preces ad mensam"
+        ]
+      },
+      {
+        id: "017.prayer_after_meals",
+        category: "common",
+        titles: {
+          KR: "식사 후 기도"
+        },
+        texts: {
+          KR: "<b>✚</b> 전능하신 하느님,\n    저희에게 베풀어 주신\n    모든 은혜에 감사하나이다.\n<b>◎</b> 아멘.\n<b>✚</b> 주님의 이름은 찬미를 받으소서.\n<b>◎</b> 이제와 영원히 받으소서.\n<b>✚</b> 세상을 떠난 모든 이가\n    하느님의 자비로 평화의 안식을 얻게 하소서.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "017.prayer_after_meals",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "식사 후 기도",
+          "주요 기도"
+        ]
+      },
+      {
+        id: "018.come_holy_spirit",
+        category: "common",
+        titles: {
+          KR: "일을 시작하며 바치는 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 오소서, 성령님.\n<indent>저희 마음을 성령으로 가득 채우시어\n저희 안에 사랑의 불이 타오르게 하소서.</indent>\n<b>●</b> 주님의 성령을 보내소서. 저희가 새로워지리이다.\n<indent>또한 온 누리가 새롭게 되리이다.</indent>\n<b>✚</b> 기도합시다.\n<indent>하느님, 성령의 빛으로 저희 마음을 이끄시어\n바르게 생각하고\n언제나 성령의 위로를 받아 누리게 하소서.\n우리 주 그리스도를 통하여 비나이다.</indent>\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "018.come_holy_spirit",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "일을 시작하며 바치는 기도",
+          "주요 기도"
+        ]
+      },
+      {
+        id: "019.sub_tuum_praesidium",
+        category: "common",
+        titles: {
+          KR: "일을 마치고 바치는 기도 (성모님께 보호를 청하는 기도)"
+        },
+        texts: {
+          KR: "천주의 성모님, 당신의 보호에 저희를 맡기오니\n어려울 때에 저희의 간절한 기도를 외면하지 마시고\n항상 모든 위험에서 저희를 구하소서.\n영화롭고 복되신 동정녀시여."
+        },
+        sourceCategory: {
+          KR: "주요 기도; 축복 예식서"
+        },
+        tags: [
+          "019.sub_tuum_praesidium",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "일을 마치고 바치는 기도 (성모님께 보호를 청하는 기도)",
+          "주요 기도; 축복 예식서"
+        ]
+      },
+      {
+        id: "020.morning_offering",
+        category: "common",
+        titles: {
+          KR: "아침 기도"
+        },
+        texts: {
+          KR: "<rubric>십자 성호를 그으며</rubric>\n<b>✚</b> 성부와 성자와 성령의 이름으로.\n<b>◎</b> 아멘.\n<b>○</b> 하늘에 계신 우리 아버지,\n    아버지의 이름이 거룩히 빛나시며\n    아버지의 나라가 오시며\n    아버지의 뜻이 하늘에서와 같이\n    땅에서도 이루어지소서!\n<b>●</b> 오늘 저희에게 일용할 양식을 주시고\n    저희에게 잘못한 이를 저희가 용서하오니\n    저희 죄를 용서하시고\n    저희를 유혹에 빠지지 않게 하시고\n    악에서 구하소서.\n<b>◎</b> 아멘.\n<b>◎</b> 하느님, 저를 사랑으로 내시고\n    저에게 영혼 육신을 주시어\n    주님만을 섬기고 사람을 도우라 하셨나이다.\n    저는 비록 죄가 많사오나\n    주님께 받은 몸과 마음을 오롯이 도로 바쳐\n    찬미와 봉사의 제물로 드리오니\n    어여삐 여기시어 받아 주소서.\n    아멘.\n<b>✚</b> 우리 주 하느님께 권능과 영광\n    지혜와 굳셈이 있사오니\n    찬미와 감사와 흠숭을 영원히 받으소서.\n<b>◎</b> 아멘.\n<b>✚</b> 전능하신 하느님,\n    오늘도 저희 생각과 말과 행위를\n    주님의 평화로 이끌어 주소서.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "020.morning_offering",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "아침 기도",
+          "주요 기도"
+        ]
+      },
+      {
+        id: "021.evening_prayer",
+        category: "common",
+        titles: {
+          KR: "저녁 기도"
+        },
+        texts: {
+          KR: "<rubric>십자 성호를 그으며</rubric>\n<b>✚</b> 성부와 성자와 성령의 이름으로.\n<b>◎</b> 아멘.\n<b>✚</b> 주님, 오늘 생각과 말과 행위로 지은 죄와\n    의무를 소홀히 한 죄를 자세히 살피고\n    그 가운데 버릇이 된 죄를 깨닫게 하소서.\n    잠깐 반성한다.\n<b>◎</b> 하느님,\n    제가 죄를 지어\n    참으로 사랑받으셔야 할\n    하느님의 마음을 아프게 하였기에\n    악을 저지르고 선을 멀리한 모든 잘못을\n    진심으로 뉘우치나이다.\n    하느님의 은총으로 속죄하고\n    다시는 죄를 짓지 않으며\n    죄지을 기회를 피하기로 굳게 다짐하오니\n    우리 구세주 예수 그리스도의 수난 공로를 보시고\n    저에게 자비를 베풀어 주소서.\n    아멘.\n<b>○</b> 하느님, 하느님께서는 진리의 근원이시며\n    그르침이 없으시므로\n    계시하신 진리를\n    교회가 가르치는 대로 굳게 믿나이다.\n<b>●</b> 하느님, 하느님께서는 자비의 근원이시며\n    저버림이 없으시므로\n    예수 그리스도의 공로를 통하여 주실\n    구원의 은총과 영원한 생명을 바라나이다.\n<b>○</b> 하느님, 하느님께서는 사랑의 근원이시며\n    한없이 좋으시므로\n    마음을 다하여 주님을 사랑하며\n    이웃을 제 몸같이 사랑하나이다.\n<b>✚</b> 하늘에 계신 우리 아버지,\n    오늘 하루도 이미 저물었나이다.\n    이제 저희는 구세주 예수 그리스도를 통하여\n    모든 천사와 성인과 함께 주님을 흠숭하며\n    지금 이 순간까지 베풀어 주신\n    주님의 사랑에 감사하나이다.\n<b>◎</b> 아멘.\n<b>✚</b> 전능하신 천주\n    <rubric>십자 성호를 그으며</rubric>성부와 성자와 성령께서는\n    저희에게 강복하시고 지켜 주소서.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "주요 기도"
+        },
+        tags: [
+          "021.evening_prayer",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "저녁 기도",
+          "주요 기도"
+        ]
+      },
+      {
+        id: "024.guardian_angel",
+        category: "common",
+        titles: {
+          KR: "수호천사에게 바치는 기도"
+        },
+        texts: {
+          KR: "저를 지켜 주시는 수호천사여, \n하느님께서 당신께 맡기신 저를 오늘 비추고 지켜 주시며 다스리고 이끌어 주소서. \n아멘."
+        },
+        sourceCategory: {
+          KR: "민간전승"
+        },
+        tags: [
+          "024.guardian_angel",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "수호천사에게 바치는 기도",
+          "민간전승"
+        ]
+      },
+      {
+        id: "101. rosary_the_joyful_mysteries",
+        category: "rosary",
+        titles: {
+          KR: "환희의 신비"
+        },
+        texts: {
+          KR: "<rubric>월·토요일에 바친다.</rubric>\n1단 마리아께서 예수님을 잉태하심을 묵상합시다.\n2단 마리아께서 엘리사벳을 찾아보심을 묵상합시다.\n3단 마리아께서 예수님을 낳으심을 묵상합시다.\n4단 마리아께서 예수님을 성전에 바치심을 묵상합시다.\n5단 마리아께서 잃으셨던 예수님을 성전에서 찾으심을 묵상합시다."
+        },
+        sourceCategory: {
+          KR: "주요기도; 묵주기도"
+        },
+        tags: [
+          "101. rosary_the_joyful_mysteries",
+          "rosary",
+          "묵주기도",
+          "Kinh Mân Côi",
+          "Rosary",
+          "ロザリオ",
+          "Rosarium",
+          "환희의 신비",
+          "주요기도; 묵주기도"
+        ]
+      },
+      {
+        id: "100.how_to_pray_the_rosary",
+        category: "rosary",
+        titles: {
+          KR: "묵주기도 바치는 방법"
+        },
+        texts: {
+          KR: "1. 묵주에 달린 십자가를 잡은 채 십자성호(성호경)를 이마, 가슴, 양 어깨 순으로 긋고 십자가 발 부분에 친구(입맞춤)한 다음, 사도신경을 바칩니다.\n\n2. 큰 알(또는 간격이 넓은 알)에서 주님의 기도 1번, 작은 알 3개에서 성모송 각 1번씩, 그리고 맨 마지막 알에서 영광송을 바칩니다. 이어서 구원을 위한 기도(구원송)를 바칠 수 있습니다.\n\n3. 그리고 같은 자리에서 신비 제1단(환희의 신비, 빛의 신비, 고통의 신비, 영광의 신비 중에서 하나를 선택)을 묵상한 후 주님의 기도를 1번 드립니다.\n\n4. 이어서 다음의 작은 묵주 알에서 각각 1번씩 성모송 10번을 바칩니다.\n\n5. 10개의 작은 묵주 알을 지나 하나의 큰 묵주 알(또는 간격이 넓은 알)에서 영광송을 바칩니다. 이어서 구원을 위한 기도(구원송)를 바칠 수 있습니다. 그리고 다시 전과 같이 신비 제2단을 묵상한 후 주님의 기도를 1번 드립니다.\n\n6. 이와 같이 매 단마다 그 신비를 묵상하면서 제3단, 제4단, 제5단을 계속 바칩니다.\n\n7. 마지막 제5단의 묵주기도가 끝나면 마침 성호경을 하기 전에 묵주기도성월 기도인 성모찬송을 바칠 수도 있습니다.\n\n8. 한 바퀴를 돌아 다시 돌아온 십자가를 잡고 성호경으로 끝을 맺습니다. 이때 십자가에 친구(입맞춤)하며 마칠 수 있습니다.\n\n<img src=https://maria.catholic.or.kr/mi_pr/prayer/mukju.gif>"
+        },
+        sourceCategory: {
+          KR: "묵주기도"
+        },
+        tags: [
+          "100.how_to_pray_the_rosary",
+          "rosary",
+          "묵주기도",
+          "Kinh Mân Côi",
+          "Rosary",
+          "ロザリオ",
+          "Rosarium",
+          "묵주기도 바치는 방법"
+        ]
+      },
+      {
+        id: "253.",
+        category: "litany",
+        titles: {
+          KR: "103위 한국 성인 호칭 기도"
+        },
+        texts: {
+          KR: "<b>╋</b> 사랑하는 형제 여러분,\n    우리의 마음을 당신 성전으로 삼으시는\n    전능하신 하느님 아버지께 기도하며\n    우리나라의 성인들이\n    천상의 모든 성인과 함께\n    우리와 소리 맞추어 전구해 주시도록 간구합시다.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 자비를 베푸소서.\n<b>●</b> 그리스도님, 자비를 베푸소서.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 천주의 성모님\n<b>●</b> 저희를 위하여 빌어 주소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 성 김대건 안드레아\n    성 정하상 바오로\n    성 이호영 베드로\n    성 정국보 프로타시오\n    성녀 김 아가타\n    성녀 박 안나\n    성녀 이 아가타\n    성녀 김업이 막달레나\n    성 이광헌 아우구스티노\n    성녀 한 바르바라\n    성녀 박희순 루치아\n    성 남명혁 다미아노\n    성 권득인 베드로\n    성 장성집 요셉\n    성녀 김 바르바라\n    성녀 이 바르바라\n    성녀 김 로사\n    성녀 김성임 마르타\n    성녀 이매임 데레사\n    성녀 김장금 안나\n    성 이광렬 요한\n    성녀 이영희 막달레나\n    성녀 김 루치아\n    성녀 원귀임 마리아\n    성녀 박 마리아\n    성녀 권희 바르바라\n    성 박후재 요한\n    성녀 이정희 바르바라\n    성녀 이연희 마리아\n    성녀 김효주 아녜스\n    성 최경환 프란치스코\n    성 범 라우렌시오\n    성 나 베드로\n    성 정 야고보\n    성 유진길 아우구스티노\n    성녀 허계임 막달레나\n    성 남이관 세바스티아노\n    성녀 김 율리에타\n    성녀 전경협 아가타\n    성 조신철 가롤로\n    성 김제준 이냐시오\n    성녀 박봉손 막달레나\n    성녀 홍금주 페르페투아\n    성녀 김효임 골룸바\n    성녀 김 루치아\n    성녀 이 가타리나\n    성녀 조 막달레나\n    성 유대철 베드로\n    성녀 유 체칠리아\n    성 최창흡 베드로\n    성녀 조증이 바르바라\n    성녀 한영이 막달레나\n    성녀 현경련 베네딕타\n    성녀 정정혜 엘리사벳\n    성녀 고순이 바르바라\n    성녀 이영덕 막달레나\n    성녀 김 데레사\n    성녀 이 아가타\n    성 민극가 스테파노\n    성 정화경 안드레아\n    성 허협 바오로\n    성 박종원 아우구스티노\n    성 홍병주 베드로\n    성녀 손소벽 막달레나\n    성녀 이경이 아가타\n    성녀 이인덕 마리아\n    성녀 권진이 아가타\n    성 홍영주 바오로\n    성 이문우 요한\n    성녀 최영이 바르바라\n    성 김성우 안토니오\n    성 현석문 가롤로\n    성 남경문 베드로\n    성 한이형 라우렌시오\n    성녀 우술임 수산나\n    성 임치백 요셉\n    성녀 김임이 데레사\n    성녀 이 아가타\n    성녀 정철염 가타리나\n    성 유정률 베드로\n    성 장 시메온\n    성 백 유스토\n    성 김 헨리코\n    성 서 루도비코\n    성 남종삼 요한\n    성 전장운 요한\n    성 최형 베드로\n    성 정의배 마르코\n    성 우세영 알렉시오\n    성 안 안토니오\n    성 민 루카\n    성 오 베드로\n    성 장주기 요셉\n    성 황석두 루카\n    성 손자선 토마스\n    성 정문호 바르톨로메오\n    성 조화서 베드로\n    성 손선지 베드로\n    성 이명서 베드로\n    성 한재권 요셉\n    성 정원지 베드로\n    성 조윤호 요셉\n    성 이윤일 요한\n    하느님의 모든 성인\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 저희를 구원하소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 온갖 악에서\n    모든 죄에서\n    영원한 죽음에서\n    사람이 되신 주님의 신비로\n    주님의 죽음과 부활로\n    성령의 강림으로\n<b>○</b> 죄인들이 청하오니\n<b>●</b> 저희의 기도를 들어주소서.\n<rubric>다음은 같은 후렴\n<b>○</b> 주님의 거룩한 교회를 다스리며 보존하시기를 청하오니\n    사도좌와 모든 성직자를 진리 안에 보존하시기를 청하오니\n    우리 민족이 화목하고 평화로이 살게 해 주시기를 청하오니\n    주님을 섬기는 저희를 지켜 주시고 굳세게 해 주시기를 청하오니\n    저희의 모든 은인에게 영원한 행복을 주시기를 청하오니\n    땅을 지키고 일구는 이들에게 풍성한 열매를 주시기를 청하오니\n    저희 바람을 들어주시기를 청하오니\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희를 용서하소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희의 기도를 들어주소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 자비를 베푸소서.\n<b>○</b> 그리스도님, 저희의 기도를 들으소서.\n<b>●</b> 그리스도님, 저희의 기도를 들으소서.\n<b>○</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>●</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>╋</b> 기도합시다.\n    전능하시고 영원하신 하느님,\n    주님께서는 산 이와 죽은 이를 모두 다스리시며\n    주님을 믿고 따르는 백성을 사랑으로 보살피시나이다.\n    간절히 청하오니\n    모든 성인의 전구를 들으시고\n    모든 이에게 자비를 베푸소서.\n    우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "호칭 기도"
+        },
+        tags: [
+          "253.",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "103위 한국 성인 호칭 기도",
+          "호칭 기도"
+        ]
+      },
+      {
+        id: "255.",
+        category: "litany",
+        titles: {
+          KR: "124위 한국 순교 복자 호칭 기도"
+        },
+        texts: {
+          KR: "○ 주님, 자비를 베푸소서.\n● 주님, 자비를 베푸소서.\n○ 그리스도님, 자비를 베푸소서.\n● 그리스도님, 자비를 베푸소서.\n○ 주님, 자비를 베푸소서.\n● 주님, 자비를 베푸소서.\n○ 천주의 성모님\n● 저희를 위하여 빌어 주소서.\n○ 그 배필이신 성 요셉\n● 저희를 위하여 빌어 주소서.\n(다음은 같은 후렴)\n○ 성 김대건 안드레아와 성 정하상 바오로와 동료 순교자들\n○ 복자 윤지충 바오로\n○ 복자 주문모 야고보\n○ 복자 권상연 야고보\n○ 복자 원시장 베드로\n○ 복자 윤유일 바오로\n○ 복자 최인길 마티아\n○ 복자 지황 사바\n○ 복자 이도기 바오로\n○ 복자 방 프란치스코\n○ 복자 박취득 라우렌시오\n○ 복자 원시보 야고보\n○ 복자 정산필 베드로\n○ 복자 배관겸 프란치스코\n○ 복자 인언민 마르티노\n○ 복자 이보현 프란치스코\n○ 복자 조용삼 베드로\n○ 복자 최창현 요한\n○ 복자 정약종 아우구스티노\n○ 복자 홍교만 프란치스코 하비에르\n○ 복자 최필공 토마스\n○ 복자 홍낙민 루카\n○ 복자 최창주 마르첼리노\n○ 복자 이중배 마르티노\n○ 복자 원경도 요한\n○ 복자 윤유오 야고보\n○ 복자 최필제 베드로\n○ 복자 윤운혜 루치아\n○ 복자 정복혜 칸디다\n○ 복자 정인혁 타대오\n○ 복자 정철상 가롤로\n○ 복자 심아기 바르바라\n○ 복자 강완숙 골룸바\n○ 복자 강경복 수산나\n○ 복자 김현우 마태오\n○ 복자 문영인 비비안나\n● 저희를 위하여 빌어 주소서.\n(다음은 같은 후렴)\n○ 복자 김연이 율리아나\n○ 복자 이현 안토니오\n○ 복자 최인철 이냐시오\n○ 복자 한신애 아가타\n○ 복자 윤점혜 아가타\n○ 복자 정순매 바르바라\n○ 복자 김이우 바르나바\n○ 복자 이국승 바오로\n○ 복자 김광옥 안드레아\n○ 복자 김정득 베드로\n○ 복자 한정흠 스타니슬라오\n○ 복자 김천애 안드레아\n○ 복자 최여겸 마티아\n○ 복자 김종교 프란치스코\n○ 복자 홍필주 필립보\n○ 복자 유항검 아우구스티노\n○ 복자 윤지헌 프란치스코\n○ 복자 유중철 요한\n○ 복자 유문석 요한\n○ 복자 현계흠 플로로\n○ 복자 김사집 프란치스코\n○ 복자 손경윤 제르바시오\n○ 복자 이경도 가롤로\n○ 복자 김계완 시몬\n○ 복자 정광수 바르나바\n○ 복자 홍익만 안토니오\n○ 복자 한덕운 토마스\n○ 복자 황일광 시몬\n○ 복자 홍인 레오\n○ 복자 권상문 세바스티아노\n○ 복자 이순이 루갈다\n○ 복자 유중성 마태오\n○ 복자 김진후 비오\n○ 복자 김윤덕 아가타 막달레나\n○ 복자 김시우 알렉시오\n○ 복자 최봉한 프란치스코\n○ 복자 서석봉 안드레아\n○ 복자 김강이 시몬\n○ 복자 김희성 프란치스코\n○ 복자 구성열 바르바라\n○ 복자 이시임 안나\n○ 복자 고성대 베드로\n○ 복자 고성운 요셉\n○ 복자 김종한 안드레아\n○ 복자 김화춘 야고보\n○ 복자 조숙 베드로\n● 저희를 위하여 빌어 주소서.\n(다음은 같은 후렴)\n○ 복자 권천례 데레사\n○ 복자 이경언 바오로\n○ 복자 박경화 바오로\n○ 복자 김세박 암브로시오\n○ 복자 안군심 리카르도\n○ 복자 이재행 안드레아\n○ 복자 박사의 안드레아\n○ 복자 김사건 안드레아\n○ 복자 이일언 욥\n○ 복자 신태보 베드로\n○ 복자 이태권 베드로\n○ 복자 정태봉 바오로\n○ 복자 김대권 베드로\n○ 복자 최해성 요한\n○ 복자 김조이 아나스타시아\n○ 복자 심조이 바르바라\n○ 복자 이봉금 아나스타시아\n○ 복자 최 비르지타\n○ 복자 홍재영 프로타시오\n○ 복자 최조이 바르바라\n○ 복자 이조이 막달레나\n○ 복자 오종례 야고보\n○ 복자 이성례 마리아\n○ 복자 오반지 바오로\n○ 복자 신석복 마르코\n○ 복자 김원중 스테파노\n○ 복자 장 토마스\n○ 복자 구한선 타대오\n○ 복자 정찬문 안토니오\n○ 복자 김기량 펠릭스 베드로\n○ 복자 박상근 마티아\n○ 복자 송 베네딕토\n○ 복자 송 베드로\n○ 복자 이 안나\n○ 복자 이정식 요한\n○ 복자 양재현 마르티노\n○ 복자 이양등 베드로\n○ 복자 김종륜 루카\n○ 복자 허인백 야고보\n○ 복자 박경진 프란치스코\n○ 복자 오 마르가리타\n○ 복자 박대식 빅토리노\n○ 복자 윤봉문 요셉\n○ 하느님의 모든 성인\n○ 주님, 자비를 베푸소서.\n● 주님, 저희를 구원하소서.\n(다음은 같은 후렴)\n○ 온갖 악에서\n○ 모든 죄에서\n○ 영원한 죽음에서\n○ 사람이 되신 주님의 신비로\n○ 주님의 죽음과 부활로\n○ 성령의 강림으로\n○ 죄인들이 청하오니\n● 저희의 기도를 들어주소서.\n(다음은 같은 후렴)\n○ 주님의 거룩한 교회를 다스리며 보존하시기를 청하오니\n○ 사도좌와 모든 성직자를 진리 안에 보존하시기를 청하오니\n○ 우리 민족이 화목하고 평화로이 살게 해 주시기를 청하오니\n○ 환난 중에 있는 모든 이에게 자비를 베풀어 주시기를 청하오니\n○ 주님을 섬기는 저희를 지켜 주시고 굳세게 해 주시기를 청하오니\n○ 살아 계신 하느님의 아들 예수님, 청하오니\n○ 그리스도님, 저희의 기도를 들으소서.\n● 그리스도님, 저희의 기도를 들으소서.\n○ 그리스도님, 저희의 기도를 들어주소서.\n● 그리스도님, 저희의 기도를 들어주소서.\n\n┼ 기도합시다.\n전능하시고 영원하신 하느님,\n이 땅에서 하느님의 백성을 선택하시어\n복음을 받아들이고 신앙을 꽃피우게 하셨으니\n복된 순교자들의 전구를 들으시고\n저희에게 자비를 베푸시어\n저희가 언제나 복음을 따라 살아가게 하소서.\n우리 주 그리스도를 통하여 비나이다.\n◎ 아멘."
+        },
+        sourceCategory: {
+          KR: "호칭 기도"
+        },
+        tags: [
+          "255.",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "124위 한국 순교 복자 호칭 기도",
+          "호칭 기도"
+        ]
+      },
+      {
+        id: "252.",
+        category: "litany",
+        titles: {
+          KR: "복되신 동정 마리아의 배필 성 요셉 호칭 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 자비를 베푸소서.\n<b>●</b> 그리스도님, 자비를 베푸소서.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 저희의 기도를 들으소서.\n<b>●</b> 그리스도님, 저희의 기도를 들으소서.\n<b>○</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>●</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>○</b> 하늘에 계신 천주 성부님\n<b>●</b> 자비를 베푸소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 세상을 구원하신 천주 성자님\n    천주 성령님\n    삼위일체이신 하느님\n<b>○</b> 성모 마리아님\n<b>●</b> 저희를 위하여 빌어 주소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 성 요셉\n    다윗의 자랑스러운 후손이신 요셉\n    성조의 빛이신 요셉\n    천주 성모님의 배필이신 요셉\n    구세주의 보호자이신 요셉\n    동정 성모 마리아의 순결을 지키신 요셉\n    하느님의 아들을 기르신 요셉\n    그리스도를 충실히 보호하신 요셉\n    그리스도의 종이신 요셉\n    구원의 봉사자이신 요셉\n    성가정의 주인이신 요셉\n    지극히 의로우신 요셉\n    지극히 정결하신 요셉\n    지극히 지혜로우신 요셉\n    지극히 강직하신 요셉\n    끝까지 순명하신 요셉\n    지극히 성실하신 요셉\n    인내의 거울이신 요셉\n    가난을 사랑하신 요셉\n    노동자의 모범이신 요셉\n    가정생활의 자랑이신 요셉\n    동정의 수호자이신 요셉\n    모든 가정의 기둥이신 요셉\n    곤경 때의 버팀목이신 요셉\n    불쌍한 이의 위안이신 요셉\n    병자의 희망이신 요셉\n    쫓겨난 이의 수호자이신 요셉\n    억눌린 이의 수호자이신 요셉\n    가난한 이의 수호자이신 요셉\n    임종하는 이의 수호자이신 요셉\n    마귀를 쫓아내시는 요셉\n    거룩한 교회의 보호자이신 요셉\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희를 용서하소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희의 기도를 들어주소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 자비를 베푸소서.\n<b>○</b> 주님께서는 요셉을 주님 집의 가장으로 세우시고\n<b>●</b> 모든 재산의 관리자로 삼으셨나이다.\n<b>╋</b> 기도합시다.\n    놀라운 섭리로 요셉을 선택하시어\n    지극히 거룩하신 성모 마리아의 배필로 정하신 하느님,\n    세상에서 성 요셉을 수호자로 공경하는 저희가\n    그를 천상의 전구자로 모시게 하소서.\n    우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "호칭 기도"
+        },
+        tags: [
+          "252.",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "복되신 동정 마리아의 배필 성 요셉 호칭 기도",
+          "호칭 기도"
+        ]
+      },
+      {
+        id: "251.",
+        category: "litany",
+        titles: {
+          KR: "성모 호칭 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 자비를 베푸소서.\n<b>●</b> 그리스도님, 자비를 베푸소서.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 저희의 기도를 들으소서.\n<b>●</b> 그리스도님, 저희의 기도를 들으소서.\n<b>○</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>●</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>○</b> 하늘에 계신 천주 성부님\n<b>●</b> 자비를 베푸소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 세상을 구원하신 천주 성자님\n    천주 성령님\n    삼위일체이신 하느님\n<b>○</b> 성모 마리아님\n<b>●</b> 저희를 위하여 빌어 주소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 천주의 성모님\n    지극히 거룩하신 동정녀\n    그리스도의 어머니\n    교회의 어머니\n    자비의 어머니\n    천상 은총의 어머니\n    희망의 어머니\n    지극히 깨끗하신 어머니\n    순결하신 어머니\n    평생 동정이신 어머니\n    티 없으신 어머니\n    사랑하올 어머니\n    탄복하올 어머니\n    슬기로우신 어머니\n    창조주의 어머니\n    구세주의 어머니\n    지극히 지혜로우신 동정녀\n    공경하올 동정녀\n    찬송하올 동정녀\n    든든한 힘이신 동정녀\n    인자하신 동정녀\n    성실하신 동정녀\n    정의의 거울\n    상지의 옥좌\n    즐거움의 샘\n    신비로운 그릇\n    존경하올 그릇\n    지극한 사랑의 그릇\n    신비로운 장미\n    다윗의 망대\n    상아 탑\n    황금 궁전\n    계약의 궤\n    하늘의 문\n    샛별\n    병자의 치유\n    죄인의 피신처\n    이주민의 위로\n    근심하는 이의 위안\n    신자들의 도움\n    천사의 모후\n    성조의 모후\n    예언자의 모후\n    사도의 모후\n    순교자의 모후\n    증거자의 모후\n    동정녀의 모후\n    모든 성인의 모후\n    원죄 없이 잉태되신 모후\n    하늘에 올림을 받으신 모후\n    묵주 기도의 모후\n    가정의 모후\n    평화의 모후\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희를 용서하소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희의 기도를 들어주소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 자비를 베푸소서.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어 주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>╋</b> 기도합시다.\n    주 하느님,\n    저희에게 은총을 베푸시고\n    복되신 평생 동정 마리아의 전구로\n    이 세상의 슬픔에서 벗어나\n    영원한 기쁨을 누리게 하소서.\n    우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "호칭 기도"
+        },
+        tags: [
+          "251.",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "성모 호칭 기도",
+          "호칭 기도"
+        ]
+      },
+      {
+        id: "254.",
+        category: "litany",
+        titles: {
+          KR: "(일상적으로 바치는) 성인 호칭 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 자비를 베푸소서.\n<b>●</b> 그리스도님, 자비를 베푸소서.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n\n<b>○</b> 하늘에 계신 천주 성부님\n<b>●</b> 자비를 베푸소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 세상을 구원하신 천주 성자님\n<indent>천주 성령님\n삼위일체이신 하느님</indent>\n\n<b>○</b> 성모 마리아님\n<b>●</b> 저희를 위하여 빌어 주소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 천주의 성모님\n<indent>지극히 거룩하신 동정녀\n성 미카엘\n성 가브리엘\n성 라파엘\n모든 천사와 대천사\n세례자 성 요한\n성 요셉\n모든 성조와 예언자\n성 베드로\n성 바오로\n성 안드레아\n성 요한\n성 야고보(대)\n성 토마스\n성 야고보(소)\n성 필립보\n성 바르톨로메오\n성 시몬\n성 타대오\n성 마태오\n성 마르코\n성 루카\n주님의 모든 거룩한 제자\n성 스테파노\n성 라우렌시오\n성 빈첸시오\n모든 거룩한 순교자\n성 실베스테르\n성 그레고리오\n성 암브로시오\n성 아우구스티노\n성 아타나시오\n성 요한 크리소스토모\n모든 거룩한 주교와 증거자\n모든 거룩한 학자\n성 안토니오\n성 베네딕토\n성 도미니코\n성 프란치스코\n모든 거룩한 사제와 부제\n모든 거룩한 수도자와 은수자\n성녀 마리아 막달레나\n성녀 아녜스\n성녀 체칠리아\n성녀 아가타\n성녀 아나스타시아\n모든 거룩한 동정녀와 부인\n성 김대건 안드레아\n성 정하상 바오로\n성 범 라우렌시오\n성녀 김효주 아녜스와 김효임 골룸바\n우리나라의 모든 순교자\n하느님의 모든 성인</indent>\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 저희를 용서하소서.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 저희의 기도를 들어주소서.\n\n<b>○</b> 온갖 악에서\n<b>●</b> 주님, 저희를 구원하소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 모든 죄에서\n<indent>영원한 죽음에서\n사람이 되신 주님의 신비로\n주님의 세례와 거룩한 재계로\n주님의 십자가와 수난으로\n주님의 죽음과 묻힘으로\n주님의 거룩한 부활로\n주님의 놀라운 승천으로\n성령의 강림으로\n심판 날에</indent>\n\n<b>○</b> 죄인들이 청하오니\n<b>●</b>저희의 기도를 들어주소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 저희를 용서하시기를 청하오니\n<indent>주님의 거룩한 교회를 다스리며 보존하시기를 청하오니\n사도좌와 모든 성직자를 진리 안에 보존하시기를 청하오니\n거룩한 교회를 박해자들에게서 지켜 주시기를 청하오니\n우리 민족이 화목하고 평화로이 살게 해 주시기를 청하오니\n주님을 섬기는 저희를 지켜 주시고 굳세게 해 주시기를 청하오니\n저희 모든 은인에게 영원한 행복을 주시기를 청하오니\n땅을 지키고 일구는 이들에게 풍성한 열매를 주시기를 청하오니\n죽은 모든 이에게 영원한 안식을 주시기를 청하오니\n저희 바람을 들어주시기를 청하오니</indent>\n\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희를 용서하소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희의 기도를 들어주소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 자비를 베푸소서.\n<b>○</b> 그리스도님, 저희의 기도를 들으소서.\n<b>●</b> 그리스도님, 저희의 기도를 들으소서.\n<b>○</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>●</b> 그리스도님, 저희의 기도를 들어주소서.\n\n<b>◎</b> 하늘에 계신 우리 아버지,\n<indent>아버지의 이름이 거룩히 빛나시며\n아버지의 나라가 오시며\n아버지의 뜻이 하늘에서와 같이\n땅에서도 이루어지소서!\n오늘 저희에게 일용할 양식을 주시고\n저희에게 잘못한 이를 저희가 용서하오니\n저희 죄를 용서하시고\n저희를 유혹에 빠지지 않게 하시고\n악에서 구하소서.</indent>\n\n<rubric><b>시편 70(69)</b></rubric>\n<b>○</b> 하느님, 저를 구하소서.\n<indent>주님, 어서 저를 도우소서.</indent>\n<b>●</b> 이 목숨 노리는 자들은\n<indent>수치를 당하여 부끄러워하고</indent>\n<b>○</b> 저의 불행을 즐기는 자들은\n<indent>치욕을 느끼며 물러나게 하소서.</indent>\n<b>●</b> “옳거니!” 하며 저를 놀려 대는 자들은\n<indent>부끄러워 되돌아가게 하소서.</indent>\n<b>○</b> 당신을 찾는 이 모두\n<indent>당신 안에서 기뻐 즐거워하리이다.</indent>\n<b>●</b> 당신 구원을 열망하는 이들은 언제나 외치게 하소서.\n<indent>“하느님은 위대하시다!”</indent>\n<b>○</b>  저는 가련하고 불쌍하오니\n<indent>하느님, 어서 제게 오소서.</indent>\n<b>●</b> 저의 도움, 저의 구원은 당신이시니\n<indent>주님, 더디 오지 마소서.</indent>\n<b>○</b>  영광이 성부와 성자와 성령께\n<b>●</b> 처음과 같이\n<indent>이제와 항상 영원히. 아멘.</indent>\n\n<b>○</b> 주님, 주님의 종들을 구원하소서.\n<indent>주님께 바라는 종들을 구원하소서.</indent>\n<b>●</b> 주님, 저희에게 든든한 보루 되어 주시고\n<indent>악인들의 손에서 지켜 주소서.</indent>\n<b>○</b> 악인들의 힘이 저희에게 미치지 못하게 하시고\n<indent>악의 세력이 해치지 못하게 하소서.</indent>\n<b>●</b> 주님, 저희 죄를 묻지 마시고\n<indent>또한 저희 죄대로 벌하지 마소서.</indent>\n\n<b>╋</b> 기도합시다.\n<indent>전능하시고 영원하신 하느님,\n주님께서는 산 이와 죽은 이를 모두 다스리시며\n주님을 믿고 따르는 백성을 사랑으로 보살피시나이다.\n간절히 청하오니\n모든 성인의 전구를 들으시고\n모든 이에게 자비를 베푸소서.\n우리 주 그리스도를 통하여 비나이다.</indent>\n<b>◎</b> 아멘.\n\n<b>╋</b> 주님, 저희의 기도를 들어주소서.\n<b>◎</b> 또한 저희의 부르짖음이 주님께 이르게 하소서.\n\n<b>╋</b> 세상을 떠난 모든 이가\n<indent>하느님의 자비로 평화의 안식을 얻게 하소서.</indent>\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "호칭 기도"
+        },
+        tags: [
+          "254.",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "(일상적으로 바치는) 성인 호칭 기도",
+          "호칭 기도"
+        ]
+      },
+      {
+        id: "200.",
+        category: "national",
+        titles: {
+          KR: "성 요셉에게 바치는 기도 (성 요셉에게 바치는 기도)"
+        },
+        texts: {
+          KR: "<b>○</b> 우리 주 예수님을 기르신 아버지시요\n    정결하신 동정 마리아의 배필이시며\n    임종하는 이의 수호자이신\n    성 요셉께 간절히 청하오니\n<b>●</b> 하느님께 빌어 주시어\n    저희가 예수님을 사랑하며 충실히 따르게 하소서.\n    또한 죽을 때에 저희를 지켜 주소서.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "성월 기도"
+        },
+        tags: [
+          "200.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성 요셉에게 바치는 기도 (성 요셉에게 바치는 기도)",
+          "성월 기도"
+        ]
+      },
+      {
+        id: "201.manificat",
+        category: "common",
+        titles: {
+          KR: "마리아의 노래 (성모 성월 기도)"
+        },
+        texts: {
+          KR: "<b>○</b> 내 영혼이 주님을 찬양하고\n    내 구원자 하느님 안에서 내 마음 기뻐 뛰노네.\n<b>●</b> 그분은 비천한 당신 종을 굽어보셨네.\n    이제부터 과연 모든 세대가 나를 복되다 하리라.\n<b>○</b> 전능하신 분이 나에게 큰일을 하셨으니\n    그 이름은 거룩하신 분이시다.\n<b>●</b> 그분 자비는 세세 대대로\n    그분을 두려워하는 이들에게 미치리라.\n<b>○</b> 그분은 당신 팔로 권능을 떨치시어\n    마음이 교만한 자들을 흩으셨네.\n<b>●</b> 권세 있는 자를 자리에서 내치시고\n    비천한 이를 들어 올리셨네.\n<b>○</b> 굶주린 이를 좋은 것으로 채워 주시고\n    부유한 자를 빈손으로 돌려보내셨네.\n<b>●</b> 당신 자비를 기억하시어\n    당신 종 이스라엘을 돌보셨으니\n<b>○</b> 우리 조상들에게 말씀하신 대로\n    아브라함과 그 후손에게 그분의 자비 영원하리라.\n<b>●</b> 영광이 성부와 성자와 성령께\n<b>○</b> 처음과 같이\n    이제와 항상 영원히. 아멘.\n\n<b>✚</b> 기도합시다.\n    저희를 하느님 아버지께 이끄시는 주 예수 그리스도님,\n    주님의 어머니 동정 마리아를\n    저희 어머니가 되게 하시고\n    저희의 전구자로 세우셨나이다.\n    비오니, 성모 마리아의 전구를 들으시어\n    저희가 주님께 간구하는 모든 은혜를\n    받아 누리게 하소서.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "성월 기도"
+        },
+        tags: [
+          "201.manificat",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "마리아의 노래 (성모 성월 기도)",
+          "성월 기도"
+        ]
+      },
+      {
+        id: "203.",
+        category: "national",
+        titles: {
+          KR: "한국 순교자들에게 바치는 기도 (순교자 성월 기도)"
+        },
+        texts: {
+          KR: "<b>○</b> 이 땅의 모든 순교자여,\n    당신들은 하느님의 은총에 힘입어\n    굳은 신앙으로\n    예수 그리스도의 사랑과\n    복음과 교회를 위하여\n    피를 흘리셨나이다.\n<b>●</b> 저희는 현세에서 악의 세력과 치열하게 싸우며\n    당신들이 거두신 승리의 영광을 노래하고\n    모든 선의 근원이신 하느님을 찬양하오니\n    저희를 위하여 빌어 주소서.\n<b>○</b> 위대하신 순교자들이여,\n    천상의 모후이신 성모 마리아와 함께\n    저희를 위하여 빌어 주시어\n    하느님의 자비를 얻어 주소서.\n<b>●</b> 지금도 어둠의 세력이\n    교회를 박해하고 있사오니\n    하느님께서 전능하신 팔로 교회를 붙들어 보호하시며\n    아직 어둠 속에 있는 지역에까지\n    널리 펴시도록 빌어 주소서.\n<b>○</b> 용감하신 순교자들이여, 특별히 청하오니\n    우리나라를 위하여 하느님께 빌어 주소서.\n<b>●</b> 당신들은 이 땅에서\n    많은 고난을 겪으며 사시다가\n    목숨까지 바치셨으니\n<b>○</b> 전능하신 하느님께 빌어 주시어\n    교회를 이 땅에서 날로 자라게 하시며\n    사제와 수도자를 많이 나게 하시고\n<b>●</b> 신자들이 주님의 계명을 잘 지키고\n    냉담 교우들은 다시 열심해지며\n    갈린 형제들은 같은 믿음으로 하나 되고\n    비신자들은 참신앙으로 하느님을 알아\n    천지의 창조주\n    인류의 구세주를 찾아오게 하소서.\n<b>○</b> 참으로 영광스러운 순교자들이여,\n    저희도 그 영광을 생각하며 기뻐하나이다.\n    간절히 청하오니\n    자비로우신 하느님 아버지께 빌어 주시어\n    저희와 친척과 은인들에게\n    필요한 은혜를 얻어 주소서.\n<b>●</b> 또한 저희가 죽을 때까지\n    예수 그리스도를 한결같이 믿어 증언하며\n    비록 피는 흘리지 못할지라도\n    주님의 은총을 입어 선종하게 하소서.\n<b>○</b> 성 김대건 안드레아와 성 정하상 바오로와\n    동료 순교자들이여,\n<b>●</b> 저희를 위하여 빌어 주소서."
+        },
+        sourceCategory: {
+          KR: "성월 기도"
+        },
+        tags: [
+          "203.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "한국 순교자들에게 바치는 기도 (순교자 성월 기도)",
+          "성월 기도"
+        ]
+      },
+      {
+        id: "202.actus_consecrationis",
+        category: "common",
+        titles: {
+          KR: "예수 성심께 천하 만민을 바치는 기도 (예수 성심 성월 기도)"
+        },
+        texts: {
+          KR: "<b>○</b> 지극히 어지신 구세주 예수님,\n    주님 앞에 꿇어 경배하오니\n    저희를 굽어살피소서.\n<b>●</b> 저희는 이미 주님의 백성이오니\n    언제나 주님과 함께 살아가기를 바라나이다.\n    주님과 하나 되고자\n    오늘 저희를 주님의 성심께 봉헌하나이다.\n<b>○</b> 주님을 일찍이 알아 모시지 못한 사람도 많고\n    주님을 알고도 주님의 계명을 저버리고\n    주님을 떠난 사람도 많사오니\n<b>●</b> 지극히 인자하신 예수님,\n    이런 사람들도 다 불쌍히 여기시어\n    주님의 성심께 이끌어 들이소서.\n<b>○</b> 주님께서는 목자이시니\n    주님을 떠나지 않은 사람들을 보살피시고\n    이미 주님을 떠난 사람들은\n    다시 아버지 집으로 돌아오게 하시어\n    굶어 죽는 일이 없게 하소서.\n<b>●</b> 옹졸한 고집에 사로잡힌 사람들이나\n    불목하여 갈린 사람들도 부르시어\n    저희가 모두 같은 신앙을 고백하며\n    한 우리에서 한 목자 밑에 살게 하소서.\n<b>○</b> 주님, 거룩한 교회를 평화의 깃발로 세우시고\n    모든 나라에 참된 평화를 주시어\n    온 세상 어디서나 입을 모아\n    저희를 구원하신 거룩하신 성심께\n    영원히 찬미와 영광과 흠숭을 드리게 하소서.\n<b>◎</b> 아멘.\n○ 예수 성심,\n● 이 세상에 주님의 나라를 세우소서."
+        },
+        sourceCategory: {
+          KR: "성월 기도"
+        },
+        tags: [
+          "202.actus_consecrationis",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "예수 성심께 천하 만민을 바치는 기도 (예수 성심 성월 기도)",
+          "성월 기도"
+        ]
+      },
+      {
+        id: "205.",
+        category: "common",
+        titles: {
+          KR: "시편 130(129) (위령 성월 기도)"
+        },
+        texts: {
+          KR: "<b>○</b> 깊은 구렁 속에서\n    주님, 당신께 부르짖나이다.\n<b>●</b> 주님, 제 소리를 들어 주소서.\n    애원하는 제 소리에 당신 귀를 기울이소서.\n<b>○</b> 주님, 당신이 죄악을 헤아리신다면\n    주님, 감당할 자 누구이리까?\n<b>●</b> 당신은 용서하는 분이시니\n    사람들이 당신을 경외하리이다.\n<b>○</b> 나 주님께 바라네.\n    내 영혼이 주님께 바라며\n    그분 말씀에 희망을 두네.\n<b>●</b> 파수꾼이 새벽을 기다리기보다\n    내 영혼이 주님을 더 기다리네.\n<b>○</b> 파수꾼이 새벽을 기다리기보다\n    이스라엘이 주님을 더 기다리네.\n<b>●</b> 주님께는 자애가 있고 \n    풍요로운 구원이 있네.\n<b>○</b> 바로 그분이 이스라엘을\n    모든 죄악에서 구원하시리라.\n<b>╋</b> 기도합시다.\n    사람을 창조하시고\n    믿는 이들을 구원하시는 하느님,\n    저희의 간절한 기도를 들으시어\n    주님을 섬기던 사람들의 죄를 용서하시고\n    그들이 바라던 영원한 행복을 얻게 하소서.\n    우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘.\n<b>╋</b> 주님, 그들에게 영원한 안식을 주소서.\n<b>◎</b> 영원한 빛을 그들에게 비추소서.\n<b>╋</b> 세상을 떠난 모든 이가\n    하느님의 자비로 평화의 안식을 얻게 하소서.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "성월 기도"
+        },
+        tags: [
+          "205.",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "시편 130(129) (위령 성월 기도)",
+          "성월 기도"
+        ]
+      },
+      {
+        id: "110.",
+        category: "sacrament",
+        titles: {
+          KR: "고해 성사"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "주요기도; 고해성사 예식"
+        },
+        tags: [
+          "110.",
+          "sacrament",
+          "성사·예식",
+          "Bí tích và nghi thức",
+          "Sacraments and Rites",
+          "秘跡・式次第",
+          "Sacramenta et ritus",
+          "고해 성사",
+          "주요기도; 고해성사 예식"
+        ]
+      },
+      {
+        id: "130.",
+        category: "sacrament",
+        titles: {
+          KR: "공소 예식"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "공소 예절"
+        },
+        tags: [
+          "130.",
+          "sacrament",
+          "성사·예식",
+          "Bí tích và nghi thức",
+          "Sacraments and Rites",
+          "秘跡・式次第",
+          "Sacramenta et ritus",
+          "공소 예식",
+          "공소 예절"
+        ]
+      },
+      {
+        id: "320.",
+        category: "blessing_household",
+        titles: {
+          KR: "가정을 위한 기도 1"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "320.",
+          "blessing_household",
+          "축복·가정기도",
+          "Lời chúc lành và gia đình",
+          "Blessings and Household Prayers",
+          "祝福と家庭の祈り",
+          "Benedictiones et familia",
+          "가정을 위한 기도 1",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "321.",
+        category: "blessing_household",
+        titles: {
+          KR: "가정을 위한 기도 2"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "321.",
+          "blessing_household",
+          "축복·가정기도",
+          "Lời chúc lành và gia đình",
+          "Blessings and Household Prayers",
+          "祝福と家庭の祈り",
+          "Benedictiones et familia",
+          "가정을 위한 기도 2",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "323.",
+        category: "blessing_household",
+        titles: {
+          KR: "부부의 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "323.",
+          "blessing_household",
+          "축복·가정기도",
+          "Lời chúc lành và gia đình",
+          "Blessings and Household Prayers",
+          "祝福と家庭の祈り",
+          "Benedictiones et familia",
+          "부부의 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "328.",
+        category: "blessing_household",
+        titles: {
+          KR: "세상을 떠난 부모를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "328.",
+          "blessing_household",
+          "축복·가정기도",
+          "Lời chúc lành và gia đình",
+          "Blessings and Household Prayers",
+          "祝福と家庭の祈り",
+          "Benedictiones et familia",
+          "세상을 떠난 부모를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "322.",
+        category: "blessing_household",
+        titles: {
+          KR: "자녀를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "322.",
+          "blessing_household",
+          "축복·가정기도",
+          "Lời chúc lành và gia đình",
+          "Blessings and Household Prayers",
+          "祝福と家庭の祈り",
+          "Benedictiones et familia",
+          "자녀를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "023.eternal_rest",
+        category: "common",
+        titles: {
+          KR: "위령 기도"
+        },
+        texts: {
+          KR: "주님, 세상을 떠난 이들에게 영원한 안식을 주소서. \n영원한 빛을 그들에게 비추소서. \n세상을 떠난 이들이 하느님의 자비로 평화의 안식을 얻게 하소서. \n아멘."
+        },
+        sourceCategory: {
+          KR: "상장 예식"
+        },
+        tags: [
+          "023.eternal_rest",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "위령 기도",
+          "상장 예식"
+        ]
+      },
+      {
+        id: "335.WYD_2027",
+        category: "national",
+        titles: {
+          KR: "2027 서울 세계청년대회 공식기도문"
+        },
+        texts: {
+          KR: "젊은이를 사랑하시는 주님,\n저희를 주님의 무한한 사랑과 자비로 초대해 주심에 감사드립니다.\n\n하느님 아버지,\n저희 자신을 당신께 맡겨 드리오니,\n온 세상 젊은이들이 교회의 품 안에서 위로받고\n친교와 일치의 기쁨을 누리게 하소서.\n\n'이미 그리고 영원히' 세상을 이기신 그리스도님,\n\"용기를 내어라\" 하신 당신의 말씀 안에서\n온 세상 모든 이가 희망을 발견하고,\n사랑과 용서의 십자가가 세상에 대한 승리임을 깨닫게 하소서.\n\n사랑의 불꽃이신 성령님,\n당신의 놀라운 손길로 이 땅에 복음의 씨앗을 심으셨으니,\n한국 순교 성인들의 믿음이 저희 가슴에도 타올라\n평화와 사랑과 진리의 복음을 살아가는 제자가 되게 하소서.\n\n주님, 이 세계청년대회의 순례 여정을 통해\n저희 모두가 서로의 목소리를 경청하고\n그 안에서 당신의 뜻을 찾으며,\n모든 하느님 백성이 함께 걷는 시노드 교회가 되게 하소서. 아멘\n\n○ 자비와 평화의 모후이시여,\n◎ 저희를 위하여 빌어 주소서.\n○ 서울 세계청년대회의 주보성인들이여,\n◎ 모든 젊은이들을 위하여 빌어 주소서."
+        },
+        sourceCategory: {
+          KR: "주교회의 승인 기도문"
+        },
+        tags: [
+          "335.WYD_2027",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "2027 서울 세계청년대회 공식기도문",
+          "주교회의 승인 기도문"
+        ]
+      },
+      {
+        id: "204.the_salve_regina",
+        category: "common",
+        titles: {
+          KR: "성모 찬송 (묵주 기도 성월 기도)"
+        },
+        texts: {
+          KR: "<b>○</b> 모후이시며 사랑이 넘친 어머니,\n    우리의 생명, 기쁨, 희망이시여,\n<b>●</b> 당신 우러러 하와의 그 자손들이\n    눈물을 흘리며 부르짖나이다,\n    슬픔의 골짜기에서.\n<b>○</b> 우리들의 보호자 성모님,\n    불쌍한 저희를\n    인자로운 눈으로 굽어보소서.\n<b>●</b> 귀양살이 끝날 때에\n    당신의 아들 우리 주 예수님 뵙게 하소서.\n    너그러우시고, 자애로우시며\n    오! 아름다우신 동정 마리아님.\n<b>○</b> 천주의 성모님, 저희를 위하여 빌어 주시어\n<b>●</b> 그리스도께서 약속하신 영원한 생명을 얻게 하소서.\n<b>✚</b> 기도합시다.\n    하느님,\n    외아드님께서 삶과 죽음과 부활로\n    저희에게 영원한 구원을 마련해 주셨나이다.\n    복되신 동정 마리아와 함께 이 신비를 묵상하며\n    묵주 기도를 바치오니\n    저희가 그 가르침을 따라\n    영원한 생명을 얻게 하소서.\n    우리 주 그리스도를 통하여 비나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "성월기도; 묵주기도"
+        },
+        tags: [
+          "204.the_salve_regina",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "성모 찬송 (묵주 기도 성월 기도)",
+          "성월기도; 묵주기도"
+        ]
+      },
+      {
+        id: "331.",
+        category: "national",
+        titles: {
+          KR: "가뭄과 장마 때에 바치는 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "331.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "가뭄과 장마 때에 바치는 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "306.",
+        category: "national",
+        titles: {
+          KR: "교황이나 주교를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도; 로마 미사 경본"
+        },
+        tags: [
+          "306.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "교황이나 주교를 위한 기도",
+          "여러 가지 기도; 로마 미사 경본"
+        ]
+      },
+      {
+        id: "325.",
+        category: "national",
+        titles: {
+          KR: "군인을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "325.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "군인을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "324.",
+        category: "national",
+        titles: {
+          KR: "군인의 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "324.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "군인의 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "314.",
+        category: "national",
+        titles: {
+          KR: "그리스도교 일치를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "314.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "그리스도교 일치를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "333.",
+        category: "national",
+        titles: {
+          KR: "농민을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "주교회의 승인 기도문"
+        },
+        tags: [
+          "333.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "농민을 위한 기도",
+          "주교회의 승인 기도문"
+        ]
+      },
+      {
+        id: "318.",
+        category: "national",
+        titles: {
+          KR: "대중 매체 선용을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "318.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "대중 매체 선용을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "315.",
+        category: "national",
+        titles: {
+          KR: "민족의 화해와 일치를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "315.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "민족의 화해와 일치를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "326.",
+        category: "national",
+        titles: {
+          KR: "병자를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "326.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "병자를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "317.",
+        category: "national",
+        titles: {
+          KR: "복음화를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "317.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "복음화를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "312.",
+        category: "national",
+        titles: {
+          KR: "비신자들을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "312.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "비신자들을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "307.",
+        category: "national",
+        titles: {
+          KR: "사제들을 위한 기도 1"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "307.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "사제들을 위한 기도 1",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "308.",
+        category: "national",
+        titles: {
+          KR: "사제들을 위한 기도 2"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "308.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "사제들을 위한 기도 2",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "330.",
+        category: "national",
+        titles: {
+          KR: "새해를 맞이하며 바치는 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "330.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "새해를 맞이하며 바치는 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "327.",
+        category: "national",
+        titles: {
+          KR: "선종을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "327.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "선종을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "305.",
+        category: "national",
+        titles: {
+          KR: "성 암브로시오의 사은 찬미가 (Te Deum)"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도; 서품 예식서"
+        },
+        tags: [
+          "305.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성 암브로시오의 사은 찬미가 (Te Deum)",
+          "여러 가지 기도; 서품 예식서"
+        ]
+      },
+      {
+        id: "304.",
+        category: "national",
+        titles: {
+          KR: "성 토마스의 성체 찬미가"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "304.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성 토마스의 성체 찬미가",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "332.veni_sancte_spiritus",
+        category: "national",
+        titles: {
+          KR: "성령 송가"
+        },
+        texts: {
+          KR: "오소서. 성령님.\n당신의 빛 그 빛살을 하늘에서 내리소서.\n가난한 이 아버지, 은총의 주님\n오시어 마음에 빛을 주소서.\n가장 좋은 위로자, 영혼의 기쁜 손님,\n생기 돋워 주소서.\n일할 때에 휴식을, 무더울 때 바람을,\n슬플 때에 위로를. 지복의 빛이시여,\n저희 맘 깊은 곳을 가득히 채우소서.\n주님 도움 없으면 저희 삶 그 모든 것\n이로운 것 없으리.\n허물은 씻어 주고 마른 땅 물 주시고 병든 것 고치소서.\n굳은 맘 풀어 주고 찬 마음 데우시고 바른 길 이끄소서.\n성령님을 믿으며 의지하는 이에게\n칠은을 베푸소서.\n공덕을 쌓게 하고 구원의 문을 넘어\n영복을 얻게 하소서. \n아멘."
+        },
+        sourceCategory: {
+          KR: "민간 전승"
+        },
+        tags: [
+          "332.veni_sancte_spiritus",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성령 송가",
+          "민간 전승"
+        ]
+      },
+      {
+        id: "302.",
+        category: "national",
+        titles: {
+          KR: "성모 성심께 바치는 봉헌 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "302.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성모 성심께 바치는 봉헌 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "303.",
+        category: "national",
+        titles: {
+          KR: "성모님께 자기를 바치는 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "303.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성모님께 자기를 바치는 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "316.",
+        category: "national",
+        titles: {
+          KR: "성서 사도직을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "316.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성서 사도직을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "313.",
+        category: "national",
+        titles: {
+          KR: "성소를 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "313.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성소를 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "300.",
+        category: "national",
+        titles: {
+          KR: "성수 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 주님, 이 성수로 저의 죄를 씻어 주시고\n<indent>마귀를 몰아내시며 악의 유혹을 물리쳐 주소서. 아멘.</indent>\n\n<rubric>또는</rubric>\n<b>○</b> 주님, 이 성수로 세례의 은총을 새롭게 하시고\n<indent>모든 악에서 보호하시어\n깨끗한 마음으로 주님께 나아가게 하소서. 아멘.</indent>"
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "300.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성수 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "319.",
+        category: "national",
+        titles: {
+          KR: "성전 건립 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "319.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성전 건립 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "329.",
+        category: "national",
+        titles: {
+          KR: "세상을 떠난 형제, 친척, 친구, 은인을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "329.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "세상을 떠난 형제, 친척, 친구, 은인을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "309.",
+        category: "national",
+        titles: {
+          KR: "수도자들을 위한 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "309.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "수도자들을 위한 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "120.",
+        category: "stations_of_cross",
+        titles: {
+          KR: "십자가의 길"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도; 십자가의 길"
+        },
+        tags: [
+          "120.",
+          "stations_of_cross",
+          "십자가의 길",
+          "Đàng Thánh Giá",
+          "Stations of the Cross",
+          "十字架の道行き",
+          "Via Crucis",
+          "여러 가지 기도; 십자가의 길"
+        ]
+      },
+      {
+        id: "301.",
+        category: "national",
+        titles: {
+          KR: "예수 성심께 바치는 봉헌 기도"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "301.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "예수 성심께 바치는 봉헌 기도",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "310.",
+        category: "national",
+        titles: {
+          KR: "평신도 사도직을 위한 기도 1"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "310.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "평신도 사도직을 위한 기도 1",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "311.",
+        category: "national",
+        titles: {
+          KR: "평신도 사도직을 위한 기도 2"
+        },
+        texts: {
+          KR: ""
+        },
+        sourceCategory: {
+          KR: "여러 가지 기도"
+        },
+        tags: [
+          "311.",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "평신도 사도직을 위한 기도 2",
+          "여러 가지 기도"
+        ]
+      },
+      {
+        id: "102. rosary_the_luminous_mysteries",
+        category: "rosary",
+        titles: {
+          KR: "빛의 신비"
+        },
+        texts: {
+          KR: "<rubric>목요일에 바친다.</rubric>\n1단 예수님께서 세례 받으심을 묵상합시다.\n2단 예수님께서 카나에서 첫 기적을 행하심을 묵상합시다.\n3단 예수님께서 하느님 나라를 선포하심을 묵상합시다.\n4단 예수님께서 거룩하게 변모하심을 묵상합시다.\n5단 예수님께서 성체성사를 세우심을 묵상합시다."
+        },
+        sourceCategory: {
+          KR: "주요기도; 묵주기도"
+        },
+        tags: [
+          "102. rosary_the_luminous_mysteries",
+          "rosary",
+          "묵주기도",
+          "Kinh Mân Côi",
+          "Rosary",
+          "ロザリオ",
+          "Rosarium",
+          "빛의 신비",
+          "주요기도; 묵주기도"
+        ]
+      },
+      {
+        id: "104. rosary_the_glorious_mysteries",
+        category: "rosary",
+        titles: {
+          KR: "영광의 신비"
+        },
+        texts: {
+          KR: "<rubric>수·일요일에 바친다.</rubric>\n\n1단 예수님께서 부활하심을 묵상합시다.\n2단 예수님께서 승천하심을 묵상합시다.\n3단 예수님께서 성령을 보내심을 묵상합시다.\n4단 예수님께서 마리아를 하늘에 불러올리심을 묵상합시다.\n5단 예수님께서 마리아께 천상 모후의 관을 씌우심을 묵상합시다."
+        },
+        sourceCategory: {
+          KR: "주요기도; 묵주기도"
+        },
+        tags: [
+          "104. rosary_the_glorious_mysteries",
+          "rosary",
+          "묵주기도",
+          "Kinh Mân Côi",
+          "Rosary",
+          "ロザリオ",
+          "Rosarium",
+          "영광의 신비",
+          "주요기도; 묵주기도"
+        ]
+      },
+      {
+        id: "103. rosary_the_sorrowful_mysteries",
+        category: "rosary",
+        titles: {
+          KR: "고통의 신비"
+        },
+        texts: {
+          KR: "<rubric>화·금요일에 바친다.</rubric>\n1단 예수님께서 우리를 위하여 피땀 흘리심을 묵상합시다.\n2단 예수님께서 우리를 위하여 매 맞으심을 묵상합시다.\n3단 예수님께서 우리를 위하여 가시관 쓰심을 묵상합시다.\n4단 예수님께서 우리를 위하여 십자가 지심을 묵상합시다.\n5단 예수님께서 우리를 위하여 십자가에 못 박혀 돌아가심을 묵상합시다."
+        },
+        sourceCategory: {
+          KR: "주요기도; 묵주기도"
+        },
+        tags: [
+          "103. rosary_the_sorrowful_mysteries",
+          "rosary",
+          "묵주기도",
+          "Kinh Mân Côi",
+          "Rosary",
+          "ロザリオ",
+          "Rosarium",
+          "고통의 신비",
+          "주요기도; 묵주기도"
+        ]
+      },
+      {
+        id: "008-1a.six_commandments_of_the_Church",
+        category: "common",
+        titles: {
+          KR: "교우의 6대 의무"
+        },
+        texts: {
+          KR: "1. ‘주일’과 ‘의무 축일’의 미사 참례\n2. 금육과 금식의 의무\n3. 고해 성사의 의무\n4. 영성체 의무\n5. 교무금의 의무\n6. 혼인성사와 관련된 교회법을 지켜야 할 의무"
+        },
+        sourceCategory: {
+          KR: "가톨릭 교리서"
+        },
+        tags: [
+          "008-1a.six_commandments_of_the_Church",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "교우의 6대 의무",
+          "가톨릭 교리서"
+        ]
+      },
+      {
+        id: "008-1b.the_Precepts_of_the_Church",
+        category: "common",
+        titles: {
+          KR: "교회의 다섯 가지 주요 법규"
+        },
+        texts: {
+          KR: "1. 주일과 의무 축일에는 미사에 참여하고, 성화에 방해가 될 수 있는 활동과 노동을 삼가야 한다.\n2. 적어도 매년 한 번 자기 죄를 고백하는 고해성사를 받아야 한다. \n3. 적어도 매년 한 번 부활 시기에 성체를 받아 모셔야 한다. \n4. 교회가 정한 날에 금식재와 금육재를 지켜야 한다. \n5. 각자가 저마다의 능력에 따라 교회의 물질적 필요를 지원하여야 한다."
+        },
+        sourceCategory: {
+          KR: "가톨릭 교리서"
+        },
+        tags: [
+          "008-1b.the_Precepts_of_the_Church",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "교회의 다섯 가지 주요 법규",
+          "가톨릭 교리서"
+        ]
+      },
+      {
+        id: "022.mass_ending_prayer",
+        category: "litany",
+        titles: {
+          KR: "(미사 후) 마침 호칭기도"
+        },
+        texts: {
+          KR: "○ [본당 주보성인의 이름]\n◎ 저희를 위하여 빌어주소서.\n<rubric>3회 반복한다</rubric>\n"
+        },
+        sourceCategory: {
+          KR: "민간전승"
+        },
+        tags: [
+          "022.mass_ending_prayer",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "(미사 후) 마침 호칭기도",
+          "민간전승"
+        ]
+      },
+      {
+        id: "025.anima_christi",
+        category: "common",
+        titles: {
+          KR: "지극히 거룩하신 구세주께 바라는 기도"
+        },
+        texts: {
+          KR: "그리스도의 마음은 저를 거룩하게 하소서.\n그리스도의 몸은 저를 구원하소서.\n그리스도의 피는 저를 취하게 하소서.\n그리스도의 가슴에서 나온 물은 저를 씻어 주소서.\n그리스도의 수난은 저를 위로하소서.\n좋으신 예수님, 제 기도를 들어주소서.\n주님의 상처 속에 저를 숨겨주소서.\n제가 주님을 떠나지 않게 하소서.\n사악한 원수에게서 저를 지켜 주소서.\n죽을 때에 저를 불러 주소서.\n저를 부르시어 성인들과 함께 영원토록 주님을 찬양하게 하소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "로마 미사 경본"
+        },
+        tags: [
+          "025.anima_christi",
+          "common",
+          "공통기도문",
+          "Kinh nguyện chung",
+          "Common Prayers",
+          "共通の祈り",
+          "Preces communes",
+          "지극히 거룩하신 구세주께 바라는 기도",
+          "로마 미사 경본"
+        ]
+      },
+      {
+        id: "250.",
+        category: "litany",
+        titles: {
+          KR: "예수 성심 호칭 기도"
+        },
+        texts: {
+          KR: "<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 자비를 베푸소서.\n<b>●</b> 그리스도님, 자비를 베푸소서.\n<b>○</b> 주님, 자비를 베푸소서.\n<b>●</b> 주님, 자비를 베푸소서.\n<b>○</b> 그리스도님, 저희의 기도를 들으소서.\n<b>●</b> 그리스도님, 저희의 기도를 들으소서.\n<b>○</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>●</b> 그리스도님, 저희의 기도를 들어주소서.\n<b>○</b> 하늘에 계신 천주 성부님\n<b>●</b> 자비를 베푸소서.\n<rubric>다음은 같은 후렴</rubric>\n<b>○</b> 세상을 구원하신 천주 성자님\n    천주 성령님 \n    삼위일체이신 하느님\n    영원하신 성부의 아들이신 예수 성심\n    동정 마리아 몸에 성령으로 잉태되신 예수 성심\n    하느님의 말씀이신 예수 성심\n    영광과 위엄이 가득하신 예수 성심\n    하느님의 성전이신 예수 성심\n    지존하신 이의 장막이신 예수 성심\n    하느님의 집이요 하늘의 문이신 예수 성심\n    사랑의 불가마이신 예수 성심\n    나눔과 베풂의 그릇이신 예수 성심\n    자비와 인정이 넘치시는 예수 성심\n    모든 덕행의 원천이신 예수 성심\n    지극한 찬미를 받으실 예수 성심\n    모든 마음의 중심이요 임금이신 예수 성심\n    온갖 지혜와 지식의 보고이신 예수 성심\n    천주성이 충만하신 예수 성심\n    성부의 기쁨이신 예수 성심\n    풍부한 은혜를 베푸시는 예수 성심\n    죽은 이들의 희망이신 예수 성심\n    지극히 자비로우시고 인내하시는 예수 성심\n    모든 이의 간구를 들어주시는 예수 성심\n    생명과 성덕의 샘이신 예수 성심\n    저희 죄를 용서하시는 예수 성심\n    극도의 모욕을 당하신 예수 성심\n    저희 죄로 찢기신 예수 성심\n    죽기까지 순명하신 예수 성심\n    창에 찔리신 예수 성심\n    모든 위로의 샘이신 예수 성심\n    생명이요 부활이신 예수 성심\n    평화요 화해이신 예수 성심\n    죄인들의 제물이 되신 예수 성심\n    주님께 바라는 이들의 구원이신 예수 성심\n    주님을 믿으며 죽는 이들의 희망이신 예수 성심\n    모든 성인의 즐거움이신 예수 성심\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희를 용서하소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 저희의 기도를 들어주소서.\n<b>○</b> 하느님의 어린양, 세상의 죄를 없애시는 주님\n<b>●</b> 자비를 베푸소서.\n<b>○</b> 마음이 어질고 겸손하신 예수님\n<b>●</b> 저희 마음을 주님 마음과 같게 하소서.\n<b>╋</b> 기도합시다.\n    전능하시고 영원하신 하느님,\n    지극히 사랑하시는 성자의 성심을 보시고\n    죄인들을 대신하여 바친\n    성자의 찬미와 보속으로 마음을 푸시어\n    주님의 자비를 간구하는 저희를 용서하소서.\n    성자께서는 영원히 살아 계시며 다스리시나이다.\n<b>◎</b> 아멘."
+        },
+        sourceCategory: {
+          KR: "호칭기도"
+        },
+        tags: [
+          "250.",
+          "litany",
+          "호칭기도",
+          "Kinh cầu",
+          "Litanies",
+          "連祷",
+          "Litaniae",
+          "예수 성심 호칭 기도"
+        ]
+      },
+      {
+        id: "026.divine_praises",
+        category: "national",
+        titles: {
+          KR: "찬미 환호송"
+        },
+        texts: {
+          KR: "하느님께서는 찬미받으소서.\n하느님의 거룩한 이름은 찬미받으소서.\n하느님이시며 참 인간이신 예수 그리스도께서는 찬미받으소서.\n예수님의 거룩한 이름은 찬미받으소서.\n지극히 거룩한 예수 성심은 찬미받으소서.\n예수님의 지극히 거룩한 성혈은 찬미받으소서.\n거룩한 성체의 형상 안에 계시는 예수님은 찬미받으소서.\n우리의 변호자이신 성령께서는 찬미받으소서.\n위대한 하느님의 어머니이신 마리아는 찬미받으소서.\n성모 마리아의 원죄 없으신 잉태는 찬미받으소서.\n성모 마리아의 영광스러운 승천은 찬미받으소서.\n동정이시며 어머니이신 마리아의 이름은 찬미받으소서.\n마리아의 지극히 정결한 남편 요셉은 찬미받으소서.\n천사들과 성인들에 에워싸여 계시는 하느님께서는 찬미받으소서. \n아멘."
+        },
+        sourceCategory: {
+          KR: "가톨릭 전례사전"
+        },
+        tags: [
+          "026.divine_praises",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "찬미 환호송",
+          "가톨릭 전례사전"
+        ]
+      },
+      {
+        id: "027.memorare",
+        category: "national",
+        titles: {
+          KR: "성 베르나르도의 기도 (기억하소서)"
+        },
+        texts: {
+          KR: "오 지극히 자비로우신 동정 마리아님, 기억하소서.\n당신의 보호에 의탁하고,\n당신의 도움을 간청하며,\n당신의 도움을 청하고\n당신의 전구를 간청한 사람이\n당신에게 버림받았다는 것을\n일찍이 들어 본 적이 없습니다.\n이러한 믿음으로 용기를 얻어\n저 또한 당신께 의탁하나이다,\n오 동정녀 가운데 가장 거룩하신 동정녀시며,\n저의 어머니이신 성모님.\n저는 당신께 나아가\n당신 앞에 엎드려\n회개하는 죄인으로서 간청하나이다.\n오 하느님 말씀의 어머니시여,\n저의 기도를 업신여기지 마시고,\n자비로이 저의 말을 들어 주시며\n저의 간청을 들어 주소서.\n아멘."
+        },
+        sourceCategory: {
+          KR: "민간전승"
+        },
+        tags: [
+          "027.memorare",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "성 베르나르도의 기도 (기억하소서)",
+          "민간전승"
+        ]
+      },
+      {
+        id: "028.o_sacrum_convivium",
+        category: "national",
+        titles: {
+          KR: "오 거룩한 잔치여"
+        },
+        texts: {
+          KR: "오! 거룩한 잔치여,\n우리는 그리스도의 몸을 영하며,\n그분의 수난을 기념하고\n은총으로 충만되며,\n후세 영광의 보증을 받는도다.\n알렐루야."
+        },
+        sourceCategory: {
+          KR: "성무일도"
+        },
+        tags: [
+          "028.o_sacrum_convivium",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "오 거룩한 잔치여",
+          "성무일도"
+        ]
+      },
+      {
+        id: "029.tantum_ergo",
+        category: "national",
+        titles: {
+          KR: "지존하신 성체"
+        },
+        texts: {
+          KR: "지존하신 성체 앞에\n꿇어 경배 드리세.\n묵은 계약 완성하는\n새 계약을 이뤘네.\n오묘하온 성체 신비\n믿음으로 알리라.\n\n영원하신 성부 성자\n위로자신 성령께\n구원받은 환희로써\n영광 찬미 드리세.\n무한하신 권능 권세\n영원무궁하리라.\n아멘."
+        },
+        sourceCategory: {
+          KR: "가톨릭성가"
+        },
+        tags: [
+          "029.tantum_ergo",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "지존하신 성체",
+          "가톨릭성가"
+        ]
+      },
+      {
+        id: "334.chaplet_of_divine_mercy",
+        category: "national",
+        titles: {
+          KR: "하느님 자비를 구하는 기도"
+        },
+        texts: {
+          KR: "(묵주를 이용하여)\n주님의 기도, 성모송, 사도신경을 바친다.\n\n각 단에서 주님의 기도 대신에 아래의 기도를 바친다.\n영원하신 아버지, 저희가 지은 죄와 온 세상의 죄를 보속하는 마음으로, 사랑하시는 성자 우리 주 예수 그리스도의 몸과 피, 영혼과 신성을 바치나이다.\n* 로마 미사 경본,  감사 기도 제1양식 참조\n\n각 단에서 성모송 대신에 아래의 기도를 바친다.\n예수님의 수난을 보시고, 저희와 온 세상에 자비를 베푸소서.\n\n5단 기도를 바친 다음, 아래의 기도를 3번 바친다.\n거룩하신 하느님, 거룩하신 용사님, 거룩하신 불사신, 저희와 온 세상에 자비를 베푸소서.\n  * 로마 미사 경본,  성금요일, 비탄의 노래 참조\n\n끝으로 아래의 기도를 바친다.\n오, 예수 성심, 저희를 위하여 피와 물을 흘리신 자비의 샘이신 주님, 저는 주님께 의탁하나이다.\n"
+        },
+        sourceCategory: {
+          KR: "주교회의 승인 기도문"
+        },
+        tags: [
+          "334.chaplet_of_divine_mercy",
+          "national",
+          "국가별 고유 기도문",
+          "Kinh Nguyện Riêng Từng Nước",
+          "Local Prayers",
+          "各国の祈り",
+          "Preces locales",
+          "하느님 자비를 구하는 기도",
+          "주교회의 승인 기도문"
+        ]
+      }
+    ]
   };
   const order = ['KR', 'VN', 'US', 'JP', 'VA', 'IE'];
   const mergedEntries = new Map();

@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V28-20261001-PRAYER-FRAMES-VN-PROPERS';
+    const APP_VERSION = 'V28-20261007-ADMIN-DATE-REVIEW';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -1896,8 +1896,9 @@
             return Object.assign({ source: 'special-mass' }, prefaceSelectionBySpecialMassKey[meta.specialMassKey]);
         }
         if (lang === 'KR' && meta.prefaceHint) return { hint: firstCalendarPrefaceCandidate(meta.prefaceHint, lang), source: 'calendar-local' };
-        const text = leftLiturgyName(info, lang);
+        const text = leftLiturgyName(info, lang) || leftLiturgyName(info, 'KR') || leftLiturgyName(info, 'LA');
         const rules = [
+            [/교회의\s*어머니|Mother of the Church|Mẹ Hội Thánh|教会の母|Ecclesiae Matris|教會之母/i, 'mary_mother_of_church'],
             [/주님 공현|Epiphany|Hiển Linh|公現|Epiphan/i, 'epiphany'],
             [/주님 세례|Baptism of the Lord|Chịu Phép Rửa|洗礼|Baptismate Domini/i, 'baptism_of_the_lord'],
             [/주님 봉헌|Presentation of the Lord|Dâng Chúa.*Đền Thánh|主の奉献|Praesentatione Domini/i, 'presentation_of_the_lord'],
@@ -1922,14 +1923,24 @@
             [/위령의 날|All Souls|Các tín hữu đã qua đời|死者の日|Omnium Fidelium Defunctorum/i, 'dead_1'],
             [/라테라노.*봉헌|Lateran.*Dedication|Cung hiến.*Latêranô|ラテラノ.*献堂|Dedicatione Basilicae Lateranensis/i, 'dedication_of_a_church'],
             [/대천사|수호천사|Archangels?|Guardian Angels?|Tổng lãnh Thiên thần|Các Thiên thần Hộ thủ|大天使|守護の天使|Michaelis.*Gabrielis.*Raphaelis|Angelorum Custodum/i, 'angels'],
-            [/성모|Our Lady|Blessed Virgin|Đức Mẹ|聖母|Beata Maria|Beatae Mariae/i, 'mary_1'],
+            [/성모|복되신\s*동정\s*마리아|Our Lady|Blessed Virgin|Đức Mẹ|聖母|Beata Maria|Beatae Mariae/i, 'mary_1'],
             [/사도|Apostle|Tông Đồ|使徒|Apostol|evangelistae|Simonis.*Iudae/i, 'apostles_1'],
             [/순교|Martyr|Tử Đạo|殉教|Martyr|Laurentii/i, 'martyrs'],
-            [/사제|주교|Pastor|Priest|Bishop|Linh Mục|Giám Mục|司祭|司教|Pastor/i, 'pastors'],
-            [/동정녀|Virgin|Trinh Nữ|おとめ|Virgine/i, 'virgins_and_religious']
+            [/사제|주교|교황|Pastor|Priest|Bishop|Pope|Linh Mục|Giám Mục|Giáo Hoàng|司祭|司教|教皇|Pastor|papae/i, 'pastors'],
+            [/동정(?:녀|\s)|아빠스|수도자|Virgin|Trinh Nữ|Tu Sĩ|おとめ|修道|Virgine|Abbot|Religious|Abbatis|virginum/i, 'virgins_and_religious'],
+            [/성(?:녀|인|\s)|교회\s*학자|Saint|Thánh|Heilige|Sanct[ai]|Doctor/i, 'saints_1']
         ];
         const matched = rules.find(([pattern]) => pattern.test(text));
         return matched ? { key: matched[1], hint: text, source: 'calendar-rule' } : null;
+    }
+
+    function missalPrefaceSelection(info, date) {
+        const entries = (globalThis.missalPrefaceIndex || {}).entries || [];
+        const title = info && info.names && info.names.EN;
+        if (!title) return null;
+        const entry = entries.find(entry => entry.date === calendarDateKey(date)
+            && entry.keys.length && localMissalTitleScore(title, entry.title) >= 0.72);
+        return entry ? { key: entry.keys[0], keys: entry.keys.slice(), hint: entry.rubric, source: 'missal-rubric' } : null;
     }
 
     function defaultPrefaceSelectionForLiturgyInfo(info, date = null) {
@@ -1949,6 +1960,8 @@
 
         const localProper = localProperPrefaceSelection(info, lang, activeDate);
         if (localProper) return localProper;
+        const missal = missalPrefaceSelection(info, activeDate);
+        if (missal) return missal;
         const explicit = explicitPrefaceSelectionFromLiturgyInfo(info, lang);
         if (explicit) return explicit;
 
@@ -1993,6 +2006,7 @@
             const selection = defaultPrefaceSelectionForLiturgyInfo(info, activeDate);
             info.prefaceHint = selection.hint || selection.key || '';
             info.prefaceKey = selection.key || '';
+            info.prefaceKeys = selection.keys || (selection.key ? [selection.key] : []);
             info.prefaceHintSource = selection.source || 'default';
         }
         return info;
@@ -3925,7 +3939,14 @@
             JP: { address: '住所', diocese: '教区', phone: '電話', website: '公式サイト', priest: '司祭', sisters: '修道女', massTimes: 'ミサ時間', massTimesPeriod: '適用期間', maps: 'Google マップ', loading: '詳細情報を読み込んでいます。', unavailable: '未確認', official: '公式サイトで確認' },
             LA: { address: 'Inscriptio', diocese: 'Dioecesis', phone: 'Telephonum', website: 'Pagina', priest: 'Sacerdos', sisters: 'Sorores', massTimes: 'Horae Missae', massTimesPeriod: 'Tempus indicis', maps: 'Google Maps', loading: 'Notitiae onerantur.', unavailable: 'Non confirmatum', official: 'Vide paginam officialem' }
         };
-        return labels[lang] || labels.EN;
+        const directoryLabels = {
+            KR: { previousTimetable: '이전 공개 시간표', sisterCongregations: '소속 수녀회', unpublishedNames: '개별 명단 미공개', unpublishedSchedule: '공개 시간표 미확인', sources: '자료 출처', checkedAt: '자료 확인일' },
+            VN: { previousTimetable: 'Lịch đã công bố trước đây', sisterCongregations: 'Hội dòng nữ', unpublishedNames: 'Chưa công bố tên', unpublishedSchedule: 'Chưa có lịch công khai', sources: 'Nguồn', checkedAt: 'Ngày kiểm tra' },
+            EN: { previousTimetable: 'Previously published timetable', sisterCongregations: 'Religious communities', unpublishedNames: 'Names not published', unpublishedSchedule: 'Public timetable not found', sources: 'Sources', checkedAt: 'Checked on' },
+            JP: { previousTimetable: '以前公開された時間表', sisterCongregations: '所属修道会', unpublishedNames: '個人名は非公開', unpublishedSchedule: '公開時間表は未確認', sources: '情報源', checkedAt: '確認日' },
+            LA: { previousTimetable: 'Horae antea publicatae', sisterCongregations: 'Communitates religiosae', unpublishedNames: 'Nomina non publicata', unpublishedSchedule: 'Horae non publicatae', sources: 'Fontes', checkedAt: 'Dies inspectionis' }
+        };
+        return Object.assign({}, labels[lang] || labels.EN, directoryLabels[lang] || directoryLabels.EN);
     }
 
     function churchLocalDetailsForPlace(place) {
@@ -4250,10 +4271,12 @@
         const mapsUrl = String((place && place.google_maps_url) || local.googleMapsUrl || '').trim();
         const priestNames = churchDetailList((place && (place.priestNames || place.priest)) || local.priestNames || local.priest);
         const sisterNames = churchDetailList((place && (place.sisterNames || place.sisters)) || local.sisterNames || local.sisters);
+        const sisterCongregations = churchDetailList((place && place.sisterCongregations) || local.sisterCongregations);
         const massTimes = churchDetailList((place && place.massTimes) || local.massTimes);
         const massTimesPeriod = cleanNodeText((place && place.massTimesPeriod) || local.massTimesPeriod);
         const officialUrl = String(
             (place && place.massTimesSourceUrl)
+            || local.massTimesSourceUrl
             || local.officialDioceseUrl
             || website
             || local.sourceUrl
@@ -4265,10 +4288,30 @@
         if (diocese) rows.push(churchInfoField(labels.diocese, escapeHtml(diocese)));
         rows.push(churchInfoField(labels.phone, phone ? escapeHtml(phone) : escapeHtml(labels.unavailable)));
         rows.push(churchInfoField(labels.website, churchSafeLink(website, labels.website) || escapeHtml(labels.unavailable)));
-        rows.push(churchInfoField(labels.priest, priestNames.length ? priestNames.map(escapeHtml).join('<br>') : officialFallback));
-        rows.push(churchInfoField(labels.sisters, sisterNames.length ? sisterNames.map(escapeHtml).join('<br>') : officialFallback));
-        rows.push(churchInfoField(labels.massTimes, massTimes.length ? massTimes.map(escapeHtml).join('<br>') : officialFallback));
+        const detailValue = key => (place && place[key]) || local[key];
+        const clergyFallback = churchSafeLink(detailValue('clergySourceUrl'), labels.official) || officialFallback;
+        const sistersFallback = detailValue('sistersStatus') === 'names-not-published'
+            ? `${escapeHtml(labels.unpublishedNames)}<br>${churchSafeLink(detailValue('sistersSourceUrl'), labels.official) || officialFallback}`
+            : officialFallback;
+        const massFallback = detailValue('massTimesStatus') === 'not-published'
+            ? `${escapeHtml(labels.unpublishedSchedule)}<br>${officialFallback}` : officialFallback;
+        const assignments = Array.isArray(detailValue('priestAssignments')) ? detailValue('priestAssignments') : [];
+        const priestHtml = priestNames.map(name => {
+            const assignment = assignments.find(item => item.name === name);
+            return escapeHtml(name) + (assignment && assignment.role ? ` (${escapeHtml(assignment.role)})` : '');
+        }).join('<br>');
+        rows.push(churchInfoField(labels.priest, priestHtml || clergyFallback));
+        rows.push(churchInfoField(labels.sisters, sisterNames.length ? sisterNames.map(escapeHtml).join('<br>') : sistersFallback));
+        if (sisterCongregations.length) rows.push(churchInfoField(labels.sisterCongregations, sisterCongregations.map(escapeHtml).join('<br>')));
+        const timetableHtml = massTimes.map(escapeHtml).join('<br>');
+        const timetableNote = detailValue('massTimesStatus') === 'previously-published' ? `${escapeHtml(labels.previousTimetable)}<br>` : '';
+        rows.push(churchInfoField(labels.massTimes, massTimes.length ? timetableNote + timetableHtml : massFallback));
         if (massTimesPeriod) rows.push(churchInfoField(labels.massTimesPeriod, escapeHtml(massTimesPeriod)));
+        const checkedAt = cleanNodeText(detailValue('directoryCheckedAt'));
+        if (checkedAt) rows.push(churchInfoField(labels.checkedAt, escapeHtml(checkedAt)));
+        const sources = [detailValue('clergySourceUrl'), detailValue('sistersSourceUrl'), officialUrl].filter(Boolean);
+        const sourceLinks = Array.from(new Set(sources)).map((url, index) => churchSafeLink(url, `${labels.sources} ${index + 1}`)).filter(Boolean);
+        if (sourceLinks.length) rows.push(churchInfoField(labels.sources, sourceLinks.join('<br>')));
         if (mapsUrl) rows.push(churchInfoField(labels.maps, churchSafeLink(mapsUrl, labels.maps)));
         if (options.loading) rows.push(churchInfoField('', escapeHtml(labels.loading)));
         return `<div class="church-info-card"><div class="church-info-title">${escapeHtml(name)}</div><div class="church-info-grid">${rows.join('')}</div></div>`;
@@ -4377,9 +4420,16 @@
                 google_maps_url: String(record.googleMapsUrl || '').trim(),
                 priestNames: record.priestNames || [],
                 sisterNames: record.sisterNames || [],
+                sisterCongregations: record.sisterCongregations || [],
+                sistersStatus: record.sistersStatus || '',
+                sistersSourceUrl: record.sistersSourceUrl || '',
+                priestAssignments: record.priestAssignments || [],
+                clergySourceUrl: record.clergySourceUrl || '',
+                directoryCheckedAt: record.directoryCheckedAt || '',
+                massTimesStatus: record.massTimesStatus || '',
                 massTimes: record.massTimes || [],
                 massTimesPeriod: record.massTimesPeriod || '',
-                massTimesSourceUrl: record.officialDioceseUrl || record.sourceUrl || '',
+                massTimesSourceUrl: record.massTimesSourceUrl || record.officialDioceseUrl || record.sourceUrl || '',
                 geometry: { location: point },
                 __localPinned: true
             };
@@ -4790,16 +4840,29 @@
         }
     };
 
+    function normalizeAppPrayerEntries(data, options = {}) {
+        return (Array.isArray(data) ? data : []).flatMap(entry => {
+            const normalized = window.ordoPrayerDataApi.normalizeEntries([entry], options)[0];
+            if (!normalized) return [];
+            return [Object.assign({}, normalized, {
+                titles: localizedObjectFromFlatEntry(entry, entry.titles || entry.title || entry.name || {}, ['title', 'name']),
+                texts: localizedObjectFromFlatEntry(entry, entry.texts || entry.text || entry.body || {}, ['text', 'body', 'content', 'prayer']),
+                sourceCategory: localizedObjectFromFlatEntry(entry, entry.sourceCategory || entry.sourceCategories || {}, ['sourceCategory', 'source_category']),
+                source: localizedObjectFromFlatEntry(entry, entry.source || entry.sources || (options.uploaded ? entry.fileName || '업로드 기도문 파일' : ''), ['source', 'sources', 'fileName'])
+            })];
+        });
+    }
+
     function getUploadedPrayerData() {
         const hasUploadedPrayerData = Array.isArray(window.uploadedPrayerData);
         const data = hasUploadedPrayerData ? window.uploadedPrayerData : (Array.isArray(window.prayerData) ? window.prayerData : []);
-        return window.ordoPrayerDataApi.normalizeEntries(data, { uploaded: hasUploadedPrayerData });
+        return normalizeAppPrayerEntries(data, { uploaded: hasUploadedPrayerData });
     }
 
     const fallbackPrayerDataByJurisdiction = new Map();
 
     function prayerModuleEntries(module) {
-        return window.ordoPrayerDataApi.normalizeEntries(module && Array.isArray(module.entries) ? module.entries : []);
+        return normalizeAppPrayerEntries(module && Array.isArray(module.entries) ? module.entries : []);
     }
 
     function mergeCountryPrayerFallbackEntry(current, incoming, sourceJurisdiction) {
@@ -4846,10 +4909,7 @@
             .filter(entry => SUPPORTED_LANGS.some(lang => localizedPrayerValueStrict(entry.texts, lang)))
             .map(entry => {
                 const hasLatinBody = !!localizedPrayerValueStrict(entry.texts, 'LA');
-                const source = Object.assign({}, entry.source || {});
-                if (hasLatinBody) source.LA = 'Universal Latin prayer text · AI translation source';
                 return Object.assign({}, entry, {
-                    source,
                     __aiPrayerFallback: true,
                     __aiPrayerFallbackJurisdiction: key,
                     __aiPrayerFallbackSourceJurisdiction: hasLatinBody
@@ -4898,12 +4958,22 @@
         return window.ordoPrayerDataApi.categoryLabel(categoryKey, langCode);
     }
 
+    function prayerSourceItems(value) {
+        return Array.from(new Set(String(value || '').split(';').map(cleanNodeText).filter(Boolean)));
+    }
+
+    function prayerOfficialCategories(entry, langCode) {
+        return prayerSourceItems(localizedPrayerValueStrict(entry && entry.sourceCategory, langCode))
+            .map(category => window.ordoPrayerDataApi.officialCategory({ sourceCategory: { KR: category } }, 'KR'))
+            .filter(Boolean);
+    }
+
     function prayerOfficialCategory(entry, langCode) {
-        return window.ordoPrayerDataApi.officialCategory(entry, langCode);
+        return prayerOfficialCategories(entry, langCode).join('; ');
     }
 
     function prayerSourceText(entry, langCode) {
-        return window.ordoPrayerDataApi.sourceText(entry, langCode);
+        return localizedPrayerValue(entry && entry.source, langCode);
     }
 
     function prayerEntrySearchText(entry, leftLang, rightLang) {
@@ -4962,8 +5032,8 @@
     function prayerTitleHtml(entry, langCode, otherLangCode, isTranslation = false) {
         const directTitle = localizedPrayerValueStrict(entry.titles, langCode);
         const automaticTitle = directTitle ? '' : prayerAutomaticTranslatedText(entry, langCode, otherLangCode, 'title');
-        const category = prayerOfficialCategory(entry, langCode);
-        const officialTag = category ? `<span class="aux-prayer-book-tag">${escapeHtml(category)}</span>` : '';
+        const officialTag = prayerOfficialCategories(entry, langCode)
+            .map(category => `<span class="aux-prayer-book-tag">${escapeHtml(category)}</span>`).join('');
         if (isTranslation) {
             if (directTitle) return `${escapeHtml(directTitle)}${officialTag}`;
             return automaticTitle ? `<span class="ai-badge">AI</span>${escapeHtml(automaticTitle)}${officialTag}` : '';
@@ -4990,8 +5060,33 @@
         return '';
     }
 
+    function prayerImageMarkupHtml(markup) {
+        const template = document.createElement('template');
+        template.innerHTML = markup;
+        const image = template.content.querySelector('img');
+        const src = image && (image.getAttribute('src') || '').trim();
+        if (!src) return escapeHtml(markup);
+        try {
+            if (!/^https?:$/.test(new URL(src, document.baseURI).protocol)) return escapeHtml(markup);
+        } catch (_) {
+            return escapeHtml(markup);
+        }
+        const alt = image.getAttribute('alt') || '';
+        const title = image.getAttribute('title');
+        return `<img class="aux-prayer-image" src="${escapeAttr(src)}" alt="${escapeAttr(alt)}"${title ? ` title="${escapeAttr(title)}"` : ''} loading="lazy" decoding="async">`;
+    }
+
     function formatPrayerMarkupHtml(value) {
-        let html = escapeHtml(value);
+        const source = value == null ? '' : String(value);
+        const images = [];
+        let imageToken = '\uE000prayer-image:';
+        while (source.includes(imageToken)) imageToken += ':';
+        // Keep image attributes out of the text formatting replacements.
+        const text = source.replace(/<img\b(?:[^>"']|"[^"]*"|'[^']*')*>/gi, markup => {
+            const index = images.push(prayerImageMarkupHtml(markup)) - 1;
+            return `${imageToken}${index}\uE001`;
+        });
+        let html = escapeHtml(text);
         html = html.replace(/&lt;rubric&gt;([\s\S]*?)&lt;\/rubric&gt;/gi, (_, inner) => {
             const text = cleanNodeText(inner);
             return text ? `<span class="rubric">${text}</span>` : '';
@@ -4999,8 +5094,13 @@
         html = html.replace(/&lt;(b|strong)&gt;([\s\S]*?)&lt;\/(?:b|strong)&gt;/gi, '<strong>$2</strong>');
         html = html.replace(/&lt;(i|em)&gt;([\s\S]*?)&lt;\/(?:i|em)&gt;/gi, '<em>$2</em>');
         html = html.replace(/&lt;u&gt;([\s\S]*?)&lt;\/u&gt;/gi, '<u>$1</u>');
+        html = html.replace(/&lt;indent&gt;([\s\S]*?)&lt;\/indent&gt;/gi, '<span class="aux-prayer-indent">$1</span>');
         html = html.replace(/\*\*([\s\S]*?)\*\*/g, (_, inner) => `<strong>${inner}</strong>`);
-        return html.replace(/\r?\n/g, '<br>');
+        html = html.replace(/\r?\n/g, '<br>');
+        images.forEach((image, index) => {
+            html = html.replace(`${imageToken}${index}\uE001`, () => image);
+        });
+        return html;
     }
 
     function prayerBodyHtml(entry, langCode, otherLangCode) {
@@ -5016,8 +5116,9 @@
         const categoryLabel = prayerCategoryLabel(entry.category, state.uiLang || 'KR');
         if (categoryLabel) pills.push(categoryLabel);
         [leftLang, rightLang].forEach(lang => {
-            const source = prayerSourceText(entry, lang);
-            if (source && !pills.includes(source)) pills.push(source);
+            prayerSourceItems(prayerSourceText(entry, lang)).forEach(source => {
+                if (!pills.includes(source)) pills.push(source);
+            });
         });
         return pills.map(value => `<span class="aux-pill">${escapeHtml(value)}</span>`).join('');
     }
@@ -5093,6 +5194,25 @@
         }
     };
 
+    const prayerIdCollator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
+
+    function comparePrayerEntryIds(leftEntry, rightEntry) {
+        const left = cleanNodeText(leftEntry && leftEntry.id || '');
+        const right = cleanNodeText(rightEntry && rightEntry.id || '');
+        const leftMatch = left.match(/^(\d+)(.*)$/u);
+        const rightMatch = right.match(/^(\d+)(.*)$/u);
+        if (leftMatch && rightMatch) {
+            const numberDifference = Number(leftMatch[1]) - Number(rightMatch[1]);
+            if (numberDifference) return numberDifference;
+            const variantRank = suffix => suffix.startsWith('.') ? 0 : suffix.startsWith('-') ? 1 : 2;
+            return variantRank(leftMatch[2]) - variantRank(rightMatch[2])
+                || prayerIdCollator.compare(leftMatch[2], rightMatch[2]);
+        }
+        if (leftMatch) return -1;
+        if (rightMatch) return 1;
+        return prayerIdCollator.compare(left, right);
+    }
+
     function renderPrayerPanel() {
         localizeAuxPanels();
         updateFooterCopyright();
@@ -5111,7 +5231,8 @@
                 if (!query) return true;
                 const haystack = prayerEntrySearchText(entry, leftLang, rightLang);
                 return normalizeAuxSearch(haystack).includes(query);
-            });
+            })
+            .sort(comparePrayerEntryIds);
         if (!rows.length) {
             root.innerHTML = `<div class="aux-empty">${escapeHtml(dict.prayerEmpty)}</div>`;
             requestAuxSearchSync();
@@ -5783,7 +5904,8 @@
     }
     function closeSettings() { document.getElementById('settings-modal').style.display = 'none'; }
 
-    let startupNoticeDecision = null;
+    let startupNoticeDecision = typeof window.ordoStartupNoticeDecision === 'boolean'
+        ? window.ordoStartupNoticeDecision : null;
     let resolveStartupNoticeDecision = null;
     const startupNoticeDecisionPromise = new Promise(resolve => { resolveStartupNoticeDecision = resolve; });
     let vietnameseSourceChoicePromise = null;
@@ -6520,7 +6642,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const selector = getStrictMassSelector(date);
         if (selector.allSoulsChoice) {
             const matched = entries.find(entry => strictAllSoulsRank(entry.title) === selector.allSoulsChoice);
-            if (matched) return matched;
+            return matched || null;
         }
         if (selector.slot === 'vigil') {
             const vigil = entries.find(entry => strictIsVigilLabel(entry.title));
@@ -6613,6 +6735,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function selectKpvMassCandidate(payload, date) {
         const primary = payload && payload.primary;
         if (!primary) return null;
+        const selector = getStrictMassSelector(date);
+        const variantCandidates = [primary].concat(payload.alternatives || []);
+        if (selector.allSoulsChoice) {
+            return variantCandidates.find(mass => strictAllSoulsRank(kpvMassCandidateTitle(mass, date)) === selector.allSoulsChoice) || null;
+        }
+        if (selector.specialVigil) {
+            return variantCandidates.find(mass => strictIsVigilLabel(kpvMassCandidateTitle(mass, date))) || null;
+        }
         // Inside Vietnam the KPV primary Mass is authoritative. In particular,
         // a weekday remains the only displayed Mass when optional saint propers
         // are supplied in `alternatives`.
@@ -6790,6 +6920,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ? data.mass_reading.filter(choice => choice && ktcgkpvChoiceMatchesRequestedDate(choice, date))
             : [];
         if (!choices.length) return [];
+        const special = specialKtcgkpvChoices(choices, date);
+        if (special) return special;
         let primary = ktcgkpvReadingChoice({ mass_reading: choices }, date, calendarContext);
         if (date) {
             const internalInfo = buildGeneratedLiturgyInfo(date);
@@ -6806,13 +6938,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function ktcgkpvOrderedLiturgyChoices(data, date = null, calendarContext = null) {
-        if (data && Array.isArray(data.liturgy_reading)) return data.liturgy_reading;
+        if (data && Array.isArray(data.liturgy_reading)) return specialKtcgkpvChoices(data.liturgy_reading, date) || data.liturgy_reading;
         const choices = data && Array.isArray(data.mass_reading)
             ? data.mass_reading.filter(choice => choice && ktcgkpvChoiceMatchesRequestedDate(choice, date))
             : [];
         if (!choices.length) return [];
+        const special = specialKtcgkpvChoices(choices, date);
+        if (special) return special;
         const primary = ktcgkpvReadingChoice({ mass_reading: choices }, date, calendarContext);
         return primary ? [primary].concat(choices.filter(choice => choice !== primary)) : choices;
+    }
+
+    function specialKtcgkpvChoices(choices, date) {
+        if (!date) return null;
+        const selector = getStrictMassSelector(date);
+        if (selector.allSoulsChoice) return choices.filter(choice => strictAllSoulsRank(ktcgkpvChoiceTitle(choice)) === selector.allSoulsChoice);
+        if (selector.specialVigil) return choices.filter(choice => strictIsVigilLabel(ktcgkpvChoiceTitle(choice)));
+        return null;
     }
 
     function normalizeKtcgkpvPunctuation(value) {
@@ -9016,6 +9158,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const prefaceHint = prefaceHintFromParsedSection(value);
                 if (prefaceHint) {
                     state.liturgyInfo.prefaceHint = prefaceHint;
+                    state.liturgyInfo.prefaceKey = '';
+                    state.liturgyInfo.prefaceKeys = [];
                     state.liturgyInfo.prefaceHintSource = 'source';
                 }
                 return;
@@ -9036,7 +9180,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
         });
         if (allowExternalLiturgy && !options.suppressTitle && parsed.title && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) {
-            state.liturgyInfo.names[lang] = cleanLiturgyTitle(parsed.title);
+            const activeContext = getActiveLiturgicalDateContext();
+            const specialNames = activeContext.allSoulsChoice || activeContext.specialVigil;
+            state.liturgyInfo.names[lang] = specialNames && state.liturgyInfo.names[lang]
+                ? state.liturgyInfo.names[lang] : cleanLiturgyTitle(parsed.title);
             state.liturgyInfo.krName = state.liturgyInfo.names.KR;
             state.liturgyInfo.vnName = state.liturgyInfo.names.VN;
             if (isSolemnityTitle(parsed.title) || isSolemnityNameMap(state.liturgyInfo.names)) {
@@ -9891,8 +10038,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const strictSpecialVigilKeys = new Set(['easter_vigil', 'christmas_vigil']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict92';
+    const STRICT_PARSER_CACHE_VERSION = 'strict93';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -9921,6 +10067,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getStrictDateBase(now = new Date()) {
         const leftTimeZone = activeLiturgicalTimeZone();
+        const reviewDate = globalThis.ordoAdminReview?.getReviewDate();
+        if (reviewDate) {
+            const [year, month, day] = reviewDate.split('-').map(Number);
+            const localDay = new Date(0);
+            localDay.setFullYear(year, month - 1, day);
+            localDay.setHours(0, 0, 0, 0);
+            return { localDay, hour:12, timeZone:leftTimeZone };
+        }
         const parts = zonedDateParts(now, leftTimeZone);
         const localDate = dateFromZonedParts(parts);
         const hour = parts.hour || 0;
@@ -9931,14 +10085,44 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         };
     }
 
+    function specialLiturgyProfile(locationCode = state.selectedLocationCode || state.currentLoc) {
+        const registry = globalThis.countrySpecialLiturgies || {};
+        const common = registry.universal || {};
+        const country = (registry.countries || {})[dataJurisdictionForLocation(locationCode)] || {};
+        const vigils = new Map((common.vigils || []).map(entry => [entry.id, entry]));
+        (country.vigils || []).forEach(entry => vigils.set(entry.id, mergeSpecialLiturgyDefinition(vigils.get(entry.id), entry)));
+        const allSouls = Object.fromEntries(['first', 'second', 'third'].map(choice => [choice,
+            mergeSpecialLiturgyDefinition((common.allSouls || {})[choice], (country.allSouls || {})[choice])
+        ]));
+        return { vigils: Array.from(vigils.values()), allSouls };
+    }
+
+    function mergeSpecialLiturgyDefinition(base = {}, override = {}) {
+        return Object.assign({}, base, override, {
+            names: Object.assign({}, base.names, override.names),
+            data: Object.assign({}, base.data, override.data),
+            sourceUrls: Object.assign({}, base.sourceUrls, override.sourceUrls)
+        });
+    }
+
+    function specialVigilsForDay(localDay, locationCode) {
+        return specialLiturgyProfile(locationCode).vigils.filter(entry => {
+            if (entry.enabled === false) return false;
+            if (Array.isArray(entry.dates)) return entry.dates.includes(formatDateIso(localDay));
+            if (entry.monthDay) return entry.monthDay === calendarDateKey(localDay);
+            return Number.isInteger(entry.easterOffset)
+                && sameDay(localDay, addDays(computeEasterSunday(localDay.getFullYear()), entry.easterOffset));
+        });
+    }
+
     function hasVigilNavigationEntry(localDay) {
-        return localDay.getDay() === 6 || isHolySaturday(localDay) || isChristmasEve(localDay);
+        return localDay.getDay() === 6 || specialVigilsForDay(localDay).length > 0;
     }
 
     function liveNavigationSlotForBase(base) {
         const localDay = cloneDateOnly(base.localDay);
-        if (isHolySaturday(localDay) && base.hour >= 19) return 'vigil';
-        if (isChristmasEve(localDay) && base.hour >= 19) return 'vigil';
+        const vigils = specialVigilsForDay(localDay);
+        if (vigils.length) return vigils.some(entry => base.hour >= (entry.hour ?? 19)) ? 'vigil' : 'day';
         if (localDay.getDay() === 6 && base.hour >= 16) return 'vigil';
         return 'day';
     }
@@ -9948,12 +10132,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let date = cloneDateOnly(localDay);
         let specialVigil = '';
 
-        if (entry.slot === 'vigil' && isHolySaturday(localDay)) {
-            specialVigil = 'easter_vigil';
-        } else if (entry.slot === 'vigil' && isChristmasEve(localDay)) {
-            specialVigil = 'christmas_vigil';
-        } else if (entry.slot === 'vigil' && localDay.getDay() === 6) {
-            date = addDays(localDay, 1);
+        if (entry.slot === 'vigil') {
+            const vigils = specialVigilsForDay(localDay);
+            const named = vigils.find(vigil => vigil.id === entry.specialVigil) || vigils[0];
+            if (named) specialVigil = named.id;
+            else if (localDay.getDay() === 6) date = addDays(localDay, 1);
         }
 
         return {
@@ -9963,17 +10146,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             timeZone: base.timeZone,
             slot: specialVigil ? 'vigil' : 'day',
             specialVigil,
+            allSoulsChoice: isAllSoulsDate(date) && entry.slot !== 'vigil' ? (entry.allSoulsChoice || 'first') : '',
             navOffset: entry.offset || 0,
             navSlot: entry.slot || 'day'
         };
     }
 
     function currentNavigationEntry(base) {
-        const slot = state.liturgyNavSlot || liveNavigationSlotForBase(base);
-        return {
+        const requested = {
             offset: Number(state.dayOffset || 0),
-            slot
+            slot: state.liturgyNavSlot || liveNavigationSlotForBase(base),
+            allSoulsChoice: state.allSoulsNavChoice || '',
+            specialVigil: state.specialVigilNavKey || ''
         };
+        const entries = buildLiturgicalNavigationEntries(base);
+        return entries.find(entry => sameNavigationEntry(entry, requested))
+            || entries.find(entry => entry.offset === requested.offset && entry.slot === requested.slot)
+            || entries.find(entry => entry.offset === requested.offset && entry.slot === 'day')
+            || entries.find(entry => entry.offset === 0 && entry.slot === 'day');
     }
 
     function getStrictDateContext(now = new Date()) {
@@ -9985,14 +10175,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const entries = [];
         for (let offset = -DATE_NAV_LIMIT_DAYS; offset <= DATE_NAV_LIMIT_DAYS; offset++) {
             const localDay = addDays(base.localDay, offset);
-            entries.push({ offset, slot: 'day' });
-            if (hasVigilNavigationEntry(localDay)) entries.push({ offset, slot: 'vigil' });
+            if (isAllSoulsDate(localDay)) {
+                ['first', 'second', 'third'].forEach(allSoulsChoice => entries.push({ offset, slot: 'day', allSoulsChoice }));
+            } else entries.push({ offset, slot: 'day' });
+            const vigils = specialVigilsForDay(localDay);
+            vigils.forEach(vigil => entries.push({ offset, slot: 'vigil', specialVigil: vigil.id }));
+            if (!vigils.length && localDay.getDay() === 6) entries.push({ offset, slot: 'vigil' });
         }
         return entries;
     }
 
     function sameNavigationEntry(a, b) {
-        return a && b && Number(a.offset || 0) === Number(b.offset || 0) && (a.slot || 'day') === (b.slot || 'day');
+        return a && b && Number(a.offset || 0) === Number(b.offset || 0) && (a.slot || 'day') === (b.slot || 'day')
+            && (a.allSoulsChoice || 'first') === (b.allSoulsChoice || 'first')
+            && (a.specialVigil || '') === (b.specialVigil || '');
     }
 
     getTargetDate = function(now = new Date()) {
@@ -10006,11 +10202,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const currentIndex = entries.findIndex(entry => sameNavigationEntry(entry, current));
         const nextEntry = entries[currentIndex + delta];
         if (!nextEntry) {
-            alert(currentNoticeUiText().dateLimit);
+            alert(globalThis.ordoAdminReview?.getReviewDate()
+                ? globalThis.ordoAdminReview.dateLimitMessage() : currentNoticeUiText().dateLimit);
             return;
         }
         state.dayOffset = nextEntry.offset;
         state.liturgyNavSlot = nextEntry.slot;
+        state.allSoulsNavChoice = nextEntry.allSoulsChoice || '';
+        state.specialVigilNavKey = nextEntry.specialVigil || '';
         fetchMassData();
     }
 
@@ -10044,7 +10243,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             && ctx.dateIso === freshDateIso
             && ctx.localDateIso === freshLocalDateIso
             && Number(ctx.navOffset || 0) === Number(fresh.navOffset || 0)
-            && (ctx.navSlot || 'day') === (fresh.navSlot || 'day');
+            && (ctx.navSlot || 'day') === (fresh.navSlot || 'day')
+            && (ctx.allSoulsChoice || '') === (fresh.allSoulsChoice || '')
+            && (ctx.specialVigil || '') === (fresh.specialVigil || '');
         if (contextIsCurrent) {
             return Object.assign({}, ctx, {
                 date: cloneDateOnly(ctx.date),
@@ -10087,6 +10288,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             isSunday: date.getDay() === 0,
             isSolemnity: isSolemnityNameMap(names)
         }, date);
+        if (overrides.meta && (overrides.meta.allSoulsChoice || overrides.meta.specialMassKey)) {
+            info.names = Object.assign({}, names);
+            info.krName = names.KR;
+            info.vnName = names.VN;
+            info.meta = Object.assign({}, info.meta, overrides.meta);
+            info.color = overrides.color || info.color;
+        }
         info.isSolemnity = !!(info.isSolemnity || isSolemnityNameMap(info.names));
         return ensureDefaultPrefaceHint(info, date);
     }
@@ -10094,6 +10302,21 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     buildGeneratedLiturgyInfo = function(date) {
         const ctx = getActiveLiturgicalDateContext();
         const isLiveDate = sameDay(date, ctx.localDate) || sameDay(date, ctx.date);
+        if (isLiveDate && ctx.specialVigil) {
+            const vigil = specialVigilsForDay(ctx.localDate).find(entry => entry.id === ctx.specialVigil);
+            if (vigil) return strictSeasonalLiturgyInfo(date, {
+                names: vigil.names, color: liturgyColorMap[vigil.color || 'gold'],
+                meta: { special: true, rank: 'solemnity', specialMassKey: vigil.id }
+            });
+        }
+        if (isAllSoulsDate(date)) {
+            const choice = getAllSoulsMassChoice(date);
+            const entry = specialLiturgyProfile().allSouls[choice];
+            if (entry && entry.names) return strictSeasonalLiturgyInfo(date, {
+                names: entry.names, color: liturgyColorMap.black,
+                meta: { special: true, rank: 'commemoration', allSoulsChoice: choice }
+            });
+        }
         if (isLiveDate && isHolySaturday(date) && ctx.specialVigil !== 'easter_vigil') {
             return strictSeasonalLiturgyInfo(date, {
                 color: liturgyColorMap.purple,
@@ -10120,9 +10343,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getAllSoulsMassChoice(date) {
         if (!isAllSoulsDate(date)) return '';
-        const stored = readStorageJSON(`${STORAGE_PREFIX}allSoulsMass`) || {};
-        const config = window.allSoulsMassConfig || {};
-        return String(stored.choice || stored.preferredMass || config.choice || config.preferredMass || 'first').toLowerCase();
+        const ctx = getActiveLiturgicalDateContext();
+        return sameDay(date, ctx.date) && ctx.allSoulsChoice ? ctx.allSoulsChoice : 'first';
     }
 
     function getStrictMassSelector(date) {
@@ -10364,10 +10586,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictAllSoulsRank(label) {
         const text = strictCleanLine(label);
         if (!text || text.length > 140 || /(?:copyright|rights reserved|typical edition|lectionary for mass)/i.test(text)) return '';
-        if (!/(위령|All Souls|Faithful Departed|미사|Mass|Missa|Lễ|ミサ|彌撒|(?:死者|諸靈|追思).{0,12}(?:彌撒|ミサ)|Defunctorum)/i.test(text)) return '';
-        if (/(첫째|제\s*1(?!\d)|1\s*미사|First|Missa\s*I\b|第\s*1(?!\d)|一|Lễ\s*I\b)/i.test(text)) return 'first';
-        if (/(둘째|제\s*2(?!\d)|2\s*미사|Second|Missa\s*II\b|第\s*2(?!\d)|二|Lễ\s*II\b)/i.test(text)) return 'second';
-        if (/(셋째|제\s*3(?!\d)|3\s*미사|Third|Missa\s*III\b|第\s*3(?!\d)|三|Lễ\s*III\b)/i.test(text)) return 'third';
+        if (!/(위령|All Souls|Faithful Departed|미사|Mass|Missa|Misa|Messa|Messe|Lễ|ミサ|彌撒|(?:死者|諸靈|追思).{0,12}(?:彌撒|ミサ)|Defunctorum)/i.test(text)) return '';
+        if (/(첫째|제\s*1(?!\d)|1\s*미사|First|Missa\s*I\b|第\s*1(?!\d)|一|Lễ\s*I\b|Lễ\s*(?:thứ\s*)?(?:nhất|1)\b|Prima\s*Messa|Primeira\s*Missa|Primera\s*Misa|Erste\s*Messe)/i.test(text)) return 'first';
+        if (/(둘째|제\s*2(?!\d)|2\s*미사|Second|Missa\s*II\b|第\s*2(?!\d)|二|Lễ\s*II\b|Lễ\s*(?:thứ\s*)?(?:hai|2)\b|Seconda\s*Messa|Segunda\s*(?:Missa|Misa)|Zweite\s*Messe)/i.test(text)) return 'second';
+        if (/(셋째|제\s*3(?!\d)|3\s*미사|Third|Missa\s*III\b|第\s*3(?!\d)|三|Lễ\s*III\b|Lễ\s*(?:thứ\s*)?(?:ba|3)\b|Terza\s*Messa|Terceira\s*Missa|Tercera\s*Misa|Dritte\s*Messe)/i.test(text)) return 'third';
         return '';
     }
 
@@ -10397,7 +10619,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const allSoulsMatch = links.find(link => strictAllSoulsRank(strictLinkLabel(link)) === selector.allSoulsChoice);
             if (allSoulsMatch) return allSoulsMatch;
         }
-        if (selector.slot === 'vigil' && strictSpecialVigilKeys.has(selector.specialVigil)) {
+        if (selector.slot === 'vigil' && selector.specialVigil) {
             const vigilLink = links.find(link => strictIsVigilLabel(strictLinkLabel(link)));
             if (vigilLink) return vigilLink;
         }
@@ -10428,6 +10650,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!markers.length) return lines || [];
         let chosen = null;
         if (selector.allSoulsChoice) chosen = markers.find(marker => marker.kind === selector.allSoulsChoice);
+        if (selector.allSoulsChoice && !chosen && markers.some(marker => ['first', 'second', 'third'].includes(marker.kind))) return [];
         if (!chosen && selector.slot === 'vigil') chosen = markers.find(marker => marker.kind === 'vigil');
         if (!chosen) chosen = markers.find(marker => marker.kind === 'day');
         if (!chosen) chosen = markers.find(marker => !['vigil', 'night'].includes(marker.kind));
@@ -13501,6 +13724,33 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         DE: fetchGermanDailyMass
     };
 
+    function countrySpecialMassRecord(date, locationCode) {
+        const selector = getStrictMassSelector(date);
+        const profile = specialLiturgyProfile(locationCode);
+        if (selector.allSoulsChoice) return profile.allSouls[selector.allSoulsChoice];
+        if (selector.specialVigil) return specialVigilsForDay(date, locationCode).find(entry => entry.id === selector.specialVigil);
+        return null;
+    }
+
+    // Python definitions compile to this registry; no Python runs in the browser.
+    Object.entries(dailySourceFetchers).forEach(([lang, fetchDaily]) => {
+        dailySourceFetchers[lang] = async (date, options = {}) => {
+            const locationCode = options.locationCode || dailySourceLocationCode(lang);
+            const entry = countrySpecialMassRecord(date, locationCode);
+            const data = entry && entry.data && entry.data[lang];
+            const sourceUrl = entry && entry.sourceUrls && entry.sourceUrls[lang];
+            if (!sourceUrl && (!data || !Object.keys(data).length)) return fetchDaily(date, options);
+            const parsed = sourceUrl
+                ? strictParseDailyMass(lang, await fetchTextWithFallbacks(sourceUrl), date, locationCode)
+                : { data: {} };
+            parsed.data = Object.assign({}, parsed.data || {}, JSON.parse(JSON.stringify(data || {})));
+            parsed.title = entry.names && entry.names[lang] || parsed.title || '';
+            parsed.sourceUrl = sourceUrl || '';
+            parsed.sourceMode = 'country-special-liturgy';
+            return parsed;
+        };
+    });
+
     function getActiveDailySourceLanguages() {
         const baseLang = normalizeSelectableLang(getLiturgicalBaseLang(), 'KR');
         const currentLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
@@ -14980,6 +15230,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function localMissalEntryForLanguage(lang, date) {
         const code = normalizeSelectableLang(lang, '');
         if (!date || !localMissalDataLanguages.has(code)) return null;
+        const selector = getStrictMassSelector(date);
+        if (selector.specialVigil) return null;
+        if (selector.allSoulsChoice) {
+            const languageData = localMissalLanguageData(code);
+            const entries = languageData && languageData.calendar && languageData.calendar[calendarDateKey(date)] || [];
+            return entries.find(entry => strictAllSoulsRank(entry.title) === selector.allSoulsChoice) || null;
+        }
         if (code === 'EN') {
             const locationCode = dailySourceLocationCode(code);
             const countryModule = activeCountryMassModule(locationCode);
@@ -16466,6 +16723,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                             const leftText = cleanNodeText(line[`text_${leftLower}`]);
                             const rightText = cleanNodeText(line[`text_${rightLower}`]);
                             if (!leftText || !rightText || normalizeSemanticText(leftText) === normalizeSemanticText(rightText)) continue;
+                            if (localMissalPrayerPairMatches(baseId, leftText, rightText, leftLower, rightLower, date)) {
+                                writeCachedDailySemanticEquivalence(date, baseId, leftText, rightText, true);
+                                continue;
+                            }
                             if (readCachedDailySemanticEquivalence(date, baseId, leftText, rightText) !== null) continue;
                             if (localSemanticEquivalent(baseId, leftText, rightText)) {
                                 writeCachedDailySemanticEquivalence(date, baseId, leftText, rightText, true);
@@ -18197,6 +18458,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function syncLocalizedChromeAndSettings() {
         const ui = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
+        if (globalThis.ordoAdminReview) {
+            const liveDate = dateFromZonedParts(zonedDateParts(new Date(), activeLiturgicalTimeZone()));
+            globalThis.ordoAdminReview.syncChrome(ui, formatDateIso(liveDate));
+        }
         const chrome = appChromeUiText[ui] || appChromeUiText.KR;
         const settings = settingsUiText[ui] || settingsUiText.KR;
         document.documentElement.lang = (langMeta[ui] && langMeta[ui].code) || 'ko';
@@ -19598,7 +19863,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function getEucharistSongMap(item) {
-        return item && item.songs && typeof item.songs === 'object' && !Array.isArray(item.songs) ? item.songs : {};
+        const songs = item && item.songs && typeof item.songs === 'object' && !Array.isArray(item.songs) ? item.songs : {};
+        const verified = (globalThis.missalPrefaceIndex || {}).prefaces || {};
+        const corrections = Object.fromEntries(Object.entries(verified).map(([key, entry]) => {
+            const base = songs[key] || {};
+            const line = {};
+            SUPPORTED_LANGS.forEach(lang => {
+                const lower = lang.toLowerCase();
+                const source = entry.content.some(row => row[`text_${lower}`]) ? entry : base;
+                line[`text_${lower}`] = (source.content || []).map(row => row[`text_${lower}`]).filter(Boolean).join('\n\n');
+                line[`sp_${lower}`] = ((source.content || []).find(row => row[`sp_${lower}`]) || {})[`sp_${lower}`] || '';
+            });
+            return [key, Object.assign({}, base, entry, { title: Object.assign({}, base.title, entry.title), content: [line] })];
+        }));
+        return Object.assign({}, songs, corrections);
     }
 
     function getEucharistSongLinesFromEntry(entry) {
@@ -20122,8 +20400,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function liturgyDateNavigationHtml(leftName, rightName) {
         const secondary = rightName ? `<br><span class="liturgy-name-secondary">${escapeHtml(rightName)}</span>` : '';
-        const prevLabel = '전날 전례로 이동';
-        const nextLabel = '다음날 전례로 이동';
+        const prevLabel = '이전 전례로 이동';
+        const nextLabel = '다음 전례로 이동';
         return [
             `<button type="button" class="liturgy-nav-btn liturgy-nav-prev" aria-label="${prevLabel}" title="${prevLabel}" onclick="changeLiturgicalDay(-1)">&lt;</button>`,
             `<div class="liturgy-name-text"><span class="liturgy-name-primary">${escapeHtml(leftName)}</span>${secondary}</div>`,
@@ -20498,6 +20776,25 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     const sourceChoiceVariantPartIds = new Set(['entrance', 'communion', 'collect', 'prayer_offerings', 'prayer_after']);
 
+    function localMissalPrayerPairMatches(baseId, leftText, rightText, leftLower, rightLower, date) {
+        if (!strictPrayerKeys.has(baseId)) return false;
+        const matches = (text, lower) => {
+            const lang = langCodeFromLowerKey(lower);
+            const entry = localMissalEntryForLanguage(lang, date);
+            const expectedTitle = state.liturgyInfo && state.liturgyInfo.names && state.liturgyInfo.names[lang];
+            if (!entry || !expectedTitle || localMissalTitleScore(expectedTitle, entry.title) < 0.52) return false;
+            const formatted = entry.data && formattedLocalMissalSection(lang, baseId, entry.data[baseId]);
+            if (!formatted) return false;
+            const options = splitParsedAlternatives(normalizePrayerParsedLinesBeforeApply(lower, baseId, formatted.lines));
+            // Only an entire, unambiguous authorized prayer can establish this
+            // correspondence; a shared sentence or a calendar date cannot.
+            if (options.length !== 1) return false;
+            const key = value => normalizeSemanticText(value).replace(/[^\p{L}\p{N}]+/gu, '');
+            return key(text) === key(variantOptionMeaningText(baseId, options[0]));
+        };
+        return matches(leftText, leftLower) && matches(rightText, rightLower);
+    }
+
     function sourceChoiceLabelForLower(sourceLower, sourceOrdinal = null) {
         const names = {
             kr: { kr: '한국어', vn: 'tiếng Hàn', en: 'Korean', jp: '韓国語', la: 'Coreana', zh: '韓文', it: 'Coreano' },
@@ -20528,6 +20825,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const leftText = cleanNodeText(line[`text_${leftKey}`]);
             const rightText = cleanNodeText(line[`text_${rightKey}`]);
             if (!leftText || !rightText) return indexes;
+            if (localMissalPrayerPairMatches(baseId, leftText, rightText, leftKey, rightKey, getActiveLiturgicalSourceDate())) return indexes;
             if ((baseId === 'entrance' || baseId === 'communion') && activeLineTextsAreKnownSemanticMismatch(line, leftKey, rightKey)) {
                 indexes.push(index);
                 return indexes;
@@ -21078,6 +21376,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         document.addEventListener('visibilitychange', () => {
             if (!document.hidden) refreshIfChanged();
         });
+        window.addEventListener('ordo:review-date-changed', () => {
+            state.dayOffset = 0;
+            state.liturgyNavSlot = '';
+            state.allSoulsNavChoice = '';
+            state.specialVigilNavKey = '';
+            state.liturgicalDateContext = null;
+            lastSignature = signature();
+            fetchMassData({ skipStartupPrompts:true });
+        });
     }
 
     function applyInitialSettingsToControls() {
@@ -21102,33 +21409,38 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         syncAuxPanelsWithSettings();
     }
 
-    function restoreAndroidSavedStartupDecision() {
-        if (!isAndroidAppRuntime() || !(initialAndroidSettings && initialAndroidSettings.consentAccepted)) return false;
+    function restoreStartupNoticeDecision() {
+        if (startupNoticeDecision === false) return false;
+        if (startupNoticeDecision !== true
+            && (!isAndroidAppRuntime() || !(initialAndroidSettings && initialAndroidSettings.consentAccepted))) return false;
         const modal = document.getElementById('consent-modal');
         if (modal) modal.style.display = 'none';
         document.body.classList.remove('consent-pending');
         startupNoticeDecision = true;
+        persistAndroidAppSettings({ consentAccepted: true });
         if (resolveStartupNoticeDecision) resolveStartupNoticeDecision(true);
         return true;
     }
 
     // 초기 실행: 로컬/캐시 데이터로 먼저 렌더하고 GPS는 백그라운드에서 보정합니다.
-    applyInitialSettingsToControls();
-    restoreAndroidSavedStartupDecision();
-    syncLocalizedChromeAndSettings();
-    setupFloatingLiturgyBanner();
-    setupOrientationPersistence();
-    setupLiturgicalDateRolloverWatch();
-    fetchMassData();
-    simulateGPS();
-    if (window.ordoFirebaseDataReady && typeof window.ordoFirebaseDataReady.then === 'function') {
-        window.ordoFirebaseDataReady.then(status => {
-            if (!status || status.error) return;
-            fallbackPrayerDataByJurisdiction.clear();
-            if (status.hymnCount) renderHymnPanel({ resetCategory: true });
-            if (status.prayerCount) renderPrayerPanel();
-            if (status.massCount && startupNoticeDecision === true) {
-                fetchMassData({ skipStartupPrompts: true });
-            }
-        }).catch(error => console.warn('Firebase published data refresh failed.', error));
+    if (!window.ordoPrayerEditorPreview && startupNoticeDecision !== false) {
+        applyInitialSettingsToControls();
+        restoreStartupNoticeDecision();
+        syncLocalizedChromeAndSettings();
+        setupFloatingLiturgyBanner();
+        setupOrientationPersistence();
+        setupLiturgicalDateRolloverWatch();
+        fetchMassData();
+        simulateGPS();
+        if (window.ordoFirebaseDataReady && typeof window.ordoFirebaseDataReady.then === 'function') {
+            window.ordoFirebaseDataReady.then(status => {
+                if (!status || status.error || startupNoticeDecision === false) return;
+                fallbackPrayerDataByJurisdiction.clear();
+                if (status.hymnCount) renderHymnPanel({ resetCategory: true });
+                if (status.prayerCount) renderPrayerPanel();
+                if (status.massCount && startupNoticeDecision === true) {
+                    fetchMassData({ skipStartupPrompts: true });
+                }
+            }).catch(error => console.warn('Firebase published data refresh failed.', error));
+        }
     }

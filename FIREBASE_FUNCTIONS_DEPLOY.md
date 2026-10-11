@@ -1,6 +1,6 @@
 # Firebase Functions 배포 안내
 
-현재 웹 앱은 `index.html`과 `JS file/app_v27_7.js`를 GitHub Pages에서 제공하고, 외부 API 프록시만 Firebase Functions에 배포한다. Firebase Hosting과 Firestore는 사용하지 않는다.
+현재 웹 앱은 `index.html`과 `JS file/app_v29.js`를 GitHub Pages에서 제공하고, API 프록시와 관리자 인증을 Firebase Functions에 배포한다. 국가별 업로드 데이터는 Firestore를 사용하며, 읽기 규칙도 배포한다. Firebase Hosting은 사용하지 않는다.
 
 ## 배포 대상
 
@@ -11,6 +11,7 @@
 - `mapsConfig`: 제한된 Google Maps 브라우저 키 전달
 - `usMassTimesProxy`: 미국 성당 미사 시간 프록시
 - `bishopDirectoryProxy`: 국가별 주교단 명단 프록시
+- `adminReviewAccess`: Google 계정과 관리자 이메일 목록을 확인하는 날짜 검토 권한
 
 국가별 성가·기도문 파일은 Firebase Functions 대상이 아니다. 해당 정적 데이터는 `JS file/countries/<국가>/` 아래에 두고 GitHub Pages에 배포한다.
 
@@ -41,7 +42,7 @@ ALLOWED_ORIGINS=https://sluggishjedi-max.github.io,local
 npm --prefix functions install
 npm run firebase:check
 $env:FUNCTIONS_DISCOVERY_TIMEOUT='60000'
-firebase deploy --only functions
+firebase deploy --project ordinary-mass-app --only functions,firestore:rules --non-interactive
 ```
 
-`firebase.json`의 predeploy 검사도 `functions/index.js` 문법을 다시 확인한다. 배포 후 CLI가 위 다섯 함수의 갱신 성공을 보고하는지 확인한다.
+`firebase.json`의 predeploy 검사도 `functions/index.js` 문법을 다시 확인한다. 배포 후 CLI가 위 여섯 함수와 Firestore 규칙의 갱신 성공을 보고하는지 확인한다.

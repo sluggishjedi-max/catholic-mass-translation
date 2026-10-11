@@ -3855,7 +3855,167 @@
   eucharist.forms = Object.fromEntries(Object.entries(eucharist.forms).map(([key, lines]) => [key, sentenceRows(lines)]));
   byPart('blessing').variants.A.lines = [z('主祭', '願主與你們同在。'), z('信友', '也與你的心靈同在。'), z('', ''), z('主祭', '願全能的天主，聖父、聖子 ✠、聖神，'), z('', '降福你們。'), z('信友', '阿們。')];
   // MASS_DATA_EDITOR_OVERRIDES_START
-  const ordinaryEditorOverrides = [];
+  const ordinaryEditorOverrides = [
+    {
+      "path": [
+        3,
+        "variants",
+        "A",
+        "lines",
+        0,
+        "text_zh"
+      ],
+      "value": "各位兄弟姊妹，現在我們大家認罪，"
+    },
+    {
+      "path": [
+        3,
+        "variants",
+        "A",
+        "lines",
+        1,
+        "text_zh"
+      ],
+      "value": "虔誠地舉行聖祭。"
+    },
+    {
+      "path": [
+        3,
+        "variants",
+        "A",
+        "lines",
+        7,
+        "text_zh"
+      ],
+      "value": "<span class=\"rubric\">搥胸。 </span>我罪、我罪、我的重罪。"
+    },
+    {
+      "path": [
+        3,
+        "variants",
+        "A",
+        "lines",
+        7,
+        "rubric_zh"
+      ],
+      "value": ""
+    },
+    {
+      "path": [
+        1,
+        "lines",
+        0,
+        "rubric_zh"
+      ],
+      "value": "如果沒有唱入會歌，可以一起唱入會歌。"
+    },
+    {
+      "path": [
+        1,
+        "lines",
+        1,
+        "text_zh"
+      ],
+      "value": "（當日進堂詠…）"
+    },
+    {
+      "create": {
+        "entryId": "1.2 greeting",
+        "relativePath": [
+          "variants",
+          "D",
+          "lines"
+        ],
+        "rowKey": "0:text",
+        "preferredIndex": 0,
+        "field": "text_zh",
+        "speakerField": "sp_zh"
+      },
+      "value": "因父、及子、及聖神之名。",
+      "speaker": ""
+    },
+    {
+      "create": {
+        "entryId": "1.2 greeting",
+        "relativePath": [
+          "variants",
+          "D",
+          "lines"
+        ],
+        "rowKey": "1:text",
+        "preferredIndex": 1,
+        "field": "text_zh",
+        "speakerField": "sp_zh"
+      },
+      "value": "阿們。",
+      "speaker": ""
+    },
+    {
+      "path": [
+        2,
+        "variants",
+        "D",
+        "lines",
+        0,
+        "sp_zh"
+      ],
+      "value": "主祭"
+    },
+    {
+      "path": [
+        2,
+        "variants",
+        "D",
+        "lines",
+        1,
+        "sp_zh"
+      ],
+      "value": "信友"
+    },
+    {
+      "create": {
+        "entryId": "1.2 greeting",
+        "relativePath": [
+          "variants",
+          "D",
+          "lines"
+        ],
+        "rowKey": "2:text",
+        "preferredIndex": 2,
+        "field": "text_zh",
+        "speakerField": "sp_zh"
+      },
+      "value": "願平安與你同在。",
+      "speaker": "主祭"
+    },
+    {
+      "path": [
+        2,
+        "variants",
+        "B",
+        "lines",
+        3,
+        "text_zh"
+      ],
+      "value": "也與你的心靈同在。"
+    },
+    {
+      "create": {
+        "entryId": "1.2 greeting",
+        "relativePath": [
+          "variants",
+          "D",
+          "lines"
+        ],
+        "rowKey": "3:text",
+        "preferredIndex": 3,
+        "field": "text_zh",
+        "speakerField": "sp_zh"
+      },
+      "value": "也與你的心靈同在。",
+      "speaker": "信友"
+    }
+  ];
   // MASS_DATA_EDITOR_OVERRIDES_END
   function applyOrdinaryEditorOverrides(target) {
     ordinaryEditorOverrides.forEach(override => {

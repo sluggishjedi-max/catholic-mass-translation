@@ -305,6 +305,17 @@ function prayerDetailForCountry(loaded, jurisdiction, id, requestedLanguage) {
     title: entry ? ((entry.titles || {})[lang] || '') : '',
     sourceCategory: entry ? (entry.sourceCategory || {}) : {},
     sourceCategoryText: entry ? ((entry.sourceCategory || {})[lang] || '') : '',
+    texts: entry ? (entry.texts || {}) : {},
+    source: entry ? (entry.source || {}) : {},
+    sourceUrl: entry ? (entry.sourceUrl || {}) : {},
+    previewCountryData: Object.fromEntries(loaded.countries.map(owner => {
+      const module = loaded.runtime && loaded.runtime.countries[owner.jurisdiction];
+      return [owner.jurisdiction, {
+        jurisdiction: owner.jurisdiction,
+        language: owner.language,
+        entries: (module && module.entries || []).filter(item => item.id === detail.id)
+      }];
+    })),
     text: entry ? ((entry.texts || {})[lang] || '') : '',
     textLength: entry ? String((entry.texts || {})[lang] || '').length : 0
   };
@@ -1026,10 +1037,19 @@ function saveLegacyPrayerData(data) {
 
   validateGeneratedOutput(output);
 
-  const backupPath = path.join(root, 'tmp', `prayer_data.backup-${timestamp()}.js`);
+  const backupStem = path.join(root, 'tmp', `prayer_data.backup-${timestamp()}`);
+  let backupPath = `${backupStem}.js`;
   const nextPath = `${prayerDataPath}.next-${process.pid}`;
   fs.mkdirSync(path.dirname(backupPath), { recursive: true });
-  fs.copyFileSync(prayerDataPath, backupPath);
+  for (let suffix = 1; ; suffix += 1) {
+    try {
+      fs.copyFileSync(prayerDataPath, backupPath, fs.constants.COPYFILE_EXCL);
+      break;
+    } catch (error) {
+      if (error.code !== 'EEXIST') throw error;
+      backupPath = `${backupStem}-${suffix}.js`;
+    }
+  }
   fs.writeFileSync(nextPath, output, 'utf8');
   fs.renameSync(nextPath, prayerDataPath);
   return backupPath;
@@ -1374,6 +1394,77 @@ function prepareCountryPrayerEntryDelete(body, sources = readCountryModuleSource
   });
 }
 
+function prayerBulkDeleteRequest(body) {
+  if (!Array.isArray(body.ids) || !body.ids.length
+      || body.ids.some(id => typeof id !== 'string' || !id.trim())) {
+    throw Object.assign(new Error('Choose one or more prayer ids'), { statusCode: 400 });
+  }
+  if (!['country', 'all'].includes(body.scope)) {
+    throw Object.assign(new Error('Choose country or all deletion scope'), { statusCode: 400 });
+  }
+  return { ids: Array.from(new Set(body.ids.map(id => id.trim()))), scope: body.scope };
+}
+
+function prepareCountryPrayerEntriesDelete(body, sources = readCountryModuleSources()) {
+  const { ids, scope } = prayerBulkDeleteRequest(body);
+  const jurisdiction = ensureKnownJurisdiction(body.jurisdiction);
+  if (!jurisdiction) throw Object.assign(new Error('Choose a country'), { statusCode: 400 });
+  return prepareCountrySourceMutation(sources, ({ current, entriesByJurisdiction }) => {
+    const lang = countryMutationLanguage(current, jurisdiction);
+    const countryEntries = entriesByJurisdiction.get(jurisdiction);
+    const targets = ids.map(id => {
+      const entry = countryEntries.find(item => item.id === id);
+      if (!entry) throw Object.assign(new Error(`Prayer id not found in ${jurisdiction}: ${id}`), { statusCode: 404 });
+      if (scope === 'country' && !['titles', 'texts', 'sourceCategory'].some(field => entry[field] && entry[field][lang])) {
+        throw Object.assign(new Error(`Nothing to delete in ${jurisdiction}: ${id}`), { statusCode: 409 });
+      }
+      return entry;
+    });
+    let removedCountries = 0;
+    if (scope === 'all') {
+      const selected = new Set(ids);
+      for (const entries of entriesByJurisdiction.values()) {
+        const kept = entries.filter(entry => !selected.has(entry.id));
+        removedCountries += entries.length - kept.length;
+        entries.splice(0, entries.length, ...kept);
+      }
+    } else {
+      for (const entry of targets) {
+        for (const field of ['titles', 'texts', 'sourceCategory']) {
+          if (entry[field]) delete entry[field][lang];
+        }
+        const hasLocalizedData = ['titles', 'texts', 'sourceCategory'].some(field =>
+          Object.values(entry[field] || {}).some(value => Boolean(String(value || '').trim())));
+        if (hasLocalizedData) updateCountryEntryTags(entry, current.data.categoryLabels);
+        else {
+          countryEntries.splice(countryEntries.indexOf(entry), 1);
+          removedCountries += 1;
+        }
+      }
+    }
+    return { ids, count: ids.length, scope, jurisdiction, lang, removedCountries };
+  });
+}
+
+function deletePrayerEntries(data, body) {
+  const { ids, scope } = prayerBulkDeleteRequest(body);
+  const lang = ensureLanguage(body.lang);
+  if (scope === 'country' && !lang) throw Object.assign(new Error('Choose a language'), { statusCode: 400 });
+  const targets = ids.map(id => data.prayers[findPrayerIndexById(data, id)]);
+  if (scope === 'country') {
+    for (const entry of targets) {
+      if (!['titles', 'texts', 'sourceCategory'].some(field => entry[field] && entry[field][lang])) {
+        throw Object.assign(new Error(`Nothing to delete for ${lang}: ${entry.id}`), { statusCode: 409 });
+      }
+    }
+  }
+  for (const id of ids) {
+    if (scope === 'all') deletePrayerEntry(data, { id, lang });
+    else deletePrayerLanguage(data, { id, lang });
+  }
+  return { ids, count: ids.length, scope, jurisdiction: body.jurisdiction || 'INTL', lang };
+}
+
 function prepareCountryPrayerCategoryUpdate(body, sources = readCountryModuleSources()) {
   const id = String(body.originalId || body.id || body.targetId || '').trim();
   const category = String(body.category || '').trim();
@@ -1437,9 +1528,10 @@ function prepareCountryPrayerMerge(body, sources = readCountryModuleSources()) {
 function savePreparedCountryMutation(prepared) {
   const changed = prepared.nextSources.filter((source, index) => source.code !== prepared.sources[index].code);
   if (!changed.length) return '';
-  const backupRoot = path.join(root, 'tmp', `prayer-data-backup-${timestamp()}`);
+  const backupParent = path.join(root, 'tmp');
+  fs.mkdirSync(backupParent, { recursive: true });
+  const backupRoot = fs.mkdtempSync(path.join(backupParent, `prayer-data-backup-${timestamp()}-`));
   const backups = [];
-  fs.mkdirSync(backupRoot, { recursive: true });
   try {
     for (const source of changed) {
       const relativePath = path.relative(root, source.path);
@@ -1560,10 +1652,49 @@ function handleError(res, error) {
   });
 }
 
+function prayerAppPreviewHtml() {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const scripts = Array.from(html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/giu))
+    .filter(match => /_prayers\.js(?:\?|$)|\/app_v\d+(?:_\d+)?\.js(?:\?|$)/u.test(match[1]))
+    .map(match => match[0]).join('\n');
+  return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/giu, '')
+    .replace('</head>', `<style>
+      body > :not(#prayer-panel) { display: none !important; }
+      #prayer-panel { display: block; }
+      #prayer-panel > :not(#prayer-results) { display: none; }
+    </style></head>`)
+    .replace('</body>', `<script>window.ordoPrayerEditorPreview = true;</script>
+      ${scripts}
+      <script src="/JS%20file/prayer_editor_preview.js"></script></body>`);
+}
+
+function servePrayerPreviewAsset(url, res) {
+  const pathname = decodeURIComponent(url.pathname);
+  const publicRoots = ['JS file', 'assets'].map(folder => path.resolve(root, folder) + path.sep);
+  const file = path.resolve(root, '.' + pathname);
+  const mime = {
+    '.js': 'application/javascript; charset=utf-8', '.svg': 'image/svg+xml',
+    '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+    '.gif': 'image/gif', '.webp': 'image/webp', '.ico': 'image/x-icon'
+  }[path.extname(file).toLowerCase()];
+  if (!mime || !publicRoots.some(folder => file.startsWith(folder))) return false;
+  if (!fs.existsSync(file) || !fs.statSync(file).isFile()) return false;
+  res.writeHead(200, { 'content-type': mime, 'cache-control': 'no-store' });
+  res.end(fs.readFileSync(file));
+  return true;
+}
+
 function createServer() {
   return http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url, 'http://127.0.0.1');
+
+      if (req.method === 'GET' && url.pathname === '/app-preview.html') {
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
+        res.end(prayerAppPreviewHtml());
+        return;
+      }
+      if (req.method === 'GET' && servePrayerPreviewAsset(url, res)) return;
 
       if (req.method === 'GET' && url.pathname === '/') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
@@ -1684,6 +1815,23 @@ function createServer() {
           backupPath,
           file: prayerDataDisplayPath
         });
+        return;
+      }
+
+      if (req.method === 'POST' && url.pathname === '/api/delete-entries') {
+        const body = await readJson(req);
+        let updated;
+        let backupPath;
+        if (usesCountryModules) {
+          const prepared = prepareCountryPrayerEntriesDelete(body);
+          updated = prepared.updated;
+          backupPath = savePreparedCountryMutation(prepared);
+        } else {
+          const data = loadPrayerData();
+          updated = deletePrayerEntries(data, body);
+          backupPath = savePrayerData(data);
+        }
+        jsonResponse(res, 200, { ok: true, updated, backupPath, file: prayerDataDisplayPath });
         return;
       }
 
@@ -3854,6 +4002,7 @@ module.exports = {
   prepareCountryModuleSources,
   prepareCountryPrayerCategoryUpdate,
   prepareCountryPrayerEntryDelete,
+  prepareCountryPrayerEntriesDelete,
   prepareCountryPrayerLanguageDelete,
   prepareCountryPrayerMerge,
   prepareCountryPrayerUpdate,

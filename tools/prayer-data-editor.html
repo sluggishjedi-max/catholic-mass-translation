@@ -79,6 +79,13 @@
     .prayer-row:hover,.prayer-row.selected {
       border-color:var(--blue); background:#f8faff; box-shadow:0 0 0 3px #315ee813;
     }
+    .prayer-list-row { display:flex; align-items:center; gap:8px; }
+    .prayer-list-row .prayer-row { flex:1; min-width:0; user-select:none; }
+    .prayer-select { width:18px; flex:0 0 18px; accent-color:var(--blue); cursor:pointer; }
+    .selection-tools { display:grid; gap:8px; padding:12px; border-bottom:1px solid var(--line); background:#f8faff; }
+    .selection-buttons { display:flex; gap:6px; flex-wrap:wrap; }
+    .selection-buttons button { padding:7px 9px; font-size:12px; white-space:normal; }
+    .selection-count { color:var(--ink); font-size:12px; font-weight:900; }
     .row-title { font-weight:900; overflow-wrap:anywhere; }
     .row-meta,.hint { color:var(--muted); font-size:12px; overflow-wrap:anywhere; }
     .country-tags { display:flex; flex-wrap:wrap; gap:4px; }
@@ -104,16 +111,8 @@
     }
     .preview-card { position:sticky; top:104px; }
     .preview-shell { padding:16px; background:#fafbfe; }
-    .app-preview { overflow:hidden; border:1px solid #e0e5ec; border-radius:14px; background:#fff; box-shadow:0 3px 12px #1720330c; }
-    .app-summary { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:12px; align-items:center; padding:14px 16px; color:#315ee8; font-weight:900; }
-    .app-summary::after { content:"▼"; font-size:12px; }
-    .app-detail { padding:12px 16px 18px; border-top:1px solid #edf0f3; }
-    .pills { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:15px; }
-    .pill { display:inline-flex; padding:4px 9px; border-radius:999px; color:#536078; background:#eef1f6; font-size:11px; font-weight:800; }
-    .language-label { margin-bottom:8px; color:#6d7689; font-size:11px; font-weight:900; text-transform:uppercase; }
-    .preview-title { margin-bottom:8px; font-weight:900; line-height:1.4; }
-    .preview-body { color:#444; line-height:1.65; overflow-wrap:anywhere; }
-    .preview-body .rubric { display:block; margin:5px 0 2px; color:#9a5b00; font-style:italic; }
+    .app-preview { display:block; width:100%; height:650px; border:1px solid #e0e5ec; border-radius:14px; background:#fff; }
+    .preview-shell > label { margin-bottom:12px; }
     .merge-card { margin-top:16px; }
     .merge-intro { padding:15px 16px; color:#51617d; background:#f7f9ff; border-bottom:1px solid var(--line); font-size:13px; line-height:1.55; }
     .merge-flow {
@@ -195,6 +194,18 @@
           <h2>기도문 목록</h2>
           <span id="result-count">0개</span>
         </div>
+        <div class="selection-tools">
+          <span class="hint">첫 항목 클릭 → Shift+끝 항목 클릭: 범위 선택<br>Ctrl/⌘+클릭 또는 체크박스: 개별 선택</span>
+          <span id="selection-count" class="selection-count" aria-live="polite">0개 선택</span>
+          <div class="selection-buttons">
+            <button id="select-visible" class="secondary" type="button">목록 전체 선택</button>
+            <button id="clear-selection" class="secondary" type="button" disabled>선택 해제</button>
+          </div>
+          <div class="selection-buttons">
+            <button id="bulk-delete-country" class="danger" type="button" disabled>선택 국가 본문 삭제</button>
+            <button id="bulk-delete-all" class="danger" type="button" disabled>선택 기도문 전체 삭제</button>
+          </div>
+        </div>
         <div id="prayer-list" class="list"></div>
       </section>
 
@@ -223,7 +234,8 @@
               <input id="title" autocomplete="off">
             </label>
             <label class="field-wide">출처·세부 분류
-              <input id="source-category" autocomplete="off" placeholder="선택 입력">
+              <input id="source-category" autocomplete="off" placeholder="예: 가톨릭 기도서; 매일미사" aria-describedby="source-category-help">
+              <span id="source-category-help" class="hint">여러 출처는 ;로 구분합니다.</span>
             </label>
             <label class="field-wide">기도문 본문
               <textarea id="text" placeholder="기도문 본문을 입력하세요"></textarea>
@@ -241,21 +253,13 @@
       <aside class="preview-card">
         <div class="panel-head">
           <h2>앱 표시 미리보기</h2>
-          <span>입력과 동시에 반영</span>
+          <span>실제 앱 화면 · 입력과 동시에 반영</span>
         </div>
         <div class="preview-shell">
-          <div class="app-preview">
-            <div id="preview-summary" class="app-summary">기도문 제목</div>
-            <div class="app-detail">
-              <div class="pills">
-                <span id="preview-id" class="pill">ID</span>
-                <span id="preview-category" class="pill">카테고리</span>
-              </div>
-              <div id="preview-language" class="language-label">언어</div>
-              <div id="preview-title" class="preview-title">기도문 제목</div>
-              <div id="preview-body" class="preview-body">기도문 본문이 이곳에 표시됩니다.</div>
-            </div>
-          </div>
+          <label>함께 표시할 국가·언어
+            <select id="preview-target-country"></select>
+          </label>
+          <iframe id="app-preview-frame" class="app-preview" src="/app-preview.html" title="실제 앱 기도문 표시 미리보기"></iframe>
         </div>
       </aside>
     </div>
@@ -307,15 +311,17 @@
     const state = {
       countries: [], languages: [], languageNames: {}, categories: [], categoryLabels: {},
       prayers: [], list: [], mergeList: [], selectedMergeId: '',
-      originalId: '', currentPrayer: null, appliedSearch: '', statusTimer: null
+      originalId: '', currentPrayer: null, appliedSearch: '', statusTimer: null, previewReady: false,
+      selectedIds: new Set(), selectionAnchor: '', bulkBusy: false, listJurisdiction: '', listLoadVersion: 0
     };
 
     const el = Object.fromEntries([
       'country','category-filter','search','search-button','new-prayer','reload','status',
       'prayer-list','result-count','edit-mode','editor-country','country-help',
+      'selection-count','select-visible','clear-selection','bulk-delete-country','bulk-delete-all',
       'prayer-id','editor-category','title','source-category','text',
       'save-local','firebase-upload','delete-country','delete-entry',
-      'preview-summary','preview-id','preview-category','preview-language','preview-title','preview-body',
+      'app-preview-frame','preview-target-country',
       'merge-target-title','merge-target-id','merge-country','merge-search','merge-search-button',
       'merge-source-list','merge-overwrite','merge-remove-source','merge-button'
     ].map(id => [id.replace(/-([a-z])/g, (_, c) => c.toUpperCase()), document.getElementById(id)]));
@@ -440,41 +446,115 @@
     function prayerRow(item, selected, dataRole) {
       const tags = (item.jurisdictions || []).map(code =>
         '<span class="country-tag">' + escapeHtml(code) + '</span>').join('');
-      return '<button class="prayer-row' + (selected ? ' selected' : '') + '" type="button" ' +
+      const button = '<button class="prayer-row' + (selected ? ' selected' : '') + '" type="button" ' +
         dataRole + '="' + escapeHtml(item.id) + '">' +
         '<span class="row-title">' + escapeHtml(item.id + ' · ' + (item.title || item.id)) + '</span>' +
         '<span class="row-meta">' + escapeHtml(item.categoryLabel || item.category) +
         ' · ' + (item.hasText ? escapeHtml(String(item.textLength || 0)) + '자' : '제목만') + '</span>' +
         (tags ? '<span class="country-tags">' + tags + '</span>' : '') +
         '</button>';
+      if (dataRole !== 'data-prayer-id') return button;
+      return '<div class="prayer-list-row"><input class="prayer-select" type="checkbox" data-selection-id="' +
+        escapeHtml(item.id) + '" aria-label="' + escapeHtml(item.id + ' 선택') + '"' + (selected ? ' checked' : '') +
+        (state.bulkBusy ? ' disabled' : '') + '>' + button + '</div>';
+    }
+
+    function updateSelectionControls() {
+      const count = state.selectedIds.size;
+      const busy = state.bulkBusy;
+      el.selectionCount.textContent = count + '개 선택' + (busy ? ' · 삭제 중…' : '');
+      el.bulkDeleteCountry.textContent = (selectedCountry()?.name || '선택 국가') + ' 본문 삭제';
+      el.selectVisible.disabled = busy || !filteredList(state.list, state.appliedSearch).length;
+      [el.clearSelection, el.bulkDeleteCountry, el.bulkDeleteAll].forEach(button => { button.disabled = busy || !count; });
+      [el.country, el.categoryFilter, el.search, el.searchButton, el.newPrayer, el.reload,
+        el.editorCountry, el.saveLocal, el.deleteCountry, el.deleteEntry, el.firebaseUpload, el.mergeButton].forEach(control => {
+        if (busy) {
+          if (!control.hasAttribute('data-bulk-disabled')) control.dataset.bulkDisabled = control.disabled ? 'true' : 'false';
+          control.disabled = true;
+        } else if (control.hasAttribute('data-bulk-disabled')) {
+          control.disabled = control.dataset.bulkDisabled === 'true';
+          delete control.dataset.bulkDisabled;
+        }
+      });
+    }
+
+    function resetSelection() {
+      state.selectedIds.clear();
+      state.selectionAnchor = '';
+    }
+
+    function selectPrayerRow(id, event, checkbox = false) {
+      if (state.bulkBusy) return;
+      const visibleIds = filteredList(state.list, state.appliedSearch).map(item => item.id);
+      const current = visibleIds.indexOf(id);
+      if (current === -1) return;
+      const anchor = visibleIds.indexOf(state.selectionAnchor);
+      if (event.shiftKey && anchor !== -1) {
+        if (!event.ctrlKey && !event.metaKey) state.selectedIds.clear();
+        visibleIds.slice(Math.min(anchor, current), Math.max(anchor, current) + 1)
+          .forEach(selected => state.selectedIds.add(selected));
+      } else if (checkbox || event.ctrlKey || event.metaKey) {
+        if (state.selectedIds.has(id)) state.selectedIds.delete(id);
+        else state.selectedIds.add(id);
+        state.selectionAnchor = id;
+      } else {
+        state.selectedIds = new Set([id]);
+        state.selectionAnchor = id;
+      }
+      renderList();
+      const selector = checkbox ? '[data-selection-id]' : '[data-prayer-id]';
+      [...el.prayerList.querySelectorAll(selector)].find(node =>
+        (checkbox ? node.dataset.selectionId : node.dataset.prayerId) === id)?.focus({ preventScroll:true });
+      if (!checkbox && !event.shiftKey && !event.ctrlKey && !event.metaKey) {
+        loadPrayer(id).catch(error => setStatus(error.message, 'error'));
+      }
     }
 
     function renderList() {
       const items = filteredList(state.list, state.appliedSearch);
+      const visibleIds = new Set(items.map(item => item.id));
+      state.selectedIds = new Set([...state.selectedIds].filter(id => visibleIds.has(id)));
+      if (!visibleIds.has(state.selectionAnchor)) state.selectionAnchor = '';
       el.resultCount.textContent = items.length + '개';
       el.prayerList.innerHTML = items.length
-        ? items.map(item => prayerRow(item, item.id === state.originalId, 'data-prayer-id')).join('')
+        ? items.map(item => prayerRow(item, state.selectedIds.has(item.id), 'data-prayer-id')).join('')
         : '<div class="empty">조건에 맞는 기도문이 없습니다.<br>검색어를 지우고 확인을 눌러보세요.</div>';
       el.prayerList.querySelectorAll('[data-prayer-id]').forEach(button => {
-        button.addEventListener('click', () => loadPrayer(button.dataset.prayerId));
+        button.addEventListener('click', event => selectPrayerRow(button.dataset.prayerId, event));
       });
+      el.prayerList.querySelectorAll('[data-selection-id]').forEach(checkbox => {
+        checkbox.addEventListener('click', event => {
+          event.preventDefault();
+          selectPrayerRow(checkbox.dataset.selectionId, event, true);
+        });
+      });
+      updateSelectionControls();
     }
 
     async function loadList(options = {}) {
       const country = selectedCountry();
       if (!country) return;
+      const requestVersion = ++state.listLoadVersion;
+      if (state.listJurisdiction !== country.jurisdiction) {
+        state.list = [];
+        renderList();
+      }
       const body = await api('/api/prayers?country=' + encodeURIComponent(country.jurisdiction) +
         '&language=' + encodeURIComponent(country.language));
+      if (requestVersion !== state.listLoadVersion || el.country.value !== country.jurisdiction) return false;
       state.list = body.prayers;
+      state.listJurisdiction = country.jurisdiction;
       if (options.resetSearch) {
         state.appliedSearch = '';
         el.search.value = '';
       }
       renderList();
       setStatus(country.name + ' · ' + languageLabel(country.language) + ' · ' + state.list.length + '개를 불러왔습니다.', 'ok');
+      return true;
     }
 
     function clearEditor() {
+      resetSelection();
       state.originalId = '';
       state.currentPrayer = null;
       el.prayerId.value = '';
@@ -488,6 +568,7 @@
       el.mergeTargetId.textContent = '먼저 로컬에 저장하세요';
       state.selectedMergeId = '';
       renderMergeList();
+      renderList();
       updatePreview();
       el.prayerId.focus();
     }
@@ -509,9 +590,11 @@
         return;
       }
       const country = selectedCountry(jurisdiction);
-      const body = await api('/api/prayer?id=' + encodeURIComponent(state.originalId) +
+      const loadingId = state.originalId;
+      const body = await api('/api/prayer?id=' + encodeURIComponent(loadingId) +
         '&country=' + encodeURIComponent(country.jurisdiction) +
         '&lang=' + encodeURIComponent(country.language));
+      if (state.originalId !== loadingId || el.editorCountry.value !== country.jurisdiction) return;
       const prayer = body.prayer;
       state.currentPrayer = prayer;
       el.prayerId.value = prayer.id;
@@ -534,24 +617,32 @@
       else setStatus('검색 필터를 해제하고 전체 목록을 표시합니다.', 'ok');
     }
 
-    function formatPreviewText(text) {
-      const safe = escapeHtml(text || '기도문 본문이 이곳에 표시됩니다.');
-      return safe
-        .replace(/\[([^\]]+)\]/g, '<span class="rubric">[$1]</span>')
-        .replace(/\n/g, '<br>');
-    }
-
     function updatePreview() {
       const country = selectedBodyCountry() || selectedCountry();
-      const code = country?.language || '';
-      const title = el.title.value.trim() || '기도문 제목';
-      const category = el.editorCategory.value || '카테고리';
-      el.previewSummary.textContent = title;
-      el.previewId.textContent = el.prayerId.value.trim() || 'ID';
-      el.previewCategory.textContent = categoryLabel(category, code);
-      el.previewLanguage.textContent = (country ? country.name + ' · ' + country.jurisdiction + ' · ' : '') + languageLabel(code);
-      el.previewTitle.textContent = title;
-      el.previewBody.innerHTML = formatPreviewText(el.text.value);
+      if (!country || !state.previewReady) return;
+      const previousTarget = el.previewTargetCountry.value;
+      el.previewTargetCountry.innerHTML = state.countries.filter(item => item.language !== country.language)
+        .map(item => '<option value="' + escapeHtml(item.jurisdiction) + '">' +
+          escapeHtml(item.name + ' · ' + languageLabel(item.language)) + '</option>').join('');
+      el.previewTargetCountry.value = previousTarget;
+      if (!el.previewTargetCountry.value) el.previewTargetCountry.value = country.language === 'KR' ? 'US' : 'KR';
+      const target = selectedCountry(el.previewTargetCountry.value);
+      const code = country.language;
+      const prayer = state.currentPrayer || {};
+      const entry = {
+        id: el.prayerId.value.trim() || 'preview-draft',
+        category: el.editorCategory.value,
+        titles: { ...(prayer.titles || {}), [code]: el.title.value.trim() || '기도문 제목' },
+        texts: { ...(prayer.texts || {}), [code]: el.text.value },
+        sourceCategory: { ...(prayer.sourceCategory || {}), [code]: el.sourceCategory.value.trim() },
+        source: prayer.source || {}, sourceUrl: prayer.sourceUrl || {}
+      };
+      el.appPreviewFrame.contentWindow.postMessage({
+        type: 'ordo:prayer-preview', entry,
+        registry: prayer.previewCountryData || {},
+        jurisdiction: country.jurisdiction, language: code,
+        targetJurisdiction: target?.jurisdiction || 'US', targetLanguage: target?.language || 'EN'
+      }, location.origin);
     }
 
     function savePayload() {
@@ -584,6 +675,8 @@
       const body = await api('/api/update', {
         method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify(payload)
       });
+      if (state.selectedIds.delete(payload.originalId) || !state.selectedIds.size) state.selectedIds.add(body.updated.id);
+      if (state.selectionAnchor === payload.originalId || !state.selectionAnchor) state.selectionAnchor = body.updated.id;
       state.originalId = body.updated.id;
       await refreshMetadata();
       fillControls();
@@ -624,6 +717,48 @@
       await loadMergeList();
       clearEditor();
       setStatus('기도문 전체를 삭제했습니다 · ' + id, 'ok');
+    }
+
+    async function deleteSelectedPrayers(scope) {
+      if (state.bulkBusy) return;
+      const country = selectedCountry();
+      const ids = filteredList(state.list, state.appliedSearch)
+        .filter(item => state.selectedIds.has(item.id)).map(item => item.id);
+      if (!ids.length) return setStatus('목록에서 삭제할 기도문을 선택하세요.', 'warn');
+      const target = scope === 'all' ? '모든 국가의 제목과 본문' : country.name + '의 제목과 본문';
+      const editedCountry = selectedBodyCountry()?.jurisdiction;
+      const editedWasDeleted = ids.includes(state.originalId) && (scope === 'all' || editedCountry === country.jurisdiction);
+      const sample = ids.slice(0, 6).join('\n') + (ids.length > 6 ? '\n…' : '');
+      if (!confirm('선택한 ' + ids.length + '개 기도문의 ' + target + '을 삭제할까요?\n\n' + sample)) return;
+      state.bulkBusy = true;
+      updateSelectionControls();
+      try {
+        const body = await api('/api/delete-entries', {
+          method:'POST', headers:{'content-type':'application/json'},
+          body:JSON.stringify({ ids, scope, jurisdiction:country.jurisdiction, lang:country.language })
+        });
+        resetSelection();
+        await refreshMetadata();
+        fillControls();
+        await loadList();
+        await loadMergeList();
+        if (editedWasDeleted) clearEditor();
+        else {
+          if (state.originalId && ids.includes(state.originalId)) {
+            const currentCountry = selectedBodyCountry();
+            const detail = await api('/api/prayer?id=' + encodeURIComponent(state.originalId) +
+              '&country=' + encodeURIComponent(currentCountry.jurisdiction) + '&lang=' + encodeURIComponent(currentCountry.language));
+            state.currentPrayer = detail.prayer;
+          }
+          updateCountryHelp();
+          updatePreview();
+          renderList();
+        }
+        setStatus(body.updated.count + '개 기도문의 ' + target + '을 삭제했습니다.', 'ok');
+      } finally {
+        state.bulkBusy = false;
+        updateSelectionControls();
+      }
     }
 
     function renderMergeList() {
@@ -687,21 +822,31 @@
     async function initialize() {
       await refreshMetadata();
       fillControls();
-      await loadList({ resetSearch:true });
+      if (await loadList({ resetSearch:true }) === false) return;
       await loadMergeList();
       clearEditor();
       setStatus('준비되었습니다. 국가를 선택하거나 목록에서 기도문을 고르세요.', 'ok');
     }
 
     el.country.addEventListener('change', async () => {
+      resetSelection();
       el.categoryFilter.innerHTML = '<option value="">전체 카테고리</option>' +
         state.categories.map(category => '<option value="' + escapeHtml(category) + '">' +
           escapeHtml(categoryLabel(category, selectedCountry()?.language || 'KR')) + '</option>').join('');
       fillEditorCountries(selectedCountry()?.jurisdiction);
-      await loadList({ resetSearch:true });
+      if (await loadList({ resetSearch:true }) === false) return;
       clearEditor();
     });
     el.categoryFilter.addEventListener('change', renderList);
+    el.selectVisible.addEventListener('click', () => {
+      const ids = filteredList(state.list, state.appliedSearch).map(item => item.id);
+      state.selectedIds = new Set(ids);
+      state.selectionAnchor = ids[0] || '';
+      renderList();
+    });
+    el.clearSelection.addEventListener('click', () => { resetSelection(); renderList(); });
+    el.bulkDeleteCountry.addEventListener('click', () => deleteSelectedPrayers('country').catch(error => setStatus(error.message, 'error')));
+    el.bulkDeleteAll.addEventListener('click', () => deleteSelectedPrayers('all').catch(error => setStatus(error.message, 'error')));
     el.searchButton.addEventListener('click', applySearch);
     el.search.addEventListener('keydown', event => {
       if (event.key === 'Enter') { event.preventDefault(); applySearch(); }
@@ -712,6 +857,14 @@
       .catch(error => setStatus(error.message, 'error')));
     [el.prayerId,el.editorCategory,el.title,el.sourceCategory,el.text].forEach(input =>
       input.addEventListener('input', updatePreview));
+    el.previewTargetCountry.addEventListener('change', updatePreview);
+    window.addEventListener('message', event => {
+      if (event.source !== el.appPreviewFrame.contentWindow || event.origin !== location.origin) return;
+      if (event.data?.type === 'ordo:prayer-preview-ready') {
+        state.previewReady = true;
+        updatePreview();
+      }
+    });
     el.saveLocal.addEventListener('click', () => saveLocal().catch(error => setStatus(error.message, 'error')));
     el.firebaseUpload.addEventListener('click', () => window.ordoFirebaseUploader.upload({
       button:el.firebaseUpload, endpoint:'/api/firebase-export', setStatus

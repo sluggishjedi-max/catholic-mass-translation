@@ -68,7 +68,7 @@
     }
     if (!global.firebase.apps.length) global.firebase.initializeApp(firebaseConfig);
     const db = global.firebase.firestore();
-    const names = ['prayer_data', 'hymn_data', 'order_of_mass', 'country_mass_metadata'];
+    const names = ['prayer_data', 'hymn_data', 'order_of_mass', 'country_mass_metadata', 'country_special_liturgies'];
     const settled = await Promise.allSettled(names.map(name => readCollection(db, name)));
     const output = {};
     settled.forEach((result, index) => {
@@ -81,6 +81,8 @@
     const hymns = output.hymn_data || [];
     const mass = output.order_of_mass || [];
     const countryMetadata = output.country_mass_metadata || [];
+    const specialLiturgies = output.country_special_liturgies || [];
+    if (specialLiturgies.length) global.uploadedCountrySpecialLiturgies = metadataByJurisdiction(specialLiturgies);
     if (prayers.length) {
       const registry = groupByJurisdiction(prayers, 'entries');
       if (Object.keys(registry).length) global.uploadedCountryPrayerData = registry;
@@ -105,6 +107,7 @@
       hymnCount: hymns.length,
       massCount: mass.length,
       countryMetadataCount: countryMetadata.length,
+      specialLiturgyCount: specialLiturgies.length,
       loadedAt: new Date().toISOString()
     };
     global.ordoFirebaseDataStatus = Object.freeze(detail);

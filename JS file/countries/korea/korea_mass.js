@@ -2290,96 +2290,6 @@
             "text_kr": "그러므로 하늘의 모든 천사와 한국 순교 성인들과 함께 저희도 기꺼이 주님을 찬미하며 노래하나이다."
           }]
         },
-        "vn_martyrs": {
-          "title": {
-            "kr": "베트남 순교자 감사송 (베트남 고유)"
-          },
-          "content": [{
-            "sp_kr": "✚",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }]
-        },
-        "us_thanksgiving": {
-          "title": {
-            "kr": "추수감사절 감사송 (미국 고유)"
-          },
-          "content": [{
-            "sp_kr": "✚",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }]
-        },
-        "us_independence": {
-          "title": {
-            "kr": "독립기념일 감사송 (미국 고유)"
-          },
-          "content": [{
-            "sp_kr": "✚",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }]
-        },
-        "us_guadalupe": {
-          "title": {
-            "kr": "과달루페의 성모 감사송 (미국 고유)"
-          },
-          "content": [{
-            "sp_kr": "✚",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }]
-        },
-        "jp_26_martyrs": {
-          "title": {
-            "kr": "일본 26위 순교자 감사송 (일본 고유)"
-          },
-          "content": [{
-            "sp_kr": "✚",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }]
-        },
-        "jp_discovery_of_christians": {
-          "title": {
-            "kr": "일본 신자 발견의 성모 감사송 (일본 고유)"
-          },
-          "content": [{
-            "sp_kr": "✚",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }, {
-            "sp_kr": "",
-            "text_kr": ""
-          }]
-        }
       },
       "sanctus": [{
         "sp_kr": "◎",
@@ -3336,16 +3246,10 @@
           "text_kr": "<B>죄를 사하여 주려고</B>"
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<B>너희와 많은 이를 위하여 흘릴 피다."
-            + "</B>"
-          )
+          "text_kr": "<B>너희와 많은 이를 위하여 흘릴 피다.</B>"
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<B>너희는 나를 기억하여 이를 행하여라."
-            + "</B>"
-          )
+          "text_kr": "<B>너희는 나를 기억하여 이를 행하여라.</B>"
         }, {
           "rubric_kr": (
             "사제가 보이는 성작을 바라본 뒤,<br>"

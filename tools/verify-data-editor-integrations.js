@@ -92,8 +92,12 @@ async function verifyPrayerCountryUi() {
     const sharedPrayer = list.prayers.find(prayer => prayer.id === '001.sign_of_cross');
     assert(sharedPrayer.jurisdictions.includes('KR'), 'Prayer country tags must include the selected country');
     assert(sharedPrayer.jurisdictions.length > 1, 'Shared prayers must expose every owning country tag');
-    const titleOnlyPrayer = list.prayers.find(prayer => prayer.id === 'kr_10_99');
-    assert(titleOnlyPrayer && !titleOnlyPrayer.hasText, 'Title-only prayer fixture is missing');
+    const fixtureSources = prayerTool.readCountryModuleSources().map(source => ({ ...source }));
+    const koreanSource = fixtureSources.find(source => source.jurisdiction === 'KR');
+    koreanSource.code += '\n;globalThis.countryPrayerData.KR = { ...globalThis.countryPrayerData.KR, entries: [...globalThis.countryPrayerData.KR.entries, { id: "codex.title.only.fixture", category: "common", titles: { KR: "Title-only fixture" }, texts: {} }] };';
+    const fixtureState = prayerTool.prayerEditorState(fixtureSources);
+    const titleOnlyPrayer = prayerTool.prayersForCountry(fixtureState, 'KR', 'KR').find(prayer => prayer.id === 'codex.title.only.fixture');
+    assert(titleOnlyPrayer && !titleOnlyPrayer.hasText, 'Title-only prayer must remain selectable without a body');
     assert(!titleOnlyPrayer.jurisdictions.includes('KR'), 'A title-only country must not appear in prayer country tags');
     const first = list.prayers[0];
     const detail = await (await fetch(`${base}/api/prayer?country=KR&lang=KR&id=${encodeURIComponent(first.id)}`)).json();
@@ -199,7 +203,7 @@ function uploadClientContext(db, payload) {
 }
 
 async function verifyFirebaseCollectionReplacement() {
-  for (const collectionName of ['prayer_data', 'hymn_data', 'order_of_mass', 'country_mass_metadata']) {
+  for (const collectionName of ['prayer_data', 'hymn_data', 'order_of_mass', 'country_mass_metadata', 'country_special_liturgies']) {
     const payload = buildFirebaseUploadPayload({ collectionName, label:'검증', idPrefix:'item',
       items:Array.from({ length:401 }, (_, index) => ({ id:`current-${index}`, value:index })) });
     const documents = new Map(Array.from({ length:401 }, (_, index) => [`stale-${index}`, { value:'old' }]));
@@ -273,18 +277,18 @@ function verifyFirebasePayloadCompatibility() {
 async function verifyHomepageFirebaseBridge() {
   const root = path.resolve(__dirname, '..');
   const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-  const versionedPage = fs.readFileSync(path.join(root, 'V28.html'), 'utf8');
+  const versionedPage = fs.readFileSync(path.join(root, 'V29.html'), 'utf8');
   const loader = fs.readFileSync(path.join(root, 'JS file', 'firebase_data_loader.js'), 'utf8');
-  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v28.js'), 'utf8');
+  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v29.js'), 'utf8');
   new vm.Script(loader, { filename: 'firebase_data_loader.js' });
   assert(index.includes('firebase-firestore-compat.js') && index.includes('firebase_data_loader.js'),
     'Homepage must load Firestore and the published-data bridge');
-  assert(index.includes('app_v28.js') && index.indexOf('firebase_data_loader.js') < index.indexOf('app_v28.js'),
+  assert(index.includes('app_v29.js') && index.indexOf('firebase_data_loader.js') < index.indexOf('app_v29.js'),
     'Published Firebase data must start loading before the app runtime');
-  assert.strictEqual(versionedPage, index, 'V28.html must be the versioned snapshot of index.html');
+  assert.strictEqual(versionedPage, index, 'V29.html must be the versioned snapshot of index.html');
   assert(!/countries\/[^/"?]+\/[^/"?]+_mass\.js/u.test(index),
     'V28 homepage must not load local country Order of Mass modules');
-  ['uploadedCountryPrayerData', 'uploadedCountryHymnData', 'uploadedCountryMassData', 'uploadedCountryMassMetadata']
+  ['uploadedCountryPrayerData', 'uploadedCountryHymnData', 'uploadedCountryMassData', 'uploadedCountryMassMetadata', 'uploadedCountrySpecialLiturgies']
     .forEach(name => assert(loader.includes(name) && app.includes(name), `Homepage bridge is missing ${name}`));
   assert(app.includes('ordoFirebaseDataReady'), 'App runtime must refresh after Firebase data is ready');
   assert(app.includes('let massData = [];'), 'V28 must start without bundled Order of Mass data');
@@ -298,7 +302,8 @@ async function verifyHomepageFirebaseBridge() {
     prayer_data: [{ order:10, jurisdiction:'US', id:'firebase-prayer', category:'common', titles:{ EN:'Firebase prayer' }, texts:{ EN:'Amen.' } }],
     hymn_data: [{ order:10, jurisdiction:'US', id:'firebase-hymn', country:'EN', title:'Firebase hymn' }],
     order_of_mass: [{ order:10, jurisdiction:'US', id:'firebase-mass', type:'section', en:'Firebase Mass' }],
-    country_mass_metadata: [{ order:10, jurisdiction:'US', jurisdictionName:'United States', calendar:{ '01-01':[{ title:'Mary, Mother of God' }] } }]
+    country_mass_metadata: [{ order:10, jurisdiction:'US', jurisdictionName:'United States', calendar:{ '01-01':[{ title:'Mary, Mother of God' }] } }],
+    country_special_liturgies: [{ order:10, jurisdiction:'KR', vigils:[{id:'christmas_vigil',names:{KR:'편집 전례'}}] }]
   };
   const context = {
     console,
@@ -321,6 +326,8 @@ async function verifyHomepageFirebaseBridge() {
   assert.strictEqual(context.uploadedHymnData[0].id, 'firebase-hymn');
   assert.strictEqual(context.uploadedCountryMassData.US.ordinary[0].id, 'firebase-mass');
   assert.strictEqual(context.uploadedCountryMassMetadata.US.jurisdictionName, 'United States');
+  assert.strictEqual(status.specialLiturgyCount, 1);
+  assert.strictEqual(context.uploadedCountrySpecialLiturgies.KR.vigils[0].names.KR, '편집 전례');
   const archiveRoot = path.join(root, 'Order of Mass 정리 보관함', 'V27.7 로컬 통상문', 'JS file', 'countries');
   const archivedMassFiles = fs.readdirSync(archiveRoot, { recursive:true })
     .filter(name => String(name).endsWith('_mass.js'));

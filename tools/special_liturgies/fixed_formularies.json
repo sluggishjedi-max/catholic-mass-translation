@@ -1,0 +1,501 @@
+{
+  "allSouls": {
+    "first": {
+      "data": {
+        "EN": {
+          "entrance": {
+            "text": "Just as Jesus died and has risen again, so through Jesus God will bring with him those who have fallen asleep; and as in Adam all die, so also in Christ will all be brought to life.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 980
+            }
+          },
+          "collect": {
+            "text": "Listen kindly to our prayers, O Lord, and, as our faith in your Son, raised from the dead, is deepened, so may our hope of resurrection for your departed servants also find new strength. Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, one God, for ever and ever.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 980
+            }
+          },
+          "prayer_offerings": {
+            "text": "Look favorably on our offerings, O Lord, so that your departed servants may be taken up into glory with your Son, in whose great mystery of love we are all united. Who lives and reigns for ever and ever.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 980
+            }
+          },
+          "communion": {
+            "text": "I am the Resurrection and the Life, says the Lord. Whoever believes in me, even though he dies, will live, and everyone who lives and believes in me will not die for ever.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 980
+            }
+          },
+          "prayer_after": {
+            "text": "Grant we pray, O Lord, that your departed servants, for whom we have celebrated this paschal Sacrament, may pass over to a dwelling place of light and peace. Through Christ our Lord.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 980
+            }
+          }
+        },
+        "VN": {
+          "entrance": {
+            "text": "Như Chúa Giê-su đã chết và đã sống lại, thì những ai đã an giấc trong Người, cũng sẽ được Thiên Chúa đưa về cùng với Người. Và như mọi người vì liên đới với A-đam mà phải chết, thì mọi người nhờ liên đới với Đức Ki-tô, cũng sẽ được Thiên Chúa cho sống.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1179
+            }
+          },
+          "collect": {
+            "text": "Lạy Chúa, Con Một Chúa từ cõi chết sống lại đã tăng cường niềm tin của chúng con. Giờ đây, xin Chúa thương nhận lời chúng con khẩn nguyện mà làm cho lòng chúng con luôn trông vậy vững vàng: chính Ðức Giêsu sẽ cho các tín hữu đã lìa cõi thế được phục sinh vinh hiển. Người là Thiên Chúa hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1179
+            }
+          },
+          "prayer_offerings": {
+            "text": "Lạy Chúa, xin thương nhìn đến lễ vật chúng con dâng và cho mọi tín hữu đã qua đời vào chung hưởng vinh quang với Con Một Chúa. Ðấng đã dùng bí tích yêu thương liên kết chúng con nên một. Người hằng sống và hiển trị muôn đời.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1179
+            }
+          },
+          "communion": {
+            "text": "Chúa nói: “Chính tôi là sự sống lại và là sự sống. Ai tin vào tôi, thì dù đã chết cũng sẽ được sống. Ai sống và tin vào tôi, sẽ không phải chết bao giờ”.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1179
+            }
+          },
+          "prayer_after": {
+            "text": "Lạy Chúa, chúng con vừa cử hành bí tích Vượt Qua để cầu cho anh chị em tín hữu đã qua đời. Xin thương đón nhận họ vào nhà Chúa, nơi đầy tràn ánh sáng và bình an. Chúng con cầu xin...",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1179
+            }
+          }
+        },
+        "KR": {
+          "entrance": {
+            "text": "예수님이 돌아가셨다가 다시 살아나셨듯이, 하느님은 예수님을 통하여 죽은 이들을 예수님과 함께 데려가시리라. 아담 안에서는 모든 사람이 죽었지만, 그리스도 안에서는 모든 사람이 살아나리라.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                823,
+                824
+              ]
+            }
+          },
+          "collect": {
+            "text": "주님, 성자께서 죽음에서 부활하시어 저희의 믿음을 깊게 하셨으니 저희의 기도를 인자로이 들으시고 저희도 세상을 떠난 주님의 종들과 더불어 그리스도와 함께 부활하리라는 굳건한 희망을 지니게 하소서.\n성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                823,
+                824
+              ]
+            }
+          },
+          "prayer_offerings": {
+            "text": "주님, 성자께서 세우신 사랑의 큰 성사로 하나 되어 저희가 바치는 이 예물을 자비로이 굽어보시고 세상을 떠난 주님의 종들이 성자와 함께 천상 영광을 누리게 하소서.\n성자께서는 영원히 살아 계시며 다스리시나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                823,
+                824
+              ]
+            }
+          },
+          "communion": {
+            "text": "주님이 말씀하신다. 나는 부활이요 생명이다. 나를 믿는 사람은 죽더라도 살고, 또 살아서 나를 믿는 모든 사람은 영원히 죽지 않으리라.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                823,
+                824
+              ]
+            }
+          },
+          "prayer_after": {
+            "text": "주님, 세상을 떠난 주님의 종들을 위하여 파스카의 신비를 거행하고 비오니 그들을 빛과 평화의 나라로 이끌어 주소서.\n우리 주 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                823,
+                824
+              ]
+            }
+          }
+        }
+      },
+      "source": {
+        "kind": "missal-fixed-formulary",
+        "calendarInvariant": true
+      },
+      "sourceTextFallbacks": {
+        "VN": "Title: Cầu cho các tín hữu đã qua đời – Lễ I\nMarkdown Content:\nBài Ðọc I Rm 6, 3-9 \n\n“Chúng ta phải sống đời sống mới”.\n\nTrích thư Thánh Phaolô Tông đồ gửi tín hữu Rôma.\n\nAnh em thân mến, tất cả chúng ta đã chịu phép rửa trong Ðức \n\nGiêsu Kitô, tức là đã chịu phép rửa trong sự chết của Người. Và \n\nchúng ta đã cùng chịu mai táng với Người, bởi được thanh tẩy trong \n\nsự chết của Người, để như Ðức Kitô nhờ vinh hiển của Chúa Cha \n\nmà sống lại từ cõi chết thế nào, thì cả chúng ta cũng phải sống đời \n\nsống mới như thế. Vì nếu chúng ta được liên kết với Người trong \ncùng một cái chết, giống như cái chết của Người, thì chúng ta cũng \n\nđược hợp nhất với Người, trong sự sống lại giống như vậy.\n\nNên biết điều này: con người cũ của chúng ta đã cùng chịu \n\nđóng đinh khổ giá, để xác thịt tội lỗi bị huỷ đi, hầu cho chúng ta \n\nkhông còn làm nô lệ tội lỗi nữa, vì con người đã chết, tức là được \n\ngiải thoát khỏi tội lỗi. Mà nếu chúng ta đã chết với Ðức Kitô, chúng \n\nta tin rằng chúng ta cũng sẽ cùng sống với Người, vì biết rằng Ðức \n\nKitô một khi từ cõi chết sống lại, Người không chết nữa, sự chết \n\nkhông còn làm chủ được Người nữa.\n\nÐó là lời Chúa.\n\nÐáp Ca Tv 22, 1-3a. 3b-4. 5. 6\n\nÐ. Chúa chăn nuôi tôi, tôi chẳng thiếu thốn chi (c. 5).\n\nHoặc đọc:Dù bước đi trong thung lũng tối, con không lo mắc \n\nnạn, vì Chúa ở cùng con (c. 4a).\n\n1) Chúa chăn nuôi tôi, tôi chẳng thiếu thốn chi; trên đồng cỏ \n\nxanh rì, Người thả tôi nằm nghỉ. Tới nguồn nước, chỗ nghỉ ngơi, \n\nNgười hướng dẫn tôi; tâm hồn tôi, Người lo bồi dưỡng.\n\nÐ. Chúa chăn nuôi tôi, tôi chẳng thiếu thốn chi (c. 5).\n\nHoặc đọc:Dù bước đi trong thung lũng tối, con không lo mắc\n\nnạn, vì Chúa ở cùng con (c. 4a).\n\n2) Người dẫn tôi qua những con đường đoan chính, sở dĩ vì uy \n\ndanh Người. - Dù bước đi trong thung lũng tối, con không lo mắc \n\nnạn, vì Chúa ở cùng con. Cây roi và cái gậy của Ngài, đó là điều an \n\nủi lòng con.\n\nÐ. Chúa chăn nuôi tôi, tôi chẳng thiếu thốn chi (c. 5).\n\nHoặc đọc:Dù bước đi trong thung lũng tối, con không lo mắc \n\nnạn, vì Chúa ở cùng con (c. 4a).\n\n3) Chúa dọn ra cho con mâm cỗ, ngay trước mặt những kẻ đối \n\nphương: đầu con thì Chúa xức dầu thơm, chén rượu con đầy tràn\n\nchan chứa.\nÐ. Chúa chăn nuôi tôi, tôi chẳng thiếu thốn chi (c. 5).\n\nHoặc đọc:Dù bước đi trong thung lũng tối, con không lo mắc \n\nnạn, vì Chúa ở cùng con (c. 4a).\n\n4) Lòng nhân từ và ân sủng Chúa theo tôi, hết mọi ngày trong \n\nđời sống; và trong nhà Chúa, tôi sẽ định cư cho tới thời gian rất ư \n\nlâu dài.\n\nÐ. Chúa chăn nuôi tôi, tôi chẳng thiếu thốn chi (c. 5).\n\nHoặc đọc:Dù bước đi trong thung lũng tối, con không lo mắc \n\nnạn, vì Chúa ở cùng con (c. 4a).\n\nAlleluia Ga 11, 25-26\n\nAlleluia, alleluia! - Chúa phán: “Hỡi những kẻ Cha Ta chúc \n\nphúc, hãy đến, hãy lãnh lấy phần gia nghiệp là Nước Trời đã chuẩn \n\nbị cho các ngươi từ khi tạo dựng vũ trụ”. - Alleluia.\n\nPhúc Âm Ga 6, 51-59\n\n“Thịt Ta thật là của ăn, \n\nvà máu Ta thật là của uống”.\n\nTin Mừng Chúa Giêsu Kitô theo Thánh Gioan.\n\nKhi ấy, Chúa Giêsu phán cùng dân Do-thái rằng: “Ta là bánh \n\nhằng sống từ trời xuống; ai ăn bánh này, thì sẽ sống đời đời. Và \n\nbánh Ta sẽ ban, chính là thịt Ta, để cho thế gian được sống”. Vậy \n\nngười Do-thái tranh luận với nhau rằng: “Làm sao ông này có thể \n\nlấy thịt mình cho chúng ta ăn được?”\n\nBấy giờ Chúa Giêsu nói với họ: “Thật, Ta bảo thật các ngươi: \n\nNếu các ngươi không ăn thịt Con Người và uống máu Ngài, các \n\nngươi sẽ không có sự sống trong các ngươi. Ai ăn thịt Ta và uống \n\nmáu Ta thì có sự sống đời đời, và Ta, Ta sẽ cho kẻ ấy sống lại ngày \n\nsau hết. Vì thịt Ta thật là của ăn, và máu Ta thật là của uống. Ai ăn \n\nthịt Ta và uống máu Ta, thì ở trong Ta, và Ta ở trong kẻ ấy. Cũng \n\nnhư Cha là Ðấng hằng sống đã sai Ta, nên Ta sống nhờ Cha, thì kẻ \n\năn Ta, chính người ấy cũng sẽ sống nhờ Ta. Ðây là bánh bởi trời \nxuống, không phải như cha ông các ngươi đã ăn manna và đã chết. \n\nAi ăn bánh này thì sẽ sống đời đời”.\n\nÐó là lời Chúa."
+      },
+      "fallbackSource": {
+        "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+        "pdfPages": [
+          3558,
+          3561
+        ],
+        "translation": "UBPT",
+        "calendarInvariant": true
+      }
+    },
+    "second": {
+      "data": {
+        "EN": {
+          "entrance": {
+            "text": "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 982
+            }
+          },
+          "collect": {
+            "text": "O God, glory of the faithful and life of the just, by the Death and Resurrection of whose Son we have been redeemed, look mercifully on your departed servants, that, just as they professed the mystery of our resurrection, so they may merit to receive the joys of eternal happiness. Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, one God, for ever and ever.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 982
+            }
+          },
+          "prayer_offerings": {
+            "text": "Almighty and merciful God, by means of these sacrificial offerings wash away, we pray, in the Blood of Christ, the sins of your departed servants, for you purify unceasingly by your merciful forgiveness those you once cleansed in the waters of Baptism. Through Christ our Lord.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 982
+            }
+          },
+          "communion": {
+            "text": "Let perpetual light shine upon them, O Lord, with your Saints for ever, for you are merciful.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 982
+            }
+          },
+          "prayer_after": {
+            "text": "Having received the Sacrament of your Only Begotten Son, who was sacrificed for us and rose in glory, we humbly implore you, O Lord, for your departed servants, that, cleansed by the paschal mysteries, they may glory in the gift of the resurrection to come. Through Christ our Lord.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 982
+            }
+          }
+        },
+        "VN": {
+          "entrance": {
+            "text": "Lạy Chúa, xin cho các tín hữu đã ly trần, được an nghỉ ngàn thu, và cho ánh hào quang vĩnh cửu, chiếu soi họ muôn đời.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1181
+            }
+          },
+          "collect": {
+            "text": "Lạy Chúa là niềm vinh hạnh của người tín hữu, là sự sống của bậc chính nhân, Chúa đã muốn cho con Chúa chịu chết và sống lại để cứu chuộc chúng con. Xin thương đến những người tín hữu khi còn sống đã tin nhận mầu nhiệm phục sinh mà ban cho họ được vinh phúc muôn đời. Chúng con cầu xin...",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1181
+            }
+          },
+          "prayer_offerings": {
+            "text": "Lạy Chúa, chúng con xin dâng lễ vật này để cầu cho anh chị em tín hữu đã lìa cõi thế. Xưa Chúa đã lấy nước thanh tẩy họ, nay nhờ Ðức Kitô đã đổ máu ra làm lễ tế giao hoà, xin mở lòng khoan dung rửa họ cho sạch mọi vết nhơ tội lỗi. Chúng con cầu xin...",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1181
+            }
+          },
+          "communion": {
+            "text": "Lạy Chúa, xin cho ánh hào quang vĩnh cửu chiếu soi các tín hữu đã ly trần. Xin đưa họ vào hưởng niềm hoan lạc cùng chư thánh, bởi vì Chúa nhân hậu từ bi. Xin cho họ được an nghỉ ngàn thu, và cho ánh hào quang vĩnh cửu, chiếu soi họ muôn đời. Xin đưa họ vào hưởng niềm hoan lạc cùng chư thánh, bởi vì Chúa nhân hậu từ bi.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1181
+            }
+          },
+          "prayer_after": {
+            "text": "Lạy Chúa, trong bí tích Vượt Qua này, Chúa đã cho chúng con nên một với Ðức Kitô, đấng toàn thắng tội lỗi và thần chết. Xin cho anh chị em tín hữu đã qua đời đuợc thoát khỏi vòng tội lỗi, để cùng Người hưởng vinh quang phục sinh. Người hằng sống và hiển trị muôn đời.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1181
+            }
+          }
+        },
+        "KR": {
+          "entrance": {
+            "text": "주님, 그들에게 영원한 안식을 주소서. 영원한 빛을 그들에게 비추소서.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                824,
+                825
+              ]
+            }
+          },
+          "collect": {
+            "text": "믿는 이들의 영광이시며 의로운 이들의 생명이신 하느님, 성자의 죽음과 부활로 저희를 구원하셨으니 세상을 떠난 하느님의 종들에게 자비를 베푸시어 부활의 신비를 믿은 그들이 영원한 행복을 누리게 하소서.\n성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                824,
+                825
+              ]
+            }
+          },
+          "prayer_offerings": {
+            "text": "전능하시고 자비로우신 하느님, 세상을 떠난 하느님의 종들을 몸소 세례의 물로 씻으시고 사랑과 자비로 끊임없이 보호해 주셨으니 이 제사를 받아들이시어 그들의 죄를 그리스도의 피로 깨끗이 씻어 주소서.\n우리 주 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                824,
+                825
+              ]
+            }
+          },
+          "communion": {
+            "text": "주님, 당신은 자애로우시니, 당신 성인들과 함께 영원한 빛을 그들에게 비추소서.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                824,
+                825
+              ]
+            }
+          },
+          "prayer_after": {
+            "text": "주님, 저희를 위하여 희생되시고 영광스럽게 부활하신 외아드님의 성체를 받아 모시고 간절히 청하오니 세상을 떠난 주님의 종들이 파스카의 신비로 깨끗해지고 훗날 부활하여 영광을 누리게 하소서.\n우리 주 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                824,
+                825
+              ]
+            }
+          }
+        }
+      },
+      "source": {
+        "kind": "missal-fixed-formulary",
+        "calendarInvariant": true
+      },
+      "sourceTextFallbacks": {
+        "VN": "Title: Cầu cho các tín hữu đã qua đời – Lễ II\nMarkdown Content:\nBài Ðọc I Kn 3, 1-9\n\n“Chúa chấp nhận các ngài như của lễ toàn thiêu”.\n\nTrích sách Khôn Ngoan.\n\nLinh hồn những người công chính ở trong tay Chúa, và đau khổ \n\nsự chết không làm gì được các ngài. Ðối với con mắt người không \n\nhiểu biết, thì hình như các ngài đã chết và việc các ngài từ biệt \n\nchúng ta, là như đi vào cõi tiêu diệt. Nhưng thật ra các ngài sống \n\ntrong bình an. Và trước mặt người đời, dầu các ngài đã chịu khổ \n\nhình, lòng cậy trông của các ngài cũng không chết. Sau một giây lát \n\nchịu khổ nhục, các ngài sẽ được vinh dự lớn lao: vì Chúa đã thử \n\nthách các ngài như thử vàng trong lửa, và chấp nhận các ngài như \n\ncủa lễ toàn thiêu.\n\nKhi đến giờ Chúa ghé mắt nhìn các ngài, các người công chính \n\nsẽ sáng chói và chiếu tỏ ra như ánh lửa chiếu qua bụi lau. Các ngài \n\nsẽ xét xử các dân tộc, sẽ thống trị các quốc gia, và Thiên Chúa sẽ \n\nngự trị trong các ngài muôn đời. Các ngài đã tin tưởng ở Chúa, thì \n\nsẽ hiểu biết chân lý, và trung thành với Chúa trong tình yêu, vì ơn \n\nChúa và bình an sẽ dành cho những người Chúa chọn.\n\nÐó là lời Chúa.\nÐáp Ca Tv 24, 6-7bc. 17-18. 20-21\n\nÐ. Lạy Chúa, con vươn linh hồn con lên tới Chúa (c. 1b).\n\nHoặc đọc: Lạy Chúa, phàm ai trông cậy Chúa, ắt chẳng hổ \n\nngươi (c. 3b).\n\n1) Lạy Chúa, xin nhớ lòng thương xót của Ngài, lòng thương \n\nxót tự muôn đời vẫn có. Xin hãy nhớ con theo lòng thương xót của \n\nNgài, vì lòng nhân hậu của Ngài, thân lạy Chúa.\n\nÐ. Lạy Chúa, con vươn linh hồn con lên tới Chúa (c. 1b).\n\nHoặc đọc: Lạy Chúa, phàm ai trông cậy Chúa, ắt chẳng hổ \n\nngươi (c. 3b).\n\n2) Xin cho lòng con được nhẹ bớt lo âu, và giải thoát con khỏi \n\ncảnh ưu tư phiền muộn. Xin Chúa coi cảnh lầm than khốn khổ của \n\ncon, và tha thứ hết mọi điều tội lỗi.\n\nÐ. Lạy Chúa, con vươn linh hồn con lên tới Chúa (c. 1b).\n\nHoặc đọc: Lạy Chúa, phàm ai trông cậy Chúa, ắt chẳng hổ \n\nngươi (c. 3b).\n\n3) Xin gìn giữ mạng sống con và giải thoát con, đừng để con bẽ \n\nbàng vì đã tìm nương tựa Chúa. Nguyện cho lòng con vô tội và \n\ntrung thứ bảo vệ con, vì con trông cậy vào Ngài, thân lạy Chúa.\n\nÐ. Lạy Chúa, con vươn linh hồn con lên tới Chúa (c. 1b).\n\nHoặc đọc: Lạy Chúa, phàm ai trông cậy Chúa, ắt chẳng hổ \n\nngươi (c. 3b).\n\nAlleluia 2 Tm 2, 11-12a\n\nAlleluia, alleluia! - Nếu chúng ta cùng chết với Chúa Kitô, thì \n\nchúng ta cùng sống với Người; nếu chúng ta kiên tâm chịu đựng, \n\nchúng ta sẽ cùng thống trị với Người. - Alleluia.\nPhúc Âm Lc 23, 33. 39-43\n\n“Hôm nay ngươi sẽ ở trên thiên đàng với Ta”.\n\nTin Mừng Chúa Giêsu Kitô theo Thánh Luca.\n\nKhi đã đến nơi gọi là Núi Sọ, chúng đóng đinh Người vào thập \n\ngiá cùng với hai tên trộm cướp, một đứa bên hữu một đứa bên tả \n\nNgười. Bấy giờ Chúa Giêsu than thở rằng: “Lạy Cha, xin tha cho \n\nchúng, vì chúng không biết việc chúng làm”. Rồi chúng rút thăm mà \n\nchia nhau áo Người. Một trong hai kẻ trộm bị đóng đinh trên thập \n\ngiá cũng sỉ nhục người rằng: “Nếu ông là Ðấng Kitô, ông hãy tự cứu \n\nông và cứu chúng tôi nữa”.\n\nÐối lại, tên kia mắng nó rằng: “Mi cũng chịu đồng một án mà \n\nmi chẳng sợ Thiên Chúa sao? Phần chúng ta, như thế này là đích \n\nđáng, vì chúng ta chịu xứng với việc chúng ta làm, còn ông này, ông \n\ncó làm gì xấu đâu?” Và anh ta thưa cùng Chúa Giêsu rằng: “Lạy \n\nNgài, khi nào về nước Ngài, xin nhớ đến tôi”. Chúa Giêsu đáp:\n\n“Quả thật, Ta bảo ngươi: ngay hôm nay, ngươi sẽ ở trên thiên đàng \n\nvới Ta”.\n\nÐó là lời Chúa."
+      },
+      "fallbackSource": {
+        "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+        "pdfPages": [
+          3561,
+          3563
+        ],
+        "translation": "UBPT",
+        "calendarInvariant": true
+      }
+    },
+    "third": {
+      "data": {
+        "EN": {
+          "entrance": {
+            "text": "God, who raised Jesus from the dead, will give life also to your mortal bodies, through his Spirit that dwells in you.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 983
+            }
+          },
+          "collect": {
+            "text": "O God, who willed that your Only Begotten Son, having conquered death, should pass over into the realm of heaven, grant, we pray, to your departed servants that, with the mortality of this life overcome, they may gaze eternally on you, their Creator and Redeemer. Through our Lord Jesus Christ, your Son, who lives and reigns with you in the unity of the Holy Spirit, one God, for ever and ever.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 983
+            }
+          },
+          "prayer_offerings": {
+            "text": "Receive, Lord, in your kindness, the sacrificial offering we make for all your servants who sleep in Christ, that, set free from the bonds of death by this singular sacrifice, they may merit eternal life. Through Christ our Lord.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 983
+            }
+          },
+          "communion": {
+            "text": "We await a savior, the Lord Jesus Christ, who will change our mortal bodies, to conform with his glorified body.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 983
+            }
+          },
+          "prayer_after": {
+            "text": "Through these sacrificial gifts which we have received, O Lord, bestow on your departed servants your great mercy and, to those you have endowed with the grace of Baptism, grant also the fullness of eternal joy. Through Christ our Lord.",
+            "source": {
+              "file": "참고자료/미사/전문/영어.pdf",
+              "pdfPage": 983
+            }
+          }
+        },
+        "VN": {
+          "entrance": {
+            "text": "Thiên Chúa, Đấng làm cho Chúa Giê-su sống lại từ cõi chết, cũng sẽ dùng Thánh Thần của Người đang ngự trong anh em, để làm cho thân xác phải chết của anh em được sự sống mới.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1182
+            }
+          },
+          "collect": {
+            "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã cho Ðức Kitô Con Chúa chiến thắng tử thần mà về với Chúa. Xin cho các tín hữu đã qua đời được cùng Ðức Kitô chiến thắng vẻ vang và muôn đời chiêm ngưỡng Chúa là Ðấng tạo thành và giải thoát họ. Chúng con cầu xin...",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1182
+            }
+          },
+          "prayer_offerings": {
+            "text": "Lạy Thiên Chúa từ bi nhân hậu, xin thương nhận của lễ chúng con dâng để cầu cho những người thuộc về Ðức Kitô mà nay đã chết. Nhờ lễ tế vô song này, xin giải thoát họ khỏi tử thần giam hãm và cho họ được sống muôn đời. Chúng con cầu xin...",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1182
+            }
+          },
+          "communion": {
+            "text": "Chúng ta nóng lòng mong đợi Đấng Cứu Độ, là Đức Giê-su Kitô Chúa chúng ta. Người sẽ biến đổi thân xác yếu hèn của chúng ta, nên giống thân xác vinh hiển của Người.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1182
+            }
+          },
+          "prayer_after": {
+            "text": "Lạy Chúa, Chúa vừa chấp nhận lễ tế chúng con dâng. Xin mở lượng từ bi nhân hậu thương đến anh chị em tín hữu đã qua đời. Nhờ bí tích thánh tẩy, Chúa đã ban cho họ phúc làm con Chúa, xin cũng cho họ được hưởng niềm vui muôn đời. Chúng con cầu xin...",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 1182
+            }
+          }
+        },
+        "KR": {
+          "entrance": {
+            "text": "예수님을 죽은 이들 가운데에서 일으키신 하느님은 우리 안에 사시는 당신의 영을 통하여 우리의 죽을 몸도 다시 살려 주시리라.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                825,
+                826
+              ]
+            }
+          },
+          "collect": {
+            "text": "하느님, 외아드님께서 죽음을 이기시고 하늘 나라로 건너가게 하셨으니 세상을 떠난 하느님의 종들도 이 세상의 죽음을 이기고 창조주요 구원자이신 하느님을 뵈오며 영원히 기뻐하게 하소서.\n성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                825,
+                826
+              ]
+            }
+          },
+          "prayer_offerings": {
+            "text": "주님, 저희가 바치는 이 제물을 인자로이 받으시고 그리스도 안에서 고이 잠든 주님의 종들이 이 특별한 제사로 죽음의 사슬에서 풀려나 영원한 생명을 얻게 하소서.\n우리 주 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                825,
+                826
+              ]
+            }
+          },
+          "communion": {
+            "text": "우리는 구세주 예수 그리스도를 기다리네. 그분은 우리의 비천한 몸을 당신의 영광스러운 몸과 같이 바꾸어 주시리라.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                825,
+                826
+              ]
+            }
+          },
+          "prayer_after": {
+            "text": "주님, 저희가 바친 이 제사를 받으시고 세상을 떠난 주님의 종들에게 풍성한 자비를 베푸시어 일찍이 세례의 은총을 받은 그들이 영원한 기쁨을 충만히 누리게 하소서.\n우리 주 그리스도를 통하여 비나이다.",
+            "source": {
+              "file": "참고자료/미사/전문/한국어.pdf",
+              "pdfPages": [
+                825,
+                826
+              ]
+            }
+          }
+        }
+      },
+      "source": {
+        "kind": "missal-fixed-formulary",
+        "calendarInvariant": true
+      },
+      "sourceTextFallbacks": {
+        "VN": "Title: Cầu cho các tín hữu đã qua đời – Lễ III\nMarkdown Content:\nBài Ðọc I Rm 5, 5-11\n\n“Chúng ta đã nên công chính trong Máu của Người, \n\nvà nhờ Người chúng ta được cứu khỏi cơn thịnh nộ”.\n\nTrích thư Thánh Phaolô Tông đồ gửi tín hữu Rôma.\n\nAnh em thân mến, tình yêu của Thiên Chúa tuôn đổ trong tâm \n\nhồn chúng ta nhờ Thánh Thần đã ban cho chúng ta. Chúa Kitô theo \n\nkỳ hẹn mà chịu chết vì chúng ta là kẻ tội lỗi. Ít có ai chết thay cho \n\nngười công chính, họa chăng mới có người dám chết vì kẻ lành. \n\nNhưng Thiên Chúa chứng tỏ tình yêu của Người đối với chúng ta, \n\nnghĩa là trong lúc chúng ta còn là tội nhân, thì theo kỳ hẹn, Chúa \n\nKitô đã chết vì chúng ta.\n\nVậy phương chi bây giờ, chúng ta đã nên công chính trong máu \n\ncủa Người, và nhờ Người chúng ta sẽ được cứu khỏi cơn thịnh nộ. \n\nBởi chưng nếu khi chúng ta còn là thù nghịch, mà chúng ta đã được \n\ngiao hoà cùng Thiên Chúa nhờ cái chết của Con Ngài, thì huống chi \n\nkhi đã được giao hoà, ắt chúng ta sẽ được cứu độ trong sự sống của \n\nchính Chúa Kitô. Và không những thế, chúng ta còn được vinh hiển \n\ntrong Thiên Chúa nhờ Ðức Giêsu Kitô, Chúa chúng ta, nhờ Người \n\nmà bây giờ chúng ta được lãnh ơn giao hoà.\n\nÐó là lời Chúa.\n\nÐáp Ca Tv 26, 1. 4. 7 và 8b và 9a. 13-14\n\nÐ. Chúa là sự sáng và là Ðấng cứu độ tôi (c. 1a).\n\nHoặc đọc: Tôi tin rằng tôi sẽ được nhìn xem những ơn lành của \n\nChúa trong cõi nhân sinh (c. 13).\n\n1) Chúa là sự sáng, là Ðấng cứu độ, tôi sợ chi ai? Chúa là Ðấng \n\nphù trợ đời tôi, tôi sợ gì ai?\n\nÐ. Chúa là sự sáng và là Ðấng cứu độ tôi (c. 1a).\n\nHoặc đọc: Tôi tin rằng tôi sẽ được nhìn xem những ơn lành của \n\nChúa trong cõi nhân sinh (c. 13).\n2) Có một điều tôi xin Chúa, một điều tôi kiếm tìm, đó là tôi \n\nđược cư ngụ trong nhà Chúa suốt đời tôi, hầu vui hưởng sự êm đềm \n\ncủa Chúa, và chiêm ngưỡng thánh điện của Người.\n\nÐ. Chúa là sự sáng và là Ðấng cứu độ tôi (c. 1a).\n\nHoặc đọc: Tôi tin rằng tôi sẽ được nhìn xem những ơn lành của \n\nChúa trong cõi nhân sinh (c. 13).\n\n3) Lạy Chúa, xin nghe con kêu cầu, xin thương xót và nhậm lời \n\ncon. Và lạy Chúa, con tìm ra mắt Chúa. Xin Chúa đừng ẩn mặt xa \n\ncon.\n\nÐ. Chúa là sự sáng và là Ðấng cứu độ tôi (c. 1a).\n\nHoặc đọc: Tôi tin rằng tôi sẽ được nhìn xem những ơn lành của \n\nChúa trong cõi nhân sinh (c. 13).\n\n4) Tôi tin rằng tôi sẽ được nhìn xem những ơn lành của Chúa \n\ntrong cõi nhân sinh. Hãy trông đợi Chúa, hãy sống can trường, hãy \n\nphấn khởi tâm hồn và trông đợi Chúa.\n\nÐ. Chúa là sự sáng và là Ðấng cứu độ tôi (c. 1a).\n\nHoặc đọc: Tôi tin rằng tôi sẽ được nhìn xem những ơn lành của \n\nChúa trong cõi nhân sinh (c. 13).\n\nAlleluia Ga 6, 39\n\nAlleluia, alleluia! - Chúa phán: “Ý của Cha là hễ sự gì Người \n\nđã ban cho Ta, Ta chẳng để mất, nhưng ngày sau hết Ta sẽ cho nó \n\nsống lại”. - Alleluia.\n\nPhúc Âm Ga 17, 24-26\n\n“Con muốn rằng Con ở đâu, chúng cũng ở đấy với Con”.\n\nTin Mừng Chúa Giêsu Kitô theo Thánh Gioan.\n\nKhi ấy, (Chúa Giêsu ngước mắt lên trời cầu nguyện rằng:) “Lạy \n\nCha, những kẻ Cha ban cho Con thì Con muốn rằng Con ở đâu \n\nchúng cũng ở đấy với Con, để chúng chiêm ngưỡng vinh quang mà \n\nCha đã ban cho Con, vì Cha đã yêu mến Con trước khi tạo thành thế \ngian. Lạy Cha công chính, thế gian đã không biết Cha, nhưng Con \n\nbiết Cha, và những người này cũng biết rằng Cha đã sai Con. Con \n\nđã tỏ cho chúng biết danh Cha, và Con sẽ còn tỏ cho chúng nữa, để \n\ntình Cha yêu Con ở trong chúng, và Con cũng ở trong chúng nữa”.\n\nÐó là lời Chúa."
+      },
+      "fallbackSource": {
+        "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+        "pdfPages": [
+          3563,
+          3566
+        ],
+        "translation": "UBPT",
+        "calendarInvariant": true
+      }
+    }
+  },
+  "vigils": {
+    "christmas_vigil": {
+      "data": {
+        "VN": {
+          "entrance": {
+            "text": "Hôm nay, anh em sẽ được biết, Chúa đến và cứu độ chúng ta. Ngày mai, anh em sẽ được thấy vinh quang của Người.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 719
+            }
+          },
+          "collect": {
+            "text": "Lạy Chúa, hằng năm Chúa khơi dậy trong lòng chúng con niềm hoan hỷ trông chờ ơn cứu độ. Giờ đây, chúng con đang vui vẻ đón mừng con Một Chúa đến cứu chuộc chúng con, thì ngày sau, khi thấy Người đến xét xử, xin cho chúng con khỏi run sợ hãi hùng. Người là Thiên Chúa hằng sống và hiển trị cùng Chúa, hiệp nhất với Chúa Thánh Thần đến muôn thuở muôn đời.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 719
+            }
+          },
+          "prayer_offerings": {
+            "text": "Lạy Chúa, Chúa đã tỏ cho chúng con thấy mầu nhiệm Ðức Giêsu Con Một Chúa giáng trần là khởi điểm ơn cứu độ. Xin cho chúng con ngay từ chiều hôm nay biết đem lòng sốt sắng mừng lễ Giáng Sinh của Người. Người hằng sống và hiển trị muôn đời.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 719
+            }
+          },
+          "communion": {
+            "text": "Vinh quang Đức Chúa sẽ tỏ hiện, và mọi người phàm sẽ được thấy, ơn cứu độ của Thiên Chúa chúng ta.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 719
+            }
+          },
+          "prayer_after": {
+            "text": "Lạy Chúa, hôm nay mừng kỷ niệm Con Chúa giáng trần, Chúa đã cho chúng con được no say nơi bàn tiệc thiên quốc. Xin Chúa cũng thương ban cho chúng con được dồi dào sức sống thần linh. Chúng con cầu xin nhờ Đức Kitô, Chúa chúng con.",
+            "source": {
+              "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+              "pdfPage": 719
+            }
+          }
+        }
+      },
+      "source": {
+        "kind": "missal-fixed-formulary",
+        "calendarInvariant": true
+      },
+      "sourceTextFallbacks": {
+        "VN": "Title: Lễ Vọng Giáng Sinh\nMarkdown Content:\nBài đọc I Is 62, 1-5\n\n“Ngươi đẹp lòng Chúa”.\n\nBài trích sách Tiên tri Isaia.\n\nVì Sion, tôi sẽ không im tiếng, và vì Giêrusalem, tôi sẽ không \n\nnghỉ ngơi cho đến khi Ðấng công chính xuất hiện như ánh sáng, \n\nÐấng Cứu độ Sion đến như ngọn đuốc sáng ngời. Mọi dân tộc sẽ \n\nthấy Người là Ðấng công chính của ngươi, và mọi đế vương sẽ thấy \n\nvinh hiển Người. Chính Chúa sẽ đặt cho ngươi một tên mới. \n\nNgươi sẽ là triều thiên vinh hiển trong tay Chúa, và vương miện \n\nquyền bính trong tay Thiên Chúa ngươi. ngươi sẽ không còn gọi là \n\nkẻ bị ruồng bỏ, và đất ngươi sẽ không còn gọi là chốn hoang vu. \n\nNgươi sẽ được gọi là “kẻ Ta ưa thích”, và đất ngươi sẽ được gọi là \n\nđất có dân cư, vì ngươi đẹp lòng Thiên Chúa và đất ngươi sẽ có dân \n\ncư. \n\n(Như) thanh niên sẽ ở cùng trinh nữ, con cái ngươi sẽ ở trong \n\nngươi; (như) người chồng sẽ vui mừng vì vợ, Thiên Chúa ngươi \n\ncũng sẽ vui mừng vì ngươi.\n\nÐó là lời Chúa.\nĐáp ca Tv 88, 4-5. 16-17. 27 và 29\n\nÐ. Lạy Chúa, con sẽ ca ngợi tình thương của Chúa tới muôn \n\nđời (x. c. 2a).\n\n1) Ta đã ký minh ước cùng người Ta tuyển lựa, Ta đã thề cùng \n\nÐavít là tôi tớ của Ta rằng: “Cho tới muôn đời Ta bảo tồn miêu duệ \n\ncủa ngươi, và Ta thiết lập ngai báu ngươi qua muôn thế hệ”.\n\nÐ. Lạy Chúa, con sẽ ca ngợi tình thương của Chúa tới muôn \n\nđời (x. c. 2a).\n\n2) Phúc thay dân tộc biết hân hoan, lạy Chúa, họ tiến thân trong \n\nánh sáng nhan Ngài. Họ luôn luôn mừng rỡ vì danh Chúa, và tự hào \n\nvì đức công minh Ngài.\n\nÐ. Lạy Chúa, con sẽ ca ngợi tình thương của Chúa tới muôn \n\nđời (x. c. 2a).\n\n3) Chính người sẽ thưa cùng Ta: “Chúa là Cha con, là Thiên \n\nChúa và Ðá Tảng cứu độ của con”. Ðời đời Ta sẽ dành cho người \n\nlòng sủng ái, và lời ước Ta ký với người sẽ được mãi mãi duy trì.\n\nÐ. Lạy Chúa, con sẽ ca ngợi tình thương của Chúa tới muôn \n\nđời (x. c. 2a).\nBài đọc II Cv 13, 16-17. 22-25\n\n“Thánh Phaolô làm chứng về Chúa Kitô, con vua Ðavít”.\n\nBài trích sách Tông đồ Công vụ.\n\nPhaolô đến Antiôkia thuộc Pisiđia, vào hội đường, đứng lên, \n\ngiơ tay ra hiệu cho mọi người yên lặng rồi nói: “Hỡi người Israel và \n\nnhững kẻ kính sợ Thiên Chúa, hãy nghe đây. Thiên Chúa Israel đã \n\nchọn Tổ phụ chúng ta, Người đã thăng tiến dân Người khi họ còn cư \n\nngụ trong nước Ai-cập, và Người ra tay mạnh mẽ đưa cha ông \n\nchúng ta ra khỏi nước ấy. “Sau khi loại bỏ Saolê, Chúa đã đặt Ðavít \n\nlên làm vua dân Người, để chứng nhận điều đó, chính Người đã \n\nphán: “Ta đã gặp được Ðavít, con của Giêsê, người vừa ý Ta, người \n\nsẽ thi hành mọi ý muốn của Ta”. “Bởi dòng dõi Ðavít, theo lời hứa, \n\nThiên Chúa ban cho Israel Ðức Giêsu làm Ðấng Cứu Ðộ, Ðấng mà \n\nGioan đã báo trước, khi ông đến rao giảng phép rửa thống hối cho \n\ntoàn dân Israel. Khi Gioan hoàn tất hành trình, ông tuyên bố: “Tôi \n\nkhông phải là người mà anh em lầm tưởng; nhưng đây, Người sẽ \n\nđến sau tôi mà tôi không đáng cởi dây giày dưới chân Người”.\n\nÐó là lời Chúa.\n\nAlleluia\n\nAll. All. - Ngày mai tội lỗi trần gian sẽ được xoá bỏ, và Ðấng \n\nCứu Thế sẽ ngự trị trên chúng ta. - All.\nPhúc âm Mt 1, 1-25\n\n“Dòng dõi Chúa Giêsu Kitô, con vua Ðavít”.\n\nTin Mừng Chúa Giêsu Kitô theo Thánh Matthêu.\n\nSách gia phả của Chúa Giêsu Kitô, con vua Ðavít, con của \n\nAbraham. Abraham sinh Isaac; Isaac sinh Giacóp; Giacóp sinh \n\nGiuđa ; Phares sinh (bởi bà Thamar) và các anh em người. Giuđa \n\nsinh Phares và Zara Esrom; Esrom sinh Aram; Aram sinh \n\nAminadab; Aminadab sinh Naasson; Naasson sinh Salmon; Salmon \n\nsinh Booz do bà Rahab; Booz sinh Giobed do bà Rút. Giobed sinh \n\nGiêsê; Giêsê sinh vua Ðavít. Ðavít sinh Salomon do bà vợ của Uria; \n\nSalomon sinh Robo-am; Roboam sinh Abia; Abia sinh Asa; Asa \n\nsinh Giosaphát; Giosaphát sinh Gioram; Gioram sinh Ozia; Ozia \n\nsinh Gioatham; Gioatham sinh Achaz; Achaz sinh Ezekia; Ezekia \n\nsinh Manas-se; Manasse sinh Amos; Amos sinh Giosia; Giosia sinh \n\nGiêconia và các em trong thời lưu đày ở Babylon. Sau thời lưu đày \n\nở Babylon, Giêconia sinh Salathiel; Salathiel sinh Zorababel; \n\nZorababel sinh Abiud; Abiud sinh Eliakim; Eliakim sinh Azor; \n\nAzor sinh Sađoc; Sađoc sinh Akim; Akim sinh Eliud; Eliud sinh \n\nEleazar; Eleazar sinh Mathan; Mathan sinh Giacóp; Giacóp sinh \n\nGiuse, là bạn của Maria, mẹ của Chúa Giêsu gọi là Ðức Kitô.\n\nVậy, từ Abraham đến Ðavít có tất cả mười bốn đời, từ Ðavít \n\nđến cuộc lưu đày ở Babylon có mười bốn đời, và từ cuộc lưu đày ở \n\nBabylon cho đến Chúa Kitô có mười bốn đời.\n\nChúa Kitô giáng sinh trong hoàn cảnh sau đây: Mẹ Người là \n\nMaria đính hôn với Giuse, trước khi về chung sống với nhau, bà đã \n\nthụ thai bởi phép Chúa Thánh Thần. Giuse, bạn của bà là người \n\ncông chính, không muốn tố cáo bà, nên định tâm lìa bỏ bà cách kín \n\nđáo. Nhưng đang khi định tâm như vậy, thì thiên thần hiện đến cùng \n\nông trong giấc mơ và bảo: “Hỡi Giuse con vua Ðavít, đừng ngại \n\nnhận Maria về nhà làm bạn mình, vì Maria mang thai là bởi phép \n\nChúa Thánh Thần; bà sẽ hạ sinh một con trai mà ông đặt tên là \nGiêsu, vì chính Người sẽ cứu dân mình khỏi tội”. Tất cả sự kiện này \n\nđã được thực hiện để làm trọn lời Chúa dùng miệng tiên tri phán \n\nxưa rằng: “Này đây một trinh nữ sẽ thụ thai, hạ sinh một con trai, \n\nngười ta sẽ gọi tên con trẻ là Emmanuel, nghĩa là Thiên Chúa-ở￾cùng-chúng-ta”. \n\nKhi tỉnh dậy, Giuse đã thực hiện như lời thiên thần Chúa \n\ntruyền. Ông tiếp nhận bạn mình, nhưng không ăn ở với nhau, cho \n\nđến khi Maria sinh con trai đầu lòng, thì Giuse đặt tên con trẻ là \n\nGiêsu.\n\nÐó là lời Chúa."
+      },
+      "fallbackSource": {
+        "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+        "pdfPages": [
+          1635,
+          1639
+        ],
+        "translation": "UBPT",
+        "calendarInvariant": true
+      }
+    }
+  }
+}

@@ -1,0 +1,2444 @@
+{
+  "checkedAt": "2026-10-11",
+  "before": {
+    "total": 1811,
+    "byDiocese": {
+      "청주교구": {
+        "parishes": 85,
+        "massTimes": 61,
+        "priests": 85,
+        "sisterNames": 11,
+        "sisterCongregations": 40
+      },
+      "수원교구": {
+        "parishes": 222,
+        "massTimes": 222,
+        "priests": 222,
+        "sisterNames": 3,
+        "sisterCongregations": 109
+      },
+      "서울대교구": {
+        "parishes": 233,
+        "massTimes": 233,
+        "priests": 233,
+        "sisterNames": 22,
+        "sisterCongregations": 180
+      },
+      "춘천교구": {
+        "parishes": 62,
+        "massTimes": 61,
+        "priests": 62,
+        "sisterNames": 14,
+        "sisterCongregations": 38
+      },
+      "대전교구": {
+        "parishes": 155,
+        "massTimes": 112,
+        "priests": 151,
+        "sisterNames": 11,
+        "sisterCongregations": 82
+      },
+      "대구대교구": {
+        "parishes": 164,
+        "massTimes": 113,
+        "priests": 164,
+        "sisterNames": 33,
+        "sisterCongregations": 119
+      },
+      "부산교구": {
+        "parishes": 127,
+        "massTimes": 84,
+        "priests": 126,
+        "sisterNames": 27,
+        "sisterCongregations": 87
+      },
+      "안동교구": {
+        "parishes": 41,
+        "massTimes": 31,
+        "priests": 41,
+        "sisterNames": 7,
+        "sisterCongregations": 33
+      },
+      "마산교구": {
+        "parishes": 78,
+        "massTimes": 51,
+        "priests": 78,
+        "sisterNames": 15,
+        "sisterCongregations": 58
+      },
+      "인천교구": {
+        "parishes": 135,
+        "massTimes": 104,
+        "priests": 135,
+        "sisterNames": 29,
+        "sisterCongregations": 84
+      },
+      "의정부교구": {
+        "parishes": 88,
+        "massTimes": 79,
+        "priests": 88,
+        "sisterNames": 18,
+        "sisterCongregations": 38
+      },
+      "광주대교구": {
+        "parishes": 142,
+        "massTimes": 101,
+        "priests": 141,
+        "sisterNames": 28,
+        "sisterCongregations": 84
+      },
+      "군종교구": {
+        "parishes": 98,
+        "massTimes": 56,
+        "priests": 95,
+        "sisterNames": 6,
+        "sisterCongregations": 24
+      },
+      "전주교구": {
+        "parishes": 96,
+        "massTimes": 55,
+        "priests": 96,
+        "sisterNames": 24,
+        "sisterCongregations": 67
+      },
+      "제주교구": {
+        "parishes": 31,
+        "massTimes": 31,
+        "priests": 31,
+        "sisterNames": 5,
+        "sisterCongregations": 24
+      },
+      "원주교구": {
+        "parishes": 54,
+        "massTimes": 41,
+        "priests": 54,
+        "sisterNames": 15,
+        "sisterCongregations": 32
+      }
+    },
+    "massTimes": 1435,
+    "priests": 1802,
+    "sisterNames": 268,
+    "sisterCongregations": 1099
+  },
+  "after": {
+    "total": 1811,
+    "byDiocese": {
+      "청주교구": {
+        "parishes": 85,
+        "massTimes": 82,
+        "priests": 85,
+        "sisterNames": 0,
+        "sisterCongregations": 39
+      },
+      "수원교구": {
+        "parishes": 222,
+        "massTimes": 222,
+        "priests": 222,
+        "sisterNames": 1,
+        "sisterCongregations": 107
+      },
+      "서울대교구": {
+        "parishes": 233,
+        "massTimes": 233,
+        "priests": 233,
+        "sisterNames": 0,
+        "sisterCongregations": 175
+      },
+      "춘천교구": {
+        "parishes": 62,
+        "massTimes": 61,
+        "priests": 62,
+        "sisterNames": 0,
+        "sisterCongregations": 37
+      },
+      "대전교구": {
+        "parishes": 155,
+        "massTimes": 147,
+        "priests": 153,
+        "sisterNames": 0,
+        "sisterCongregations": 82
+      },
+      "대구대교구": {
+        "parishes": 164,
+        "massTimes": 163,
+        "priests": 164,
+        "sisterNames": 0,
+        "sisterCongregations": 115
+      },
+      "부산교구": {
+        "parishes": 127,
+        "massTimes": 117,
+        "priests": 126,
+        "sisterNames": 0,
+        "sisterCongregations": 86
+      },
+      "안동교구": {
+        "parishes": 41,
+        "massTimes": 31,
+        "priests": 41,
+        "sisterNames": 0,
+        "sisterCongregations": 33
+      },
+      "마산교구": {
+        "parishes": 78,
+        "massTimes": 51,
+        "priests": 78,
+        "sisterNames": 0,
+        "sisterCongregations": 57
+      },
+      "인천교구": {
+        "parishes": 135,
+        "massTimes": 104,
+        "priests": 135,
+        "sisterNames": 0,
+        "sisterCongregations": 81
+      },
+      "의정부교구": {
+        "parishes": 88,
+        "massTimes": 80,
+        "priests": 88,
+        "sisterNames": 0,
+        "sisterCongregations": 33
+      },
+      "광주대교구": {
+        "parishes": 142,
+        "massTimes": 136,
+        "priests": 142,
+        "sisterNames": 0,
+        "sisterCongregations": 83
+      },
+      "군종교구": {
+        "parishes": 98,
+        "massTimes": 56,
+        "priests": 95,
+        "sisterNames": 0,
+        "sisterCongregations": 24
+      },
+      "전주교구": {
+        "parishes": 96,
+        "massTimes": 96,
+        "priests": 96,
+        "sisterNames": 0,
+        "sisterCongregations": 66
+      },
+      "제주교구": {
+        "parishes": 31,
+        "massTimes": 31,
+        "priests": 31,
+        "sisterNames": 0,
+        "sisterCongregations": 24
+      },
+      "원주교구": {
+        "parishes": 54,
+        "massTimes": 41,
+        "priests": 54,
+        "sisterNames": 0,
+        "sisterCongregations": 32
+      }
+    },
+    "massTimesCheckedToday": 1649,
+    "previousTimetables": 0,
+    "massTimes": 1651,
+    "priests": 1805,
+    "sisterNames": 1,
+    "sisterCongregations": 1074
+  },
+  "cbckListed": 1789,
+  "cbckChecked": 1789,
+  "goodnewsListed": 1808,
+  "goodnewsChecked": 1808,
+  "suwonChecked": 222,
+  "mergedAliases": 0,
+  "supplements": {
+    "Daejeon official": {
+      "checked": 163,
+      "matched": 155,
+      "timetables": 146
+    },
+    "Busan official": {
+      "listed": 129,
+      "checked": 129,
+      "matched": 125,
+      "timetables": 108
+    },
+    "Daegu official": {
+      "listed": 164,
+      "checked": 164,
+      "matched": 163,
+      "timetables": 164
+    },
+    "Gwangju official": {
+      "listed": 142,
+      "checked": 142,
+      "matched": 142,
+      "timetables": 129
+    },
+    "Jeonju official": {
+      "listed": 96,
+      "checked": 96,
+      "matched": 96,
+      "timetables": 96
+    },
+    "Cheongju official": {
+      "listed": 82,
+      "checked": 82,
+      "matched": 82,
+      "timetables": 81
+    },
+    "Gamgol current sisters": 2
+  },
+  "errors": [],
+  "parishWebsites": {
+    "checked": 25,
+    "timetablesFound": 1,
+    "outcomes": [
+      {
+        "sourceCode": "201001039",
+        "name": "거창성당",
+        "diocese": "마산교구",
+        "url": "https://geo.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000335",
+        "name": "계산동성당",
+        "diocese": "인천교구",
+        "url": "https://kyesan.com",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000256",
+        "name": "고양동성당",
+        "diocese": "의정부교구",
+        "url": "https://www.goyangdong.or.kr/",
+        "massTimes": [
+          "월요일 오전6시",
+          "화요일 오후8시"
+        ]
+      },
+      {
+        "sourceCode": "201001501",
+        "name": "꽃동네 가평준본당성당",
+        "diocese": "춘천교구",
+        "url": "https://www.kkotgp.or.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201001056",
+        "name": "봉곡동성당",
+        "diocese": "마산교구",
+        "url": "https://bong.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000279",
+        "name": "봉일천성당",
+        "diocese": "의정부교구",
+        "url": "https://sd.uca.or.kr/bic/",
+        "status": "no-structured-timetable"
+      },
+      {
+        "sourceCode": "201001057",
+        "name": "북신동성당",
+        "diocese": "마산교구",
+        "url": "https://bsd.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201001060",
+        "name": "산청성당",
+        "diocese": "마산교구",
+        "url": "https://sanc.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000378",
+        "name": "서운동성당",
+        "diocese": "인천교구",
+        "url": "https://seoun.or.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000284",
+        "name": "수동성당",
+        "diocese": "의정부교구",
+        "url": "https://sd.uca.or.kr/sudong",
+        "status": "no-structured-timetable"
+      },
+      {
+        "sourceCode": "201001071",
+        "name": "신안동성당",
+        "diocese": "마산교구",
+        "url": "https://sinanch.or.kr",
+        "status": "unreachable",
+        "error": "ConnectionError"
+      },
+      {
+        "sourceCode": "201001073",
+        "name": "안의선교성당",
+        "diocese": "마산교구",
+        "url": "https://ahn.cathms.or.kr",
+        "status": "unreachable",
+        "error": "ConnectionError"
+      },
+      {
+        "sourceCode": "201001075",
+        "name": "양덕동 주교좌성당",
+        "diocese": "마산교구",
+        "url": "https://yangduk.kr",
+        "status": "no-structured-timetable"
+      },
+      {
+        "sourceCode": "201000397",
+        "name": "여월동성당",
+        "diocese": "인천교구",
+        "url": "https://www.yeowol.or.kr/",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000399",
+        "name": "역곡2동성당",
+        "diocese": "인천교구",
+        "url": "https://www.yukkok2.com",
+        "status": "unreachable",
+        "error": "ConnectionError"
+      },
+      {
+        "sourceCode": "201001079",
+        "name": "옥포성당",
+        "diocese": "마산교구",
+        "url": "https://opcath.or.kr",
+        "status": "unreachable",
+        "error": "ConnectionError"
+      },
+      {
+        "sourceCode": "201000409",
+        "name": "온수성당",
+        "diocese": "인천교구",
+        "url": "https://onsu.or.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201001081",
+        "name": "용원성당",
+        "diocese": "마산교구",
+        "url": "https://yongwon.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000414",
+        "name": "원미동성당",
+        "diocese": "인천교구",
+        "url": "https://www.wonmii.or.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201007239",
+        "name": "참회와 속죄의 성당",
+        "diocese": "의정부교구",
+        "url": "https://sd.uca.or.kr/chamsok/",
+        "status": "no-structured-timetable"
+      },
+      {
+        "sourceCode": "201001096",
+        "name": "창녕성당",
+        "diocese": "마산교구",
+        "url": "https://cn.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000311",
+        "name": "청학성당",
+        "diocese": "의정부교구",
+        "url": "https://sd.uca.or.kr/ch/",
+        "status": "no-structured-timetable"
+      },
+      {
+        "sourceCode": "201001104",
+        "name": "하동성당",
+        "diocese": "마산교구",
+        "url": "https://hd.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201001106",
+        "name": "함양성당",
+        "diocese": "마산교구",
+        "url": "https://ham.cathms.kr",
+        "status": "unreachable",
+        "error": "SSLError"
+      },
+      {
+        "sourceCode": "201000319",
+        "name": "행주성당",
+        "diocese": "의정부교구",
+        "url": "https://sd.uca.or.kr/hjsd1909",
+        "status": "no-structured-timetable"
+      }
+    ]
+  },
+  "unconfirmed": [
+    {
+      "sourceCode": "201008003",
+      "name": "가흥동성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008003&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4322",
+      "phone": "054-634-1781"
+    },
+    {
+      "sourceCode": "201000330",
+      "name": "간석4동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000330&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1309",
+      "phone": "(032)435-8511"
+    },
+    {
+      "sourceCode": "201008040",
+      "name": "갈곡리성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008040&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4348",
+      "phone": "(031)959-1208"
+    },
+    {
+      "sourceCode": "201001039",
+      "name": "거창성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001039&gubun=4",
+      "website": "http://geo.cathms.kr",
+      "phone": "(055)944-0781"
+    },
+    {
+      "sourceCode": "201000335",
+      "name": "계산동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000335&gubun=4",
+      "website": "http://kyesan.com",
+      "phone": "(032)546-0321"
+    },
+    {
+      "sourceCode": "201001558",
+      "name": "공군중앙성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001558&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2172",
+      "phone": "(02)827-7066"
+    },
+    {
+      "sourceCode": "3570",
+      "name": "공세리성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "priestNames",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3570",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3570",
+      "phone": "041-533-8181"
+    },
+    {
+      "sourceCode": "201006660",
+      "name": "과훈단성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201006660&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4229",
+      "phone": "(033)462-6162"
+    },
+    {
+      "sourceCode": "201001238",
+      "name": "구담성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001238&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1813",
+      "phone": "054-652-3334"
+    },
+    {
+      "sourceCode": "201001043",
+      "name": "구암동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001043&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1750",
+      "phone": "(055)296-0207"
+    },
+    {
+      "sourceCode": "4304",
+      "name": "국방대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "priestNames",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4304",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4304",
+      "phone": "일반전화 없음"
+    },
+    {
+      "sourceCode": "201001501",
+      "name": "꽃동네 가평준본당성당",
+      "diocese": "춘천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001501&gubun=4",
+      "website": "http://www.kkotgp.or.kr",
+      "phone": "(031)589-0100"
+    },
+    {
+      "sourceCode": "201001374",
+      "name": "꽃바위성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001374&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2781",
+      "phone": "(052)233-7709"
+    },
+    {
+      "sourceCode": "201001439",
+      "name": "남밀양성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001439&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2215",
+      "phone": "(055)355-8671"
+    },
+    {
+      "sourceCode": "201000343",
+      "name": "내가성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000343&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1380",
+      "phone": "(032)933-1853"
+    },
+    {
+      "sourceCode": "201001562",
+      "name": "노도성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001562&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2068",
+      "phone": "(031)771-7852"
+    },
+    {
+      "sourceCode": "201001129",
+      "name": "노안성당",
+      "diocese": "광주대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001129&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1878",
+      "phone": "(061)336-8900"
+    },
+    {
+      "sourceCode": "201001240",
+      "name": "다인성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001240&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1834",
+      "phone": "054-861-8343"
+    },
+    {
+      "sourceCode": "201001048",
+      "name": "대건성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001048&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1788",
+      "phone": "(055)644-3323"
+    },
+    {
+      "sourceCode": "201000346",
+      "name": "대곶성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000346&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3467",
+      "phone": "(031)996-1230"
+    },
+    {
+      "sourceCode": "201000347",
+      "name": "대부성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000347&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1371",
+      "phone": "(032)880-0403"
+    },
+    {
+      "sourceCode": "201001050",
+      "name": "대산성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001050&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1795",
+      "phone": "(055)582-8041"
+    },
+    {
+      "sourceCode": "201000349",
+      "name": "대청도(준본당)성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000349&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000017&code=201000349&tbxSearch=&gubn2=all&char=all",
+      "phone": "(032)836-2374"
+    },
+    {
+      "sourceCode": "4237",
+      "name": "대흥봉수산순교성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4237",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4237",
+      "phone": "041-333-0202"
+    },
+    {
+      "sourceCode": "201008576",
+      "name": "덕산성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008576&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4429",
+      "phone": "(043)653-9394"
+    },
+    {
+      "sourceCode": "201000350",
+      "name": "덕적도(준본당)성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000350&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000017&code=201000350&tbxSearch=&gubn2=all&char=all",
+      "phone": "(032)831-2806"
+    },
+    {
+      "sourceCode": "201000924",
+      "name": "도계성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000924&gubun=4",
+      "website": "http://cafe.daum.net/chdg",
+      "phone": "(033)541-4687"
+    },
+    {
+      "sourceCode": "201000354",
+      "name": "마니산(준)성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000354&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1010",
+      "phone": "(032)937-8311"
+    },
+    {
+      "sourceCode": "201004430",
+      "name": "마리스텔라(준본당)성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201004430&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000017&code=201004430&tbxSearch=&gubn2=all&char=all",
+      "phone": "(032)280-1945"
+    },
+    {
+      "sourceCode": "201001389",
+      "name": "만덕성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001389&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1615",
+      "phone": "(051)343-6270~1"
+    },
+    {
+      "sourceCode": "4310",
+      "name": "멍에목성당",
+      "diocese": "청주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4310",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4310",
+      "phone": "043-543-0691"
+    },
+    {
+      "sourceCode": "201001569",
+      "name": "명성대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001569&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2112",
+      "phone": "(033)730-4193"
+    },
+    {
+      "sourceCode": "201001572",
+      "name": "무열대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001572&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2073",
+      "phone": "(053)750-1631"
+    },
+    {
+      "sourceCode": "201000927",
+      "name": "문막성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000927&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1440",
+      "phone": "(033)734-5240"
+    },
+    {
+      "sourceCode": "4391",
+      "name": "배티성지성당",
+      "diocese": "청주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4391",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4391",
+      "phone": "043-533-5710"
+    },
+    {
+      "sourceCode": "201001576",
+      "name": "백마성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001576&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2083",
+      "phone": "(031)975-3204"
+    },
+    {
+      "sourceCode": "201008414",
+      "name": "백마대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008414&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4394",
+      "phone": "일반전화 없음"
+    },
+    {
+      "sourceCode": "201001578",
+      "name": "백호성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001578&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2137",
+      "phone": "(033)741-6163"
+    },
+    {
+      "sourceCode": "201001056",
+      "name": "봉곡동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001056&gubun=4",
+      "website": "http://bong.cathms.kr",
+      "phone": "(055)746-6957"
+    },
+    {
+      "sourceCode": "201006733",
+      "name": "봉선유안성당",
+      "diocese": "광주대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201006733&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3597",
+      "phone": "(062)671-1015"
+    },
+    {
+      "sourceCode": "201000279",
+      "name": "봉일천성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000279&gubun=4",
+      "website": "http://sd.uca.or.kr/bic/",
+      "phone": "(031)945-9901"
+    },
+    {
+      "sourceCode": "201000364",
+      "name": "부개2동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000364&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=989",
+      "phone": "(032)505-2048"
+    },
+    {
+      "sourceCode": "201000363",
+      "name": "부개동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000363&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1324",
+      "phone": "(032)504-1011"
+    },
+    {
+      "sourceCode": "201007092",
+      "name": "부산가정성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201007092&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4341",
+      "phone": "(051)441-3500"
+    },
+    {
+      "sourceCode": "201000820",
+      "name": "부상(준본당)성당",
+      "diocese": "대구대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000820&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000021&code=201000820&tbxSearch=&gubn2=all&char=all",
+      "phone": "(054)434-2898"
+    },
+    {
+      "sourceCode": "201001057",
+      "name": "북신동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001057&gubun=4",
+      "website": "http://bsd.cathms.kr",
+      "phone": "(055)641-5450"
+    },
+    {
+      "sourceCode": "201001166",
+      "name": "비금성당",
+      "diocese": "광주대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001166&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1939",
+      "phone": "(061)275-4580"
+    },
+    {
+      "sourceCode": "201001581",
+      "name": "비룡성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001581&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2084",
+      "phone": "(031)863-5616"
+    },
+    {
+      "sourceCode": "201001245",
+      "name": "사벌퇴강성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001245&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1056",
+      "phone": "054-536-3789"
+    },
+    {
+      "sourceCode": "201000934",
+      "name": "사직동성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000934&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1450",
+      "phone": "(033)574-6607"
+    },
+    {
+      "sourceCode": "201001058",
+      "name": "사천성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001058&gubun=4",
+      "website": "https://cafe.daum.net/sc-4000",
+      "phone": "(055)852-2048"
+    },
+    {
+      "sourceCode": "201001060",
+      "name": "산청성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001060&gubun=4",
+      "website": "http://sanc.cathms.kr",
+      "phone": "(055)972-1004"
+    },
+    {
+      "sourceCode": "1686",
+      "name": "삼덕성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "priestNames",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1686",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1686",
+      "phone": "721-0320"
+    },
+    {
+      "sourceCode": "201000374",
+      "name": "삼정동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000374&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1354",
+      "phone": "(032)678-9981"
+    },
+    {
+      "sourceCode": "201000280",
+      "name": "상리성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000280&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=893",
+      "phone": "(031)834-9905"
+    },
+    {
+      "sourceCode": "201001585",
+      "name": "상무대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001585&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2059",
+      "phone": "(061)394-6376"
+    },
+    {
+      "sourceCode": "201001586",
+      "name": "상승대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001586&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2049",
+      "phone": "(031)640-1620"
+    },
+    {
+      "sourceCode": "201001418",
+      "name": "서면성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001418&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1630",
+      "phone": "(051)809-0642"
+    },
+    {
+      "sourceCode": "201000378",
+      "name": "서운동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000378&gubun=4",
+      "website": "http://seoun.or.kr",
+      "phone": "(032)553-6573"
+    },
+    {
+      "sourceCode": "201001068",
+      "name": "석전동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001068&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1754",
+      "phone": "(055)299-7791"
+    },
+    {
+      "sourceCode": "201001067",
+      "name": "성가정성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001067&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3578",
+      "phone": "(055)853-1683"
+    },
+    {
+      "sourceCode": "2777",
+      "name": "성거산성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2777",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2777",
+      "phone": "041-584-7199"
+    },
+    {
+      "sourceCode": "201001588",
+      "name": "성레오성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001588&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2057",
+      "phone": "(031)633-5166"
+    },
+    {
+      "sourceCode": "201001069",
+      "name": "성심원(준본당)성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001069&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000024&code=201001069&tbxSearch=&gubn2=all&char=all",
+      "phone": "(055)973-6368"
+    },
+    {
+      "sourceCode": "201001591",
+      "name": "성요셉(1군단)성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001591&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2148",
+      "phone": "(031)962-2145"
+    },
+    {
+      "sourceCode": "201001592",
+      "name": "성요셉(부사교)성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001592&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000029&code=201001592&tbxSearch=&gubn2=all&char=all",
+      "phone": "(063)859-6183"
+    },
+    {
+      "sourceCode": "201001597",
+      "name": "성요한성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001597&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2110",
+      "phone": "(062)940-1167"
+    },
+    {
+      "sourceCode": "3566",
+      "name": "솔뫼성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3566",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3566",
+      "phone": "041-362-5021"
+    },
+    {
+      "sourceCode": "201000387",
+      "name": "송림4동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000387&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1332",
+      "phone": "(032)763-7611"
+    },
+    {
+      "sourceCode": "201001424",
+      "name": "송정성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001424&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2785",
+      "phone": "(051)704-8901"
+    },
+    {
+      "sourceCode": "201000284",
+      "name": "수동성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000284&gubun=4",
+      "website": "http://sd.uca.or.kr/sudong",
+      "phone": "(031)594-6461"
+    },
+    {
+      "sourceCode": "201001070",
+      "name": "수산성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001070&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1767",
+      "phone": "(055)391-0855"
+    },
+    {
+      "sourceCode": "201001595",
+      "name": "승진성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001595&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2086",
+      "phone": "(031)532-4409"
+    },
+    {
+      "sourceCode": "201000391",
+      "name": "신도(준본당)성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000391&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000017&code=201000391&tbxSearch=&gubn2=all&char=all",
+      "phone": "(032)752-0097"
+    },
+    {
+      "sourceCode": "201001071",
+      "name": "신안동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001071&gubun=4",
+      "website": "http://sinanch.or.kr",
+      "phone": "(055)745-5131"
+    },
+    {
+      "sourceCode": "201000288",
+      "name": "신암리성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000288&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3506",
+      "phone": "(031)862-3455"
+    },
+    {
+      "sourceCode": "2221",
+      "name": "신월동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2221",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2221",
+      "phone": "055)263-9554"
+    },
+    {
+      "sourceCode": "201001598",
+      "name": "쌍용성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001598&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2062",
+      "phone": "(033)249-1620"
+    },
+    {
+      "sourceCode": "201000939",
+      "name": "아우라지성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000939&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1472",
+      "phone": "033-563-1019"
+    },
+    {
+      "sourceCode": "201001249",
+      "name": "안계성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001249&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1835",
+      "phone": "054-861-0371"
+    },
+    {
+      "sourceCode": "201001073",
+      "name": "안의선교성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001073&gubun=4",
+      "website": "http://ahn.cathms.or.kr",
+      "phone": "(055)963-4627 (안의성당)"
+    },
+    {
+      "sourceCode": "201001074",
+      "name": "양곡성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001074&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1786",
+      "phone": "(055)286-0577"
+    },
+    {
+      "sourceCode": "201001075",
+      "name": "양덕동 주교좌성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001075&gubun=4",
+      "website": "http://yangduk.kr",
+      "phone": "(055)292-6561"
+    },
+    {
+      "sourceCode": "201000397",
+      "name": "여월동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000397&gubun=4",
+      "website": "http://www.yeowol.or.kr/",
+      "phone": "(032)682-1986"
+    },
+    {
+      "sourceCode": "201000399",
+      "name": "역곡2동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000399&gubun=4",
+      "website": "http://www.yukkok2.com",
+      "phone": "(032)347-7073"
+    },
+    {
+      "sourceCode": "201001178",
+      "name": "연동성당",
+      "diocese": "광주대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001178&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1885",
+      "phone": "(061)276-4352"
+    },
+    {
+      "sourceCode": "201000401",
+      "name": "연안성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000401&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1337",
+      "phone": "(032)887-4313"
+    },
+    {
+      "sourceCode": "201000402",
+      "name": "연평도성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000402&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1375",
+      "phone": "(032)831-4176"
+    },
+    {
+      "sourceCode": "4344",
+      "name": "연풍성지성당",
+      "diocese": "청주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4344",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4344",
+      "phone": "043-833-5061"
+    },
+    {
+      "sourceCode": "201009167",
+      "name": "연합사성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201009167&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000029&code=201009167&tbxSearch=&gubn2=all&char=all",
+      "phone": ""
+    },
+    {
+      "sourceCode": "201001599",
+      "name": "열쇠성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001599&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2091",
+      "phone": "070-8150-2571"
+    },
+    {
+      "sourceCode": "201000941",
+      "name": "영산성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000941&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3492",
+      "phone": "(033)731-7856"
+    },
+    {
+      "sourceCode": "201001253",
+      "name": "영해성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001253&gubun=4",
+      "website": "http://cafe.daum.net/yhsd",
+      "phone": "054-733-6880"
+    },
+    {
+      "sourceCode": "201000405",
+      "name": "영흥성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000405&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3468",
+      "phone": "(032)883-6100"
+    },
+    {
+      "sourceCode": "201001600",
+      "name": "예성대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001600&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2115",
+      "phone": "(054)650-4685"
+    },
+    {
+      "sourceCode": "201001254",
+      "name": "예천성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001254&gubun=4",
+      "website": "http://cafe.daum.net/yecheonsungdang",
+      "phone": "054-654-2042"
+    },
+    {
+      "sourceCode": "201000407",
+      "name": "오정동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000407&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1364",
+      "phone": "(032)678-8156"
+    },
+    {
+      "sourceCode": "201008081",
+      "name": "옥길동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008081&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4320",
+      "phone": "(032)341-3217"
+    },
+    {
+      "sourceCode": "201000408",
+      "name": "옥련동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000408&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1330",
+      "phone": "(032)832-1784"
+    },
+    {
+      "sourceCode": "201001079",
+      "name": "옥포성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001079&gubun=4",
+      "website": "http://opcath.or.kr",
+      "phone": "(055)687-2347"
+    },
+    {
+      "sourceCode": "201000409",
+      "name": "온수성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000409&gubun=4",
+      "website": "http://onsu.or.kr",
+      "phone": "(032)937-7922"
+    },
+    {
+      "sourceCode": "201001602",
+      "name": "용성대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001602&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2121",
+      "phone": "(041)689-1180"
+    },
+    {
+      "sourceCode": "201000943",
+      "name": "용소막성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000943&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1442",
+      "phone": "(033)763-2343(사무1번)"
+    },
+    {
+      "sourceCode": "201001081",
+      "name": "용원성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001081&gubun=4",
+      "website": "http://yongwon.cathms.kr",
+      "phone": "(055)551-8416"
+    },
+    {
+      "sourceCode": "201000944",
+      "name": "우산동성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000944&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1443",
+      "phone": "(033)745-9300"
+    },
+    {
+      "sourceCode": "201000414",
+      "name": "원미동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000414&gubun=4",
+      "website": "http://www.wonmii.or.kr",
+      "phone": "(032)652-0154"
+    },
+    {
+      "sourceCode": "201000415",
+      "name": "원종2동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000415&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3474",
+      "phone": "(032)682-7340"
+    },
+    {
+      "sourceCode": "201001200",
+      "name": "율촌성당",
+      "diocese": "광주대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001200&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1912",
+      "phone": "(061)682-7340"
+    },
+    {
+      "sourceCode": "201001604",
+      "name": "은하수성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001604&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3619",
+      "phone": "(053)792-0360"
+    },
+    {
+      "sourceCode": "201001605",
+      "name": "을지성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001605&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2069",
+      "phone": "(033)462-1710"
+    },
+    {
+      "sourceCode": "201001085",
+      "name": "의령성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001085&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1797",
+      "phone": "(055)573-4702"
+    },
+    {
+      "sourceCode": "201008548",
+      "name": "인천가톨릭대학교 성 김대건성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008548&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4410",
+      "phone": "(032)830-9000~1"
+    },
+    {
+      "sourceCode": "201007065",
+      "name": "임계성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201007065&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3497",
+      "phone": "033-562-6443"
+    },
+    {
+      "sourceCode": "201000948",
+      "name": "장성성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000948&gubun=4",
+      "website": "http://cafe.daum.net/jangsoong",
+      "phone": "033-581-6190"
+    },
+    {
+      "sourceCode": "201001087",
+      "name": "장재동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001087&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1775",
+      "phone": "(055)759-8217"
+    },
+    {
+      "sourceCode": "201000423",
+      "name": "주안5동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000423&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1348",
+      "phone": "(032)867-1157"
+    },
+    {
+      "sourceCode": "201001610",
+      "name": "증평 103위 성인성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001610&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2076",
+      "phone": "(043)835-6162"
+    },
+    {
+      "sourceCode": "201007249",
+      "name": "지내성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201007249&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4197",
+      "phone": "(055)321-0503"
+    },
+    {
+      "sourceCode": "201001611",
+      "name": "지성대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001611&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3625",
+      "phone": "(070)8897-6073"
+    },
+    {
+      "sourceCode": "201001612",
+      "name": "진군성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001612&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2090",
+      "phone": "(031)536-1913"
+    },
+    {
+      "sourceCode": "201001094",
+      "name": "진례성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001094&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1809",
+      "phone": "(055)345-3226"
+    },
+    {
+      "sourceCode": "201001261",
+      "name": "진보성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001261&gubun=4",
+      "website": "https://cafe.daum.net/wlsqhtjdekd",
+      "phone": "054-874-2397"
+    },
+    {
+      "sourceCode": "201007239",
+      "name": "참회와 속죄의 성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201007239&gubun=4",
+      "website": "http://sd.uca.or.kr/chamsok/",
+      "phone": "(031)941-3159"
+    },
+    {
+      "sourceCode": "201001096",
+      "name": "창녕성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001096&gubun=4",
+      "website": "http://cn.cathms.kr",
+      "phone": "(055)532-8311"
+    },
+    {
+      "sourceCode": "2222",
+      "name": "창원상남동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2222",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2222",
+      "phone": "055)263-9593"
+    },
+    {
+      "sourceCode": "201001614",
+      "name": "천마대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001614&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3622",
+      "phone": "(070)4265-6073"
+    },
+    {
+      "sourceCode": "201008415",
+      "name": "청룡세라핌성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008415&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4395",
+      "phone": "일반전화 없음"
+    },
+    {
+      "sourceCode": "201001619",
+      "name": "청성성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001619&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2088",
+      "phone": "(033)455-2691"
+    },
+    {
+      "sourceCode": "201007047",
+      "name": "청언성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201007047&gubun=4",
+      "website": "http://cafe.daum.net/indeaf/",
+      "phone": "(032)832-2361"
+    },
+    {
+      "sourceCode": "201000952",
+      "name": "청일성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000952&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3493",
+      "phone": "(033)344-9347"
+    },
+    {
+      "sourceCode": "201000311",
+      "name": "청학성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000311&gubun=4",
+      "website": "http://sd.uca.or.kr/ch/",
+      "phone": "(031)841-1676"
+    },
+    {
+      "sourceCode": "2071",
+      "name": "충용성당",
+      "diocese": "군종교구",
+      "fields": [
+        "priestNames",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2071",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2071",
+      "phone": "02-749-1921 (내선1번)"
+    },
+    {
+      "sourceCode": "201001624",
+      "name": "충의성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001624&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2079",
+      "phone": "(031)440-1620"
+    },
+    {
+      "sourceCode": "201001625",
+      "name": "충장성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001625&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2151",
+      "phone": "(062)269-3217"
+    },
+    {
+      "sourceCode": "201001628",
+      "name": "칠성대(공군)성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001628&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2120",
+      "phone": "(031)669-1258"
+    },
+    {
+      "sourceCode": "201001629",
+      "name": "칠성대(육군)성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001629&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3621",
+      "phone": "(042)616-1620~1"
+    },
+    {
+      "sourceCode": "2186",
+      "name": "태풍성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "priestNames",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2186",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2186",
+      "phone": "031-863-5023"
+    },
+    {
+      "sourceCode": "201001264",
+      "name": "태화동성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001264&gubun=4",
+      "website": "http://cafe.daum.net/taehwadongSD",
+      "phone": "054-852-7038"
+    },
+    {
+      "sourceCode": "2223",
+      "name": "토월성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2223",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2223",
+      "phone": "055)263-9552"
+    },
+    {
+      "sourceCode": "201001634",
+      "name": "통일대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001634&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2061",
+      "phone": "(033)762-3201"
+    },
+    {
+      "sourceCode": "201000432",
+      "name": "풍무동성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000432&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1383",
+      "phone": "(031)983-1751"
+    },
+    {
+      "sourceCode": "201008780",
+      "name": "하늘의 문 성당",
+      "diocese": "인천교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201008780&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4694",
+      "phone": "(032)765-7251"
+    },
+    {
+      "sourceCode": "201001104",
+      "name": "하동성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001104&gubun=4",
+      "website": "http://hd.cathms.kr",
+      "phone": "(055)883-9693"
+    },
+    {
+      "sourceCode": "4214",
+      "name": "하부내포성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4214",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4214",
+      "phone": "041-836-9625"
+    },
+    {
+      "sourceCode": "201001636",
+      "name": "하상바오로성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001636&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2078",
+      "phone": "(051)742-7576"
+    },
+    {
+      "sourceCode": "201001637",
+      "name": "한밭성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001637&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2154",
+      "phone": "(042)829-6162"
+    },
+    {
+      "sourceCode": "201000959",
+      "name": "함백성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000959&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1469",
+      "phone": "033-378-5588"
+    },
+    {
+      "sourceCode": "201001106",
+      "name": "함양성당",
+      "diocese": "마산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001106&gubun=4",
+      "website": "http://ham.cathms.kr",
+      "phone": "(055)963-1009"
+    },
+    {
+      "sourceCode": "4280",
+      "name": "합덕성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "priestNames",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4280",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4280",
+      "phone": "041-363-1061"
+    },
+    {
+      "sourceCode": "201001641",
+      "name": "해군중앙성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001641&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2096",
+      "phone": "(02)844-2439"
+    },
+    {
+      "sourceCode": "201006619",
+      "name": "해병대요람성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201006619&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3629",
+      "phone": "(054) 290-1151"
+    },
+    {
+      "sourceCode": "201001643",
+      "name": "해성대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001643&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2111",
+      "phone": "(051)979-2042"
+    },
+    {
+      "sourceCode": "201000319",
+      "name": "행주성당",
+      "diocese": "의정부교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000319&gubun=4",
+      "website": "http://sd.uca.or.kr/hjsd1909",
+      "phone": "(031)974-1728"
+    },
+    {
+      "sourceCode": "4215",
+      "name": "홍주순교성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4215",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4215",
+      "phone": "041-633-2402"
+    },
+    {
+      "sourceCode": "201001269",
+      "name": "화령성당",
+      "diocese": "안동교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001269&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1827",
+      "phone": "054-532-9344"
+    },
+    {
+      "sourceCode": "201001563",
+      "name": "화살성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001563&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4697",
+      "phone": "일반전화 없음"
+    },
+    {
+      "sourceCode": "201001646",
+      "name": "화성대성당",
+      "diocese": "군종교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001646&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2113",
+      "phone": "(031)220-1171"
+    },
+    {
+      "sourceCode": "201001471",
+      "name": "활천성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001471&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1661",
+      "phone": "(055)334-5418"
+    },
+    {
+      "sourceCode": "3569",
+      "name": "황새바위순교성지성당",
+      "diocese": "대전교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3569",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=3569",
+      "phone": "041-854-6321"
+    },
+    {
+      "sourceCode": "201000961",
+      "name": "횡성성당",
+      "diocese": "원주교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201000961&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1470",
+      "phone": "(033)344-2610"
+    },
+    {
+      "sourceCode": "201001232",
+      "name": "흑산성당",
+      "diocese": "광주대교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001232&gubun=4",
+      "website": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=1921",
+      "phone": "(061)275-9004"
+    },
+    {
+      "sourceCode": "201001472",
+      "name": "흰돌공동체성당",
+      "diocese": "부산교구",
+      "fields": [
+        "massTimes",
+        "sisterNames"
+      ],
+      "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001472&gubun=4",
+      "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000022&code=201001472&tbxSearch=&gubn2=all&char=all",
+      "phone": "070-8896-0949"
+    }
+  ]
+}
