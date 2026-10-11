@@ -95,7 +95,7 @@ def main():
     failures = supplemental['errors']
     blocked_hosts = ['cbck.or.kr', 'catholic.or.kr', 'daum.net', 'naver.com', 'facebook.com', 'instagram.com', 'youtube.com']
     candidates = [e for e in entries if not e.get('massTimes') and e.get('website', '').startswith(('http://', 'https://'))
-                  and not any(urlparse(e['website']).netloc.endswith(host) for host in blocked_hosts)]
+                  and not any(urlparse(e['website']).hostname == host or urlparse(e['website']).hostname.endswith('.' + host) for host in blocked_hosts)]
     outcomes = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         for i, result in enumerate(pool.map(home_detail, candidates), 1):
