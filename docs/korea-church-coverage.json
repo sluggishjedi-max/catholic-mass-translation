@@ -238,7 +238,7 @@
       }
     },
     "massTimesCheckedToday": 1649,
-    "previousTimetables": 0,
+    "previousTimetables": 2,
     "massTimes": 1651,
     "priests": 1805,
     "sisterNames": 1,
@@ -2439,6 +2439,20 @@
       "sourceUrl": "https://directory.cbck.or.kr/m/catholicInfo.asp?code=201001472&gubun=4",
       "website": "https://directory.cbck.or.kr/onlineaddress/Catholic/DetailInfo.aspx?cgubn=g&gubn=4&gyogu=201000022&code=201001472&tbxSearch=&gubn2=all&char=all",
       "phone": "070-8896-0949"
+    }
+  ],
+  "previousTimetables": [
+    {
+      "name": "국방대성당",
+      "diocese": "군종교구",
+      "sourceCode": "4304",
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=4304"
+    },
+    {
+      "name": "충용성당",
+      "diocese": "군종교구",
+      "sourceCode": "2071",
+      "sourceUrl": "https://maria.catholic.or.kr/mobile/church/bondang_view.asp?app=goodnews&orgnum=2071"
     }
   ]
 }

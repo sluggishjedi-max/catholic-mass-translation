@@ -344,6 +344,8 @@ def main():
         errors.extend(supplemental.get('errors', []))
     for e in entries:
         e['sisterCongregations'] = unique(value for value in e.get('sisterCongregations', []) if valid_community(value))
+        if e.get('massTimes') and e.get('massTimesCheckedAt') != TODAY:
+            e['massTimesStatus'] = 'previously-published'
         e['sistersStatus'] = 'published' if e.get('sisterNames') else 'names-not-published'
         e['clergyStatus'] = 'published' if e.get('priestNames') else 'not-published'
         e['massTimesStatus'] = e.get('massTimesStatus') or ('published' if e.get('massTimes') else 'not-published')

@@ -9247,6 +9247,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const pageTitle = sourceTitle && !/^USCCB Daily Readings$/i.test(sourceTitle) ? sourceTitle : '';
         const title = pageTitle || findEnglishLiturgyTitle(lines) || titleCandidates[0] || '';
         const data = parseEnglishDailySections(lines);
+        applyEnglishProperReadingNotice(data, lines);
         if (!Object.keys(data).length) {
             const bodyLines = contentLinesFromSource(lines).filter(line => !/^(Wednesday|Tuesday|Monday|Thursday|Friday|Saturday|Sunday|Daily Readings)/i.test(line));
             if (bodyLines.length) data.reading1 = joinAsParagraph(bodyLines);
@@ -10456,13 +10457,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictUsccbHtmlLinesFromDoc(doc) {
         if (!doc || !doc.querySelector('.b-verse .content-header')) return [];
         const lines = [];
-        const lectionary = doc.querySelector('.b-lectionary .innerblock');
-        if (lectionary) {
+        Array.from(doc.querySelectorAll('.b-lectionary .innerblock')).forEach(lectionary => {
             const title = strictCleanLine((lectionary.querySelector('h1, h2, h3') || {}).textContent || '');
-            const ref = strictCleanLine((lectionary.querySelector('p') || {}).textContent || '');
             if (title) lines.push(title);
-            if (ref) lines.push(ref);
-        }
+            Array.from(lectionary.querySelectorAll('p')).forEach(paragraph =>
+                lines.push(...strictNodeTextLinesWithBreaks(paragraph)));
+        });
         Array.from(doc.querySelectorAll('.b-verse')).forEach(section => {
             const heading = strictCleanLine((section.querySelector('.content-header .name') || {}).textContent || '');
             const citation = strictCleanLine((section.querySelector('.content-header .address') || {}).textContent || '');
@@ -11059,6 +11059,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (separatorIndex < 0) return [];
         const verseText = raw.slice(separatorIndex + 1)
             .replace(/\((?=[^)]*(?:◎|R\.?|Đ|Ð|℟|答))[^)]*\)/giu, ' ')
+            .replace(/\(\s*\d+[a-zㄱ-ㅎ]*(?:[-–—.]\d+[a-zㄱ-ㅎ]*)?\s*\)\s*$/giu, ' ')
             .replace(/\s+(?:Đ|Ð)\s*\.?(?:\s+(?:x|c)\s*\.)?[\s\S]*$/iu, ' ');
         return verseText.split(/[.,;、]/u).map(token => {
             const refs = new Set();
@@ -12056,15 +12057,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictExpandKoreanPrayerEnding(key, text) {
         let out = String(text || '').replace(/\s+/g, ' ').trim();
         if (key === 'collect') {
-            out = out.replace(/성부와\s*성령[과괴].*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.');
-            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
-            out = out.replace(/주님께서는.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
+            out = out.replace(/성부와\s*성령[과괴].*(?:…+|\.{2,}|⋯+)[,.;]*\s*$/u, '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.');
+            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)[,.;]*\s*$/u, '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
+            out = out.replace(/주님께서는.*(?:…+|\.{2,}|⋯+)[,.;]*\s*$/u, '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
             out = out.replace(/성부와\s*성령[과괴]\s*[,.;]?\s*$/u, '성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.');
             out = out.replace(/성자께서는\s*[,.;]?\s*$/u, '성자께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
             out = out.replace(/주님께서는\s*[,.;]?\s*$/u, '주님께서는 성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시나이다.');
         } else if (key === 'prayer_offerings' || key === 'prayer_after') {
-            out = out.replace(/우리\s*주.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, '우리 주 그리스도를 통하여 비나이다.');
-            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)[,.;]?\s*$/u, source => {
+            out = out.replace(/우리\s*주.*(?:…+|\.{2,}|⋯+)[,.;]*\s*$/u, '우리 주 그리스도를 통하여 비나이다.');
+            out = out.replace(/성자께서는.*(?:…+|\.{2,}|⋯+)[,.;]*\s*$/u, source => {
                 const toSon = /성자(?:이신|예수|그리스도|주님)|주\s*예수/u.test(out.slice(0, Math.max(0, out.length - source.length)));
                 return toSon ? '성자께서는 영원히 살아 계시며 다스리시나이다.' : '성자께서는 성부와 함께 영원히 살아 계시며 다스리시나이다.';
             });
@@ -13071,6 +13072,31 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return isJinaMarkdownSource(text) ? `Markdown Content:\n${scoped}` : scoped;
     }
 
+    function applyEnglishProperReadingNotice(data, lines) {
+        const firstSection = lines.findIndex(line => strictIdentifySection(line, 'EN'));
+        const notices = (firstSection < 0 ? lines : lines.slice(0, firstSection))
+            .map(strictCleanLine)
+            .filter(line => /\b(?:for|of) this (?:memorial|feast|celebration) (?:is|are) proper\.?$/i.test(line));
+        if (!notices.length) return;
+        const proper = new Set();
+        notices.forEach(notice => {
+            if (/\b(?:first reading|reading\s*(?:1|I))\b/i.test(notice)) proper.add('reading1');
+            if (/\b(?:second reading|reading\s*(?:2|II))\b/i.test(notice)) proper.add('reading2');
+            if (/\b(?:responsorial )?psalm\b/i.test(notice)) proper.add('psalm');
+            if (/\bgospel\b/i.test(notice)) proper.add('gospel');
+            if (/^The readings\b/i.test(notice)) {
+                ['reading1', 'reading2', 'psalm', 'gospel'].forEach(key => proper.add(key));
+            }
+        });
+        if (!proper.size) return;
+        ['reading1', 'reading2', 'psalm', 'gospel'].forEach(key => {
+            const section = data[key];
+            if (!section) return;
+            const count = splitParsedAlternatives(section.lines || []).length;
+            section.optionKinds = Array(count).fill(proper.has(key) ? 'proper' : 'common');
+        });
+    }
+
     function strictParseDailyMass(lang, source, date, locationCode = dailySourceLocationCode(lang)) {
         const selector = getStrictMassSelector(date);
         const metadataTitle = sourceMetadataTitle(source, lang);
@@ -13105,6 +13131,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             if (sourceSectionHasContent(parsed)) data[key] = parsed;
         });
+        if (lang === 'EN') applyEnglishProperReadingNotice(data, lines);
         const title = metadataTitle || strictFindLiturgyTitle(lines, lang);
         return strictEnsureReadingSummarySlots({
             title: cleanLiturgyTitle(title),
@@ -16858,6 +16885,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     const sourceLabeledDailyVariantPartIds = new Set([
         'entrance',
+        'psalm',
         'gospel_accl',
         'communion',
         ...sourceSeparatedPrayerVariantPartIds
@@ -17047,10 +17075,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (candidates.size === 1) variant.__dailyOptionKind = Array.from(candidates)[0];
         });
 
-        const knownKinds = new Set(entries
-            .map(variant => variant && variant.__dailyOptionKind || '')
-            .filter(kind => validKinds.has(kind)));
-        if (knownKinds.size || !fixedCelebrationImplicitProperPartIds.has(baseId)) return variants;
+        if (!fixedCelebrationImplicitProperPartIds.has(baseId)) return variants;
         const sourceDate = date instanceof Date && !Number.isNaN(date.getTime())
             ? cloneDateOnly(date)
             : getActiveLiturgicalSourceDate();
@@ -17060,7 +17085,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             && !!(meta.special || generatedInfo.localCalendar);
         if (!isNamedFixedCelebration) return variants;
         entries.forEach(variant => {
-            if (variant && !validKinds.has(variant.__dailyOptionKind)) variant.__dailyOptionKind = 'proper';
+            if (!variant || validKinds.has(variant.__dailyOptionKind)) return;
+            // Explicit metadata in another language must not suppress this
+            // source's fallback, nor classify its unresolved alternatives.
+            if (Object.keys(variant.__dailySourceIndexes || {}).some(lower => sourceKinds[lower]?.size)) return;
+            variant.__dailyOptionKind = 'proper';
         });
         return variants;
     }

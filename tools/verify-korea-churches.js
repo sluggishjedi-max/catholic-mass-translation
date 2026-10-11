@@ -32,6 +32,9 @@ const root = path.resolve(__dirname, '..');
     if (entry.massTimesCheckedAt === module.checkedAt && entry.massTimes?.length) {
       assert(/^https?:\/\//.test(entry.massTimesSourceUrl), 'Fresh timetable has no source');
     }
+    if (entry.massTimes?.length && entry.massTimesCheckedAt !== module.checkedAt) {
+      assert.equal(entry.massTimesStatus, 'previously-published', 'Unverified old timetable was presented as current');
+    }
   }
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   for (const match of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {

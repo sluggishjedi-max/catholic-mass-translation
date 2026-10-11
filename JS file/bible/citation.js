@@ -50,8 +50,11 @@
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
-      const tail = text.slice(entry.key.length).replace(/^\./,'')
+      let tail = text.slice(entry.key.length).replace(/^\./,'')
         .replace(/([〇零一二三四五六七八九十百廿卅]+)(?=\d)/gu,(_,han) => hanNumber(han)+':');
+      // A Psalm's trailing parenthetical verse identifies its refrain, not
+      // another stanza. Keep the alternate chapter number before the colon.
+      if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
       const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)(?:\((\d+)\))?[,.:・、]([0-9].*)$/u);
       if (!match) continue;
       if (!resolve(entry.key,code)) return null; // Ambiguous even within this language.

@@ -109,6 +109,8 @@ def main():
             if i % 20 == 0 or i == len(candidates):
                 print(f'Official parish websites: {i}/{len(candidates)}', flush=True)
     for entry in entries:
+        if entry.get('massTimes') and entry.get('massTimesCheckedAt') != api.TODAY:
+            entry['massTimesStatus'] = 'previously-published'
         entry['sisterCongregations'] = api.unique(x for x in entry.get('sisterCongregations', []) if api.valid_community(x))
         if not entry['sisterCongregations']:
             entry.pop('sisterCongregations')
