@@ -1,6 +1,21 @@
 (function setupAdminDateReview(global) {
   'use strict';
   const endpoint = 'https://us-central1-ordinary-mass-app.cloudfunctions.net/adminReviewAccess';
+  const loginPage = 'https://ordinary-mass-app.firebaseapp.com/admin-login.html';
+  const loginRequestKey = 'ordo:admin-login-request';
+  const loginMaxAge = 10 * 60 * 1000;
+  const loginMessages = {
+    KR:['Google 로그인 페이지로 이동합니다…','브라우저에서 이 사이트의 저장소를 허용한 뒤 다시 로그인해 주세요.','로그인이 완료되지 않았습니다. 다시 로그인해 주세요.'],
+    EN:['Opening Google sign-in…','Allow storage for this site in your browser, then sign in again.','Sign-in was not completed. Please try again.'],
+    VN:['Đang mở trang đăng nhập Google…','Cho phép trình duyệt lưu dữ liệu của trang này rồi đăng nhập lại.','Đăng nhập chưa hoàn tất. Vui lòng thử lại.'],
+    JP:['Googleのログインページを開いています…','ブラウザーでこのサイトのデータ保存を許可してから再度ログインしてください。','ログインが完了しませんでした。もう一度お試しください。'],
+    LA:['Pagina ingressus Google aperitur…','Permitte navigatro data huius situs servare, deinde iterum intra.','Ingressus non completus est. Iterum tenta.'],
+    ZH:['正在開啟 Google 登入頁面…','請在瀏覽器允許此網站儲存資料，然後重新登入。','登入未完成，請重試。'],
+    IT:['Apertura dell’accesso Google…','Consenti al browser di memorizzare i dati di questo sito, poi accedi di nuovo.','Accesso non completato. Riprova.'],
+    PT:['A abrir o acesso Google…','Permita que o navegador guarde dados deste site e entre novamente.','O acesso não foi concluído. Tente novamente.'],
+    ES:['Abriendo el acceso de Google…','Permita que el navegador guarde datos de este sitio e inicie sesión de nuevo.','No se completó el acceso. Inténtelo de nuevo.'],
+    DE:['Google-Anmeldung wird geöffnet…','Erlauben Sie Ihrem Browser, Daten dieser Website zu speichern, und melden Sie sich erneut an.','Die Anmeldung wurde nicht abgeschlossen. Bitte versuchen Sie es erneut.']
+  };
   const labels = {
     KR:['관리자 전례 검토','Google로 관리자 로그인','로그아웃','검토 날짜','검토하기','오늘로 돌아가기','관리자 확인 완료','관리자 권한이 없는 계정입니다.','관리자 인증을 확인할 수 없습니다. 다시 로그인해 주세요.','올바른 날짜를 선택해 주세요.','검토 기준일','선택한 날짜 전후 7일까지 조회할 수 있습니다.'],
     EN:['Administrator liturgy review','Administrator sign-in with Google','Sign out','Review date','Review','Return to today','Administrator verified','This account has no administrator permission.','Unable to verify administrator access. Please sign in again.','Select a valid date.','Review anchor','You can browse seven days before and after the selected date.'],
@@ -15,8 +30,41 @@
   };
   let auth, verifiedUid = '', validUntil = 0, reviewDate = '', busy = false, ready = false;
   let language = 'KR', today = '', messageIndex = -1, generation = 0;
-  const text = index => (labels[language] || labels.EN)[index];
+  const text = index => index >= 12 ? (loginMessages[language] || loginMessages.EN)[index - 12] : (labels[language] || labels.EN)[index];
   const byId = id => document.getElementById(id);
+  function useLoginPage() {
+    return global.navigator.userAgentData?.mobile === true || /Android|iPhone|iPad|iPod/i.test(global.navigator.userAgent)
+      || (global.navigator.platform === 'MacIntel' && global.navigator.maxTouchPoints > 1);
+  }
+  function beginPageSignIn() {
+    const nonce = Array.from(global.crypto.getRandomValues(new Uint8Array(32)), byte => byte.toString(16).padStart(2, '0')).join('');
+    const returnTo = global.location.origin + global.location.pathname + global.location.search;
+    // Only the request nonce is persisted; credentials are never written to storage.
+    try {
+      global.sessionStorage.setItem(loginRequestKey, JSON.stringify({nonce, returnTo, hash:global.location.hash, createdAt:Date.now()}));
+    } catch (error) { revoke(13); return; }
+    messageIndex = 12; render();
+    global.location.assign(loginPage + '#' + new URLSearchParams({nonce, returnTo, language}));
+  }
+  function takePageSignInResult() {
+    const params = new URLSearchParams(global.location.hash.slice(1));
+    if (![...params.keys()].some(key => key.startsWith('ordoAdmin'))) return null;
+    // Remove credentials from history before any asynchronous authentication work.
+    global.history.replaceState(global.history.state, '', global.location.pathname + global.location.search);
+    let request;
+    try {
+      request = JSON.parse(global.sessionStorage.getItem(loginRequestKey));
+      global.sessionStorage.removeItem(loginRequestKey);
+    } catch (error) { return {failed:true}; }
+    const age = request && Date.now() - request.createdAt;
+    if (!request || age < 0 || !(age <= loginMaxAge) || request.nonce !== params.get('ordoAdminNonce')
+      || request.returnTo !== global.location.href || !/^[a-f0-9]{64}$/.test(request.nonce)) return {failed:true};
+    global.history.replaceState(global.history.state, '', global.location.pathname + global.location.search + (request.hash || ''));
+    if (params.has('ordoAdminError')) return {failed:true};
+    const idToken = params.get('ordoAdminIdToken'), accessToken = params.get('ordoAdminAccessToken');
+    if ((!idToken && !accessToken) || (idToken || '').length > 8192 || (accessToken || '').length > 8192) return {failed:true};
+    return {idToken, accessToken};
+  }
   function validDate(value) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || value < '0001-01-01' || value > '9999-12-31') return false;
     const parsed = new Date(value + 'T12:00:00Z');
@@ -53,11 +101,13 @@
     if (busy || !ready) return;
     busy = true; messageIndex = -1; render();
     try {
+      if (useLoginPage()) { beginPageSignIn(); return; }
       const provider = new global.firebase.auth.GoogleAuthProvider();
       provider.setCustomParameters({prompt:'select_account'});
       await auth.signInWithPopup(provider);
     } catch (error) {
-      if (error.code !== 'auth/popup-closed-by-user' && error.code !== 'auth/cancelled-popup-request') revoke(8);
+      if (['auth/popup-blocked','auth/web-storage-unsupported'].includes(error.code)) beginPageSignIn();
+      else if (error.code !== 'auth/popup-closed-by-user' && error.code !== 'auth/cancelled-popup-request') revoke(8);
     } finally { busy = false; render(); }
   }
   async function signOut() {
@@ -105,17 +155,33 @@
   byId('admin-review-today')?.addEventListener('click', returnToToday);
   byId('admin-review-header-today')?.addEventListener('click', returnToToday);
   async function initialize() {
+    const incoming = takePageSignInResult();
+    if (incoming) {
+      const showSettings = () => global.openSettings?.();
+      if (document.readyState === 'complete') showSettings();
+      else global.addEventListener('load', showSettings, {once:true});
+    }
     try {
       if (!global.firebase || !global.firebase.auth) throw new Error('auth-sdk-unavailable');
       if (!global.firebase.apps.length) throw new Error('firebase-app-unavailable');
       auth = global.firebase.auth();
-      await auth.setPersistence(global.firebase.auth.Auth.Persistence.SESSION);
+      try { await auth.setPersistence(global.firebase.auth.Auth.Persistence.SESSION); }
+      catch (error) { await auth.setPersistence(global.firebase.auth.Auth.Persistence.NONE); }
       ready = true;
       auth.onIdTokenChanged(user => {
         generation++;
-        if (!user || user.uid !== verifiedUid) revoke();
+        if (!user || user.uid !== verifiedUid) revoke(!user && messageIndex >= 12 ? messageIndex : -1);
         if (user) verify();
       });
+      if (incoming) {
+        if (incoming.failed) { messageIndex = 14; }
+        else {
+          busy = true; render();
+          try { await auth.signInWithCredential(global.firebase.auth.GoogleAuthProvider.credential(incoming.idToken, incoming.accessToken)); }
+          catch (error) { revoke(14); }
+          finally { busy = false; }
+        }
+      }
     } catch (error) { revoke(8); }
     render();
   }

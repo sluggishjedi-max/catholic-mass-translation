@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>관리자 로그인 · Order of Mass</title>
+  <style>
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f4f6fa;color:#21334d;font:17px/1.6 system-ui,sans-serif}
+    main{box-sizing:border-box;width:min(420px,100%);padding:28px}h1{font-size:24px}a,button{display:block;box-sizing:border-box;width:100%;margin-top:18px;padding:12px;border-radius:10px;text-align:center;font:inherit}
+    button{border:0;background:#234d85;color:white;cursor:pointer}a{color:#234d85}button[hidden]{display:none}
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="title">관리자 로그인</h1>
+    <p id="status" role="status" aria-live="polite">로그인을 준비하고 있습니다…</p>
+    <button id="retry" type="button" hidden>다시 로그인</button>
+    <a id="return" href="https://sluggishjedi-max.github.io/catholic-mass-translation/">앱으로 돌아가기</a>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="admin-login.js?v=20261012"></script>
+</body>
+</html>

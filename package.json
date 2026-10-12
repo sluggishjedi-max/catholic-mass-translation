@@ -14,6 +14,8 @@
     "mass:tool:special:verify": "node tools/verify-special-liturgy-editor.js",
     "browser:check:admin-review": "node tools/browser-check-admin-date-review.js",
     "admin:auth:check": "node tools/check-admin-review-auth.js",
+    "admin:mobile:check": "node tools/check-admin-mobile-login.js",
+    "browser:check:admin-mobile": "node tools/browser-check-admin-mobile-login.js",
     "browser:check:prayers": "node tools/browser-check-prayer-display.js",
     "browser:check:startup-preview": "node tools/browser-check-startup-and-preview.js",
     "browser:check": "node tools/browser-check-v22.js",

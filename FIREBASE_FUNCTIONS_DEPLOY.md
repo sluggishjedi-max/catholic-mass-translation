@@ -1,6 +1,6 @@
 # Firebase Functions 배포 안내
 
-현재 웹 앱은 `index.html`과 `JS file/app_v29.js`를 GitHub Pages에서 제공하고, API 프록시와 관리자 인증을 Firebase Functions에 배포한다. 국가별 업로드 데이터는 Firestore를 사용하며, 읽기 규칙도 배포한다. Firebase Hosting은 사용하지 않는다.
+현재 웹 앱은 `index.html`과 `JS file/app_v29.js`를 GitHub Pages에서 제공하고, API 프록시와 관리자 인증을 Firebase Functions에 배포한다. 국가별 업로드 데이터는 Firestore를 사용하며, 읽기 규칙도 배포한다. 모바일 관리자 로그인 전용 페이지 두 파일은 기존 `ordinary-mass-app` Firebase Hosting 사이트의 `auth-hosting/`에서 배포한다.
 
 ## 배포 대상
 
@@ -42,7 +42,7 @@ ALLOWED_ORIGINS=https://sluggishjedi-max.github.io,local
 npm --prefix functions install
 npm run firebase:check
 $env:FUNCTIONS_DISCOVERY_TIMEOUT='60000'
-firebase deploy --project ordinary-mass-app --only functions,firestore:rules --non-interactive
+firebase deploy --project ordinary-mass-app --only functions,firestore:rules,hosting --non-interactive
 ```
 
-`firebase.json`의 predeploy 검사도 `functions/index.js` 문법을 다시 확인한다. 배포 후 CLI가 위 여섯 함수와 Firestore 규칙의 갱신 성공을 보고하는지 확인한다.
+`firebase.json`의 predeploy 검사도 `functions/index.js` 문법을 다시 확인한다. 배포 후 CLI가 위 여섯 함수와 Firestore 규칙, Hosting의 갱신 성공을 보고하는지 확인한다. Hosting에는 앱·데이터·로컬 도구를 올리지 않고 로그인 전용 파일만 올린다.
