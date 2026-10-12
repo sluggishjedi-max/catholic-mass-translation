@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "church:supported:refresh": "python tools/enrich-supported-churches.py --refresh",
+    "church:supported:check": "python tools/test-supported-churches.py && node tools/verify-supported-churches.js",
     "church:korea:refresh": "python tools/refresh-korea-churches.py && python tools/enrich-korea-church-gaps.py",
     "church:korea:check": "node tools/verify-korea-churches.js",
     "browser:check:v29": "set ORDO_CHECK_HTML=V29.html&& node tools/browser-check-v28.js",

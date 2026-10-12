@@ -1,0 +1,165 @@
+{
+  "checkedAt": "2026-10-12",
+  "countries": {
+    "IE": {
+      "before": {
+        "total": 6,
+        "address": 6,
+        "phone": 4,
+        "website": 6,
+        "massTimes": 0,
+        "priestNames": 0,
+        "coordinates": 6
+      },
+      "after": {
+        "total": 261,
+        "address": 259,
+        "phone": 254,
+        "website": 245,
+        "massTimes": 254,
+        "priestNames": 256,
+        "coordinates": 260
+      },
+      "added": 255,
+      "updated": 256,
+      "sources": [
+        {
+          "authority": "Archdiocese of Dublin",
+          "url": "https://www.dublindiocese.ie/parishes/parishes-a-z/",
+          "checkedAt": "2026-10-12",
+          "listed": 195,
+          "checked": 195,
+          "errors": [],
+          "withoutChurchDetails": [
+            {
+              "name": "Blakestown",
+              "url": "https://www.dublindiocese.ie/parish/blakestown/"
+            },
+            {
+              "name": "Travelling People",
+              "url": "https://www.dublindiocese.ie/parish/travelling-people/"
+            }
+          ],
+          "limitations": []
+        }
+      ]
+    },
+    "GB-SCT": {
+      "before": {
+        "total": 6,
+        "address": 6,
+        "phone": 6,
+        "website": 6,
+        "massTimes": 0,
+        "priestNames": 0,
+        "coordinates": 6
+      },
+      "after": {
+        "total": 95,
+        "address": 90,
+        "phone": 86,
+        "website": 55,
+        "massTimes": 84,
+        "priestNames": 87,
+        "coordinates": 6
+      },
+      "added": 89,
+      "updated": 90,
+      "sources": [
+        {
+          "authority": "Archdiocese of Glasgow",
+          "url": "https://www.rcag.org.uk/index.php/the-archdiocese/parishes",
+          "checkedAt": "2026-10-12",
+          "listed": 90,
+          "checked": 90,
+          "errors": [],
+          "withoutChurchDetails": [],
+          "limitations": []
+        }
+      ]
+    },
+    "US": {
+      "before": {
+        "total": 0,
+        "address": 0,
+        "phone": 0,
+        "website": 0,
+        "massTimes": 0,
+        "priestNames": 0,
+        "coordinates": 0
+      },
+      "after": {
+        "total": 401,
+        "address": 401,
+        "phone": 254,
+        "website": 211,
+        "massTimes": 252,
+        "priestNames": 0,
+        "coordinates": 400
+      },
+      "added": 401,
+      "updated": 0,
+      "sources": [
+        {
+          "authority": "Archdiocese of Washington",
+          "url": "https://adw.org/parishes-masses/parish-mass-finder/",
+          "checkedAt": "2026-10-12",
+          "listed": 147,
+          "checked": 147,
+          "errors": [],
+          "withoutChurchDetails": [],
+          "limitations": [
+            "The official finder supplies names, addresses and coordinates. Detail-page contacts and timetables were not imported; the tested detail endpoint returned HTTP 403."
+          ]
+        },
+        {
+          "authority": "Archdiocese of Los Angeles",
+          "url": "https://lacatholics.org/find/",
+          "checkedAt": "2026-10-12",
+          "listed": 254,
+          "checked": 254,
+          "errors": [],
+          "withoutChurchDetails": [],
+          "limitations": []
+        }
+      ]
+    },
+    "PH": {
+      "before": {
+        "total": 1,
+        "address": 1,
+        "phone": 1,
+        "website": 1,
+        "massTimes": 0,
+        "priestNames": 0,
+        "coordinates": 1
+      },
+      "after": {
+        "total": 50,
+        "address": 2,
+        "phone": 2,
+        "website": 1,
+        "massTimes": 1,
+        "priestNames": 1,
+        "coordinates": 1
+      },
+      "added": 49,
+      "updated": 0,
+      "sources": [
+        {
+          "authority": "Diocese of Cubao",
+          "url": "https://dioceseofcubao.ph/parishes/",
+          "checkedAt": "2026-10-12",
+          "listed": 49,
+          "checked": 49,
+          "errors": [],
+          "withoutChurchDetails": [],
+          "limitations": [
+            "The vicariate list supplies church names. Only the cathedral detail page was available in the public page index; other contacts, addresses and timetables remain missing."
+          ],
+          "detailPagesChecked": 1
+        }
+      ]
+    }
+  }
+}

@@ -3959,7 +3959,20 @@
             JP: { previousTimetable: '以前公開された時間表', sisterCongregations: '所属修道会', unpublishedNames: '個人名は非公開', unpublishedSchedule: '公開時間表は未確認', sources: '情報源', checkedAt: '確認日' },
             LA: { previousTimetable: 'Horae antea publicatae', sisterCongregations: 'Communitates religiosae', unpublishedNames: 'Nomina non publicata', unpublishedSchedule: 'Horae non publicatae', sources: 'Fontes', checkedAt: 'Dies inspectionis' }
         };
-        return Object.assign({}, labels[lang] || labels.EN, directoryLabels[lang] || directoryLabels.EN);
+        const closureLabels = {
+            KR: '임시 폐쇄 — 공식 출처에서 현재 미사 장소를 확인하세요.',
+            VN: 'Tạm đóng cửa — xem nguồn chính thức để biết địa điểm cử hành Thánh lễ hiện tại.',
+            EN: 'Temporarily closed — check the official source for current Mass arrangements.',
+            JP: '一時閉鎖中 — 現在のミサ会場は公式情報をご確認ください。',
+            LA: 'Ad tempus clausa — de Missis vide fontem officialem.',
+            IT: 'Temporaneamente chiusa — consultare la fonte ufficiale per le Messe.',
+            ES: 'Cerrada temporalmente — consulte la fuente oficial sobre las misas.',
+            PT: 'Temporariamente fechada — consulte a fonte oficial sobre as Missas.',
+            GM: 'Vorübergehend geschlossen — aktuelle Gottesdienstorte stehen in der offiziellen Quelle.',
+            ZH: '暫時關閉 — 請查閱官方來源確認目前的彌撒安排。'
+        };
+        return Object.assign({}, labels[lang] || labels.EN, directoryLabels[lang] || directoryLabels.EN,
+            { temporarilyClosed: closureLabels[lang] || closureLabels.EN });
     }
 
     function churchLocalDetailsForPlace(place) {
@@ -4297,6 +4310,10 @@
         ).trim();
         const officialFallback = churchSafeLink(officialUrl, labels.official) || escapeHtml(labels.unavailable);
         const rows = [];
+        if (((place && place.availabilityStatus) || local.availabilityStatus) === 'temporarily-closed') {
+            const closureSource = (place && place.availabilitySourceUrl) || local.availabilitySourceUrl || officialUrl;
+            rows.push(churchInfoField('', `${escapeHtml(labels.temporarilyClosed)}<br>${churchSafeLink(closureSource, labels.official)}`));
+        }
         rows.push(churchInfoField(labels.address, address ? escapeHtml(address) : escapeHtml(labels.unavailable)));
         if (diocese) rows.push(churchInfoField(labels.diocese, escapeHtml(diocese)));
         rows.push(churchInfoField(labels.phone, phone ? escapeHtml(phone) : escapeHtml(labels.unavailable)));
@@ -4319,6 +4336,8 @@
         const timetableHtml = massTimes.map(escapeHtml).join('<br>');
         const timetableNote = detailValue('massTimesStatus') === 'previously-published' ? `${escapeHtml(labels.previousTimetable)}<br>` : '';
         rows.push(churchInfoField(labels.massTimes, massTimes.length ? timetableNote + timetableHtml : massFallback));
+        const scheduleNotes = churchDetailList(detailValue('massTimesNotes'));
+        if (scheduleNotes.length) rows.push(churchInfoField('', scheduleNotes.map(escapeHtml).join('<br>')));
         if (massTimesPeriod) rows.push(churchInfoField(labels.massTimesPeriod, escapeHtml(massTimesPeriod)));
         const checkedAt = cleanNodeText(detailValue('directoryCheckedAt'));
         if (checkedAt) rows.push(churchInfoField(labels.checkedAt, escapeHtml(checkedAt)));
@@ -4439,6 +4458,9 @@
                 priestAssignments: record.priestAssignments || [],
                 clergySourceUrl: record.clergySourceUrl || '',
                 directoryCheckedAt: record.directoryCheckedAt || '',
+                availabilityStatus: record.availabilityStatus || '',
+                availabilitySourceUrl: record.availabilitySourceUrl || '',
+                massTimesNotes: record.massTimesNotes || [],
                 massTimesStatus: record.massTimesStatus || '',
                 massTimes: record.massTimes || [],
                 massTimesPeriod: record.massTimesPeriod || '',
