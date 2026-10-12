@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V29-20261008-COUNTRY-VIGILS';
+    const APP_VERSION = 'V29-20261012-ALL-SOULS-SOURCE';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -9380,7 +9380,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         } catch (error) {
             // Markdown fallback below covers Jina Reader responses.
         }
-        const markdownLinkRegex = /\[([^\]]+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+)(?:\s+["'][^)]*["'])?\)/g;
+        // Relays preserve bracketed liturgical colors inside the link label,
+        // e.g. [[자] ... 둘째 미사](url). Keep that label with its target.
+        const markdownLinkRegex = /\[((?:[^\[\]]|\[[^\[\]]*\])+)\]\((https?:\/\/[^)\s]+|\/[^)\s]+)(?:\s+["'][^)]*["'])?\)/g;
         let match;
         while ((match = markdownLinkRegex.exec(source || '')) !== null) {
             links.push({ text: cleanNodeText(match[1]), href: absoluteUrl(match[2], baseUrl) });
@@ -10086,7 +10088,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict94';
+    const STRICT_PARSER_CACHE_VERSION = 'strict95';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
