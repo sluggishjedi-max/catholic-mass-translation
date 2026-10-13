@@ -124,7 +124,27 @@ const en=heading('Reading 1','Wis 3:1-9\nThe souls of the just are in the hand o
   let weekdayRejected=false;try{strictParseDailyMass('EN','<h1>Thursday of the Fourth Week of Advent</h1>'+fixtures.en,christmas,'US')}catch{weekdayRejected=true}
   check(weekdayRejected,'Ordinary Advent text accepted as Christmas Vigil');
   state.liturgyNavSlot='day';state.specialVigilNavKey='';state.liturgicalDateContext=null;rememberLiturgicalDateContext(getStrictDateContext());state.liturgyInfo=buildGeneratedLiturgyInfo(christmas);
+  check(state.liturgyInfo.names.KR==='12월 24일'&&!state.liturgyInfo.isSolemnity,'Daytime Mass was overwritten by the fixed Vigil calendar entry');
+  check(state.liturgyInfo.prefaceKey==='advent_2'&&recommendedVestmentColor(christmas,state.liturgyInfo.color,state.liturgyInfo)===liturgyColorMap.purple,'Daytime Mass inherited the Christmas preface or vestments');
+  check(localizedNavigationLabel(getStrictDateContext(),'KR')==='낮 미사','Daytime navigation label is missing');
+  const christmasEntries=buildLiturgicalNavigationEntries(getStrictDateBase()).filter(entry=>entry.offset===0);
+  check(christmasEntries.length===2&&christmasEntries[0].slot==='day'&&christmasEntries[1].specialVigil==='christmas_vigil','December 24 must expose daytime before Vigil');
   check(koreanBlessingDateSelection(christmas,state.liturgyInfo)?.key==='advent','December 24 daytime blessing changed');
+  state.liturgyNavSlot='vigil';state.specialVigilNavKey='christmas_vigil';state.liturgicalDateContext=null;rememberLiturgicalDateContext(getStrictDateContext());state.liturgyInfo=buildGeneratedLiturgyInfo(christmas);
+  globalThis.uploadedCountrySpecialLiturgies={KR:{vigils:[{id:'christmas_vigil',names:{KR:'주님 성탄 대축일 성야 미사'}}]}};
+  check(buildGeneratedLiturgyInfo(christmas).names.KR==='주님 성탄 대축일 전야미사','Published legacy Christmas title was not normalized');
+  globalThis.uploadedCountrySpecialLiturgies={};
+  fetchJinaHtml=fetchTextWithFallbacks=async()=>{throw Error('Simulated source outage')};
+  for(const year of [2026,2031]){
+   getStrictDateBase=()=>({localDay:new Date(year,11,24),hour:20,timeZone:'Asia/Seoul'});state.liturgicalDateContext=null;rememberLiturgicalDateContext(getStrictDateContext());
+   for(const [lang,locationCode]of [['KR','KR'],['EN','US']]){
+    const fallback=await dailySourceFetchers[lang](new Date(year,11,24),{locationCode});
+    for(const key of readingKeys)check(sourceSectionHasContent(fallback.data[key]),'Fixed Vigil fallback missing '+lang+' '+key);
+    check(passageCitationsEquivalent('reading1',fallback.data.reading1['cit_'+lang.toLowerCase()],'Is 62:1-5',lang,'EN'),'Vigil fallback selected another first reading');
+    check(passageCitationsEquivalent('gospel',fallback.data.gospel['cit_'+lang.toLowerCase()],'Mt 1:1-25',lang,'EN'),'Vigil fallback selected another Gospel');
+    check(fallback.fallbackSource?.calendarInvariant,'Fixed source did not retain its calendar invariant provenance');
+   }
+  }
 
   return {resolvedMasses,masses:reports,pairedCitations:true,shortReadings:true,meaningfulRows:true,christmasVigil:true,christmasGospel:vn.data.gospel.cit_vn,passed:true};
  },fixtures);assert(result.passed);console.log(JSON.stringify(result,null,2));

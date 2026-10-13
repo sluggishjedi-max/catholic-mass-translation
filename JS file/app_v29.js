@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V29-20261013-READING-CHOICES';
+    const APP_VERSION = 'V29-20261013-CHRISTMAS-DAY-VIGIL';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -831,7 +831,6 @@
         '12-08': saintEntry('white', { KR: '원죄 없이 잉태되신 복되신 동정 마리아 대축일', VN: 'Lễ Đức Mẹ Vô Nhiễm Nguyên Tội', EN: 'The Immaculate Conception of the Blessed Virgin Mary', JP: '無原罪の聖マリア', LA: 'In Conceptione Immaculata Beatae Mariae Virginis' }, { rank: 'solemnity' }),
         '12-13': saintEntry('red', { KR: '성녀 루치아 동정 순교자 기념일', VN: 'Thánh Lucia, Trinh nữ, Tử đạo', EN: 'Saint Lucy, Virgin and Martyr', JP: '聖ルチアおとめ殉教者', LA: 'Sanctae Luciae' }, { rank: 'memorial' }),
         '12-14': saintEntry('white', { KR: '십자가의 성 요한 사제 학자 기념일', VN: 'Thánh Gioan Thánh Giá, Linh mục, Tiến sĩ Hội Thánh', EN: 'Saint John of the Cross, Priest and Doctor of the Church', JP: '十字架の聖ヨハネ司祭教会博士', LA: 'Sancti Ioannis a Cruce' }, { rank: 'memorial' }),
-        '12-24': saintEntry('gold', { KR: '주님 성탄 대축일 - 전야 미사', VN: 'Lễ Vọng Giáng Sinh', EN: 'The Nativity of the Lord - Vigil Mass', JP: '主の降誕 - 前晩のミサ', LA: 'In Vigilia Nativitatis Domini' }, { rank: 'solemnity', specialMassKey: 'christmas_vigil' }),
         '12-25': saintEntry('gold', { KR: '주님 성탄 대축일', VN: 'Lễ Chúa Giáng Sinh', EN: 'The Nativity of the Lord', JP: '主の降誕', LA: 'In Nativitate Domini' }, { rank: 'solemnity' }),
         '12-26': saintEntry('red', { KR: '성 스테파노 첫 순교자 축일', VN: 'Thánh Stêphanô, Tử đạo tiên khởi', EN: 'Saint Stephen, The First Martyr', JP: '最初の殉教者聖ステファノ', LA: 'Sancti Stephani, protomartyris' }, { rank: 'feast' }),
         '12-27': saintEntry('white', { KR: '성 요한 사도 복음사가 축일', VN: 'Thánh Gioan, Tông đồ, Tác giả Tin Mừng', EN: 'Saint John, Apostle and Evangelist', JP: '聖ヨハネ使徒福音記者', LA: 'Sancti Ioannis, apostoli et evangelistae' }, { rank: 'feast' }),
@@ -1710,7 +1709,12 @@
 
         if (d >= adventStart && d < new Date(y, 11, 25)) {
             const week = Math.floor(dayDiff(d, adventStart) / 7) + 1;
-            return { season: 'advent', week, day, sundayCycle, weekdayCycle, color: (day === 0 && week === 3) ? liturgyColorMap.rose : liturgyColorMap.purple };
+            const names = d.getMonth() === 11 && d.getDate() === 24 && day !== 0 ? {
+                KR:'12월 24일', VN:'Ngày 24 tháng 12', EN:'December 24', JP:'12月24日',
+                LA:'Die 24 Decembris', ZH:'12月24日', IT:'24 dicembre', PT:'24 de dezembro',
+                ES:'24 de diciembre', DE:'24. Dezember'
+            } : undefined;
+            return { season: 'advent', week, day, sundayCycle, weekdayCycle, color: (day === 0 && week === 3) ? liturgyColorMap.rose : liturgyColorMap.purple, names };
         }
         if (d > baptism && d < ashWednesday) {
             const week = Math.floor(dayDiff(d, ordinaryStart) / 7) + (day === 0 ? 2 : 1);
@@ -2058,6 +2062,12 @@
     }
 
     function localizedNavigationLabel(dateContext, langCode) {
+        if (dateContext?.navSlot === 'day' && isChristmasEve(dateContext.localDate || dateContext.date)) {
+            const labels = {KR:'낮 미사', VN:'Thánh lễ ban ngày', EN:'Daytime Mass', JP:'日中のミサ',
+                LA:'Missa diurna', ZH:'日間彌撒', IT:'Messa diurna', PT:'Missa durante o dia',
+                ES:'Misa diurna', DE:'Messe am Tag'};
+            return labels[normalizeSelectableLang(langCode,'KR')] || labels.KR;
+        }
         if (!dateContext || dateContext.navSlot !== 'vigil') return '';
         const namedVigil = dateContext.specialVigil;
         const labels = namedVigil ? {
@@ -9077,7 +9087,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function isSelectedTargetDailySource(lang) {
         const target = state.targetLocationCode || '';
         return normalizeSelectableLang(lang, '') === normalizeSelectableLang(state.targetLang || '', '')
-            && !!target && hasCountryDailyReadings(target)
+            && !!target && targetLanguageForLocationCode(target) === normalizeSelectableLang(lang, '')
             && dataJurisdictionForLocation(dailySourceLocationCode(lang)) === dataJurisdictionForLocation(target);
     }
 
@@ -10088,7 +10098,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict96';
+    const STRICT_PARSER_CACHE_VERSION = 'strict97';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10158,6 +10168,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             result[key] = value && typeof value === 'object' && !Array.isArray(value)
                 ? mergeSpecialLiturgyDefinition(result[key] || {}, value) : value;
         });
+        if (result.id === 'christmas_vigil' && result.names?.KR) {
+            result.names = Object.assign({}, result.names, {KR:result.names.KR.replace(/성야\s*미사/gu,'전야미사')});
+        }
         return result;
     }
 
@@ -13928,7 +13941,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const data = entry && entry.data && entry.data[lang];
             const sourceUrl = entry && entry.sourceUrls && entry.sourceUrls[lang];
             if (entry?.fetchDaily === false) return {data:{}, title:entry.names?.[lang] || '', sourceMode:'country-special-liturgy'};
-            if (!sourceUrl && (!data || !Object.keys(data).length)) return fetchDaily(date, options);
+            if (!sourceUrl && (!data || !Object.keys(data).length) && !entry?.sourceTextFallbacks?.[lang]) return fetchDaily(date, options);
             let parsed = {data:{}};
             if (sourceUrl) parsed = strictParseDailyMass(lang, await fetchTextWithFallbacks(sourceUrl), date, locationCode);
             else if (entry.mergeDaily) {
@@ -21180,10 +21193,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const note = document.createElement('p');
             note.className = 'daily-source-provenance';
             note.setAttribute('role', 'note');
-            const text = uiL === 'KR' ? '날짜별 원문을 조회할 수 없어 제공된 경본의 고정 전례문을 표시합니다.'
-                : uiL === 'VN' ? 'Không thể lấy bản văn theo ngày; hiển thị bản văn cố định từ sách lễ được cung cấp.'
-                : 'The dated source is unavailable; displaying the fixed formulary from the supplied Missal.';
-            note.textContent = `${lang}: ${text} (${detail.source.translation || 'Missal'}, PDF ${detail.source.pdfPages?.join('–') || ''})`;
+            const text = uiL === 'KR' ? '날짜별 원문을 조회할 수 없어 검증된 고정 전례문을 표시합니다.'
+                : uiL === 'VN' ? 'Không thể lấy bản văn theo ngày; hiển thị bản văn phụng vụ cố định đã được kiểm chứng.'
+                : 'The dated source is unavailable; displaying the verified fixed formulary.';
+            note.textContent = `${lang}: ${text} (${detail.source.authority || detail.source.translation || 'Missal'})`;
             root.appendChild(note);
         });
 

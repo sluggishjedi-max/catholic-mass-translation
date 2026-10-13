@@ -3776,3 +3776,190 @@ if christmas_vigil is None:
     christmas_vigil = deepcopy(next(entry for entry in UNIVERSAL['vigils'] if entry['id'] == 'christmas_vigil'))
     SPECIAL_LITURGIES['vigils'].append(christmas_vigil)
 christmas_vigil.setdefault('sourceSelectors', {}).setdefault('EN', {})['dateOffset'] = 1
+
+# CHRISTMAS_VIGIL_LECTIONARY_FALLBACK
+# These five readings are fixed for the Vigil in every civil year and cycle.
+CHRISTMAS_VIGIL = christmas_vigil
+CHRISTMAS_VIGIL.setdefault('sourceTextFallbacks', {})['EN'] = '''Title: The Nativity of the Lord – Vigil Mass
+Markdown Content:
+Reading 1
+Isaiah 62:1-5
+For Zion’s sake I will not be silent,
+for Jerusalem’s sake I will not be quiet,
+until her vindication shines forth like the dawn
+and her victory like a burning torch.
+Nations shall behold your vindication,
+and all the kings your glory;
+you shall be called by a new name
+pronounced by the mouth of the LORD.
+You shall be a glorious crown in the hand of the LORD,
+a royal diadem held by your God.
+No more shall people call you “Forsaken,”
+or your land “Desolate,”
+but you shall be called “My Delight,”
+and your land “Espoused.”
+For the LORD delights in you
+and makes your land his spouse.
+As a young man marries a virgin,
+your Builder shall marry you;
+and as a bridegroom rejoices in his bride
+so shall your God rejoice in you.
+
+Responsorial Psalm
+Psalm 89:4-5, 16-17, 27, 29.
+R. (2a) For ever I will sing the goodness of the Lord.
+I have made a covenant with my chosen one,
+I have sworn to David my servant:
+Forever will I confirm your posterity
+and establish your throne for all generations.
+R. For ever I will sing the goodness of the Lord.
+Blessed the people who know the joyful shout;
+in the light of your countenance, O LORD, they walk.
+At your name they rejoice all the day,
+and through your justice they are exalted.
+R. For ever I will sing the goodness of the Lord.
+He shall say of me, “You are my father,
+my God, the rock, my savior.”
+Forever I will maintain my kindness toward him,
+and my covenant with him stands firm.
+R. For ever I will sing the goodness of the Lord.
+
+Reading 2
+Acts 13:16-17, 22-25
+When Paul reached Antioch in Pisidia and entered the synagogue,
+he stood up, motioned with his hand, and said,
+“Fellow Israelites and you others who are God-fearing, listen.
+The God of this people Israel chose our ancestors
+and exalted the people during their sojourn in the
+land of Egypt.
+With uplifted arm he led them out of it.
+Then he removed Saul and raised up David as king;
+of him he testified,
+‘I have found David, son of Jesse, a man after my own heart;
+he will carry out my every wish.’
+From this man’s descendants God, according to his promise,
+has brought to Israel a savior, Jesus.
+John heralded his coming by proclaiming a baptism of repentance
+to all the people of Israel;
+and as John was completing his course, he would say,
+‘What do you suppose that I am? I am not he.
+Behold, one is coming after me;
+I am not worthy to unfasten the sandals of his feet.’”
+
+Alleluia
+R. Alleluia, alleluia.
+Tomorrow the wickedness of the earth will be destroyed:
+the Savior of the world will reign over us.
+R. Alleluia, alleluia.
+
+Gospel
+Matthew 1:1-25
+The book of the genealogy of Jesus Christ,
+the son of David, the son of Abraham.
+Abraham became the father of Isaac,
+Isaac the father of Jacob,
+Jacob the father of Judah and his brothers.
+Judah became the father of Perez and Zerah,
+whose mother was Tamar.
+Perez became the father of Hezron,
+Hezron the father of Ram,
+Ram the father of Amminadab.
+Amminadab became the father of Nahshon,
+Nahshon the father of Salmon,
+Salmon the father of Boaz,
+whose mother was Rahab.
+Boaz became the father of Obed,
+whose mother was Ruth.
+Obed became the father of Jesse,
+Jesse the father of David the king.
+David became the father of Solomon,
+whose mother had been the wife of Uriah.
+Solomon became the father of Rehoboam,
+Rehoboam the father of Abijah,
+Abijah the father of Asaph.
+Asaph became the father of Jehoshaphat,
+Jehoshaphat the father of Joram,
+Joram the father of Uzziah.
+Uzziah became the father of Jotham,
+Jotham the father of Ahaz,
+Ahaz the father of Hezekiah.
+Hezekiah became the father of Manasseh,
+Manasseh the father of Amos,
+Amos the father of Josiah.
+Josiah became the father of Jechoniah and his brothers
+at the time of the Babylonian exile.
+After the Babylonian exile,
+Jechoniah became the father of Shealtiel,
+Shealtiel the father of Zerubbabel,
+Zerubbabel the father of Abiud.
+Abiud became the father of Eliakim,
+Eliakim the father of Azor,
+Azor the father of Zadok.
+Zadok became the father of Achim,
+Achim the father of Eliud,
+Eliud the father of Eleazar.
+Eleazar became the father of Matthan,
+Matthan the father of Jacob,
+Jacob the father of Joseph, the husband of Mary.
+Of her was born Jesus who is called the Christ.
+Thus the total number of generations
+from Abraham to David
+is fourteen generations;
+from David to the Babylonian exile,
+fourteen generations;
+from the Babylonian exile to the Christ,
+fourteen generations.
+Now this is how the birth of Jesus Christ came about.
+When his mother Mary was betrothed to Joseph,
+but before they lived together,
+she was found with child through the Holy Spirit.
+Joseph her husband, since he was a righteous man,
+yet unwilling to expose her to shame,
+decided to divorce her quietly.
+Such was his intention when, behold,
+the angel of the Lord appeared to him in a dream and said,
+“Joseph, son of David,
+do not be afraid to take Mary your wife into your home.
+For it is through the Holy Spirit
+that this child has been conceived in her.
+She will bear a son and you are to name him Jesus,
+because he will save his people from their sins.”
+All this took place to fulfill
+what the Lord had said through the prophet:
+Behold, the virgin shall conceive and bear a son,
+and they shall name him Emmanuel,
+which means “God is with us.”
+When Joseph awoke,
+he did as the angel of the Lord had commanded him
+and took his wife into his home.
+He had no relations with her until she bore a son,
+and he named him Jesus.
+OR:
+Matthew 1:18-25
+This is how the birth of Jesus Christ came about.
+When his mother Mary was betrothed to Joseph,
+but before they lived together,
+she was found with child through the Holy Spirit.
+Joseph her husband, since he was a righteous man,
+yet unwilling to expose her to shame,
+decided to divorce her quietly.
+Such was his intention when, behold,
+the angel of the Lord appeared to him in a dream and said,
+“Joseph, son of David,
+do not be afraid to take Mary your wife into your home.
+For it is through the Holy Spirit
+that this child has been conceived in her.
+She will bear a son and you are to name him Jesus,
+because he will save his people from their sins.”
+All this took place to fulfill
+what the Lord had said through the prophet:
+Behold, the virgin shall conceive and bear a son,
+and they shall name him Emmanuel,
+which means “God is with us.”
+When Joseph awoke,
+he did as the angel of the Lord had commanded him
+and took his wife into his home.
+He had no relations with her until she bore a son,
+and he named him Jesus.'''
+CHRISTMAS_VIGIL['fallbackSource'] = {'authority': 'USCCB', 'calendarInvariant': True}
+CHRISTMAS_VIGIL.setdefault('requiredSourceSections', {})['EN'] = ['reading1', 'psalm', 'reading2', 'gospel_accl', 'gospel']
