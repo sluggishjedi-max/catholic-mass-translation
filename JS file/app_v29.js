@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V29-20261013-CHRISTMAS-DAY-VIGIL';
+    const APP_VERSION = 'V29-20261013-VIGIL-DAYTIME';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -1442,7 +1442,6 @@
             { date: addDays(easter, -7), color: 'red', isSunday: true, names: { KR: '주님 수난 성지 주일', VN: 'Chúa Nhật Lễ Lá và Cuộc Thương Khó của Chúa', EN: 'Palm Sunday of the Passion of the Lord', JP: '受難の主日（枝の主日）', LA: 'Dominica in Palmis de Passione Domini' }, specialMassKey: 'palm_sunday' },
             { date: addDays(easter, -3), color: 'white', isSunday: false, names: { KR: '주님 만찬 성목요일', VN: 'Thứ Năm Tuần Thánh - Thánh Lễ Tiệc Ly', EN: 'Holy Thursday - Evening Mass of the Lord’s Supper', JP: '聖木曜日・主の晩さんの夕べのミサ', LA: 'Feria quinta in Cena Domini' }, specialMassKey: 'holy_thursday' },
             { date: addDays(easter, -2), color: 'red', isSunday: false, names: { KR: '주님 수난 성금요일', VN: 'Thứ Sáu Tuần Thánh', EN: 'Friday of the Passion of the Lord', JP: '聖金曜日・主の受難', LA: 'Feria sexta in Passione Domini' }, specialMassKey: 'good_friday' },
-            { date: addDays(easter, -1), color: 'gold', isSunday: false, names: { KR: '주님 부활 대축일 파스카 성야', VN: 'Đêm Canh Thức Vượt Qua', EN: 'Easter Vigil in the Holy Night', JP: '復活の聖なる徹夜祭', LA: 'Vigilia Paschalis in Nocte Sancta' }, specialMassKey: 'easter_vigil' },
             { date: easter, color: 'gold', isSunday: true, names: { KR: '주님 부활 대축일', VN: 'Chúa Nhật Phục Sinh', EN: 'Easter Sunday of the Resurrection of the Lord', JP: '復活の主日', LA: 'Dominica Resurrectionis Domini' } },
             { date: ascension, color: 'white', isSunday: ascension.getDay() === 0, names: { KR: '주님 승천 대축일', VN: 'Lễ Chúa Thăng Thiên', EN: 'The Ascension of the Lord', JP: '主の昇天', LA: 'In Ascensione Domini' } },
             { date: addDays(easter, 49), color: 'red', isSunday: true, names: { KR: '성령 강림 대축일', VN: 'Chúa Nhật Lễ Chúa Thánh Thần Hiện Xuống', EN: 'Pentecost Sunday', JP: '聖霊降臨の主日', LA: 'Dominica Pentecostes' } },
@@ -10098,7 +10097,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict97';
+    const STRICT_PARSER_CACHE_VERSION = 'strict98';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10395,7 +10394,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             isSunday: date.getDay() === 0,
             isSolemnity: isSolemnityNameMap(names)
         }, date);
-        if (overrides.meta && (overrides.meta.allSoulsChoice || overrides.meta.specialMassKey)) {
+        if (overrides.names) {
             info.names = Object.assign({}, names);
             info.krName = names.KR;
             info.vnName = names.VN;
@@ -10432,7 +10431,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     VN: 'Thứ Bảy Tuần Thánh',
                     EN: 'Holy Saturday',
                     JP: '聖土曜日',
-                    LA: 'Sabbato Sancto'
+                    LA: 'Sabbato Sancto',
+                    ZH: '聖週六',
+                    IT: 'Sabato Santo',
+                    PT: 'Sábado Santo',
+                    ES: 'Sábado Santo',
+                    DE: 'Karsamstag'
                 },
                 meta: { season: 'holy_week', special: true }
             });
@@ -10777,7 +10781,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return '';
     }
 
-    function strictScopeLinesForMassVariant(lines, selector) {
+    function strictScopeLinesForMassVariant(lines, selector, lang) {
         // A relay may retain the selected Mass only in its metadata title.
         // Homily prose mentioning another Mass must not rescope that document.
         const declared = strictVariantKind(selector.sourceTitle || '');
@@ -10800,6 +10804,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!chosen && selector.slot === 'vigil') chosen = markers.find(marker => marker.kind === 'vigil');
         if (!chosen) chosen = markers.find(marker => marker.kind === 'day');
         if (!chosen) chosen = markers.find(marker => !['vigil', 'night'].includes(marker.kind));
+        if (!chosen && selector.slot === 'day') {
+            // A weekday heading need not say "Day Mass". Keep its sections
+            // when a later Vigil starts the same sections again. A mention
+            // of the Vigil in a homily does not start another formulary.
+            for (const marker of markers) {
+                const before = lines.slice(0, marker.index);
+                const dayKeys = new Set(before.map(line => strictIdentifySection(line, lang)?.key).filter(Boolean));
+                if (!dayKeys.has('reading1') && !dayKeys.has('gospel')) continue;
+                const nextSection = lines.slice(marker.index + 1).map(line => strictIdentifySection(line, lang)).find(Boolean);
+                if (nextSection && dayKeys.has(nextSection.key)) return before;
+            }
+        }
         if (!chosen) return lines || [];
         const nextVariant = markers.find(marker => marker.index > chosen.index && marker.kind !== chosen.kind);
         const end = nextVariant ? nextVariant.index : lines.length;
@@ -10968,7 +10984,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictExtractRawSections(lines, lang, selector) {
-        const scoped = splitEmbeddedDailySectionHeadings(strictScopeLinesForMassVariant(lines, selector), lang);
+        const scoped = splitEmbeddedDailySectionHeadings(strictScopeLinesForMassVariant(lines, selector, lang), lang);
         const result = {};
         let current = null;
         scoped.forEach(line => {
