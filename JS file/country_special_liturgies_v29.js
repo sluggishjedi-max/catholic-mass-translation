@@ -1025,6 +1025,7 @@ globalThis.countrySpecialLiturgies = {
           "DE": "Weihnachten – Messe am Heiligen Abend"
         },
         "mergeDaily": true,
+        "requiresVigilSource": true,
         "sourceSelectors": {
           "KR": {
             "labelPattern": "전야\\s*미사"
@@ -5827,6 +5828,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -14815,6 +14817,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -23399,6 +23402,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -35716,6 +35720,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -48044,6 +48049,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -69844,6 +69850,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -78424,6 +78431,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -87405,6 +87413,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -93164,6 +93173,7 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
@@ -99408,9 +99418,13 @@ globalThis.countrySpecialLiturgies = {
             "DE": "Weihnachten – Messe am Heiligen Abend"
           },
           "mergeDaily": true,
+          "requiresVigilSource": true,
           "sourceSelectors": {
             "KR": {
               "labelPattern": "전야\\s*미사"
+            },
+            "EN": {
+              "dateOffset": 1
             }
           },
           "data": {

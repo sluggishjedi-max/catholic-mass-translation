@@ -3767,3 +3767,12 @@ MISSAL_SPECIAL_TEXTS = {'palm_sunday': {'rites': {'palm_form': '<On this day the
                                                  'Spirit, whom you wondrously poured out on your '
                                                  'Apostles. Through Christ our Lord.'}}}
 apply_missal_parts(SPECIAL_LITURGIES, 'EN', MISSAL_SPECIAL_TEXTS)
+
+# USCCB publishes the Christmas Vigil under Christmas Day's reading date.
+christmas_vigil = next((entry for entry in SPECIAL_LITURGIES['vigils'] if entry['id'] == 'christmas_vigil'), None)
+if christmas_vigil is None:
+    from common import UNIVERSAL
+    from copy import deepcopy
+    christmas_vigil = deepcopy(next(entry for entry in UNIVERSAL['vigils'] if entry['id'] == 'christmas_vigil'))
+    SPECIAL_LITURGIES['vigils'].append(christmas_vigil)
+christmas_vigil.setdefault('sourceSelectors', {}).setdefault('EN', {})['dateOffset'] = 1
