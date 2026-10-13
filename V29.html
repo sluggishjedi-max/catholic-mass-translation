@@ -94,7 +94,7 @@
         .setting-note { flex: 0 0 auto; color: var(--sub-txt); font-size: 0.9rem; font-weight: 700; white-space: nowrap; }
         .close-btn { width: 100%; padding: 10px; border: 0; border-radius: 6px; background: var(--primary-color); color: white; font-weight: 800; cursor: pointer; }
         #consent-modal { display: flex; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
-        .consent-content { width: min(760px, 96vw); max-height: 90vh; overflow: hidden; display: flex; flex-direction: column; gap: 14px; background: white; color: #333; border-radius: 10px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); font-family: var(--body-gothic-font-family); }
+        .consent-content { box-sizing: border-box; width: min(760px, 96vw); max-height: 90vh; max-height: min(90vh, 90dvh); overflow: hidden; display: flex; flex-direction: column; gap: 14px; background: white; color: #333; border-radius: 10px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); font-family: var(--body-gothic-font-family); }
         .consent-content .lang-EN,
         .consent-content .lang-LA,
         .consent-content .lang-KR,
@@ -107,17 +107,33 @@
         .consent-content .lang-DE,
         .consent-content button { font-family: inherit; }
         .consent-content h2 { margin: 0; color: var(--brand-logo-color); font-size: 1.15rem; border-bottom: 2px solid var(--brand-logo-color); padding-bottom: 8px; }
-        .consent-language-grid { overflow-y: auto; display: grid; gap: 10px; padding-right: 4px; }
-        .consent-warning-line { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 9px; align-items: start; }
+        .consent-language-grid { min-height: 0; overflow-y: auto; display: grid; gap: 14px; padding-right: 4px; }
+        .consent-warning-line { margin: 0; }
         .consent-warning-line + .consent-warning-line { border-top: 1px solid #ececec; padding-top: 10px; }
-        .consent-warning-language { color: #111; font-weight: 900; white-space: nowrap; }
-        .consent-warning-text { min-width: 0; line-height: 1.5; font-size: 0.92rem; overflow-wrap: anywhere; }
-        .consent-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; border-top: 1px solid #e8e8e8; padding-top: 12px; }
-        .consent-btn { border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 900; }
+        .consent-other-label { margin: 0; font-size: 0.88rem; line-height: 1.5; color: #555; }
+        .consent-language-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 9px; }
+        .consent-language-links button { min-height: 36px; padding: 6px 0; border: 0; border-radius: 3px; background: transparent; color: #333; font-size: 0.9rem; font-weight: 800; cursor: pointer; }
+        .consent-language-links button:hover, .consent-language-links button[aria-pressed="true"] { color: var(--brand-logo-color); text-decoration: underline; text-underline-offset: 3px; }
+        .consent-language-links button:focus-visible { outline: 2px solid var(--brand-logo-color); outline-offset: 3px; }
+        .consent-language-links > span { color: #aaa; }
+        #consent-other-notice { margin: 0; padding-top: 12px; border-top: 1px solid #e8e8e8; }
+        .consent-warning-text { margin: 0; min-width: 0; line-height: 1.5; font-size: 0.92rem; overflow-wrap: anywhere; }
+        .consent-actions { flex-shrink: 0; display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; border-top: 1px solid #e8e8e8; padding-top: 12px; }
+        .consent-btn { max-width: 100%; border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 900; line-height: 1.45; }
+        .consent-btn span { display: block; }
+        .consent-btn-translation { margin-top: 3px; font-size: 0.78rem; font-weight: 600; }
         .consent-btn.accept { background: var(--brand-logo-color); color: white; }
         .consent-btn.accept:hover,
-        .consent-btn.accept:focus-visible { background: var(--brand-logo-hover-color); outline: none; }
+        .consent-btn.accept:focus-visible { background: var(--brand-logo-hover-color); }
+        .consent-btn:focus-visible { outline: 2px solid #333; outline-offset: 3px; }
         .consent-btn.decline { background: #eee; color: #444; }
+        .consent-btn.decline:hover { background: #ddd; }
+        @media (max-width: 540px) {
+            #consent-modal { padding: 12px; }
+            .consent-content { padding: 18px; gap: 12px; }
+            .consent-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+            .consent-btn.accept { order: -1; }
+        }
         #vn-source-modal { display: none; position: fixed; inset: 0; z-index: 10001; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         #vn-source-modal.is-visible { display: flex; }
         .vn-source-content { width: min(560px, 96vw); background: white; color: #333; border-radius: 12px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
@@ -228,8 +244,7 @@
         .aux-panel h3 { margin-bottom: 8px; color: var(--primary-color); font-size: 1.05rem; }
         .aux-title-secondary { color: var(--sub-txt); opacity: 0.62; font-size: 0.88em; font-weight: 700; }
         .aux-dev-warning { display: grid; gap: 5px; margin: 0 0 14px; padding: 0; border: 0; border-radius: 0; outline: 0; box-shadow: none; background: transparent; color: #775700; line-height: 1.45; }
-        .aux-warning-line { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 8px; align-items: start; }
-        .aux-warning-language { font-weight: 900; white-space: nowrap; }
+        .aux-warning-line { min-width: 0; }
         .aux-warning-text { min-width: 0; font-weight: 700; overflow-wrap: anywhere; }
         .aux-note { margin-bottom: 14px; color: var(--sub-txt); line-height: 1.55; font-size: 0.92rem; }
         .aux-source-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
@@ -517,57 +532,38 @@
 
 <div id="consent-modal" role="dialog" aria-modal="true" aria-labelledby="consent-title">
     <div class="consent-content">
-        <h2 id="consent-title">사용 전 안내 / Notice Before Use</h2>
-        <div id="consent-language-grid" class="consent-language-grid" aria-live="polite">
-            <div class="consent-warning-line lang-EN">
-                <span class="consent-warning-language">English :</span>
-                <span class="consent-warning-text">Please note that the &lt;Order of Mass&gt;, &lt;Liturgical Readings&gt;, prayers, and hymns on this site have not been approved by the Catholic Bishops' Conferences of each country or other relevant copyright holders. Some parts may differ in the celebration of Mass; please use this site for reference only.</span>
+        <h2 id="consent-title"><span lang="ko">사용 전 안내</span> / <span lang="en">Notice Before Use</span></h2>
+        <div id="consent-language-grid" class="consent-language-grid">
+            <p id="consent-warning-kr" class="consent-warning-line consent-warning-text lang-KR" lang="ko">&lt;미사통상문&gt; 및 &lt;전례독서&gt;, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의에서 발행된 공식 자료를 활용하였으나, 해당 저작물의 이용 승인을 받은 것은 아님을 알려드립니다. 또한, 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.</p>
+            <p id="consent-warning-en" class="consent-warning-line consent-warning-text lang-EN" lang="en">Please note that the &lt;Order of Mass&gt;, &lt;Liturgical Readings&gt;, prayers, and hymns on this site use official materials published by the Catholic Bishops' Conferences of each country, but permission to use these works has not been obtained. Some parts may also differ in the celebration of Mass; please use this site for reference only.</p>
+            <p id="consent-other-label" class="consent-other-label"><span lang="ko">각국 언어별 안내문 보기</span><br><span lang="en">Select a language below to view the notice.</span></p>
+            <div class="consent-language-links" role="group" aria-labelledby="consent-other-label">
+                <button type="button" lang="la" data-consent-language="LA" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('LA')">Latine</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="zh-Hant" data-consent-language="ZH" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('ZH')">繁體中文</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="ja" data-consent-language="JP" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('JP')">日本語</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="vi" data-consent-language="VN" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('VN')">Tiếng Việt</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="it" data-consent-language="IT" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('IT')">Italiano</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="es" data-consent-language="ES" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('ES')">Español</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="pt" data-consent-language="PT" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('PT')">Português</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" lang="de" data-consent-language="DE" aria-controls="consent-other-notice" aria-expanded="false" aria-pressed="false" onclick="selectStartupNoticeLanguage('DE')">Deutsch</button>
             </div>
-            <div class="consent-warning-line lang-LA">
-                <span class="consent-warning-language">Latine :</span>
-                <span class="consent-warning-text">Monemus &lt;Ordinarium Missae&gt;, &lt;Lectiones liturgicas&gt;, preces atque cantus in hoc situ positos non esse approbatos a Conferentiis Episcoporum Catholicorum singularum nationum neque ab aliis iurium auctoralium possessoribus pertinentibus. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.</span>
-            </div>
-            <div class="consent-warning-line lang-KR">
-                <span class="consent-warning-language">한국어 :</span>
-                <span class="consent-warning-text">&lt;미사통상문&gt; 및 &lt;전례독서&gt;, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의 등 저작권자의 승인을 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.</span>
-            </div>
-            <div class="consent-warning-line lang-JP">
-                <span class="consent-warning-language">日本語 :</span>
-                <span class="consent-warning-text">本サイトに掲載している&lt;ミサ通常文&gt;、&lt;典礼朗読&gt;、祈祷文および聖歌について、各国のカトリック司教協議会その他の著作権者から承認を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。</span>
-            </div>
-            <div class="consent-warning-line lang-ZH">
-                <span class="consent-warning-language">繁體中文 :</span>
-                <span class="consent-warning-text">請注意，本網站所載的&lt;彌撒常用經文&gt;、&lt;禮儀讀經&gt;、祈禱文及聖歌，尚未獲各國天主教主教團或其他相關著作權人核准。舉行彌撒時，部分內容可能有所不同；請僅供參考使用。</span>
-            </div>
-            <div class="consent-warning-line lang-VN">
-                <span class="consent-warning-language">Tiếng Việt :</span>
-                <span class="consent-warning-text">Xin lưu ý rằng &lt;Nghi thức Thánh lễ&gt;, &lt;Bài đọc phụng vụ&gt;, cũng như các kinh nguyện và thánh ca trên trang này chưa được các Hội đồng Giám mục Công giáo của từng quốc gia hoặc các chủ sở hữu bản quyền liên quan chấp thuận. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.</span>
-            </div>
-            <div class="consent-warning-line lang-IT">
-                <span class="consent-warning-language">Italiano :</span>
-                <span class="consent-warning-text">Si informa che l'&lt;Ordinario della Messa&gt;, le &lt;Letture liturgiche&gt;, le preghiere e i canti presenti in questo sito non sono stati approvati dalle Conferenze episcopali cattoliche dei singoli Paesi né dagli altri titolari dei relativi diritti d'autore. Alcune parti possono differire nella celebrazione della Messa; utilizzare il sito solo come riferimento.</span>
-            </div>
-            <div class="consent-warning-line lang-ES">
-                <span class="consent-warning-language">Español :</span>
-                <span class="consent-warning-text">Se informa que el &lt;Ordinario de la Misa&gt;, las &lt;Lecturas litúrgicas&gt;, las oraciones y los cantos de este sitio no han sido aprobados por las Conferencias Episcopales Católicas de cada país ni por otros titulares de los derechos de autor correspondientes. Algunas partes pueden diferir en la celebración de la Misa; utilice este sitio solo como referencia.</span>
-            </div>
-            <div class="consent-warning-line lang-PT">
-                <span class="consent-warning-language">Português :</span>
-                <span class="consent-warning-text">Informamos que o &lt;Ordinário da Missa&gt;, as &lt;Leituras litúrgicas&gt;, as orações e os cânticos deste site não foram aprovados pelas Conferências Episcopais Católicas de cada país nem por outros titulares dos respetivos direitos de autor. Algumas partes podem diferir na celebração da Missa; utilize este site apenas como referência.</span>
-            </div>
-            <div class="consent-warning-line lang-DE">
-                <span class="consent-warning-language">Deutsch :</span>
-                <span class="consent-warning-text">Bitte beachten Sie, dass das &lt;Ordinarium der Messe&gt;, die &lt;liturgischen Lesungen&gt;, Gebete und Gesänge auf dieser Website weder von den katholischen Bischofskonferenzen der einzelnen Länder noch von anderen zuständigen Rechteinhabern genehmigt wurden. Einzelne Teile können bei der Messfeier abweichen; verwenden Sie diese Website nur als Referenz.</span>
-            </div>
+            <p id="consent-other-notice" class="consent-warning-text" role="region" aria-labelledby="consent-other-label" aria-live="polite" aria-atomic="true" hidden></p>
         </div>
         <div class="consent-actions">
-            <button type="button" id="consent-decline" class="consent-btn decline" onclick="declineStartupNotice()">동의하지 않고 종료</button>
-            <button type="button" id="consent-accept" class="consent-btn accept" onclick="acceptStartupNotice()">동의합니다</button>
+            <button type="button" id="consent-decline" class="consent-btn decline" onclick="declineStartupNotice()"><span lang="ko">아니요, 이용하지 않겠습니다 (실행종료)</span><span lang="en" class="consent-btn-translation">No, I will not use this site (Exit).</span></button>
+            <button type="button" id="consent-accept" class="consent-btn accept" onclick="acceptStartupNotice()"><span lang="ko">네, 이해했습니다</span><span lang="en" class="consent-btn-translation">Yes, I understand.</span></button>
         </div>
     </div>
 </div>
 
-<script src="JS%20file/startup_notice.js?v=20261006-early-consent"></script>
+<script src="JS%20file/startup_notice.js?v=20261013-notice-v29-1"></script>
 
 <div id="vn-source-modal" role="dialog" aria-modal="true" aria-labelledby="vn-source-title" aria-describedby="vn-source-description">
     <div class="vn-source-content">
@@ -775,7 +771,7 @@
 <div id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="lbl-settings-title">
     <div class="settings-content">
         <h3 id="lbl-settings-title">설정 (Settings)</h3>
-        <span id="settings-version-label" class="settings-version-label" aria-label="App version">V29</span>
+        <span id="settings-version-label" class="settings-version-label" aria-label="App version">V29.1</span>
         <section class="admin-review-settings" aria-labelledby="admin-review-title">
             <div class="admin-review-heading">
             <h4 id="admin-review-title">관리자 전례 검토</h4>
@@ -976,6 +972,6 @@
 <script src="JS%20file/country_special_liturgies_v29.js?v=20261013-christmas-fallback"></script>
 <script src="JS%20file/special_liturgy_order.js?v=20261008"></script>
 <script src="JS%20file/missal_preface_index.js?v=20261007"></script>
-<script src="JS%20file/app_v29.js?v=20261013-vigil-daytime"></script>
+<script src="JS%20file/app_v29.js?v=20261013-notice-v29-1"></script>
 </body>
 </html>

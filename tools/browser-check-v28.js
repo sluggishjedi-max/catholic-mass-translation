@@ -125,8 +125,9 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
       localizeAuxPanels();
       const prayerWarningLines = [...document.querySelectorAll('#prayer-dev-warning .aux-warning-line')];
       check(prayerWarningLines.length === 2, 'Prayer warning did not render the UI and translation languages');
-      check(prayerWarningLines[0].textContent.includes('Italiano') && prayerWarningLines[0].textContent.includes(auxUiText.IT.prayerWarning), 'Prayer warning omitted the UI language');
-      check(prayerWarningLines[1].textContent.includes('Deutsch') && prayerWarningLines[1].textContent.includes(auxUiText.DE.prayerWarning), 'Prayer warning omitted the translation language');
+      check(prayerWarningLines[0].textContent.includes(auxUiText.IT.prayerWarning), 'Prayer warning omitted the UI language');
+      check(prayerWarningLines[1].textContent.includes(auxUiText.DE.prayerWarning), 'Prayer warning omitted the translation language');
+      if (/^V29\.1/.test(APP_VERSION)) check(!document.querySelector('#prayer-dev-warning .aux-warning-language'), 'Prayer warning still has language labels');
       check(!document.getElementById('prayer-dev-warning').textContent.includes('English'), 'Prayer warning incorrectly used the country language');
       state.uiLang = originalCalendarState.uiLang;
       state.currentLoc = 'EN';
@@ -1129,7 +1130,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
-    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29-/ : /^V28-/);
+    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29(?:\.\d+)?-/ : /^V28-/);
     await page.setViewportSize({width:412,height:915});
     const mobile = await page.evaluate(() => {
       render();

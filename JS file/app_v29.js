@@ -1,4 +1,4 @@
-// Order of Mass V29 application runtime. The Order of Mass is loaded only from Firebase.
+// Order of Mass V29.1 application runtime. The Order of Mass is loaded only from Firebase.
     let massData = [];
 
     // 데이터 ID 앞의 번호/기호를 제거해 화면 로직이 진짜 이름표만 보도록 합니다.
@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V29-20261013-VIGIL-DAYTIME';
+    const APP_VERSION = 'V29.1-20261013-NOTICE';
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -2938,10 +2938,6 @@
         if (el) el.textContent = text;
     }
 
-    const auxWarningLanguageLabels = Object.freeze({
-        KR: '한국어', VN: 'Tiếng Việt', EN: 'English', JP: '日本語', LA: 'Latine', ZH: '中文', IT: 'Italiano', PT: 'Português', ES: 'Español', DE: 'Deutsch'
-    });
-
     function renderAuxWarning(id, field, languageCodes) {
         const element = document.getElementById(id);
         if (!element) return;
@@ -2949,8 +2945,7 @@
             .map(lang => normalizeSelectableLang(lang, ''))
             .filter(lang => lang && auxUiText[lang] && auxUiText[lang][field])));
         element.innerHTML = languages.map(lang => [
-            '<div class="aux-warning-line">',
-            `<span class="aux-warning-language">${escapeHtml(auxWarningLanguageLabels[lang] || lang)} :</span>`,
+            `<div class="aux-warning-line" lang="${({ KR: 'ko', JP: 'ja', VN: 'vi', ZH: 'zh-Hant' })[lang] || lang.toLowerCase()}">`,
             `<span class="aux-warning-text">${escapeHtml(auxUiText[lang][field])}</span>`,
             '</div>'
         ].join('')).join('');
@@ -2981,8 +2976,7 @@
         renderAuxWarning('prayer-dev-warning', 'prayerWarning', [state.uiLang, state.targetLang]);
         setTextIfExists('prayer-search-button', dict.search);
         setHymnPanelTitleText(dict.hymnTitle);
-        const hymnLanguage = normalizeSelectableLang((document.getElementById('hymn-country') || {}).value || state.currentLoc || 'KR', 'KR');
-        renderAuxWarning('hymn-dev-warning', 'hymnWarning', ['KR', hymnLanguage]);
+        renderAuxWarning('hymn-dev-warning', 'hymnWarning', [state.uiLang, state.targetLang]);
         setTextIfExists('hymn-search-button', dict.search);
         updateHymnCountryOptionLabels();
         setTextIfExists('church-panel-title', dict.churchTitle);
@@ -6089,10 +6083,10 @@
         startupNoticeDecision = false;
         if (resolveStartupNoticeDecision) resolveStartupNoticeDecision(false);
         window.close();
-        const notice = currentNoticeUiText();
         document.body.innerHTML = [
             '<div class="closed-message">',
-            `<div>${notice.closed}</div>`,
+            '<div><p lang="ko">이용하지 않기로 선택하여 사이트 사용을 종료했습니다.</p>',
+            '<p lang="en">You chose not to use this site. Please close this page.</p></div>',
             '</div>'
         ].join('');
     }
@@ -18429,49 +18423,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         DE: { title: 'Hinweis vor der Nutzung', accept: 'Zustimmen', decline: 'Nicht zustimmen und beenden', closed: 'Da Sie nicht zugestimmt haben, wurde die Anwendung geschlossen.', dateLimit: 'Liturgien mehr als sieben Tage vor oder nach heute können nicht angezeigt werden.' }
     });
 
-    const startupConsentLanguageOrder = Object.freeze(['EN', 'LA', 'KR', 'JP', 'ZH', 'VN', 'IT', 'ES', 'PT', 'DE']);
-    const startupConsentLanguageLabels = Object.freeze({
-        EN: 'English', LA: 'Latine', KR: '한국어', JP: '日本語', ZH: '繁體中文', VN: 'Tiếng Việt', IT: 'Italiano', ES: 'Español', PT: 'Português', DE: 'Deutsch'
-    });
-    const startupConsentWarningText = Object.freeze({
-        EN: "Please note that the <Order of Mass>, <Liturgical Readings>, prayers, and hymns on this site have not been approved by the Catholic Bishops' Conferences of each country or other relevant copyright holders. Some parts may differ in the celebration of Mass; please use this site for reference only.",
-        LA: 'Monemus <Ordinarium Missae>, <Lectiones liturgicas>, preces atque cantus in hoc situ positos non esse approbatos a Conferentiis Episcoporum Catholicorum singularum nationum neque ab aliis iurium auctoralium possessoribus pertinentibus. In celebratione Missae nonnullae partes discrepare possunt; ad consultationem tantum adhibeantur.',
-        KR: '<미사통상문> 및 <전례독서>, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의 등 저작권자의 승인을 받은 것이 아님을 알려드립니다. 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.',
-        JP: '本サイトに掲載している<ミサ通常文>、<典礼朗読>、祈祷文および聖歌について、各国のカトリック司教協議会その他の著作権者から承認を受けたものではないことをお知らせします。ミサの挙行に際して一部異なる場合がありますので、参考用としてのみご利用ください。',
-        ZH: '請注意，本網站所載的<彌撒常用經文>、<禮儀讀經>、祈禱文及聖歌，尚未獲各國天主教主教團或其他相關著作權人核准。舉行彌撒時，部分內容可能有所不同；請僅供參考使用。',
-        VN: 'Xin lưu ý rằng <Nghi thức Thánh lễ>, <Bài đọc phụng vụ>, cũng như các kinh nguyện và thánh ca trên trang này chưa được các Hội đồng Giám mục Công giáo của từng quốc gia hoặc các chủ sở hữu bản quyền liên quan chấp thuận. Khi cử hành Thánh lễ, một số phần có thể khác; xin chỉ dùng để tham khảo.',
-        IT: "Si informa che l'<Ordinario della Messa>, le <Letture liturgiche>, le preghiere e i canti presenti in questo sito non sono stati approvati dalle Conferenze episcopali cattoliche dei singoli Paesi né dagli altri titolari dei relativi diritti d'autore. Alcune parti possono differire nella celebrazione della Messa; utilizzare il sito solo come riferimento.",
-        ES: 'Se informa que el <Ordinario de la Misa>, las <Lecturas litúrgicas>, las oraciones y los cantos de este sitio no han sido aprobados por las Conferencias Episcopales Católicas de cada país ni por otros titulares de los derechos de autor correspondientes. Algunas partes pueden diferir en la celebración de la Misa; utilice este sitio solo como referencia.',
-        PT: 'Informamos que o <Ordinário da Missa>, as <Leituras litúrgicas>, as orações e os cânticos deste site não foram aprovados pelas Conferências Episcopais Católicas de cada país nem por outros titulares dos respetivos direitos de autor. Algumas partes podem diferir na celebração da Missa; utilize este site apenas como referência.',
-        DE: 'Bitte beachten Sie, dass das <Ordinarium der Messe>, die <liturgischen Lesungen>, Gebete und Gesänge auf dieser Website weder von den katholischen Bischofskonferenzen der einzelnen Länder noch von anderen zuständigen Rechteinhabern genehmigt wurden. Einzelne Teile können bei der Messfeier abweichen; verwenden Sie diese Website nur als Referenz.'
-    });
-
     function currentNoticeUiText() {
         return noticeUiText[normalizeSelectableLang(state.uiLang || 'KR', 'KR')] || noticeUiText.KR;
     }
 
-    function regionalNoticeUiText() {
-        return noticeUiText[normalizeSelectableLang(state.currentLoc || 'EN', 'EN')] || noticeUiText.EN;
-    }
-
-    function renderStartupConsentWarnings() {
-        const element = document.getElementById('consent-language-grid');
-        if (!element) return;
-        element.innerHTML = startupConsentLanguageOrder.map(lang => [
-            `<div class="consent-warning-line lang-${lang}">`,
-            `<span class="consent-warning-language">${escapeHtml(startupConsentLanguageLabels[lang] || lang)} :</span>`,
-            `<span class="consent-warning-text">${escapeHtml(startupConsentWarningText[lang])}</span>`,
-            '</div>'
-        ].join('')).join('');
-    }
-
     function syncStartupConsentControls() {
-        const notice = currentNoticeUiText();
-        const regionalNotice = regionalNoticeUiText();
-        setElementText('consent-title', notice.title);
-        setElementText('consent-accept', regionalNotice.accept);
-        setElementText('consent-decline', regionalNotice.decline);
-        renderStartupConsentWarnings();
+        // The first-use notice is always bilingual, independent of app settings.
+        if (typeof window.renderOrdoStartupNoticeWarnings === 'function') {
+            window.renderOrdoStartupNoticeWarnings();
+        }
     }
 
     const localizedCountryNames = Object.freeze({
