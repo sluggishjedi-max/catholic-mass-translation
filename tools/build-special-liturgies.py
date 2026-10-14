@@ -25,9 +25,11 @@ def validate_text(value):
         return
     if "text" in value:
         assert isinstance(value["text"], str), "text must be a string"
-    if "lines" in value:
-        assert isinstance(value["lines"], list), "lines must be an array"
-        for line in value["lines"]:
+    for field in ("lines", "standaloneLines"):
+        if field not in value:
+            continue
+        assert isinstance(value[field], list), f"{field} must be an array"
+        for line in value[field]:
             assert isinstance(line, dict) and ("text" in line or "rubric" in line), "Each line needs text or rubric"
             for key in ("sp", "text", "rubric"):
                 if key in line:
@@ -52,7 +54,10 @@ def validate_mass(entry):
         assert re.match(r"^https?://", url), "sourceUrls must be HTTP(S) URLs"
     assert isinstance(entry.get("order", []), list), "order must be an array"
     rite_ids = set()
-    for node in entry.get("order", []):
+    assert isinstance(entry.get("insertRites", []), list), "insertRites must be an array"
+    for node in entry.get("insertRites", []):
+        assert re.fullmatch(r"[a-z][a-z0-9_]*", node.get("after", "")), "insertRites needs an ordinary anchor"
+    for node in [*entry.get("insertRites", []), *entry.get("order", [])]:
         if isinstance(node, str):
             assert re.fullmatch(r"[A-Za-z][a-z0-9_]*", node), f"Invalid ordinary reference: {node}"
             continue

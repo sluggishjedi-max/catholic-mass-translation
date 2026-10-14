@@ -1708,12 +1708,7 @@
 
         if (d >= adventStart && d < new Date(y, 11, 25)) {
             const week = Math.floor(dayDiff(d, adventStart) / 7) + 1;
-            const names = d.getMonth() === 11 && d.getDate() === 24 && day !== 0 ? {
-                KR:'12월 24일', VN:'Ngày 24 tháng 12', EN:'December 24', JP:'12月24日',
-                LA:'Die 24 Decembris', ZH:'12月24日', IT:'24 dicembre', PT:'24 de dezembro',
-                ES:'24 de diciembre', DE:'24. Dezember'
-            } : undefined;
-            return { season: 'advent', week, day, sundayCycle, weekdayCycle, color: (day === 0 && week === 3) ? liturgyColorMap.rose : liturgyColorMap.purple, names };
+            return { season: 'advent', week, day, sundayCycle, weekdayCycle, color: (day === 0 && week === 3) ? liturgyColorMap.rose : liturgyColorMap.purple };
         }
         if (d > baptism && d < ashWednesday) {
             const week = Math.floor(dayDiff(d, ordinaryStart) / 7) + (day === 0 ? 2 : 1);
@@ -9157,6 +9152,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
+        const sourceDate = getActiveLiturgicalSourceDate();
+        const sourceMeta = getSeasonMeta(sourceDate);
+        if (sourceMeta.season === 'advent' && sourceDate.getMonth() === 11
+            && sourceDate.getDate() >= 17 && sourceDate.getDate() <= 24 && sourceDate.getDay() !== 0
+            && !getStrictMassSelector(sourceDate).specialVigil) {
+            // Late-Advent sources often name only the date. Keep the full
+            // seasonal weekday title while retaining their date-specific texts.
+            parsed = Object.assign({}, parsed, {title:formatSeasonalName(lang, sourceMeta.season, sourceMeta.week, sourceMeta.day, sourceMeta.sundayCycle)});
+        }
         state.dailySourceProvenance ||= {};
         if (parsed.fallbackSource) state.dailySourceProvenance[lang] = { date:formatDateIso(getActiveLiturgicalSourceDate()), source:parsed.fallbackSource };
         else delete state.dailySourceProvenance[lang];
@@ -10091,7 +10095,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict98';
+    const STRICT_PARSER_CACHE_VERSION = 'strict99';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -12594,7 +12598,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictPrayerParagraphs(lang, key, blocks) {
-        let text = strictCleanLine(blocks.join(' '));
+        let text = strictCleanLine(strictTrimPrayerSourceTail(blocks, lang).join(' '));
         text = strictExpandPrayerEnding(lang, key, text);
         const ending = prayerConclusionEndingForText(lang, key, text);
         if (!ending) return text ? [text] : [];
@@ -12613,6 +12617,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             DE: /((?:Darum bitten wir durch (?:Jesus )?Christus|Durch (?:Jesus Christus|unseren Herrn Jesus Christus)|Der (?:du |in der Einheit|mit dir))[^]*?(?:Ewigkeit|unseren Herrn|Jesus Christus)\.)$/iu
         };
         if (additionalPatterns[lang]) return additionalPatterns[lang];
+        if (lang === 'EN') {
+            return key === 'collect'
+                ? /((?:Through our Lord Jesus Christ,\s*your Son,\s*who lives and reigns with you|Who lives and reigns with you|Who live and reign with God the Father)\s+in the unity of the Holy Spirit,\s*(?:one\s+)?God,\s*for ever and ever\.)$/iu
+                : /((?:Through Christ our Lord|Who lives? and reigns? for ever and ever)\.)$/iu;
+        }
         if (lang === 'VN' && key === 'collect') {
             return /((?:Chúng con cầu xin nhờ Đức Gi[êe]-su Ki-tô[\s\S]*?|(?:Chúa|Đức|Ðức)\s+Ki-tô\s+là\s+Thiên Chúa\s+|(?:Người|Chúa)(?:\s+là\s+Thiên Chúa,?\s*)?)hằng sống và hiển trị[\s\S]*?muôn (?:thuở\s+)?muôn đời\.)$/iu;
         }
@@ -12632,8 +12641,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function splitPrayerParsedLineByConclusion(parsed, lang, key) {
-        const text = cleanNodeText(parsed && parsed.text);
-        if (!text || isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text)) return [parsed];
+        const text = cleanNodeText(strictTrimPrayerSourceTail([parsed && parsed.text], lang).join(' '));
+        if (!text) return parsed && parsed.text ? [] : [parsed];
+        if (isAlternativeText(text) || isPrayerOpenerText(text) || isPrayerAmenText(text)) return [parsed];
         const expanded = strictExpandPrayerEnding(lang, key, text);
         const ending = prayerConclusionEndingForText(lang, key, expanded);
         if (!ending) return [Object.assign({}, parsed, { text: expanded })];
@@ -12711,6 +12721,30 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (cleaned) trimmed.push(cleaned);
         }
         return trimmed;
+    }
+
+    function strictTrimPrayerSourceTail(blocks, lang) {
+        // Text proxies flatten image descriptions and page controls into the
+        // final prayer. Stop before that chrome, even when it shares a line.
+        const patterns = [
+            /!\s*(?:Image|이미지)\s*\d*\s*:/iu,
+            /!\[[^\]]*\]\(/u,
+            /(?:©|Copyright\s+(?:©|\d{4}))/iu,
+            ...(strictTerminalSectionPatterns[lang] || [])
+        ];
+        if (lang === 'KR') patterns.push(/(?:페이스북|트위터|카카오톡)\s*공유하기|이전\s+오늘\s+목록|글자\s*[-+]/u);
+        const result = [];
+        for (const block of blocks || []) {
+            const text = strictCleanLine(block);
+            const positions = patterns.map(pattern => text.search(pattern)).filter(index => index >= 0);
+            if (positions.length) {
+                const before = text.slice(0, Math.min(...positions)).trim();
+                if (before) result.push(before);
+                break;
+            }
+            if (text) result.push(text);
+        }
+        return result;
     }
 
     function strictParsePrayerOrAntiphon(lang, key, section) {
@@ -21270,6 +21304,36 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             headerRow.appendChild(hColL);
             if (!isStacked) headerRow.appendChild(hColR);
             partContainer.appendChild(headerRow);
+
+            if (Array.isArray(item.__specialOriginals)) {
+                item.__specialOriginals.forEach(original => {
+                    const block = document.createElement('div');
+                    block.className = 'special-rite-original pc-col';
+                    block.dataset.sourceLang = original.language;
+                    const appendOriginalLines = (container, lines) => lines.forEach(line => {
+                        const paragraph = document.createElement('p');
+                        paragraph.style.whiteSpace = 'pre-line';
+                        if (line.rubric) paragraph.className = 'rubric';
+                        paragraph.textContent = line.rubric || [line.sp, line.text].filter(Boolean).join(' ');
+                        container.appendChild(paragraph);
+                    });
+                    appendOriginalLines(block, original.lines);
+                    if (original.standaloneLines?.length) {
+                        const details = document.createElement('details');
+                        details.className = 'special-rite-standalone';
+                        const summary = document.createElement('summary');
+                        summary.textContent = state.uiLang === 'KR'
+                            ? '미사 밖에서 거행하는 별도 예식 원문 (English)'
+                            : 'Original for a separate celebration outside Mass (English)';
+                        details.appendChild(summary);
+                        appendOriginalLines(details, original.standaloneLines);
+                        block.appendChild(details);
+                    }
+                    partContainer.appendChild(block);
+                });
+                root.appendChild(partContainer);
+                return;
+            }
 
             if (appendSourceOnlyReadingWholeDisplay(partContainer, data, baseId, leftL, rightL, isStacked)) {
                 root.appendChild(partContainer);

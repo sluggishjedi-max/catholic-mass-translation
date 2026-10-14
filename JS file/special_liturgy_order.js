@@ -16,7 +16,7 @@
   }
   function build(date, ordinary) {
     const record = countrySpecialMassRecord(date, state.selectedLocationCode || state.currentLoc);
-    activeRecord = record && Array.isArray(record.order) ? record : null;
+    activeRecord = record && (Array.isArray(record.order) || Array.isArray(record.insertRites)) ? record : null;
     activeCountryRecords = {};
     if (!activeRecord) return null;
     const templates = new Map(ordinary.map(item => [getBaseId(item.id), item]));
@@ -26,8 +26,32 @@
     activeCountryRecords = records;
     const activeLanguages = new Set(getActiveDailySourceLanguages());
     const result = [];
-    for (const raw of activeRecord.order) {
+    const order = [];
+    for (const raw of activeRecord.order || ordinary.map((item,index) => ({ordinaryIndex:index}))) {
+      order.push(raw);
+      const key = typeof raw === 'string' ? raw : raw.use || raw.rite || getBaseId(ordinary[raw.ordinaryIndex]?.id || '');
+      order.push(...(activeRecord.insertRites || []).filter(node => node.after === key));
+    }
+    for (const raw of order) {
       const node = typeof raw === 'string' ? {use:raw} : raw;
+      if (Number.isInteger(node.ordinaryIndex)) {
+        const item = clone(ordinary[node.ordinaryIndex]);
+        if ((activeRecord.insertRites || []).some(rite => rite.after === getBaseId(item.id) && rite.replaceAnchorConclusion)) {
+          for (const lang of SUPPORTED_LANGS) {
+            const lower = lang.toLowerCase(), lines = item.lines || [];
+            const amen = lines.findLastIndex(line => isPrayerAmenText(line[`text_${lower}`] || ''));
+            const speaker = lines.find(line => line[`sp_${lower}`])?.[`sp_${lower}`];
+            const prayer = amen > 0 && speaker
+              ? lines.slice(0, amen).findLastIndex(line => line[`sp_${lower}`] === speaker && line[`text_${lower}`]) : -1;
+            if (prayer <= 0) continue;
+            for (let index = prayer; index <= amen; index += 1) {
+              for (const key of Object.keys(lines[index])) if (key.endsWith(`_${lower}`) || key.endsWith(`_${lower}_ai`)) delete lines[index][key];
+            }
+          }
+          item.lines = (item.lines || []).filter(line => Object.keys(line).some(key => /^(text|rubric)_/.test(key) && line[key]));
+        }
+        result.push(item); continue;
+      }
       if (node.section) { result.push({id:`special_section_${node.section}`, type:'section', ...header(node.names)}); continue; }
       if (node.use) {
         const template = templates.get(node.use);
@@ -79,6 +103,8 @@
       };
       const cit = Object.fromEntries(SUPPORTED_LANGS.filter(lang => perLanguage[lang].citation).map(lang => [`cit_${lang.toLowerCase()}`, perLanguage[lang].citation]));
       const item = {id:key, type:choices ? 'selectable' : 'part', header:header(node.names), cit, lines:toLines(), __countrySpecialRite:true, __specialWhen:node.when};
+      if (node.sourceOnly) item.__specialOriginals = Object.entries(perLanguage)
+        .filter(([,data]) => data.lines?.length).map(([language,data]) => ({language,lines:clone(data.lines),standaloneLines:clone(data.standaloneLines || [])}));
       if (choices) {
         item.variants = Object.fromEntries(Object.entries(choices).map(([choice,names]) => [choice,{label:header(names), header:item.header, cit, lines:toLines(choice)}]));
         if (!item.variants[state.options[key]]) state.options[key] = node.default || Object.keys(choices)[0];
