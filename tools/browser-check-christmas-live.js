@@ -11,11 +11,15 @@ const mobile = process.argv.includes('--mobile');
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage({ timezoneId: 'Asia/Seoul', viewport:mobile ? {width:390,height:844} : {width:1280,height:900} });
-    if (local) await page.route('**/JS%20file/*.js*', route => {
-      const name = path.basename(new URL(route.request().url()).pathname);
-      if (!['app_v29.js', 'country_special_liturgies_v29.js', 'special_liturgy_order.js'].includes(name)) return route.continue();
-      return route.fulfill({ contentType: 'application/javascript', body: fs.readFileSync(path.join(root, 'JS file', name), 'utf8') });
-    });
+    if (local) {
+      await page.route('**/JS%20file/**', route => {
+        const pathname=decodeURIComponent(new URL(route.request().url()).pathname);
+        const file=path.join(root,pathname.slice(pathname.indexOf('/JS file/')+1));
+        if (!fs.existsSync(file)) return route.continue();
+        return route.fulfill({contentType:'application/javascript',body:fs.readFileSync(file,'utf8')});
+      });
+      await page.route('**/catholic-mass-translation/?christmas-check=*',route=>route.fulfill({contentType:'text/html; charset=utf-8',body:fs.readFileSync(path.join(root,'index.html'),'utf8')}));
+    }
     await page.goto('https://sluggishjedi-max.github.io/catholic-mass-translation/?christmas-check=' + Date.now(), {
       waitUntil: 'domcontentloaded', timeout: 60000
     });
@@ -86,7 +90,8 @@ const mobile = process.argv.includes('--mobile');
         date: formatDateIso(getTargetDate()), parts,
         displayedNames: { KR: getLiturgyDisplayName('KR'), EN: getLiturgyDisplayName('EN') },
         ids: [...document.querySelectorAll('#missal-root .part-container')].map(item => item.dataset.partId),
-        cribLinks: [...document.querySelectorAll('[data-part-id="christmas_crib"] a')].map(link => link.href)
+        cribLinks: [...document.querySelectorAll('[data-part-id="christmas_crib"] a')].map(link => link.href),
+        selectedBlessing:state.options.blessing
       };
     });
     const daytime = await snapshot();
@@ -96,6 +101,7 @@ const mobile = process.argv.includes('--mobile');
     assert.match(daytime.header, /낮 미사/);
     assert.equal(daytime.preface, 'advent_2');
     assert.equal(daytime.blessing, 'advent');
+    assert.equal(daytime.selectedBlessing,'A','Advent must initially display the ordinary blessing');
     assert.deepEqual(daytime.status, { KR: 'done', EN: 'done' });
     assert.match(daytime.parts.gospel.citation.cit_kr, /루카\s*1,67-79/);
     assert.match(daytime.parts.gospel.en, /Blessed be the Lord|Zechariah/i);
@@ -124,25 +130,24 @@ const mobile = process.argv.includes('--mobile');
     assert.doesNotMatch(await page.locator('[data-part-id="universal"]').innerText(), /전능하신 주 하느님/, 'The ordinary conclusion was not replaced by the prayer of blessing');
     assert.ok(vigil.ids.includes('penitential') && vigil.ids.includes('gospel'), 'Crib devotion replaced an ordinary rite');
     assert.deepEqual(vigil.cribLinks, [], 'Crib devotion contains source links');
-    const cribOriginals = await page.locator('[data-part-id="christmas_crib"]').evaluate(element => ({
-      languages:[...element.querySelectorAll('[data-source-lang]')].map(block => block.dataset.sourceLang),
-      aiButtons:element.querySelectorAll('.ai-btn, .ai-button').length,
-      text:[...element.querySelectorAll('.special-rite-original > p')].map(p => p.innerText).join('\n'),
-      standalone:[...element.querySelectorAll('.special-rite-standalone p')].map(p => p.textContent).join('\n')
-    }));
-    assert.deepEqual(cribOriginals.languages, ['EN'], 'The complete original is missing or an unverified translation is displayed');
+    const cribOriginals = await page.locator('[data-part-id="christmas_crib"]').evaluate(element => {
+      const stacked=!!element.querySelector('.pair-block');
+      return {aiButtons:element.querySelectorAll('.ai-btn,.ai-button').length,
+        left:[...element.querySelectorAll(stacked?'.pair-block > :not(.translation)':'.pc-line-row:not(.pc-header-row) > .pc-col:first-child')].map(n=>n.innerText).join('\n'),
+        text:[...element.querySelectorAll(stacked?'.pair-block .translation':'.pc-line-row:not(.pc-header-row) > .pc-col-sub')].map(n=>n.innerText).join('\n'),
+        standalone:element.querySelectorAll('details,.special-rite-original').length};
+    });
     assert.equal(cribOriginals.aiButtons, 0, 'Crib original was offered for automatic translation');
     assert.match(cribOriginals.text, /With hands outstretched, the celebrant says the prayer of blessing:/);
     assert.match(cribOriginals.text, /God of every nation and people,/);
     assert.match(cribOriginals.text, /justice, mercy, and love\./);
-    assert.match(cribOriginals.text, /and who lives and reigns forever and ever\.\s*R\/\. Amen\.$/);
+    assert.match(cribOriginals.text, /and who lives and reigns forever and ever\.\s*R\/\.\s*Amen\.$/);
     assert.doesNotMatch(cribOriginals.text, /excerpt|…|[가-힣]|Our help|Reader:|Luke 2:1/i);
-    assert.match(cribOriginals.standalone, /All make the sign of the cross as the leader says:/);
-    assert.match(cribOriginals.standalone, /Luke 2:1 \(lines 1-8\)/);
-    assert.match(cribOriginals.standalone, /R\/\. Amen\.$/);
+    assert.equal(cribOriginals.standalone,0,'Outside-Mass original or full-width block remains');
+    assert.doesNotMatch(cribOriginals.left,/God of every nation/,'English covers the Korean column');
     await page.evaluate(() => {state.targetLang='VN'; render();});
-    assert.equal(await page.locator('[data-part-id="christmas_crib"]').evaluate(element => [...element.querySelectorAll('.special-rite-original > p')].map(p => p.innerText).join('\n')), cribOriginals.text,
-      'The English original disappeared when English was not in the selected language pair');
+    assert.doesNotMatch(await page.locator('[data-part-id="christmas_crib"]').innerText(),/God of every nation/,
+      'English original is visible without an English column');
     await page.evaluate(() => {state.targetLang='EN'; render();});
     if (process.argv.includes('--screenshots')) {
       const dir = path.join(root, 'tmp', 'christmas-check');

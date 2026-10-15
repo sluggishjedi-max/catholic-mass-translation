@@ -124,7 +124,7 @@ const en=heading('Reading 1','Wis 3:1-9\nThe souls of the just are in the hand o
   let weekdayRejected=false;try{strictParseDailyMass('EN','<h1>Thursday of the Fourth Week of Advent</h1>'+fixtures.en,christmas,'US')}catch{weekdayRejected=true}
   check(weekdayRejected,'Ordinary Advent text accepted as Christmas Vigil');
   state.liturgyNavSlot='day';state.specialVigilNavKey='';state.liturgicalDateContext=null;rememberLiturgicalDateContext(getStrictDateContext());state.liturgyInfo=buildGeneratedLiturgyInfo(christmas);
-  check(state.liturgyInfo.names.KR==='12월 24일'&&!state.liturgyInfo.isSolemnity,'Daytime Mass was overwritten by the fixed Vigil calendar entry');
+  check(state.liturgyInfo.names.KR==='대림 제4주간 목요일'&&!state.liturgyInfo.isSolemnity,'Daytime Mass was overwritten by the fixed Vigil calendar entry');
   check(state.liturgyInfo.prefaceKey==='advent_2'&&recommendedVestmentColor(christmas,state.liturgyInfo.color,state.liturgyInfo)===liturgyColorMap.purple,'Daytime Mass inherited the Christmas preface or vestments');
   check(localizedNavigationLabel(getStrictDateContext(),'KR')==='낮 미사','Daytime navigation label is missing');
   const christmasEntries=buildLiturgicalNavigationEntries(getStrictDateBase()).filter(entry=>entry.offset===0);

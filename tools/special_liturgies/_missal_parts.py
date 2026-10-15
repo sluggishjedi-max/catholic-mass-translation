@@ -44,6 +44,16 @@ def apply_missal_parts(profile, language, texts):
                 rites[rite_key]={'lines':lines(text)}
             else:
                 rites[rite_key]=deepcopy(text)
+        if key == 'palm_sunday' and language in {'EN','VN','LA'}:
+            # These Missals print the complete entrance Gospels locally. Keep
+            # their cycle references with the originals rather than relying on
+            # a dated daily-reading page for the header.
+            books = {'EN': ['Matthew','Mark','Luke'], 'VN':['Mt','Mc','Lc'], 'LA':['Mt','Mc','Lc']}[language]
+            separator = ':' if language == 'EN' else ','
+            for cycle, book, passage in zip('ABC', books, ['21{sep}1-11','11{sep}1-10','19{sep}28-40']):
+                part = rites.get('palm_gospel',{}).get('byCycle',{}).get(cycle)
+                if part and any(len(line.get('text','')) > 15 for line in part.get('lines',[])):
+                    part.setdefault('citation', book + ' ' + passage.format(sep=separator))
         data = existing.setdefault('data',{}).setdefault(language,{})
         for section, text in source.get('prayers',{}).items():
             data[section]={'text':text,'lines':lines(text)}

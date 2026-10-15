@@ -94,24 +94,25 @@ if(process.env.ORDO_HOLY_WEEK_SOURCE_ROOT){
         check(!list.includes('creed') && !list.includes('penitential') && !list.includes('entrance'),'Vigil has ordinary introduction or duplicate Creed');
         check(list.includes('water_blessing') && !list.includes('litany'),'No-baptism branch');
         const parsed=strictParseDailyMass('KR',fixture.vigil,selectedDate,'KR');
-        for(let i=1;i<=7;i++)check(parsed.data['vigil_reading_'+i]?.text.includes('말씀 '+i+'을'),'Reading '+i+' merged or missing');
-        check(parsed.data.vigil_epistle?.cit_kr?.includes('6,3-11'),'Epistle source missing: '+JSON.stringify(parsed.data.vigil_epistle));
-        check(document.querySelector('[data-part-id="vigil_reading_7"]').textContent.includes('말씀 7을'),'Vigil reading was parsed but not rendered');
-        check(!parsed.data.vigil_reading_3.lines.some(line=>line.text==='주님의 말씀입니다.'),'Exodus ends with the omitted proclamation');
+        const fixed=countrySpecialMassRecord(selectedDate,'KR').riteData.KR;
+        for(let i=1;i<=7;i++)check(!parsed.data['vigil_reading_'+i]&&fixed['vigil_reading_'+i].lines.some(line=>(line.text||'').length>250),'Fixed reading '+i+' missing or overwritten by remote parsing');
+        check(fixed.vigil_epistle.citation.includes('6,3-11'),'Fixed Epistle source missing');
+        check(document.querySelector('[data-part-id="vigil_reading_7"]').textContent.includes('이스라엘'),'Fixed Vigil reading was not rendered');
+        check(!fixed.vigil_reading_3.lines.some(line=>line.text==='주님의 말씀입니다.'),'Exodus ends with the omitted proclamation');
         check(document.querySelector('[data-part-id="eucharist"]').textContent.includes('이 밤에 더욱 성대하게'),'Easter preface does not use the Holy Night formula');
         check(fetched.some(url=>url.includes('/20260405')),'Vigil queried Saturday rather than Easter entry');
         if(fixture.liveVigil){
           const real=strictParseDailyMass('KR',fixture.liveVigil,selectedDate,'KR');
-          for(let i=1;i<=7;i++)check(real.data['vigil_reading_'+i]?.text.length>150,'CBCK reading '+i+' missing: '+JSON.stringify({keys:Object.keys(real.data),head:strictSourceLines(fixture.liveVigil).slice(0,25)}));
-          for(let i=1;i<=7;i++)check(real.data['vigil_psalm_'+i]?.text.length>30,'CBCK Psalm '+i+' missing');
-          check(real.data.vigil_epistle?.text.length>150,'CBCK epistle missing');
+          for(let i=1;i<=7;i++)check(!real.data['vigil_reading_'+i]&&fixed['vigil_reading_'+i].lines.some(line=>(line.text||'').length>150),'Fixed CBCK reading '+i+' missing');
+          for(let i=1;i<=7;i++)check(fixed['vigil_psalm_'+i].lines.some(line=>(line.text||'').length>15),'Fixed CBCK Psalm '+i+' missing');
+          check(fixed.vigil_epistle.lines.some(line=>(line.text||'').length>150),'Fixed CBCK epistle missing');
           check(real.data.gospel?.text.length>150,'CBCK Gospel missing');
           check(!real.data.gospel.text.includes('세례수'),'Baptism text leaked into the Gospel');
           const supper=strictParseDailyMass('KR',fixture.liveThursday,addDays(computeEasterSunday(2026),-3),'KR');
           check(supper.data.reading1?.cit_kr?.includes('12,1') && supper.data.reading2?.cit_kr?.includes('11,23'),'CBCK Supper readings missing');
           const palm=strictParseDailyMass('KR',fixture.livePalm,addDays(computeEasterSunday(2026),-7),'KR');
           check(palm.data.gospel?.text.length>1000 && palm.data.reading2?.text.length>100,'CBCK Palm Sunday Passion/readings missing');
-          check(palm.data.palm_gospel?.text.length>150,'CBCK entry Gospel missing');
+          check(!palm.data.palm_gospel&&countrySpecialMassRecord(addDays(computeEasterSunday(2026),-7),'KR').riteData.KR.palm_gospel.byCycle.A.lines.some(line=>(line.text||'').length>150),'Fixed entry Gospel missing or remotely overwritten');
           const friday=strictParseDailyMass('KR',fixture.liveFriday,addDays(computeEasterSunday(2026),-2),'KR');
           check(friday.data.gospel?.text.length>1000 && friday.data.reading2?.text.length>100,'CBCK Good Friday Passion/readings missing');
         }
@@ -135,7 +136,7 @@ if(process.env.ORDO_HOLY_WEEK_SOURCE_ROOT){
           await select(-1,'liveVigil','vigil',true);
           const real=strictParseDailyMass('KR',fixture.liveVigil,selectedDate,'KR');
           for(let i=1;i<=7;i++){
-            const sample=real.data['vigil_reading_'+i].lines.find(line=>line.role==='body' && line.text.length>25)?.text.split('\n')[0];
+            const sample=fixed['vigil_reading_'+i].lines.find(line=>line.role==='body' && line.text.length>25)?.text.split('\n')[0];
             const content=document.querySelector('[data-part-id="vigil_reading_'+i+'"]').textContent;
             check(sample && content.includes(sample),'Actual Vigil reading '+i+' not rendered');
             const item=massData.find(item=>item.id==='vigil_reading_'+i);

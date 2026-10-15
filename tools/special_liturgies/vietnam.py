@@ -3386,3 +3386,20 @@ MISSAL_SPECIAL_TEXTS = {'palm_sunday': {'rites': {'palm_form': '<Hình thức th
                                                  'lòng chúng con cũng cháy lửa yêu mến của Thánh '
                                                  'Thần. Chúng con cầu xin...'}}}
 apply_missal_parts(SPECIAL_LITURGIES, 'VN', MISSAL_SPECIAL_TEXTS)
+
+# Supplied Vietnamese Roman Missal, PDF p.831. The dialogue comes from the
+# ordinary; this proper text ends before the Sanctus to avoid duplicating it.
+_palm = next(entry for entry in SPECIAL_LITURGIES['celebrations'] if entry['id'] == 'palm_sunday')
+_palm.setdefault('prefaceText', {})['VN'] = {
+    'source': {'file':'참고자료/미사/전문/베트남어 (일부).pdf', 'pdfPages':[831]},
+    'lines': [{'sp':'CT.', 'text':'''Lạy Chúa là Cha chí thánh là Thiên Chúa toàn năng hằng hữu,
+chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo
+và sinh ơn cứu độ cho chúng con, nhờ Ðức Ki-tô, Chúa chúng con.
+Người là Ðấng vô tội, đã cam chịu khổ hình thay cho những
+người tội lỗi, và bằng lòng chịu kết án bất công thay cho kẻ gian tà.
+Người đã chết để tẩy trừ tội lỗi, và đã sống lại để thánh hoá chúng con.
+Vì thế, cùng với toàn thể Thiên thần và các thánh, chúng con ca
+ngợi Chúa, và vui mừng phấn khởi tung hô rằng:'''}]
+}
+from _vietnamese_roles import normalize_profile
+normalize_profile(SPECIAL_LITURGIES)

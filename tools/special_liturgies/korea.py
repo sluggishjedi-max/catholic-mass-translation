@@ -402,6 +402,39 @@ VIGIL['sourceParts']['KR'].update({
 })
 VIGIL['requiredSourceSections'] = {'KR': [*VIGIL['sourceParts']['KR'], 'gospel']}
 
+# Fixed readings belong to the local approved corpus. The Gospel alone follows
+# the A/B/C cycle; the Epistle (Romans 6:3-11) is also calendar-invariant.
+import json
+from pathlib import Path
+_fixed_vigil = json.loads(Path(__file__).with_name('korean_easter_readings.json').read_text(encoding='utf-8'))
+VIGIL['riteData']['KR'].update(deepcopy(_fixed_vigil['parts']))
+VIGIL['sourceParts']['KR'] = {}
+VIGIL['requiredSourceSections']['KR'] = ['gospel']
+PALM['riteData']['KR']['palm_gospel'] = json.loads(Path(__file__).with_name('korean_palm_gospels.json').read_text(encoding='utf-8'))
+# The supplied Missal also prints the optional Johannine entrance Gospel for B.
+_palm_b = PALM['riteData']['KR']['palm_gospel']['byCycle']['B']
+_palm_b['choices'] = {'A': names('마르코 복음', 'Gospel according to Mark'), 'B': names('요한 복음', 'Gospel according to John')}
+_palm_b['variants'] = {
+    'A': {'citation': _palm_b['citation'], 'lines': deepcopy(_palm_b['lines'])},
+    'B': approved('''╋ 요한이 전한 거룩한 복음입니다.
+그때에 축제를 지내러 온 많은 군중이
+예수님께서 예루살렘에 오신다는 말을 듣고서,
+종려나무 가지를 들고 그분을 맞으러 나가 이렇게 외쳤다.
+“호산나! 주님의 이름으로 오시는 분은 복되시어라.
+이스라엘의 임금님은 복되시어라.”
+예수님께서는 나귀를 보시고 그 위에 올라앉으셨다.
+이는 성경에 기록된 그대로였다.
+“딸 시온아, 두려워하지 마라.
+보라, 너의 임금님이 오신다. 어린 나귀를 타고 오신다.”
+제자들은 처음에 이 일을 깨닫지 못하였다.
+그러나 예수님께서 영광스럽게 되신 뒤에,
+이 일이 예수님을 두고 성경에 기록되고
+또 사람들이 그분께 그대로 해 드렸다는 것을 기억하게 되었다.
+╋ 주님의 말씀입니다.
+◎ 그리스도님, 찬미합니다.''', [542, 543], '요한 12,12-16'),
+}
+PALM['sourceParts']['KR'] = {}
+
 SAINTS = ['천주의 성모님', '성 미카엘', '하느님의 거룩한 천사들', '세례자 성 요한', '성 요셉', '성 베드로와 성 바오로', '성 안드레아', '성 요한', '성녀 마리아 막달레나', '성 스테파노', '안티오키아의 성 이냐시오', '성 라우렌시오', '성녀 페르페투아와 성녀 펠리치타', '성녀 아녜스', '성 그레고리오', '성 아우구스티노', '성 아타나시오', '성 바실리오', '성 마르티노', '성 베네딕토', '성 프란치스코와 성 도미니코', '성 프란치스코 하비에르', '성 요한 마리아 비안네', '시에나의 성녀 가타리나', '예수의 성녀 데레사', '성 김대건 안드레아와 성 정하상 바오로와 동료 순교자들', '하느님의 모든 성인']
 litany = '<모두 일어서서 화답한다. 성당 주보와 지역 수호자, 세례 받을 사람의 수호자 이름을 덧붙일 수 있다.>\n'
 for call in ['주님, 자비를 베푸소서.', '그리스도님, 자비를 베푸소서.', '주님, 자비를 베푸소서.']:

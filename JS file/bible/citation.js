@@ -2,6 +2,8 @@
 (function (root) {
   'use strict';
   const codes = { KO:'KR', GM:'DE', DE:'DE', EN:'EN', VN:'VN', VI:'VN', JA:'JP' };
+  const subverses = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f','ㅅ':'g','ㅇ':'h','ㅈ':'i','ㅊ':'j','ㅋ':'k','ㅌ':'l','ㅍ':'m','ㅎ':'n'};
+  const koreanSubverses = Object.fromEntries(Object.entries(subverses).map(([kr,en]) => [en,kr]));
   const language = value => codes[String(value || '').toUpperCase()] || String(value || '').toUpperCase();
   // Accents carry identity: Portuguese Jo (John) must not collide with Jó (Job).
   const fold = value => String(value || '').normalize('NFKC').toLowerCase();
@@ -38,8 +40,7 @@
   }
   function parse(value, lang) {
     const code = language(lang);
-    const koreanSuffixes = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f'};
-    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => koreanSuffixes[c]))
+    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c]))
       .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
       // Vietnamese lectionaries also append the response reference without
       // parentheses (for example "Đ. c.6b" or "Đ. x. c.5").  It is metadata
@@ -47,6 +48,7 @@
       .replace(/\s+(?:đ|dap|r(?:esp)?|response|refrain)\.?\s*(?:x\.?\s*)?(?:c\.?\s*)?\d+[a-z]?(?:\s*[-–—.]\s*\d+[a-z]?)?\s*$/iu,'')
       .replace(/\s*(?:참고|참조|参照|參照|參閱)$/u,'')
       .replace(/^(?:cf\.?|cfr\.?|x\.?|see|vgl\.?)\s+/,'')
+      .replace(/(?:과|와)(?=\s*\d)/gu,'.')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
@@ -55,16 +57,16 @@
       // A Psalm's trailing parenthetical verse identifies its refrain, not
       // another stanza. Keep the alternate chapter number before the colon.
       if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
-      const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)(?:\((\d+)\))?[,.:・、]([0-9].*)$/u);
+      const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)(?:\((\d+(?:[-─–—]\d+)?)\))?[,.:・、]([0-9].*)$/u);
       if (!match) continue;
       if (!resolve(entry.key,code)) return null; // Ambiguous even within this language.
       const chapter = hanNumber(match[1]);
       if (!Number.isInteger(chapter) || chapter < 1) return null;
-      const suffixes = {'ㄱ':'a','ㄴ':'b','ㄷ':'c','ㄹ':'d','ㅁ':'e','ㅂ':'f'};
-      const verses = match[3].replace(/[ㄱㄴㄷㄹㅁㅂ]/g,c => suffixes[c])
+      const rawVerses = code === 'EN' ? match[3] : match[3].replace(/[—―─](\d+),(\d+)/g,'-$1:$2');
+      const verses = rawVerses.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c])
         // Dots separate verses. In comma-style notation a descending endpoint
         // followed by a comma denotes a chapter boundary: 5,20-6,2.
-        .replace(/[–—−~～]/g,'-')
+        .replace(/[–—―−~～]/g,'-')
         .replace(/(\d+)([a-z]*)-(\d+),(\d+)/g, (all,start,suffix,end,verse) =>
           Number(end) < Number(start) ? start+suffix+'-'+end+':'+verse : all)
         .replace(/[,、]/g,'.').replace(/[。.]$/,'');
@@ -72,7 +74,8 @@
       // Retain the entire range, subverses, cross-chapter boundaries and explicit
       // alternate Psalm number. No inferred Hebrew/LXX verse equivalence.
       const reference = chapter + (match[2] ? '('+match[2]+')' : '') + ':' + verses;
-      return {id:entry.id, kr:entry.kr, chapter, alternateChapter:match[2] ? Number(match[2]) : null, verses, reference, key:entry.id+':'+reference};
+      return {id:entry.id, kr:entry.kr, chapter, alternateChapter:match[2] && /^\d+$/.test(match[2]) ? Number(match[2]) : null,
+        alternateChapterRange:match[2] || '', verses, reference, key:entry.id+':'+reference};
     }
     return null;
   }
@@ -114,6 +117,73 @@
     const parsed=parse(value,lang);
     return parsed ? parsed.key : '?'+language(lang)+':'+fold(value).replace(/\s+/g,'');
   }
-  root.bibleCitation = Object.freeze({language, entries, resolve, parse, key, hanNumber, wholeVerseCoverage, comparisonKeys, equivalent});
+  // Formatting belongs to the target language, independently of the source's
+  // book names and punctuation. Tables added later may supply citationStyle.
+  const styles = {
+    KR:{chapter:',',verses:'.',reference:'참조',suffix:true},
+    EN:{chapter:':',verses:', ',reference:'cf.'},
+    VN:{chapter:',',verses:'.',reference:'x.'},
+    JP:{chapter:',',verses:'.',reference:'参照',suffix:true},
+    ZH:{chapter:',',verses:', ',reference:'參閱',suffix:true},
+    DE:{chapter:',',verses:'.',reference:'vgl.'},
+    IT:{chapter:',',verses:'.',reference:'cf.'},
+    PT:{chapter:',',verses:'.',reference:'cf.'},
+    ES:{chapter:',',verses:'.',reference:'cf.'},
+    LA:{chapter:',',verses:'.',reference:'cf.'}
+  };
+  function format(value, sourceLang, targetLang) {
+    const source=language(sourceLang), target=language(targetLang);
+    const table=(root.bibleLanguageTables || {})[target];
+    const sourceTable=(root.bibleLanguageTables || {})[source];
+    if (!table || !sourceTable || !value) return '';
+    const style={...styles.EN,...styles[target],...table.citationStyle};
+    const aliases=Object.entries(sourceTable.books).flatMap(([id,book]) =>
+      book.aliases.map(alias => ({id,alias}))).sort((a,b)=>b.alias.length-a.alias.length);
+    const escape=text=>text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    // Separate references to different books without losing same-book chapter
+    // continuations, alternate Psalm numbers, response references or cf. markers.
+    const parts=String(value).trim().split(/\s*;\s*/);
+    let previousId='', recognized=false;
+    const output=parts.map(part => {
+      const isReference=/^(?:cf\.?|cfr\.?|x\.?|vgl\.?)\s+/iu.test(part)
+        || /(?:참조|참고|参照|參閱)\s*$/u.test(part);
+      part=part.replace(/^(?:cf\.?|cfr\.?|x\.?|vgl\.?)\s+/iu,'')
+        .replace(/\s*(?:참조|참고|参照|參閱)\s*$/u,'');
+      const match=aliases.find(item=>resolve(item.alias,source)?.id === item.id
+        && new RegExp('^'+escape(item.alias)+'\\s*\\.?\\s*[0-9〇零一二三四五六七八九十百廿卅]', 'iu').test(part));
+      let id=match?.id, tail=match ? part.slice(match.alias.length).replace(/^\s*\.?\s*/u,'') : part;
+      if (!id && previousId && /^\d/.test(tail)) id=previousId;
+      if (!id) return part;
+      recognized=true; previousId=id;
+      if (source !== 'EN') tail=tail.replace(/[—―─]\s*(\d+)\s*,\s*(\d+)/g,'-$1:$2');
+      tail=tail.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/gu,c=>subverses[c])
+        .normalize('NFKC').replace(/[（]/g,'(').replace(/[）]/g,')').replace(/[–—―─−~～]/g,'-')
+        .replace(/([〇零一二三四五六七八九十百廿卅]+)(?=\d)/gu,(_,han)=>hanNumber(han)+':');
+      const boundary='\uE000';
+      tail=tail.replace(/^(\d+(?:\(\d+(?:-\d+)?\))?)\s*[,.:、・]\s*/u,'$1'+boundary)
+        .replace(/:/g,boundary);
+      if (source !== 'EN') tail=tail.replace(/(\d+)([a-z]*)-(\d+),(\d+)/g,(all,start,suffix,end,verse)=>
+        Number(end)<Number(start) ? start+suffix+'-'+end+boundary+verse : all);
+      tail=tail.replace(/[.,、]\s*(?=\d)/g,style.verses).replace(/(?:과|와)\s*(?=\d)/g,style.verses)
+        .replaceAll(boundary,style.chapter);
+      const alternatives={KR:'또는', EN:'or', VN:'hoặc', JP:'または', ZH:'或', DE:'oder', IT:'oppure', PT:'ou', ES:'o', LA:'vel'};
+      tail=tail.replace(/또는|\bor\b|\bhoặc\b|または|或|\boder\b|\boppure\b|\bou\b|\bvel\b/giu,' '+(alternatives[target] || 'or')+' ');
+      if (target === 'KR') tail=tail.replace(/(\d)([a-n]+)/g,(_,n,suffix)=>n+[...suffix].map(c=>koreanSubverses[c]).join(''));
+      tail=tail.replace(/〔/g,'(').replace(/〕/g,')').replace(/\(\s*(◎|R\.?|[ĐÐ]\.?)\s*((?:[^()]|\([^()]*\))*)\)/gu,(_,marker,reference)=>{
+        const suffix=reference.match(/^(.*?)\s*(?:참조|참고|参照|參閱)\s*$/u);
+        let body=(suffix?suffix[1]:reference).trim();
+        const nested=format(body,source,target);
+        if(nested) body=nested;
+        if(suffix) body=style.suffix?body+' '+style.reference:style.reference+' '+body;
+        return ' ('+(source===target?marker+' ':'')+body+')';
+      }).replace(/\s{2,}/g,' ').trim();
+      const book=table.books[id], name=target === 'KR' ? book.koreanKey : (book.aliases[0] || book.name);
+      let result=(match ? name+' ' : '')+tail;
+      if (isReference) result=style.suffix ? result+' '+style.reference : style.reference+' '+result;
+      return result;
+    });
+    return recognized ? output.join('; ') : '';
+  }
+  root.bibleCitation = Object.freeze({language, entries, resolve, parse, key, format, hanNumber, wholeVerseCoverage, comparisonKeys, equivalent});
   if (typeof module !== 'undefined' && module.exports) module.exports = root.bibleCitation;
 })(globalThis);

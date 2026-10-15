@@ -41,6 +41,16 @@ function startServer() {
   await page.addInitScript(() => {
     window.fetch = async () => { throw new Error('Remote fetch disabled by version-display check'); };
   });
+  const massTool = require('./mass-data-editor');
+  const registry = massTool.runCountryMassSources(massTool.readCountryMassSources()).registry;
+  const metadataTool = require('./country-metadata-upload-tool');
+  const metadata = Object.fromEntries(metadataTool.countryMetadataItems().map(item => [item.jurisdiction,item]));
+  await page.addInitScript(({registry,metadata}) => {
+    globalThis.countryMassData=registry;
+    globalThis.uploadedCountryMassData=registry;
+    globalThis.uploadedCountryMassMetadata=metadata;
+    globalThis.ordoPrayerEditorPreview=true;
+  },{registry,metadata});
 
   try {
     await page.goto(`http://127.0.0.1:${server.address().port}/${targetHtml}`, {
@@ -48,17 +58,15 @@ function startServer() {
       timeout: 90000
     });
     await page.locator('#consent-accept').click({ timeout: 15000 }).catch(() => {});
-    await page.waitForFunction(() => document.querySelector('#main-footer .app-version-label'), null, { timeout: 90000 });
+    await page.waitForFunction(() => document.documentElement.dataset.appVersion && document.querySelector('#settings-version-label')?.textContent, null, { timeout: 30000 });
     const result = await page.evaluate(() => ({
       internalVersion: APP_VERSION,
       publicVersion: publicAppVersionLabel(),
-      footerText: document.querySelector('#main-footer .app-version-label')?.textContent.trim() || '',
-      footerVersion: document.querySelector('#main-footer .app-version-label')?.dataset.appVersion || '',
+      settingsVersion: document.querySelector('#settings-version-label')?.textContent.trim() || '',
       rootVersion: document.documentElement.dataset.appVersion || ''
     }));
     assert(/^V\d+(?:\.\d+)?$/i.test(result.publicVersion), `Invalid public version: ${result.publicVersion}`);
-    assert(result.footerText === `Ordo Missae ${result.publicVersion}`, `Unexpected footer label: ${result.footerText}`);
-    assert(result.footerVersion === result.publicVersion, 'Footer data version does not match APP_VERSION.');
+    assert(result.settingsVersion === result.publicVersion, 'Settings version does not match APP_VERSION.');
     assert(result.rootVersion === result.publicVersion, 'Root data version does not match APP_VERSION.');
     assert(pageErrors.length === 0, `Page errors:\n${pageErrors.join('\n')}`);
     console.log(JSON.stringify(result, null, 2));

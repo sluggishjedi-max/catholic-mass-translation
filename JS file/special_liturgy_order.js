@@ -12,6 +12,35 @@
     const data = clone(record?.riteData?.[lang]?.[key] || {});
     const cycle = getSundayCycle(date);
     if (data.byCycle) Object.assign(data, data.byCycle[cycle] || {});
+    if (/^(?:palm_gospel|vigil_reading_\d)$/.test(key) && !data.choices && !data.variants) {
+      const options = [[]];
+      for (const line of data.lines || []) {
+        const marker = String(line.text || line.rubric || '').trim();
+        if (/^(?:Or\s*:|Vel\s*:|또는\s*:?|Hoặc(?:\s+đọc\b.*)?\s*:?)$/iu.test(marker)) options.push([]);
+        else options[options.length - 1].push(line);
+      }
+      const bodies = options.filter(lines => lines.length);
+      if (bodies.length > 1) {
+        const longShort = key.startsWith('vigil_reading_') && bodies.length === 2;
+        const labels = longShort ? [
+          {KR:'긴 독서', EN:'Long form', VN:'Bài dài', JP:'長い形', LA:'Forma longior', ZH:'長式', IT:'Forma lunga', PT:'Forma longa', ES:'Forma larga', DE:'Langfassung'},
+          {KR:'짧은 독서', EN:'Short form', VN:'Bài ngắn', JP:'短い形', LA:'Forma brevior', ZH:'短式', IT:'Forma breve', PT:'Forma breve', ES:'Forma breve', DE:'Kurzfassung'}
+        ] : bodies.map((_,index)=>({KR:`제${index+1}양식`,EN:`Form ${index+1}`}));
+        data.choices = Object.fromEntries(bodies.map((_,index)=>[String.fromCharCode(65+index),labels[index]]));
+        data.variants = Object.fromEntries(bodies.map((lines,index)=>[String.fromCharCode(65+index),{
+          lines, citation:data.optionCits?.[index]?.[`cit_${lang.toLowerCase()}`] || data.citation || ''
+        }]));
+        data.__scriptureChoices = true;
+      }
+    }
+    if (/^(?:palm_gospel|vigil_reading_\d)$/.test(key) && data.variants) data.__scriptureChoices = true;
+    if (key === 'vigil_blessing' && !(data.lines || []).some(line => line.text)) {
+      const approved = global.missalBlessingData?.[lang]?.solemnBlessings?.easter_vigil;
+      if (approved) data.lines = approved.lines.map(raw => ({
+        sp: /^R\./.test(raw) ? peopleSpeakerByLang[lang.toLowerCase()] : celebrantSpeakerByLang[lang.toLowerCase()],
+        text: raw.replace(/^R\.\s*/, '')
+      }));
+    }
     return data;
   }
   function build(date, ordinary) {
@@ -88,25 +117,31 @@
       const key = node.rite;
       const perLanguage = Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang, riteData(records[lang], lang, key, date)]));
       const choices = node.choices || perLanguage[state.currentLoc]?.choices || Object.values(perLanguage).find(data => data.choices)?.choices;
+      const scriptureChoices = Object.values(perLanguage).some(data=>data.__scriptureChoices);
       const toLines = choice => {
         const bodies = Object.fromEntries(SUPPORTED_LANGS.map(lang => {
           let lines = choice ? perLanguage[lang].variants?.[choice]?.lines || perLanguage[lang].lines || [] : perLanguage[lang].lines || [];
-          if (!node.choices && !lines.length) lines = [{rubric:missingText(lang)}];
+          if (choice && scriptureChoices && !perLanguage[lang].variants?.[choice] && choice !== 'A') lines = [];
+          if (!node.sourceOnly && !node.choices && !lines.length) lines = [{rubric:missingText(lang)}];
           return [lang,lines];
         }));
         const length = Math.max(1, ...Object.entries(bodies).filter(([lang])=>activeLanguages.has(lang)).map(([,lines])=>lines.length));
-        return Array.from({length}, (_, index) => Object.fromEntries(SUPPORTED_LANGS.flatMap(lang => {
-          const line = bodies[lang][index] || {};
+        return Array.from({length}, (_, index) => Object.assign(node.sourceOnly ? {__sourceOnlyOriginal:true} : {}, Object.fromEntries(SUPPORTED_LANGS.flatMap(lang => {
+          let line = bodies[lang][index] || {};
+          if (line.text === 'Or:') line = {rubric:localized({KR:'또는',EN:'Or:',VN:'Hoặc:',JP:'または',LA:'Vel:',ZH:'或',IT:'Oppure:',PT:'Ou:',ES:'O bien:',DE:'Oder:'},lang)};
           const lower = lang.toLowerCase();
           return ['text','sp','rubric','role'].filter(field => line[field] !== undefined).map(field => [`${field}_${lower}`, line[field]]);
-        })));
+        }))));
       };
-      const cit = Object.fromEntries(SUPPORTED_LANGS.filter(lang => perLanguage[lang].citation).map(lang => [`cit_${lang.toLowerCase()}`, perLanguage[lang].citation]));
+      const citationFor = choice => Object.fromEntries(SUPPORTED_LANGS.flatMap(lang => {
+        if (choice && scriptureChoices && !perLanguage[lang].variants?.[choice] && choice !== 'A') return [];
+        const citation = (choice && perLanguage[lang].variants?.[choice]?.citation) || perLanguage[lang].citation;
+        return citation ? [[`cit_${lang.toLowerCase()}`,citation]] : [];
+      }));
+      const cit = citationFor();
       const item = {id:key, type:choices ? 'selectable' : 'part', header:header(node.names), cit, lines:toLines(), __countrySpecialRite:true, __specialWhen:node.when};
-      if (node.sourceOnly) item.__specialOriginals = Object.entries(perLanguage)
-        .filter(([,data]) => data.lines?.length).map(([language,data]) => ({language,lines:clone(data.lines),standaloneLines:clone(data.standaloneLines || [])}));
       if (choices) {
-        item.variants = Object.fromEntries(Object.entries(choices).map(([choice,names]) => [choice,{label:header(names), header:item.header, cit, lines:toLines(choice)}]));
+        item.variants = Object.fromEntries(Object.entries(choices).map(([choice,names]) => [choice,{label:header(names), header:item.header, cit:citationFor(choice), lines:toLines(choice)}]));
         if (!item.variants[state.options[key]]) state.options[key] = node.default || Object.keys(choices)[0];
       }
       result.push(item);

@@ -131,7 +131,8 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V29.1-20261013-NOTICE';
+    const APP_VERSION = 'V29.2-20261015';
+    appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
     const DAILY_SOURCE_CACHE_TTL_MS = 26 * 60 * 60 * 1000;
@@ -6243,40 +6244,8 @@
     const suffixMap = { 'ㄱ': 'a', 'ㄴ': 'b', 'ㄷ': 'c', 'ㄹ': 'd', 'ㅁ': 'e', 'ㅂ': 'f', 'ㅅ': 'g', 'ㅇ': 'h', 'ㅈ': 'i', 'ㅊ': 'j', 'ㅋ': 'k', 'ㅌ': 'l', 'ㅍ': 'm', 'ㅎ': 'n'};
 
     function formatBibleCit(cit, targetLang) {
-        if (!cit) return cit;
-        let converted = cit;
-
-        // 🌟 언어별로 서랍 번호를 지정합니다 (VN:0, EN:1, JP:2, LA:3)
-        const langIndex = {'VN': 0, 'EN': 1, 'JP': 2, 'LA': 3}[targetLang];
-        const referenceMarkerPrefix = { 'VN': 'x.', 'EN': 'cf.', 'JP': '\u53C2\u7167', 'LA': 'cf.' }[targetLang] || 'x.';
-        const shouldTranslateReferenceMarker = langIndex !== undefined && /(?:\uCC38\uACE0|\uCC38\uC870)\s*$/u.test(converted);
-        if (shouldTranslateReferenceMarker) {
-            converted = converted.replace(/\s*(?:\uCC38\uACE0|\uCC38\uC870)\s*$/u, '').trim();
-        }
-
-        // 1. 성경 권 이름 변환
-        const sortedKeys = Object.keys(bibleMap).sort((a, b) => b.length - a.length);
-        for (let kr of sortedKeys) {
-            if (converted.includes(kr)) {
-                // 한국어면 원본 유지, 다른 언어면 알맞은 번호의 서랍에서 꺼냅니다!
-                const replacement = langIndex !== undefined ? bibleMap[kr][langIndex] : kr;
-                converted = converted.replace(kr, replacement);
-                break;
-            }
-        }
-
-        // 2. 한국어 첨자 변환 (ㄱ->a, ㄴ->b 등)
-        if (langIndex !== undefined) {
-            for (let krChar in suffixMap) {
-                if (converted.includes(krChar)) {
-                    converted = converted.split(krChar).join(suffixMap[krChar]);
-                }
-            }
-        }
-        if (shouldTranslateReferenceMarker && converted) {
-            converted = targetLang === 'JP' ? `${converted} ${referenceMarkerPrefix}` : `${referenceMarkerPrefix} ${converted}`;
-        }
-        return converted;
+        return globalThis.bibleCitation?.format(cit, targetLang, targetLang)
+            || globalThis.bibleCitation?.format(cit, 'KR', targetLang) || cit || '';
     }
 
     function langCodeFromLowerKey(lower) {
@@ -10094,8 +10063,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         'gospel_accl', 'gospel', 'prayer_offerings', 'preface', 'communion', 'prayer_after'
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
+    const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict99';
+    const STRICT_PARSER_CACHE_VERSION = 'strict101-inline-citations';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10825,7 +10795,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['entrance', /^입당송(?:\s|$|[:：])/u],
             ['collect', /^본기도(?:\s|$|[:：])/u],
             ['reading1', /^제\s*1\s*독서(?:\s|$|[:：])/u],
-            ['psalm', /^화답송(?=\s|$|[:：]|시편)/u],
+            ['psalm', /^(?:화답송|찬가)(?=\s|$|[:：]|시편|탈출|이사|다니|루카|유딧|토빗|집회|지혜|1사무|1역대)/u],
             ['reading2', /^제\s*2\s*독서(?:\s|$|[:：])/u],
             ['Sequence', /^부속가(?:\s|$|[:：])/u],
             ['gospel_accl', /^복음\s*환호송(?=\s|$|[:：]|[가-힣0-9])/u],
@@ -11136,7 +11106,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const text = strictCitationCandidate(line, lang);
         if (!text || text.length > 120 || !/\d/.test(text)) return false;
         if (/^\d[\d\s,.;:·+\-–—―─()ㄱ-ㅎ]*$/.test(text)) return true;
-        if (lang === 'KR') return /^(?:[1-3]\s*)?[가-힣]{1,12}\s*\d/.test(text);
+        if (lang === 'KR') {
+            const book = text.match(/^((?:[1-3]\s*)?[가-힣]{1,12})\s*(?=\d)/u);
+            return !!book && !!globalThis.bibleCitation?.resolve(book[1], 'KR');
+        }
         if (lang === 'EN') return /^(?:[1-3]\s*)?[A-Z][A-Za-z. ]{1,30}\s+\d/.test(text);
         if (lang === 'JP') return /^(?:[①②③１２３1-3])?[一-龯ァ-ヶー]{1,20}\s*\d/.test(text);
         if (lang === 'VN') return /^(?:[1-3]\s*)?[A-ZĐÐ][A-Za-zÀ-ỹĐđÐð. ]{0,30}\s+\d/i.test(text);
@@ -11176,8 +11149,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function strictExtractCitation(section, blocks, lang, options = {}) {
         const headingRest = strictIdentifySection(section.heading || '', lang);
-        const headingCitation = headingRest && strictLooksLikeCitation(headingRest.rest, lang)
-            ? (lang === 'DE' ? strictCitationCandidate(headingRest.rest, lang) : headingRest.rest)
+        const headingCandidate = headingRest ? headingRest.rest : section.heading || '';
+        const headingCitation = strictLooksLikeCitation(headingCandidate, lang)
+            ? (lang === 'DE' ? strictCitationCandidate(headingCandidate, lang) : headingCandidate)
             : '';
         const index = blocks.findIndex(line => strictLooksLikeCitation(line, lang));
         if (index < 0) return { citation: strictCleanCitation(headingCitation, options), blocks };
@@ -11983,7 +11957,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictParseReadingSection(lang, key, section) {
-        const sourceBlocks = strictSplitBlocks(section.lines);
+        const sourceBlocks = strictSplitBlocks(section.lines).flatMap(line => {
+            // CBCK sometimes prints the chapter/verses on the proclamation's
+            // line. Split before detecting the intro, preserving the whole body.
+            const inline = lang === 'KR' && line.match(/^(.*?(?:말씀입니다|복음입니다)\.?)\s*(\d+\s*[,.:]\s*\d[\d\s,.;:ㄱ-ㅎ\-–—―]*)(?:\s*<또는\s*[^>]+>)?$/u);
+            return inline ? [inline[1], inline[2]] : [line];
+        });
         const joinedCitationBlocks = [];
         for (let index = 0; index < sourceBlocks.length; index += 1) {
             const current = sourceBlocks[index];
@@ -15717,11 +15696,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ].join('\n');
     }
 
+    async function runLimitedTasks(tasks, limit, worker) {
+        let next = 0;
+        await Promise.all(Array.from({length: Math.min(limit, tasks.length)}, async () => {
+            while (next < tasks.length) await worker(tasks[next++]);
+        }));
+    }
+
     async function compareLocalMissalPrayersWithAI(fetchedData, date) {
         const tasks = collectLocalMissalComparisonTasks(fetchedData, date).slice(0, 15);
         if (!tasks.length) return false;
         let changed = false;
-        for (const task of tasks) {
+        await runLimitedTasks(tasks, 3, async task => {
             try {
                 const payload = await fetchGeminiViaFirebase('align', {
                     contents: [{ parts: [{ text: buildLocalMissalComparisonPrompt(task) }] }],
@@ -15736,8 +15722,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             } finally {
                 pendingLocalMissalComparisonKeys.delete(task.signature);
             }
-            await new Promise(resolve => setTimeout(resolve, 180));
-        }
+        });
         return changed;
     }
 
@@ -16181,17 +16166,37 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             && ['3,4,5,6,12', '3,4,5,6,8,12'].includes(b);
     }
 
-    // Unknown syntax is not evidence that two official sources chose different
-    // passages. A difference is trusted only when both citations parse. For a
-    // responsorial Psalm, different stanza lists within the same Psalm are also
-    // inconclusive because conferences print verse numbering and stanza detail
-    // differently.
-    function passageCitationsConflict(baseId, leftCitation, rightCitation, leftLang, rightLang) {
+    // Keep different passages separate, including unresolved numeric references.
+    // Only explicitly reviewed source discrepancies can override that boundary.
+    function passageCitationsConflict(baseId, leftCitation, rightCitation, leftLang, rightLang, evidence = {}) {
         const left = globalThis.bibleCitation.parse(leftCitation, leftLang);
         const right = globalThis.bibleCitation.parse(rightCitation, rightLang);
-        if (!left || !right) return false;
+        const languages = new Set([leftLang,rightLang].map(lang=>globalThis.bibleCitation.language(lang)));
+        const sameTruthText = evidence.leftSemanticKey === 'father_word_truth_sanctify'
+            && evidence.rightSemanticKey === 'father_word_truth_sanctify';
+        if (baseId === 'gospel_accl' && languages.has('KR') && languages.has('ZH') && sameTruthText) {
+            const korean = globalThis.bibleCitation.language(leftLang) === 'KR' ? left : right;
+            const chinese = String(globalThis.bibleCitation.language(leftLang) === 'ZH' ? leftCitation : rightCitation).replace(/\s+/gu,'');
+            // This legacy source uses an otherwise ambiguous single-character
+            // book alias. Do not register that alias globally to infer a book.
+            if (korean?.id === 'JHN' && korean.chapter === 17
+                && globalThis.bibleCitation.wholeVerseCoverage(korean) === '17'
+                && /^若十七7[,、]17$/u.test(chinese)) return false;
+        }
+        if (!left || !right) return scriptureAlignmentKeys.has(baseId)
+            && /\d/u.test(String(leftCitation || '')) && /\d/u.test(String(rightCitation || ''));
         if (passageCitationsEquivalent(baseId, leftCitation, rightCitation, leftLang, rightLang)) return false;
-        if (baseId === 'psalm' && left.id === 'PSA' && parsedCitationsShareChapter(left, right)) return false;
+        // National lectionaries can divide stanzas differently within one Psalm.
+        // A different Psalm is a conflict; stanza notation alone needs text evidence.
+        if (baseId === 'psalm' && left.id === 'PSA' && parsedCitationsShareChapter(left,right)) return false;
+        // Reviewed KR/TW acclamation: both proclaim "sanctify them in the truth"
+        // (Jn 17:17), while the Taiwan header additionally lists verse 7. Require
+        // that exact source-text meaning as well as the reviewed reference pair.
+        if (baseId === 'gospel_accl' && languages.has('KR') && languages.has('ZH')
+            && left.id === 'JHN' && right.id === 'JHN' && left.chapter === 17 && right.chapter === 17
+            && evidence.leftSemanticKey === 'father_word_truth_sanctify'
+            && evidence.rightSemanticKey === 'father_word_truth_sanctify'
+            && [left,right].every(parsed=>['17','7,17'].includes(globalThis.bibleCitation.wholeVerseCoverage(parsed)))) return false;
         return true;
     }
 
@@ -16224,7 +16229,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                         strictReadingOptionCitation(section, left, 0),
                         strictReadingOptionCitation(section, right, 0),
                         left,
-                        right
+                        right,
+                        {leftSemanticKey:leftKey, rightSemanticKey:rightKey}
                     )) return [];
                 }
             }
@@ -16460,7 +16466,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align9-citation-length';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align10-scripture-boundaries';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -16530,36 +16536,37 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return groups;
     }
 
-    function splitKnownSemanticConflicts(baseId, optionMap, proposedGroups) {
+    function splitKnownSemanticConflicts(baseId, optionMap, proposedGroups, section = {}) {
         const lowers = SUPPORTED_LANGS.map(lang => lang.toLowerCase());
         return (Array.isArray(proposedGroups) ? proposedGroups : []).flatMap(rawGroup => {
-            const mapped = lowers.map(lower => {
+            const mapped = lowers.flatMap(lower => {
                 const rawValue = rawGroup && (rawGroup[lower] ?? rawGroup[lower.toUpperCase()]);
                 const index = typeof rawValue === 'number' ? rawValue : Number.parseInt(rawValue, 10);
-                const options = optionMap && optionMap[lower];
-                if (!Number.isInteger(index) || !Array.isArray(options) || !options[index]) return null;
-                return {
-                    lower,
-                    index,
-                    semanticKey: variantSemanticKey(baseId, variantOptionMeaningText(baseId, options[index]))
-                };
-            }).filter(Boolean);
-            const distinctKeys = Array.from(new Set(mapped.map(item => item.semanticKey).filter(Boolean)));
-            if (distinctKeys.length < 2) return [rawGroup];
-            const groups = distinctKeys.map(key => Object.fromEntries(
-                mapped.filter(item => item.semanticKey === key).map(item => [item.lower, item.index])
-            ));
-            mapped.filter(item => !item.semanticKey).forEach(item => {
-                groups.push({ [item.lower]: item.index });
+                if (!Number.isInteger(index) || !optionMap?.[lower]?.[index]) return [];
+                return [{lower, index,
+                    citation: strictReadingOptionCitation(section, lower, index),
+                    semanticKey: variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[lower][index]))}];
             });
-            return groups;
+            const distinctKeys = new Set(mapped.map(item => item.semanticKey).filter(Boolean));
+            const groups = [];
+            for (const item of mapped) {
+                const compatible = groups.find(group => group.every(other => {
+                    if (distinctKeys.size > 1 && (!item.semanticKey || !other.semanticKey)) return false;
+                    if (item.semanticKey && other.semanticKey && item.semanticKey !== other.semanticKey) return false;
+                    return !passageCitationsConflict(baseId, item.citation, other.citation, item.lower, other.lower,
+                        {leftSemanticKey:item.semanticKey,rightSemanticKey:other.semanticKey});
+                }));
+                if (compatible) compatible.push(item); else groups.push([item]);
+            }
+            if (groups.length <= 1) return [rawGroup];
+            return groups.map(group => Object.fromEntries(group.map(item => [item.lower, item.index])));
         });
     }
 
-    function normalizeSafeVariantAlignmentGroups(baseId, optionMap, proposedGroups) {
+    function normalizeSafeVariantAlignmentGroups(baseId, optionMap, proposedGroups, section = {}) {
         return normalizeVariantAlignmentGroups(
             optionMap,
-            splitKnownSemanticConflicts(baseId, optionMap, proposedGroups)
+            splitKnownSemanticConflicts(baseId, optionMap, proposedGroups, section)
         );
     }
 
@@ -16579,11 +16586,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return singletonLanguages.size >= 2;
     }
 
-    function combineTrustedVariantAlignments(baseId, optionMap, trustedAlignment, proposedAlignment) {
+    function combineTrustedVariantAlignments(baseId, optionMap, trustedAlignment, proposedAlignment, section = {}) {
         return normalizeSafeVariantAlignmentGroups(
             baseId,
             optionMap,
-            matchedVariantAlignmentGroups(trustedAlignment).concat(Array.isArray(proposedAlignment) ? proposedAlignment : [])
+            matchedVariantAlignmentGroups(trustedAlignment).concat(Array.isArray(proposedAlignment) ? proposedAlignment : []),
+            section
         );
     }
 
@@ -16666,7 +16674,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ].join('\n');
     }
 
-    async function requestVariantAlignmentWithGemini(baseId, optionMap) {
+    async function requestVariantAlignmentWithGemini(baseId, optionMap, section = {}) {
         const prompt = buildVariantAlignmentPrompt(baseId, optionMap);
         const promptConfig = {
             contents: [{ parts: [{ text: prompt }] }],
@@ -16681,7 +16689,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 });
                 const text = geminiTextFromPayload(payload);
                 const parsed = extractJsonObjectFromText(text);
-                return normalizeSafeVariantAlignmentGroups(baseId, optionMap, parsed.groups || parsed.alignment || []);
+                return normalizeSafeVariantAlignmentGroups(baseId, optionMap, parsed.groups || parsed.alignment || [], section);
             } catch (error) {
                 lastError = error;
                 await new Promise(resolve => setTimeout(resolve, 700 + attempt * 900));
@@ -16698,7 +16706,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     // while readings use a different grouping lifecycle.
     function buildDeterministicDailyVariantAlignment(baseId, section, optionMap) {
         if (strictReadingKeys.has(baseId)) {
-            const alignment = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            const byCitation = buildStrictReadingCitationAlignment(baseId, optionMap, section);
+            const raw = byCitation.length ? byCitation : buildKnownConflictSourceSeparation(baseId, optionMap, section);
+            const alignment = raw.length ? normalizeSafeVariantAlignmentGroups(baseId, optionMap, raw, section) : [];
             return { alignment, terminal: !!alignment.length, source: 'scripture' };
         }
         const authoritativeBuilders = [
@@ -16709,9 +16719,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         ];
         for (const build of authoritativeBuilders) {
             const alignment = build();
-            if (alignment.length) return { alignment, terminal: true, source: 'authoritative' };
+            if (alignment.length) return { alignment: normalizeSafeVariantAlignmentGroups(baseId, optionMap, alignment, section), terminal: true, source: 'authoritative' };
         }
-        const alignment = buildFallbackVariantAlignment(baseId, optionMap, section);
+        const raw = buildFallbackVariantAlignment(baseId, optionMap, section);
+        const alignment = raw.length ? normalizeSafeVariantAlignmentGroups(baseId, optionMap, raw, section) : [];
         return {
             alignment,
             terminal: !!(alignment.length && !variantAlignmentNeedsSemanticCompletion(alignment)),
@@ -16779,7 +16790,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
-                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached);
+                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached, section);
                 return;
             }
             if (deterministic.alignment.length) {
@@ -16809,13 +16820,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 delete section.variantAlignment;
                 const cached = readCachedDailyVariantAlignment(date, baseId, signature);
                 if (cached) {
-                    section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached);
+                    section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached, section);
                     return;
                 }
                 if (maxOptions < 2) return;
                 try {
-                    const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap);
-                    const alignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, proposed);
+                    const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap, section);
+                    const alignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, proposed, section);
                     if (alignment.length) {
                         section.variantAlignment = alignment;
                         writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
@@ -16832,7 +16843,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             }
             const cached = readCachedDailyVariantAlignment(date, baseId, signature);
             if (cached) {
-                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached);
+                section.variantAlignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, cached, section);
                 return;
             }
             if (!needsCrossLanguageVariantAlignment(optionMap, maxOptions)) {
@@ -16840,8 +16851,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return;
             }
             try {
-                const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap);
-                const alignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, proposed);
+                const proposed = await requestVariantAlignmentWithGemini(baseId, optionMap, section);
+                const alignment = combineTrustedVariantAlignments(baseId, optionMap, deterministic.alignment, proposed, section);
                 if (alignment.length) {
                     section.variantAlignment = alignment;
                     writeCachedDailyVariantAlignment(date, baseId, signature, alignment);
@@ -17011,7 +17022,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const tasks = collectDailySemanticEquivalenceTasks(date).slice(0, 8);
         if (!tasks.length) return false;
         let changed = false;
-        for (const task of tasks) {
+        await runLimitedTasks(tasks, 3, async task => {
             try {
                 const equivalent = await requestSemanticEquivalenceWithGemini(task);
                 writeCachedDailySemanticEquivalence(date, task.baseId, task.leftText, task.rightText, equivalent);
@@ -17026,8 +17037,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             } finally {
                 pendingDailySemanticEquivalenceKeys.delete(task.signature);
             }
-            await new Promise(resolve => setTimeout(resolve, 180));
-        }
+        });
         return changed;
     }
 
@@ -17721,6 +17731,50 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return true;
     }
 
+    let dailyLiturgyValidationGeneration = 0;
+
+    function setDailyLiturgyChecking(visible) {
+        state.dailyLiturgyChecking = visible;
+        let popup = document.getElementById('liturgy-checking-popup');
+        if (!popup) {
+            popup = document.createElement('div');
+            popup.id = 'liturgy-checking-popup';
+            popup.setAttribute('role', 'status');
+            popup.setAttribute('aria-live', 'polite');
+            popup.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:10020;max-width:90vw;width:max-content;padding:14px 20px;border-radius:12px;background:#2b3038;color:#fff;box-shadow:0 4px 20px #0004;font-size:15px;pointer-events:none';
+            popup.textContent = '불러 온 전례를 확인하고 있습니다.';
+            document.body.appendChild(popup);
+        }
+        popup.hidden = !visible;
+    }
+
+    function cancelDailyLiturgyValidation() {
+        dailyLiturgyValidationGeneration += 1;
+        setDailyLiturgyChecking(false);
+    }
+
+    async function validateLoadedDailyLiturgy(fetchedData, date, shouldApply = () => true) {
+        const generation = ++dailyLiturgyValidationGeneration;
+        const current = () => generation === dailyLiturgyValidationGeneration && (!shouldApply || shouldApply());
+        if (!current()) return;
+        setDailyLiturgyChecking(true);
+        try {
+            await alignDailySelectableVariantsWithAI(fetchedData, date);
+            if (!current()) return;
+            await compareLocalMissalPrayersWithAI(fetchedData, date);
+            if (!current()) return;
+            finalizeDailyReadingsData(fetchedData);
+            await alignDailyTextEquivalenceWithAI(date);
+            if (!current()) return;
+            finalizeDailyReadingsData(fetchedData);
+            render();
+        } catch (error) {
+            console.warn('일일 전례 확인 실패; 원문 선택지를 유지합니다.', error);
+        } finally {
+            if (generation === dailyLiturgyValidationGeneration) setDailyLiturgyChecking(false);
+        }
+    }
+
     async function fetchDailyReadings(options = {}) {
         const today = cloneDateOnly(options.date || getActiveLiturgicalSourceDate());
         let fetchedData = createDailyReadingData();
@@ -17813,22 +17867,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             setTimeout(() => queueVietnameseKtcgPrayerEnrichment(vietnameseResult.parsed, today), 250);
         }
 
-        if (appliedCount) {
-            alignDailySelectableVariantsWithAI(fetchedData, today)
-                .then(() => compareLocalMissalPrayersWithAI(fetchedData, today))
-                .then(() => {
-                    if (options.shouldApply && !options.shouldApply()) return false;
-                    finalizeDailyReadingsData(fetchedData);
-                    return alignDailyTextEquivalenceWithAI(today);
-                })
-                .then(() => {
-                if (options.shouldApply && !options.shouldApply()) return;
-                finalizeDailyReadingsData(fetchedData);
-                render();
-                }).catch(error => {
-                console.warn('일일 독서 선택지 정렬 보정 실패', error);
-                });
-        }
+        if (appliedCount) void validateLoadedDailyLiturgy(fetchedData, today, options.shouldApply);
         return appliedCount > 0 || results.some(result => result.parsed);
     }
 
@@ -17864,6 +17903,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     async function fetchMassData(options = {}) {
+        state.autoBlessingSignature = '';
+        cancelDailyLiturgyValidation();
         const loadId = ++activeMassDataLoadId;
         const dateContext = rememberLiturgicalDateContext(getStrictDateContext(new Date()));
         const today = cloneDateOnly(dateContext.date);
@@ -19524,6 +19565,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function shouldSuppressAIFallbackForLine(line, baseId, lower) {
+        if (line?.__sourceOnlyOriginal) return true;
         if (line?.__readingAlignmentBlank?.[lower]) return true;
         if (shouldSuppressAIFallbackLine(line, baseId)) return true;
         if (strictPrayerKeys.has(baseId)
@@ -20565,6 +20607,34 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }).filter(line => cleanNodeText(line.text_kr));
     }
 
+    function approvedSolemnBlessing(key, original) {
+        const sources = {KR:globalThis.koreanBlessingData, EN:globalThis.englishBlessingData,
+            ...(globalThis.missalBlessingData || {})};
+        const entries = Object.entries(sources).flatMap(([lang, data]) => {
+            const entry = data?.solemnBlessings?.[key];
+            return entry ? [{lang, entry}] : [];
+        });
+        if (!entries.length) return null;
+        const label = {...original.label};
+        const titles = {KR:'장엄강복', EN:'Solemn Blessing', VN:'Phép lành trọng thể',
+            LA:'Benedictio sollemnis', IT:'Benedizione solenne', PT:'Bênção solene', JP:'荘厳な祝福'};
+        const content = Array.from({length:Math.max(...entries.map(({entry}) => entry.lines.length))}, () => ({__sourceOnlyOriginal:true}));
+        for (const {lang, entry} of entries) {
+            const lower = lang.toLowerCase();
+            label[lower] = `${titles[lang] || titles.EN} - ${entry.label || key}`;
+            entry.lines.forEach((raw, index) => {
+                const response = /^(?:[◎○]|R\.)/.test(raw);
+                // National editions may split a petition differently. Always
+                // align the final Trinitarian blessing and its Amen at the end.
+                const row = index >= entry.lines.length - 2 ? content.length - (entry.lines.length - index) : index;
+                content[row][`sp_${lower}`] = lang === 'KR' ? (response ? '◎' : '✚')
+                    : (response ? peopleSpeakerByLang[lower] : celebrantSpeakerByLang[lower]) || '';
+                content[row][`text_${lower}`] = raw.replace(/^(?:[╋＋✚◎○]\s*|R\.\s*)/, '');
+            });
+        }
+        return {label, lines:cloneMassLines(original.lines).slice(0,3).concat(content)};
+    }
+
     function prepareKoreanBlessingForActiveDate(item, baseId) {
         if (baseId !== 'blessing' || !item || !item.variants || !item.variants.C) return;
         const variant = item.variants.C;
@@ -20575,6 +20645,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             };
         }
         const original = item.__originalKoreanBlessingVariantC;
+        if (!item.__approvedSolemnBlessingChoices) {
+            const sources = [globalThis.koreanBlessingData, globalThis.englishBlessingData,
+                ...Object.values(globalThis.missalBlessingData || {})];
+            const keys = new Set(sources.flatMap(data => Object.keys(data?.solemnBlessings || {})));
+            for (const key of keys) {
+                const approved = approvedSolemnBlessing(key, original);
+                if (approved) item.variants[`solemn_${key}`] = approved;
+            }
+            item.__approvedSolemnBlessingChoices = true;
+        }
         variant.label = JSON.parse(JSON.stringify(original.label));
         variant.lines = cloneMassLines(original.lines);
 
@@ -20604,11 +20684,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             variant.label.kr = `장엄강복 - ${entry.label || selection.key}`;
         }
         if (!content.length) return;
+        if (selection.type === 'solemn_blessing') {
+            const approved = approvedSolemnBlessing(selection.key, original);
+            variant.label = approved.label;
+            content = approved.lines.slice(3);
+        }
         variant.lines = prefix.concat(content);
 
         const signature = `${formatDateIso(date)}|${selection.type}|${selection.key}`;
         if (state.autoBlessingSignature !== signature) {
-            state.options.blessing = 'C';
+            state.options.blessing = getSeasonMeta(date).season === 'advent'
+                && state.liturgyInfo?.meta?.specialMassKey !== 'christmas_vigil' && item.variants.A ? 'A' : 'C';
             state.autoBlessingSignature = signature;
         }
     }
@@ -21305,36 +21391,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!isStacked) headerRow.appendChild(hColR);
             partContainer.appendChild(headerRow);
 
-            if (Array.isArray(item.__specialOriginals)) {
-                item.__specialOriginals.forEach(original => {
-                    const block = document.createElement('div');
-                    block.className = 'special-rite-original pc-col';
-                    block.dataset.sourceLang = original.language;
-                    const appendOriginalLines = (container, lines) => lines.forEach(line => {
-                        const paragraph = document.createElement('p');
-                        paragraph.style.whiteSpace = 'pre-line';
-                        if (line.rubric) paragraph.className = 'rubric';
-                        paragraph.textContent = line.rubric || [line.sp, line.text].filter(Boolean).join(' ');
-                        container.appendChild(paragraph);
-                    });
-                    appendOriginalLines(block, original.lines);
-                    if (original.standaloneLines?.length) {
-                        const details = document.createElement('details');
-                        details.className = 'special-rite-standalone';
-                        const summary = document.createElement('summary');
-                        summary.textContent = state.uiLang === 'KR'
-                            ? '미사 밖에서 거행하는 별도 예식 원문 (English)'
-                            : 'Original for a separate celebration outside Mass (English)';
-                        details.appendChild(summary);
-                        appendOriginalLines(details, original.standaloneLines);
-                        block.appendChild(details);
-                    }
-                    partContainer.appendChild(block);
-                });
-                root.appendChild(partContainer);
-                return;
-            }
-
             if (appendSourceOnlyReadingWholeDisplay(partContainer, data, baseId, leftL, rightL, isStacked)) {
                 root.appendChild(partContainer);
                 return;
@@ -21458,26 +21514,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function translateCitationForDisplay(value, sourceLower, targetLang) {
-        const target = String(targetLang || '').toUpperCase();
-        const parsed = globalThis.bibleCitation?.parse(value, sourceLower);
-        let id = parsed?.id, tail = parsed?.reference;
-        if (!id) {
-            const raw = String(value || '').trim();
-            const books = globalThis.bibleLanguageTables?.[String(sourceLower).toUpperCase()]?.books || {};
-            const matches = Object.entries(books).flatMap(([bookId, book]) =>
-                (book.aliases || []).map(alias => ({id:bookId,alias})))
-                .sort((a,b)=>b.alias.length-a.alias.length);
-            const match = matches.find(item => raw.toLowerCase().startsWith(item.alias.toLowerCase())
-                && /^\s*\.?\s*\d/u.test(raw.slice(item.alias.length)));
-            if (match) { id=match.id; tail=raw.slice(match.alias.length).replace(/^\s*\.?\s*/u,''); }
-        }
-        const book = id && globalThis.bibleLanguageTables?.[target]?.books?.[id];
-        if (book && tail) {
-            const name = target === 'KR' ? book.koreanKey : (book.aliases?.[0] || book.name);
-            if (target !== 'KR') tail=tail.replace(/[ㄱㄴㄷㄹㅁㅂ]/gu,c=>suffixMap[c] || c);
-            return name + ' ' + tail.replace(':', target === 'EN' ? ':' : ',');
-        }
-        return value || '';
+        return globalThis.bibleCitation?.format(value, sourceLower, targetLang) || value || '';
     }
 
     function headerCitationFor(orig, data, langCode) {

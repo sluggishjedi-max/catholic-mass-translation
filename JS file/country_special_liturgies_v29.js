@@ -1112,39 +1112,6 @@ globalThis.countrySpecialLiturgies = {
                   "sp": "R/.",
                   "text": "Amen."
                 }
-              ],
-              "standaloneLines": [
-                {
-                  "rubric": "All make the sign of the cross as the leader says:"
-                },
-                {
-                  "text": "Our help is in the name of the Lord."
-                },
-                {
-                  "sp": "R/.",
-                  "text": "Who made heaven and earth."
-                },
-                {
-                  "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                },
-                {
-                  "sp": "Reader:",
-                  "text": "The Gospel of the Lord."
-                },
-                {
-                  "sp": "R/.",
-                  "text": "Praise to you, Lord Jesus Christ."
-                },
-                {
-                  "rubric": "The leader prays with hands joined:"
-                },
-                {
-                  "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                },
-                {
-                  "sp": "R/.",
-                  "text": "Amen."
-                }
               ]
             }
           }
@@ -6025,39 +5992,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -6631,7 +6565,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -6831,7 +6766,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -6971,7 +6907,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -15074,39 +15011,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -15680,7 +15584,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -15880,7 +15785,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -16020,7 +15926,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -23719,39 +23626,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -24325,7 +24199,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -24525,7 +24400,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -24665,7 +24541,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -36097,39 +35974,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -36703,7 +36547,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -36903,7 +36748,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -37043,7 +36889,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -37818,7 +37665,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "Verbum Dómini."
                       }
-                    ]
+                    ],
+                    "citation": "Mt 21,1-11"
                   },
                   "B": {
                     "lines": [
@@ -38010,7 +37858,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "Verbum Dómini."
                       }
-                    ]
+                    ],
+                    "citation": "Mc 11,1-10"
                   },
                   "C": {
                     "lines": [
@@ -38162,7 +38011,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "Verbum Dómini."
                       }
-                    ]
+                    ],
+                    "citation": "Lc 19,28-40"
                   }
                 }
               }
@@ -48486,39 +48336,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -49092,7 +48909,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -49292,7 +49110,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -49432,7 +49251,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -62773,36 +62593,125 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_1": {
+                "citation": "창세 1,1―2,2",
                 "lines": [
                   {
-                    "rubric": "이 독서는 해당 연도의 한국 주교회의 전례 원문에서 불러온다."
+                    "sp": "",
+                    "text": "하느님께서 보시니 손수 만드신 모든 것이 참 좋았다",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "창세기의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "한처음에 하느님께서 하늘과 땅을 창조하셨다.\n땅은 아직 꼴을 갖추지 못하고 비어 있었는데,\n어둠이 심연을 덮고 하느님의 영이 그 물 위를 감돌고 있었다.\n하느님께서 말씀하시기를 “빛이 생겨라.” 하시자 빛이 생겼다.\n하느님께서 보시니 그 빛이 좋았다. 하느님께서는 빛과 어둠을 가르시어,\n빛을 낮이라 부르시고 어둠을 밤이라 부르셨다.\n저녁이 되고 아침이 되니 첫날이 지났다.\n하느님께서 말씀하셨다.\n“물 한가운데에 궁창이 생겨, 물과 물 사이를 갈라놓아라.”\n하느님께서 이렇게 궁창을 만들어\n궁창 아래에 있는 물과 궁창 위에 있는 물을 가르시자, 그대로 되었다.\n하느님께서는 궁창을 하늘이라 부르셨다.\n저녁이 되고 아침이 되니 이튿날이 지났다.\n하느님께서 말씀하시기를\n“하늘 아래에 있는 물은 한곳으로 모여, 뭍이 드러나라.” 하시자,\n그대로 되었다.\n하느님께서는 뭍을 땅이라, 물이 모인 곳을 바다라 부르셨다.\n하느님께서 보시니 좋았다.\n하느님께서 말씀하시기를 “땅은 푸른 싹을 돋게 하여라.\n씨를 맺는 풀과 씨 있는 과일나무를 제 종류대로 땅 위에 돋게 하여라.” 하시자,\n그대로 되었다.\n땅은 푸른 싹을 돋아나게 하였다.\n씨를 맺는 풀과 씨 있는 과일나무를 제 종류대로 돋아나게 하였다.\n하느님께서 보시니 좋았다.\n저녁이 되고 아침이 되니 사흗날이 지났다.\n하느님께서 말씀하시기를 “하늘의 궁창에 빛물체들이 생겨,\n낮과 밤을 가르고, 표징과 절기, 날과 해를 나타내어라.\n그리고 하늘의 궁창에서 땅을 비추는 빛물체들이 되어라.” 하시자,\n그대로 되었다.\n하느님께서는 큰 빛물체 두 개를 만드시어,\n그 가운데에서 큰 빛물체는 낮을 다스리고 작은 빛물체는 밤을 다스리게 하셨다.\n그리고 별들도 만드셨다.\n하느님께서 이것들을 하늘 궁창에 두시어 땅을 비추게 하시고,\n낮과 밤을 다스리며 빛과 어둠을 가르게 하셨다.\n하느님께서 보시니 좋았다.\n저녁이 되고 아침이 되니 나흗날이 지났다.\n하느님께서 말씀하셨다.\n“물에는 생물이 우글거리고, 새들은 땅 위 하늘 궁창 아래를 날아다녀라.”\n이렇게 하느님께서는 큰 용들과 물에서 우글거리며 움직이는 온갖 생물들을 제 종류대로,\n또 날아다니는 온갖 새들을 제 종류대로 창조하셨다.\n하느님께서 보시니 좋았다.\n하느님께서 이들에게 복을 내리며 말씀하셨다.\n“번식하고 번성하여 바닷물을 가득 채워라. 새들도 땅 위에서 번성하여라.”\n저녁이 되고 아침이 되니 닷샛날이 지났다.\n하느님께서 말씀하시기를 “땅은 생물을 제 종류대로,\n곧 집짐승과 기어다니는 것과 들짐승을 제 종류대로 내어라.” 하시자,\n그대로 되었다.\n하느님께서는 이렇게 들짐승을 제 종류대로, 집짐승을 제 종류대로,\n땅바닥을 기어다니는 온갖 것을 제 종류대로 만드셨다.\n하느님께서 보시니 좋았다.\n하느님께서 말씀하셨다. “우리와 비슷하게 우리 모습으로 사람을 만들자.\n그래서 그가 바다의 물고기와 하늘의 새와 집짐승과\n온갖 들짐승과 땅을 기어다니는 온갖 것을 다스리게 하자.”\n하느님께서는 이렇게 당신의 모습으로 사람을 창조하셨다.\n하느님의 모습으로 사람을 창조하시되 남자와 여자로 그들을 창조하셨다.\n하느님께서 그들에게 복을 내리며 말씀하셨다.\n“자식을 많이 낳고 번성하여 땅을 가득 채우고 지배하여라.\n그리고 바다의 물고기와 하늘의 새와 땅을 기어다니는 온갖 생물을 다스려라.”\n하느님께서 말씀하시기를 “이제 내가 온 땅 위에서\n씨를 맺는 모든 풀과 씨 있는 모든 과일나무를 너희에게 준다.\n이것이 너희의 양식이 될 것이다.\n땅의 모든 짐승과 하늘의 모든 새와 땅을 기어다니는 모든 생물에게는\n온갖 푸른 풀을 양식으로 준다.” 하시자, 그대로 되었다.\n하느님께서 보시니 손수 만드신 모든 것이 참 좋았다.\n저녁이 되고 아침이 되니 엿샛날이 지났다.\n이렇게 하늘과 땅과 그 안의 모든 것이 이루어졌다.\n하느님께서는 하시던 일을 이렛날에 다 이루셨다.\n그분께서는 하시던 일을 모두 마치시고 이렛날에 쉬셨다.",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "",
+                    "text": "Or:"
+                  },
+                  {
+                    "sp": "",
+                    "text": "",
+                    "role": "summary",
+                    "ai": "AI 요약 번역"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "창세기의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "한처음에 하느님께서 하늘과 땅을 창조하셨다.\n하느님께서 말씀하셨다. “우리와 비슷하게 우리 모습으로 사람을 만들자.\n그래서 그가 바다의 물고기와 하늘의 새와 집짐승과\n온갖 들짐승과 땅을 기어다니는 온갖 것을 다스리게 하자.”\n하느님께서는 이렇게 당신의 모습으로 사람을 창조하셨다.\n하느님의 모습으로 사람을 창조하시되 남자와 여자로 그들을 창조하셨다.\n하느님께서 그들에게 복을 내리며 말씀하셨다.\n“자식을 많이 낳고 번성하여 땅을 가득 채우고 지배하여라.\n그리고 바다의 물고기와 하늘의 새와 땅을 기어다니는 온갖 생물을 다스려라.”\n하느님께서 말씀하시기를 “이제 내가 온 땅 위에서\n씨를 맺는 모든 풀과 씨 있는 모든 과일나무를 너희에게 준다.\n이것이 너희의 양식이 될 것이다.\n땅의 모든 짐승과 하늘의 모든 새와 땅을 기어다니는 모든 생물에게는\n온갖 푸른 풀을 양식으로 준다.” 하시자, 그대로 되었다.\n하느님께서 보시니 손수 만드신 모든 것이 참 좋았다.",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
                 ],
-                "citation": "창세 1,1―2,2",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                "optionCits": [
+                  {
+                    "cit_kr": "창세 1,1―2,2"
+                  },
+                  {
+                    "cit_kr": "창세 1,1.26-31ㄱ"
+                  }
+                ]
               },
               "vigil_psalm_1": {
+                "citation": "시편 104(103),1-2ㄱ.5-6.10과 12.13-14ㄴ.24와 35ㄷ(◎ 30 참조)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "주님, 당신 숨을 보내시어 온 누리의 얼굴을 새롭게 하소서."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "내 영혼아, 주님을 찬미하여라. 주 하느님, 당신은 참으로 위대하시옵니다. 존엄과 영화를 입으시고, 광채를 겉옷처럼 두르셨나이다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "땅을 기초 위에 든든히 세우시니, 영영 세세 흔들리지 않으리이다. 바다로 땅을 옷처럼 덮으시니, 산 위까지 물이 가득 찼나이다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "골짜기마다 샘물 터뜨리시니, 산과 산 굽이굽이 흘러내려, 하늘의 새들은 그 곁에 깃들이고, 나뭇가지 사이에서 지저귀나이다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "당신 거처에서 산에도 물 대시니, 땅은 당신이 내신 열매로 가득하옵니다. 가축을 위하여 풀이 나게 하시고, 사람을 위하여 나물 돋게 하시나이다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님, 당신 업적 얼마나 많사옵니까! 그 모든 것 당신 슬기로 이루시니, 온 세상은 당신이 지으신 것으로 가득하옵니다. 내 영혼아, 주님을 찬미하여라. ◎"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "참조)"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "주님의 자애가 온 땅에 가득하네."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님의 말씀은 바르고, 그 하신 일 모두 진실하다. 주님은 정의와 공정을 좋아하시네. 그분의 자애가 온 땅에 가득하네. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님은 말씀으로 하늘을 여시고, 당신 입김으로 천상 만군 만드셨네. 그분은 둑을 쌓아 바닷물을 모으시고, 깊은 물을 곳간에다 넣으신다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "행복하여라, 주님을 하느님으로 모시는 민족, 그분이 당신 소유로 뽑으신 백성! 주님은 하늘에서 굽어보시며, 모든 사람을 살펴보신다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님은 우리 도움, 우리 방패. 우리 영혼이 주님을 기다리네. 주님, 저희가 당신께 바라는 그대로, 당신 자애를 저희에게 베푸소서. ◎"
                   }
-                ],
-                "citation": "시편 104(103) 또는 33(32)",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_1": {
                 "lines": [
@@ -62841,36 +62750,104 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_2": {
+                "citation": "창세 22,1-18",
                 "lines": [
                   {
-                    "rubric": "이 독서는 해당 연도의 한국 주교회의 전례 원문에서 불러온다."
+                    "sp": "",
+                    "text": "우리 성조 아브라함의 제사",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "창세기의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "그 무렵 하느님께서 아브라함을 시험해 보시려고\n“아브라함아!” 하고 부르시자, 그가 “예, 여기 있습니다.” 하고 대답하였다.\n그분께서 말씀하셨다.\n“너의 아들, 네가 사랑하는 외아들 이사악을 데리고 모리야 땅으로 가거라.\n그곳, 내가 너에게 일러 주는 산에서 그를 나에게 번제물로 바쳐라.”\n아브라함은 아침 일찍 일어나 나귀에 안장을 얹고\n두 하인과 아들 이사악을 데리고서는, 번제물을 사를 장작을 팬 뒤\n하느님께서 자기에게 말씀하신 곳으로 길을 떠났다.\n사흘째 되는 날에 아브라함이 눈을 들자, 멀리 있는 그곳을 볼 수 있었다.\n아브라함이 하인들에게 말하였다.\n“너희는 나귀와 함께 여기에 머물러 있어라.\n나와 이 아이는 저리로 가서 경배하고 너희에게 돌아오겠다.”\n그러고 나서 아브라함은 번제물을 사를 장작을 가져다 아들 이사악에게 지우고,\n자기는 손에 불과 칼을 들었다. 그렇게 둘은 함께 걸어갔다.\n이사악이 아버지 아브라함에게 “아버지!” 하고 부르자,\n그가 “얘야, 왜 그러느냐?” 하고 대답하였다.\n이사악이 “불과 장작은 여기 있는데,\n번제물로 바칠 양은 어디 있습니까?” 하고 묻자,\n아브라함이 “얘야, 번제물로 바칠 양은\n하느님께서 손수 마련하실 거란다.” 하고 대답하였다.\n둘은 계속 함께 걸어갔다.\n그들이 하느님께서 아브라함에게 말씀하신 곳에 다다르자,\n아브라함은 그곳에 제단을 쌓고 장작을 얹어 놓았다.\n그러고 나서 아들 이사악을 묶어 제단 장작 위에 올려놓았다.\n아브라함이 손을 뻗쳐 칼을 잡고 자기 아들을 죽이려 하였다.\n그때, 주님의 천사가 하늘에서\n“아브라함아, 아브라함아!” 하고 그를 불렀다.\n그가 “예, 여기 있습니다.” 하고 대답하자\n천사가 말하였다. “그 아이에게 손대지 마라. 그에게 아무 해도 입히지 마라.\n네가 너의 아들, 너의 외아들까지 나를 위하여 아끼지 않았으니,\n네가 하느님을 경외하는 줄을 이제 내가 알았다.”\n아브라함이 눈을 들어 보니, 덤불에 뿔이 걸린 숫양 한 마리가 있었다.\n아브라함은 가서 그 숫양을 끌어와 아들 대신 번제물로 바쳤다.\n아브라함은 그곳의 이름을 ‘야훼 이레’라 하였다.\n그래서 오늘도 사람들은 ‘주님의 산에서 마련된다.’고들 한다.\n주님의 천사가 하늘에서 두 번째로 아브라함을 불러 말하였다.\n“나는 나 자신을 걸고 맹세한다. 주님의 말씀이다.\n네가 이 일을 하였으니, 곧 너의 아들, 너의 외아들까지 아끼지 않았으니,\n나는 너에게 한껏 복을 내리고, 네 후손이 하늘의 별처럼,\n바닷가의 모래처럼 한껏 번성하게 해 주겠다.\n너의 후손은 원수들의 성문을 차지할 것이다.\n네가 나에게 순종하였으니,\n세상의 모든 민족들이 너의 후손을 통하여 복을 받을 것이다.”",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "",
+                    "text": "Or:"
+                  },
+                  {
+                    "sp": "",
+                    "text": "",
+                    "role": "summary",
+                    "ai": "AI 요약 번역"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "창세기의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "그 무렵 하느님께서 아브라함을 시험해 보시려고\n“아브라함아!” 하고 부르시자, 그가 “예, 여기 있습니다.” 하고 대답하였다.\n그분께서 말씀하셨다.\n“너의 아들, 네가 사랑하는 외아들 이사악을 데리고 모리야 땅으로 가거라.\n그곳, 내가 너에게 일러 주는 산에서 그를 나에게 번제물로 바쳐라.”\n그들이 하느님께서 아브라함에게 말씀하신 곳에 다다르자,\n아브라함은 그곳에 제단을 쌓고 장작을 얹어 놓았다.\n아브라함이 손을 뻗쳐 칼을 잡고 자기 아들을 죽이려 하였다.\n그때, 주님의 천사가 하늘에서\n“아브라함아, 아브라함아!” 하고 그를 불렀다.\n그가 “예, 여기 있습니다.” 하고 대답하자\n천사가 말하였다. “그 아이에게 손대지 마라.\n그에게 아무 해도 입히지 마라.\n네가 너의 아들, 너의 외아들까지 나를 위하여 아끼지 않았으니,\n네가 하느님을 경외하는 줄을 이제 내가 알았다.”\n아브라함이 눈을 들어 보니, 덤불에 뿔이 걸린 숫양 한 마리가 있었다.\n아브라함은 가서 그 숫양을 끌어와 아들 대신 번제물로 바쳤다.\n주님의 천사가 하늘에서 두 번째로 아브라함을 불러 말하였다.\n“나는 나 자신을 걸고 맹세한다. 주님의 말씀이다.\n네가 이 일을 하였으니, 곧 너의 아들, 너의 외아들까지 아끼지 않았으니,\n나는 너에게 한껏 복을 내리고, 네 후손이 하늘의 별처럼,\n바닷가의 모래처럼 한껏 번성하게 해 주겠다.\n너의 후손은 원수들의 성문을 차지할 것이다.\n네가 나에게 순종하였으니,\n세상의 모든 민족들이 너의 후손을 통하여 복을 받을 것이다.”",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
                 ],
-                "citation": "창세 22,1-18",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                "optionCits": [
+                  {
+                    "cit_kr": "창세 22,1-18"
+                  },
+                  {
+                    "cit_kr": "창세 22,1-2.9ㄱ.10-13.15-18"
+                  }
+                ]
               },
               "vigil_psalm_2": {
+                "citation": "시편 16(15),5와 8.9-10.11(◎ 1)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "하느님, 저를 지켜 주소서. 당신께 피신하나이다."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님은 제 몫의 유산, 저의 잔. 당신이 제 운명의 제비를 쥐고 계시나이다. 언제나 제가 주님을 모시어, 당신이 제 오른쪽에 계시니 저는 흔들리지 않으리이다. ◎",
+                    "verseRefs": [
+                      5,
+                      8
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "제 마음 기뻐하고 제 영혼 뛰노니, 제 육신도 편안히 쉬리이다. 당신은 제 영혼 저승에 버려두지 않으시고, 당신께 충실한 이에게 구렁을 보지 않게 하시나이다. ◎",
+                    "verseRefs": [
+                      9,
+                      10
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "당신이 저에게 생명의 길 가르치시니, 당신 얼굴 뵈오며 기쁨에 넘치고, 당신 오른쪽에서 길이 평안하리이다. ◎",
+                    "verseRefs": [
+                      11
+                    ]
                   }
-                ],
-                "citation": "시편 16(15)",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_2": {
                 "lines": [
@@ -62909,36 +62886,65 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_3": {
+                "citation": "탈출 14,15―15,1ㄱ",
                 "lines": [
                   {
-                    "rubric": "탈출기 14장 독서는 결코 생략할 수 없다."
+                    "sp": "",
+                    "text": "이스라엘 자손들이 바다 가운데로 마른땅을 걸어 들어갔다",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "탈출기의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "그 무렵 주님께서 모세에게 말씀하셨다.\n“너는 어찌하여 나에게 부르짖느냐?\n이스라엘 자손들에게 앞으로 나아가라고 일러라.\n너는 네 지팡이를 들고 바다 위로 손을 뻗어 바다를 가르고서는,\n이스라엘 자손들이 바다 가운데로 마른땅을 걸어 들어가게 하여라.\n나는 이집트인들의 마음을 완고하게 하여, 너희를 뒤따라 들어가게 하겠다.\n그런 다음 나는 파라오와 그의 모든 군대,\n그의 병거와 기병들을 쳐서 나의 영광을 드러내겠다.\n내가 파라오와 그의 병거와 기병들을 쳐서 나의 영광을 드러내면,\n이집트인들은 내가 주님임을 알게 될 것이다.”\n이스라엘 군대 앞에 서서 나아가던 하느님의 천사가\n자리를 옮겨 그들 뒤로 갔다.\n구름 기둥도 그들 앞에서 자리를 옮겨 그들 뒤로 가 섰다.\n그리하여 그것은 이집트 군대와 이스라엘 군대 사이에 자리 잡게 되었다.\n그러자 그 구름이 한쪽은 어둡게 하고, 다른 쪽은 밤을 밝혀 주었다.\n그래서 밤새도록 아무도 이쪽에서 저쪽으로 다가갈 수 없었다.\n모세가 바다 위로 손을 뻗었다.\n주님께서는 밤새도록 거센 샛바람으로 바닷물을 밀어내시어,\n바다를 마른땅으로 만드셨다. 그리하여 바닷물이 갈라지자,\n이스라엘 자손들이 바다 가운데로 마른땅을 걸어 들어갔다.\n물은 그들 좌우에서 벽이 되어 주었다. 뒤이어 이집트인들이 쫓아왔다.\n파라오의 모든 말과 병거와 기병들이 그들을 따라 바다 한가운데로 들어갔다.\n새벽녘에 주님께서 불기둥과 구름 기둥에서\n이집트 군대를 내려다보시고, 이집트 군대를 혼란에 빠뜨리셨다.\n그리고 그분께서는 이집트 병거들의 바퀴를 움직이지 못하게 하시어,\n병거를 몰기 어렵게 만드셨다.\n그러자 이집트인들이 “이스라엘을 피해 달아나자.\n주님이 그들을 위해서 이집트와 싸우신다.” 하고 말하였다.\n주님께서 모세에게 말씀하셨다. “바다 위로 손을 뻗어,\n이집트인들과 그들의 병거와 기병들 위로 물이 되돌아오게 하여라.”\n모세가 바다 위로 손을 뻗었다. 날이 새자 물이 제자리로 되돌아왔다.\n그래서 도망치던 이집트인들이 물과 맞닥뜨리게 되었다.\n주님께서는 이집트인들을 바다 한가운데로 처넣으셨다.\n물이 되돌아와서, 이스라엘 자손들을 따라 바다로 들어선\n파라오의 모든 군대의 병거와 기병들을 덮쳐 버렸다.\n그들 가운데 한 사람도 살아남지 못하였다.\n그러나 이스라엘 자손들은 바다 가운데로 마른땅을 걸어갔다.\n물은 그들 좌우에서 벽이 되어 주었다.\n그날 주님께서는 이렇게 이스라엘을 이집트인들의 손에서 구해 주셨고,\n이스라엘은 바닷가에 죽어 있는 이집트인들을 보게 되었다.\n이렇게 이스라엘은 주님께서 이집트인들에게 행사하신 큰 권능을 보았다.\n그리하여 백성은 주님을 경외하고, 주님과 그분의 종 모세를 믿게 되었다.\n그때 모세와 이스라엘 자손들이 주님께 이 노래를 불렀다.\n<\"주님의 말씀입니다.\"를 생략하고 바로 화답송을 한다.>",
+                    "role": "body"
                   }
-                ],
-                "citation": "탈출 14,15―15,1ㄱ",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_psalm_3": {
+                "citation": "탈출 15,1ㄷㄹㅁ-2.3-4.5-6.17-18(◎ 1ㄷㄹ)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "주님을 찬양하세, 그지없이 높으신 분."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님을 찬양하세. 그지없이 높으신 분, 기마와 기병을 바다에 처넣으셨네. 주님은 나의 힘, 나의 굳셈. 나를 구원하셨네. 주님은 나의 하느님, 나 그분을 찬미하리라. 내 조상의 하느님, 나 그분을 높이 기리리라. ◎",
+                    "verseRefs": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님은 전쟁의 용사, 그 이름 주님이시다. 파라오의 군대와 병거를 바다에 내던지시니, 뛰어난 장수들이 갈대 바다에 빠졌네. ◎",
+                    "verseRefs": [
+                      3,
+                      4
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "바닷물이 그들을 덮치니, 돌처럼 깊이 가라앉았네. 주님, 당신 오른손이 권능과 영광을 드러내시니, 주님, 당신 오른손이 원수를 짓부수셨나이다. ◎",
+                    "verseRefs": [
+                      5,
+                      6
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "당신은 그들을 데려오시어, 당신 소유의 산에 심으셨나이다. 주님, 그 산은 당신 거처로 삼으신 곳, 주님 손수 세우신 성소이옵니다. 주님은 영원무궁토록 다스리시나이다. ◎",
+                    "verseRefs": [
+                      17,
+                      18
+                    ]
                   }
-                ],
-                "citation": "탈출 15장",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_3": {
                 "lines": [
@@ -62981,36 +62987,68 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_4": {
+                "citation": "이사 54,5-14",
                 "lines": [
                   {
-                    "rubric": "이 독서는 해당 연도의 한국 주교회의 전례 원문에서 불러온다."
+                    "sp": "",
+                    "text": "네 구원자이신 주님께서는 영원한 자애로 너를 가엾이 여기신다",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "이사야서의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "너를 만드신 분이 너의 남편 그 이름 만군의 주님이시다.\n이스라엘의 거룩하신 분이 너의 구원자 그분께서는 온 땅의 하느님이라 불리신다.\n정녕 주님께서는 너를 소박맞아 마음 아파하는 아내인 양\n퇴박맞은 젊은 시절의 아내인 양 다시 부르신다. 너의 하느님께서 말씀하신다.\n“내가 잠시 너를 버렸지만 크나큰 자비로 너를 다시 거두어들인다.\n분노가 북받쳐 내 얼굴을 잠시 너에게서 감추었지만\n영원한 자애로 너를 가엾이 여긴다.”\n네 구원자이신 주님께서 말씀하신다.\n“이는 나에게 노아의 때와 같다.\n노아의 물이 다시는 땅에 범람하지 않으리라고 내가 맹세하였듯이\n너에게 분노를 터뜨리지도 너를 꾸짖지도 않겠다고 내가 맹세한다.\n산들이 밀려나고 언덕들이 흔들린다 하여도\n나의 자애는 너에게서 밀려나지 않고 내 평화의 계약은 흔들리지 아니하리라.”\n너를 가엾이 여기시는 주님께서 말씀하신다.\n너 가련한 여인아, 광풍에 시달려도 위로받지 못한 여인아.\n보라, 내가 석류석을 너의 주춧돌로 놓고 청옥으로 너의 기초를 세우리라.\n너의 성가퀴들을 홍옥으로, 너의 대문들을 수정으로,\n너의 성벽을 모두 보석으로 만들리라.\n너의 아들들은 모두 주님의 제자가 되리라. 또 네 아들들의 평화가 넘치리라.\n너는 의로움으로 굳건히 세워지고 압박에서 풀려나리니\n네가 두려워할 일이 없으리라.\n또 공포에서 풀려나리니 그것이 너에게 닥쳐오지 아니하리라.",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
-                ],
-                "citation": "이사 54,5-14",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_psalm_4": {
+                "citation": "시편 30(29),2와 4.5-6.11-12ㄱ과 13ㄴ(◎ 2ㄱㄴ 참조)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "주님, 저를 구하셨으니 당신을 높이 기리나이다."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님, 당신을 높이 기리나이다. 당신은 저를 구하시어, 원수들이 저를 보고 기뻐하지 못하게 하셨나이다. 주님, 당신이 제 목숨 저승에서 건지시고, 구렁에 떨어지지 않게 살리셨나이다. ◎",
+                    "verseRefs": [
+                      2,
+                      4
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님께 충실한 이들아, 주님께 찬미 노래 불러라. 거룩하신 그 이름 찬송하여라. 그분의 진노는 잠시뿐이나 그분의 호의는 한평생이니, 울음으로 한밤을 지새워도 기쁨으로 아침을 맞이하리라. ◎",
+                    "verseRefs": [
+                      5,
+                      6
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "“들으소서, 주님, 저에게 자비를 베푸소서. 주님, 저의 구원자 되어 주소서.” 당신은 저의 비탄을 춤으로 바꾸시니, 주 하느님, 영원히 당신을 찬송하오리다. ◎",
+                    "verseRefs": [
+                      11,
+                      12,
+                      13
+                    ]
                   }
-                ],
-                "citation": "시편 30(29)",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_4": {
                 "lines": [
@@ -63045,36 +63083,66 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_5": {
+                "citation": "이사 55,1-11",
                 "lines": [
                   {
-                    "rubric": "이 독서는 해당 연도의 한국 주교회의 전례 원문에서 불러온다."
+                    "sp": "",
+                    "text": "나에게 오너라. 너희가 살리라. 내가 너희와 영원한 계약을 맺으리라",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "이사야서의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "주님께서 이렇게 말씀하신다.\n“자, 목마른 자들아, 모두 물가로 오너라.\n돈이 없는 자들도 와서 사 먹어라. 와서 돈 없이 값 없이 술과 젖을 사라.\n너희는 어찌하여 양식도 못 되는 것에 돈을 쓰고\n배불리지도 못하는 것에 수고를 들이느냐?\n들어라, 내 말을 들어라. 너희가 좋은 것을 먹고 기름진 음식을 즐기리라.\n너희는 귀를 기울이고 나에게 오너라. 들어라. 너희가 살리라.\n내가 너희와 영원한 계약을 맺으리니\n이는 다윗에게 베푼 나의 변치 않는 자애이다.\n보라, 내가 그를 민족들을 위한 증인으로,\n민족들의 지배자와 명령자로 만들었다.\n보라, 네가 알지 못하는 나라를 네가 부르고\n너를 알지 못하는 나라가 너에게 달려오리니\n주 너의 하느님, 이스라엘의 거룩하신 분\n그분께서 너를 영화롭게 하신 까닭이다.\n만나 뵐 수 있을 때에 주님을 찾아라.\n가까이 계실 때에 그분을 불러라.\n죄인은 제 길을, 불의한 사람은 제 생각을 버리고\n주님께 돌아오너라. 그분께서 그를 가엾이 여기시리라.\n우리 하느님께 돌아오너라. 그분께서는 너그러이 용서하신다.\n내 생각은 너희 생각과 같지 않고 너희 길은 내 길과 같지 않다.\n주님의 말씀이다.\n하늘이 땅 위에 드높이 있듯이\n내 길은 너희 길 위에, 내 생각은 너희 생각 위에 드높이 있다.\n비와 눈은 하늘에서 내려와 그리로 돌아가지 않고\n오히려 땅을 적시어 기름지게 하고 싹이 돋아나게 하여\n씨 뿌리는 사람에게 씨앗을 주고 먹는 이에게 양식을 준다.\n이처럼 내 입에서 나가는 나의 말도 나에게 헛되이 돌아오지 않고\n반드시 내가 뜻하는 바를 이루며 내가 내린 사명을 완수하고야 만다.”",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
-                ],
-                "citation": "이사 55,1-11",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_psalm_5": {
+                "citation": "이사 12,2-3.4ㄴㄷㄹ.5-6(◎ 3)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "너희는 기뻐하며 구원의 샘에서 물을 길으리라."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "“보라, 내 구원의 하느님. 나는 믿기에 두려워하지 않네. 주님은 나의 힘, 나의 굳셈. 나를 구원해 주셨네.” 너희는 기뻐하며 구원의 샘에서 물을 길으리라. ◎",
+                    "verseRefs": [
+                      2,
+                      3
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님을 찬송하여라. 그 이름 높이 불러라. 그분 업적을 민족들에게 알리고, 높으신 그 이름을 선포하여라. ◎",
+                    "verseRefs": [
+                      4
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "위업을 이루신 주님을 찬양하여라. 그분이 하신 일 온 세상에 알려라. 시온 사람들아, 기뻐하며 외쳐라. 이스라엘의 거룩하신 분, 너희 가운데 계신 분은 위대하시다. ◎",
+                    "verseRefs": [
+                      5,
+                      6
+                    ]
                   }
-                ],
-                "citation": "이사 12장",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_5": {
                 "lines": [
@@ -63113,36 +63181,71 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_6": {
+                "citation": "바룩 3,9-15.32―4,4",
                 "lines": [
                   {
-                    "rubric": "이 독서는 해당 연도의 한국 주교회의 전례 원문에서 불러온다."
+                    "sp": "",
+                    "text": "주님의 불빛을 향하여 나아가라",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "바룩서의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "이스라엘아! 생명의 계명을 들어라. 귀를 기울여 예지를 배워라.\n이스라엘아! 어찌하여, 네가 어찌하여\n원수들의 땅에서 살며 남의 나라에서 늙어 가느냐?\n네가 어찌하여 죽은 자들과 함께 더럽혀지고\n저승으로 가는 자들과 함께 헤아려지게 되었느냐?\n네가 지혜의 샘을 저버린 탓이다.\n네가 하느님의 길을 걸었더라면 너는 영원히 평화롭게 살았으리라.\n예지가 어디에 있고 힘이 어디에 있으며 지식이 어디에 있는지를 배워라.\n그러면 장수와 생명이 어디에 있고\n눈을 밝혀 주는 빛과 평화가 어디에 있는지를 함께 깨달으리라.\n누가 지혜의 자리를 찾았으며 누가 지혜의 보고에 들어갔는가?\n모든 것을 보시는 그분만이 슬기를 아시고 당신의 지식으로 그것을 찾아내신다.\n이 세상이 영원하도록 마련하신 그분께서 그곳을 네발 가진 짐승들로 채우셨다.\n그분께서 보내시니 빛이 가고 그분께서 부르시니 빛이 떨며 복종한다.\n별들은 때맞추어 빛을 내며 즐거워한다.\n그분께서 별들을 부르시니 “여기 있습니다.” 하며\n자기들을 만드신 분을 위하여 즐겁게 빛을 낸다.\n이분께서 우리 하느님이시니 어느 누구도 이분께 견줄 수 없다.\n그분께서 슬기의 길을 모두 찾아내시어\n당신 종 야곱과 당신께 사랑받는 이스라엘에게 주셨다.\n그러고 나서야 땅 위에 슬기가 나타나 사람들과 어울리게 되었다.\n슬기는 하느님의 명령과 길이 남을 율법을 기록한 책이다.\n슬기를 붙드는 이는 살고 그것을 버리는 자는 죽는다.\n야곱아, 돌아서서 슬기를 붙잡고 그 슬기의 불빛을 향하여 나아가라.\n네 영광을 남에게 넘겨주지 말고 네 특권을 다른 민족에게 넘겨주지 마라.\n이스라엘아, 우리는 행복하구나!\n하느님께서 기뻐하시는 일을 우리가 알고 있다.",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
-                ],
-                "citation": "바룩 3,9-15.32―4,4",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_psalm_6": {
+                "citation": "시편 19(18),8.9.10.11(◎ 요한 6,68ㄷ)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "주님, 당신께는 영원한 생명의 말씀이 있나이다."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님의 법은 완전하여 생기 돋우고, 주님의 가르침은 참되어 어리석음 깨우치네. ◎",
+                    "verseRefs": [
+                      8
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님의 규정 올바르니 마음을 기쁘게 하고, 주님의 계명 밝으니 눈을 맑게 하네. ◎",
+                    "verseRefs": [
+                      9
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님을 경외함 순수하니 영원히 이어지고, 주님의 법규들 진실하니 모두 의롭네. ◎",
+                    "verseRefs": [
+                      10
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "금보다 순금보다 더욱 값지며, 꿀보다 참꿀보다 더욱 달다네. ◎",
+                    "verseRefs": [
+                      11
+                    ]
                   }
-                ],
-                "citation": "시편 19(18)",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_6": {
                 "lines": [
@@ -63177,36 +63280,79 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_reading_7": {
+                "citation": "에제 36,16-17ㄱ.18-28",
                 "lines": [
                   {
-                    "rubric": "이 독서는 해당 연도의 한국 주교회의 전례 원문에서 불러온다."
+                    "sp": "",
+                    "text": "정결한 물을 뿌려 너희에게 새 마음을 주겠다",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "에제키엘 예언서의 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "주님의 말씀이 나에게 내렸다.\n“사람의 아들아, 이스라엘 집안이 자기 땅에 살 때,\n그들은 자기들이 걸어온 길과 행실로 그 땅을 부정하게 만들었다.\n그들이 그 땅에 쏟은 피 때문에, 그들이 그 땅을 더럽히며 섬긴 우상들 때문에,\n나는 그들에게 내 화를 퍼부었다.\n그래서 그들을 민족들 사이로 쫓아 버리고 여러 나라로 흩어 버렸다.\n그들의 길과 행실에 따라 그들을 심판하였다.\n사람들이 그들을 두고,\n‘이자들은 주님의 백성인데 그분 땅에서 나와야만 했지.’ 하고 말하였다.\n이렇게 그들은 가는 곳마다 나의 거룩한 이름을 더럽혔다.\n그래서 나는 이스라엘 집안이 민족들 사이로 흩어져 가\n거기에서 더럽힌 나의 이름을 걱정하게 되었다.\n그러므로 이스라엘 집안에게 말하여라.\n‘주 하느님이 이렇게 말한다.\n이스라엘 집안아, 너희 때문에 내가 이 일을 하는 것이 아니다.\n너희가 민족들 사이로 흩어져 가 거기에서 더럽힌 나의 거룩한 이름 때문이다.\n나는 민족들 사이에서 더럽혀진,\n곧 너희가 그들 사이에서 더럽힌 내 큰 이름의 거룩함을 드러내겠다.\n그들이 보는 앞에서 너희에게 나의 거룩함을 드러내면,\n그제야 그들은 내가 주님임을 알게 될 것이다. 주 하느님의 말이다.\n나는 너희를 민족들에게서 데려오고 모든 나라에서 모아다가,\n너희 땅으로 데리고 들어가겠다.\n그리고 너희에게 정결한 물을 뿌려, 너희를 정결하게 하겠다.\n너희의 모든 부정과 모든 우상에게서 너희를 정결하게 하겠다.\n너희에게 새 마음을 주고 너희 안에 새 영을 넣어 주겠다.\n너희 몸에서 돌로 된 마음을 치우고, 살로 된 마음을 넣어 주겠다.\n나는 또 너희 안에 내 영을 넣어 주어,\n너희가 나의 규정들을 따르고 나의 법규들을 준수하여 지키게 하겠다.\n그리하여 너희는 내가 너희 조상들에게 준 땅에서 살게 될 것이다.\n너희는 나의 백성이 되고 나는 너희의 하느님이 될 것이다.”",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
-                ],
-                "citation": "에제 36,16-17ㄱ.18-28",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_psalm_7": {
+                "citation": "시편 42(41),3.5ㄱㄴㄷㄹ; 43(42),3.4(◎ 42〔41〕,2)",
                 "lines": [
                   {
-                    "rubric": "독서 다음에 화답송 또는 찬가를 한다."
+                    "sp": "◎",
+                    "text": "사슴이 시냇물을 그리워하듯, 하느님, 제 영혼이 당신을 그리나이다."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "제 영혼이 하느님을, 생명의 하느님을 목말라하나이다. 하느님의 얼굴을 언제 가서 뵈오리이까? ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "영광의 초막, 하느님의 집까지, 환호와 찬미 소리 드높은 가운데 축제의 무리와 행진하였나이다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "당신의 빛과 진리를 보내시어, 저를 인도하게 하소서. 당신의 거룩한 산, 당신의 거처로 데려가게 하소서. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "저는 하느님의 제단으로 나아가오리다. 제 기쁨과 즐거움이신 하느님께 나아가오리다. 하느님, 저의 하느님, 비파 타며 당신을 찬송하오리다. ◎"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": ")"
+                  },
+                  {
+                    "sp": "◎",
+                    "text": "하느님, 제 마음을 깨끗이 만드소서."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "하느님, 제 마음을 깨끗이 만드시고, 제 안에 굳건한 영을 새롭게 하소서. 당신 앞에서 저를 내치지 마시고, 당신의 거룩한 영을 제게서 거두지 마소서. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "구원의 기쁨을 제게 돌려주시고, 순종의 영으로 저를 받쳐 주소서. 저는 악인들에게 당신의 길을 가르치리니, 죄인들이 당신께 돌아오리이다. ◎"
+                  },
+                  {
+                    "sp": "○",
+                    "text": "당신은 제사를 즐기지 않으시기에, 제가 번제를 드려도 반기지 않으시리이다. 하느님께 드리는 제물은 부서진 영. 부서지고 뉘우치는 마음을, 하느님, 당신은 업신여기지 않으시나이다. ◎"
                   }
-                ],
-                "citation": "시편 42(41)―43(42)",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    627,
-                    630
-                  ]
-                }
+                ]
               },
               "vigil_prayer_7": {
                 "lines": [
@@ -63249,38 +63395,67 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "vigil_epistle": {
-                "lines": [
-                  {
-                    "rubric": "대영광송과 본기도 뒤에 사도의 서간을 봉독한다."
-                  }
-                ],
                 "citation": "로마 6,3-11",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    631
-                  ]
-                }
-              },
-              "vigil_alleluia": {
                 "lines": [
                   {
-                    "rubric": "모두 일어서고 사제가 목소리를 차츰 높여 가며 알렐루야를 세 번 선창한다. 매번 모두 되풀이한다. 이어 시편 118(117)편을 노래하고 교우들은 알렐루야로 화답한다."
+                    "sp": "",
+                    "text": "그리스도께서는 죽은 이들 가운데에서 되살아나시어 다시는 돌아가시지 않을 것입니다",
+                    "role": "summary"
+                  },
+                  {
+                    "sp": "▥",
+                    "text": "사도 바오로의 로마서 말씀입니다.",
+                    "role": "intro"
+                  },
+                  {
+                    "sp": "",
+                    "text": "형제 여러분, 그리스도 예수님과 하나 되는 세례를 받은 우리가\n모두 그분의 죽음과 하나 되는 세례를 받았다는 사실을 여러분은 모릅니까?\n과연 우리는 그분의 죽음과 하나 되는 세례를 통하여 그분과 함께 묻혔습니다.\n그리하여 그리스도께서 아버지의 영광을 통하여\n죽은 이들 가운데에서 되살아나신 것처럼,\n우리도 새로운 삶을 살아가게 되었습니다.\n사실 우리가 그분처럼 죽어 그분과 결합되었다면,\n부활 때에도 분명히 그리될 것입니다.\n우리는 압니다. 우리의 옛 인간이 그분과 함께 십자가에 못 박힘으로써\n죄의 지배를 받는 몸이 소멸하여,\n우리가 더 이상 죄의 종노릇을 하지 않게 되었습니다.\n죽은 사람은 죄에서 벗어나기 때문입니다.\n그래서 우리가 그리스도와 함께 죽었으니\n그분과 함께 살리라고 우리는 믿습니다.\n우리는 그리스도께서 죽은 이들 가운데에서 되살아나시어\n다시는 돌아가시지 않으리라는 것을 압니다.\n죽음은 더 이상 그분 위에 군림하지 못합니다.\n그분께서 돌아가신 것은 죄와 관련하여 단 한 번 돌아가신 것이고,\n그분께서 사시는 것은 하느님을 위하여 사시는 것입니다.\n이와 같이 여러분 자신도 죄에서는 죽었지만\n그리스도 예수님 안에서 하느님을 위하여 살고 있다고 생각하십시오.",
+                    "role": "body"
+                  },
+                  {
+                    "sp": "╋",
+                    "text": "주님의 말씀입니다.",
+                    "role": "proclamation"
                   },
                   {
                     "sp": "◎",
-                    "text": "알렐루야, 알렐루야, 알렐루야."
+                    "text": "하느님, 감사합니다.",
+                    "role": "proclamation"
                   }
-                ],
-                "citation": "시편 118(117)",
-                "source": {
-                  "file": "참고자료/미사/전문/한국어.pdf",
-                  "edition": "로마 미사 경본 제3판 한국어판",
-                  "pdfPages": [
-                    631
-                  ]
-                }
+                ]
+              },
+              "vigil_alleluia": {
+                "citation": "시편 118(117),1-2.16-17.22-23",
+                "lines": [
+                  {
+                    "sp": "◎",
+                    "text": "알렐루야, 알렐루야, 알렐루야."
+                  },
+                  {
+                    "sp": "○",
+                    "text": "주님은 좋으신 분, 찬송하여라. 주님의 자애는 영원하시다. 이스라엘은 말하여라. “주님의 자애는 영원하시다.” ◎",
+                    "verseRefs": [
+                      1,
+                      2
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "“주님이 오른손을 들어 올리셨다! 주님의 오른손이 위업을 이루셨다!” 나는 죽지 않으리라, 살아남으리라. 주님이 하신 일을 선포하리라. ◎",
+                    "verseRefs": [
+                      16,
+                      17
+                    ]
+                  },
+                  {
+                    "sp": "○",
+                    "text": "집 짓는 이들이 내버린 돌, 모퉁이의 머릿돌이 되었네. 주님이 이루신 일, 우리 눈에는 놀랍기만 하네. ◎",
+                    "verseRefs": [
+                      22,
+                      23
+                    ]
+                  }
+                ]
               },
               "litany": {
                 "lines": [
@@ -63740,167 +63915,7 @@ globalThis.countrySpecialLiturgies = {
             }
           },
           "sourceParts": {
-            "KR": {
-              "vigil_reading_1": {
-                "start": "^제\\s*1\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_psalm_1": {
-                "after": "^제\\s*1\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*1\\s*독서\\s*후\\s*기도)|^제\\s*2\\s*독서",
-                "kind": "psalm"
-              },
-              "vigil_reading_2": {
-                "start": "^제\\s*2\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_psalm_2": {
-                "after": "^제\\s*2\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*2\\s*독서\\s*후\\s*기도)|^제\\s*3\\s*독서",
-                "kind": "psalm"
-              },
-              "vigil_reading_3": {
-                "start": "^제\\s*3\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": []
-              },
-              "vigil_psalm_3": {
-                "after": "^제\\s*3\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*3\\s*독서\\s*후\\s*기도)|^제\\s*4\\s*독서",
-                "kind": "psalm"
-              },
-              "vigil_reading_4": {
-                "start": "^제\\s*4\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_psalm_4": {
-                "after": "^제\\s*4\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*4\\s*독서\\s*후\\s*기도)|^제\\s*5\\s*독서",
-                "kind": "psalm"
-              },
-              "vigil_reading_5": {
-                "start": "^제\\s*5\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_psalm_5": {
-                "after": "^제\\s*5\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*5\\s*독서\\s*후\\s*기도)|^제\\s*6\\s*독서",
-                "kind": "psalm"
-              },
-              "vigil_reading_6": {
-                "start": "^제\\s*6\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_psalm_6": {
-                "after": "^제\\s*6\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*6\\s*독서\\s*후\\s*기도)|^제\\s*7\\s*독서",
-                "kind": "psalm"
-              },
-              "vigil_reading_7": {
-                "start": "^제\\s*7\\s*독서(?:\\s|$)",
-                "stop": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_psalm_7": {
-                "after": "^제\\s*7\\s*독서(?:\\s|$)",
-                "start": "^(?:화답송|찬가)(?=\\s|$|[가-힣0-9])",
-                "stop": "^(?:기도|<기도|제\\s*7\\s*독서\\s*후\\s*기도)|^(?:대영광송|본기도)",
-                "kind": "psalm"
-              },
-              "vigil_epistle": {
-                "start": "^(?:서간|제8독서)(?:\\s|$)",
-                "stop": "^(?:복음\\s*환호송|알렐루야|시편\\s*118)(?=\\s|$|[가-힣0-9(])",
-                "kind": "reading",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "하느님, 감사합니다."
-                  }
-                ]
-              },
-              "vigil_alleluia": {
-                "after": "^(?:서간|제8독서)(?:\\s|$)",
-                "start": "^(?:복음\\s*환호송|알렐루야|시편\\s*118)(?=\\s|$|[가-힣0-9(])",
-                "stop": "^복음(?:\\s|$)",
-                "kind": "psalm"
-              }
-            }
+            "KR": {}
           },
           "eucharistEdits": {
             "KR": [
@@ -63919,22 +63934,6 @@ globalThis.countrySpecialLiturgies = {
           },
           "requiredSourceSections": {
             "KR": [
-              "vigil_reading_1",
-              "vigil_psalm_1",
-              "vigil_reading_2",
-              "vigil_psalm_2",
-              "vigil_reading_3",
-              "vigil_psalm_3",
-              "vigil_reading_4",
-              "vigil_psalm_4",
-              "vigil_reading_5",
-              "vigil_psalm_5",
-              "vigil_reading_6",
-              "vigil_psalm_6",
-              "vigil_reading_7",
-              "vigil_psalm_7",
-              "vigil_epistle",
-              "vigil_alleluia",
               "gospel"
             ]
           }
@@ -64032,39 +64031,6 @@ globalThis.countrySpecialLiturgies = {
                 "lines": [
                   {
                     "rubric": "With hands outstretched, the celebrant says the prayer of blessing:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
                   },
                   {
                     "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
@@ -64271,53 +64237,228 @@ globalThis.countrySpecialLiturgies = {
                 }
               },
               "palm_gospel": {
+                "source": {
+                  "authority": "한국천주교주교회의",
+                  "calendarInvariant": true,
+                  "dates": {
+                    "A": "2026-03-29",
+                    "B": "2024-03-24",
+                    "C": "2025-04-13"
+                  }
+                },
                 "byCycle": {
                   "A": {
+                    "citation": "마태 21,1-11",
                     "lines": [
                       {
-                        "rubric": "주님의 예루살렘 입성에 관한 복음을 선포한다."
+                        "sp": "",
+                        "text": "",
+                        "role": "summary",
+                        "ai": "AI 요약 번역"
+                      },
+                      {
+                        "sp": "",
+                        "text": "╋ 마태오가 전한 거룩한 복음입니다.",
+                        "role": "intro"
+                      },
+                      {
+                        "sp": "",
+                        "text": "예수님과 제자들이 예루살렘에 가까이 이르러\n올리브 산 벳파게에 다다랐을 때, 예수님께서 제자 둘을 보내며 말씀하셨다.\n“너희 맞은쪽 동네로 가거라.\n매여 있는 암나귀와 그 곁의 어린 나귀를 곧바로 보게 될 것이다.\n그것들을 풀어 나에게 끌고 오너라.\n누가 너희에게 무어라고 하거든, ‘주님께서 필요하시답니다.’ 하고 대답하여라.\n그러면 그것들을 곧 보내 줄 것이다.”\n예언자를 통하여 하신 말씀이 이루어지려고 이 일이 일어난 것이다.\n“딸 시온에게 말하여라. 보라, 너의 임금님이 너에게 오신다.\n그분은 겸손하시어 암나귀를, 짐바리 짐승의 새끼, 어린 나귀를 타고 오신다.”\n제자들은 가서 예수님께서 지시하신 대로 하였다.\n그들은 그렇게 암나귀와 어린 나귀를 끌고 와서\n그 위에 겉옷을 펴 놓았다. 예수님께서 그 위에 앉으시자,\n수많은 군중이 자기들의 겉옷을 길에 깔았다.\n또 어떤 이들은 나뭇가지를 꺾어다가 길에 깔았다.\n그리고 앞서 가는 군중과 뒤따라가는 군중이 외쳤다.\n“다윗의 자손께 호산나! 주님의 이름으로 오시는 분은 복되시어라.\n지극히 높은 곳에 호산나!”\n이렇게 하여 예수님께서 예루살렘에 들어가시니\n온 도성이 술렁거리며, “저분이 누구냐?” 하고 물었다.\n그러자 군중이 “저분은 갈릴래아 나자렛 출신 예언자 예수님이시오.” 하고\n대답하였다.",
+                        "role": "body"
+                      },
+                      {
+                        "sp": "╋",
+                        "text": "주님의 말씀입니다.",
+                        "role": "proclamation"
+                      },
+                      {
+                        "sp": "◎",
+                        "text": "그리스도님, 찬미합니다.",
+                        "role": "proclamation"
                       }
-                    ],
-                    "citation": "마태 21,1-11",
-                    "source": {
-                      "file": "참고자료/미사/전문/한국어.pdf",
-                      "edition": "로마 미사 경본 제3판 한국어판",
-                      "pdfPages": [
-                        541
-                      ]
-                    }
+                    ]
                   },
                   "B": {
+                    "citation": "마르 11,1-10",
                     "lines": [
                       {
-                        "rubric": "주님의 예루살렘 입성에 관한 복음을 선포한다. 마르코 복음 또는 요한 12,12-16을 읽을 수 있다."
+                        "sp": "",
+                        "text": "",
+                        "role": "summary",
+                        "ai": "AI 요약 번역"
+                      },
+                      {
+                        "sp": "",
+                        "text": "╋ 마르코가 전한 거룩한 복음입니다.",
+                        "role": "intro"
+                      },
+                      {
+                        "sp": "",
+                        "text": "예수님과 제자들이 예루살렘 곧 올리브 산 근처 벳파게와 베타니아에\n가까이 이르렀을 때, 예수님께서 제자 둘을 보내며 말씀하셨다.\n“너희 맞은쪽 동네로 가거라. 그곳에 들어가면 아직 아무도 탄 적이 없는\n어린 나귀 한 마리가 매여 있는 것을 곧 보게 될 것이다. 그것을 풀어 끌고 오너라.\n누가 너희에게 ‘왜 그러는 거요?’ 하거든,\n‘주님께서 필요하셔서 그러는데 곧 이리로 돌려보내신답니다.’ 하고 대답하여라.”\n그들이 가서 보니,\n과연 어린 나귀 한 마리가 바깥 길 쪽으로 난 문 곁에 매여 있었다.\n그래서 제자들이 그것을 푸는데, 거기에 서 있던 이들 가운데 몇 사람이,\n“왜 그 어린 나귀를 푸는 거요?” 하고 물었다.\n제자들이 예수님께서 일러 주신 대로 말하였더니 그들이 막지 않았다.\n제자들은 그 어린 나귀를 예수님께 끌고 와서\n그 위에 자기들의 겉옷을 얹어 놓았다.\n예수님께서 그 위에 올라앉으시자, 많은 이가 자기들의 겉옷을 길에 깔았다.\n또 어떤 이들은 들에서 잎이 많은 나뭇가지를 꺾어다가 깔았다.\n그리고 앞서 가는 이들과 뒤따라가는 이들이 외쳤다.\n“‘호산나! 주님의 이름으로 오시는 분은 복되시어라.’\n다가오는 우리 조상 다윗의 나라는 복되어라. 지극히 높은 곳에 호산나!”",
+                        "role": "body"
+                      },
+                      {
+                        "sp": "╋",
+                        "text": "주님의 말씀입니다.",
+                        "role": "proclamation"
+                      },
+                      {
+                        "sp": "◎",
+                        "text": "그리스도님, 찬미합니다.",
+                        "role": "proclamation"
                       }
                     ],
-                    "citation": "마르 11,1-10",
-                    "source": {
-                      "file": "참고자료/미사/전문/한국어.pdf",
-                      "edition": "로마 미사 경본 제3판 한국어판",
-                      "pdfPages": [
-                        542,
-                        543
-                      ]
+                    "choices": {
+                      "A": {
+                        "KR": "마르코 복음",
+                        "EN": "Gospel according to Mark"
+                      },
+                      "B": {
+                        "KR": "요한 복음",
+                        "EN": "Gospel according to John"
+                      }
+                    },
+                    "variants": {
+                      "A": {
+                        "citation": "마르 11,1-10",
+                        "lines": [
+                          {
+                            "sp": "",
+                            "text": "",
+                            "role": "summary",
+                            "ai": "AI 요약 번역"
+                          },
+                          {
+                            "sp": "",
+                            "text": "╋ 마르코가 전한 거룩한 복음입니다.",
+                            "role": "intro"
+                          },
+                          {
+                            "sp": "",
+                            "text": "예수님과 제자들이 예루살렘 곧 올리브 산 근처 벳파게와 베타니아에\n가까이 이르렀을 때, 예수님께서 제자 둘을 보내며 말씀하셨다.\n“너희 맞은쪽 동네로 가거라. 그곳에 들어가면 아직 아무도 탄 적이 없는\n어린 나귀 한 마리가 매여 있는 것을 곧 보게 될 것이다. 그것을 풀어 끌고 오너라.\n누가 너희에게 ‘왜 그러는 거요?’ 하거든,\n‘주님께서 필요하셔서 그러는데 곧 이리로 돌려보내신답니다.’ 하고 대답하여라.”\n그들이 가서 보니,\n과연 어린 나귀 한 마리가 바깥 길 쪽으로 난 문 곁에 매여 있었다.\n그래서 제자들이 그것을 푸는데, 거기에 서 있던 이들 가운데 몇 사람이,\n“왜 그 어린 나귀를 푸는 거요?” 하고 물었다.\n제자들이 예수님께서 일러 주신 대로 말하였더니 그들이 막지 않았다.\n제자들은 그 어린 나귀를 예수님께 끌고 와서\n그 위에 자기들의 겉옷을 얹어 놓았다.\n예수님께서 그 위에 올라앉으시자, 많은 이가 자기들의 겉옷을 길에 깔았다.\n또 어떤 이들은 들에서 잎이 많은 나뭇가지를 꺾어다가 깔았다.\n그리고 앞서 가는 이들과 뒤따라가는 이들이 외쳤다.\n“‘호산나! 주님의 이름으로 오시는 분은 복되시어라.’\n다가오는 우리 조상 다윗의 나라는 복되어라. 지극히 높은 곳에 호산나!”",
+                            "role": "body"
+                          },
+                          {
+                            "sp": "╋",
+                            "text": "주님의 말씀입니다.",
+                            "role": "proclamation"
+                          },
+                          {
+                            "sp": "◎",
+                            "text": "그리스도님, 찬미합니다.",
+                            "role": "proclamation"
+                          }
+                        ]
+                      },
+                      "B": {
+                        "lines": [
+                          {
+                            "sp": "╋",
+                            "text": "요한이 전한 거룩한 복음입니다."
+                          },
+                          {
+                            "sp": "",
+                            "text": "그때에 축제를 지내러 온 많은 군중이"
+                          },
+                          {
+                            "sp": "",
+                            "text": "예수님께서 예루살렘에 오신다는 말을 듣고서,"
+                          },
+                          {
+                            "sp": "",
+                            "text": "종려나무 가지를 들고 그분을 맞으러 나가 이렇게 외쳤다."
+                          },
+                          {
+                            "sp": "",
+                            "text": "“호산나! 주님의 이름으로 오시는 분은 복되시어라."
+                          },
+                          {
+                            "sp": "",
+                            "text": "이스라엘의 임금님은 복되시어라.”"
+                          },
+                          {
+                            "sp": "",
+                            "text": "예수님께서는 나귀를 보시고 그 위에 올라앉으셨다."
+                          },
+                          {
+                            "sp": "",
+                            "text": "이는 성경에 기록된 그대로였다."
+                          },
+                          {
+                            "sp": "",
+                            "text": "“딸 시온아, 두려워하지 마라."
+                          },
+                          {
+                            "sp": "",
+                            "text": "보라, 너의 임금님이 오신다. 어린 나귀를 타고 오신다.”"
+                          },
+                          {
+                            "sp": "",
+                            "text": "제자들은 처음에 이 일을 깨닫지 못하였다."
+                          },
+                          {
+                            "sp": "",
+                            "text": "그러나 예수님께서 영광스럽게 되신 뒤에,"
+                          },
+                          {
+                            "sp": "",
+                            "text": "이 일이 예수님을 두고 성경에 기록되고"
+                          },
+                          {
+                            "sp": "",
+                            "text": "또 사람들이 그분께 그대로 해 드렸다는 것을 기억하게 되었다."
+                          },
+                          {
+                            "sp": "╋",
+                            "text": "주님의 말씀입니다."
+                          },
+                          {
+                            "sp": "◎",
+                            "text": "그리스도님, 찬미합니다."
+                          }
+                        ],
+                        "citation": "요한 12,12-16",
+                        "source": {
+                          "file": "참고자료/미사/전문/한국어.pdf",
+                          "edition": "로마 미사 경본 제3판 한국어판",
+                          "pdfPages": [
+                            542,
+                            543
+                          ]
+                        }
+                      }
                     }
                   },
                   "C": {
+                    "citation": "루카 19,28-40",
                     "lines": [
                       {
-                        "rubric": "주님의 예루살렘 입성에 관한 복음을 선포한다."
+                        "sp": "",
+                        "text": "",
+                        "role": "summary",
+                        "ai": "AI 요약 번역"
+                      },
+                      {
+                        "sp": "",
+                        "text": "╋ 루카가 전한 거룩한 복음입니다.",
+                        "role": "intro"
+                      },
+                      {
+                        "sp": "",
+                        "text": "그때에 예수님께서는 앞장서서 예루살렘으로 오르는 길을 걸어가셨다.\n올리브 산이라고 불리는 곳 근처 벳파게와 베타니아에 가까이 이르셨을 때,\n예수님께서 제자 둘을 보내며 말씀하셨다.\n“맞은쪽 동네로 가거라. 그곳에 들어가면 아직 아무도 탄 적이 없는\n어린 나귀 한 마리가 매여 있는 것을 보게 될 것이다. 그것을 풀어 끌고 오너라.\n누가 너희에게 ‘왜 푸는 거요?’ 하고 묻거든, 이렇게 대답하여라.\n‘주님께서 필요하시답니다.’”\n분부를 받은 이들이 가서 보니 예수님께서 말씀하신 그대로였다.\n그래서 그들이 어린 나귀를 푸는데\n그 주인이, “왜 그 어린 나귀를 푸는 거요?” 하고 물었다.\n그들은 “주님께서 필요하시답니다.” 하고 대답하였다.\n그리고 그 어린 나귀를 예수님께 끌고 와 그 위에 자기들의 겉옷을 걸치고,\n예수님을 거기에 올라타시게 하였다.\n예수님께서 나아가실 때에 그들은 자기들의 겉옷을 길에 깔았다.\n예수님께서 어느덧 올리브 산 내리막길에 가까이 이르시자,\n제자들의 무리가 다 자기들이 본 모든 기적 때문에 기뻐하며\n큰 소리로 하느님을 찬미하기 시작하였다.\n그들은 이렇게 말하였다.\n“‘주님의 이름으로 오시는 분, 임금님은 복되시어라.’\n하늘에 평화, 지극히 높은 곳에 영광!”\n군중 속에 있던 바리사이 몇 사람이 예수님께,\n“스승님, 제자들을 꾸짖으십시오.” 하고 말하였다.\n그러자 예수님께서 대답하셨다.\n“내가 너희에게 말한다. 이들이 잠자코 있으면 돌들이 소리 지를 것이다.”",
+                        "role": "body"
+                      },
+                      {
+                        "sp": "╋",
+                        "text": "주님의 말씀입니다.",
+                        "role": "proclamation"
+                      },
+                      {
+                        "sp": "◎",
+                        "text": "그리스도님, 찬미합니다.",
+                        "role": "proclamation"
                       }
-                    ],
-                    "citation": "루카 19,28-40",
-                    "source": {
-                      "file": "참고자료/미사/전문/한국어.pdf",
-                      "edition": "로마 미사 경본 제3판 한국어판",
-                      "pdfPages": [
-                        543,
-                        544
-                      ]
-                    }
+                    ]
                   }
                 }
               },
@@ -64526,25 +64667,7 @@ globalThis.countrySpecialLiturgies = {
             }
           },
           "sourceParts": {
-            "KR": {
-              "palm_gospel": {
-                "htmlSelector": "#missa-print",
-                "after": "^주님의\\s*예루살렘\\s*입성\\s*기념",
-                "start": "^복음(?:\\s|$)",
-                "stop": "^(?:행렬|<행렬|따름\\s*노래\\s*1|제2양식)",
-                "kind": "gospel",
-                "ending": [
-                  {
-                    "sp": "╋",
-                    "text": "주님의 말씀입니다."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "그리스도님, 찬미합니다."
-                  }
-                ]
-              }
-            }
+            "KR": {}
           },
           "order": [
             {
@@ -70495,39 +70618,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -71101,7 +71191,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -71301,7 +71392,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -71441,7 +71533,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -79136,39 +79229,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -79742,7 +79802,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -79942,7 +80003,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -80082,7 +80144,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -88178,39 +88241,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -88784,7 +88814,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -88984,7 +89015,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -89124,7 +89156,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -94010,39 +94043,6 @@ globalThis.countrySpecialLiturgies = {
                 "lines": [
                   {
                     "rubric": "With hands outstretched, the celebrant says the prayer of blessing:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
                   },
                   {
                     "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
@@ -100303,39 +100303,6 @@ globalThis.countrySpecialLiturgies = {
                     "sp": "R/.",
                     "text": "Amen."
                   }
-                ],
-                "standaloneLines": [
-                  {
-                    "rubric": "All make the sign of the cross as the leader says:"
-                  },
-                  {
-                    "text": "Our help is in the name of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Who made heaven and earth."
-                  },
-                  {
-                    "rubric": "One of those present or the leader reads a text of sacred Scripture, for example, Luke 2:1 (lines 1-8) or Isaiah 7:10 (lines 10-15, the birth of Emmanuel)."
-                  },
-                  {
-                    "sp": "Reader:",
-                    "text": "The Gospel of the Lord."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Praise to you, Lord Jesus Christ."
-                  },
-                  {
-                    "rubric": "The leader prays with hands joined:"
-                  },
-                  {
-                    "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-                  },
-                  {
-                    "sp": "R/.",
-                    "text": "Amen."
-                  }
                 ]
               }
             }
@@ -100918,7 +100885,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Matthew 21:1-11"
                   },
                   "B": {
                     "lines": [
@@ -101118,7 +101086,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Mark 11:1-10"
                   },
                   "C": {
                     "lines": [
@@ -101258,7 +101227,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "The Gospel of the Lord."
                       }
-                    ]
+                    ],
+                    "citation": "Luke 19:28-40"
                   }
                 }
               }
@@ -109763,7 +109733,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "Verbum Dómini."
                       }
-                    ]
+                    ],
+                    "citation": "Mt 21,1-11"
                   },
                   "B": {
                     "lines": [
@@ -109955,7 +109926,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "Verbum Dómini."
                       }
-                    ]
+                    ],
+                    "citation": "Mc 11,1-10"
                   },
                   "C": {
                     "lines": [
@@ -110107,7 +110079,8 @@ globalThis.countrySpecialLiturgies = {
                         "sp": "",
                         "text": "Verbum Dómini."
                       }
-                    ]
+                    ],
+                    "citation": "Lc 19,28-40"
                   }
                 }
               }
@@ -114200,1872 +114173,397 @@ globalThis.countrySpecialLiturgies = {
               "vigil_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<Theo truyền thống xa xưa, đêm nay là đêm Chúa truyền phải giữ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Xh 12,42), nên theo lời khuyên của Tin Mừng (Lc 12,35tt) các tín hữu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cầm đèn cháy sáng trong tay, giống như người trông đợi Chúa trở lại, để"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lúc Người đến, Người thấy họ tỉnh thức và mời họ vào bàn tiệc."
-                  },
-                  {
-                    "sp": "",
-                    "text": "2- Trong đêm canh thức này, nghi thức được sắp xếp như sau:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "-Phần thứ nhất: Thắp nến phục sinh:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "-Phần thứ hai: Phụng Vụ Lời Chúa. Tin tưởng vào Lời Chúa và điều"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa hứa, Hội Thánh suy niệm những kỳ công Chúa đã làm cho dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người, ngay từ lúc khởi nguyên."
-                  },
-                  {
-                    "sp": "",
-                    "text": "-Phần thứ ba: Phụng Vụ Thánh Tẩy. Hội Thánh đón nhận các anh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "em tân tòng, và toàn thể cộng đoàn lặp lại những lời cam kết khi lãnh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhận bí tích Thánh Tẩy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "-Phần thứ tư: Phụng Vụ Thánh Thể. Gần rạng sáng Phục Sinh, cùng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "với những chi thể mới đã được tái sinh trong bí tích Thánh Tẩy, Hội"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh được mời vào bàn tiệc mà Chúa đã dọn sẵn cho dân Người qua sự"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chết và phục sinh của Người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3- Tất cả Canh Thức Vượt Qua được cử hành về đêm, nên phải bắt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đầu lúc chập tối và phải kết thúc trước rạng đông ngày Chúa nhật."
-                  },
-                  {
-                    "sp": "",
-                    "text": "4- Mặc dầu được cử hành trước nửa đêm, thánh lễ Vọng vẫn là lễ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa nhật Phục Sinh. Ai dự lễ đêm, có thể rước lễ một lần trong thánh lễ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhì Phục Sinh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "5- Ai cử hành hoặc đồng tế lễ đêm còn được cử hành hoặc đồng tế"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trong thánh lễ ngày Phục Sinh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "6- Linh mục và các thừa tác viên khác, như phó tế và các linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đồng tế phải mặc lễ phục màu trắng."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Phải chuẩn bị nến cho mọi người tham dự đêm Canh Thức này."
-                  },
-                  {
-                    "sp": "",
-                    "text": "PHẦN THỨ NHẤT"
-                  },
-                  {
-                    "sp": "",
-                    "text": "KHAI MẠC TRỌNG THỂ ĐÊM CANH THỨC"
-                  },
-                  {
-                    "sp": "",
-                    "text": "NGHI THỨC THẮP NẾN PHỤC SINH"
-                  },
-                  {
-                    "sp": "",
-                    "text": "LÀM PHÉP LỬA VÀ CHUẨN BỊ NẾN>"
+                    "rubric": "Theo truyền thống xa xưa, đêm nay là đêm Chúa truyền phải giữ (Xh 12,42), nên theo lời khuyên của Tin Mừng (Lc 12,35tt) các tín hữu cầm đèn cháy sáng trong tay, giống như người trông đợi Chúa trở lại, để lúc Người đến, Người thấy họ tỉnh thức và mời họ vào bàn tiệc. 2- Trong đêm canh thức này, nghi thức được sắp xếp như sau: -Phần thứ nhất: Thắp nến phục sinh: -Phần thứ hai: Phụng Vụ Lời Chúa. Tin tưởng vào Lời Chúa và điều Chúa hứa, Hội Thánh suy niệm những kỳ công Chúa đã làm cho dân Người, ngay từ lúc khởi nguyên. -Phần thứ ba: Phụng Vụ Thánh Tẩy. Hội Thánh đón nhận các anh em tân tòng, và toàn thể cộng đoàn lặp lại những lời cam kết khi lãnh nhận bí tích Thánh Tẩy. -Phần thứ tư: Phụng Vụ Thánh Thể. Gần rạng sáng Phục Sinh, cùng với những chi thể mới đã được tái sinh trong bí tích Thánh Tẩy, Hội Thánh được mời vào bàn tiệc mà Chúa đã dọn sẵn cho dân Người qua sự chết và phục sinh của Người. 3- Tất cả Canh Thức Vượt Qua được cử hành về đêm, nên phải bắt đầu lúc chập tối và phải kết thúc trước rạng đông ngày Chúa nhật. 4- Mặc dầu được cử hành trước nửa đêm, thánh lễ Vọng vẫn là lễ Chúa nhật Phục Sinh. Ai dự lễ đêm, có thể rước lễ một lần trong thánh lễ nhì Phục Sinh. 5- Ai cử hành hoặc đồng tế lễ đêm còn được cử hành hoặc đồng tế trong thánh lễ ngày Phục Sinh. 6- Linh mục và các thừa tác viên khác, như phó tế và các linh mục đồng tế phải mặc lễ phục màu trắng. Phải chuẩn bị nến cho mọi người tham dự đêm Canh Thức này. PHẦN THỨ NHẤT KHAI MẠC TRỌNG THỂ ĐÊM CANH THỨC NGHI THỨC THẮP NẾN PHỤC SINH LÀM PHÉP LỬA VÀ CHUẨN BỊ NẾN"
                   }
                 ]
               },
               "fire_blessing": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Linh mục chào dân chúng như thường lệ và nói vắn tắt về ý"
+                    "rubric": "Linh mục chào dân chúng như thường lệ và nói vắn tắt về ý nghĩa đêm canh thức, bằng những lời sau đây hoặc tương tự:"
                   },
                   {
-                    "sp": "",
-                    "text": "nghĩa đêm canh thức, bằng những lời sau đây hoặc tương tự:"
+                    "text": "Anh (chị) em thân mến, Trong đêm rất thánh này, đêm Đức Giê-su Ki-tô, Chúa chúng ta, đã hoàn tất mầu nhiệm Vượt Qua, tức là từ cõi chết sống lại, Hội Thánh kêu mời con cái ở khắp nơi trên hoàn cầu, cùng họp nhau lại mà canh thức cầu nguyện. Vậy chúng ta sẽ cùng nhau chăm chú nghe Lời Chúa, và sốt sắng cử hành những bí tích tưởng niệm mầu nhiệm Vượt Qua của Đức Ki-tô, với niềm hy vọng sẽ được cùng Người chiến thắng sự chết, và cùng Người luôn sống kết hợp với Chúa Cha.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến,"
+                    "rubric": "9- Rồi làm phép lửa. Lời nguyện"
                   },
                   {
-                    "sp": "",
-                    "text": "Trong đêm rất thánh này, đêm Đức Giê-su Ki-tô, Chúa chúng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ta, đã hoàn tất mầu nhiệm Vượt Qua, tức là từ cõi chết sống lại, Hội"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh kêu mời con cái ở khắp nơi trên hoàn cầu, cùng họp nhau lại"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mà canh thức cầu nguyện."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vậy chúng ta sẽ cùng nhau chăm chú nghe Lời Chúa, và sốt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sắng cử hành những bí tích tưởng niệm mầu nhiệm Vượt Qua của"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đức Ki-tô, với niềm hy vọng sẽ được cùng Người chiến thắng sự"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chết, và cùng Người luôn sống kết hợp với Chúa Cha."
-                  },
-                  {
-                    "sp": "",
-                    "text": "9- Rồi làm phép lửa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lời nguyện"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Chúa, Chúa đã sai Con Một đến giãi ánh vinh quang rực rỡ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "của Chúa vào lòng tín hữu. Xin thánh ? hoá ngọn lửa mới này, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trong suốt thời gian mừng lễ Vượt Qua, xin cho niềm khao khát"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nước Trời cũng bừng lên thiêu đốt lòng chúng con, và thanh tẩy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "muôn vàn tội lỗi, để mai sau chúng con xứng đáng vào thiên quốc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tham dự lễ ánh sáng muôn đời. Chúng con cầu xin"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lấy lửa mới thắp nến Phục Sinh"
+                    "text": "Lạy Chúa, Chúa đã sai Con Một đến giãi ánh vinh quang rực rỡ của Chúa vào lòng tín hữu. Xin thánh ? hoá ngọn lửa mới này, và trong suốt thời gian mừng lễ Vượt Qua, xin cho niềm khao khát Nước Trời cũng bừng lên thiêu đốt lòng chúng con, và thanh tẩy muôn vàn tội lỗi, để mai sau chúng con xứng đáng vào thiên quốc tham dự lễ ánh sáng muôn đời. Chúng con cầu xin Lấy lửa mới thắp nến Phục Sinh",
+                    "sp": "CT."
                   }
                 ]
               },
               "paschal_candle": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Nếu xét là nên dùng một vài biểu hiệu để làm nổi bật ý nghĩa và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vẻ trang trọng của nến phục sinh thì có thể làm theo nghi thức sau đây:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Làm phép lửa xong, người giúp lễ hoặc một phụ tế cầm nến phục sinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đứng trước chủ tế. Chủ tế dùng mũi nhọn vẽ hình thánh giá trên nến, rồi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "viết chữ An-pha phía trên, và chữ Ô-mê-ga ở phía dưới hình thánh giá,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đoạn viết 4 con số chỉ năm đó ở 4 góc thánh giá, vừa viết vừa đọc những"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lời sau đây:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "1. Đức Ki-tô vẫn là một,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(vẽ đường dọc)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "2. Hôm qua cũng như hôm nay,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(vẽ đường ngang)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "3. Là An-pha và Ô-mê-ga,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(viết chữ An-pha phía trên thánh giá)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "4. Nghĩa là khởi nguyên và tận cùng."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(viết chữ Ô-mê-ga phía dưới thánh giá)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "5. Người làm chủ thời gian"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(viết số đầu của năm nơi góc trái phía trên thánh giá)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "6. Và muôn thế hệ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(viết số thứ hai của năm nơi góc phải phía trên thánh giá)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "7. Vạn tuế Đức Ki-tô, Đấng vinh hiển quyền năng,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(viết số thứ ba của năm nơi góc trái phía dưới thánh giá)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "8. Vạn vạn tuế. A-men."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(viết số thứ tư của năm nơi góc phải phía dưới thánh giá)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "11- Vẽ hình thánh giá và ghi số năm xong, chủ tế có thể cắm năm"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hạt hương theo hình thánh giá trên nến phục sinh, vừa gắn vừa đọc như"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sau:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "1.Vì năm vết thương"
-                  },
-                  {
-                    "sp": "",
-                    "text": "2. chí thánh và vinh hiển,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "3. xin Chúa Ki-tô"
-                  },
-                  {
-                    "sp": "",
-                    "text": "4. gìn giữ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "5. và bảo vệ chúng ta. A-men."
-                  },
-                  {
-                    "sp": "",
-                    "text": "12- Linh mục lấy lửa mới thắp nến phục sinh và nói:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin Đức Ki-tô, Đấng phục sinh vinh hiển, chiếu giãi ánh sáng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "của Người để phá tan bóng tối đang bao phủ lòng trí chúng ta."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì hoàn cảnh mục vụ địa phương, có thể sử dụng tất cả hay một"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phần những điều nói trên (từ số 10 đến số 12). Hội Đồng giám Mục cũng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "có thể ấn định những hình thức khác thích hợp hơn với tinh thần dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng địa phương."
+                    "rubric": "Nếu xét là nên dùng một vài biểu hiệu để làm nổi bật ý nghĩa và vẻ trang trọng của nến phục sinh thì có thể làm theo nghi thức sau đây: Làm phép lửa xong, người giúp lễ hoặc một phụ tế cầm nến phục sinh đứng trước chủ tế. Chủ tế dùng mũi nhọn vẽ hình thánh giá trên nến, rồi viết chữ An-pha phía trên, và chữ Ô-mê-ga ở phía dưới hình thánh giá, đoạn viết 4 con số chỉ năm đó ở 4 góc thánh giá, vừa viết vừa đọc những lời sau đây: 1. Đức Ki-tô vẫn là một, (vẽ đường dọc) 2. Hôm qua cũng như hôm nay, (vẽ đường ngang) 3. Là An-pha và Ô-mê-ga, (viết chữ An-pha phía trên thánh giá) 4. Nghĩa là khởi nguyên và tận cùng. (viết chữ Ô-mê-ga phía dưới thánh giá) 5. Người làm chủ thời gian (viết số đầu của năm nơi góc trái phía trên thánh giá) 6. Và muôn thế hệ (viết số thứ hai của năm nơi góc phải phía trên thánh giá) 7. Vạn tuế Đức Ki-tô, Đấng vinh hiển quyền năng, (viết số thứ ba của năm nơi góc trái phía dưới thánh giá) 8. Vạn vạn tuế. A-men. (viết số thứ tư của năm nơi góc phải phía dưới thánh giá) 11- Vẽ hình thánh giá và ghi số năm xong, chủ tế có thể cắm năm hạt hương theo hình thánh giá trên nến phục sinh, vừa gắn vừa đọc như sau: 1.Vì năm vết thương 2. chí thánh và vinh hiển, 3. xin Chúa Ki-tô 4. gìn giữ 5. và bảo vệ chúng ta. A-men. 12- Linh mục lấy lửa mới thắp nến phục sinh và nói: Xin Đức Ki-tô, Đấng phục sinh vinh hiển, chiếu giãi ánh sáng của Người để phá tan bóng tối đang bao phủ lòng trí chúng ta. Vì hoàn cảnh mục vụ địa phương, có thể sử dụng tất cả hay một phần những điều nói trên (từ số 10 đến số 12). Hội Đồng giám Mục cũng có thể ấn định những hình thức khác thích hợp hơn với tinh thần dân chúng địa phương."
                   }
                 ]
               },
               "light_procession": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Phó tế hoặc chính linh mục cầm nến phục sinh nâng cao và hát"
+                    "rubric": "Phó tế hoặc chính linh mục cầm nến phục sinh nâng cao và hát một mình:"
                   },
                   {
-                    "sp": "",
-                    "text": "một mình:"
+                    "text": "Ánh sáng Chúa Ki-tô.",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "- Ánh sáng Chúa Ki-tô."
+                    "rubric": "Và mọi người thưa:"
                   },
                   {
-                    "sp": "",
-                    "text": "Và mọi người thưa:"
+                    "text": "Tạ ơn Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "- Tạ ơn Chúa."
+                    "rubric": "Hội Đồng Giám Mục có thể ấn định lời tung hô khác. Người cầm nến đi đầu, mọi người theo sau tiến vào nhà thờ. Nếu có hương, người cầm bình hương, có bỏ hương, đi trước người cầm nến phục sinh. 15- Đến trước cửa nhà thờ, người cầm nến phục sinh đứng lại, giơ cao cây nến và hát lần thứ hai:"
                   },
                   {
-                    "sp": "",
-                    "text": "Hội Đồng Giám Mục có thể ấn định lời tung hô khác."
+                    "text": "Ánh sáng Chúa Ki-tô.",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "Người cầm nến đi đầu, mọi người theo sau tiến vào nhà thờ. Nếu có"
+                    "rubric": "Mọi người thưa:"
                   },
                   {
-                    "sp": "",
-                    "text": "hương, người cầm bình hương, có bỏ hương, đi trước người cầm nến"
+                    "text": "Tạ ơn Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "phục sinh."
+                    "rubric": "Sau đó mọi người lấy lửa từ nến Phục sinh thắp nến của mình và tiếp tục đi. 16- Khi đến trước bàn thờ, người cầm nến đứng lại, quay về phía giáo dân hát lần thứ ba"
                   },
                   {
-                    "sp": "",
-                    "text": "15- Đến trước cửa nhà thờ, người cầm nến phục sinh đứng lại, giơ"
+                    "text": "-Ánh sáng Chúa Ki-tô.",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "cao cây nến và hát lần thứ hai:"
+                    "rubric": "Mọi người thưa:"
                   },
                   {
-                    "sp": "",
-                    "text": "- Ánh sáng Chúa Ki-tô."
+                    "text": "-Tạ ơn Chúa. Đến đây thắp hết các đèn trong nhà thờ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Mọi người thưa:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "- Tạ ơn Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Sau đó mọi người lấy lửa từ nến Phục sinh thắp nến của mình và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tiếp tục đi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "16- Khi đến trước bàn thờ, người cầm nến đứng lại, quay về phía"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giáo dân hát lần thứ ba"
-                  },
-                  {
-                    "sp": "",
-                    "text": "-Ánh sáng Chúa Ki-tô."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mọi người thưa:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "-Tạ ơn Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đến đây thắp hết các đèn trong nhà thờ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "CÔNG BỐ TIN MỪNG PHỤC SINH"
+                    "rubric": "CÔNG BỐ TIN MỪNG PHỤC SINH"
                   }
                 ]
               },
               "exsultet": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Mừng vui lên, hỡi muôn lớp cơ binh Thiên Thần trên trời. Cùng"
+                    "text": "Mừng vui lên, hỡi muôn lớp cơ binh Thiên Thần trên trời. Cùng vui lên, hỡi những Nhiệm Mầu thánh này, tiếng loa cứu độ hãy vang rền không gian. Mừng reo chiến công oai hùng: Vua khải hoàn. Và vui lên, toàn trái đất vui lên dưới ánh huy hoàng chiếu soi và dưới ánh sáng Chúa muôn đời chói ngời, tất cả vũ trụ đều hân hoan được ơn thoát ly xa miền tối u sầu. Cùng vui lên, ôi Mẹ Hội Thánh vui lên, uy nghiêm trong muôn ngàn ánh quang, khắp nơi trong cung điện này hòa vang lên ngàn muôn tiếng ca reo mừng của nhân trần. (Hợp nhau đây tôi xin anh chị em rất thân yêu, đang hân hoan tham gia nguồn sáng này, hết tâm kêu xin cùng Chúa uy linh, tha thiết khấn xin lòng Chúa nhân từ. Người dủ thương tôi, tôi dù không có công chi thương cho tôi nhập hàng tư tế Người, khấn xin ban cho tôi đầy ánh quang, để tôi hân hoan ca ngợi cây nến huy hoàng). (X. Chúa ở cùng anh (chị) em. T. Và ở cùng (Thầy) Cha.",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "vui lên, hỡi những Nhiệm Mầu thánh này, tiếng loa cứu độ hãy vang"
+                    "text": "Hãy nâng tâm hồn lên.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "rền không gian. Mừng reo chiến công oai hùng: Vua khải hoàn. Và"
+                    "text": "Chúng con đang hướng về Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "vui lên, toàn trái đất vui lên dưới ánh huy hoàng chiếu soi và dưới"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ánh sáng Chúa muôn đời chói ngời, tất cả vũ trụ đều hân hoan được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ơn thoát ly xa miền tối u sầu. Cùng vui lên, ôi Mẹ Hội Thánh vui"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lên, uy nghiêm trong muôn ngàn ánh quang, khắp nơi trong cung"
-                  },
-                  {
-                    "sp": "",
-                    "text": "điện này hòa vang lên ngàn muôn tiếng ca reo mừng của nhân trần."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Hợp nhau đây tôi xin anh chị em rất thân yêu, đang hân hoan tham"
-                  },
-                  {
-                    "sp": "",
-                    "text": "gia nguồn sáng này, hết tâm kêu xin cùng Chúa uy linh, tha thiết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khấn xin lòng Chúa nhân từ. Người dủ thương tôi, tôi dù không có"
-                  },
-                  {
-                    "sp": "",
-                    "text": "công chi thương cho tôi nhập hàng tư tế Người, khấn xin ban cho tôi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đầy ánh quang, để tôi hân hoan ca ngợi cây nến huy hoàng)."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(X. Chúa ở cùng anh (chị) em."
-                  },
-                  {
-                    "sp": "",
-                    "text": "T. Và ở cùng (Thầy) Cha."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Hãy nâng tâm hồn lên."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Chúng con đang hướng về Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Hãy tạ ơn Chúa là Thiên Chúa chúng ta."
-                  },
-                  {
-                    "sp": "",
-                    "text": "T. Thật là chính đáng)."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thật chính đáng việc dâng lên tâm tư ca tụng Thiên Chúa Cha,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đấng thiêng liêng toàn năng, cùng Đức Giêsu Kitô Con Một Người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa chúng tôi. Ngài thế chúng tôi trả nợ A Đam, với Chúa Cha"
-                  },
-                  {
-                    "sp": "",
-                    "text": "muôn thuở, và đổ máu quý giá để tẩy sạch án tổ tông xưa. Chính"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đây là lễ Vượt Qua, mà Chiên thật chịu sát tế nơi cửa nhà dân Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đã được ghi dấu máu chiên. Này là đêm mà cha ông chúng tôi, là"
-                  },
-                  {
-                    "sp": "",
-                    "text": "con cái Israel thoát ly Ai Cập xưa, Chúa đã cho tiến qua Biển Đỏ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vẫn khô chân. Chính đây là đêm, nhờ ánh sáng cột lửa thiêng, xua"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tan bóng đen tội lỗi nhân gian. Đây là đêm mà hôm nay ai tin cậy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nơi Chúa Kitô khắp trên trần gian, được cứu thoát hết các vết nhơ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và tối tăm tội khiên, được ơn thiêng, đưa về hợp đoàn cùng các"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh nhân. Này là đêm, xiềng xích bị bẻ tung, Đức Kitô ra khỏi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngục vinh thắng tiến lên. Nguồn phúc cứu thế nếu không trao ban,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng ta sinh ra nào có ích chi? Ôi huyền nhiệm thay, lòng Thiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa yêu trần thế chúng tôi. Tình thương yêu của Chúa không ai"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hiểu thấu, để cứu đầy tớ, Chúa đã nộp chính Con yêu. Ôi cần thiết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thay tội A Đam, tội đã được tẩy xóa chính nhờ sự chết Chúa Kitô."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ôi tội hồng phúc, vì cho chúng ta Đấng Cứu Chuộc rất cao sang. Ôi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đêm thật hạnh phúc, chỉ ngươi biết giờ Chúa Kitô từ cõi chết đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vinh thăng. Đây là Đêm mà Sách Thánh đã ghi: Là đêm rực rỡ sáng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "như bình minh, đêm mà ánh sáng soi cho ta biết bao cảm mến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sướng vui. Vì thế sự thánh thiện của đêm nay, xua đuổi hết tội"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khiên, tẩy sạch vết nhơ người có tội được sạch trong, kẻ ưu phiền"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sướng vui hân hoan. Phá tan hận thù oán ghét, và sớm đem hòa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thuận đồng tâm khuất phục quyền bính thế gian. Kính lạy Cha chí"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh, nguyện xin trong nguồn ơn thánh đêm nay nhận cho hương"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thơm lễ chiều hôm, là lễ nghi dâng cây nến làm bởi sáp ong tinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tuyền đây, do tay thừa tác viên Giáo Hội cùng kính dâng lên. Giờ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đây tôi hiểu biết ý nghĩa của ngọn nến, lung linh sáng lên để Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được ngợi chúc tôn vinh. Dù phân chia đi ở khắp nơi cũng không"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hao mòn chi, luôn nuôi bằng tính chất sáp ong mẹ đã gây nên. Ôi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đêm hồng ân, này đêm nối kết trời đất, kết hợp Thiên Chúa với"
-                  },
-                  {
-                    "sp": "",
-                    "text": "muôn người thế chúng tôi. Nguyện xin cho cây nến này dâng Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đây luôn luôn được tỏa sáng, phá tan mọi bóng tối đêm nay. Nguyện"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cho ngọn nến lung linh hòa với muôn muôn vì sao, luôn được Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đoái thương xem như hương trầm ngát thơm bay. Ước mong ngôi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sao mai, sẽ gặp gỡ ánh lửa này chiếu sáng luôn. Này đây ngôi sao"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không bao giờ lặn đi. Chính là Con Chúa, Đức Kitô, Ngôi sao từ nơi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tối tăm vượt lên chiếu sáng nhân gian. Người là Đấng thống trị hằng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sống đến muôn đời muôn kiếp vinh quang. Amen."
+                    "text": "Hãy tạ ơn Chúa là Thiên Chúa chúng ta. T. Thật là chính đáng). Thật chính đáng việc dâng lên tâm tư ca tụng Thiên Chúa Cha, Đấng thiêng liêng toàn năng, cùng Đức Giêsu Kitô Con Một Người Chúa chúng tôi. Ngài thế chúng tôi trả nợ A Đam, với Chúa Cha muôn thuở, và đổ máu quý giá để tẩy sạch án tổ tông xưa. Chính đây là lễ Vượt Qua, mà Chiên thật chịu sát tế nơi cửa nhà dân Chúa đã được ghi dấu máu chiên. Này là đêm mà cha ông chúng tôi, là con cái Israel thoát ly Ai Cập xưa, Chúa đã cho tiến qua Biển Đỏ vẫn khô chân. Chính đây là đêm, nhờ ánh sáng cột lửa thiêng, xua tan bóng đen tội lỗi nhân gian. Đây là đêm mà hôm nay ai tin cậy nơi Chúa Kitô khắp trên trần gian, được cứu thoát hết các vết nhơ và tối tăm tội khiên, được ơn thiêng, đưa về hợp đoàn cùng các thánh nhân. Này là đêm, xiềng xích bị bẻ tung, Đức Kitô ra khỏi ngục vinh thắng tiến lên. Nguồn phúc cứu thế nếu không trao ban, chúng ta sinh ra nào có ích chi? Ôi huyền nhiệm thay, lòng Thiên Chúa yêu trần thế chúng tôi. Tình thương yêu của Chúa không ai hiểu thấu, để cứu đầy tớ, Chúa đã nộp chính Con yêu. Ôi cần thiết thay tội A Đam, tội đã được tẩy xóa chính nhờ sự chết Chúa Kitô. Ôi tội hồng phúc, vì cho chúng ta Đấng Cứu Chuộc rất cao sang. Ôi đêm thật hạnh phúc, chỉ ngươi biết giờ Chúa Kitô từ cõi chết đã vinh thăng. Đây là Đêm mà Sách Thánh đã ghi: Là đêm rực rỡ sáng như bình minh, đêm mà ánh sáng soi cho ta biết bao cảm mến sướng vui. Vì thế sự thánh thiện của đêm nay, xua đuổi hết tội khiên, tẩy sạch vết nhơ người có tội được sạch trong, kẻ ưu phiền sướng vui hân hoan. Phá tan hận thù oán ghét, và sớm đem hòa thuận đồng tâm khuất phục quyền bính thế gian. Kính lạy Cha chí thánh, nguyện xin trong nguồn ơn thánh đêm nay nhận cho hương thơm lễ chiều hôm, là lễ nghi dâng cây nến làm bởi sáp ong tinh tuyền đây, do tay thừa tác viên Giáo Hội cùng kính dâng lên. Giờ đây tôi hiểu biết ý nghĩa của ngọn nến, lung linh sáng lên để Chúa được ngợi chúc tôn vinh. Dù phân chia đi ở khắp nơi cũng không hao mòn chi, luôn nuôi bằng tính chất sáp ong mẹ đã gây nên. Ôi đêm hồng ân, này đêm nối kết trời đất, kết hợp Thiên Chúa với muôn người thế chúng tôi. Nguyện xin cho cây nến này dâng Chúa đây luôn luôn được tỏa sáng, phá tan mọi bóng tối đêm nay. Nguyện cho ngọn nến lung linh hòa với muôn muôn vì sao, luôn được Chúa đoái thương xem như hương trầm ngát thơm bay. Ước mong ngôi sao mai, sẽ gặp gỡ ánh lửa này chiếu sáng luôn. Này đây ngôi sao không bao giờ lặn đi. Chính là Con Chúa, Đức Kitô, Ngôi sao từ nơi tối tăm vượt lên chiếu sáng nhân gian. Người là Đấng thống trị hằng sống đến muôn đời muôn kiếp vinh quang. Amen.",
+                    "sp": "X."
                   }
                 ]
               },
               "vigil_word_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Trong đêm Vọng này là mẹ các đêm Vọng, Hội Thánh đề nghị"
+                    "text": "Trong đêm Vọng này là mẹ các đêm Vọng, Hội Thánh đề nghị đọc chín bài đọc: bảy bài trích từ Cựu Ước, hai bài trích trong Tân Ước (Thánh Thư và Tin Mừng).",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "đọc chín bài đọc: bảy bài trích từ Cựu Ước, hai bài trích trong Tân Ước"
+                    "rubric": "21- Nếu hoàn cảnh mục vụ đòi buộc, có thể bớt số bài đọc Cựu Ước, nhưng phải luôn luôn lưu ý rằng việc đọc Lời Chúa là phần căn bản của đêm Canh Thức Vượt Qua. Phải đọc ít nhất ba bài đọc Cựu Ước Nhưng không bao giờ được bỏ bài trích sách Xuất hành chương 14. 22. Mọi người tắt nến, ngồi nghe. Trước khi bắt đầu các bài đọc, linh mục nên nhắn nhủ giáo dân bằng những lời sau đây, hoặc những lời tương tự:"
                   },
                   {
-                    "sp": "",
-                    "text": "(Thánh Thư và Tin Mừng)."
+                    "text": "Anh (chị) em thân mến, Chúng ta đã long trọng khai mạc đêm Canh Thức Vượt Qua, giờ đây chúng ta hãy lắng nghe Lời Chúa. Chúng ta hãy ngẫm xem trong thời Cựu Ước, Chúa đã cứu chuộc dân Người làm sao, và trong thời đại cuối cùng này, Người lại sai Con Một đến cứu chuộc chúng ta thế nào. Chúng ta hãy xin Chúa hoàn tất công trình cứu độ mà Người đã khởi sự trong mầu nhiệm Vượt Qua.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "21- Nếu hoàn cảnh mục vụ đòi buộc, có thể bớt số bài đọc Cựu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ước, nhưng phải luôn luôn lưu ý rằng việc đọc Lời Chúa là phần căn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bản của đêm Canh Thức Vượt Qua. Phải đọc ít nhất ba bài đọc Cựu Ước"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nhưng không bao"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giờ được bỏ bài trích sách Xuất hành chương 14."
-                  },
-                  {
-                    "sp": "",
-                    "text": "22. Mọi người tắt nến, ngồi nghe. Trước khi bắt đầu các bài đọc,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "linh mục nên nhắn nhủ giáo dân bằng những lời sau đây, hoặc những lời"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tương tự:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúng ta đã long trọng khai mạc đêm Canh Thức Vượt Qua,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giờ đây chúng ta hãy lắng nghe Lời Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúng ta hãy ngẫm xem trong thời Cựu Ước, Chúa đã cứu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chuộc dân Người làm sao, và trong thời đại cuối cùng này, Người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lại sai Con Một đến cứu chuộc chúng ta thế nào. Chúng ta hãy xin"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa hoàn tất công trình cứu độ mà Người đã khởi sự trong mầu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhiệm Vượt Qua."
-                  },
-                  {
-                    "sp": "",
-                    "text": "23- Sau đó là các bài đọc, người đọc sách đến giảng đài đọc bài đọc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "1. Sau bài đọc, hát đáp ca, cộng đoàn hát câu đáp. Rồi mọi người đứng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lên, linh mục đọc: “Chúng ta dâng lời cầu nguyện”. Và sau khi mọi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "người thinh lặng cầu nguyện trong giây lát, linh mục đọc lời nguyện."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thay vì hát đáp ca, có thể giữ thinh lặng thánh. Trong trường hợp này,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thì không ngừng lại sau câu: “Chúng ta dâng lời cầu nguyện”."
+                    "rubric": "23- Sau đó là các bài đọc, người đọc sách đến giảng đài đọc bài đọc 1. Sau bài đọc, hát đáp ca, cộng đoàn hát câu đáp. Rồi mọi người đứng lên, linh mục đọc: “Chúng ta dâng lời cầu nguyện”. Và sau khi mọi người thinh lặng cầu nguyện trong giây lát, linh mục đọc lời nguyện. Thay vì hát đáp ca, có thể giữ thinh lặng thánh. Trong trường hợp này, thì không ngừng lại sau câu: “Chúng ta dâng lời cầu nguyện”."
                   }
                 ]
               },
               "baptism_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Linh mục cùng các người giúp lễ đi đến giếng rửa tội, nếu giếng"
+                    "rubric": "Linh mục cùng các người giúp lễ đi đến giếng rửa tội, nếu giếng này ở trước mặt giáo dân. Nếu không thì đặt một lu nước ở cung thánh. Nếu có những người dự tòng thì kêu gọi họ đến cùng với những người đỡ đầu, đưa tới trước mặt cộng đoàn. Nếu là trẻ em, thì cha mẹ dẫn, hoặc ẵm đến cùng với những người đỡ đầu. 38- Lời chủ tế nhắn nhủ Linh mục khuyên bảo cộng đoàn hiện diện những lời sau đây hoặc những lời khác tương tự:"
                   },
                   {
-                    "sp": "",
-                    "text": "này ở trước mặt giáo dân. Nếu không thì đặt một lu nước ở cung thánh."
+                    "text": "Anh (chị) em thân mến, Chúng ta hãy hợp ý cầu nguyện cho các anh (chị) em dự tòng này được vững lòng trông cậy. Xin Chúa Cha toàn năng thương tình nâng đỡ và dẫn đưa họ tới nguồn nước tái sinh.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Nếu có những người dự tòng thì kêu gọi họ đến cùng với những"
+                    "rubric": "Nếu không có người lãnh nhận bí tích Thánh Tẩy thì nói:"
                   },
                   {
-                    "sp": "",
-                    "text": "người đỡ đầu, đưa tới trước mặt cộng đoàn. Nếu là trẻ em, thì cha mẹ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dẫn, hoặc ẵm đến cùng với những người đỡ đầu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "38- Lời chủ tế nhắn nhủ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục khuyên bảo cộng đoàn hiện diện những lời sau đây hoặc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "những lời khác tương tự:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúng ta hãy hợp ý cầu nguyện cho các anh (chị) em dự tòng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "này được vững lòng trông cậy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin Chúa Cha toàn năng thương tình nâng đỡ và dẫn đưa họ tới"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nguồn nước tái sinh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nếu không có người lãnh nhận bí tích Thánh Tẩy thì nói:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúng ta hãy cầu xin Thiên Chúa là Cha toàn năng thánh hóa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước này, để những ai nhờ nước này mà được tái sinh, cũng được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hợp đoàn với con cái Chúa trong Đức Kitô."
+                    "text": "Anh (chị) em thân mến, Chúng ta hãy cầu xin Thiên Chúa là Cha toàn năng thánh hóa nước này, để những ai nhờ nước này mà được tái sinh, cũng được hợp đoàn với con cái Chúa trong Đức Kitô.",
+                    "sp": "CT."
                   }
                 ]
               },
               "litany": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Hai ca viên hát kinh cầu. Mọi người đứng (vì là mùa Phục Sinh)"
+                    "rubric": "Hai ca viên hát kinh cầu. Mọi người đứng (vì là mùa Phục Sinh) và đáp lại. Kinh cầu có thể hát đang khi đi kiệu, nếu đường dài. Trong trường hợp này, phải mời cả những người sắp lãnh nhận bí tích Thánh Tẩy cùng đi kiệu. Khi đi kiệu, người cầm nến Phục Sinh đi đầu, tiếp đó là những dự tòng cùng các người đỡ đầu, rồi đến linh mục và những người giúp lễ. Trước khi làm phép nước, linh mục nói những lời khuyên bảo như ở số 38. 40- Nếu không có những người dự tòng và cũng không làm phép giếng, thì bỏ kinh cầu và tiến hành việc làm phép nước ngay (số 45). 41- Trong kinh Cầu Các Thánh, có thể thêm ít tên các thánh, nhất là các thánh bổn mạng nhà thờ, bổn mạng của địa phương và bổn mạng của những người sắp lãnh nhận bí tích Thánh Tẩy. KINH CẦU CÁC THÁNH"
                   },
                   {
-                    "sp": "",
-                    "text": "và đáp lại."
+                    "text": "Xin Chúa thương xót chúng con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Kinh cầu có thể hát đang khi đi kiệu, nếu đường dài. Trong trường"
+                    "text": "Xin Chúa thương xót chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "hợp này, phải mời cả những người sắp lãnh nhận bí tích Thánh Tẩy cùng"
+                    "text": "Xin Chúa Kitô thương xót chúng con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "đi kiệu. Khi đi kiệu, người cầm nến Phục Sinh đi đầu, tiếp đó là những"
+                    "text": "Xin Chúa Kitô thương xót chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "dự tòng cùng các người đỡ đầu, rồi đến linh mục và những người giúp"
+                    "text": "Xin Chúa thương xót chúng con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "lễ. Trước khi làm phép nước, linh mục nói những lời khuyên bảo như ở"
+                    "text": "Xin Chúa thương xót chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "số 38."
+                    "text": "Thánh Maria Đức Mẹ Chúa Trời.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "40- Nếu không có những người dự tòng và cũng không làm phép"
+                    "text": "Cầu cho chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "giếng, thì bỏ kinh cầu và tiến hành việc làm phép nước ngay (số 45)."
+                    "text": "Thánh Micae tổng lãnh thiên thần. Các thiên sứ của Chúa. Thánh Gioan tẩy giả. Thánh Giuse. Thánh Phêrô và thánh Phaolô. Thánh Anrê Thánh Gioan Thánh nữ Maria Mađalêna Thánh Têphanô Thánh Inhaxiô Antiôkia Thánh Lôrenxô Thánh nữ Pepêtua và thánh nữ Phêlixita. Thánh nữ Annê Thánh Ghêgôriô Thánh Âutinh Thánh Athanaxiô Thánh Baxiliô Thánh Máctinô Thánh Biển Đức Thánh Phanxicô và thánh Đaminh Thánh nữ Têrêxa Hài Đồng Giêsu Thánh Phanxicô Xaviê Thánh Gioan Maria Vianê Thánh nữ Catarina Xiêna Thánh nữ Têrêxa Giêsu Các thánh Tử Đạo Việt Nam Các thánh Nam Nữ của Thiên Chúa Lạy Chúa xin tỏ lòng nhân hậu,",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "41- Trong kinh Cầu Các Thánh, có thể thêm ít tên các thánh, nhất là"
+                    "text": "Xin Chúa giải thoát chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "các thánh bổn mạng nhà thờ, bổn mạng của địa phương và bổn mạng của"
+                    "text": "Xin giải thoát chúng con khỏi mọi sự dữ, Xin giải thoát chúng con khỏi vòng tội lỗi, Xin giải thoát chúng con khỏi án chết đời đời, Vì Chúa đã xuống thế làm người, Vì Chúa đã chịu chết và sống lại, Vì Chúa đã đổ ơn Thánh Thần xuống, Chúng con là kẻ tội lỗi,",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "những người sắp lãnh nhận bí tích Thánh Tẩy."
+                    "text": "Xin Chúa nghe lời chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "KINH CẦU CÁC THÁNH"
+                    "rubric": "Nếu có những người sắp nhận bí tích Thánh Tẩy: Xin Chúa thương dùng phép Thánh Tẩy mà ban ơn tái sinh cho"
                   },
                   {
-                    "sp": "",
-                    "text": "X. Xin Chúa thương xót chúng con."
+                    "text": "những người được tuyển chọn đây.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Xin Chúa thương xót chúng con."
+                    "rubric": "Nếu không có ai lãnh nhận bí tích Thánh Tẩy: Xin Chúa thương thánh hóa nước này, để nhờ đó, nhiều người"
                   },
                   {
-                    "sp": "",
-                    "text": "X. Xin Chúa Kitô thương xót chúng con."
+                    "text": "được tái sinh mà trở thành con cái Chúa Lạy Chúa Giêsu Con Chúa Trời hằng sống",
+                    "sp": "X."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Xin Chúa Kitô thương xót chúng con."
+                    "text": "Xin Chúa nghe lời chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "X. Xin Chúa thương xót chúng con."
+                    "text": "Lạy Chúa Kitô, xin Chúa nghe lời chúng con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Xin Chúa thương xót chúng con."
+                    "text": "Lạy Chúa Kitô, xin Chúa nghe lời chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "X. Thánh Maria Đức Mẹ Chúa Trời."
+                    "text": "Lạy Chúa Kitô, xin Chúa nhận lời chúng con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Cầu cho chúng con."
+                    "text": "Lạy Chúa Kitô, xin Chúa nhận lời chúng con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "X. Thánh Micae tổng lãnh thiên thần."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Các thiên sứ của Chúa. Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Gioan tẩy giả. Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Giuse. Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Phêrô và thánh Phaolô. Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Anrê Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Gioan Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh nữ Maria Mađalêna Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Têphanô Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Inhaxiô Antiôkia Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Lôrenxô Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh nữ Pepêtua và thánh nữ Phêlixita. Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh nữ Annê Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Ghêgôriô Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Âutinh Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Athanaxiô Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Baxiliô Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Máctinô Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Biển Đức Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Phanxicô và thánh Đaminh Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh nữ Têrêxa Hài Đồng Giêsu Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Phanxicô Xaviê Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Gioan Maria Vianê Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh nữ Catarina Xiêna Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh nữ Têrêxa Giêsu Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Các thánh Tử Đạo Việt Nam Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Các thánh Nam Nữ của Thiên Chúa Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Lạy Chúa xin tỏ lòng nhân hậu,"
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Xin Chúa giải thoát chúng con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Xin giải thoát chúng con khỏi mọi sự dữ,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin giải thoát chúng con khỏi vòng tội lỗi, Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin giải thoát chúng con khỏi án chết đời đời,Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì Chúa đã xuống thế làm người, Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì Chúa đã chịu chết và sống lại, Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì Chúa đã đổ ơn Thánh Thần xuống, Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúng con là kẻ tội lỗi, Đ."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Xin Chúa nghe lời chúng con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nếu có những người sắp nhận bí tích Thánh Tẩy:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin Chúa thương dùng phép Thánh Tẩy mà ban ơn tái sinh cho"
-                  },
-                  {
-                    "sp": "",
-                    "text": "những người được tuyển chọn đây. Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nếu không có ai lãnh nhận bí tích Thánh Tẩy:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin Chúa thương thánh hóa nước này, để nhờ đó, nhiều người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được tái sinh mà trở thành con cái Chúa Đ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Lạy Chúa Giêsu Con Chúa Trời hằng sống"
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Xin Chúa nghe lời chúng con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Lạy Chúa Kitô, xin Chúa nghe lời chúng con."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Lạy Chúa Kitô, xin Chúa nghe lời chúng con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Lạy Chúa Kitô, xin Chúa nhận lời chúng con."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Lạy Chúa Kitô, xin Chúa nhận lời chúng con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "LÀM PHÉP NƯỚC"
+                    "rubric": "LÀM PHÉP NƯỚC"
                   }
                 ]
               },
               "baptism_water": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Nếu có người sắp lãnh nhận bí tích Thánh Tẩy, linh mục dang"
+                    "rubric": "Nếu có người sắp lãnh nhận bí tích Thánh Tẩy, linh mục dang tay đọc lời nguyện sau đây:"
                   },
                   {
-                    "sp": "",
-                    "text": "tay đọc lời nguyện sau đây:"
+                    "text": "Lạy Chúa, Chúa dùng quyền năng vô hình, mà làm cho các bí tích trở nên hữu hiệu lạ lùng. Và qua dòng lịch sử cứu độ, Chúa đã bao lần dùng nước do chính Chúa tạo thành, để bày tỏ hiệu năng của phép Thánh Tẩy. Quả vậy, ngay từ lúc vũ trụ khởi nguyên, Thánh Thần Chúa đã bay là là trên mặt nước, để từ đó nước hàm chứa năng lực thánh hóa muôn loài. Chúa lại dùng nước hồng thủy, làm hình ảnh tiên báo Phép Rửa ban ơn tái sinh, vì thời đó cũng như bây giờ, nước biểu thị quyền năng Chúa, vừa tiêu diệt tội lỗi, vừa khai mở một đời sống mới. Chúa đã giải thoát con cháu ông Abraham khỏi vòng nô lệ mà dẫn qua biển đỏ ráo chân, để họ tượng trưng cho một dân tộc mới, là những người được thanh tẩy sau này. Và sau hết, khi đến thời đến buổi, chính Con Một Chúa đã lãnh nhận phép rửa của thánh Gioan trong dòng nước sông Giođan, và được Chúa Thánh Thần ngự xuống trên mình, lúc bị treo trên thập giá, Người đã để cho máu cùng nước từ cạnh sườn chảy ra. Và sau khi sống lại Người đã truyền cho các môn đệ rằng: “Anh em hãy đi giảng dạy và làm phép rửa cho muôn dân, nhân danh Cha, và Con, và Thánh Thần”. Vậy giờ đây, lạy Chúa, xin thương nhìn đến Giáo hội và khơi lên giữa lòng Giáo hội nguồn nước thanh tẩy. Xin cho dòng nước này được thấm nhuần Thần Khí của Đức Kitô, để nhân loại Chúa đã dựng nên theo hình ảnh Chúa, được thanh tẩy khỏi vết nhơ con người cũ, và tái sinh làm người mới nhờ nước và Thánh Thần.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Lạy Chúa, Chúa dùng quyền năng vô hình, mà làm cho các bí"
+                    "rubric": "Linh mục tùy nghi nhúng cây nến phục sinh vào nước một hoặc ba lần và đọc:"
                   },
                   {
-                    "sp": "",
-                    "text": "tích trở nên hữu hiệu lạ lùng. Và qua dòng lịch sử cứu độ, Chúa đã"
+                    "text": "Lạy Chúa, nhờ công ơn Con Một Chúa, xin cho nước này đầy tràn sức mạnh của Chúa Thánh Thần, để những ai được dìm trong nước thánh tẩy này, nghĩa là cùng chết và chịu mai táng với Đức Kitô, thì cũng được sống lại với Người để hưởng phúc trường sinh. Người hằng sống và hiển trị muôn đời.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "bao lần dùng nước do chính Chúa tạo thành, để bày tỏ hiệu năng của"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phép Thánh Tẩy. Quả vậy, ngay từ lúc vũ trụ khởi nguyên, Thánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thần Chúa đã bay là là trên mặt nước, để từ đó nước hàm chứa năng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lực thánh hóa muôn loài."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa lại dùng nước hồng thủy, làm hình ảnh tiên báo Phép Rửa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ban ơn tái sinh, vì thời đó cũng như bây giờ, nước biểu thị quyền"
-                  },
-                  {
-                    "sp": "",
-                    "text": "năng Chúa, vừa tiêu diệt tội lỗi, vừa khai mở một đời sống mới."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa đã giải thoát con cháu ông Abraham khỏi vòng nô lệ mà"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dẫn qua biển đỏ ráo chân, để họ tượng trưng cho một dân tộc mới, là"
-                  },
-                  {
-                    "sp": "",
-                    "text": "những người được thanh tẩy sau này. Và sau hết, khi đến thời đến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "buổi, chính Con Một Chúa đã lãnh nhận phép rửa của thánh Gioan"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trong dòng nước sông Giođan, và được Chúa Thánh Thần ngự"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xuống trên mình, lúc bị treo trên thập giá, Người đã để cho máu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cùng nước từ cạnh sườn chảy ra. Và sau khi sống lại Người đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "truyền cho các môn đệ rằng: “Anh em hãy đi giảng dạy và làm phép"
-                  },
-                  {
-                    "sp": "",
-                    "text": "rửa cho muôn dân, nhân danh Cha, và Con, và Thánh Thần”. Vậy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giờ đây, lạy Chúa, xin thương nhìn đến Giáo hội và khơi lên giữa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lòng Giáo hội nguồn nước thanh tẩy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin cho dòng nước này được thấm nhuần Thần Khí của Đức"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Kitô, để nhân loại Chúa đã dựng nên theo hình ảnh Chúa, được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thanh tẩy khỏi vết nhơ con người cũ, và tái sinh làm người mới nhờ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước và Thánh Thần."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục tùy nghi nhúng cây nến phục sinh vào nước một hoặc ba"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lần và đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Chúa, nhờ công ơn Con Một Chúa, xin cho nước này đầy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tràn sức mạnh của Chúa Thánh Thần, để những ai được dìm trong"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước thánh tẩy này, nghĩa là cùng chết và chịu mai táng với Đức"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Kitô, thì cũng được sống lại với Người để hưởng phúc trường sinh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người hằng sống và hiển trị muôn đời."
-                  },
-                  {
-                    "sp": "",
-                    "text": "43- Trong lúc linh mục lấy nến phục sinh ra khỏi nước thì giáo dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tung hô bằng lời sau đây hoặc lời tương tự:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lời tung hô"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúc tụng Chúa đi, suối mạch nước tràn đầy,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Muôn ngàn đời, hãy ca tụng suy tôn."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nếu không làm phép thánh tẩy trong đêm canh thức, thì tiếp theo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bằng nghi thức lặp lại lời cam kết khi chịu phép rửa. Xem số 46."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Phép Thánh Tẩy và Thêm Sức"
+                    "rubric": "43- Trong lúc linh mục lấy nến phục sinh ra khỏi nước thì giáo dân tung hô bằng lời sau đây hoặc lời tương tự: Lời tung hô Chúc tụng Chúa đi, suối mạch nước tràn đầy, Muôn ngàn đời, hãy ca tụng suy tôn. Nếu không làm phép thánh tẩy trong đêm canh thức, thì tiếp theo bằng nghi thức lặp lại lời cam kết khi chịu phép rửa. Xem số 46. Phép Thánh Tẩy và Thêm Sức"
                   }
                 ]
               },
               "baptism": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<Các người dự tòng, từng người một, tuyên bố từ bỏ ma quỷ,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tuyên xưng đức tin và được thanh tẩy. Trường hợp các dự tòng là người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lớn, thì ngay sau khi được thanh tẩy họ được lãnh bí tích Thêm Sức."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh hóa nước>"
+                    "rubric": "Các người dự tòng, từng người một, tuyên bố từ bỏ ma quỷ, tuyên xưng đức tin và được thanh tẩy. Trường hợp các dự tòng là người lớn, thì ngay sau khi được thanh tẩy họ được lãnh bí tích Thêm Sức. Thánh hóa nước"
                   }
                 ]
               },
               "water_blessing": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Nếu không có ai lãnh nhận bí tích Thánh Tẩy, cũng không phải"
+                    "rubric": "Nếu không có ai lãnh nhận bí tích Thánh Tẩy, cũng không phải làm phép giếng rửa tội, linh mục đọc lời nguyện làm phép nước như sau: Lời chủ tế hướng dẫn"
                   },
                   {
-                    "sp": "",
-                    "text": "làm phép giếng rửa tội, linh mục đọc lời nguyện làm phép nước như sau:"
+                    "text": "Anh (chị) em thân mến, Giờ đây chúng ta cầu xin Chúa thánh hóa nước này, để chúng ta rảy trên mình mà nhớ lại bí tích Thánh Tẩy ta đã lãnh nhận. Cúi xin Chúa đổi mới chúng ta, giúp chúng ta luôn trung thành sống theo ơn Thánh Người đã ban.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Lời chủ tế hướng dẫn"
+                    "rubric": "Linh mục dừng lại, thinh lặng cầu nguyện trong giây lát, rồi dang tay đọc tiếp: Lời nguyện"
                   },
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến,"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, trong đêm cực thánh này, chúng con là dân Chúa, đang họp nhau canh thức cầu nguyện, để tưởng nhớ công ơn Chúa đã sáng tạo chúng con cách lạ lùng, và cứu chuộc còn lạ lùng hơn nữa. Xin Chúa thương nhận lời chúng con và thánh hóa nước này do chính Chúa đã dựng nên, để làm cho ruộng đất phì nhiêu mầu mỡ, cho thân xác con người được sạch sẽ và thoải mái. Và trải qua lịch sự cứu độ, nước thiên nhiên đã trở nên khí cụ của tình thương hải hà: Quả vậy, Chúa dùng nước Biển Đỏ cứu dân riêng khỏi vòng nô lệ, và làm vọt lên giữa sa mạc khô cằn một nguồn nước cho dân giải khát. Các ngôn sứ cũng dùng hình ảnh nước mạch tuôn trào, để tiên báo Chúa sẽ lập giao ước mới với loài người chúng con. Và sau hết, khi Đức Kitô chịu phép rửa tại sông Giođan, Chúa đã thánh hóa nước trong lành, để thanh tẩy con người tội lỗi chúng con, và cho chúng con được tái sinh nên con người mới. Vậy giờ đây, khi chúng con rảy nước thánh trên mình, để nhớ lại bí tích Thánh Tẩy chúng con đã lãnh nhận, xin Chúa cho tất cả chúng con được chia sẻ niềm vui với anh chị em chịu phép Thánh Tẩy trong mùa Vượt Qua này, Chúng con cầu xin…",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Giờ đây chúng ta cầu xin Chúa thánh hóa nước này, để chúng ta"
-                  },
-                  {
-                    "sp": "",
-                    "text": "rảy trên mình mà nhớ lại bí tích Thánh Tẩy ta đã lãnh nhận. Cúi xin"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa đổi mới chúng ta, giúp chúng ta luôn trung thành sống theo ơn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh Người đã ban."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục dừng lại, thinh lặng cầu nguyện trong giây lát, rồi dang"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tay đọc tiếp:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lời nguyện"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, trong đêm cực thánh này,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng con là dân Chúa, đang họp nhau canh thức cầu nguyện, để"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tưởng nhớ công ơn Chúa đã sáng tạo chúng con cách lạ lùng, và cứu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chuộc còn lạ lùng hơn nữa. Xin Chúa thương nhận lời chúng con và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh hóa nước này do chính Chúa đã dựng nên, để làm cho ruộng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất phì nhiêu mầu mỡ, cho thân xác con người được sạch sẽ và thoải"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mái. Và trải qua lịch sự cứu độ, nước thiên nhiên đã trở nên khí cụ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "của tình thương hải hà: Quả vậy, Chúa dùng nước Biển Đỏ cứu dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "riêng khỏi vòng nô lệ, và làm vọt lên giữa sa mạc khô cằn một"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nguồn nước cho dân giải khát. Các ngôn sứ cũng dùng hình ảnh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước mạch tuôn trào, để tiên báo Chúa sẽ lập giao ước mới với loài"
-                  },
-                  {
-                    "sp": "",
-                    "text": "người chúng con. Và sau hết, khi Đức Kitô chịu phép rửa tại sông"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Giođan, Chúa đã thánh hóa nước trong lành, để thanh tẩy con người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tội lỗi chúng con, và cho chúng con được tái sinh nên con người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mới. Vậy giờ đây, khi chúng con rảy nước thánh trên mình, để nhớ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lại bí tích Thánh Tẩy chúng con đã lãnh nhận, xin Chúa cho tất cả"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng con được chia sẻ niềm vui với anh chị em chịu phép Thánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tẩy trong mùa Vượt Qua này, Chúng con cầu xin…"
-                  },
-                  {
-                    "sp": "",
-                    "text": "LẶP LẠI LỜI TUYÊN HỨA"
-                  },
-                  {
-                    "sp": "",
-                    "text": "KHI LÃNH NHẬN BÍ TÍCH THÁNH TẨY"
+                    "rubric": "LẶP LẠI LỜI TUYÊN HỨA KHI LÃNH NHẬN BÍ TÍCH THÁNH TẨY"
                   }
                 ]
               },
               "baptism_renewal": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Làm phép Thánh Tẩy và Thêm sức xong, hoặc nếu không, thì"
+                    "rubric": "Làm phép Thánh Tẩy và Thêm sức xong, hoặc nếu không, thì sau khi thánh hóa nước, mọi người đứng cầm nến cháy trong tay, lặp lại lời tuyên xưng đức tin khi lãnhnhận bí tích Thánh Tẩy. Linh mục nói với giáo dân những lời sau đây hoặc những lời tương tự:"
                   },
                   {
-                    "sp": "",
-                    "text": "sau khi thánh hóa nước, mọi người đứng cầm nến cháy trong tay, lặp lại"
+                    "text": "Anh (chị) em thân mến, Nhờ mầu nhiệm Vượt Qua, chúng ta được mai táng với Đức Kitô trong bí tích Thánh Tẩy, để được cùng Người sống đời sống mới. Bởi thế, giờ đây, thời gian thanh luyện của Mùa Chay đã kết thúc, chúng ta cùng nhau lặp lại những điều đã tuyên hứa khi lãnh nhận bí tích Thánh Tẩy: là từ bỏ Satan với tất cả những gì thuộc về nó, và trung thành phụng sự Chúa trong Hội thánh Công Giáo.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "lời tuyên xưng đức tin khi lãnhnhận bí tích Thánh Tẩy."
+                    "rubric": "Linh mục lựa chọn một trong hai công thức sau đây: CÔNG THỨC I Linh mục Vậy anh (chị) em có từ bỏ Satan không? Cộng đoàn"
                   },
                   {
-                    "sp": "",
-                    "text": "Linh mục nói với giáo dân những lời sau đây hoặc những lời tương"
+                    "text": "Thưa từ bỏ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "tự:"
+                    "rubric": "Linh mục"
                   },
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến,"
+                    "text": "Anh (chị) em có từ bỏ mọi hành vi do Satan xúi giục không? Cộng đoàn",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Nhờ mầu nhiệm Vượt Qua, chúng ta được mai táng với Đức"
+                    "text": "Thưa từ bỏ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Kitô trong bí tích Thánh Tẩy, để được cùng Người sống đời sống"
+                    "rubric": "Linh mục"
                   },
                   {
-                    "sp": "",
-                    "text": "mới. Bởi thế, giờ đây, thời gian thanh luyện của Mùa Chay đã kết"
+                    "text": "Anh (chị) em có từ bỏ những quyến rũ của Satan không? Cộng đoàn",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "thúc, chúng ta cùng nhau lặp lại những điều đã tuyên hứa khi lãnh"
+                    "text": "Thưa từ bỏ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "nhận bí tích Thánh Tẩy: là từ bỏ Satan với tất cả những gì thuộc về"
+                    "rubric": "CÔNG THỨC II Linh mục Để sống cho xứng là con cái tự do của Thiên Chúa, anh (chị) em có từ bỏ tội lỗi không? Cộng đoàn"
                   },
                   {
-                    "sp": "",
-                    "text": "nó, và trung thành phụng sự Chúa trong Hội thánh Công Giáo."
+                    "text": "Thưa từ bỏ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Linh mục lựa chọn một trong hai công thức sau đây:"
+                    "rubric": "Linh mục Để khỏi làm nô lệ tội lỗi, anh (chị) em có từ bỏ những quyến rũ gian tà không? Cộng đoàn"
                   },
                   {
-                    "sp": "",
-                    "text": "CÔNG THỨC I"
+                    "text": "Thưa từ bỏ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Linh mục"
+                    "rubric": "Linh mục"
                   },
                   {
-                    "sp": "",
-                    "text": "Vậy anh (chị) em có từ bỏ Satan không?"
+                    "text": "Anh (chị) em có từ bỏ Satan là đầu mối gây ra mọi tội ác không? Cộng đoàn",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Cộng đoàn"
+                    "text": "Thưa từ bỏ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Thưa từ bỏ."
+                    "rubric": "Hội Đồng Giám Mục có thể thích nghi công thức thứ hai này tùy theo hoàn cảnh địa phương. Linh mục nói tiếp: Linh mục"
                   },
                   {
-                    "sp": "",
-                    "text": "Linh mục"
+                    "text": "Anh (chị) em có tin kính Thiên Chúa là Chúa Cha toàn năng, Đấng tạo thành trời đất không? Cộng đoàn",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em có từ bỏ mọi hành vi do Satan xúi giục không?"
+                    "text": "Thưa tin.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Cộng đoàn"
+                    "rubric": "Linh mục"
                   },
                   {
-                    "sp": "",
-                    "text": "Thưa từ bỏ."
+                    "text": "Anh (chị) em có tin kính Đức Giêsu Kitô là Con Một của Chúa Cha và là Chúa chúng ta, đã được Đức Trinh Nữ Maria sinh ra, đã chịu khổ hình và mai táng, đã từ cõi chết sống lại và đang ngự bên hữu Chúa Cha không? Cộng đoàn",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Linh mục"
+                    "text": "Thưa tin.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em có từ bỏ những quyến rũ của Satan không?"
+                    "rubric": "Linh mục"
                   },
                   {
-                    "sp": "",
-                    "text": "Cộng đoàn"
+                    "text": "Anh (chị) em có tin kính Chúa Thánh Thần, tin kính Giáo hội thánh thiện và công giáo, tin mầu nhiệm hiệp thông trong dân thánh, tin có ơn tha tội, tin xác phàm sẽ sống lại, và tin có sự sống đời đời không? Cộng đoàn",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Thưa từ bỏ."
+                    "text": "Thưa tin.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "CÔNG THỨC II"
+                    "rubric": "Rồi linh mục kết thúc: Thiên Chúa toàn năng là Cha Đức Giêsu Kitô, Chúa chúng ta, đã giải thoát chúng ta khỏi vòng tội lỗi, và cho chúng ta được tái sinh nhờ nước và Thánh Thần. Nguyện xin Người ban ơn gìn giữ chúng ta luôn kết hiệp với Đức Kitô, để được sống muôn đời. Cộng đoàn"
                   },
                   {
-                    "sp": "",
-                    "text": "Linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Để sống cho xứng là con cái tự do của Thiên Chúa, anh (chị)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "em có từ bỏ tội lỗi không?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thưa từ bỏ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Để khỏi làm nô lệ tội lỗi, anh (chị) em có từ bỏ những quyến rũ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "gian tà không?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thưa từ bỏ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em có từ bỏ Satan là đầu mối gây ra mọi tội ác"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thưa từ bỏ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hội Đồng Giám Mục có thể thích nghi công thức thứ hai này tùy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "theo hoàn cảnh địa phương. Linh mục nói tiếp:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em có tin kính Thiên Chúa là Chúa Cha toàn năng,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đấng tạo thành trời đất không?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thưa tin."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em có tin kính Đức Giêsu Kitô là Con Một của Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cha và là Chúa chúng ta, đã được Đức Trinh Nữ Maria sinh ra, đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chịu khổ hình và mai táng, đã từ cõi chết sống lại và đang ngự bên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hữu Chúa Cha không?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thưa tin."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Linh mục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh (chị) em có tin kính Chúa Thánh Thần, tin kính Giáo hội"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh thiện và công giáo, tin mầu nhiệm hiệp thông trong dân thánh,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tin có ơn tha tội, tin xác phàm sẽ sống lại, và tin có sự sống đời đời"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thưa tin."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Rồi linh mục kết thúc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa toàn năng là Cha Đức Giêsu Kitô, Chúa chúng ta,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đã giải thoát chúng ta khỏi vòng tội lỗi, và cho chúng ta được tái"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sinh nhờ nước và Thánh Thần. Nguyện xin Người ban ơn gìn giữ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng ta luôn kết hiệp với Đức Kitô, để được sống muôn đời."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Amen."
+                    "text": "Amen.",
+                    "sp": "CĐ."
                   }
                 ]
               },
               "sprinkling": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Linh mục rảy nước thánh trên giáo dân, trong lúc đó mọi người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hát:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tôi đã thấy dòng nước"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Từ cửa đông đền thờ tuôn ra. Hallêluia."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Và tất cả những người được nước ấy thanh tẩy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đều hưởng ơn cứu độ,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Và cất tiếng reo mừng: Hallêluia, Hallêluia."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoặc một bài thánh ca khác diễn tả được đặc tính của bí tích Thánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tẩy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "48- Trong lúc đó, những người tân tòng được đưa về chỗ giữa cộng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đoàn các tín hữu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nếu không làm phép nước thánh tẩy ở giếng rửa tội, thì những"
-                  },
-                  {
-                    "sp": "",
-                    "text": "người giúp lễ khiêng lu nước đến đó."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nếu không làm phép giếng rửa tội, thì nước thánh được đưa đến nơi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xứng hợp."
-                  },
-                  {
-                    "sp": "",
-                    "text": "49- Sau khi rảy nước thánh, linh mục về ghế chủ tọa, không đọc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "kinh Tin .Kính. Đọc lời nguyện giáo dân. Đây là lần đầu tiên những"
-                  },
-                  {
-                    "sp": "",
-                    "text": "người tân tòng tham dự lời nguyện này, nên dành phần tích cực cho họ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "PHẦN THỨ TƯ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "PHỤNG VỤ THÁNH THỂ"
+                    "rubric": "Linh mục rảy nước thánh trên giáo dân, trong lúc đó mọi người hát: Tôi đã thấy dòng nước Từ cửa đông đền thờ tuôn ra. Hallêluia. Và tất cả những người được nước ấy thanh tẩy Đều hưởng ơn cứu độ, Và cất tiếng reo mừng: Hallêluia, Hallêluia. Hoặc một bài thánh ca khác diễn tả được đặc tính của bí tích Thánh Tẩy. 48- Trong lúc đó, những người tân tòng được đưa về chỗ giữa cộng đoàn các tín hữu. Nếu không làm phép nước thánh tẩy ở giếng rửa tội, thì những người giúp lễ khiêng lu nước đến đó. Nếu không làm phép giếng rửa tội, thì nước thánh được đưa đến nơi xứng hợp. 49- Sau khi rảy nước thánh, linh mục về ghế chủ tọa, không đọc kinh Tin .Kính. Đọc lời nguyện giáo dân. Đây là lần đầu tiên những người tân tòng tham dự lời nguyện này, nên dành phần tích cực cho họ. PHẦN THỨ TƯ PHỤNG VỤ THÁNH THỂ"
                   }
                 ]
               },
               "vigil_eucharist_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<Linh mục tiến tới bàn thờ và bắt đầu phần phụng vụ Thánh Thể"
-                  },
-                  {
-                    "sp": "",
-                    "text": "như thường lệ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "51- Nên để cho các tân tòng dâng bánh rượu.>"
+                    "rubric": "Linh mục tiến tới bàn thờ và bắt đầu phần phụng vụ Thánh Thể như thường lệ. 51- Nên để cho các tân tòng dâng bánh rượu."
                   }
                 ]
               },
@@ -116079,12 +114577,12 @@ globalThis.countrySpecialLiturgies = {
               "vigil_dismissal": {
                 "lines": [
                   {
-                    "sp": "╋",
-                    "text": "Lễ đã xong, chúc anh (chị) em ra về bình an. Hallêluia. Hallêluia."
+                    "text": "Lễ đã xong, chúc anh (chị) em ra về bình an. Hallêluia. Hallêluia.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Tạ ơn Chúa. Hallêluia. Hallêluia."
+                    "text": "Tạ ơn Chúa. Hallêluia. Hallêluia.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -116103,44 +114601,16 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, mọi công trình của Chúa"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thật kỳ diệu phi thường. Xin làm cho chúng con là những kẻ được"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa cứu chuộc luôn luôn hiểu biết rằng: công trình tạo thành vũ trụ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thuở ban đầu tuy đã kỳ diệu, nhưng công trình cứu độ của Đức Kitô, Đấng hy sinh làm Chiên lễ Vượt Qua của chúng con trong thời"
-                      },
-                      {
-                        "sp": "",
-                        "text": "sau hết, còn kỳ diệu hơn nữa. Chúng con cầu xi..."
+                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, mọi công trình của Chúa thật kỳ diệu phi thường. Xin làm cho chúng con là những kẻ được Chúa cứu chuộc luôn luôn hiểu biết rằng: công trình tạo thành vũ trụ thuở ban đầu tuy đã kỳ diệu, nhưng công trình cứu độ của Đức Kitô, Đấng hy sinh làm Chiên lễ Vượt Qua của chúng con trong thời sau hết, còn kỳ diệu hơn nữa. Chúng con cầu xi...",
+                        "sp": "CT."
                       }
                     ]
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, Chúa đã sáng tạo con người cách lạ lùng, và cứu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "chuộc còn lạ lùng hơn nữa. Xin ban cho chúng con một tinh thần"
-                      },
-                      {
-                        "sp": "",
-                        "text": "khôn ngoan sáng suốt, biết chống trả tội lỗi hằng quyến rũ chúng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "con, để mai sau được hưởng phúc muôn đời. Chúng con cầu xin…"
+                        "text": "Lạy Chúa, Chúa đã sáng tạo con người cách lạ lùng, và cứu chuộc còn lạ lùng hơn nữa. Xin ban cho chúng con một tinh thần khôn ngoan sáng suốt, biết chống trả tội lỗi hằng quyến rũ chúng con, để mai sau được hưởng phúc muôn đời. Chúng con cầu xin…",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -116149,404 +114619,58 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_1": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Sáng Thế."
+                    "text": "Bài trích sách Sáng Thế. Từ nguyên thủy Thiên Chúa đã tạo thành trời đất. Đất còn hoang vu trống rỗng, tối tăm bao trùm vực thẳm, và thần trí Thiên Chúa bay sà trên mặt nước. Thiên Chúa phán: “Hãy có ánh sáng”. Và có ánh sáng. Thiên Chúa thấy ánh sáng tốt đẹp, Người phân rẽ ánh sáng khỏi tối tăm. Thiên Chúa gọi ánh sáng là ngày, tối tăm là đêm. Qua một buổi chiều và một buổi sáng: đó là ngày thứ nhất. Thiên Chúa phán: “Hãy có một vòm trời ở giữa nước, phân rẽ nước với nước”; và Thiên Chúa làm nên vòm trời, và phân rẽ nước phía dưới vòm trời với nước phía trên vòm trời. Và xảy ra như vậy. Thiên Chúa gọi vòm đó là trời. Qua một buổi chiều và một buổi sáng: đó là ngày thứ hai. Thiên Chúa phán: “Nước dưới trời hãy tụ lại một nơi, để lộ ra chỗ khô cạn. Và đã xảy ra như vậy. Thiên Chúa gọi chỗ khô cạn là đất, và Người gọi khối nước là biển. Thiên Chúa thấy tốt đẹp. Và Thiên Chúa phán: “Đất hãy trổ sinh thảo mộc xanh tươi mang hạt giống; và cây ăn trái phát sinh trái theo giống nó, và trong trái có hạt giống, trên mặt đất. Và đã xảy ra như vậy. Tức thì đất sản xuất thảo mộc xanh tươi mang hạt theo giống nó, và cây phát sinh trái trong có hạt tùy theo loại nó. Và Thiên Chúa thấy nó tốt đẹp. Qua một buổi chiều và một buổi sáng: đó là ngày thứ ba. Thiên Chúa còn phán: “Hãy có những vật sáng trên vòm trời và hãy phân chia ngày và đêm, và trở thành dấu chỉ thời gian, ngày và năm tháng, để soi sáng trên vòm trời và giãi sáng mặt đất”. Và đã xảy ra như vậy. Thiên Chúa đã làm nên hai vầng sáng lớn: Vầng sáng lớn hơn làm chủ ban ngày, và vầng sáng nhỏ hơn làm chủ ban đêm; Và Ngài cũng làm nên các tinh tú. Thiên Chúa đặt chúng trên vòm trời để soi sáng trên mặt đất, và làm chủ ngày đêm, và phân chia ánh sáng với tối tăm. Thiên Chúa thấy nó tốt đẹp. Qua một buổi chiều và một buổi sáng: đó là ngày thứ tư. Thiên Chúa lại phán: “Nước hãy sản xuất những sinh vật bò sát, và loài chim bay trên mặt đất, dưới vòm trời. Vậy Thiên Chúa tạo thành những cá lớn, mọi sinh vật sống động mà nước sản xuất theo loại chúng, và mọi chim bay tùy theo giống. Thiên Chúa thấy chúng tốt đẹp. Thiên Chúa chúc phúc cho chúng rằng: “Hãy sinh sôi nẩy nở cho nhiều, đầy nước biển; loài chim hãy sinh cho nhiều trên mặt đất”. Qua một buổi chiều và một buổi sáng: đó là ngày thứ năm. Thiên Chúa lại phán: “Đất hãy sản xuất các sinh vật tùy theo giống: gia súc, loài bò sát và dã thú dưới đất tùy theo loại”. Và đã xảy ra như vậy. Thiên Chúa đã dựng nên dã thú dưới đất tùy theo loại, gia súc, và mọi loài bò sát dưới đất tùy theo giống. Thiên Chúa thấy chúng tốt đẹp. Và Thiên Chúa phán: “Chúng ta hãy dựng nên con người theo hình ảnh giống như Ta, để chúng làm chủ cá biển, chim trời, dã thú khắp mặt đất và tất cả loài bò sát di chuyển trên mặt đất”. Vậy Thiên Chúa đã tạo thành con người giống hình ảnh Chúa, Chúa tạo thành con người giống hình ảnh Thiên Chúa. Người tạo thành họ có nam có nữ. Thiên Chúa chúc phúc cho họ và phán rằng: “Hãy sinh sôi nẩy nở cho nhiều, đầy mặt đất, và thống trị nó; hãy bá chủ cá biển, chim trời và toàn thể sinh vật di chuyển trên mặt đất”. Thiên Chúa phán: “Đây Ta ban cho các ngươi làm thức ăn mọi thứ cây cỏ mang hạt giống trên mặt đất và toàn thể thảo mộc sinh trái có hạt tùy theo giống. Ta ban mọi thứ cây cỏ xanh tươi làm thức ăn cho mọi loài dã thú trên mặt đất, chim trời và toàn thể sinh vật di chuyển trên mặt đất”. Và đã xảy ra như vậy. Thiên Chúa thấy mọi sự Người đã làm rất tốt đẹp. Qua một buổi chiều và một buổi sáng: đó là ngày thứ sáu. Thế là trời đất và mọi trang điểm của chúng đã hoàn thành. Ngày thứ bảy Thiên Chúa đã hoàn tất công việc Người đã làm. Và",
+                    "sp": "N."
                   },
                   {
-                    "sp": "",
-                    "text": "Từ nguyên thủy Thiên Chúa đã tạo thành trời đất. Đất còn"
+                    "rubric": "sau khi hoàn tất công việc Người đã làm, thì ngày thứ bảy Người nghỉ ngơi. Đó là lời Chúa. Hoặc (Bài ngắn) St 1, 1. 26-31a"
                   },
                   {
-                    "sp": "",
-                    "text": "hoang vu trống rỗng, tối tăm bao trùm vực thẳm, và thần trí Thiên"
+                    "text": "Bài trích sách Sáng Thế. Từ nguyên thủy Thiên Chúa đã tạo thành trời đất. Và Thiên Chúa phán: “Chúng ta hãy dựng nên con người theo hình ảnh giống như Ta, để chúng làm chủ cá biển, chim trời, dã thú khắp mặt đất và",
+                    "sp": "N."
                   },
                   {
-                    "sp": "",
-                    "text": "Chúa bay sà trên mặt nước."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa phán: “Hãy có ánh sáng”. Và có ánh sáng. Thiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa thấy ánh sáng tốt đẹp, Người phân rẽ ánh sáng khỏi tối tăm."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa gọi ánh sáng là ngày, tối tăm là đêm. Qua một buổi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chiều và một buổi sáng: đó là ngày thứ nhất."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa phán: “Hãy có một vòm trời ở giữa nước, phân rẽ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước với nước”; và Thiên Chúa làm nên vòm trời, và phân rẽ nước"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phía dưới vòm trời với nước phía trên vòm trời. Và xảy ra như vậy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa gọi vòm đó là trời. Qua một buổi chiều và một buổi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sáng: đó là ngày thứ hai."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa phán: “Nước dưới trời hãy tụ lại một nơi, để lộ ra"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chỗ khô cạn. Và đã xảy ra như vậy. Thiên Chúa gọi chỗ khô cạn là"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất, và Người gọi khối nước là biển. Thiên Chúa thấy tốt đẹp. Và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa phán: “Đất hãy trổ sinh thảo mộc xanh tươi mang hạt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống; và cây ăn trái phát sinh trái theo giống nó, và trong trái có hạt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống, trên mặt đất. Và đã xảy ra như vậy. Tức thì đất sản xuất thảo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mộc xanh tươi mang hạt theo giống nó, và cây phát sinh trái trong"
-                  },
-                  {
-                    "sp": "",
-                    "text": "có hạt tùy theo loại nó. Và Thiên Chúa thấy nó tốt đẹp. Qua một"
-                  },
-                  {
-                    "sp": "",
-                    "text": "buổi chiều và một buổi sáng: đó là ngày thứ ba."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa còn phán: “Hãy có những vật sáng trên vòm trời và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hãy phân chia ngày và đêm, và trở thành dấu chỉ thời gian, ngày và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "năm tháng, để soi sáng trên vòm trời và giãi sáng mặt đất”. Và đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xảy ra như vậy. Thiên Chúa đã làm nên hai vầng sáng lớn: Vầng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sáng lớn hơn làm chủ ban ngày, và vầng sáng nhỏ hơn làm chủ ban"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đêm; Và Ngài cũng làm nên các tinh tú. Thiên Chúa đặt chúng trên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vòm trời để soi sáng trên mặt đất, và làm chủ ngày đêm, và phân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chia ánh sáng với tối tăm. Thiên Chúa thấy nó tốt đẹp. Qua một"
-                  },
-                  {
-                    "sp": "",
-                    "text": "buổi chiều và một buổi sáng: đó là ngày thứ tư."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa lại phán: “Nước hãy sản xuất những sinh vật bò sát,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và loài chim bay trên mặt đất, dưới vòm trời. Vậy Thiên Chúa tạo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thành những cá lớn, mọi sinh vật sống động mà nước sản xuất theo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "loại chúng, và mọi chim bay tùy theo giống. Thiên Chúa thấy chúng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tốt đẹp. Thiên Chúa chúc phúc cho chúng rằng: “Hãy sinh sôi nẩy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nở cho nhiều, đầy nước biển; loài chim hãy sinh cho nhiều trên mặt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất”. Qua một buổi chiều và một buổi sáng: đó là ngày thứ năm."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa lại phán: “Đất hãy sản xuất các sinh vật tùy theo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống: gia súc, loài bò sát và dã thú dưới đất tùy theo loại”. Và đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xảy ra như vậy. Thiên Chúa đã dựng nên dã thú dưới đất tùy theo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "loại, gia súc, và mọi loài bò sát dưới đất tùy theo giống. Thiên Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thấy chúng tốt đẹp. Và Thiên Chúa phán: “Chúng ta hãy dựng nên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "con người theo hình ảnh giống như Ta, để chúng làm chủ cá biển,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chim trời, dã thú khắp mặt đất và tất cả loài bò sát di chuyển trên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mặt đất”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vậy Thiên Chúa đã tạo thành con người giống hình ảnh Chúa,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa tạo thành con người giống hình ảnh Thiên Chúa. Người tạo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thành họ có nam có nữ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa chúc phúc cho họ và phán rằng: “Hãy sinh sôi nẩy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nở cho nhiều, đầy mặt đất, và thống trị nó; hãy bá chủ cá biển, chim"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trời và toàn thể sinh vật di chuyển trên mặt đất”. Thiên Chúa phán:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Đây Ta ban cho các ngươi làm thức ăn mọi thứ cây cỏ mang hạt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống trên mặt đất và toàn thể thảo mộc sinh trái có hạt tùy theo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống. Ta ban mọi thứ cây cỏ xanh tươi làm thức ăn cho mọi loài dã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thú trên mặt đất, chim trời và toàn thể sinh vật di chuyển trên mặt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất”. Và đã xảy ra như vậy. Thiên Chúa thấy mọi sự Người đã làm"
-                  },
-                  {
-                    "sp": "",
-                    "text": "rất tốt đẹp. Qua một buổi chiều và một buổi sáng: đó là ngày thứ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sáu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thế là trời đất và mọi trang điểm của chúng đã hoàn thành."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ngày thứ bảy Thiên Chúa đã hoàn tất công việc Người đã làm. Và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sau khi hoàn tất công việc Người đã làm, thì ngày thứ bảy Người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nghỉ ngơi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoặc (Bài ngắn) St 1, 1. 26-31a"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Bài trích sách Sáng Thế."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Từ nguyên thủy Thiên Chúa đã tạo thành trời đất. Và Thiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa phán: “Chúng ta hãy dựng nên con người theo hình ảnh giống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "như Ta, để chúng làm chủ cá biển, chim trời, dã thú khắp mặt đất và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tất cả loài bò sát di chuyển trên mặt đất”. Vậy Thiên Chúa đã tạo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thành con người giống hình ảnh Chúa, Chúa tạo thành con người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống hình ảnh Thiên Chúa. Người tạo thành họ có nam có nữ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa chúc phúc cho họ và phán rằng: “Hãy sinh sôi nẩy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nở cho nhiều, đầy mặt đất, và thống trị nó; hãy bá chủ cá biển, chim"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trời và toàn thể sinh vật di chuyển trên mặt đất”. Thiên Chúa phán:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Đây Ta ban cho các ngươi làm thức ăn mọi thứ cây cỏ mang hạt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống trên mặt đất và toàn thể thảo mộc sinh trái có hạt tùy theo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giống. Ta ban mọi thứ cây cỏ xanh tươi làm thức ăn cho mọi loài dã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thú trên mặt đất, chim trời và toàn thể sinh vật di chuyển trên mặt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất”. Và đã xảy ra như vậy. Thiên Chúa thấy mọi sự Người đã làm"
-                  },
-                  {
-                    "sp": "",
-                    "text": "rất tốt đẹp."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "rubric": "tất cả loài bò sát di chuyển trên mặt đất”. Vậy Thiên Chúa đã tạo thành con người giống hình ảnh Chúa, Chúa tạo thành con người giống hình ảnh Thiên Chúa. Người tạo thành họ có nam có nữ. Thiên Chúa chúc phúc cho họ và phán rằng: “Hãy sinh sôi nẩy nở cho nhiều, đầy mặt đất, và thống trị nó; hãy bá chủ cá biển, chim trời và toàn thể sinh vật di chuyển trên mặt đất”. Thiên Chúa phán: “Đây Ta ban cho các ngươi làm thức ăn mọi thứ cây cỏ mang hạt giống trên mặt đất và toàn thể thảo mộc sinh trái có hạt tùy theo giống. Ta ban mọi thứ cây cỏ xanh tươi làm thức ăn cho mọi loài dã thú trên mặt đất, chim trời và toàn thể sinh vật di chuyển trên mặt đất”. Và đã xảy ra như vậy. Thiên Chúa thấy mọi sự Người đã làm rất tốt đẹp. Đó là lời Chúa."
                   }
                 ]
               },
               "vigil_psalm_1": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Địa cầu đầy ân sủng Chúa."
+                    "text": "Địa cầu đầy ân sủng Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Vì lời Chúa là lời chân chính, bao việc Chúa làm đều đáng"
+                    "text": "1) Vì lời Chúa là lời chân chính, bao việc Chúa làm đều đáng cậy tin. Chúa yêu chuộng điều công minh chính trực, địa cầu đầy ân sủng Chúa.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "cậy tin. Chúa yêu chuộng điều công minh chính trực, địa cầu đầy ân"
+                    "text": "Địa cầu đầy ân sủng Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "sủng Chúa."
+                    "text": "2) Do lời Chúa mà trời xanh được tạo thành, và mọi cơ binh chúng đều do hơi thở miệng Người. Chúa thu nước biển lại như để trong bầu, Người đặt những ngọn sóng trong kho chứa đựng.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Địa cầu đầy ân sủng Chúa."
+                    "text": "Địa cầu đầy ân sủng Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Do lời Chúa mà trời xanh được tạo thành, và mọi cơ binh"
+                    "text": "3) Phúc thay quốc gia mà Chúa là chúa tể, dân tộc mà Chúa chọn làm cơ nghiệp riêng mình. Tự trời cao Chúa nhìn xuống, Người xem thấy hết thảy con cái loài người.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "chúng đều do hơi thở miệng Người. Chúa thu nước biển lại như để"
+                    "text": "Địa cầu đầy ân sủng Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "trong bầu, Người đặt những ngọn sóng trong kho chứa đựng."
+                    "text": "4) Linh hồn chúng tôi mong đợi Chúa, chính Người là Đấng phù trợ và che chở chúng tôi. Lạy Chúa, xin đổ lòng từ bi xuống trên chúng con, theo như chúng con tin cậy ở nơi Ngài.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Địa cầu đầy ân sủng Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Phúc thay quốc gia mà Chúa là chúa tể, dân tộc mà Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chọn làm cơ nghiệp riêng mình. Tự trời cao Chúa nhìn xuống,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người xem thấy hết thảy con cái loài người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Địa cầu đầy ân sủng Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "4) Linh hồn chúng tôi mong đợi Chúa, chính Người là Đấng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phù trợ và che chở chúng tôi. Lạy Chúa, xin đổ lòng từ bi xuống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trên chúng con, theo như chúng con tin cậy ở nơi Ngài."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Địa cầu đầy ân sủng Chúa."
+                    "text": "Địa cầu đầy ân sủng Chúa.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -116561,28 +114685,8 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa là Cha nhân từ của các tín hữu, Chúa đã hứa cho ông"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Áp-ra-ham trở thành cha chung các dân tội; và nhờ mầu nhiệm Vượt"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Qua, Chúa đã thực hiện lời hứa ấy và ban cho muôn dân khắp địa"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cầu, hồng ân được làm nghĩa tử khiến đoàn con cái Chúa ngày càng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thêm đông. Xin cho những ai đã thuộc về gia đình Chúa, biết ăn ở"
-                      },
-                      {
-                        "sp": "",
-                        "text": "xứng đáng với ân huệ Chúa ban. Chúa con cầu xin..."
+                        "text": "Lạy Chúa là Cha nhân từ của các tín hữu, Chúa đã hứa cho ông Áp-ra-ham trở thành cha chung các dân tội; và nhờ mầu nhiệm Vượt Qua, Chúa đã thực hiện lời hứa ấy và ban cho muôn dân khắp địa cầu, hồng ân được làm nghĩa tử khiến đoàn con cái Chúa ngày càng thêm đông. Xin cho những ai đã thuộc về gia đình Chúa, biết ăn ở xứng đáng với ân huệ Chúa ban. Chúa con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -116591,308 +114695,50 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_2": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Sáng Thế."
+                    "text": "Bài trích sách Sáng Thế. Trong những ngày ấy, Chúa thử Abraham và nói với ông rằng: “Abraham, Abraham”. Ông đáp lại: “Dạ, con đây”. Chúa nói: “Ngươi hãy đem Isaac, đứa con một yêu dấu của ngươi, và đi đến đất Moria, ở đó ngươi sẽ dâng nó làm của lễ toàn thiêu trên núi Ta sẽ chỉ cho ngươi”. Sáng ngày, Abraham dậy sớm, thắng lừa và đem theo hai đứa đầy tớ của ông, cùng với Isaác con ông, ông chẻ củi dùng vào lễ thượng hiến, đoạn ông lên đường đến chỗ Thiên Chúa đã tỏ cho ông. Ngày thứ ba, Abraham ngước mắt lên và thấy chỗ ấy từ đàng xa. Abraham mới bảo tôi tớ: “Các anh ở lại đây với con lừa; còn ta và đứa trẻ, chúng ta phải đi tới đằng kia mà thờ lạy, rồi chúng tôi sẽ về lại với các anh”. Abraham lấy củi lễ thượng hiến và cho Isaác vác đi, còn ông thì cầm lấy lửa và dao phay, rồi cả hai cùng bước. Isaac cất tiếng nói với Abraham cha cậu rằng: “Cha!” Ông đáp: “Ta đây, con!” Cậu hỏi: “Này đây đã có lửa và củi, vậy hy sinh thượng hiến ở đâu?” Abraham đáp: “Chính Thiên Chúa sẽ tự liệu ra hy sinh thượng hiến, con ạ”. Rồi cả hai cùng bước.",
+                    "sp": "N."
                   },
                   {
-                    "sp": "",
-                    "text": "Trong những ngày ấy, Chúa thử Abraham và nói với ông rằng:"
+                    "rubric": "Khi hai người đến nơi Chúa đã chỉ, Abraham làm một bàn thờ và chất củi lên, rồi trói Isaac lại, đặt lên bàn thờ trên đống củi. Abraham giơ tay lấy dao để sát tế con mình. Bấy giờ thiên thần Chúa từ trời gọi ông rằng: “Abraham! Abraham!” Ông thưa lại: “Dạ, con đây”. Người nói: “Đừng giết con trẻ và đừng động đến nó, vì giờ đây, Ta biết ngươi kính sợ Chúa, đến nỗi không từ chối dâng đứa con duy nhất cho Ta”. Abraham ngước mắt lên, thấy sau lưng mình có con cừu đực đang mắc sừng trong bụi cây, Abraham liền bắt nó và tế lễ thay cho con mình. Chỗ ấy Abraham gọi tên là “Thiên Chúa sẽ liệu”, khiến ngày nay người ta còn nói: “Trên núi Thiên Chúa sẽ liệu”. Thiên thần Chúa gọi Abraham lần thứ hai và nói rằng: “Chúa phán: Ta thề rằng: vì ngươi đã làm điều đó, ngươi không từ chối dâng đứa con duy nhất của ngươi cho Ta, nên Ta chúc phúc cho ngươi. Ta cho ngươi sinh sản con cái đông đúc như sao trên trời, như cát bãi biển; miêu duệ ngươi sẽ chiếm cửa thành quân địch, và mọi dân tộc trên mặt đất sẽ được chúc phúc nơi miêu duệ ngươi, vì ngươi đã vâng lời Ta”. Đó là lời Chúa. Hoặc (bài ngắn) St 22, 1-2. 9a. 10-13. 15-18"
                   },
                   {
-                    "sp": "",
-                    "text": "“Abraham, Abraham”. Ông đáp lại: “Dạ, con đây”. Chúa nói:"
+                    "text": "Bài trích sách Sáng Thế. Trong những ngày ấy, Chúa thử Abraham và nói với ông rằng: “Abraham, Abraham”. Ông đáp lại: “Dạ, con đây”. Chúa nói: “Ngươi hãy đem Isaac, đứa con một yêu dấu của ngươi, và đi đến đất Moria, ở đó ngươi sẽ dâng nó làm của lễ toàn thiêu trên núi Ta sẽ chỉ cho ngươi”.",
+                    "sp": "N."
                   },
                   {
-                    "sp": "",
-                    "text": "“Ngươi hãy đem Isaac, đứa con một yêu dấu của ngươi, và đi đến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất Moria, ở đó ngươi sẽ dâng nó làm của lễ toàn thiêu trên núi Ta"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sẽ chỉ cho ngươi”. Sáng ngày, Abraham dậy sớm, thắng lừa và đem"
-                  },
-                  {
-                    "sp": "",
-                    "text": "theo hai đứa đầy tớ của ông, cùng với Isaác con ông, ông chẻ củi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dùng vào lễ thượng hiến, đoạn ông lên đường đến chỗ Thiên Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đã tỏ cho ông."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ngày thứ ba, Abraham ngước mắt lên và thấy chỗ ấy từ đàng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xa. Abraham mới bảo tôi tớ: “Các anh ở lại đây với con lừa; còn ta"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và đứa trẻ, chúng ta phải đi tới đằng kia mà thờ lạy, rồi chúng tôi sẽ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "về lại với các anh”. Abraham lấy củi lễ thượng hiến và cho Isaác"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vác đi, còn ông thì cầm lấy lửa và dao phay, rồi cả hai cùng bước."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Isaac cất tiếng nói với Abraham cha cậu rằng: “Cha!” Ông đáp: “Ta"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đây, con!” Cậu hỏi: “Này đây đã có lửa và củi, vậy hy sinh thượng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hiến ở đâu?” Abraham đáp: “Chính Thiên Chúa sẽ tự liệu ra hy sinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thượng hiến, con ạ”. Rồi cả hai cùng bước."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Khi hai người đến nơi Chúa đã chỉ, Abraham làm một bàn thờ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và chất củi lên, rồi trói Isaac lại, đặt lên bàn thờ trên đống củi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Abraham giơ tay lấy dao để sát tế con mình. Bấy giờ thiên thần"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa từ trời gọi ông rằng: “Abraham! Abraham!” Ông thưa lại:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Dạ, con đây”. Người nói: “Đừng giết con trẻ và đừng động đến nó,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vì giờ đây, Ta biết ngươi kính sợ Chúa, đến nỗi không từ chối dâng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đứa con duy nhất cho Ta”. Abraham ngước mắt lên, thấy sau lưng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mình có con cừu đực đang mắc sừng trong bụi cây, Abraham liền"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bắt nó và tế lễ thay cho con mình. Chỗ ấy Abraham gọi tên là"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Thiên Chúa sẽ liệu”, khiến ngày nay người ta còn nói: “Trên núi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa sẽ liệu”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên thần Chúa gọi Abraham lần thứ hai và nói rằng: “Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phán: Ta thề rằng: vì ngươi đã làm điều đó, ngươi không từ chối"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dâng đứa con duy nhất của ngươi cho Ta, nên Ta chúc phúc cho"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi. Ta cho ngươi sinh sản con cái đông đúc như sao trên trời,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "như cát bãi biển; miêu duệ ngươi sẽ chiếm cửa thành quân địch, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mọi dân tộc trên mặt đất sẽ được chúc phúc nơi miêu duệ ngươi, vì"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi đã vâng lời Ta”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoặc (bài ngắn) St 22, 1-2. 9a. 10-13. 15-18"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Bài trích sách Sáng Thế."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Trong những ngày ấy, Chúa thử Abraham và nói với ông rằng:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Abraham, Abraham”. Ông đáp lại: “Dạ, con đây”. Chúa nói:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Ngươi hãy đem Isaac, đứa con một yêu dấu của ngươi, và đi đến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất Moria, ở đó ngươi sẽ dâng nó làm của lễ toàn thiêu trên núi Ta"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sẽ chỉ cho ngươi”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Khi hai người đến nơi Chúa đã chỉ, Abraham làm một bàn thờ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và chất củi lên, rồi trói Isaac lại, đặt lên bàn thờ trên đống củi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Abraham giơ tay lấy dao để sát tế con mình. Bấy giờ thiên thần"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa từ trời gọi ông rằng: “Abraham! Abraham!” Ông thưa lại:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Dạ, con đây”. Người nói: “Đừng giết con trẻ và đừng động đến nó,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vì giờ đây, Ta biết ngươi kính sợ Chúa, đến nỗi không từ chối dâng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đứa con duy nhất cho Ta”. Abraham ngước mắt lên, thấy sau lưng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mình có con cừu đực đang mắc sừng trong bụi cây, Abraham liền"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bắt nó và tế lễ thay cho con mình."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên thần Chúa gọi Abraham lần thứ hai và nói rằng: “Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phán: Ta thề rằng: vì ngươi đã làm điều đó, ngươi không từ chối"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dâng đứa con duy nhất của ngươi cho Ta, nên Ta chúc phúc cho"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi. Ta cho ngươi sinh sản con cái đông đúc như sao trên trời,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "như cát bãi biển; miêu duệ ngươi sẽ chiếm cửa thành quân địch, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mọi dân tộc trên mặt đất sẽ được chúc phúc nơi miêu duệ ngươi, vì"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi đã vâng lời Ta”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "rubric": "Khi hai người đến nơi Chúa đã chỉ, Abraham làm một bàn thờ và chất củi lên, rồi trói Isaac lại, đặt lên bàn thờ trên đống củi. Abraham giơ tay lấy dao để sát tế con mình. Bấy giờ thiên thần Chúa từ trời gọi ông rằng: “Abraham! Abraham!” Ông thưa lại: “Dạ, con đây”. Người nói: “Đừng giết con trẻ và đừng động đến nó, vì giờ đây, Ta biết ngươi kính sợ Chúa, đến nỗi không từ chối dâng đứa con duy nhất cho Ta”. Abraham ngước mắt lên, thấy sau lưng mình có con cừu đực đang mắc sừng trong bụi cây, Abraham liền bắt nó và tế lễ thay cho con mình. Thiên thần Chúa gọi Abraham lần thứ hai và nói rằng: “Chúa phán: Ta thề rằng: vì ngươi đã làm điều đó, ngươi không từ chối dâng đứa con duy nhất của ngươi cho Ta, nên Ta chúc phúc cho ngươi. Ta cho ngươi sinh sản con cái đông đúc như sao trên trời, như cát bãi biển; miêu duệ ngươi sẽ chiếm cửa thành quân địch, và mọi dân tộc trên mặt đất sẽ được chúc phúc nơi miêu duệ ngươi, vì ngươi đã vâng lời Ta”. Đó là lời Chúa."
                   }
                 ]
               },
               "vigil_psalm_2": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa."
+                    "text": "Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Chúa là phần gia nghiệp và phần chén của con, chính Ngài"
+                    "text": "1) Chúa là phần gia nghiệp và phần chén của con, chính Ngài nắm giữ vận mạng của con. Con luôn luôn đặt Chúa ở trước mặt con, vì Chúa ngự bên hữu con, con sẽ không nao núng.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "nắm giữ vận mạng của con. Con luôn luôn đặt Chúa ở trước mặt"
+                    "text": "Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "con, vì Chúa ngự bên hữu con, con sẽ không nao núng."
+                    "text": "2) Bởi thế, lòng con vui mừng và linh hồn con hoan hỉ, ngay cả đến xác thịt của con cũng nằm nghỉ an toàn, vì Chúa chẳng bỏ rơi linh hồn con trong âm phủ, cũng không để thánh nhân của Ngài thấy điều hư nát.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa."
+                    "text": "Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Bởi thế, lòng con vui mừng và linh hồn con hoan hỉ, ngay cả"
+                    "text": "3) Chúa sẽ chỉ cho con biết đường lối trường sinh, sự no đầy hoan hỉ ở trước thiên nhan, sự khoái lạc bên tay hữu Chúa tới muôn muôn đời!",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "đến xác thịt của con cũng nằm nghỉ an toàn, vì Chúa chẳng bỏ rơi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "linh hồn con trong âm phủ, cũng không để thánh nhân của Ngài thấy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "điều hư nát."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Chúa sẽ chỉ cho con biết đường lối trường sinh, sự no đầy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hoan hỉ ở trước thiên nhan, sự khoái lạc bên tay hữu Chúa tới muôn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "muôn đời!"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa."
+                    "text": "Lạy Chúa, xin bảo toàn con, vì con tìm nương tựa Chúa.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -116911,64 +114757,16 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, những công trình kỳ diệu Chúa đã làm thuở trước,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nay còn như xuất hiện rỡ ràng. Quả vậy, xưa Chúa đã ra oai thần lực"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cứu một mình dân Ít-ra-en khỏi bàn tay Pha-ra-ôn áp bức. Ngày nay"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa cũng dùng nước thánh tẩy, để cứu độ muôn dân khắp hoàn"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cầu. Xin cho mọi người trên thế giới được lòng tin mạnh mẽ như tổ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "phụ Ap-ra-ham, và đạt tới địa vị làm dân riêng của Chúa. Chúng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "con cầu xin..."
+                        "text": "Lạy Chúa, những công trình kỳ diệu Chúa đã làm thuở trước, nay còn như xuất hiện rỡ ràng. Quả vậy, xưa Chúa đã ra oai thần lực cứu một mình dân Ít-ra-en khỏi bàn tay Pha-ra-ôn áp bức. Ngày nay Chúa cũng dùng nước thánh tẩy, để cứu độ muôn dân khắp hoàn cầu. Xin cho mọi người trên thế giới được lòng tin mạnh mẽ như tổ phụ Ap-ra-ham, và đạt tới địa vị làm dân riêng của Chúa. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, dưới ánh sáng Tin Mừng, Chúa cho thấy ý nghĩa kỳ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "công Chúa đã thực hiện trong thời Cựu Ước: Quả vậy, Biển Đỏ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tượng trưng cho dòng nước thánh tẩy, còn dân Do thái thoát vòng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nô lệ là hình ảnh của dân Chúa ngày nay. Xin cho các dân tộc trên"
-                      },
-                      {
-                        "sp": "",
-                        "text": "khắp địa cầu nhờ lòng tin vào Chúa, được hưởng những đặc ân của"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Ít-ra-en, và được tái sinh khi lãnh nhận Thánh Thần. Chúng con cầu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "xin..."
+                        "text": "Lạy Chúa, dưới ánh sáng Tin Mừng, Chúa cho thấy ý nghĩa kỳ công Chúa đã thực hiện trong thời Cựu Ước: Quả vậy, Biển Đỏ tượng trưng cho dòng nước thánh tẩy, còn dân Do thái thoát vòng nô lệ là hình ảnh của dân Chúa ngày nay. Xin cho các dân tộc trên khắp địa cầu nhờ lòng tin vào Chúa, được hưởng những đặc ân của Ít-ra-en, và được tái sinh khi lãnh nhận Thánh Thần. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -116977,232 +114775,48 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_3": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Xuất Hành."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Trong những ngày ấy, Chúa phán cùng Môsê rằng: “Có gì mà"
-                  },
-                  {
-                    "sp": "",
-                    "text": "kêu đến Ta? Hãy bảo con cái Israel cứ lên đường. Còn ngươi, đưa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "gậy lên, và giơ tay trên biển, hãy phân rẽ biển ra, cho con cái Israel"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đi vào giữa lòng biển khô cạn. Còn Ta, Ta sẽ làm cho lòng người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ai-cập ra chai đá, chúng sẽ rượt theo sau các ngươi. Bấy giờ Ta sẽ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tỏ vinh quang cho Pharaon, toàn thể quân lực, chiến xa và kỵ binh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "của vua ấy biết. Người Ai-cập sẽ biết Ta là Chúa khi Ta tỏ vinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "quang cho Pharaon, chiến xa và kỵ binh của vua ấy biết”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Sứ thần Thiên Chúa thường đi trước hàng ngũ Israel, liền bỏ trở"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lại sau họ. Cột mây thường đi phía trước, cũng theo sứ thần trở lại"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phía sau, đứng giữa hàng ngũ Ai-cập và hàng ngũ Israel. Và đám"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mây thường soi sáng ban đêm trở thành mù mịt, đến nỗi suốt đêm,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hai bên không thể tới gần được. Môsê giơ tay trên biển, thì bằng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "một cơn gió đông thổi mạnh suốt đêm, Chúa dồn biển lui và làm"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cho biển khô cạn. Nước rẽ ra và con cái Israel đi vào giữa lòng biển"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khô cạn, nước dựng lên như bức thành hai bên tả hữu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người Ai-cập đuổi theo, toàn thể binh mã của Pharaon, chiến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xa và kỵ binh đi theo sau Israel vào giữa lòng biển. Lúc gần sáng,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "qua cột mây lửa, Chúa nhìn xuống hàng ngũ Ai-cập, gây rối loạn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trong hàng ngũ chúng. Người lật đổ bánh xe, khiến xe tiến tới thật"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vất vả. Người Ai-cập nói: “Ta hãy chạy trốn Israel, vì Chúa chiến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đấu giúp họ, chống chúng ta”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa phán bảo Môsê: “Hãy giơ tay trên biển để nước trở lại vùi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dập người Ai-cập, chiến xa và kỵ binh của chúng”. Môsê giơ tay"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trên biển, và lúc tảng sáng, biển trở lại như cũ. Người Ai-cập chạy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trốn, gặp ngay nước biển ập lại. Chúa xô chúng ngã giữa lòng biển."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nước trở lại, vùi dập chiến xa và kỵ binh. Toàn thể quân lực của"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Pharaon đã theo dân Israel xuống biển, không còn tên nào sống sót."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Còn con cái Israel đã đi giữa lòng biển khô cạn, nước dựng như bức"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thành hai bên tả hữu. Ngày đó Chúa cứu Israel khỏi tay Ai-cập. Và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "họ thấy xác người Ai-cập trôi dạt đầy bờ, và thấy cánh tay oai hùng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "của Thiên Chúa đè bẹp Ai-cập. Toàn dân kính sợ Chúa, tin vào"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa và vào Môsê tôi tớ người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Bấy giờ Môsê cùng với con cái Israel hát mừng Chúa bài ca"
-                  },
-                  {
-                    "sp": "",
-                    "text": "này:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Không đọc: Đó là lời Chúa)."
+                    "text": "Bài trích sách Xuất Hành. Trong những ngày ấy, Chúa phán cùng Môsê rằng: “Có gì mà kêu đến Ta? Hãy bảo con cái Israel cứ lên đường. Còn ngươi, đưa gậy lên, và giơ tay trên biển, hãy phân rẽ biển ra, cho con cái Israel đi vào giữa lòng biển khô cạn. Còn Ta, Ta sẽ làm cho lòng người Ai-cập ra chai đá, chúng sẽ rượt theo sau các ngươi. Bấy giờ Ta sẽ tỏ vinh quang cho Pharaon, toàn thể quân lực, chiến xa và kỵ binh của vua ấy biết. Người Ai-cập sẽ biết Ta là Chúa khi Ta tỏ vinh quang cho Pharaon, chiến xa và kỵ binh của vua ấy biết”. Sứ thần Thiên Chúa thường đi trước hàng ngũ Israel, liền bỏ trở lại sau họ. Cột mây thường đi phía trước, cũng theo sứ thần trở lại phía sau, đứng giữa hàng ngũ Ai-cập và hàng ngũ Israel. Và đám mây thường soi sáng ban đêm trở thành mù mịt, đến nỗi suốt đêm, hai bên không thể tới gần được. Môsê giơ tay trên biển, thì bằng một cơn gió đông thổi mạnh suốt đêm, Chúa dồn biển lui và làm cho biển khô cạn. Nước rẽ ra và con cái Israel đi vào giữa lòng biển khô cạn, nước dựng lên như bức thành hai bên tả hữu. Người Ai-cập đuổi theo, toàn thể binh mã của Pharaon, chiến xa và kỵ binh đi theo sau Israel vào giữa lòng biển. Lúc gần sáng, qua cột mây lửa, Chúa nhìn xuống hàng ngũ Ai-cập, gây rối loạn trong hàng ngũ chúng. Người lật đổ bánh xe, khiến xe tiến tới thật vất vả. Người Ai-cập nói: “Ta hãy chạy trốn Israel, vì Chúa chiến đấu giúp họ, chống chúng ta”. Chúa phán bảo Môsê: “Hãy giơ tay trên biển để nước trở lại vùi dập người Ai-cập, chiến xa và kỵ binh của chúng”. Môsê giơ tay trên biển, và lúc tảng sáng, biển trở lại như cũ. Người Ai-cập chạy trốn, gặp ngay nước biển ập lại. Chúa xô chúng ngã giữa lòng biển. Nước trở lại, vùi dập chiến xa và kỵ binh. Toàn thể quân lực của Pharaon đã theo dân Israel xuống biển, không còn tên nào sống sót. Còn con cái Israel đã đi giữa lòng biển khô cạn, nước dựng như bức thành hai bên tả hữu. Ngày đó Chúa cứu Israel khỏi tay Ai-cập. Và họ thấy xác người Ai-cập trôi dạt đầy bờ, và thấy cánh tay oai hùng của Thiên Chúa đè bẹp Ai-cập. Toàn dân kính sợ Chúa, tin vào Chúa và vào Môsê tôi tớ người. Bấy giờ Môsê cùng với con cái Israel hát mừng Chúa bài ca này: (Không đọc: Đó là lời Chúa).",
+                    "sp": "N."
                   }
                 ]
               },
               "vigil_psalm_3": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả."
+                    "text": "Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả. Người đã ném"
+                    "text": "1) Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả. Người đã ném ngựa và người xuống biển khơi. Chúa là sức mạnh và là khúc ca của tôi, chính Người đã cho tôi được cứu thoát. Người là Thiên Chúa tôi, tôi sẽ tôn vinh Người; Người là Chúa tổ phụ tôi, tôi sẽ hát ca mừng Chúa.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "ngựa và người xuống biển khơi. Chúa là sức mạnh và là khúc ca của"
+                    "text": "Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "tôi, chính Người đã cho tôi được cứu thoát. Người là Thiên Chúa"
+                    "text": "2) Chúa như là người chiến sĩ, danh thánh Người thật toàn năng. Người đã ném xe cộ và đạo binh của Pharaon xuống biển, và dìm xuống Biển Đỏ các tướng lãnh của ông.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "tôi, tôi sẽ tôn vinh Người; Người là Chúa tổ phụ tôi, tôi sẽ hát ca"
+                    "text": "Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "mừng Chúa."
+                    "text": "3) Các vực thẳm đã chôn sống họ, họ rơi xuống đáy biển như tảng đá to. Lạy Chúa, tay hữu Chúa biểu dương sức mạnh; lạy Chúa, tay hữu Chúa đánh tan quân thù.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả."
+                    "text": "Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Chúa như là người chiến sĩ, danh thánh Người thật toàn"
+                    "text": "4) Chúa đem con cái Israel trồng trên núi gia nghiệp Chúa, nơi vững chắc Chúa làm nơi cư ngụ, ôi lạy Chúa, là cung thánh tay Chúa đã lập nên; Chúa sẽ thống trị muôn đời muôn kiếp.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "năng. Người đã ném xe cộ và đạo binh của Pharaon xuống biển, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dìm xuống Biển Đỏ các tướng lãnh của ông."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Các vực thẳm đã chôn sống họ, họ rơi xuống đáy biển như"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tảng đá to. Lạy Chúa, tay hữu Chúa biểu dương sức mạnh; lạy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa, tay hữu Chúa đánh tan quân thù."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả."
-                  },
-                  {
-                    "sp": "",
-                    "text": "4) Chúa đem con cái Israel trồng trên núi gia nghiệp Chúa, nơi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vững chắc Chúa làm nơi cư ngụ, ôi lạy Chúa, là cung thánh tay"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa đã lập nên; Chúa sẽ thống trị muôn đời muôn kiếp."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả."
+                    "text": "Tôi sẽ ca tụng Chúa, vì Người uy linh cao cả.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -117217,28 +114831,8 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, để đáp lại niềm tin của"
-                      },
-                      {
-                        "sp": "",
-                        "text": "các tổ phụ, Chúa đã hứa ban cho các ngài một dòng tộc đông đảo."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Nay xin thực hiện lời hứa ấy mà làm cho số nghĩa tử ngày càng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thêm đông, để mọi người tôn vinh Danh Thánh, và Giáo Hội được"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thấy thực hiện điều các tổ phụ vẫn tin tưởng đợi chờ. Chúng con cầu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "xin..."
+                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, để đáp lại niềm tin của các tổ phụ, Chúa đã hứa ban cho các ngài một dòng tộc đông đảo. Nay xin thực hiện lời hứa ấy mà làm cho số nghĩa tử ngày càng thêm đông, để mọi người tôn vinh Danh Thánh, và Giáo Hội được thấy thực hiện điều các tổ phụ vẫn tin tưởng đợi chờ. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -117247,176 +114841,43 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_4": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Tiên tri Isaia."
+                    "text": "Bài trích sách Tiên tri Isaia. Đấng đã tạo thành ngươi thống trị ngươi, danh Người là Chúa các cơ binh, Đấng Cứu Chuộc ngươi là Đấng Thánh Israel, Người sẽ được tôn xưng là Thiên Chúa khắp địa cầu. Thiên Chúa ngươi đã phán: “Chúa gọi ngươi như gọi người thiếu phụ bị bỏ rơi và sầu muộn, và như người vợ bị bỏ rơi lúc còn xuân xanh. Trong một thời gian ngắn, Ta đã bỏ ngươi, nhưng Ta sẽ lấy lượng từ bi cao cả mà tụ họp ngươi lại. Trong lúc nóng giận, Ta tạm ẩn mặt Ta, nhưng vì lòng nhân từ vô biên, Ta thương xót ngươi, Chúa là Đấng cứu chuộc ngươi đã phán như vậy. Cũng như trong thời Noe, Ta đã thề rằng nước lụt Noe sẽ không tràn ngập đất nữa, thì Ta cũng đã thề rằng Ta sẽ không giận ngươi, không quở trách ngươi nữa. Dù núi có dời, đồi có di chuyển, tình yêu của Ta đối với ngươi không thay đổi, và giao ước bình an của Ta cũng sẽ không lay chuyển, Chúa nhân từ của ngươi đã phán như vậy. Hỡi thành vô phúc, bị bão táp tàn phá và không ai an ủi, này đây Ta sẽ sắp xếp các viên đá của ngươi cho trật tự, sẽ đặt nền móng ngươi trên ngọc thạch, sẽ lấy đá hồng xây cửa đồn ngươi, sẽ lấy thủy tinh làm cửa thành ngươi, sẽ dùng đá quý xây tường thành ngươi.",
+                    "sp": "N."
                   },
                   {
-                    "sp": "",
-                    "text": "Đấng đã tạo thành ngươi thống trị ngươi, danh Người là Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "các cơ binh, Đấng Cứu Chuộc ngươi là Đấng Thánh Israel, Người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sẽ được tôn xưng là Thiên Chúa khắp địa cầu. Thiên Chúa ngươi đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phán: “Chúa gọi ngươi như gọi người thiếu phụ bị bỏ rơi và sầu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "muộn, và như người vợ bị bỏ rơi lúc còn xuân xanh. Trong một thời"
-                  },
-                  {
-                    "sp": "",
-                    "text": "gian ngắn, Ta đã bỏ ngươi, nhưng Ta sẽ lấy lượng từ bi cao cả mà tụ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "họp ngươi lại. Trong lúc nóng giận, Ta tạm ẩn mặt Ta, nhưng vì"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lòng nhân từ vô biên, Ta thương xót ngươi, Chúa là Đấng cứu chuộc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi đã phán như vậy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cũng như trong thời Noe, Ta đã thề rằng nước lụt Noe sẽ không"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tràn ngập đất nữa, thì Ta cũng đã thề rằng Ta sẽ không giận ngươi,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không quở trách ngươi nữa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Dù núi có dời, đồi có di chuyển, tình yêu của Ta đối với ngươi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không thay đổi, và giao ước bình an của Ta cũng sẽ không lay"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chuyển, Chúa nhân từ của ngươi đã phán như vậy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hỡi thành vô phúc, bị bão táp tàn phá và không ai an ủi, này"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đây Ta sẽ sắp xếp các viên đá của ngươi cho trật tự, sẽ đặt nền móng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi trên ngọc thạch, sẽ lấy đá hồng xây cửa đồn ngươi, sẽ lấy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thủy tinh làm cửa thành ngươi, sẽ dùng đá quý xây tường thành"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tất cả con cái ngươi sẽ được Chúa dạy bảo, chúng sẽ vui hưởng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "một nền hòa bình lâu dài. Ngươi sẽ đứng vững trong công lý, và xa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mọi đàn áp, ngươi sẽ không còn sợ, và sống xa mọi khủng bố, vì sẽ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không có ai hãm hại được ngươi nữa”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "rubric": "Tất cả con cái ngươi sẽ được Chúa dạy bảo, chúng sẽ vui hưởng một nền hòa bình lâu dài. Ngươi sẽ đứng vững trong công lý, và xa mọi đàn áp, ngươi sẽ không còn sợ, và sống xa mọi khủng bố, vì sẽ không có ai hãm hại được ngươi nữa”. Đó là lời Chúa."
                   }
                 ]
               },
               "vigil_psalm_4": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, con ca tụng Chúa vì đã giải thoát con."
+                    "text": "Lạy Chúa, con ca tụng Chúa vì đã giải thoát con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Lạy Chúa, con ca tụng Chúa vì đã giải thoát con, và không"
+                    "text": "1) Lạy Chúa, con ca tụng Chúa vì đã giải thoát con, và không để quân thù hoan hỉ về con. Lạy Chúa, Ngài đã đưa linh hồn con thoát xa Âm phủ, Ngài đã cứu con khỏi số người đang bước xuống mồ.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "để quân thù hoan hỉ về con. Lạy Chúa, Ngài đã đưa linh hồn con"
+                    "text": "Lạy Chúa, con ca tụng Chúa vì đã giải thoát con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "thoát xa Âm phủ, Ngài đã cứu con khỏi số người đang bước xuống"
+                    "text": "2) Các tín đồ của Chúa, hãy đàn ca mừng Chúa, và hãy cảm tạ thánh danh Ngài. Vì cơn giận của Ngài chỉ lâu trong giây phút, nhưng lòng nhân hậu của Ngài vẫn có suốt đời. Chiều hôm có gặp cảnh lệ rơi, nhưng sáng mai lại được mừng vui hoan hỉ.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "mồ."
+                    "text": "Lạy Chúa, con ca tụng Chúa vì đã giải thoát con.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, con ca tụng Chúa vì đã giải thoát con."
+                    "text": "3) Lạy Chúa, xin nhậm lời và xót thương con. Lạy Chúa, xin Ngài gia ân cứu giúp con. Chúa đã biến đổi lời than khóc thành khúc nhạc cho con; lạy Chúa là Thiên Chúa của con, con sẽ tán tụng Chúa tới muôn đời.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Các tín đồ của Chúa, hãy đàn ca mừng Chúa, và hãy cảm tạ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh danh Ngài. Vì cơn giận của Ngài chỉ lâu trong giây phút,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhưng lòng nhân hậu của Ngài vẫn có suốt đời. Chiều hôm có gặp"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cảnh lệ rơi, nhưng sáng mai lại được mừng vui hoan hỉ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, con ca tụng Chúa vì đã giải thoát con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Lạy Chúa, xin nhậm lời và xót thương con. Lạy Chúa, xin"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ngài gia ân cứu giúp con. Chúa đã biến đổi lời than khóc thành"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khúc nhạc cho con; lạy Chúa là Thiên Chúa của con, con sẽ tán tụng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa tới muôn đời."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, con ca tụng Chúa vì đã giải thoát con."
+                    "text": "Lạy Chúa, con ca tụng Chúa vì đã giải thoát con.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -117431,28 +114892,8 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, là niềm hy vọng độc nhất"
-                      },
-                      {
-                        "sp": "",
-                        "text": "của trần gian, Chúa đã dùng lời các ngôn sứ tiên báo những mầu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nhiệm đang được thực hiện ngày nay. Xin khơi dậy trong lòng dân"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa những ước nguyện cao đẹp, vì nếu không có Chúa soi trí mở"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lòng, chẳng một ai trong chúng con có thể tiến bước trên con đường"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thánh thiện. Chúng con cầu xin..."
+                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, là niềm hy vọng độc nhất của trần gian, Chúa đã dùng lời các ngôn sứ tiên báo những mầu nhiệm đang được thực hiện ngày nay. Xin khơi dậy trong lòng dân Chúa những ước nguyện cao đẹp, vì nếu không có Chúa soi trí mở lòng, chẳng một ai trong chúng con có thể tiến bước trên con đường thánh thiện. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -117461,172 +114902,40 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_5": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Tiên tri Isaia."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đây Chúa phán: Hỡi tất cả những ai khát nước, hãy đến uống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước; hỡi kẻ không tiền bạc, hãy đến mua lúa mà ăn; hãy đến mà"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mua rượu và sữa, không cần trả tiền, không cần đổi chác gì. Tại sao"
-                  },
-                  {
-                    "sp": "",
-                    "text": "các ngươi không dùng tiền mà mua bánh, sao không dùng tiền"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lương mà mua đồ nuôi thân? Vậy hãy lắng tai nghe, hãy đến ăn đồ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bổ và các ngươi sẽ được thưởng thức món ăn mĩ vị."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hãy lắng tai và đến cùng Ta, hãy nghe, thì các ngươi sẽ được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sống; Ta sẽ ký kết với các ngươi một giao ước vĩnh cửu, đó là"
-                  },
-                  {
-                    "sp": "",
-                    "text": "những hồng ân đã hứa cho Đavít: Đây Ta đặt ngươi làm nhân chứng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cho các dân, làm tướng lãnh tôn sư cho các dân tộc. Này ngươi sẽ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "kêu gọi dân mà trước ngươi không biết, và các dân trước chưa biết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi, sẽ chạy đến cùng ngươi, vì Chúa là Thiên Chúa ngươi, là"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đấng Thánh Israel, bởi vì Chúa làm cho ngươi được hiển vinh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hãy tìm Chúa khi còn tìm được, hãy kêu cầu Người khi Người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "còn ở gần. Kẻ gian ác, hãy bỏ đường lối mình, và kẻ bất lương, hãy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bỏ những tư tưởng mình, hãy trở về với Chúa, thì Người sẽ thương"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xót, hãy trở về với Thiên Chúa chúng ta, vì Chúa rộng lòng tha thứ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì tư tưởng Ta không phải tư tưởng các ngươi, và đường lối các"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi không phải đường lối của Ta, Chúa phán như vậy. Như trời"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cao hơn đất thế nào, thì đường lối Ta vượt trên đường lối các ngươi,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và tư tưởng Ta cũng vượt trên tư tưởng các ngươi thể ấy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Như mưa tuyết từ trời rơi xuống và không trở lên trời nữa,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhưng chúng thấm xuống đất, làm cho đất phì nhiêu, cây cối sinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mầm, cho người gieo có hạt giống, cho người ta có cơm bánh ăn;"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cũng thế, lời từ miệng Ta phán ra sẽ không trở lại với Ta mà không"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sinh kết quả, nhưng nó thực hiện ý muốn của Ta, và làm tròn sứ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mạng Ta uỷ thác."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "text": "Bài trích sách Tiên tri Isaia. Đây Chúa phán: Hỡi tất cả những ai khát nước, hãy đến uống nước; hỡi kẻ không tiền bạc, hãy đến mua lúa mà ăn; hãy đến mà mua rượu và sữa, không cần trả tiền, không cần đổi chác gì. Tại sao các ngươi không dùng tiền mà mua bánh, sao không dùng tiền lương mà mua đồ nuôi thân? Vậy hãy lắng tai nghe, hãy đến ăn đồ bổ và các ngươi sẽ được thưởng thức món ăn mĩ vị. Hãy lắng tai và đến cùng Ta, hãy nghe, thì các ngươi sẽ được sống; Ta sẽ ký kết với các ngươi một giao ước vĩnh cửu, đó là những hồng ân đã hứa cho Đavít: Đây Ta đặt ngươi làm nhân chứng cho các dân, làm tướng lãnh tôn sư cho các dân tộc. Này ngươi sẽ kêu gọi dân mà trước ngươi không biết, và các dân trước chưa biết ngươi, sẽ chạy đến cùng ngươi, vì Chúa là Thiên Chúa ngươi, là Đấng Thánh Israel, bởi vì Chúa làm cho ngươi được hiển vinh. Hãy tìm Chúa khi còn tìm được, hãy kêu cầu Người khi Người còn ở gần. Kẻ gian ác, hãy bỏ đường lối mình, và kẻ bất lương, hãy bỏ những tư tưởng mình, hãy trở về với Chúa, thì Người sẽ thương xót, hãy trở về với Thiên Chúa chúng ta, vì Chúa rộng lòng tha thứ. Vì tư tưởng Ta không phải tư tưởng các ngươi, và đường lối các ngươi không phải đường lối của Ta, Chúa phán như vậy. Như trời cao hơn đất thế nào, thì đường lối Ta vượt trên đường lối các ngươi, và tư tưởng Ta cũng vượt trên tư tưởng các ngươi thể ấy. Như mưa tuyết từ trời rơi xuống và không trở lên trời nữa, nhưng chúng thấm xuống đất, làm cho đất phì nhiêu, cây cối sinh mầm, cho người gieo có hạt giống, cho người ta có cơm bánh ăn; cũng thế, lời từ miệng Ta phán ra sẽ không trở lại với Ta mà không sinh kết quả, nhưng nó thực hiện ý muốn của Ta, và làm tròn sứ mạng Ta uỷ thác. Đó là lời Chúa.",
+                    "sp": "N."
                   }
                 ]
               },
               "vigil_psalm_5": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ."
+                    "text": "Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Đây Thiên Chúa là Đấng Cứu Chuộc tôi, tôi sẽ tin tưởng mà"
+                    "text": "1) Đây Thiên Chúa là Đấng Cứu Chuộc tôi, tôi sẽ tin tưởng mà hành động và không khiếp sợ: vì Chúa là sức mạnh, là Đấng tôi ngợi khen, Người sẽ trở nên cho tôi phần rỗi.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "hành động và không khiếp sợ: vì Chúa là sức mạnh, là Đấng tôi"
+                    "text": "Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "ngợi khen, Người sẽ trở nên cho tôi phần rỗi."
+                    "text": "2) Hãy ca tụng Chúa và kêu cầu danh Người, hãy công bố cho các dân biết kỳ công của Chúa, hãy nhớ lại danh Chúa rất cao sang.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ."
+                    "text": "Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Hãy ca tụng Chúa và kêu cầu danh Người, hãy công bố cho"
+                    "text": "3) Hãy ca tụng, vì Người làm nên những việc kỳ diệu, hãy cao rao việc đó trên khắp hoàn cầu. Hỡi người cư ngụ tại Sion, hãy nhảy mừng ca hát, vì Đấng cao cả là Đấng Thánh Israel ở giữa ngươi.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "các dân biết kỳ công của Chúa, hãy nhớ lại danh Chúa rất cao sang."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Hãy ca tụng, vì Người làm nên những việc kỳ diệu, hãy cao"
-                  },
-                  {
-                    "sp": "",
-                    "text": "rao việc đó trên khắp hoàn cầu. Hỡi người cư ngụ tại Sion, hãy nhảy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mừng ca hát, vì Đấng cao cả là Đấng Thánh Israel ở giữa ngươi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ."
+                    "text": "Các ngươi sẽ hân hoan múc nước nơi suối Đấng Cứu Độ.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -117641,20 +114950,8 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, Chúa không ngừng kêu gọi muôn dân gia nhập Hội"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Thánh Chúa, khiến Hội Thánh ngày thêm phát triển. Xin hằng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thương giữ gìn những người đã được ơn tái sinh nhờ bí tích thánh"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tẩy. Chúng con cầu xin..."
+                        "text": "Lạy Chúa, Chúa không ngừng kêu gọi muôn dân gia nhập Hội Thánh Chúa, khiến Hội Thánh ngày thêm phát triển. Xin hằng thương giữ gìn những người đã được ơn tái sinh nhờ bí tích thánh tẩy. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -117663,184 +114960,51 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_6": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Tiên tri Barúc."
+                    "text": "Bài trích sách Tiên tri Barúc. Hỡi Israel, hãy nghe các giới răn ban sự sống; hãy lắng tai nghe để hiểu biết sự khôn ngoan. Hỡi Israel, bởi đâu ngươi ở trong đất nước quân thù, ngươi mòn mỏi trên đất khách, nhiễm lây nhơ bẩn của người chết, bị liệt vào kẻ phải xuống địa ngục? Ngươi đã lìa bỏ nguồn khôn ngoan. Vì chưng",
+                    "sp": "N."
                   },
                   {
-                    "sp": "",
-                    "text": "Hỡi Israel, hãy nghe các giới răn ban sự sống; hãy lắng tai nghe"
-                  },
-                  {
-                    "sp": "",
-                    "text": "để hiểu biết sự khôn ngoan."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hỡi Israel, bởi đâu ngươi ở trong đất nước quân thù, ngươi mòn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mỏi trên đất khách, nhiễm lây nhơ bẩn của người chết, bị liệt vào kẻ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phải xuống địa ngục? Ngươi đã lìa bỏ nguồn khôn ngoan. Vì chưng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nếu ngươi theo đường lối Chúa,thì ngươi đã luôn sống trong bình"
-                  },
-                  {
-                    "sp": "",
-                    "text": "an. Ngươi hãy học xem đâu là sự khôn ngoan, đâu là sức mạnh, đâu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "là sự thông hiểu, để ngươi cũng hiểu biết đâu là trường thọ và sự"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sống, đâu là ánh sáng con mắt và bình an. Ai là người sẽ tìm được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nơi cư ngụ của sự khôn ngoan, ai đi vào trong kho tàng của nó?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chính Đấng thấu suốt mọi sự, Người biết nó: Người thấu suốt nó do"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đức khôn ngoan của Người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người là Đấng đã an bài vũ trụ đến muôn đời, và cho các gia"
-                  },
-                  {
-                    "sp": "",
-                    "text": "súc và các thú bốn chân sống đầy mặt đất. Người sai ánh sáng đi thì"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nó đi, gọi nó lại thì nó run sợ vâng lời Người. Các ngôi sao ở vị trí"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mình mà chiếu sáng và đều vui mừng. Người gọi chúng thì chúng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trả lời rằng: “Có mặt”. Chúng vui mừng chiếu sáng trước mặt Đấng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sáng tạo chúng."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người là Thiên Chúa chúng ta, và không có chúa nào khác sánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được với Người. Người đã biết mọi đường lối khôn ngoan, đã ban"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nó cho Giacóp tôi tớ Người và cho Israel kẻ người yêu mến. Sau đó,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người xuất hiện trên mặt đất và sống giữa loài người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là sách ghi các giới răn Chúa và lề luật tồn tại muôn đời, tất"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cả những ai tuân giữ lề luật thì được sống, còn ai bỏ thì phải chết."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hỡi Giacóp, hãy trở về và nắm giữ lề luật; hãy nhờ ánh sáng của"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người mà tiến đến sự huy hoàng của Người. Đừng trao vinh quang"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi cho kẻ khác, cũng đừng trao đặc ân ngươi cho dân ngoại. Hỡi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Israel, chúng ta có phúc, vì chúng ta đã được biết những gì là đẹp"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lòng Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "rubric": "nếu ngươi theo đường lối Chúa,thì ngươi đã luôn sống trong bình an. Ngươi hãy học xem đâu là sự khôn ngoan, đâu là sức mạnh, đâu là sự thông hiểu, để ngươi cũng hiểu biết đâu là trường thọ và sự sống, đâu là ánh sáng con mắt và bình an. Ai là người sẽ tìm được nơi cư ngụ của sự khôn ngoan, ai đi vào trong kho tàng của nó? Chính Đấng thấu suốt mọi sự, Người biết nó: Người thấu suốt nó do đức khôn ngoan của Người. Người là Đấng đã an bài vũ trụ đến muôn đời, và cho các gia súc và các thú bốn chân sống đầy mặt đất. Người sai ánh sáng đi thì nó đi, gọi nó lại thì nó run sợ vâng lời Người. Các ngôi sao ở vị trí mình mà chiếu sáng và đều vui mừng. Người gọi chúng thì chúng trả lời rằng: “Có mặt”. Chúng vui mừng chiếu sáng trước mặt Đấng sáng tạo chúng. Người là Thiên Chúa chúng ta, và không có chúa nào khác sánh được với Người. Người đã biết mọi đường lối khôn ngoan, đã ban nó cho Giacóp tôi tớ Người và cho Israel kẻ người yêu mến. Sau đó, Người xuất hiện trên mặt đất và sống giữa loài người. Đó là sách ghi các giới răn Chúa và lề luật tồn tại muôn đời, tất cả những ai tuân giữ lề luật thì được sống, còn ai bỏ thì phải chết. Hỡi Giacóp, hãy trở về và nắm giữ lề luật; hãy nhờ ánh sáng của Người mà tiến đến sự huy hoàng của Người. Đừng trao vinh quang ngươi cho kẻ khác, cũng đừng trao đặc ân ngươi cho dân ngoại. Hỡi Israel, chúng ta có phúc, vì chúng ta đã được biết những gì là đẹp lòng Chúa. Đó là lời Chúa."
                   }
                 ]
               },
               "vigil_psalm_6": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, Chúa có lời ban sự sống đời đời."
+                    "text": "Lạy Chúa, Chúa có lời ban sự sống đời đời.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Luật pháp Chúa toàn thiện, bồi bổ tâm linh; chỉ thị Chúa cố"
+                    "text": "1) Luật pháp Chúa toàn thiện, bồi bổ tâm linh; chỉ thị Chúa cố định, phá ngu kẻ dốt.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "định, phá ngu kẻ dốt."
+                    "text": "Lạy Chúa, Chúa có lời ban sự sống đời đời.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, Chúa có lời ban sự sống đời đời."
+                    "text": "2) Giới răn Chúa chính trực, làm hoan lạc tâm can; mệnh lệnh Chúa trong ngời, sáng soi con mắt.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Giới răn Chúa chính trực, làm hoan lạc tâm can; mệnh lệnh"
+                    "text": "Lạy Chúa, Chúa có lời ban sự sống đời đời.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Chúa trong ngời, sáng soi con mắt."
+                    "text": "3) Lòng tôn sợ Chúa thuần khiết, còn mãi muôn đời; phán quyết của Chúa chân thực, công minh hết thảy.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, Chúa có lời ban sự sống đời đời."
+                    "text": "Lạy Chúa, Chúa có lời ban sự sống đời đời.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "3) Lòng tôn sợ Chúa thuần khiết, còn mãi muôn đời; phán"
+                    "text": "4) Những điều đó đáng chuộng hơn vàng, hơn cả vàng ròng, ngọt hơn mật và hơn cả mật chảy từ tàng ong.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "quyết của Chúa chân thực, công minh hết thảy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, Chúa có lời ban sự sống đời đời."
-                  },
-                  {
-                    "sp": "",
-                    "text": "4) Những điều đó đáng chuộng hơn vàng, hơn cả vàng ròng,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngọt hơn mật và hơn cả mật chảy từ tàng ong."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Lạy Chúa, Chúa có lời ban sự sống đời đời."
+                    "text": "Lạy Chúa, Chúa có lời ban sự sống đời đời.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -117863,88 +115027,24 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa là sức mạnh thường hằng bất biến, là ánh sáng tồn tại"
-                      },
-                      {
-                        "sp": "",
-                        "text": "muôn đời, xin đoái nhìn toàn thể Hội Thánh và dùng Hội Thánh như"
-                      },
-                      {
-                        "sp": "",
-                        "text": "bí tích kỳ diệu, để hoàn tất công trình cứu độ muôn dân. Ước chi cả"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thế giới nghiệm thấy và nhìn nhận rằng: vạn vật suy vong đã được"
-                      },
-                      {
-                        "sp": "",
-                        "text": "trỗi dậy, muôn loài già cỗi được đổi mới và hết thảy được phục hồi"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nguyện vẹn như xưa, nhờ chính Đức Ki-tô là căn nguyên tất cả."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Người hằng sống và hiển trị muôn đời."
+                        "text": "Lạy Chúa là sức mạnh thường hằng bất biến, là ánh sáng tồn tại muôn đời, xin đoái nhìn toàn thể Hội Thánh và dùng Hội Thánh như bí tích kỳ diệu, để hoàn tất công trình cứu độ muôn dân. Ước chi cả thế giới nghiệm thấy và nhìn nhận rằng: vạn vật suy vong đã được trỗi dậy, muôn loài già cỗi được đổi mới và hết thảy được phục hồi nguyện vẹn như xưa, nhờ chính Đức Ki-tô là căn nguyên tất cả. Người hằng sống và hiển trị muôn đời.",
+                        "sp": "CT."
                       }
                     ]
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, Chúa dùng lời Kinh Thánh, giúp chúng con chuẩn bị"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tâm hồn mừng đại lễ Vượt Qua. Xin cho chúng con được thâm hiểu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lòng nhân hậu của Chúa đối với chúng con, để những hồng ân Chúa"
-                      },
-                      {
-                        "sp": "",
-                        "text": "ban tặng ở đời này, giúp chúng con vững vàng tin tưởng sẽ được"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa ban muôn phúc lộc đời sau. Chúng con cầu xin..."
+                        "text": "Lạy Chúa, Chúa dùng lời Kinh Thánh, giúp chúng con chuẩn bị tâm hồn mừng đại lễ Vượt Qua. Xin cho chúng con được thâm hiểu lòng nhân hậu của Chúa đối với chúng con, để những hồng ân Chúa ban tặng ở đời này, giúp chúng con vững vàng tin tưởng sẽ được Chúa ban muôn phúc lộc đời sau. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   },
                   "C": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, xin ngự đến tác động"
-                      },
-                      {
-                        "sp": "",
-                        "text": "trong những bí tích chúng con sắp cử hành đây, là những bí tích"
-                      },
-                      {
-                        "sp": "",
-                        "text": "chứng tỏ tình yêu Chúa. Xin ban Thánh Thần cho những anh chị em"
-                      },
-                      {
-                        "sp": "",
-                        "text": "sắp được tái sinh nhờ bí tích thánh tẩy, để họ trở thành con cái"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa. Như vậy, công việc phục vụ của chúng con, mặc dầu khiêm"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tốn, cũng được nên hữu hiệu, nhờ chính sức mạnh của Chúa. Chúng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "con cầu xin..."
+                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, xin ngự đến tác động trong những bí tích chúng con sắp cử hành đây, là những bí tích chứng tỏ tình yêu Chúa. Xin ban Thánh Thần cho những anh chị em sắp được tái sinh nhờ bí tích thánh tẩy, để họ trở thành con cái Chúa. Như vậy, công việc phục vụ của chúng con, mặc dầu khiêm tốn, cũng được nên hữu hiệu, nhờ chính sức mạnh của Chúa. Chúng con cầu xin...",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -117953,408 +115053,119 @@ globalThis.countrySpecialLiturgies = {
               "vigil_reading_7": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài trích sách Tiên tri Êdêkiel."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đây lời Chúa phán cùng tôi rằng: “Hỡi con người, khi dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Israel cư ngụ trên đất mình, họ đã làm dơ bẩn đất ấy bằng đời sống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và việc làm của họ. Và Ta đã nổi giận họ, vì họ đã đổ máu trên phần"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đất ấy, và vì các thần tượng họ thờ làm dơ bẩn phần đất ấy. Ta đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phân tán họ đi khắp các dân tộc, và cho họ sống rải rác trong các"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nước; Ta đã xét xử theo đời sống và việc làm của họ. Họ đã đi đến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "các dân tộc và ở đó họ xúc phạm thánh danh Ta, vì thiên hạ nói về"
-                  },
-                  {
-                    "sp": "",
-                    "text": "họ rằng: “Này là dân của Chúa, họ bị đuổi ra khỏi đất của Người”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Và Ta đã thương hại thánh danh Ta mà nhà Israel đã xúc phạm nơi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "các dân tộc họ đến cư ngụ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì thế, ngươi hãy nói với nhà Israel rằng: “Đây Chúa là Thiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa phán: Hỡi nhà Israel, không phải vì các ngươi mà Ta hành"
-                  },
-                  {
-                    "sp": "",
-                    "text": "động, nhưng vì thánh danh Ta đã bị các ngươi xúc phạm nơi các dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tộc mà các ngươi đi đến cư ngụ. Ta sẽ thánh hóa danh cao cả Ta đã"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bị xúc phạm giữa các dân tộc, nơi mà các ngươi đã xúc phạm danh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh Ta, để các dân tộc biết Ta là Chúa, Thiên Chúa các đạo binh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phán, khi Ta tự thánh hóa nơi các ngươi trước mặt họ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ta sẽ kéo các ngươi ra khỏi các dân tộc, sẽ quy tụ các ngươi từ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "các nước, và dẫn dắt các ngươi trên đất các ngươi. Ta sẽ dùng nước"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trong sạch mà rảy trên các ngươi, và các ngươi sẽ được rửa sạch"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mọi vết nhơ. Ta sẽ thanh tẩy các ngươi sạch mọi vết nhơ các bụt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thần."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ta sẽ ban cho các ngươi quả tim mới, đặt giữa các ngươi một"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thần trí mới, cất khỏi xác các ngươi quả tim bằng đá và ban cho các"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngươi quả tim bằng thịt. Ta đặt thần trí Ta giữa các ngươi, làm cho"
-                  },
-                  {
-                    "sp": "",
-                    "text": "các ngươi thực thi các huấn lệnh Ta, làm cho các ngươi tuân giữ và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thực hành các lề luật Ta. Các ngươi sẽ cư ngụ trong xứ Ta đã ban"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cho tổ phụ các ngươi; các ngươi sẽ là dân Ta, còn Ta, Ta sẽ là Thiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa các ngươi”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "text": "Bài trích sách Tiên tri Êdêkiel. Đây lời Chúa phán cùng tôi rằng: “Hỡi con người, khi dân Israel cư ngụ trên đất mình, họ đã làm dơ bẩn đất ấy bằng đời sống và việc làm của họ. Và Ta đã nổi giận họ, vì họ đã đổ máu trên phần đất ấy, và vì các thần tượng họ thờ làm dơ bẩn phần đất ấy. Ta đã phân tán họ đi khắp các dân tộc, và cho họ sống rải rác trong các nước; Ta đã xét xử theo đời sống và việc làm của họ. Họ đã đi đến các dân tộc và ở đó họ xúc phạm thánh danh Ta, vì thiên hạ nói về họ rằng: “Này là dân của Chúa, họ bị đuổi ra khỏi đất của Người”. Và Ta đã thương hại thánh danh Ta mà nhà Israel đã xúc phạm nơi các dân tộc họ đến cư ngụ. Vì thế, ngươi hãy nói với nhà Israel rằng: “Đây Chúa là Thiên Chúa phán: Hỡi nhà Israel, không phải vì các ngươi mà Ta hành động, nhưng vì thánh danh Ta đã bị các ngươi xúc phạm nơi các dân tộc mà các ngươi đi đến cư ngụ. Ta sẽ thánh hóa danh cao cả Ta đã bị xúc phạm giữa các dân tộc, nơi mà các ngươi đã xúc phạm danh thánh Ta, để các dân tộc biết Ta là Chúa, Thiên Chúa các đạo binh phán, khi Ta tự thánh hóa nơi các ngươi trước mặt họ. Ta sẽ kéo các ngươi ra khỏi các dân tộc, sẽ quy tụ các ngươi từ các nước, và dẫn dắt các ngươi trên đất các ngươi. Ta sẽ dùng nước trong sạch mà rảy trên các ngươi, và các ngươi sẽ được rửa sạch mọi vết nhơ. Ta sẽ thanh tẩy các ngươi sạch mọi vết nhơ các bụt thần. Ta sẽ ban cho các ngươi quả tim mới, đặt giữa các ngươi một thần trí mới, cất khỏi xác các ngươi quả tim bằng đá và ban cho các ngươi quả tim bằng thịt. Ta đặt thần trí Ta giữa các ngươi, làm cho các ngươi thực thi các huấn lệnh Ta, làm cho các ngươi tuân giữ và thực hành các lề luật Ta. Các ngươi sẽ cư ngụ trong xứ Ta đã ban cho tổ phụ các ngươi; các ngươi sẽ là dân Ta, còn Ta, Ta sẽ là Thiên Chúa các ngươi”. Đó là lời Chúa.",
+                    "sp": "N."
                   }
                 ]
               },
               "vigil_psalm_7": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Như nai rừng khát mong nguồn nước,"
+                    "text": "Như nai rừng khát mong nguồn nước, hồn con khát Chúa, Chúa Trời ôi!",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "hồn con khát Chúa, Chúa Trời ôi!"
+                    "text": "1) Hồn con khát Chúa Trời, Chúa Trời hằng sống: ngày nào con được tìm về ra mắt Chúa Trời?",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Hồn con khát Chúa Trời, Chúa Trời hằng sống: ngày nào con"
+                    "text": "Như nai rừng khát mong nguồn nước, hồn con khát Chúa, Chúa Trời ôi!",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "được tìm về ra mắt Chúa Trời?"
+                    "text": "2) Tôi nhớ lúc xưa đi giữa muôn người, tôi đứng đầu đưa dân tiến vào nhà Đức Chúa Trời, giữa muôn tiếng reo mừng, ca ngợi.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Như nai rừng khát mong nguồn nước,"
+                    "text": "Như nai rừng khát mong nguồn nước, hồn con khát Chúa, Chúa Trời ôi!",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "hồn con khát Chúa, Chúa Trời ôi!"
+                    "text": "3) Xin chiếu giãi quang minh và chân thực của Chúa, để những điều đó hướng dẫn con, đưa con lên núi thánh và cung lâu của Ngài.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Tôi nhớ lúc xưa đi giữa muôn người, tôi đứng đầu đưa dân"
+                    "text": "Như nai rừng khát mong nguồn nước, hồn con khát Chúa, Chúa Trời ôi!",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "tiến vào nhà Đức Chúa Trời, giữa muôn tiếng reo mừng, ca ngợi."
+                    "text": "4) Con sẽ tiến tới bàn thờ Thiên Chúa, đến cùng Thiên Chúa làm cho con được hoan hỉ mừng vui. Với cây cầm thụ, con sẽ ca ngợi Chúa, ôi Chúa là Thiên Chúa của con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Như nai rừng khát mong nguồn nước,"
+                    "text": "Như nai rừng khát mong nguồn nước, hồn con khát Chúa, Chúa Trời ôi!",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "hồn con khát Chúa, Chúa Trời ôi!"
+                    "rubric": "Hoặc (khi có Rửa tội) Tv 50, 12-13. 14-15. 18-19"
                   },
                   {
-                    "sp": "",
-                    "text": "3) Xin chiếu giãi quang minh và chân thực của Chúa, để những"
+                    "text": "Ôi lạy Chúa, xin tạo cho con quả tim trong sạch.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "điều đó hướng dẫn con, đưa con lên núi thánh và cung lâu của Ngài."
+                    "text": "1) Ôi lạy Chúa, xin tạo cho con quả tim trong sạch, và canh tân tinh thần cương nghị trong người con. Xin đừng loại con khỏi thiên nhan Chúa, chớ thu hồi Thánh Thần Chúa ra khỏi con.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Như nai rừng khát mong nguồn nước,"
+                    "text": "Ôi lạy Chúa, xin tạo cho con quả tim trong sạch.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "hồn con khát Chúa, Chúa Trời ôi!"
+                    "text": "2) Xin Chúa lại cho con niềm vui ơn cứu độ, với tinh thần quảng đại, Chúa đỡ nâng con. Con sẽ dạy kẻ bất nhân đường nẻo Chúa, và người tội lỗi sẽ trở về với Ngài.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "4) Con sẽ tiến tới bàn thờ Thiên Chúa, đến cùng Thiên Chúa"
+                    "text": "Ôi lạy Chúa, xin tạo cho con quả tim trong sạch.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "làm cho con được hoan hỉ mừng vui. Với cây cầm thụ, con sẽ ca"
+                    "text": "3) Bởi vì Chúa chẳng ưa gì sinh lễ, nếu con dâng lễ toàn thiêu, Chúa sẽ không ưng. Của lễ con dâng, lạy Chúa, là tâm hồn tan nát; lạy Chúa, xin đừng chê tấm lòng tan nát, khiêm cung.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "ngợi Chúa, ôi Chúa là Thiên Chúa của con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Như nai rừng khát mong nguồn nước,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hồn con khát Chúa, Chúa Trời ôi!"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoặc (khi có Rửa tội) Tv 50, 12-13. 14-15. 18-19"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Ôi lạy Chúa, xin tạo cho con quả tim trong sạch."
-                  },
-                  {
-                    "sp": "",
-                    "text": "1) Ôi lạy Chúa, xin tạo cho con quả tim trong sạch, và canh tân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tinh thần cương nghị trong người con. Xin đừng loại con khỏi thiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhan Chúa, chớ thu hồi Thánh Thần Chúa ra khỏi con."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Ôi lạy Chúa, xin tạo cho con quả tim trong sạch."
-                  },
-                  {
-                    "sp": "",
-                    "text": "2) Xin Chúa lại cho con niềm vui ơn cứu độ, với tinh thần"
-                  },
-                  {
-                    "sp": "",
-                    "text": "quảng đại, Chúa đỡ nâng con. Con sẽ dạy kẻ bất nhân đường nẻo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa, và người tội lỗi sẽ trở về với Ngài."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Ôi lạy Chúa, xin tạo cho con quả tim trong sạch."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Bởi vì Chúa chẳng ưa gì sinh lễ, nếu con dâng lễ toàn thiêu,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa sẽ không ưng. Của lễ con dâng, lạy Chúa, là tâm hồn tan nát;"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lạy Chúa, xin đừng chê tấm lòng tan nát, khiêm cung."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Ôi lạy Chúa, xin tạo cho con quả tim trong sạch."
+                    "text": "Ôi lạy Chúa, xin tạo cho con quả tim trong sạch.",
+                    "sp": "CĐ."
                   }
                 ]
               },
               "vigil_epistle": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bài tríchthư Thánh Phaolô Tông đồ gửi tín hữu Rôma."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh em thân mến, tất cả chúng ta đã chịu phép rửa trong Đức"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Giêsu Kitô, tức là đã chịu phép rửa trong sự chết của Người. Và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng ta đã cùng chịu mai táng với Người, bởi được thanh tẩy trong"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sự chết của người, để như Đức Kitô nhờ vinh hiển của Chúa Cha mà"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sống lại từ cõi chết thế nào, thì cả chúng ta cũng phải sống đời sống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mới như thế."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì nếu chúng ta được liên kết với Người trong cùng một cái"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chết, giống như cái chết của Người, thì chúng ta cũng được hợp nhất"
-                  },
-                  {
-                    "sp": "",
-                    "text": "với Người, trong sự sống lại giống như vậy. Nên biết điều này: con"
-                  },
-                  {
-                    "sp": "",
-                    "text": "người cũ của chúng ta đã cùng chịu đóng đinh khổ giá, để xác thịt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tội lỗi bị hủy đi, hầu cho chúng ta không còn làm nô lệ tội lỗi nữa,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vì con người đã chết, tức là được giải thoát khỏi tội lỗi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mà nếu chúng ta đã chết với Đức Kitô, chúng ta tin rằng chúng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ta cũng sẽ cùng sống với Người, vì biết rằng Đức Kitô, một khi từ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cõi chết sống lại, Người không chết nữa, sự chết không còn làm chủ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được Người nữa. Người đã chết, tức là chết một lần dứt khoát đối"
-                  },
-                  {
-                    "sp": "",
-                    "text": "với tội lỗi, mà khi Người sống, là sống cho Thiên Chúa. Cả anh em"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cũng thế, anh em hãy tự kể như mình đã chết đối với tội lỗi, nhưng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sống cho Thiên Chúa, trong Đức Giêsu Kitô, Chúa chúng ta."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là lời Chúa."
+                    "text": "Bài tríchthư Thánh Phaolô Tông đồ gửi tín hữu Rôma. Anh em thân mến, tất cả chúng ta đã chịu phép rửa trong Đức Giêsu Kitô, tức là đã chịu phép rửa trong sự chết của Người. Và chúng ta đã cùng chịu mai táng với Người, bởi được thanh tẩy trong sự chết của người, để như Đức Kitô nhờ vinh hiển của Chúa Cha mà sống lại từ cõi chết thế nào, thì cả chúng ta cũng phải sống đời sống mới như thế. Vì nếu chúng ta được liên kết với Người trong cùng một cái chết, giống như cái chết của Người, thì chúng ta cũng được hợp nhất với Người, trong sự sống lại giống như vậy. Nên biết điều này: con người cũ của chúng ta đã cùng chịu đóng đinh khổ giá, để xác thịt tội lỗi bị hủy đi, hầu cho chúng ta không còn làm nô lệ tội lỗi nữa, vì con người đã chết, tức là được giải thoát khỏi tội lỗi. Mà nếu chúng ta đã chết với Đức Kitô, chúng ta tin rằng chúng ta cũng sẽ cùng sống với Người, vì biết rằng Đức Kitô, một khi từ cõi chết sống lại, Người không chết nữa, sự chết không còn làm chủ được Người nữa. Người đã chết, tức là chết một lần dứt khoát đối với tội lỗi, mà khi Người sống, là sống cho Thiên Chúa. Cả anh em cũng thế, anh em hãy tự kể như mình đã chết đối với tội lỗi, nhưng sống cho Thiên Chúa, trong Đức Giêsu Kitô, Chúa chúng ta. Đó là lời Chúa.",
+                    "sp": "N."
                   }
                 ]
               },
               "vigil_alleluia": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Đáp: Alleluia, alleluia, alleluia."
+                    "text": "Alleluia, alleluia, alleluia.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "1) Hãy cảm tạ Chúa, vì Chúa hảo tâm, vì đức từ bi của Người"
+                    "text": "1) Hãy cảm tạ Chúa, vì Chúa hảo tâm, vì đức từ bi của Người muôn thuở. Hỡi nhà Israel, hãy xướng lên: “Đức từ bi của Người muôn thuở”.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "muôn thuở. Hỡi nhà Israel, hãy xướng lên: “Đức từ bi của Người"
+                    "text": "Alleluia, alleluia, alleluia.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "muôn thuở”."
+                    "text": "2) Tay hữu Chúa đã hành động mãnh liệt, tay hữu Chúa đã cất nhắc tôi lên. Tôi không chết, nhưng tôi sẽ sống, và tôi sẽ loan truyền công cuộc của Chúa.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đáp: Alleluia, alleluia, alleluia."
+                    "text": "Alleluia, alleluia, alleluia.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "2) Tay hữu Chúa đã hành động mãnh liệt, tay hữu Chúa đã cất"
+                    "text": "3) Phiến đá mà những người thợ xây loại bỏ, đã biến nên tảng đá góc tường. Việc đó đã do Chúa làm ra, việc đó kỳ diệu trước mắt chúng ta.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "nhắc tôi lên. Tôi không chết, nhưng tôi sẽ sống, và tôi sẽ loan truyền"
-                  },
-                  {
-                    "sp": "",
-                    "text": "công cuộc của Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Alleluia, alleluia, alleluia."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3) Phiến đá mà những người thợ xây loại bỏ, đã biến nên tảng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đá góc tường. Việc đó đã do Chúa làm ra, việc đó kỳ diệu trước mắt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng ta."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đáp: Alleluia, alleluia, alleluia."
+                    "text": "Alleluia, alleluia, alleluia.",
+                    "sp": "CĐ."
                   }
                 ]
               }
@@ -118577,108 +115388,26 @@ globalThis.countrySpecialLiturgies = {
               "palm_antiphon": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Điệp ca"
+                    "rubric": "Điệp ca"
                   },
                   {
-                    "sp": "",
-                    "text": "Hoan hô Chúa trên các tầng trời !"
+                    "text": "Hoan hô Chúa trên các tầng trời ! Chúc tụng Đấng ngự đến Đầy nhân hậu từ bi. Hỡi cửa đền, hãy cất cao lên. Tv 23, 9-10 Cao lên nữa, hỡi cửa đền cổ kính, Để Đức Vua vinh hiển ngự vào. Đức Vua vinh hiển đó là ai? Là Chúa tể càn khôn: Chính Người là Đức Vua vinh hiển.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Chúc tụng Đấng ngự đến"
+                    "rubric": "Điệp ca"
                   },
                   {
-                    "sp": "",
-                    "text": "Đầy nhân hậu từ bi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hỡi cửa đền, hãy cất cao lên. Tv 23, 9-10"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cao lên nữa, hỡi cửa đền cổ kính,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Để Đức Vua vinh hiển ngự vào."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đức Vua vinh hiển đó là ai?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Là Chúa tể càn khôn:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chính Người là Đức Vua vinh hiển."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoan hô Chúa trên các tầng trời !"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúc tụng Đấng ngự đến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đầy nhân hậu từ bi."
+                    "text": "Hoan hô Chúa trên các tầng trời ! Chúc tụng Đấng ngự đến Đầy nhân hậu từ bi.",
+                    "sp": "X."
                   }
                 ]
               },
               "palm_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Anh chị em thân mến,chúng ta tụ họp nơi đây, để cùng toàn thể"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Giáo Hội khai mạc tuần thánh tưởng niệm mầu nhiệm Vượt Qua,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tức là cuộc thương khó và Phục Sinh của Ðức Ki-tô. Ðể chuẩn bị"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tuần Thánh, trong suốt mùa chay, chúng ta đã cầu nguyện, thống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hối, chia sẻ tình thương và cơm áo cho nhau."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa nhật lễ lá hôm nay là ngày kỷ niệm Ðấng Cứu Thế vào"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thành thánh Giê-ru-sa-lem để hoàn tất mầu nhiệm Vượt Qua đem lại"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cho loài người ơn cứu độ, chúng ta hãy đem cả niềm tin mà hăng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hái bước theo Người. Xin Người ban ơn để chúng ta thông phần đau"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khổ Người đã chịu trên thập Giá, hầu được chia sẻ vinh quang Phục"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Sinh và sự sống của Người."
+                    "text": "Anh chị em thân mến,chúng ta tụ họp nơi đây, để cùng toàn thể Giáo Hội khai mạc tuần thánh tưởng niệm mầu nhiệm Vượt Qua, tức là cuộc thương khó và Phục Sinh của Ðức Ki-tô. Ðể chuẩn bị Tuần Thánh, trong suốt mùa chay, chúng ta đã cầu nguyện, thống hối, chia sẻ tình thương và cơm áo cho nhau. Chúa nhật lễ lá hôm nay là ngày kỷ niệm Ðấng Cứu Thế vào thành thánh Giê-ru-sa-lem để hoàn tất mầu nhiệm Vượt Qua đem lại cho loài người ơn cứu độ, chúng ta hãy đem cả niềm tin mà hăng hái bước theo Người. Xin Người ban ơn để chúng ta thông phần đau khổ Người đã chịu trên thập Giá, hầu được chia sẻ vinh quang Phục Sinh và sự sống của Người.",
+                    "sp": "CT."
                   }
                 ]
               },
@@ -118697,52 +115426,16 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Thiên Chúa toàn năng hằng hữu,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "xin thánh † hiến những"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cành lá này, để chúng con cầm mà hoan nghênh Ðức Giêsu là Vua"
-                      },
-                      {
-                        "sp": "",
-                        "text": "chúng con. Xin ban cho mọi người chúng con đây là tín hữu Chúa"
-                      },
-                      {
-                        "sp": "",
-                        "text": "được theo Người vào thành thánh Giê-ru-sa-lem vĩnh cửu. Người"
-                      },
-                      {
-                        "sp": "",
-                        "text": "hằng sống và hiển trị muôn đời."
+                        "text": "Lạy Thiên Chúa toàn năng hằng hữu, xin thánh † hiến những cành lá này, để chúng con cầm mà hoan nghênh Ðức Giêsu là Vua chúng con. Xin ban cho mọi người chúng con đây là tín hữu Chúa được theo Người vào thành thánh Giê-ru-sa-lem vĩnh cửu. Người hằng sống và hiển trị muôn đời.",
+                        "sp": "CT."
                       }
                     ]
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, xin gia tăng lòng tin cho chúng con là những kẻ cậy"
-                      },
-                      {
-                        "sp": "",
-                        "text": "trông vào Chúa. Giờ đây chúng con cầm những cành lá này, nghênh"
-                      },
-                      {
-                        "sp": "",
-                        "text": "đón Ðức Ki-tô khải hoàn vinh hiển. Xin Chúa thương nhận lời và"
-                      },
-                      {
-                        "sp": "",
-                        "text": "ban cho chúng con được sống kết hợp với Người như cành liền cây"
-                      },
-                      {
-                        "sp": "",
-                        "text": "hầu sinh hoa kết quả. Người hằng sống và hiển trị muôn đời."
+                        "text": "Lạy Chúa, xin gia tăng lòng tin cho chúng con là những kẻ cậy trông vào Chúa. Giờ đây chúng con cầm những cành lá này, nghênh đón Ðức Ki-tô khải hoàn vinh hiển. Xin Chúa thương nhận lời và ban cho chúng con được sống kết hợp với Người như cành liền cây hầu sinh hoa kết quả. Người hằng sống và hiển trị muôn đời.",
+                        "sp": "CT."
                       }
                     ]
                   }
@@ -118751,456 +115444,51 @@ globalThis.countrySpecialLiturgies = {
               "palm_procession": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Rồi bắt đầu rước vào nhà thờ, nơi cử hành thánh lễ."
+                    "rubric": "Rồi bắt đầu rước vào nhà thờ, nơi cử hành thánh lễ. Nếu có dùng hương, người cầm bình hương đi trước, tay cầm bình hương nghi ngút, kế đến người cầm thánh giá có gắn nhành lá, đi giữa hai người cầm nến cháy, theo sau là linh mục và các người giúp lễ, cuối cùng là giáo dân tay cầm nhành lá. Đang khi đi kiệu, ca đoàn cùng giáo dân hát các bài thánh ca sau đây, hoặc các bài khác thích hợp. Điệp ca"
                   },
                   {
-                    "sp": "",
-                    "text": "Nếu có dùng hương, người cầm bình hương đi trước, tay cầm bình"
+                    "text": "Dân Do Thái vui mừng ra đón Chúa. Tay phất cành ô-liu Miệng reo hò ca tụng: Hoan hô Chúa trên các tầng trời.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "hương nghi ngút, kế đến người cầm thánh giá có gắn nhành lá, đi giữa"
+                    "rubric": "Tùy nghi lặp lại điệp ca sau một vài câu thánh vịnh 23. Thánh vịnh 23"
                   },
                   {
-                    "sp": "",
-                    "text": "hai người cầm nến cháy, theo sau là linh mục và các người giúp lễ, cuối"
+                    "text": "Chúa làm chủ trái đất cùng muôn vật muôn loài. Làm chủ hoàn cầu với toàn thể dân cư. * Nền trái đất, Người dựng trên biển cả, Đặt vững vàng trên làn nước mênh mông. Ai được lên núi Chúa? Ai được ở trong đền thánh của Người? Đó là kẻ tay sạch lòng thanh, Chẳng mê theo ngẫu tượng. Không thề gian thề dối. Người ấy sẽ được Chúa ban phúc lành. Được Thiên Chúa cứu độ thưởng công xứng đáng. * Đây chính là dòng dõi những kẻ tìm kiếm Người. Tìm thánh nhan Thiên Chúa nhà Giacóp. Hỡi cửa đền, hãy cất cao lên, * Cao lên nữa, hỡi cửa đền cổ kính, Để Đức Vua vinh hiển ngự vào. Đức Vua vinh hiển đó là ai? * Là Đức Chúa mạnh mẽ oai hùng, Đức Chúa oai hùng khi xuất trận. Hỡi cửa đền, hãy cất cao lên, * Cao lên nữa, hỡi cửa đền cổ kính, Để Đức Vua vinh hiển ngự vào. Đức Vua vinh hiển đó là ai? * Là Chúa tể càn khôn: Chính Người là Đức Vua vinh hiển.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "cùng là giáo dân tay cầm nhành lá."
+                    "rubric": "Điệp ca"
                   },
                   {
-                    "sp": "",
-                    "text": "Đang khi đi kiệu, ca đoàn cùng giáo dân hát các bài thánh ca sau"
+                    "text": "Dân Do Thái trải áo trên đường Và lớn tiếng reo hò: Hoan hô Thái Tử nhà Đavit, Chúc tụng Đấng ngự đến nhân danh Chúa.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "đây, hoặc các bài khác thích hợp."
+                    "rubric": "Tùy nghi lặp lại điệp ca sau một vài câu thánh vịnh 46. Thánh vịnh 46"
                   },
                   {
-                    "sp": "",
-                    "text": "Điệp ca"
+                    "text": "Vỗ tay đi nào muôn dân hỡi, Mừng Thiên Chúa, hãy cất tiếng hò reo! * Vì Đức Chúa là Đấng tối cao, Đấng khả úy. Là Vua cả thống trị khắp địa cầu. Chính Người bắt muôn dân muôn nước Phải phục quyền và quỵ lụy chúng tôi. * Người chọn lựa cho chúng tôi phần cơ nghiệp. Cơ nghiệp làm cho Người thương kẻ người nhà Giacóp Được nở mặt nở mày. Thiên Chúa ngự lên rộn rã tiếng hò reo, Chúa ngự lên, vang dội tiếng tù và. * Hãy đàn ca, đàn ca mừng Thiên Chúa, Đàn ca lên nào, đàn ca nữa kính vua ta! Thiên Chúa là vua toàn cõi địa cầu, Hãy dâng Người khúc đàn ca tuyệt mỹ. * Thiên Chúa là vua thống trị chư dân, Thiên Chúa ngự trên tòa uy linh cao cả. Kìa vương hầu các dân tề tựu Cùng dâng Thiên Chúa, Chúa của Abraham. * Mọi thủ lãnh trần gian thuộc quyền Thiên Chúa, Đấng siêu việt ngàn trùng. Thánh thi mừng Chúa Kitô Vua Ca đoàn: Câu chúc tụng lời tung hô vạn tuế, Kính dâng Ngài, lạy vua cả Kitô, Xin tôn vinh Đấng cứu chuộc nhân từ Như toàn thể thiếu nhi xưa mừng Chúa.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Dân Do Thái vui mừng ra đón Chúa."
+                    "text": "Câu chúc tụng lời tung hô vạn tuế, Kính dâng Ngài, lạy vua cả Kitô, Xin tôn vinh Đấng cứu chuộc nhân từ Như toàn thể thiếu nhi xưa mừng Chúa. Ca đoàn: Vạn tuế vua Israel, Thánh tử nhà Đavít, Vạn phúc vua nhân hiền, Ngự đến nhân danh Chúa. Thần thánh cõi thiên đình Với muôn người nhân thế Cùng toàn thể thọ sinh Đồng thanh ca tụng Chúa. Dân Chúa xưa cầm lá Rước Người ngự vào thành Chúng con nay cầu nguyện Dâng tiếng hát cung nghinh",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Tay phất cành ô-liu"
+                    "rubric": "Trước khi Ngài chịu nạn, Họ thành kính tán dương, Nay chúng con mừng hát Ngài hiển trị thiên đường. Lạy vua đầy nhân hậu, Tình dân, Ngài đã thấu, Xin đoái nhận nỗi niềm, Lòng thành kính dâng lên. 10- Khi đoàn kiệu đang tiến vào nhà thờ thì hát bài sau đây, hoặc một bài khác về việc Chúa tiến vào thành. Xướng đáp"
                   },
                   {
-                    "sp": "",
-                    "text": "Miệng reo hò ca tụng:"
+                    "text": "Xưa Chúa vào thành thánh, Dân Do Thái phất lá hò reo Tiên báo Người phục sinh vinh hiển, Nay chúng ta đồng thanh ca hát: Hoan hô Chúa trên các tầng trời.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Hoan hô Chúa trên các tầng trời."
+                    "text": "Xưa dân Chúa vừa mới được tin Chúa Giêsu vào Giêrusalem, Liền đổ xô ra đón Và phất lá hò reo.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Tùy nghi lặp lại điệp ca sau một vài câu thánh vịnh 23."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh vịnh 23"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa làm chủ trái đất cùng muôn vật muôn loài."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Làm chủ hoàn cầu với toàn thể dân cư. *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nền trái đất, Người dựng trên biển cả,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đặt vững vàng trên làn nước mênh mông."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ai được lên núi Chúa?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ai được ở trong đền thánh của Người?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đó là kẻ tay sạch lòng thanh,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chẳng mê theo ngẫu tượng."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Không thề gian thề dối."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người ấy sẽ được Chúa ban phúc lành."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Được Thiên Chúa cứu độ thưởng công xứng đáng. *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đây chính là dòng dõi những kẻ tìm kiếm Người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tìm thánh nhan Thiên Chúa nhà Giacóp."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hỡi cửa đền, hãy cất cao lên, *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cao lên nữa, hỡi cửa đền cổ kính,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Để Đức Vua vinh hiển ngự vào."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đức Vua vinh hiển đó là ai? *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Là Đức Chúa mạnh mẽ oai hùng,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đức Chúa oai hùng khi xuất trận."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hỡi cửa đền, hãy cất cao lên, *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cao lên nữa, hỡi cửa đền cổ kính,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Để Đức Vua vinh hiển ngự vào."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đức Vua vinh hiển đó là ai? *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Là Chúa tể càn khôn:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chính Người là Đức Vua vinh hiển."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Dân Do Thái trải áo trên đường"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Và lớn tiếng reo hò:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoan hô Thái Tử nhà Đavit,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúc tụng Đấng ngự đến nhân danh Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tùy nghi lặp lại điệp ca sau một vài câu thánh vịnh 46."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh vịnh 46"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vỗ tay đi nào muôn dân hỡi,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mừng Thiên Chúa, hãy cất tiếng hò reo! *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vì Đức Chúa là Đấng tối cao, Đấng khả úy."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Là Vua cả thống trị khắp địa cầu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chính Người bắt muôn dân muôn nước"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Phải phục quyền và quỵ lụy chúng tôi. *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người chọn lựa cho chúng tôi phần cơ nghiệp."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cơ nghiệp làm cho Người thương kẻ người nhà Giacóp"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Được nở mặt nở mày."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa ngự lên rộn rã tiếng hò reo,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa ngự lên, vang dội tiếng tù và. *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hãy đàn ca, đàn ca mừng Thiên Chúa,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đàn ca lên nào, đàn ca nữa kính vua ta!"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa là vua toàn cõi địa cầu,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hãy dâng Người khúc đàn ca tuyệt mỹ. *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa là vua thống trị chư dân,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thiên Chúa ngự trên tòa uy linh cao cả."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Kìa vương hầu các dân tề tựu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cùng dâng Thiên Chúa, Chúa của Abraham. *"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mọi thủ lãnh trần gian thuộc quyền Thiên Chúa,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đấng siêu việt ngàn trùng."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh thi mừng Chúa Kitô Vua"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ca đoàn:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Câu chúc tụng lời tung hô vạn tuế,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Kính dâng Ngài, lạy vua cả Kitô,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin tôn vinh Đấng cứu chuộc nhân từ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Như toàn thể thiếu nhi xưa mừng Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cộng đoàn:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Câu chúc tụng lời tung hô vạn tuế,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Kính dâng Ngài, lạy vua cả Kitô,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin tôn vinh Đấng cứu chuộc nhân từ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Như toàn thể thiếu nhi xưa mừng Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ca đoàn:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vạn tuế vua Israel,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh tử nhà Đavít,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vạn phúc vua nhân hiền,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ngự đến nhân danh Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thần thánh cõi thiên đình"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Với muôn người nhân thế"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cùng toàn thể thọ sinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đồng thanh ca tụng Chúa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Dân Chúa xưa cầm lá"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Rước Người ngự vào thành"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúng con nay cầu nguyện"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Dâng tiếng hát cung nghinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Trước khi Ngài chịu nạn,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Họ thành kính tán dương,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nay chúng con mừng hát"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ngài hiển trị thiên đường."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy vua đầy nhân hậu,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tình dân, Ngài đã thấu,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin đoái nhận nỗi niềm,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lòng thành kính dâng lên."
-                  },
-                  {
-                    "sp": "",
-                    "text": "10- Khi đoàn kiệu đang tiến vào nhà thờ thì hát bài sau đây, hoặc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "một bài khác về việc Chúa tiến vào thành."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xướng đáp"
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Xưa Chúa vào thành thánh,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Dân Do Thái phất lá hò reo"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tiên báo Người phục sinh vinh hiển,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nay chúng ta đồng thanh ca hát:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoan hô Chúa trên các tầng trời."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Xưa dân Chúa vừa mới được tin"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa Giêsu vào Giêrusalem,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Liền đổ xô ra đón"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Và phất lá hò reo."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Nay chúng ta đồng thanh ca hát"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoan hô Chúa trên các tầng trời."
+                    "text": "Nay chúng ta đồng thanh ca hát Hoan hô Chúa trên các tầng trời.",
+                    "sp": "CĐ."
                   }
                 ]
               },
@@ -119209,246 +115497,38 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Tin MừngChúa Giêsu Ki-tô theo thánh Mát-thêu."
+                        "text": "Tin MừngChúa Giêsu Ki-tô theo thánh Mát-thêu.",
+                        "sp": "CT."
                       },
                       {
-                        "sp": "",
-                        "text": "Khi Ðức Giêsu và các môn đệ đi gần tới thành Giê-ru-sa-lem"
-                      },
-                      {
-                        "sp": "",
-                        "text": "đến làng Bết-pha-ghê, phía núi cây ô-liu, Người sai hai môn đệ và"
-                      },
-                      {
-                        "sp": "",
-                        "text": "bảo: “các anh đi vào làng trước mặt kia và sẽ thấy ngay một con lừa"
-                      },
-                      {
-                        "sp": "",
-                        "text": "mẹ đang cột sẵn đó, có con lừa con bên cạnh. Các anh cởi dây ra và"
-                      },
-                      {
-                        "sp": "",
-                        "text": "dắt về cho Thầy. Nếu có ai nói gì, thì trả lời là Thầy có việc cần"
-                      },
-                      {
-                        "sp": "",
-                        "text": "dùng. Thầy sẽ trả ngay. Sự việc đã xảy ra như thế để ứng nghiệm lời"
-                      },
-                      {
-                        "sp": "",
-                        "text": "ngôn sứ."
-                      },
-                      {
-                        "sp": "",
-                        "text": "“Hãy bảo thiếu nữ xi-on: Kìa Ðức Vua đến với ngươi; Khiêm"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tốn ngồi trên lưng lừa, lưng lừa con, là con của thú vật chở đồ.”"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Các môn đệ ra đi và làm theo lời Ðức Giêsu đã dạy. Các ông"
-                      },
-                      {
-                        "sp": "",
-                        "text": "dắt lừa mẹ lừa con về, trải áo choàng của mình trên lưng chúng, và"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Ðức Giêsu cỡi lên. Ðông đảo dân chúng trải áo xuống mặt đường,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "một số khác lại chặt cành chặt lá rải lên lối đi. Dân chúng, người đi"
-                      },
-                      {
-                        "sp": "",
-                        "text": "trước, kẻ theo sau, reo hò vang dậy “Hoan hô Thái Tử nhà Ða-vít!"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúc tụng Ðấng ngự đến nhân danh Chúa! Hoan hô Chúa trên các"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tầng Trời!” Khi Ðức Giêsu vào Giê-ru-sa-lem, cả thành náo động,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "và thiên hạ hỏi nhau: “ Ông nào vậy?” Dân chúng trả lời: “Ngôn sứ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Giêsu, người Na-da-rét, xứ Ga-li-lê đấy.”"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Ðó là Lời Chúa."
+                        "rubric": "Khi Ðức Giêsu và các môn đệ đi gần tới thành Giê-ru-sa-lem đến làng Bết-pha-ghê, phía núi cây ô-liu, Người sai hai môn đệ và bảo: “các anh đi vào làng trước mặt kia và sẽ thấy ngay một con lừa mẹ đang cột sẵn đó, có con lừa con bên cạnh. Các anh cởi dây ra và dắt về cho Thầy. Nếu có ai nói gì, thì trả lời là Thầy có việc cần dùng. Thầy sẽ trả ngay. Sự việc đã xảy ra như thế để ứng nghiệm lời ngôn sứ. “Hãy bảo thiếu nữ xi-on: Kìa Ðức Vua đến với ngươi; Khiêm tốn ngồi trên lưng lừa, lưng lừa con, là con của thú vật chở đồ.” Các môn đệ ra đi và làm theo lời Ðức Giêsu đã dạy. Các ông dắt lừa mẹ lừa con về, trải áo choàng của mình trên lưng chúng, và Ðức Giêsu cỡi lên. Ðông đảo dân chúng trải áo xuống mặt đường, một số khác lại chặt cành chặt lá rải lên lối đi. Dân chúng, người đi trước, kẻ theo sau, reo hò vang dậy “Hoan hô Thái Tử nhà Ða-vít! Chúc tụng Ðấng ngự đến nhân danh Chúa! Hoan hô Chúa trên các tầng Trời!” Khi Ðức Giêsu vào Giê-ru-sa-lem, cả thành náo động, và thiên hạ hỏi nhau: “ Ông nào vậy?” Dân chúng trả lời: “Ngôn sứ Giêsu, người Na-da-rét, xứ Ga-li-lê đấy.” Ðó là Lời Chúa."
                       }
-                    ]
+                    ],
+                    "citation": "Mt 21,1-11"
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Tin MừngChúa Giê-su Ki-tô theo thánh Mác-cô."
+                        "text": "Tin MừngChúa Giê-su Ki-tô theo thánh Mác-cô.",
+                        "sp": "CT."
                       },
                       {
-                        "sp": "",
-                        "text": "Khi Ðức Giê-su và các môn đệ đi gần tới thành Giê-ru-sa-lem,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lúc sắp vào làng Bết-pha-ghê và Bê-ta-ni-a, bên triền núi cây Ô-liu,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Người sai hai môn đệ và bảo: “Các anh đi vào làng trước mặt kia."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Tới nơi, sẽ thấy một con lừa con chưa ai cỡi bao giờ, đang cột sẵn"
-                      },
-                      {
-                        "sp": "",
-                        "text": "đó. Các anh cởi dây ra và dắt nó về đây. Nếu có ai bảo: “Tại sao các"
-                      },
-                      {
-                        "sp": "",
-                        "text": "anh làm như vậy?” thì cứ nói là: “Thầy có việc cần dùng, rồi sẽ trả"
-                      },
-                      {
-                        "sp": "",
-                        "text": "về ngay”. Hai môn đệ ấy ra đi và thấy một con lừa con cột ngoài"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cửa ngõ, ngay mặt đường. Các ông liền cởi dây lừa ra. Mấy người"
-                      },
-                      {
-                        "sp": "",
-                        "text": "đứng đó hỏi: “các ông cởi lừa người ta ra làm gì vậy?” Hai ông trả"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lời như Ðức Giêsu đã dặn. Và họ để cho đi. Hai ông dắt con lừa về"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cho Ðức Giêsu, trải áo choàng của mình lên lưng nó, và Ðức Giêsu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cỡi lên. Nhiều người trải áo xuống mặt đường, môt số khác lại chặt"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cành chặt lá ngoài đồng rải lên lối đi. Người đi trước, kẻ theo sau,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "reo hò vang dậy: “Hoan hô! Chúc tụng Ðấng ngự đến nhân danh"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa! Chúc tụng triều đại đang tới, triều đại vua Ða-vít, tổ phụ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "chúng ta. Hoan hô Chúa trên các tầng trời!”"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Ðó là lời Chúa."
+                        "rubric": "Khi Ðức Giê-su và các môn đệ đi gần tới thành Giê-ru-sa-lem, lúc sắp vào làng Bết-pha-ghê và Bê-ta-ni-a, bên triền núi cây Ô-liu, Người sai hai môn đệ và bảo: “Các anh đi vào làng trước mặt kia. Tới nơi, sẽ thấy một con lừa con chưa ai cỡi bao giờ, đang cột sẵn đó. Các anh cởi dây ra và dắt nó về đây. Nếu có ai bảo: “Tại sao các anh làm như vậy?” thì cứ nói là: “Thầy có việc cần dùng, rồi sẽ trả về ngay”. Hai môn đệ ấy ra đi và thấy một con lừa con cột ngoài cửa ngõ, ngay mặt đường. Các ông liền cởi dây lừa ra. Mấy người đứng đó hỏi: “các ông cởi lừa người ta ra làm gì vậy?” Hai ông trả lời như Ðức Giêsu đã dặn. Và họ để cho đi. Hai ông dắt con lừa về cho Ðức Giêsu, trải áo choàng của mình lên lưng nó, và Ðức Giêsu cỡi lên. Nhiều người trải áo xuống mặt đường, môt số khác lại chặt cành chặt lá ngoài đồng rải lên lối đi. Người đi trước, kẻ theo sau, reo hò vang dậy: “Hoan hô! Chúc tụng Ðấng ngự đến nhân danh Chúa! Chúc tụng triều đại đang tới, triều đại vua Ða-vít, tổ phụ chúng ta. Hoan hô Chúa trên các tầng trời!” Ðó là lời Chúa."
                       }
-                    ]
+                    ],
+                    "citation": "Mc 11,1-10"
                   },
                   "C": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Tin MừngChúa Giêsu Ki-tô, theo thánh Lu-ca"
+                        "text": "Tin MừngChúa Giêsu Ki-tô, theo thánh Lu-ca",
+                        "sp": "CT."
                       },
                       {
-                        "sp": "",
-                        "text": "Khi ấy, Ðức Giêsu dẫn đầu các môn đệ đi lên thành Giê-ru-salem. Khi đến làng Bết-pha-ghê và làng Bê-ta-ni-a, bên triền núi gọi"
-                      },
-                      {
-                        "sp": "",
-                        "text": "là núi cây Ô-liu, Người sai hai môn đệ và bảo: “Các anh đi vào làng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "trước mặt kia. Tới nơi sẽ thấy một con lừa con chưa ai cỡi bao giờ,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "đang cột sẵn đó. Các anh cởi dây ra và dắt nó về đây. Nếu có ai hỏi:"
-                      },
-                      {
-                        "sp": "",
-                        "text": "“Tại sao các anh cởi lừa người ta ra?”, thì cứ nói là Thầy có việc"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cần dùng.” Hai môn đệ ấy ra đi và thấy y như Người đã nói. Các"
-                      },
-                      {
-                        "sp": "",
-                        "text": "ông đang cởi dây lừa, thì mấy người chủ hỏi: “Tại sao các ông lại"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cởi lừa người ta ra?” Hai ông đáp: “Thầy có việc cần dùng”."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Các ông dắt lừa về cho Ðức Giêsu, rồi trải áo choàng của mình"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lên lưng nó, và giúp Người cỡi lên. Người tới đâu, dân chúng cũng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "trải áo lót đường cho Người đi. Khi Người đến gần thành, chỗ dốc"
-                      },
-                      {
-                        "sp": "",
-                        "text": "núi cây Ô-liu, tất cả đoàn môn đệ bỗng hứng khởi ca tụng Thiên"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa, vì các phép lạ họ đã được thấy. Họ cất tiếng tung hô: “Chúc"
-                      },
-                      {
-                        "sp": "",
-                        "text": "tụng Ðức Vua, Ðấng ngự đến nhân danh Chúa! Bình an trên trời"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cao, vinh quang trên các tầng trời!”"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Trong đám đông, có vài người thuộc nhóm Pha-ri-sêu, nói với"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Ðức Giêsu: “Thầy dạy môn đệ Thầy đi chứ!” Người đáp: “Tôi bảo"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thật các ông, họ mà làm thinh, thì sỏi đá sẽ reo hò!”"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Ðó là lời Chúa."
+                        "rubric": "Khi ấy, Ðức Giêsu dẫn đầu các môn đệ đi lên thành Giê-ru-salem. Khi đến làng Bết-pha-ghê và làng Bê-ta-ni-a, bên triền núi gọi là núi cây Ô-liu, Người sai hai môn đệ và bảo: “Các anh đi vào làng trước mặt kia. Tới nơi sẽ thấy một con lừa con chưa ai cỡi bao giờ, đang cột sẵn đó. Các anh cởi dây ra và dắt nó về đây. Nếu có ai hỏi: “Tại sao các anh cởi lừa người ta ra?”, thì cứ nói là Thầy có việc cần dùng.” Hai môn đệ ấy ra đi và thấy y như Người đã nói. Các ông đang cởi dây lừa, thì mấy người chủ hỏi: “Tại sao các ông lại cởi lừa người ta ra?” Hai ông đáp: “Thầy có việc cần dùng”. Các ông dắt lừa về cho Ðức Giêsu, rồi trải áo choàng của mình lên lưng nó, và giúp Người cỡi lên. Người tới đâu, dân chúng cũng trải áo lót đường cho Người đi. Khi Người đến gần thành, chỗ dốc núi cây Ô-liu, tất cả đoàn môn đệ bỗng hứng khởi ca tụng Thiên Chúa, vì các phép lạ họ đã được thấy. Họ cất tiếng tung hô: “Chúc tụng Ðức Vua, Ðấng ngự đến nhân danh Chúa! Bình an trên trời cao, vinh quang trên các tầng trời!” Trong đám đông, có vài người thuộc nhóm Pha-ri-sêu, nói với Ðức Giêsu: “Thầy dạy môn đệ Thầy đi chứ!” Người đáp: “Tôi bảo thật các ông, họ mà làm thinh, thì sỏi đá sẽ reo hò!” Ðó là lời Chúa."
                       }
-                    ]
+                    ],
+                    "citation": "Lc 19,28-40"
                   }
                 }
               }
@@ -119554,7 +115634,23 @@ globalThis.countrySpecialLiturgies = {
               }
             }
           },
-          "missalTextRegistered": true
+          "missalTextRegistered": true,
+          "prefaceText": {
+            "VN": {
+              "source": {
+                "file": "참고자료/미사/전문/베트남어 (일부).pdf",
+                "pdfPages": [
+                  831
+                ]
+              },
+              "lines": [
+                {
+                  "sp": "CT.",
+                  "text": "Lạy Chúa là Cha chí thánh là Thiên Chúa toàn năng hằng hữu,\nchúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo\nvà sinh ơn cứu độ cho chúng con, nhờ Ðức Ki-tô, Chúa chúng con.\nNgười là Ðấng vô tội, đã cam chịu khổ hình thay cho những\nngười tội lỗi, và bằng lòng chịu kết án bất công thay cho kẻ gian tà.\nNgười đã chết để tẩy trừ tội lỗi, và đã sống lại để thánh hoá chúng con.\nVì thế, cùng với toàn thể Thiên thần và các thánh, chúng con ca\nngợi Chúa, và vui mừng phấn khởi tung hô rằng:"
+                }
+              ]
+            }
+          }
         },
         {
           "id": "holy_thursday",
@@ -119694,508 +115790,114 @@ globalThis.countrySpecialLiturgies = {
               "thursday_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<QUY LUẬT CẦN BIẾT"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Theo truyền thống lâu đời của Hội thánh, hôm nay cấm cử hành mọi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh lễ không có giáo dân tham dự."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh lễ Tiệc Ly cử hành ban chiều lúc thuận tiện, có toàn thể cộng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đoàn địa phương tham dự đông đủ, trong khi các linh mục và thừa tác"
-                  },
-                  {
-                    "sp": "",
-                    "text": "viên thi hành phận vụ mình."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Các linh mục đã đồng tế trong thánh lễ làm Phép Dầu, hoặc đã cử"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hành thánh lễ vì lợi ích giáo dân, thì lại được đồng tế trong thánh lễ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chiều nữa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nơi nào lý do mục vụ đòi hỏi, thì Đấng Thường Quyền Sở Tại có"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thể cho cử hành một lễ thứ hai trong các nhà thờ, nhà nguyện công và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bán công, vào ban chiều. Còn trong trường hợp thật sự cần thiết, có thể"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cho phép cử hành thánh lễ cả vào lúc ban sáng, nhưng chỉ dành cho các"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tín hữu không có cách nào tham dự thánh lễ ban Chiều được. Tuy nhiên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đừng cử hành chỉ vì lợi ích riêng tư, kẻo làm thiệt hại cho việc cử hành"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh lễ chính ban chiều."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chỉ có thể cho giáo dân rước lễ trong thánh lễ mà thôi; nhưng bất cứ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giờ nào trong ngày, cũng có thể đem Mình Thánh Chúa cho bệnh nhân.>"
+                    "rubric": "QUY LUẬT CẦN BIẾT Theo truyền thống lâu đời của Hội thánh, hôm nay cấm cử hành mọi thánh lễ không có giáo dân tham dự. Thánh lễ Tiệc Ly cử hành ban chiều lúc thuận tiện, có toàn thể cộng đoàn địa phương tham dự đông đủ, trong khi các linh mục và thừa tác viên thi hành phận vụ mình. Các linh mục đã đồng tế trong thánh lễ làm Phép Dầu, hoặc đã cử hành thánh lễ vì lợi ích giáo dân, thì lại được đồng tế trong thánh lễ Chiều nữa. Nơi nào lý do mục vụ đòi hỏi, thì Đấng Thường Quyền Sở Tại có thể cho cử hành một lễ thứ hai trong các nhà thờ, nhà nguyện công và bán công, vào ban chiều. Còn trong trường hợp thật sự cần thiết, có thể cho phép cử hành thánh lễ cả vào lúc ban sáng, nhưng chỉ dành cho các tín hữu không có cách nào tham dự thánh lễ ban Chiều được. Tuy nhiên đừng cử hành chỉ vì lợi ích riêng tư, kẻo làm thiệt hại cho việc cử hành thánh lễ chính ban chiều. Chỉ có thể cho giáo dân rước lễ trong thánh lễ mà thôi; nhưng bất cứ giờ nào trong ngày, cũng có thể đem Mình Thánh Chúa cho bệnh nhân."
                   }
                 ]
               },
               "washing_feet": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "5- Bài giảng sẽ đề cập đến các mầu nhiệm được tưởng niệm trong"
+                    "text": "5- Bài giảng sẽ đề cập đến các mầu nhiệm được tưởng niệm trong thánh lễ này, tức là việc thiết lập bí tích Thánh Thể, chức tư tế và điều răn của Chúa về tình bác ái huynh đệ. Sau bài giảng, sẽ cử hành nghi thức rửa chân, nếu lý do mục vụ khuyên nên làm. 6- Các người giúp lễ sẽ hướng dẫn những người đã được tuyển trọn đến ghế dọn sẵn. Sau đó linh mục (cởi áo lễ nếu cần), với các người giúp lễ, đi đến từng người, đổ nước trên chân họ và lau. 7- Trong khi đó, hát một bài ca được ghi sau đây, hoặc những thánh ca thích hợp.",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "thánh lễ này, tức là việc thiết lập bí tích Thánh Thể, chức tư tế và điều"
+                    "rubric": "Điệp ca 1 x. Ga 13, 4.5.15"
                   },
                   {
-                    "sp": "",
-                    "text": "răn của Chúa về tình bác ái huynh đệ. Sau bài giảng, sẽ cử hành nghi"
+                    "text": "Chúa Giêsu trỗi dậy, rời bàn ăn, Đổ nước vào chậu",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "thức rửa chân, nếu lý do mục vụ khuyên nên làm."
+                    "rubric": "Rồi bắt đầu rửa chân cho các môn đệ Người Để làm gương cho họ noi theo. Điệp ca 2 x. Ga 13, 6.7.8"
                   },
                   {
-                    "sp": "",
-                    "text": "6- Các người giúp lễ sẽ hướng dẫn những người đã được"
+                    "text": "Lạy Chúa, Chúa mà lại rửa chân cho con sao? Chúa Giêsu đáp: “Nếu Thầy không rửa chân cho con, Con sẽ chẳng được chung phần với Thầy”.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "tuyển trọn đến ghế dọn sẵn. Sau đó linh mục (cởi áo lễ nếu cần), với các"
+                    "text": "Chúa đến chỗ Simon Phêrô, Ông liền thưa Người rằng:",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "người giúp lễ, đi đến từng người, đổ nước trên chân họ và lau."
+                    "text": "Lạy Chúa, Chúa mà lại rửa chân cho con sao?",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "7- Trong khi đó, hát một bài ca được ghi sau đây, hoặc những thánh"
+                    "text": "Việc Thầy làm bây giờ con chưa hiểu, Nhưng sau này sẽ hiểu.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "ca thích hợp."
+                    "text": "Lạy Chúa, Chúa mà lại rửa chân cho con sao?",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Điệp ca 1 x. Ga 13, 4.5.15"
+                    "rubric": "Điệp ca 3 x. Ga 13,14"
                   },
                   {
-                    "sp": "",
-                    "text": "Chúa Giêsu trỗi dậy, rời bàn ăn,"
+                    "text": "Chúa nói: “Nếu Thầy là Chúa và là Thầy, còn rửa chân cho anh em Anh em lại càng phải rửa chân cho nhau”.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Đổ nước vào chậu"
+                    "rubric": "Điệp ca 4 x. Ga 13, 35"
                   },
                   {
-                    "sp": "",
-                    "text": "Rồi bắt đầu rửa chân cho các môn đệ Người"
+                    "text": "Mọi người sẽ nhận biết anh em là môn đệ của Thầy ở điểm này: Là anh em có lòng yêu thương nhau.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Để làm gương cho họ noi theo."
+                    "text": "Chúa Giêsu nói cùng các môn đệ",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Điệp ca 2 x. Ga 13, 6.7.8"
+                    "text": "Mọi người…",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Lạy Chúa, Chúa mà lại rửa chân cho con sao?"
+                    "rubric": "Điệp ca 5 x. Ga 13, 34"
                   },
                   {
-                    "sp": "",
-                    "text": "Chúa Giêsu đáp: “Nếu Thầy không rửa chân cho con,"
+                    "text": "Chúa nói: “Thầy ban cho anh em một điều răn mới là anh em hãy yêu thương nhau, như Thầy đã yêu thương anh em.”",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Con sẽ chẳng được chung phần với Thầy”."
+                    "rubric": "Điệp ca 6 1 Cr 13, 13"
                   },
                   {
-                    "sp": "",
-                    "text": "X. Chúa đến chỗ Simon Phêrô,"
+                    "text": "Anh em hãy luôn luôn có đức tin, đức cậy, đức mến. Trong ba đức này, đức mến trọng hơn.",
+                    "sp": "CĐ."
                   },
                   {
-                    "sp": "",
-                    "text": "Ông liền thưa Người rằng:"
+                    "text": "Hiện bây giờ tin, cậy, mến, cả ba vẫn còn, nhưng đức mến mới là trọng nhất.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "◎",
-                    "text": "Lạy Chúa, Chúa mà lại rửa chân cho con sao?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Việc Thầy làm bây giờ con chưa hiểu,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nhưng sau này sẽ hiểu."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Lạy Chúa, Chúa mà lại rửa chân cho con sao?"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca 3 x. Ga 13,14"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa nói: “Nếu Thầy là Chúa và là Thầy,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "còn rửa chân cho anh em"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Anh em lại càng phải rửa chân cho nhau”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca 4 x. Ga 13, 35"
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Mọi người sẽ nhận biết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "anh em là môn đệ của Thầy ở điểm này:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Là anh em có lòng yêu thương nhau."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Chúa Giêsu nói cùng các môn đệ"
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Mọi người…"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca 5 x. Ga 13, 34"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa nói:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "“Thầy ban cho anh em một điều răn mới"
-                  },
-                  {
-                    "sp": "",
-                    "text": "là anh em hãy yêu thương nhau,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "như Thầy đã yêu thương anh em.”"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca 6 1 Cr 13, 13"
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Anh em hãy luôn luôn có đức tin, đức cậy, đức mến."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Trong ba đức này, đức mến trọng hơn."
-                  },
-                  {
-                    "sp": "",
-                    "text": "X. Hiện bây giờ tin, cậy, mến, cả ba vẫn còn, nhưng đức mến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mới là trọng nhất."
-                  },
-                  {
-                    "sp": "◎",
-                    "text": "Anh em hãy…"
+                    "text": "Anh em hãy…",
+                    "sp": "CĐ."
                   }
                 ]
               },
               "thursday_offertory": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Bắt đầu phụng vụ Thánh Thể, có thể cho giáo dân lên dâng của lễ"
+                    "rubric": "Bắt đầu phụng vụ Thánh Thể, có thể cho giáo dân lên dâng của lễ dành cho người nghèo. Trong lúc đó, hát bài thánh ca sau đây, hoặc bài khác thích hợp. Điệp ca"
                   },
                   {
-                    "sp": "",
-                    "text": "dành cho người nghèo."
+                    "text": "Đâu có tình yêu thương đích thực, Thì ở đấy có Đức Chúa Trời. Tình yêu Đức Kitô làm cho ta hiệp nhất, Nào anh em một nhà, hãy vui mừng hoan lạc. Đem tấc dạ kính yêu dâng Chúa Trời hằng sống Mối chân tình cao rộng ta trao gửi cho nhau.",
+                    "sp": "X."
                   },
                   {
-                    "sp": "",
-                    "text": "Trong lúc đó, hát bài thánh ca sau đây, hoặc bài khác thích hợp."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Điệp ca"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đâu có tình yêu thương đích thực,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thì ở đấy có Đức Chúa Trời."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Tình yêu Đức Kitô làm cho ta hiệp nhất,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nào anh em một nhà, hãy vui mừng hoan lạc."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đem tấc dạ kính yêu dâng Chúa Trời hằng sống"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mối chân tình cao rộng ta trao gửi cho nhau."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Khi cùng nhau kết đoàn làm nên một thân thể"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lo sao đừng chia rẽ sống hòa thuận bình an."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đừng tranh chấp kêu ca, chớ nặng lời cãi cọ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nguyện Kitô Đức Chúa hằng ngự giữa chúng ta."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cúi xin Đức Kitô cho đoàn con hưởng kiến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Giữa triều thần vinh hiển trên cõi phúc thiên thu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hoan lạc chẳng phôi pha, nỗi vui mừng chan chứa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ôi hạnh phúc bao la đến muôn đời muôn thuở."
+                    "rubric": "Khi cùng nhau kết đoàn làm nên một thân thể Lo sao đừng chia rẽ sống hòa thuận bình an. Đừng tranh chấp kêu ca, chớ nặng lời cãi cọ. Nguyện Kitô Đức Chúa hằng ngự giữa chúng ta. Cúi xin Đức Kitô cho đoàn con hưởng kiến Giữa triều thần vinh hiển trên cõi phúc thiên thu. Hoan lạc chẳng phôi pha, nỗi vui mừng chan chứa Ôi hạnh phúc bao la đến muôn đời muôn thuở."
                   }
                 ]
               },
               "reposition": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "15. Đọc lời nguyện xong, chủ tế đứng trước bàn thờ, bỏ hương rồi"
+                    "text": "15. Đọc lời nguyện xong, chủ tế đứng trước bàn thờ, bỏ hương rồi quỳ gối xông hương ba lần lên Mình Thánh Chúa, đoạn nhận khăn choàng vai, dùng hai đầu khăn choàng phủ bình đựng Mình Thánh, và cầm bình lên. 16. Cuộc rước kiệu tiến hành như sau: đi đầu là người cầm thánh giá, tiếp đến là linh mục mang Mình Thánh Chúa, cùng với các người cầm đèn nến, bình hương, kiệu dọc nhà thờ đến bàn thờ phụ đã được trang hoàng xứng đáng. Trong khi đó, hát thánh thi “Nào Ca Hát” hoặc một bài ca nào khác kính Mình Thánh. Nào Ca Hát Nào ca hát để họp mừng mầu nhiệm Vua muôn dân đã đem trót thân mình Cùng máu đào làm lễ tế hy sinh Nên giá chuộc muôn người trên thế giới. Người tự hiến cho ta nên chẳng ngại Sinh làm con Đức Trinh Nữ vẹn toàn, Trót cuộc đời gieo chân lý Phúc âm Và kết thúc bằng điềm thiêng kỳ diệu Đêm dự bữa Tiệc Ly cùng bạn hữu",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "quỳ gối xông hương ba lần lên Mình Thánh Chúa, đoạn nhận khăn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "choàng vai, dùng hai đầu khăn choàng phủ bình đựng Mình Thánh, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cầm bình lên."
-                  },
-                  {
-                    "sp": "",
-                    "text": "16. Cuộc rước kiệu tiến hành như sau: đi đầu là người cầm thánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giá, tiếp đến là linh mục mang Mình Thánh Chúa, cùng với các người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cầm đèn nến, bình hương, kiệu dọc nhà thờ đến bàn thờ phụ đã được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trang hoàng xứng đáng. Trong khi đó, hát thánh thi “Nào Ca Hát” hoặc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "một bài ca nào khác kính Mình Thánh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nào Ca Hát"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nào ca hát để họp mừng mầu nhiệm"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Vua muôn dân đã đem trót thân mình"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cùng máu đào làm lễ tế hy sinh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nên giá chuộc muôn người trên thế giới."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người tự hiến cho ta nên chẳng ngại"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Sinh làm con Đức Trinh Nữ vẹn toàn,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Trót cuộc đời gieo chân lý Phúc âm"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Và kết thúc bằng điềm thiêng kỳ diệu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đêm dự bữa Tiệc Ly cùng bạn hữu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Khi đã dùng thực phẩm luật truyền xưa."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người trao tay cho tất cả tông đồ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mình Máu Thánh làm thần lương mỹ vị."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Câu tuyên phán của Ngôi Lời nhập thể"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Đã làm cho bánh thật nên Mình Người,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Rượu nho thành bao giọt máu hồng tươi,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mắt chẳng thấy nhưng lòng tin vững mạnh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "17-Khi đến nơi, linh mục đặt bình đựng Mình Thánh Chúa lên bàn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thờ, bỏ hương rồi quỳ gối xông hương, trong lúc đó hát “Ôi Bí Tích”."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cuối cùng, đóng cửa nhà tạm."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ôi Bí Tích"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ôi Bí Tích thật cao vời khôn sánh,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Ta bái thờ Chúa đang ngự nơi đây,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Nghi lễ xưa đâu sánh bí tích này,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Niềm tin thế cho giác quan cảm nghiệm."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lòng hớn hở, cùng tán dương trìu mến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cha uy quyền và Con Một từ nhân,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Cùng tôn vinh ca ngợi Chúa Thánh Thần,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Xin chúc tụng Ba Ngôi ngàn muôn thuở."
-                  },
-                  {
-                    "sp": "",
-                    "text": "18- Sau khi thinh lặng thờ lạy trong giây lát, linh mục và các người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "giúp lễ bái gối, trở vào phòng thánh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "19- Sau đó, lột khăn bàn thờ, và nếu có thể, cất các thánh giá. Nếu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "còn thánh giá nào, phải phủ khăn."
+                    "rubric": "Khi đã dùng thực phẩm luật truyền xưa. Người trao tay cho tất cả tông đồ Mình Máu Thánh làm thần lương mỹ vị. Câu tuyên phán của Ngôi Lời nhập thể Đã làm cho bánh thật nên Mình Người, Rượu nho thành bao giọt máu hồng tươi, Mắt chẳng thấy nhưng lòng tin vững mạnh. 17-Khi đến nơi, linh mục đặt bình đựng Mình Thánh Chúa lên bàn thờ, bỏ hương rồi quỳ gối xông hương, trong lúc đó hát “Ôi Bí Tích”. Cuối cùng, đóng cửa nhà tạm. Ôi Bí Tích Ôi Bí Tích thật cao vời khôn sánh, Ta bái thờ Chúa đang ngự nơi đây, Nghi lễ xưa đâu sánh bí tích này, Niềm tin thế cho giác quan cảm nghiệm. Lòng hớn hở, cùng tán dương trìu mến Cha uy quyền và Con Một từ nhân, Cùng tôn vinh ca ngợi Chúa Thánh Thần, Xin chúc tụng Ba Ngôi ngàn muôn thuở. 18- Sau khi thinh lặng thờ lạy trong giây lát, linh mục và các người giúp lễ bái gối, trở vào phòng thánh. 19- Sau đó, lột khăn bàn thờ, và nếu có thể, cất các thánh giá. Nếu còn thánh giá nào, phải phủ khăn."
                   }
                 ]
               },
@@ -120526,60 +116228,7 @@ globalThis.countrySpecialLiturgies = {
               "friday_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<Theo truyền thống rất xa xưa, hôm nay và ngày mai Hội thánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không cử hành bí tích nào hết."
-                  },
-                  {
-                    "sp": "",
-                    "text": "2- Bàn thờ hoàn toàn để trống: không thánh giá, không chân đèn,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không trải khăn."
-                  },
-                  {
-                    "sp": "",
-                    "text": "3- Khoảng 3 giờ chiều, cử hành cuộc Thương Khó của Chúa, trừ khi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lý do mục vụ khuyên nên làm muộn hơn. Nghi thức này gồm ba phần:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Phụng vụ Lời Chúa, Kính thờ Thánh Giá, và Rước Lễ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hôm nay chỉ cho giáo dân rước lễ trong nghi thức tưởng niệm cuộc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thương Khó của Chúa mà thôi; tuy nhiên vào bất cứ giờ nào trong ngày,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cũng có thể đem Mình Thánh Chúa cho những bệnh nhân nào không thể"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tham dự nghi thức."
-                  },
-                  {
-                    "sp": "",
-                    "text": "4- Linh mục và phó tế, mặc lễ phục đỏ như khi cử hành thánh lễ,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tiến ra bàn thờ, cúi chào rồi phủ phục xuống đất hoặc quỳ gối, và tất cả"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mọi người thinh lặng cầu nguyện trong giây lát.>"
+                    "rubric": "Theo truyền thống rất xa xưa, hôm nay và ngày mai Hội thánh không cử hành bí tích nào hết. 2- Bàn thờ hoàn toàn để trống: không thánh giá, không chân đèn, không trải khăn. 3- Khoảng 3 giờ chiều, cử hành cuộc Thương Khó của Chúa, trừ khi lý do mục vụ khuyên nên làm muộn hơn. Nghi thức này gồm ba phần: Phụng vụ Lời Chúa, Kính thờ Thánh Giá, và Rước Lễ. Hôm nay chỉ cho giáo dân rước lễ trong nghi thức tưởng niệm cuộc Thương Khó của Chúa mà thôi; tuy nhiên vào bất cứ giờ nào trong ngày, cũng có thể đem Mình Thánh Chúa cho những bệnh nhân nào không thể tham dự nghi thức. 4- Linh mục và phó tế, mặc lễ phục đỏ như khi cử hành thánh lễ, tiến ra bàn thờ, cúi chào rồi phủ phục xuống đất hoặc quỳ gối, và tất cả mọi người thinh lặng cầu nguyện trong giây lát."
                   }
                 ]
               },
@@ -120598,68 +116247,22 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Linh mục và các người giúp lễ đến ghế, quay về phía giáo dân,"
+                        "rubric": "Linh mục và các người giúp lễ đến ghế, quay về phía giáo dân, linh mục dang tay đọc một trong hai lời nguyện sau đây: Lời Nguyện (không đọc “Chúng ta dâng lời cầu nguyện”)"
                       },
                       {
-                        "sp": "",
-                        "text": "linh mục dang tay đọc một trong hai lời nguyện sau đây:"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Lời Nguyện (không đọc “Chúng ta dâng lời cầu nguyện”)"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Lạy Chúa, vì yêu thương chúng con vô ngần, Chúa đã vui lòng"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cho Con Một Chúa đổ máu đào trên thập giá, để hoàn thành mầu"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nhiệm Vượt Qua, đem lại ơn cứu độ cho loài người. Giờ đây, xin"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa nhớ lại tình thương ấy mà thánh hóa và che chở đoàn con luôn"
-                      },
-                      {
-                        "sp": "",
-                        "text": "mãi. Chúng con cầu xin…"
+                        "text": "Lạy Chúa, vì yêu thương chúng con vô ngần, Chúa đã vui lòng cho Con Một Chúa đổ máu đào trên thập giá, để hoàn thành mầu nhiệm Vượt Qua, đem lại ơn cứu độ cho loài người. Giờ đây, xin Chúa nhớ lại tình thương ấy mà thánh hóa và che chở đoàn con luôn mãi. Chúng con cầu xin…",
+                        "sp": "CT."
                       }
                     ]
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Lạy Chúa, từ lòng mẹ, chúng con đã phải mang án chết do tội"
+                        "text": "Lạy Chúa, từ lòng mẹ, chúng con đã phải mang án chết do tội Ađam truyền lại, nhưng nhờ mầu nhiệm Con Chúa chịu khổ hình, Chúa đã tiêu diệt sự chết. Vậy giờ đây, xin Chúa ban ơn thánh hóa biến đổi chúng con nên giống hình ảnh Ađam mới là Đức Kitô, Đấng hằng sống và hiển trị muôn đời.",
+                        "sp": "CT."
                       },
                       {
-                        "sp": "",
-                        "text": "Ađam truyền lại, nhưng nhờ mầu nhiệm Con Chúa chịu khổ hình,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Chúa đã tiêu diệt sự chết. Vậy giờ đây, xin Chúa ban ơn thánh hóa"
-                      },
-                      {
-                        "sp": "",
-                        "text": "biến đổi chúng con nên giống hình ảnh Ađam mới là Đức Kitô,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Đấng hằng sống và hiển trị muôn đời."
-                      },
-                      {
-                        "sp": "",
-                        "text": "PHẦN THỨ NHẤT"
-                      },
-                      {
-                        "sp": "",
-                        "text": "PHỤNG VỤ LỜI CHÚA"
+                        "rubric": "PHẦN THỨ NHẤT PHỤNG VỤ LỜI CHÚA"
                       }
                     ]
                   }
@@ -120680,116 +116283,26 @@ globalThis.countrySpecialLiturgies = {
                   "A": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "Đem thánh giá có phủ khăn ra bàn thờ, hai người giúp lễ cầm nến"
+                        "text": "Đem thánh giá có phủ khăn ra bàn thờ, hai người giúp lễ cầm nến cháy đi hai bên. Linh mục đứng trước bàn thờ, nhận thánh giá, mở phần khăn che phía đầu thánh giá, nâng thánh giá lên và hát câu kêu mời: “Đây là cây thánh giá”, phó tế hoặc ca đoàn hát giúp linh mục. Mọi người đáp: “Ta hãy đến bái thờ”. Hát xong, mọi người quỳ gối thinh lặng cầu nguyện giây lát, linh mục vẫn đứng nâng cao thánh giá.",
+                        "sp": "CT."
                       },
                       {
-                        "sp": "",
-                        "text": "cháy đi hai bên. Linh mục đứng trước bàn thờ, nhận thánh giá, mở phần"
-                      },
-                      {
-                        "sp": "",
-                        "text": "khăn che phía đầu thánh giá, nâng thánh giá lên và hát câu kêu mời:"
-                      },
-                      {
-                        "sp": "",
-                        "text": "“Đây là cây thánh giá”, phó tế hoặc ca đoàn hát giúp linh mục. Mọi"
-                      },
-                      {
-                        "sp": "",
-                        "text": "người đáp: “Ta hãy đến bái thờ”. Hát xong, mọi người quỳ gối thinh"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lặng cầu nguyện giây lát, linh mục vẫn đứng nâng cao thánh giá."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Rồi linh mục mở khăn che cánh phải thánh giá, nâng cao thánh giá"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lên hát kêu mời như trên."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Sau cùng linh mục bỏ hết khăn che thánh giá, lại nâng lên và hát"
-                      },
-                      {
-                        "sp": "",
-                        "text": "kêu mời như trên."
-                      },
-                      {
-                        "sp": "",
-                        "text": "Rồi linh mục mang thánh giá, xuống lối vào cung thánh hoặc đến"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nơi nào xứng hợp có hai người cầm nến cháy đi hai bên; đến nơi, ngài"
-                      },
-                      {
-                        "sp": "",
-                        "text": "đặt thánh giá tại đó, hoặc trao cho hai người giúp lễ đỡ hai bên, còn đèn"
-                      },
-                      {
-                        "sp": "",
-                        "text": "nến thì đặt hai bên tả hữu. Đoạn bắt đầu việc tôn thờ thánh giá như số 18"
-                      },
-                      {
-                        "sp": "",
-                        "text": "dưới đây."
+                        "rubric": "Rồi linh mục mở khăn che cánh phải thánh giá, nâng cao thánh giá lên hát kêu mời như trên. Sau cùng linh mục bỏ hết khăn che thánh giá, lại nâng lên và hát kêu mời như trên. Rồi linh mục mang thánh giá, xuống lối vào cung thánh hoặc đến nơi nào xứng hợp có hai người cầm nến cháy đi hai bên; đến nơi, ngài đặt thánh giá tại đó, hoặc trao cho hai người giúp lễ đỡ hai bên, còn đèn nến thì đặt hai bên tả hữu. Đoạn bắt đầu việc tôn thờ thánh giá như số 18 dưới đây."
                       }
                     ]
                   },
                   "B": {
                     "lines": [
                       {
-                        "sp": "",
-                        "text": "17- Linh mục, hoặc phó tế, hay một thừa tác viên khác xứng hợp,"
+                        "rubric": "17- Linh mục, hoặc phó tế, hay một thừa tác viên khác xứng hợp, cùng các người giúp lễ, đến cửa nhà thờ, nhận thánh giá không phủ khăn, các người giúp lễ thì nhận nến cháy, rồi đi kiệu qua lòng nhà thờ lên cung thành. Tại ba nơi: ở gần cửa, ở giữa nhà thờ và ở lối vào cung thánh, người cầm thánh giá nâng cao lên và hát câu kêu mời: “Đây là cây thánh giá”; mọi người đáp: “Ta hãy đến bái thờ”, rồi quỳ gối thinh lặng giây lát như trên. Sau đó đặt thánh giá và đèn, nến ở lối vào cung thánh như trên (số 16). LỜI MỜI GỌI KÍNH THỜ THÁNH GIÁ"
                       },
                       {
-                        "sp": "",
-                        "text": "cùng các người giúp lễ, đến cửa nhà thờ, nhận thánh giá không phủ"
+                        "text": "Đây là cây thánh giá, Nơi đã treo Đấng Cứu Độ trần gian.",
+                        "sp": "X."
                       },
                       {
-                        "sp": "",
-                        "text": "khăn, các người giúp lễ thì nhận nến cháy, rồi đi kiệu qua lòng nhà thờ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lên cung thành. Tại ba nơi: ở gần cửa, ở giữa nhà thờ và ở lối vào cung"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thánh, người cầm thánh giá nâng cao lên và hát câu kêu mời: “Đây là"
-                      },
-                      {
-                        "sp": "",
-                        "text": "cây thánh giá”; mọi người đáp: “Ta hãy đến bái thờ”, rồi quỳ gối thinh"
-                      },
-                      {
-                        "sp": "",
-                        "text": "lặng giây lát như trên. Sau đó đặt thánh giá và đèn, nến ở lối vào cung"
-                      },
-                      {
-                        "sp": "",
-                        "text": "thánh như trên (số 16)."
-                      },
-                      {
-                        "sp": "",
-                        "text": "LỜI MỜI GỌI KÍNH THỜ THÁNH GIÁ"
-                      },
-                      {
-                        "sp": "",
-                        "text": "X. Đây là cây thánh giá,"
-                      },
-                      {
-                        "sp": "",
-                        "text": "Nơi đã treo Đấng Cứu Độ trần gian."
-                      },
-                      {
-                        "sp": "◎",
-                        "text": "Ta hãy đến bái thờ."
+                        "text": "Ta hãy đến bái thờ.",
+                        "sp": "CĐ."
                       }
                     ]
                   }
@@ -120798,640 +116311,152 @@ globalThis.countrySpecialLiturgies = {
               "cross_adoration": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Để kính thờ thánh giá, linh mục, giáo sĩ và giáo dân lần lượt tiến"
-                  },
-                  {
-                    "sp": "",
-                    "text": "lên và tỏ lòng tôn kính thánh giá bằng cách bái gối, hoặc bằng dấu hiệu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nào khác thích hợp, theo phong tục địa phương, ví dụ hôn thánh giá."
-                  },
-                  {
-                    "sp": "",
-                    "text": "Trong khi đó hát điệp ca: “Lạy Chúa, chúng con tôn thờ thánh giá"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa”, những câu than vãn hoặc các thánh ca khác thích hợp; những ai"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tôn thờ xong thì trở về chỗ ngồi."
-                  },
-                  {
-                    "sp": "",
-                    "text": "19- Chỉ dùng một thánh giá duy nhất trong nghi thức kính thờ. Nếu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vì số dân chúng đông, mỗi người không thể lên kính thờ thánh giá được,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thì sau khi một phần tín hữu đã kính thờ, linh mục cầm thánh giá lên"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đứng trước bàn thờ, nói ít lời kêu mời dân chúng kính thờ thánh giá, rồi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nâng cao thánh giá trong giây lát để mọi người thinh lặng tôn thờ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "20- Nghi thức kính thờ chấm dứt, mang thánh giá đặt vào chỗ của"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thánh giá tại bàn thờ. Còn các nến cháy đặt chung quanh bàn thờ hay đặt"
-                  },
-                  {
-                    "sp": "",
-                    "text": "gần thánh giá."
-                  },
-                  {
-                    "sp": "",
-                    "text": "PHẦN THỨ BA"
-                  },
-                  {
-                    "sp": "",
-                    "text": "RƯỚC LỄ"
+                    "rubric": "Để kính thờ thánh giá, linh mục, giáo sĩ và giáo dân lần lượt tiến lên và tỏ lòng tôn kính thánh giá bằng cách bái gối, hoặc bằng dấu hiệu nào khác thích hợp, theo phong tục địa phương, ví dụ hôn thánh giá. Trong khi đó hát điệp ca: “Lạy Chúa, chúng con tôn thờ thánh giá Chúa”, những câu than vãn hoặc các thánh ca khác thích hợp; những ai tôn thờ xong thì trở về chỗ ngồi. 19- Chỉ dùng một thánh giá duy nhất trong nghi thức kính thờ. Nếu vì số dân chúng đông, mỗi người không thể lên kính thờ thánh giá được, thì sau khi một phần tín hữu đã kính thờ, linh mục cầm thánh giá lên đứng trước bàn thờ, nói ít lời kêu mời dân chúng kính thờ thánh giá, rồi nâng cao thánh giá trong giây lát để mọi người thinh lặng tôn thờ. 20- Nghi thức kính thờ chấm dứt, mang thánh giá đặt vào chỗ của thánh giá tại bàn thờ. Còn các nến cháy đặt chung quanh bàn thờ hay đặt gần thánh giá. PHẦN THỨ BA RƯỚC LỄ"
                   }
                 ]
               },
               "friday_communion_intro": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<Trải khăn phủ bàn thờ và khăn thánh, rồi đặt sách lễ lên. Đoạn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phó tế hoặc chính linh mục, nếu không có phó tế, đi rước Mình Thánh từ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "bàn thờ phụ theo đường tắt về bàn thờ chính, trong lúc đó mọi người"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đứng thinh lặng. Hai người giúp lễ cầm nến cháy cùng đi rước Mình"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thánh với linh mục, sau đó đặt nến trên hay bên cạnh bàn thờ.>"
+                    "rubric": "Trải khăn phủ bàn thờ và khăn thánh, rồi đặt sách lễ lên. Đoạn phó tế hoặc chính linh mục, nếu không có phó tế, đi rước Mình Thánh từ bàn thờ phụ theo đường tắt về bàn thờ chính, trong lúc đó mọi người đứng thinh lặng. Hai người giúp lễ cầm nến cháy cùng đi rước Mình Thánh với linh mục, sau đó đặt nến trên hay bên cạnh bàn thờ."
                   }
                 ]
               },
               "friday_people_prayer": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Lạy Chúa, cộng đoàn dân Chúa đây vừa tưởng niệm Con Một"
+                    "text": "Lạy Chúa, cộng đoàn dân Chúa đây vừa tưởng niệm Con Một Chúa đã chịu chết vì chúng con, và tin tưởng sẽ được phục sinh với Người. Xin Chúa thương giáng phúc dồi dào, mà ban cho họ ơn tha thứ và niềm an ủi. Xin cho họ ngày càng thêm tin kính Chúa, và vững lòng trông cậy sẽ được ơn cứu chuộc muôn đời. Chúng con cầu xin…",
+                    "sp": "CT."
                   },
                   {
-                    "sp": "",
-                    "text": "Chúa đã chịu chết vì chúng con, và tin tưởng sẽ được phục sinh với"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người. Xin Chúa thương giáng phúc dồi dào, mà ban cho họ ơn tha"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thứ và niềm an ủi. Xin cho họ ngày càng thêm tin kính Chúa, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vững lòng trông cậy sẽ được ơn cứu chuộc muôn đời. Chúng con"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cầu xin…"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mọi người yên lặng ra về. Vào lúc thuận tiện lột khăn bàn thờ."
+                    "rubric": "Mọi người yên lặng ra về. Vào lúc thuận tiện lột khăn bàn thờ."
                   }
                 ]
               },
               "friday_departure": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "<Lạy Chúa, cộng đoàn dân Chúa đây vừa tưởng niệm Con Một"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa đã chịu chết vì chúng con, và tin tưởng sẽ được phục sinh với"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người. Xin Chúa thương giáng phúc dồi dào, mà ban cho họ ơn tha"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thứ và niềm an ủi. Xin cho họ ngày càng thêm tin kính Chúa, và"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vững lòng trông cậy sẽ được ơn cứu chuộc muôn đời. Chúng con"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cầu xin…"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Mọi người yên lặng ra về. Vào lúc thuận tiện lột khăn bàn thờ.>"
+                    "rubric": "Lạy Chúa, cộng đoàn dân Chúa đây vừa tưởng niệm Con Một Chúa đã chịu chết vì chúng con, và tin tưởng sẽ được phục sinh với Người. Xin Chúa thương giáng phúc dồi dào, mà ban cho họ ơn tha thứ và niềm an ủi. Xin cho họ ngày càng thêm tin kính Chúa, và vững lòng trông cậy sẽ được ơn cứu chuộc muôn đời. Chúng con cầu xin… Mọi người yên lặng ra về. Vào lúc thuận tiện lột khăn bàn thờ."
                   }
                 ]
               },
               "friday_intercession_1": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến, ta hãy cầu nguyện cho Hội thánh Chúa."
+                    "text": "Anh (chị) em thân mến, ta hãy cầu nguyện cho Hội thánh Chúa. Xin cho Hội thánh được hiệp nhất và bình an, được Chúa bảo tồn ở khắp nơi trên hoàn cầu. Xin Chúa cũng ban cho ta được an cư lạc nghiệp hầu tôn vinh Người là Cha toàn năng. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "Xin cho Hội thánh được hiệp nhất và bình an, được Chúa bảo tồn ở"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khắp nơi trên hoàn cầu. Xin Chúa cũng ban cho ta được an cư lạc"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nghiệp hầu tôn vinh Người là Cha toàn năng."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã cho muôn dân"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được thấy vinh quang Chúa tỏ hiện nơi Đức Kitô là Đấng yêu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "thương gầy dựng Hội thánh Chúa. Cúi xin Chúa bảo vệ giữ gìn để"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Hội thánh đang hiện diện khắp nơi luôn tin kính một niềm mà xưng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "tụng danh Chúa. Chúng con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã cho muôn dân được thấy vinh quang Chúa tỏ hiện nơi Đức Kitô là Đấng yêu thương gầy dựng Hội thánh Chúa. Cúi xin Chúa bảo vệ giữ gìn để Hội thánh đang hiện diện khắp nơi luôn tin kính một niềm mà xưng tụng danh Chúa. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_2": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho Đức Thánh Cha T. Chính Chúa đã chọn"
+                    "text": "Ta hãy cầu cho Đức Thánh Cha T. Chính Chúa đã chọn Người giữa hàng giám mục, xin Chúa cũng ban cho Người luôn an khang để lãnh đạo toàn thể dân thánh. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "Người giữa hàng giám mục, xin Chúa cũng ban cho Người luôn an"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khang để lãnh đạo toàn thể dân thánh."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa an bài mọi sự cách"
-                  },
-                  {
-                    "sp": "",
-                    "text": "khôn ngoan lạ lùng. Chính Chúa đã tuyển chọn Đức Thánh Cha T."
-                  },
-                  {
-                    "sp": "",
-                    "text": "và trao cho Người nhiệm vụ lãnh đạo dân thánh Chúa. Xin nhận lời"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chúng con cầu nguyện mà ân cần săn sóc giữ gìn Người; để nhờ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người, đức tin của mọi tín hữu luôn bền vững sắt son, chúng con"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa an bài mọi sự cách khôn ngoan lạ lùng. Chính Chúa đã tuyển chọn Đức Thánh Cha T. và trao cho Người nhiệm vụ lãnh đạo dân thánh Chúa. Xin nhận lời chúng con cầu nguyện mà ân cần săn sóc giữ gìn Người; để nhờ Người, đức tin của mọi tín hữu luôn bền vững sắt son, chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_3": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho Đức (Hồng Y) Giám Mục T. của giáo phận"
+                    "text": "Ta hãy cầu cho Đức (Hồng Y) Giám Mục T. của giáo phận chúng ta, cho hàng Giám Mục, linh mục, phó tế, cũng như mọi người phục vụ dân thánh, và cho toàn thể cộng đoàn tín hữu khắp địa cầu. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "chúng ta, cho hàng Giám Mục, linh mục, phó tế, cũng như mọi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "người phục vụ dân thánh, và cho toàn thể cộng đoàn tín hữu khắp"
-                  },
-                  {
-                    "sp": "",
-                    "text": "địa cầu."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Thánh Thần Chúa luôn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hướng dẫn và thánh hóa toàn thể Hội thánh. Nay chúng con tha thiết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nguyện cầu: Xin Chúa thương cho mỗi thành phần Hội thánh, biết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "theo ơn đặc sủng Chúa ban để trung thành phụng sự Chúa. Chúng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Thánh Thần Chúa luôn hướng dẫn và thánh hóa toàn thể Hội thánh. Nay chúng con tha thiết nguyện cầu: Xin Chúa thương cho mỗi thành phần Hội thánh, biết theo ơn đặc sủng Chúa ban để trung thành phụng sự Chúa. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_4": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho anh chị em dự tòng (có mặt nơi đây). Xin Chúa"
+                    "text": "Ta hãy cầu cho anh chị em dự tòng (có mặt nơi đây). Xin Chúa thương soi sáng tâm hồn họ, để họ được hiểu biết Chúa hơn. Xin Người mở lượng từ bi ban cho họ ơn tái sinh nhờ bí tích Thánh Tẩy, để họ được thứ tha tội lỗi và trở thành chi thể của Chúa Kitô. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "thương soi sáng tâm hồn họ, để họ được hiểu biết Chúa hơn. Xin"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Người mở lượng từ bi ban cho họ ơn tái sinh nhờ bí tích Thánh Tẩy,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "để họ được thứ tha tội lỗi và trở thành chi thể của Chúa Kitô."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa làm cho Hội thánh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không ngừng sinh thêm nhiều con cái. Xin cho anh chị em dự tòng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "(có mặt nơi đây), được thêm lòng tin kính và hiểu biết Chúa hơn,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hầu xứng đáng lãnh nhận ơn tái sinh nhờ bí tích Thánh Tẩy và gia"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhập đoàn nghĩa tử của Chúa. Chúng con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa làm cho Hội thánh không ngừng sinh thêm nhiều con cái. Xin cho anh chị em dự tòng (có mặt nơi đây), được thêm lòng tin kính và hiểu biết Chúa hơn, hầu xứng đáng lãnh nhận ơn tái sinh nhờ bí tích Thánh Tẩy và gia nhập đoàn nghĩa tử của Chúa. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_5": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho mọi anh chị em cùng tin vào Đức Kitô, và đang"
+                    "text": "Ta hãy cầu cho mọi anh chị em cùng tin vào Đức Kitô, và đang cố gắng sống theo sự thật, xin Chúa thương quy tụ và gìn giữ tất cả trong Hội thánh duy nhất của Người. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "cố gắng sống theo sự thật, xin Chúa thương quy tụ và gìn giữ tất cả"
-                  },
-                  {
-                    "sp": "",
-                    "text": "trong Hội thánh duy nhất của Người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa muốn làm cho"
-                  },
-                  {
-                    "sp": "",
-                    "text": "những ai ly tán được trở về đoàn tụ, và những kẻ xum vầy được"
-                  },
-                  {
-                    "sp": "",
-                    "text": "luôn luôn hiệp nhất. Xin Chúa thương nhìn đến đoàn chiên của Đức"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Kitô, và cho mọi người đã lãnh nhận bí tích Thánh Tẩy được mãi"
-                  },
-                  {
-                    "sp": "",
-                    "text": "mãi đoàn kết với nhau, nhờ sống cùng một đức tin toàn vẹn, và chia"
-                  },
-                  {
-                    "sp": "",
-                    "text": "sẻ một đức ái vững bền. Chúng con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa muốn làm cho những ai ly tán được trở về đoàn tụ, và những kẻ xum vầy được luôn luôn hiệp nhất. Xin Chúa thương nhìn đến đoàn chiên của Đức Kitô, và cho mọi người đã lãnh nhận bí tích Thánh Tẩy được mãi mãi đoàn kết với nhau, nhờ sống cùng một đức tin toàn vẹn, và chia sẻ một đức ái vững bền. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_6": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho người Do Thái. Cha ông họ là những người đầu"
+                    "text": "Ta hãy cầu cho người Do Thái. Cha ông họ là những người đầu tiên đã được nghe lời Chúa phán dạy. Giờ đây xin Chúa làm cho họ ngày càng mến yêu Danh Thánh Chúa và trung thành với giao ước của Người. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "tiên đã được nghe lời Chúa phán dạy. Giờ đây xin Chúa làm cho họ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngày càng mến yêu Danh Thánh Chúa và trung thành với giao ước"
-                  },
-                  {
-                    "sp": "",
-                    "text": "của Người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã hứa ban ơn cứu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "độ cho tổ phụ Abraham và con cháu của người. Xin Chúa thương"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nghe lời Hội thánh cầu nguyện cho dân tộc Chúa đã chọn xưa kia"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cũng được hưởng nhờ ơn cứu độ viên mãn của Đức Kitô, Đấng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hằng sống và hiển trị muôn đời."
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã hứa ban ơn cứu độ cho tổ phụ Abraham và con cháu của người. Xin Chúa thương nghe lời Hội thánh cầu nguyện cho dân tộc Chúa đã chọn xưa kia cũng được hưởng nhờ ơn cứu độ viên mãn của Đức Kitô, Đấng hằng sống và hiển trị muôn đời.",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_7": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho những người ngoài Kitô giáo. Xin Chúa Thánh"
+                    "text": "Ta hãy cầu cho những người ngoài Kitô giáo. Xin Chúa Thánh Thần soi sáng dẫn đưa họ vào đường cứu độ. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "Thần soi sáng dẫn đưa họ vào đường cứu độ."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, xin cho những người tuy"
-                  },
-                  {
-                    "sp": "",
-                    "text": "không tin vào Đức Kitô, nhưng trước mặt Chúa vẫn ăn ngay ở lành,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được hồng ân tìm thấy chân lý. Xin cũng ban cho chính chúng con,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ngày càng biết tương thân tương ái và thiết tha sống kết hợp với"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa, để trước mặt thế gian, chúng con có thể minh chứng rằng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Chúa chính là tình thương. Chúng con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, xin cho những người tuy không tin vào Đức Kitô, nhưng trước mặt Chúa vẫn ăn ngay ở lành, được hồng ân tìm thấy chân lý. Xin cũng ban cho chính chúng con, ngày càng biết tương thân tương ái và thiết tha sống kết hợp với Chúa, để trước mặt thế gian, chúng con có thể minh chứng rằng Chúa chính là tình thương. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_8": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho những người không nhận biết Thiên Chúa,"
+                    "text": "Ta hãy cầu cho những người không nhận biết Thiên Chúa, nhưng vẫn sống theo lương tâm ngay thẳng: Xin cho họ một ngày kia được gặp thấy Người. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "nhưng vẫn sống theo lương tâm ngay thẳng: Xin cho họ một ngày"
-                  },
-                  {
-                    "sp": "",
-                    "text": "kia được gặp thấy Người."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã đặt vào trái tim"
-                  },
-                  {
-                    "sp": "",
-                    "text": "con người niềm khát vọng đi tìm kiếm Chúa, khiến con người chỉ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "được bình an khi gặp thấy Chúa. Xin cho mọi người khắp thế gian"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dù đang sống giữa muôn và nghịch cảnh, vẫn có thể nhận ra những"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dấu chỉ của tình yêu Chúa; và khi thấy các tín hữu sống đời bác ái"
-                  },
-                  {
-                    "sp": "",
-                    "text": "yêu thương, họ sẽ vui mừng tin nhận duy có Chúa là Thiên Chúa"
-                  },
-                  {
-                    "sp": "",
-                    "text": "đích thực và là Cha của hết mọi người. Chúng con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa đã đặt vào trái tim con người niềm khát vọng đi tìm kiếm Chúa, khiến con người chỉ được bình an khi gặp thấy Chúa. Xin cho mọi người khắp thế gian dù đang sống giữa muôn và nghịch cảnh, vẫn có thể nhận ra những dấu chỉ của tình yêu Chúa; và khi thấy các tín hữu sống đời bác ái yêu thương, họ sẽ vui mừng tin nhận duy có Chúa là Thiên Chúa đích thực và là Cha của hết mọi người. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_9": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Ta hãy cầu cho những nhà lãnh đạo quốc gia. Xin Chúa thương"
+                    "text": "Ta hãy cầu cho những nhà lãnh đạo quốc gia. Xin Chúa thương soi trí mở lòng để họ biết hành động theo thánh ý mà tận tình lo cho dân nước được an cư lạc nghiệp và vui hưởng tự do. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "soi trí mở lòng để họ biết hành động theo thánh ý mà tận tình lo cho"
-                  },
-                  {
-                    "sp": "",
-                    "text": "dân nước được an cư lạc nghiệp và vui hưởng tự do."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa làm chủ lòng người,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "và bảo vệ quyền lợi của nhân dân các nước. Xin ghé mắt nhân từ mà"
-                  },
-                  {
-                    "sp": "",
-                    "text": "ban ơn soi sáng trợ lực cho những nhà lãnh đạo quốc gia, để họ biết"
-                  },
-                  {
-                    "sp": "",
-                    "text": "cùng nhau làm cho thế giới được hòa bình, muôn dân được thịnh"
-                  },
-                  {
-                    "sp": "",
-                    "text": "vượng, và mọi người được hưởng tự do tôn giáo. Chúng con cầu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa làm chủ lòng người, và bảo vệ quyền lợi của nhân dân các nước. Xin ghé mắt nhân từ mà ban ơn soi sáng trợ lực cho những nhà lãnh đạo quốc gia, để họ biết cùng nhau làm cho thế giới được hòa bình, muôn dân được thịnh vượng, và mọi người được hưởng tự do tôn giáo. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               },
               "friday_intercession_10": {
                 "lines": [
                   {
-                    "sp": "",
-                    "text": "Anh (chị) em thân mến, ta hãy cầu xin Thiên Chúa là Cha toàn"
+                    "text": "Anh (chị) em thân mến, ta hãy cầu xin Thiên Chúa là Cha toàn năng, dủ lòng thương giải thoát thế giới khỏi mọi sai lầm, khử trừ muôn bệnh tật, xua đuổi cơn đói kém, mở cửa ngục tù, bẻ tan xiềng xích, giữ gìn lữ khách được bình an, đưa kẻ tha hương về xứ sở, chữa lành các bệnh nhân, ban ơn cứu độ cho người đang hấp hối. (Chúng ta hãy quỳ xuống – Xin đứng lên) Thinh lặng cầu nguyện. Rồi linh mục đọc:",
+                    "sp": "PT."
                   },
                   {
-                    "sp": "",
-                    "text": "năng, dủ lòng thương giải thoát thế giới khỏi mọi sai lầm, khử trừ"
-                  },
-                  {
-                    "sp": "",
-                    "text": "muôn bệnh tật, xua đuổi cơn đói kém, mở cửa ngục tù, bẻ tan xiềng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "xích, giữ gìn lữ khách được bình an, đưa kẻ tha hương về xứ sở,"
-                  },
-                  {
-                    "sp": "",
-                    "text": "chữa lành các bệnh nhân, ban ơn cứu độ cho người đang hấp hối."
-                  },
-                  {
-                    "sp": "",
-                    "text": "(Chúng ta hãy quỳ xuống – Xin đứng lên)"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Thinh lặng cầu nguyện. Rồi linh mục đọc:"
-                  },
-                  {
-                    "sp": "",
-                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa hằng an ủi kẻ ưu"
-                  },
-                  {
-                    "sp": "",
-                    "text": "phiền, ban sức mạnh cho người vất vả lầm than. Xin nghe tiếng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "nhân loại khổ đau nài van Chúa, và ban cho những người lâm cơn"
-                  },
-                  {
-                    "sp": "",
-                    "text": "hoạn nạn được vui mừng cảm thấy Chúa nhân hậu phù trì. Chúng"
-                  },
-                  {
-                    "sp": "",
-                    "text": "con cầu xin…"
+                    "text": "Lạy Thiên Chúa toàn năng hằng hữu, Chúa hằng an ủi kẻ ưu phiền, ban sức mạnh cho người vất vả lầm than. Xin nghe tiếng nhân loại khổ đau nài van Chúa, và ban cho những người lâm cơn hoạn nạn được vui mừng cảm thấy Chúa nhân hậu phù trì. Chúng con cầu xin…",
+                    "sp": "CT."
                   }
                 ]
               }
