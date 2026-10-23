@@ -44,13 +44,16 @@
       global.sessionStorage.setItem(loginRequestKey, JSON.stringify({nonce, returnTo, hash:global.location.hash, createdAt:Date.now()}));
     } catch (error) { revoke(13); return; }
     messageIndex = 12; render();
-    global.location.assign(loginPage + '#' + new URLSearchParams({nonce, returnTo, language}));
+    const appReturn = !!global.OrdoAndroid?.isAppRuntime?.();
+    const target = loginPage + '#' + new URLSearchParams({nonce, returnTo, language, ...(appReturn ? {appReturn:'android'} : {})});
+    if (appReturn && global.OrdoAndroid.openAdminSignIn) global.OrdoAndroid.openAdminSignIn(target);
+    else global.location.assign(target);
   }
-  function takePageSignInResult() {
-    const params = new URLSearchParams(global.location.hash.slice(1));
+  function takePageSignInResult(appResult) {
+    const params = new URLSearchParams(appResult || global.location.hash.slice(1));
     if (![...params.keys()].some(key => key.startsWith('ordoAdmin'))) return null;
     // Remove credentials from history before any asynchronous authentication work.
-    global.history.replaceState(global.history.state, '', global.location.pathname + global.location.search);
+    if (!appResult) global.history.replaceState(global.history.state, '', global.location.pathname + global.location.search);
     let request;
     try {
       request = JSON.parse(global.sessionStorage.getItem(loginRequestKey));
@@ -58,7 +61,8 @@
     } catch (error) { return {failed:true}; }
     const age = request && Date.now() - request.createdAt;
     if (!request || age < 0 || !(age <= loginMaxAge) || request.nonce !== params.get('ordoAdminNonce')
-      || request.returnTo !== global.location.href || !/^[a-f0-9]{64}$/.test(request.nonce)) return {failed:true};
+      || request.returnTo !== global.location.origin + global.location.pathname + global.location.search
+      || !/^[a-f0-9]{64}$/.test(request.nonce)) return {failed:true};
     global.history.replaceState(global.history.state, '', global.location.pathname + global.location.search + (request.hash || ''));
     if (params.has('ordoAdminError')) return {failed:true};
     const idToken = params.get('ordoAdminIdToken'), accessToken = params.get('ordoAdminAccessToken');
@@ -126,6 +130,15 @@
   function returnToToday() {
     reviewDate = ''; render(); announceDateChange();
   }
+  async function finishPageSignIn(incoming) {
+    if (!incoming) return;
+    global.openSettings?.();
+    if (incoming.failed) { revoke(14); return; }
+    busy = true; render();
+    try { await auth.signInWithCredential(global.firebase.auth.GoogleAuthProvider.credential(incoming.idToken, incoming.accessToken)); }
+    catch (error) { revoke(14); }
+    finally { busy = false; render(); }
+  }
   function render() {
     const approved = isVerified();
     const values = {'admin-review-title':0, 'admin-review-login':1, 'admin-review-logout':2, 'admin-review-date-label':3, 'admin-review-submit':4, 'admin-review-today':5, 'admin-review-header-today':5, 'admin-review-help':11};
@@ -146,6 +159,11 @@
   global.ordoAdminReview = Object.freeze({
     getReviewDate: () => isVerified() ? reviewDate : '',
     isVerified, selectDate, returnToToday,
+    acceptAppSignInResult: value => {
+      if (!global.OrdoAndroid?.isAppRuntime?.() || typeof value !== 'string' || value.length > 20000) return;
+      if (!ready) { global.ordoPendingAdminSignIn = value; return; }
+      void finishPageSignIn(takePageSignInResult(value));
+    },
     dateLimitMessage: () => text(11),
     syncChrome: (ui, liveDate) => { language = ui; today = liveDate; render(); }
   });
@@ -173,14 +191,11 @@
         if (!user || user.uid !== verifiedUid) revoke(!user && messageIndex >= 12 ? messageIndex : -1);
         if (user) verify();
       });
-      if (incoming) {
-        if (incoming.failed) { messageIndex = 14; }
-        else {
-          busy = true; render();
-          try { await auth.signInWithCredential(global.firebase.auth.GoogleAuthProvider.credential(incoming.idToken, incoming.accessToken)); }
-          catch (error) { revoke(14); }
-          finally { busy = false; }
-        }
+      if (incoming) await finishPageSignIn(incoming);
+      if (global.ordoPendingAdminSignIn) {
+        const value = global.ordoPendingAdminSignIn;
+        delete global.ordoPendingAdminSignIn;
+        global.ordoAdminReview.acceptAppSignInResult(value);
       }
     } catch (error) { revoke(8); }
     render();

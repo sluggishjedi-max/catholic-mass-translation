@@ -8,6 +8,12 @@ WebView로 표시합니다.
 따라서 GitHub Pages를 갱신하면 앱을 다시 빌드하거나 설치하지 않아도 다음 접속부터
 최신 페이지를 사용합니다. 앱 실행 시 첫 문서는 캐시 재검사를 요청합니다.
 
+관리자 로그인 복귀 기능은 **29.2 (versionCode 10)** APK부터 지원합니다.
+[최신 APK 다운로드](https://sluggishjedi-max.github.io/catholic-mass-translation/downloads/ordo-missae.apk)
+후 기존 앱을 업데이트합니다. 앱에서 Google 로그인 → 외부 브라우저에서 계정 선택 →
+‘앱으로 돌아가기’를 누르면 원래 WebView의 일회용 요청과 대조한 뒤 관리자 권한을 서버에서 확인합니다.
+웹 브라우저의 로그인은 같은 탭으로 복귀합니다.
+
 ## 빌드
 
 PowerShell에서 다음 명령을 실행합니다.

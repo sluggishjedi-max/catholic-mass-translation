@@ -36,11 +36,11 @@ assert.equal(bible.parse('시편 84(83),3.4.5-6.12(◎ 2)','KR').alternateChapte
 assert.equal(bible.parse('詠八三3-6, 8, 12','ZH').verses,'3-6.8.12');
 assert.equal(bible.parse('1코린 8,1-7,11-13','KR').verses,'1-7.11-13');
 assert(bible.equivalent('1코린 9,16-19.22ㄴ-27','KR','聖保祿宗徒致格林多人前書 9,16-19, 22-27','ZH',{ignoreSubverses:true}),'Whole-verse subletter equivalence');
-assert(bible.equivalent('시편 84(83),3.4.5-6.12(◎ 2)','KR','Ps 83:3-6,12','EN',{ignoreSubverses:true}),'Explicit dual Psalm numbering');
+assert(bible.equivalent('시편 84(83),3.4.5-6.12(◎ 2)','KR','Ps 83(84):3-6,12','EN',{ignoreSubverses:true}),'Explicit Greek-first English Psalm numbering');
 assert(!bible.equivalent('마태 1,1-25','KR','Matthew 1:1-23','EN',{ignoreSubverses:true}),'Long/short range distinction');
 assert.equal(bible.wholeVerseCoverage(bible.parse('1코린 9,16-19.22ㄴ-27','KR')),'16,17,18,19,22,23,24,25,26,27');
 assert.equal(bible.wholeVerseCoverage(bible.parse('마태 1,3a-c','KR')),'3');
-assert(bible.equivalent('Tv 95,1-3 (Đ. x. 7b)','VN','Ps 95:1-3','EN',{ignoreSubverses:true}),'Vietnamese Psalm response marker');
+assert(bible.equivalent('Tv 95,1-3 (Đ. x. 7b)','VN','Ps 96:1-3','EN',{ignoreSubverses:true}),'Vietnamese Greek numbering and response marker');
 assert(bible.equivalent('시편 17(16),1.2-3.6-7(◎ 6ㄷ 참조)','KR','Tv 16,1.2-3.6-7 Đ. c.6b','VN',{ignoreSubverses:true}),'Vietnamese bare Psalm response marker');
 assert.equal(bible.parse('Tv 33,2-3.4-5.6-7.8-9 Đ. x. c.5','VN')?.verses,'2-3.4-5.6-7.8-9','Vietnamese response cross-reference suffix');
 assert(bible.equivalent('Vgl. Mt 1,18-23','DE','Matthew 1:18-23','EN',{ignoreSubverses:true}),'German reference prefix');

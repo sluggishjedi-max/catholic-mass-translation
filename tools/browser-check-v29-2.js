@@ -16,6 +16,7 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
     const fixtureDir=path.join(root,'tmp/all-souls-20261013');
     const expected=require('./fixtures/v29-2-all-souls-citations.json').audit;
     const live=process.argv.includes('--live-sources');
+    const currentSources=process.argv.includes('--reviewed-current-sources')?Object.fromEntries(['kr','krToday','vn','la'].map(key=>[key,fs.readFileSync(path.join(root,'tmp/source-audit',key+'.html'),'utf8')])):null;
     const fixture=(readings,lang)=>Object.entries(readings).map(([key,citations])=>{
       const heading=({KR:{reading1:'제1독서',psalm:'화답송',reading2:'제2독서',gospel_accl:'복음 환호송',gospel:'복음'},EN:{reading1:'Reading 1',psalm:'Responsorial Psalm',reading2:'Reading 2',gospel_accl:'Alleluia',gospel:'Gospel'}})[lang][key];
       const body=key==='psalm'||key==='gospel_accl'?(lang==='KR'?'◎ 알렐루야.\n○ 검증용 본문입니다.':'R. Alleluia.\nA synthetic passage for testing.'):(lang==='KR'?'자동 검증을 위한 합성 본문입니다.':'A synthetic passage for automated tests.');
@@ -29,7 +30,7 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
       await page.addInitScript(({registry,metadata})=>{globalThis.countryMassData=registry;globalThis.uploadedCountryMassData=registry;globalThis.uploadedCountryMassMetadata=metadata;globalThis.ordoPrayerEditorPreview=true;},{registry,metadata});
       await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
       await page.goto(`http://127.0.0.1:${server.address().port}/V29.html`);
-      const result=await page.evaluate(async ({fixtures,expected})=>{
+      const result=await page.evaluate(async ({fixtures,expected,currentSources})=>{
         const check=(ok,message)=>{if(!ok)throw Error(message)};
         const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
         startupNoticeDecision=true;
@@ -134,11 +135,55 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
         const pending=[];alignDailySelectableVariantsWithAI=()=>new Promise(resolve=>pending.push(resolve));
         compareLocalMissalPrayersWithAI=alignDailyTextEquivalenceWithAI=async()=>false;finalizeDailyReadingsData=render=()=>{};
         const first=validateLoadedDailyLiturgy({},new Date(2026,10,2));
-        check(document.getElementById('liturgy-checking-popup').textContent==='불러 온 전례를 확인하고 있습니다.'&&!document.getElementById('liturgy-checking-popup').hidden,'Validation popup missing');
+        check(document.querySelector('#liturgy-status-bar.is-visible.is-loading')?.textContent==='불러온 전례를 확인하고 있습니다','Validation toast missing');
+        check(!document.getElementById('liturgy-checking-popup'),'Separate validation popup remains');
         cancelDailyLiturgyValidation();const second=validateLoadedDailyLiturgy({},new Date(2026,11,24));
-        pending.shift()();await first;check(!document.getElementById('liturgy-checking-popup').hidden,'Stale validation hid current popup');
-        pending.shift()();await second;check(document.getElementById('liturgy-checking-popup').hidden,'Completed validation popup remains');
+        pending.shift()();await first;check(document.querySelector('#liturgy-status-bar.is-visible'),'Stale validation hid current toast');
+        pending.shift()();await second;check(!document.querySelector('#liturgy-status-bar.is-visible'),'Completed validation toast remains');
         alignDailySelectableVariantsWithAI=original.align;compareLocalMissalPrayersWithAI=original.compare;alignDailyTextEquivalenceWithAI=original.semantic;finalizeDailyReadingsData=original.finalize;render=original.render;
+        // Source titles and actual formularies override generated temporal labels.
+        const missionDate=new Date(2026,9,18);
+        select(missionDate);
+        check(state.liturgyInfo.names.KR.includes('민족들의 복음화'),'Korean Mission Sunday missing before source load');
+        const missionHtml='<h3>[녹] 연중 제29주일</h3><p>[녹] 민족들의 복음화를 위한 미사 <small>(전교 주일)</small></p><h4>입당송 시편 67(66),2-3 참조</h4><p>하느님은 자비를 베푸소서.</p><h4>본기도</h4><p>민족들의 복음화를 위한 검증용 본기도.</p><h4>제1독서</h4><p>이사 2,1-5</p><p>검증용 독서 본문.</p><h4>화답송 시편 98(97),1.2-3ㄱㄴ.3ㄷㄹ-4.5-6(◎ 2 참조 또는 3ㄷㄹ)</h4><p>◎ 주님은 민족들의 눈앞에 당신 정의를 드러내셨네.</p><p>○ 주님께 노래하여라.</p>';
+        const mission=strictParseDailyMass('KR',missionHtml,missionDate,'KR');
+        check(mission.title.includes('민족들의 복음화')&&!mission.title.includes('연중 제29'),'CBCK second formulary title lost');
+        const ordinary={title:'Twenty-ninth Sunday in Ordinary Time',data:{collect:{text:'Synthetic ordinary Sunday collect.',lines:[parsedLine('','Synthetic ordinary Sunday collect.')]},reading1:{cit_en:'Ex 17:8-13',text:'Synthetic Exodus passage.',lines:[parsedLine('','Synthetic Exodus passage.')]}}};
+        for(const reverse of [false,true]){
+          select(missionDate);const combined=createDailyReadingData();
+          for(const lang of reverse?['EN','KR']:['KR','EN'])mergeSourceData(combined,lang==='KR'?mission:ordinary,lang);
+          applyCachedVariantAlignments(combined,missionDate);
+          check(getLiturgyDisplayName('KR').includes('민족들의 복음화'),'Primary official title not displayed');
+          check(getLiturgyDisplayName('EN').includes('Twenty-ninth Sunday'),'Counterpart title replaced by primary proper');
+          for(const key of ['collect','reading1'])check(!combined[key].variantAlignment.some(g=>Number.isInteger(g.kr)&&Number.isInteger(g.en)),'Different national formularies bound: '+key);
+        }
+        select(new Date(2026,9,24));
+        const alternative=strictParseDailyMass('KR','<h3>[녹] 연중 제29주간 토요일 <small>또는</small></h3><p>[백] 성 안토니오 마리아 클라렛 주교 또는</p><h4>제1독서</h4><p>에페 4,7-16</p><p>검증 본문</p>',getTargetDate(),'KR');
+        check(alternative.title.includes('연중 제29주간'),'Optional memorial replaced temporal source');
+        check(strictFindLiturgyTitle(['[녹] 연중 제29주간 토요일','또는','[백] 복되신 동정 마리아','제1독서'],'KR').includes('연중 제29주간'),'Separate alternative marker ignored');
+        const localColor=state.liturgyInfo.color;
+        mergeSourceData(createDailyReadingData(),{title:'A national solemnity',color:'#ff0000',calendarContext:{confirmed:true,priority:true,rankKey:'solemnity'},data:{}},'EN');
+        check(state.liturgyInfo.color===localColor&&!state.liturgyInfo.meta.vietnameseCalendarConfirmed,'Counterpart calendar overwrote the primary calendar');
+        select(new Date(2027,9,24));check(state.liturgyInfo.names.KR.includes('민족들의'),'Moving Mission Sunday used a fixed third-Sunday rule');
+        state.selectedLocationCode='US';state.currentLoc='EN';state.liturgyInfo=buildGeneratedLiturgyInfo(new Date(2026,9,18));
+        check(!state.liturgyInfo.names.EN.includes('Evangelization'),'Korean proper leaked into US calendar');
+        select(new Date(2026,9,24));state.targetLang='VN';state.targetLocationCode='VN';
+        const commonPsalm={cit_kr:'시편 122(121),1-2.3-4ㄱㄴ.4ㄷㄹ-5(◎ 1 참조)',cit_vn:'Tv 121,1-2.3-4ab.4cd-5 Đ. c.1',kr_lines:[parsedLine('◎','기뻐하며 주님의 집으로 가리라.')],vn_lines:[parsedLine('Đ.','Ta vui mừng trẩy lên đền thánh Chúa.')]};
+        const psalmOptions=selectableOptionMapFromData(commonPsalm,'psalm').optionMap;
+        check(buildDeterministicDailyVariantAlignment('psalm',commonPsalm,psalmOptions).alignment.some(g=>g.kr===0&&g.vn===0),'Equivalent Korean/Vietnamese Psalm separated');
+        check(passageCitationsConflict('psalm',commonPsalm.cit_kr,'Ps 121:1-2','KR','EN'),'Different adjacent Psalms merged through an alternate number');
+        check(passageCitationsConflict('psalm','시편 116,1-2','Tv 115,1-2','KR','VN'),'Disjoint parts of a split Psalm merged');
+        if(currentSources){
+          select(missionDate);
+          const actual=strictParseDailyMass('KR',currentSources.kr,missionDate,'KR');
+          check(actual.title.includes('민족들의 복음화'),'Actual CBCK proper title lost: '+actual.title);
+          check(bibleCitation.parse(actual.data.reading1.cit_kr,'KR')?.id==='ISA','Actual Mission Sunday reading missing');
+          select(new Date(2026,9,24));
+          const today=strictParseDailyMass('KR',currentSources.krToday,getTargetDate(),'KR');
+          check(today.title.includes('연중 제29주간 토요일'),'Actual CBCK optional memorial replaced weekday');
+          const vnReference=JSON.stringify(JSON.parse(currentSources.vn)).match(/"ref":"(Tv 121,[^"]+)"/)?.[1];
+          check(vnReference&&bibleCitation.equivalent(today.data.psalm.cit_kr,'KR',vnReference,'VN',{ignoreSubverses:true}),'Actual Korean/Vietnamese Psalm failed comparison');
+        }
         // Network comparison pool performs independent work three at a time.
         let running=0,maximum=0,finished=0;const start=performance.now();
         await runLimitedTasks(Array.from({length:9}),3,async()=>{running++;maximum=Math.max(maximum,running);await sleep(60);running--;finished++});
@@ -146,7 +191,7 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
         check(maximum===3&&finished===9,'Comparison pool concurrency is not bounded at three');
         check(publicAppVersionLabel()==='V29.2','Public version is not V29.2');
         return {version:APP_VERSION,audit,blessings:['KR','EN','LA','VN','IT','PT','JP'],poolMs,maximum,passed:true};
-      },{fixtures,expected});
+      },{fixtures,expected,currentSources});
       if(errors.length)throw Error(errors.join('\n'));
       fs.mkdirSync(path.join(root,'tmp/v29-2-check'),{recursive:true});
       fs.writeFileSync(path.join(root,'tmp/v29-2-check',viewport.width+'.json'),JSON.stringify(result,null,2));

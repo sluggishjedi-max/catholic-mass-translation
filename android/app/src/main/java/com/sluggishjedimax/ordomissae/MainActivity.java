@@ -41,10 +41,11 @@ import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.json.JSONObject;
 
 public final class MainActivity extends Activity {
     private static final String HOME_URL =
-            "https://sluggishjedi-max.github.io/catholic-mass-translation/?android=25.0-r10";
+            "https://sluggishjedi-max.github.io/catholic-mass-translation/?android=29.2-r11";
     private static final String TRUSTED_HOST = "sluggishjedi-max.github.io";
     private static final int LOCATION_PERMISSION_REQUEST = 1001;
     private static final int AUDIO_PERMISSION_REQUEST = 1002;
@@ -61,6 +62,8 @@ public final class MainActivity extends Activity {
     private PermissionRequest pendingAudioPermissionRequest;
     private volatile boolean hideStatusBar;
     private volatile boolean hideNavigationBar;
+    private String pendingAdminSignIn;
+    private boolean pageReady;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +76,40 @@ public final class MainActivity extends Activity {
         createContentView();
         applySystemBarsVisibility();
         configureWebView();
+        receiveAdminSignIn(getIntent());
 
         if (savedInstanceState == null || webView.restoreState(savedInstanceState) == null) {
             loadHome();
         }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        receiveAdminSignIn(intent);
+        deliverAdminSignIn();
+    }
+
+    private void receiveAdminSignIn(Intent intent) {
+        Uri uri = intent == null ? null : intent.getData();
+        if (uri == null || !"ordomissae".equals(uri.getScheme())
+                || !"admin-login".equals(uri.getHost()) || uri.getUserInfo() != null
+                || uri.getPort() != -1 || (uri.getPath() != null && !uri.getPath().isEmpty())
+                || uri.getFragment() != null) return;
+        String result = uri.getEncodedQuery();
+        if (result == null || result.length() > 20000) return;
+        pendingAdminSignIn = result;
+        intent.setData(null);
+    }
+
+    private void deliverAdminSignIn() {
+        if (!pageReady || pendingAdminSignIn == null || webView.getUrl() == null
+                || !isTrustedOrigin(Uri.parse(webView.getUrl()))) return;
+        String result = JSONObject.quote(pendingAdminSignIn);
+        pendingAdminSignIn = null;
+        webView.evaluateJavascript("if(globalThis.ordoAdminReview){ordoAdminReview.acceptAppSignInResult("
+                + result + ")}else{globalThis.ordoPendingAdminSignIn=" + result + "}", null);
     }
 
     private void createContentView() {
@@ -256,6 +289,17 @@ public final class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public void openAdminSignIn(String url) {
+            if (url == null || url.length() > 20000) return;
+            Uri uri = Uri.parse(url);
+            if (!"https".equals(uri.getScheme())
+                    || !"ordinary-mass-app.firebaseapp.com".equals(uri.getHost())
+                    || !"/admin-login.html".equals(uri.getPath())
+                    || uri.getUserInfo() != null || uri.getPort() != -1) return;
+            runOnUiThread(() -> openOutsideApp(url));
+        }
+
+        @JavascriptInterface
         public boolean isStatusBarHidden() {
             return hideStatusBar;
         }
@@ -367,13 +411,16 @@ public final class MainActivity extends Activity {
 
         @Override
         public void onPageStarted(WebView view, String url, android.graphics.Bitmap favicon) {
+            pageReady = false;
             errorPanel.setVisibility(View.GONE);
             webView.setVisibility(View.VISIBLE);
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
+            pageReady = true;
             progressBar.setVisibility(View.GONE);
+            deliverAdminSignIn();
         }
 
         @Override

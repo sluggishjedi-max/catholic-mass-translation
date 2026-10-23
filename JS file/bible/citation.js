@@ -41,7 +41,7 @@
   function parse(value, lang) {
     const code = language(lang);
     let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c]))
-      .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
+      .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|kv\.?|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
       // Vietnamese lectionaries also append the response reference without
       // parentheses (for example "Đ. c.6b" or "Đ. x. c.5").  It is metadata
       // for the refrain, not part of the Psalm stanza range.
@@ -57,12 +57,12 @@
       // A Psalm's trailing parenthetical verse identifies its refrain, not
       // another stanza. Keep the alternate chapter number before the colon.
       if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
-      const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)(?:\((\d+(?:[-─–—]\d+)?)\))?[,.:・、]([0-9].*)$/u);
+      const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)([ab])?(?:\((\d+(?:[-─–—]\d+)?)\))?[,.:・、]([0-9].*)$/u);
       if (!match) continue;
       if (!resolve(entry.key,code)) return null; // Ambiguous even within this language.
       const chapter = hanNumber(match[1]);
       if (!Number.isInteger(chapter) || chapter < 1) return null;
-      const rawVerses = code === 'EN' ? match[3] : match[3].replace(/[—―─](\d+),(\d+)/g,'-$1:$2');
+      const rawVerses = code === 'EN' ? match[4] : match[4].replace(/[—―─](\d+),(\d+)/g,'-$1:$2');
       const verses = rawVerses.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c])
         // Dots separate verses. In comma-style notation a descending endpoint
         // followed by a comma denotes a chapter boundary: 5,20-6,2.
@@ -71,11 +71,10 @@
           Number(end) < Number(start) ? start+suffix+'-'+end+':'+verse : all)
         .replace(/[,、]/g,'.').replace(/[。.]$/,'');
       if (!/^[0-9a-z.:;+-]+$/i.test(verses)) return null;
-      // Retain the entire range, subverses, cross-chapter boundaries and explicit
-      // alternate Psalm number. No inferred Hebrew/LXX verse equivalence.
-      const reference = chapter + (match[2] ? '('+match[2]+')' : '') + ':' + verses;
-      return {id:entry.id, kr:entry.kr, chapter, alternateChapter:match[2] && /^\d+$/.test(match[2]) ? Number(match[2]) : null,
-        alternateChapterRange:match[2] || '', verses, reference, key:entry.id+':'+reference};
+      const reference = chapter + (match[2] || '') + (match[3] ? '('+match[3]+')' : '') + ':' + verses;
+      return {id:entry.id, kr:entry.kr, chapter, chapterPart:match[2] || '', language:code,
+        alternateChapter:match[3] && /^\d+$/.test(match[3]) ? Number(match[3]) : null,
+        alternateChapterRange:match[3] || '', verses, reference, key:entry.id+':'+reference};
     }
     return null;
   }
@@ -102,10 +101,72 @@
   function comparisonKeys(value,lang,options={}) {
     const parsed=parse(value,lang);
     if (!parsed) return [];
+    if (parsed.id === 'PSA') {
+      const coverage = psalmCoverage(parsed, options);
+      return coverage.length ? ['PSA:'+coverage.join(',')] : [];
+    }
     const verses=options.ignoreSubverses ? wholeVerseCoverage(parsed) : parsed.verses;
     if (!verses) return [];
     return [...new Set([parsed.chapter,parsed.alternateChapter].filter(Number.isInteger))]
       .map(chapter => parsed.id+':'+chapter+':'+verses);
+  }
+  // Official lectionaries use Hebrew or Greek/LXX numbering. An explicit
+  // dual number overrides the language default (e.g. English Universalis).
+  // New languages can declare psalmNumbering in their independent table.
+  const psalmNumbering = Object.freeze({KR:'hebrew',DE:'hebrew',JP:'hebrew',EN:'hebrew',
+    VN:'greek',IT:'greek',PT:'greek',ES:'greek',LA:'greek',ZH:'greek'});
+  function greekPsalmVerse(chapter, verse, part='') {
+    if (chapter === 9) return part === 'b' ? [10,verse] : verse > 21 ? [10,verse-21] : [9,verse];
+    if (chapter >= 10 && chapter <= 112) return [chapter+1,verse];
+    if (chapter === 113) return part === 'b' ? [115,verse] : verse > 8 ? [115,verse-8] : [114,verse];
+    if (chapter === 114) return [116,verse];
+    if (chapter === 115) return [116,verse+9];
+    if (chapter >= 116 && chapter <= 145) return [chapter+1,verse];
+    if (chapter === 146) return [147,verse];
+    if (chapter === 147) return [147,verse+11];
+    return [chapter,verse];
+  }
+  function psalmScheme(parsed, options={}) {
+    const a=parsed.chapter, b=parsed.alternateChapter;
+    if (b && a !== b) {
+      if ((a === 9 && b === 10) || (a === 113 && [114,115].includes(b))
+          || ([114,115].includes(a) && b === 116) || ([146,147].includes(a) && b === 147)
+          || (a >= 10 && a <= 145 && b === a+1)) return 'greek';
+      if ((b === 9 && a === 10) || (b === 113 && [114,115].includes(a))
+          || ([114,115].includes(b) && a === 116) || ([146,147].includes(b) && a === 147)
+          || (b >= 10 && b <= 145 && a === b+1)) return 'hebrew';
+      return ''; // Inconsistent dual numbers must not acquire a guessed identity.
+    }
+    const alternateRange=parsed.alternateChapterRange.replace(/[─–—]/g,'-');
+    if (alternateRange === '114-115' && a === 116) return 'hebrew';
+    if (alternateRange === '114-115' && a === 113) return 'greek';
+    if (alternateRange === '9-10' && a === 9) return 'greek';
+    return options.psalmNumbering || (root.bibleLanguageTables || {})[parsed.language]?.psalmNumbering
+      || psalmNumbering[parsed.language] || '';
+  }
+  function psalmCoverage(parsed, options={}) {
+    if (!parsed || parsed.id !== 'PSA') return [];
+    const scheme=psalmScheme(parsed,options);
+    if (!scheme) return [];
+    const source=options.ignoreSubverses ? wholeVerseCoverage(parsed).replace(/,/g,'.') : parsed.verses;
+    const result=new Set();
+    for (const part of source.split(/[.;+]/).filter(Boolean)) {
+      const m=part.match(/^(\d+)([a-z]*)(?:-(\d+)([a-z]*))?$/i);
+      if (!m) return [];
+      const start=Number(m[1]),end=Number(m[3] || m[1]);
+      if (end<start || end-start>200) return [];
+      for(let verse=start;verse<=end;verse++) {
+        const [chapter,canonicalVerse]=scheme==='greek' ? greekPsalmVerse(parsed.chapter,verse,parsed.chapterPart) : [parsed.chapter,verse];
+        const suffix=options.ignoreSubverses ? '' : verse===start ? m[2] : verse===end ? m[4] || '' : '';
+        result.add(chapter+':'+canonicalVerse+suffix);
+      }
+    }
+    return [...result].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  }
+  function psalmsShareChapter(left,right) {
+    const chapters=parsed=>new Set(psalmCoverage(parsed,{ignoreSubverses:true}).map(key=>Number(key.split(':')[0])));
+    const a=chapters(left),b=chapters(right);
+    return a.size>0 && [...a].every(chapter=>b.has(chapter)) && [...b].every(chapter=>a.has(chapter));
   }
   function equivalent(left,leftLang,right,rightLang,options={}) {
     const leftKeys=comparisonKeys(left,leftLang,options);
@@ -184,6 +245,7 @@
     });
     return recognized ? output.join('; ') : '';
   }
-  root.bibleCitation = Object.freeze({language, entries, resolve, parse, key, format, hanNumber, wholeVerseCoverage, comparisonKeys, equivalent});
+  root.bibleCitation = Object.freeze({language, entries, resolve, parse, key, format, hanNumber, wholeVerseCoverage, comparisonKeys, equivalent,
+    psalmNumbering, psalmCoverage, psalmsShareChapter});
   if (typeof module !== 'undefined' && module.exports) module.exports = root.bibleCitation;
 })(globalThis);

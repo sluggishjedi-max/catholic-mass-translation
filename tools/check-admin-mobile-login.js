@@ -41,6 +41,7 @@ function fixture(url, options = {}) {
     setInterval:()=>{},addEventListener:()=>{},dispatchEvent:()=>{},
     fetch:async()=>{calls.verification++;return {ok:true,status:200,json:async()=>({administrator:true,uid:'admin',validForSeconds:300})};}
   };
+  if(options.native)context.OrdoAndroid={isAppRuntime:()=>true};
   vm.createContext(context);
   return {context,dom,calls,location,storage,run:source=>vm.runInContext(source,context)};
 }
@@ -95,6 +96,27 @@ function pending(f, changes={}) {
     assert.equal(new URLSearchParams(destination.hash.slice(1)).get('ordoAdminNonce'),nonce);
     assert.equal(f.storage.getItem('ordo:admin-login-page-request'),null);f.dom.window.close();
   }
+  // The installed app and system browser have independent sessionStorage.
+  // A package-addressed Intent returns to the original WebView's pending nonce.
+  const app=fixture(home,{mobile:true,native:true});app.run(appSource);await settle();
+  app.dom.window.document.getElementById('admin-review-login').click();await settle();
+  const externalUrl=app.calls.navigation[0], appRequest=JSON.parse(app.storage.getItem('ordo:admin-login-request'));
+  assert.equal(new URLSearchParams(new URL(externalUrl).hash.slice(1)).get('appReturn'),'android');
+  const external=fixture(externalUrl);await external.run(bridgeSource);await settle();
+  assert.equal(external.calls.redirect,1);
+  const callback=fixture(login,{storage:external.storage,result:{credential:{idToken:'native-google-token'}}});
+  await callback.run(bridgeSource);await settle();
+  assert.equal(callback.calls.navigation.length,0,'App login must not return to a separate browser copy of the web app');
+  const intent=callback.dom.window.document.getElementById('return').getAttribute('href');
+  assert(intent.endsWith('#Intent;scheme=ordomissae;package=com.sluggishjedimax.ordomissae;end'));
+  const payload=intent.slice('intent://admin-login?'.length,intent.indexOf('#Intent'));
+  assert.equal(new URLSearchParams(payload).get('ordoAdminNonce'),appRequest.nonce);
+  app.context.ordoAdminReview.acceptAppSignInResult(payload);await settle();
+  assert(app.context.ordoAdminReview.isVerified());assert.equal(app.calls.credential.length,1);
+  assert.equal(app.storage.getItem('ordo:admin-login-request'),null);
+  app.context.ordoAdminReview.acceptAppSignInResult(payload);await settle();
+  assert.equal(app.calls.credential.length,1,'Callback replay accepted');
+  for(const f of [app,external,callback])f.dom.window.close();
   for(const returnTo of ['https://evil.example/','https://sluggishjedi-max.github.io/other/','https://sluggishjedi-max.github.io/catholic-mass-translation/../../other/',home+'#token']) {
     const f=fixture(login+'#'+new URLSearchParams({...request,returnTo}));await f.run(bridgeSource);await settle();
     assert.equal(f.calls.navigation.length,0);assert.equal(f.calls.redirect,0);assert.equal(f.dom.window.document.getElementById('return').href,home);f.dom.window.close();

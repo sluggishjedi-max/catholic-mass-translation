@@ -1274,6 +1274,19 @@
         const requested = String(countryLang || state.selectedLocationCode || state.currentLoc || '').trim().toUpperCase();
         const profile = getLiturgicalCalendarProfile(requested);
         const countryKey = profile.countryCalendar || requested;
+        // Korea's annual proper is observed on the Sunday before October's
+        // last Sunday, rather than on a fixed day or always its third Sunday.
+        if (countryKey === 'KR' && date.getMonth() === 9 && date.getDay() === 0
+            && date.getDate() + 7 <= 31 && date.getDate() + 14 > 31) {
+            return calendarOverrideFromEntry(saintEntry('green', {
+                KR:'민족들의 복음화를 위한 미사(전교 주일)', VN:'Thánh lễ cầu cho việc loan báo Tin Mừng cho các dân tộc (Chúa Nhật Truyền Giáo tại Hàn Quốc)',
+                EN:'Mass for the Evangelization of Peoples (Mission Sunday in Korea)', JP:'諸民族の福音宣教のためのミサ（韓国の世界宣教の日）',
+                LA:'Missa pro evangelizatione populorum (Dominica missionum in Corea)', ZH:'萬民福音傳播彌撒（韓國傳教主日）',
+                IT:'Messa per l’evangelizzazione dei popoli (Domenica missionaria in Corea)', PT:'Missa pela evangelização dos povos (Domingo das Missões na Coreia)',
+                ES:'Misa por la evangelización de los pueblos (Domingo de las Misiones en Corea)', DE:'Messe für die Evangelisierung der Völker (Weltmissionssonntag in Korea)'
+            }, {rank:'votive',localOnly:true,countryProper:true,source:'CBCK: Sunday before the last Sunday of October',
+                sourceUrl:'https://missa.cbck.or.kr/DailyMissa/'+formatDateYmd(date)}));
+        }
         const koreanLunarOverride = koreanLunarCalendarOverride(date, countryKey);
         if (koreanLunarOverride) return koreanLunarOverride;
         const countryEntries = countryFixedSaintsCalendar[countryKey] || {};
@@ -2260,6 +2273,9 @@
 
     function getLiturgyDisplayName(langCode) {
         const names = state.liturgyInfo.names || {};
+        const sourceTitle = state.liturgyInfo.sourceCelebrations?.[langCode]?.title;
+        const context = getActiveLiturgicalDateContext();
+        if (sourceTitle && !context.allSoulsChoice && !context.specialVigil) return formatDisplayLiturgyTitle(langCode, sourceTitle);
         const localCalendar = state.liturgyInfo.localCalendar;
         let displayName = names[langCode] || state.liturgyInfo.krName || '';
         if (localCalendar) {
@@ -9146,6 +9162,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             names[lang] = parsed.title || names[lang];
             state.liturgyInfo = ensureDefaultPrefaceHint({
                 names, krName: names.KR, vnName: names.VN,
+                sourceCelebrations: state.liturgyInfo.sourceCelebrations,
                 meta, color: meta.color, dateStr: state.liturgyInfo.dateStr,
                 isSunday: date.getDay() === 0, isSolemnity: false
             }, date);
@@ -9155,8 +9172,21 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 ? parsed.officialLocalProper.sectionKeys
                 : []
         );
-        const allowExternalLiturgy = options.allowExternalLiturgy === true;
-        const calendarContext = allowExternalLiturgy && parsed.calendarContext && parsed.calendarContext.confirmed
+        const allowExternalLiturgy = options.allowExternalLiturgy !== false;
+        const sourceTitle = cleanLiturgyTitle(parsed.title);
+        const expectedTitle = state.liturgyInfo.names?.[lang] || '';
+        const sourceCelebration = allowExternalLiturgy && sourceTitle ? {
+            title: sourceTitle,
+            localProper: !isGeneratedSeasonalNameForInfo(lang, sourceTitle, state.liturgyInfo)
+                && (normalizeCalendarNameForCompare(sourceTitle) !== normalizeCalendarNameForCompare(expectedTitle)
+                    || !!state.liturgyInfo.localCalendar),
+            seasonal: isGeneratedSeasonalName(lang, sourceTitle)
+        } : null;
+        if (allowExternalLiturgy && !options.suppressTitle && sourceCelebration) {
+            state.liturgyInfo.sourceCelebrations ||= {};
+            state.liturgyInfo.sourceCelebrations[lang] = sourceCelebration;
+        }
+        const calendarContext = allowExternalLiturgy && isPrimarySource && parsed.calendarContext && parsed.calendarContext.confirmed
             ? parsed.calendarContext
             : null;
         const calendarPriority = !!(calendarContext && calendarContext.priority);
@@ -9188,6 +9218,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return;
             }
             if (!target[key]) target[key] = {};
+            if (sourceCelebration) {
+                target[key].__sourceCelebrations ||= {};
+                target[key].__sourceCelebrations[lower] = sourceCelebration;
+            }
             if (isPrimarySource && parsed.calendarForm) target[key].__primaryCalendarForm = parsed.calendarForm;
             if (typeof value === 'object' && value !== null) {
                 if (value.text) target[key][lower] = value.text;
@@ -9209,12 +9243,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 ? state.liturgyInfo.names[lang] : cleanLiturgyTitle(parsed.title);
             state.liturgyInfo.krName = state.liturgyInfo.names.KR;
             state.liturgyInfo.vnName = state.liturgyInfo.names.VN;
-            if (isSolemnityTitle(parsed.title) || isSolemnityNameMap(state.liturgyInfo.names)) {
+            if (isPrimarySource && (isSolemnityTitle(parsed.title) || isSolemnityNameMap(state.liturgyInfo.names))) {
                 state.liturgyInfo.isSolemnity = true;
                 state.isSunday = state.isSunday || state.liturgyInfo.isSolemnity;
             }
         }
-        if (allowExternalLiturgy && !options.suppressTitle && parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
+        if (allowExternalLiturgy && isPrimarySource && !options.suppressTitle && parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
     }
 
     function parseKoreanDailyMass(html) {
@@ -10065,7 +10099,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict101-inline-citations';
+    const STRICT_PARSER_CACHE_VERSION = 'strict102-proper-titles-psalm-numbering';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -13188,6 +13222,25 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictFindLiturgyTitle(lines, lang) {
+        if (lang === 'KR') {
+            // CBCK can print the temporal Sunday and then the actual local
+            // formulary on consecutive colour-labelled lines. "또는" marks
+            // alternatives; those must not replace the selected first form.
+            const firstSection = lines.findIndex(line => strictIdentifySection(line, lang));
+            const titleLines = (firstSection < 0 ? lines : lines.slice(0, firstSection)).map(strictCleanLine);
+            const heading = /^\[(?:녹|백|홍|자|장미|흑)\]/u;
+            const start = titleLines.findIndex(line => heading.test(line));
+            if (start >= 0) {
+                let selected = titleLines[start];
+                if (!/또는/u.test(selected)) {
+                    for (const line of titleLines.slice(start + 1)) {
+                        if (/또는/u.test(line)) break;
+                        if (heading.test(line)) selected = line;
+                    }
+                }
+                return selected;
+            }
+        }
         const japaneseReadingTitle = lang === 'JP' ? japaneseReadingTitleFromLines(lines) : '';
         if (japaneseReadingTitle) return japaneseReadingTitle;
         if (lang === 'IT') {
@@ -13326,7 +13379,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
         if (lang === 'EN') applyEnglishProperReadingNotice(data, lines);
         Object.assign(data, globalThis.ordoSpecialOrder?.parseParts(countrySpecialMassRecord(date, locationCode), lang, scopedSource, date) || {});
-        const title = metadataTitle || strictFindLiturgyTitle(lines, lang);
+        const title = (lang === 'KR' ? strictFindLiturgyTitle(lines, lang) : '') || metadataTitle || strictFindLiturgyTitle(lines, lang);
         return strictEnsureReadingSummarySlots({
             title: cleanLiturgyTitle(title),
             color: colorFromSourceTitle(title, colorFromSourceLines(lines, state.liturgyInfo.color)),
@@ -16141,6 +16194,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function parsedCitationsShareChapter(left, right) {
         if (!left || !right || left.id !== right.id) return false;
+        if (left.id === 'PSA') return globalThis.bibleCitation.psalmsShareChapter(left, right);
         const rightChapters = parsedCitationChapters(right);
         return [...parsedCitationChapters(left)].some(chapter => rightChapters.has(chapter));
     }
@@ -16186,9 +16240,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!left || !right) return scriptureAlignmentKeys.has(baseId)
             && /\d/u.test(String(leftCitation || '')) && /\d/u.test(String(rightCitation || ''));
         if (passageCitationsEquivalent(baseId, leftCitation, rightCitation, leftLang, rightLang)) return false;
-        // National lectionaries can divide stanzas differently within one Psalm.
-        // A different Psalm is a conflict; stanza notation alone needs text evidence.
-        if (baseId === 'psalm' && left.id === 'PSA' && parsedCitationsShareChapter(left,right)) return false;
+        // National lectionaries can divide overlapping stanzas differently.
+        // Disjoint parts of a split Psalm remain different passages.
+        if (baseId === 'psalm' && left.id === 'PSA' && parsedCitationsShareChapter(left,right)) {
+            const rightCoverage = new Set(globalThis.bibleCitation.psalmCoverage(right, {ignoreSubverses:true}));
+            return !globalThis.bibleCitation.psalmCoverage(left, {ignoreSubverses:true}).some(verse => rightCoverage.has(verse));
+        }
         // Reviewed KR/TW acclamation: both proclaim "sanctify them in the truth"
         // (Jn 17:17), while the Taiwan header additionally lists verse 7. Require
         // that exact source-text meaning as well as the reviewed reference pair.
@@ -16224,6 +16281,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const leftKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[left][0]));
                     const rightKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[right][0]));
                     if (leftKey && rightKey && leftKey !== rightKey) return [];
+                    if (sourceCelebrationsConflict(baseId, section, left, right, leftKey, rightKey)) return [];
                     if (passageCitationsConflict(
                         baseId,
                         strictReadingOptionCitation(section, left, 0),
@@ -16466,7 +16524,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align10-scripture-boundaries';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align11-canonical-psalms-proper-sources';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -16551,6 +16609,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const groups = [];
             for (const item of mapped) {
                 const compatible = groups.find(group => group.every(other => {
+                    if (sourceCelebrationsConflict(baseId, section, item.lower, other.lower, item.semanticKey, other.semanticKey)) return false;
                     if (distinctKeys.size > 1 && (!item.semanticKey || !other.semanticKey)) return false;
                     if (item.semanticKey && other.semanticKey && item.semanticKey !== other.semanticKey) return false;
                     return !passageCitationsConflict(baseId, item.citation, other.citation, item.lower, other.lower,
@@ -16561,6 +16620,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (groups.length <= 1) return [rawGroup];
             return groups.map(group => Object.fromEntries(group.map(item => [item.lower, item.index])));
         });
+    }
+
+    function sourceCelebrationsConflict(baseId, section, left, right, leftKey, rightKey) {
+        if (!commonDailyVariantSectionIds.has(baseId)) return false;
+        if (leftKey && leftKey === rightKey) return false;
+        const a = section.__sourceCelebrations?.[left], b = section.__sourceCelebrations?.[right];
+        return !!(a && b && ((a.localProper && b.seasonal) || (b.localProper && a.seasonal)));
     }
 
     function normalizeSafeVariantAlignmentGroups(baseId, optionMap, proposedGroups, section = {}) {
@@ -17735,17 +17801,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function setDailyLiturgyChecking(visible) {
         state.dailyLiturgyChecking = visible;
-        let popup = document.getElementById('liturgy-checking-popup');
-        if (!popup) {
-            popup = document.createElement('div');
-            popup.id = 'liturgy-checking-popup';
-            popup.setAttribute('role', 'status');
-            popup.setAttribute('aria-live', 'polite');
-            popup.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:10020;max-width:90vw;width:max-content;padding:14px 20px;border-radius:12px;background:#2b3038;color:#fff;box-shadow:0 4px 20px #0004;font-size:15px;pointer-events:none';
-            popup.textContent = '불러 온 전례를 확인하고 있습니다.';
-            document.body.appendChild(popup);
-        }
-        popup.hidden = !visible;
+        syncLiturgyLoadingStatusBar(state.currentLoc, state.targetLang);
     }
 
     function cancelDailyLiturgyValidation() {
@@ -18825,6 +18881,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }[ui] || ('Loading ' + nameText + ' liturgy');
     }
 
+    function localizedLiturgyCheckingMessage(uiLang = state.uiLang) {
+        return ({KR:'불러온 전례를 확인하고 있습니다',VN:'Đang kiểm tra phụng vụ đã tải',
+            EN:'Checking the loaded liturgy',JP:'読み込んだ典礼を確認しています',LA:'Liturgia onerata recognoscitur',
+            ZH:'正在核對已載入的禮儀',IT:'Verifica della liturgia caricata',PT:'A verificar a liturgia carregada',
+            ES:'Comprobando la liturgia cargada',DE:'Die geladene Liturgie wird geprüft'})[uiLang] || 'Checking the loaded liturgy';
+    }
+
     function localizedLiturgyLoadedMessageForLang(langCode, uiLang = state.uiLang) {
         const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
         const lang = normalizeSelectableLang(langCode || state.currentLoc || 'KR', 'KR');
@@ -19065,6 +19128,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const loadingLangs = trackedLangs.filter(lang => status[lang] === 'loading');
         if (loadingLangs.length) {
             updateLiturgyStatusBar(loadingLangs.map(lang => localizedLiturgyLoadingMessageForLang(lang)), { loading: true });
+            return;
+        }
+        if (state.dailyLiturgyChecking) {
+            updateLiturgyStatusBar([localizedLiturgyCheckingMessage()], { loading: true });
             return;
         }
         const now = Date.now();

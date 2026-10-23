@@ -31,7 +31,7 @@
     "1MA": {"koreanName":"마카베오기 상권","name":"マカ一","aliases":["マカ一"],"koreanKey":"1마카"},
     "2MA": {"koreanName":"마카베오기 하권","name":"マカ二","aliases":["マカ二"],"koreanKey":"2마카"},
     "JOB": {"koreanName":"욥기","name":"ヨブ","aliases":["ヨブ"],"koreanKey":"욥"},
-    "PSA": {"koreanName":"시편","name":"詩","aliases":["詩"],"koreanKey":"시편"},
+    "PSA": {"koreanName":"시편","name":"詩","aliases":["詩","詩編","詩篇"],"koreanKey":"시편"},
     "PRO": {"koreanName":"잠언","name":"箴","aliases":["箴"],"koreanKey":"잠언"},
     "ECC": {"koreanName":"코헬렛","name":"コヘ","aliases":["コヘ"],"koreanKey":"코헬"},
     "SNG": {"koreanName":"아가","name":"雅","aliases":["雅"],"koreanKey":"아가"},

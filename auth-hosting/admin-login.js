@@ -15,6 +15,12 @@
     DE:['Administratoranmeldung','Anmeldung mit Google…','Die Anmeldung konnte nicht abgeschlossen werden. Kehren Sie zur App zurück und versuchen Sie es erneut.','Erneut anmelden','Zurück zur App']
   };
   let request, auth;
+  function returnUrl(params) {
+    // Explicit package prevents another app from claiming the login callback.
+    return request.appReturn === 'android'
+      ? 'intent://admin-login?' + params + '#Intent;scheme=ordomissae;package=com.sluggishjedimax.ordomissae;end'
+      : request.returnTo + '#' + params;
+  }
   const byId = id => document.getElementById(id);
   function allowedReturn(value) {
     try {
@@ -34,7 +40,7 @@
     byId('retry').textContent = words[3]; byId('return').textContent = words[4];
     byId('retry').hidden = !failed || !auth || !validRequest(request);
     if (validRequest(request)) {
-      byId('return').href = request.returnTo + '#' + new URLSearchParams({ordoAdminNonce:request.nonce,ordoAdminError:'cancelled'});
+      byId('return').href = returnUrl(new URLSearchParams({ordoAdminNonce:request.nonce,ordoAdminError:'cancelled'}));
     }
   }
   async function start() {
@@ -52,7 +58,7 @@
     const fresh = params.has('nonce') || params.has('returnTo');
     global.history.replaceState(global.history.state, '', global.location.pathname);
     if (fresh) {
-      request = {nonce:params.get('nonce'),returnTo:params.get('returnTo'),language:params.get('language'),createdAt:Date.now()};
+      request = {nonce:params.get('nonce'),returnTo:params.get('returnTo'),language:params.get('language'),appReturn:params.get('appReturn'),createdAt:Date.now()};
       if (!validRequest(request)) throw new Error('invalid-request');
       global.sessionStorage.setItem(requestKey, JSON.stringify(request));
     } else {
@@ -78,6 +84,13 @@
     global.sessionStorage.removeItem(requestKey);
     // Fragments are not sent to servers or included in Referer headers. The app
     // consumes this once, removes it from history, and verifies admin access.
-    global.location.replace(request.returnTo + '#' + response);
+    if (request.appReturn === 'android') {
+      // Android opens this page outside its WebView. A user gesture returns the
+      // credential to the existing app, where the original nonce is retained.
+      byId('status').textContent = ({KR:'Google 로그인이 완료되었습니다. 아래 버튼을 눌러 앱으로 돌아가 주세요.',EN:'Google sign-in is complete. Tap below to return to the app.',VN:'Đã đăng nhập Google. Nhấn bên dưới để quay lại ứng dụng.',JP:'Googleログインが完了しました。下のボタンでアプリに戻ってください。',LA:'Ingressus per Google completus est. Infra preme ut ad applicationem redeas.',ZH:'Google 登入已完成，請按下方按鈕返回應用程式。',IT:'Accesso Google completato. Tocca qui sotto per tornare all’app.',PT:'Acesso Google concluído. Toque abaixo para voltar à aplicação.',ES:'Acceso de Google completado. Pulse abajo para volver a la aplicación.',DE:'Google-Anmeldung abgeschlossen. Tippen Sie unten, um zur App zurückzukehren.'})[request.language] || 'Google sign-in is complete. Tap below to return to the app.';
+      byId('retry').hidden = true;
+      byId('return').href = returnUrl(response);
+      await auth.signOut();
+    } else global.location.replace(returnUrl(response));
   } catch (error) { render(true); }
 })(globalThis);

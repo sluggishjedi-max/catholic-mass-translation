@@ -31,7 +31,7 @@
     "1MA": {"koreanName":"마카베오기 상권","name":"1 Macabeus","aliases":["1Mac","1Mc","1 Macabeus"],"koreanKey":"1마카"},
     "2MA": {"koreanName":"마카베오기 하권","name":"2 Macabeus","aliases":["2Mac","2Mc","2 Macabeus"],"koreanKey":"2마카"},
     "JOB": {"koreanName":"욥기","name":"Job / Jó","aliases":["Job","Jó","Job / Jó"],"koreanKey":"욥"},
-    "PSA": {"koreanName":"시편","name":"Salmos","aliases":["Sl","Sal","Salmos"],"koreanKey":"시편"},
+    "PSA": {"koreanName":"시편","name":"Salmos","aliases":["Sl","Sal","Salmos","Salmo"],"koreanKey":"시편"},
     "PRO": {"koreanName":"잠언","name":"Provérbios","aliases":["Pr","Prv","Provérbios"],"koreanKey":"잠언"},
     "ECC": {"koreanName":"코헬렛","name":"Eclesiastes / Coélet","aliases":["Ecl","Qo","Eclesiastes / Coélet"],"koreanKey":"코헬"},
     "SNG": {"koreanName":"아가","name":"Cântico dos Cânticos","aliases":["Ct","Cântico dos Cânticos"],"koreanKey":"아가"},

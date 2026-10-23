@@ -10,7 +10,7 @@
     "church:korea:check": "node tools/verify-korea-churches.js",
     "browser:check:v29": "set ORDO_CHECK_HTML=V29.html&& node tools/browser-check-v28.js",
     "browser:check:v29.2": "node tools/browser-check-v29-2.js",
-    "scripture:citations:check": "node tools/verify-v27-7-bible-aliases.js && node tools/verify-v29-2-citations.js",
+    "scripture:citations:check": "node tools/verify-v27-7-bible-aliases.js && node tools/verify-v29-2-citations.js && node tools/verify-psalm-numbering.js",
     "browser:check:holy-week": "node tools/browser-check-holy-week-orders.js",
     "browser:check:all-souls": "node tools/browser-check-all-souls.js",
     "mass:tool:special:verify": "node tools/verify-special-liturgy-editor.js",
