@@ -497,10 +497,10 @@
         .admin-review-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
         .admin-review-settings h4 { margin: 0; font-size: 1em; line-height: 1.4; }
         .admin-review-auth-actions, .admin-review-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-        .admin-review-settings button, .admin-review-banner button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 1px solid #d0d8e4; border-radius: 9px; background: #f6f8fb; color: #243247; font: inherit; font-size: .85em; font-weight: 600; line-height: 1.4; cursor: pointer; transition: background .15s, box-shadow .15s; }
-        .admin-review-settings button:hover:not(:disabled), .admin-review-banner button:hover { background: #eaf0f8; }
-        .admin-review-settings button:focus-visible, .admin-review-settings input:focus-visible, .admin-review-banner button:focus-visible { outline: 3px solid var(--primary-color, #4369a0); outline-offset: 3px; }
-        .admin-review-settings button:disabled { opacity: .5; cursor: wait; }
+        .admin-review-settings button, .admin-review-banner button, .admin-review-calendar button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 14px; border: 1px solid #d0d8e4; border-radius: 9px; background: #f6f8fb; color: #243247; font: inherit; font-size: .85em; font-weight: 600; line-height: 1.4; cursor: pointer; transition: background .15s, box-shadow .15s; }
+        .admin-review-settings button:hover:not(:disabled), .admin-review-banner button:hover, .admin-review-calendar button:hover:not(:disabled) { background: #eaf0f8; }
+        .admin-review-settings button:focus-visible, .admin-review-settings input:focus-visible, .admin-review-banner button:focus-visible, .admin-review-calendar :is(button, input):focus-visible { outline: 3px solid var(--primary-color, #4369a0); outline-offset: 3px; }
+        .admin-review-settings button:disabled, .admin-review-calendar button:disabled { opacity: .5; cursor: wait; }
         #admin-review-login { background: #fff; box-shadow: 0 1px 3px #21334d12; }
         #admin-review-login::before { content: 'G'; display: grid; place-items: center; flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; color: #4285f4; font: 700 17px Arial, sans-serif; }
         #admin-review-submit { background: #2f5f92; border-color: #2f5f92; color: #fff; }
@@ -515,11 +515,15 @@
         #admin-review-controls { margin-top: 14px; padding-top: 14px; border-top: 1px solid #e5eaf0; }
         .admin-review-date-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 12px; }
         .admin-review-date-field label { display: block; font-size: .85em; font-weight: 600; }
-        .admin-review-settings input { display: block; box-sizing: border-box; width: 100%; margin: 6px 0 0; min-height: 44px; padding: 9px 11px; border: 1px solid #c9d3df; border-radius: 9px; background: #fff; color: #243247; font: inherit; }
+        .admin-review-settings input, .admin-review-calendar input { display: block; box-sizing: border-box; width: 100%; margin: 6px 0 0; min-height: 44px; padding: 9px 11px; border: 1px solid #c9d3df; border-radius: 9px; background: #fff; color: #243247; font: inherit; }
         .admin-review-settings p { font-size: .82em; line-height: 1.6; margin: 10px 0 0; overflow-wrap: anywhere; }
         #admin-review-help { color: #617084; text-align: justify; text-wrap: pretty; }
         .admin-review-banner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 10px; font-size: .85em; }
-        .admin-review-banner[hidden], .admin-review-settings [hidden] { display: none !important; }
+        .admin-review-banner[hidden], .admin-review-banner [hidden], .admin-review-settings [hidden], .admin-review-calendar [hidden] { display: none !important; }
+        .admin-review-calendar { box-sizing: border-box; width: min(560px, calc(100% - 32px)); max-height: calc(100dvh - 40px); padding: 20px; border: 1px solid #d8dee8; border-radius: 14px; background: #fff; color: #243247; font: inherit; box-shadow: 0 18px 60px #10233b40; }
+        .admin-review-calendar::backdrop { background: #10233b80; }
+        .admin-review-calendar h2 { margin: 0; font-size: 1.1em; }
+        .admin-review-calendar p { font-size: .82em; line-height: 1.6; margin: 10px 0 0; }
         @media (max-width: 600px) { .admin-review-date-row { grid-template-columns: 1fr; } .admin-review-actions { display: grid; grid-template-columns: 1fr 1fr; } .admin-review-heading { align-items: stretch; } .admin-review-auth-actions { width: 100%; } .admin-review-auth-actions button { flex: 1; } }
 </style>
 </head>
@@ -588,6 +592,26 @@
     </div>
 </div>
 
+<dialog id="admin-review-date-dialog" class="admin-review-calendar" aria-labelledby="admin-review-date-title">
+    <div class="admin-review-heading">
+        <h2 id="admin-review-date-title">날짜 선택하기</h2>
+        <button id="admin-review-date-close" type="button">닫기</button>
+    </div>
+    <form id="admin-review-controls" hidden>
+        <div class="admin-review-date-row">
+            <div class="admin-review-date-field">
+                <label id="admin-review-date-label" for="admin-review-date">검토 날짜</label>
+                <input id="admin-review-date" type="date" min="0001-01-01" max="9999-12-31" required>
+            </div>
+            <div class="admin-review-actions">
+                <button id="admin-review-submit" type="submit">검토하기</button>
+                <button id="admin-review-today" type="button">오늘로 돌아가기</button>
+            </div>
+        </div>
+        <p id="admin-review-help">선택한 날짜 전후 7일까지 조회할 수 있습니다.</p>
+    </form>
+</dialog>
+
 <nav aria-label="주요 메뉴">
     <div class="nav-inner">
         <button type="button" class="nav-item active" data-tab="mass" onclick="showAppTab('mass')">미사</button>
@@ -610,7 +634,7 @@
         <div id="header-liturgy-name" class="liturgy-name"></div>
         <div id="admin-review-banner" class="admin-review-banner" hidden>
             <span id="admin-review-anchor"></span>
-            <button id="admin-review-header-today" type="button">오늘로 돌아가기</button>
+            <button id="admin-review-date-open" type="button" aria-haspopup="dialog" aria-controls="admin-review-date-dialog">날짜 선택하기</button>
         </div>
     </div>
 </header>
@@ -781,19 +805,6 @@
             </div>
             </div>
             <p id="admin-review-status" role="status" aria-live="polite"></p>
-            <form id="admin-review-controls" hidden>
-                <div class="admin-review-date-row">
-                <div class="admin-review-date-field">
-                <label id="admin-review-date-label" for="admin-review-date">검토 날짜</label>
-                <input id="admin-review-date" type="date" min="0001-01-01" max="9999-12-31" required>
-                </div>
-                <div class="admin-review-actions">
-                    <button id="admin-review-submit" type="submit">검토하기</button>
-                    <button id="admin-review-today" type="button">오늘로 돌아가기</button>
-                </div>
-                </div>
-                <p id="admin-review-help">선택한 날짜 전후 7일까지 조회할 수 있습니다.</p>
-            </form>
         </section>
 
         <div class="setting-row">
@@ -970,10 +981,10 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="JS%20file/firebase_data_loader.js?v=20261008-country-vigils"></script>
-<script src="JS%20file/admin_date_review.js?v=20261024-app-return"></script>
+<script src="JS%20file/admin_date_review.js?v=20261024-main-date-picker"></script>
 <script src="JS%20file/country_special_liturgies_v29.js?v=20261015-v29-2"></script>
 <script src="JS%20file/special_liturgy_order.js?v=20261015-v29-2"></script>
 <script src="JS%20file/missal_preface_index.js?v=20261007"></script>
-<script src="JS%20file/app_v29.js?v=20261024-liturgy-fixes"></script>
+<script src="JS%20file/app_v29.js?v=20261024-reading-frames-notices"></script>
 </body>
 </html>

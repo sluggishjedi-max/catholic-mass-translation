@@ -17,6 +17,7 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
   try {
     for(const viewport of [{width:1280,height:900},{width:390,height:844}]) {
       const page=await browser.newPage({viewport});
+      page.setDefaultNavigationTimeout(90000);
       const errors=[];page.on('pageerror',error=>errors.push(error.message));
       let permitted=true;
       await page.addInitScript(registry=>{
@@ -41,7 +42,7 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
         }
         return url.hostname==='127.0.0.1'?route.continue():route.abort();
       });
-      await page.goto(`http://127.0.0.1:${server.address().port}/${process.env.ORDO_CHECK_HTML || 'V28.html'}?reviewDate=2030-11-02`,{waitUntil:'load'});
+      await page.goto(`http://127.0.0.1:${server.address().port}/${process.env.ORDO_CHECK_HTML || 'V29.html'}?reviewDate=2030-11-02`,{waitUntil:'load'});
       await page.waitForFunction(()=>typeof getStrictDateBase==='function' && !document.getElementById('admin-review-login').disabled);
       await page.evaluate(()=>{
         document.getElementById('consent-modal').style.display='none';document.body.classList.remove('consent-pending');
@@ -60,20 +61,25 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
       await page.evaluate(()=>{globalThis.fixtureAccount='administrator';});
       await page.locator('#admin-review-login').click();
       await page.waitForFunction(()=>ordoAdminReview.isVerified());
-      if(process.env.ORDO_CHECK_HTML==='V29.html') {
+      assert.equal(await page.locator('.admin-review-settings #admin-review-controls').count(),0);
+      await page.locator('#lbl-close-btn').click();
+      assert.equal(await page.locator('#admin-review-date-open').textContent(),'날짜 선택하기');
+      await page.locator('#admin-review-date-open').click();
+      assert.equal(await page.locator('#admin-review-date-dialog').isVisible(),true);
+      if(!process.env.ORDO_CHECK_HTML || process.env.ORDO_CHECK_HTML==='V29.html') {
         const panel=page.locator('.admin-review-settings');
         assert.equal(await panel.getAttribute('data-auth-state'),'verified');
         assert(await page.locator('#admin-review-submit').evaluate(el=>el.getBoundingClientRect().height>=44));
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2));
         fs.mkdirSync(path.join(root,'tmp/admin-review-check'),{recursive:true});
-        await panel.screenshot({path:path.join(root,`tmp/admin-review-check/${viewport.width}.png`)});
+        await page.locator('#admin-review-date-dialog').screenshot({path:path.join(root,`tmp/admin-review-check/${viewport.width}.png`)});
       }
       await page.locator('#admin-review-date').fill('2030-11-02');
       await page.locator('#admin-review-submit').click();
       await page.waitForFunction(()=>ordoAdminReview.getReviewDate()==='2030-11-02');
       const selected=await page.evaluate(()=>({anchor:formatDateIso(getStrictDateBase().localDay),day:formatDateIso(getTargetDate()),title:state.liturgyInfo.names.KR,offset:state.dayOffset,choice:getStrictDateContext().allSoulsChoice}));
-      assert.deepEqual(selected,{anchor:'2030-11-02',day:'2030-11-02',title:process.env.ORDO_CHECK_HTML==='V29.html'?'죽은 모든 이를 위한 위령의 날 - 첫째 미사':'위령의날 첫째미사',offset:0,choice:'first'});
-      await page.locator('#lbl-close-btn').click();
+      assert.deepEqual(selected,{anchor:'2030-11-02',day:'2030-11-02',title:!process.env.ORDO_CHECK_HTML || process.env.ORDO_CHECK_HTML==='V29.html'?'죽은 모든 이를 위한 위령의 날 - 첫째 미사':'위령의날 첫째미사',offset:0,choice:'first'});
+      assert.equal(await page.locator('#admin-review-date-dialog').isVisible(),false);
       for(const expected of ['second','third']) {
         await page.locator('.liturgy-nav-next').click();assert.equal(await page.evaluate(()=>getStrictDateContext().allSoulsChoice),expected);
       }
@@ -108,7 +114,8 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
       });
       await page.evaluate(()=>globalThis.fixtureRefreshToken());await page.waitForFunction(()=>ordoAdminReview.isVerified());
       await page.evaluate(()=>ordoAdminReview.selectDate('2031-01-01'));
-      await page.locator('#admin-review-header-today').click();assert.equal(await page.evaluate(()=>ordoAdminReview.getReviewDate()),'');
+      await page.locator('#admin-review-date-open').click();
+      await page.locator('#admin-review-today').click();assert.equal(await page.evaluate(()=>ordoAdminReview.getReviewDate()),'');
       await page.evaluate(()=>ordoAdminReview.selectDate('2030-11-02'));
       permitted=false;await page.evaluate(()=>globalThis.dispatchEvent(new Event('focus')));
       await page.waitForFunction(()=>!ordoAdminReview.isVerified());
@@ -124,5 +131,5 @@ const registry = massTool.runCountryMassSources(massTool.readCountryMassSources(
       console.log(JSON.stringify({viewport,...navigation,guestRestricted:true,allSouls:true,vigils:true,tokenRefresh:true,revocation:true,signOut:true}));
       await page.close();
     }
-  } finally {await browser.close();await new Promise(resolve=>server.close(resolve));}
+  } finally {await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;});

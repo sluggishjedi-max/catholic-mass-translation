@@ -28,6 +28,11 @@
     ES:['Revisión litúrgica del administrador','Acceso de administrador con Google','Cerrar sesión','Fecha de revisión','Revisar','Volver a hoy','Administrador verificado','Esta cuenta no tiene permisos de administrador.','No se pueden verificar los permisos. Inicie sesión de nuevo.','Seleccione una fecha válida.','Fecha de referencia','Puede consultar los siete días anteriores y posteriores a la fecha elegida.'],
     DE:['Liturgieprüfung für Administratoren','Administratoranmeldung mit Google','Abmelden','Prüfdatum','Prüfen','Zurück zu heute','Administrator bestätigt','Dieses Konto hat keine Administratorrechte.','Administratorrechte konnten nicht bestätigt werden. Bitte erneut anmelden.','Bitte ein gültiges Datum wählen.','Bezugsdatum','Sie können sieben Tage vor und nach dem gewählten Datum anzeigen.']
   };
+  const calendarLabels = {
+    KR:['날짜 선택하기','닫기'], EN:['Select a date','Close'], VN:['Chọn ngày','Đóng'], JP:['日付を選択','閉じる'],
+    LA:['Diem eligere','Claudere'], ZH:['選擇日期','關閉'], IT:['Seleziona una data','Chiudi'],
+    PT:['Selecionar data','Fechar'], ES:['Seleccionar fecha','Cerrar'], DE:['Datum auswählen','Schließen']
+  };
   let auth, verifiedUid = '', validUntil = 0, reviewDate = '', busy = false, ready = false;
   let language = 'KR', today = '', messageIndex = -1, generation = 0;
   const text = index => index >= 12 ? (loginMessages[language] || loginMessages.EN)[index - 12] : (labels[language] || labels.EN)[index];
@@ -129,6 +134,16 @@
   }
   function returnToToday() {
     reviewDate = ''; render(); announceDateChange();
+    byId('admin-review-date-dialog')?.close();
+  }
+  function openDateDialog() {
+    if (!isVerified()) return false;
+    const dialog = byId('admin-review-date-dialog');
+    if (!dialog) return false;
+    render();
+    if (!dialog.open) dialog.showModal();
+    byId('admin-review-date')?.focus();
+    return true;
   }
   async function finishPageSignIn(incoming) {
     if (!incoming) return;
@@ -141,8 +156,12 @@
   }
   function render() {
     const approved = isVerified();
-    const values = {'admin-review-title':0, 'admin-review-login':1, 'admin-review-logout':2, 'admin-review-date-label':3, 'admin-review-submit':4, 'admin-review-today':5, 'admin-review-header-today':5, 'admin-review-help':11};
+    const values = {'admin-review-title':0, 'admin-review-login':1, 'admin-review-logout':2, 'admin-review-date-label':3, 'admin-review-submit':4, 'admin-review-today':5, 'admin-review-help':11};
     for (const [id,index] of Object.entries(values)) { const element = byId(id); if (element) element.textContent = text(index); }
+    const words = calendarLabels[language] || calendarLabels.EN;
+    for (const id of ['admin-review-date-open','admin-review-date-title']) { const element = byId(id); if (element) element.textContent = words[0]; }
+    const close = byId('admin-review-date-close'); if (close) close.textContent = words[1];
+    const dialog = byId('admin-review-date-dialog'); if (!approved && dialog?.open) dialog.close();
     const login = byId('admin-review-login'), logout = byId('admin-review-logout'), controls = byId('admin-review-controls');
     if (login) { login.hidden = approved; login.disabled = busy || !ready; }
     if (logout) { logout.hidden = !auth || !auth.currentUser; logout.disabled = busy; }
@@ -153,12 +172,12 @@
     const status = byId('admin-review-status'); if (status) status.textContent = messageIndex >= 0 ? text(messageIndex) : '';
     const panel = document.querySelector('.admin-review-settings');
     if (panel) panel.dataset.authState = busy ? 'pending' : approved ? 'verified' : [7,8].includes(messageIndex) ? 'error' : 'guest';
-    const banner = byId('admin-review-banner'); if (banner) banner.hidden = !approved || !reviewDate;
-    const anchor = byId('admin-review-anchor'); if (anchor) anchor.textContent = text(10) + ': ' + reviewDate;
+    const banner = byId('admin-review-banner'); if (banner) banner.hidden = !approved;
+    const anchor = byId('admin-review-anchor'); if (anchor) { anchor.hidden = !reviewDate; anchor.textContent = text(10) + ': ' + reviewDate; }
   }
   global.ordoAdminReview = Object.freeze({
     getReviewDate: () => isVerified() ? reviewDate : '',
-    isVerified, selectDate, returnToToday,
+    isVerified, selectDate, returnToToday, openDateDialog,
     acceptAppSignInResult: value => {
       if (!global.OrdoAndroid?.isAppRuntime?.() || typeof value !== 'string' || value.length > 20000) return;
       if (!ready) { global.ordoPendingAdminSignIn = value; return; }
@@ -169,9 +188,10 @@
   });
   byId('admin-review-login')?.addEventListener('click', signIn);
   byId('admin-review-logout')?.addEventListener('click', () => signOut().catch(() => revoke(8)));
-  byId('admin-review-controls')?.addEventListener('submit', event => { event.preventDefault(); selectDate(byId('admin-review-date').value); });
+  byId('admin-review-controls')?.addEventListener('submit', event => { event.preventDefault(); selectDate(byId('admin-review-date').value).then(selected => { if (selected) byId('admin-review-date-dialog')?.close(); }); });
   byId('admin-review-today')?.addEventListener('click', returnToToday);
-  byId('admin-review-header-today')?.addEventListener('click', returnToToday);
+  byId('admin-review-date-open')?.addEventListener('click', openDateDialog);
+  byId('admin-review-date-close')?.addEventListener('click', () => byId('admin-review-date-dialog')?.close());
   async function initialize() {
     const incoming = takePageSignInResult();
     if (incoming) {

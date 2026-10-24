@@ -13,6 +13,7 @@
     "scripture:citations:check": "node tools/verify-v27-7-bible-aliases.js && node tools/verify-v29-2-citations.js && node tools/verify-psalm-numbering.js",
     "browser:check:holy-week": "node tools/browser-check-holy-week-orders.js",
     "browser:check:all-souls": "node tools/browser-check-all-souls.js",
+    "browser:check:reading-frames": "node tools/browser-check-reading-frames.js",
     "mass:tool:special:verify": "node tools/verify-special-liturgy-editor.js",
     "browser:check:admin-review": "node tools/browser-check-admin-date-review.js",
     "admin:auth:check": "node tools/check-admin-review-auth.js",

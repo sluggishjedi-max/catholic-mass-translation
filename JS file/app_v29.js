@@ -2593,6 +2593,19 @@
         return state.selectedLocationCode || 'KR';
     }
 
+    const fixedFormularyNoticeText = {
+        KR:'날짜별 원문을 조회할 수 없어 검증된 고정 전례문을 표시합니다.',
+        VN:'Không thể lấy bản văn theo ngày; hiển thị bản văn phụng vụ cố định đã được kiểm chứng.',
+        EN:'The dated source is unavailable; displaying the verified fixed formulary.',
+        JP:'日付別の原文を取得できないため、確認済みの固定典礼文を表示しています。',
+        LA:'Textus diei obtineri nequit; formularium fixum comprobatum exhibetur.',
+        ZH:'無法取得當日原文，現顯示已核實的固定禮儀經文。',
+        IT:'La fonte del giorno non è disponibile; viene mostrato il formulario fisso verificato.',
+        PT:'A fonte do dia está indisponível; apresenta-se o formulário fixo verificado.',
+        ES:'La fuente del día no está disponible; se muestra el formulario fijo verificado.',
+        DE:'Die Tagesquelle ist nicht verfügbar; das geprüfte feste Messformular wird angezeigt.'
+    };
+
     function updateRoleLegend(leftLang, rightLang) {
         const activeLangs = new Set([leftLang, rightLang].filter(lang => langMeta[lang]));
         const legend = document.getElementById('role-legend');
@@ -2609,6 +2622,23 @@
         [leftLang, rightLang].forEach(lang => {
             const group = groups.find(candidate => candidate.dataset.legendLang === lang);
             if (group) grid.appendChild(group);
+        });
+        const dateKey = formatDateIso(getActiveLiturgicalSourceDate());
+        const sourceNotices = Object.entries(state.dailySourceProvenance || {})
+            .filter(([lang,detail]) => activeLangs.has(lang) && detail.date === dateKey);
+        groups.forEach(group => {
+            group.querySelectorAll('.mass-page-notice').forEach(node => node.remove());
+            const lang = group.dataset.legendLang;
+            const container = group.querySelector('.role-legend-lines');
+            if (!container || !activeLangs.has(lang)) return;
+            const append = (message, id, className='') => {
+                if (!message) return;
+                const note = document.createElement('div');
+                note.className = 'role-legend-line mass-page-notice' + (className ? ' '+className : '');
+                note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = '※ '+message;
+                container.appendChild(note);
+            };
+            sourceNotices.forEach(([sourceLang,detail]) => append(`${sourceLang}: ${fixedFormularyNoticeText[lang] || fixedFormularyNoticeText.EN} (${detail.source?.authority || detail.source?.translation || 'Missal'})`, 'fixed-formulary:'+sourceLang, 'daily-source-provenance'));
         });
     }
 
@@ -8373,39 +8403,52 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function parseVietnamesePsalmLines(lines) {
-        const out = [];
+        const responses = [];
+        const verses = [];
         let responseRef = '';
-        let pendingRubric = '';
+        let current = null;
+        const flush = () => {
+            if (!current) return;
+            const text = cleanNodeText(current.parts.join(' '));
+            if (current.kind === 'response') {
+                responseRef ||= extractParentheticalRef(text);
+                const response = removeParentheticalRef(text);
+                if (response && !responses.some(value => strictUnmarkedPsalmResponseKey(value) === strictUnmarkedPsalmResponseKey(response))) responses.push(response);
+            } else if (text) {
+                verses.push(parsedLine('Xướng', normalizeVietnamesePsalmResponseTail(text.replace(/\s*[-–—]\s*(?:Đáp|Ðáp|Dap|[ĐÐ]\.)\.?\s*$/iu, '') + ' - Đáp.')));
+            }
+            current = null;
+        };
         splitSourceBlocks(lines).forEach(line => {
             const alternative = strictAlternativeMatch(line.replace(/^\((.*)\)$/u, '$1'));
             if (alternative) {
-                pendingRubric = 'Hoặc đọc:';
-                if (alternative.rest) {
-                    responseRef = responseRef || extractParentheticalRef(alternative.rest);
-                    out.push(parsedRubricLine(pendingRubric, removeParentheticalRef(alternative.rest)));
-                    pendingRubric = '';
-                }
+                flush();
+                current = {kind:'response', parts:[alternative.rest || '']};
                 return;
             }
-            if (/^(Đáp|Ðáp|Đ\.|Ð\.)\s*[:.：]?/i.test(line)) {
-                responseRef = responseRef || extractParentheticalRef(line);
-                out.push(parsedLine('Đáp', removeParentheticalRef(line.replace(/^(Đáp|Ðáp|Đ\.|Ð\.)\s*[:.：]?\s*/i, ''))));
+            const response = line.match(/^(?:Đáp|Ðáp|Dap|[ĐÐ]\.)\s*[:.：]?\s*(.*)$/iu);
+            if (response) {
+                flush(); current = {kind:'response', parts:[response[1]]};
                 return;
             }
-            if (/^Xướng:/i.test(line)) {
-                let text = normalizeVietnamesePsalmResponseTail(line.replace(/^Xướng:\s*/i, '').trim());
-                if (!/[–—-]\s*(?:Đáp|Ðáp|Dap|Đ\.|Ð\.)\.?$/iu.test(text)) text = `${text} - Đáp.`;
-                text = normalizeVietnamesePsalmResponseTail(text);
-                out.push(parsedLine('Xướng', text));
+            const verse = line.match(/^(?:Xướng\s*[:：]|\d+\s*[).])\s*(.*)$/iu);
+            if (verse) {
+                flush(); current = {kind:'verse', parts:[verse[1]]};
                 return;
             }
-            if (pendingRubric) {
-                responseRef = responseRef || extractParentheticalRef(line);
-                out.push(parsedRubricLine(pendingRubric, removeParentheticalRef(line)));
-                pendingRubric = '';
-            }
+            if (current) current.parts.push(line);
+            else current = {kind:'verse',parts:[line]};
         });
-        return { lines: out, responseRef };
+        flush();
+        // The repeated "Hoặc đọc" in printed lectionaries offers another
+        // refrain for the same stanzas, rather than another incomplete Psalm.
+        const out = [];
+        (responses.length ? responses : ['']).forEach((response,index) => {
+            if (index) out.push(parsedLine('', 'Hoặc:'));
+            if (response) out.push(parsedLine('Đáp', response));
+            verses.forEach(line => out.push({...line}));
+        });
+        return { lines: out, responseRef, optionCount:Math.max(1,responses.length) };
     }
 
     function appendVietnameseResponseRef(citation, responseRef) {
@@ -10099,7 +10142,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict102-proper-titles-psalm-numbering';
+    const STRICT_PARSER_CACHE_VERSION = 'strict103-wrapped-vietnamese-psalms';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -12107,6 +12150,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const result = { text: parsedLinesToText(out), lines: out };
             const finalCitation = appendVietnameseResponseRef(citationResult.citation, parsedPsalm.responseRef);
             if (finalCitation) result.cit_vn = finalCitation;
+            if (parsedPsalm.optionCount > 1) result.optionCits = Array.from({length:parsedPsalm.optionCount}, () => ({cit_vn:finalCitation}));
             return result;
         }
         if (lang === 'VN' && key === 'gospel_accl') {
@@ -14227,6 +14271,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function isDailyEndingLine(line) {
+        // Portuguese uses the same acclamation before and after the Gospel.
+        if (isGospelDialogueLine(line)) return false;
         return SUPPORTED_LANGS.some(lang => {
             const lower = lang.toLowerCase();
             return !line?.[`role_${lower}`] && strictIsProclamationEnding(line?.[`text_${lower}`]);
@@ -14277,6 +14323,35 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const lectorSpeakerByLang = { kr: '▥', vn: 'N.', en: 'L.', jp: '朗', la: 'L.', zh: '讀經員', it: 'L.', pt: 'L.', es: 'L.', de: 'L.' };
     const peopleSpeakerByLang = { kr: '◎', vn: 'CĐ.', en: 'ALL', jp: '会', la: 'P.', zh: '答', it: 'Tutti', pt: 'Todos', es: 'Todos', de: 'A.' };
     const gospelSpeakerByLang = { kr: celebrantSpeakerByLang.kr, vn: 'LM. (PT.)', en: 'P. (D.)', jp: '司 (助)', la: celebrantSpeakerByLang.la, zh: '主祭', it: 'C. (D.)', pt: 'C. (D.)', es: 'C. (D.)', de: 'P. (D.)' };
+
+    // These modules keep their fixed responses in officialOrderCorpus rather
+    // than in the daily reading slots. Fill only missing frame text so local
+    // wording already supplied by an independent missal remains authoritative.
+    const supplementalReadingFrames = {
+        it: {reading:['Parola di Dio.','Rendiamo grazie a Dio.'], gospel:['Parola del Signore.','Lode a te, o Cristo.'], dialogue:['Il Signore sia con voi.','E con il tuo spirito.','Gloria a te, o Signore.']},
+        pt: {reading:['Palavra do Senhor.','Graças a Deus.'], gospel:['Palavra da salvação.','Glória a Vós, Senhor.'], dialogue:['O Senhor esteja convosco.','Ele está no meio de nós.','Glória a Vós, Senhor.']},
+        es: {reading:['Palabra de Dios.','Te alabamos, Señor.'], gospel:['Palabra del Señor.','Gloria a ti, Señor Jesús.'], dialogue:['El Señor esté con ustedes.','Y con tu espíritu.','Gloria a ti, Señor.']},
+        de: {reading:['Wort des lebendigen Gottes.','Dank sei Gott.'], gospel:['Evangelium unseres Herrn Jesus Christus.','Lob sei dir, Christus.'], dialogue:['Der Herr sei mit euch.','Und mit deinem Geiste.','Ehre sei dir, o Herr.']}
+    };
+
+    function ensureLocalizedReadingFrames(lines, baseId) {
+        if (!strictReadingKeys.has(baseId)) return;
+        const endings = lines.filter(isDailyEndingLine);
+        const dialogues = baseId === 'gospel' ? lines.filter(isGospelDialogueLine) : [];
+        SUPPORTED_LANGS.forEach(lang => {
+            const lower = lang.toLowerCase(), frame = supplementalReadingFrames[lower];
+            if (!frame) return;
+            const fill = (line, text, speaker) => {
+                if (!line || (cleanNodeText(line[`text_${lower}`]) && !isLiturgicalPlaceholderText(line[`text_${lower}`]))) return;
+                line[`text_${lower}`] = text;
+                line[`sp_${lower}`] = speaker;
+                line[`role_${lower}`] = '';
+            };
+            frame[baseId === 'gospel' ? 'gospel' : 'reading'].forEach((text,index) =>
+                fill(endings[index], text, index ? peopleSpeakerByLang[lower] : baseId === 'gospel' ? gospelSpeakerByLang[lower] : lectorSpeakerByLang[lower]));
+            frame.dialogue.forEach((text,index) => fill(dialogues[index], text, index ? peopleSpeakerByLang[lower] : gospelSpeakerByLang[lower]));
+        });
+    }
 
     // Keep a stable localized frame for the biblical source line. Official
     // source wording always wins; these templates are used only when that
@@ -17584,6 +17659,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(lines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(lines, baseId);
             const cit = filterCitationsByVariantText(collectVariantCitation(newData, lowerLangs, i, alignmentGroup, optionMap), lines, lowerLangs, baseId);
+            ensureLocalizedReadingFrames(lines, baseId);
             ensureLocalizedReadingIntros(lines, baseId, cit);
             normalizeDailySectionLines(lines, baseId);
             removeDailyProclamationEndingLines(lines, baseId);
@@ -17671,6 +17747,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
             if (isPrayerPart(baseId)) ensureLocalizedPrayerConclusions(targetLines, baseId);
             if (isPrayerPart(baseId)) ensurePrayerFrameLines(targetLines, baseId);
+            ensureLocalizedReadingFrames(targetLines, baseId);
             ensureLocalizedReadingIntros(targetLines, baseId, newData);
             normalizeDailySectionLines(targetLines, baseId);
             removeDailyProclamationEndingLines(targetLines, baseId);
@@ -19992,7 +20069,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function sourceOnlyReadingWholeText(lines, lower, baseId, field = 'text') {
         return (lines || []).filter(line => !isProtectedParsedTargetLineForLanguage(line, baseId, lower)
-            && line && line[`role_${lower}`] !== 'intro').flatMap(line => {
+            && line && !['intro','summary'].includes(line[`role_${lower}`])).flatMap(line => {
             const key = field === 'text_ai' ? `text_${lower}_ai` : `${field}_${lower}`;
             const value = line && line[key];
             return String(value || '').replace(/<br\s*\/?>/giu, '\n').split(/\n+/);
@@ -20019,52 +20096,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }).join('');
     }
 
-    function sourceOnlyReadingTargetHtml(lines, lower, baseId, aiHtml, extraClass = '') {
-        const sourceLines = Array.isArray(lines) ? lines : [];
-        const lastGospelDialogueIndex = baseId === 'gospel'
-            ? sourceLines.reduce((last, line, index) => isGospelDialogueLine(line) ? index : last, -1)
-            : -1;
-        const lastIntroIndex = sourceLines.reduce((last, line, index) =>
-            line && line[`role_${lower}`] === 'intro' ? index : last, -1);
-        const lastFrameIndex = Math.max(lastGospelDialogueIndex, lastIntroIndex);
-        const endingIndex = sourceLines.findIndex(isDailyEndingLine);
-        let aiInsertIndex = sourceLines.findIndex((line, index) =>
-            index > lastFrameIndex
-            && (endingIndex < 0 || index < endingIndex)
-            && !isProtectedParsedTargetLineForLanguage(line, baseId, lower)
-        );
-        if (aiInsertIndex < 0) aiInsertIndex = endingIndex >= 0 ? endingIndex : sourceLines.length;
-
-        let inserted = false;
-        const html = sourceLines.map((line, index) => {
-            let lineHtml = '';
-            if (index === aiInsertIndex) {
-                lineHtml += linePairHTML('', aiHtml, lower, extraClass, true, false);
-                inserted = true;
-            }
-            const isIntro = line && line[`role_${lower}`] === 'intro';
-            if (!isIntro && !isProtectedParsedTargetLineForLanguage(line, baseId, lower)) return lineHtml;
-            const speaker = line && line[`sp_${lower}`] || '';
-            const text = line && line[`text_${lower}`] || '';
-            const rubric = line && line[`rubric_${lower}`] || '';
-            const rubricHtml = rubric ? `<span class="rubric${extraClass.includes('translation') ? ' translation' : ''}">${rubric}</span>` : '';
-            if (isLiturgicalPlaceholderText(text)) return lineHtml + rubricHtml;
-            return lineHtml + rubricHtml + linePairHTML(
-                speaker,
-                text,
-                lower,
-                [extraClass, roleClassForLine(line, lower)].filter(Boolean).join(' '),
-                shouldSuppressSpeaker(baseId),
-                false
-            );
-        }).join('');
-        return inserted ? html : html + linePairHTML('', aiHtml, lower, extraClass, true, false);
-    }
-
-    function appendSourceOnlyReadingPcRow(partContainer, leftHtml, rightHtml, extraClass = '') {
+    function appendSourceOnlyReadingRow(partContainer, leftHtml, rightHtml, extraClass = '', isStacked = false) {
         if (!cleanNodeText(leftHtml) && !cleanNodeText(rightHtml)) return;
         const row = document.createElement('div');
-        row.className = `pc-line-row source-only-reading-whole${extraClass ? ` ${extraClass}` : ''}`;
+        row.className = `${isStacked ? 'pair-block' : 'pc-line-row'} source-only-reading-whole${extraClass ? ` ${extraClass}` : ''}`;
+        if (isStacked) {
+            row.innerHTML = leftHtml + rightHtml;
+            partContainer.appendChild(row);
+            return;
+        }
         const leftColumn = document.createElement('div');
         leftColumn.className = 'pc-col';
         leftColumn.innerHTML = leftHtml;
@@ -20076,11 +20116,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         partContainer.appendChild(row);
     }
 
-    // In the two-column layout, keep the fixed proclamation frames on their
-    // own shared rows.  A source-only body may be much taller than its single
-    // AI button, so putting the whole column in one flex row makes the intro
-    // and ending appear at unrelated vertical positions.
-    function appendSourceOnlyReadingPcDisplay(partContainer, lines, baseId, leftLower, rightLower, sourceLower, targetLower, aiHtml) {
+    // Keep the proclamation frames paired in both layouts. Only the Scripture
+    // body is grouped with its AI translation, between the intro and ending.
+    function appendSourceOnlyReadingDisplay(partContainer, lines, baseId, leftLower, rightLower, sourceLower, targetLower, aiHtml, isStacked = false) {
         const sourceBodyIndexes = (lines || []).reduce((indexes, line, index) => {
             const text = cleanNodeText(line && line[`text_${sourceLower}`]);
             if (text
@@ -20109,19 +20147,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     true,
                     false
                 );
-                appendSourceOnlyReadingPcRow(
+                appendSourceOnlyReadingRow(
                     partContainer,
                     leftLower === sourceLower ? sourceHtml : targetHtml,
                     rightLower === sourceLower ? sourceHtml : targetHtml,
-                    'source-only-reading-body-row'
+                    'source-only-reading-body-row', isStacked
                 );
             }
             if (sourceBodySet.has(index)) return;
-            appendSourceOnlyReadingPcRow(
+            appendSourceOnlyReadingRow(
                 partContainer,
                 sourceOnlyReadingLanguageHtml([line], leftLower, baseId),
                 sourceOnlyReadingLanguageHtml([line], rightLower, baseId, 'translation'),
-                'source-only-reading-frame-row'
+                'source-only-reading-frame-row', isStacked
             );
         });
         return true;
@@ -20149,38 +20187,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
         const predefinedAiText = sourceOnlyReadingWholeText(data.lines, targetLower, baseId, 'text_ai');
         const targetLang = targetLower === leftLower ? leftLang : rightLang;
-        const htmlFor = lower => {
-            const extraClass = lower === rightLower ? 'translation' : '';
-            if (lower === sourceLower) {
-                return sourceOnlyReadingLanguageHtml(data.lines, lower, baseId, extraClass);
-            }
-            return sourceOnlyReadingTargetHtml(
-                data.lines,
-                lower,
-                baseId,
-                makeAIButton(sourceText, predefinedAiText, targetLang),
-                extraClass
-            );
-        };
-
-        if (isStacked) {
-            const block = document.createElement('div');
-            block.className = 'pair-block source-only-reading-whole';
-            block.innerHTML = htmlFor(leftLower) + htmlFor(rightLower);
-            partContainer.appendChild(block);
-        } else {
-            appendSourceOnlyReadingPcDisplay(
-                partContainer,
-                data.lines,
-                baseId,
-                leftLower,
-                rightLower,
-                sourceLower,
-                targetLower,
-                makeAIButton(sourceText, predefinedAiText, targetLang)
-            );
-        }
-        return true;
+        return appendSourceOnlyReadingDisplay(
+            partContainer,
+            data.lines,
+            baseId,
+            leftLower,
+            rightLower,
+            sourceLower,
+            targetLower,
+            makeAIButton(sourceText, predefinedAiText, targetLang), isStacked
+        );
     }
 
     function dottedDividerHTML(extraClass = '') {
@@ -21350,18 +21366,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const isStacked = state.layoutStacked || window.innerWidth < 600;
         root.innerHTML = '';
         root.classList.toggle('stacked-mode', isStacked);
-        const dateKey = formatDateIso(getActiveLiturgicalSourceDate());
-        Object.entries(state.dailySourceProvenance || {}).forEach(([lang, detail]) => {
-            if (![leftL, rightL].includes(lang) || detail.date !== dateKey) return;
-            const note = document.createElement('p');
-            note.className = 'daily-source-provenance';
-            note.setAttribute('role', 'note');
-            const text = uiL === 'KR' ? '날짜별 원문을 조회할 수 없어 검증된 고정 전례문을 표시합니다.'
-                : uiL === 'VN' ? 'Không thể lấy bản văn theo ngày; hiển thị bản văn phụng vụ cố định đã được kiểm chứng.'
-                : 'The dated source is unavailable; displaying the verified fixed formulary.';
-            note.textContent = `${lang}: ${text} (${detail.source.authority || detail.source.translation || 'Missal'})`;
-            root.appendChild(note);
-        });
 
         massData.forEach(item => {
             const baseId = getBaseId(item.id);
