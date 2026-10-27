@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "data:lazy:build": "node tools/build-lazy-data.js",
+    "data:lazy:check": "node tools/build-lazy-data.js --check",
+    "browser:check:lazy-data": "node tools/browser-check-lazy-data.js",
     "church:supported:refresh": "python tools/enrich-supported-churches.py --refresh",
     "church:supported:check": "python tools/test-supported-churches.py && node tools/verify-supported-churches.js",
     "church:korea:refresh": "python tools/refresh-korea-churches.py && python tools/enrich-korea-church-gaps.py",

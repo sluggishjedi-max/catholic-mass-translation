@@ -43,30 +43,7 @@ const JURISDICTION_LANGUAGES = {
 };
 
 function discoverCountryPrayerModules() {
-  const indexPath = path.join(root, 'index.html');
-  const indexSource = fs.readFileSync(indexPath, 'utf8');
-  const modules = [];
-  const seen = new Set();
-  const scriptPattern = /JS%20file\/countries\/([^/"?]+)\/([^/"?]+_prayers\.js)(?:\?[^"']*)?/gu;
-
-  for (const match of indexSource.matchAll(scriptPattern)) {
-    const modulePath = path.join(root, 'JS file', 'countries', decodeURIComponent(match[1]), decodeURIComponent(match[2]));
-    const normalizedPath = path.normalize(modulePath).toLowerCase();
-    if (seen.has(normalizedPath)) continue;
-    seen.add(normalizedPath);
-
-    const source = fs.readFileSync(modulePath, 'utf8');
-    const jurisdictionMatch = source.match(/\bjurisdiction\s*:\s*["']([^"']+)["']/u);
-    if (!jurisdictionMatch) {
-      throw new Error(`Could not find the jurisdiction in ${modulePath}`);
-    }
-    modules.push({ jurisdiction: jurisdictionMatch[1], path: modulePath });
-  }
-
-  if (!modules.length) {
-    throw new Error(`No country prayer modules were found in ${indexPath}`);
-  }
-  return modules;
+  return require('./country-aux-sources').discoverCountryAuxModules('prayers');
 }
 
 const countryPrayerModules = usesCountryModules ? discoverCountryPrayerModules() : [];
@@ -1655,7 +1632,7 @@ function handleError(res, error) {
 function prayerAppPreviewHtml() {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const scripts = Array.from(html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/giu))
-    .filter(match => /_prayers\.js(?:\?|$)|\/app_v\d+(?:_\d+)?\.js(?:\?|$)/u.test(match[1]))
+    .filter(match => /prayer_data_api\.js(?:\?|$)|_prayers\.js(?:\?|$)|\/app_v\d+(?:_\d+)?\.js(?:\?|$)/u.test(match[1]))
     .map(match => match[0]).join('\n');
   return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/giu, '')
     .replace('</head>', `<style>

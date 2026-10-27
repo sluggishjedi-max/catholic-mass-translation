@@ -33,7 +33,7 @@ async function checkStartup(browser, base, filename, decision) {
   await page.route('**/*', async route => {
     const url = new URL(route.request().url());
     if (url.hostname !== '127.0.0.1') return route.abort();
-    if (url.pathname.includes('taiwan_daily_mass_data.js')) await blockedData;
+    if (/app_v[0-9_]+\.js$/.test(url.pathname)) await blockedData;
     if (url.pathname.includes('firebase_data_loader.js')) {
       return route.fulfill({ contentType: 'application/javascript', body: 'window.ordoFirebaseDataReady = new Promise(() => {});' });
     }

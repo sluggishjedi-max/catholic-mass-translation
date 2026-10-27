@@ -30,6 +30,7 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
       await page.addInitScript(({registry,metadata})=>{globalThis.countryMassData=registry;globalThis.uploadedCountryMassData=registry;globalThis.uploadedCountryMassMetadata=metadata;globalThis.ordoPrayerEditorPreview=true;},{registry,metadata});
       await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
       await page.goto(`http://127.0.0.1:${server.address().port}/V29.html`);
+      await page.evaluate(async()=>{if(window.ordoDataLoader)await Promise.all([ordoDataLoader.ensure('special',Object.keys(ordoDataLoader.manifest.special)),ordoDataLoader.ensure('missal',Object.keys(ordoDataLoader.manifest.missal))]);});
       const result=await page.evaluate(async ({fixtures,expected,currentSources})=>{
         const check=(ok,message)=>{if(!ok)throw Error(message)};
         const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -189,7 +190,7 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
         await runLimitedTasks(Array.from({length:9}),3,async()=>{running++;maximum=Math.max(maximum,running);await sleep(60);running--;finished++});
         const poolMs=performance.now()-start;
         check(maximum===3&&finished===9,'Comparison pool concurrency is not bounded at three');
-        check(publicAppVersionLabel()==='V29.2','Public version is not V29.2');
+        check(publicAppVersionLabel()==='V29.3','Public version is not V29.3');
         return {version:APP_VERSION,audit,blessings:['KR','EN','LA','VN','IT','PT','JP'],poolMs,maximum,passed:true};
       },{fixtures,expected,currentSources});
       if(errors.length)throw Error(errors.join('\n'));

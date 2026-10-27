@@ -1,4 +1,4 @@
-// Order of Mass V29.1 application runtime. The Order of Mass is loaded only from Firebase.
+// Order of Mass V29.3 application runtime. The Order of Mass is loaded only from Firebase.
     let massData = [];
 
     // 데이터 ID 앞의 번호/기호를 제거해 화면 로직이 진짜 이름표만 보도록 합니다.
@@ -131,7 +131,7 @@
     const hiddenSelectableLangs = new Set();
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
-    const APP_VERSION = 'V29.2-20261015';
+    const APP_VERSION = 'V29.3-20261027';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -552,7 +552,7 @@
         const koreanModule = registry.KR;
         const koreanEntry = koreanModule && eucharisticPrayerEntry(koreanModule.ordinary);
         const koreanRows = koreanEntry && koreanEntry.forms['4'];
-        const coreCodes = ['KR', 'VN', 'US', 'JP', 'VA'];
+        const coreCodes = [...new Set(['KR', dataJurisdictionForLocation(state.selectedLocationCode), dataJurisdictionForLocation(state.targetLocationCode), ...(['AU','NZ'].includes(state.selectedLocationCode) || ['AU','NZ'].includes(state.targetLocationCode) ? ['US'] : [])])];
         const rebuiltCore = coreCodes.reduce((merged, code) => {
             const module = registry[code];
             const ordinary = normalizedOrdinaryForMerge(module, code, koreanRows);
@@ -3130,9 +3130,8 @@
     }
 
     function getUploadedHymnData() {
-        const data = Array.isArray(window.uploadedHymnData) && window.uploadedHymnData.length
-            ? window.uploadedHymnData
-            : (Array.isArray(window.hymnData) ? window.hymnData : []);
+        const countryRows = Object.values(Object.assign({},globalThis.countryHymnData || {},globalThis.uploadedCountryHymnData || {})).flatMap(module => module.entries || []);
+        const data = countryRows.length ? countryRows : (Array.isArray(window.uploadedHymnData) && window.uploadedHymnData.length ? window.uploadedHymnData : (Array.isArray(window.hymnData) ? window.hymnData : []));
         return data.map(entry => {
             const country = normalizeSelectableLang(entry.country || entry.lang || entry.language || 'KR', 'KR');
             const number = cleanNodeText(entry.number || entry.no || entry.num || '');
@@ -3764,11 +3763,89 @@
             countryHymnData: 'uploadedCountryHymnData',
             countryPrayerData: 'uploadedCountryPrayerData'
         }[registryName];
-        const registry = uploadedRegistryName && globalThis[uploadedRegistryName]
-            ? globalThis[uploadedRegistryName]
-            : globalThis[registryName];
+        const registry = Object.assign({},globalThis[registryName] || {},uploadedRegistryName ? globalThis[uploadedRegistryName] || {} : {});
         if (!registry || typeof registry !== 'object') return null;
         return registry[dataJurisdictionForLocation()] || null;
+    }
+
+    const auxiliaryDataRequests = new Map();
+    const auxiliaryDataFailures = new Map();
+    const remoteAuxiliaryRequested = new Set();
+    const lazyDataLabels = {
+        KR:['자료를 불러오는 중…','자료를 불러오지 못했습니다.','다시 시도'],
+        VN:['Đang tải dữ liệu…','Không thể tải dữ liệu.','Thử lại'],
+        EN:['Loading data…','Unable to load data.','Retry'],
+        JP:['データを読み込み中…','データを読み込めませんでした。','再試行'],
+        LA:['Data onerantur…','Data onerari non potuerunt.','Iterum'],
+        ZH:['正在載入資料…','無法載入資料。','重試'],
+        IT:['Caricamento dati…','Impossibile caricare i dati.','Riprova'],
+        PT:['A carregar dados…','Não foi possível carregar os dados.','Tentar novamente'],
+        ES:['Cargando datos…','No se pudieron cargar los datos.','Reintentar'],
+        DE:['Daten werden geladen…','Daten konnten nicht geladen werden.','Erneut versuchen']
+    };
+    function auxiliaryCountryCodes(kind) {
+        const local = dataJurisdictionForLocation(state.selectedLocationCode);
+        if (kind === 'prayers') return [...new Set([local,dataJurisdictionForLocation(state.targetLocationCode),'VA'])];
+        if (kind === 'hymns') {
+            const lang = document.getElementById('hymn-country')?.value || state.currentLoc;
+            return [lang === state.currentLoc ? local : ({EN:'US',LA:'VA',ZH:'TW'}[lang] || lang)];
+        }
+        return [local];
+    }
+    function prepareAuxiliaryPanel(kind, rerender) {
+        const loader = window.ordoDataLoader;
+        if (!loader || window.ordoPrayerEditorPreview) return true;
+        const codes = auxiliaryCountryCodes(kind);
+        const key = kind+':'+codes.join(',');
+        const status = loader.status(kind,codes);
+        const root = document.getElementById(({prayers:'prayer-results',hymns:'hymn-results',churches:'church-map-status'}[kind]));
+        const labels = lazyDataLabels[state.uiLang] || lazyDataLabels.EN;
+        if (!status.ready) {
+            const failed = auxiliaryDataFailures.has(key);
+            if (root) root.innerHTML = `<div class="aux-empty" role="status">${escapeHtml(labels[failed ? 1:0])}${failed ? ` <button type="button" onclick="retryAuxiliaryData('${kind}')">${escapeHtml(labels[2])}</button>`:''}</div>`;
+            if (!failed && !auxiliaryDataRequests.has(key)) {
+                const request = loader.ensure(kind,codes).then(()=>{
+                    fallbackPrayerDataByJurisdiction.clear();
+                    if (kind === 'churches') rebuildCountryChurchDirectory();
+                    if (state.activeTab === kind && key === kind+':'+auxiliaryCountryCodes(kind).join(',')) rerender();
+                }).catch(error=>{
+                    auxiliaryDataFailures.set(key,error);
+                    if (state.activeTab === kind && key === kind+':'+auxiliaryCountryCodes(kind).join(',')) rerender();
+                }).finally(()=>auxiliaryDataRequests.delete(key));
+                auxiliaryDataRequests.set(key,request);
+            }
+            return false;
+        }
+        if (kind !== 'churches' && !remoteAuxiliaryRequested.has(key) && window.ordoFirebaseDataApi) {
+            remoteAuxiliaryRequested.add(key);
+            window.ordoFirebaseDataApi.ensure(kind,codes).then(()=>{
+                fallbackPrayerDataByJurisdiction.clear();
+                if (state.activeTab === kind && key === kind+':'+auxiliaryCountryCodes(kind).join(',')) rerender();
+            }).catch(error=>console.warn('Country data refresh failed.',error));
+        }
+        return true;
+    }
+    window.retryAuxiliaryData = function(kind) {
+        auxiliaryDataFailures.delete(kind+':'+auxiliaryCountryCodes(kind).join(','));
+        syncAuxPanelsWithSettings();
+    };
+    async function ensureActiveMassData(options = {}) {
+        const countries = [...new Set([dataJurisdictionForLocation(state.selectedLocationCode),dataJurisdictionForLocation(state.targetLocationCode)].filter(Boolean))];
+        const ordinaryCountries = [...new Set(['KR',...countries,...(countries.some(code=>code === 'AU' || code === 'NZ')?['US']:[]),...(countries.includes('GB-WLS')?['GB-ENG']:[])])];
+        const loader = window.ordoDataLoader;
+        await Promise.all([
+            loader?.ensure('special',countries,options),
+            loader?.ensure('missal',[state.currentLoc,state.targetLang],options),
+            countries.includes('TW') ? loader?.ensure('daily',['TW'],options) : undefined,
+            window.ordoPrayerEditorPreview ? undefined : window.ordoFirebaseDataApi?.ensure('mass',ordinaryCountries,options)
+        ]);
+    }
+    async function refreshAuxiliaryCountryData(kind) {
+        const codes = auxiliaryCountryCodes(kind);
+        await Promise.all([window.ordoDataLoader?.ensure(kind,codes,{force:true}),window.ordoFirebaseDataApi?.ensure(kind,codes,{force:true})]);
+        auxiliaryDataFailures.delete(kind+':'+codes.join(','));
+        fallbackPrayerDataByJurisdiction.clear();
+        if (kind === 'churches') rebuildCountryChurchDirectory();
     }
 
     function countryAuxDevelopmentMessage(kind) {
@@ -3787,6 +3864,7 @@
     }
 
     function renderHymnPanel(options = {}) {
+        if (!prepareAuxiliaryPanel('hymns', () => renderHymnPanel(options))) return;
         localizeAuxPanels();
         const country = normalizeSelectableLang((document.getElementById('hymn-country') || {}).value || state.currentLoc || 'KR', 'KR');
         const query = normalizeAuxSearch((document.getElementById('hymn-search') || {}).value || '');
@@ -4870,6 +4948,7 @@
     }
 
     async function renderChurchPanel() {
+        if (!prepareAuxiliaryPanel('churches', renderChurchPanel)) return;
         localizeAuxPanels();
         updateFooterCopyright();
         const activeCountry = churchCountryFromLocation(state.selectedLocationCode || state.currentLoc);
@@ -4971,7 +5050,7 @@
         const targetJurisdiction = dataJurisdictionForLocation(state.targetLocationCode || state.targetLang);
         const cacheKey = [key, state.currentLoc, targetJurisdiction, state.targetLang].map(value => cleanNodeText(value)).join('|');
         if (fallbackPrayerDataByJurisdiction.has(cacheKey)) return fallbackPrayerDataByJurisdiction.get(cacheKey);
-        const registry = globalThis.uploadedCountryPrayerData || globalThis.countryPrayerData || {};
+        const registry = Object.assign({},globalThis.countryPrayerData || {},globalThis.uploadedCountryPrayerData || {});
         const modules = [
             { jurisdiction: 'VA', module: registry.VA },
             { jurisdiction: key, module: registry[key] },
@@ -5013,7 +5092,7 @@
         if (!module || module.status === 'under-development' || !Array.isArray(module.entries) || !module.entries.length) {
             return buildCountryPrayerFallbackData(dataJurisdictionForLocation());
         }
-        return getUploadedPrayerData();
+        return buildCountryPrayerFallbackData(dataJurisdictionForLocation());
     }
 
     function localizedPrayerValueStrict(value, langCode) {
@@ -5294,6 +5373,7 @@
     }
 
     function renderPrayerPanel() {
+        if (!prepareAuxiliaryPanel('prayers', renderPrayerPanel)) return;
         localizeAuxPanels();
         updateFooterCopyright();
         const leftLang = normalizeSelectableLang(state.currentLoc || 'KR', 'KR');
@@ -5681,21 +5761,19 @@
     }
 
     async function refreshPrayerTabContent() {
-        await reloadPageDataScript('prayer_data.js');
+        await refreshAuxiliaryCountryData('prayers');
         aiTranslationRecords.clear();
         renderPrayerPanel();
     }
 
     async function refreshHymnTabContent() {
-        await reloadPageDataScript('hymn_data.js', () => {
-            if (Array.isArray(window.ordoHymnData)) window.hymnData = window.ordoHymnData;
-        });
+        await refreshAuxiliaryCountryData('hymns');
         hymnTranslationRecords.clear();
         renderHymnPanel();
     }
 
     async function refreshChurchTabContent() {
-        await reloadPageDataScript('church_local_details.js');
+        await refreshAuxiliaryCountryData('churches');
         churchPlaceDetailsCache.clear();
         usMassTimesCache.clear();
         churchSearchRequestId += 1;
@@ -18039,6 +18117,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         state.autoBlessingSignature = '';
         cancelDailyLiturgyValidation();
         const loadId = ++activeMassDataLoadId;
+        try { await ensureActiveMassData({force:!!options.forceRemote}); }
+        catch (error) { console.warn('Country Mass data download failed.',error); }
+        if (loadId !== activeMassDataLoadId) return false;
         const dateContext = rememberLiturgicalDateContext(getStrictDateContext(new Date()));
         const today = cloneDateOnly(dateContext.date);
         state.liturgyInfo = applyNavigationDateLabel(buildGeneratedLiturgyInfo(today), dateContext);
@@ -21868,10 +21949,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         simulateGPS();
         if (window.ordoFirebaseDataReady && typeof window.ordoFirebaseDataReady.then === 'function') {
             window.ordoFirebaseDataReady.then(status => {
-                if (!status || status.error || startupNoticeDecision === false) return;
+                if (!status || status.deferred || status.error || startupNoticeDecision === false) return;
                 fallbackPrayerDataByJurisdiction.clear();
-                if (status.hymnCount) renderHymnPanel({ resetCategory: true });
-                if (status.prayerCount) renderPrayerPanel();
+                if (status.hymnCount && state.activeTab === 'hymns') renderHymnPanel({ resetCategory: true });
+                if (status.prayerCount && state.activeTab === 'prayers') renderPrayerPanel();
                 if (status.massCount && startupNoticeDecision === true) {
                     fetchMassData({ skipStartupPrompts: true });
                 }

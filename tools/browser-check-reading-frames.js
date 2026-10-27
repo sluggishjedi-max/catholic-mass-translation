@@ -13,6 +13,7 @@ const registry=tool.runCountryMassSources(tool.readCountryMassSources()).registr
   await page.route('**/*',r=>new URL(r.request().url()).hostname==='127.0.0.1'?r.continue():r.abort());
   await page.goto(`http://127.0.0.1:${server.address().port}/V29.html`);
   console.log('Reading frame check: page loaded at '+viewport.width);
+await page.evaluate(async()=>{if(window.ordoDataLoader)await Promise.all([ordoDataLoader.ensure('special',Object.keys(ordoDataLoader.manifest.special)),ordoDataLoader.ensure('missal',Object.keys(ordoDataLoader.manifest.missal))]);});
   const result=await page.evaluate(()=>{
    const check=(ok,message)=>{if(!ok)throw Error(message)};
    document.getElementById('consent-modal').style.display='none';document.body.classList.remove('consent-pending');startupNoticeDecision=true;

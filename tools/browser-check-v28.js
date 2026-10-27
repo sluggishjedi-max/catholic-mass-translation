@@ -42,6 +42,7 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
     }, { mass:firebaseMassRegistry, metadata:firebaseMetadataRegistry });
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
     await page.goto(`http://127.0.0.1:${server.address().port}/${process.env.ORDO_CHECK_HTML || 'V28.html'}`, {waitUntil: 'load'});
+    await page.evaluate(async()=>{if(window.ordoDataLoader)await Promise.all([ordoDataLoader.ensure('special',Object.keys(ordoDataLoader.manifest.special)),ordoDataLoader.ensure('missal',Object.keys(ordoDataLoader.manifest.missal)),ordoDataLoader.ensure('daily',['TW']),ordoDataLoader.ensure('prayers',Object.keys(ordoDataLoader.manifest.prayers))]);});
     await page.waitForFunction(() => typeof strictParseDailyMass === 'function' && globalThis.taiwanDailyMassTextData);
     await page.evaluate(() => {
       resetMassDataFrom(getStartupOrdinaryMassData());

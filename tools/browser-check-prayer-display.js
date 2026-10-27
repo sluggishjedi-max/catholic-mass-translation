@@ -28,6 +28,7 @@ const imagePath = '/prayer-test-wide.svg';
     browser = await chromium.launch({ headless: true });
     for (const filename of ['index.html', 'V28.html']) {
       const page = await browser.newPage();
+      await page.addInitScript(()=>{globalThis.ordoPrayerEditorPreview=true;});
       await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
       await page.goto(`http://127.0.0.1:${server.address().port}/${filename}`, { waitUntil: 'load' });
       await page.waitForFunction(() => typeof renderPrayerPanel === 'function' && !!window.ordoPrayerDataApi);

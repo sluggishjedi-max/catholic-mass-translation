@@ -14,30 +14,7 @@ const usesCountryModules = path.normalize(hymnDataPath).toLowerCase()
   === path.normalize(defaultHymnDataPath).toLowerCase();
 
 function discoverCountryHymnModules() {
-  const indexPath = path.join(root, 'index.html');
-  const indexSource = fs.readFileSync(indexPath, 'utf8');
-  const modules = [];
-  const seen = new Set();
-  const scriptPattern = /JS%20file\/countries\/([^/"?]+)\/([^/"?]+_hymns\.js)(?:\?[^"']*)?/gu;
-
-  for (const match of indexSource.matchAll(scriptPattern)) {
-    const modulePath = path.join(root, 'JS file', 'countries', decodeURIComponent(match[1]), decodeURIComponent(match[2]));
-    const normalizedPath = path.normalize(modulePath).toLowerCase();
-    if (seen.has(normalizedPath)) continue;
-    seen.add(normalizedPath);
-
-    const source = fs.readFileSync(modulePath, 'utf8');
-    const jurisdictionMatch = source.match(/\bjurisdiction\s*:\s*["']([^"']+)["']/u);
-    if (!jurisdictionMatch) {
-      throw new Error(`Could not find the jurisdiction in ${modulePath}`);
-    }
-    modules.push({ jurisdiction: jurisdictionMatch[1], path: modulePath });
-  }
-
-  if (!modules.length) {
-    throw new Error(`No country hymn modules were found in ${indexPath}`);
-  }
-  return modules;
+  return require('./country-aux-sources').discoverCountryAuxModules('hymns');
 }
 
 const countryHymnModules = usesCountryModules ? discoverCountryHymnModules() : [];

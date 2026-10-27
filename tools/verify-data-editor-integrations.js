@@ -307,20 +307,23 @@ async function verifyHomepageFirebaseBridge() {
   };
   const context = {
     console,
-    Date,
+    Date, setTimeout, clearTimeout,
     CustomEvent: class CustomEvent { constructor(type, options) { this.type = type; this.detail = options.detail; } },
     dispatchEvent() {},
     firebase: {
       apps: [],
       initializeApp() { this.apps.push({}); },
       firestore() {
-        return { collection: name => ({ get: async () => ({ docs: (fixtures[name] || []).map(data => ({ data: () => data })) }) }) };
+        return { collection: name => ({ where: (field,operator,code) => { assert.equal(field,'jurisdiction'); assert.equal(operator,'=='); return {get: async () => ({ docs: (fixtures[name] || []).filter(data=>data.jurisdiction === code).map(data => ({ data: () => data })) })}; } }) };
       }
     }
   };
   context.globalThis = context;
   vm.runInNewContext(loader, context, { filename: 'firebase_data_loader.js' });
-  const status = await context.ordoFirebaseDataReady;
+  assert.equal((await context.ordoFirebaseDataReady).deferred,true,'Startup must not download entire collections');
+  await context.ordoFirebaseDataApi.ensure('prayers',['US']);
+  await context.ordoFirebaseDataApi.ensure('hymns',['US']);
+  const status = await context.ordoFirebaseDataApi.ensure('mass',['US','KR']);
   assert.deepStrictEqual([status.prayerCount, status.hymnCount, status.massCount, status.countryMetadataCount], [1, 1, 1, 1]);
   assert.strictEqual(context.uploadedCountryPrayerData.US.entries[0].id, 'firebase-prayer');
   assert.strictEqual(context.uploadedHymnData[0].id, 'firebase-hymn');
