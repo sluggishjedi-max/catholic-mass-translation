@@ -62,8 +62,9 @@ async function cloudFixture(page) {
       return route.continue();
     });
     try {
-      await page.goto(base+'/'+(width===1280?'V29.html':'index.html'),{waitUntil:'load'});
+      await page.goto(base+'/'+(width===1280?'V30.html':'index.html'),{waitUntil:'load'});
       await page.waitForFunction(()=>window.ordoFirebaseDataStatus?.massCount>0 && countrySpecialLiturgies.countries.KR && localMissalPrayerData.languages.EN);
+      assert.equal(await page.evaluate(()=>document.documentElement.dataset.appVersion),'V30');
       assert(!requests.some(file=>/_(hymns|prayers|churches)\.js$/.test(file)),'First screen downloaded auxiliary country data');
       assert(!requests.some(file=>/taiwan_daily_mass|special-IT|missal-LA/.test(file)),'First screen downloaded unselected countries/languages');
       assert.deepEqual(await page.evaluate(()=>[...new Set(__queries.map(item=>item[1]))].sort()),['KR','US']);

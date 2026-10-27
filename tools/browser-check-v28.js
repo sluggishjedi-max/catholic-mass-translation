@@ -329,8 +329,20 @@ const firebaseMetadataRegistry = Object.fromEntries(metadataTool.countryMetadata
           check(splitParsedAlternatives(vietnamPaired[id].kr_lines).length===1,id+' cached Korean proper leaked into Vietnam feria');
           check(!vietnamPaired[id].variantAlignment||vietnamPaired[id].variantAlignment.length===1,id+' Vietnam weekday split into memorial alternatives');
         }
-        check(state.liturgyInfo.names.KR.includes('연중')&&!state.liturgyInfo.names.KR.includes('예로니모'),'Vietnam feria kept the Korean memorial title');
+        check(state.liturgyInfo.names.KR.includes('연중')&&!state.liturgyInfo.names.KR.includes('예로니모'),'Vietnam feria kept the Korean memorial title: '+JSON.stringify({names:state.liturgyInfo.names,meta:state.liturgyInfo.meta,isSolemnity:state.liturgyInfo.isSolemnity,currentLoc:state.currentLoc,date:formatDateIso(getActiveLiturgicalSourceDate())}));
         check(state.liturgyInfo.names.VN.includes('Thường niên'),'Vietnam feria lost its source title');
+        check(!getLiturgyDisplayName('KR').includes('예로니모'),'Supplementary source title bypassed the primary calendar in the header');
+        render();
+        check(!document.querySelector('.liturgy-name-text').textContent.includes('예로니모'),'Visible header retained the supplementary memorial');
+        const primaryTitleState=cloneData(state.liturgyInfo);
+        state.liturgyInfo=buildGeneratedLiturgyInfo(jeromeDate);
+        const reversedTitleData={};
+        mergeSourceData(reversedTitleData,koreanJerome,'KR');
+        mergeSourceData(reversedTitleData,{title:kpvMassCandidateTitle(jeromeTemporal,jeromeDate),calendarForm:'temporal',data:vietnamData},'VN');
+        check(!getLiturgyDisplayName('KR').includes('예로니모'),'Header depends on which country source finishes first');
+        check(state.liturgyInfo.sourceCelebrations.KR.title.includes('예로니모'),'Original source title was lost from provenance');
+        state.liturgyInfo=primaryTitleState;
+
         for(const other of ['en','jp']) {
           const sharedScope={reading1:{__primaryCalendarForm:'temporal',vn_lines:[parsedLine('','Weekday','body')],cit_vn:'G 9,1-12.14-16',
             [other+'_lines']:[parsedLine('','Weekday translation','body'),parsedLine('','또는:'),parsedLine('','Memorial alternative','body')],
@@ -1131,7 +1143,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
-    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29(?:\.\d+)?-/ : /^V28-/);
+    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V30.html' ? /^V30-/ : process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29(?:\.\d+)?-/ : /^V28-/);
     await page.setViewportSize({width:412,height:915});
     const mobile = await page.evaluate(() => {
       render();

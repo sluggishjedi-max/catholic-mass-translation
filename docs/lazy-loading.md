@@ -1,6 +1,6 @@
 # Country and feature data loading
 
-The V29 entrypoints share `JS file/app_v29.js`. V29.3 loads auxiliary data by
+The V30 entrypoints share `JS file/app_v30.js`. V30 loads auxiliary data by
 country when its tab is opened, rather than eagerly executing every country's
 prayer, hymn and church directory. The generated manifest discovers countries
 from their canonical files, including newly added modules.
@@ -66,7 +66,7 @@ country changes while downloads are pending, retry and persistent cache reuse.
 Existing startup/editor-preview, multilingual prayer rendering, reading-frame,
 V29 special-liturgy and editor integration checks also cover the changed paths.
 
-The older broad `browser-check-v28.js` run against V29 has a pre-existing failure
-at `Vietnam feria kept the Korean memorial title`. It reproduces with the
-unchanged HEAD runtime as well as this runtime. It is tracked separately from
-the loading change; the assertion has not been removed or weakened.
+V30 also keeps the primary country's seasonal liturgy title when a supplementary
+source supplies a different local memorial title. The source title remains in
+provenance; it cannot replace the translated primary title in the main header or
+floating banner. This rule applies to every language and to either load order.
