@@ -991,3 +991,5 @@ async function callMachineTranslationFallback(text, sourceLang, targetLang) {
   if (!translated.trim()) throw new Error("Fallback translation returned an empty result.");
   return translated.trim();
 }
+
+Object.assign(exports, require("./daily-functions").dailyFunctions({adminSecret:ADMIN_REVIEW_EMAILS,allowedOrigin:resolveAllowedOrigin,rateLimit:checkRateLimit}));

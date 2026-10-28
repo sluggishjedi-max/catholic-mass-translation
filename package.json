@@ -52,7 +52,11 @@
     "data:tools:check": "node tools/verify-country-data-editors.js",
     "data:tools:ui-check": "node tools/verify-data-editor-integrations.js",
     "firebase:check": "node --check functions/index.js",
-    "test": "npm run browser:check --"
+    "test": "npm run browser:check --",
+    "daily:server:build": "node tools/build-server-daily-runtime.js",
+    "daily:server:check": "node tools/test-daily-service.js",
+    "browser:check:daily-editor": "node tools/browser-check-daily-editor.js",
+    "browser:check:v31": "set ORDO_CHECK_HTML=V31.html&& node tools/browser-check-v28.js"
   },
   "keywords": [],
   "author": "",

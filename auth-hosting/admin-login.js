@@ -26,7 +26,7 @@
     try {
       const url = new URL(value);
       return url.origin === new URL(appHome).origin && !url.username && !url.password && !url.hash
-        && /^\/catholic-mass-translation\/(?:index\.html|V29\.html)?$/.test(url.pathname);
+        && /^\/catholic-mass-translation\/(?:index\.html|V(?:29|30|31)\.html|daily-mass-editor\.html)?$/.test(url.pathname);
     } catch (error) { return false; }
   }
   function validRequest(value) {

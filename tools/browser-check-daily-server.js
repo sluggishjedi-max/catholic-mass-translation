@@ -1,0 +1,22 @@
+const fs=require('node:fs'),http=require('node:http'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require('playwright'),mass=require('./mass-data-editor'),metadata=require('./country-metadata-upload-tool');
+const root=path.resolve(__dirname,'..'),registry=mass.runCountryMassSources(mass.readCountryMassSources()).registry;
+(async()=>{
+ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(error,data)=>{if(error)return res.writeHead(404).end();res.setHeader('Content-Type',file.endsWith('.js')?'application/javascript':'text/html;charset=utf-8');res.end(data);});});
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const browser=await chromium.launch({headless:true});
+ try{const page=await browser.newPage();await page.addInitScript(({registry,countries})=>{window.ordoPrayerEditorPreview=true;window.uploadedCountryMassData=registry;window.uploadedCountryMassMetadata=countries;},{registry,countries:Object.fromEntries(metadata.countryMetadataItems().map(item=>[item.jurisdiction,item]))});
+ await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());await page.goto(`http://127.0.0.1:${server.address().port}/V31.html`);
+ const result=await page.evaluate(async()=>{
+  const check=(condition,message)=>{if(!condition)throw Error(message);};
+  state.selectedLocationCode=state.currentLoc='KR';state.targetLang='EN';state.targetLocationCode='US';state.useGps=false;
+  await ensureActiveMassData();
+  const date=new Date(2026,9,28,12);getStrictDateBase=()=>({localDay:cloneDateOnly(date),hour:12,timeZone:'Asia/Seoul'});state.liturgicalDateContext=null;state.liturgyInfo=buildGeneratedLiturgyInfo(date);
+  const response=version=>({title:'성 시몬과 성 유다(타대오) 사도 축일',color:'#d32f2f',data:Object.fromEntries(['entrance','collect','reading1','psalm','gospel_accl','gospel','communion','prayer_offerings','prayer_after'].map(key=>[key,{text:key==='collect'?'관리자 편집 본기도 v'+version:'Synthetic '+key+' passage.',lines:[parsedLine('',key==='collect'?'관리자 편집 본기도 v'+version:'Synthetic '+key+' passage.','body')]}])),serverRecord:{key:'대한민국_2026-10-28',version,kind:'edited'}});
+  let version=2,reads=0;window.ordoDailyServer={read:async request=>{reads++;check(request.country==='KR'&&request.date==='2026-10-28','Wrong server identity');return response(version);}};
+  const original=dailySourceFetchers.KR;dailySourceFetchers.KR=async()=>{throw Error('Server hit should not download the original source');};
+  startupNoticeDecision=true;document.body.classList.remove('consent-pending');document.getElementById('consent-modal').style.display='none';
+  for(const current of [2,4]){version=current;const parsed=await fetchParsedDailyMass('KR',date,{locationCode:'KR',forceRemote:true});check(parsed.serverRecord.version===current,'Published revision did not update');resetMassDataFrom(getStartupOrdinaryMassData());const merged={};mergeSourceData(merged,parsed,'KR');finalizeDailyReadingsData(merged);render();check(document.querySelector('[data-part-id="collect"]').textContent.includes('관리자 편집 본기도 v'+current),'Local Missal overlay replaced the edited server prayer');}
+  dailySourceFetchers.KR=original;return {serverReads:reads,publishedVersions:[2,4],originalFetches:0,editedPrayerPreserved:true};
+ });assert.equal(result.serverReads,2);console.log(JSON.stringify(result));await page.close();
+ }finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
+})().catch(error=>{console.error(error);process.exitCode=1;});

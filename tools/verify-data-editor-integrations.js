@@ -277,15 +277,15 @@ function verifyFirebasePayloadCompatibility() {
 async function verifyHomepageFirebaseBridge() {
   const root = path.resolve(__dirname, '..');
   const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-  const versionedPage = fs.readFileSync(path.join(root, 'V30.html'), 'utf8');
+  const versionedPage = fs.readFileSync(path.join(root, 'V31.html'), 'utf8');
   const loader = fs.readFileSync(path.join(root, 'JS file', 'firebase_data_loader.js'), 'utf8');
-  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v30.js'), 'utf8');
+  const app = fs.readFileSync(path.join(root, 'JS file', 'app_v31.js'), 'utf8');
   new vm.Script(loader, { filename: 'firebase_data_loader.js' });
   assert(index.includes('firebase-firestore-compat.js') && index.includes('firebase_data_loader.js'),
     'Homepage must load Firestore and the published-data bridge');
-  assert(index.includes('app_v30.js') && index.indexOf('firebase_data_loader.js') < index.indexOf('app_v30.js'),
+  assert(index.includes('app_v31.js') && index.indexOf('firebase_data_loader.js') < index.indexOf('app_v31.js'),
     'Published Firebase data must start loading before the app runtime');
-  assert.strictEqual(versionedPage, index, 'V30.html must be the versioned snapshot of index.html');
+  assert.strictEqual(versionedPage, index, 'V31.html must be the versioned snapshot of index.html');
   assert(!/countries\/[^/"?]+\/[^/"?]+_mass\.js/u.test(index),
     'V28 homepage must not load local country Order of Mass modules');
   ['uploadedCountryPrayerData', 'uploadedCountryHymnData', 'uploadedCountryMassData', 'uploadedCountryMassMetadata', 'uploadedCountrySpecialLiturgies']
