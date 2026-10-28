@@ -5,6 +5,7 @@ const versionName=number=>'v'+String(number).padStart(6,'0');
 function recordRef(db,request){return db.collection(COLLECTION).doc(dayId(request.country,request.date)).collection('records').doc(recordId(request.sourceId,request.variant));}
 function conflict(latest){const error=Error('newer-version-available');error.status=409;error.latestVersion=latest;return error;}
 function createStore(db){
+  const provenanceCache=new Map();
   async function append(request,result,{kind,expectedLatestVersion,baseVersion,authorUid}={}){
     const parsed=cleanParsed(result.parsed),ref=recordRef(db,request),now=new Date().toISOString();
     const fingerprint=result.fingerprint||digest(parsed);
@@ -51,6 +52,17 @@ function createStore(db){
       const list=await query.limit(100).get();return list.docs.map(doc=>{const {parsed,...metadata}=doc.data();return metadata;});
     },
     async version(request,number){if(!Number.isInteger(number)||number<1)throw Error('invalid-version');const snapshot=await recordRef(db,request).collection('versions').doc(versionName(number)).get();return snapshot.exists?snapshot.data():null;},
+    async provenance(request,version){
+      const cacheKey=recordRef(db,request).path+'/'+version.number;
+      if(provenanceCache.has(cacheKey))return provenanceCache.get(cacheKey);
+      const raw=await this.raw(request,version.number),urls=new Map();
+      const add=(value,kind)=>{try{const url=new URL(value);if(['https:','http:'].includes(url.protocol)&&!url.username&&!url.password&&!urls.has(url.href))urls.set(url.href,{url:url.href,kind});}catch{}};
+      add(version.parsed?.sourceUrl,'source');add(version.parsed?.prayerSourceUrl,'prayer');
+      for(const item of raw?.snapshots||[])if(item.status>=200&&item.status<300&&!item.verification)add(item.url,'response');
+      const result={country:request.country,sourceId:request.sourceId,originCollectedVersion:raw?.version||version.originCollectedVersion||0,urls:[...urls.values()],compiled:(raw?.snapshots||[]).some(item=>item.url?.startsWith('app-bundle://'))};
+      if(provenanceCache.size>=200)provenanceCache.delete(provenanceCache.keys().next().value);
+      provenanceCache.set(cacheKey,result);return result;
+    },
     async raw(request,number){
       const visited=new Set(),ref=recordRef(db,request);
       while(Number.isInteger(number)&&number>0&&!visited.has(number)){

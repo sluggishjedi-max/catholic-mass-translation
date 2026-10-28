@@ -39,7 +39,7 @@ function createDailyHttpHandler({getService,verifyIdToken,configuredEmails,allow
         if(action==='raw'){const raw=await service.store.raw(request,Number(value.version));return res.status(raw?200:404).json(raw||{error:'version-not-found'});}
         if(action==='version'){
           const version=await service.store.version(request,Number(value.version));
-          return res.status(version?200:404).json(version||{error:'version-not-found'});
+          return res.status(version?200:404).json(version?{...version,provenance:await service.store.provenance(request,version)}:{error:'version-not-found'});
         }
         const record=await service.read(request);
         return res.status(200).json({record,versions:record?await service.store.versions(request):[]});

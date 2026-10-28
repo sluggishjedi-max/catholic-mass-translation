@@ -15,7 +15,7 @@ const parsed=text=>({title:'Synthetic Mass',color:'#fff',data:{reading1:{text},g
 async function main(){
   assert.equal(dayId('VN','2026-11-01'),'베트남_2026-11-01');assert.equal(datesFrom('2026-11-20').at(-1),'2026-12-19');
   const db=memoryFirestore(),store=createStore(db);
-  let result=await store.appendCollected(request,{parsed:parsed('Original one'),fingerprint:'source-one',snapshots:[{url:'https://example.test',body:'Original one'}]});assert.equal(result.latestVersion,1);
+  let result=await store.appendCollected(request,{parsed:parsed('Original one'),fingerprint:'source-one',snapshots:[{url:'https://example.test',status:200,body:'Original one'},{url:'https://verification.test',status:200,verification:true,body:'Comparison sample'},{url:'javascript:alert(1)',status:200,body:''},{url:'https://failed.test',status:404,body:''}]});assert.equal(result.latestVersion,1);
   result=await store.appendEdited(request,parsed('Edited two'),{baseVersion:1,expectedLatestVersion:1,authorUid:'administrator'});assert.equal(result.latestVersion,2);
   result=await store.appendCollected(request,{parsed:parsed('Original one'),fingerprint:'source-one'});assert.equal(result.changed,false);assert.equal(result.latestVersion,2);
   result=await store.appendCollected(request,{parsed:parsed('Updated original three'),fingerprint:'source-three'});assert.equal(result.latestVersion,3);assert.equal(result.publishedVersion,2);assert.equal(result.protectedEdit,true);
@@ -26,9 +26,12 @@ async function main(){
   assert.deepEqual((await store.versions(request)).map(version=>[version.number,version.kind]),[[4,'edited'],[3,'collected'],[2,'edited'],[1,'collected']]);
   assert([...db.data.keys()].some(path=>path.includes('/v000001/raw/')),'Original response was not retained');
   assert.equal((await store.raw(request,2)).snapshots[0].body,'Original one');
+  const unchangedVersion=JSON.stringify(await store.version(request,2));
+  const provenance=await store.provenance(request,await store.version(request,2));assert.equal(provenance.originCollectedVersion,1);assert.equal(provenance.sourceId,'hanoi');assert.deepEqual(provenance.urls,[{url:'https://example.test/',kind:'response'}]);assert.equal(JSON.stringify(await store.version(request,2)),unchangedVersion,'Provenance lookup modified an immutable edited version');
   const handler=createDailyHttpHandler({admin:true,getService:()=>({store,requestIdentity:value=>value,read:()=>store.get(request)}),configuredEmails:()=>'admin@example.test',allowedOrigin:()=>'',rateLimit:()=>true,verifyIdToken:async token=>({uid:'admin',email:token==='good'?'admin@example.test':'other@example.test',email_verified:true,firebase:{sign_in_provider:'google.com'}})});
-  async function call(token){const response={headers:{},set(key,value){this.headers[key]=value;return this;},status(code){this.code=code;return this;},json(body){this.body=body;return this;}};await handler({method:'GET',query:{...request,action:'record'},get:name=>name==='authorization'&&token?'Bearer '+token:''},response);return response;}
+  async function call(token,action='record',extra={}){const response={headers:{},set(key,value){this.headers[key]=value;return this;},status(code){this.code=code;return this;},json(body){this.body=body;return this;}};await handler({method:'GET',query:{...request,action,...extra},get:name=>name==='authorization'&&token?'Bearer '+token:''},response);return response;}
   assert.equal((await call()).code,401);assert.equal((await call('wrong')).code,403);assert.equal((await call('good')).body.record.publishedVersion,4);
+  const versionResponse=await call('good','version',{version:2});assert.equal(versionResponse.code,200);assert.deepEqual(versionResponse.body.provenance.urls,provenance.urls);assert(!versionResponse.body.provenance.urls.some(item=>Object.hasOwn(item,'body')),'Raw page bodies were downloaded for source labels');
   console.log('Daily Mass: immutable v1/v2/v3/v4 history, unchanged-source deduplication, manual-edit preservation, optimistic conflict and administrator access passed.');
 }
 if(require.main===module)main().catch(error=>{console.error(error);process.exitCode=1;});

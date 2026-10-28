@@ -2,8 +2,38 @@
   'use strict';
   const endpoint=global.ORDO_DAILY_ADMIN_ENDPOINT||'https://asia-northeast3-ordinary-mass-app.cloudfunctions.net/dailyMassAdmin';
   const $=id=>document.getElementById(id),copy=value=>JSON.parse(JSON.stringify(value));
-  const sectionNames={entrance:'입당송',collect:'본기도',reading1:'제1독서',psalm:'화답송',reading2:'제2독서',gospel_accl:'복음 환호송',gospel:'복음',prayer_offerings:'예물 기도',preface:'감사송',communion:'영성체송',prayer_after:'영성체 후 기도'};
-  const state={verified:false,identity:null,record:null,parsed:null,loadedVersion:0,latestVersion:0,offeredVersion:0,section:'',dirty:false,busy:false,generation:0,days:[],versions:[],cancelWait:false};
+  const sectionNames={entrance:'입당송',collect:'본기도',reading1:'제1독서',psalm:'화답송',reading2:'제2독서',Sequence:'부속가',gospel_accl:'복음 환호송',gospel:'복음',prayer_offerings:'예물 기도',preface:'감사송',communion:'영성체송',meditation_after_communion:'영성체 후 묵상',prayer_after:'영성체 후 기도'};
+  const standardSections=Object.keys(sectionNames);
+  const colors=[['white','백색','#f7f8fa',['#fff','#ffffff','흰색']],['green','녹색','#27ae60',['#008000','#00ff00']],['purple','자색','#8e44ad',['#800080','보라색']],['red','홍색','#c0392b',['#d32f2f','#ff0000','빨간색']],['rose','장미색','#e67ab1',['#ffc0cb','pink']],['black','흑색','#2c3e50',['#000','#000000','검정색']],['gold','금색','#d4af37',['#ffd700']],['none','미지정','',[]],['other','기타 색상',null,[]]];
+  const state={verified:false,identity:null,record:null,parsed:null,loadedVersion:0,latestVersion:0,offeredVersion:0,section:'',dirty:false,busy:false,generation:0,days:[],versions:[],cancelWait:false,colorOriginal:'',colorChoice:'none',provenance:null};
+  function hasBody(value){return typeof value==='string'?!!value.trim():!!(value&&typeof value==='object'&&(typeof value.text==='string'&&value.text.trim()||Array.isArray(value.lines)&&value.lines.some(line=>typeof line.text==='string'&&line.text.trim())));}
+  function sectionLabel(id){return sectionNames[id]||sectionNames[standardSections.find(key=>key.toLowerCase()===id.toLowerCase())]||id;}
+  function orderedSections(data={}){const keys=Object.keys(data),order=standardSections.map(id=>id.toLowerCase()),all=[...keys,...standardSections.filter(id=>!keys.some(key=>key.toLowerCase()===id.toLowerCase()))];return all.sort((a,b)=>{const ai=order.indexOf(a.toLowerCase()),bi=order.indexOf(b.toLowerCase());return (ai<0?order.length:ai)-(bi<0?order.length:bi);});}
+  function renderSectionStatuses(){
+    const sections=orderedSections(state.parsed?.data);let count=0;
+    $('section-statuses').replaceChildren(...sections.map(id=>{const ready=hasBody(state.parsed?.data?.[id]);if(ready)count++;const item=document.createElement('li');item.dataset.section=id;item.dataset.collected=String(ready);const label=document.createElement('span');label.textContent=sectionLabel(id);const badge=document.createElement('span');badge.className='collection-badge';badge.textContent=ready?'수집':'미수집';item.append(label,badge);return item;}));
+    for(const option of $('section').options)option.textContent=sectionLabel(option.value)+' · '+(hasBody(state.parsed?.data?.[option.value])?'수집':'미수집');
+    $('section-count').textContent=count+'/'+sections.length+'개 항목에 본문 있음';
+  }
+  function colorChoice(value){const normalized=String(value||'').trim().toLowerCase();return colors.find(([id,name,code,aliases])=>[id,name,code,...aliases].includes(normalized))?.[0]||'other';}
+  function renderColor(){state.colorOriginal=state.parsed?.color||'';state.colorChoice=colorChoice(state.colorOriginal);$('liturgy-color').replaceChildren(...colors.map(([id,name])=>new Option(name,id)));$('liturgy-color').value=state.colorChoice;renderColorPreview();}
+  function renderColorPreview(){const selected=colors.find(item=>item[0]===$('liturgy-color').value);$('color-preview').style.backgroundColor=selected?.[2]||state.colorOriginal||'transparent';}
+  function selectedColor(){const choice=$('liturgy-color').value;return choice===state.colorChoice||choice==='other'?state.colorOriginal:colors.find(item=>item[0]===choice)?.[2]||'';}
+  const sourceSites=[['missa.cbck.or.kr','CBCK','한국천주교주교회의 매일미사'],['bible.usccb.org','USCCB','미국 주교회의'],['tonggiaophanhanoi.org','HANOI','하노이 대교구'],['ktcgkpv.org','KTCG-LEGACY','KTCG 구 홈페이지'],['kpv.vn','KPV','KTCG 현 홈페이지'],['gpbanmethuot.net','BANMETHUOT','반메투옷 교구'],['universalis.com','UNIVERSALIS','Universalis'],['ibreviary.com','IBREVIARY','iBreviary'],['higotonofukuin.org','HIGOTONOFUKUIN','일본 매일의 복음'],['chiesacattolica.it','CEI','이탈리아 주교회의'],['liturgia.pt','LITURGIA-PT','Liturgia.pt'],['cem.org.mx','CEM','멕시코 주교회의'],['erzabtei-beuron.de','SCHOTT','Schott-Messbuch'],['pocketterco.com.br','POCKETTERCO','Pocket Terço'],['catholic.org.tw','CRBC','대만 주교회의'],['drive.google.com','GOOGLE-DRIVE','Google Drive 문서']];
+  function sourceUrl(value){
+    try{let url=new URL(value);for(let i=0;i<5&&url.hostname==='r.jina.ai';i++){const nested=url.pathname.slice(1)+url.search;if(!/^https?:\/\//i.test(nested))break;url=new URL(nested);}return ['https:','http:'].includes(url.protocol)&&!url.username&&!url.password?url:null;}catch{return null;}
+  }
+  function sourceLink(url,label){const link=document.createElement('a');link.href=url;link.textContent=label;link.target='_blank';link.rel='noopener noreferrer';return link;}
+  function renderSources(){
+    const identity=state.identity||inputs(),id=state.provenance?.sourceId||(identity.source==='ktcg'?(identity.profile==='VIETNAM_NORTH'?'ktcg_north':'ktcg_south'):identity.source||'official');
+    $('source-code').textContent='출처 코드: '+(identity.country||'—')+' / '+id;
+    const entries=[...(state.provenance?.urls||[]),...(state.parsed?.sourceUrl?[{url:state.parsed.sourceUrl,kind:'source'}]:[]),...(state.parsed?.prayerSourceUrl?[{url:state.parsed.prayerSourceUrl,kind:'prayer'}]:[])],groups=new Map();
+    for(const entry of entries){const url=sourceUrl(entry.url||entry);if(!url)continue;const host=url.hostname.replace(/^www\./,'');const known=sourceSites.find(([suffix])=>host===suffix||host.endsWith('.'+suffix));if(!groups.has(url.origin))groups.set(url.origin,{origin:url.origin,code:known?.[1]||host.toUpperCase(),name:known?.[2]||host,urls:new Set(),kinds:new Set()});const group=groups.get(url.origin);group.urls.add(url.href);group.kinds.add(({source:'자료에 기록된 출처',prayer:'보조 기도문 출처',response:'수집·대조 응답'})[entry.kind]||'자료에 기록된 출처');}
+    const nodes=[...groups.values()].map(site=>{const card=document.createElement('div');card.className='source-site';const heading=document.createElement('strong');heading.textContent=site.name+' · '+site.code;const host=document.createElement('div');host.className='muted';host.textContent=site.origin+' · '+[...site.kinds].join(' / ');const links=document.createElement('div');links.className='source-links';links.append(sourceLink(site.origin+'/','홈페이지'),sourceLink([...site.urls][0],'수집 주소'));card.append(heading,host,links);if(site.urls.size>1){const details=document.createElement('details'),summary=document.createElement('summary'),list=document.createElement('ul');summary.textContent='관련 수집 주소 '+site.urls.size+'개';for(const url of site.urls){const item=document.createElement('li');item.append(sourceLink(url,url));list.append(item);}details.append(summary,list);card.append(details);}return card;});
+    if(state.provenance?.compiled){const note=document.createElement('p');note.textContent='APP-BUNDLE · 앱에 포함된 국가별 전례 자료';nodes.push(note);}
+    if(!nodes.length){const note=document.createElement('p');note.className='muted';note.textContent=state.parsed?'이 버전에는 홈페이지 주소가 저장되어 있지 않습니다.':'자료를 불러오면 수집한 홈페이지와 링크가 표시됩니다.';nodes.push(note);}
+    $('source-websites').replaceChildren(...nodes);
+  }
   function message(value,error=false){$('status').textContent=value;$('status').classList.toggle('error',error);}
   function inputs(){const country=$('country').value,source=$('source').value;return {country,date:$('date').value,source:source==='hanoi'?'hanoi':source.startsWith('ktcg')?'ktcg':'official',profile:source==='ktcg_north'?'VIETNAM_NORTH':source==='ktcg_south'?'VIETNAM_SOUTH':'',variant:$('variant').value||'day'};}
   function key(identity=state.identity){return identity?JSON.stringify(identity):'';}
@@ -27,7 +57,7 @@
       if($('citation').value||value.citation||value.cit)value[Object.hasOwn(value,'cit')?'cit':'citation']=$('citation').value;
       state.parsed.data[state.section]=value;
     }
-    state.parsed.title=$('liturgy-title').value;state.parsed.color=$('liturgy-color').value;
+    state.parsed.title=$('liturgy-title').value;state.parsed.color=selectedColor();
   }
   function sectionFields(){
     const value=state.parsed?.data[state.section];
@@ -36,11 +66,11 @@
   }
   function renderParsed(){
     const parsed=state.parsed;$('content-fields').disabled=!parsed||state.busy;
-    $('liturgy-title').value=parsed?.title||'';$('liturgy-color').value=parsed?.color||'';
-    const sections=[...new Set([...Object.keys(parsed?.data||{}),...Object.keys(sectionNames)])];
-    $('section').replaceChildren(...sections.map(value=>new Option(sectionNames[value]||value,value)));
-    if(!sections.includes(state.section))state.section=sections[0]||'';
-    $('section').value=state.section;sectionFields();
+    $('liturgy-title').value=parsed?.title||'';renderColor();
+    const sections=orderedSections(parsed?.data);
+    $('section').replaceChildren(...sections.map(value=>new Option(sectionLabel(value),value)));
+    if(!sections.includes(state.section))state.section=sections.find(id=>hasBody(parsed?.data?.[id]))||sections[0]||'';
+    $('section').value=state.section;sectionFields();renderSectionStatuses();
     $('advanced-json').value=parsed?JSON.stringify(parsed,null,2):'';
     $('draft-state').textContent=state.dirty?'편집 중 · 이 브라우저에 임시 저장됩니다.':'';
   }
@@ -50,7 +80,7 @@
     try{localStorage.setItem(draftKey(),JSON.stringify({identity:state.identity,parsed:state.parsed,baseVersion:state.loadedVersion,savedAt:new Date().toISOString()}));$('draft-state').textContent='임시 저장됨 · v'+state.loadedVersion+'에서 편집 중';return true;}
     catch{message('임시 저장 공간이 부족합니다. 현재 편집본을 다운로드한 후 다른 버전을 불러와 주세요.',true);return false;}
   }
-  function changed(){state.dirty=true;saveDraft();$('advanced-json').value=JSON.stringify(state.parsed,null,2);}
+  function changed(){state.dirty=true;saveDraft();renderSectionStatuses();renderColorPreview();$('advanced-json').value=JSON.stringify(state.parsed,null,2);}
   function versionOptions(versions){
     state.versions=[...new Map([...state.versions,...versions].map(item=>[item.number,item])).values()].sort((a,b)=>b.number-a.number);
     $('version-history').replaceChildren(...state.versions.map(item=>new Option('v'+item.number+' · '+(item.kind==='collected'?'수집본':'편집본')+' · '+item.createdAt.replace('T',' ').slice(0,16),String(item.number))));
@@ -62,6 +92,7 @@
     const version=await api({...identity,action:'version',version:number});
     if(generation!==state.generation||key(identity)!==key())return;
     state.parsed=copy(version.parsed);state.loadedVersion=version.number;state.dirty=false;state.section='';
+    state.provenance=version.provenance||null;renderSources();
     $('version-history').value=String(version.number);$('newer-version').hidden=state.latestVersion<=version.number;
     $('provenance').textContent=JSON.stringify({kind:version.kind,createdAt:version.createdAt,parserRevision:version.parserRevision,comparison:version.comparison,sourceUrl:version.parsed.sourceUrl,prayerSourceUrl:version.parsed.prayerSourceUrl},null,2);
     renderParsed();message('v'+version.number+' '+(version.kind==='collected'?'수집본':'편집본')+'을 불러왔습니다.');
@@ -88,7 +119,7 @@
   }
   async function loadRecord(){
     if(!saveDraft())return;
-    state.generation++;state.identity=inputs();state.parsed=null;state.record=null;state.loadedVersion=0;state.latestVersion=0;state.offeredVersion=0;state.dirty=false;state.section='';state.versions=[];renderParsed();
+    state.generation++;state.identity=inputs();state.parsed=null;state.record=null;state.loadedVersion=0;state.latestVersion=0;state.offeredVersion=0;state.dirty=false;state.section='';state.versions=[];state.provenance=null;renderParsed();renderSources();
     const result=await refreshRecord({offer:false});
     if(result?.record?.publishedVersion){await loadVersion(result.record.publishedVersion);await offerNewer();}
     else await collectMissing();
@@ -134,7 +165,7 @@
   }
   function updateSource(){
     const previous=$('source').value;
-    const options=$('country').value==='VN'?[['hanoi','하노이 대교구'],['ktcg_south','KTCG · 남부'],['ktcg_north','KTCG · 북부']]:[['official','국가 공식 출처']];
+    const options=$('country').value==='VN'?[['hanoi','hanoi · 하노이 대교구'],['ktcg_south','ktcg_south · KTCG 남부'],['ktcg_north','ktcg_north · KTCG 북부']]:[['official','official · 국가 출처']];
     $('source').replaceChildren(...options.map(([value,label])=>new Option(label,value)));
     if(options.some(([value])=>value===previous))$('source').value=previous;
   }
@@ -172,12 +203,13 @@
   $('load-newer').onclick=()=>guard(()=>loadVersion(state.latestVersion));$('save').onclick=()=>guard(save);$('publish-version').onclick=()=>guard(publish);
   $('older-versions').onclick=()=>guard(async()=>{const before=Math.min(...state.versions.map(version=>version.number));const result=await api({...state.identity,action:'versions',before});versionOptions(result.versions);$('older-versions').hidden=!result.hasMore;});
   $('collect-one').onclick=()=>guard(()=>collect(1));$('collect-range').onclick=()=>guard(()=>collect(30));$('refresh-list').onclick=()=>guard(list);$('refresh-runs').onclick=()=>guard(runs);
-  $('section').onchange=()=>{captureSection();state.section=$('section').value;sectionFields();$('advanced-json').value=JSON.stringify(state.parsed,null,2);};
-  for(const id of ['section-body','citation','liturgy-title','liturgy-color'])$(id).addEventListener('input',changed);
-  $('apply-json').onclick=()=>guard(async()=>{const parsed=JSON.parse($('advanced-json').value);if(typeof parsed.title!=='string'||!parsed.data||typeof parsed.data!=='object')throw Error('전례명과 data 항목을 확인해 주세요.');state.parsed=parsed;state.section='';state.dirty=true;renderParsed();saveDraft();});
+  $('section').onchange=()=>{captureSection();state.section=$('section').value;sectionFields();renderSectionStatuses();$('advanced-json').value=JSON.stringify(state.parsed,null,2);};
+  for(const id of ['section-body','citation','liturgy-title'])$(id).addEventListener('input',changed);
+  $('liturgy-color').onchange=changed;
+  $('apply-json').onclick=()=>guard(async()=>{const parsed=JSON.parse($('advanced-json').value);if(typeof parsed.title!=='string'||!parsed.data||typeof parsed.data!=='object')throw Error('전례명과 data 항목을 확인해 주세요.');state.parsed=parsed;state.section='';state.dirty=true;renderParsed();renderSources();saveDraft();});
   $('country').onchange=()=>guard(async()=>{if(!saveDraft())return;updateSource();await list();await loadRecord();});
   $('source').onchange=()=>guard(async()=>{updateVariants();await loadRecord();});$('date').onchange=()=>guard(async()=>{await list();await loadRecord();});$('variant').onchange=()=>guard(loadRecord);
-  $('restore-draft').onclick=()=>guard(async()=>{const value=JSON.parse(localStorage.getItem(draftKey())||'null');if(!value)throw Error('저장된 임시 편집이 없습니다.');state.parsed=value.parsed;state.loadedVersion=value.baseVersion;state.dirty=true;state.section='';renderParsed();message('임시 편집을 복원했습니다.');});
+  $('restore-draft').onclick=()=>guard(async()=>{const value=JSON.parse(localStorage.getItem(draftKey())||'null');if(!value)throw Error('저장된 임시 편집이 없습니다.');const version=value.baseVersion?await api({...state.identity,action:'version',version:value.baseVersion}):null;state.parsed=value.parsed;state.loadedVersion=value.baseVersion;state.provenance=version?.provenance||null;state.dirty=true;state.section='';renderParsed();renderSources();message('임시 편집을 복원했습니다.');});
   $('export').onclick=()=>{captureSection();const url=URL.createObjectURL(new Blob([JSON.stringify(state.parsed,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=($('country').selectedOptions[0]?.textContent||'국가')+'_'+$('date').value+'_'+$('source').value+'_v'+state.loadedVersion+'_편집.json';link.click();URL.revokeObjectURL(url);};
   $('export-original').onclick=()=>guard(async()=>{const raw=await api({...state.identity,action:'raw',version:state.loadedVersion});const url=URL.createObjectURL(new Blob([JSON.stringify(raw,null,2)],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download=($('country').selectedOptions[0]?.textContent||'국가')+'_'+$('date').value+'_v'+(raw.version||state.loadedVersion)+'_수집원문.json';link.click();URL.revokeObjectURL(url);});
   global.addEventListener('beforeunload',saveDraft);
