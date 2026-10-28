@@ -73,7 +73,10 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     }
     try{
       const {createRuntime}=require('./daily-runtime');
-      runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
+      const sourceDocuments=request.country==='TW'?await require('./daily-taiwan').collectTaiwanDocuments({date:request.date,db,fetchImpl}):undefined;
+      runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl,sourceDocuments,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
+      if(request.country==='PT')runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
+      await store.registerVariants(request,runtime.variantChoices());
       const variants=runtime.variants();
       for(const variant of variants){
         const scoped={...request,variant};
@@ -81,7 +84,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
           const result=await runtime.collect(variant);
           result.comparison=runtime.ktcgComparison||null;
           const saved=await store.appendCollected(scoped,result);
-          results.push({variant,status:'ready',...saved});
+          results.push({variant,status:result.validation.complete?'ready':'partial',missing:result.validation.missing,...saved});
         }catch(error){
           await store.status(scoped,error);results.push({variant,status:'unavailable',error:String(error.message).slice(0,400)});
           logger.warn('Daily Mass source unavailable',{country:request.country,date:request.date,source:request.sourceId,variant,error:error.message});
@@ -94,7 +97,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
   }
   async function read(value,{queueMissing=false}={}){
     const request=requestIdentity(value),record=await store.get(request);
-    if(!record?.parsed&&queueMissing){
+    if(queueMissing&&(!record?.parsed||record.latestParserRevision!==PARSER_REVISION)){
       const date=new Date(request.date+'T12:00:00Z'),today=new Date(koreaToday()+'T12:00:00Z');
       const offset=(date-today)/86400000;
       if(offset>=-7&&offset<30)await queueOne(request,'demand-'+PARSER_REVISION+'-'+koreaToday(),{onDemand:true});
@@ -102,6 +105,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     return record;
   }
   return {store,queueOne,queueRange,collect,read,requestIdentity,
+    async sourceFile(request,number,id){const version=await store.version(request,number);if(!version)return null;const provenance=await store.provenance(request,version),selected=provenance.files.find(file=>file.id===id);if(!selected)return null;const file=await require('./daily-pdf').readPdf(db,id);return file?{...file,metadata:{...file.metadata,name:selected.name||file.metadata.name}}:null;},
     async collectionJob(value,runId){
       if(!/^[a-zA-Z0-9_-]{1,120}$/.test(String(runId||'')))throw Error('invalid-run-id');
       const request=requestIdentity(value),snapshot=await db.collection(JOBS).doc(runId+'__'+request.country+'_'+request.date+'_'+request.sourceId).get();

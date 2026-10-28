@@ -1,7 +1,7 @@
 const fs=require('node:fs'),http=require('node:http'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..');
-const original=number=>({title:'전례명 v'+number,color:'#27ae60',sourceUrl:'https://www.tonggiaophanhanoi.org/daily-v'+number+'/',data:{gospel:{text:'복음 본문'},prayer_after:{text:'영성체 후 기도 본문'},reading2:{citation:'성경 구절만 있음'},psalm:{lines:[{sp:'R.',text:'   '}]},reading1:{text:'본문 v'+number,lines:[{sp:'',text:'본문 v'+number,kind:'body'}]},collect:{text:''},Sequence:{text:'부속가 본문'}}});
+const original=number=>({title:'전례명 v'+number,color:'#27ae60',sourceUrl:'https://www.tonggiaophanhanoi.org/daily-v'+number+'/',data:{entrance:{options:[{id:'A',text:'첫째 입당송',cit_vn:'Tv 1,1'},{id:'B',text:'둘째 입당송',cit_vn:'Tv 2,2'}]},meditation_after_communion:{text:'역사 자료는 유지'},gospel:{text:'복음 본문'},prayer_after:{text:'영성체 후 기도 본문'},reading2:{citation:'성경 구절만 있음'},psalm:{lines:[{sp:'R.',text:'   '}]},reading1:{text:'본문 v'+number,lines:[{sp:'',text:'본문 v'+number,kind:'body'}]},collect:{text:''},Sequence:{text:'부속가 본문'}}});
 const provenance=number=>({country:'VN',sourceId:'hanoi',originCollectedVersion:1,urls:[{url:'https://r.jina.ai/https://www.tonggiaophanhanoi.org/daily-v'+number+'/',kind:'response'},{url:'https://ktcgkpv.org/readings',kind:'response'},{url:'javascript:alert(1)',kind:'response'}]});
 (async()=>{
  const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(error,data)=>{if(error)return res.writeHead(404).end();res.setHeader('Content-Type',file.endsWith('.js')?'application/javascript':file.endsWith('.svg')?'image/svg+xml':'text/html;charset=utf-8');res.end(data);});});
@@ -22,7 +22,7 @@ const provenance=number=>({country:'VN',sourceId:'hanoi',originCollectedVersion:
     const record=()=>({country:'VN',date:'2026-11-01',sourceId:'hanoi',variant:'day',latestVersion:latest,publishedVersion:published,publishedKind:'edited',parsed:versions.find(version=>version.number===published).parsed});
     let response;
     if(data.action==='catalog')response={countries:{VN:['베트남','VN'],KR:['대한민국','KR']},today:'2026-11-01'};
-    else if(data.action==='list')response={days:[{date:'2026-11-01',records:{hanoi__day:{latestVersion:latest,publishedVersion:published}}}]};
+    else if(data.action==='list')response={days:[{date:'2026-11-01',availableVariants:{hanoi:[{id:'day',label:'당일 미사'},{id:'vigil',label:'전야 미사'}]},records:{hanoi__day:{latestVersion:latest,publishedVersion:published}}}]};
     else if(data.action==='runs')response={runs:[]};
     else if(data.action==='head')response={latestVersion:latest,publishedVersion:published};
     else if(data.action==='record')response={record:missing?null:record(),versions:missing?[]:versions.toReversed().map(({parsed,...metadata})=>metadata)};
@@ -43,7 +43,19 @@ const provenance=number=>({country:'VN',sourceId:'hanoi',originCollectedVersion:
   });
   await page.goto(`http://127.0.0.1:${server.address().port}/daily-mass-editor.html`,{waitUntil:'domcontentloaded',timeout:60000});
   await page.waitForFunction(()=>window.ordoDailyEditor?.state.loadedVersion===2&&!ordoDailyEditor.state.busy);
-  const order=await page.locator('#section option').evaluateAll(options=>options.map(option=>option.value));assert.deepEqual(order,['entrance','collect','reading1','psalm','reading2','Sequence','gospel_accl','gospel','prayer_offerings','preface','communion','meditation_after_communion','prayer_after']);
+  const order=await page.locator('#section-statuses [data-select-section]').evaluateAll(options=>options.map(option=>option.dataset.selectSection));assert.deepEqual(order,['entrance','collect','reading1','psalm','reading2','Sequence','gospel_accl','gospel','prayer_offerings','preface','communion','prayer_after']);
+  assert.equal(await page.locator('#section').count(),0);
+  assert.equal(await page.locator('#mass-choices button').count(),2);
+  await page.click('[data-variant="vigil"]');await page.waitForFunction(()=>ordoDailyEditor.state.identity.variant==='vigil'&&!ordoDailyEditor.state.busy);
+  assert(requests.some(request=>request.action==='record'&&request.variant==='vigil'));
+  await page.click('[data-variant="day"]');await page.waitForFunction(()=>ordoDailyEditor.state.identity.variant==='day'&&!ordoDailyEditor.state.busy);
+  await page.click('[data-select-section="entrance"]');assert.equal(await page.inputValue('#section-body'),'첫째 입당송');
+  await page.click('#section-options button:nth-child(2)');assert.equal(await page.inputValue('#section-body'),'둘째 입당송');assert.equal(await page.inputValue('#citation'),'Tv 2,2');
+  await page.fill('#section-body','둘째 선택지만 수정');await page.click('[data-select-section="reading1"]');
+  assert.equal(await page.evaluate(()=>ordoDailyEditor.state.parsed.data.entrance.options[0].text),'첫째 입당송');
+  assert.equal(await page.evaluate(()=>ordoDailyEditor.state.parsed.data.entrance.options[1].text),'둘째 선택지만 수정');
+  assert.equal(await page.locator('[data-section="meditation_after_communion"]').count(),0);
+  assert(await page.evaluate(()=>!!(document.getElementById('save').compareDocumentPosition(document.getElementById('source-heading'))&Node.DOCUMENT_POSITION_FOLLOWING)));
   assert.equal(await page.locator('#liturgy-color option:checked').textContent(),'녹색');assert(!(await page.locator('#liturgy-color').textContent()).includes('#'));
   assert.equal(await page.locator('[data-section="reading1"] .collection-badge').textContent(),'수집');assert.equal(await page.locator('[data-section="reading2"] .collection-badge').textContent(),'미수집');assert.equal(await page.locator('[data-section="psalm"] .collection-badge').textContent(),'미수집');
   assert((await page.locator('#source-code').textContent()).includes('VN / hanoi'));assert((await page.locator('#source-websites').textContent()).includes('하노이 대교구 · HANOI'));
@@ -60,9 +72,9 @@ const provenance=number=>({country:'VN',sourceId:'hanoi',originCollectedVersion:
   assert.equal(await page.locator('#liturgy-color option:checked').textContent(),'자색');
   assert.equal(published,2,'New collection overwrote the published edit');
   await page.click('#load-newer');await page.waitForFunction(()=>ordoDailyEditor.state.loadedVersion===3&&!ordoDailyEditor.state.busy);
-  assert.equal(await page.inputValue('#section-body'),'본문 v3');
+  await page.click('[data-select-section="reading1"]');assert.equal(await page.inputValue('#section-body'),'본문 v3');
   await page.click('#restore-draft');await page.waitForFunction(()=>ordoDailyEditor.state.loadedVersion===2&&!ordoDailyEditor.state.busy);
-  assert.equal(await page.inputValue('#section-body'),'수정 중인 편집본을 보존합니다.');
+  await page.click('[data-select-section="reading1"]');assert.equal(await page.inputValue('#section-body'),'수정 중인 편집본을 보존합니다.');
   await page.click('#save');await page.waitForFunction(()=>ordoDailyEditor.state.loadedVersion===4&&!ordoDailyEditor.state.busy);
   assert.equal(versions[3].parsed.data.reading1.text,'수정 중인 편집본을 보존합니다.');assert.equal(published,4);assert.equal(versions.length,4);
   assert.equal(versions[3].parsed.color,'#8e44ad');
@@ -77,7 +89,7 @@ const provenance=number=>({country:'VN',sourceId:'hanoi',originCollectedVersion:
   missing=true;
   await page.evaluate(()=>{const date=document.getElementById('date');date.value='2026-11-02';date.dispatchEvent(new Event('change'));});
   await page.waitForFunction(()=>ordoDailyEditor.state.identity?.date==='2026-11-02'&&ordoDailyEditor.state.loadedVersion===1&&!ordoDailyEditor.state.busy,{timeout:60000});
-  assert(collectionRequested);assert(collectionChecks>=2);assert.equal(await page.inputValue('#section-body'),'본문 v1');
+  assert(collectionRequested);assert(collectionChecks>=2);await page.click('[data-select-section="reading1"]');assert.equal(await page.inputValue('#section-body'),'본문 v1');
   assert(await page.locator('#cancel-collection').isHidden());assert.deepEqual(errors,[]);
   console.log(JSON.stringify({width,missingDate:'2026-11-02',automaticServerCollection:true,waitedForCompletion:true,loadedVersion:1}));await page.close();
  }}finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}

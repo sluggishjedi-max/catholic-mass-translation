@@ -4,7 +4,7 @@ service cloud.firestore {
     // Preserve the project's existing access for the public app and local editors.
     match /{collection}/{document=**} {
       allow read, create, update: if !(collection in [
-        'daily_mass', 'daily_mass_jobs', 'daily_mass_runs', 'daily_mass_system'
+        'daily_mass', 'daily_mass_jobs', 'daily_mass_runs', 'daily_mass_system', 'daily_mass_files'
       ]);
     }
 

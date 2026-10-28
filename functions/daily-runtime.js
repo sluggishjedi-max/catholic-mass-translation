@@ -14,7 +14,7 @@ function safeSourceUrl(value){
   if(url.protocol!=='https:'||url.username||url.password||url.port||!url.hostname.includes('.')||/^(?:localhost|127\.|10\.|192\.168\.|169\.254\.|172\.(?:1[6-9]|2\d|3[01])\.)/.test(url.hostname)||url.hostname.endsWith('.internal'))throw Error('source-url-not-public');
   return url;
 }
-function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider}={}){
+function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDocuments}={}){
   const country=countryCode(input.country),date=isoDate(input.date),lang=COUNTRIES[country][1];
   const virtualConsole=new VirtualConsole();
   const dom=new JSDOM(bundleFiles().html,{url:'https://sluggishjedi-max.github.io/catholic-mass-translation/V31.html',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
@@ -92,18 +92,30 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider}={}){
   }
   const runtime={
     window,run,snapshots,input:{...input,country,date,lang},
+    setSourceDocuments(documents){sourceDocuments=documents;},
+    portugalContext(){return JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),meta=getSeasonMeta(date),year=date.getFullYear()+(date>=getAdventStart(date.getFullYear())?1:0);return {...meta,cycle:['C','A','B'][year%3],title:state.liturgyInfo.names?.PT||'',rank:state.liturgyInfo.isSolemnity?'solemnity':state.liturgyInfo.meta?.rank||''};})()`)));},
     async fetch(url,options){return window.fetch(url,options);},
     legacyChoice(mass){window.__mass=mass;return JSON.parse(JSON.stringify(run('kpvMassCandidateAsLegacyChoice(__mass,getActiveLiturgicalSourceDate())')));},
     normalizeLegacy(payload){window.__legacy=payload;return JSON.parse(JSON.stringify(run('normalizeKpvMassReadingPayload(__legacy,getActiveLiturgicalSourceDate())')));},
-    variants(){return JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate();if(isAllSoulsDate(date))return ['first','second','third'];return ['day',...specialLiturgyProfile(__collectorInput.country).vigils.filter(entry=>entry.enabled!==false&&specialDefinitionMatchesDate(entry,date,__collectorInput.country)).map(entry=>entry.id)];})()`)));},
+    variantChoices(){return sourceDocuments?.length?sourceDocuments.map(document=>({id:document.id,label:document.label})):JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),profile=specialLiturgyProfile(__collectorInput.country);if(isAllSoulsDate(date))return ['first','second','third'].map((id,index)=>({id,label:profile.allSouls[id]?.names?.KR||'위령의 날 '+(index+1)+'미사'}));return [{id:'day',label:'당일 미사'},...profile.vigils.filter(entry=>entry.enabled!==false&&specialDefinitionMatchesDate(entry,date,__collectorInput.country)).map(entry=>({id:entry.id,label:entry.names?.KR||entry.names?.[__collectorInput.lang]||entry.id}))];})()`)));},
+    variants(){return runtime.variantChoices().map(choice=>choice.id);},
     async collect(variant='day'){
       const snapshotStart=snapshots.length;
       window.__variant=variant;
       run(`getStrictMassSelector=()=>({slot:__variant==='day'||['first','second','third'].includes(__variant)?'day':'vigil',specialVigil:__variant==='day'||['first','second','third'].includes(__variant)?'':__variant,allSoulsChoice:['first','second','third'].includes(__variant)?__variant:''});state.allSoulsNavChoice=['first','second','third'].includes(__variant)?__variant:'';`);
-      const parsed=await run('Promise.resolve(dailySourceFetchers[__collectorInput.lang](getActiveLiturgicalSourceDate(),{locationCode:__collectorInput.country})).then(sanitizeDailyAcclamationReferences)');
+      const document=sourceDocuments?.find(item=>item.id===variant);
+      let parsed;
+      if(sourceDocuments){
+        if(!document)throw Error('requested-pdf-mass-not-found');
+        if(document.error)throw Error(document.error);
+        window.__pdfSource='Title: '+document.label+'\nURL Source: '+document.sourceUrl+'\n\nMarkdown Content:\n'+document.text;
+        parsed=run('ordoDailyContent.normalizeParsed(sanitizeDailyAcclamationReferences(strictParseDailyMass(__collectorInput.lang,__pdfSource,getActiveLiturgicalSourceDate(),__collectorInput.country)))');
+        parsed.title=document.label||parsed.title;parsed.sourceUrl=document.sourceUrl;parsed.sourcePage=document.sourcePage;parsed.sourceFiles=[document.file];parsed.sourceMode='official-pdf';
+        snapshots.push({url:document.sourceUrl,status:200,kind:'pdf-extraction',file:document.file,body:document.text});
+      }else parsed=await run('Promise.resolve(dailySourceFetchers[__collectorInput.lang](getActiveLiturgicalSourceDate(),{locationCode:__collectorInput.country})).then(sanitizeDailyAcclamationReferences).then(ordoDailyContent.normalizeParsed)');
       window.__parsed=parsed;
       const validation=run(`({missing:missingCoreDailyReadingSections(__parsed,getActiveLiturgicalSourceDate(),__collectorInput.lang,__collectorInput.country),fixed:countrySpecialMassRecord(getActiveLiturgicalSourceDate(),__collectorInput.country)?.fetchDaily===false})`);
-      if(validation.missing.length&&!validation.fixed)throw Error('incomplete-source:'+validation.missing.join(','));
+      if(validation.missing.length&&!validation.fixed&&!Object.keys(parsed.data||{}).length)throw Error('incomplete-source:'+validation.missing.join(','));
       // Store Missal prayers when a public diocesan source supplies them; no AI is used.
       if(input.source==='ktcg')await run('applyVietnameseKtcgDiocesanPrayers(__parsed,getActiveLiturgicalSourceDate())');
       const result=JSON.parse(JSON.stringify(parsed));
@@ -112,7 +124,7 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider}={}){
       }
       const originals=snapshots.slice(snapshotStart);
       if(!originals.length)originals.push({url:'app-bundle://'+PARSER_REVISION+'/'+country+'/'+date+'/'+variant,status:200,kind:'compiled-data',body:JSON.stringify({parsed:result})});
-      return {parsed:result,validation:{complete:true,missing:[],fixed:validation.fixed},parserRevision:PARSER_REVISION,snapshots:originals,fingerprint:digest({parsed:result,sources:originals.filter(s=>s.status===200&&!s.verification).map(s=>({url:s.url,body:s.body.replace(/\r\n/g,'\n').trim()})).sort((a,b)=>a.url.localeCompare(b.url))})};
+      return {parsed:result,validation:{complete:!validation.missing.length||validation.fixed,missing:validation.missing,fixed:validation.fixed},parserRevision:PARSER_REVISION,snapshots:originals,fingerprint:digest({parsed:result,sources:originals.filter(s=>s.status===200&&!s.verification).map(s=>({url:s.url,body:s.body.replace(/\r\n/g,'\n').trim()})).sort((a,b)=>a.url.localeCompare(b.url))})};
     },
     close(){dom.window.close();}
   };

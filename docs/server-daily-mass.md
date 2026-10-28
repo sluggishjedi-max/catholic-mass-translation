@@ -83,6 +83,47 @@ the reason after the attempt; they are not presented as successful downloads.
 All new functions use `asia-northeast3`, beside Firestore. Existing functions keep
 their existing region and purpose. No Firebase Storage bucket is needed.
 
+## PDF sources and editor behavior
+
+Taiwan queries the date lookup embedded by the official diocesan daily-Mass
+page, enumerates every returned Drive PDF and downloads each file. Each Mass
+gets a separately editable record (including all three All Souls formularies).
+PDF.js extracts the original text; the shared multilingual parser formats it.
+Original PDF bytes are stored once by SHA-256 in private
+`daily_mass_files/{hash}/chunks`, with bounded batch sizes. Authenticated editor
+downloads verify the file belongs to that version. PDF originals and previous
+collected/edited versions are retained.
+
+Portugal discovers PDFs under the official `/leccionarios/` indexes. Fixed
+feasts use the Santoral; Sundays select A/B/C, weekdays select the season and
+odd/even year, then the liturgical week and weekday. Date selection must resolve
+a real formulary before anything is published. On 2026-10-28 the indexes and
+the checked official PDF URLs returned HTTP 403 to collection requests. The
+adapter therefore records an unavailable source; successful live Portuguese
+PDF collection remains unverified until that source allows access. It does not
+substitute the current day's page for a requested future date.
+
+Australia and New Zealand use their own date-specific Universalis paths. They
+also use those paths when uploaded country metadata is absent; no US-source
+fallback is permitted for these two countries. A citation without public Psalm
+text is treated as missing text. Useful partial collections retain a version
+for the administrator to edit, but do not automatically replace a complete
+published version.
+
+The editor shows all registered Mass choices, ordered clickable section-status
+buttons and independent options within each section. Meditation after Communion
+is omitted from its categories while existing history is preserved. Source
+names, codes, URLs and archived-PDF downloads follow the body and save buttons.
+Collected/edited prefaces appear as the actual selectable text in the Mass.
+Sequences use substantive canonical JS content only after an exact normalized
+text match. Empty initial summary rows and standalone alternative markers do
+not count as collected body text.
+
+The shared blessing path defaults to the simple blessing. Christmas/Easter,
+local solemnities and date-assigned Lenten prayers select the applicable
+approved solemn blessing or prayer over the people on initial load. Manual
+selection remains possible.
+
 ## Validation and deployment
 
 ```text

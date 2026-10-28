@@ -10,7 +10,7 @@ const COUNTRIES = Object.freeze({
 const COLLECTION = 'daily_mass';
 const JOBS = 'daily_mass_jobs';
 const RUNS = 'daily_mass_runs';
-const PARSER_REVISION = 'v31-20261028-4';
+const PARSER_REVISION = 'v31-20261028-5';
 function isoDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ''))) throw Error('invalid-date');
   const date = new Date(value+'T12:00:00Z');

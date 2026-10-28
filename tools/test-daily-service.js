@@ -32,6 +32,15 @@ async function main(){
   async function call(token,action='record',extra={}){const response={headers:{},set(key,value){this.headers[key]=value;return this;},status(code){this.code=code;return this;},json(body){this.body=body;return this;}};await handler({method:'GET',query:{...request,action,...extra},get:name=>name==='authorization'&&token?'Bearer '+token:''},response);return response;}
   assert.equal((await call()).code,401);assert.equal((await call('wrong')).code,403);assert.equal((await call('good')).body.record.publishedVersion,4);
   const versionResponse=await call('good','version',{version:2});assert.equal(versionResponse.code,200);assert.deepEqual(versionResponse.body.provenance.urls,provenance.urls);assert(!versionResponse.body.provenance.urls.some(item=>Object.hasOwn(item,'body')),'Raw page bodies were downloaded for source labels');
+  const partialRequest={...request,country:'JP',sourceId:'official',source:'official'};
+  await store.registerVariants(partialRequest,[{id:'day',label:'당일 미사'},{id:'vigil',label:'전야 미사'}]);
+  const partial=await store.appendCollected(partialRequest,{parsed:parsed('Partial original'),fingerprint:'partial-one',validation:{complete:false,missing:['psalm']}});
+  assert.equal(partial.publishedVersion,0);assert.equal((await store.get(partialRequest)).collectionStatus,'partial');assert(!(await store.get(partialRequest)).parsed,'Incomplete readings were automatically published');
+  assert.equal((await store.version(partialRequest,1)).parsed.data.reading1.text,'Partial original');
+  await store.appendCollected(partialRequest,{parsed:parsed('Complete original'),fingerprint:'complete-two',validation:{complete:true,missing:[]}});
+  await store.appendCollected(partialRequest,{parsed:parsed('New partial'),fingerprint:'partial-three',validation:{complete:false,missing:['psalm']}});
+  assert.equal((await store.get(partialRequest)).publishedVersion,2);assert.equal((await store.get(partialRequest)).parsed.data.reading1.text,'Complete original');
+  const day=db.data.get('daily_mass/'+dayId('JP',request.date));assert.equal(day.availableVariants.official.length,2);assert.equal(day.records.official__day.latestVersion,3);
   console.log('Daily Mass: immutable v1/v2/v3/v4 history, unchanged-source deduplication, manual-edit preservation, optimistic conflict and administrator access passed.');
 }
 if(require.main===module)main().catch(error=>{console.error(error);process.exitCode=1;});

@@ -23,25 +23,26 @@ function createStore(db){
         const data=base.data();originCollectedVersion=data.originCollectedVersion||(data.kind==='collected'?data.number:0);
       }
       if(kind==='collected'&&previous.lastCollectedHash===fingerprint){
-        tx.set(ref,{lastCheckedAt:now,collectionStatus:'unchanged',lastError:'',comparison:result.comparison||null},{merge:true});
+        tx.set(ref,{lastCheckedAt:now,latestParserRevision:result.parserRevision||PARSER_REVISION,collectionStatus:result.validation?.complete===false?'partial':'unchanged',lastError:'',comparison:result.comparison||null},{merge:true});
         return {changed:false,latestVersion:latest,publishedVersion:previous.publishedVersion};
       }
-      const number=latest+1,protectedEdit=kind==='collected'&&previous.publishedKind==='edited';
+      const number=latest+1,partial=kind==='collected'&&result.validation?.complete===false,protectedEdit=kind==='collected'&&previous.publishedKind==='edited',keepPublished=protectedEdit||partial;
       const version={number,kind,createdAt:now,parentVersion:kind==='edited'?Number(baseVersion||latest):Number(previous.latestCollectedVersion||0),originCollectedVersion:kind==='collected'?number:originCollectedVersion,parsed,sourceHash:fingerprint,parserRevision:result.parserRevision||PARSER_REVISION,comparison:result.comparison||null,validation:result.validation||null};
       if(authorUid)version.authorUid=authorUid;
       tx.create(ref.collection('versions').doc(versionName(number)),version);
       rawChunks.forEach((data,index)=>tx.create(ref.collection('versions').doc(versionName(number)).collection('raw').doc(String(index).padStart(4,'0')),{encoding:'gzip-base64',index,count:rawChunks.length,data}));
       const update={country:request.country,countryName:COUNTRIES[request.country][0],date:request.date,language:COUNTRIES[request.country][1],sourceId:request.sourceId,variant:request.variant,latestVersion:number,latestKind:kind,lastCheckedAt:now,updatedAt:now,collectionStatus:'ready',lastError:''};
-      if(kind==='collected'){update.latestCollectedVersion=number;update.lastCollectedHash=fingerprint;update.comparison=result.comparison||null;}
-      if(!protectedEdit)Object.assign(update,{publishedVersion:number,publishedKind:kind,parsed,publishedAt:now,reviewNeeded:false});
-      else update.reviewNeeded=true;
+      if(kind==='collected'){update.latestCollectedVersion=number;update.lastCollectedHash=fingerprint;update.latestParserRevision=result.parserRevision||PARSER_REVISION;update.comparison=result.comparison||null;}
+      if(!keepPublished)Object.assign(update,{publishedVersion:number,publishedKind:kind,parsed,publishedAt:now,reviewNeeded:false});
+      else {update.reviewNeeded=true;if(partial)update.collectionStatus='partial';}
       tx.set(ref,update,{merge:true});
-      tx.set(ref.parent.parent,{country:request.country,countryName:COUNTRIES[request.country][0],date:request.date,updatedAt:now,records:{[ref.id]:{sourceId:request.sourceId,variant:request.variant,latestVersion:number,publishedVersion:protectedEdit?previous.publishedVersion:number,title:protectedEdit?previous.parsed?.title||'':parsed.title,reviewNeeded:protectedEdit}}},{merge:true});
-      return {changed:true,latestVersion:number,publishedVersion:protectedEdit?previous.publishedVersion:number,protectedEdit};
+      tx.set(ref.parent.parent,{country:request.country,countryName:COUNTRIES[request.country][0],date:request.date,updatedAt:now,records:{[ref.id]:{sourceId:request.sourceId,variant:request.variant,latestVersion:number,publishedVersion:keepPublished?previous.publishedVersion||0:number,title:keepPublished?previous.parsed?.title||parsed.title:parsed.title,reviewNeeded:keepPublished,collectionStatus:partial?'partial':'ready'}}},{merge:true});
+      return {changed:true,latestVersion:number,publishedVersion:keepPublished?previous.publishedVersion||0:number,protectedEdit};
     });
     return outcome;
   }
   return {
+    async registerVariants(request,choices){await db.collection(COLLECTION).doc(dayId(request.country,request.date)).set({country:request.country,date:request.date,availableVariants:{[request.sourceId]:choices},updatedAt:new Date().toISOString()},{merge:true});},
     appendCollected:(request,result)=>append(request,result,{kind:'collected'}),
     appendEdited:(request,parsed,options)=>append(request,{parsed,fingerprint:digest(parsed),validation:{edited:true}}, {...options,kind:'edited'}),
     async get(request){const snapshot=await recordRef(db,request).get();return snapshot.exists?snapshot.data():null;},
@@ -57,9 +58,9 @@ function createStore(db){
       if(provenanceCache.has(cacheKey))return provenanceCache.get(cacheKey);
       const raw=await this.raw(request,version.number),urls=new Map();
       const add=(value,kind)=>{try{const url=new URL(value);if(['https:','http:'].includes(url.protocol)&&!url.username&&!url.password&&!urls.has(url.href))urls.set(url.href,{url:url.href,kind});}catch{}};
-      add(version.parsed?.sourceUrl,'source');add(version.parsed?.prayerSourceUrl,'prayer');
+      add(version.parsed?.sourceUrl,'source');add(version.parsed?.prayerSourceUrl,'prayer');add(version.parsed?.titleSourceUrl,'title');add(version.parsed?.sourcePage,'source');
       for(const item of raw?.snapshots||[])if(item.status>=200&&item.status<300&&!item.verification)add(item.url,'response');
-      const result={country:request.country,sourceId:request.sourceId,originCollectedVersion:raw?.version||version.originCollectedVersion||0,urls:[...urls.values()],compiled:(raw?.snapshots||[]).some(item=>item.url?.startsWith('app-bundle://'))};
+      const result={country:request.country,sourceId:request.sourceId,originCollectedVersion:raw?.version||version.originCollectedVersion||0,urls:[...urls.values()],files:version.parsed?.sourceFiles||(raw?.snapshots||[]).filter(item=>item.file).map(item=>item.file),compiled:(raw?.snapshots||[]).some(item=>item.url?.startsWith('app-bundle://'))};
       if(provenanceCache.size>=200)provenanceCache.delete(provenanceCache.keys().next().value);
       provenanceCache.set(cacheKey,result);return result;
     },
@@ -77,8 +78,9 @@ function createStore(db){
     },
     async status(request,error){
       const ref=recordRef(db,request),now=new Date().toISOString();
+      const existing=await ref.get();
       await ref.set({country:request.country,date:request.date,sourceId:request.sourceId,variant:request.variant,lastCheckedAt:now,collectionStatus:'unavailable',lastError:String(error.message||error).slice(0,400)},{merge:true});
-      await ref.parent.parent.set({country:request.country,countryName:COUNTRIES[request.country][0],date:request.date,updatedAt:now,collectionStatus:'has-unavailable-sources'},{merge:true});
+      await ref.parent.parent.set({country:request.country,countryName:COUNTRIES[request.country][0],date:request.date,updatedAt:now,collectionStatus:'has-unavailable-sources',...(!existing.exists?{records:{[ref.id]:{sourceId:request.sourceId,variant:request.variant,latestVersion:0,publishedVersion:0,collectionStatus:'unavailable'}}}:{})},{merge:true});
     }
   };
 }

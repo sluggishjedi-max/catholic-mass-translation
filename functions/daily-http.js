@@ -37,6 +37,10 @@ function createDailyHttpHandler({getService,verifyIdToken,configuredEmails,allow
         if(action==='versions'){const versions=await service.store.versions(request,{before:Number(value.before)});return res.status(200).json({versions,hasMore:versions.length===100});}
         if(action==='head'){const record=await service.read(request);return res.status(200).json({latestVersion:record?.latestVersion||0,publishedVersion:record?.publishedVersion||0});}
         if(action==='raw'){const raw=await service.store.raw(request,Number(value.version));return res.status(raw?200:404).json(raw||{error:'version-not-found'});}
+        if(action==='file'){
+          const file=await service.sourceFile(request,Number(value.version),String(value.file||''));
+          return res.status(file?200:404).json(file?{name:file.metadata.name,data:file.bytes.toString('base64'),type:'application/pdf'}:{error:'file-not-found'});
+        }
         if(action==='version'){
           const version=await service.store.version(request,Number(value.version));
           return res.status(version?200:404).json(version?{...version,provenance:await service.store.provenance(request,version)}:{error:'version-not-found'});
