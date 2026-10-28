@@ -13,5 +13,8 @@ try{
  runtime.window.__published={...parsed,serverRecord:{version:1,kind:'collected'}};
  assert(runtime.run("hasCompleteGermanDailyMass(__published,'DE')"),'Published server readings were blocked by optional Missal prayers');
  assert(!runtime.run("hasCompleteGermanDailyMass({...__published,serverRecord:null},'DE')"),'Direct-source proper validation was bypassed');
+ runtime.run('loadAllSoulsMassConfigIfNeeded(new Date(2026,10,2))');
+ assert(runtime.window.allSoulsMassConfig,'All Souls collection waited forever for a browser script element');
+ assert.throws(()=>runtime.run("loadScriptOnce('JS%20file/not-packaged.js')"),/server-module-not-packaged/);
  console.log('Daily Mass parser: inline German HTML citations retain every reading section and select the requested year cycle.');
 }finally{runtime.close();}

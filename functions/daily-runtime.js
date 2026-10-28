@@ -52,12 +52,21 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider}={}){
     return response;
   };
   function run(code,name='daily-runtime-bridge'){return vm.runInContext(code,context,{filename:name,timeout:10000});}
-  function load(file){run(scriptSource(file),file);}
+  const loaded=new Set();
+  function load(file){if(!loaded.has(file)){run(scriptSource(file),file);loaded.add(file);}}
   for(const file of bundleFiles().manifest.core.filter(file=>!file.endsWith('/app_v31.js')))load(file);
   const special='JS file/lazy/special-'+country+'.js';if(bundleFiles().manifest.hashes[special])load(special);
   const missal='JS file/lazy/missal-'+lang+'.js';if(bundleFiles().manifest.hashes[missal])load(missal);
   if(country==='TW')load('JS file/countries/taiwan/taiwan_daily_mass_data.js');
   load('JS file/app_v31.js');
+  // jsdom does not execute dynamically inserted script elements. Resolve only
+  // packaged app modules directly, and fail immediately for missing modules.
+  window.__loadServerModule=src=>{
+    const file=decodeURIComponent(String(src).split('?')[0]);
+    if(!bundleFiles().manifest.hashes[file])throw Error('server-module-not-packaged:'+file);
+    load(file);return Promise.resolve(true);
+  };
+  run('loadScriptOnce = src => __loadServerModule(src);');
   const [year,month,day]=date.split('-').map(Number);
   window.__collectorInput={...input,country,lang,year,month,day};
   run(`
