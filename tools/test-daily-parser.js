@@ -35,6 +35,12 @@ try{
  const it=runtime.run("strictFormatSection('IT','gospel',__trailing)");assert(it.cit_it.includes('SAL 37,22-23'));assert(!it.text.includes('(SAL'));assert(it.text.includes('testo originale'));
  runtime.window.__trailing.lines=['Dal Vangelo secondo Luca','Il testo originale (tutti) rimane.'];assert(runtime.run("strictFormatSection('IT','gospel',__trailing)").text.includes('(tutti)'));
  console.log('Source regressions: Japanese nested sections/verse spans, Brazilian mixed-content alternatives and trailing Bible references passed.');
+ assert.equal(runtime.run("strictAllSoulsRank('（第三臺彌撒）')"),'third');
+ assert.equal(runtime.run("strictAllSoulsRank('追思已亡第三式')"),'third');
+ assert.equal(runtime.run("strictAllSoulsRank('死者の日（第三のミサ）')"),'third');
+ assert.equal(runtime.run("strictAllSoulsRank('【加上讀經一，讀經可選自追思彌撒任選讀經。】')"),'');
+ runtime.window.__thirdLines=['（第三臺彌撒）','進堂詠','Original entrance.','【加上讀經一，讀經可選自追思彌撒任選讀經。】','讀經一','Original reading.','福音','Original Gospel.'];
+ const third=runtime.run("strictScopeLinesForMassVariant(__thirdLines,{allSoulsChoice:'third'},'ZH')");assert(third.includes('Original Gospel.'),'Reading instructions prematurely ended the third Mass');
  console.log('Acclamation references: Te Deum labels omitted across dates and cached versions; actual verses and Bible citations preserved.');
  console.log('Daily Mass parser: inline German HTML citations retain every reading section and select the requested year cycle.');
 }finally{runtime.close();}

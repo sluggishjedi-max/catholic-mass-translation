@@ -10858,10 +10858,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictAllSoulsRank(label) {
         const text = strictCleanLine(label);
         if (!text || text.length > 140 || /(?:copyright|rights reserved|typical edition|lectionary for mass)/i.test(text)) return '';
+        const chinese=text.match(/第\s*([一二三123])\s*(?:(?:臺|台)?\s*彌撒|(?:の)?\s*ミサ|式)/u);
+        if(chinese)return ({一:'first',二:'second',三:'third','1':'first','2':'second','3':'third'})[chinese[1]];
         if (!/(위령|All Souls|Faithful Departed|미사|Mass|Missa|Misa|Messa|Messe|Lễ|ミサ|彌撒|(?:死者|諸靈|追思).{0,12}(?:彌撒|ミサ)|Defunctorum)/i.test(text)) return '';
-        if (/(첫째|제\s*1(?!\d)|1\s*미사|First|Missa\s*I\b|第\s*1(?!\d)|一|Lễ\s*I\b|Lễ\s*(?:thứ\s*)?(?:nhất|1)\b|Prima\s*Messa|Primeira\s*Missa|Primera\s*Misa|Erste\s*Messe)/i.test(text)) return 'first';
-        if (/(둘째|제\s*2(?!\d)|2\s*미사|Second|Missa\s*II\b|第\s*2(?!\d)|二|Lễ\s*II\b|Lễ\s*(?:thứ\s*)?(?:hai|2)\b|Seconda\s*Messa|Segunda\s*(?:Missa|Misa)|Zweite\s*Messe)/i.test(text)) return 'second';
-        if (/(셋째|제\s*3(?!\d)|3\s*미사|Third|Missa\s*III\b|第\s*3(?!\d)|三|Lễ\s*III\b|Lễ\s*(?:thứ\s*)?(?:ba|3)\b|Terza\s*Messa|Terceira\s*Missa|Tercera\s*Misa|Dritte\s*Messe)/i.test(text)) return 'third';
+        if (/(첫째|제\s*1(?!\d)|1\s*미사|First|Missa\s*I\b|第\s*1(?!\d)|Lễ\s*I\b|Lễ\s*(?:thứ\s*)?(?:nhất|1)\b|Prima\s*Messa|Primeira\s*Missa|Primera\s*Misa|Erste\s*Messe)/i.test(text)) return 'first';
+        if (/(둘째|제\s*2(?!\d)|2\s*미사|Second|Missa\s*II\b|第\s*2(?!\d)|Lễ\s*II\b|Lễ\s*(?:thứ\s*)?(?:hai|2)\b|Seconda\s*Messa|Segunda\s*(?:Missa|Misa)|Zweite\s*Messe)/i.test(text)) return 'second';
+        if (/(셋째|제\s*3(?!\d)|3\s*미사|Third|Missa\s*III\b|第\s*3(?!\d)|Lễ\s*III\b|Lễ\s*(?:thứ\s*)?(?:ba|3)\b|Terza\s*Messa|Terceira\s*Missa|Tercera\s*Misa|Dritte\s*Messe)/i.test(text)) return 'third';
         return '';
     }
 
@@ -10934,7 +10936,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         (lines || []).forEach((line, index) => {
             // A rubric or homily mentioning the Vigil is not a new Mass heading.
             const label = strictCleanLine(line);
-            if (label.length > 140 || /^[\d╋✠✚◎○●]/u.test(label)) return;
+            if (label.length > 140 || /^[\d╋✠✚◎○●【]/u.test(label) || strictIdentifySection(label,lang)) return;
             const kind = strictVariantKind(line);
             if (kind) markers.push({ index, kind });
         });
