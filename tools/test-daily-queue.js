@@ -23,5 +23,6 @@ const {dailyFunctions}=require('../functions/daily-functions');
  const schedule=definitions.scheduleDailyMassCollection.__endpoint.scheduleTrigger;
  assert.equal(schedule.schedule,'0 4 10,20,30 * *');assert.equal(schedule.timeZone,'Asia/Seoul');
  assert.equal(definitions.collectDailyMassOnDemandTask.__endpoint.taskQueueTrigger.rateLimits.maxConcurrentDispatches,1);
+ assert.deepEqual(definitions.dailyMassAdmin.__endpoint.httpsTrigger.invoker,['public']);
  console.log('Daily Mass queue: 600 source tasks, both Vietnamese providers/profiles, 30-day boundary, idempotent scheduled run and monthly Korean-time schedule passed.');
 })().catch(error=>{console.error(error);process.exitCode=1;});
