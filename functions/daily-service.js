@@ -29,12 +29,12 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
       tx.create(reference,{...input,runId,status:'queued',createdAt:new Date().toISOString(),onDemand});return true;
     });
     if(shouldEnqueue){
-      try{await enqueue({...input,jobId:id,runId});}
+      try{await enqueue({...input,jobId:id,runId,onDemand});}
       catch(error){await reference.delete();throw error;}
     }
     return shouldEnqueue;
   }
-  async function queueRange({start=koreaToday(),days=30,countries=Object.keys(COUNTRIES),runId='manual-'+crypto.randomUUID()}={}){
+  async function queueRange({start=koreaToday(),days=30,countries=Object.keys(COUNTRIES),runId='manual-'+crypto.randomUUID(),onDemand=false}={}){
     countries=[...new Set(countries.map(countryCode))];
     const dates=datesFrom(isoDate(start),Number(days));
     const ref=db.collection(RUNS).doc(runId);
@@ -43,7 +43,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     let queued=0;
     // Interleave countries so one source host is not hammered with 30 dates at once.
     for(const date of dates)for(const country of countries)for(const provider of providers(country)){
-      if(await queueOne({country,date,...provider},runId))queued++;
+      if(await queueOne({country,date,...provider},runId,{onDemand}))queued++;
     }
     await ref.set({status:'queued',queued:planned,newlyQueued:queued,finishedQueuingAt:new Date().toISOString()},{merge:true});
     return {runId,queued,start,days:dates.length,countries};
@@ -97,11 +97,17 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     if(!record?.parsed&&queueMissing){
       const date=new Date(request.date+'T12:00:00Z'),today=new Date(koreaToday()+'T12:00:00Z');
       const offset=(date-today)/86400000;
-      if(offset>=-7&&offset<30)await queueOne(request,'demand-'+koreaToday(),{onDemand:true});
+      if(offset>=-7&&offset<30)await queueOne(request,'demand-'+PARSER_REVISION+'-'+koreaToday(),{onDemand:true});
     }
     return record;
   }
   return {store,queueOne,queueRange,collect,read,requestIdentity,
+    async collectionJob(value,runId){
+      if(!/^[a-zA-Z0-9_-]{1,120}$/.test(String(runId||'')))throw Error('invalid-run-id');
+      const request=requestIdentity(value),snapshot=await db.collection(JOBS).doc(runId+'__'+request.country+'_'+request.date+'_'+request.sourceId).get();
+      if(!snapshot.exists)return {status:'not-found'};
+      const job=snapshot.data();return {status:job.status,results:job.results||[],lastError:job.lastError||'',startedAt:job.startedAt||'',finishedAt:job.finishedAt||''};
+    },
     async list({country,start,days=30}){
       country=countryCode(country);
       const dates=datesFrom(start,days);

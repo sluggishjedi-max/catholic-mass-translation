@@ -33,6 +33,7 @@ function createDailyHttpHandler({getService,verifyIdToken,configuredEmails,allow
         if(action==='runs')return res.status(200).json({runs:await service.runs()});
         if(action==='list')return res.status(200).json({days:await service.list({country:value.country,start:value.start||koreaToday(),days:Number(value.days||30)})});
         const request=service.requestIdentity(value);
+        if(action==='collection')return res.status(200).json(await service.collectionJob(request,value.runId));
         if(action==='versions'){const versions=await service.store.versions(request,{before:Number(value.before)});return res.status(200).json({versions,hasMore:versions.length===100});}
         if(action==='head'){const record=await service.read(request);return res.status(200).json({latestVersion:record?.latestVersion||0,publishedVersion:record?.publishedVersion||0});}
         if(action==='raw'){const raw=await service.store.raw(request,Number(value.version));return res.status(raw?200:404).json(raw||{error:'version-not-found'});}
@@ -44,7 +45,7 @@ function createDailyHttpHandler({getService,verifyIdToken,configuredEmails,allow
         return res.status(200).json({record,versions:record?await service.store.versions(request):[]});
       }
       if(action==='collect'){
-        const result=await service.queueRange({start:value.start||value.date||koreaToday(),days:Number(value.days||1),countries:value.countries||[value.country]});
+        const result=await service.queueRange({start:value.start||value.date||koreaToday(),days:Number(value.days||1),countries:value.countries||[value.country],onDemand:value.priority===true});
         return res.status(202).json(result);
       }
       const request=service.requestIdentity(value);

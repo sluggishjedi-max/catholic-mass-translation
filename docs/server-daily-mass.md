@@ -72,6 +72,14 @@ bounded retries. Country/date/provider jobs are idempotent for each scheduled
 run. Progress and unavailable sources are retained in job/run documents. The
 editor can request a selected country's date or 30-day recollection.
 
+Opening a missing date in the verified administrator app or editor automatically
+requests that country's date, waits for its collection job, and loads the saved
+server version. Vietnam still queues both providers and the two KTCG profiles.
+These requests use a separate single-worker on-demand queue so a 30-day scheduled
+batch does not hold them up. The editor shows elapsed waiting time and can stop
+waiting while allowing the server job to finish. Unavailable source dates show
+the reason after the attempt; they are not presented as successful downloads.
+
 All new functions use `asia-northeast3`, beside Firestore. Existing functions keep
 their existing region and purpose. No Firebase Storage bucket is needed.
 

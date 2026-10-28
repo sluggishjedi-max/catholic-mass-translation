@@ -9,7 +9,7 @@ const original=number=>({title:'전례명 v'+number,color:'#27ae60',data:{readin
   console.log('Checking daily Mass editor at '+width+'px.');
   const page=await browser.newPage({viewport:{width,height:900}}),errors=[],requests=[];
   const versions=[1,2].map(number=>({number,kind:number===1?'collected':'edited',createdAt:'2026-11-01T00:00:00Z',parsed:original(number)}));
-  let latest=2,published=2;
+  let latest=2,published=2,missing=false,collectionChecks=0,collectionRequested=false;
   page.on('pageerror',error=>errors.push(error.message));
   await page.addInitScript(()=>{window.firebase={apps:[],auth:()=>({currentUser:{getIdToken:async()=>'fixture-administrator-token'}})};});
   await page.route('**/*',async route=>{
@@ -24,7 +24,13 @@ const original=number=>({title:'전례명 v'+number,color:'#27ae60',data:{readin
     else if(data.action==='list')response={days:[{date:'2026-11-01',records:{hanoi__day:{latestVersion:latest,publishedVersion:published}}}]};
     else if(data.action==='runs')response={runs:[]};
     else if(data.action==='head')response={latestVersion:latest,publishedVersion:published};
-    else if(data.action==='record')response={record:record(),versions:versions.toReversed().map(({parsed,...metadata})=>metadata)};
+    else if(data.action==='record')response={record:missing?null:record(),versions:missing?[]:versions.toReversed().map(({parsed,...metadata})=>metadata)};
+    else if(data.action==='collect'){assert.equal(data.priority,true);assert.equal(data.start,'2026-11-02');assert.equal(data.days,1);collectionRequested=true;response={runId:'auto-missing-date',queued:3};}
+    else if(data.action==='collection'){
+     assert(collectionRequested);assert.equal(data.runId,'auto-missing-date');collectionChecks++;
+     if(collectionChecks===1)response={status:'queued'};
+     else{missing=false;latest=published=1;versions.splice(0,versions.length,{number:1,kind:'collected',createdAt:'2026-11-02T00:00:00Z',parsed:original(1)});response={status:'completed'};}
+    }
     else if(data.action==='version')response=versions.find(version=>version.number===Number(data.version));
     else if(data.action==='save'){
      assert.equal(data.expectedLatestVersion,latest);assert.equal(data.baseVersion,2);latest++;published=latest;versions.push({number:latest,kind:'edited',createdAt:'2026-11-01T01:00:00Z',parsed:data.parsed});response={latestVersion:latest,publishedVersion:published};
@@ -54,6 +60,12 @@ const original=number=>({title:'전례명 v'+number,color:'#27ae60',data:{readin
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+2),'Editor has horizontal overflow');
   assert.deepEqual(errors,[]);
   fs.mkdirSync(path.join(root,'tmp/v31-editor'),{recursive:true});await page.screenshot({path:path.join(root,'tmp/v31-editor',width+'.png'),fullPage:true,animations:'disabled',timeout:30000});
-  console.log(JSON.stringify({width,versions:[1,2,3,4],higherVersionPrompt:true,draftPreserved:true,conflictSafeSave:true,publishedVersion:published,pageErrors:errors}));await page.close();
+  console.log(JSON.stringify({width,versions:[1,2,3,4],higherVersionPrompt:true,draftPreserved:true,conflictSafeSave:true,publishedVersion:published,pageErrors:errors}));
+  missing=true;
+  await page.evaluate(()=>{const date=document.getElementById('date');date.value='2026-11-02';date.dispatchEvent(new Event('change'));});
+  await page.waitForFunction(()=>ordoDailyEditor.state.identity?.date==='2026-11-02'&&ordoDailyEditor.state.loadedVersion===1&&!ordoDailyEditor.state.busy,{timeout:60000});
+  assert(collectionRequested);assert(collectionChecks>=2);assert.equal(await page.inputValue('#section-body'),'본문 v1');
+  assert(await page.locator('#cancel-collection').isHidden());assert.deepEqual(errors,[]);
+  console.log(JSON.stringify({width,missingDate:'2026-11-02',automaticServerCollection:true,waitedForCompletion:true,loadedVersion:1}));await page.close();
  }}finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;});

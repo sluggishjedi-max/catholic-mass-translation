@@ -11184,7 +11184,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictNormalizeGermanSchottLines(lines) {
-        return (lines || []).map(line => strictCleanLine(line).replace(/^([A-ZÄÖÜ])\s+(?=[a-zäöüß]{2})/u, '$1'));
+        return (lines || []).map(line => strictCleanLine(line)
+            .replace(/^([A-ZÄÖÜ])\s+(?=[a-zäöüß]{2})/u, '$1')
+            // Schott's inline citation span touches its heading in textContent.
+            .replace(/^((?:ERSTE|ZWEITE)\s+LESUNG|ANTWORTPSALM|RUF VOR DEM EVANGELIUM|EVANGELIUM)(?=\S)/iu, '$1 '));
     }
 
     function strictBrazilPocketTercoLines(source) {
@@ -13475,6 +13478,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let lines = lang === 'PT' && dataJurisdictionForLocation(locationCode) === 'BR'
             ? strictBrazilPocketTercoLines(scopedSource)
             : strictSourceLines(scopedSource);
+        if (lang === 'DE' && !isJinaMarkdownSource(scopedSource)) {
+            const schott = parseHtml(scopedSource).querySelector('#schott');
+            if (schott) lines = strictSourceLines(schott.outerHTML);
+        }
         if (lang === 'ZH') lines = strictExpandTraditionalChineseLines(lines);
         if (lang === 'DE') lines = strictScopeGermanSchottCycle(strictNormalizeGermanSchottLines(lines), date);
         if (lang === 'EN' && usesCbcpCountryReadings(locationCode)) lines = strictScopeCbcpDailyLines(lines);
@@ -14235,31 +14242,37 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function hasCompleteTraditionalChineseDailyMass(parsed, locationCode) {
         if (dataJurisdictionForLocation(locationCode) !== 'TW') return true;
         const data = parsed && parsed.data || {};
-        return traditionalChineseDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+        return hasRequiredDailyProperSections(parsed, traditionalChineseDailyMassSectionKeys);
     }
 
     function hasCompleteItalianDailyMass(parsed, locationCode) {
         if (dataJurisdictionForLocation(locationCode) !== 'IT') return true;
         const data = parsed && parsed.data || {};
-        return italianDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+        return hasRequiredDailyProperSections(parsed, italianDailyMassSectionKeys);
     }
 
     function hasCompletePortugueseDailyMass(parsed, locationCode) {
         if (!['PT', 'BR'].includes(dataJurisdictionForLocation(locationCode))) return true;
         const data = parsed && parsed.data || {};
-        return portugueseDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+        return hasRequiredDailyProperSections(parsed, portugueseDailyMassSectionKeys);
     }
 
     function hasCompleteMexicanDailyMass(parsed, locationCode) {
         if (dataJurisdictionForLocation(locationCode) !== 'MX') return true;
         const data = parsed && parsed.data || {};
-        return mexicanDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+        return hasRequiredDailyProperSections(parsed, mexicanDailyMassSectionKeys);
     }
 
     function hasCompleteGermanDailyMass(parsed, locationCode) {
         if (dataJurisdictionForLocation(locationCode) !== 'DE') return true;
         const data = parsed && parsed.data || {};
-        return germanDailyMassSectionKeys.every(key => sourceSectionHasContent(data[key]));
+        return hasRequiredDailyProperSections(parsed, germanDailyMassSectionKeys);
+    }
+
+    function hasRequiredDailyProperSections(parsed, keys) {
+        // Published server readings have already passed the shared core check.
+        // Some sources omit Missal prayers; existing local overlays supply them.
+        return !!parsed?.serverRecord || keys.every(key => sourceSectionHasContent(parsed?.data?.[key]));
     }
 
     function readCachedDailySource(lang, date, options = {}) {
@@ -14298,7 +14311,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ? `:${vietnameseSource}:${vietnameseKpvSelectionContext(date)}`
             : (['EN', 'ZH', 'IT', 'PT', 'ES', 'DE'].includes(lang) ? `:${dataJurisdictionForLocation(locationCode)}` : '');
         const key = `${formatDateIso(date)}:${lang}:${strictDailySourceCacheVariant(date)}${sourceVariant}`;
-        if (options.forceRemote) delete dailySourceCache[key];
+        if (options.forceRemote || window.ordoAdminReview?.isVerified()) delete dailySourceCache[key];
         if (!dailySourceCache[key]) {
             const cached = options.forceRemote ? null : readCachedDailySource(lang, date, { locationCode });
             if (cached) {
@@ -18052,11 +18065,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 forceRemote: !!options.forceRemote,
                 locationCode: dailySourceLocationCode(lang)
             });
-            return withTimeout(
+            const awaitingSource = window.ordoAdminReview?.isVerified() ? sourcePromise : withTimeout(
                 sourcePromise,
                 DAILY_SOURCE_LANGUAGE_TIMEOUT_MS,
                 `${lang} daily source timeout`
-            )
+            );
+            return awaitingSource
                 .then(parsed => ({ lang, parsed }))
                 .catch(error => ({ lang, error }))
                 .then(result => {

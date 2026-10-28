@@ -3,7 +3,7 @@
   const endpoint=global.ORDO_DAILY_ADMIN_ENDPOINT||'https://asia-northeast3-ordinary-mass-app.cloudfunctions.net/dailyMassAdmin';
   const $=id=>document.getElementById(id),copy=value=>JSON.parse(JSON.stringify(value));
   const sectionNames={entrance:'입당송',collect:'본기도',reading1:'제1독서',psalm:'화답송',reading2:'제2독서',gospel_accl:'복음 환호송',gospel:'복음',prayer_offerings:'예물 기도',preface:'감사송',communion:'영성체송',prayer_after:'영성체 후 기도'};
-  const state={verified:false,identity:null,record:null,parsed:null,loadedVersion:0,latestVersion:0,offeredVersion:0,section:'',dirty:false,busy:false,generation:0,days:[],versions:[]};
+  const state={verified:false,identity:null,record:null,parsed:null,loadedVersion:0,latestVersion:0,offeredVersion:0,section:'',dirty:false,busy:false,generation:0,days:[],versions:[],cancelWait:false};
   function message(value,error=false){$('status').textContent=value;$('status').classList.toggle('error',error);}
   function inputs(){const country=$('country').value,source=$('source').value;return {country,date:$('date').value,source:source==='hanoi'?'hanoi':source.startsWith('ktcg')?'ktcg':'official',profile:source==='ktcg_north'?'VIETNAM_NORTH':source==='ktcg_south'?'VIETNAM_SOUTH':'',variant:$('variant').value||'day'};}
   function key(identity=state.identity){return identity?JSON.stringify(identity):'';}
@@ -91,7 +91,32 @@
     state.generation++;state.identity=inputs();state.parsed=null;state.record=null;state.loadedVersion=0;state.latestVersion=0;state.offeredVersion=0;state.dirty=false;state.section='';state.versions=[];renderParsed();
     const result=await refreshRecord({offer:false});
     if(result?.record?.publishedVersion){await loadVersion(result.record.publishedVersion);await offerNewer();}
-    else message(result?.record?.lastError?'수집 대기 또는 원문 미공개: '+result.record.lastError:'선택한 자료가 없습니다. 재수집으로 수집을 요청할 수 있습니다.');
+    else await collectMissing();
+  }
+  async function collectMissing(){
+    const generation=state.generation,identity=copy(state.identity),started=Date.now();state.cancelWait=false;
+    message('저장된 자료가 없어 해당 날짜의 매일독서를 서버에서 수집하고 있습니다. 완료되면 자동으로 불러옵니다.');
+    const button=$('cancel-collection');button.hidden=false;button.disabled=false;
+    try{
+      const queued=await api({action:'collect',country:identity.country,start:identity.date,days:1,priority:true},'POST');
+      while(generation===state.generation&&!state.cancelWait){
+        const job=await api({...identity,action:'collection',runId:queued.runId});
+        if(['completed','completed-with-errors','failed'].includes(job.status)){
+          const result=await refreshRecord({offer:false});
+          if(result?.record?.publishedVersion){await loadVersion(result.record.publishedVersion);await offerNewer();}
+          else{
+            const reason=result?.record?.lastError||job.lastError||job.results?.find(item=>item.variant===identity.variant)?.error||'';
+            const explanation=/only serves its current/.test(reason)?'이 출처는 요청한 날짜의 자료를 아직 제공하지 않습니다.':/incomplete-source/.test(reason)?'출처에서 필요한 독서 본문을 확인하지 못했습니다.':'출처에 자료가 아직 없거나 일시적으로 연결할 수 없습니다.';
+            message('해당 날짜의 서버 수집을 시도했지만 자료를 가져오지 못했습니다. '+explanation,true);
+          }
+          await list();await runs();return;
+        }
+        if(job.status==='not-found')throw Error('수집 작업을 확인하지 못했습니다. 다시 불러와 주세요.');
+        message((job.status==='running'?'해당 날짜의 매일독서를 서버에서 수집하고 있습니다.':'해당 날짜의 서버 수집을 기다리고 있습니다.')+' 완료되면 자동으로 불러옵니다. ('+Math.floor((Date.now()-started)/1000)+'초 경과)');
+        await new Promise(resolve=>setTimeout(resolve,5000));
+      }
+      message('불러오기 대기를 취소했습니다. 서버 수집은 계속되며, 나중에 다시 불러올 수 있습니다.');
+    }finally{button.hidden=true;}
   }
   async function save(){
     if(!state.parsed)return;captureSection();saveDraft();
@@ -143,6 +168,7 @@
     finally{state.busy=false;controls.forEach(element=>element.disabled=false);$('content-fields').disabled=!state.parsed;}
   }
   $('load').onclick=()=>guard(loadRecord);$('load-version').onclick=()=>guard(()=>loadVersion(Number($('version-history').value)));
+  $('cancel-collection').onclick=()=>{state.cancelWait=true;$('cancel-collection').disabled=true;};
   $('load-newer').onclick=()=>guard(()=>loadVersion(state.latestVersion));$('save').onclick=()=>guard(save);$('publish-version').onclick=()=>guard(publish);
   $('older-versions').onclick=()=>guard(async()=>{const before=Math.min(...state.versions.map(version=>version.number));const result=await api({...state.identity,action:'versions',before});versionOptions(result.versions);$('older-versions').hidden=!result.hasMore;});
   $('collect-one').onclick=()=>guard(()=>collect(1));$('collect-range').onclick=()=>guard(()=>collect(30));$('refresh-list').onclick=()=>guard(list);$('refresh-runs').onclick=()=>guard(runs);
