@@ -8975,7 +8975,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function parseEnglishAcclamation(lines) {
         const out = [];
-        const citationResult = extractEnglishCitationLine(splitSourceBlocks(lines));
+        const citationResult = extractEnglishCitationLine(splitSourceBlocks(lines).filter(line => !isLiturgicalReferenceLabel(line)));
         let verseBuffer = [];
         const flushVerse = () => {
             const text = cleanNodeText(verseBuffer.join(' '));
@@ -11313,10 +11313,31 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .trim();
     }
 
+    function isLiturgicalReferenceLabel(value) {
+        const text = strictCleanLine(value).replace(/^[([]\s*|\s*[)\]]$/gu, '').trim();
+        return /^(?:(?:see|cf\.?|cfr\.?)\s+)?te\s+deum(?:\s*[:,]?\s*\d+(?:\s*[-–,]\s*\d+)*)?\.?$/iu.test(text);
+    }
+
+    function sanitizeDailyAcclamationReferences(parsed) {
+        const section = parsed?.data?.gospel_accl;
+        if (!section || typeof section !== 'object') return parsed;
+        const cleaned = { ...section };
+        let changed = false;
+        if (Array.isArray(section.lines)) {
+            const lines = section.lines.filter(line => !isLiturgicalReferenceLabel(line.text || ''));
+            if (lines.length !== section.lines.length) { cleaned.lines = lines; cleaned.text = parsedLinesToText(lines); changed = true; }
+        } else if (typeof section.text === 'string') {
+            const lines = section.text.split(/\r?\n/).filter(line => !isLiturgicalReferenceLabel(line.replace(/^(?:Versicle|V\.|℣)\s*[:.]?\s*/iu, '')));
+            if (lines.length !== section.text.split(/\r?\n/).length) { cleaned.text = lines.join('\n'); changed = true; }
+        }
+        Object.keys(cleaned).filter(key => /^cit_/u.test(key) && isLiturgicalReferenceLabel(cleaned[key])).forEach(key => { delete cleaned[key]; changed = true; });
+        return changed ? { ...parsed, data: { ...parsed.data, gospel_accl: cleaned } } : parsed;
+    }
+
     function strictExtractCitation(section, blocks, lang, options = {}) {
         const headingRest = strictIdentifySection(section.heading || '', lang);
         const headingCandidate = headingRest ? headingRest.rest : section.heading || '';
-        const headingCitation = strictLooksLikeCitation(headingCandidate, lang)
+        const headingCitation = !isLiturgicalReferenceLabel(headingCandidate) && strictLooksLikeCitation(headingCandidate, lang)
             ? (lang === 'DE' ? strictCitationCandidate(headingCandidate, lang) : headingCandidate)
             : '';
         const index = blocks.findIndex(line => strictLooksLikeCitation(line, lang));
@@ -12222,7 +12243,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictParsePsalmOrAcclamation(lang, key, section) {
-        const blocks = strictSplitBlocks(section.lines);
+        const blocks = strictSplitBlocks(section.lines).filter(line => key !== 'gospel_accl' || !isLiturgicalReferenceLabel(line));
         const citationResult = strictExtractCitation(section, blocks, lang, { preserveParentheses: true });
         const contentBlocks = key === 'gospel_accl'
             ? citationResult.blocks.filter(line => !isStandaloneDashText(line))
@@ -14361,7 +14382,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     });
             }
         }
-        return dailySourceCache[key];
+        return sanitizeDailyAcclamationReferences(await dailySourceCache[key]);
     }
 
     function createDailyReadingData() {

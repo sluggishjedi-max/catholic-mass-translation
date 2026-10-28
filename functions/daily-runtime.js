@@ -100,7 +100,7 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider}={}){
       const snapshotStart=snapshots.length;
       window.__variant=variant;
       run(`getStrictMassSelector=()=>({slot:__variant==='day'||['first','second','third'].includes(__variant)?'day':'vigil',specialVigil:__variant==='day'||['first','second','third'].includes(__variant)?'':__variant,allSoulsChoice:['first','second','third'].includes(__variant)?__variant:''});state.allSoulsNavChoice=['first','second','third'].includes(__variant)?__variant:'';`);
-      const parsed=await run('dailySourceFetchers[__collectorInput.lang](getActiveLiturgicalSourceDate(),{locationCode:__collectorInput.country})');
+      const parsed=await run('Promise.resolve(dailySourceFetchers[__collectorInput.lang](getActiveLiturgicalSourceDate(),{locationCode:__collectorInput.country})).then(sanitizeDailyAcclamationReferences)');
       window.__parsed=parsed;
       const validation=run(`({missing:missingCoreDailyReadingSections(__parsed,getActiveLiturgicalSourceDate(),__collectorInput.lang,__collectorInput.country),fixed:countrySpecialMassRecord(getActiveLiturgicalSourceDate(),__collectorInput.country)?.fetchDaily===false})`);
       if(validation.missing.length&&!validation.fixed)throw Error('incomplete-source:'+validation.missing.join(','));

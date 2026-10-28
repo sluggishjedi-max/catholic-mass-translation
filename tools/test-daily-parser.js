@@ -16,5 +16,16 @@ try{
  runtime.run('loadAllSoulsMassConfigIfNeeded(new Date(2026,10,2))');
  assert(runtime.window.allSoulsMassConfig,'All Souls collection waited forever for a browser script element');
  assert.throws(()=>runtime.run("loadScriptOnce('JS%20file/not-packaged.js')"),/server-module-not-packaged/);
+ for(const marker of ['See Te Deum','see te deum','(See Te Deum)','Cf. Te Deum','See Te Deum 21']){
+  runtime.window.__acclamation={heading:'Alleluia '+marker,lines:[marker,'R. Alleluia, alleluia.','The actual acclamation verse is preserved.','R. Alleluia, alleluia.']};
+  const parsed=runtime.run("strictFormatSection('EN','gospel_accl',__acclamation)");
+  assert(!/te\s+deum/iu.test(JSON.stringify(parsed)),'Reference label was parsed as a verse or Bible citation');
+  assert(parsed.text.includes('actual acclamation verse'));
+ }
+ runtime.window.__acclamation={heading:'Alleluia',lines:['See John 15:16','R. Alleluia, alleluia.','Te Deum laudamus is part of this synthetic verse.','R. Alleluia, alleluia.']};
+ const biblical=runtime.run("strictFormatSection('EN','gospel_accl',__acclamation)");assert(biblical.cit_en.includes('John 15:16'));assert(biblical.text.includes('Te Deum laudamus'));
+ runtime.window.__old={title:'Cached reading',data:{gospel_accl:{lines:[{sp:'Versicle',text:'See Te Deum'},{sp:'Versicle',text:'The actual verse remains.'}],text:'See Te Deum\nThe actual verse remains.',cit_en:'See Te Deum'}}};
+ const cleaned=runtime.run('sanitizeDailyAcclamationReferences(__old)');assert(!/te\s+deum/iu.test(JSON.stringify(cleaned)));assert(cleaned.data.gospel_accl.text.includes('actual verse remains'));assert(runtime.window.__old.data.gospel_accl.text.includes('See Te Deum'),'Original stored version was mutated');
+ console.log('Acclamation references: Te Deum labels omitted across dates and cached versions; actual verses and Bible citations preserved.');
  console.log('Daily Mass parser: inline German HTML citations retain every reading section and select the requested year cycle.');
 }finally{runtime.close();}
