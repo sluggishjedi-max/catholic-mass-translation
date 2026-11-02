@@ -1,5 +1,6 @@
 'use strict';
 const {digest}=require('./daily-schema');
+const {withKpvTemporalTitle}=require('./kpv-title');
 const OLD='https://ktcgkpv.org/readings/mass-reading';
 const NEW='https://kpv.vn/api/liturgical/mass-readings';
 const slots=['introit','reading1','reading2','gospel','communion'];
@@ -42,16 +43,21 @@ async function resolveKtcg(date,profile,runtime,{equivalence}={}){
   if(modern?.date&&modern.date!==date)throw Error('KTCG-current-returned-another-date');
   const oldChoices=legacy?.mass_reading || [];
   if(modern?.primary){
-    const selected=runtime.normalizeLegacy(modern);
+    const selected=runtime.normalizeLegacy(await withKpvTemporalTitle(modern,(...args)=>runtime.fetch(...args)));
     const selectedChoices=selected.mass_reading || [];
     const matches=selectedChoices.map(choice=>oldChoices.find(old=>compareChoices(choice,old,runtime).equal));
     const equal=selectedChoices.length>0&&matches.every(Boolean);
     runtime.ktcgComparison={status:equal?'same-content':'different-content',date,profile,currentUrl:NEW,legacyUrl:OLD,selectedProvider:equal?'ktcgkpv.org':'kpv.vn',differentSlots:equal?[]:(oldChoices.length?compareChoices(selectedChoices[0],oldChoices[0],runtime).differentSlots:['missing-legacy'])};
     if(equal){
-      const mass=matches.map((choice,index)=>({...choice,kpvVia:selectedChoices[index].kpvVia,kpvCelebrationCode:selectedChoices[index].kpvCelebrationCode}));
+      const mass=matches.map((choice,index)=>({...choice,
+        // Keep the selected calendar title even when identical legacy reading
+        // bodies are preferred. Its generic "Ngày thường" is only a menu label.
+        display_text:selectedChoices[index].display_text,
+        date_info:{...choice.date_info,...selectedChoices[index].date_info},
+        kpvVia:selectedChoices[index].kpvVia,kpvCelebrationCode:selectedChoices[index].kpvCelebrationCode}));
       return {...selected,mass_reading:mass,liturgy_reading:[mass[0]],legacyPreferred:true};
     }
-    return modern;
+    return selected;
   }
   // The current UI limits guest dates. For the legacy site's default southern
   // calendar only, establish equivalence using a same-day, per-section sample.

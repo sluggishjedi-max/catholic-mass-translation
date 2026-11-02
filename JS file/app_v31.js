@@ -6843,10 +6843,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return payload.data;
     }
 
-    function kpvMassCandidateTitle(mass, date) {
+    function kpvMassCandidateTitle(mass, date, temporalTitle = '') {
         const celebration = mass && mass.celebration;
         const celebrationName = cleanLiturgyTitle(celebration && (celebration.name || (celebration.names && celebration.names.vi)) || '');
-        const title = celebrationName || vietnameseSeasonalLookupTitle(date) || cleanLiturgyTitle(buildGeneratedLiturgyInfo(date).names.VN || '');
+        const title = celebrationName || cleanLiturgyTitle(temporalTitle) || vietnameseSeasonalLookupTitle(date) || cleanLiturgyTitle(buildGeneratedLiturgyInfo(date).names.VN || '');
         // KPV gives every All Souls Mass the same celebration name. Its first
         // form is `principal` with no formName; the other forms are `ii`/`iii`.
         const allSoulsForms = { principal: 'Lễ I', i: 'Lễ I', ii: 'Lễ II', iii: 'Lễ III' };
@@ -6952,9 +6952,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return entries;
     }
 
-    function kpvMassCandidateAsLegacyChoice(mass, date) {
+    function kpvMassCandidateAsLegacyChoice(mass, date, temporalTitle = '') {
         if (!mass) return null;
-        const title = kpvMassCandidateTitle(mass, date);
+        const title = kpvMassCandidateTitle(mass, date, temporalTitle);
         return {
             display_text: title,
             date_info: { daily_title: title },
@@ -6972,7 +6972,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function normalizeKpvMassReadingPayload(payload, date) {
         if (payload && Array.isArray(payload.mass_reading)) return payload;
         const selected = selectKpvMassCandidate(payload, date);
-        const choice = kpvMassCandidateAsLegacyChoice(selected, date);
+        const choice = kpvMassCandidateAsLegacyChoice(selected, date, payload && payload.temporalTitle);
         const candidates = [payload && payload.primary].concat(payload && payload.alternatives || []).filter(Boolean);
         const info = buildGeneratedLiturgyInfo(date);
         const includeWeekday = dataJurisdictionForLocation(state.selectedLocationCode || state.currentLoc) !== 'VN'
@@ -6981,7 +6981,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             && getSeasonMeta(date).season === 'ordinary' && date.getDay() !== 0;
         const temporal = includeWeekday ? candidates.find(mass => mass.via === 'temporal') : null;
         return {
-            mass_reading: choice ? [choice].concat(temporal ? [kpvMassCandidateAsLegacyChoice(temporal, date)] : []) : [],
+            mass_reading: choice ? [choice].concat(temporal ? [kpvMassCandidateAsLegacyChoice(temporal, date, payload.temporalTitle)] : []) : [],
             // Prayers and antiphons belong to the selected formulary even when
             // a memorial permits the seasonal weekday readings as alternatives.
             liturgy_reading: choice ? [choice] : [],
@@ -6995,7 +6995,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function ktcgkpvChoiceTitle(choice) {
         if (!choice) return '';
         const dateInfo = choice.date_info || {};
-        return cleanLiturgyTitle(choice.display_text || dateInfo.daily_title || '');
+        const displayTitle = cleanLiturgyTitle(choice.display_text || '');
+        const genericWeekday = /^(?:le\s+)?ngay thuong$/.test(normalizeVietnameseDiocesanMatchText(displayTitle));
+        return genericWeekday ? cleanLiturgyTitle(dateInfo.daily_title || displayTitle)
+            : displayTitle || cleanLiturgyTitle(dateInfo.daily_title || '');
     }
 
     function ktcgkpvChoiceCitations(choice, names) {
@@ -10245,7 +10248,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict106-multilingual-verse-references';
+    const STRICT_PARSER_CACHE_VERSION = 'strict107-kpv-temporal-titles';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {

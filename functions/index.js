@@ -4,6 +4,7 @@ const logger = require("firebase-functions/logger");
 const { getApps, initializeApp } = require("firebase-admin/app");
 const { getAuth } = require("firebase-admin/auth");
 const { createAdminReviewHandler } = require("./admin-review-auth");
+const { withKpvTemporalTitle } = require("./kpv-title");
 
 const GEMINI_API_KEY_TRANSLATE = defineSecret("GEMINI_API_KEY_TRANSLATE");
 const GEMINI_API_KEY_SYNTAX = defineSecret("GEMINI_API_KEY_SYNTAX");
@@ -477,7 +478,7 @@ async function fetchKpvMassReading(isoDate, profile) {
   if (!payload || !payload.primary || !Array.isArray(payload.primary.templates)) {
     throw new Error("KPV returned an empty mass-reading payload.");
   }
-  return { success: true, provider: "kpv.vn", data: payload };
+  return { success: true, provider: "kpv.vn", data: await withKpvTemporalTitle(payload) };
 }
 
 function parseVietnameseDiocesanUrl(value) {

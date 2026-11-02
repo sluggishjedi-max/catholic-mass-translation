@@ -18,6 +18,7 @@
     "browser:check:holy-week": "node tools/browser-check-holy-week-orders.js",
     "browser:check:all-souls": "node tools/browser-check-all-souls.js",
     "browser:check:kpv-all-souls": "node tools/build-server-daily-runtime.js && node tools/browser-check-kpv-all-souls.js",
+    "browser:check:kpv-titles": "node tools/build-server-daily-runtime.js && node tools/browser-check-kpv-titles.js",
     "browser:check:reading-frames": "node tools/browser-check-reading-frames.js",
     "browser:check:passage-alignment": "node tools/browser-check-passage-alignment.js",
     "mass:tool:special:verify": "node tools/verify-special-liturgy-editor.js",
