@@ -75,7 +75,7 @@
     "2CO": {"koreanName":"코린토 2서","name":"格林多後書","aliases":["格林多後書","格後","2Co","聖保祿宗徒致格林多人後書"],"koreanKey":"2코린"},
     "GAL": {"koreanName":"갈라티아서","name":"迦拉達書","aliases":["迦拉達書","加拉達書","加","Gal","聖保祿宗徒致迦拉達人書"],"koreanKey":"갈라"},
     "EPH": {"koreanName":"에페소서","name":"厄弗所書","aliases":["厄弗所書","厄","Eph","聖保祿宗徒致厄弗所人書"],"koreanKey":"에페"},
-    "PHP": {"koreanName":"필리피서","name":"斐理伯書","aliases":["斐理伯書","斐","Phi","聖保祿宗徒致斐理伯人書"],"koreanKey":"필리"},
+    "PHP": {"koreanName":"필리피서","name":"斐理伯書","aliases":["斐理伯書","斐","Phi","聖保祿宗徒致斐理伯人書","聖保祿宗徒致斐理伯仁書"],"koreanKey":"필리"},
     "COL": {"koreanName":"콜로새서","name":"哥羅森書","aliases":["哥羅森書","哥","Col","聖保祿宗徒致哥羅森人書"],"koreanKey":"콜로"},
     "1TH": {"koreanName":"테살로니카 1서","name":"得撒洛尼前書","aliases":["得撒洛尼前書","帖撒羅尼迦前書","帖前","1Th","聖保祿宗徒致得撒洛尼人前書"],"koreanKey":"1테살"},
     "2TH": {"koreanName":"테살로니카 2서","name":"得撒洛尼後書","aliases":["得撒洛尼後書","帖撒羅尼迦後書","帖後","2Th","聖保祿宗徒致得撒洛尼人後書"],"koreanKey":"2테살"},

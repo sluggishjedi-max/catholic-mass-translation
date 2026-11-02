@@ -27,6 +27,8 @@
     return new Set(matches.map(item => item.id)).size === 1 ? matches[0] : null;
   }
   function hanNumber(value) {
+    // Some official PDF text layers use Greek omicron for the Chinese zero.
+    value = String(value).replace(/[Οο○]/gu, '〇');
     if (/^\d+$/.test(value)) return Number(value);
     const digits = {'〇':0,'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9};
     value = value.replace(/廿/g,'二十').replace(/卅/g,'三十');
@@ -38,22 +40,26 @@
     }
     return total+digit;
   }
+  function normalizeVerseConjunctions(value) {
+    // Apply only between numeric verse references, never inside a book name.
+    return String(value).replace(/(\d[a-z]*)(?:\s*(?:과|와|及|和|與|与|と)\s*|\s+(?:and|et|und|y|e|và)\s+)(?=\d)/giu, '$1.');
+  }
   function parse(value, lang) {
     const code = language(lang);
-    let text = fold(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c]))
+    let text = fold(normalizeVerseConjunctions(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c])))
       .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|kv\.?|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
       // Vietnamese lectionaries also append the response reference without
       // parentheses (for example "Đ. c.6b" or "Đ. x. c.5").  It is metadata
       // for the refrain, not part of the Psalm stanza range.
       .replace(/\s+(?:đ|dap|r(?:esp)?|response|refrain)\.?\s*(?:x\.?\s*)?(?:c\.?\s*)?\d+[a-z]?(?:\s*[-–—.]\s*\d+[a-z]?)?\s*$/iu,'')
+      .replace(/\s*[℟◎]\.?\s*\d[^\n]*$/u,'')
       .replace(/\s*(?:참고|참조|参照|參照|參閱)$/u,'')
       .replace(/^(?:cf\.?|cfr\.?|x\.?|see|vgl\.?)\s+/,'')
-      .replace(/(?:과|와)(?=\s*\d)/gu,'.')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
       let tail = text.slice(entry.key.length).replace(/^\./,'')
-        .replace(/([〇零一二三四五六七八九十百廿卅]+)(?=\d)/gu,(_,han) => hanNumber(han)+':');
+        .replace(/([〇零一二三四五六七八九十百廿卅Οο○]+)(?=\d)/gu,(_,han) => hanNumber(han)+':');
       // A Psalm's trailing parenthetical verse identifies its refrain, not
       // another stanza. Keep the alternate chapter number before the colon.
       if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
@@ -217,9 +223,9 @@
       if (!id) return part;
       recognized=true; previousId=id;
       if (source !== 'EN') tail=tail.replace(/[—―─]\s*(\d+)\s*,\s*(\d+)/g,'-$1:$2');
-      tail=tail.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/gu,c=>subverses[c])
+      tail=normalizeVerseConjunctions(tail.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/gu,c=>subverses[c]))
         .normalize('NFKC').replace(/[（]/g,'(').replace(/[）]/g,')').replace(/[–—―─−~～]/g,'-')
-        .replace(/([〇零一二三四五六七八九十百廿卅]+)(?=\d)/gu,(_,han)=>hanNumber(han)+':');
+        .replace(/([〇零一二三四五六七八九十百廿卅Οο○]+)(?=\d)/gu,(_,han)=>hanNumber(han)+':');
       const boundary='\uE000';
       tail=tail.replace(/^(\d+(?:\(\d+(?:-\d+)?\))?)\s*[,.:、・]\s*/u,'$1'+boundary)
         .replace(/:/g,boundary);

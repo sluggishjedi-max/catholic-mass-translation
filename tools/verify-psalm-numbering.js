@@ -23,3 +23,27 @@ assert(!b.equivalent('Ps 122(119):1-5','EN',samples.KR,'KR',{ignoreSubverses:tru
 globalThis.bibleLanguageTables.XX={psalmNumbering:'greek',books:{PSA:{aliases:['TestPsalm'],koreanKey:'시편'}}};
 assert(b.equivalent('TestPsalm 121,1-5','XX','시편 122,1-5','KR',{ignoreSubverses:true}),'Future table numbering metadata');
 console.log('Psalm comparison: 10 languages / 100 pairs, dual/bare numbering, response markers, split/combined verse offsets and adjacent-Psalm rejection passed.');
+const allSouls = {
+  KR:'시편 27(26),1.4.7과 8ㄷ과 9ㄱ.13-14(◎ 1ㄱ 또는 13)',
+  VN:'Tv 26,1.4.7 và 8b và 9a.13-14 Đ. c.13',
+  EN:'Ps 27(26):1.4.7 and 8c and 9a.13-14. ℟1a or 13',
+  JP:'詩編27,1.4.7と8cと9a.13-14', ZH:'詠二六1.4.7及8c及9a.13-14',
+  IT:'Sal 26 (27),1.4.7 e 8c e 9a.13-14', PT:'Sl 26 (27),1.4.7 e 8c e 9a.13-14',
+  ES:'Sal 26 (27),1.4.7 y 8c y 9a.13-14', DE:'Ps 27 (26),1.4.7 und 8c und 9a.13-14',
+  LA:'Ps 26 (27),1.4.7 et 8c et 9a.13-14'
+};
+for(const [left,a] of Object.entries(allSouls))for(const [right,c] of Object.entries(allSouls))
+  assert(b.equivalent(a,left,c,right,{ignoreSubverses:true}),left+' / '+right+' All Souls conjunction/refrain');
+for(const [lang,table] of Object.entries(globalThis.bibleLanguageTables).filter(([lang])=>lang!=='XX')){
+  const connector={KR:'과',VN:' và ',EN:' and ',JP:'と',ZH:'及',IT:' e ',PT:' e ',ES:' y ',DE:' und ',LA:' et '}[lang];
+  for(const id of ['JOB','ROM','MAT','JHN']){
+    const book=table.books[id].aliases.find(alias=>b.resolve(alias,lang));
+    assert(b.equivalent(book+' 5,1'+connector+'3-4',lang,book+' 5,1.3-4',lang,{ignoreSubverses:true}),lang+' '+id+' numeric conjunction');
+  }
+}
+assert(b.equivalent('詠一Ο二 10,13-18','ZH','시편 103(102),10.13-18','KR',{ignoreSubverses:true}),'PDF omicron zero');
+assert(b.equivalent('聖保祿宗徒致斐理伯仁書 3,20-21','ZH','필리 3,20-21','KR',{ignoreSubverses:true}),'Attested full PDF book label');
+assert.equal(b.format('Tv 26,7 và 8b và 9a','VN','EN'),'Ps 26:7, 8b, 9a','Translated citation conjunction punctuation');
+assert.equal(b.parse('Gospel of imaginary book 5,1 and 3','EN'),null,'Conjunction normalization guessed a book');
+assert(!b.equivalent('Rm 5,1 và 3','VN','Rm 5,1-3','VN',{ignoreSubverses:true}),'Conjunction is a list, not a range');
+console.log('All Souls references: 100 language pairs, numeric conjunctions across four reading books, bare refrains and PDF zero/book labels passed.');

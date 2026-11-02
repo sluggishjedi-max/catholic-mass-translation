@@ -43,4 +43,15 @@ try{
  const third=runtime.run("strictScopeLinesForMassVariant(__thirdLines,{allSoulsChoice:'third'},'ZH')");assert(third.includes('Original Gospel.'),'Reading instructions prematurely ended the third Mass');
  console.log('Acclamation references: Te Deum labels omitted across dates and cached versions; actual verses and Bible citations preserved.');
  console.log('Daily Mass parser: inline German HTML citations retain every reading section and select the requested year cycle.');
+ runtime.window.__massLines=['COMMEMORAZIONE DI TUTTI I FEDELI DEFUNTI (MESSA 1)','Prima Lettura','First source.','Vangelo','First Gospel.','COMMEMORAZIONE DI TUTTI I FEDELI DEFUNTI (MESSA 2)','Prima Lettura','Second source.','Vangelo','Second Gospel.','COMMEMORAZIONE DI TUTTI I FEDELI DEFUNTI (MESSA 3)','Prima Lettura','Third source.','Vangelo','Third Gospel.'];
+ for(const [index,variant] of ['first','second','third'].entries()){
+  runtime.window.__selector={allSoulsChoice:variant,sourceTitle:'COMMEMORAZIONE DI TUTTI I FEDELI DEFUNTI (MESSA 3)'};
+  const scoped=runtime.run("strictScopeLinesForMassVariant(__massLines,__selector,'IT')");
+  assert(scoped.includes(['First Gospel.','Second Gospel.','Third Gospel.'][index]),variant+' CEI Mass was not selected');
+  assert.equal(scoped.filter(line=>line.endsWith('Gospel.')).length,1,'Multiple CEI Masses were merged');
+ }
+ assert(runtime.run("strictLooksLikeCitation('ローマ8・31b-35、37-39','JP')"),'Japanese subverse reference was treated as prose');
+ assert.equal(runtime.run("strictExtractCitation({heading:'福音'},['恭讀聖瑪竇福音 廿五 31-46','保留原文。'],'ZH').citation"),'聖瑪竇福音 25,31-46','PDF chapter shorthand lost the Gospel citation');
+ assert.equal(runtime.run("traditionalChineseChapterNumber('一Ο二')"),102);
+ console.log('All Souls source forms: three CEI Masses scoped independently despite the last-form page title; Japanese subverses and Chinese PDF chapters retained.');
 }finally{runtime.close();}

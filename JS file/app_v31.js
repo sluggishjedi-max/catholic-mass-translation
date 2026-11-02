@@ -10245,7 +10245,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict105-kpv-mass-forms';
+    const STRICT_PARSER_CACHE_VERSION = 'strict106-multilingual-verse-references';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10869,6 +10869,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!text || text.length > 140 || /(?:copyright|rights reserved|typical edition|lectionary for mass)/i.test(text)) return '';
         const chinese=text.match(/第\s*([一二三123])\s*(?:(?:臺|台)?\s*彌撒|(?:の)?\s*ミサ|式)/u);
         if(chinese)return ({一:'first',二:'second',三:'third','1':'first','2':'second','3':'third'})[chinese[1]];
+        const numbered=text.match(/\b(?:Mass|Missa|Misa|Messa|Messe|Lễ)\s*(III|II|I|[123])\b/iu);
+        if(numbered)return ({I:'first',II:'second',III:'third','1':'first','2':'second','3':'third'})[numbered[1].toUpperCase()];
         if (!/(위령|All Souls|Faithful Departed|미사|Mass|Missa|Misa|Messa|Messe|Lễ|ミサ|彌撒|(?:死者|諸靈|追思).{0,12}(?:彌撒|ミサ)|Defunctorum)/i.test(text)) return '';
         if (/(첫째|제\s*1(?!\d)|1\s*미사|First|Missa\s*I\b|第\s*1(?!\d)|Lễ\s*I\b|Lễ\s*(?:thứ\s*)?(?:nhất|1)\b|Prima\s*Messa|Primeira\s*Missa|Primera\s*Misa|Erste\s*Messe)/i.test(text)) return 'first';
         if (/(둘째|제\s*2(?!\d)|2\s*미사|Second|Missa\s*II\b|第\s*2(?!\d)|Lễ\s*II\b|Lễ\s*(?:thứ\s*)?(?:hai|2)\b|Seconda\s*Messa|Segunda\s*(?:Missa|Misa)|Zweite\s*Messe)/i.test(text)) return 'second';
@@ -10937,9 +10939,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         // A relay may retain the selected Mass only in its metadata title.
         // Homily prose mentioning another Mass must not rescope that document.
         const declared = strictVariantKind(selector.sourceTitle || '');
-        if (selector.allSoulsChoice && ['first', 'second', 'third'].includes(declared)) {
-            return declared === selector.allSoulsChoice ? lines || [] : [];
-        }
         if (selector.slot === 'vigil' && declared === 'vigil') return lines || [];
         const markers = [];
         (lines || []).forEach((line, index) => {
@@ -10949,6 +10948,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const kind = strictVariantKind(line);
             if (kind) markers.push({ index, kind });
         });
+        // A publisher may put the last Mass in the HTML title while printing
+        // all three formularies in the body. Real section-bearing headings
+        // take precedence; homily mentions still cannot rescope a selected page.
+        const numberedMasses = markers.filter((marker, index) =>
+            ['first','second','third'].includes(marker.kind)
+            && lines.slice(marker.index + 1, markers[index + 1]?.index ?? lines.length)
+                .some(line => ['reading1','gospel'].includes(strictIdentifySection(line, lang)?.key))
+        );
+        if (selector.allSoulsChoice && ['first','second','third'].includes(declared)
+            && new Set(numberedMasses.map(marker => marker.kind)).size < 2) {
+            return declared === selector.allSoulsChoice ? lines || [] : [];
+        }
         if (!markers.length) return lines || [];
         let chosen = null;
         if (selector.allSoulsChoice) chosen = markers.find(marker => marker.kind === selector.allSoulsChoice);
@@ -11179,16 +11190,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function traditionalChineseChapterNumber(value) {
-        const digits = '〇一二三四五六七八九';
-        if (/^\d+$/.test(value)) return Number(value);
-        const normalized = value.replace(/[○Ο零]/gu, '〇');
-        if (!/[十百]/u.test(normalized)) return Number(Array.from(normalized, c => digits.indexOf(c)).join(''));
-        let total = 0, digit = 0;
-        for (const c of normalized) {
-            if (c === '十' || c === '百') { total += (digit || 1) * (c === '十' ? 10 : 100); digit = 0; }
-            else digit = digits.indexOf(c);
-        }
-        return total + digit;
+        return globalThis.bibleCitation.hanNumber(String(value));
     }
 
     function strictScopeGermanSchottCycle(lines, date) {
@@ -11312,14 +11314,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             return !!book && !!globalThis.bibleCitation?.resolve(book[1], 'KR');
         }
         if (lang === 'EN') return /^(?:[1-3]\s*)?[A-Z][A-Za-z. ]{1,30}\s+\d/.test(text);
-        if (lang === 'JP') return /^(?:[①②③１２３1-3])?[一-龯ぁ-ゖァ-ヶー]{1,25}\s*\d[\d・:：.,、+＋−\-–—\s]*$/u.test(text);
+        if (lang === 'JP') return /^(?:[①②③１２３1-3])?[一-龯ぁ-ゖァ-ヶー]{1,25}\s*\d[\da-z・:：.,、+＋−\-–—\s]*$/iu.test(text);
         if (lang === 'VN') return /^(?:[1-3]\s*)?[A-ZĐÐ][A-Za-zÀ-ỹĐđÐð. ]{0,30}\s+\d/i.test(text);
         if (lang === 'LA') return /^(?:[1-3]\s*)?[A-ZÆŒ][A-Za-zÀ-ỹÆæŒœ. ]{0,30}\s+\d/i.test(text);
         if (lang === 'IT') return /^(?:[1-3]\s*)?[A-Z][A-Za-zÀ-ÿ. ]{0,30}\s+\d/i.test(text);
         if (lang === 'PT') return /^(?:[1-3]\s*)?[A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-Za-zÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç. ]{0,30}\s+\d/iu.test(text);
         if (lang === 'ES') return /^(?:[1-3]\s*)?[A-ZÁÉÍÓÚÜÑ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ. ]{0,30}\s+\d/iu.test(text);
         if (lang === 'DE') return /^(?:[1-3]\s*)?[A-ZÄÖÜ][A-Za-zÄÖÜäöüß. ]{0,30}\s+\d/iu.test(text);
-        if (lang === 'ZH') return /^(?:[1-3]\s*)?[\p{Script=Han}〇○Ο一二三四五六七八九十]{1,24}\s*[一二三四五六七八九十0-9]/u.test(text);
+        if (lang === 'ZH') return /^(?:[1-3]\s*)?[\p{Script=Han}〇○Ο一二三四五六七八九十]{1,24}\s*[一二三四五六七八九十百廿卅〇○Ο0-9]/u.test(text);
         return false;
     }
 
@@ -11386,7 +11388,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (index < 0) return { citation: strictCleanCitation(headingCitation, options), blocks };
         const citationSource = options.preferBlockCitation && blocks[index] ? blocks[index] : (headingCitation || blocks[index]);
         if (lang === 'ZH') {
-            const chineseCitation = strictCleanLine(citationSource).match(/^恭讀(.+?)\s+([一二三四五六七八九十百〇○Ο]+|\d+)[\s,，:：]*([0-9][0-9a-z,，;；.\s\-–—]*)$/u);
+            const chineseCitation = strictCleanLine(citationSource).match(/^恭讀(.+?)\s+([一二三四五六七八九十百廿卅〇○Ο]+|\d+)[\s,，:：]*([0-9][0-9a-z,，;；.\s\-–—]*)$/u);
             if (chineseCitation) {
                 return {
                     citation: strictCleanCitation(`${chineseCitation[1]} ${traditionalChineseChapterNumber(chineseCitation[2])},${chineseCitation[3]}`, options),
@@ -16532,8 +16534,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const left = lowers[i], right = lowers[j];
                     const leftKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[left][0]));
                     const rightKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[right][0]));
-                    if (leftKey && rightKey && leftKey !== rightKey) return [];
-                    if (sourceCelebrationsConflict(baseId, section, left, right, leftKey, rightKey)) return [];
+                    const samePassage = scriptureAlignmentKeys.has(baseId) && passageCitationsEquivalent(baseId,
+                        strictReadingOptionCitation(section, left, 0), strictReadingOptionCitation(section, right, 0), left, right);
+                    if (!samePassage && leftKey && rightKey && leftKey !== rightKey) return [];
+                    if (!samePassage && sourceCelebrationsConflict(baseId, section, left, right, leftKey, rightKey)) return [];
                     if (passageCitationsConflict(
                         baseId,
                         strictReadingOptionCitation(section, left, 0),
@@ -16776,7 +16780,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align11-canonical-psalms-proper-sources';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align12-multilingual-verse-references';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -16861,6 +16865,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const groups = [];
             for (const item of mapped) {
                 const compatible = groups.find(group => group.every(other => {
+                    // A whole pericope can trigger different sentence keywords
+                    // in different translations. Exact canonical references
+                    // outrank that partial-text heuristic for Scripture only.
+                    if (scriptureAlignmentKeys.has(baseId)
+                        && passageCitationsEquivalent(baseId, item.citation, other.citation, item.lower, other.lower)) return true;
                     if (sourceCelebrationsConflict(baseId, section, item.lower, other.lower, item.semanticKey, other.semanticKey)) return false;
                     if (distinctKeys.size > 1 && (!item.semanticKey || !other.semanticKey)) return false;
                     if (item.semanticKey && other.semanticKey && item.semanticKey !== other.semanticKey) return false;
