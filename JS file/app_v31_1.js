@@ -132,7 +132,7 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261102-2';
+    const APP_VERSION = 'V31.1-20261102-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -6767,6 +6767,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const data = traditionalChineseStaticMassData();
         if (!data) return [];
         const exactIds = data.byDate && data.byDate[formatDateYmd(date)];
+        if (isAllSoulsDate(date)) {
+            // An annual index can omit one of the three invariant formularies
+            // even though its approved PDF is already present in the corpus.
+            const ids = new Set(Array.isArray(exactIds) ? exactIds : []);
+            Object.entries(data.records || {}).forEach(([id, record]) => {
+                const canonicalDate = traditionalChineseStaticDate(record.canonicalDate);
+                if (canonicalDate && isAllSoulsDate(canonicalDate)) ids.add(id);
+            });
+            if (ids.size) return [...ids].map(id => data.records[id]).filter(Boolean);
+        }
         if (Array.isArray(exactIds) && exactIds.length) {
             return exactIds.map(id => data.records && data.records[id]).filter(Boolean);
         }
@@ -6801,7 +6811,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!entries.length) return null;
         const selector = getStrictMassSelector(date);
         if (selector.allSoulsChoice) {
-            const matched = entries.find(entry => strictAllSoulsRank(entry.title) === selector.allSoulsChoice);
+            const matched = entries.find(entry => {
+                const titleRank = strictAllSoulsRank(entry.title);
+                if (titleRank) return titleRank === selector.allSoulsChoice;
+                // The CRBC PDF uses the same catalog title for all three
+                // Masses and prints their number in the first body heading.
+                for (const line of String(entry.text || '').split(/\r?\n/)) {
+                    if (strictIdentifySection(line, 'ZH')) break;
+                    const rank = strictAllSoulsRank(line);
+                    if (rank) return rank === selector.allSoulsChoice;
+                }
+                return false;
+            });
             return matched || null;
         }
         if (selector.slot === 'vigil') {

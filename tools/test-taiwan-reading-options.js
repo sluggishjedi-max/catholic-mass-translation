@@ -23,7 +23,8 @@ try {
       getStrictMassSelector = () => ({ slot:'day', specialVigil:'', allSoulsChoice:choice });
       const source = fetchTraditionalChineseDailyStaticSource(allSoulsDate);
       const selected = strictParseDailyMass('ZH', source, allSoulsDate, 'TW');
-      return { choice, title:selected.title, complete:hasCompleteCoreDailyReadings(selected,allSoulsDate,'ZH','TW') };
+      return { choice, selected:strictSourceLines(source).map(strictAllSoulsRank).find(Boolean), title:selected.title,
+        complete:hasCompleteCoreDailyReadings(selected,allSoulsDate,'ZH','TW') };
     });
     return {
       sections: Object.keys(parsed.data),
@@ -42,5 +43,9 @@ try {
   assert.equal(result.gospelCitation, '聖瑪竇福音 1,18-23');
   assert.deepEqual(result.lostSections, [], 'Numbered reading options truncated another Taiwan formulary');
   assert(result.allSouls.every(mass => mass.complete), 'An actual Taiwan All Souls Mass was truncated');
+  assert.deepEqual(result.allSouls.map(mass => mass.selected), ['first', 'second', 'third']);
   console.log(JSON.stringify(result));
+} catch (error) {
+  console.error(error.message);
+  process.exitCode = 1;
 } finally { runtime.close(); }
