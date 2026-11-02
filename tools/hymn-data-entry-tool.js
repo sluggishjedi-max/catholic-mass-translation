@@ -24,7 +24,7 @@ const hymnDataDisplayPath = usesCountryModules
 const DEFAULT_PORT = 5227;
 const DEFAULT_HOST = '127.0.0.1';
 const MAX_BODY_BYTES = 8 * 1024 * 1024;
-const VOICE_TYPES = ['단성', '화성', '4성부'];
+const VOICE_TYPES = ['단성', '화성', '2성부', '3성부', '4성부'];
 const REFRAIN_HEADING_RE = /^(?:\[\s*(?:후렴구?|후렴|반복|응송|refrain|chorus|ref\.?|antiphona|antiphon|antífona|ant\.?|[đdð]\.?|[đdð]k\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?)\s*\]\s*|(?:후렴구?|후렴|반복|응송|refrain|chorus|ref\.?|antiphona|antiphon|antífona|ant\.?|[đdð]\.?|[đdð]k\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?|[r℟])(?=\s|[:：.)\]-]|$)\s*[:：.)\]-]?\s*)(.*)$/iu;
 
 function parseArgs(argv) {
@@ -178,8 +178,28 @@ function parseVerseHeading(line) {
   const value = headingComparableText(line);
   if (!value) return null;
 
+  const responsorial = value.match(/^(?:\[\s*[đdð]x\s*\]|[đdð]x\s*[:：.)])\s*(.*)$/iu);
+  if (responsorial) return { label: '후렴', rest: responsorial[1] || '' };
+
+  const qualifiedSection = value.match(/^\[\s*(도입|간주|마침|intro|introduction|bridge|coda|outro)\s*(\([^)]+\))\s*\]\s*(.*)$/iu);
+  if (qualifiedSection) return { label: `${qualifiedSection[1]} ${qualifiedSection[2]}`, rest: qualifiedSection[3] || '' };
+
+  const variantRefrain = value.match(/^(?:\[\s*)?(?:후렴|refrain|chorus|[đdð]k)\s*(?:\(([^)]+)\)|([2-4]\s*bè))\s*\]?\s*[:：.)-]?\s*(.*)$/iu);
+  if (variantRefrain) {
+    return { label: `후렴 (${variantRefrain[1] || variantRefrain[2]})`, rest: variantRefrain[3] || '' };
+  }
+
+  const section = value.match(/^(?:\[\s*(가사|도입|간주|마침|영광송|栄唱|intro|introduction|bridge|coda|outro|doxology)\s*\]|(가사|도입|간주|마침|영광송|栄唱|intro|introduction|bridge|coda|outro|doxology)(?=\s*[:：.]|\s*$)\s*[:：.]?)\s*(.*)$/iu);
+  if (section) return { label: section[1] || section[2], rest: section[3] || '' };
+
   let match = value.match(/^(\d+)\s*절\s*[:：.)\]-]?\s*(.*)$/u);
   if (match) return { label: `${Number(match[1])}절`, rest: match[2] || '' };
+
+  match = value.match(/^第\s*(\d+)\s*節\s*[:：.)-]?\s*(.*)$/u);
+  if (match) return { label: `${Number(match[1])}절`, rest: match[2] || '' };
+
+  match = value.match(/^(\d{1,2})$/u);
+  if (match) return { label: `${Number(match[1])}절`, rest: '' };
 
   match = value.match(/^(\d+)\s*[.)]\s*(.*)$/u);
   if (match) return { label: `${Number(match[1])}절`, rest: match[2] || '' };
@@ -1350,6 +1370,8 @@ const INDEX_HTML = String.raw`<!doctype html>
             <option value="">선택 없음</option>
             <option value="단성">단성</option>
             <option value="화성">화성</option>
+            <option value="2성부">2성부</option>
+            <option value="3성부">3성부</option>
             <option value="4성부">4성부</option>
           </select>
         </label>
@@ -1907,6 +1929,7 @@ async function main() {
 module.exports = {
   createServer,
   countryHymnModules,
+  parseLyricsVerses,
   loadHymnData,
   prepareCountryModuleSources,
   readCountryModuleSources,

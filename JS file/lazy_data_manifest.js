@@ -30,8 +30,8 @@ globalThis.ordoLazyDataManifest = {
     "IE": "countries/ireland/ireland_hymns.js?v=1b9a72fa000a",
     "GB-NIR": "countries/ireland/ireland_hymns.js?v=1b9a72fa000a",
     "IT": "countries/italy/italy_hymns.js?v=751fec3471c5",
-    "JP": "countries/japan/japan_hymns.js?v=c73064c442e9",
-    "KR": "countries/korea/korea_hymns.js?v=00fa2ce16a7b",
+    "JP": "countries/japan/japan_hymns.js?v=ba24a68e6749",
+    "KR": "countries/korea/korea_hymns.js?v=06cdb40d272a",
     "MX": "countries/mexico/mexico_hymns.js?v=a4d9a1950cf1",
     "NZ": "countries/new_zealand/new_zealand_hymns.js?v=88c080cd738a",
     "PH": "countries/philippines/philippines_hymns.js?v=89f6ff4cbec1",
@@ -40,7 +40,7 @@ globalThis.ordoLazyDataManifest = {
     "TW": "countries/taiwan/taiwan_hymns.js?v=a58269fb6401",
     "US": "countries/united_states/united_states_hymns.js?v=312d9049d807",
     "VA": "countries/vatican/vatican_hymns.js?v=24a42166a937",
-    "VN": "countries/vietnam/vietnam_hymns.js?v=b9afce03019d"
+    "VN": "countries/vietnam/vietnam_hymns.js?v=61b471920310"
   },
   "churches": {
     "AU": "countries/australia/australia_churches.js?v=fa0d431e5004",
