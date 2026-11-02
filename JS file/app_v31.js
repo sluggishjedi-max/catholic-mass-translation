@@ -1505,7 +1505,14 @@
             || (d.getMonth() === 11 && d.getDate() === 25);
     }
 
+    function primarySourceLiturgyColor(info = state.liturgyInfo) {
+        const source = info && info.primarySourceColor;
+        return source && source.lang === normalizeSelectableLang(state.currentLoc, '') ? source.color : '';
+    }
+
     function recommendedVestmentColor(date, colorValue, info = {}) {
+        const sourceColor = primarySourceLiturgyColor(info);
+        if (sourceColor) return sourceColor;
         if (info && info.localCalendar) return colorValue;
         if (isGoldVestmentDate(date, info)) return liturgyColorMap.gold;
         if (isRoseVestmentDate(date)) return liturgyColorMap.rose;
@@ -9398,7 +9405,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 state.isSunday = state.isSunday || state.liturgyInfo.isSolemnity;
             }
         }
-        if (allowExternalLiturgy && isPrimarySource && !options.suppressTitle && parsed.color && !suppressNonLeftProper && !shouldSuppressMismatchedLocalProperLanguage(lang)) state.liturgyInfo.color = parsed.color;
+        if (allowExternalLiturgy && isPrimarySource) {
+            // Honor the original record loaded through the configured source,
+            // including Firestore edits. Title inference and another language's
+            // calendar must not replace its published liturgical color.
+            const color = parsed.color || (calendarContext && calendarContext.color);
+            if (color) {
+                state.liturgyInfo.primarySourceColor = { lang: normalizeSelectableLang(lang, ''), color };
+                state.liturgyInfo.color = color;
+            } else delete state.liturgyInfo.primarySourceColor;
+        }
     }
 
     function parseKoreanDailyMass(html) {
@@ -18056,8 +18072,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         // The Korean Missal overlays are added after remote sources merge, so
         // their source-pairing rule must be evaluated at this point as well.
         applyCachedVariantAlignments(fetchedData, activeDate);
-        const baseLang = getLiturgicalBaseLang();
-        state.liturgyInfo.color = colorFromSourceTitle(state.liturgyInfo.names[baseLang] || state.liturgyInfo.krName, state.liturgyInfo.color);
+        const sourceLang = normalizeSelectableLang(state.currentLoc, 'KR');
+        state.liturgyInfo.color = primarySourceLiturgyColor()
+            || colorFromSourceTitle(state.liturgyInfo.names[sourceLang] || '', state.liturgyInfo.color);
         state.liturgyInfo.color = recommendedVestmentColor(getActiveLiturgicalSourceDate(), state.liturgyInfo.color, state.liturgyInfo);
         ensureDefaultPrefaceHint(state.liturgyInfo, getActiveLiturgicalSourceDate());
         applyDailyReadingsToMassData(fetchedData);
