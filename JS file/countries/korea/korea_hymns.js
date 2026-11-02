@@ -38,7 +38,7 @@
     "firstLine": "1. 나는 굳게 믿나이다, 진실하온 주님 말씀. 성세 때에 드린 맹세 충실하게 지키리다. 주께서 나를 택하여 교회로 부르시오니 진심 감사 하나이다.",
     "composer": "Alb. Gereon Stein",
     "lyricist": "",
-    "copyright": "",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -127,7 +127,7 @@
         "title": "主なる神は偉大なり"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Capitol CMG publishing",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -208,7 +208,7 @@
         "title": "光の神"
       }
     },
-    "copyright": "한국천주교주교회의",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -296,7 +296,7 @@
         "title": "賛美せよ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -365,7 +365,7 @@
         "title": "賛美の祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -443,7 +443,7 @@
         "title": "賛美の歌を歌いながら"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -518,7 +518,7 @@
         "title": "主に向かって新しい歌を"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -622,7 +622,7 @@
         "title": "早朝"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -691,7 +691,7 @@
         "title": "私たちが共に集まり"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 고도임",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -764,7 +764,7 @@
         "title": "主を賛美せよ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -849,7 +849,7 @@
         "title": "主なる神"
       }
     },
-    "copyright": "김영자",
+    "copyright": "김영자 / 최창무",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -930,7 +930,7 @@
         "title": "主をあがめます"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1022,7 +1022,7 @@
         "title": "主を慕います"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 박정미",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1113,7 +1113,7 @@
         "title": "主に賛美を捧げよう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1194,7 +1194,7 @@
         "title": "主を賛美せよ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1279,7 +1279,7 @@
         "title": "全世界よ、主を"
       }
     },
-    "copyright": "한국천주교주교회의",
+    "copyright": "Lucien Deiss / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1370,7 +1370,7 @@
         "title": "正義の神"
       }
     },
-    "copyright": "",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1454,7 +1454,7 @@
         "title": "主を呼んだ日"
       }
     },
-    "copyright": "이종철",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1538,7 +1538,7 @@
         "title": "主に従います"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1611,7 +1611,7 @@
         "title": "闇を照らしてください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1698,7 +1698,7 @@
         "title": "全能なる主よ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1770,7 +1770,7 @@
         "title": "天地創造の前に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1849,7 +1849,7 @@
         "title": "全世界を治められる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -1933,7 +1933,7 @@
         "title": "我が心の神よ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2012,7 +2012,7 @@
         "title": "愛の神"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2087,7 +2087,7 @@
         "title": "導いてください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2162,7 +2162,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2225,7 +2225,7 @@
         "title": "不義が世界を襲っても"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2288,7 +2288,7 @@
         "title": "主イエスに従ってください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2355,7 +2355,7 @@
         "title": "勝利の十字架"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2426,7 +2426,7 @@
         "title": "この大きなすべての恵み"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2489,7 +2489,7 @@
         "title": "いつも主と共に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2564,7 +2564,7 @@
         "title": "私たちの主イエス・キリスト"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2631,7 +2631,7 @@
         "title": "道、真実、人生、"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2702,7 +2702,7 @@
         "title": "私はぶどうの木です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / 김경옥",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2777,7 +2777,7 @@
         "title": "聖イエスの心"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2856,7 +2856,7 @@
         "title": "幸せな人"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이연국 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -2931,7 +2931,7 @@
         "title": "幸せ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3022,7 +3022,7 @@
         "title": "一つにしてください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3089,7 +3089,7 @@
         "title": "求めてください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3148,7 +3148,7 @@
         "title": "兄弟に与えたもの"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3223,7 +3223,7 @@
         "title": "最も笑顔の人を扱う"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3294,7 +3294,7 @@
         "title": "永遠の命"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 박정미",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3361,7 +3361,7 @@
         "title": "平和を与えてください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3432,7 +3432,7 @@
         "title": "真の愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3495,7 +3495,7 @@
         "title": "愛の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Tina Benitez / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3566,7 +3566,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3629,7 +3629,7 @@
         "title": "主私たちに愛と自由"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김금자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3700,7 +3700,7 @@
         "title": "オンギジャン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영자 / 김부자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3763,7 +3763,7 @@
         "title": "主は私の羊飼いです"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Joseph Gelineau / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3842,7 +3842,7 @@
         "title": "主は私の羊飼いです。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3917,7 +3917,7 @@
         "title": "神 私の主"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이태성 / 박창득",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -3996,7 +3996,7 @@
         "title": "主は私の羊飼いです"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Paul Quinlan / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4071,7 +4071,7 @@
         "title": "主は私の羊飼いです"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "구명림 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4138,7 +4138,7 @@
         "title": "良い羊飼い"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4213,7 +4213,7 @@
         "title": "羊飼いに沿って"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4280,7 +4280,7 @@
         "title": "私たちは牧場の人々です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "구명림 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4351,7 +4351,7 @@
         "title": "体は激しくあなたを探します"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이연국 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4422,7 +4422,7 @@
         "title": "主は私の避難所"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4489,7 +4489,7 @@
         "title": "主の名前を賞賛する"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 김부자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4556,7 +4556,7 @@
         "title": "主イエスと変えることはできません。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Word Music LLC",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4627,7 +4627,7 @@
         "title": "主の御心を成し遂げなさい"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4698,7 +4698,7 @@
         "title": "全世界に伝播する"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김금자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4765,7 +4765,7 @@
         "title": "イスラエルを聞く"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영자 / 윤승자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4832,7 +4832,7 @@
         "title": "エルサレムの祝福"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4899,7 +4899,7 @@
         "title": "主の民が集まってください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -4962,7 +4962,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5021,7 +5021,7 @@
         "title": "喜びと平和あふれる場所"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5092,7 +5092,7 @@
         "title": "極めて聖なる神殿"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5167,7 +5167,7 @@
         "title": "平和を求める祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5246,7 +5246,7 @@
         "title": "平和の祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영자 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5321,7 +5321,7 @@
         "title": "タボルサンのイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "박계순",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5388,7 +5388,7 @@
         "title": "万民の王キリスト"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5459,7 +5459,7 @@
         "title": "真の王であるキリスト"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김금자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5534,7 +5534,7 @@
         "title": "主キリスト私たちの王"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5601,7 +5601,7 @@
         "title": "キリスト王国"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 김부자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5664,7 +5664,7 @@
         "title": "州の天主の力と"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5739,7 +5739,7 @@
         "title": "栄光の王に賛美を"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5814,7 +5814,7 @@
         "title": "キリストの勝利"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5889,7 +5889,7 @@
         "title": "聖なる聖参"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 조정옥",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -5956,7 +5956,7 @@
         "title": "栄光の州聖三位"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6027,7 +6027,7 @@
         "title": "主賛美"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6102,7 +6102,7 @@
         "title": "主賛美原"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6165,7 +6165,7 @@
         "title": "どれだけ良い"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6228,7 +6228,7 @@
         "title": "ズガリヤの歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6339,7 +6339,7 @@
         "title": "今夜（夕方の祈り）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6406,7 +6406,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6477,7 +6477,7 @@
         "title": "イム・ハソソ救世主"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6548,7 +6548,7 @@
         "title": "主神の憐れみ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6619,7 +6619,7 @@
         "title": "救い主を送ってください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6690,7 +6690,7 @@
         "title": "救世主はすぐにオサ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6769,7 +6769,7 @@
         "title": "救世主私の週"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6844,7 +6844,7 @@
         "title": "イムハソソインマヌエル"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6919,7 +6919,7 @@
         "title": "空は露雨のように"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -6998,7 +6998,7 @@
         "title": "星を建てた週"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7069,7 +7069,7 @@
         "title": "神約束された方"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7140,7 +7140,7 @@
         "title": "救いのメシア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7207,7 +7207,7 @@
         "title": "イザヤが言った"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7278,7 +7278,7 @@
         "title": "静かな夜 聖なる夜"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7353,7 +7353,7 @@
         "title": "東方の星"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7422,7 +7422,7 @@
         "title": "グロリア、いと高き方の誕生"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7499,7 +7499,7 @@
         "title": "行って崇拝する"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7568,7 +7568,7 @@
         "title": "今日の赤ちゃんイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7637,7 +7637,7 @@
         "title": "愛する赤ちゃんイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7706,7 +7706,7 @@
         "title": "愛の赤ちゃんイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7775,7 +7775,7 @@
         "title": "冷たい風を吹く馬小屋"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7840,7 +7840,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7913,7 +7913,7 @@
         "title": "ああ小さなゴールベツレヘム"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -7986,7 +7986,7 @@
         "title": "かわいい赤ちゃん"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8059,7 +8059,7 @@
         "title": "傾斜"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8136,7 +8136,7 @@
         "title": "空の高いところに栄光"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8201,7 +8201,7 @@
         "title": "飼い葉桶に横たわっています。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8298,7 +8298,7 @@
         "title": "聖ヨセフと聖マリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8367,7 +8367,7 @@
         "title": "ナザレット聖家"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8432,7 +8432,7 @@
         "title": "受難の約束"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8509,7 +8509,7 @@
         "title": "主イエスを見なさい"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8578,7 +8578,7 @@
         "title": "極端な不安に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8651,7 +8651,7 @@
         "title": "ゴルゴタの丘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8724,7 +8724,7 @@
         "title": "主は私たちのために"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8797,7 +8797,7 @@
         "title": "受難のイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 조화선",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8862,7 +8862,7 @@
         "title": "多くの悲しみに"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -8935,7 +8935,7 @@
         "title": "救いの十字架"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9012,7 +9012,7 @@
         "title": "十字架を取る"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9085,7 +9085,7 @@
         "title": "恵みの悔い改めの時"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "서병수 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9146,7 +9146,7 @@
         "title": "主の聖なる十字架"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9219,7 +9219,7 @@
         "title": "メシアの受難"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9284,7 +9284,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9345,7 +9345,7 @@
         "title": "兄弟、喜び、アレルヤ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9414,7 +9414,7 @@
         "title": "アレルヤを歌おう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9487,7 +9487,7 @@
         "title": "イエスが復活しました。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9560,7 +9560,7 @@
         "title": "賛美歌を歌おう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9625,7 +9625,7 @@
         "title": "感謝の歌を"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "International Liturgy Publications",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9694,7 +9694,7 @@
         "title": "復活の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9755,7 +9755,7 @@
         "title": "聖なる復活"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9832,7 +9832,7 @@
         "title": "アレルヤアレルヤ主イエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9897,7 +9897,7 @@
         "title": "イエスが復活しました。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -9970,7 +9970,7 @@
         "title": "復活した主イエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10039,7 +10039,7 @@
         "title": "満王の王"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10112,7 +10112,7 @@
         "title": "アレルヤ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10189,7 +10189,7 @@
         "title": "主の昇天をたたえよう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10254,7 +10254,7 @@
         "title": "死に勝った"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10331,7 +10331,7 @@
         "title": "ああ、聖霊です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10416,7 +10416,7 @@
         "title": "真理の聖霊"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10489,7 +10489,7 @@
         "title": "主の霊が"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10558,7 +10558,7 @@
         "title": "イム・ハソは聖霊です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10627,7 +10627,7 @@
         "title": "イム・ハソは聖霊です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10712,7 +10712,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10781,7 +10781,7 @@
         "title": "慰め者聖霊"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10862,7 +10862,7 @@
         "title": "暗闇の光である聖霊"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -10931,7 +10931,7 @@
         "title": "すべての恵みの源である聖霊"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11000,7 +11000,7 @@
         "title": "主よ、"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11069,7 +11069,7 @@
         "title": "ああ、極端な謎"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11142,7 +11142,7 @@
         "title": "オソソ主イエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11215,7 +11215,7 @@
         "title": "主よ、来てください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11284,7 +11284,7 @@
         "title": "私たちの主イエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11353,7 +11353,7 @@
         "title": "一言だけしてください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11422,7 +11422,7 @@
         "title": "イエスは私たちの心に来てください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11487,7 +11487,7 @@
         "title": "救世主イエス・キリスト"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11548,7 +11548,7 @@
         "title": "世界の真の幸せ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11613,7 +11613,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11690,7 +11690,7 @@
         "title": "聖体を賛美する"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11771,7 +11771,7 @@
         "title": "成体性血その謎"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11844,7 +11844,7 @@
         "title": "命の聖体女"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11913,7 +11913,7 @@
         "title": "餅とお酒の形状に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -11978,7 +11978,7 @@
         "title": "主の宴"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12051,7 +12051,7 @@
         "title": "命の様式"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "GIA Publications, Inc.",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12124,7 +12124,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12193,7 +12193,7 @@
         "title": "オミハオン聖体"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12266,7 +12266,7 @@
         "title": "愛の神社"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12339,7 +12339,7 @@
         "title": "慈悲深いイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영선",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12408,7 +12408,7 @@
         "title": "ああ、聖なる命の泉"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12469,7 +12469,7 @@
         "title": "キリストの魂"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12530,7 +12530,7 @@
         "title": "愛の主よ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12591,7 +12591,7 @@
         "title": "愛の謎"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12664,7 +12664,7 @@
         "title": "これより大きい恵みと"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12725,7 +12725,7 @@
         "title": "信仰希望愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12794,7 +12794,7 @@
         "title": "出会ったイスラエルの民"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12867,7 +12867,7 @@
         "title": "聖体の前に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -12936,7 +12936,7 @@
         "title": "主の愛電荷"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13009,7 +13009,7 @@
         "title": "主の小さなボウル"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13078,7 +13078,7 @@
         "title": "神秘的な体と血"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13151,7 +13151,7 @@
         "title": "神妙に来たこの霊的"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13220,7 +13220,7 @@
         "title": "救いのための犠牲"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13285,7 +13285,7 @@
         "title": "救いのための犠牲"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13346,7 +13346,7 @@
         "title": "救いの犠牲者"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Lorenzo Perosi / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13411,7 +13411,7 @@
         "title": "救いのための犠牲"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Alajos Werner / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13472,7 +13472,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13533,7 +13533,7 @@
         "title": "天使の様式"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13598,7 +13598,7 @@
         "title": "存続された成体"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13663,7 +13663,7 @@
         "title": "存続された成体"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13728,7 +13728,7 @@
         "title": "存続された成体"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13793,7 +13793,7 @@
         "title": "存続された成体"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13854,7 +13854,7 @@
         "title": "存続された成体"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13915,7 +13915,7 @@
         "title": "成体の中にいるイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -13976,7 +13976,7 @@
         "title": "天主聖者イエス・キリスト"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14061,7 +14061,7 @@
         "title": "悪いイエス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14118,7 +14118,7 @@
         "title": "私はフォームです。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14183,7 +14183,7 @@
         "title": "聖体の中におられる主"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14244,7 +14244,7 @@
         "title": "イエスの心"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14321,7 +14321,7 @@
         "title": "熱心な主の愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14394,7 +14394,7 @@
         "title": "恵みの泉"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14455,7 +14455,7 @@
         "title": "救世主の誠意"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14528,7 +14528,7 @@
         "title": "ああ聖なる心"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14597,7 +14597,7 @@
         "title": "主の聖心だけが"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14666,7 +14666,7 @@
         "title": "愛の誠意"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14739,7 +14739,7 @@
         "title": "誠意の愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 성심 수녀회",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14808,7 +14808,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 김금자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14869,7 +14869,7 @@
         "title": "主の切なる愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -14938,7 +14938,7 @@
         "title": "愛するイエスは誠実です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15007,7 +15007,7 @@
         "title": "私の命を捧げる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15084,7 +15084,7 @@
         "title": "主よ私の体と心"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15153,7 +15153,7 @@
         "title": "あなたが受け取る"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15218,7 +15218,7 @@
         "title": "祭壇に贈り物を贈ろうとするとき"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15279,7 +15279,7 @@
         "title": "オンヌリの神"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15348,7 +15348,7 @@
         "title": "永遠のお父さん"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15409,7 +15409,7 @@
         "title": "十字架に拘束された"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15478,7 +15478,7 @@
         "title": "私たちの誠実なご提案"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15547,7 +15547,7 @@
         "title": "主よあなたの紙ここ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / 이분매",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15616,7 +15616,7 @@
         "title": "主よ、体と心を捧げます。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15677,7 +15677,7 @@
         "title": "生活した供物"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15742,7 +15742,7 @@
         "title": "受け取ってください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영자 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15811,7 +15811,7 @@
         "title": "主よ、私を見てください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15892,7 +15892,7 @@
         "title": "主よ、許し、住所"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -15985,7 +15985,7 @@
         "title": "神私を哀れにここに"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16122,7 +16122,7 @@
         "title": "主よお世話になりました"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16203,7 +16203,7 @@
         "title": "神は慈悲です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김금자 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16276,7 +16276,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16341,7 +16341,7 @@
         "title": "この世界を去った兄弟"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16410,7 +16410,7 @@
         "title": "死から命へ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16487,7 +16487,7 @@
         "title": "安らぎをアドレスする"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16552,7 +16552,7 @@
         "title": "永遠の安息をアドレスする"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16625,7 +16625,7 @@
         "title": "生きて私を信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16686,7 +16686,7 @@
         "title": "主の永遠の光"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16751,7 +16751,7 @@
         "title": "私たちの母親"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16820,7 +16820,7 @@
         "title": "印字された聖マリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16889,7 +16889,7 @@
         "title": "愛する母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -16962,7 +16962,7 @@
         "title": "主イエスの母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17031,7 +17031,7 @@
         "title": "ジャモシン・マリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17096,7 +17096,7 @@
         "title": "聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17161,7 +17161,7 @@
         "title": "祝福されたマリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17230,7 +17230,7 @@
         "title": "海の星である聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17303,7 +17303,7 @@
         "title": "海の星"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17376,7 +17376,7 @@
         "title": "マリア・モフヨ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17441,7 +17441,7 @@
         "title": "聖母の聖月"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17518,7 +17518,7 @@
         "title": "澄んだ空の五月は"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17587,7 +17587,7 @@
         "title": "チャンパに浮かぶ日葉株"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17656,7 +17656,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17729,7 +17729,7 @@
         "title": "一生を主のために"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17798,7 +17798,7 @@
         "title": "極めて聖なる童貞"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17863,7 +17863,7 @@
         "title": "曲げてください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17928,7 +17928,7 @@
         "title": "無変海上"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -17997,7 +17997,7 @@
         "title": "聖母よ私たちのために"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18066,7 +18066,7 @@
         "title": "君の頭を飾る"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18135,7 +18135,7 @@
         "title": "空の女王"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18208,7 +18208,7 @@
         "title": "空の女王"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18277,7 +18277,7 @@
         "title": "天の母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "신원식 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18342,7 +18342,7 @@
         "title": "私の喜びマリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18411,7 +18411,7 @@
         "title": "救世主の母よ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18488,7 +18488,7 @@
         "title": "聖母昇天"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18561,7 +18561,7 @@
         "title": "栄光の聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18626,7 +18626,7 @@
         "title": "罪なしに想像されたマリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18695,7 +18695,7 @@
         "title": "痛みの母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18756,7 +18756,7 @@
         "title": "十字架の道の聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18893,7 +18893,7 @@
         "title": "その一人の息子"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -18972,7 +18972,7 @@
         "title": "アヴェ・マリアの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19035,7 +19035,7 @@
         "title": "アヴェ・マリアの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이연국 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19098,7 +19098,7 @@
         "title": "アヴェ・マリアの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19175,7 +19175,7 @@
         "title": "女性の間に祝福された聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19234,7 +19234,7 @@
         "title": "マリアの歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19329,7 +19329,7 @@
         "title": "ロサリオの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19412,7 +19412,7 @@
         "title": "ロザリオが祈るとき"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "박기현",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19479,7 +19479,7 @@
         "title": "恵みがいっぱいのマリア"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19550,7 +19550,7 @@
         "title": "アヴェ・マリアの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19613,7 +19613,7 @@
         "title": "アヴェ・マリアの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19676,7 +19676,7 @@
         "title": "海の星である聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19747,7 +19747,7 @@
         "title": "空の女王"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19818,7 +19818,7 @@
         "title": "空の女王"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19889,7 +19889,7 @@
         "title": "モフです。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -19956,7 +19956,7 @@
         "title": "天上の毛布女"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20019,7 +20019,7 @@
         "title": "聖ヨセフ賞賛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20090,7 +20090,7 @@
         "title": "聖ヨセフ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20153,7 +20153,7 @@
         "title": "義の聖ヨセフ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20228,7 +20228,7 @@
         "title": "殉教者の賛歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20307,7 +20307,7 @@
         "title": "ムグンムジンセ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20402,7 +20402,7 @@
         "title": "103位 殉教大人"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영자 / 조화선",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20477,7 +20477,7 @@
         "title": "殉教者の信仰"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20556,7 +20556,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20635,7 +20635,7 @@
         "title": "大人の賛美歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이동훈",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20710,7 +20710,7 @@
         "title": "丙寅迫害の殉教者の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20785,7 +20785,7 @@
         "title": "福音を伝えた使徒たち"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20852,7 +20852,7 @@
         "title": "使徒聖ペテロとパウロ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -20923,7 +20923,7 @@
         "title": "聖女消化デレッサ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / 신원식",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21006,7 +21006,7 @@
         "title": "保護天使"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21077,7 +21077,7 @@
         "title": "すべての大人の成熟しました。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21144,7 +21144,7 @@
         "title": "大人呼称祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21227,7 +21227,7 @@
         "title": "新しい信者歓迎"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "박기현",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21298,7 +21298,7 @@
         "title": "新しくなった兄弟"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "현종건 / 박창득",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21373,7 +21373,7 @@
         "title": "恵みのある今日"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영선",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21440,7 +21440,7 @@
         "title": "一体になるように祝福を"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21507,7 +21507,7 @@
         "title": "司祭の心"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21582,7 +21582,7 @@
         "title": "今日この祭りの日に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "서병수 / 안현숙",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21653,7 +21653,7 @@
         "title": "司祭"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김영자 / 김부자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21724,7 +21724,7 @@
         "title": "十字架の主に従って"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "박기현",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21795,7 +21795,7 @@
         "title": "私たちの代謝祭"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Lorenzo Perosi / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21858,7 +21858,7 @@
         "title": "司祭ヨ大祭館"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21921,7 +21921,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -21984,7 +21984,7 @@
         "title": "栄光の賛歌（グロリア）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22063,7 +22063,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22126,7 +22126,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22185,7 +22185,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22244,7 +22244,7 @@
         "title": "栄光の賛歌（グロリア）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22319,7 +22319,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22382,7 +22382,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22441,7 +22441,7 @@
         "title": "信仰の神秘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22500,7 +22500,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22563,7 +22563,7 @@
         "title": "栄光の賛歌（グロリア）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22638,7 +22638,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22701,7 +22701,7 @@
         "title": "主の祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22768,7 +22768,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22831,7 +22831,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22894,7 +22894,7 @@
         "title": "栄光の賛歌（グロリア）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -22969,7 +22969,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23032,7 +23032,7 @@
         "title": "主の祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23099,7 +23099,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23158,7 +23158,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23221,7 +23221,7 @@
         "title": "栄光の賛歌（グロリア）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23300,7 +23300,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23363,7 +23363,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23426,7 +23426,7 @@
         "title": "ミサの開祭"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23493,7 +23493,7 @@
         "title": "栄唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23556,7 +23556,7 @@
         "title": "福音朗読前のアレルヤ唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23623,7 +23623,7 @@
         "title": "奉納"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23690,7 +23690,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23761,7 +23761,7 @@
         "title": "愛の聖体聖師"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23824,7 +23824,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23891,7 +23891,7 @@
         "title": "閉祭の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -23954,7 +23954,7 @@
         "title": "ミサの開祭"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24017,7 +24017,7 @@
         "title": "栄唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24076,7 +24076,7 @@
         "title": "福音朗読前のアレルヤ唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24135,7 +24135,7 @@
         "title": "奉納"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24198,7 +24198,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24257,7 +24257,7 @@
         "title": "生け贄に捧げる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24320,7 +24320,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24383,7 +24383,7 @@
         "title": "聖体拝領"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24446,7 +24446,7 @@
         "title": "ミサの閉祭"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24509,7 +24509,7 @@
         "title": "ミサの開祭"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24580,7 +24580,7 @@
         "title": "奉納"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24647,7 +24647,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24718,7 +24718,7 @@
         "title": "閉祭の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK / Archdiocese of Seoul",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24789,7 +24789,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24852,7 +24852,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24915,7 +24915,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -24978,7 +24978,7 @@
         "title": "入祭唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25041,7 +25041,7 @@
         "title": "あわれみの賛歌（キリエ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25104,7 +25104,7 @@
         "title": "答唱詩編"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25167,7 +25167,7 @@
         "title": "詠唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25230,7 +25230,7 @@
         "title": "感謝の賛歌（サンクトゥス）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25293,7 +25293,7 @@
         "title": "平和の賛歌（アニュス・デイ）"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25360,7 +25360,7 @@
         "title": "拝領唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25423,7 +25423,7 @@
         "title": "答唱詩編"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25502,7 +25502,7 @@
         "title": "答唱詩編"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25561,7 +25561,7 @@
         "title": "答唱詩編"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25620,7 +25620,7 @@
         "title": "イエス様の言葉"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25683,7 +25683,7 @@
         "title": "福音朗読前のアレルヤ唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25742,7 +25742,7 @@
         "title": "福音朗読前のアレルヤ唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25801,7 +25801,7 @@
         "title": "福音朗読前のアレルヤ唱"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25860,7 +25860,7 @@
         "title": "共同祈願の応答"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25927,7 +25927,7 @@
         "title": "共同祈願の応答"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -25994,7 +25994,7 @@
         "title": "共同祈願の応答"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26061,7 +26061,7 @@
         "title": "共同祈願の応答"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26128,7 +26128,7 @@
         "title": "共同祈願の応答"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26187,7 +26187,7 @@
         "title": "信仰の神秘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26246,7 +26246,7 @@
         "title": "信仰の神秘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26317,7 +26317,7 @@
         "title": "信仰の神秘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26388,7 +26388,7 @@
         "title": "信仰の神秘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26459,7 +26459,7 @@
         "title": "信仰の神秘"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이연국 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26530,7 +26530,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이연국 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26589,7 +26589,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26648,7 +26648,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26707,7 +26707,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26766,7 +26766,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26825,7 +26825,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26884,7 +26884,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -26943,7 +26943,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27002,7 +27002,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27061,7 +27061,7 @@
         "title": "アーメン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27120,7 +27120,7 @@
         "title": "主の祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27187,7 +27187,7 @@
         "title": "主の祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27246,7 +27246,7 @@
         "title": "国と力と栄光は限りなくあなたのもの"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27305,7 +27305,7 @@
         "title": "国と力と栄光は限りなくあなたのもの"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이연국 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27364,7 +27364,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27417,7 +27417,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27470,7 +27470,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27523,7 +27523,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27576,7 +27576,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27629,7 +27629,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27682,7 +27682,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27735,7 +27735,7 @@
         "title": "グレゴリオ聖歌詩編ウィンドウ8選法"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27788,7 +27788,7 @@
         "title": "主の中の一つ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "OCP / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27855,7 +27855,7 @@
         "title": "主と私"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Capitol CMG Publishing",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -27930,7 +27930,7 @@
         "title": "主を賛美する"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28001,7 +28001,7 @@
         "title": "世界は美しいです。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Soeur Sourire / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28088,7 +28088,7 @@
         "title": "貧しい人です"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28159,7 +28159,7 @@
         "title": "私は主を探します。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Odette Vercruysse / 김수환",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28230,7 +28230,7 @@
         "title": "きらびやかな光明が降りた日"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "John W. Peterson Music Company / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28297,7 +28297,7 @@
         "title": "世界に叫びたい"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Marcello Giombini / Figlie di San Paolo",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28356,7 +28356,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28435,7 +28435,7 @@
         "title": "主の栄光"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28510,7 +28510,7 @@
         "title": "朝の夜"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28581,7 +28581,7 @@
         "title": "イエスの考え"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28652,7 +28652,7 @@
         "title": "ムグンセ私たちの週"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28719,7 +28719,7 @@
         "title": "万物の名前超越"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28790,7 +28790,7 @@
         "title": "エルサレムの私の祝福された家"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28861,7 +28861,7 @@
         "title": "愛する人は誰でも"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -28936,7 +28936,7 @@
         "title": "愛がなければ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29011,7 +29011,7 @@
         "title": "いいですね。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29090,7 +29090,7 @@
         "title": "主よ、栄光と賛美"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29181,7 +29181,7 @@
         "title": "新しい曲を歌う"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29272,7 +29272,7 @@
         "title": "小麦の一つ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29351,7 +29351,7 @@
         "title": "主はいつも私の前に祀られます。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29446,7 +29446,7 @@
         "title": "私は世界の光です"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29513,7 +29513,7 @@
         "title": "あなたを切ないでください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29600,7 +29600,7 @@
         "title": "千年もあなたの目に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29679,7 +29679,7 @@
         "title": "主を賛美しなさいエルサレム"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29758,7 +29758,7 @@
         "title": "万軍の主よ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29845,7 +29845,7 @@
         "title": "主の家に行こうとするとき"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29916,7 +29916,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -29987,7 +29987,7 @@
         "title": "何を食べるか"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30050,7 +30050,7 @@
         "title": "アレルヤ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30137,7 +30137,7 @@
         "title": "喜びで主に仕えなさい。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30216,7 +30216,7 @@
         "title": "賛美の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30283,7 +30283,7 @@
         "title": "主に私を導いてください。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30350,7 +30350,7 @@
         "title": "主は私の羊飼いです"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30417,7 +30417,7 @@
         "title": "山上教訓"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30488,7 +30488,7 @@
         "title": "子供のように"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30559,7 +30559,7 @@
         "title": "主翼の下"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30630,7 +30630,7 @@
         "title": "賛美しなさい主の名を"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30705,7 +30705,7 @@
         "title": "主に感謝しましょう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30772,7 +30772,7 @@
         "title": "主の優しい御手が"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Lowem Wagner / 이종철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30847,7 +30847,7 @@
         "title": "主の足跡を知っていますか"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "OCP / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30914,7 +30914,7 @@
         "title": "主の国が来るとき"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Sherman Bros. / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -30997,7 +30997,7 @@
         "title": "与える私たちの幸せ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Ira Forest Stanphill / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31068,7 +31068,7 @@
         "title": "慈悲深い主"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이순규 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31155,7 +31155,7 @@
         "title": "私は主に頼ります。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31230,7 +31230,7 @@
         "title": "イエス様に従って"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31301,7 +31301,7 @@
         "title": "わたしたちは主の愛を"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31372,7 +31372,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31443,7 +31443,7 @@
         "title": "上手な言葉"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31510,7 +31510,7 @@
         "title": "召された若者"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31581,7 +31581,7 @@
         "title": "満室に進む"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Lou Fortunate / 김금자",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31652,7 +31652,7 @@
         "title": "主に進む"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31715,7 +31715,7 @@
         "title": "危険に陥った人へ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "윤영철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31786,7 +31786,7 @@
         "title": "青い小川の"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Sacred Songs / Word Music LLC",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31857,7 +31857,7 @@
         "title": "主の豊かな賛美"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31924,7 +31924,7 @@
         "title": "主に従うために集まっている私たち"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -31991,7 +31991,7 @@
         "title": "二人と三人が集まったところ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "OCP / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32066,7 +32066,7 @@
         "title": "働いて祈る"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32129,7 +32129,7 @@
         "title": "主のみことばを聞いて"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32192,7 +32192,7 @@
         "title": "あなたが持っているものを売る"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32259,7 +32259,7 @@
         "title": "おかしいぶどうの木"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32334,7 +32334,7 @@
         "title": "エムマウス"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / 성엽",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32413,7 +32413,7 @@
         "title": "この世界を過ぎて"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32484,7 +32484,7 @@
         "title": "巡礼者の歌"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Miriam Therese Winter of Medical Mission Sisters / 이종철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32555,7 +32555,7 @@
         "title": "イエスの名"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32626,7 +32626,7 @@
         "title": "救いの犠牲"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Lucien Deiss / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32721,7 +32721,7 @@
         "title": "ああ、偉大な贈り物です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32800,7 +32800,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김남조",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32875,7 +32875,7 @@
         "title": "キリストは私の岩"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Miriam Therese Winter of Medical Mission Sisters / 김남조",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -32955,7 +32955,7 @@
         "title": "空の大人たち"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33026,7 +33026,7 @@
         "title": "天上の楽園に連れて行って"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33089,7 +33089,7 @@
         "title": "川のように流れる愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33156,7 +33156,7 @@
         "title": "主その天を広げなさい。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "김남조",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33223,7 +33223,7 @@
         "title": "世界の光です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33290,7 +33290,7 @@
         "title": "主よ愛で一つになる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Lucien Deiss / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33369,7 +33369,7 @@
         "title": "アレルヤ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33432,7 +33432,7 @@
         "title": "偉大な王です。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33507,7 +33507,7 @@
         "title": "その音の全地へ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33598,7 +33598,7 @@
         "title": "主に栄光を与えましょう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33665,7 +33665,7 @@
         "title": "嬉しい日"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33732,7 +33732,7 @@
         "title": "信仰によって"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33807,7 +33807,7 @@
         "title": "ヨルダン川で"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33874,7 +33874,7 @@
         "title": "日月聖霊を出して"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -33945,7 +33945,7 @@
         "title": "四千年を楽しみにしていた"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34024,7 +34024,7 @@
         "title": "嬉しい救い主に来ました。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34103,7 +34103,7 @@
         "title": "東方に現れた星"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34174,7 +34174,7 @@
         "title": "聖なる夜"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "배진구",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34245,7 +34245,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34332,7 +34332,7 @@
         "title": "天の死神"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34403,7 +34403,7 @@
         "title": "見たが十字架の主"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34470,7 +34470,7 @@
         "title": "十字架に近い"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34545,7 +34545,7 @@
         "title": "十字架の下に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34612,7 +34612,7 @@
         "title": "この日が主が用意した日"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34687,7 +34687,7 @@
         "title": "生きている主の聖霊"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Capitol CMG Publishing",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34758,7 +34758,7 @@
         "title": "愛の火を放す"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34825,7 +34825,7 @@
         "title": "聖霊が日差しのように"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "Miriam Therese Winter of Medical Mission Sisters / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34904,7 +34904,7 @@
         "title": "主は私たちを愛しました。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -34983,7 +34983,7 @@
         "title": "聖なる聖霊"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "OCP / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35054,7 +35054,7 @@
         "title": "イエス様を称える"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35133,7 +35133,7 @@
         "title": "夕食の謎"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이순규",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35200,7 +35200,7 @@
         "title": "全能の主の愛"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35267,7 +35267,7 @@
         "title": "受け取って私たちの心"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "GIA Publications, Inc.",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35342,7 +35342,7 @@
         "title": "主のパンを分かち合おう"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35417,7 +35417,7 @@
         "title": "命の様式"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35504,7 +35504,7 @@
         "title": "私たちと一緒に"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35579,7 +35579,7 @@
         "title": "最後の晩餐"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35642,7 +35642,7 @@
         "title": "恋に来た主よ"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35713,7 +35713,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35784,7 +35784,7 @@
         "title": "アベベルム"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35847,7 +35847,7 @@
         "title": "誠意"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35922,7 +35922,7 @@
         "title": "主に上げる祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -35993,7 +35993,7 @@
         "title": "弱くなった私たちの供物"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36064,7 +36064,7 @@
         "title": "主よ、私たちは今"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36139,7 +36139,7 @@
         "title": "綿瓶とワイン"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36206,7 +36206,7 @@
         "title": "主よ大佐だったな"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36290,7 +36290,7 @@
         "title": "主よ慈悲を与えます"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "윤선규 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36373,7 +36373,7 @@
         "title": "主よ、あなたの顔"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36460,7 +36460,7 @@
         "title": "私が絶望の中で"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36531,7 +36531,7 @@
         "title": "善良な人99"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "원선오",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36602,7 +36602,7 @@
         "title": "永遠の安息"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36665,7 +36665,7 @@
         "title": "今日この世界を去った"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36732,7 +36732,7 @@
         "title": "痛みもありません。"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36803,7 +36803,7 @@
         "title": "アヴェ・マリアの祈り"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철 / CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36866,7 +36866,7 @@
         "title": "存続した天主聖母"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -36933,7 +36933,7 @@
         "title": "聖マリアは"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -37008,7 +37008,7 @@
         "title": "聖なる童貞"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -37075,7 +37075,7 @@
         "title": "楽しんでください"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -37142,7 +37142,7 @@
         "title": "私は信じる"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "CCK",
     "book": "가톨릭성가",
     "scoreImages": [
       {
@@ -37225,7 +37225,7 @@
         "title": "おめでとうございます"
       }
     },
-    "copyright": "한국천주교중앙협의회",
+    "copyright": "이종철",
     "book": "가톨릭성가",
     "scoreImages": [
       {
