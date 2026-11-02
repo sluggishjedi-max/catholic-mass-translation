@@ -141,7 +141,8 @@
     const REMOTE_FETCH_RETRIES = 0;
     const REMOTE_FETCH_TIMEOUT_MS = 8000;
     const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 60000;
-    const KTCG_CITATION_TIMEOUT_MS = 10000;
+    // Allow the source page's title lookup and a cold proxy start to complete.
+    const KTCG_CITATION_TIMEOUT_MS = 25000;
     const KPV_PROFILE_NORTH = 'VIETNAM_NORTH';
     const KPV_PROFILE_SOUTH = 'VIETNAM_SOUTH';
     // KPV exposes two Vietnamese calendars. The 17th parallel is the stable

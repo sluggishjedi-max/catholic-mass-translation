@@ -63,6 +63,11 @@ async function main() {
   const registry = massTool.runCountryMassSources(massTool.readCountryMassSources()).registry;
   const countries = Object.fromEntries(metadata.countryMetadataItems().map(item => [item.jurisdiction, item]));
   const server = http.createServer((req, res) => {
+    // Reproduce the observed cold proxy response exceeding the old 10s limit.
+    if (new URL(req.url, 'http://localhost').pathname === '/kpv') {
+      setTimeout(() => res.setHeader('Content-Type', 'application/json').end(JSON.stringify({ success: true, data: enriched })), 11000);
+      return;
+    }
     const file = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
     if (!file.startsWith(root + path.sep)) return res.writeHead(403).end();
     fs.readFile(file, (error, data) => error ? res.writeHead(404).end() : res.setHeader('Content-Type', file.endsWith('.js') ? 'application/javascript' : 'text/html;charset=utf-8').end(data));
@@ -71,10 +76,11 @@ async function main() {
   const browser = await chromium.launch({ headless: true });
   try {
     const page = await browser.newPage({ viewport: { width: 390, height: 844 } });
-    await page.addInitScript(({ registry, countries }) => {
+    await page.addInitScript(({ registry, countries, endpoint }) => {
       window.ordoPrayerEditorPreview = true;
+      window.ORDO_KTCG_PROXY_ENDPOINT = endpoint;
       window.uploadedCountryMassData = registry; window.uploadedCountryMassMetadata = countries;
-    }, { registry, countries });
+    }, { registry, countries, endpoint: `http://127.0.0.1:${server.address().port}/kpv` });
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
     await page.goto(`http://127.0.0.1:${server.address().port}/V31.html`);
     const result = await page.evaluate(async ({ payload, title, legacy, proper }) => {
@@ -89,6 +95,8 @@ async function main() {
       state.liturgyInfo = buildGeneratedLiturgyInfo(date);
       startupNoticeDecision = true; document.body.classList.remove('consent-pending');
       document.getElementById('consent-modal').style.display = 'none';
+      const slowPayload = await requestKtcgkpvMassReadingJson(date);
+      check(slowPayload.temporalTitle === title, 'Cold proxy response lost its source title');
       const reports = [];
       for (const [kind, source, expected] of [['modern', { ...payload, temporalTitle: title }, title], ['legacy', legacy, legacy.mass_reading[0].date_info.daily_title], ['proper', { ...proper, temporalTitle: title }, proper.primary.celebration.name]]) {
         state.liturgyInfo = buildGeneratedLiturgyInfo(date);
@@ -104,7 +112,7 @@ async function main() {
       }
       return reports;
     }, { payload, title, legacy, proper });
-    console.log(JSON.stringify({ viewport: 390, titleCases: result, legacyBodyPreserved: true, wrongDateRejected: true }, null, 2));
+    console.log(JSON.stringify({ viewport: 390, titleCases: result, legacyBodyPreserved: true, wrongDateRejected: true, slowProxyResponse: 'passed after 11s' }, null, 2));
   } finally { await browser.close(); server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); }
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });
