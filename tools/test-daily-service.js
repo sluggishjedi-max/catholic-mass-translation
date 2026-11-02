@@ -5,7 +5,7 @@ const {dayId,datesFrom}=require('../functions/daily-schema');
 function memoryFirestore(){
   const data=new Map();
   const snapshot=ref=>({id:ref.id,ref,exists:data.has(ref.path),data:()=>data.has(ref.path)?structuredClone(data.get(ref.path)):undefined});
-  function reference(path){return {path,id:path.split('/').at(-1),get parent(){return collection(path.split('/').slice(0,-1).join('/'));},collection:name=>collection(path+'/'+name),get:async()=>snapshot(reference(path)),set:async(value,options)=>{const old=data.get(path)||{};data.set(path,options?.merge?merge(old,value):structuredClone(value));},delete:async()=>data.delete(path)};}
+  function reference(path){return {path,id:path.split('/').at(-1),get parent(){return collection(path.split('/').slice(0,-1).join('/'));},collection:name=>collection(path+'/'+name),get:async()=>snapshot(reference(path)),set:async(value,options)=>{const old=data.get(path)||{};data.set(path,options?.mergeFields?{...structuredClone(old),...structuredClone(value)}:options?.merge?merge(old,value):structuredClone(value));},delete:async()=>data.delete(path)};}
   function merge(a,b){const result=structuredClone(a);for(const [key,value]of Object.entries(b))result[key]=value&&typeof value==='object'&&!Array.isArray(value)?merge(result[key]||{},value):structuredClone(value);return result;}
   function collection(path){return {path,get parent(){return reference(path.split('/').slice(0,-1).join('/'));},doc:id=>reference(path+'/'+id),orderBy(field,direction){return {limit(){return {async get(){return {docs:[...data.keys()].filter(key=>key.startsWith(path+'/')&&!key.slice(path.length+1).includes('/')).map(reference).map(snapshot).sort((a,b)=>(a.data()[field]>b.data()[field]?1:-1)*(direction==='desc'?-1:1))};}};}};}};}
   return {data,collection,getAll:async(...refs)=>refs.map(snapshot),async runTransaction(action){const writes=[];const result=await action({get:async ref=>snapshot(ref),create(ref,value){writes.push(['create',ref,value]);},set(ref,value,options){writes.push(['set',ref,value,options]);}});for(const [kind,ref]of writes)if(kind==='create')assert(!data.has(ref.path),'Immutable version was overwritten');for(const [kind,ref,value,options]of writes){if(kind==='create')data.set(ref.path,structuredClone(value));else await ref.set(value,options);}return result;}};
@@ -15,6 +15,20 @@ const parsed=text=>({title:'Synthetic Mass',color:'#fff',data:{reading1:{text},g
 async function main(){
   assert.equal(dayId('VN','2026-11-01'),'베트남_2026-11-01');assert.equal(datesFrom('2026-11-20').at(-1),'2026-12-19');
   const db=memoryFirestore(),store=createStore(db);
+  const recoveredRequest={...request,variant:'first'};
+  const fallback={...parsed('Fixed fallback'),fallbackSource:{translation:'UBPT'},sourceMode:'missal-fixed-formulary'};
+  fallback.data.reading1.options=[{text:'Obsolete alternative'}];fallback.data.reading2={text:'Obsolete second reading'};
+  await store.appendCollected(recoveredRequest,{parsed:fallback,fingerprint:'fallback'});
+  const recovered=parsed('Dated original');recovered.sourceUrl='https://example.test/dated-original';
+  await store.appendCollected(recoveredRequest,{parsed:recovered,fingerprint:'recovered',validation:{complete:true,missing:[]}});
+  assert.deepEqual((await store.get(recoveredRequest)).parsed,recovered,'Published snapshot retained fallback flags or removed reading fields');
+  assert.equal((await store.version(recoveredRequest,1)).parsed.fallbackSource.translation,'UBPT','Original fallback history was modified');
+  const recoveredPath='daily_mass/'+dayId(request.country,request.date)+'/records/hanoi__first';
+  db.data.get(recoveredPath).parsed.fallbackSource={translation:'stale recursive merge'};
+  const repaired=await store.appendCollected(recoveredRequest,{parsed:recovered,fingerprint:'recovered',validation:{complete:true,missing:[]}});
+  assert.equal(repaired.changed,false);assert.equal(repaired.latestVersion,2);
+  assert.deepEqual((await store.get(recoveredRequest)).parsed,recovered,'Unchanged-source refresh did not repair stale published provenance');
+  assert.equal((await store.get(recoveredRequest)).latestCollectedVersion,2,'Snapshot replacement erased record metadata');
   let result=await store.appendCollected(request,{parsed:parsed('Original one'),fingerprint:'source-one',snapshots:[{url:'https://example.test',status:200,body:'Original one'},{url:'https://verification.test',status:200,verification:true,body:'Comparison sample'},{url:'javascript:alert(1)',status:200,body:''},{url:'https://failed.test',status:404,body:''}]});assert.equal(result.latestVersion,1);
   result=await store.appendEdited(request,parsed('Edited two'),{baseVersion:1,expectedLatestVersion:1,authorUid:'administrator'});assert.equal(result.latestVersion,2);
   result=await store.appendCollected(request,{parsed:parsed('Original one'),fingerprint:'source-one'});assert.equal(result.changed,false);assert.equal(result.latestVersion,2);
@@ -42,6 +56,7 @@ async function main(){
   assert.equal((await store.get(partialRequest)).publishedVersion,2);assert.equal((await store.get(partialRequest)).parsed.data.reading1.text,'Complete original');
   const day=db.data.get('daily_mass/'+dayId('JP',request.date));assert.equal(day.availableVariants.official.length,2);assert.equal(day.records.official__day.latestVersion,3);
   console.log('Daily Mass: immutable v1/v2/v3/v4 history, unchanged-source deduplication, manual-edit preservation, optimistic conflict and administrator access passed.');
+  console.log('Published snapshots: recovered originals clear stale fallback flags and removed sections; unchanged-source repair preserves immutable versions and metadata.');
 }
 if(require.main===module)main().catch(error=>{console.error(error);process.exitCode=1;});
 module.exports={memoryFirestore};

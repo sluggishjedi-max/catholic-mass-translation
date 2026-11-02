@@ -23,7 +23,11 @@ function createStore(db){
         const data=base.data();originCollectedVersion=data.originCollectedVersion||(data.kind==='collected'?data.number:0);
       }
       if(kind==='collected'&&previous.lastCollectedHash===fingerprint){
-        tx.set(ref,{lastCheckedAt:now,latestParserRevision:result.parserRevision||PARSER_REVISION,collectionStatus:result.validation?.complete===false?'partial':'unchanged',lastError:'',comparison:result.comparison||null},{merge:true});
+        const update={lastCheckedAt:now,latestParserRevision:result.parserRevision||PARSER_REVISION,collectionStatus:result.validation?.complete===false?'partial':'unchanged',lastError:'',comparison:result.comparison||null};
+        // Refresh the published snapshot even for an unchanged source. Older
+        // recursive writes could retain fallback flags absent from the version.
+        if(result.validation?.complete!==false&&previous.publishedKind==='collected'&&previous.publishedVersion===previous.latestCollectedVersion)update.parsed=parsed;
+        tx.set(ref,update,{mergeFields:Object.keys(update)});
         return {changed:false,latestVersion:latest,publishedVersion:previous.publishedVersion};
       }
       const number=latest+1,partial=kind==='collected'&&result.validation?.complete===false,protectedEdit=kind==='collected'&&previous.publishedKind==='edited',keepPublished=protectedEdit||partial;
@@ -35,7 +39,9 @@ function createStore(db){
       if(kind==='collected'){update.latestCollectedVersion=number;update.lastCollectedHash=fingerprint;update.latestParserRevision=result.parserRevision||PARSER_REVISION;update.comparison=result.comparison||null;}
       if(!keepPublished)Object.assign(update,{publishedVersion:number,publishedKind:kind,parsed,publishedAt:now,reviewNeeded:false});
       else {update.reviewNeeded=true;if(partial)update.collectionStatus='partial';}
-      tx.set(ref,update,{merge:true});
+      // A published parsed document is a complete snapshot, not a nested patch.
+      // Keep record metadata while replacing removed sections and provenance.
+      tx.set(ref,update,{mergeFields:Object.keys(update)});
       tx.set(ref.parent.parent,{country:request.country,countryName:COUNTRIES[request.country][0],date:request.date,updatedAt:now,records:{[ref.id]:{sourceId:request.sourceId,variant:request.variant,latestVersion:number,publishedVersion:keepPublished?previous.publishedVersion||0:number,title:keepPublished?previous.parsed?.title||parsed.title:parsed.title,reviewNeeded:keepPublished,collectionStatus:partial?'partial':'ready'}}},{merge:true});
       return {changed:true,latestVersion:number,publishedVersion:keepPublished?previous.publishedVersion||0:number,protectedEdit};
     });
