@@ -1632,8 +1632,8 @@ function handleError(res, error) {
 function prayerAppPreviewHtml() {
   const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const scripts = Array.from(html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*><\/script>/giu))
-    .filter(match => /prayer_data_api\.js(?:\?|$)|_prayers\.js(?:\?|$)|\/app_v\d+(?:_\d+)?\.js(?:\?|$)/u.test(match[1]))
-    .map(match => match[0]).join('\n');
+    .filter(match => /prayer_data_api\.js(?:\?|$)|_prayers\.js(?:\?|$)|\/app_v\d+(?:_\d+)?(?:\.min)?\.js(?:\?|$)/u.test(match[1]))
+    .map(match => match[0].replace(/\sdefer\b/iu, '')).join('\n');
   return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/giu, '')
     .replace('</head>', `<style>
       body > :not(#prayer-panel) { display: none !important; }

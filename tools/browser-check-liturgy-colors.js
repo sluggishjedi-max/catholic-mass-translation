@@ -30,7 +30,7 @@ const live = process.env.ORDO_COLOR_RECORDS ? JSON.parse(fs.readFileSync(process
         }
         return url.hostname === '127.0.0.1' ? route.continue() : route.abort();
       });
-      await page.goto(`http://127.0.0.1:${server.address().port}/V31.html`);
+      await page.goto(`http://127.0.0.1:${server.address().port}/V31.1.html`);
       const result = await page.evaluate(async live => {
         const check = (value, message) => { if (!value) throw Error(message); };
         let date = new Date(2026, 10, 4, 12);

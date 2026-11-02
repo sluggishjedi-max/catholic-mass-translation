@@ -159,7 +159,8 @@
 
         /* 미사 본문은 예식 단락(part) 안에 문장별 행(row)을 쌓아 좌우 1:1 대칭을 유지합니다. */
         .missal-container { max-width: 1100px; margin: 0 auto; padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); background: white; }
-        .role-legend { position: sticky; top: var(--floating-liturgy-offset, 0px); z-index: 998; max-width: 1100px; max-height: calc(38vh - var(--floating-liturgy-offset, 0px)); margin: 0 auto; padding: 12px 20px; overflow-y: auto; background: white; border: 1px solid #ddd; border-top: 0; border-radius: 0 0 8px 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16); color: #333; font-family: 'Noto Sans', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans CJK JP', 'Segoe UI', Arial, sans-serif; font-size: var(--chrome-font-size); transition: top 0.18s ease, max-height 0.18s ease; }
+        .role-legend { position: sticky; top: var(--floating-liturgy-offset, 0px); z-index: 998; max-width: 1100px; max-height: calc(38vh - var(--floating-liturgy-offset, 0px)); margin: 0 auto; padding: 12px 20px; overflow-y: auto; background: white; border: 1px solid #ddd; border-top: 0; border-radius: 0 0 8px 8px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16); color: #333; font-family: 'Noto Sans', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans CJK KR', 'Noto Sans CJK JP', 'Segoe UI', Arial, sans-serif; font-size: var(--chrome-font-size); transition: max-height 0.18s ease; }
+        body.liturgy-loading .role-legend { position: static; }
         .role-legend .role-legend-group { font-family: inherit; }
         .role-legend-group[hidden] { display: none !important; }
         .role-legend-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; }
@@ -795,7 +796,7 @@
 <div id="settings-modal" role="dialog" aria-modal="true" aria-labelledby="lbl-settings-title">
     <div class="settings-content">
         <h3 id="lbl-settings-title">설정 (Settings)</h3>
-        <span id="settings-version-label" class="settings-version-label" aria-label="App version">V31</span>
+        <span id="settings-version-label" class="settings-version-label" aria-label="App version">V31.1</span>
         <section class="admin-review-settings" aria-labelledby="admin-review-title">
             <div class="admin-review-heading">
             <h4 id="admin-review-title">관리자 전례 검토</h4>
@@ -908,36 +909,36 @@
 <footer id="main-footer">
     </footer>
 
-<script src="JS%20file/prayer_data_api.js?v=20261027-lazy"></script>
-<script src="JS%20file/lazy_data_manifest.js?v=20261027-lazy"></script>
-<script src="JS%20file/lazy_data_loader.js?v=20261027-lazy"></script>
-<script src="JS%20file/korean_temporal_data.js?v=20260822-v26"></script>
-<script src="JS%20file/korean_blessing_data.js?v=20260822-v26"></script>
-<script src="JS%20file/english_blessing_data.js?v=20261015-v29-2"></script>
-<script src="JS%20file/multilingual_blessing_data.js?v=20261015-v29-2"></script>
-<script src="JS%20file/bishop_data_loader.js?v=20260918-archdiocese-context"></script>
+<script defer src="JS%20file/prayer_data_api.js?v=20261027-lazy"></script>
+<script defer src="JS%20file/lazy_data_manifest.js?v=20261027-lazy"></script>
+<script defer src="JS%20file/lazy_data_loader.js?v=20261027-lazy"></script>
+<script defer src="JS%20file/korean_temporal_data.js?v=20260822-v26"></script>
+<script defer src="JS%20file/korean_blessing_data.js?v=20260822-v26"></script>
+<script defer src="JS%20file/english_blessing_data.js?v=20261015-v29-2"></script>
+<script defer src="JS%20file/multilingual_blessing_data.js?v=20261015-v29-2"></script>
+<script defer src="JS%20file/bishop_data_loader.js?v=20260918-archdiocese-context"></script>
 
-<script src="JS%20file/bible/lang-ko.js?v=20260910"></script>
-<script src="JS%20file/bible/lang-gm.js?v=20260910"></script>
-<script src="JS%20file/bible/lang-en.js?v=20261002-psalm-alias"></script>
-<script src="JS%20file/bible/lang-vn.js?v=20261001-full-intros"></script>
-<script src="JS%20file/bible/lang-it.js?v=20261024-psalm-alias"></script>
-<script src="JS%20file/bible/lang-pt.js?v=20261024-psalm-alias"></script>
-<script src="JS%20file/bible/lang-es.js?v=20261024-psalm-alias"></script>
-<script src="JS%20file/bible/lang-jp.js?v=20261024-psalm-alias"></script>
-<script src="JS%20file/bible/lang-la.js?v=20260910"></script>
-<script src="JS%20file/bible/lang-zh.js?v=20261102-pdf-book-label"></script>
-<script src="JS%20file/bible/citation.js?v=20261102-multilingual-verses"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="JS%20file/firebase_data_loader.js?v=20261027-country-scoped"></script>
-<script src="JS%20file/admin_date_review.js?v=20261024-main-date-picker"></script>
-<script src="JS%20file/lazy/special-common.js?v=20261027-lazy"></script>
-<script src="JS%20file/special_liturgy_order.js?v=20261015-v29-2"></script>
-<script src="JS%20file/missal_preface_index.js?v=20261007"></script>
-<script src="JS%20file/daily_mass_content.js?v=20261028-v31-content-1"></script>
-<script src="JS%20file/daily_server_loader.js?v=20261028-v31-2"></script>
-<script src="JS%20file/app_v31.js?v=20261102-v31-source-colors-1"></script>
+<script defer src="JS%20file/bible/lang-ko.js?v=20260910"></script>
+<script defer src="JS%20file/bible/lang-gm.js?v=20260910"></script>
+<script defer src="JS%20file/bible/lang-en.js?v=20261002-psalm-alias"></script>
+<script defer src="JS%20file/bible/lang-vn.js?v=20261001-full-intros"></script>
+<script defer src="JS%20file/bible/lang-it.js?v=20261024-psalm-alias"></script>
+<script defer src="JS%20file/bible/lang-pt.js?v=20261024-psalm-alias"></script>
+<script defer src="JS%20file/bible/lang-es.js?v=20261024-psalm-alias"></script>
+<script defer src="JS%20file/bible/lang-jp.js?v=20261024-psalm-alias"></script>
+<script defer src="JS%20file/bible/lang-la.js?v=20260910"></script>
+<script defer src="JS%20file/bible/lang-zh.js?v=20261102-pdf-book-label"></script>
+<script defer src="JS%20file/bible/citation.js?v=20261102-multilingual-verses"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script defer src="JS%20file/firebase_data_loader.js?v=20261027-country-scoped"></script>
+<script defer src="JS%20file/admin_date_review.js?v=20261024-main-date-picker"></script>
+<script defer src="JS%20file/lazy/special-common.js?v=20261027-lazy"></script>
+<script defer src="JS%20file/special_liturgy_order.js?v=20261015-v29-2"></script>
+<script defer src="JS%20file/missal_preface_index.js?v=20261007"></script>
+<script defer src="JS%20file/daily_mass_content.js?v=20261028-v31-content-1"></script>
+<script defer src="JS%20file/daily_server_loader.js?v=20261028-v31-2"></script>
+<script defer src="JS%20file/app_v31_1.min.js?v=20261102-v31-1"></script>
 </body>
 </html>

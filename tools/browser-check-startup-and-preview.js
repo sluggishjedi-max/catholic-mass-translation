@@ -33,7 +33,7 @@ async function checkStartup(browser, base, filename, decision) {
   await page.route('**/*', async route => {
     const url = new URL(route.request().url());
     if (url.hostname !== '127.0.0.1') return route.abort();
-    if (/app_v[0-9_]+\.js$/.test(url.pathname)) await blockedData;
+    if (/app_v[0-9_]+(?:\.min)?\.js$/.test(url.pathname)) await blockedData;
     if (url.pathname.includes('firebase_data_loader.js')) {
       return route.fulfill({ contentType: 'application/javascript', body: 'window.ordoFirebaseDataReady = new Promise(() => {});' });
     }
@@ -187,7 +187,7 @@ async function checkPreview(browser, editorBase, appBase) {
   try {
     browser = await chromium.launch({ headless: true });
     if (!process.argv.includes('--preview-only')) {
-      for (const filename of ['index.html', 'V28.html']) {
+      for (const filename of ['index.html', 'V31.1.html']) {
         for (const decision of ['accept', 'late-accept', 'decline']) await checkStartup(browser, appBase, filename, decision);
       }
     }

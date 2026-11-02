@@ -5,7 +5,7 @@ const root=path.resolve(__dirname,'..'),registry=mass.runCountryMassSources(mass
  const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(error,data)=>{if(error)return res.writeHead(404).end();res.setHeader('Content-Type',file.endsWith('.js')?'application/javascript':'text/html;charset=utf-8');res.end(data);});});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const browser=await chromium.launch({headless:true});
  try{const page=await browser.newPage();await page.addInitScript(({registry,countries})=>{window.ordoPrayerEditorPreview=true;window.uploadedCountryMassData=registry;window.uploadedCountryMassMetadata=countries;},{registry,countries:Object.fromEntries(metadata.countryMetadataItems().map(item=>[item.jurisdiction,item]))});
- await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());await page.goto(`http://127.0.0.1:${server.address().port}/V31.html`);
+ await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());await page.goto(`http://127.0.0.1:${server.address().port}/V31.1.html`);
  const result=await page.evaluate(async()=>{
   const check=(condition,message)=>{if(!condition)throw Error(message);};
   state.selectedLocationCode=state.currentLoc='KR';state.targetLang='EN';state.targetLocationCode='US';state.useGps=false;

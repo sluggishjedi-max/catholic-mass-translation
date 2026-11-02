@@ -19,6 +19,17 @@ const {dailyFunctions}=require('../functions/daily-functions');
  await db.collection('daily_mass_jobs').doc(tasks.at(-3).jobId).set({status:'completed',results:[{variant:'day',status:'ready'}]},{merge:true});
  assert.equal((await service.collectionJob(identity,'admin-missing-date')).status,'completed');
  await assert.rejects(()=>service.collectionJob(identity,'bad/path'),/invalid-run-id/);
+ // Already-published fallbacks are repairable beyond the normal missing-date
+ // window, without widening that window or repeatedly enqueueing a repair.
+ const {koreaToday}=require('../functions/daily-schema');
+ const later=new Date(koreaToday()+'T12:00:00Z');later.setUTCDate(later.getUTCDate()+52);
+ const future=later.toISOString().slice(0,10),repair={country:'KR',date:future,source:'official',variant:'christmas_vigil'};
+ await service.store.appendCollected({...repair,sourceId:'official'},{parsed:{title:'Fixed published source',data:{reading1:{text:'Published reading'}},fallbackSource:{calendarInvariant:true}},fingerprint:'old-fallback',parserRevision:'old-parser',validation:{complete:true}});
+ const queuedBefore=tasks.length;
+ await service.read(repair,{queueMissing:true});await service.read(repair,{queueMissing:true});
+ assert.equal(tasks.length,queuedBefore+1,'Published fixed fallback was not repaired exactly once');
+ await service.read({...repair,date:future,variant:'day'},{queueMissing:true});
+ assert.equal(tasks.length,queuedBefore+1,'Future missing date bypassed the normal 30-day window');
  const definitions=dailyFunctions({adminSecret:{value:()=>''},allowedOrigin:()=>'',rateLimit:()=>true});
  const schedule=definitions.scheduleDailyMassCollection.__endpoint.scheduleTrigger;
  assert.equal(schedule.schedule,'0 4 10,20,30 * *');assert.equal(schedule.timeZone,'Asia/Seoul');

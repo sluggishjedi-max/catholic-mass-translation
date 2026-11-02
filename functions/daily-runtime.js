@@ -17,7 +17,7 @@ function safeSourceUrl(value){
 function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDocuments}={}){
   const country=countryCode(input.country),date=isoDate(input.date),lang=COUNTRIES[country][1];
   const virtualConsole=new VirtualConsole();
-  const dom=new JSDOM(bundleFiles().html,{url:'https://sluggishjedi-max.github.io/catholic-mass-translation/V31.html',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
+  const dom=new JSDOM(bundleFiles().html,{url:'https://sluggishjedi-max.github.io/catholic-mass-translation/V31.1.html',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
   const window=dom.window,context=dom.getInternalVMContext();
   const snapshots=[];
   let snapshotBytes=0;
@@ -54,11 +54,13 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
   function run(code,name='daily-runtime-bridge'){return vm.runInContext(code,context,{filename:name,timeout:10000});}
   const loaded=new Set();
   function load(file){if(!loaded.has(file)){run(scriptSource(file),file);loaded.add(file);}}
-  for(const file of bundleFiles().manifest.core.filter(file=>!file.endsWith('/app_v31.js')))load(file);
+  const appFile=bundleFiles().manifest.core.find(file=>/\/app_v[\d_]+(?:\.min)?\.js$/.test(file));
+  if(!appFile)throw Error('Packaged application runtime is missing');
+  for(const file of bundleFiles().manifest.core.filter(file=>file!==appFile))load(file);
   const special='JS file/lazy/special-'+country+'.js';if(bundleFiles().manifest.hashes[special])load(special);
   const missal='JS file/lazy/missal-'+lang+'.js';if(bundleFiles().manifest.hashes[missal])load(missal);
   if(country==='TW')load('JS file/countries/taiwan/taiwan_daily_mass_data.js');
-  load('JS file/app_v31.js');
+  load(appFile);
   // jsdom does not execute dynamically inserted script elements. Resolve only
   // packaged app modules directly, and fail immediately for missing modules.
   window.__loadServerModule=src=>{

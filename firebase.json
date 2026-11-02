@@ -46,6 +46,7 @@
         "*.local"
       ],
       "predeploy": [
+        "node tools/build-app-runtime.js --check",
         "node tools/build-server-daily-runtime.js",
         "node --check \"$RESOURCE_DIR/index.js\""
       ]

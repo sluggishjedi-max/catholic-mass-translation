@@ -2,6 +2,12 @@ const assert=require('node:assert/strict');
 const {createRuntime}=require('../functions/daily-runtime');
 const runtime=createRuntime({country:'DE',date:'2026-10-30',source:'official'});
 try{
+ for(const [lang,heading,reading,gospel] of [['KR','[백] 주님 성탄 대축일 - 전야 미사','제1독서','복음'],['EN','Christmas Vigil Mass','Reading 1','Gospel'],['JP','主の降誕 前晩のミサ','第一朗読','福音']]){
+  runtime.window.__vigilLines=[heading,'<이 미사는 성탄 대축일 제1 저녁 기도 앞이나 뒤에 드린다.>',reading,'Selected original reading.',gospel,'Selected original Gospel.'];
+  runtime.window.__vigilLang=lang;
+  const scoped=runtime.run("strictScopeLinesForMassVariant(__vigilLines,{slot:'vigil',specialVigil:'christmas_vigil'},__vigilLang)");
+  assert(scoped.includes('Selected original Gospel.'),lang+' numbered prayer rubric truncated the Vigil Mass');
+ }
  runtime.window.__source=`<html><body><h1>Erzabtei navigation</h1><div id="schott"><h1>FREITAG</h1><h2>TAGESgebet</h2><p>Gebet für diesen Tag.</p>
  <h4>Jahr I</h4><h2>ERSTE Lesung<span class="lb_right">Röm 9, 1–5</span></h2><p>Lesung aus dem Brief an die Römer.</p><p>Nur im ungeraden Jahr zu verwenden.</p><h2>ANTWORTPSALM<span class="lb_right">Ps 147, 12–13</span></h2><p>Kv Lobt den Herrn. – Kv</p>
  <h4>Jahr II</h4><h2>ERSTE Lesung<span class="lb_right">Phil 1, 1–11</span></h2><p>Lesung aus dem Brief an die Philipper.</p><p>Dies ist der Lesungstext für das gerade Jahr.</p><h2>ANTWORTPSALM<span class="lb_right">Ps 111 (110), 1–2.3–4</span></h2><p>Kv Groß sind die Werke des Herrn. – Kv</p><p>Ich danke dem Herrn von ganzem Herzen.</p>

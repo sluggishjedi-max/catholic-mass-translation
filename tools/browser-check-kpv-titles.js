@@ -82,7 +82,7 @@ async function main() {
       window.uploadedCountryMassData = registry; window.uploadedCountryMassMetadata = countries;
     }, { registry, countries, endpoint: `http://127.0.0.1:${server.address().port}/kpv` });
     await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
-    await page.goto(`http://127.0.0.1:${server.address().port}/V31.html`);
+    await page.goto(`http://127.0.0.1:${server.address().port}/V31.1.html`);
     const result = await page.evaluate(async ({ payload, title, legacy, proper }) => {
       const check = (value, message) => { if (!value) throw Error(message); };
       const date = new Date(2026, 10, 3, 12);

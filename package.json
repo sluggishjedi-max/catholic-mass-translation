@@ -58,9 +58,13 @@
     "firebase:check": "node --check functions/index.js",
     "test": "npm run browser:check --",
     "daily:server:build": "node tools/build-server-daily-runtime.js",
-    "daily:server:check": "node tools/build-server-daily-runtime.js && node tools/test-daily-service.js && node tools/test-daily-queue.js && node tools/test-daily-content.js && node tools/test-daily-parser.js && node tools/test-daily-loader.js",
+    "daily:server:check": "node tools/build-server-daily-runtime.js && node tools/test-daily-service.js && node tools/test-daily-queue.js && node tools/test-daily-content.js && node tools/test-daily-parser.js && node tools/test-daily-loader.js && node tools/test-cbck-vigil.js",
     "browser:check:daily-editor": "node tools/browser-check-daily-editor.js",
-    "browser:check:v31": "set ORDO_CHECK_HTML=V31.html&& node tools/browser-check-v28.js"
+    "browser:check:v31": "set ORDO_CHECK_HTML=V31.html&& node tools/browser-check-v28.js",
+    "app:build": "node tools/build-app-runtime.js",
+    "app:check": "node tools/build-app-runtime.js --check",
+    "browser:check:v31.1": "set ORDO_CHECK_HTML=V31.1.html&& node tools/browser-check-v28.js",
+    "browser:check:loading-scroll": "node tools/browser-check-loading-scroll.js"
   },
   "keywords": [],
   "author": "",
@@ -69,7 +73,8 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "jsdom": "^29.1.1",
-    "playwright": "^1.60.0"
+    "playwright": "^1.60.0",
+    "terser": "5.44.1"
   },
   "dependencies": {
     "xlsx": "^0.18.5"

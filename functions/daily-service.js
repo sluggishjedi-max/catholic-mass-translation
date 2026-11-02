@@ -100,7 +100,10 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     if(queueMissing&&(!record?.parsed||record.latestParserRevision!==PARSER_REVISION)){
       const date=new Date(request.date+'T12:00:00Z'),today=new Date(koreaToday()+'T12:00:00Z');
       const offset=(date-today)/86400000;
-      if(offset>=-7&&offset<30)await queueOne(request,'demand-'+PARSER_REVISION+'-'+koreaToday(),{onDemand:true});
+      // Repair already-published fixed fallbacks even when the user is
+      // checking a later feast. Keep new missing-date collection at 30 days.
+      const repairFixed=!!record?.parsed?.fallbackSource?.calendarInvariant&&offset<366;
+      if(offset>=-7&&(offset<30||repairFixed))await queueOne(request,'demand-'+PARSER_REVISION+'-'+koreaToday(),{onDemand:true});
     }
     return record;
   }
