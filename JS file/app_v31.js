@@ -6846,7 +6846,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function kpvMassCandidateTitle(mass, date) {
         const celebration = mass && mass.celebration;
         const celebrationName = cleanLiturgyTitle(celebration && (celebration.name || (celebration.names && celebration.names.vi)) || '');
-        return celebrationName || vietnameseSeasonalLookupTitle(date) || cleanLiturgyTitle(buildGeneratedLiturgyInfo(date).names.VN || '');
+        const title = celebrationName || vietnameseSeasonalLookupTitle(date) || cleanLiturgyTitle(buildGeneratedLiturgyInfo(date).names.VN || '');
+        // KPV gives every All Souls Mass the same celebration name. Its first
+        // form is `principal` with no formName; the other forms are `ii`/`iii`.
+        const allSoulsForms = { principal: 'Lễ I', i: 'Lễ I', ii: 'Lễ II', iii: 'Lễ III' };
+        const formName = cleanLiturgyTitle(mass && mass.formName || '')
+            || (isAllSoulsDate(date) && mass && (mass.celebrationCode || celebration && celebration.code) === 'all-souls'
+                ? allSoulsForms[String(mass.formCode || '').toLowerCase()] || '' : '');
+        return formName && !normalizeSemanticText(title).includes(normalizeSemanticText(formName))
+            ? `${title} - ${formName}` : title;
     }
 
     function kpvExpectedCelebrationNames(date) {
@@ -6979,7 +6987,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             liturgy_reading: choice ? [choice] : [],
             kpvProfile: payload && payload.profile || currentVietnameseKpvProfile(),
             kpvSelectedVia: selected && selected.via || '',
-            kpvSelectedCelebrationCode: selected && selected.celebrationCode || ''
+            kpvSelectedCelebrationCode: selected && selected.celebrationCode || '',
+            kpvSelectedMassKey: selected ? (selected === payload.primary ? 'primary' : `alternative-${payload.alternatives.indexOf(selected)}`) : ''
         };
     }
 
@@ -7380,7 +7389,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             color: internalInfo.color,
             titleSource: 'kpv-calendar',
             sourceName: 'KPV · Bài đọc Thánh lễ',
-            sourceUrl: 'https://kpv.vn/liturgy/mass-readings',
+            sourceUrl: `https://kpv.vn/liturgy/mass-readings?date=${formatDateIso(specialLiturgySourceDate('VN', date))}&mass=${encodeURIComponent(payload.kpvSelectedMassKey || 'primary')}`,
             calendarSourceUrl: 'https://kpv.vn/liturgy/calendar',
             ktcgChoiceTitles: choices.map(ktcgkpvChoiceTitle).filter(Boolean),
             kpvProfile: payload.kpvProfile,
@@ -10236,7 +10245,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict104-pdf-options-citations';
+    const STRICT_PARSER_CACHE_VERSION = 'strict105-kpv-mass-forms';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
