@@ -132,7 +132,7 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261102';
+    const APP_VERSION = 'V31.1-20261102-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10283,7 +10283,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict107-kpv-temporal-titles';
+    const STRICT_PARSER_CACHE_VERSION = 'strict108-numbered-reading-options';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10905,7 +10905,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictAllSoulsRank(label) {
         const text = strictCleanLine(label);
         if (!text || text.length > 140 || /(?:copyright|rights reserved|typical edition|lectionary for mass)/i.test(text)) return '';
-        const chinese=text.match(/第\s*([一二三123])\s*(?:(?:臺|台)?\s*彌撒|(?:の)?\s*ミサ|式)/u);
+        // 第一式 / 第二式 can label alternatives within a reading. Only an
+        // explicit Mass title or a named commemoration identifies a whole Mass.
+        const chinese=text.match(/第\s*([一二三123])\s*(?:(?:臺|台)?\s*彌撒|(?:の)?\s*ミサ)/u)
+            || (/(?:追思|已亡|亡者|諸靈|眾靈|All Souls|Faithful Departed|Defunctorum)/iu.test(text)
+                ? text.match(/第\s*([一二三123])\s*式/u) : null);
         if(chinese)return ({一:'first',二:'second',三:'third','1':'first','2':'second','3':'third'})[chinese[1]];
         const numbered=text.match(/\b(?:Mass|Missa|Misa|Messa|Messe|Lễ)\s*(III|II|I|[123])\b/iu);
         if(numbered)return ({I:'first',II:'second',III:'third','1':'first','2':'second','3':'third'})[numbered[1].toUpperCase()];

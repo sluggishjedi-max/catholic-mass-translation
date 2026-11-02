@@ -43,6 +43,10 @@ try{
  console.log('Source regressions: Japanese nested sections/verse spans, Brazilian mixed-content alternatives and trailing Bible references passed.');
  assert.equal(runtime.run("strictAllSoulsRank('（第三臺彌撒）')"),'third');
  assert.equal(runtime.run("strictAllSoulsRank('追思已亡第三式')"),'third');
+ for(const label of ['第一式（上主必將遺棄他們，直到孕婦生產的時候。）','第二式（天主所預知和所預定的人。）','第三式']){
+  runtime.window.__readingOptionLabel=label;
+  assert.equal(runtime.run('strictAllSoulsRank(__readingOptionLabel)'),'',label+' was treated as a whole Mass');
+ }
  assert.equal(runtime.run("strictAllSoulsRank('死者の日（第三のミサ）')"),'third');
  assert.equal(runtime.run("strictAllSoulsRank('【加上讀經一，讀經可選自追思彌撒任選讀經。】')"),'');
  runtime.window.__thirdLines=['（第三臺彌撒）','進堂詠','Original entrance.','【加上讀經一，讀經可選自追思彌撒任選讀經。】','讀經一','Original reading.','福音','Original Gospel.'];
