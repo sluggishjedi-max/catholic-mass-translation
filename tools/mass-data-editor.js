@@ -4,6 +4,7 @@ const path = require('path');
 const vm = require('vm');
 const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
 const { createSpecialEditorBackend } = require('./special-liturgy-editor');
+const { translateEditorRequest } = require('./mass-editor-translation');
 
 const root = path.resolve(__dirname, '..');
 const DEFAULT_HOST = '127.0.0.1';
@@ -915,18 +916,6 @@ function translationPrompt(text, sourceLanguage, targetLanguage) {
   ].join('\n');
 }
 
-async function readFetchJson(response) {
-  const text = await response.text();
-  let payload;
-  try { payload = text ? JSON.parse(text) : {}; } catch { payload = {}; }
-  if (!response.ok) throw Object.assign(new Error(payload.error || `Translation HTTP ${response.status}`), { statusCode: 502 });
-  return payload;
-}
-
-function geminiText(payload) {
-  return cleanText(payload?.candidates?.[0]?.content?.parts?.map(part => part.text || '').join('') || '').trim();
-}
-
 async function translateText({ text, sourceLanguage, targetLanguage, mode }) {
   const source = cleanText(text).trim();
   if (!source) throw Object.assign(new Error('번역할 원문을 입력하세요.'), { statusCode: 400 });
@@ -945,16 +934,7 @@ async function translateText({ text, sourceLanguage, targetLanguage, mode }) {
           generationConfig: { temperature: 0.1 }
         }
       };
-  const response = await fetch(GEMINI_PROXY_ENDPOINT, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-    signal: AbortSignal.timeout(60000)
-  });
-  const payload = await readFetchJson(response);
-  const translated = mode === 'google' ? cleanText(payload.text).trim() : geminiText(payload);
-  if (!translated) throw Object.assign(new Error('번역 결과가 비어 있습니다.'), { statusCode: 502 });
-  return translated;
+  return translateEditorRequest({ mode, body, proxyEndpoint: GEMINI_PROXY_ENDPOINT });
 }
 
 function readJson(req) {
@@ -1166,8 +1146,6 @@ const INDEX_HTML = String.raw`<!doctype html>
     textarea { min-height:116px; resize:vertical; line-height:1.65; }
     .missing { min-height:154px; display:grid; place-items:center; border:1px dashed #ccd3df; border-radius:12px; color:#8a93a7; background:#fafbfc; }
     .translate-stack { display:flex; flex-direction:column; justify-content:center; gap:7px; }
-    .addbar { display:grid; grid-template-columns:1fr 118px 1fr; gap:12px; margin:12px 0 4px; }
-    .addbar button { border:1px dashed #aeb9cd; background:#f9fbff; color:#315078; }
     .savebar { position:sticky; bottom:12px; z-index:4; display:grid; grid-template-columns:1fr 118px 1fr; gap:12px; margin:18px 0; }
     .savebar button { box-shadow:0 8px 20px #17203320; }
     .translator { padding:18px; margin-top:18px; }
@@ -1188,8 +1166,6 @@ const INDEX_HTML = String.raw`<!doctype html>
       .columns-head span:nth-child(2) { display:none; }
       .row-card { grid-template-columns:1fr; }
       .translate-stack { flex-direction:row; flex-wrap:wrap; }
-      .addbar { grid-template-columns:1fr 1fr; }
-      .addbar span { display:none; }
       .savebar { grid-template-columns:1fr 1fr; }
       .savebar span { display:none; }
       .translator-boxes { grid-template-columns:1fr; }
@@ -1217,13 +1193,9 @@ const INDEX_HTML = String.raw`<!doctype html>
       <div class="control-actions"><button id="reload" class="secondary" type="button">새로고침</button><button id="firebase-upload" class="secondary" type="button">Firebase에 업로드</button></div>
     </section>
     <div id="status" class="status">데이터를 불러오는 중입니다.</div>
-    <div class="columns-head"><span id="left-title">원문</span><span>번역</span><span id="right-title">번역문</span></div>
+    <div class="columns-head"><span id="left-title">원문</span><span aria-hidden="true"></span><span id="right-title">번역문</span></div>
     <p class="edit-help">각 문장 아래에서 앞·뒤 삽입, 위·아래 이동, 삭제를 할 수 있습니다. 변경한 쪽의 로컬 저장을 누르면 적용됩니다.</p>
     <section id="rows"></section>
-    <div class="addbar">
-      <button id="add-left" class="secondary" type="button">＋ 왼쪽 줄 추가</button><span></span>
-      <button id="add-right" class="secondary" type="button">＋ 오른쪽 줄 추가</button>
-    </div>
     <div class="savebar">
       <button id="save-left" class="primary" type="button">왼쪽 로컬 저장</button><span></span>
       <button id="save-right" class="primary" type="button">오른쪽 로컬 저장</button>
@@ -1244,7 +1216,7 @@ const INDEX_HTML = String.raw`<!doctype html>
   </main>
   <script>
     const state = { countries:[], blocks:[], visibleBlocks:[], block:null, drafts:{left:[],right:[]}, saving:false, rowSequence:0, translationSequence:0, translationTimer:null, statusTimer:null };
-    const el = Object.fromEntries(['left-country','right-country','search','block','reload','firebase-upload','status','rows','add-left','add-right','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
+    const el = Object.fromEntries(['left-country','right-country','search','block','reload','firebase-upload','status','rows','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
     async function api(url, options) { const response=await fetch(url,options); const body=await response.json(); if(!response.ok||!body.ok) throw new Error(body.error||('HTTP '+response.status)); return body; }
     function setStatus(message, kind='') { clearTimeout(state.statusTimer); el.status.textContent=message; el.status.className='status show '+kind; state.statusTimer=setTimeout(()=>{ el.status.className='status'; },kind==='error'?6000:3600); }
@@ -1283,7 +1255,10 @@ const INDEX_HTML = String.raw`<!doctype html>
     function kindLabel(kind) { return {text:'본문',rubric:'지시문',cit:'인용'}[kind]||kind; }
     function kindOptions(selected) { return ['text','rubric','cit'].map(kind=>'<option value="'+kind+'" '+(kind===selected?'selected':'')+'>'+kindLabel(kind)+'</option>').join(''); }
     function editorHtml(side,row,index) {
-      if(!row) return '<div class="missing">해당 언어에 대응 구절이 없습니다.</div>';
+      if(!row) {
+        const canAdd=!state.saving&&selectedCountry(side)?.editable&&state.block[side+'CreateBase']&&index===state.drafts[side].length;
+        return '<div class="missing"><span>해당 언어에 대응 문장이 없습니다.</span>'+(canAdd?'<button type="button" class="secondary" data-action="first" data-action-side="'+side+'">＋ '+(state.drafts[side].length?'문장':'첫 문장')+' 추가</button>':'')+'</div>';
+      }
       const disabled=row.speakerPath||row.virtual?'':'disabled'; const placeholder=row.virtual?'비어 있는 번역 구문을 입력하세요.':'';
       const locked=state.saving||!selectedCountry(side)?.editable;
       const actions=[['before','＋ 앞 삽입'],['after','＋ 뒤 삽입'],['up','↑ 위로'],['down','↓ 아래로'],['delete','삭제']].map(([action,label])=>'<button type="button" class="secondary '+(action==='delete'?'delete':'')+'" data-action="'+action+'" data-action-side="'+side+'" data-row="'+escapeHtml(row.key)+'" '+(locked||(action==='up'&&index===0)||(action==='down'&&index===state.drafts[side].length-1)?'disabled':'')+'>'+label+'</button>').join('');
@@ -1302,8 +1277,8 @@ const INDEX_HTML = String.raw`<!doctype html>
       }));
     }
     function renderRows() {
-      const pairs=Array.from({length:Math.max(state.drafts.left.length,state.drafts.right.length)},(_,index)=>({key:'slot-'+index,left:state.drafts.left[index],right:state.drafts.right[index]}));
-      el.rows.innerHTML=pairs.map(rowHtml).join('')||'<div class="empty">문장이 없습니다. 아래 줄 추가 버튼으로 새 문장을 넣으세요.</div>';
+      const pairs=Array.from({length:Math.max(1,state.drafts.left.length,state.drafts.right.length)},(_,index)=>({key:'slot-'+index,left:state.drafts.left[index],right:state.drafts.right[index]}));
+      el.rows.innerHTML=pairs.map(rowHtml).join('');
       document.querySelectorAll('button.translate').forEach(button=>button.addEventListener('click',()=>translateRow(button).catch(error=>setStatus(error.message,'error'))));
       document.querySelectorAll('button.speak').forEach(button=>button.addEventListener('click',()=>speakRow(button)));
       document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>editRow(button)));
@@ -1325,6 +1300,7 @@ const INDEX_HTML = String.raw`<!doctype html>
     }
     function editRow(button) {
       if(state.saving)return;
+      if(button.dataset.action==='first'){addRow(button.dataset.actionSide);return;}
       const side=button.dataset.actionSide; const rows=state.drafts[side]; const index=rows.findIndex(row=>row.key===button.dataset.row); if(index<0)return;
       const action=button.dataset.action;
       if(action==='before'||action==='after'){addRow(side,index+(action==='after'?1:0));return;}
@@ -1345,13 +1321,14 @@ const INDEX_HTML = String.raw`<!doctype html>
       const previous=state.block; state.block=(await api(url)).block;
       ['left','right'].forEach(side=>{
         if(side===preserveSide){ state.block[side+'Revision']=previous[side+'Revision']; return; }
-        const rows=state.block.rows.map(pair=>pair[side]).filter(Boolean); const keys=state.block[side+'RowKeys'];
+        // Counterpart placeholders are not stored sentences. Rendering them as draft
+        // rows made blank inputs accumulate at the end after inserts and moves.
+        const rows=state.block.rows.map(pair=>pair[side]).filter(row=>row&&!row.virtual); const keys=state.block[side+'RowKeys'];
         rows.sort((a,b)=>{const ai=keys.indexOf(a.key),bi=keys.indexOf(b.key);return (ai<0?keys.length+a.rowIndex:ai)-(bi<0?keys.length+b.rowIndex:bi);});
         state.drafts[side]=rows.map(row=>({...row,draftText:row.text,draftSpeaker:row.speaker,draftKind:row.kind}));
       }); renderRows();
       el.leftTitle.textContent=countryLabel(state.block.leftCountry); el.rightTitle.textContent=countryLabel(state.block.rightCountry);
       el.saveLeft.disabled=!state.block.leftCountry.editable||!state.block.leftCreateBase; el.saveRight.disabled=!state.block.rightCountry.editable||!state.block.rightCreateBase;
-      el.addLeft.disabled=el.saveLeft.disabled; el.addRight.disabled=el.saveRight.disabled;
       setStatus(state.block.title,'ok');
     }
     function inputFor(side,role,rowKey) { return document.querySelector('[data-side="'+side+'"][data-role="'+role+'"][data-row="'+CSS.escape(rowKey)+'"]'); }
@@ -1376,12 +1353,12 @@ const INDEX_HTML = String.raw`<!doctype html>
     async function saveSide(side) {
       if(!state.block||state.saving)return; const country=selectedCountry(side); if(!country.editable)throw new Error('이 국가는 다른 모듈에서 파생되어 읽기 전용입니다.');
       const updates=updatesFor(side); const structure={revision:state.block[side+'Revision'],order:updates.map(row=>row.key)};
-      state.saving=true; el.saveLeft.disabled=el.saveRight.disabled=el.addLeft.disabled=el.addRight.disabled=true; renderRows();
+      state.saving=true; el.saveLeft.disabled=el.saveRight.disabled=true; renderRows();
       [el.leftCountry,el.rightCountry,el.block,el.search,el.reload,el.firebaseUpload].forEach(control=>control.disabled=true);
       try {
         setStatus(countryLabel(country)+' 저장 중…'); const body=await api('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jurisdiction:country.jurisdiction,blockKey:state.block[side+'BlockKey']||state.block.key,updates,structure})});
         await loadBlock(side==='left'?'right':'left'); setStatus(body.changed.length?'문장과 순서를 저장했습니다. 백업: '+body.backup:'변경된 내용이 없습니다.','ok');
-      } finally { state.saving=false; renderRows(); [el.leftCountry,el.rightCountry,el.block,el.search,el.reload,el.firebaseUpload].forEach(control=>control.disabled=false); el.saveLeft.disabled=el.addLeft.disabled=!state.block.leftCountry.editable||!state.block.leftCreateBase; el.saveRight.disabled=el.addRight.disabled=!state.block.rightCountry.editable||!state.block.rightCreateBase; }
+      } finally { state.saving=false; renderRows(); [el.leftCountry,el.rightCountry,el.block,el.search,el.reload,el.firebaseUpload].forEach(control=>control.disabled=false); el.saveLeft.disabled=!state.block.leftCountry.editable||!state.block.leftCreateBase; el.saveRight.disabled=!state.block.rightCountry.editable||!state.block.rightCreateBase; }
     }
     async function runTranslator(mode='google') {
       const text=el.translatorSource.value.trim(); const sequence=++state.translationSequence;
@@ -1410,7 +1387,6 @@ const INDEX_HTML = String.raw`<!doctype html>
     el.search.addEventListener('input',()=>filterBlocks()); el.block.addEventListener('change',()=>loadBlock().catch(e=>setStatus(e.message,'error')));
     el.reload.addEventListener('click',()=>loadBlocks(el.block.value).catch(e=>setStatus(e.message,'error')));
     el.firebaseUpload.addEventListener('click',()=>window.ordoFirebaseUploader.upload({button:el.firebaseUpload,setStatus:(message,kind)=>setStatus(message,kind)}).catch(e=>setStatus(e.message,'error')));
-    el.addLeft.addEventListener('click',()=>addRow('left')); el.addRight.addEventListener('click',()=>addRow('right'));
     el.saveLeft.addEventListener('click',()=>saveSide('left').catch(e=>setStatus(e.message,'error'))); el.saveRight.addEventListener('click',()=>saveSide('right').catch(e=>setStatus(e.message,'error')));
     el.translatorSource.addEventListener('input',scheduleTranslation); el.translatorSourceLanguage.addEventListener('change',scheduleTranslation); el.translatorTargetLanguage.addEventListener('change',scheduleTranslation);
     el.translatorSwap.addEventListener('click',swapTranslator); el.translatorAi.addEventListener('click',()=>runTranslator('ai')); el.translatorCopy.addEventListener('click',async()=>{ if(!el.translatorOutput.value)return; await navigator.clipboard.writeText(el.translatorOutput.value); el.translatorStatus.textContent='번역 결과를 복사했습니다.'; });

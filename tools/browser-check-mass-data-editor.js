@@ -5,12 +5,53 @@ const assert = require('node:assert/strict');
 const { chromium } = require('playwright');
 const mass = require('./mass-data-editor');
 
+async function verifyLiveTranslations(browser, base) {
+  const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  try {
+    await page.goto(base, { waitUntil: 'domcontentloaded' });
+    await page.waitForFunction(() => state.block && state.drafts.left.length > 0);
+    await page.selectOption('#left-country', 'US');
+    await page.waitForFunction(() => state.block.leftCountry.jurisdiction === 'US');
+    await page.selectOption('#right-country', 'KR');
+    await page.waitForFunction(() => state.block.rightCountry.jurisdiction === 'KR');
+    const row = page.locator('.row-card').first();
+    const left = row.locator('textarea[data-side="left"]'), right = row.locator('textarea[data-side="right"]');
+    for (const mode of ['ai', 'google']) {
+      await left.fill('Peace be with you.');
+      await right.fill('');
+      await row.locator(`[data-mode="${mode}"][data-direction="right"]`).click();
+      await page.waitForFunction(() => !!document.querySelector('textarea[data-side="right"]').value.trim()
+        || document.getElementById('status').classList.contains('error'), null, { timeout: 70000 });
+      const result = await right.inputValue();
+      assert.match(result, /[가-힣]/u, `${mode}: ${await page.locator('#status').textContent()}`);
+      console.log(JSON.stringify({ live: true, mode, direction: 'EN to KR', result }));
+    }
+    await page.fill('#translator-source', 'Peace be with you.');
+    await page.waitForFunction(() => !!document.getElementById('translator-output').value.trim()
+      || document.getElementById('translator-status').textContent.startsWith('번역 실패'), null, { timeout: 70000 });
+    assert.match(await page.inputValue('#translator-output'), /[가-힣]/u, await page.locator('#translator-status').textContent());
+    await page.locator('#translator-output').evaluate(input => { input.value = ''; });
+    await page.click('#translator-ai');
+    await page.waitForFunction(() => !!document.getElementById('translator-output').value.trim()
+      || document.getElementById('translator-status').textContent.startsWith('번역 실패'), null, { timeout: 70000 });
+    assert.match(await page.inputValue('#translator-output'), /[가-힣]/u, await page.locator('#translator-status').textContent());
+    assert.deepEqual(errors, []);
+    console.log('Live sentence buttons and automatic translator both passed for AI and Google; no Mass data was saved.');
+  } finally { await page.close(); }
+}
+
 async function main() {
   const originalSources = mass.readCountryMassSources();
   const server = mass.createServer();
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const browser = await chromium.launch({ headless: true });
   try {
+    if (process.argv.includes('--live-translations')) {
+      await verifyLiveTranslations(browser, `http://127.0.0.1:${server.address().port}/`);
+      return;
+    }
     for (const width of [1280, 390, 320]) {
       let sources = originalSources;
       let loaded = mass.getLoadedState(sources);
@@ -40,9 +81,15 @@ async function main() {
       });
       await page.goto(`http://127.0.0.1:${server.address().port}/`, { waitUntil: 'domcontentloaded' });
       await page.waitForFunction(() => state.block && state.drafts.left.length > 0);
+      assert.equal(await page.locator('#add-left,#add-right,.addbar').count(), 0, 'Obsolete bottom add buttons must be removed');
+      assert.equal((await page.locator('.columns-head span').nth(1).textContent()).trim(), '', 'The middle translation heading must be blank');
       const chosen = mass.blocksForCountry(loaded, 'KR').find(block => block.rows.length >= 4);
       await page.selectOption('#block', chosen.key);
       await page.waitForFunction(key => state.block.key === key, chosen.key);
+      if (width !== 390) {
+        await page.selectOption('#right-country', 'TW');
+        await page.waitForFunction(() => state.block.rightCountry.jurisdiction === 'TW');
+      }
       const text = side => page.locator(`textarea[data-side="${side}"][data-role="text"]`);
       const persistedText = side => page.evaluate(side => state.drafts[side].filter(row => !row.virtual || row.create?.forceCreate).map(row => row.draftText), side);
       const action = (side, name, index) => page.locator(`[data-action-side="${side}"][data-action="${name}"]`).nth(index);
@@ -78,6 +125,11 @@ async function main() {
       await page.waitForFunction(() => state.drafts.right[0]?.text === 'Unsaved opposite sentence');
       assert.deepEqual(await persistedText('left'), expected);
       assert.equal(await text('right').nth(0).inputValue(), 'Unsaved opposite sentence');
+      for (let reload = 0; reload < 2; reload++) {
+        await Promise.all([page.waitForResponse(response => new URL(response.url()).pathname === '/api/block'), page.click('#reload')]);
+        await page.waitForFunction(() => ['left','right'].every(side => state.drafts[side].length === state.block[side+'RowKeys'].length));
+        assert.equal(await text('left').count(), expected.length, 'Reloading must not append virtual blank sentences');
+      }
 
       // The two columns may have different row keys after independent reordering.
       await page.locator('.row-card').first().locator('[data-mode="google"][data-direction="right"]').click();
@@ -87,6 +139,16 @@ async function main() {
       page.once('dialog', dialog => dialog.accept());
       await action('left', 'delete', 0).click();
       assert.equal(await text('left').nth(0).inputValue(), expected[0]);
+
+      while (await text('left').count()) {
+        page.once('dialog', dialog => dialog.accept());
+        await action('left', 'delete', 0).click();
+      }
+      await page.click('#save-left');
+      await page.waitForFunction(() => !state.saving);
+      assert.equal(await text('left').count(), 0, 'An empty country block must stay empty');
+      await page.locator('[data-action="first"][data-action-side="left"]').click();
+      assert.equal(await text('left').count(), 1, 'Empty blocks must allow the first sentence without bottom add buttons');
 
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${width}px: horizontal overflow`);
       assert.deepEqual(errors, [], `${width}px: browser errors`);
