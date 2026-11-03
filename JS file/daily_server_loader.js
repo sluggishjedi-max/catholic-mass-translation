@@ -2,11 +2,14 @@
   'use strict';
   const endpoint=global.ORDO_DAILY_MASS_ENDPOINT||'https://asia-northeast3-ordinary-mass-app.cloudfunctions.net/dailyMassData';
   const pending=new Map();
+  // The public function can spend up to 60 seconds starting and reading data.
+  // Keep a margin for the response to reach the browser before falling back.
+  const responseTimeoutMs=65000;
   async function administratorRead(request){
     const user=global.firebase?.auth().currentUser;if(!user)throw Error('administrator-session-required');
     const adminEndpoint=global.ORDO_DAILY_ADMIN_ENDPOINT||'https://asia-northeast3-ordinary-mass-app.cloudfunctions.net/dailyMassAdmin';
     async function api(value,method='GET'){
-      const response=await fetch(adminEndpoint+(method==='GET'?'?'+new URLSearchParams(value):''),{method,headers:{Authorization:'Bearer '+await user.getIdToken(),...(method==='POST'?{'Content-Type':'application/json'}:{})},body:method==='POST'?JSON.stringify(value):undefined,cache:'no-store',signal:AbortSignal.timeout(30000)});
+      const response=await fetch(adminEndpoint+(method==='GET'?'?'+new URLSearchParams(value):''),{method,headers:{Authorization:'Bearer '+await user.getIdToken(),...(method==='POST'?{'Content-Type':'application/json'}:{})},body:method==='POST'?JSON.stringify(value):undefined,cache:'no-store',signal:AbortSignal.timeout(responseTimeoutMs)});
       if(!response.ok)throw Error('administrator-collection-request-failed');return response.json();
     }
     const published=record=>record?.parsed&&record.publishedVersion?{key:record.countryName+'_'+record.date,version:record.publishedVersion,kind:record.publishedKind,parsed:record.parsed,lastCheckedAt:record.lastCheckedAt}:null;
@@ -32,7 +35,7 @@
         let value;
         if(global.ordoAdminReview?.isVerified())value=await administratorRead(request);
         else{
-          const response=await fetch(endpoint+'?'+query,{cache:force?'reload':'default',signal:AbortSignal.timeout(5000)});
+          const response=await fetch(endpoint+'?'+query,{cache:force?'reload':'default',signal:AbortSignal.timeout(responseTimeoutMs)});
           if(!response.ok)return null;value=await response.json();
         }
         if(!value)return null;

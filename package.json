@@ -64,7 +64,9 @@
     "app:build": "node tools/build-app-runtime.js",
     "app:check": "node tools/build-app-runtime.js --check",
     "browser:check:v31.1": "set ORDO_CHECK_HTML=V31.1.html&& node tools/browser-check-v28.js",
-    "browser:check:loading-scroll": "node tools/browser-check-loading-scroll.js"
+    "browser:check:loading-scroll": "node tools/browser-check-loading-scroll.js",
+    "taiwan:daily:refresh": "node tools/refresh-taiwan-daily-date.js",
+    "browser:check:taiwan-daily": "node tools/browser-check-taiwan-daily.js"
   },
   "keywords": [],
   "author": "",
@@ -72,6 +74,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
+    "acorn": "8.19.0",
     "jsdom": "^29.1.1",
     "playwright": "^1.60.0",
     "terser": "5.44.1"

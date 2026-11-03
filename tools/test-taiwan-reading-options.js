@@ -18,6 +18,9 @@ try {
       const missing = expected.filter(key => !sourceSectionHasContent(actual.data[key]));
       if (missing.length) lostSections.push({ title: record.title, date: record.canonicalDate, missing });
     }
+    const novemberDate = new Date(2026, 10, 3);
+    const november = strictParseDailyMass('ZH', fetchTraditionalChineseDailyStaticSource(novemberDate), novemberDate, 'TW');
+    const novemberReadings = {complete:hasCompleteTraditionalChineseDailyMass(november,'TW'),reading:november.data.reading1?.cit_zh,gospel:november.data.gospel?.cit_zh};
     const allSoulsDate = new Date(2026, 10, 2);
     const allSouls = ['first', 'second', 'third'].map(choice => {
       getStrictMassSelector = () => ({ slot:'day', specialVigil:'', allSoulsChoice:choice });
@@ -34,7 +37,8 @@ try {
       gospelCitation: parsed.data.gospel.cit_zh,
       numberedRecords: numberedRecords.length,
       lostSections,
-      allSouls
+      allSouls,
+      novemberReadings
     };
   })())`));
   assert(result.complete, 'September 8 daily Mass is incomplete');
@@ -44,6 +48,9 @@ try {
   assert.deepEqual(result.lostSections, [], 'Numbered reading options truncated another Taiwan formulary');
   assert(result.allSouls.every(mass => mass.complete), 'An actual Taiwan All Souls Mass was truncated');
   assert.deepEqual(result.allSouls.map(mass => mass.selected), ['first', 'second', 'third']);
+  assert(result.novemberReadings.complete, 'November 3 weekday Mass is missing from the bundled corpus');
+  assert.match(result.novemberReadings.reading, /斐理伯.*2,5-11/u);
+  assert.match(result.novemberReadings.gospel, /路加.*14,15-24/u);
   console.log(JSON.stringify(result));
 } catch (error) {
   console.error(error.message);

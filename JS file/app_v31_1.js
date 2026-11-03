@@ -132,7 +132,7 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261102-3';
+    const APP_VERSION = 'V31.1-20261103-1';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -141,7 +141,7 @@
     const VATICAN_PONTIFFS_URL = 'https://www.vatican.va/content/vatican/en/holy-father.html';
     const REMOTE_FETCH_RETRIES = 0;
     const REMOTE_FETCH_TIMEOUT_MS = 8000;
-    const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 60000;
+    const DAILY_SOURCE_LANGUAGE_TIMEOUT_MS = 120000;
     // Allow the source page's title lookup and a cold proxy start to complete.
     const KTCG_CITATION_TIMEOUT_MS = 25000;
     const KPV_PROFILE_NORTH = 'VIETNAM_NORTH';
@@ -14123,6 +14123,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             source = await fetchStrictSource(selectedLink.href);
         }
         let parsed = strictParseDailyMass(lang, source, date, locationCode);
+        if (sourceIsStatic) parsed.sourceUrl = traditionalChineseStaticMassRecord(specialLiturgySourceDate(lang,date,locationCode))?.sourceUrl || entryUrl;
         if (lang === 'EN' && !['reading1', 'psalm', 'gospel'].every(key => parsed.data && parsed.data[key])) {
             const fallbackUrl = strictCountryDailyFallbackUrl(lang, date, locationCode);
             if (fallbackUrl && fallbackUrl !== entryUrl) {

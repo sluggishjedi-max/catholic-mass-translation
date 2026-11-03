@@ -92,6 +92,6 @@ globalThis.ordoLazyDataManifest = {
     "LA": "lazy/missal-LA.js?v=5ddbafcb2b28"
   },
   "daily": {
-    "TW": "countries/taiwan/taiwan_daily_mass_data.js?v=d317167cf874"
+    "TW": "countries/taiwan/taiwan_daily_mass_data.js?v=8bd3bbf0d2f9"
   }
 };

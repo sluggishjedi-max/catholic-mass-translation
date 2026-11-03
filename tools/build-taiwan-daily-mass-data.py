@@ -19,6 +19,7 @@ import datetime as dt
 import io
 import json
 import re
+import subprocess
 import sys
 import time
 import urllib.parse
@@ -67,11 +68,18 @@ def fetch_bytes(url: str, timeout: int = 60) -> bytes:
 
 
 def parse_manifest() -> dict[str, list[dict[str, str]]]:
-    source = TAIWAN_MODULE.read_text(encoding="utf-8")
-    pattern = re.compile(r'"(\d{8})":(\[\{.*?\}\])(?=,|\})')
-    manifest: dict[str, list[dict[str, str]]] = {}
-    for ymd, raw_entries in pattern.findall(source):
-        manifest[ymd] = json.loads(raw_entries)
+    # Read the registered JS object instead of requiring a one-line JSON
+    # literal. The source also contains formatted arrays and joined strings.
+    script = """const fs=require('node:fs'),vm=require('node:vm');
+const context={};vm.runInNewContext(fs.readFileSync(process.argv[1],'utf8'),context);
+process.stdout.write(JSON.stringify(context.countryMassData.TW.dailyReadings.manifest));"""
+    result = subprocess.run(["node", "-e", script, str(TAIWAN_MODULE)], capture_output=True,
+                            text=True, encoding="utf-8", check=True, timeout=60)
+    manifest: dict[str, list[dict[str, str]]] = json.loads(result.stdout)
+    supplemental = ROOT / "tools" / "taiwan-daily-source-updates.json"
+    if supplemental.exists():
+        for ymd, entries in json.loads(supplemental.read_text(encoding="utf-8")).get("dates", {}).items():
+            manifest[ymd] = entries
     if len(manifest) < 700:
         raise RuntimeError(f"Taiwan manifest unexpectedly has only {len(manifest)} dates")
     return manifest
