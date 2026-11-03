@@ -44,7 +44,15 @@
     // Apply only between numeric verse references, never inside a book name.
     return String(value).replace(/(\d[a-z]*)(?:\s*(?:과|와|及|和|與|与|と)\s*|\s+(?:and|et|und|y|e|và)\s+)(?=\d)/giu, '$1.');
   }
-  function parse(value, lang) {
+  function normalizeChapterNumbers(value) {
+    return String(value)
+      .replace(/\(([0-9〇零一二三四五六七八九十百廿卅Οο○]+)(?:-([0-9〇零一二三四五六七八九十百廿卅Οο○]+))?\)/gu,
+        (_,first,last)=>'('+hanNumber(first)+(last?'-'+hanNumber(last):'')+')')
+      .replace(/^([0-9〇零一二三四五六七八九十百廿卅Οο○]+)([ab]?)(\(\d+(?:-\d+)?\))(?=\d)/u,
+        (_,chapter,part,alternate)=>hanNumber(chapter)+part+alternate+':')
+      .replace(/([〇零一二三四五六七八九十百廿卅Οο○]+)(?=\d)/gu,(_,han)=>hanNumber(han)+':');
+  }
+  function parse(value, lang, options={}) {
     const code = language(lang);
     let text = fold(normalizeVerseConjunctions(String(value || '').replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c])))
       .replace(/\s*[（(\[]\s*(?:◎|℟|r(?:esp)?\.?|đ\.?|dap\.?|答(?:唱)?|response|refrain|kv\.?|cf\.?|cfr\.?|see|x\.?|vgl\.?)\s*[:：./-]?[^)）\]]*[)）\]]\s*$/iu,'')
@@ -58,14 +66,18 @@
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
-      let tail = text.slice(entry.key.length).replace(/^\./,'')
-        .replace(/([〇零一二三四五六七八九十百廿卅Οο○]+)(?=\d)/gu,(_,han) => hanNumber(han)+':');
+      let tail = normalizeChapterNumbers(text.slice(entry.key.length).replace(/^\./,''));
       // A Psalm's trailing parenthetical verse identifies its refrain, not
       // another stanza. Keep the alternate chapter number before the colon.
       if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
       const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)([ab])?(?:\((\d+(?:[-─–—]\d+)?)\))?[,.:・、]([0-9].*)$/u);
       if (!match) continue;
-      if (!resolve(entry.key,code)) return null; // Ambiguous even within this language.
+      if (!resolve(entry.key,code)) {
+        // Only an explicit caller-supplied context may disambiguate a book.
+        // Ordinary lookups still reject aliases shared by multiple books.
+        if (!options.bookId) return null;
+        if (entry.id !== options.bookId) continue;
+      }
       const chapter = hanNumber(match[1]);
       if (!Number.isInteger(chapter) || chapter < 1) return null;
       const rawVerses = code === 'EN' ? match[4] : match[4].replace(/[—―─](\d+),(\d+)/g,'-$1:$2');
@@ -105,7 +117,7 @@
     return [...verses].sort((a,b) => a-b).join(',');
   }
   function comparisonKeys(value,lang,options={}) {
-    const parsed=parse(value,lang);
+    const parsed=parse(value,lang,options);
     if (!parsed) return [];
     if (parsed.id === 'PSA') {
       const coverage = psalmCoverage(parsed, options);
@@ -198,6 +210,17 @@
     ES:{chapter:',',verses:'.',reference:'cf.'},
     LA:{chapter:',',verses:'.',reference:'cf.'}
   };
+  function hanChapter(value, digitsOnly=false) {
+    const digits='〇一二三四五六七八九',number=Number(value);
+    if (digitsOnly) return String(value).replace(/\d/g,digit=>digits[Number(digit)]);
+    if (number < 10) return digits[number];
+    if (number < 100) return (number < 20 ? '' : digits[Math.floor(number/10)])+'十'+(number%10 ? digits[number%10] : '');
+    if (number < 1000) {
+      const rest=number%100;
+      return digits[Math.floor(number/100)]+'百'+(!rest ? '' : rest<10 ? '零'+hanChapter(rest) : (rest<20?'一':'')+hanChapter(rest));
+    }
+    return String(value);
+  }
   function format(value, sourceLang, targetLang) {
     const source=language(sourceLang), target=language(targetLang);
     const table=(root.bibleLanguageTables || {})[target];
@@ -216,8 +239,9 @@
         || /(?:참조|참고|参照|參閱)\s*$/u.test(part);
       part=part.replace(/^(?:cf\.?|cfr\.?|x\.?|vgl\.?)\s+/iu,'')
         .replace(/\s*(?:참조|참고|参照|參閱)\s*$/u,'');
-      const match=aliases.find(item=>resolve(item.alias,source)?.id === item.id
+      const match=aliases.find(item=>(resolve(item.alias,source)?.id === item.id || source===target)
         && new RegExp('^'+escape(item.alias)+'\\s*\\.?\\s*[0-9〇零一二三四五六七八九十百廿卅]', 'iu').test(part));
+      const preserveAlias=!!match && !resolve(match.alias,source);
       let id=match?.id, tail=match ? part.slice(match.alias.length).replace(/^\s*\.?\s*/u,'') : part;
       if (!id && previousId && /^\d/.test(tail)) id=previousId;
       if (!id) return part;
@@ -225,14 +249,19 @@
       if (source !== 'EN') tail=tail.replace(/[—―─]\s*(\d+)\s*,\s*(\d+)/g,'-$1:$2');
       tail=normalizeVerseConjunctions(tail.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/gu,c=>subverses[c]))
         .normalize('NFKC').replace(/[（]/g,'(').replace(/[）]/g,')').replace(/[–—―─−~～]/g,'-')
-        .replace(/([〇零一二三四五六七八九十百廿卅Οο○]+)(?=\d)/gu,(_,han)=>hanNumber(han)+':');
+        .replace(/([〇零一二三四五六七八九十百廿卅Οο○]+)\s+(?=\d)/gu,'$1');
+      tail=normalizeChapterNumbers(tail);
       const boundary='\uE000';
       tail=tail.replace(/^(\d+(?:\(\d+(?:-\d+)?\))?)\s*[,.:、・]\s*/u,'$1'+boundary)
         .replace(/:/g,boundary);
       if (source !== 'EN') tail=tail.replace(/(\d+)([a-z]*)-(\d+),(\d+)/g,(all,start,suffix,end,verse)=>
         Number(end)<Number(start) ? start+suffix+'-'+end+boundary+verse : all);
-      tail=tail.replace(/[.,、]\s*(?=\d)/g,style.verses).replace(/(?:과|와)\s*(?=\d)/g,style.verses)
-        .replaceAll(boundary,style.chapter);
+      tail=tail.replace(/[.,、]\s*(?=\d)/g,style.verses).replace(/(?:과|와)\s*(?=\d)/g,style.verses);
+      if (style.chapterNumerals === 'han') {
+        tail=tail.replace(new RegExp('(\\d+[ab]?(?:\\(\\d+(?:-\\d+)?\\))?)'+boundary,'g'),(_,chapter)=>
+          chapter.replace(/\d+/g,number=>hanChapter(number,!preserveAlias && id==='PSA' && style.psalmChapterNumerals==='digits'))+boundary);
+      }
+      tail=tail.replaceAll(boundary,style.chapter);
       const alternatives={KR:'또는', EN:'or', VN:'hoặc', JP:'または', ZH:'或', DE:'oder', IT:'oppure', PT:'ou', ES:'o', LA:'vel'};
       tail=tail.replace(/또는|\bor\b|\bhoặc\b|または|或|\boder\b|\boppure\b|\bou\b|\bvel\b/giu,' '+(alternatives[target] || 'or')+' ');
       if (target === 'KR') tail=tail.replace(/(\d)([a-n]+)/g,(_,n,suffix)=>n+[...suffix].map(c=>koreanSubverses[c]).join(''));
@@ -244,7 +273,7 @@
         if(suffix) body=style.suffix?body+' '+style.reference:style.reference+' '+body;
         return ' ('+(source===target?marker+' ':'')+body+')';
       }).replace(/\s{2,}/g,' ').trim();
-      const book=table.books[id], name=target === 'KR' ? book.koreanKey : (book.aliases[0] || book.name);
+      const book=table.books[id], name=preserveAlias ? match.alias : target === 'KR' ? book.koreanKey : (book.aliases[0] || book.name);
       let result=(match ? name+' ' : '')+tail;
       if (isReference) result=style.suffix ? result+' '+style.reference : style.reference+' '+result;
       return result;

@@ -132,7 +132,7 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261103-2';
+    const APP_VERSION = 'V31.1-20261103-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10303,8 +10303,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     ]);
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
+    const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict109-chinese-antiphon-alternatives';
+    const STRICT_PARSER_CACHE_VERSION = 'strict110-canonical-antiphon-citations';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -16450,7 +16451,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['savior_destroyed_death_life', /구원자.*죽음.*복음.*생명|죽음을\s*없애.*생명|dang cuu do.*tieu diet.*than chet|tieu diet.*than chet.*tin mung|tin mung.*phuc truong sinh|savior.*destroyed.*death.*gospel.*life|abolished death.*gospel.*life/i],
             ['faithful_holy_works', /주님.*넘어지는.*붙들|주님.*일으켜|chua trung thanh.*viec chua|nang do.*nga quy|thien hao.*loai nguoi|lord.*faithful.*works|raises.*bowed down/i],
             ['kingdom_near_repent_gospel', /하느님\s*나라.*가까.*회개.*복음|trieu dai thien chua.*den gan.*sam hoi.*tin mung|nuoc thien chua.*den gan.*sam hoi.*tin mung|kingdom.*(?:near|at hand).*repent.*gospel/i],
-            ['come_to_me_rest', /고생.*무거운\s*짐.*나에게\s*오너라|안식을\s*주리라|kho nhoc.*ganh nang.*den cung ta|den cung ta.*bo s[ứu]c|come to me.*burden|give you rest/i],
+            ['come_to_me_rest', /고생.*무거운\s*짐.*나에게\s*오너라|안식을\s*주리라|kho nhoc.*ganh nang.*den cung ta|den cung ta.*bo s[ứu]c|come to me.*burden|give you rest|你們.*辛苦.*負重擔.*到我這裡來.*安息/i],
             ['taste_see_good_lord', /맛보고.*깨달|주님.*얼마나\s*좋|hay nem.*nhin coi|nem thu.*nhin coi|chua thien hao|taste.*see.*good|gustate.*videte/i],
             ['praise_soul_holy_name', /내\s*영혼.*찬미|거룩하신.*이름|linh hon.*chuc tung|thanh danh nguoi|bless the lord.*soul|holy name/i],
             ['lord_mercy_plentiful_redemption', /주님.*자애.*풍요로운\s*구원|자애.*풍요로운\s*구원|long chua.*(?:tu bi|thuong xot).*(?:cuu do|ơn cứu độ|on cuu do)|with the lord.*mercy.*(?:plentiful|full).*redemption|apud dominum.*misericordia.*copiosa.*redemptio/i],
@@ -16577,6 +16578,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 && globalThis.bibleCitation.wholeVerseCoverage(korean) === '17'
                 && /^若十七7[,、]17$/u.test(chinese)) return false;
         }
+        if (evidence.leftSemanticKey && evidence.leftSemanticKey === evidence.rightSemanticKey
+            && !!left !== !!right) {
+            // Matching source text plus an exact reference in the other
+            // language can resolve a shared alias for this comparison only.
+            const options={ignoreSubverses:true,bookId:(left || right).id};
+            const rightKeys=new Set(globalThis.bibleCitation.comparisonKeys(rightCitation,rightLang,options));
+            if (globalThis.bibleCitation.comparisonKeys(leftCitation,leftLang,options).some(key=>rightKeys.has(key))) return false;
+        }
         if (!left || !right) return scriptureAlignmentKeys.has(baseId)
             && /\d/u.test(String(leftCitation || '')) && /\d/u.test(String(rightCitation || ''));
         if (passageCitationsEquivalent(baseId, leftCitation, rightCitation, leftLang, rightLang)) return false;
@@ -16620,7 +16629,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const left = lowers[i], right = lowers[j];
                     const leftKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[left][0]));
                     const rightKey = variantSemanticKey(baseId, variantOptionMeaningText(baseId, optionMap[right][0]));
-                    const samePassage = scriptureAlignmentKeys.has(baseId) && passageCitationsEquivalent(baseId,
+                    const samePassage = citedVariantSectionIds.has(baseId) && passageCitationsEquivalent(baseId,
                         strictReadingOptionCitation(section, left, 0), strictReadingOptionCitation(section, right, 0), left, right);
                     if (!samePassage && leftKey && rightKey && leftKey !== rightKey) return [];
                     if (!samePassage && sourceCelebrationsConflict(baseId, section, left, right, leftKey, rightKey)) return [];
@@ -16953,8 +16962,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const compatible = groups.find(group => group.every(other => {
                     // A whole pericope can trigger different sentence keywords
                     // in different translations. Exact canonical references
-                    // outrank that partial-text heuristic for Scripture only.
-                    if (scriptureAlignmentKeys.has(baseId)
+                    // outrank that partial-text heuristic for cited passages.
+                    if (citedVariantSectionIds.has(baseId)
                         && passageCitationsEquivalent(baseId, item.citation, other.citation, item.lower, other.lower)) return true;
                     if (sourceCelebrationsConflict(baseId, section, item.lower, other.lower, item.semanticKey, other.semanticKey)) return false;
                     if (distinctKeys.size > 1 && (!item.semanticKey || !other.semanticKey)) return false;

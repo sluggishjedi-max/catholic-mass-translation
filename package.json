@@ -66,7 +66,8 @@
     "browser:check:v31.1": "set ORDO_CHECK_HTML=V31.1.html&& node tools/browser-check-v28.js",
     "browser:check:loading-scroll": "node tools/browser-check-loading-scroll.js",
     "taiwan:daily:refresh": "node tools/refresh-taiwan-daily-date.js",
-    "browser:check:taiwan-daily": "node tools/browser-check-taiwan-daily.js"
+    "browser:check:taiwan-daily": "node tools/browser-check-taiwan-daily.js",
+    "browser:check:kr-zh-citations": "node tools/browser-check-kr-zh-citations.js"
   },
   "keywords": [],
   "author": "",

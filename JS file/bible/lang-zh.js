@@ -4,6 +4,7 @@
   "schemaVersion": 1,
   "language": "zh",
   "appLanguage": "ZH",
+  "citationStyle": {"chapter":" ","chapterNumerals":"han","psalmChapterNumerals":"digits"},
   "label": "중국어 번체",
   "status": "language-scoped",
   "coverage": "73 Catholic books; user's 71 entries plus Jonah/Micah from Catholic index; representative aliases, not exhaustive",
