@@ -107,7 +107,7 @@
         autoCreedOptionKey: '',
         autoCreedLocation: '',
         autoBlessingSignature: '',
-        popeNames: { kr: '레오', vn: 'Lêô', en: 'Leo', jp: 'レオ', la: 'Leo' },
+        popeNames: { kr: '레오', vn: 'Lêô', en: 'Leo', jp: 'レオ', la: 'Leo', zh: '良' },
         popeSourceName: 'Leo XIV',
         startupConsentDeclined: false,
         activeTab: 'mass',
@@ -132,7 +132,8 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261103-4';
+    const eucharistSongMapCache = new WeakMap();
+    const APP_VERSION = 'V31.1-20261103-5';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -257,15 +258,15 @@
             .replace(/[\u0300-\u036f]/g, '')
             .toLowerCase();
         const map = {
-            'leo': { kr: '레오', vn: 'Lêô', en: 'Leo', jp: 'レオ', la: 'Leo' },
-            'francis': { kr: '프란치스코', vn: 'Phanxicô', en: 'Francis', jp: 'フランシスコ', la: 'Franciscus' },
-            'benedict': { kr: '베네딕토', vn: 'Bênêđictô', en: 'Benedict', jp: 'ベネディクト', la: 'Benedictus' },
-            'john paul': { kr: '요한 바오로', vn: 'Gioan Phaolô', en: 'John Paul', jp: 'ヨハネ・パウロ', la: 'Ioannes Paulus' },
-            'john': { kr: '요한', vn: 'Gioan', en: 'John', jp: 'ヨハネ', la: 'Ioannes' },
-            'paul': { kr: '바오로', vn: 'Phaolô', en: 'Paul', jp: 'パウロ', la: 'Paulus' },
-            'pius': { kr: '비오', vn: 'Piô', en: 'Pius', jp: 'ピオ', la: 'Pius' }
+            'leo': { kr: '레오', vn: 'Lêô', en: 'Leo', jp: 'レオ', la: 'Leo', zh: '良' },
+            'francis': { kr: '프란치스코', vn: 'Phanxicô', en: 'Francis', jp: 'フランシスコ', la: 'Franciscus', zh: '方濟各' },
+            'benedict': { kr: '베네딕토', vn: 'Bênêđictô', en: 'Benedict', jp: 'ベネディクト', la: 'Benedictus', zh: '本篤' },
+            'john paul': { kr: '요한 바오로', vn: 'Gioan Phaolô', en: 'John Paul', jp: 'ヨハネ・パウロ', la: 'Ioannes Paulus', zh: '若望保祿' },
+            'john': { kr: '요한', vn: 'Gioan', en: 'John', jp: 'ヨハネ', la: 'Ioannes', zh: '若望' },
+            'paul': { kr: '바오로', vn: 'Phaolô', en: 'Paul', jp: 'パウロ', la: 'Paulus', zh: '保祿' },
+            'pius': { kr: '비오', vn: 'Piô', en: 'Pius', jp: 'ピオ', la: 'Pius', zh: '庇護' }
         };
-        return Object.assign({ kr: baseName, vn: baseName, en: baseName, jp: baseName, la: baseName }, map[normalized] || {});
+        return Object.assign(Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang.toLowerCase(), baseName])), map[normalized] || {});
     }
 
     function popeNameCacheKey() {
@@ -274,7 +275,8 @@
 
     function applyPopeNameCache(entry) {
         if (!entry || !entry.names) return false;
-        state.popeNames = Object.assign({}, state.popeNames || {}, entry.names);
+        const localized = popeNameLocalization(stripPapalOrdinal(entry.sourceName || entry.names.en || ''));
+        state.popeNames = Object.assign({}, state.popeNames || {}, localized, entry.names);
         state.popeSourceName = entry.sourceName || state.popeSourceName || '';
         return true;
     }
@@ -1618,12 +1620,17 @@
         return total || Number.MAX_SAFE_INTEGER;
     }
 
+    function liturgicalOrdinal(value) {
+        return globalThis.ordoPrefaceMatcher.ordinal(value);
+    }
+
     function normalizeCalendarNameForCompare(value) {
         return String(value || '')
             .toLowerCase()
             .replace(/\[[^\]]*?[가나다]해[^\]]*?\]/g, '')
             .replace(/\b(?:cycle|year|năm)\s*[abc]\b/gi, '')
             .replace(/[가나다]해/g, '')
+            .replace(/第([〇零一二三四五六七八九十百廿卅\d]+)(週|周|主日)/gu, (_, number, unit) => `第${liturgicalOrdinal(number)}${unit === '周' ? '週' : unit}`)
             .replace(/\b[ivxlcdm]{1,8}\b/gi, match => {
                 const value = romanToNumber(match);
                 return value && Number.isFinite(value) && value < Number.MAX_SAFE_INTEGER ? String(value) : match;
@@ -12188,7 +12195,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (/^(Palabra de Dios|Te alabamos, Señor|Palabra del Señor|Gloria a ti, Señor Jesús)$/iu.test(cleaned)) return true;
         if (/^(Parola di Dio|Rendiamo grazie a Dio|Parola del Signore|Lode a te,?\s*o Cristo)$/iu.test(cleaned)) return true;
         if (/^(Wort des lebendigen Gottes|Dank sei Gott|Evangelium unseres Herrn Jesus Christus|Lob sei dir,?\s*Christus)$/iu.test(cleaned)) return true;
-        if (/(主|神)の(ことば|御言葉)$/u.test(cleaned)) return true;
+        if (/^(主|神)の(ことば|みことば|御言葉|み言葉|御ことば)$/u.test(cleaned)) return true;
         const loose = cleaned.normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
             .replace(/[ĐÐ]/g, 'D')
@@ -12196,7 +12203,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/[,.]/g, '')
             .replace(/\s+/g, ' ')
             .toLowerCase();
-        return /^(do la loi chua|ta on chua|loi chua|lay chua kito ngoi khen chua|verbum domini|laus tibi christe)$/.test(loose);
+        return /^(do la loi chua|ta on chua|loi chua|lay chua kito ngoi khen chua|verbum domini|deo gratias|evangelium domini|laus tibi christe)$/.test(loose);
     }
 
     function strictTrimReadingAfterProclamation(blocks) {
@@ -14599,6 +14606,31 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         de: {reading:['Wort des lebendigen Gottes.','Dank sei Gott.'], gospel:['Evangelium unseres Herrn Jesus Christus.','Lob sei dir, Christus.'], dialogue:['Der Herr sei mit euch.','Und mit deinem Geiste.','Ehre sei dir, o Herr.']}
     };
 
+    function alignReadingProclamationFrames(lines) {
+        const frames = [{}, {}], touched = new Set();
+        const response = /^(?:하느님|그리스도님|thanks\b|praise\b|deo\b|laus\b|神に|主に|キリストに|感謝|基督|gracas\b|gloria\b|te alabamos\b|rendiamo\b|lode\b|dank\b|lob\b|ta on\b|lay chua\b)/iu;
+        const frameRows = lines.filter(line => isDailyEndingLine(line)
+            && SUPPORTED_LANGS.every(lang => !cleanNodeText(line[`text_${lang.toLowerCase()}`]) || !line[`role_${lang.toLowerCase()}`] && strictIsProclamationEnding(line[`text_${lang.toLowerCase()}`])));
+        lines.forEach(line => SUPPORTED_LANGS.forEach(lang => {
+            const lower = lang.toLowerCase(), text = line[`text_${lower}`];
+            if (line[`role_${lower}`] || !strictIsProclamationEnding(text) || isGospelDialogueLine(line)) return;
+            const folded = cleanNodeText(text).replace(/^[\s◎○●✚✠▥\-─–—―]+/u, '').normalize('NFD').replace(/[\u0300-\u036f]/gu, '').normalize('NFC').replace(/[Đđ]/gu, 'd').trim();
+            const kind = response.test(folded) ? 1 : 0;
+            frames[kind][lower] ||= {text, speaker:line[`sp_${lower}`] || ''};
+            clearParsedLineLanguage(line, lower); touched.add(line);
+        }));
+        if (!touched.size) return;
+        const anchors = frames.map((frame, index) => {
+            if (!Object.keys(frame).length) return null;
+            const line = frameRows[index] || emptyMassLine();
+            if (!lines.includes(line)) lines.push(line);
+            for (const [lower, value] of Object.entries(frame)) { line[`text_${lower}`] = value.text; line[`sp_${lower}`] = value.speaker; }
+            return line;
+        });
+        for (let index = lines.length - 1; index >= 0; index--) if (touched.has(lines[index]) && !anchors.includes(lines[index]) && !hasAnyLineContent(lines[index])) lines.splice(index, 1);
+        anchors.filter(Boolean).forEach(line => { lines.splice(lines.indexOf(line), 1); lines.push(line); });
+    }
+
     function ensureLocalizedReadingFrames(lines, baseId) {
         if (!strictReadingKeys.has(baseId)) return;
         const endings = lines.filter(isDailyEndingLine);
@@ -14616,6 +14648,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 fill(endings[index], text, index ? peopleSpeakerByLang[lower] : baseId === 'gospel' ? gospelSpeakerByLang[lower] : lectorSpeakerByLang[lower]));
             frame.dialogue.forEach((text,index) => fill(dialogues[index], text, index ? peopleSpeakerByLang[lower] : gospelSpeakerByLang[lower]));
         });
+        alignReadingProclamationFrames(lines);
     }
 
     // Keep a stable localized frame for the biblical source line. Official
@@ -14890,7 +14923,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function lineHasAnyRubric(line) {
-        return !!line && SUPPORTED_LANGS.some(lang => cleanNodeText(line[`rubric_${lang.toLowerCase()}`]));
+        return !!line && SUPPORTED_LANGS.some(lang => {
+            const lower = lang.toLowerCase();
+            if (cleanNodeText(line[`rubric_${lower}`])) return true;
+            const text = String(line[`text_${lower}`] || '');
+            return /<span\b[^>]*class=["'][^"']*\brubric\b/iu.test(text)
+                && !cleanNodeText(plainTextFromHtml(text.replace(/<span\b[^>]*class=["'][^"']*\brubric\b[^"']*["'][^>]*>[\s\S]*?<\/span>/giu, '')));
+        });
     }
 
     function isProtectedParsedTargetLine(line, baseId) {
@@ -20045,6 +20084,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function shouldSuppressAIFallbackForLine(line, baseId, lower) {
         if (line?.__sourceOnlyOriginal) return true;
         if (line?.__readingAlignmentBlank?.[lower]) return true;
+        if (strictReadingKeys.has(baseId) && (isDailyEndingLine(line) || isGospelDialogueLine(line) || lineHasAnyRole(line, 'intro'))) return true;
         if (shouldSuppressAIFallbackLine(line, baseId)) return true;
         if (strictPrayerKeys.has(baseId)
             && (lineHasAnyRole(line, 'conclusion') || isPrayerConclusionText(combinedLineText(line)))) return true;
@@ -20073,7 +20113,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function shouldRenderBlankParagraph(line, langKey, baseId) {
         if (allowsAIFallback(baseId)) return false;
-        const hasRubric = SUPPORTED_LANGS.map(lang => lang.toLowerCase()).some(lower => cleanNodeText(line && line[`rubric_${lower}`]));
+        const hasRubric = lineHasAnyRubric(line);
         if (hasRubric) return false;
         const speaker = cleanNodeText(line && line[`sp_${langKey}`]);
         const text = cleanNodeText(line && line[`text_${langKey}`]);
@@ -20142,9 +20182,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function replacePopePlaceholder(html, langKey) {
         const popeName = (state.popeNames && state.popeNames[langKey]) || (state.popeNames && state.popeNames.en) || 'Leo';
         const popeNameHtml = `<span class="muted-name-placeholder">${escapeHtml(popeName)}</span>`;
-        const popePattern = '(?:교황명|Pope name|Pope N\\.?|Tên Đức Giáo Hoàng|Tên Giáo Hoàng|Tên GH\\.?|Ten GH\\.?|T.n GH\\.?|tên Đức Giáo Hoàng|tên Giáo Hoàng|tên GH\\.?|ten GH\\.?|t.n GH\\.?|教皇名|Nomen Papae)';
+        const popePattern = '(?:교황명|Pope name|Pope N\\.?|Tên Đức Giáo Hoàng|Tên Giáo Hoàng|Tên GH\\.?|Ten GH\\.?|T.n GH\\.?|tên Đức Giáo Hoàng|tên Giáo Hoàng|tên GH\\.?|ten GH\\.?|t.n GH\\.?|教皇名|教宗名|Nomen Papae)';
         return String(html || '')
-            .replace(new RegExp(`(?:\\(${popePattern}\\)|\\[${popePattern}\\])`, 'giu'), popeNameHtml)
+            .replace(new RegExp(`(?:\\(${popePattern}\\)|\\[${popePattern}\\])(?:와\\(과\\)|과\\(와\\))?`, 'giu'), match => popeNameHtml + (langKey === 'kr' && /(?:와\(과\)|과\(와\))$/u.test(match) ? koreanNameParticle(popeName) : ''))
             .replace(/(교황\s*)(?:\[[^\]]*\]|\([^)]*\)|\?{1,4})(\s*와(?:\(과\))?)/gu, `$1${popeNameHtml}$2`);
     }
 
@@ -20349,20 +20389,40 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return output;
     }
 
-    function markMutedNamePlaceholders(html) {
-        const mutedNamePattern = '(?:주교명|세례명|bishop name|bishop n\\.?|baptismal name|Christian name|person name|the other person name|person n\\.?|the other person n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|tên thánh|tên rửa tội|司教名|洗礼名|\u4E3B\u6559\u540D|nome (?:do |del )?(?:bispo|vescovo)|nombre (?:del )?obispo|bischofsname|name des bischofs|nomen episcopi|nomen baptismale)';
+    function normalizeContextualNamePlaceholders(html, langKey) {
+        if (langKey !== 'zh') return String(html || '');
+        const slot = '(?:\\[\\s*某{1,2}\\s*\\]|［\\s*某{1,2}\\s*］|\\(\\s*某{1,2}\\s*\\)|（\\s*某{1,2}\\s*）)';
         return String(html || '')
+            .replace(new RegExp(`((?:教宗|教皇))\\s*${slot}`, 'gu'), '$1[教宗名]')
+            .replace(new RegExp(`((?:總)?主教)\\s*${slot}`, 'gu'), '$1[主教名]')
+            .replace(/(我們的(?:教宗|教皇))\s*(?:方濟各|良(?:十四世)?)(?=\s*[、，,。；;與和及]|\s*$)/gu, '$1[教宗名]')
+            .replace(/(我們的(?:教宗|教皇))(?=\s*[、，,。；;與和及]|\s*$)/gu, '$1[教宗名]')
+            .replace(/台北總教區的主教若翰/gu, '我們的主教[主教名]')
+            .replace(/(我們的主教)(?=\s*[、，,。；;與和及]|\s*$)/gu, '$1[主教名]');
+    }
+
+    function markMutedNamePlaceholders(html, langKey = '') {
+        const mutedNamePattern = '(?:주교명|세례명|bishop name|bishop n\\.?|baptismal name|Christian name|person name|the other person name|person n\\.?|the other person n\\.?|tên giám mục|tên GM\\.?|ten GM\\.?|t.n GM\\.?|tên thánh|tên rửa tội|司教名|洗礼名|\u4E3B\u6559\u540D|nome (?:do |del )?(?:bispo|vescovo)|nombre (?:del )?obispo|bischofsname|name des bischofs|nomen episcopi|nomen baptismale)';
+        const nameSpan = /(<span\b[^>]*class=["'][^"']*\bmuted-name-placeholder\b[^"']*["'][^>]*>[\s\S]*?<\/span>)/giu;
+        return String(html || '').split(nameSpan).map(part => /^<span\b/iu.test(part) && /muted-name-placeholder/u.test(part) ? part : part
             .replace(
                 new RegExp(`(?:\\(${mutedNamePattern}\\)|\\[${mutedNamePattern}\\])`, 'giu'),
                 match => `<span class="muted-name-placeholder">${match}</span>`
             )
             .replace(/(주교\s*)(\[[^\]]{1,24}\]|\([^)]{1,24}\)|\?{1,4})(\s*와(?:\(과\))?)/gu, `$1<span class="muted-name-placeholder">$2</span>$3`)
-            .replace(/(종\s*)(\[[^\]]{1,24}\]|\([^)]{1,24}\)|\?{1,4})(\s*을(?:\(를\))?)/gu, `$1<span class="muted-name-placeholder">$2</span>$3`);
+            .replace(/(종\s*)(\[[^\]]{1,24}\]|\([^)]{1,24}\)|\?{1,4})(\s*을(?:\(를\))?)/gu, `$1<span class="muted-name-placeholder">$2</span>$3`)
+            .replace(/\[\s*某{1,2}\s*\]|［\s*某{1,2}\s*］|\(\s*某{1,2}\s*\)|（\s*某{1,2}\s*）/gu, (slot, offset, source) => {
+                if (langKey !== 'zh') return slot;
+                const before = source.slice(0, offset), boundary = Math.max(before.lastIndexOf('。'), before.lastIndexOf('；'), before.lastIndexOf('\n'));
+                const context = plainTextFromHtml(source.slice(Math.max(boundary + 1, offset - 100), offset + slot.length + 150)).split(/[。；\n]/u)[0];
+                const deceased = /亡者|亡靈|已亡|死亡|先我們而去|安眠|從人世|去世|過世/u.test(context);
+                return `<span class="muted-name-placeholder" data-name-role="${deceased ? 'deceased' : 'person'}" title="${deceased ? '亡者姓名' : '姓名'}">${slot}</span>`;
+            })).join('');
     }
 
     function formatDynamicLineText(html, langKey) {
         if (!html || isAIButton(html)) return html || '';
-        return markMutedNamePlaceholders(replaceBishopPlaceholder(replacePopePlaceholder(html, langKey), langKey));
+        return markMutedNamePlaceholders(replaceBishopPlaceholder(replacePopePlaceholder(normalizeContextualNamePlaceholders(html, langKey), langKey), langKey), langKey);
     }
 
     function shouldSuppressSpeaker(baseId) {
@@ -20562,6 +20622,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const songs = item && item.songs && typeof item.songs === 'object' && !Array.isArray(item.songs) ? item.songs : {};
         if (item?.__specialPrefaceKey && !item.__dailyServerPreface) return songs;
         const verified = (globalThis.missalPrefaceIndex || {}).prefaces || {};
+        const previous = item && eucharistSongMapCache.get(item);
+        if (previous && previous.songs === songs && previous.verified === verified && previous.daily === item.__dailyServerPreface) return previous.result;
         const corrections = Object.fromEntries(Object.entries(verified).map(([key, entry]) => {
             const base = songs[key] || {};
             const line = {};
@@ -20575,13 +20637,33 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }));
         const result=Object.assign({}, songs, corrections), daily=item?.__dailyServerPreface;
         if (daily) {
-            const count=Math.max(1,...SUPPORTED_LANGS.map(lang=>daily[lang.toLowerCase()+'_options']?.length||0));
-            for(let index=0;index<count;index++) {
-                const line={},title={};
-                SUPPORTED_LANGS.forEach(lang=>{const lower=lang.toLowerCase(),option=daily[lower+'_options']?.[index];line['text_'+lower]=option?globalThis.ordoDailyContent.body(option):(index===0?globalThis.ordoDailyContent.body({lines:daily[lower+'_lines'],text:daily[lower]}):'');line['sp_'+lower]='';title[lower]=lang==='KR'?'수집된 감사송'+(count>1?' '+(index+1):''):'Collected preface'+(count>1?' '+(index+1):'');});
-                result['daily_collected_preface'+(index?'_'+(index+1):'')]={title,content:[line],__dailyServer:true};
-            }
+            let rank=0, unmatched=0;
+            SUPPORTED_LANGS.forEach(lang => {
+                const lower=lang.toLowerCase();
+                const options=daily[lower+'_options']?.length ? daily[lower+'_options'] : [{lines:daily[lower+'_lines'],text:daily[lower]}];
+                options.forEach(option => {
+                    const matched=globalThis.ordoPrefaceMatcher.match(option,lower,result);
+                    if (!cleanNodeText(matched.body)) return;
+                    let key=matched.key;
+                    if (key && result[key]?.__dailySourceLanguages?.[lower]) {
+                        const previous=(result[key].content||[]).map(line=>line['text_'+lower]||'').join('\n\n');
+                        if (normalizePrefaceMatchText(previous)===normalizePrefaceMatchText(matched.body)) return;
+                        key='';
+                    }
+                    if (!key) key='daily_collected_preface'+(unmatched++ ? '_'+unmatched : '');
+                    const base=result[key]||{}, line={}, title=Object.assign({},base.title);
+                    SUPPORTED_LANGS.forEach(code => {
+                        const target=code.toLowerCase(),rows=base.content||[];
+                        line['text_'+target]=rows.map(row=>row['text_'+target]).filter(Boolean).join('\n\n');
+                        line['sp_'+target]=(rows.find(row=>row['sp_'+target])||{})['sp_'+target]||'';
+                    });
+                    line['text_'+lower]=matched.body;line['sp_'+lower]='';
+                    title[lower] ||= globalThis.ordoPrefaceMatcher.displayTitle(matched.key,matched.heading,lower) || (lang==='KR'?'수집된 감사송':lang==='ZH'?'收錄頌謝詞':'Collected preface');
+                    result[key]=Object.assign({},base,{title,content:[line],__dailyServer:true,__dailySourceRank:Math.min(base.__dailySourceRank??Infinity,rank++),__dailySourceLanguages:{...base.__dailySourceLanguages,[lower]:true}});
+                });
+            });
         }
+        if (item) eucharistSongMapCache.set(item, {songs,verified,daily:item.__dailyServerPreface,result});
         return result;
     }
 
@@ -20920,7 +21002,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function getEucharistSongHintKey(item) {
         const songs = getEucharistSongMap(item);
-        if (songs.daily_collected_preface) return 'daily_collected_preface';
+        const collected=Object.entries(songs).filter(([,entry])=>entry.__dailyServer).sort((a,b)=>(a[1].__dailySourceRank||0)-(b[1].__dailySourceRank||0))[0];
+        if (collected) return collected[0];
         if ((state.currentLoc === 'IT' || state.targetLang === 'IT') && songs.cei_complete_prefaces) {
             return 'cei_complete_prefaces';
         }

@@ -68,7 +68,8 @@
     "browser:check:loading-scroll": "node tools/browser-check-loading-scroll.js",
     "taiwan:daily:refresh": "node tools/refresh-taiwan-daily-date.js",
     "browser:check:taiwan-daily": "node tools/browser-check-taiwan-daily.js",
-    "browser:check:kr-zh-citations": "node tools/browser-check-kr-zh-citations.js"
+    "browser:check:kr-zh-citations": "node tools/browser-check-kr-zh-citations.js",
+    "browser:check:taiwan-display": "node tools/verify-preface-matching.js && node tools/browser-check-taiwan-display.js"
   },
   "keywords": [],
   "author": "",
