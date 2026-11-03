@@ -83,6 +83,28 @@ async function main() {
       await page.waitForFunction(() => state.block && state.drafts.left.length > 0);
       assert.equal(await page.locator('#add-left,#add-right,.addbar').count(), 0, 'Obsolete bottom add buttons must be removed');
       assert.equal((await page.locator('.columns-head span').nth(1).textContent()).trim(), '', 'The middle translation heading must be blank');
+      await page.selectOption('#right-country', 'TW');
+      await page.waitForFunction(() => state.block.rightCountry.jurisdiction === 'TW');
+      const speakerBlock = mass.blocksForCountry(loaded, 'TW').find(block => block.rows.some(row => row.kind === 'text' && !row.speakerPath)
+        && mass.blocksForCountry(loaded, 'KR').some(left => left.key === block.key));
+      assert.ok(speakerBlock, 'A translated body sentence without a speaker field is required');
+      await page.selectOption('#block', speakerBlock.key);
+      await page.waitForFunction(key => state.block.key === key, speakerBlock.key);
+      const speakerIndex = await page.evaluate(() => state.drafts.right.findIndex(row => row.kind === 'text' && !row.speakerPath));
+      assert(speakerIndex >= 0);
+      const speakerInput = page.locator('[data-side="right"][data-role="speaker"]').nth(speakerIndex);
+      assert(await speakerInput.isEnabled(), 'Missing speaker data must not lock the input');
+      for (const speaker of ['사제', '교우', '']) {
+        await speakerInput.fill(speaker);
+        await page.click('#save-right');
+        await page.waitForFunction(() => !state.saving);
+        assert.equal(await speakerInput.inputValue(), speaker, 'Adding, updating, and clearing the speaker must survive a reload');
+      }
+      const speakerSaves = saved;
+      if (width === 390) {
+        await page.selectOption('#right-country', 'VN');
+        await page.waitForFunction(() => state.block.rightCountry.jurisdiction === 'VN');
+      }
       const chosen = mass.blocksForCountry(loaded, 'KR').find(block => block.rows.length >= 4);
       await page.selectOption('#block', chosen.key);
       await page.waitForFunction(key => state.block.key === key, chosen.key);
@@ -115,12 +137,12 @@ async function main() {
       const expected = await text('left').evaluateAll(inputs => inputs.map(input => input.value));
       await page.click('#save-left');
       await page.waitForFunction(() => !state.saving);
-      assert.equal(saved, 1);
+      assert.equal(saved, speakerSaves + 1);
       assert.deepEqual(await persistedText('left'), expected);
       assert.equal(await text('right').nth(0).inputValue(), 'Unsaved opposite sentence', 'Saving one side must preserve the opposite draft');
       await page.click('#save-right');
       await page.waitForFunction(() => !state.saving);
-      assert.equal(saved, 2);
+      assert.equal(saved, speakerSaves + 2);
       await page.click('#reload');
       await page.waitForFunction(() => state.drafts.right[0]?.text === 'Unsaved opposite sentence');
       assert.deepEqual(await persistedText('left'), expected);

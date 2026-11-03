@@ -1264,10 +1264,10 @@ const INDEX_HTML = String.raw`<!doctype html>
         const canAdd=!state.saving&&selectedCountry(side)?.editable&&state.block[side+'CreateBase']&&index===state.drafts[side].length;
         return '<div class="missing"><span>해당 언어에 대응 문장이 없습니다.</span>'+(canAdd?'<button type="button" class="secondary" data-action="first" data-action-side="'+side+'">＋ '+(state.drafts[side].length?'문장':'첫 문장')+' 추가</button>':'')+'</div>';
       }
-      const disabled=row.speakerPath||row.virtual?'':'disabled'; const placeholder=row.virtual?'비어 있는 번역 구문을 입력하세요.':'';
       const locked=state.saving||!selectedCountry(side)?.editable;
+      const disabled=locked?'disabled':''; const placeholder=row.virtual?'비어 있는 번역 구문을 입력하세요.':'';
       const actions=[['before','＋ 앞 삽입'],['after','＋ 뒤 삽입'],['up','↑ 위로'],['down','↓ 아래로'],['delete','삭제']].map(([action,label])=>'<button type="button" class="secondary '+(action==='delete'?'delete':'')+'" data-action="'+action+'" data-action-side="'+side+'" data-row="'+escapeHtml(row.key)+'" '+(locked||(action==='up'&&index===0)||(action==='down'&&index===state.drafts[side].length-1)?'disabled':'')+'>'+label+'</button>').join('');
-      return '<div class="editor-meta"><select class="kind" data-side="'+side+'" data-role="kind" data-row="'+escapeHtml(row.key)+'" title="본문 또는 지시문 선택">'+kindOptions(row.draftKind)+'</select><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.draftSpeaker)+'" '+disabled+' title="화자"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
+      return '<div class="editor-meta"><select class="kind" data-side="'+side+'" data-role="kind" data-row="'+escapeHtml(row.key)+'" title="본문 또는 지시문 선택">'+kindOptions(row.draftKind)+'</select><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.draftSpeaker)+'" '+disabled+' title="발화자" aria-label="발화자" placeholder="사제·교우"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
         '<textarea data-side="'+side+'" data-role="text" data-row="'+escapeHtml(row.key)+'" placeholder="'+placeholder+'">'+escapeHtml(row.draftText)+'</textarea><div class="row-actions" aria-label="'+(side==='left'?'왼쪽':'오른쪽')+' '+(index+1)+'번 문장 편집">'+actions+'</div>';
     }
     function rowHtml(pair,index) {
