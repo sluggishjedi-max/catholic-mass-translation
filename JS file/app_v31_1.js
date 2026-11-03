@@ -132,7 +132,7 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261103-1';
+    const APP_VERSION = 'V31.1-20261103-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10304,7 +10304,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const strictReadingKeys = new Set(['reading1', 'reading2', 'gospel']);
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict108-numbered-reading-options';
+    const STRICT_PARSER_CACHE_VERSION = 'strict109-chinese-antiphon-alternatives';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11245,7 +11245,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .filter(Boolean))
             .filter(line => !/^--\s*\d+\s+of\s+\d+\s*--$/iu.test(line));
         const structural = line => strictIdentifySection(line, 'ZH') || strictIsTerminalSection(line, 'ZH')
-            || /^(?:恭讀|第[一二三四五六七八九十]+式|[（(]|答[:：]|領[:：]|[一二三四五六七八九十]+、|上主的聖言)/u.test(line);
+            || /^(?:恭讀|第[一二三四五六七八九十]+式|[（(]|答[:：]|領[:：]|或(?:[:：]|\s|$)|Or:|[一二三四五六七八九十]+、|上主的聖言)/u.test(line)
+            || /^[\p{Script=Han}〇○Ο]{1,24}\s+\d[\da-z,，.;；:：()（）\s+\-–—]*$/u.test(line);
         const out = [];
         expanded.forEach(line => {
             const previous = out[out.length - 1];

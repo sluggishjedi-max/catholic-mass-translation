@@ -20,7 +20,10 @@ try {
     }
     const novemberDate = new Date(2026, 10, 3);
     const november = strictParseDailyMass('ZH', fetchTraditionalChineseDailyStaticSource(novemberDate), novemberDate, 'TW');
-    const novemberReadings = {complete:hasCompleteTraditionalChineseDailyMass(november,'TW'),reading:november.data.reading1?.cit_zh,gospel:november.data.gospel?.cit_zh};
+    const novemberReadings = {complete:hasCompleteTraditionalChineseDailyMass(november,'TW'),reading:november.data.reading1?.cit_zh,gospel:november.data.gospel?.cit_zh,
+      communionAlternatives:splitParsedAlternatives(november.data.communion.lines).length,
+      communionCitations:november.data.communion.optionCits,
+      secondCommunion:splitParsedAlternatives(november.data.communion.lines)[1]?.map(line=>line.text).join(' ')};
     const allSoulsDate = new Date(2026, 10, 2);
     const allSouls = ['first', 'second', 'third'].map(choice => {
       getStrictMassSelector = () => ({ slot:'day', specialVigil:'', allSoulsChoice:choice });
@@ -51,6 +54,9 @@ try {
   assert(result.novemberReadings.complete, 'November 3 weekday Mass is missing from the bundled corpus');
   assert.match(result.novemberReadings.reading, /斐理伯.*2,5-11/u);
   assert.match(result.novemberReadings.gospel, /路加.*14,15-24/u);
+  assert.equal(result.novemberReadings.communionAlternatives, 2, 'The second approved Communion antiphon was lost');
+  assert.match(result.novemberReadings.secondCommunion, /那以我為飲食的人/u);
+  assert.equal(result.novemberReadings.communionCitations[1].cit_zh, '若六 57');
   console.log(JSON.stringify(result));
 } catch (error) {
   console.error(error.message);
