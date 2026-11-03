@@ -175,7 +175,8 @@ function collectMassBlocks(ordinary, language) {
   (ordinary || []).forEach((entry, entryIndex) => {
     function walk(value, relativePath) {
       if (Array.isArray(value)) {
-        const containsRows = value.some(row => rowContentFields(row, language).length > 0);
+        const containsRows = value.some(row => rowContentFields(row, language).length > 0)
+          || (value.length === 0 && relativePath.length > 0);
         if (containsRows) {
           const rows = [];
           value.forEach((row, rowIndex) => {
@@ -199,6 +200,7 @@ function collectMassBlocks(ordinary, language) {
             title: blockTitle(entry, language, relativePath),
             entryIndex,
             relativePath,
+            revision: require('node:crypto').createHash('sha256').update(JSON.stringify(value)).digest('hex'),
             rows
           });
           return;
@@ -380,7 +382,7 @@ function ordinaryOverrideBlock(source) {
   const arrayNode = parseArrayNode(source, arrayStart);
   if (arrayNode.end > markerEnd) throw new Error('Mass editor override array crosses its end marker');
   const entries = vm.runInNewContext(source.slice(arrayStart, arrayNode.end));
-  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create && !entry.rename))) {
+  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create && !entry.rename && !entry.replace))) {
     throw new Error('Mass editor overrides must contain a path, create, or rename descriptor');
   }
   return { start: arrayStart, end: arrayNode.end, entries: JSON.parse(JSON.stringify(entries)) };
@@ -455,7 +457,7 @@ function ensureOrdinaryOverrideSection(source, jurisdiction) {
   if (ordinaryOverrideBlock(source)) return source;
   const ordinaryStart = findOrdinaryArrayStart(source);
   const directProperty = ordinaryStart !== -1 && /\bordinary\s*:\s*$/u.test(source.slice(Math.max(0, ordinaryStart - 80), ordinaryStart));
-  const registrations = Array.from(source.matchAll(/\n[ \t]*global\.countryMassData(?:\[[^\r\n]+\]|\.[A-Za-z0-9_$-]+)\s*=/gu));
+  const registrations = Array.from(source.matchAll(/\n[ \t]*(?:global|globalThis)\.countryMassData(?:\[[^\r\n]+\]|\.[A-Za-z0-9_$-]+)\s*=/gu));
   if (!registrations.length) throw new Error(`Could not locate ${jurisdiction} Mass module registration`);
   const insertAt = registrations[0].index + 1;
   let output = `${source.slice(0, insertAt)}${injectedOverrideSection(jurisdiction, !directProperty)}${source.slice(insertAt)}`;
@@ -465,6 +467,117 @@ function ensureOrdinaryOverrideSection(source, jurisdiction) {
     output = `${output.slice(0, nextStart)}applyOrdinaryEditorOverrides(${output.slice(nextStart, arrayNode.end)})${output.slice(arrayNode.end)}`;
   }
   return output;
+}
+
+// Keep structural edits after older field overrides, whose paths refer to the original rows.
+// Replacing this final snapshot also makes later insert/move/delete operations idempotent.
+function ensureBlockReplacementSupport(source) {
+  const anchor = '    ordinaryEditorOverrides.forEach(override => {';
+  if (source.includes('if (override.replace) {')) return source;
+  if (!source.includes(anchor)) throw new Error('Mass editor override handler is missing');
+  return source.replace(anchor, `${anchor}
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }`);
+}
+
+function prepareMassStructureEdit(payload, sources, loaded, country, block, sourceIndex) {
+  const fail = (message, statusCode = 400) => { throw Object.assign(new Error(message), { statusCode }); };
+  const { structure, updates } = payload;
+  const module = loaded.runtime.countries[country.jurisdiction];
+  const rawRows = valuesAtPath(module.ordinary, [block.entryIndex, ...block.relativePath]) || [];
+  const revision = require('node:crypto').createHash('sha256').update(JSON.stringify(rawRows)).digest('hex');
+  if (structure.revision !== revision) fail('구절이 다른 곳에서 변경되었습니다. 새로고침한 뒤 다시 편집하세요.', 409);
+  if (!Array.isArray(structure.order) || !Array.isArray(updates)) fail('Invalid sentence order');
+  const order = structure.order;
+  if (order.some(key => typeof key !== 'string' || !key) || new Set(order).size !== order.length) fail('Duplicate or invalid sentence key');
+  const originals = new Map(block.rows.map(row => [row.key, row]));
+  const edits = new Map(updates.map(update => [update.key, update]));
+  if (edits.size !== updates.length || edits.size !== order.length || order.some(key => !edits.has(key))) fail('Sentence updates must match the requested order');
+  const kinds = new Set(['text', 'rubric', 'cit']);
+  const suffix = `_${country.language.toLowerCase()}`;
+  const speakerField = `sp${suffix}`;
+  const owners = new Set();
+  const nextRows = order.map(key => {
+    const update = edits.get(key);
+    const original = originals.get(key);
+    if (!kinds.has(update.kind)) fail('Unknown sentence type');
+    if (original) {
+      if (cleanText(update.expectedText) !== original.text || cleanText(update.expectedSpeaker) !== original.speaker
+        || update.expectedKind !== original.kind) fail('문장이 변경되었습니다. 새로고침한 뒤 다시 편집하세요.', 409);
+    } else {
+      const create = update.create;
+      if (!create || create.entryId !== block.entryId || JSON.stringify(create.relativePath) !== JSON.stringify(block.relativePath)
+        || create.rowKey !== key || cleanText(update.expectedText) || cleanText(update.expectedSpeaker)) fail('Invalid new sentence');
+    }
+    const raw = original ? JSON.parse(JSON.stringify(rawRows[original.rowIndex])) : {};
+    // A physical row can contain several sentences. Preserve unrelated fields once,
+    // and carry formatting metadata and the speaker with each moved sentence.
+    const first = original && !owners.has(original.rowIndex);
+    if (original) owners.add(original.rowIndex);
+    Object.keys(raw).forEach(field => {
+      if (['text', 'rubric', 'cit'].some(kind => field === `${kind}${suffix}`)
+        || (!first && /^(?:text|rubric|cit|sp)_[a-z]{2}$/iu.test(field))) delete raw[field];
+    });
+    const keys = first ? { ...raw.__massEditorPairKeys } : {};
+    ['text', 'rubric', 'cit'].forEach(kind => delete keys[`${kind}${suffix}`]);
+    const field = `${update.kind}${suffix}`;
+    raw[field] = cleanText(update.text);
+    if (!original || original.speakerPath || cleanText(update.speaker)) raw[speakerField] = cleanText(update.speaker);
+    raw.__massEditorPairKeys = { ...keys, [field]: key };
+    return raw;
+  });
+  if (order.length === block.rows.length && order.every((key, index) => {
+    const row = block.rows[index], update = edits.get(key);
+    return key === row.key && update.kind === row.kind && cleanText(update.text) === row.text && cleanText(update.speaker) === row.speaker;
+  })) {
+    return { sources, sourceIndex, changed: [], nextCode: sources[sourceIndex].code, country, block };
+  }
+  // Retain rows without an editable sentence and any other-language fields in deleted rows.
+  rawRows.forEach((raw, index) => {
+    if (owners.has(index)) return;
+    const residual = JSON.parse(JSON.stringify(raw));
+    const contentFields = rowContentFields(raw, country.language);
+    contentFields.forEach(({ field }) => delete residual[field]);
+    if (contentFields.length) {
+      delete residual[speakerField];
+      const keys = { ...residual.__massEditorPairKeys };
+      contentFields.forEach(({ field }) => delete keys[field]);
+      if (Object.keys(keys).length) residual.__massEditorPairKeys = keys;
+      else delete residual.__massEditorPairKeys;
+      if (!Object.keys(residual).some(field => /^(?:text|rubric|cit)_[a-z]{2}$/iu.test(field))) return;
+    }
+    const anchor = order.findIndex(key => originals.get(key)?.rowIndex > index);
+    nextRows.splice(anchor < 0 ? nextRows.length : anchor, 0, residual);
+  });
+  const source = sources[sourceIndex];
+  if (require('node:util').isDeepStrictEqual(JSON.parse(JSON.stringify(rawRows)), nextRows)) {
+    return { sources, sourceIndex, changed: [], nextCode: source.code, country, block };
+  }
+  let workingCode = ensureBlockReplacementSupport(ensureOrdinaryOverrideSection(source.code, country.jurisdiction));
+  const overrides = ordinaryOverrideBlock(workingCode);
+  const entries = overrides.entries;
+  const replacement = entries.find(entry => entry.replace && entry.replace.entryId === block.entryId
+    && JSON.stringify(entry.replace.relativePath) === JSON.stringify(block.relativePath));
+  if (replacement) replacement.replace.rows = nextRows;
+  else entries.push({ replace: { entryId: block.entryId, relativePath: block.relativePath, rows: nextRows } });
+  const nextCode = `${workingCode.slice(0, overrides.start)}${formatOrdinaryOverrides(entries)}${workingCode.slice(overrides.end)}`;
+  const nextSources = sources.map((item, index) => index === sourceIndex ? { ...item, code: nextCode } : item);
+  const runtime = runCountryMassSources(nextSources);
+  const actualRows = valuesAtPath(runtime.countries[country.jurisdiction].ordinary, [block.entryIndex, ...block.relativePath]);
+  if (JSON.stringify(actualRows) !== JSON.stringify(nextRows)) throw new Error('Sentence structure did not round-trip');
+  if (runtime.countries[country.jurisdiction].ordinary.length !== module.ordinary.length) throw new Error('Mass data item count changed during save');
+  return { sources: nextSources, sourceIndex, changed: [{ field: 'structure', value: order }], nextCode, country, block };
 }
 
 const editabilityCache = new Map();
@@ -546,6 +659,7 @@ function virtualBlockFor(reference, module, language) {
     title: blockTitle(entry, language, reference.relativePath),
     entryIndex,
     relativePath: Array.from(reference.relativePath),
+    revision: require('node:crypto').createHash('sha256').update('[]').digest('hex'),
     rows: [],
     virtual: true
   };
@@ -595,6 +709,10 @@ function blockPair(loaded, leftJurisdiction, rightJurisdiction, key) {
     rightCountry,
     leftExists: Boolean(leftBlock),
     rightExists: Boolean(rightBlock),
+    leftRevision: leftBlock?.revision,
+    rightRevision: rightBlock?.revision,
+    leftRowKeys: (leftBlock?.rows || []).map(row => row.key),
+    rightRowKeys: (rightBlock?.rows || []).map(row => row.key),
     leftBlockKey: leftBlock?.key || '',
     rightBlockKey: rightBlock?.key || '',
     leftCreateBase: leftBlock ? {
@@ -617,7 +735,7 @@ function blockPair(loaded, leftJurisdiction, rightJurisdiction, key) {
   };
 }
 
-function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updates }, sources = readCountryMassSources()) {
+function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updates, structure }, sources = readCountryMassSources()) {
   const loaded = getLoadedState(sources);
   const country = loaded.countries.find(item => item.jurisdiction === jurisdiction);
   if (!country) throw Object.assign(new Error(`Unknown jurisdiction: ${jurisdiction}`), { statusCode: 404 });
@@ -634,6 +752,20 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
     }
   }
   if (!block) throw Object.assign(new Error('The selected Mass passage was not found in this country'), { statusCode: 404 });
+
+  if (structure) return prepareMassStructureEdit({ updates, structure }, sources, loaded, country, block, sourceIndex);
+  const existingReplacement = ordinaryOverrideBlock(source.code)?.entries.some(entry => entry.replace
+    && entry.replace.entryId === block.entryId && JSON.stringify(entry.replace.relativePath) === JSON.stringify(block.relativePath));
+  if (existingReplacement) {
+    const updatesByKey = new Map((updates || []).map(update => [update.key, update]));
+    const completeUpdates = block.rows.map(row => ({
+      key: row.key, kind: row.kind, expectedKind: row.kind, text: row.text, expectedText: row.text,
+      speaker: row.speaker, expectedSpeaker: row.speaker, ...updatesByKey.get(row.key)
+    }));
+    (updates || []).filter(update => !block.rows.some(row => row.key === update.key)).forEach(update => completeUpdates.push(update));
+    return prepareMassStructureEdit({ updates: completeUpdates, structure: { revision: block.revision, order: completeUpdates.map(update => update.key) } },
+      sources, loaded, country, block, sourceIndex);
+  }
 
   const requestedUpdates = Array.isArray(updates) ? updates : [];
   const currentRowsByKey = new Map(block.rows.map(row => [row.key, row]));
@@ -1022,6 +1154,10 @@ const INDEX_HTML = String.raw`<!doctype html>
     .row-card { display:grid; grid-template-columns:minmax(0,1fr) 118px minmax(0,1fr); gap:12px; padding:14px; margin-bottom:12px; }
     .editor { min-width:0; }
     .editor-meta { display:flex; gap:8px; align-items:center; margin-bottom:8px; }
+    .row-actions { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+    .row-actions button { padding:6px 9px; font-size:12px; }
+    .row-actions .delete { color:#ad2434; background:#fff0f2; }
+    .edit-help { color:var(--muted); font-size:13px; line-height:1.6; }
     .kind { width:auto; min-width:82px; padding:7px 30px 7px 10px; border-radius:999px; color:#43506a; background:#eef1f6; border:1px solid #d8deea; font-size:12px; font-weight:800; }
     .speaker { max-width:110px; padding:7px 9px !important; font-weight:800; text-align:center; }
     .speak { margin-left:auto; padding:7px 10px; white-space:nowrap; }
@@ -1057,6 +1193,10 @@ const INDEX_HTML = String.raw`<!doctype html>
       .savebar { grid-template-columns:1fr 1fr; }
       .savebar span { display:none; }
       .translator-boxes { grid-template-columns:1fr; }
+      .editor-meta { flex-wrap:wrap; }
+      main { padding:12px; }
+      .controls,.section-tools { grid-template-columns:minmax(0,1fr); }
+      .top { position:relative; }
     }
   </style>
 </head>
@@ -1078,6 +1218,7 @@ const INDEX_HTML = String.raw`<!doctype html>
     </section>
     <div id="status" class="status">데이터를 불러오는 중입니다.</div>
     <div class="columns-head"><span id="left-title">원문</span><span>번역</span><span id="right-title">번역문</span></div>
+    <p class="edit-help">각 문장 아래에서 앞·뒤 삽입, 위·아래 이동, 삭제를 할 수 있습니다. 변경한 쪽의 로컬 저장을 누르면 적용됩니다.</p>
     <section id="rows"></section>
     <div class="addbar">
       <button id="add-left" class="secondary" type="button">＋ 왼쪽 줄 추가</button><span></span>
@@ -1102,7 +1243,7 @@ const INDEX_HTML = String.raw`<!doctype html>
     </section>
   </main>
   <script>
-    const state = { countries:[], blocks:[], visibleBlocks:[], block:null, rowSequence:0, translationSequence:0, translationTimer:null, statusTimer:null };
+    const state = { countries:[], blocks:[], visibleBlocks:[], block:null, drafts:{left:[],right:[]}, saving:false, rowSequence:0, translationSequence:0, translationTimer:null, statusTimer:null };
     const el = Object.fromEntries(['left-country','right-country','search','block','reload','firebase-upload','status','rows','add-left','add-right','save-left','save-right','left-title','right-title','translator-source-language','translator-target-language','translator-source','translator-output','translator-swap','translator-status','translator-ai','translator-copy'].map(id => [id.replace(/-([a-z])/g,(_,c)=>c.toUpperCase()), document.getElementById(id)]));
     function escapeHtml(value) { return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
     async function api(url, options) { const response=await fetch(url,options); const body=await response.json(); if(!response.ok||!body.ok) throw new Error(body.error||('HTTP '+response.status)); return body; }
@@ -1141,39 +1282,73 @@ const INDEX_HTML = String.raw`<!doctype html>
     }
     function kindLabel(kind) { return {text:'본문',rubric:'지시문',cit:'인용'}[kind]||kind; }
     function kindOptions(selected) { return ['text','rubric','cit'].map(kind=>'<option value="'+kind+'" '+(kind===selected?'selected':'')+'>'+kindLabel(kind)+'</option>').join(''); }
-    function editorHtml(side,row) {
+    function editorHtml(side,row,index) {
       if(!row) return '<div class="missing">해당 언어에 대응 구절이 없습니다.</div>';
       const disabled=row.speakerPath||row.virtual?'':'disabled'; const placeholder=row.virtual?'비어 있는 번역 구문을 입력하세요.':'';
-      return '<div class="editor-meta"><select class="kind" data-side="'+side+'" data-role="kind" data-row="'+escapeHtml(row.key)+'" title="본문 또는 지시문 선택">'+kindOptions(row.kind)+'</select><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.speaker)+'" '+disabled+' title="화자"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
-        '<textarea data-side="'+side+'" data-role="text" data-row="'+escapeHtml(row.key)+'" placeholder="'+placeholder+'">'+escapeHtml(row.text)+'</textarea>';
+      const locked=state.saving||!selectedCountry(side)?.editable;
+      const actions=[['before','＋ 앞 삽입'],['after','＋ 뒤 삽입'],['up','↑ 위로'],['down','↓ 아래로'],['delete','삭제']].map(([action,label])=>'<button type="button" class="secondary '+(action==='delete'?'delete':'')+'" data-action="'+action+'" data-action-side="'+side+'" data-row="'+escapeHtml(row.key)+'" '+(locked||(action==='up'&&index===0)||(action==='down'&&index===state.drafts[side].length-1)?'disabled':'')+'>'+label+'</button>').join('');
+      return '<div class="editor-meta"><select class="kind" data-side="'+side+'" data-role="kind" data-row="'+escapeHtml(row.key)+'" title="본문 또는 지시문 선택">'+kindOptions(row.draftKind)+'</select><input class="speaker" data-side="'+side+'" data-role="speaker" data-row="'+escapeHtml(row.key)+'" value="'+escapeHtml(row.draftSpeaker)+'" '+disabled+' title="화자"><button class="speak secondary" type="button" data-speak-side="'+side+'" data-row="'+escapeHtml(row.key)+'" title="이 문장 읽어주기">🔊 듣기</button></div>'+
+        '<textarea data-side="'+side+'" data-role="text" data-row="'+escapeHtml(row.key)+'" placeholder="'+placeholder+'">'+escapeHtml(row.draftText)+'</textarea><div class="row-actions" aria-label="'+(side==='left'?'왼쪽':'오른쪽')+' '+(index+1)+'번 문장 편집">'+actions+'</div>';
     }
     function rowHtml(pair,index) {
       const leftButtons=pair.left&&pair.right?'<button class="translate" data-mode="ai" data-direction="right" data-row="'+escapeHtml(pair.key)+'">AI →</button><button class="translate" data-mode="google" data-direction="right" data-row="'+escapeHtml(pair.key)+'">Google →</button>':'';
       const rightButtons=pair.left&&pair.right?'<button class="translate" data-mode="ai" data-direction="left" data-row="'+escapeHtml(pair.key)+'">← AI</button><button class="translate" data-mode="google" data-direction="left" data-row="'+escapeHtml(pair.key)+'">← Google</button>':'';
-      return '<article class="row-card" data-row-card="'+escapeHtml(pair.key)+'"><div class="editor '+(pair.left&&pair.left.virtual?'virtual':'')+'">'+editorHtml('left',pair.left)+'</div><div class="translate-stack">'+leftButtons+rightButtons+'</div><div class="editor '+(pair.right&&pair.right.virtual?'virtual':'')+'">'+editorHtml('right',pair.right)+'</div></article>';
+      return '<article class="row-card" data-row-card="'+escapeHtml(pair.key)+'" data-index="'+index+'"><div class="editor '+(pair.left&&pair.left.virtual?'virtual':'')+'">'+editorHtml('left',pair.left,index)+'</div><div class="translate-stack">'+leftButtons+rightButtons+'</div><div class="editor '+(pair.right&&pair.right.virtual?'virtual':'')+'">'+editorHtml('right',pair.right,index)+'</div></article>';
+    }
+    function syncDrafts() {
+      ['left','right'].forEach(side=>state.drafts[side].forEach(row=>{
+        const text=inputFor(side,'text',row.key); if(!text)return;
+        row.draftText=text.value; row.draftSpeaker=inputFor(side,'speaker',row.key)?.value||''; row.draftKind=inputFor(side,'kind',row.key).value;
+      }));
     }
     function renderRows() {
-      el.rows.innerHTML=state.block.rows.map(rowHtml).join('')||'<div class="empty">편집 가능한 본문이 없습니다.</div>';
+      const pairs=Array.from({length:Math.max(state.drafts.left.length,state.drafts.right.length)},(_,index)=>({key:'slot-'+index,left:state.drafts.left[index],right:state.drafts.right[index]}));
+      el.rows.innerHTML=pairs.map(rowHtml).join('')||'<div class="empty">문장이 없습니다. 아래 줄 추가 버튼으로 새 문장을 넣으세요.</div>';
       document.querySelectorAll('button.translate').forEach(button=>button.addEventListener('click',()=>translateRow(button).catch(error=>setStatus(error.message,'error'))));
       document.querySelectorAll('button.speak').forEach(button=>button.addEventListener('click',()=>speakRow(button)));
+      document.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>editRow(button)));
+      document.querySelectorAll('#rows textarea,#rows select,#rows input,#rows .translate').forEach(input=>{ if(state.saving)input.disabled=true; });
     }
-    function addRow(side) {
-      if(!state.block)return;
+    function addRow(side,index=state.drafts[side].length) {
+      if(!state.block||state.saving)return;
+      syncDrafts();
       const base=state.block[side+'CreateBase']; const country=selectedCountry(side);
       if(!base||!country?.editable){ setStatus('선택한 쪽에는 줄을 추가할 수 없습니다.','error'); return; }
-      const indices=state.block.rows.map(pair=>pair[side]?.rowIndex).filter(Number.isInteger);
+      const indices=state.drafts[side].map(row=>row.rowIndex).filter(Number.isInteger);
       const rowIndex=indices.length?Math.max(...indices)+1:0;
       const key='editor-'+Date.now()+'-'+(++state.rowSequence)+':text';
-      const row={key,rowIndex,kind:'text',text:'',speaker:'',textPath:null,speakerPath:null,virtual:true,create:{entryId:base.entryId,relativePath:Array.from(base.relativePath),rowKey:key,preferredIndex:rowIndex,kind:'text',forceCreate:true}};
-      state.block.rows.push({key,left:side==='left'?row:null,right:side==='right'?row:null});
+      const row={key,rowIndex,kind:'text',text:'',speaker:'',draftKind:'text',draftText:'',draftSpeaker:'',textPath:null,speakerPath:null,virtual:true,create:{entryId:base.entryId,relativePath:Array.from(base.relativePath),rowKey:key,preferredIndex:rowIndex,kind:'text',forceCreate:true}};
+      state.drafts[side].splice(index,0,row);
       renderRows();
       const input=inputFor(side,'text',key); if(input)input.focus();
       setStatus((side==='left'?'왼쪽':'오른쪽')+'에 새 줄을 추가했습니다. 유형과 내용을 선택한 뒤 저장하세요.','ok');
     }
-    async function loadBlock() {
+    function editRow(button) {
+      if(state.saving)return;
+      const side=button.dataset.actionSide; const rows=state.drafts[side]; const index=rows.findIndex(row=>row.key===button.dataset.row); if(index<0)return;
+      const action=button.dataset.action;
+      if(action==='before'||action==='after'){addRow(side,index+(action==='after'?1:0));return;}
+      syncDrafts();
+      if(action==='delete'){
+        const preview=rows[index].draftText.slice(0,120)||'(빈 문장)';
+        if(!confirm((side==='left'?'왼쪽':'오른쪽')+' '+(index+1)+'번 문장을 삭제할까요?\n\n'+preview+'\n\n로컬 저장을 누르면 파일에 적용됩니다.'))return;
+        rows.splice(index,1);
+      } else {
+        const target=index+(action==='up'?-1:1); if(target<0||target>=rows.length)return;
+        [rows[index],rows[target]]=[rows[target],rows[index]];
+      }
+      renderRows(); setStatus(action==='delete'?'문장을 삭제했습니다. 로컬 저장을 누르면 적용됩니다.':'문장 순서를 변경했습니다. 로컬 저장을 누르면 적용됩니다.','ok');
+    }
+    async function loadBlock(preserveSide='') {
       if(!el.block.value) return; setStatus('선택한 구절을 불러오는 중입니다.');
       const url='/api/block?left='+encodeURIComponent(el.leftCountry.value)+'&right='+encodeURIComponent(el.rightCountry.value)+'&key='+encodeURIComponent(el.block.value);
-      state.block=(await api(url)).block; renderRows();
+      const previous=state.block; state.block=(await api(url)).block;
+      ['left','right'].forEach(side=>{
+        if(side===preserveSide){ state.block[side+'Revision']=previous[side+'Revision']; return; }
+        const rows=state.block.rows.map(pair=>pair[side]).filter(Boolean); const keys=state.block[side+'RowKeys'];
+        rows.sort((a,b)=>{const ai=keys.indexOf(a.key),bi=keys.indexOf(b.key);return (ai<0?keys.length+a.rowIndex:ai)-(bi<0?keys.length+b.rowIndex:bi);});
+        state.drafts[side]=rows.map(row=>({...row,draftText:row.text,draftSpeaker:row.speaker,draftKind:row.kind}));
+      }); renderRows();
       el.leftTitle.textContent=countryLabel(state.block.leftCountry); el.rightTitle.textContent=countryLabel(state.block.rightCountry);
       el.saveLeft.disabled=!state.block.leftCountry.editable||!state.block.leftCreateBase; el.saveRight.disabled=!state.block.rightCountry.editable||!state.block.rightCreateBase;
       el.addLeft.disabled=el.saveLeft.disabled; el.addRight.disabled=el.saveRight.disabled;
@@ -1187,20 +1362,26 @@ const INDEX_HTML = String.raw`<!doctype html>
       const utterance=new SpeechSynthesisUtterance(text.value); utterance.lang=speechCodes[language]||language; speechSynthesis.cancel(); speechSynthesis.speak(utterance); setStatus('선택한 문장을 읽고 있습니다.','ok');
     }
     async function translateRow(button) {
-      const direction=button.dataset.direction; const from=direction==='right'?'left':'right'; const to=direction==='right'?'right':'left'; const rowKey=button.dataset.row;
-      const source=inputFor(from,'text',rowKey); const target=inputFor(to,'text',rowKey); if(!source||!target) return;
+      const direction=button.dataset.direction; const from=direction==='right'?'left':'right'; const to=direction==='right'?'right':'left';
+      const index=Number(button.closest('[data-index]').dataset.index); const sourceRow=state.drafts[from][index],targetRow=state.drafts[to][index];
+      const source=inputFor(from,'text',sourceRow.key); const target=inputFor(to,'text',targetRow.key); if(!source||!target) return;
       const sourceCountry=selectedCountry(from); const targetCountry=selectedCountry(to); button.disabled=true; setStatus((button.dataset.mode==='ai'?'AI':'Google')+' 번역 중…');
-      try { const body=await api('/api/translate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({mode:button.dataset.mode,text:source.value,sourceLanguage:sourceCountry.language,targetLanguage:targetCountry.language})}); target.value=body.text; el.translatorSource.value=source.value; el.translatorOutput.value=body.text; el.translatorSourceLanguage.value=sourceCountry.language; el.translatorTargetLanguage.value=targetCountry.language; setStatus('번역 초안을 반대쪽 편집창에 넣었습니다. 저장 전 반드시 전례문과 대조하세요.','ok'); }
+      try { const body=await api('/api/translate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({mode:button.dataset.mode,text:source.value,sourceLanguage:sourceCountry.language,targetLanguage:targetCountry.language})}); if(!state.drafts[to].includes(targetRow))return; targetRow.draftText=body.text; const current=inputFor(to,'text',targetRow.key); if(current)current.value=body.text; el.translatorSource.value=source.value; el.translatorOutput.value=body.text; el.translatorSourceLanguage.value=sourceCountry.language; el.translatorTargetLanguage.value=targetCountry.language; setStatus('번역 초안을 반대쪽 편집창에 넣었습니다. 저장 전 반드시 전례문과 대조하세요.','ok'); }
       finally { button.disabled=false; }
     }
     function updatesFor(side) {
-      const sourceRows=new Map(state.block.rows.map(pair=>[pair.key,pair[side]])); const updates=[];
-      sourceRows.forEach((row,key)=>{ if(!row)return; const text=inputFor(side,'text',key); const speaker=inputFor(side,'speaker',key); const kind=inputFor(side,'kind',key); const create=row.create?Object.assign({},row.create,{kind:kind.value}):null; updates.push({key,text:text.value,expectedText:row.text,speaker:speaker?speaker.value:row.speaker,expectedSpeaker:row.speaker,kind:kind.value,expectedKind:row.kind,create}); }); return updates;
+      syncDrafts();
+      return state.drafts[side].filter(row=>!row.virtual||row.create?.forceCreate||row.draftText||row.draftSpeaker).map(row=>({key:row.key,text:row.draftText,expectedText:row.text,speaker:row.draftSpeaker,expectedSpeaker:row.speaker,kind:row.draftKind,expectedKind:row.kind,create:row.create?{...row.create,kind:row.draftKind}:null}));
     }
     async function saveSide(side) {
-      if(!state.block)return; const country=selectedCountry(side); if(!country.editable)throw new Error('이 국가는 다른 모듈에서 파생되어 읽기 전용입니다.');
-      setStatus(countryLabel(country)+' 저장 중…'); const body=await api('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jurisdiction:country.jurisdiction,blockKey:state.block[side+'BlockKey']||state.block.key,updates:updatesFor(side)})});
-      setStatus(body.changed.length?body.changed.length+'개 필드를 저장했습니다. 백업: '+body.backup:'변경된 내용이 없습니다.','ok'); await loadBlock();
+      if(!state.block||state.saving)return; const country=selectedCountry(side); if(!country.editable)throw new Error('이 국가는 다른 모듈에서 파생되어 읽기 전용입니다.');
+      const updates=updatesFor(side); const structure={revision:state.block[side+'Revision'],order:updates.map(row=>row.key)};
+      state.saving=true; el.saveLeft.disabled=el.saveRight.disabled=el.addLeft.disabled=el.addRight.disabled=true; renderRows();
+      [el.leftCountry,el.rightCountry,el.block,el.search,el.reload,el.firebaseUpload].forEach(control=>control.disabled=true);
+      try {
+        setStatus(countryLabel(country)+' 저장 중…'); const body=await api('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jurisdiction:country.jurisdiction,blockKey:state.block[side+'BlockKey']||state.block.key,updates,structure})});
+        await loadBlock(side==='left'?'right':'left'); setStatus(body.changed.length?'문장과 순서를 저장했습니다. 백업: '+body.backup:'변경된 내용이 없습니다.','ok');
+      } finally { state.saving=false; renderRows(); [el.leftCountry,el.rightCountry,el.block,el.search,el.reload,el.firebaseUpload].forEach(control=>control.disabled=false); el.saveLeft.disabled=el.addLeft.disabled=!state.block.leftCountry.editable||!state.block.leftCreateBase; el.saveRight.disabled=el.addRight.disabled=!state.block.rightCountry.editable||!state.block.rightCreateBase; }
     }
     async function runTranslator(mode='google') {
       const text=el.translatorSource.value.trim(); const sequence=++state.translationSequence;

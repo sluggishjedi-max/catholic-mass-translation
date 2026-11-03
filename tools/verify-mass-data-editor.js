@@ -61,13 +61,15 @@ function verifyInMemoryEdit(sources, loaded, jurisdiction) {
   return prepared;
 }
 
-function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, sourceBlock, translatedText) {
+function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, sourceBlock, translatedText, structural = false) {
   const beforeHashes = new Map(sources.map(source => [source.path, digest(source.path)]));
   const pair = blockPair(loaded, 'KR', targetJurisdiction, sourceBlock.key);
   const missing = pair.rows.find(item => item.right && item.right.virtual);
   assert.ok(missing, `${targetJurisdiction}: a missing translation input should be available`);
-  const updates = pair.rows.map(item => ({
+  const updates = pair.rows.filter(item => !structural || !item.right.virtual || item.key === missing.key).map(item => ({
     key: item.right.key,
+    kind: item.right.kind,
+    expectedKind: item.right.kind,
     text: item.key === missing.key ? translatedText : item.right.text,
     expectedText: item.right.text,
     speaker: item.right.speaker,
@@ -77,7 +79,8 @@ function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, s
   const prepared = prepareMassSourceEdit({
     jurisdiction: targetJurisdiction,
     blockKey: pair.rightBlockKey,
-    updates
+    updates,
+    ...(structural ? { structure: { revision: pair.rightRevision, order: updates.map(row => row.key) } } : {})
   }, sources);
   assert.match(prepared.nextCode, /MASS_DATA_EDITOR_OVERRIDES_START/u, `${targetJurisdiction}: missing text should use an override section`);
   const reloaded = getLoadedState(prepared.sources);
@@ -141,11 +144,105 @@ function verifyRowTypeAndAddition(sources, loaded, jurisdiction) {
   sources.forEach(source => assert.equal(digest(source.path), beforeHashes.get(source.path), `${jurisdiction}: row controls verification wrote a live file`));
 }
 
+function structurePayload(jurisdiction, block, order, overrides = new Map()) {
+  return {
+    jurisdiction, blockKey: block.key,
+    structure: { revision: block.revision, order: order.map(row => row.key) },
+    updates: order.map(row => ({
+      key: row.key, kind: row.kind, expectedKind: row.kind, text: row.text, expectedText: row.text,
+      speaker: row.speaker, expectedSpeaker: row.speaker, ...overrides.get(row.key)
+    }))
+  };
+}
+
+function verifySentenceStructure(sources, loaded, jurisdiction) {
+  const block = blocksForCountry(loaded, jurisdiction).find(item => item.rows.length >= 3);
+  assert.ok(block, `${jurisdiction}: a multi-sentence block is required`);
+  const beforeHashes = sources.map(source => digest(source.path));
+  const added = { key: 'verify-middle-sentence', text: '', speaker: '', kind: 'text' };
+  const addedUpdate = {
+    text: `Inserted ${jurisdiction}`, speaker: '',
+    create: { entryId: block.entryId, relativePath: block.relativePath, rowKey: added.key, preferredIndex: 1, kind: 'text', forceCreate: true }
+  };
+  const desired = [block.rows[2], added, block.rows[0], ...block.rows.slice(3)];
+  const payload = structurePayload(jurisdiction, block, desired, new Map([[added.key, addedUpdate]]));
+  const prepared = prepareMassSourceEdit(payload, sources);
+  const afterState = getLoadedState(prepared.sources);
+  const after = blocksForCountry(afterState, jurisdiction).find(item => item.key === block.key);
+  assert.deepEqual(after.rows.map(row => row.key), desired.map(row => row.key), `${jurisdiction}: move, middle insert, and delete must persist in order`);
+  assert.equal(after.rows[1].text, `Inserted ${jurisdiction}`);
+  assert(!after.rows.some(row => row.key === block.rows[1].key), `${jurisdiction}: deleted sentence must be absent`);
+  for (const other of loaded.countries.filter(country => country.jurisdiction !== jurisdiction)) {
+    // Derived countries intentionally inherit their parent module; their source files still stay untouched.
+    assert.equal(prepared.sources.find(source => source.jurisdiction === other.jurisdiction).code,
+      sources.find(source => source.jurisdiction === other.jurisdiction).code, `${jurisdiction}: only the selected source may change`);
+  }
+  assert.throws(() => prepareMassSourceEdit(payload, prepared.sources), error => error.statusCode === 409,
+    `${jurisdiction}: a stale structural save must not overwrite newer work`);
+  const repeated = prepareMassSourceEdit(structurePayload(jurisdiction, after, after.rows), prepared.sources);
+  assert.equal(repeated.changed.length, 0, `${jurisdiction}: saving unchanged sentences should do nothing`);
+  const second = prepareMassSourceEdit(structurePayload(jurisdiction, after, after.rows.slice().reverse()), prepared.sources);
+  const secondBlock = blocksForCountry(getLoadedState(second.sources), jurisdiction).find(item => item.key === block.key);
+  assert.deepEqual(secondBlock.rows.map(row => row.key), after.rows.map(row => row.key).reverse(), `${jurisdiction}: repeated moves must persist`);
+  const empty = prepareMassSourceEdit(structurePayload(jurisdiction, secondBlock, []), second.sources);
+  const emptyBlock = blocksForCountry(getLoadedState(empty.sources), jurisdiction).find(item => item.key === block.key);
+  assert.ok(emptyBlock, `${jurisdiction}: an empty block must remain selectable`);
+  assert.equal(emptyBlock.rows.length, 0);
+  const restored = prepareMassSourceEdit(structurePayload(jurisdiction, emptyBlock, [added], new Map([[added.key, addedUpdate]])), empty.sources);
+  assert.equal(blocksForCountry(getLoadedState(restored.sources), jurisdiction).find(item => item.key === block.key).rows[0].text, `Inserted ${jurisdiction}`);
+  sources.forEach((source, index) => assert.equal(digest(source.path), beforeHashes[index], 'Verification must not write live Mass data'));
+}
+
+function verifyCompoundRow() {
+  const source = {
+    jurisdiction: 'KR', path: 'compound-row-fixture.js',
+    code: `(function(global) {
+      global.countryMassData = {};
+      const ordinary = Object.freeze([{id:'fixture', lines:[
+        {text_kr:'Body',rubric_kr:'Rubric',cit_kr:'Citation',sp_kr:'Priest',text_en:'Foreign body',custom:{keep:true}},
+        {divider:true}, {text_kr:'Last'}
+      ]}]);
+      global.countryMassData.KR = Object.freeze({jurisdiction:'KR',ordinaryLanguage:'KR',ordinary});
+    })(globalThis);`
+  };
+  const sources = [source], loaded = getLoadedState(sources), block = blocksForCountry(loaded, 'KR')[0];
+  const desired = [block.rows[2], block.rows[1], block.rows[3]];
+  const prepared = prepareMassSourceEdit(structurePayload('KR', block, desired), sources);
+  const reloaded = getLoadedState(prepared.sources), after = blocksForCountry(reloaded, 'KR')[0];
+  assert.deepEqual(after.rows.map(row => row.text), ['Citation', 'Rubric', 'Last'], 'A sentence inside a compound row must move/delete independently');
+  const rows = reloaded.runtime.countries.KR.ordinary[0].lines;
+  assert.equal(rows.filter(row => row.text_en).length, 1, 'Foreign text must survive exactly once');
+  assert(rows.some(row => row.divider), 'Non-sentence rows must survive');
+  assert(rows.some(row => row.custom?.keep), 'Custom metadata must survive');
+  const invalid = structurePayload('KR', after, [after.rows[0], after.rows[0]]);
+  assert.throws(() => prepareMassSourceEdit(invalid, prepared.sources), error => error.statusCode === 400, 'Duplicate sentence keys must be rejected');
+  const edited = prepareMassSourceEdit({ jurisdiction: 'KR', blockKey: after.key, updates: [{
+    key: after.rows[0].key, text: 'Edited after moving', expectedText: after.rows[0].text,
+    speaker: after.rows[0].speaker, expectedSpeaker: after.rows[0].speaker
+  }] }, prepared.sources);
+  assert.equal(blocksForCountry(getLoadedState(edited.sources), 'KR')[0].rows[0].text, 'Edited after moving',
+    'Field-only saves after structural edits must update the snapshot');
+}
+
 function main() {
   const sources = readCountryMassSources();
   const loaded = getLoadedState(sources);
   assert.equal(loaded.countries.length, 17, 'all country Mass modules should load');
   assert.equal(loaded.countries.filter(country => country.editable).length, 17, 'all country Mass modules should be editable');
+
+  if (process.argv.includes('--structure-only')) {
+    const requestedCountry = process.argv.find(arg => arg.startsWith('--country='))?.slice('--country='.length);
+    loaded.countries.filter(country => !requestedCountry || country.jurisdiction === requestedCountry).forEach(country => {
+      verifySentenceStructure(sources, loaded, country.jurisdiction);
+      console.log(`${country.jurisdiction}: insert, move, delete, reload, conflict, and empty-block checks passed`);
+    });
+    verifyCompoundRow();
+    const koreanBlocks = blocksForCountry(loaded, 'KR');
+    verifyMissingTranslationCreation(sources, loaded, 'IT', koreanBlocks.find(block => block.entryId === '3.3 eucharist' && block.relativePath.includes('ordinary_1')), 'Inserted missing translation', true);
+    verifyMissingTranslationCreation(sources, loaded, 'TW', koreanBlocks.find(block => block.entryId === '1.5 gloria'), 'Inserted missing translation', true);
+    console.log('Sentence structure checks passed; no live data files were written.');
+    return;
+  }
 
   const verifiedEdits = loaded.countries
     .map(country => {
@@ -196,6 +293,8 @@ function main() {
     '新增譯文。'
   );
   ['KR', 'TW', 'AU', 'NZ'].forEach(jurisdiction => verifyRowTypeAndAddition(sources, loaded, jurisdiction));
+  loaded.countries.forEach(country => verifySentenceStructure(sources, loaded, country.jurisdiction));
+  verifyCompoundRow();
 
   const report = {
     ok: true,
@@ -203,6 +302,7 @@ function main() {
     editableCountries: loaded.countries.filter(country => country.editable).length,
     sideBySideRows: pair.rows.length,
     verifiedEdits,
+    sentenceStructureCountries: loaded.countries.length,
     liveFilesWritten: 0
   };
   console.log(JSON.stringify(report, null, 2));
