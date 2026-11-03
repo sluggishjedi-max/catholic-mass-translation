@@ -132,7 +132,7 @@
     const SUPPORTED_LANGS = ['KR', 'VN', 'EN', 'JP', 'LA', 'ZH', 'IT', 'PT', 'ES', 'DE'];
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
-    const APP_VERSION = 'V31.1-20261103-3';
+    const APP_VERSION = 'V31.1-20261103-4';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -496,7 +496,7 @@
 
     function normalizedOrdinaryForMerge(module, locationCode, koreanRows) {
         if (!module || !Array.isArray(module.ordinary)) return [];
-        const ordinary = module.ordinary.slice();
+        const ordinary = module.ordinary.map(item => globalThis.ordoMassStorage.hydrateMassEntry(item));
         const entryIndex = ordinary.findIndex(item => item && item.forms && Array.isArray(item.forms['4']));
         const entry = entryIndex >= 0 ? cloneData(ordinary[entryIndex]) : null;
         const lower = eucharisticPrayerLanguageLower(module, locationCode);
@@ -548,7 +548,7 @@
 
     function getStartupOrdinaryMassData() {
         if (Array.isArray(window.uploadedMassData) && window.uploadedMassData.length) {
-            return cloneData(window.uploadedMassData);
+            return window.uploadedMassData.map(item => globalThis.ordoMassStorage.hydrateMassEntry(item));
         }
         const registry = window.uploadedCountryMassData || {};
         const koreanModule = registry.KR;
@@ -14882,7 +14882,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             consolidateFixedPrayerFrameLine(targetLines, isPrayerOpenerLine, isPrayerOpenerText, makePrayerOpenerLine);
         }
         consolidateFixedPrayerFrameLine(targetLines, isPrayerAmenLine, isPrayerAmenText, makePrayerAmenLine);
-        const hasBodyLine = targetLines.some(line => !isPrayerFrameLine(line) && !line.rubric_kr && !line.rubric_vn && !line.rubric_en && !line.rubric_jp && !line.rubric_la && !line.rubric_zh);
+        const hasBodyLine = targetLines.some(line => !isPrayerFrameLine(line) && !lineHasAnyRubric(line));
         if (!hasBodyLine) {
             const amenIndex = targetLines.findIndex(isPrayerAmenLine);
             targetLines.splice(amenIndex >= 0 ? amenIndex : targetLines.length, 0, emptyMassLine());
@@ -14890,7 +14890,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function lineHasAnyRubric(line) {
-        return !!(line && (line.rubric_kr || line.rubric_vn || line.rubric_en || line.rubric_jp || line.rubric_la || line.rubric_zh));
+        return !!line && SUPPORTED_LANGS.some(lang => cleanNodeText(line[`rubric_${lang.toLowerCase()}`]));
     }
 
     function isProtectedParsedTargetLine(line, baseId) {
@@ -17800,16 +17800,24 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function normalizeDailySelectableTemplate(item) {
-        if (!item || item.type !== 'selectable' || !item.variants || item.variants.A) return;
+        if (!item || !item.variants || item.variants.A) return;
         if (!Array.isArray(item.variants.lines)) return;
         const headerCits = Array.isArray(item.variants.header) && item.variants.header[0] ? item.variants.header[0] : {};
         item.cit = Object.assign({}, item.cit || {}, headerCits || {});
+        // Country modules can mix legacy single-option templates with plain
+        // parts. Keep both languages' rubrics and body slots when flattening.
+        const lines = mergeIndependentOrdinary(item.variants.lines, item.lines || []);
+        if (item.type !== 'selectable') {
+            item.lines = cloneMassLines(lines);
+            delete item.variants;
+            return;
+        }
         item.variants = {
             A: {
                 label: dailyVariantLabel(0),
                 header: item.header || {},
                 cit: item.cit || {},
-                lines: cloneMassLines(item.variants.lines)
+                lines: cloneMassLines(lines)
             }
         };
         item.lines = cloneMassLines(item.variants.A.lines);
@@ -21728,9 +21736,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return;
             }
 
+            normalizeDailySelectableTemplate(item);
             const data = Object.assign({}, item);
             if (item.type === 'selectable' && item.variants) {
-                normalizeDailySelectableTemplate(item);
                 ensureDismissalDefaultOption(item, baseId);
                 const variantKeys = Object.keys(item.variants).sort();
                 const currentKey = state.options[baseId];

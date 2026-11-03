@@ -38,10 +38,11 @@ if(process.env.ORDO_HOLY_WEEK_SOURCE_ROOT){
       const page=await browser.newPage({viewport});
       const errors=[];page.on('pageerror',error=>errors.push(error.message));
       page.on('console',msg=>{if(msg.text().startsWith('Holy Week check:'))console.log(msg.text());});
-      await page.addInitScript(({registry,metadata})=>{globalThis.countryMassData=registry;globalThis.uploadedCountryMassData=registry;globalThis.uploadedCountryMassMetadata=metadata;},{registry,metadata});
+      await page.addInitScript(({registry,metadata})=>{globalThis.ordoPrayerEditorPreview=true;globalThis.countryMassData=registry;globalThis.uploadedCountryMassData=registry;globalThis.uploadedCountryMassMetadata=metadata;},{registry,metadata});
       await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
-      await page.goto(`http://127.0.0.1:${server.address().port}/V29.html`,{waitUntil:'load'});
+      await page.goto(`http://127.0.0.1:${server.address().port}/${process.env.ORDO_CHECK_HTML||'V31.1.html'}`,{waitUntil:'load'});
       await page.waitForFunction(()=>typeof countrySpecialMassRecord==='function');
+      await page.evaluate(()=>Promise.all([ordoDataLoader.ensure('special',['KR','US']),ordoDataLoader.ensure('missal',['KR','EN'])]));
       const result=await page.evaluate(async fixture=>{
         const check=(value,message)=>{if(!value)throw new Error(message);};
         state.useGps=false;state.selectedLocationCode='KR';state.currentLoc='KR';state.targetLang='EN';state.targetLocationCode='US';

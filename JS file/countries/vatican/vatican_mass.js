@@ -16,21 +16,22 @@
       "la": "Ritus Initiales"
     }, {
       "id": "1.1 entrance",
-      "type": "selectable",
+      "type": "part",
       "header": {
         "la": "Antiphona ad Introitus"
       },
-      "variants": {
-        "header": [{
-          "cit_la": ""
-        }],
-        "lines": [{
+      "cit": {
+        "cit_la": ""
+      },
+      "lines": [
+        {
           "rubric_la": "Si ad introitum non cantatur, antiphona recitari potest."
-        }, {
+        },
+        {
           "sp_la": "",
           "text_la": "(Antiphona ad Introitus hodiernus…)"
-        }]
-      }
+        }
+      ]
     }, {
       "id": "1.2 greeting",
       "type": "selectable",
@@ -145,7 +146,20 @@
             "text_la": "cogitatióne, verbo, ópere et omissióne:"
           }, {
             "sp_la": "",
-            "text_la": "<span class=\"rubric\">et, percutientes sibi pectus, dicunt: </span>mea culpa, mea culpa, mea máxima culpa."
+            "text_la": "mea culpa, mea culpa, mea máxima culpa.",
+            "rubric_la": "et, percutientes sibi pectus, dicunt: ",
+            "rubricLayout_la": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 38,
+                  "left": "",
+                  "right": "mea culpa, mea culpa, mea máxima"
+                }
+              ]
+            }
           }, {
             "sp_la": "",
             "text_la": "Deinde prosequuntur:"
@@ -546,7 +560,20 @@
             "text_la": "et in Iesum Christum, Fílium eius únicum, Dóminum nostrum,"
           }, {
             "sp_la": "",
-            "text_la": "<span class=\"rubric\">omnes se inclinant. </span>qui concéptus est de Spíritu Sancto, natus ex María Vírgine,"
+            "text_la": "qui concéptus est de Spíritu Sancto, natus ex María Vírgine,",
+            "rubric_la": "omnes se inclinant. ",
+            "rubricLayout_la": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 20,
+                  "left": "",
+                  "right": "qui concéptus est de Spíritu San"
+                }
+              ]
+            }
           }, {
             "sp_la": "",
             "text_la": "passus sub Póntio Piláto,"
@@ -633,10 +660,20 @@
             "text_la": "descéndit de cælis."
           }, {
             "sp_la": "",
-            "text_la": (
-              "<span class=\"rubric\">omnes se inclinant. </span>Et incarnátus est de Spíritu Sancto <br>"
-              + "ex María Vírgine, et homo factus est."
-            )
+            "text_la": "Et incarnátus est de Spíritu Sancto <br>ex María Vírgine, et homo factus est.",
+            "rubric_la": "omnes se inclinant. ",
+            "rubricLayout_la": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 20,
+                  "left": "",
+                  "right": "Et incarnátus est de Spíritu San"
+                }
+              ]
+            }
           }, {
             "sp_la": "",
             "text_la": "Crucifíxus étiam pro nobis sub Póntio Piláto;"
@@ -702,7 +739,20 @@
         "rubric_la": "Communitas orationes sibi ipsis paratas offert."
       }, {
         "sp_la": "P.",
-        "text_la": "<span class=\"rubric\">Ad finem orationum</span> Dómine, exáudi oratiónem nostram."
+        "text_la": " Dómine, exáudi oratiónem nostram.",
+        "rubric_la": "Ad finem orationum",
+        "rubricLayout_la": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 18,
+              "left": "",
+              "right": " Dómine, exáudi oratiónem nostra"
+            }
+          ]
+        }
       }, {
         "sp_la": "S.",
         "text_la": (
@@ -730,10 +780,20 @@
         "rubric_la": "Si vero cantus ad offertorium non peragitur, sacerdoti licet hæc verba elata voce proferre."
       }, {
         "sp_la": "S.",
-        "text_la": (
-          "<span class=\"rubric\">accipit patenam cum pane,<br>"
-          + "eamque ambabus manibus aliquantulum elevatam </span>Benedíctus es, Dómine, Deus univérsi,"
-        )
+        "text_la": "Benedíctus es, Dómine, Deus univérsi,",
+        "rubric_la": "accipit patenam cum pane,<br>eamque ambabus manibus aliquantulum elevatam ",
+        "rubricLayout_la": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 74,
+              "left": "",
+              "right": "Benedíctus es, Dómine, Deus univ"
+            }
+          ]
+        }
       }, {
         "sp_la": "",
         "text_la": "quia de tua largitáte accépimus panem,"
@@ -751,7 +811,20 @@
         "text_la": "Benedíctus Deus in sǽcula."
       }, {
         "sp_la": "S.",
-        "text_la": "<span class=\"rubric\">eumque ambabus manibus aliquantulum elevatum super altare tenet </span>Benedíctus es, Dómine, Deus univérsi,"
+        "text_la": "Benedíctus es, Dómine, Deus univérsi,",
+        "rubric_la": "eumque ambabus manibus aliquantulum elevatum super altare tenet ",
+        "rubricLayout_la": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 64,
+              "left": "",
+              "right": "Benedíctus es, Dómine, Deus univ"
+            }
+          ]
+        }
       }, {
         "sp_la": "",
         "text_la": "quia de tua largitáte accépimus vinum,"
@@ -2999,10 +3072,36 @@
           "text_la": "Mortem tuam annuntiámus, Dómine, et tuam resurrectiónem confitémur, donec vénias."
         }, {
           "sp_la": "",
-          "text_la": "<span class=\"rubric\">Vel: </span>Quotiescúmque manducámus panem hunc et cálicem bíbimus, mortem tuam annuntiámus, Dómine, donec vénias."
+          "text_la": "Quotiescúmque manducámus panem hunc et cálicem bíbimus, mortem tuam annuntiámus, Dómine, donec vénias.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Quotiescúmque manducámus panem h"
+              }
+            ]
+          }
         }, {
           "sp_la": "",
-          "text_la": "<span class=\"rubric\">Vel: </span>Salvátor mundi, salva nos, qui per crucem et resurrectiónem tuam liberásti nos."
+          "text_la": "Salvátor mundi, salva nos, qui per crucem et resurrectiónem tuam liberásti nos.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Salvátor mundi, salva nos, qui p"
+              }
+            ]
+          }
         }, {
           "sp_la": "S.",
           "text_la": "Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta,"
@@ -3202,17 +3301,36 @@
           )
         }, {
           "sp_la": "",
-          "text_la": (
-            "<span class=\"rubric\">Vel: </span>Quotiescúmque manducámus panem hunc<br>"
-            + "et cálicem bíbimus,<br>"
-            + "mortem tuam annuntiámus, Dómine, donec vénias."
-          )
+          "text_la": "Quotiescúmque manducámus panem hunc<br>et cálicem bíbimus,<br>mortem tuam annuntiámus, Dómine, donec vénias.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Quotiescúmque manducámus panem h"
+              }
+            ]
+          }
         }, {
           "sp_la": "",
-          "text_la": (
-            "<span class=\"rubric\">Vel: </span>Salvátor mundi, salva nos,<br>"
-            + "qui per crucem et resurrectiónem tuam liberásti nos."
-          )
+          "text_la": "Salvátor mundi, salva nos,<br>qui per crucem et resurrectiónem tuam liberásti nos.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Salvátor mundi, salva nos,<br>qu"
+              }
+            ]
+          }
         }, {
           "sp_la": "S.",
           "text_la": "Mémores ígitur mortis et resurrectiónis eius,"
@@ -3398,17 +3516,36 @@
           )
         }, {
           "sp_la": "",
-          "text_la": (
-            "<span class=\"rubric\">Vel: </span>Quotiescúmque manducámus panem hunc<br>"
-            + "et cálicem bíbimus,<br>"
-            + "mortem tuam annuntiámus, Dómine, donec vénias."
-          )
+          "text_la": "Quotiescúmque manducámus panem hunc<br>et cálicem bíbimus,<br>mortem tuam annuntiámus, Dómine, donec vénias.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Quotiescúmque manducámus panem h"
+              }
+            ]
+          }
         }, {
           "sp_la": "",
-          "text_la": (
-            "<span class=\"rubric\">Vel: </span>Salvátor mundi, salva nos,<br>"
-            + "qui per crucem et resurrectiónem tuam liberásti nos."
-          )
+          "text_la": "Salvátor mundi, salva nos,<br>qui per crucem et resurrectiónem tuam liberásti nos.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Salvátor mundi, salva nos,<br>qu"
+              }
+            ]
+          }
         }, {
           "sp_la": "S.",
           "text_la": " "
@@ -3695,17 +3832,36 @@
           )
         }, {
           "sp_la": "",
-          "text_la": (
-            "<span class=\"rubric\">Vel: </span>Quotiescúmque manducámus panem hunc<br>"
-            + "et cálicem bíbimus,<br>"
-            + "mortem tuam annuntiámus, Dómine, donec vénias."
-          )
+          "text_la": "Quotiescúmque manducámus panem hunc<br>et cálicem bíbimus,<br>mortem tuam annuntiámus, Dómine, donec vénias.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Quotiescúmque manducámus panem h"
+              }
+            ]
+          }
         }, {
           "sp_la": "",
-          "text_la": (
-            "<span class=\"rubric\">Vel: </span>Salvátor mundi, salva nos,<br>"
-            + "qui per crucem et resurrectiónem tuam liberásti nos."
-          )
+          "text_la": "Salvátor mundi, salva nos,<br>qui per crucem et resurrectiónem tuam liberásti nos.",
+          "rubric_la": "Vel: ",
+          "rubricLayout_la": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 5,
+                "left": "",
+                "right": "Salvátor mundi, salva nos,<br>qu"
+              }
+            ]
+          }
         }, {
           "sp_la": "S.",
           "text_la": "Unde et nos, Dómine, redemptiónis nostræ memoriále nunc celebrántes, mortem Christi eiúsque descénsum ad ínferos recólimus, eius resurrectiónem et ascensiónem ad tuam déxteram proﬁtémur,"
@@ -4057,7 +4213,20 @@
             "rubric_la": "Inclinat se ad benedictionem accipiendam."
           }, {
             "sp_la": "R.",
-            "text_la": "<span class=\"rubric\">In fine orationis Sacerdotis, </span>Amen."
+            "text_la": "Amen.",
+            "rubric_la": "In fine orationis Sacerdotis, ",
+            "rubricLayout_la": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 30,
+                  "left": "",
+                  "right": "Amen."
+                }
+              ]
+            }
           }, {
             "sp_la": "S.",
             "text_la": "Benedícat vos omnípotens Deus,"

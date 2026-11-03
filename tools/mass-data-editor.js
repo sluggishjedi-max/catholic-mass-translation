@@ -4,6 +4,8 @@ const path = require('path');
 const vm = require('vm');
 const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
 const { createSpecialEditorBackend } = require('./special-liturgy-editor');
+const massStorage = require('./mass-storage-schema');
+const { canonicalMassEntry } = massStorage;
 const { translateEditorRequest } = require('./mass-editor-translation');
 
 const root = path.resolve(__dirname, '..');
@@ -81,6 +83,7 @@ function registeredModule(registry, jurisdiction) {
 
 function runCountryMassSources(sources) {
   const sandbox = {};
+  sandbox.ordoMassStorage = massStorage;
   sandbox.globalThis = sandbox;
   vm.createContext(sandbox);
   sources.forEach(source => vm.runInContext(source.code, sandbox, { filename: source.path }));
@@ -104,7 +107,7 @@ function firebaseMassItems() {
   return countryMassModules.flatMap(module => (
     runtime.countries[module.jurisdiction].ordinary || []
   ).map((entry, index) => ({
-    ...JSON.parse(JSON.stringify(entry)),
+    ...canonicalMassEntry(entry),
     jurisdiction: module.jurisdiction,
     __firebaseDocId: `${module.jurisdiction}__${entry.id || `section_${index}`}`
   })));
@@ -1084,6 +1087,8 @@ module.exports = {
   createServer,
   countryMassModules,
   findOrdinaryArrayStart,
+  ensureBlockReplacementSupport,
+  firebaseMassItems,
   getLoadedState,
   prepareMassSourceEdit,
   readCountryMassSources,

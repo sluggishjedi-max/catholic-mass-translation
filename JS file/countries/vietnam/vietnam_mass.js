@@ -16,20 +16,21 @@
       "vn": "Nghi thức đầu lễ"
     }, {
       "id": "1.1 entrance",
-      "type": "selectable",
+      "type": "part",
       "header": {
         "vn": "Ca Nhập Lễ"
       },
-      "variants": {
-        "header": [{
-          "cit_vn": ""
-        }],
-        "lines": [{
+      "cit": {
+        "cit_vn": ""
+      },
+      "lines": [
+        {
           "rubric_vn": "Nếu không hát ca nhập lễ, thì có thể đọc ca nhập lễ."
-        }, {
+        },
+        {
           "text_vn": "(Ca Nhập Lễ Hôm nay…)"
-        }]
-      }
+        }
+      ]
     }, {
       "id": "1.2 greeting",
       "type": "selectable",
@@ -144,7 +145,20 @@
             "text_vn": "và những điều thiếu sót."
           }, {
             "sp_vn": "",
-            "text_vn": "<span class=\"rubric\">Đấm ngực và đọc. </span>Lỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng."
+            "text_vn": "Lỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng.",
+            "rubric_vn": "Đấm ngực và đọc. ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 17,
+                  "left": "",
+                  "right": "Lỗi tại tôi, lỗi tại tôi, lỗi tạ"
+                }
+              ]
+            }
           }, {
             "sp_vn": "",
             "text_vn": "Vì vậy tôi xin Ðức Bà Maria trọn đời đồng trinh,"
@@ -527,7 +541,20 @@
             "text_vn": "Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha cùng là Chúa chúng tôi,"
           }, {
             "sp_vn": "",
-            "text_vn": "<span class=\"rubric\">Mọi người cúi mình. </span>bởi phép Đức Chúa Thánh Thần mà Người xuống thai sinh bởi Bà Maria Đồng Trinh,"
+            "text_vn": "bởi phép Đức Chúa Thánh Thần mà Người xuống thai sinh bởi Bà Maria Đồng Trinh,",
+            "rubric_vn": "Mọi người cúi mình. ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 20,
+                  "left": "",
+                  "right": "bởi phép Đức Chúa Thánh Thần mà "
+                }
+              ]
+            }
           }, {
             "sp_vn": "",
             "text_vn": "chịu nạn đời quan Phongxiô Philatô,"
@@ -608,10 +635,20 @@
             "text_vn": "Người đã từ trời xuống thế;"
           }, {
             "sp_vn": "",
-            "text_vn": (
-              "<span class=\"rubric\">Mọi người cúi mình. </span>bởi phép Đức Chúa Thánh Thần, Người đã nhập thể trong lòng Trinh Nữ Maria,<br>"
-              + "và đã làm người."
-            )
+            "text_vn": "bởi phép Đức Chúa Thánh Thần, Người đã nhập thể trong lòng Trinh Nữ Maria,<br>và đã làm người.",
+            "rubric_vn": "Mọi người cúi mình. ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 20,
+                  "left": "",
+                  "right": "bởi phép Đức Chúa Thánh Thần, Ng"
+                }
+              ]
+            }
           }, {
             "sp_vn": "",
             "text_vn": "Người chịu đóng đinh vào thập giá vì chúng ta, thời quan Phongxiô Philatô,"
@@ -677,7 +714,20 @@
         "rubric_vn": "Cộng đoàn tự chuẩn bị lời nguyện và dâng lên Chúa."
       }, {
         "sp_vn": "CĐ.",
-        "text_vn": "<span class=\"rubric\">Cuối lời nguyện</span> Xin Chúa nhận lời chúng con."
+        "text_vn": " Xin Chúa nhận lời chúng con.",
+        "rubric_vn": "Cuối lời nguyện",
+        "rubricLayout_vn": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 15,
+              "left": "",
+              "right": " Xin Chúa nhận lời chúng con."
+            }
+          ]
+        }
       }, {
         "sp_vn": "CT.",
         "text_vn": (
@@ -705,10 +755,20 @@
         "rubric_vn": "Nếu không hát ca Dâng lễ, Linh mục nên đọc lớn tiếng kinh này."
       }, {
         "sp_vn": "CT.",
-        "text_vn": (
-          "<span class=\"rubric\">Nhận đĩa thánh có bánh,<br>"
-          + "hai tay nâng đĩa thánh cao lên khỏi bàn thờ một chút </span>Lạy Chúa là Chúa Cả trời đất, "
-        )
+        "text_vn": "Lạy Chúa là Chúa Cả trời đất, ",
+        "rubric_vn": "Nhận đĩa thánh có bánh,<br>hai tay nâng đĩa thánh cao lên khỏi bàn thờ một chút ",
+        "rubricLayout_vn": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 80,
+              "left": "",
+              "right": "Lạy Chúa là Chúa Cả trời đất, "
+            }
+          ]
+        }
       }, {
         "sp_vn": "",
         "text_vn": "chúc tụng Chúa đã rộng ban cho chúng con bánh này,"
@@ -726,10 +786,20 @@
         "text_vn": "Chúc tụng Thiên Chúa đến muôn đời."
       }, {
         "sp_vn": "CT.",
-        "text_vn": (
-          "<span class=\"rubric\">Nhận chén thánh, cầm cả hai tay,<br>"
-          + "nâng lên khỏi bàn thờ một chút </span>Lạy Chúa là Chúa Cả trời đất,"
-        )
+        "text_vn": "Lạy Chúa là Chúa Cả trời đất,",
+        "rubric_vn": "Nhận chén thánh, cầm cả hai tay,<br>nâng lên khỏi bàn thờ một chút ",
+        "rubricLayout_vn": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 67,
+              "left": "",
+              "right": "Lạy Chúa là Chúa Cả trời đất,"
+            }
+          ]
+        }
       }, {
         "sp_vn": "",
         "text_vn": "chúc tụng Chúa đã rộng ban cho chúng con rượu này,"
@@ -3047,10 +3117,36 @@
           "text_vn": "Lạy Chúa, chúng con loan truyền Chúa chết và tuyên xưng Chúa sống lại, cho tới khi Chúa đến."
         }, {
           "sp_vn": "",
-          "text_vn": "<span class=\"rubric\">Hoặc: </span>Lạy Chúa, mỗi lần ăn bánh và uống chén này, chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến."
+          "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này, chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+          "rubric_vn": "Hoặc: ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 6,
+                "left": "",
+                "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+              }
+            ]
+          }
         }, {
           "sp_vn": "",
-          "text_vn": "<span class=\"rubric\">Hoặc: </span>Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá và sự Phục Sinh của Chúa để giải thoát chúng con, xin cứu độ chúng con."
+          "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá và sự Phục Sinh của Chúa để giải thoát chúng con, xin cứu độ chúng con.",
+          "rubric_vn": "Hoặc: ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 6,
+                "left": "",
+                "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+              }
+            ]
+          }
         }, {
           "sp_vn": "LM.",
           "text_vn": "Vì vậy, lạy Chúa, chúng con là tôi tớ Chúa, và toàn thể dân Thánh Chúa,"
@@ -3250,17 +3346,36 @@
           )
         }, {
           "sp_vn": "",
-          "text_vn": (
-            "<span class=\"rubric\">Hoặc: </span>Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>"
-            + "chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến."
-          )
+          "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+          "rubric_vn": "Hoặc: ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 6,
+                "left": "",
+                "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+              }
+            ]
+          }
         }, {
           "sp_vn": "",
-          "text_vn": (
-            "<span class=\"rubric\">Hoặc:  </span>Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>"
-            + "và sự Phục Sinh của Chúa để giải thoát chúng con,<br>"
-            + "xin cứu độ chúng con."
-          )
+          "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con.",
+          "rubric_vn": "Hoặc:  ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 7,
+                "left": "",
+                "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+              }
+            ]
+          }
         }, {
           "sp_vn": "LM.",
           "text_vn": "Vì vậy, lạy Chúa, khi kính nhớ Con Chúa chịu chết và sống lại,"
@@ -3447,17 +3562,36 @@
           )
         }, {
           "sp_vn": "",
-          "text_vn": (
-            "<span class=\"rubric\">Hoặc: </span>Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>"
-            + "chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến."
-          )
+          "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+          "rubric_vn": "Hoặc: ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 6,
+                "left": "",
+                "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+              }
+            ]
+          }
         }, {
           "sp_vn": "",
-          "text_vn": (
-            "<span class=\"rubric\">Hoặc:  </span>Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>"
-            + "và sự Phục Sinh của Chúa để giải thoát chúng con,<br>"
-            + "xin cứu độ chúng con."
-          )
+          "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con.",
+          "rubric_vn": "Hoặc:  ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 7,
+                "left": "",
+                "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+              }
+            ]
+          }
         }, {
           "sp_vn": "LM.",
           "text_vn": "Vì vậy, lạy Chúa, khi kính nhớ cuộc khổ hình sinh ơn cứu độ,"
@@ -3502,7 +3636,20 @@
           "text_vn": "các Thánh Tông Đồ và các Thánh Tử đạo hiển vinh,"
         }, {
           "sp_vn": "",
-          "text_vn": "<span class=\"rubric\">tên Thánh kính trong ngày hoặc Thánh bổn mạng</span>(cùng với Thánh [tên thánh] )"
+          "text_vn": "(cùng với Thánh [tên thánh] )",
+          "rubric_vn": "tên Thánh kính trong ngày hoặc Thánh bổn mạng",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 45,
+                "left": "",
+                "right": "(cùng với Thánh [tên thánh] )"
+              }
+            ]
+          }
         }, {
           "sp_vn": "",
           "text_vn": "và toàn thể các Thánh,"
@@ -3776,17 +3923,36 @@
           )
         }, {
           "sp_vn": "",
-          "text_vn": (
-            "<span class=\"rubric\">Hoặc: </span>Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>"
-            + "chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến."
-          )
+          "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+          "rubric_vn": "Hoặc: ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 6,
+                "left": "",
+                "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+              }
+            ]
+          }
         }, {
           "sp_vn": "",
-          "text_vn": (
-            "<span class=\"rubric\">Hoặc:  </span>Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>"
-            + "và sự Phục Sinh của Chúa để giải thoát chúng con,<br>"
-            + "xin cứu độ chúng con."
-          )
+          "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con.",
+          "rubric_vn": "Hoặc:  ",
+          "rubricLayout_vn": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 7,
+                "left": "",
+                "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+              }
+            ]
+          }
         }, {
           "sp_vn": "LM.",
           "text_vn": "Vì vậy, lạy Chúa, giờ đây cử hành lễ tưởng niệm công trình cứu chuộc, chúng con kính nhớ Đức Kitô chịu chết và xuống ngục tổ tông, chúng con tuyên xưng Người sống lại và lên trời ngự bên hữu Chúa,"
@@ -4131,7 +4297,20 @@
             "rubric_vn": "Cúi đầu nhận phép lành."
           }, {
             "sp_vn": "Đ.",
-            "text_vn": "<span class=\"rubric\">Kết thúc lời nguyện của linh mục, </span>Amen."
+            "text_vn": "Amen.",
+            "rubric_vn": "Kết thúc lời nguyện của linh mục, ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 34,
+                  "left": "",
+                  "right": "Amen."
+                }
+              ]
+            }
           }, {
             "sp_vn": "LM.",
             "text_vn": (

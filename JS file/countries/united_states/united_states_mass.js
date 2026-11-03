@@ -16,20 +16,21 @@
       "en": "The Introductory Rites"
     }, {
       "id": "1.1 entrance",
-      "type": "selectable",
+      "type": "part",
       "header": {
         "en": "Entrance Antiphon"
       },
-      "variants": {
-        "header": [{
-          "cit_en": ""
-        }],
-        "lines": [{
+      "cit": {
+        "cit_en": ""
+      },
+      "lines": [
+        {
           "rubric_en": "If the Entrance Chant is not sung, the Entrance Antiphon may be recited."
-        }, {
+        },
+        {
           "text_en": "(Today's Entrance Chant…)"
-        }]
-      }
+        }
+      ]
     }, {
       "id": "1.2 greeting",
       "type": "selectable",
@@ -150,7 +151,20 @@
             "text_en": "in what I have done and in what I have failed to do,"
           }, {
             "sp_en": "",
-            "text_en": "<span class=\"rubric\">striking their breast, they say: </span>through my fault, through my fault, through my most grievous fault;"
+            "text_en": "through my fault, through my fault, through my most grievous fault;",
+            "rubric_en": "striking their breast, they say: ",
+            "rubricLayout_en": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 33,
+                  "left": "",
+                  "right": "through my fault, through my fau"
+                }
+              ]
+            }
           }, {
             "sp_en": "",
             "text_en": "Therefore I ask blessed Mary ever-Virgin,"
@@ -279,22 +293,100 @@
       },
       "lines": [{
         "sp_en": "V.",
-        "text_en": "Lord, have mercy. <span class=\"rubric\">Or</span> Kyrie, eleison."
+        "text_en": "Lord, have mercy.  Kyrie, eleison.",
+        "rubric_en": "Or",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 18,
+              "from": 0,
+              "to": 2,
+              "left": "Lord, have mercy. ",
+              "right": " Kyrie, eleison."
+            }
+          ]
+        }
       }, {
         "sp_en": "R.",
-        "text_en": "Lord, have mercy. <span class=\"rubric\">Or</span> Kyrie, eleison."
+        "text_en": "Lord, have mercy.  Kyrie, eleison.",
+        "rubric_en": "Or",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 18,
+              "from": 0,
+              "to": 2,
+              "left": "Lord, have mercy. ",
+              "right": " Kyrie, eleison."
+            }
+          ]
+        }
       }, {
         "sp_en": "V.",
-        "text_en": "Christ, have mercy. <span class=\"rubric\">Or</span> Christe, eleison."
+        "text_en": "Christ, have mercy.  Christe, eleison.",
+        "rubric_en": "Or",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 20,
+              "from": 0,
+              "to": 2,
+              "left": "Christ, have mercy. ",
+              "right": " Christe, eleison."
+            }
+          ]
+        }
       }, {
         "sp_en": "R.",
-        "text_en": "Christ, have mercy. <span class=\"rubric\">Or</span> Christe, eleison."
+        "text_en": "Christ, have mercy.  Christe, eleison.",
+        "rubric_en": "Or",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 20,
+              "from": 0,
+              "to": 2,
+              "left": "Christ, have mercy. ",
+              "right": " Christe, eleison."
+            }
+          ]
+        }
       }, {
         "sp_en": "V.",
-        "text_en": "Lord, have mercy. <span class=\"rubric\">Or</span> Kyrie, eleison."
+        "text_en": "Lord, have mercy.  Kyrie, eleison.",
+        "rubric_en": "Or",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 18,
+              "from": 0,
+              "to": 2,
+              "left": "Lord, have mercy. ",
+              "right": " Kyrie, eleison."
+            }
+          ]
+        }
       }, {
         "sp_en": "R.",
-        "text_en": "Lord, have mercy. <span class=\"rubric\">Or</span> Kyrie, eleison."
+        "text_en": "Lord, have mercy.  Kyrie, eleison.",
+        "rubric_en": "Or",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 18,
+              "from": 0,
+              "to": 2,
+              "left": "Lord, have mercy. ",
+              "right": " Kyrie, eleison."
+            }
+          ]
+        }
       }]
     }, {
       "id": "1.5 gloria",
@@ -567,7 +659,20 @@
             "text_en": "and in Jesus Christ, his only Son, our Lord,"
           }, {
             "sp_en": "",
-            "text_en": "<span class=\"rubric\">All bow. </span>who was conceived by the Holy Spirit, born of the Virgin Mary,"
+            "text_en": "who was conceived by the Holy Spirit, born of the Virgin Mary,",
+            "rubric_en": "All bow. ",
+            "rubricLayout_en": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 9,
+                  "left": "",
+                  "right": "who was conceived by the Holy Sp"
+                }
+              ]
+            }
           }, {
             "sp_en": "",
             "text_en": "suffered under Pontius Pilate,"
@@ -657,10 +762,20 @@
             "text_en": "he came down from heaven,"
           }, {
             "sp_en": "",
-            "text_en": (
-              "<span class=\"rubric\">All bow. </span>and by the Holy Spirit was incarnate of the Virgin Mary,<br>"
-              + "and became man."
-            )
+            "text_en": "and by the Holy Spirit was incarnate of the Virgin Mary,<br>and became man.",
+            "rubric_en": "All bow. ",
+            "rubricLayout_en": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 9,
+                  "left": "",
+                  "right": "and by the Holy Spirit was incar"
+                }
+              ]
+            }
           }, {
             "sp_en": "",
             "text_en": "For our sake he was crucified under Pontius Pilate,"
@@ -732,7 +847,20 @@
         "rubric_en": "The community offers prayers prepared by themselves."
       }, {
         "sp_en": "All",
-        "text_en": "<span class=\"rubric\">At the end of the prayers</span> Lord, hear our prayer."
+        "text_en": " Lord, hear our prayer.",
+        "rubric_en": "At the end of the prayers",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 25,
+              "left": "",
+              "right": " Lord, hear our prayer."
+            }
+          ]
+        }
       }, {
         "sp_en": "P.",
         "text_en": (
@@ -760,10 +888,20 @@
         "rubric_en": "The Offertory Chant is not sung, The Priest may speak these words aloud."
       }, {
         "sp_en": "P.",
-        "text_en": (
-          "<span class=\"rubric\">takes the paten with the bread<br>"
-          + "and holds it slightly raised above the altar, with both hands </span>Blessed are you, Lord God of all creation,"
-        )
+        "text_en": "Blessed are you, Lord God of all creation,",
+        "rubric_en": "takes the paten with the bread<br>and holds it slightly raised above the altar, with both hands ",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 96,
+              "left": "",
+              "right": "Blessed are you, Lord God of all"
+            }
+          ]
+        }
       }, {
         "sp_en": "",
         "text_en": "for through your goodness"
@@ -781,10 +919,20 @@
         "text_en": "Blessed be God for ever."
       }, {
         "sp_en": "P.",
-        "text_en": (
-          "<span class=\"rubric\">takes the chalice and holds it slightly raised<br>"
-          + "above the altar with both hands </span>Blessed are you, Lord God of all creation,"
-        )
+        "text_en": "Blessed are you, Lord God of all creation,",
+        "rubric_en": "takes the chalice and holds it slightly raised<br>above the altar with both hands ",
+        "rubricLayout_en": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 82,
+              "left": "",
+              "right": "Blessed are you, Lord God of all"
+            }
+          ]
+        }
       }, {
         "sp_en": "",
         "text_en": "for through your goodness"
@@ -3129,18 +3277,36 @@
           )
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>When we eat this Bread and drink this Cup,<br>"
-            + "we proclaim your Death, O Lord,<br>"
-            + "until you come again."
-          )
+          "text_en": "When we eat this Bread and drink this Cup,<br>we proclaim your Death, O Lord,<br>until you come again.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "When we eat this Bread and drink"
+              }
+            ]
+          }
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>Save us, Savior of the world,<br>"
-            + "for by your Cross and Resurrection<br>"
-            + "you have set us free."
-          )
+          "text_en": "Save us, Savior of the world,<br>for by your Cross and Resurrection<br>you have set us free.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "Save us, Savior of the world,<br"
+              }
+            ]
+          }
         }, {
           "sp_en": "P.",
           "text_en": (
@@ -3389,18 +3555,36 @@
           )
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>When we eat this Bread and drink this Cup,<br>"
-            + "we proclaim your Death, O Lord,<br>"
-            + "until you come again."
-          )
+          "text_en": "When we eat this Bread and drink this Cup,<br>we proclaim your Death, O Lord,<br>until you come again.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "When we eat this Bread and drink"
+              }
+            ]
+          }
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>Save us, Savior of the world,<br>"
-            + "for by your Cross and Resurrection<br>"
-            + "you have set us free."
-          )
+          "text_en": "Save us, Savior of the world,<br>for by your Cross and Resurrection<br>you have set us free.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "Save us, Savior of the world,<br"
+              }
+            ]
+          }
         }, {
           "sp_en": "P.",
           "text_en": (
@@ -3593,18 +3777,36 @@
           )
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>When we eat this Bread and drink this Cup,<br>"
-            + "we proclaim your Death, O Lord,<br>"
-            + "until you come again."
-          )
+          "text_en": "When we eat this Bread and drink this Cup,<br>we proclaim your Death, O Lord,<br>until you come again.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "When we eat this Bread and drink"
+              }
+            ]
+          }
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>Save us, Savior of the world,<br>"
-            + "for by your Cross and Resurrection<br>"
-            + "you have set us free."
-          )
+          "text_en": "Save us, Savior of the world,<br>for by your Cross and Resurrection<br>you have set us free.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "Save us, Savior of the world,<br"
+              }
+            ]
+          }
         }, {
           "sp_en": "P.",
           "text_en": " "
@@ -3892,18 +4094,36 @@
           )
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>When we eat this Bread and drink this Cup,<br>"
-            + "we proclaim your Death, O Lord,<br>"
-            + "until you come again."
-          )
+          "text_en": "When we eat this Bread and drink this Cup,<br>we proclaim your Death, O Lord,<br>until you come again.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "When we eat this Bread and drink"
+              }
+            ]
+          }
         }, {
           "sp_en": "",
-          "text_en": (
-            "<span class=\"rubric\">Or: </span>Save us, Savior of the world,<br>"
-            + "for by your Cross and Resurrection<br>"
-            + "you have set us free."
-          )
+          "text_en": "Save us, Savior of the world,<br>for by your Cross and Resurrection<br>you have set us free.",
+          "rubric_en": "Or: ",
+          "rubricLayout_en": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "Save us, Savior of the world,<br"
+              }
+            ]
+          }
         }, {
           "sp_en": "P.",
           "text_en": "Therefore, O Lord, as we now celebrate the memorial of our redemption, we remember Christ's death and his descent to the realm of the dead, we proclaim his Resurrection and his Ascension to your right hand;"
@@ -4261,7 +4481,20 @@
             "rubric_en": "Bow your heads and pray for God's blessing."
           }, {
             "sp_en": "R.",
-            "text_en": "<span class=\"rubric\">At the end of the Priest's prayer, </span>Amen."
+            "text_en": "Amen.",
+            "rubric_en": "At the end of the Priest's prayer, ",
+            "rubricLayout_en": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 35,
+                  "left": "",
+                  "right": "Amen."
+                }
+              ]
+            }
           }, {
             "sp_en": "P.",
             "text_en": "May almighty God bless you:"
@@ -4323,7 +4556,20 @@
           },
           "lines": [{
             "sp_en": "P.",
-            "text_en": "Go forth, the Mass is ended. <span class=\"rubric\">Or </span> Go in peace."
+            "text_en": "Go forth, the Mass is ended.  Go in peace.",
+            "rubric_en": "Or ",
+            "rubricLayout_en": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 29,
+                  "from": 0,
+                  "to": 3,
+                  "left": "Go forth, the Mass is ended. ",
+                  "right": " Go in peace."
+                }
+              ]
+            }
           }, {
             "sp_en": "ALL",
             "text_en": "Thanks be to God."

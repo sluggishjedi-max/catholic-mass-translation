@@ -16,20 +16,21 @@
       "kr": "시작 예식"
     }, {
       "id": "1.1 entrance",
-      "type": "selectable",
+      "type": "part",
       "header": {
         "kr": "입당송"
       },
-      "variants": {
-        "header": [{
-          "cit_kr": ""
-        }],
-        "lines": [{
+      "cit": {
+        "cit_kr": ""
+      },
+      "lines": [
+        {
           "rubric_kr": "입당성가를 부르지 않는 경우 입당송을 합송할 수 있다．"
-        }, {
+        },
+        {
           "text_kr": "(오늘의 입당송…)"
-        }]
-      }
+        }
+      ]
     }, {
       "id": "1.2 greeting",
       "type": "selectable",
@@ -144,7 +145,20 @@
             "text_kr": "자주 의무를 소홀히 하였나이다."
           }, {
             "sp_kr": "",
-            "text_kr": "<span class=\"rubric\">가슴을 치며 말한다. </span>제 탓이오, 제 탓이오, 저의 큰 탓이옵니다."
+            "text_kr": "제 탓이오, 제 탓이오, 저의 큰 탓이옵니다.",
+            "rubric_kr": "가슴을 치며 말한다. ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 12,
+                  "left": "",
+                  "right": "제 탓이오, 제 탓이오, 저의 큰 탓이옵니다."
+                }
+              ]
+            }
           }, {
             "sp_kr": "",
             "text_kr": "그러므로 간절히 바라오니"
@@ -253,22 +267,100 @@
       },
       "lines": [{
         "sp_kr": "✚",
-        "text_kr": "주님, 자비를 베푸소서. <span class=\"rubric\">또는</span> 키리에, 엘레이손."
+        "text_kr": "주님, 자비를 베푸소서.  키리에, 엘레이손.",
+        "rubric_kr": "또는",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 14,
+              "from": 0,
+              "to": 2,
+              "left": "주님, 자비를 베푸소서. ",
+              "right": " 키리에, 엘레이손."
+            }
+          ]
+        }
       }, {
         "sp_kr": "◎",
-        "text_kr": "주님, 자비를 베푸소서. <span class=\"rubric\"> 또는</span> 키리에, 엘레이손."
+        "text_kr": "주님, 자비를 베푸소서.  키리에, 엘레이손.",
+        "rubric_kr": " 또는",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 14,
+              "from": 0,
+              "to": 3,
+              "left": "주님, 자비를 베푸소서. ",
+              "right": " 키리에, 엘레이손."
+            }
+          ]
+        }
       }, {
         "sp_kr": "✚",
-        "text_kr": "그리스도님, 자비를 베푸소서. <span class=\"rubric\"> 또는</span> 크리스테, 엘레이손."
+        "text_kr": "그리스도님, 자비를 베푸소서.  크리스테, 엘레이손.",
+        "rubric_kr": " 또는",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 17,
+              "from": 0,
+              "to": 3,
+              "left": "그리스도님, 자비를 베푸소서. ",
+              "right": " 크리스테, 엘레이손."
+            }
+          ]
+        }
       }, {
         "sp_kr": "◎",
-        "text_kr": "그리스도님, 자비를 베푸소서. <span class=\"rubric\"> 또는</span> 크리스테, 엘레이손."
+        "text_kr": "그리스도님, 자비를 베푸소서.  크리스테, 엘레이손.",
+        "rubric_kr": " 또는",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 17,
+              "from": 0,
+              "to": 3,
+              "left": "그리스도님, 자비를 베푸소서. ",
+              "right": " 크리스테, 엘레이손."
+            }
+          ]
+        }
       }, {
         "sp_kr": "✚",
-        "text_kr": "주님, 자비를 베푸소서. <span class=\"rubric\"> 또는</span> 키리에, 엘레이손."
+        "text_kr": "주님, 자비를 베푸소서.  키리에, 엘레이손.",
+        "rubric_kr": " 또는",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 14,
+              "from": 0,
+              "to": 3,
+              "left": "주님, 자비를 베푸소서. ",
+              "right": " 키리에, 엘레이손."
+            }
+          ]
+        }
       }, {
         "sp_kr": "◎",
-        "text_kr": "주님, 자비를 베푸소서. <span class=\"rubric\"> 또는</span> 키리에, 엘레이손."
+        "text_kr": "주님, 자비를 베푸소서.  키리에, 엘레이손.",
+        "rubric_kr": " 또는",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 14,
+              "from": 0,
+              "to": 3,
+              "left": "주님, 자비를 베푸소서. ",
+              "right": " 키리에, 엘레이손."
+            }
+          ]
+        }
       }]
     }, {
       "id": "1.5 gloria",
@@ -509,7 +601,20 @@
             "text_kr": "그 외아들 우리 주 예수 그리스도님"
           }, {
             "sp_kr": "",
-            "text_kr": "<span class=\"rubric\">모두 깊은 절을 한다. </span>성령으로 인하여 동정 마리아에게 잉태되어 나시고"
+            "text_kr": "성령으로 인하여 동정 마리아에게 잉태되어 나시고",
+            "rubric_kr": "모두 깊은 절을 한다. ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 13,
+                  "left": "",
+                  "right": "성령으로 인하여 동정 마리아에게 잉태되어 나시고"
+                }
+              ]
+            }
           }, {
             "sp_kr": "",
             "text_kr": "본시오 빌라도 통치 아래서 고난을 받으시고"
@@ -581,10 +686,20 @@
             "text_kr": "하늘에서 내려오셨을을 믿나이다."
           }, {
             "sp_kr": "",
-            "text_kr": (
-              "<span class=\"rubric\">모두 깊은 절을 한다. </span>또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어<br>"
-              + "사람이 되셨음을 믿나이다."
-            )
+            "text_kr": "또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어<br>사람이 되셨음을 믿나이다.",
+            "rubric_kr": "모두 깊은 절을 한다. ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 13,
+                  "left": "",
+                  "right": "또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어<b"
+                }
+              ]
+            }
           }, {
             "sp_kr": "",
             "text_kr": "본시오 빌라도 통치 아래서 저희를 위하여"
@@ -647,7 +762,20 @@
         "rubric_kr": "공동체 스스로 준비한 기도를 바친다."
       }, {
         "sp_kr": "◎",
-        "text_kr": "<span class=\"rubric\">기도 끝에 </span>주님 저희의 기도를 들어주소서."
+        "text_kr": "주님 저희의 기도를 들어주소서.",
+        "rubric_kr": "기도 끝에 ",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 6,
+              "left": "",
+              "right": "주님 저희의 기도를 들어주소서."
+            }
+          ]
+        }
       }, {
         "sp_kr": "✚",
         "text_kr": (
@@ -675,10 +803,20 @@
         "rubric_kr": "봉헌 성가를 부르지 않는다면 이 기도를 큰 목소리로 바칠 수 있다."
       }, {
         "sp_kr": "✚",
-        "text_kr": (
-          "<span class=\"rubric\">빵이 담긴 성반을 두 손으로<br>"
-          + "제대 위에 조금 높이 받쳐들며 </span>온 누리의 주 하느님, 찬미받으소서."
-        )
+        "text_kr": "온 누리의 주 하느님, 찬미받으소서.",
+        "rubric_kr": "빵이 담긴 성반을 두 손으로<br>제대 위에 조금 높이 받쳐들며 ",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 36,
+              "left": "",
+              "right": "온 누리의 주 하느님, 찬미받으소서."
+            }
+          ]
+        }
       }, {
         "sp_kr": "",
         "text_kr": "주님의 너그러우신 은혜로"
@@ -693,10 +831,20 @@
         "text_kr": "하느님, 길이 찬미받으소서."
       }, {
         "sp_kr": "✚",
-        "text_kr": (
-          "<span class=\"rubric\">두 손으로 성작을<br>"
-          + "제대 위에 조금 높이 받쳐 들고 </span>온 누리의 주 하느님, 찬미받으소서."
-        )
+        "text_kr": "온 누리의 주 하느님, 찬미받으소서.",
+        "rubric_kr": "두 손으로 성작을<br>제대 위에 조금 높이 받쳐 들고 ",
+        "rubricLayout_kr": {
+          "blockEnd": 0,
+          "pieces": [
+            {
+              "at": 0,
+              "from": 0,
+              "to": 31,
+              "left": "",
+              "right": "온 누리의 주 하느님, 찬미받으소서."
+            }
+          ]
+        }
       }, {
         "sp_kr": "",
         "text_kr": "주님의 너그러우신 은혜로"
@@ -2868,17 +3016,36 @@
           )
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 사순시기에) </span>주님께서 오실 때 까지<br>"
-            + "이 빵을 먹고 이 잔을 마실적마다<br>"
-            + "주님의 죽음을 전하나이다."
-          )
+          "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+          "rubric_kr": "또는 (특히 사순시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+              }
+            ]
+          }
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 부활시기에) </span>십자가와 부활로 저희를 구원하신 주님,<br>"
-            + "길이 영광 받으소서."
-          )
+          "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+          "rubric_kr": "또는 (특히 부활시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+              }
+            ]
+          }
         }, {
           "sp_kr": "✚",
           "text_kr": "주님, 저희 봉사자들과 주님의 거룩한 백성은"
@@ -3082,17 +3249,36 @@
           )
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 사순시기에) </span>주님께서 오실 때 까지<br>"
-            + "이 빵을 먹고 이 잔을 마실적마다<br>"
-            + "주님의 죽음을 전하나이다."
-          )
+          "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+          "rubric_kr": "또는 (특히 사순시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+              }
+            ]
+          }
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 부활시기에) </span>십자가와 부활로 저희를 구원하신 주님,<br>"
-            + "길이 영광 받으소서."
-          )
+          "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+          "rubric_kr": "또는 (특히 부활시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+              }
+            ]
+          }
         }, {
           "sp_kr": "✚",
           "text_kr": "아버지, 저희는 그리스도의 죽음과 부활을 기념하며"
@@ -3267,17 +3453,36 @@
           )
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 사순시기에) </span>주님께서 오실 때 까지<br>"
-            + "이 빵을 먹고 이 잔을 마실적마다<br>"
-            + "주님의 죽음을 전하나이다."
-          )
+          "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+          "rubric_kr": "또는 (특히 사순시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+              }
+            ]
+          }
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 부활시기에) </span>십자가와 부활로 저희를 구원하신 주님,<br>"
-            + "길이 영광 받으소서."
-          )
+          "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+          "rubric_kr": "또는 (특히 부활시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+              }
+            ]
+          }
         }, {
           "sp_kr": "✚",
           "text_kr": "아버지, 저희를 구원해 주신 성자의 수난과"
@@ -3316,7 +3521,20 @@
           "text_kr": "그 배필이신 성 요셉과 복된 사도들과 영광스러운 순교자들과"
         }, {
           "sp_kr": "",
-          "text_kr": "<span class=\"rubric\">그날의 성인이나 수호자 이름</span>([성인이름] 과)"
+          "text_kr": "([성인이름] 과)",
+          "rubric_kr": "그날의 성인이나 수호자 이름",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 15,
+                "left": "",
+                "right": "([성인이름] 과)"
+              }
+            ]
+          }
         }, {
           "sp_kr": "",
           "text_kr": "그 밖의 모든 성인과 함께 상속을 받게 하여 주소서."
@@ -3642,17 +3860,36 @@
           )
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 사순시기에) </span>주님께서 오실 때 까지<br>"
-            + "이 빵을 먹고 이 잔을 마실적마다<br>"
-            + "주님의 죽음을 전하나이다."
-          )
+          "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+          "rubric_kr": "또는 (특히 사순시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+              }
+            ]
+          }
         }, {
           "sp_kr": "",
-          "text_kr": (
-            "<span class=\"rubric\">또는 (특히 부활시기에) </span>십자가와 부활로 저희를 구원하신 주님,<br>"
-            + "길이 영광 받으소서."
-          )
+          "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+          "rubric_kr": "또는 (특히 부활시기에) ",
+          "rubricLayout_kr": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 14,
+                "left": "",
+                "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+              }
+            ]
+          }
         }, {
           "sp_kr": "✚",
           "text_kr": "주님, 저희는 지금 구원의 기념제를 거행하오니"
@@ -4064,7 +4301,20 @@
             "rubric_kr": "고개를 숙여 강복을 받는다."
           }, {
             "sp_kr": "◎",
-            "text_kr": "<span class=\"rubric\">사제의 기도 끝에, </span>아멘."
+            "text_kr": "아멘.",
+            "rubric_kr": "사제의 기도 끝에, ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 11,
+                  "left": "",
+                  "right": "아멘."
+                }
+              ]
+            }
           }, {
             "sp_kr": "✚",
             "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"

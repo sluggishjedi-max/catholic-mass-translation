@@ -52,6 +52,7 @@
     "prayer:bulk:check": "node tools/verify-prayer-bulk-selection.js",
     "mass:tool": "node tools/mass-data-editor.js",
     "mass:tool:check": "node tools/mass-data-editor.js --check",
+    "mass:storage:check": "node tools/normalize-mass-storage.js --check && node tools/verify-mass-storage.js",
     "mass:tool:verify": "node tools/verify-mass-data-editor.js",
     "data:tools:check": "node tools/verify-country-data-editors.js",
     "data:tools:ui-check": "node tools/verify-data-editor-integrations.js",

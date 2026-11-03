@@ -3856,169 +3856,229 @@
   byPart('blessing').variants.A.lines = [z('主祭', '願主與你們同在。'), z('信友', '也與你的心靈同在。'), z('', ''), z('主祭', '願全能的天主，聖父、聖子 ✠、聖神，'), z('', '降福你們。'), z('信友', '阿們。')];
   // MASS_DATA_EDITOR_OVERRIDES_START
   const ordinaryEditorOverrides = [
-    {
-      "path": [
-        3,
-        "variants",
-        "A",
-        "lines",
-        0,
-        "text_zh"
-      ],
-      "value": "各位兄弟姊妹，現在我們大家認罪，"
-    },
-    {
-      "path": [
-        3,
-        "variants",
-        "A",
-        "lines",
-        1,
-        "text_zh"
-      ],
-      "value": "虔誠地舉行聖祭。"
-    },
-    {
-      "path": [
-        3,
-        "variants",
-        "A",
-        "lines",
-        7,
-        "text_zh"
-      ],
-      "value": "<span class=\"rubric\">搥胸。 </span>我罪、我罪、我的重罪。"
-    },
-    {
-      "path": [
-        3,
-        "variants",
-        "A",
-        "lines",
-        7,
-        "rubric_zh"
-      ],
-      "value": ""
-    },
-    {
-      "path": [
-        1,
-        "lines",
-        0,
-        "rubric_zh"
-      ],
-      "value": "如果沒有唱入會歌，可以一起唱入會歌。"
-    },
-    {
-      "path": [
-        1,
-        "lines",
-        1,
-        "text_zh"
-      ],
-      "value": "（當日進堂詠…）"
-    },
-    {
-      "create": {
-        "entryId": "1.2 greeting",
-        "relativePath": [
-          "variants",
-          "D",
-          "lines"
-        ],
-        "rowKey": "0:text",
-        "preferredIndex": 0,
-        "field": "text_zh",
-        "speakerField": "sp_zh"
-      },
-      "value": "因父、及子、及聖神之名。",
-      "speaker": ""
-    },
-    {
-      "create": {
-        "entryId": "1.2 greeting",
-        "relativePath": [
-          "variants",
-          "D",
-          "lines"
-        ],
-        "rowKey": "1:text",
-        "preferredIndex": 1,
-        "field": "text_zh",
-        "speakerField": "sp_zh"
-      },
-      "value": "阿們。",
-      "speaker": ""
-    },
-    {
-      "path": [
-        2,
+  {
+    "path": [
+      3,
+      "variants",
+      "A",
+      "lines",
+      0,
+      "text_zh"
+    ],
+    "value": "各位兄弟姊妹，現在我們大家認罪，"
+  },
+  {
+    "path": [
+      3,
+      "variants",
+      "A",
+      "lines",
+      1,
+      "text_zh"
+    ],
+    "value": "虔誠地舉行聖祭。"
+  },
+  {
+    "path": [
+      1,
+      "lines",
+      0,
+      "rubric_zh"
+    ],
+    "value": "如果沒有唱入會歌，可以一起唱入會歌。"
+  },
+  {
+    "path": [
+      1,
+      "lines",
+      1,
+      "text_zh"
+    ],
+    "value": "（當日進堂詠…）"
+  },
+  {
+    "create": {
+      "entryId": "1.2 greeting",
+      "relativePath": [
         "variants",
         "D",
-        "lines",
-        0,
-        "sp_zh"
+        "lines"
       ],
-      "value": "主祭"
+      "rowKey": "0:text",
+      "preferredIndex": 0,
+      "field": "text_zh",
+      "speakerField": "sp_zh"
     },
-    {
-      "path": [
-        2,
+    "value": "因父、及子、及聖神之名。",
+    "speaker": ""
+  },
+  {
+    "create": {
+      "entryId": "1.2 greeting",
+      "relativePath": [
         "variants",
         "D",
-        "lines",
-        1,
-        "sp_zh"
+        "lines"
       ],
-      "value": "信友"
+      "rowKey": "1:text",
+      "preferredIndex": 1,
+      "field": "text_zh",
+      "speakerField": "sp_zh"
     },
-    {
-      "create": {
-        "entryId": "1.2 greeting",
-        "relativePath": [
-          "variants",
-          "D",
-          "lines"
-        ],
-        "rowKey": "2:text",
-        "preferredIndex": 2,
-        "field": "text_zh",
-        "speakerField": "sp_zh"
-      },
-      "value": "願平安與你同在。",
-      "speaker": "主祭"
-    },
-    {
-      "path": [
-        2,
+    "value": "阿們。",
+    "speaker": ""
+  },
+  {
+    "path": [
+      2,
+      "variants",
+      "D",
+      "lines",
+      0,
+      "sp_zh"
+    ],
+    "value": "主祭"
+  },
+  {
+    "path": [
+      2,
+      "variants",
+      "D",
+      "lines",
+      1,
+      "sp_zh"
+    ],
+    "value": "信友"
+  },
+  {
+    "create": {
+      "entryId": "1.2 greeting",
+      "relativePath": [
         "variants",
-        "B",
-        "lines",
-        3,
-        "text_zh"
+        "D",
+        "lines"
       ],
-      "value": "也與你的心靈同在。"
+      "rowKey": "2:text",
+      "preferredIndex": 2,
+      "field": "text_zh",
+      "speakerField": "sp_zh"
     },
-    {
-      "create": {
-        "entryId": "1.2 greeting",
-        "relativePath": [
-          "variants",
-          "D",
-          "lines"
-        ],
-        "rowKey": "3:text",
-        "preferredIndex": 3,
-        "field": "text_zh",
-        "speakerField": "sp_zh"
-      },
-      "value": "也與你的心靈同在。",
-      "speaker": "信友"
+    "value": "願平安與你同在。",
+    "speaker": "主祭"
+  },
+  {
+    "path": [
+      2,
+      "variants",
+      "B",
+      "lines",
+      3,
+      "text_zh"
+    ],
+    "value": "也與你的心靈同在。"
+  },
+  {
+    "create": {
+      "entryId": "1.2 greeting",
+      "relativePath": [
+        "variants",
+        "D",
+        "lines"
+      ],
+      "rowKey": "3:text",
+      "preferredIndex": 3,
+      "field": "text_zh",
+      "speakerField": "sp_zh"
+    },
+    "value": "也與你的心靈同在。",
+    "speaker": "信友"
+  },
+  {
+    "replace": {
+      "entryId": "1.3 penitential",
+      "relativePath": [
+        "variants",
+        "A",
+        "lines"
+      ],
+      "rows": [
+        {
+          "sp_zh": "主祭",
+          "text_zh": "各位兄弟姊妹，現在我們大家認罪，"
+        },
+        {
+          "text_zh": "虔誠地舉行聖祭。"
+        },
+        {
+          "rubric_zh": "靜默片刻。"
+        },
+        {
+          "sp_zh": "全體",
+          "text_zh": "我向全能的天主"
+        },
+        {
+          "text_zh": "和各位教友，"
+        },
+        {
+          "text_zh": "承認我思、言、行為上的過失。"
+        },
+        {},
+        {
+          "text_zh": "我罪、我罪、我的重罪。",
+          "rubric_zh": "搥胸。 ",
+          "rubricLayout_zh": {
+            "blockEnd": 0,
+            "pieces": [
+              {
+                "at": 0,
+                "from": 0,
+                "to": 4,
+                "left": "",
+                "right": "我罪、我罪、我的重罪。"
+              }
+            ]
+          }
+        },
+        {
+          "text_zh": "為此，懇請"
+        },
+        {
+          "text_zh": "終身童貞聖母瑪利亞、天使、聖人、和你們各位教友，"
+        },
+        {
+          "text_zh": "為我祈求上主，我們的天主。"
+        },
+        {
+          "sp_zh": "主祭",
+          "text_zh": "願全能的天主垂憐我們，赦免我們的罪，"
+        },
+        {
+          "text_zh": "使我們得到永生。"
+        },
+        {
+          "sp_zh": "信友",
+          "text_zh": "阿們。"
+        }
+      ]
     }
-  ];
+  }
+];
   // MASS_DATA_EDITOR_OVERRIDES_END
   function applyOrdinaryEditorOverrides(target) {
     ordinaryEditorOverrides.forEach(override => {
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }
       if (override.create) {
         const entry = target.find(item => item && item.id === override.create.entryId);
         if (!entry) throw new Error(`Taiwan Mass editor entry is missing: ${override.create.entryId}`);
@@ -4075,7 +4135,7 @@
     jurisdictionName: 'Taiwan',
     conferenceCalendar: '天主教會台灣地區主教團',
     ordinaryLanguage: 'ZH',
-    ordinary,
+    ordinary: global.ordoMassStorage ? Object.freeze(ordinary.map(global.ordoMassStorage.canonicalMassEntry)) : ordinary,
     ordinaryEdition: '感恩祭常用經文及附錄二：感恩經第一式至第四式',
     ordinarySegmentation: Object.freeze({
       version: 'V27.7',

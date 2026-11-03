@@ -38,6 +38,31 @@ const fixtures={
    const check=(ok,message)=>{if(!ok)throw Error(message)};
    startupNoticeDecision=true;document.body.classList.remove('consent-pending');document.getElementById('consent-modal').style.display='none';
    const date=new Date(2026,10,3,12);getStrictDateBase=()=>({localDay:cloneDateOnly(date),hour:12,timeZone:'Asia/Seoul'});
+   const koreanEntrance=uploadedCountryMassData.KR.ordinary.find(item=>getBaseId(item.id)==='entrance');
+   const chineseEntrance=uploadedCountryMassData.TW.ordinary.find(item=>getBaseId(item.id)==='entrance');
+   const legacy={...structuredClone(koreanEntrance),type:'selectable',variants:{header:[koreanEntrance.cit],lines:koreanEntrance.lines}};
+   delete legacy.lines;
+   for(const type of ['part','selectable']){
+    const mixed={...mergeIndependentOrdinary(legacy,chineseEntrance),type};normalizeDailySelectableTemplate(mixed);
+    const lines=type==='selectable'?mixed.variants.A.lines:mixed.lines;
+    for(const lower of ['kr','zh'])check(lines.some(line=>line['rubric_'+lower]),'Cached legacy template lost '+lower+' rubric');
+   }
+   const checkEntranceRubric=(country,lower)=>{
+    const ordinary=uploadedCountryMassData[country].ordinary.find(item=>getBaseId(item.id)==='entrance');
+    const rubric=(ordinary.lines||ordinary.variants.lines).find(line=>line['rubric_'+lower])?.['rubric_'+lower];
+    if(!rubric)return;
+    const nodes=[...document.querySelectorAll('[data-part-id="entrance"] .rubric')].filter(node=>node.textContent===rubric);
+    check(nodes.length===1,'entrance lost or duplicated '+country+' ordinary rubric');
+   };
+   let ordinaryPairs=0;
+   for(const [country,module] of Object.entries(uploadedCountryMassData)){
+    const lang=module.ordinaryLanguage;if(country==='KR'||!SUPPORTED_LANGS.includes(lang))continue;
+    for(const reverse of [false,true]){
+     state.useGps=false;state.currentLoc=reverse?lang:'KR';state.selectedLocationCode=reverse?country:'KR';state.targetLang=reverse?'KR':lang;state.targetLocationCode=reverse?'KR':country;
+     resetMassDataFrom(getStartupOrdinaryMassData());render();
+     checkEntranceRubric('KR','kr');checkEntranceRubric(country,lang.toLowerCase());ordinaryPairs++;
+    }
+   }
    const reports=[];
    for(const primary of ['KR','ZH']){
     state.useGps=false;state.currentLoc=primary;state.selectedLocationCode=primary==='KR'?'KR':'TW';state.targetLang=primary==='KR'?'ZH':'KR';state.targetLocationCode=primary==='KR'?'TW':'KR';
@@ -55,6 +80,7 @@ const fixtures={
       const normalize=value=>value.replace(/[\s\p{P}\p{S}]/gu,'');
       check(normalize(element.textContent).includes(normalize(text)),key+' lost '+country+' source text: '+JSON.stringify({primary,expected:text,rendered:element.textContent}));
      }
+     if(key==='entrance'){checkEntranceRubric('KR','kr');checkEntranceRubric('TW','zh');}
     }
     for(const [key,chapter] of [['reading1','二'],['gospel','十四']]){
      const item=massData.find(item=>getBaseId(item.id)===key),selected=item.variants?.[state.options[key]]||item;
@@ -67,10 +93,10 @@ const fixtures={
      const map=selectableOptionMapFromData(negative,key).optionMap;
      check(!buildDeterministicDailyVariantAlignment(key,negative,map).alignment.some(group=>group.kr===0&&group.zh===0),key+' merged a different or unresolved reference');
     }
-    reports.push({primary,citations,pairedAntiphons:true,differentPassagesPreserved:true});
+    reports.push({primary,citations,pairedAntiphons:true,differentPassagesPreserved:true,ordinaryRubricsPreserved:true});
    }
-   return reports;
+   return {ordinaryPairs,cases:reports};
   },records);
-  assert.deepEqual(errors,[]);console.log(JSON.stringify({width,live:process.argv.includes('--live'),cases:result,errors}));await page.close();
+  assert.deepEqual(errors,[]);console.log(JSON.stringify({width,live:process.argv.includes('--live'),...result,errors}));await page.close();
  }}finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;});

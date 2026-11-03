@@ -27,7 +27,12 @@
       }
       if (phrase) output.push(phrase);
     });
-    return output;
+    let rubricOpen = false;
+    return output.map(phrase => {
+      const fragment = (rubricOpen ? '<span class="rubric">' : '') + phrase;
+      for (const match of fragment.matchAll(/<span\b[^>]*class=["'][^"']*\brubric\b[^"']*["'][^>]*>|<\/span>/giu)) rubricOpen = !/^<\//u.test(match[0]);
+      return fragment + (rubricOpen ? '</span>' : '');
+    });
   }
   function splitEnglishRows(rows) {
     return (Array.isArray(rows) ? rows : []).flatMap(row => {
@@ -50,7 +55,7 @@
   }
   function structureEnglishOrdinary(source) {
     return source.map(entry => {
-      const item = Object.assign({}, entry);
+      const item = Object.assign({}, global.ordoMassStorage?.hydrateMassEntry(entry) || entry);
       ['lines', 'common_dialogue', 'sanctus', 'amen'].forEach(key => {
         if (Array.isArray(item[key])) item[key] = splitEnglishRows(item[key]);
       });
@@ -61,7 +66,7 @@
       if (item.songs) item.songs = Object.fromEntries(Object.entries(item.songs).map(([key, song]) => [key, song && Array.isArray(song.content) ? Object.assign({}, song, {
         content: splitEnglishRows(song.content)
       }) : song]));
-      return item;
+      return global.ordoMassStorage?.canonicalMassEntry(item) || item;
     });
   }
   // MASS_DATA_EDITOR_OVERRIDES_START
