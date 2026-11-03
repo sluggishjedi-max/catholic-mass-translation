@@ -107,6 +107,12 @@ const gpsCases = [
     assert(points > 0, 'Expected explicit point fallbacks for post-snapshot jurisdictions');
 
     const berlin = await api.contextForDiocese('Archdiocese of Berlin', 'DE');
+    const taipei = await api.contextForDiocese('Archdiocese of Taipei', 'TW');
+    assert(taipei.ordinary.zh === '多瑪斯·阿奎納' && taipei.ordinary.kr === '토마스 아퀴나스', 'Verified Taipei baptismal name missing');
+    assert(taipei.sourceUrls.includes('https://taipei.catholic.org.tw/chi/archbishop/'), 'Taipei official name source missing');
+    const { localizedPerson } = require('./build-bishop-conference-data');
+    assert(localizedPerson({given:'Thomas', fullName:'Thomas Chung An-zu'}).zh === taipei.ordinary.zh, 'Regeneration would discard the Taipei name correction');
+    assert(localizedPerson({given:'Thomas', fullName:'Thomas Unrelated'}).en === 'Thomas', 'A person-specific name correction leaked into another bishop');
     assert(berlin && berlin.ordinary && berlin.ordinary.en, 'Diocese-name lookup failed after lazy loading');
     console.log(JSON.stringify({ conferences: api._dataByConference.size, dioceses, polygons, pointFallbacks: points, gpsCases: results }, null, 2));
 })().catch(error => {

@@ -9,7 +9,7 @@
         CBCEW: { file: 'cbcew.js', locations: ['GB-ENG', 'GB-WLS'] },
         BCOS: { file: 'bcos.js', locations: ['GB-SCT'] },
         CBCP: { file: 'cbcp.js', locations: ['PH'] },
-        CRBC: { file: 'crbc.js', locations: ['TW'] },
+        CRBC: { file: 'crbc.js', locations: ['TW'], version: '20261103-name-corrections' },
         ACBC: { file: 'acbc.js', locations: ['AU'] },
         NZCBC: { file: 'nzcbc.js', locations: ['NZ'] },
         CBCJ: { file: 'cbcj.js', locations: ['JP'] },
@@ -53,7 +53,9 @@
         const promise = new Promise((resolve, reject) => {
             const script = document.createElement('script');
             script.async = true;
-            script.src = new URL(CONFERENCES[conferenceId].file, baseUrl).href;
+            const url = new URL(CONFERENCES[conferenceId].file, baseUrl);
+            if (CONFERENCES[conferenceId].version) url.searchParams.set('v', CONFERENCES[conferenceId].version);
+            script.src = url.href;
             script.onload = () => resolve(dataByConference.get(conferenceId) || null);
             script.onerror = () => reject(new Error(`Failed to load bishops conference data: ${conferenceId}`));
             document.head.appendChild(script);

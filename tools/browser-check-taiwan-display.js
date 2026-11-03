@@ -30,6 +30,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
    check(formatDynamicLineText('求祢垂念祢的僕婢 [某某] 和所有參禮的人。','zh').includes('data-name-role="person"'),'Living person misclassified');
    check(formatDynamicLineText(deceased,'zh')===deceased,'Name emphasis nested on a repeated render');
    const second=await refreshGpsBishopContext(25.033,121.5654,'TW');check(second?.ordinary&&second.diocese!==first.diocese,'GPS context did not change');
+   check(localizedBishopName(second.ordinary,'zh')==='多瑪斯·阿奎納'&&localizedBishopName(second.ordinary,'kr')==='토마스 아퀴나스','Taipei baptismal name was truncated or left in English');
    names=formatDynamicLineText(fixture,'zh');check(plain(names).includes(localizedBishopName(second.ordinary,'zh')),'New GPS name not applied');
    applyGpsBishopContext(null);const unresolved=formatDynamicLineText('我們的主教 [某某]','zh');check(unresolved.includes('muted-name-placeholder')&&!unresolved.includes(localizedBishopName(first.ordinary,'zh')),'Unavailable GPS retained an old bishop');
    const kr={title:'연중 제31주간 화요일',serverRecord:{kind:'source',version:2},data:{

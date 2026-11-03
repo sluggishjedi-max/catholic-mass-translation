@@ -39,6 +39,14 @@ const KOREA_LEGACY_ORDER = ['Cheongju', 'Suwon', 'Seoul', 'Chuncheon', 'Daejeon'
 const VIETNAM_LEGACY_ORDER = ['Lang Son and Cao Bang', 'Hung Hoa', 'Bac Ninh', 'Hanoi', 'Hai Phong', 'Thai Binh', 'Bui Chu', 'Phat Diem', 'Thanh Hoa', 'Vinh', 'Ha Tinh', 'Hue', 'Da Nang', 'Qui Nhon', 'Kontum', 'Nha Trang', 'Ban Me Thuot', 'Da Lat', 'Phan Thiet', 'Phu Cuong', 'Xuan Loc', 'Ba Ria', 'Ho Chi Minh City', 'My Tho', 'Vinh Long', 'Long Xuyen', 'Can Tho'];
 const JAPAN_LEGACY_ORDER = ['Tokyo', 'Osaka-Takamatsu', 'Kyoto', 'Nagoya', 'Fukuoka', 'Sapporo'];
 const requestPromises = new Map();
+// Person identity matters: Thomas Aquinas must not be inferred for every Thomas.
+const VERIFIED_PERSON_NAMES = {
+    'Thomas Chung An-zu': {
+        kr: '토마스 아퀴나스', vn: 'Tôma Aquinô', en: 'Thomas Aquinas', jp: 'トマス・アクィナス', la: 'Thomas Aquinas',
+        zh: '多瑪斯·阿奎納', it: "Tommaso d'Aquino", pt: 'Tomás de Aquino', es: 'Tomás de Aquino', de: 'Thomas von Aquin',
+        nameSourceUrl: 'https://taipei.catholic.org.tw/chi/archbishop/'
+    }
+};
 
 function localIsoDate() {
     const now = new Date();
@@ -201,7 +209,7 @@ function localizedPerson(current, legacyPerson) {
         de: fallback,
         fullName: current.fullName
     };
-    return result;
+    return Object.assign(result, VERIFIED_PERSON_NAMES[current.fullName]);
 }
 function popeLeoPerson() {
     return { kr: '\uB808\uC624', vn: 'Leo', en: 'Leo', jp: '\u30EC\u30AA', la: 'Leo', zh: '\u826F', it: 'Leone', pt: 'Leao', es: 'Leon', de: 'Leo', fullName: 'Pope Leo XIV' };
@@ -300,7 +308,7 @@ async function countryData(country, legacyIndex) {
             ordinary: people.ordinary,
             auxiliaries: people.auxiliaries,
             collaboratorSummary: people.auxiliaries.length > 1,
-            sourceUrls: [`${HIERARCHY_ROOT}/diocese/d${diocese.key}.html`, leadershipUrl],
+            sourceUrls: [...new Set([`${HIERARCHY_ROOT}/diocese/d${diocese.key}.html`, leadershipUrl, ...[people.ordinary, ...people.auxiliaries].map(person => person && person.nameSourceUrl).filter(Boolean)])],
             territory
         });
     }
@@ -367,7 +375,8 @@ async function main() {
     fs.writeFileSync(path.join(OUTPUT_DIR, 'build-summary.json'), `${JSON.stringify({ updatedAt, conferences: summaries }, null, 2)}\n`, 'utf8');
 }
 
-main().catch(error => {
+module.exports = { localizedPerson };
+if (require.main === module) main().catch(error => {
     console.error(error);
     process.exitCode = 1;
 });
