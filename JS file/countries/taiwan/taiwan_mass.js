@@ -5202,7 +5202,7 @@
           "__massEditorPairKeys": {
             "text_zh": "editor-1793690054104-34:text"
           },
-          "text_zh": "祿茂、祿茂、瑪竇、西滿和達德："
+          "text_zh": "祿茂、瑪竇、西滿和達德："
         },
         {
           "sp_zh": "",
@@ -5347,7 +5347,7 @@
           "__massEditorPairKeys": {
             "text_zh": "editor-1793690529202-54:text"
           },
-          "text_zh": "祿茂、祿茂、瑪竇、西滿和達德："
+          "text_zh": "祿茂、瑪竇、西滿和達德："
         },
         {
           "sp_zh": "",
@@ -5501,7 +5501,7 @@
           "__massEditorPairKeys": {
             "text_zh": "editor-1793690924713-77:text"
           },
-          "text_zh": "祿茂、祿茂、瑪竇、西滿和達德："
+          "text_zh": "祿茂、瑪竇、西滿和達德："
         },
         {
           "sp_zh": "",
@@ -5647,7 +5647,7 @@
           "__massEditorPairKeys": {
             "text_zh": "editor-1793691043314-91:text"
           },
-          "text_zh": "祿茂、祿茂、瑪竇、西滿和達德："
+          "text_zh": "祿茂、瑪竇、西滿和達德："
         },
         {
           "sp_zh": "",
@@ -5814,7 +5814,7 @@
           "__massEditorPairKeys": {
             "text_zh": "editor-1793691246693-120:text"
           },
-          "text_zh": "祿茂、祿茂、瑪竇、西滿和達德："
+          "text_zh": "祿茂、瑪竇、西滿和達德："
         },
         {
           "sp_zh": "",
@@ -5961,7 +5961,7 @@
           "__massEditorPairKeys": {
             "text_zh": "editor-1793691312151-127:text"
           },
-          "text_zh": "祿茂、祿茂、瑪竇、西滿和達德："
+          "text_zh": "祿茂、瑪竇、西滿和達德："
         },
         {
           "sp_zh": "",
