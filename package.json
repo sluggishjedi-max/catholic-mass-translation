@@ -29,6 +29,7 @@
     "browser:check:admin-mobile": "node tools/browser-check-admin-mobile-login.js",
     "browser:check:prayers": "node tools/browser-check-prayer-display.js",
     "browser:check:startup-preview": "node tools/browser-check-startup-and-preview.js",
+    "browser:check:startup-loading": "node tools/browser-check-startup-loading.js",
     "browser:check": "set ORDO_CHECK_HTML=V31.1.html&& node tools/browser-check-v28.js",
     "browser:check:daily-memorial": "node tools/browser-check-daily-memorial.js",
     "browser:check:v21": "node tools/browser-check-v21.js",

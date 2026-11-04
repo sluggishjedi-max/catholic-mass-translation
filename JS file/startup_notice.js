@@ -2,7 +2,35 @@
 (function prepareStartupNotice(global) {
     'use strict';
 
-    global.ordoStartupNoticeDecision = null;
+    // A click can arrive while this script is still downloading.
+    if (typeof global.ordoStartupNoticeDecision !== 'boolean') global.ordoStartupNoticeDecision = null;
+
+    let loadingTimer;
+    global.ordoShowStartupLoading = function () {
+        if (global.ordoStartupMassReady) return;
+        document.body.classList.add('startup-loading');
+        const screen = document.getElementById('startup-loading-screen');
+        screen?.focus({ preventScroll: true });
+        if (loadingTimer) return;
+        loadingTimer = setTimeout(() => {
+            if (!document.body.classList.contains('startup-loading')) return;
+            const delayed = document.getElementById('startup-loading-delayed');
+            if (delayed) delayed.hidden = false;
+        }, 30000);
+    };
+    global.ordoFinishStartupLoading = function () {
+        global.ordoStartupMassReady = true;
+        clearTimeout(loadingTimer);
+        const screen = document.getElementById('startup-loading-screen');
+        const hadFocus = screen?.contains(document.activeElement);
+        document.body.classList.remove('startup-loading');
+        if (hadFocus) {
+            const root = document.getElementById('missal-root');
+            root?.setAttribute('tabindex', '-1');
+            root?.focus({ preventScroll: true });
+        }
+    };
+    global.addEventListener('ordo:startup-accepted', global.ordoShowStartupLoading);
 
     const warningTexts = Object.freeze({
         KR: '<미사통상문> 및 <전례독서>, 그리고 기도문과 성가에 대하여 각국 천주교 주교회의에서 발행된 공식 자료를 활용하였으나, 해당 저작물의 이용 승인을 받은 것은 아님을 알려드립니다. 또한, 미사 거행시 일부 다른 부분이 있을 수 있으니, 참고용으로만 사용하시기 바랍니다.',
@@ -48,9 +76,11 @@
 
     global.acceptStartupNotice = function () {
         global.ordoStartupNoticeDecision = true;
+        global.ordoShowStartupLoading();
         const modal = document.getElementById('consent-modal');
         if (modal) modal.style.display = 'none';
         document.body.classList.remove('consent-pending');
+        global.dispatchEvent(new Event('ordo:startup-accepted'));
     };
 
     global.declineStartupNotice = function () {
@@ -64,4 +94,5 @@
     };
 
     global.renderOrdoStartupNoticeWarnings();
+    if (global.ordoStartupNoticeDecision === true) global.ordoShowStartupLoading();
 })(window);

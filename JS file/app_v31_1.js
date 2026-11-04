@@ -6229,6 +6229,8 @@
     }
 
     function acceptStartupNotice() {
+        window.ordoStartupNoticeDecision = true;
+        window.ordoShowStartupLoading?.();
         const modal = document.getElementById('consent-modal');
         if (modal) modal.style.display = 'none';
         document.body.classList.remove('consent-pending');
@@ -6238,6 +6240,8 @@
         syncFloatingLiturgyBannerVisibility();
         queuePendingLiturgyCompletionAfterChoice();
     }
+
+    window.addEventListener('ordo:startup-accepted', acceptStartupNotice);
 
     function declineStartupNotice() {
         state.startupConsentDeclined = true;
@@ -18426,6 +18430,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             return false;
         }
         if (loadId !== activeMassDataLoadId) return;
+        if (document.body.classList.contains('startup-loading')) {
+            // Let the browser paint the spinner before compiling the first Mass.
+            await new Promise(resolve => requestAnimationFrame(() => setTimeout(resolve, 0)));
+            if (loadId !== activeMassDataLoadId) return false;
+        }
         if (options.forceRemote) clearDailyAnalysisCachesForRefresh(today);
         if (options.forceRemote) kpvMassReadingRequests.clear();
         state.options.eucharist_song = '';
@@ -22006,6 +22015,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         liveRoot.replaceChildren(root);
         restoreVoiceHighlightAfterRender();
         applyActiveTabState();
+        // Release the startup screen after actual Mass content reaches the DOM.
+        // Daily readings continue loading through the existing progress bar.
+        if (startupNoticeDecision === true && liveRoot.querySelector('.part-container')) {
+            if (window.ordoFinishStartupLoading) window.ordoFinishStartupLoading();
+            else {
+                // The notice helper may have failed to download after the click.
+                window.ordoStartupMassReady = true;
+                document.body.classList.remove('startup-loading');
+            }
+        }
     }
 
     // 헤더 선택창은 UI 언어가 아니라 실제 칸의 언어를 따라갑니다.
@@ -22281,6 +22300,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (modal) modal.style.display = 'none';
         document.body.classList.remove('consent-pending');
         startupNoticeDecision = true;
+        window.ordoStartupNoticeDecision = true;
+        window.ordoShowStartupLoading?.();
         persistAndroidAppSettings({ consentAccepted: true });
         if (resolveStartupNoticeDecision) resolveStartupNoticeDecision(true);
         return true;

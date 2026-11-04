@@ -134,6 +134,16 @@
             .consent-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
             .consent-btn.accept { order: -1; }
         }
+        body.startup-loading { overflow: hidden; }
+        #startup-loading-screen { display: none; position: fixed; inset: 0; z-index: 10000; align-items: center; justify-content: center; padding: 24px; background: #f5f7fa; color: #263238; text-align: center; }
+        body.startup-loading #startup-loading-screen { display: flex; }
+        .startup-loading-content { width: min(420px, 100%); line-height: 1.6; }
+        .startup-loading-spinner { display: block; width: 52px; height: 52px; margin: 0 auto 20px; border: 5px solid #dce2e7; border-top-color: var(--brand-logo-color); border-radius: 50%; animation: pull-refresh-spin 0.8s linear infinite; }
+        #startup-loading-title { font-size: 1.2rem; font-weight: 800; }
+        .startup-loading-translation { display: block; margin-top: 4px; color: #64748b; font-size: 0.9rem; }
+        #startup-loading-delayed { margin-top: 24px; font-size: 0.95rem; }
+        #startup-loading-delayed button { margin-top: 14px; padding: 10px 18px; border: 0; border-radius: 8px; background: var(--brand-logo-color); color: white; font: inherit; cursor: pointer; }
+        @media (prefers-reduced-motion: reduce) { .startup-loading-spinner { animation-duration: 2s; } }
         #vn-source-modal { display: none; position: fixed; inset: 0; z-index: 10001; align-items: center; justify-content: center; padding: 18px; background: rgba(0, 0, 0, 0.58); }
         #vn-source-modal.is-visible { display: flex; }
         .vn-source-content { width: min(560px, 96vw); background: white; color: #333; border-radius: 12px; padding: 22px; box-shadow: 0 18px 46px rgba(0, 0, 0, 0.32); }
@@ -563,12 +573,24 @@
         </div>
         <div class="consent-actions">
             <button type="button" id="consent-decline" class="consent-btn decline" onclick="declineStartupNotice()"><span lang="ko">아니요, 이용하지 않겠습니다 (실행종료)</span><span lang="en" class="consent-btn-translation">No, I will not use this site (Exit).</span></button>
-            <button type="button" id="consent-accept" class="consent-btn accept" onclick="acceptStartupNotice()"><span lang="ko">네, 이해했습니다</span><span lang="en" class="consent-btn-translation">Yes, I understand.</span></button>
+            <button type="button" id="consent-accept" class="consent-btn accept" onclick="window.ordoStartupNoticeDecision = true; document.body.classList.add('startup-loading'); document.body.classList.remove('consent-pending'); document.getElementById('consent-modal').style.display = 'none'; this.disabled = true; window.dispatchEvent(new Event('ordo:startup-accepted'))"><span lang="ko">네, 이해했습니다</span><span lang="en" class="consent-btn-translation">Yes, I understand.</span></button>
         </div>
     </div>
 </div>
 
-<script src="JS%20file/startup_notice.js?v=20261013-notice-v29-1"></script>
+<div id="startup-loading-screen" role="dialog" aria-modal="true" aria-labelledby="startup-loading-title" tabindex="-1">
+    <div class="startup-loading-content">
+        <span class="startup-loading-spinner" aria-hidden="true"></span>
+        <p id="startup-loading-title" role="status" aria-live="polite"><span lang="ko">로딩 중…</span><span lang="en" class="startup-loading-translation">Loading…</span></p>
+        <div id="startup-loading-delayed" hidden>
+            <p lang="ko">불러오는 데 시간이 걸리고 있습니다. 잠시 기다리거나 다시 시도해 주세요.</p>
+            <p lang="en" class="startup-loading-translation">Loading is taking longer than usual. Please wait or try again.</p>
+            <button type="button" onclick="location.reload()"><span lang="ko">다시 시도</span> / <span lang="en">Retry</span></button>
+        </div>
+    </div>
+</div>
+
+<script src="JS%20file/startup_notice.js?v=20261104-startup-loading"></script>
 
 <div id="vn-source-modal" role="dialog" aria-modal="true" aria-labelledby="vn-source-title" aria-describedby="vn-source-description">
     <div class="vn-source-content">
@@ -940,6 +962,6 @@
 <script defer src="JS%20file/mass_storage_schema.js?v=20261103-rubric-storage"></script>
 <script defer src="JS%20file/daily_mass_content.js?v=20261028-v31-content-1"></script>
 <script defer src="JS%20file/daily_server_loader.js?v=20261103-server-wait65"></script>
-<script defer src="JS%20file/app_v31_1.min.js?v=20261104-v31-1-bundled-prefaces-6"></script>
+<script defer src="JS%20file/app_v31_1.min.js?v=20261104-v31-1-startup-loading-7"></script>
 </body>
 </html>
