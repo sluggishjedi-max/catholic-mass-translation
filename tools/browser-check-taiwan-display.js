@@ -9,11 +9,12 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
  try{for(const width of [1280,390]){
   const page=await browser.newPage({viewport:{width,height:844}}),errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.addInitScript(({registry,countries})=>{window.ordoPrayerEditorPreview=true;window.uploadedCountryMassData=window.countryMassData=registry;window.uploadedCountryMassMetadata=countries;},{registry,countries});
-  await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
+  await page.route('**/*',route=>{const url=new URL(route.request().url());return url.hostname==='127.0.0.1'&&!url.pathname.endsWith('/preface_matching.js')?route.continue():route.abort();});
   await page.goto('http://127.0.0.1:'+server.address().port+'/V31.1.html');
   await page.evaluate(()=>Promise.all([ordoDataLoader.ensure('special',['KR','TW']),ordoDataLoader.ensure('missal',['KR','ZH']),ordoDataLoader.ensure('daily',['TW'])]));
   const result=await page.evaluate(async()=>{
    const check=(ok,message)=>{if(!ok)throw Error(message)},plain=plainTextFromHtml;
+   check(typeof ordoPrefaceMatcher==='object'&&!document.querySelector('script[src*="preface_matching.js"]'),'Preface matching still depends on a separate network request');
    startupNoticeDecision=true;document.body.classList.remove('consent-pending');document.getElementById('consent-modal').style.display='none';
    state.useGps=false;state.currentLoc='ZH';state.selectedLocationCode='TW';state.targetLang=state.targetLocationCode='KR';
    const date=new Date(2026,10,3,12);getStrictDateBase=()=>({localDay:cloneDateOnly(date),hour:12,timeZone:'Asia/Seoul'});state.liturgicalDateContext=null;rememberLiturgicalDateContext(getStrictDateContext());state.liturgyInfo=buildGeneratedLiturgyInfo(date);
