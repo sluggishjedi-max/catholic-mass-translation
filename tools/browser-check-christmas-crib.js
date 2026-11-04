@@ -50,7 +50,10 @@ const korean = '지역에따라 미사 전 혹은 미사 후에 아기예수님�
           ordoDataLoader.ensure('special', Object.keys(ordoDataLoader.manifest.special)),
           ordoDataLoader.ensure('missal', Object.keys(ordoDataLoader.manifest.missal))
         ]);
-        if (live) check(ordoFirebaseDataStatus.massCount > 0, 'Published Mass data did not load');
+        if (live) {
+          await ordoFirebaseDataApi.ensure('mass', Object.keys(ordoDataLoader.manifest.special));
+          check(globalThis.ordoFirebaseDataStatus?.massCount > 0, 'Published Mass data did not load');
+        }
         const countries = Object.keys(ordoDataLoader.manifest.special);
         const select = (country, lang, vigil = true, day = 24) => {
           state.currentLoc = 'KR'; state.selectedLocationCode = country;
