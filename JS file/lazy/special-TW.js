@@ -1651,34 +1651,130 @@ globalThis.countrySpecialLiturgies.countries["TW"] = {
       },
       "insertRites": [
         {
-          "after": "universal",
-          "replaceAnchorConclusion": true,
+          "at": "start",
+          "section": "christmas_crib",
+          "names": {
+            "KR": "구유경배예식",
+            "EN": "Rite of Veneration at the Crib",
+            "VN": "Nghi thức kính viếng máng cỏ",
+            "JP": "飼い葉桶の礼拝式",
+            "LA": "Ritus adorationis ad praesepium",
+            "ZH": "朝拜馬槽禮",
+            "IT": "Rito di adorazione al presepe",
+            "PT": "Rito de adoração do presépio",
+            "ES": "Rito de adoración del pesebre",
+            "DE": "Ritus der Anbetung an der Krippe"
+          }
+        },
+        {
+          "at": "start",
           "rite": "christmas_crib",
           "sourceOnly": true,
           "names": {
-            "KR": "구유 경배 · 구유 축복 (선택)",
-            "EN": "Veneration and Blessing of the Christmas Crib (Optional)"
+            "KR": "구유 안치 예식 및 경배",
+            "EN": "Placing the Infant Jesus in the Crib and Veneration",
+            "VN": "Nghi thức đặt Hài Nhi Giêsu vào máng cỏ và kính viếng",
+            "JP": "幼子イエスを飼い葉桶に安置する式と礼拝",
+            "LA": "Depositio Infantis Iesu in praesepio et adoratio",
+            "ZH": "安放耶穌聖嬰及朝拜馬槽禮",
+            "IT": "Deposizione di Gesù Bambino nella mangiatoia e adorazione",
+            "PT": "Colocação do Menino Jesus na manjedoura e adoração",
+            "ES": "Colocación del Niño Jesús en el pesebre y adoración",
+            "DE": "Einlegen des Jesuskindes in die Krippe und Anbetung"
           }
         }
       ],
       "riteData": {
-        "EN": {
+        "KR": {
           "christmas_crib": {
             "lines": [
               {
-                "rubric": "With hands outstretched, the celebrant says the prayer of blessing:"
-              },
-              {
-                "text": "God of every nation and people,\nfrom the very beginning of creation\nyou have made manifest your love:\nwhen our need for a Savior was great\nyou sent your Son to be born of the Virgin Mary.\nTo our lives he brings joy and peace,\njustice, mercy, and love.\n\nLord,\nbless all who look upon this manger;\nmay it remind us of the humble birth of Jesus,\nand raise our thoughts to him,\nwho is God-with-us and Savior of all,\nand who lives and reigns forever and ever."
-              },
-              {
-                "sp": "R/.",
-                "text": "Amen."
+                "rubric": "지역에따라 미사 전 혹은 미사 후에 아기예수님을 구유에 모시는 행렬과 신자들의 구유경배를 실시한다."
               }
             ]
           }
         },
-        "ZH": {}
+        "EN": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "According to local custom, a procession to place the Infant Jesus in the crib and the veneration of the crib by the faithful take place before or after Mass."
+              }
+            ]
+          }
+        },
+        "VN": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "Tùy theo tập quán địa phương, trước hoặc sau Thánh lễ, cử hành cuộc rước đặt Hài Nhi Giêsu vào máng cỏ và để các tín hữu kính viếng máng cỏ."
+              }
+            ]
+          }
+        },
+        "JP": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "地域の慣習に従い、ミサの前または後に、幼子イエスを飼い葉桶に安置する行列と、信者による飼い葉桶の礼拝を行う。"
+              }
+            ]
+          }
+        },
+        "LA": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "Pro locorum consuetudine, ante vel post Missam fit processio ad Infantem Iesum in praesepio deponendum et adoratio praesepii a fidelibus."
+              }
+            ]
+          }
+        },
+        "ZH": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "按照當地習慣，在彌撒前或彌撒後，舉行恭迎耶穌聖嬰安放於馬槽的遊行，並由信友朝拜馬槽。"
+              }
+            ]
+          }
+        },
+        "IT": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "Secondo l’uso locale, prima o dopo la Messa si svolgono la processione per deporre Gesù Bambino nella mangiatoia e l’adorazione del presepe da parte dei fedeli."
+              }
+            ]
+          }
+        },
+        "PT": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "Conforme o costume local, antes ou depois da Missa, realizam-se a procissão para colocar o Menino Jesus na manjedoura e a adoração do presépio pelos fiéis."
+              }
+            ]
+          }
+        },
+        "ES": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "Según la costumbre local, antes o después de la Misa se realizan la procesión para colocar al Niño Jesús en el pesebre y la adoración del pesebre por los fieles."
+              }
+            ]
+          }
+        },
+        "DE": {
+          "christmas_crib": {
+            "lines": [
+              {
+                "rubric": "Je nach örtlichem Brauch finden vor oder nach der Messe die Prozession zum Einlegen des Jesuskindes in die Krippe und die Anbetung an der Krippe durch die Gläubigen statt."
+              }
+            ]
+          }
+        }
       },
       "missalTextRegistered": true
     }

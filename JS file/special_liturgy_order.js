@@ -55,7 +55,7 @@
     activeCountryRecords = records;
     const activeLanguages = new Set(getActiveDailySourceLanguages());
     const result = [];
-    const order = [];
+    const order = (activeRecord.insertRites || []).filter(node => node.at === 'start');
     for (const raw of activeRecord.order || ordinary.map((item,index) => ({ordinaryIndex:index}))) {
       order.push(raw);
       const key = typeof raw === 'string' ? raw : raw.use || raw.rite || getBaseId(ordinary[raw.ordinaryIndex]?.id || '');

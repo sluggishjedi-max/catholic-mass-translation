@@ -101,7 +101,9 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
         const left=[...crib().querySelectorAll(stacked?'.pair-block > :not(.translation)':'.pc-line-row:not(.pc-header-row) > .pc-col:first-child')].map(n=>n.textContent).join('');
         const right=[...crib().querySelectorAll(stacked?'.pair-block .translation':'.pc-line-row:not(.pc-header-row) > .pc-col-sub')].map(n=>n.textContent).join('');
         check(!left.includes('God of every nation'),'English crib text covers Korean');
-        check(right.includes('God of every nation')&&right.includes('forever and ever'),'Complete prayer absent from English column');
+        check(left.includes('지역에따라 미사 전 혹은 미사 후에 아기예수님을 구유에 모시는 행렬과 신자들의 구유경배를 실시한다.'),'Korean crib instruction missing');
+        check(right.includes('According to local custom')&&right.includes('before or after Mass.'),'English crib instruction missing');
+        check(document.querySelector('#missal-root .part-container')===crib(),'Crib instruction does not precede the Mass');
         state.targetLang='VN';state.targetLocationCode='VN';render();check(!crib().textContent.includes('God of every nation'),'English visible without an English column');
         state.targetLang='EN';state.targetLocationCode='US';render();
         // Fixed Korean readings remain complete without fetching their source.

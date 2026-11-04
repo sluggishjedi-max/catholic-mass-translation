@@ -125,9 +125,8 @@ const mobile = process.argv.includes('--mobile');
       && /62,1-5/.test(massData.find(item=>getBaseId(item.id)==='reading1')?.cit?.cit_kr || ''), null, { timeout: 90000 });
     const vigil = await snapshot();
     verifyPrayers(vigil);
-    assert.ok(vigil.ids.indexOf('christmas_crib') === vigil.ids.indexOf('universal') + 1
-      && vigil.ids.indexOf('christmas_crib') < vigil.ids.indexOf('offertory'), 'Crib blessing is not after the Universal Prayer and before the Offertory');
-    assert.doesNotMatch(await page.locator('[data-part-id="universal"]').innerText(), /전능하신 주 하느님/, 'The ordinary conclusion was not replaced by the prayer of blessing');
+    assert.equal(vigil.ids[0], 'christmas_crib', 'Crib instruction must precede the ordinary Mass');
+    assert.match(await page.locator('[data-part-id="universal"]').innerText(), /전능하신 주 하느님/, 'The Universal Prayer conclusion is missing');
     assert.ok(vigil.ids.includes('penitential') && vigil.ids.includes('gospel'), 'Crib devotion replaced an ordinary rite');
     assert.deepEqual(vigil.cribLinks, [], 'Crib devotion contains source links');
     const cribOriginals = await page.locator('[data-part-id="christmas_crib"]').evaluate(element => {
@@ -138,11 +137,10 @@ const mobile = process.argv.includes('--mobile');
         standalone:element.querySelectorAll('details,.special-rite-original').length};
     });
     assert.equal(cribOriginals.aiButtons, 0, 'Crib original was offered for automatic translation');
-    assert.match(cribOriginals.text, /With hands outstretched, the celebrant says the prayer of blessing:/);
-    assert.match(cribOriginals.text, /God of every nation and people,/);
-    assert.match(cribOriginals.text, /justice, mercy, and love\./);
-    assert.match(cribOriginals.text, /and who lives and reigns forever and ever\.\s*R\/\.\s*Amen\.$/);
-    assert.doesNotMatch(cribOriginals.text, /excerpt|…|[가-힣]|Our help|Reader:|Luke 2:1/i);
+    assert.match(cribOriginals.text, /According to local custom,/);
+    assert.match(cribOriginals.text, /before or after Mass\./);
+    assert.match(cribOriginals.left, /지역에따라 미사 전 혹은 미사 후에 아기예수님을 구유에 모시는 행렬과 신자들의 구유경배를 실시한다\./);
+    assert.doesNotMatch(cribOriginals.text, /God of every nation|With hands outstretched|Our help|Reader:|Luke 2:1/i);
     assert.equal(cribOriginals.standalone,0,'Outside-Mass original or full-width block remains');
     assert.doesNotMatch(cribOriginals.left,/God of every nation/,'English covers the Korean column');
     await page.evaluate(() => {state.targetLang='VN'; render();});

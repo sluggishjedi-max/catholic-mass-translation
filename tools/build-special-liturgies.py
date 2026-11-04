@@ -56,7 +56,9 @@ def validate_mass(entry):
     rite_ids = set()
     assert isinstance(entry.get("insertRites", []), list), "insertRites must be an array"
     for node in entry.get("insertRites", []):
-        assert re.fullmatch(r"[a-z][a-z0-9_]*", node.get("after", "")), "insertRites needs an ordinary anchor"
+        assert (node.get("at") == "start" and "after" not in node) or (
+            "at" not in node and re.fullmatch(r"[a-z][a-z0-9_]*", node.get("after", ""))
+        ), "insertRites needs an ordinary anchor or at: start"
     for node in [*entry.get("insertRites", []), *entry.get("order", [])]:
         if isinstance(node, str):
             assert re.fullmatch(r"[A-Za-z][a-z0-9_]*", node), f"Invalid ordinary reference: {node}"
