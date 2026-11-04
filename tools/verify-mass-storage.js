@@ -45,4 +45,13 @@ const actions=canonicalMassEntry({text_zh:'祢的僕婢(某某)(合掌默禱片�
 assert(actions.text_zh.includes('(某某)'),'A spoken name placeholder became an instruction');
 assert.equal(actions.rubric_zh,'(合掌默禱片刻,伸手)');
 assert.equal(canonicalMassEntry(hydrateMassEntry(actions)).rubric_zh,actions.rubric_zh,'Chinese action instruction duplicated during reload');
+for(const language of ['kr','zh','en','vn','jp','la','it','pt','es','de']){
+ const textKey='text_'+language,rubricKey='rubric_'+language,layoutKey='rubricLayout_'+language;
+ const original=canonicalMassEntry({[textKey]:'<span class="rubric">Instruction</span>Spoken words.'});
+ const moved={lines:[{[rubricKey]:original[rubricKey],[layoutKey]:original[layoutKey]},{[textKey]:'<u>Spoken words.</u>',[layoutKey]:original[layoutKey]}]};
+ const stored=canonicalMassEntry(moved);
+ assert(!stored.lines[1][layoutKey],language+' retained an instruction layout on the moved body');
+ assert.deepEqual(canonicalMassEntry(hydrateMassEntry(stored)),stored,language+' moved instruction did not round-trip');
+ assert.equal(hydrateMassEntry(stored).lines[1][textKey],'<u>Spoken words.</u>',language+' lost the moved body formatting');
+}
 console.log(JSON.stringify({countries:Object.keys(loaded.runtime.registry).length,editorRubricSaves:saved,checkedRubrics:rubrics,canonicalInstructions:true,genuineChoicesPreserved:true}));

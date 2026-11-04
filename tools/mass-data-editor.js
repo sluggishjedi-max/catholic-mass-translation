@@ -564,6 +564,7 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
     const anchor = order.findIndex(key => originals.get(key)?.rowIndex > index);
     nextRows.splice(anchor < 0 ? nextRows.length : anchor, 0, residual);
   });
+  nextRows.splice(0, nextRows.length, ...canonicalMassEntry(nextRows));
   const source = sources[sourceIndex];
   if (require('node:util').isDeepStrictEqual(JSON.parse(JSON.stringify(rawRows)), nextRows)) {
     return { sources, sourceIndex, changed: [], nextCode: source.code, country, block };

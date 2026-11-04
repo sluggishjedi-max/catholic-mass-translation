@@ -63,8 +63,19 @@ function verifyInMemoryEdit(sources, loaded, jurisdiction) {
 
 function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, sourceBlock, translatedText, structural = false) {
   const beforeHashes = new Map(sources.map(source => [source.path, digest(source.path)]));
+  // A live translation may now be complete. Supply a missing reference row in
+  // memory so this check does not depend on gaps in the published prayers.
+  const fixtureKey = `verify-missing-${targetJurisdiction}:text`;
+  const withReference = state => {
+    const country = state.runtime.countries.KR;
+    const ordinary = JSON.parse(JSON.stringify(country.ordinary));
+    const rows = sourceBlock.relativePath.reduce((value, key) => value[key], ordinary[sourceBlock.entryIndex]);
+    rows.push({ text_kr: '번역 생성 검증용 문장', __massEditorPairKeys: { text_kr: fixtureKey } });
+    return { ...state, runtime: { ...state.runtime, countries: { ...state.runtime.countries, KR: { ...country, ordinary } } } };
+  };
+  loaded = withReference(loaded);
   const pair = blockPair(loaded, 'KR', targetJurisdiction, sourceBlock.key);
-  const missing = pair.rows.find(item => item.right && item.right.virtual);
+  const missing = pair.rows.find(item => item.key === fixtureKey && item.right && item.right.virtual);
   assert.ok(missing, `${targetJurisdiction}: a missing translation input should be available`);
   const updates = pair.rows.filter(item => !structural || !item.right.virtual || item.key === missing.key).map(item => ({
     key: item.right.key,
@@ -83,7 +94,7 @@ function verifyMissingTranslationCreation(sources, loaded, targetJurisdiction, s
     ...(structural ? { structure: { revision: pair.rightRevision, order: updates.map(row => row.key) } } : {})
   }, sources);
   assert.match(prepared.nextCode, /MASS_DATA_EDITOR_OVERRIDES_START/u, `${targetJurisdiction}: missing text should use an override section`);
-  const reloaded = getLoadedState(prepared.sources);
+  const reloaded = withReference(getLoadedState(prepared.sources));
   const after = blockPair(reloaded, 'KR', targetJurisdiction, sourceBlock.key).rows.find(item => item.key === missing.key);
   assert.equal(after.right.text, translatedText, `${targetJurisdiction}: created translation should round-trip`);
   assert.equal(Boolean(after.right.virtual), false, `${targetJurisdiction}: created translation should become a regular row`);

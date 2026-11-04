@@ -31,6 +31,18 @@
       pieces.forEach(piece=>{piece.left=body.slice(Math.max(0,piece.at-32),piece.at);piece.right=body.slice(piece.at,piece.at+32);});
       line[key]=body;line[rubricKey]=rubric;line[layoutKey]={blockEnd,pieces};
     }
+    // Sentence moves can leave a layout on the body row after its instruction
+    // has moved elsewhere. Keep anchors attached only to their current text.
+    for(const[key,layout]of Object.entries(line)){
+      const match=/^rubricLayout(_[a-z]{2})?$/u.exec(key);if(!match)continue;
+      const suffix=match[1]||'',rubricKey='rubric'+suffix,textKey='text'+suffix;
+      if(!line[rubricKey]){delete line[key];continue;}
+      const body=String(line[textKey]||'');line[textKey]=body;
+      layout.pieces=layout.pieces.map(piece=>{
+        const at=anchor(body,piece);
+        return {...piece,at,left:body.slice(Math.max(0,at-32),at),right:body.slice(at,at+32)};
+      });
+    }
   }
   function canonicalMassEntry(entry){
     const result=clone(entry);
