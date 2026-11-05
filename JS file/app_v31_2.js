@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261106-3';
+    const APP_VERSION = 'V31.2-20261106-4';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -12173,15 +12173,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             // CEM prints the reference after the proclamation on the same
             // line. Resolve its real book name before separating the field.
             if (lang === 'ES' && /^(?:Del|De (?:la|los|las))\s/iu.test(line)) {
-                const source = line.match(/^(.*?):\s*(\d+\s*[,.:]\s*\d[\da-z\s,.;:–—\-]*?)\.?$/iu);
+                const source = line.match(/^(.*?):\s*(\d[\da-z\s,.;:–—\-]*?)\.?$/iu);
                 if (source) {
                     const words = source[1].split(/\s+/u);
                     const ordinal = source[1].match(/\b(primera|segunda|tercera)\s+carta\b/iu);
                     const number = ordinal && {primera:'1',segunda:'2',tercera:'3'}[ordinal[1].toLowerCase()];
+                    const chapterAndVerse = /\d\s*[,.:]\s*\d/u.test(source[2]);
+                    const validBook = book => {
+                        const id = globalThis.bibleCitation?.resolve(book,'ES')?.id;
+                        return id && (chapterAndVerse || ['OBA','PHM','2JN','3JN','JUD'].includes(id));
+                    };
                     for (let count = Math.min(6,words.length); count > 0; count -= 1) {
                         const book = words.slice(-count).join(' ');
-                        if (number && globalThis.bibleCitation?.resolve(number+' '+book,'ES')) return [source[1], `${number} ${book} ${source[2]}`];
-                        if (globalThis.bibleCitation?.resolve(book,'ES')) return [source[1], `${book} ${source[2]}`];
+                        if (number && validBook(number+' '+book)) return [source[1], `${number} ${book} ${source[2]}`];
+                        if (validBook(book)) return [source[1], `${book} ${source[2]}`];
                     }
                 }
             }
