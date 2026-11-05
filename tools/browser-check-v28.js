@@ -552,12 +552,30 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       check(differentSelect && differentSelect.options.length === 2, 'Different range choices missing from UI');
       const tw = countryMassData.TW.ordinary;
       const kr = countryMassData.KR.ordinary;
+      const checkOrdinarySourceRows = (source, merged, lower, label) => {
+        const compact = text => plainTextFromHtml(text || '').replace(/\s+/gu, '');
+        const text = compact((merged || []).map(line => line['text_' + lower] || '').join(' '));
+        let offset = 0, phrases = 0;
+        for (const line of source || []) {
+          const phrase = compact(line['text_' + lower]);
+          if (!phrase) continue;
+          const found = text.indexOf(phrase, offset);
+          check(found >= 0, label + ' source phrase was dropped or reordered: ' + phrase.slice(0, 40));
+          offset = found + phrase.length; phrases++;
+        }
+        check(phrases > 0, label + ' has no source prayer body');
+      };
       for (const key of ['gloria','lords_prayer','peace','lamb','offertory']) {
         const a = tw.find(x => getBaseId(x.id) === key), b = kr.find(x => getBaseId(x.id) === key);
-        check(a.lines.length === b.lines.length, key + ' Korean row count');
+        const merged = massData.find(x => getBaseId(x.id) === key);
+        // Instruction-only and continuation rows are independently editable
+        // in each language. Their prayer text must survive in source order.
+        checkOrdinarySourceRows(a.lines, merged.lines, 'zh', key + ' ZH');
+        checkOrdinarySourceRows(b.lines, merged.lines, 'kr', key + ' KR');
       }
       const creed = tw.find(x => getBaseId(x.id) === 'creed');
-      check(creed.variants.A.lines.length === 14 && creed.variants.B.lines.length === 25, 'Creed phrase rows');
+      const mergedCreed = massData.find(x => getBaseId(x.id) === 'creed');
+      for (const form of ['A','B']) checkOrdinarySourceRows(creed.variants[form].lines, mergedCreed.variants[form].lines, 'zh', 'Creed ' + form);
       check(creed.variants.A.label.zh === '宗徒信經', 'Creed option identity');
       const taiwanSourceEucharist = eucharisticPrayerEntry(tw);
       check(taiwanSourceEucharist.type === 'selectable' && taiwanSourceEucharist.isEucharist, 'Taiwan Eucharist is not a selectable part');

@@ -40,7 +40,19 @@ try{
  runtime.window.__trailing={heading:'Vangelo',lines:['Dal Vangelo secondo Luca','Il testo originale rimane. (SAL 37,22-23)']};
  const it=runtime.run("strictFormatSection('IT','gospel',__trailing)");assert(it.cit_it.includes('SAL 37,22-23'));assert(!it.text.includes('(SAL'));assert(it.text.includes('testo originale'));
  runtime.window.__trailing.lines=['Dal Vangelo secondo Luca','Il testo originale (tutti) rimane.'];assert(runtime.run("strictFormatSection('IT','gospel',__trailing)").text.includes('(tutti)'));
- console.log('Source regressions: Japanese nested sections/verse spans, Brazilian mixed-content alternatives and trailing Bible references passed.');
+ runtime.window.__november4=require('./fixtures/taiwan-20261104-display.json').sources.TW;
+ const originalNovember4=JSON.stringify(runtime.window.__november4);
+ const repairedNovember4=runtime.run('sanitizeDailyAcclamationReferences(__november4)');
+ assert.equal(repairedNovember4.data.gospel_accl.lines.length,3,'Chinese physical PDF wrap retained a fourth acclamation row');
+ assert(repairedNovember4.data.gospel_accl.lines[1].text.endsWith('身上。'));
+ assert.equal(JSON.stringify(runtime.window.__november4),originalNovember4,'Cached original was mutated');
+ runtime.window.__splitOptions={data:{gospel_accl:{options:[{id:'A',lines:runtime.window.__november4.data.gospel_accl.lines},{id:'B',lines:[{sp:'R.',text:'Alleluia.'},{sp:'V.',text:'The Holy Spirit rests'},{sp:'',text:'upon you.'},{sp:'R.',text:'Alleluia.'}]}]}}};
+ const repairedOptions=runtime.run('sanitizeDailyAcclamationReferences(__splitOptions)').data.gospel_accl.options;
+ assert.equal(repairedOptions.length,2);assert(repairedOptions.every(option=>option.lines.length===3),'Alternative acclamations were not independently repaired');
+ assert.equal(repairedOptions[1].lines[1].text,'The Holy Spirit rests upon you.');
+ assert(runtime.run("isAlleluiaOnlyText('阿肋路亞。') && isAlleluiaOnlyText('Aleluya, aleluya.') && isAlleluiaOnlyText('Halleluja!')"));
+ assert(!runtime.run("isAlleluiaOnlyText('Alleluia. The proper verse remains.')"),'A proper verse was mistaken for a fixed response');
+ console.log('Source regressions: Japanese nested sections/verse spans, Brazilian mixed-content alternatives, trailing Bible references and wrapped multilingual acclamations passed.');
  assert.equal(runtime.run("strictAllSoulsRank('（第三臺彌撒）')"),'third');
  assert.equal(runtime.run("strictAllSoulsRank('追思已亡第三式')"),'third');
  for(const label of ['第一式（上主必將遺棄他們，直到孕婦生產的時候。）','第二式（天主所預知和所預定的人。）','第三式']){

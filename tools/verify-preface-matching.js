@@ -4,7 +4,7 @@ catalog.common_1={title:{en:'COMMON PREFACE I - The renewal of all things in Chr
 catalog.common_2.title.en='COMMON PREFACE II - Salvation through Christ';
 let titles=0;
 for(const[key,aliases]of Object.entries(matcher.aliases))for(const title of aliases){
- const number=key.match(/_(\d+)$/u)[1],section={lines:[{text:'（'+number+'）（'+title+'）'},{text:'正文保留。'},{text:'（另有其他五式「通用頌謝詞」供選擇使用，請看《感恩祭典》。）'}]};
+ const number=key.match(/_(\d+)$/u)?.[1],section={lines:[{text:(number?'（'+number+'）':'')+'（'+title+'）'},{text:'正文保留。'},{text:'（另有其他五式「通用頌謝詞」供選擇使用，請看《感恩祭典》。）'}]};
  const result=matcher.match(section,'zh',catalog);assert.equal(result.key,key,title);assert.equal(result.body,'正文保留。');titles++;
 }
 for(const title of ['COMMON PREFACE II','공통 감사송 2','通用頌謝詞（二）','共通叙唱二','Kinh Tiền Tụng Chung II','Præfatio II communis','Prefazio comune II','Prefácio comum II','Prefacio común II','Allgemeine Präfation II']){
@@ -12,6 +12,9 @@ for(const title of ['COMMON PREFACE II','공통 감사송 2','通用頌謝詞（
  assert.equal(result.key,'common_2',title);assert.equal(result.body,'The authorized prayer body.',title+' heading leaked into body');
 }
 assert.equal(matcher.match({text:'（二）（未辨識的標題）\n正文。'},'zh',catalog).key,'','An ordinal alone must not identify a preface');
+assert.equal(matcher.match({text:'（天主藉牧者聖人照顧教會）\n正文。'},'zh',catalog).key,'pastors','The unnumbered November 4 title must match the existing preface');
+const unnumbered=matcher.match({text:'（未辨識的專用標題）\n正文。\n（正文中的括注。）'},'zh',catalog);
+assert.equal(unnumbered.key,'');assert.equal(unnumbered.body,'正文。\n\n（正文中的括注。）','An unnumbered title leaked into the body or a body note was removed');
 assert.equal(matcher.match({text:'（三）（藉基督獲救恩）\n正文。'},'zh',catalog).key,'','Contradictory title and number must stay unresolved');
 assert.equal(matcher.match({text:'COMMON PREFACE II - The renewal of all things in Christ\nPrayer.'},'en',catalog).key,'','A different known subtitle must not be merged by its number');
 const text='A complete authoritative prayer paragraph that is long enough to establish an exact same-language body match without guessing its title.';

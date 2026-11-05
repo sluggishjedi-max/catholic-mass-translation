@@ -59,6 +59,8 @@ await page.evaluate(async()=>{if(window.ordoDataLoader)await Promise.all([ordoDa
     if(stacked||innerWidth<600)check(rows.every(row=>row.classList.contains('pair-block')),'Stacked display uses whole-language columns');
     cases++;
    }
+   check(isLiturgicalPlaceholderText('（今天第二讀…）')&&isLiturgicalPlaceholderText('（當日讀經二）'),'Chinese ordinary reading placeholders are being rendered as Scripture');
+   check(!isLiturgicalPlaceholderText('今天，天主的話傳給了我們。'),'An actual source sentence was mistaken for an ordinary placeholder');
    state.currentLoc='KR';state.targetLang='VN';state.selectedLocationCode='KR';state.targetLocationCode='VN';state.layoutStacked=false;
    const different={gospel:{cit_kr:'마태 5,1-12',cit_vn:'Ga 6,37-40',kr_lines:[parsedLine('','한국어 복음 원문','body')],vn_lines:[parsedLine('','Bản văn Tin Mừng riêng.','body')]}};
    resetMassDataFrom(getStartupOrdinaryMassData());applyCachedVariantAlignments(different,date);finalizeDailyReadingsData(different);

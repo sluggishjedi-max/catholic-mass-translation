@@ -1,5 +1,6 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),http=require('node:http'),path=require('node:path');
 const {chromium}=require('playwright'),mass=require('./mass-data-editor'),metadata=require('./country-metadata-upload-tool');
+const november4=require('./fixtures/taiwan-20261104-display.json');
 const root=path.resolve(__dirname,'..'),modules=mass.runCountryMassSources(mass.readCountryMassSources()).registry;
 const registry=Object.fromEntries(Object.entries(modules).map(([code,module])=>[code,{ordinary:module.ordinary,ordinaryLanguage:module.ordinaryLanguage||module.language}]));
 const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[item.jurisdiction,item]));
@@ -12,7 +13,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
   await page.route('**/*',route=>{const url=new URL(route.request().url());return url.hostname==='127.0.0.1'&&!url.pathname.endsWith('/preface_matching.js')?route.continue():route.abort();});
   await page.goto('http://127.0.0.1:'+server.address().port+'/V31.1.html');
   await page.evaluate(()=>Promise.all([ordoDataLoader.ensure('special',['KR','TW']),ordoDataLoader.ensure('missal',['KR','ZH']),ordoDataLoader.ensure('daily',['TW'])]));
-  const result=await page.evaluate(async()=>{
+  const result=await page.evaluate(async november4=>{
    const check=(ok,message)=>{if(!ok)throw Error(message)},plain=plainTextFromHtml;
    check(typeof ordoPrefaceMatcher==='object'&&!document.querySelector('script[src*="preface_matching.js"]'),'Preface matching still depends on a separate network request');
    startupNoticeDecision=true;document.body.classList.remove('consent-pending');document.getElementById('consent-modal').style.display='none';
@@ -72,8 +73,35 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
    const unknown={songs:eucharist.songs,__dailyServerPreface:{zh_lines:[{text:'（二）（無法核實的新標題）'},{text:'另外的正文。'}]}};
    check(getEucharistSongMap(unknown).daily_collected_preface,'An unverified title was assigned to a known preface');
    for(const form of ['1','2','3','4'])for(const line of eucharist.forms[form]||[]){if(/我們的教宗|台北總教區的主教/u.test(line.text_zh||'')){const html=formatDynamicLineText(line.text_zh,'zh');check(!/方濟各|台北總教區的主教若翰/u.test(plain(html)),'Old fixed office name remains in prayer '+form);}}
-   return{gpsContexts:[first.diocese,second.diocese],nameHighlighting:true,readingFramesPaired:true,noTrailingAi:true,pairedPrayers:['collect','prayer_offerings','prayer_after'],prefaceKey:'common_2',cleanPrefaceBody:true,singleParagraphGap:true};
-  });
+   const host=document.createElement('div');host.style.cssText='position:absolute;left:-10000px;width:900px';document.body.appendChild(host);
+   const heights=[];
+   for(const lang of SUPPORTED_LANGS){
+    const lower=lang.toLowerCase(),measure=text=>{host.innerHTML=linePairHTML('',text,lower);return host.querySelector('.text-content').getBoundingClientRect().height;};
+    const rubric='<span class="rubric">Instruction</span>',body='<u>After</u>',baseline=measure('Before'+rubric+body),lineHeight=parseFloat(getComputedStyle(host.querySelector('.text-content')).lineHeight);
+    for(const br of ['\n','\r\n','<br>','<br />'])check(Math.abs(measure('Before'+br+rubric+br+body)-baseline)<1,lang+' rubric added a second line break: '+br);
+    check(Math.abs(measure('Before\n\n'+rubric+'\n\n'+body)-baseline-2*lineHeight)<1,lang+' intentional empty lines were lost');
+    check(host.querySelectorAll('u').length===1,lang+' emphasis was lost during spacing repair');
+    const one=measure('Before\nAfter'),two=measure('Before\n\nAfter');check(Math.abs(two-one-lineHeight)<1,lang+' ordinary explicit blank line changed');
+    const response=gospelAcclamationAlleluiaText(lower,{count:2});check(isAlleluiaOnlyText(response),lang+' fixed Alleluia not recognized');check(gospelAcclamationAlleluiaProfile(response).count===2,lang+' Alleluia repetition was lost');
+    heights.push({lang,rubricHeight:baseline,lineHeight});
+   }host.remove();
+   const novDate=new Date(2026,10,4,12);getStrictDateBase=()=>({localDay:cloneDateOnly(novDate),hour:12,timeZone:'Asia/Seoul'});state.liturgicalDateContext=null;rememberLiturgicalDateContext(getStrictDateContext());state.liturgyInfo=buildGeneratedLiturgyInfo(novDate);
+   const parsedNovember4=strictParseDailyMass('ZH',fetchTraditionalChineseDailyStaticSource(novDate),novDate,'TW');check(parsedNovember4.data.gospel_accl.lines.length===3,'Direct Chinese PDF parser retained a physical wrap as a fourth row');
+   resetMassDataFrom(getStartupOrdinaryMassData());const novemberData={};
+   for(const [country,source]of Object.entries(november4.sources))mergeSourceData(novemberData,{...source,serverRecord:{kind:'source',version:2}},country==='TW'?'ZH':'KR');
+   finalizeDailyReadingsData(novemberData);state.isSunday=true;state.options.penitential='A';state.options.creed='A';state.options.eucharist='2';state.options.eucharist_song='';render();
+   const accl=document.querySelector('[data-part-id="gospel_accl"]');check(!accl.querySelector('.btn-ai-trans'),'November 4 Alleluia still has a spurious AI button');
+   for(const lower of ['zh','kr']){const rows=accl.querySelectorAll('.pair-line.line-'+lower);check(rows.length===3,lower+' November 4 acclamation has '+rows.length+' rows');check(isAlleluiaOnlyText(rows[2].textContent.replace(/^(?:答|◎)\s*/u,'')),lower+' final response is misaligned');}
+   check(accl.textContent.includes('身上。')&&!accl.textContent.includes('身 上。'),'Chinese PDF wrap was retained in the verse');
+   const currentEucharist=massData.find(item=>item.isEucharist),novSongs=getEucharistSongMap(currentEucharist);
+   check(state.options.eucharist_song==='pastors'&&novSongs.pastors.__dailySourceLanguages.zh,'Unnumbered November 4 preface did not join the canonical Pastors preface');
+   const prefaceDom=[...document.querySelectorAll('[data-part-id="eucharist"] .text-content')].map(node=>node.textContent).join(' ');
+   check(!prefaceDom.includes('天主藉牧者聖人照顧教會')&&prefaceDom.includes('祢藉聖人善行的榜樣鼓勵我們'),'Unnumbered preface title remains in the actual prayer DOM');
+   check(novSongs.pastors.content.some(line=>line.text_kr)&&novSongs.pastors.content.some(line=>line.text_zh),'Pastors preface lost an official language');
+   if(innerWidth<600)for(const key of ['penitential','creed'])check(!document.querySelector('[data-part-id="'+key+'"] .blank-line'),key+' has an inferred empty translation row in stacked display');
+   const repeated=JSON.stringify(massData);render();check(JSON.stringify(massData)===repeated,'Repeated rendering changed source line breaks');
+   return{gpsContexts:[first.diocese,second.diocese],nameHighlighting:true,readingFramesPaired:true,noTrailingAi:true,pairedPrayers:['collect','prayer_offerings','prayer_after'],prefaceKey:'common_2',cleanPrefaceBody:true,november4:{acclamationRows:3,aiButtons:0,prefaceKey:'pastors',noBodyTitle:true},spacing:heights};
+  },november4);
   assert.deepEqual(errors,[]);console.log(JSON.stringify({width,...result,errors}));await page.close();
  }}finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
 })().catch(error=>{console.error(error);process.exitCode=1;});

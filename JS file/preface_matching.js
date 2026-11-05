@@ -19,7 +19,7 @@
     advent_1:['基督的兩次來臨'],advent_2:['對基督的雙重期待'],nativity_2:['降生的聖子重整萬有'],nativity_3:['天人間奇妙的交換'],
     lent_1:['四旬期的精神意義'],lent_2:['藉齋戒革新生活'],lent_3:['自制的效益'],lent_4:['齋戒的效益'],
     dead_1:['復活的希望'],dead_2:['基督死了，為使我們生活'],dead_3:['基督是生命與復活'],
-    mary_1:['救主之母'],mary_2:['教會藉瑪利亞的口讚美天主'],apostles_1:['宗徒為天主子民的牧者'],apostles_2:['教會以宗徒為基礎和見證'],saints_2:['聖者的活動']
+    mary_1:['救主之母'],mary_2:['教會藉瑪利亞的口讚美天主'],apostles_1:['宗徒為天主子民的牧者'],apostles_2:['教會以宗徒為基礎和見證'],saints_2:['聖者的活動'],pastors:['天主藉牧者聖人照顧教會']
   };
   const families={
     common:/通用|共通|공통|common|chung|commun|comum|comun|comune|allgemein/iu,
@@ -51,7 +51,7 @@
     const values=value=>typeof value==='object'?Object.values(value||{}):[value];
     const titles=[...values(object.title),...values(object.label),...values(object.prefaceTitle)].filter(Boolean),body=[];
     const knownTitles=new Set(Object.values(catalog).flatMap(entry=>values(entry.title)).filter(Boolean).map(normalize));
-    for(const {text,role}of rows){if(['reference','source_note','preface_reference'].includes(role)||reference(text))continue;if(['title','heading','preface_title'].includes(role)||heading(text)||knownTitles.has(normalize(text))){titles.push(plain(text).trim());continue;}if(plain(text).trim())body.push(text);}
+    for(const {text,role}of rows){if(['reference','source_note','preface_reference'].includes(role)||reference(text))continue;const leadingSubtitle=!body.length&&plain(text).trim().length<=180&&/^[（(][^。.!?\n]+[）)]$/u.test(plain(text).trim());if(['title','heading','preface_title'].includes(role)||heading(text)||leadingSubtitle||knownTitles.has(normalize(text))){titles.push(plain(text).trim());continue;}if(plain(text).trim())body.push(text);}
     return{heading:titles.join(' '),body:body.join('\n\n'),section:object};
   }
   function numberInTitle(title){
@@ -85,7 +85,7 @@
     return{...extracted,key:candidates.length===1?candidates[0]:''};
   }
   function displayTitle(key,title,lower){
-    const labels={common:'通用',ordinary:'常年期主日',advent:'將臨期',nativity:'聖誕期',lent:'四旬期',easter:'復活期',dead:'亡者',mary:'聖母',apostles:'宗徒',saints:'聖人',eucharist:'聖體'};
+    const labels={common:'通用',ordinary:'常年期主日',advent:'將臨期',nativity:'聖誕期',lent:'四旬期',easter:'復活期',dead:'亡者',mary:'聖母',apostles:'宗徒',saints:'聖人',eucharist:'聖體',pastors:'牧者聖人'};
     if(lower==='zh'&&labels[key?.split('_')[0]]&&/^[（(]/u.test(title.trim()))return labels[key.split('_')[0]]+'頌謝詞'+title.trim();
     return title.trim();
   }

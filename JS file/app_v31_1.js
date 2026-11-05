@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.1-20261104-6';
+    const APP_VERSION = 'V31.1-20261105-7';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -9336,6 +9336,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function mergeSourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
+        parsed = sanitizeDailyAcclamationReferences(parsed);
         const sourceDate = getActiveLiturgicalSourceDate();
         const sourceMeta = getSeasonMeta(sourceDate);
         if (sourceMeta.season === 'advent' && sourceDate.getMonth() === 11
@@ -11434,19 +11435,41 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return /^(?:(?:see|cf\.?|cfr\.?)\s+)?te\s+deum(?:\s*[:,]?\s*\d+(?:\s*[-–,]\s*\d+)*)?\.?$/iu.test(text);
     }
 
+    function normalizeAcclamationWrappedLines(lines) {
+        const out = [];
+        for (const line of lines || []) {
+            const text = String(line.text || '').trim(), previous = out.at(-1);
+            const continuation = text && previous?.text && !line.sp && !line.rubric && !previous.rubric
+                && (!line.role || line.role === previous.role)
+                && !isAlleluiaOnlyText(text) && !isAlleluiaOnlyText(previous.text)
+                && !strictAlternativeMatch(text) && !strictAlternativeMatch(previous.text)
+                && !/[.!?。！？:：;；]["'”’」』)]?$/u.test(previous.text.trim());
+            if (continuation) {
+                const cjk = '[\\p{Script=Han}\\p{Script=Hiragana}\\p{Script=Katakana}]';
+                const separator = new RegExp(cjk + '$', 'u').test(previous.text) && new RegExp('^' + cjk, 'u').test(text) ? '' : ' ';
+                previous.text += separator + text;
+            } else out.push({ ...line });
+        }
+        return out;
+    }
+
     function sanitizeDailyAcclamationReferences(parsed) {
         const section = parsed?.data?.gospel_accl;
         if (!section || typeof section !== 'object') return parsed;
         const cleaned = { ...section };
         let changed = false;
         if (Array.isArray(section.lines)) {
-            const lines = section.lines.filter(line => !isLiturgicalReferenceLabel(line.text || ''));
-            if (lines.length !== section.lines.length) { cleaned.lines = lines; cleaned.text = parsedLinesToText(lines); changed = true; }
+            const lines = normalizeAcclamationWrappedLines(section.lines.filter(line => !isLiturgicalReferenceLabel(line.text || '')));
+            if (JSON.stringify(lines) !== JSON.stringify(section.lines)) { cleaned.lines = lines; cleaned.text = parsedLinesToText(lines); changed = true; }
         } else if (typeof section.text === 'string') {
             const lines = section.text.split(/\r?\n/).filter(line => !isLiturgicalReferenceLabel(line.replace(/^(?:Versicle|V\.|℣)\s*[:.]?\s*/iu, '')));
             if (lines.length !== section.text.split(/\r?\n/).length) { cleaned.text = lines.join('\n'); changed = true; }
         }
         Object.keys(cleaned).filter(key => /^cit_/u.test(key) && isLiturgicalReferenceLabel(cleaned[key])).forEach(key => { delete cleaned[key]; changed = true; });
+        if (Array.isArray(section.options)) {
+            cleaned.options = section.options.map(option => sanitizeDailyAcclamationReferences({data:{gospel_accl:option}}).data.gospel_accl);
+            if (JSON.stringify(cleaned.options) !== JSON.stringify(section.options)) changed = true;
+        }
         return changed ? { ...parsed, data: { ...parsed.data, gospel_accl: cleaned } } : parsed;
     }
 
@@ -12481,7 +12504,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const split = strictSplitLeadingSpeaker('ZH', key, line);
                 if (split.text) out.push(strictParsedLine(split.sp, split.text));
             });
-            const result = { text: parsedLinesToText(out), lines: out };
+            const lines = normalizeAcclamationWrappedLines(out);
+            const result = { text: parsedLinesToText(lines), lines };
             if (citationResult.citation) result.cit_zh = citationResult.citation;
             return result;
         }
@@ -16397,13 +16421,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function isAlleluiaOnlyText(text) {
         const compact = cleanNodeText(text)
-            .replace(/^(?:CĐ\.|CD\.|◎|会)\s*/i, '')
+            .replace(/^(?:CĐ\.|CD\.|◎|会|答[：.:]?|R\.|℟\.?)\s*/iu, '')
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
             .normalize('NFC')
-            .replace(/[()\[\]{}\-–—,.!?:;、。，\s]/g, '')
+            .replace(/[\p{P}\s]/gu, '')
             .toLowerCase();
-        return /^(?:alleluia|aleluia|haleluia|알렐루야|アレルヤ)+$/i.test(compact);
+        return /^(?:alleluia|aleluia|aleluya|haleluia|halleluja|hallelujah|알렐루야|アレルヤ|阿肋路亞|哈利路亞)+$/iu.test(compact);
     }
 
     function variantOptionMeaningText(baseId, optionLines) {
@@ -20135,6 +20159,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function isLiturgicalPlaceholderText(value) {
         const normalized = cleanNodeText(value)
+            .normalize('NFKC')
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
             .normalize('NFC')
@@ -20157,7 +20182,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             /^(?:(?:evangelium|lesung|eroffnungsgesang|kommuniongesang) des tages|heutiges? (?:evangelium|lesung))$/i,
             /^(?:evangelium hodiernum|lectio hodierna|cantus hodiernus)$/i,
             /^(?:(?:\u4ECA\u65E5|\u672C\u65E5)\u306E?(?:\u798F\u97F3|\u6717\u8AAD|\u7B54\u5531\u8A69\u7DE8|\u30A2\u30EC\u30EB\u30E4\u5531|\u5171\u540C\u7948\u9858|\u5165\u796D\u5531|\u62DD\u9818\u5531))$/,
-            /^(?:(?:\u4ECA\u65E5|\u672C\u65E5|\u7576\u65E5)(?:\u798F\u97F3|\u8B80\u7D93|\u7B54\u5531\u8A60|\u798F\u97F3\u524D\u6B61\u547C|\u4FE1\u53CB\u79B1\u8A5E|\u9032\u5802\u8A60|\u9818\u4E3B\u8A60))$/
+            /^(?:(?:今日|本日|當日|今天)的?(?:福音|(?:第?[一二三123]篇?)?(?:讀經|讀)[一二三123]?|答唱詠|福音前歡呼|信友禱詞|進堂詠|領主詠))$/u
         ];
         return patterns.some(pattern => pattern.test(normalized));
     }
@@ -20431,6 +20456,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function formatDynamicLineText(html, langKey) {
         if (!html || isAIButton(html)) return html || '';
+        // A block rubric already ends its line. Consume one following stored
+        // break; preceding breaks and additional intentional gaps stay intact.
+        const breaks = /(<span\b[^>]*class=["'][^"']*\brubric\b[^"']*["'][^>]*>[\s\S]*?<\/span>)(?:[\t ]*(?:\r?\n|<br\s*\/?>))?/giu;
+        html = String(html).replace(breaks, '$1');
         return markMutedNamePlaceholders(replaceBishopPlaceholder(replacePopePlaceholder(normalizeContextualNamePlaceholders(html, langKey), langKey), langKey), langKey);
     }
 
@@ -21557,7 +21586,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         jp: 'アレルヤ',
         la: 'Alleluia',
         zh: '阿肋路亞',
-        it: 'Alleluia'
+        it: 'Alleluia',
+        pt: 'Aleluia',
+        de: 'Halleluja'
     });
 
     function normalizedAlleluiaResponseText(value) {
@@ -21565,6 +21596,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/^(?:CĐ\.|CD\.|◎|会|R\.|℟\.?)\s*/iu, '')
             .normalize('NFD')
             .replace(/[\u0300-\u036f]/g, '')
+            .normalize('NFC')
             .replace(/[ĐÐ]/g, 'D')
             .replace(/[đð]/g, 'd');
     }
@@ -21573,7 +21605,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!isAlleluiaOnlyText(value)) return null;
         const normalized = normalizedAlleluiaResponseText(value);
         const withoutPronunciationGuide = normalized.replace(/\([^)]*\)|\[[^\]]*\]|\{[^}]*\}/g, ' ');
-        const tokenPattern = /(?:alleluia|aleluia|haleluia|ha(?:[\s-]*le[\s-]*lui[\s-]*a)|알렐루야|アレルヤ)/giu;
+        const tokenPattern = /(?:alleluia|aleluia|aleluya|haleluia|hallelujah|halleluja|ha(?:[\s-]*le[\s-]*lui[\s-]*a)|알렐루야|アレルヤ|阿肋路亞|哈利路亞)/giu;
         const outsideMatches = withoutPronunciationGuide.match(tokenPattern) || [];
         const allMatches = normalized.match(tokenPattern) || [];
         return {
@@ -21589,8 +21621,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (index === 0 || !/^[A-Z]/.test(token)) return token;
             return token.charAt(0).toLowerCase() + token.slice(1);
         });
-        const separator = lower === 'jp' ? '、' : ', ';
-        const terminal = profile.emphatic ? (lower === 'jp' ? '！' : '!') : (lower === 'jp' ? '。' : '.');
+        const cjk = ['jp', 'zh'].includes(lower);
+        const separator = cjk ? '、' : ', ';
+        const terminal = profile.emphatic ? (cjk ? '！' : '!') : (cjk ? '。' : '.');
         return `${words.join(separator)}${terminal}`;
     }
 
@@ -21988,9 +22021,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     if (rubricLeft) block.innerHTML += `<div class="rubric">${rubricLeft}</div>`;
                     const leftRoleClass = roleClassForLine(line, leftKey);
                     const rightRoleClass = roleClassForLine(line, rightKey);
-                    block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, shouldSuppressSpeaker(baseId), shouldRenderBlankParagraph(line, leftKey, baseId));
+                    block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, shouldSuppressSpeaker(baseId));
                     if (rubricRight) block.innerHTML += `<div class="rubric translation">${rubricRight}</div>`;
-                    block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), shouldSuppressSpeaker(baseId), shouldRenderBlankParagraph(line, rightKey, baseId));
+                    block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), shouldSuppressSpeaker(baseId));
                     if (block.innerHTML.trim()) partContainer.appendChild(block);
                 } else {
                     const leftHtml = genLineHTML(line, leftL, baseId);
