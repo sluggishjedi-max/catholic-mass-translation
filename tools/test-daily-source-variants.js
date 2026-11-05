@@ -7,7 +7,7 @@ const page=(name)=>'<html><body><h1>'+name+'</h1>'+links+'<h3>Reading</h3><p>Rev
 (async()=>{
  const runtime=createRuntime({country:'US',date:'2026-11-26'},{metadata,fetchImpl:async(url,options)=>{
   calls.push({url:String(url),html:new Headers(options.headers).get('x-respond-with')});
-  if(String(url).startsWith('https://bible.usccb.org'))return new Response('Unavailable direct connection',{status:403});
+  if(String(url).startsWith('https://bible.usccb.org'))return new Response('<html><body>Daily readings are temporarily loading.</body></html>',{status:200});
   assert.equal(new Headers(options.headers).get('x-respond-with'),'html','Rich source fallback lost its HTML request header');
   if(String(url).includes('-Thanksgiving'))return new Response(page('Thanksgiving'),{status:200});
   if(String(url).includes('-Ordinary'))return new Response(page('Ordinary'),{status:200});
@@ -22,6 +22,18 @@ const page=(name)=>'<html><body><h1>'+name+'</h1>'+links+'<h3>Reading</h3><p>Rev
   assert(!thanksgiving.parsed.data.reading1.text.includes('Ordinary original'));
   assert.equal(runtime.refreshVariantChoices().filter(choice=>choice.id==='thanksgiving').length,1);
   assert(calls.some(call=>call.html==='html'&&call.url.includes('r.jina.ai')));
-  console.log('Daily source variants: rich HTML fallback, unnumbered Reading, dated ordinary/Thanksgiving choices, native titles and explicit-source preservation passed.');
+  console.log('Daily source variants: incomplete HTTP 200 response retry, rich HTML fallback, unnumbered Reading, dated ordinary/Thanksgiving choices, native titles and explicit-source preservation passed.');
  }finally{runtime.close();}
+ let emptyResponses=0,richResponses=0;
+ const italian=createRuntime({country:'IT',date:'2026-11-17'},{metadata,fetchImpl:async(url)=>{
+  if(!String(url).includes('r.jina.ai')){emptyResponses++;return new Response('<html><body>Liturgia del giorno is loading.</body></html>');}
+  richResponses++;return new Response(page('Italian approved text').replaceAll('Reading','Prima Lettura').replaceAll('Responsorial Psalm','Salmo Responsoriale').replaceAll('Gospel','Vangelo').replaceAll('<h3>Alleluia</h3>','<h3>Acclamazione al Vangelo</h3>'));
+ }});
+ try{const result=await italian.collect();assert(result.validation.complete,JSON.stringify(result.validation));assert(emptyResponses>0&&richResponses>0,'An empty successful HTML response prevented the real source retry');console.log('Italian source: incomplete HTTP 200 shell retries the rich official source and preserves all readings.');}finally{italian.close();}
+ let cemShells=0,cemOriginals=0;
+ const mexican=createRuntime({country:'MX',date:'2026-11-08'},{metadata,fetchImpl:async(url)=>{
+  if(!String(url).includes('r.jina.ai')){cemShells++;return new Response('<html><body>Misal loading.</body></html>');}
+  cemOriginals++;return new Response('2026-11-08 00:00:00'+page('Approved Mexican text').replaceAll('Reading','PRIMERA LECTURA').replaceAll('Responsorial Psalm','SALMO RESPONSORIAL').replaceAll('Gospel','EVANGELIO').replaceAll('<h3>Alleluia</h3>','<h3>ACLAMACIÓN ANTES DEL EVANGELIO</h3>'));
+ }});
+ try{const result=await mexican.collect();assert(result.validation.complete,JSON.stringify(result.validation));assert(cemShells>0&&cemOriginals>0,'CEM loading shell hid its published dated rows');console.log('Mexican source: a successful loading shell cannot hide the dated official readings.');}finally{mexican.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

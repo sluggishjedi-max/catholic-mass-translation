@@ -7,6 +7,9 @@ try{
  assert.match(mexicanIntro.cit_es,/filipenses 3, 3-8/iu);assert(!mexicanIntro.lines.find(line=>line.role==='intro').text.includes('3-8'));assert(mexicanIntro.text.includes('Original approved passage.'));
  runtime.window.__mexicanGospel={heading:'EVANGELIO',lines:['Del santo Evangelio según san Lucas: 15, 1-10','En aquel tiempo, original Gospel.']};
  assert.match(runtime.run("strictParseReadingSection('ES','gospel',__mexicanGospel)").cit_es,/Lucas 15, 1-10/iu);
+ runtime.window.__mexicanLetter={heading:'SEGUNDA LECTURA',lines:['De la primera carta del apóstol san Pablo a los tesalonicenses: 4, 13-18','Lo que les decimos, como palabra del Señor, es que todos estaremos con el Señor. Palabra de Dios. R. Te alabamos, Señor.']};
+ const mexicanLetter=runtime.run("strictParseReadingSection('ES','reading2',__mexicanLetter)");
+ assert.match(mexicanLetter.cit_es,/1 tesalonicenses 4, 13-18/iu);assert(mexicanLetter.text.includes('como palabra del Señor, es que todos estaremos con el Señor.'),'A biblical mention of the word of the Lord truncated the reading');assert(!mexicanLetter.text.includes('Te alabamos'));
  assert(runtime.run("strictLooksLikeCitation('ダニエル補遺・アザルヤ30+32、34+栄唱','JP')"),'Japanese canticle reference was stored as the Psalm response');
  runtime.window.__malformedSchott='<html><body><h2>Erste Lesung<span class="lb_right">Jes 63,16</span></h2><p>Original first reading.</p><p>ZUR 2. LESUNG Commentary.&newpage;<LB_u1>Zweite Lesung<span class="lb_right">1 Kor 1,3–9</span></p><p>Lesung aus dem ersten Brief an die Korinther.</p><p>Original approved second reading.</p><h2>Evangelium<span class="lb_right">Mk 13,33–37</span></h2><p>Original Gospel.</p></body></html>';
  const malformedSchott=runtime.run("strictParseDailyMass('DE',__malformedSchott,getActiveLiturgicalSourceDate(),'DE')");

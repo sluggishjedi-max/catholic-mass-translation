@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261106-1';
+    const APP_VERSION = 'V31.2-20261106-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -6499,7 +6499,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                         error.permanent = [400, 401, 403, 404, 410].includes(response.status);
                         throw error;
                     }
-                    return await response.text();
+                    const text = await response.text();
+                    if (typeof options.validateSource === 'function' && !options.validateSource(text)) throw new Error('source-response-has-no-reading-structure');
+                    return text;
                 } catch (error) {
                     lastError = error;
                 }
@@ -6528,7 +6530,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     error.status = response.status;
                     throw error;
                 }
-                return response.text();
+                const text = await response.text();
+                if (typeof options.validateSource === 'function' && !options.validateSource(text)) throw new Error('source-response-has-no-reading-structure');
+                return text;
             } catch (error) {
                 lastError = error;
             }
@@ -12138,8 +12142,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             : (lang === 'PT'
                 ? [/\bPalavra (?:de Deus|do Senhor|da salvação)\.(?=\s*(?:R\.|$))/iu]
                 : (lang === 'ES'
-                ? [/\bPalabra de Dios\.?(?:\s*R\.\s*Te alabamos,?\s*Señor\.?)?/iu,
-                    /\bPalabra del Señor\.?(?:\s*R\.\s*Gloria a ti,?\s*Señor Jesús\.?)?/iu]
+                ? [/(?:^|(?<=[.!?])\s+)Palabra de Dios\.?(?:\s*R\.\s*Te alabamos,?\s*Señor\.?)?\s*$/iu,
+                    /(?:^|(?<=[.!?])\s+)Palabra del Señor\.?(?:\s*R\.\s*Gloria a ti,?\s*Señor Jesús\.?)?\s*$/iu]
                 : []));
         const trimmed = [];
         for (const line of blocks || []) {
@@ -12172,8 +12176,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const source = line.match(/^(.*?):\s*(\d+\s*[,.:]\s*\d[\da-z\s,.;:–—\-]*?)\.?$/iu);
                 if (source) {
                     const words = source[1].split(/\s+/u);
+                    const ordinal = source[1].match(/\b(primera|segunda|tercera)\s+carta\b/iu);
+                    const number = ordinal && {primera:'1',segunda:'2',tercera:'3'}[ordinal[1].toLowerCase()];
                     for (let count = Math.min(6,words.length); count > 0; count -= 1) {
                         const book = words.slice(-count).join(' ');
+                        if (number && globalThis.bibleCitation?.resolve(number+' '+book,'ES')) return [source[1], `${number} ${book} ${source[2]}`];
                         if (globalThis.bibleCitation?.resolve(book,'ES')) return [source[1], `${book} ${source[2]}`];
                     }
                 }
@@ -14008,10 +14015,22 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
 
         const fetchStrictSource = async url => {
-            if (lang === 'ES') return fetchTextWithFallbacks(url, { timeoutMs: 55000 });
+            if (lang === 'ES') return fetchTextWithFallbacks(url, { timeoutMs: 55000,
+                validateSource: /sistemas\.cem\.org\.mx/u.test(url) ? source => /\d{4}-\d{2}-\d{2} 00:00:00/u.test(source) : undefined });
             if (!['EN', 'IT', 'PT', 'DE'].includes(lang)) return fetchTextWithFallbacks(url);
             try {
-                return await fetchJinaHtml(url);
+                return await fetchJinaHtml(url, { validateSource: source => {
+                    try {
+                        const probe = strictParseDailyMass(lang, source, date, locationCode);
+                        if (probe.data?.reading1 || probe.data?.gospel) return true;
+                        // Dated Mass indexes are valid intermediate documents.
+                        return lang === 'EN' && !!strictChooseMassLink(lang, source, url, date, getStrictMassSelector(date), locationCode);
+                    } catch (error) {
+                        // A real publisher window notice is terminal and must
+                        // retain its precise reason instead of being retried.
+                        return /source-date-outside-public-window/u.test(error.message);
+                    }
+                } });
             } catch (error) {
                 console.warn(`${lang} HTML source failed, trying markdown source.`, error);
                 return fetchTextWithFallbacks(url);
