@@ -217,7 +217,8 @@ function verifyCompoundRow() {
     })(globalThis);`
   };
   const sources = [source], loaded = getLoadedState(sources), block = blocksForCountry(loaded, 'KR')[0];
-  const desired = [block.rows[2], block.rows[1], block.rows[3]];
+  assert.deepEqual(block.rows.map(row => row.text), ['Rubric', 'Body', 'Citation', 'Last'], 'Block instructions must precede their body in the editor');
+  const desired = [block.rows.find(row => row.kind === 'cit'), block.rows.find(row => row.kind === 'rubric'), block.rows.find(row => row.text === 'Last')];
   const prepared = prepareMassSourceEdit(structurePayload('KR', block, desired), sources);
   const reloaded = getLoadedState(prepared.sources), after = blocksForCountry(reloaded, 'KR')[0];
   assert.deepEqual(after.rows.map(row => row.text), ['Citation', 'Rubric', 'Last'], 'A sentence inside a compound row must move/delete independently');

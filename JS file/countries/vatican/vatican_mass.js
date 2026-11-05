@@ -3548,7 +3548,31 @@
           }
         }, {
           "sp_la": "S.",
+          "text_la": "Mémores ígitur, Dómine, eiúsdem Fílii tui salutíferæ passiónis necnon mirábilis resurrectiónis et ascensiónis in cælum, sed et præstolántes álterum eius advéntum, offérimus tibi, grátias referéntes, hoc sacrifícium vivum et sanctum."
+        }, {
+          "sp_la": "",
           "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": "Réspice, quǽsumus, in oblatiónem Ecclésiæ tuæ et, agnóscens Hóstiam, cuius voluísti immolatióne placári, concéde, ut qui Córpore et Sánguine Fílii tui refícimur, Spíritu eius Sancto repléti, unum corpus et unus spíritus inveniámur in Christo."
+        }, {
+          "sp_la": "",
+          "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": "Ipse nos tibi perfíciat munus ætérnum, ut cum eléctis tuis hereditátem cónsequi valeámus, in primis cum beatíssima Vírgine, Dei Genetríce, María, cum beáto Ioseph, eius Sponso, cum beátis Apóstolis tuis et gloriósis Martýribus (cum Sancto [Nomen Sancti]) et ómnibus Sanctis, quorum intercessióne perpétuo apud te confídimus adiuvári."
         }, {
           "sp_la": "",
           "text_la": " "
@@ -3569,7 +3593,13 @@
           "text_la": " "
         }, {
           "sp_la": "",
+          "text_la": "Hæc Hóstia nostræ reconciliatiónis profíciat, quaésumus, Dómine, ad totíus mundi pacem atque salútem."
+        }, {
+          "sp_la": "",
           "text_la": " "
+        }, {
+          "sp_la": "",
+          "text_la": "Ecclésiam tuam, peregrinántem in terra, in fide et caritáte firmáre dignéris cum fámulo tuo Papa nostro [Nomen Papae] et Epíscopo nostro [Nomen Episcopi], cum episcopáli órdine et univérso clero et omni pópulo acquisitiónis tuæ."
         }, {
           "sp_la": "",
           "text_la": " "
@@ -3584,37 +3614,7 @@
           "text_la": " "
         }, {
           "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
-        }, {
-          "sp_la": "",
-          "text_la": " "
+          "text_la": "Votis huius famíliæ, quam tibi astáre voluísti, adésto propítius. Omnes fílios tuos ubíque dispérsos tibi, clemens Pater, miserátus coniúnge."
         }, {
           "sp_la": "",
           "text_la": " "
@@ -3635,7 +3635,7 @@
               },
               "lines": [{
                 "sp_la": "",
-                "text_la": " "
+                "text_la": "Fratres nostros defúnctos et omnes qui, tibi placéntes, ex hoc sǽculo transiérunt, in regnum tuum benígnus admítte, ubi fore sperámus, ut simul glória tua perénniter satiémur,"
               }, {
                 "sp_la": "",
                 "text_la": " "
@@ -3662,10 +3662,10 @@
                 "la": "Missa pro defunctis"
               },
               "lines": [{
-                "rubric_la": " "
+                "rubric_la": "Quando hæc Prex eucharistica in Missis pro defunctis adhibetur, dici potest:"
               }, {
                 "sp_la": "",
-                "text_la": " "
+                "text_la": "Meménto fámuli tui (fámulæ tuæ) [Nomen Personae], quem (quam) (hódie) ad te ex hoc mundo vocásti. Concéde, ut, qui (quæ) complantátus (complantáta) fuit similitúdini mortis Fílii tui, simul fiat et resurrectiónis ipsíus, quando mórtuos suscitábit in carne de terra et corpus humilitátis nostræ configurábit córpori claritátis suæ. Sed et fratres nostros defúnctos, et omnes qui, tibi placéntes, ex hoc sǽculo transiérunt, in regnum tuum benígnus admítte, ubi fore sperámus, ut simul glória tua perénniter satiémur, quando omnem lácrimam abstérges ab óculis nostris, quia te, sícuti es, Deum nostrum vidéntes, tibi símiles érimus cuncta per sǽcula, et te sine fine laudábimus,"
               }, {
                 "sp_la": "",
                 "text_la": " "

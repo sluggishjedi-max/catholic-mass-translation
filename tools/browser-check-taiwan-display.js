@@ -11,7 +11,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
   const page=await browser.newPage({viewport:{width,height:844}}),errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.addInitScript(({registry,countries})=>{window.ordoPrayerEditorPreview=true;window.uploadedCountryMassData=window.countryMassData=registry;window.uploadedCountryMassMetadata=countries;},{registry,countries});
   await page.route('**/*',route=>{const url=new URL(route.request().url());return url.hostname==='127.0.0.1'&&!url.pathname.endsWith('/preface_matching.js')?route.continue():route.abort();});
-  await page.goto('http://127.0.0.1:'+server.address().port+'/V31.1.html');
+  await page.goto('http://127.0.0.1:'+server.address().port+'/V31.2.html');
   await page.evaluate(()=>Promise.all([ordoDataLoader.ensure('special',['KR','TW']),ordoDataLoader.ensure('missal',['KR','ZH']),ordoDataLoader.ensure('daily',['TW'])]));
   const result=await page.evaluate(async november4=>{
    const check=(ok,message)=>{if(!ok)throw Error(message)},plain=plainTextFromHtml;

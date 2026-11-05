@@ -33,7 +33,7 @@ async function check(browser, base, filename, width, timing) {
             if (timing === 'missing-notice-script') return route.abort();
             await notice;
         }
-        if (url.pathname.endsWith('/app_v31_1.min.js')) await runtime;
+        if (url.pathname.endsWith('/app_v31_2.min.js')) await runtime;
         if (url.pathname.endsWith('/firebase_data_loader.js')) return route.fulfill({
             contentType: 'application/javascript',
             body: 'window.ordoFirebaseDataReady = Promise.resolve({deferred:true}); window.ordoFirebaseDataApi = {ensure: () => window.testMassReady};'
@@ -106,7 +106,7 @@ async function check(browser, base, filename, width, timing) {
     await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
     const browser = await chromium.launch({ headless: true });
     try {
-        for (const filename of ['index.html', 'V31.1.html']) {
+        for (const filename of ['index.html', 'V31.2.html']) {
             for (const width of [1280, 390]) {
                 for (const timing of ['before-notice-script', 'before-runtime', 'after-runtime']) {
                     await check(browser, `http://127.0.0.1:${server.address().port}`, filename, width, timing);

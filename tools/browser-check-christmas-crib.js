@@ -37,7 +37,7 @@ const korean = '지역에따라 미사 전 혹은 미사 후에 아기예수님�
         }, { registry, metadata });
         await page.route('**/*', route => new URL(route.request().url()).hostname === '127.0.0.1' ? route.continue() : route.abort());
       }
-      const base = live ? 'https://sluggishjedi-max.github.io/catholic-mass-translation/' : `http://127.0.0.1:${server.address().port}/V31.1.html`;
+      const base = live ? 'https://sluggishjedi-max.github.io/catholic-mass-translation/' : `http://127.0.0.1:${server.address().port}/V31.2.html`;
       await page.goto(base + '?crib-check=' + Date.now(), { waitUntil: 'domcontentloaded', timeout: 60000 });
       await page.waitForFunction(() => typeof state !== 'undefined' && typeof ordoSpecialOrder !== 'undefined', null, { timeout: 90000 });
       const result = await page.evaluate(async ({ korean, live }) => {

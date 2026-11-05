@@ -29,7 +29,7 @@ const metadata=Object.fromEntries(metadataTool.countryMetadataItems().map(item=>
       const errors=[];page.on('pageerror',error=>{errors.push(error.message);console.error('PAGE ERROR:',error.message)});
       await page.addInitScript(({registry,metadata})=>{globalThis.countryMassData=registry;globalThis.uploadedCountryMassData=registry;globalThis.uploadedCountryMassMetadata=metadata;globalThis.ordoPrayerEditorPreview=true;},{registry,metadata});
       await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
-      await page.goto(`http://127.0.0.1:${server.address().port}/V31.1.html`);
+      await page.goto(`http://127.0.0.1:${server.address().port}/V31.2.html`);
       await page.evaluate(async()=>{if(window.ordoDataLoader)await Promise.all([ordoDataLoader.ensure('special',Object.keys(ordoDataLoader.manifest.special)),ordoDataLoader.ensure('missal',Object.keys(ordoDataLoader.manifest.missal))]);});
       const result=await page.evaluate(async ({fixtures,expected,currentSources})=>{
         const check=(ok,message)=>{if(!ok)throw Error(message)};

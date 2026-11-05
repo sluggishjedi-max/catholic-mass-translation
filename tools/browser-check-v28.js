@@ -719,8 +719,8 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         check(names.every(name => renderedBishops.includes(name)), `${lang} named auxiliary bishops missing`);
       }
       state.bishopContext = previousBishopContext;
-      // Eucharistic Prayer IV is normalized to the Korean 88-clause layout in
-      // every jurisdiction before ordinary data is merged by row.
+      // Whole semantic paragraphs follow Korean order. Source sentences must
+      // never be sliced by character weights to fit 88 physical rows.
       const koreanPrayerFour = eucharisticPrayerEntry(countryMassData.KR.ordinary).forms['4'];
       check(koreanPrayerFour.length === 88, 'Korean Eucharistic Prayer IV clause count');
       const ep4Locations = ['KR','VN','US','IE','GB-ENG','GB-WLS','GB-SCT','PH','TW','AU','NZ','JP','IT','PT','MX','DE','BR','VA'];
@@ -730,22 +730,23 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         const module = countryMassData[code] || (code === 'GB-WLS' ? countryMassData['GB-ENG'] : null);
         check(!!module, `${code} Mass module missing`);
         const normalizedOrdinary = normalizedOrdinaryForMerge(module,code,koreanPrayerFour);
-        const normalizedPrayer = eucharisticPrayerEntry(normalizedOrdinary).forms['4'];
-        check(normalizedPrayer.length === 88, `${code} Eucharistic Prayer IV is not on the shared layout`);
         const lower = eucharisticPrayerLanguageLower(module,code);
+        const rawPrayer = eucharisticPrayerEntry(normalizedOrdinary).forms['4'];
+        const normalizedPrayer = ordoOrdinaryAlignment.alignFourth([{rows:rawPrayer,lower,location:code}]);
+        check(normalizedPrayer.length === 6, `${code} Eucharistic Prayer IV semantic paragraph count`);
         ep4EmptyRows[code] = normalizedPrayer.filter(row => !(row[`text_${lower}`] || row[`rubric_${lower}`])).length;
-        check(ep4EmptyRows[code] === (code === 'DE' ? 10 : 0), `${code} unexpected empty Eucharistic Prayer IV clauses`);
-        const bodyText = normalizedPrayer.slice(10,35).map(row => row[`text_${lower}`] || '').join(' ');
-        const epiclesisText = normalizedPrayer.slice(35,57).map(row => row[`text_${lower}`] || row[`rubric_${lower}`] || '').join(' ');
-        const endingText = normalizedPrayer.slice(61).map(row => row[`text_${lower}`] || '').join(' ');
+        check(ep4EmptyRows[code] === 0, `${code} unexpected empty Eucharistic Prayer IV paragraphs`);
+        const bodyText = normalizedPrayer[2][`text_${lower}`] || '';
+        const epiclesisText = normalizedPrayer[3][`text_${lower}`] || '';
+        const endingText = normalizedPrayer[5][`text_${lower}`] || '';
         check(bodyText.trim().length > 20, `${code} salvation-history clauses missing`);
         check(epiclesisText.trim().length > 20, `${code} institution clauses missing`);
         check(endingText.trim().length > 20, `${code} intercession clauses missing`);
         state.selectedLocationCode='KR'; state.currentLoc='KR';
         state.targetLocationCode=code; state.targetLang=ep4Language[code];
         resetMassDataFrom(getStartupOrdinaryMassData());
-        const mergedPrayer = eucharisticPrayerEntry(massData).forms['4'];
-        check(mergedPrayer.length === 88, `${code} merged Eucharistic Prayer IV row count`);
+        const mergedPrayer = ordoOrdinaryAlignment.alignFourth(eucharisticPrayerEntry(massData).__ordinaryFourthSources);
+        check(mergedPrayer.length === 6, `${code} merged Eucharistic Prayer IV paragraph count`);
         check(mergedPrayer.some(row => row[`text_${lower}`] || row[`rubric_${lower}`]), `${code} merged language text missing`);
       }
       const repeated = [];
@@ -1161,7 +1162,7 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
       return {version: APP_VERSION, conclusionCases, bishopPrayerCases, ep4EmptyRows, chineseSections: Object.keys(parsed.data), repeatedLanguagePairs: repeated, chineseRendered: Object.fromEntries(Object.entries(rendered).map(([key,value]) => [key,value.length]))};
     });
     console.log(JSON.stringify(result, null, 2));
-    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V31.1.html' ? /^V31\.1-/ : process.env.ORDO_CHECK_HTML === 'V31.html' ? /^V31-/ : process.env.ORDO_CHECK_HTML === 'V30.html' ? /^V30-/ : process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29(?:\.\d+)?-/ : /^V28-/);
+    assert.match(result.version, process.env.ORDO_CHECK_HTML === 'V31.2.html' ? /^V31\.2-/ : process.env.ORDO_CHECK_HTML === 'V31.1.html' ? /^V31\.1-/ : process.env.ORDO_CHECK_HTML === 'V31.html' ? /^V31-/ : process.env.ORDO_CHECK_HTML === 'V30.html' ? /^V30-/ : process.env.ORDO_CHECK_HTML === 'V29.html' ? /^V29(?:\.\d+)?-/ : /^V28-/);
     await page.setViewportSize({width:412,height:915});
     const mobile = await page.evaluate(() => {
       render();

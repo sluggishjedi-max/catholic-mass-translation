@@ -3809,7 +3809,31 @@
           }
         }, {
           "sp_en": "P.",
+          "text_en": "Therefore, O Lord, as we celebrate the memorial of the saving Passion of your Son, his wondrous Resurrection and Ascension into heaven, and as we look forward to his second coming, we offer you in thanksgiving this holy and living sacrifice."
+        }, {
+          "sp_en": "",
           "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": "Look, we pray, upon the oblation of your Church and, recognizing the sacrificial Victim by whose death you willed to reconcile us to yourself, grant that we, who are nourished by the Body and Blood of your Son and filled with his Holy Spirit, may become one body, one spirit in Christ."
+        }, {
+          "sp_en": "",
+          "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": "May he make of us an eternal offering to you, so that we may obtain an inheritance with your elect, especially with the most blessed Virgin Mary, Mother of God, with blessed Joseph, her Spouse, with your blessed Apostles and glorious Martyrs (with Saint [Saint Name]) and with all the Saints, on whose constant intercession in your presence we rely for unfailing help."
         }, {
           "sp_en": "",
           "text_en": " "
@@ -3830,7 +3854,13 @@
           "text_en": " "
         }, {
           "sp_en": "",
+          "text_en": "May this Sacrifice of our reconciliation, we pray, O Lord, advance the peace and salvation of all the world."
+        }, {
+          "sp_en": "",
           "text_en": " "
+        }, {
+          "sp_en": "",
+          "text_en": "Be pleased to confirm in faith and charity your pilgrim Church on earth, with your servant [Pope Name] our Pope and [Bishop Name] our Bishop, the Order of Bishops, all the clergy, and the entire people you have gained for your own."
         }, {
           "sp_en": "",
           "text_en": " "
@@ -3845,37 +3875,7 @@
           "text_en": " "
         }, {
           "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
-        }, {
-          "sp_en": "",
-          "text_en": " "
+          "text_en": "Listen graciously to the prayers of this family, whom you have summoned before you: in your compassion, O merciful Father, gather to yourself all your children scattered throughout the world."
         }, {
           "sp_en": "",
           "text_en": " "
@@ -3896,7 +3896,7 @@
               },
               "lines": [{
                 "sp_en": "",
-                "text_en": " "
+                "text_en": "To our departed brothers and sisters and to all who were pleasing to you at their passing from this life, give kind admittance to your kingdom. There we hope to enjoy for ever the fullness of your glory"
               }, {
                 "sp_en": "",
                 "text_en": " "
@@ -3923,10 +3923,10 @@
                 "en": "Mass for the Dead"
               },
               "lines": [{
-                "rubric_en": " "
+                "rubric_en": "When this Eucharistic Prayer is used in Masses for the Dead, the following may be said:"
               }, {
                 "sp_en": "",
-                "text_en": " "
+                "text_en": "Remember your servant [Person Name] whom you have called (today) from this world to yourself. Grant that he (she) who was united with your Son in a death like his, may also be one with him in his Resurrection, when from the earth he will raise up in the flesh those who have died, and transform our lowly body after the pattern of his own glorious body. To our departed brothers and sisters, too, and to all who were pleasing to you at their passing from this life, give kind admittance to your kingdom. There we hope to enjoy for ever the fullness of your glory, when you will wipe away every tear from our eyes. For seeing you, our God, as you are, we shall be like you for all the ages and praise you without end,"
               }, {
                 "sp_en": "",
                 "text_en": " "

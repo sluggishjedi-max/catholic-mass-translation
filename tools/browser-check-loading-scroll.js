@@ -8,7 +8,7 @@ const metadata = require('./country-metadata-upload-tool');
 const root = path.resolve(__dirname, '..');
 const registry = mass.runCountryMassSources(mass.readCountryMassSources()).registry;
 const countries = Object.fromEntries(metadata.countryMetadataItems().map(item => [item.jurisdiction, item]));
-const filename = process.env.ORDO_CHECK_HTML || 'V31.1.html';
+const filename = process.env.ORDO_CHECK_HTML || 'V31.2.html';
 
 (async () => {
   const server = http.createServer((req, res) => {

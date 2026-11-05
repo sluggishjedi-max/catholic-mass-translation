@@ -55,6 +55,18 @@ async function main(){
   await store.appendCollected(partialRequest,{parsed:parsed('New partial'),fingerprint:'partial-three',validation:{complete:false,missing:['psalm']}});
   assert.equal((await store.get(partialRequest)).publishedVersion,2);assert.equal((await store.get(partialRequest)).parsed.data.reading1.text,'Complete original');
   const day=db.data.get('daily_mass/'+dayId('JP',request.date));assert.equal(day.availableVariants.official.length,2);assert.equal(day.records.official__day.latestVersion,3);
+  const discoveryRequest={country:'TW',date:'2026-12-04',source:'official',sourceId:'official',variant:'day'};
+  await store.appendCollected(discoveryRequest,{parsed:parsed('Existing original'),fingerprint:'existing-discovery-test'});
+  await store.appendEdited(discoveryRequest,parsed('User approved text'),{baseVersion:1,expectedLatestVersion:1,authorUid:'administrator'});
+  const discoveryService=require('../functions/daily-service').createDailyService({db,enqueue:async()=>{},logger:{warn(){}},fetchImpl:async()=>{throw Error('fixture-discovery-unavailable');}});
+  let discoveryError;
+  try{await discoveryService.collect({...discoveryRequest,jobId:'fixture-discovery',runId:'fixture-discovery-run'});}catch(error){discoveryError=error;}
+  assert(discoveryError,'Source discovery should fail in the offline fixture');
+  const unavailable=await store.get(discoveryRequest);
+  assert.equal(unavailable.lastError,discoveryError.message,'Discovery failure retained an obsolete error on the daily record');
+  assert.equal(unavailable.collectionStatus,'unavailable');
+  assert.equal(unavailable.parsed.data.reading1.text,'User approved text','Discovery failure erased a user-approved reading');
+  assert.equal(unavailable.publishedVersion,2);
   console.log('Daily Mass: immutable v1/v2/v3/v4 history, unchanged-source deduplication, manual-edit preservation, optimistic conflict and administrator access passed.');
   console.log('Published snapshots: recovered originals clear stale fallback flags and removed sections; unchanged-source repair preserves immutable versions and metadata.');
 }

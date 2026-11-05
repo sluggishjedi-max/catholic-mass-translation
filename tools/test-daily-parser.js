@@ -2,6 +2,23 @@ const assert=require('node:assert/strict');
 const {createRuntime}=require('../functions/daily-runtime');
 const runtime=createRuntime({country:'DE',date:'2026-10-30',source:'official'});
 try{
+ runtime.window.__mexicanIntro={heading:'PRIMERA LECTURA',lines:['Por amor a Cristo.','De la carta del apóstol san Pablo a los filipenses: 3, 3-8','Hermanos: Original approved passage.']};
+ const mexicanIntro=runtime.run("strictParseReadingSection('ES','reading1',__mexicanIntro)");
+ assert.match(mexicanIntro.cit_es,/filipenses 3, 3-8/iu);assert(!mexicanIntro.lines.find(line=>line.role==='intro').text.includes('3-8'));assert(mexicanIntro.text.includes('Original approved passage.'));
+ runtime.window.__mexicanGospel={heading:'EVANGELIO',lines:['Del santo Evangelio según san Lucas: 15, 1-10','En aquel tiempo, original Gospel.']};
+ assert.match(runtime.run("strictParseReadingSection('ES','gospel',__mexicanGospel)").cit_es,/Lucas 15, 1-10/iu);
+ assert(runtime.run("strictLooksLikeCitation('ダニエル補遺・アザルヤ30+32、34+栄唱','JP')"),'Japanese canticle reference was stored as the Psalm response');
+ runtime.window.__malformedSchott='<html><body><h2>Erste Lesung<span class="lb_right">Jes 63,16</span></h2><p>Original first reading.</p><p>ZUR 2. LESUNG Commentary.&newpage;<LB_u1>Zweite Lesung<span class="lb_right">1 Kor 1,3–9</span></p><p>Lesung aus dem ersten Brief an die Korinther.</p><p>Original approved second reading.</p><h2>Evangelium<span class="lb_right">Mk 13,33–37</span></h2><p>Original Gospel.</p></body></html>';
+ const malformedSchott=runtime.run("strictParseDailyMass('DE',__malformedSchott,getActiveLiturgicalSourceDate(),'DE')");
+ assert(malformedSchott.data.reading2?.text.includes('Original approved second reading.'),'Malformed source heading hid the Sunday second reading');assert.match(malformedSchott.data.reading2.cit_de,/1 Kor 1,3–9/u);assert(!malformedSchott.data.reading2.text.includes('Commentary'));
+ runtime.window.__bareReading='Title: Memorial\nMarkdown Content:\n### Reading\nRevelation 11:4-12\nFirst original passage.\n### Responsorial Psalm\nPsalm 144:1-2\nR. Praise the Lord.\n### Alleluia\nJohn 1:1\nAlleluia.\nA proper acclamation.\nAlleluia.\n### Gospel\nLuke 20:27-40\nThe original Gospel.';
+ const bareReading=runtime.run("strictParseDailyMass('EN',__bareReading,getActiveLiturgicalSourceDate(),'US')");
+ assert(bareReading.data.reading1?.lines.some(line=>line.text.includes('First original passage.')),'An unnumbered Reading heading lost the first reading');
+ assert.equal(runtime.run("strictIdentifySection('Reading 2','EN').key"),'reading2','Bare Reading support captured Reading 2');
+ runtime.window.__dateListing='Markdown Content:\n[Thursday of the Thirty-fourth Week in Ordinary Time](https://bible.usccb.org/bible/readings/112626-Ordinary)\n[Thanksgiving Day](https://bible.usccb.org/bible/readings/112626-Thanksgiving)';
+ assert.equal(runtime.run("strictChooseMassLink('EN',__dateListing,'https://bible.usccb.org/bible/readings/112626.cfm',new Date(2026,10,26),{slot:'day'},'US').href"),'https://bible.usccb.org/bible/readings/112626-Ordinary','Dated multi-Mass listing did not resolve its actual ordinary Mass');
+ runtime.window.__publicWindow='Title: Other dates\nMarkdown Content:\nThe Universalis web site shows you:\nYesterday.\nToday.\nThe week ahead.\nIf you want to see texts for more than a week ahead, then you need to get one of our apps or programs.';
+ assert.throws(()=>runtime.run("strictParseDailyMass('EN',__publicWindow,getActiveLiturgicalSourceDate(),'GB-ENG')"),/source-date-outside-public-window/,'A source access notice was stored as a reading');
  for(const [lang,heading,reading,gospel] of [['KR','[백] 주님 성탄 대축일 - 전야 미사','제1독서','복음'],['EN','Christmas Vigil Mass','Reading 1','Gospel'],['JP','主の降誕 前晩のミサ','第一朗読','福音']]){
   runtime.window.__vigilLines=[heading,'<이 미사는 성탄 대축일 제1 저녁 기도 앞이나 뒤에 드린다.>',reading,'Selected original reading.',gospel,'Selected original Gospel.'];
   runtime.window.__vigilLang=lang;

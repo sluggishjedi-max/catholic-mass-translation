@@ -22,7 +22,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
    window.ORDO_DAILY_MASS_ENDPOINT=base+'/fixture/daily';
   },{registry,countries,base});
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
-  await page.goto(base+'/V31.1.html');
+  await page.goto(base+'/V31.2.html');
   const published=await page.evaluate(async()=>{
    await Promise.all([ordoDataLoader.ensure('special',['TW','KR']),ordoDataLoader.ensure('missal',['ZH','KR']),ordoDataLoader.ensure('daily',['TW'])]);
    state.selectedLocationCode='TW';state.currentLoc='ZH';state.targetLocationCode=state.targetLang='KR';state.useGps=false;

@@ -83,7 +83,56 @@
     });
     return result;
   }
-  const api=Object.freeze({canonicalMassEntry,hydrateMassEntry,canonicalLine});
+  // Describe the actual reading order, rather than the order of object fields.
+  // Editors save these parts as independent rows, so an instruction can never
+  // inherit an obsolete inline offset from the sentence it used to accompany.
+  function lineParts(source,language){
+    const suffix='_'+String(language).toLowerCase();
+    // Array discovery also visits large Mass entries and option catalogues.
+    // Copy only this row's language fields, never its entire prayer subtree.
+    const line={};for(const kind of ['text','rubric','rubricLayout','sp','cit']){const field=kind+suffix;if(Object.hasOwn(source||{},field))line[field]=copyField(source[field]);}
+    if(!Object.keys(line).length)return [];
+    canonicalLine(line);
+    const body=String(line['text'+suffix]||''),rubric=String(line['rubric'+suffix]||''),layout=line['rubricLayout'+suffix];
+    const result=[];
+    function add(kind,text){if(text)result.push({kind,field:kind+suffix,text});}
+    if(layout&&rubric){
+      if(layout.blockEnd)add('rubric',rubric.slice(0,layout.blockEnd));
+      let cursor=0;
+      for(const piece of [...layout.pieces].sort((a,b)=>anchor(body,a)-anchor(body,b)||a.from-b.from)){
+        const at=anchor(body,piece);add('text',balancedFragment(body,cursor,at));
+        add('rubric',layout.pieces.length===1&&!layout.blockEnd?rubric:rubric.slice(piece.from,piece.to));cursor=at;
+      }
+      add('text',balancedFragment(body,cursor,body.length));
+    }else{add('rubric',rubric);add('text',body);}
+    add('cit',String(line['cit'+suffix]||''));
+    if(!result.length)for(const kind of ['rubric','text','cit'])if(Object.hasOwn(line,kind+suffix))result.push({kind,field:kind+suffix,text:String(line[kind+suffix]||'')});
+    const counts={};for(const part of result)counts[part.field]=(counts[part.field]||0)+1;
+    const positions={};let speakerUsed=false;
+    return result.map(part=>{
+      const index=positions[part.field]||0;positions[part.field]=index+1;
+      const speaker=part.kind==='text'&&!speakerUsed?String(line['sp'+suffix]||''):'';
+      if(part.kind==='text')speakerUsed=true;
+      return {...part,speaker,segment:counts[part.field]>1,segmentIndex:index};
+    });
+  }
+  function copyField(value){return value&&typeof value==='object'?clone(value):value;}
+  function balancedFragment(body,start,end){
+    if(start===end)return '';
+    const stackAt=limit=>{
+      const stack=[];
+      for(const match of body.slice(0,limit).matchAll(/<\/?([a-z][\w:-]*)\b[^>]*>/giu)){
+        const tag=match[1].toLowerCase();if(/^(?:area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)$/u.test(tag)||/\/\s*>$/u.test(match[0]))continue;
+        if(match[0].startsWith('</')){const index=stack.findLastIndex(item=>item.tag===tag);if(index>=0)stack.splice(index);}
+        else stack.push({tag,html:match[0]});
+      }
+      return stack;
+    };
+    const fragment=body.slice(start,end);
+    if(!fragment.replace(/<[^>]*>/gu,'').trim())return fragment.includes('<br')?fragment:'';
+    return stackAt(start).map(item=>item.html).join('')+fragment+stackAt(end).reverse().map(item=>'</'+item.tag+'>').join('');
+  }
+  const api=Object.freeze({canonicalMassEntry,hydrateMassEntry,canonicalLine,lineParts});
   if(typeof module==='object'&&module.exports)module.exports=api;
   root.ordoMassStorage=api;
 })(globalThis);

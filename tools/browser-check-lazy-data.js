@@ -62,7 +62,7 @@ async function cloudFixture(page) {
       return route.continue();
     });
     try {
-      await page.goto(base+'/'+(width===1280?'V31.1.html':'index.html'),{waitUntil:'load'});
+      await page.goto(base+'/'+(width===1280?'V31.2.html':'index.html'),{waitUntil:'load'});
       await page.waitForFunction(()=>window.ordoFirebaseDataStatus?.massCount>0 && countrySpecialLiturgies.countries.KR && localMissalPrayerData.languages.EN);
       assert.equal(await page.evaluate(()=>document.documentElement.dataset.appVersion),'V31.1');
       assert(!requests.some(file=>/_(hymns|prayers|churches)\.js$/.test(file)),'First screen downloaded auxiliary country data');

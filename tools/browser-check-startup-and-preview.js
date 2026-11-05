@@ -187,7 +187,7 @@ async function checkPreview(browser, editorBase, appBase) {
   try {
     browser = await chromium.launch({ headless: true });
     if (!process.argv.includes('--preview-only')) {
-      for (const filename of ['index.html', 'V31.1.html']) {
+      for (const filename of ['index.html', 'V31.2.html']) {
         for (const decision of ['accept', 'late-accept', 'decline']) await checkStartup(browser, appBase, filename, decision);
       }
     }

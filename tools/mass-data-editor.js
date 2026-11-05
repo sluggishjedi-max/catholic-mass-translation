@@ -81,12 +81,23 @@ function registeredModule(registry, jurisdiction) {
     || Object.values(registry).find(module => module && module.jurisdiction === jurisdiction);
 }
 
+const compiledMassSourceCache = new Map();
 function runCountryMassSources(sources) {
   const sandbox = {};
   sandbox.ordoMassStorage = massStorage;
   sandbox.globalThis = sandbox;
   vm.createContext(sandbox);
-  sources.forEach(source => vm.runInContext(source.code, sandbox, { filename: source.path }));
+  sources.forEach(source => {
+    let compiled = compiledMassSourceCache.get(source.path);
+    if (!compiled || compiled.code !== source.code) {
+      compiled = { code: source.code, script: new vm.Script(source.code, { filename: source.path }) };
+      compiledMassSourceCache.set(source.path, compiled);
+      if (compiledMassSourceCache.size > 64) compiledMassSourceCache.delete(compiledMassSourceCache.keys().next().value);
+    }
+    // Execute into a fresh context on each read: cached code must never cache
+    // mutable prayer objects or hide an editor's newly saved source text.
+    compiled.script.runInContext(sandbox);
+  });
   const registry = sandbox.countryMassData || {};
   const countries = {};
   sources.forEach(source => {
@@ -142,12 +153,7 @@ function localizedValue(value, language) {
 
 function rowContentFields(row, language) {
   if (!row || typeof row !== 'object' || Array.isArray(row)) return [];
-  const suffix = `_${language.toLowerCase()}`;
-  const preferred = ['text', 'rubric', 'cit'];
-  return preferred.flatMap(kind => {
-    const field = `${kind}${suffix}`;
-    return Object.prototype.hasOwnProperty.call(row, field) ? [{ field, kind }] : [];
-  });
+  return massStorage.lineParts(row, language);
 }
 
 function speakerFieldForRow(row, language) {
@@ -185,14 +191,15 @@ function collectMassBlocks(ordinary, language) {
           const rows = [];
           value.forEach((row, rowIndex) => {
             const speakerField = speakerFieldForRow(row, language);
-            rowContentFields(row, language).forEach(({ field, kind }) => {
+            rowContentFields(row, language).forEach(({ field, kind, text, speaker, segment, segmentIndex }) => {
               const pairedKey = row.__massEditorPairKeys && row.__massEditorPairKeys[field];
               rows.push({
-                key: pairedKey || `${rowIndex}:${kind}`,
+                key: (pairedKey || `${rowIndex}:${kind}`) + (segment ? `:segment:${segmentIndex}` : ''),
                 rowIndex,
                 kind,
-                text: cleanText(row[field]),
-                speaker: speakerField ? cleanText(row[speakerField]) : '',
+                text: cleanText(text),
+                speaker: cleanText(speaker),
+                segment,
                 textPath: [entryIndex, ...relativePath, rowIndex, field],
                 speakerPath: speakerField ? [entryIndex, ...relativePath, rowIndex, speakerField] : null
               });
@@ -206,6 +213,13 @@ function collectMassBlocks(ordinary, language) {
             relativePath,
             revision: require('node:crypto').createHash('sha256').update(JSON.stringify(value)).digest('hex'),
             rows
+          });
+          // Nested alternatives are independently editable passages as well.
+          // Do not stop at the parent array and hide ordinary/funeral choices.
+          value.forEach((row, rowIndex) => {
+            if (row && typeof row === 'object') Object.entries(row).forEach(([key, child]) => {
+              if (child && typeof child === 'object' && !key.startsWith('__') && !key.startsWith('rubricLayout')) walk(child, relativePath.concat(rowIndex, key));
+            });
           });
           return;
         }
@@ -531,13 +545,14 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
     if (original) owners.add(original.rowIndex);
     Object.keys(raw).forEach(field => {
       if (['text', 'rubric', 'cit'].some(kind => field === `${kind}${suffix}`)
+        || field === `rubricLayout${suffix}`
         || (!first && /^(?:text|rubric|cit|sp)_[a-z]{2}$/iu.test(field))) delete raw[field];
     });
     const keys = first ? { ...raw.__massEditorPairKeys } : {};
     ['text', 'rubric', 'cit'].forEach(kind => delete keys[`${kind}${suffix}`]);
     const field = `${update.kind}${suffix}`;
     raw[field] = cleanText(update.text);
-    if (!original || original.speakerPath || cleanText(update.speaker)) raw[speakerField] = cleanText(update.speaker);
+    if (!original || original.speakerPath || cleanText(update.speaker)) raw[speakerField] = update.kind === 'rubric' ? '' : cleanText(update.speaker);
     raw.__massEditorPairKeys = { ...keys, [field]: key };
     return raw;
   });
@@ -761,7 +776,7 @@ function prepareMassSourceEdit({ jurisdiction, blockKey: selectedBlockKey, updat
   if (structure) return prepareMassStructureEdit({ updates, structure }, sources, loaded, country, block, sourceIndex);
   const existingReplacement = ordinaryOverrideBlock(source.code)?.entries.some(entry => entry.replace
     && entry.replace.entryId === block.entryId && JSON.stringify(entry.replace.relativePath) === JSON.stringify(block.relativePath));
-  if (existingReplacement) {
+  if (existingReplacement || block.rows.some(row => row.segment)) {
     const updatesByKey = new Map((updates || []).map(update => [update.key, update]));
     const completeUpdates = block.rows.map(row => ({
       key: row.key, kind: row.kind, expectedKind: row.kind, text: row.text, expectedText: row.text,

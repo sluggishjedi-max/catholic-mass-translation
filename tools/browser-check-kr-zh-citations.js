@@ -32,7 +32,7 @@ const fixtures={
   page.on('pageerror',error=>errors.push(error.message));
   await page.addInitScript(({registry,countries})=>{window.ordoPrayerEditorPreview=true;window.uploadedCountryMassData=registry;window.uploadedCountryMassMetadata=countries;},{registry,countries});
   await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
-  await page.goto('http://127.0.0.1:'+server.address().port+'/V31.1.html');
+  await page.goto('http://127.0.0.1:'+server.address().port+'/V31.2.html');
   await page.evaluate(async()=>{await Promise.all([ordoDataLoader.ensure('special',['KR','TW']),ordoDataLoader.ensure('missal',['KR','ZH'])]);});
   const result=await page.evaluate(records=>{
    const check=(ok,message)=>{if(!ok)throw Error(message)};

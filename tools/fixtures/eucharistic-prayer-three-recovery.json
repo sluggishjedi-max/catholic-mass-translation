@@ -1,0 +1,53 @@
+{
+  "description": "Missing Eucharistic Prayer III paragraphs recovered from the project-supplied Roman Missal PDFs. No AI translation. English St Joseph insertion follows the 2013 decree.",
+  "sources": {
+    "en": "https://www.liturgyoffice.org.uk/Missal/Text/EP3-A4.pdf",
+    "enJoseph": "https://www.liturgyoffice.org.uk/Missal/Text/index.shtml",
+    "jp": "https://www.cbcj.catholic.jp/publish/mass2022/",
+    "la": "Reference Roman Missal PDF supplied in this project"
+  },
+  "languages": {
+    "en": {
+      "main": [
+        "Therefore, O Lord, as we celebrate the memorial of the saving Passion of your Son, his wondrous Resurrection and Ascension into heaven, and as we look forward to his second coming, we offer you in thanksgiving this holy and living sacrifice.",
+        "Look, we pray, upon the oblation of your Church and, recognizing the sacrificial Victim by whose death you willed to reconcile us to yourself, grant that we, who are nourished by the Body and Blood of your Son and filled with his Holy Spirit, may become one body, one spirit in Christ.",
+        "May he make of us an eternal offering to you, so that we may obtain an inheritance with your elect, especially with the most blessed Virgin Mary, Mother of God, with blessed Joseph, her Spouse, with your blessed Apostles and glorious Martyrs (with Saint [Saint Name]) and with all the Saints, on whose constant intercession in your presence we rely for unfailing help.",
+        "May this Sacrifice of our reconciliation, we pray, O Lord, advance the peace and salvation of all the world.",
+        "Be pleased to confirm in faith and charity your pilgrim Church on earth, with your servant [Pope Name] our Pope and [Bishop Name] our Bishop, the Order of Bishops, all the clergy, and the entire people you have gained for your own.",
+        "Listen graciously to the prayers of this family, whom you have summoned before you: in your compassion, O merciful Father, gather to yourself all your children scattered throughout the world."
+      ],
+      "ordinary": "To our departed brothers and sisters and to all who were pleasing to you at their passing from this life, give kind admittance to your kingdom. There we hope to enjoy for ever the fullness of your glory",
+      "funeral": "Remember your servant [Person Name] whom you have called (today) from this world to yourself. Grant that he (she) who was united with your Son in a death like his, may also be one with him in his Resurrection, when from the earth he will raise up in the flesh those who have died, and transform our lowly body after the pattern of his own glorious body. To our departed brothers and sisters, too, and to all who were pleasing to you at their passing from this life, give kind admittance to your kingdom. There we hope to enjoy for ever the fullness of your glory, when you will wipe away every tear from our eyes. For seeing you, our God, as you are, we shall be like you for all the ages and praise you without end,",
+      "condition": "When this Eucharistic Prayer is used in Masses for the Dead, the following may be said:",
+      "referenceSha256": "27805b0a1d80db97f086cf64579b2551ebc29212f79224f0f79332914e1d2531"
+    },
+    "la": {
+      "main": [
+        "Mémores ígitur, Dómine, eiúsdem Fílii tui salutíferæ passiónis necnon mirábilis resurrectiónis et ascensiónis in cælum, sed et præstolántes álterum eius advéntum, offérimus tibi, grátias referéntes, hoc sacrifícium vivum et sanctum.",
+        "Réspice, quǽsumus, in oblatiónem Ecclésiæ tuæ et, agnóscens Hóstiam, cuius voluísti immolatióne placári, concéde, ut qui Córpore et Sánguine Fílii tui refícimur, Spíritu eius Sancto repléti, unum corpus et unus spíritus inveniámur in Christo.",
+        "Ipse nos tibi perfíciat munus ætérnum, ut cum eléctis tuis hereditátem cónsequi valeámus, in primis cum beatíssima Vírgine, Dei Genetríce, María, cum beáto Ioseph, eius Sponso, cum beátis Apóstolis tuis et gloriósis Martýribus (cum Sancto [Nomen Sancti]) et ómnibus Sanctis, quorum intercessióne perpétuo apud te confídimus adiuvári.",
+        "Hæc Hóstia nostræ reconciliatiónis profíciat, quaésumus, Dómine, ad totíus mundi pacem atque salútem.",
+        "Ecclésiam tuam, peregrinántem in terra, in fide et caritáte firmáre dignéris cum fámulo tuo Papa nostro [Nomen Papae] et Epíscopo nostro [Nomen Episcopi], cum episcopáli órdine et univérso clero et omni pópulo acquisitiónis tuæ.",
+        "Votis huius famíliæ, quam tibi astáre voluísti, adésto propítius. Omnes fílios tuos ubíque dispérsos tibi, clemens Pater, miserátus coniúnge."
+      ],
+      "ordinary": "Fratres nostros defúnctos et omnes qui, tibi placéntes, ex hoc sǽculo transiérunt, in regnum tuum benígnus admítte, ubi fore sperámus, ut simul glória tua perénniter satiémur,",
+      "funeral": "Meménto fámuli tui (fámulæ tuæ) [Nomen Personae], quem (quam) (hódie) ad te ex hoc mundo vocásti. Concéde, ut, qui (quæ) complantátus (complantáta) fuit similitúdini mortis Fílii tui, simul fiat et resurrectiónis ipsíus, quando mórtuos suscitábit in carne de terra et corpus humilitátis nostræ configurábit córpori claritátis suæ. Sed et fratres nostros defúnctos, et omnes qui, tibi placéntes, ex hoc sǽculo transiérunt, in regnum tuum benígnus admítte, ubi fore sperámus, ut simul glória tua perénniter satiémur, quando omnem lácrimam abstérges ab óculis nostris, quia te, sícuti es, Deum nostrum vidéntes, tibi símiles érimus cuncta per sǽcula, et te sine fine laudábimus,",
+      "condition": "Quando hæc Prex eucharistica in Missis pro defunctis adhibetur, dici potest:",
+      "referenceSha256": "59ce45e199a921be5e2fe790a66882c0f33203f0919249b9b3ec59f9b324360f"
+    },
+    "jp": {
+      "main": [
+        "聖なる父よ、わたしたちはいま、御子キリストの救いをもたらす受難、復活、昇天を記念し、その再臨を待ち望み、いのちに満ちたこの聖なるいけにえを感謝してささげます。",
+        "あなたの教会のささげものを顧み、まことの和解のいけにえとして認め、受け入れてください。御子キリストの御からだと御血によってわたしたちが養われ、聖霊に満たされて、キリストのうちに、一つのからだ、一つの心となりますように。",
+        "聖霊によってわたしたちを、あなたにささげられた永遠の供えものとしてください。選ばれた人々、神の母おとめマリアと聖ヨセフ、使徒と殉教者、(聖 [聖人名]、)すべての聖人とともに神の国を継ぎ、その取り次ぎによってたえず助けられますように。",
+        "わたしたちの罪のゆるしとなるこのいけにえが、全世界の平和と救いのためになりますように。",
+        "地上を旅するあなたの教会、教皇 [教皇名]、わたしたちの司教 [司教名]、司教団とすべての奉仕者を導き、あなたの民となったすべての人の信仰と愛を強めてください。",
+        "あなたがここにお集めになったこの家族の願いを聞き入れてください。いつくしみ深い父よ、あなたの子がどこにいても、すべてあなたのもとに呼び寄せてください。"
+      ],
+      "ordinary": "亡くなったわたしたちの兄弟姉妹、また、み旨に従って生活し、いまはこの世を去ったすべての人を、あなたの国に受け入れてください。わたしたちもいつかその国で、いつまでもともにあなたの栄光にあずかり、喜びに満たされますように。",
+      "funeral": "(きょう、)この世からあなたのもとに召された[洗礼名]を心に留めてください。洗礼によってキリストの死にあずかった者が、その復活にもあずかることができますように。キリストは死者を復活させるとき、滅びゆくわたしたちのからだを、ご自分の栄光のからだに変えてくださいます。また、亡くなったわたしたちの兄弟姉妹、み旨に従って生活し、いまはこの世を去ったすべての人を、あなたの国に受け入れてください。わたしたちもいつかその国で、いつまでもともにあなたの栄光にあずかり、喜びに満たされますように。そのときあなたは、わたしたちの目から涙をすべてぬぐい去り、わたしたちは神であるあなたをありのままに見て、永遠にあなたに似るものとなり、終わりなくあなたをたたえることができるのです。",
+      "condition": "死者のためのミサがささげられる場合は、次の祈りを唱えることができる。",
+      "referenceSha256": "a2ccb249fdb60f776ddcbeefc13be093bfd9608339ce2f4e2265c8341621fb06"
+    }
+  }
+}

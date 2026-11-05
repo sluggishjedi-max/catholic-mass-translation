@@ -17,9 +17,9 @@ function safeSourceUrl(value){
 function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDocuments}={}){
   const country=countryCode(input.country),date=isoDate(input.date),lang=COUNTRIES[country][1];
   const virtualConsole=new VirtualConsole();
-  const dom=new JSDOM(bundleFiles().html,{url:'https://sluggishjedi-max.github.io/catholic-mass-translation/V31.1.html',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
+  const dom=new JSDOM(bundleFiles().html,{url:new URL(bundleFiles().manifest.htmlFile||'index.html','https://sluggishjedi-max.github.io/catholic-mass-translation/').href,runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
   const window=dom.window,context=dom.getInternalVMContext();
-  const snapshots=[];
+  const snapshots=[],nativeChoices=new Map();
   let snapshotBytes=0;
   const deadline=Date.now()+150000;
   let requests=0;
@@ -35,7 +35,7 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
     for(let redirect=0;redirect<6;redirect++){
       const headers=new Headers(requestOptions.headers||{}),cookies=dom.cookieJar.getCookieStringSync(target.href);
       if(cookies)headers.set('Cookie',cookies);
-      response=await fetchImpl(target,{...requestOptions,headers,redirect:'manual',signal:AbortSignal.any([AbortSignal.timeout(Math.min(20000,Math.max(1,deadline-Date.now()))),...(options.signal?[options.signal]:[])])});
+      response=await fetchImpl(target,{...requestOptions,headers,redirect:'manual',signal:AbortSignal.any([AbortSignal.timeout(Math.min(30000,Math.max(1,deadline-Date.now()))),...(options.signal?[options.signal]:[])])});
       for(const cookie of response.headers.getSetCookie?.()||[])try{dom.cookieJar.setCookieSync(cookie,target.href);}catch{}
       if(![301,302,303,307,308].includes(response.status))break;
       const location=response.headers.get('location');if(!location)break;
@@ -71,6 +71,7 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
   run('loadScriptOnce = src => __loadServerModule(src);');
   const [year,month,day]=date.split('-').map(Number);
   window.__collectorInput={...input,country,lang,year,month,day};
+  window.__nativeSourceUrl='';
   run(`
     state.currentLoc=__collectorInput.lang;state.selectedLocationCode=__collectorInput.country;
     state.targetLang=__collectorInput.lang==='KR'?'EN':'KR';state.targetLocationCode=state.targetLang==='KR'?'KR':'US';
@@ -78,13 +79,13 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
     state.gpsCoordinates=__collectorInput.profile==='VIETNAM_NORTH'?{lat:21.03,lon:105.85,lng:105.85}:{lat:10.78,lon:106.69,lng:106.69};
     getStrictDateBase=()=>({localDay:new Date(__collectorInput.year,__collectorInput.month-1,__collectorInput.day),hour:12,timeZone:'Asia/Seoul'});
     getActiveLiturgicalSourceDate=()=>new Date(__collectorInput.year,__collectorInput.month-1,__collectorInput.day,12);
+    const collectorOriginalSourceEntryUrl=strictDailySourceEntryUrl;
+    strictDailySourceEntryUrl=(lang,date,location)=>__nativeSourceUrl&&__collectorInput.country==='US'&&lang==='EN'?__nativeSourceUrl:collectorOriginalSourceEntryUrl(lang,date,location);
     state.liturgicalDateContext=null;
     state.liturgyInfo=buildGeneratedLiturgyInfo(getActiveLiturgicalSourceDate());
     fetchGeminiViaFirebase=async()=>{throw Error('AI is disabled in server collection');};
-    fetchJinaHtml=async(url,options={})=>{
-      try {const response=await fetchWithTimeout(url,options);if(!response.ok)throw Error('HTTP '+response.status);return response.text();}
-      catch(error){return fetchTextWithFallbacks(url,options);}
-    };
+    const collectorOriginalFetchJinaHtml=fetchJinaHtml;
+    fetchJinaHtml=(url,options={})=>collectorOriginalFetchJinaHtml(url,{...options,timeoutMs:Math.max(25000,options.timeoutMs||0)});
     const collectorOriginalCandidates=buildFetchCandidates;
     buildFetchCandidates=url=>[...new Set([url,...collectorOriginalCandidates(url)])];
   `);
@@ -99,12 +100,21 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
     async fetch(url,options){return window.fetch(url,options);},
     legacyChoice(mass){window.__mass=mass;return JSON.parse(JSON.stringify(run('kpvMassCandidateAsLegacyChoice(__mass,getActiveLiturgicalSourceDate())')));},
     normalizeLegacy(payload){window.__legacy=payload;return JSON.parse(JSON.stringify(run('normalizeKpvMassReadingPayload(__legacy,getActiveLiturgicalSourceDate())')));},
-    variantChoices(){return sourceDocuments?.length?sourceDocuments.map(document=>({id:document.id,label:document.label})):JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),profile=specialLiturgyProfile(__collectorInput.country);if(isAllSoulsDate(date))return ['first','second','third'].map((id,index)=>({id,label:profile.allSouls[id]?.names?.KR||'위령의 날 '+(index+1)+'미사'}));return [{id:'day',label:'당일 미사'},...profile.vigils.filter(entry=>entry.enabled!==false&&specialDefinitionMatchesDate(entry,date,__collectorInput.country)).map(entry=>({id:entry.id,label:entry.names?.KR||entry.names?.[__collectorInput.lang]||entry.id}))];})()`)));},
+    variantChoices(){const choices=sourceDocuments?.length?sourceDocuments.map(document=>({id:document.id,label:document.label})):JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),profile=specialLiturgyProfile(__collectorInput.country);if(isAllSoulsDate(date))return ['first','second','third'].map((id,index)=>({id,label:profile.allSouls[id]?.names?.[__collectorInput.lang]||profile.allSouls[id]?.names?.KR||'위령의 날 '+(index+1)+'미사'}));return [{id:'day',label:'당일 미사'},...profile.vigils.filter(entry=>entry.enabled!==false&&specialDefinitionMatchesDate(entry,date,__collectorInput.country)).map(entry=>({id:entry.id,label:entry.names?.[__collectorInput.lang]||entry.names?.KR||entry.id}))];})()`)));return choices.concat([...nativeChoices.values()].filter(choice=>!choices.some(existing=>existing.id===choice.id)));},
+    refreshVariantChoices(){
+      if(country==='US'&&!sourceDocuments){
+        window.__massChoiceSources=snapshots.filter(source=>source.status===200).map(source=>source.body);
+        window.__massChoiceBase='https://bible.usccb.org/bible/readings/'+date.slice(5,7)+date.slice(8,10)+date.slice(2,4)+'.cfm';
+        const choices=run('__massChoiceSources.flatMap(source=>strictUsccbDatedMassChoices(source,__massChoiceBase,getActiveLiturgicalSourceDate()))');
+        for(const choice of choices)if(!nativeChoices.has(choice.id))nativeChoices.set(choice.id,JSON.parse(JSON.stringify(choice)));
+      }
+      return runtime.variantChoices();
+    },
     variants(){return runtime.variantChoices().map(choice=>choice.id);},
     async collect(variant='day'){
       const snapshotStart=snapshots.length;
-      window.__variant=variant;
-      run(`getStrictMassSelector=()=>({slot:__variant==='day'||['first','second','third'].includes(__variant)?'day':'vigil',specialVigil:__variant==='day'||['first','second','third'].includes(__variant)?'':__variant,allSoulsChoice:['first','second','third'].includes(__variant)?__variant:''});state.allSoulsNavChoice=['first','second','third'].includes(__variant)?__variant:'';`);
+      window.__variant=variant;window.__nativeSourceUrl=nativeChoices.get(variant)?.sourceUrl||'';
+      run(`getStrictMassSelector=()=>({slot:__nativeSourceUrl||__variant==='day'||['first','second','third'].includes(__variant)?'day':'vigil',specialVigil:__nativeSourceUrl||__variant==='day'||['first','second','third'].includes(__variant)?'':__variant,sourceChoice:__nativeSourceUrl?__variant:'',allSoulsChoice:['first','second','third'].includes(__variant)?__variant:''});state.allSoulsNavChoice=['first','second','third'].includes(__variant)?__variant:'';`);
       const document=sourceDocuments?.find(item=>item.id===variant);
       let parsed;
       if(sourceDocuments){

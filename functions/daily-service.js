@@ -77,7 +77,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
       runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl,sourceDocuments,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
       if(request.country==='PT')runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
       await store.registerVariants(request,runtime.variantChoices());
-      const variants=runtime.variants();
+      const variants=runtime.variants(),registered=new Set(variants);
       for(const variant of variants){
         const scoped={...request,variant};
         try{
@@ -89,10 +89,19 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
           await store.status(scoped,error);results.push({variant,status:'unavailable',error:String(error.message).slice(0,400)});
           logger.warn('Daily Mass source unavailable',{country:request.country,date:request.date,source:request.sourceId,variant,error:error.message});
         }
+        let discovered=false;
+        for(const choice of runtime.refreshVariantChoices?.()||[])if(!registered.has(choice.id)&&registered.size<32){registered.add(choice.id);variants.push(choice.id);discovered=true;}
+        if(discovered)await store.registerVariants(request,runtime.variantChoices());
       }
       await finish(results.every(result=>result.status==='ready')?'completed':'completed-with-errors');
       return {country:request.country,date:request.date,source:request.sourceId,results};
-    }catch(error){await finish('failed',{lastError:String(error.message).slice(0,400)});throw error;}
+    }catch(error){
+      // Discovery can fail before a runtime/variant exists (for example an
+      // unpublished dated PDF). Persist that attempt on the requested head as
+      // well, so clients do not retain an older error or see "not collected".
+      await store.status(request,error);
+      await finish('failed',{lastError:String(error.message).slice(0,400)});throw error;
+    }
     finally{runtime?.close();}
   }
   async function read(value,{queueMissing=false}={}){
