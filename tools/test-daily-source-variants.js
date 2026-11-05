@@ -29,7 +29,7 @@ const page=(name)=>'<html><body><h1>'+name+'</h1>'+links+'<h3>Reading</h3><p>Rev
   if(!String(url).includes('r.jina.ai')){emptyResponses++;return new Response('<html><body>Liturgia del giorno is loading.</body></html>');}
   richResponses++;return new Response(page('Italian approved text').replaceAll('Reading','Prima Lettura').replaceAll('Responsorial Psalm','Salmo Responsoriale').replaceAll('Gospel','Vangelo').replaceAll('<h3>Alleluia</h3>','<h3>Acclamazione al Vangelo</h3>'));
  }});
- try{const result=await italian.collect();assert(result.validation.complete,JSON.stringify(result.validation));assert(emptyResponses>0&&richResponses>0,'An empty successful HTML response prevented the real source retry');console.log('Italian source: incomplete HTTP 200 shell retries the rich official source and preserves all readings.');}finally{italian.close();}
+ try{italian.run("countrySpecialMassRecord=()=>({names:{IT:'Approved memorial'},sourceUrls:{IT:'https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261117'}})");const result=await italian.collect();assert(result.validation.complete,JSON.stringify(result.validation));assert(emptyResponses>0&&richResponses>0,'An empty successful HTML response prevented the real source retry');console.log('Italian proper source: incomplete HTTP 200 shell retries the rich official source and preserves all readings.');}finally{italian.close();}
  let cemShells=0,cemOriginals=0;
  const mexican=createRuntime({country:'MX',date:'2026-11-08'},{metadata,fetchImpl:async(url)=>{
   if(!String(url).includes('r.jina.ai')){cemShells++;return new Response('<html><body>Misal loading.</body></html>');}

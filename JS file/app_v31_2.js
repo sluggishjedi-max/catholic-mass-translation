@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261106-2';
+    const APP_VERSION = 'V31.2-20261106-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -13941,6 +13941,29 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return parsed;
     }
 
+    async function fetchStrictDailySourceText(lang, url, date, locationCode) {
+            if (lang === 'ES') return fetchTextWithFallbacks(url, { timeoutMs: 55000,
+                validateSource: /sistemas\.cem\.org\.mx/u.test(url) ? source => /\d{4}-\d{2}-\d{2} 00:00:00/u.test(source) : undefined });
+            if (!['EN', 'IT', 'PT', 'DE'].includes(lang)) return fetchTextWithFallbacks(url);
+            try {
+                return await fetchJinaHtml(url, { validateSource: source => {
+                    try {
+                        const probe = strictParseDailyMass(lang, source, date, locationCode);
+                        if (probe.data?.reading1 || probe.data?.gospel) return true;
+                        // Dated Mass indexes are valid intermediate documents.
+                        return lang === 'EN' && !!strictChooseMassLink(lang, source, url, date, getStrictMassSelector(date), locationCode);
+                    } catch (error) {
+                        // A real publisher window notice is terminal and must
+                        // retain its precise reason instead of being retried.
+                        return /source-date-outside-public-window/u.test(error.message);
+                    }
+                } });
+            } catch (error) {
+                console.warn(`${lang} HTML source failed, trying markdown source.`, error);
+                return fetchTextWithFallbacks(url);
+            }
+            }
+
     async function fetchStrictDailyMass(lang, date, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         await loadAllSoulsMassConfigIfNeeded(date);
@@ -14014,28 +14037,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             throw lastError || new Error('VN strict source not found');
         }
 
-        const fetchStrictSource = async url => {
-            if (lang === 'ES') return fetchTextWithFallbacks(url, { timeoutMs: 55000,
-                validateSource: /sistemas\.cem\.org\.mx/u.test(url) ? source => /\d{4}-\d{2}-\d{2} 00:00:00/u.test(source) : undefined });
-            if (!['EN', 'IT', 'PT', 'DE'].includes(lang)) return fetchTextWithFallbacks(url);
-            try {
-                return await fetchJinaHtml(url, { validateSource: source => {
-                    try {
-                        const probe = strictParseDailyMass(lang, source, date, locationCode);
-                        if (probe.data?.reading1 || probe.data?.gospel) return true;
-                        // Dated Mass indexes are valid intermediate documents.
-                        return lang === 'EN' && !!strictChooseMassLink(lang, source, url, date, getStrictMassSelector(date), locationCode);
-                    } catch (error) {
-                        // A real publisher window notice is terminal and must
-                        // retain its precise reason instead of being retried.
-                        return /source-date-outside-public-window/u.test(error.message);
-                    }
-                } });
-            } catch (error) {
-                console.warn(`${lang} HTML source failed, trying markdown source.`, error);
-                return fetchTextWithFallbacks(url);
-            }
-        };
+        const fetchStrictSource = url => fetchStrictDailySourceText(lang, url, date, locationCode);
         let entryUrl = strictDailySourceEntryUrl(lang, date, locationCode);
         const selector = getStrictMassSelector(date);
         let source;
@@ -14235,7 +14237,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (entry?.fetchDaily === false) return {data:{}, title:entry.names?.[lang] || '', sourceMode:'country-special-liturgy'};
             if (!sourceUrl && (!data || !Object.keys(data).length) && !entry?.sourceTextFallbacks?.[lang]) return fetchDaily(date, options);
             let parsed = {data:{}};
-            if (sourceUrl) parsed = strictParseDailyMass(lang, await fetchTextWithFallbacks(sourceUrl), date, locationCode);
+            if (sourceUrl) parsed = strictParseDailyMass(lang, await fetchStrictDailySourceText(lang, sourceUrl, date, locationCode), date, locationCode);
             else if (entry.mergeDaily) {
                 try { parsed = await fetchDaily(date, options); }
                 catch (error) { console.warn('Special liturgy source unavailable; keeping the approved country texts.', error); }
