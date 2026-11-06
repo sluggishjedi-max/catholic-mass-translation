@@ -6,9 +6,13 @@ const {collectVaticanDay}=require('../functions/daily-functions');
 const {romeToday,koreaToday}=require('../functions/daily-schema');
 (async()=>{
  const calls=[],stub={collectScheduledDay:async(value,runId)=>{calls.push({value,runId});return{duplicate:false,results:[{status:'ready'}]};}};
- for(const time of ['2026-11-05T23:15:00Z','2026-05-31T22:15:00Z'])await collectVaticanDay(stub,{scheduleTime:time});
- assert.deepEqual(calls.map(call=>call.value),[{country:'VA',date:'2026-11-06',source:'official',variant:'day'},{country:'VA',date:'2026-06-01',source:'official',variant:'day'}]);
- assert.deepEqual(calls.map(call=>call.runId),['vatican-daily-2026-11-06','vatican-daily-2026-06-01']);
+ for(const time of ['2026-11-05T23:15:00Z','2026-05-31T22:15:00Z'])await collectVaticanDay(stub,{scheduleTime:time},new Date(time));
+ // A run-now Scheduler event may name tomorrow's next scheduled attempt.
+ // Only the execution clock decides which source date is available.
+ const realDate=Date,futureSchedule='2099-11-07T23:15:00Z';
+ try{global.Date=class extends realDate{constructor(...args){super(...(args.length?args:['2026-11-06T00:12:00Z']));}static now(){return new realDate('2026-11-06T00:12:00Z').getTime();}};await collectVaticanDay(stub,{scheduleTime:futureSchedule});await collectVaticanDay(stub,{scheduleTime:'2026-10-01T22:15:00Z'});}finally{global.Date=realDate;}
+ assert.deepEqual(calls.map(call=>call.value),[{country:'VA',date:'2026-11-06',source:'official',variant:'day'},{country:'VA',date:'2026-06-01',source:'official',variant:'day'},{country:'VA',date:'2026-11-06',source:'official',variant:'day'},{country:'VA',date:'2026-11-06',source:'official',variant:'day'}]);
+ assert.deepEqual(calls.map(call=>call.runId),['vatican-daily-2026-11-06','vatican-daily-2026-06-01','vatican-daily-2026-11-06','vatican-daily-2026-11-06']);
  assert.equal(romeToday(new Date('2026-11-05T22:59:00Z')),'2026-11-05');assert.equal(romeToday(new Date('2026-11-05T23:00:00Z')),'2026-11-06');
  assert.equal(koreaToday(new Date('2026-11-05T23:15:00Z')),'2026-11-06');
  const db=memoryFirestore();let requests=0,queued=0,available=false;

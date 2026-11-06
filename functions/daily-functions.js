@@ -17,8 +17,10 @@ function getService(){
   if(!service)service=createDailyService({db:getFirestore(),logger,enqueue:input=>getFunctions().taskQueue('locations/'+REGION+'/functions/'+(input.onDemand?'collectDailyMassOnDemandTask':'collectDailyMassTask')).enqueue(input,{dispatchDeadlineSeconds:540})});
   return service;
 }
-async function collectVaticanDay(service,event={}){
-  const date=romeToday(new Date(event.scheduleTime||Date.now()));
+async function collectVaticanDay(service,_event={},now=new Date()){
+  // This provider only serves Rome's current day. Scheduler run-now requests
+  // can carry the next scheduled time; delayed retries can carry an old one.
+  const date=romeToday(now);
   return service.collectScheduledDay({country:'VA',date,source:'official',variant:'day'},'vatican-daily-'+date);
 }
 function dailyFunctions({adminSecret,allowedOrigin,rateLimit}){
