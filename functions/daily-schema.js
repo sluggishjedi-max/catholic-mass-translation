@@ -50,6 +50,8 @@ function datesFrom(start,count=30) {
   if (!Number.isInteger(count) || count<1 || count>30) throw Error('invalid-day-count');
   return Array.from({length:count},(_,offset)=>{const date=new Date(start+'T12:00:00Z');date.setUTCDate(date.getUTCDate()+offset);return date.toISOString().slice(0,10);});
 }
-function koreaToday(now=new Date()) {return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(now);}
+function dateInTimeZone(now,timeZone) {return new Intl.DateTimeFormat('sv-SE',{timeZone,year:'numeric',month:'2-digit',day:'2-digit'}).format(now);}
+function koreaToday(now=new Date()) {return dateInTimeZone(now,'Asia/Seoul');}
+function romeToday(now=new Date()) {return dateInTimeZone(now,'Europe/Rome');}
 function providers(country) { return countryCode(country)==='VN' ? [{source:'hanoi',profile:''},{source:'ktcg',profile:'VIETNAM_SOUTH'},{source:'ktcg',profile:'VIETNAM_NORTH'}] : [{source:'official',profile:''}]; }
-module.exports={COUNTRIES,COLLECTION,JOBS,RUNS,PARSER_REVISION,isoDate,countryCode,dayId,sourceId,recordId,digest,cleanParsed,datesFrom,koreaToday,providers};
+module.exports={COUNTRIES,COLLECTION,JOBS,RUNS,PARSER_REVISION,isoDate,countryCode,dayId,sourceId,recordId,digest,cleanParsed,datesFrom,dateInTimeZone,koreaToday,romeToday,providers};

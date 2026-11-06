@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261106-4';
+    const APP_VERSION = 'V31.2-20261106-5';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -2470,6 +2470,19 @@
         DE:'Die Tagesquelle ist nicht verfügbar; das geprüfte feste Messformular wird angezeigt.'
     };
 
+    const vaticanMidnightNoticeText = {
+        KR:'바티칸 원문은 로마시간 자정 이후부터 제공됩니다.',
+        VN:'Bản văn gốc của Vatican được cung cấp sau nửa đêm theo giờ Rôma.',
+        EN:'The Vatican source text is available after midnight, Rome time.',
+        JP:'バチカンの原文はローマ時間の午前0時以降に提供されます。',
+        LA:'Textus originalis Vaticani post mediam noctem, hora Romae, praebetur.',
+        ZH:'梵蒂岡原文於羅馬時間午夜後提供。',
+        IT:'Il testo originale del Vaticano è disponibile dopo la mezzanotte, ora di Roma.',
+        PT:'O texto original do Vaticano fica disponível após a meia-noite, no horário de Roma.',
+        ES:'El texto original del Vaticano está disponible después de la medianoche, hora de Roma.',
+        DE:'Der vatikanische Originaltext ist nach Mitternacht römischer Zeit verfügbar.'
+    };
+
     function updateRoleLegend(leftLang, rightLang) {
         const activeLangs = new Set([leftLang, rightLang].filter(lang => langMeta[lang]));
         const legend = document.getElementById('role-legend');
@@ -2490,19 +2503,22 @@
         const dateKey = formatDateIso(getActiveLiturgicalSourceDate());
         const sourceNotices = Object.entries(state.dailySourceProvenance || {})
             .filter(([lang,detail]) => activeLangs.has(lang) && detail.date === dateKey);
+        const vaticanSelected = [state.selectedLocationCode,state.targetLocationCode]
+            .some(code => dataJurisdictionForLocation(code) === 'VA');
         groups.forEach(group => {
             group.querySelectorAll('.mass-page-notice').forEach(node => node.remove());
             const lang = group.dataset.legendLang;
             const container = group.querySelector('.role-legend-lines');
             if (!container || !activeLangs.has(lang)) return;
-            const append = (message, id, className='') => {
+            const append = (message, id, className='', prefix='※ ') => {
                 if (!message) return;
                 const note = document.createElement('div');
                 note.className = 'role-legend-line mass-page-notice' + (className ? ' '+className : '');
-                note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = '※ '+message;
+                note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = prefix+message;
                 container.appendChild(note);
             };
             sourceNotices.forEach(([sourceLang,detail]) => append(`${sourceLang}: ${fixedFormularyNoticeText[lang] || fixedFormularyNoticeText.EN} (${detail.source?.authority || detail.source?.translation || 'Missal'})`, 'fixed-formulary:'+sourceLang, 'daily-source-provenance'));
+            if(vaticanSelected)append(vaticanMidnightNoticeText[lang] || vaticanMidnightNoticeText.EN,'vatican-midnight','vatican-source-notice','* ');
         });
     }
 

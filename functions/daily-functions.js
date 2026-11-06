@@ -9,13 +9,17 @@ const {getFunctions}=require('firebase-admin/functions');
 const logger=require('firebase-functions/logger');
 const {createDailyService}=require('./daily-service');
 const {createDailyHttpHandler}=require('./daily-http');
-const {koreaToday}=require('./daily-schema');
+const {koreaToday,romeToday}=require('./daily-schema');
 const REGION='asia-northeast3';
 let service;
 function getService(){
   if(!getApps().length)initializeApp();
   if(!service)service=createDailyService({db:getFirestore(),logger,enqueue:input=>getFunctions().taskQueue('locations/'+REGION+'/functions/'+(input.onDemand?'collectDailyMassOnDemandTask':'collectDailyMassTask')).enqueue(input,{dispatchDeadlineSeconds:540})});
   return service;
+}
+async function collectVaticanDay(service,event={}){
+  const date=romeToday(new Date(event.scheduleTime||Date.now()));
+  return service.collectScheduledDay({country:'VA',date,source:'official',variant:'day'},'vatican-daily-'+date);
 }
 function dailyFunctions({adminSecret,allowedOrigin,rateLimit}){
   const common={getService,allowedOrigin,rateLimit,verifyIdToken:(token,revoked)=>{if(!getApps().length)initializeApp();return getAuth().verifyIdToken(token,revoked);},configuredEmails:()=>adminSecret.value()};
@@ -28,7 +32,11 @@ function dailyFunctions({adminSecret,allowedOrigin,rateLimit}){
       const start=koreaToday(new Date(event.scheduleTime||Date.now()));
       const result=await getService().queueRange({start,days:30,runId:'schedule-'+start});
       logger.info('Daily Mass 30-day collection queued',result);
+    }),
+    scheduleVaticanDailyMassCollection:onSchedule({region:REGION,schedule:'15 0 * * *',timeZone:'Europe/Rome',timeoutSeconds:540,memory:'1GiB',retryCount:3,minBackoffSeconds:600,maxBackoffSeconds:1800,maxRetrySeconds:7200},async event=>{
+      const result=await collectVaticanDay(getService(),event);
+      logger.info('Vatican daily Mass stored',result);
     })
   };
 }
-module.exports={dailyFunctions,getService,REGION};
+module.exports={dailyFunctions,getService,collectVaticanDay,REGION};

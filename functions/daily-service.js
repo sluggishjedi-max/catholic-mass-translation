@@ -39,6 +39,12 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     const dates=datesFrom(isoDate(start),Number(days));
     const ref=db.collection(RUNS).doc(runId);
     const planned=dates.length*countries.reduce((total,country)=>total+providers(country).length,0);
+    const previous=await ref.get();
+    if(previous.exists&&Number(previous.data().done||0)>=planned){
+      const status=previous.data().failed?'completed-with-errors':'completed';
+      if(previous.data().status!==status)await ref.set({status},{merge:true});
+      return {runId,queued:0,start,days:dates.length,countries};
+    }
     await ref.set({start,days:dates.length,countries,planned,status:'queuing',createdAt:new Date().toISOString(),parserRevision:PARSER_REVISION},{merge:true});
     let queued=0;
     // Interleave countries so one source host is not hammered with 30 dates at once.
@@ -48,13 +54,29 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     await ref.set({status:'queued',queued:planned,newlyQueued:queued,finishedQueuingAt:new Date().toISOString()},{merge:true});
     return {runId,queued,start,days:dates.length,countries};
   }
+  async function collectScheduledDay(value,runId){
+    const request=requestIdentity(value),jobId=runId+'__'+request.country+'_'+request.date+'_'+request.sourceId;
+    const run=db.collection(RUNS).doc(runId),job=db.collection(JOBS).doc(jobId),createdAt=new Date().toISOString();
+    // The scheduler awaits collection itself, so a failed source can trigger
+    // its retry policy. No background task is also queued for this same job.
+    await db.runTransaction(async tx=>{
+      const [runSnapshot,jobSnapshot]=await Promise.all([tx.get(run),tx.get(job)]);
+      if(!runSnapshot.exists)tx.create(run,{start:request.date,days:1,countries:[request.country],planned:1,queued:1,status:'queued',createdAt,parserRevision:PARSER_REVISION,execution:'scheduled-direct'});
+      if(!jobSnapshot.exists)tx.create(job,{...request,runId,status:'queued',createdAt,onDemand:false});
+    });
+    const result=await collect({...request,runId,jobId});
+    if(!result.duplicate&&(!result.results?.length||result.results.some(item=>item.status!=='ready'))){
+      throw Error('scheduled-source-incomplete:'+request.country+':'+request.date);
+    }
+    return result;
+  }
   async function collect(input){
     const request=requestIdentity(input),job=db.collection(JOBS).doc(input.jobId);
     const claimed=await db.runTransaction(async tx=>{
       const snapshot=await tx.get(job),previous=snapshot.exists?snapshot.data():{};
       if(previous.status==='completed')return false;
       if(previous.leaseUntil>Date.now())throw Error('collection-already-running');
-      tx.set(job,{status:'running',leaseUntil:Date.now()+500000,startedAt:new Date().toISOString()},{merge:true});return true;
+      tx.set(job,{status:'running',leaseUntil:Date.now()+500000,startedAt:new Date().toISOString(),lastError:''},{merge:true});return true;
     });
     if(!claimed)return {duplicate:true};
     let runtime;
@@ -116,7 +138,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     }
     return record;
   }
-  return {store,queueOne,queueRange,collect,read,requestIdentity,
+  return {store,queueOne,queueRange,collect,collectScheduledDay,read,requestIdentity,
     async sourceFile(request,number,id){const version=await store.version(request,number);if(!version)return null;const provenance=await store.provenance(request,version),selected=provenance.files.find(file=>file.id===id);if(!selected)return null;const file=await require('./daily-pdf').readPdf(db,id);return file?{...file,metadata:{...file.metadata,name:selected.name||file.metadata.name}}:null;},
     async collectionJob(value,runId){
       if(!/^[a-zA-Z0-9_-]{1,120}$/.test(String(runId||'')))throw Error('invalid-run-id');
