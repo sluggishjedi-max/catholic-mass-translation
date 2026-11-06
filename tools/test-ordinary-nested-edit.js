@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict'),mass=require('./mass-data-editor');
+let sources=mass.readCountryMassSources(),loaded=mass.getLoadedState(sources),blocks=mass.blocksForCountry(loaded,'KR');
+const proper=blocks.find(block=>block.relativePath[0]==='forms'&&block.relativePath[1]==='1'&&block.relativePath.join('.').endsWith('.options.ordinary.lines')),sentence=proper.rows.find(row=>row.kind==='text');
+sources=mass.prepareMassSourceEdit({jurisdiction:'KR',blockKey:proper.key,updates:[{key:sentence.key,kind:sentence.kind,expectedKind:sentence.kind,text:sentence.text+' EDITOR_NESTED_PRESERVED',expectedText:sentence.text,speaker:sentence.speaker,expectedSpeaker:sentence.speaker}]},sources).sources;
+loaded=mass.getLoadedState(sources);const parent=mass.blocksForCountry(loaded,'KR').find(block=>block.relativePath.join('.')==='forms.1'),updates=parent.rows.map(row=>({key:row.key,kind:row.kind,expectedKind:row.kind,text:row.text,expectedText:row.text,speaker:row.speaker,expectedSpeaker:row.speaker}));
+const key='editor-nested-parent',inserted={key,kind:'text',text:'EDITOR_NEW_PARENT_SENTENCE',speaker:'',expectedText:'',expectedSpeaker:'',create:{entryId:parent.entryId,relativePath:parent.relativePath,rowKey:key}};updates.splice(1,0,inserted);
+sources=mass.prepareMassSourceEdit({jurisdiction:'KR',blockKey:parent.key,updates,structure:{revision:parent.revision,order:updates.map(row=>row.key)}},sources).sources;
+const ordinary=mass.runCountryMassSources(sources).countries.KR.ordinary,prayer=ordinary.find(entry=>entry.forms);assert(JSON.stringify(prayer.forms['1']).includes('EDITOR_NESTED_PRESERVED'));assert(JSON.stringify(prayer.forms['1']).includes('EDITOR_NEW_PARENT_SENTENCE'));
+const choices=prayer.forms['1'].filter(row=>row.optionKey==='roman_canon_season');assert.deepEqual(Array.from(choices,row=>row.pairKey),['canon:communicantes:choice','canon:hanc_igitur:choice']);assert(choices[0].options.ordinary.lines.some(row=>row.text_kr?.includes('EDITOR_NESTED_PRESERVED')),'Moving the parent block detached an edited proper');
+console.log('Nested ordinary edit: an edited Canon proper survived inserting a parent sentence and moving its physical row; obsolete child overrides were folded into the saved parent snapshot.');

@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261106-5';
+    const APP_VERSION = 'V31.2-20261106-6';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -351,67 +351,17 @@
 
     function normalizedOrdinaryForMerge(module, locationCode) {
         if (!module || !Array.isArray(module.ordinary)) return [];
-        const ordinary = module.ordinary.map(item => globalThis.ordoMassStorage.hydrateMassEntry(item));
-        const entry = eucharisticPrayerEntry(ordinary);
-        if (entry) {
-            entry.type = 'selectable'; entry.isEucharist = true;
-            if (!isEucharistSongMap(entry.songs)) entry.songs = {};
-            const lower = eucharisticPrayerLanguageLower(module, locationCode);
-            ordoOrdinarySourceRepairs.repair(entry, lower);
-            if (['AU','NZ'].includes(locationCode)) {
-                const reference = eucharisticPrayerEntry(window.uploadedCountryMassData?.US?.ordinary);
-                for (const key of ['1','4']) {
-                    if (reference?.forms?.[key] && ordoOrdinaryAlignment.equivalentRows(entry.forms[key], reference.forms[key], lower)) {
-                        entry.forms[key] = globalThis.ordoMassStorage.hydrateMassEntry(reference.forms[key]);
-                    }
-                }
-            }
-            const amen = ordoOrdinaryAlignment.commonAmen(entry, lower, locationCode);
-            if (amen.length) entry.amen = amen;
-            for (const [key, rows] of Object.entries(entry.forms)) if (!['1','4'].includes(key) && Array.isArray(rows)) entry.forms[key] = ordoOrdinaryAlignment.trimDoxology(ordoOrdinaryAlignment.baseFormRows(rows, lower, locationCode, key), lower, locationCode);
-        }
-        return ordinary;
+        return ordoOrdinaryDisplay.prepare(cloneData(module.ordinary), eucharisticPrayerLanguageLower(module, locationCode));
     }
 
     function getStartupOrdinaryMassData() {
-        if (Array.isArray(window.uploadedMassData) && window.uploadedMassData.length) {
-            return window.uploadedMassData.map(item => globalThis.ordoMassStorage.hydrateMassEntry(item));
-        }
+        if (Array.isArray(window.uploadedMassData) && window.uploadedMassData.length) return cloneData(window.uploadedMassData);
         const registry = window.uploadedCountryMassData || {};
-        const koreanModule = registry.KR;
-        const koreanEntry = koreanModule && eucharisticPrayerEntry(koreanModule.ordinary);
-        const koreanRows = koreanEntry && koreanEntry.forms['4'];
-        const coreCodes = [...new Set(['KR', dataJurisdictionForLocation(state.selectedLocationCode), dataJurisdictionForLocation(state.targetLocationCode), ...(['AU','NZ'].includes(state.selectedLocationCode) || ['AU','NZ'].includes(state.targetLocationCode) ? ['US'] : [])])];
-        const canonSources = [], fourthSources = [], formSources = { '2': [], '3': [] };
-        const rebuiltCore = coreCodes.reduce((merged, code) => {
-            const module = registry[code];
-            const ordinary = normalizedOrdinaryForMerge(module, code, koreanRows);
-            const lower = eucharisticPrayerLanguageLower(module, code);
-            const canon = eucharisticPrayerEntry(ordinary)?.forms?.['1'];
-            const fourth = eucharisticPrayerEntry(ordinary)?.forms?.['4'];
-            if (fourth) fourthSources.push({ rows: fourth, lower, location: code });
-            for (const key of ['2','3']) {
-                const rows = eucharisticPrayerEntry(ordinary)?.forms?.[key];
-                if (rows) formSources[key].push({ rows, lower, location: code });
-            }
-            if (canon) canonSources.push({ rows: canon, lower, location: code, legacy: ['KR','VN','US','IE','GB-ENG','GB-WLS','GB-SCT','PH','AU','NZ','JP','VA'].includes(code) });
-            return ordinary.length ? ordoOrdinaryAlignment.mergeValue(merged, ordoOrdinaryAlignment.prepare(ordinary, lower, code), lower) : merged;
+        const codes = [...new Set(['KR', dataJurisdictionForLocation(state.selectedLocationCode), dataJurisdictionForLocation(state.targetLocationCode)])];
+        return codes.reduce((merged, code) => {
+            const module = registry[code] || (typeof activeCountryMassModule === 'function' ? activeCountryMassModule(code) : null);
+            return ordoOrdinaryDisplay.merge(merged, normalizedOrdinaryForMerge(module, code));
         }, []);
-        const base = rebuiltCore;
-        if (typeof activeCountryMassModule !== 'function') return base;
-        const locationCodes = [state.selectedLocationCode, state.targetLocationCode]
-            .filter((code, index, list) => code && list.indexOf(code) === index);
-        const result = locationCodes.reduce((merged, locationCode) => {
-            if (coreCodes.includes(locationCode)) return merged;
-            const module = activeCountryMassModule(locationCode);
-            return module && Array.isArray(module.ordinary) && module.ordinary.length
-                ? ordoOrdinaryAlignment.mergeValue(merged, ordoOrdinaryAlignment.prepare(normalizedOrdinaryForMerge(module, locationCode), eucharisticPrayerLanguageLower(module, locationCode), locationCode), eucharisticPrayerLanguageLower(module, locationCode))
-                : merged;
-        }, base);
-        const eucharist = eucharisticPrayerEntry(result);
-        if (eucharist) { eucharist.__ordinaryCanonSources = canonSources; eucharist.__ordinaryFourthSources = fourthSources; eucharist.__ordinaryFormSources = formSources; }
-        ordoOrdinaryAlignment.applyRubricPolicy(result);
-        return result;
     }
 
     function normalizeSelectableLang(langCode, fallback = DEFAULT_TARGET_LANG) {
@@ -2510,15 +2460,15 @@
             const lang = group.dataset.legendLang;
             const container = group.querySelector('.role-legend-lines');
             if (!container || !activeLangs.has(lang)) return;
-            const append = (message, id, className='', prefix='※ ') => {
+            const append = (message, id, className='') => {
                 if (!message) return;
                 const note = document.createElement('div');
                 note.className = 'role-legend-line mass-page-notice' + (className ? ' '+className : '');
-                note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = prefix+message;
+                note.dataset.noticeId = id; note.setAttribute('role','note'); note.textContent = '※ '+message;
                 container.appendChild(note);
             };
             sourceNotices.forEach(([sourceLang,detail]) => append(`${sourceLang}: ${fixedFormularyNoticeText[lang] || fixedFormularyNoticeText.EN} (${detail.source?.authority || detail.source?.translation || 'Missal'})`, 'fixed-formulary:'+sourceLang, 'daily-source-provenance'));
-            if(vaticanSelected)append(vaticanMidnightNoticeText[lang] || vaticanMidnightNoticeText.EN,'vatican-midnight','vatican-source-notice','* ');
+            if(vaticanSelected)append(vaticanMidnightNoticeText[lang] || vaticanMidnightNoticeText.EN,'vatican-midnight','vatican-source-notice');
         });
     }
 
@@ -20045,6 +19995,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function shouldSuppressAIFallbackForLine(line, baseId, lower) {
+        if (line?.__ordinarySource && !line.__dailyCollected && !['entrance','collect','reading1','psalm','reading2','Sequence','gospel_accl','gospel','prayer_offerings','communion','prayer_after'].includes(baseId)) return true;
         if (line?.__sourceOnlyOriginal) return true;
         if (line?.__readingAlignmentBlank?.[lower]) return true;
         if (strictReadingKeys.has(baseId) && (isDailyEndingLine(line) || isGospelDialogueLine(line) || lineHasAnyRole(line, 'intro'))) return true;
@@ -20075,6 +20026,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function shouldRenderBlankParagraph(line, langKey, baseId) {
+        if (line?.__ordinarySource) return false;
         if (allowsAIFallback(baseId)) return false;
         const hasRubric = lineHasAnyRubric(line);
         if (hasRubric) return false;
@@ -20589,49 +20541,39 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function getEucharistSongMap(item) {
         const songs = item && item.songs && typeof item.songs === 'object' && !Array.isArray(item.songs) ? item.songs : {};
         if (item?.__specialPrefaceKey && !item.__dailyServerPreface) return songs;
-        const verified = (globalThis.missalPrefaceIndex || {}).prefaces || {};
+        const daily = item?.__dailyServerPreface;
         const previous = item && eucharistSongMapCache.get(item);
-        if (previous && previous.songs === songs && previous.verified === verified && previous.daily === item.__dailyServerPreface) return previous.result;
-        const corrections = Object.fromEntries(Object.entries(verified).map(([key, entry]) => {
-            const base = songs[key] || {};
-            const line = {};
+        if (previous && previous.songs === songs && previous.daily === daily) return previous.result;
+        const result = Object.assign({}, songs);
+        if (daily) {
+            let rank = 0, unmatched = 0;
             SUPPORTED_LANGS.forEach(lang => {
                 const lower = lang.toLowerCase();
-                const source = entry.content.some(row => row[`text_${lower}`]) ? entry : base;
-                line[`text_${lower}`] = (source.content || []).map(row => row[`text_${lower}`]).filter(Boolean).join('\n\n');
-                line[`sp_${lower}`] = ((source.content || []).find(row => row[`sp_${lower}`]) || {})[`sp_${lower}`] || '';
-            });
-            return [key, Object.assign({}, base, entry, { title: Object.assign({}, base.title, entry.title), content: [line] })];
-        }));
-        const result=Object.assign({}, songs, corrections), daily=item?.__dailyServerPreface;
-        if (daily) {
-            let rank=0, unmatched=0;
-            SUPPORTED_LANGS.forEach(lang => {
-                const lower=lang.toLowerCase();
-                const options=daily[lower+'_options']?.length ? daily[lower+'_options'] : [{lines:daily[lower+'_lines'],text:daily[lower]}];
+                const options = daily[lower + '_options']?.length ? daily[lower + '_options'] : [{lines:daily[lower + '_lines'],text:daily[lower]}];
                 options.forEach(option => {
-                    const matched=globalThis.ordoPrefaceMatcher.match(option,lower,result);
+                    const matched = globalThis.ordoPrefaceMatcher.match(option, lower, result);
                     if (!cleanNodeText(matched.body)) return;
-                    let key=matched.key;
-                    if (key && result[key]?.__dailySourceLanguages?.[lower]) {
-                        const previous=(result[key].content||[]).map(line=>line['text_'+lower]||'').join('\n\n');
-                        if (normalizePrefaceMatchText(previous)===normalizePrefaceMatchText(matched.body)) return;
-                        key='';
+                    let key = matched.key;
+                    if (key && result[key]?.__dailySourceLanguages?.[lower]) return;
+                    if (!key) key = 'daily_collected_preface' + (unmatched++ ? '_' + unmatched : '');
+                    const base = result[key] || {}, title = Object.assign({}, base.title);
+                    let content = cloneMassLines(base.content || []);
+                    const stored = content.map(row => row['text_' + lower] || '').filter(Boolean).join('\n\n');
+                    // A known daily preface selects the editor's stored text,
+                    // including deliberate wording/line changes. Collected
+                    // text is used only when this language has no stored body.
+                    if (!cleanNodeText(stored)) {
+                        const anchor = content.find(row => row.__ordinaryKinds?.[lower] === 'text' || row['text_' + lower])?.__ordinaryPairKey || content[0]?.__ordinaryPairKey || 'daily-preface:text';
+                        content = content.map(row => clearDisplayLanguageFromLine(row, lower));
+                        const collected = {['text_' + lower]:matched.body,__ordinaryPairKey:anchor,__dailyCollected:true};
+                        content = ordoOrdinaryDisplay.mergeRows(content, [collected]);
                     }
-                    if (!key) key='daily_collected_preface'+(unmatched++ ? '_'+unmatched : '');
-                    const base=result[key]||{}, line={}, title=Object.assign({},base.title);
-                    SUPPORTED_LANGS.forEach(code => {
-                        const target=code.toLowerCase(),rows=base.content||[];
-                        line['text_'+target]=rows.map(row=>row['text_'+target]).filter(Boolean).join('\n\n');
-                        line['sp_'+target]=(rows.find(row=>row['sp_'+target])||{})['sp_'+target]||'';
-                    });
-                    line['text_'+lower]=matched.body;line['sp_'+lower]='';
-                    title[lower] ||= globalThis.ordoPrefaceMatcher.displayTitle(matched.key,matched.heading,lower) || (lang==='KR'?'수집된 감사송':lang==='ZH'?'收錄頌謝詞':'Collected preface');
-                    result[key]=Object.assign({},base,{title,content:[line],__dailyServer:true,__dailySourceRank:Math.min(base.__dailySourceRank??Infinity,rank++),__dailySourceLanguages:{...base.__dailySourceLanguages,[lower]:true}});
+                    title[lower] ||= globalThis.ordoPrefaceMatcher.displayTitle(matched.key, matched.heading, lower) || 'Collected preface';
+                    result[key] = Object.assign({}, base, {title,content,__dailyServer:true,__dailySourceRank:Math.min(base.__dailySourceRank ?? Infinity, rank++),__dailySourceLanguages:{...base.__dailySourceLanguages,[lower]:true}});
                 });
             });
         }
-        if (item) eucharistSongMapCache.set(item, {songs,verified,daily:item.__dailyServerPreface,result});
+        if (item) eucharistSongMapCache.set(item, {songs,daily,result});
         return result;
     }
 
@@ -20748,7 +20690,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const key = activeEucharistInlineOptionKey(line, context);
                 const options = eucharistInlineDisplayOptions(line, context);
                 const option = key && options ? options[key] : null;
-                output.push({ type: 'inlineOptionControl', optionKey: line.optionKey, optionBlock: line });
+                if (line.showControl !== false) output.push({ type: 'inlineOptionControl', optionKey: line.optionKey, optionBlock: line });
                 output.push(...(option && Array.isArray(option.lines) ? option.lines : []));
                 return;
             }
@@ -20881,19 +20823,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return out;
     }
 
-    const romanCanonSeasonalMarkers = [
-        { key: 'ordinary', marker: '우리 주 천주 예수 그리스도의 어머니이시며' },
-        { key: 'christmas', marker: '복되신 마리아께서 동정의 순결한 몸으로' },
-        { key: 'epiphany', marker: '아버지의 영광을 영원히 함께 누리시는 외아들 그리스도께서' },
-        { key: 'easter', marker: '우리 주 그리스도께서 육신으로 부활하신' },
-        { key: 'ascension', marker: '저희의 연약한 육신을 취하신 성자 우리 주님께서' },
-        { key: 'pentecost', marker: '성령께서 사도들에게 혀 모양의 불길로 나타나신' }
-    ];
-
-    function romanCanonLineText(line) {
-        return cleanNodeText([line && line.text_kr, line && line.rubric_kr].filter(Boolean).join(' '));
-    }
-
     function isChristmasOctaveDate(date) {
         const d = toDateOnly(date);
         const month = d.getMonth();
@@ -20917,45 +20846,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (sameDay(d, getEpiphanyObserved(d.getFullYear()))) return 'epiphany';
         if (isChristmasOctaveDate(d)) return 'christmas';
         return 'ordinary';
-    }
-
-    function romanCanonSeasonalBlockRanges(lines) {
-        const ranges = romanCanonSeasonalMarkers.map(marker => {
-            const start = lines.findIndex((line, index) => {
-                const text = romanCanonLineText(line);
-                const nextText = romanCanonLineText(lines[index + 1]);
-                return text === '저희는 온 교회와 일치하여' && nextText.includes(marker.marker);
-            });
-            return Object.assign({}, marker, { start });
-        });
-        if (ranges.some(range => range.start < 0)) return [];
-        ranges.sort((a, b) => a.start - b.start);
-        const afterLast = lines.findIndex((line, index) =>
-            index > ranges[ranges.length - 1].start &&
-            romanCanonLineText(line).includes('주 하느님, 이 예물을 너그러이 받아들이고 강복하시어')
-        );
-        ranges.forEach((range, index) => {
-            range.end = index + 1 < ranges.length
-                ? ranges[index + 1].start
-                : (afterLast > range.start ? afterLast : lines.length);
-        });
-        return ranges;
-    }
-
-    function filterRomanCanonSeasonalLines(lines, date) {
-        if (!Array.isArray(lines) || !lines.length) return [];
-        const ranges = romanCanonSeasonalBlockRanges(lines);
-        if (!ranges.length) return lines;
-        const key = romanCanonSeasonalKeyForDate(date);
-        const selected = ranges.find(range => range.key === key) || ranges.find(range => range.key === 'ordinary');
-        if (!selected) return lines;
-        const seasonalStart = Math.min(...ranges.map(range => range.start));
-        const seasonalEnd = Math.max(...ranges.map(range => range.end));
-        return lines.filter((line, index) =>
-            index < seasonalStart ||
-            index >= seasonalEnd ||
-            (index >= selected.start && index < selected.end)
-        );
     }
 
     function defaultDismissalOptionKeyForLocation() {
@@ -21079,114 +20969,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return { type: 'solemn_blessing', key, entry: solemnBlessings[key] };
     }
 
-    function koreanBlessingLine(text, response = false) {
-        const line = {
-            sp_kr: response ? '◎' : '✚', text_kr: text,
-            sp_vn: response ? 'CĐ.' : 'LM.', text_vn: response ? 'Amen.' : '',
-            sp_en: response ? 'ALL' : 'P.', text_en: response ? 'Amen.' : '',
-            sp_la: response ? 'P.' : 'S.', text_la: response ? 'Amen.' : '',
-            sp_jp: response ? '会衆' : '司祭', text_jp: response ? 'アーメン。' : ''
-        };
-        return line;
-    }
-
-    function parsedKoreanSolemnBlessingLines(lines) {
-        return (Array.isArray(lines) ? lines : []).map(raw => {
-            const text = cleanNodeText(raw);
-            const response = /^[◎○]/.test(text);
-            return koreanBlessingLine(text.replace(/^[╋＋✚◎○]\s*/, ''), response);
-        }).filter(line => cleanNodeText(line.text_kr));
-    }
-
-    function approvedSolemnBlessing(key, original) {
-        const sources = {KR:globalThis.koreanBlessingData, EN:globalThis.englishBlessingData,
-            ...(globalThis.missalBlessingData || {})};
-        const entries = Object.entries(sources).flatMap(([lang, data]) => {
-            const entry = data?.solemnBlessings?.[key];
-            return entry ? [{lang, entry}] : [];
-        });
-        if (!entries.length) return null;
-        const label = {...original.label};
-        const titles = {KR:'장엄강복', EN:'Solemn Blessing', VN:'Phép lành trọng thể',
-            LA:'Benedictio sollemnis', IT:'Benedizione solenne', PT:'Bênção solene', JP:'荘厳な祝福'};
-        const content = Array.from({length:Math.max(...entries.map(({entry}) => entry.lines.length))}, () => ({__sourceOnlyOriginal:true}));
-        for (const {lang, entry} of entries) {
-            const lower = lang.toLowerCase();
-            label[lower] = `${titles[lang] || titles.EN} - ${entry.label || key}`;
-            entry.lines.forEach((raw, index) => {
-                const response = /^(?:[◎○]|R\.)/.test(raw);
-                // National editions may split a petition differently. Always
-                // align the final Trinitarian blessing and its Amen at the end.
-                const row = index >= entry.lines.length - 2 ? content.length - (entry.lines.length - index) : index;
-                content[row][`sp_${lower}`] = lang === 'KR' ? (response ? '◎' : '✚')
-                    : (response ? peopleSpeakerByLang[lower] : celebrantSpeakerByLang[lower]) || '';
-                content[row][`text_${lower}`] = raw.replace(/^(?:[╋＋✚◎○]\s*|R\.\s*)/, '');
-            });
-        }
-        return {label, lines:cloneMassLines(original.lines).slice(0,3).concat(content)};
-    }
-
-    function prepareKoreanBlessingForActiveDate(item, baseId) {
-        if (baseId !== 'blessing' || !item || !item.variants || !item.variants.C) return;
-        const variant = item.variants.C;
-        if (!item.__originalKoreanBlessingVariantC) {
-            item.__originalKoreanBlessingVariantC = {
-                label: JSON.parse(JSON.stringify(variant.label || {})),
-                lines: cloneMassLines(variant.lines || [])
-            };
-        }
-        const original = item.__originalKoreanBlessingVariantC;
-        if (!item.__approvedSolemnBlessingChoices) {
-            const sources = [globalThis.koreanBlessingData, globalThis.englishBlessingData,
-                ...Object.values(globalThis.missalBlessingData || {})];
-            const keys = new Set(sources.flatMap(data => Object.keys(data?.solemnBlessings || {})));
-            for (const key of keys) {
-                const approved = approvedSolemnBlessing(key, original);
-                if (approved) item.variants[`solemn_${key}`] = approved;
-            }
-            item.__approvedSolemnBlessingChoices = true;
-        }
-        variant.label = JSON.parse(JSON.stringify(original.label));
-        variant.lines = cloneMassLines(original.lines);
-
+    function selectStoredBlessingForActiveDate(item, baseId) {
+        if (baseId !== 'blessing' || !item?.variants) return;
         const date = getActiveLiturgicalSourceDate();
         const selection = koreanBlessingDateSelection(date, state.liturgyInfo);
-        if (!selection || !selection.entry) {
-            const signature = `${formatDateIso(date)}|simple`;
-            if (state.autoBlessingSignature !== signature) {
-                state.options.blessing = item.variants.A ? 'A' : Object.keys(item.variants)[0];
-                state.autoBlessingSignature = signature;
-            }
-            return;
-        }
-        const entry = selection.entry;
-        const originalLines = cloneMassLines(original.lines);
-        const prefix = originalLines.slice(0, 3);
-        let content = [];
-        if (selection.type === 'prayer_over_people') {
-            content = [
-                koreanBlessingLine((entry.lines || []).join('<br>')),
-                koreanBlessingLine('아멘.', true),
-                ...originalLines.slice(4)
-            ];
-            variant.label.kr = `백성을 위한 기도 - ${entry.title || selection.key}`;
-        } else {
-            content = parsedKoreanSolemnBlessingLines(entry.lines);
-            variant.label.kr = `장엄강복 - ${entry.label || selection.key}`;
-        }
-        if (!content.length) return;
-        if (selection.type === 'solemn_blessing') {
-            const approved = approvedSolemnBlessing(selection.key, original);
-            variant.label = approved.label;
-            content = approved.lines.slice(3);
-        }
-        variant.lines = prefix.concat(content);
-
-        const meta=getSeasonMeta(date),info=state.liturgyInfo||{};
-        const auto=selection.type==='prayer_over_people'||['christmas','easter'].includes(meta.season)||info.meta?.specialMassKey==='christmas_vigil'||info.isSolemnity||['solemnity','local_solemnity'].includes(info.meta?.rank)||!!info.localCalendar?.isSolemnity;
-        const signature = `${formatDateIso(date)}|${selection.type}|${selection.key}|${auto}`;
+        const meta = getSeasonMeta(date), info = state.liturgyInfo || {};
+        const automatic = selection?.type === 'prayer_over_people' || ['christmas','easter'].includes(meta.season)
+            || info.meta?.specialMassKey === 'christmas_vigil' || info.isSolemnity || ['solemnity','local_solemnity'].includes(info.meta?.rank) || !!info.localCalendar?.isSolemnity;
+        const preferred = automatic && selection && item.variants[(selection.type === 'prayer_over_people' ? 'people_' : 'solemn_') + selection.key]
+            ? (selection.type === 'prayer_over_people' ? 'people_' : 'solemn_') + selection.key : 'A';
+        const signature = formatDateIso(date) + '|' + preferred;
         if (state.autoBlessingSignature !== signature) {
-            state.options.blessing = auto ? 'C' : (item.variants.A ? 'A' : Object.keys(item.variants)[0]);
+            state.options.blessing = item.variants[preferred] ? preferred : Object.keys(item.variants)[0];
             state.autoBlessingSignature = signature;
         }
     }
@@ -21783,7 +21577,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         massData.forEach(item => {
             const baseId = getBaseId(item.id);
             if (globalThis.ordoSpecialOrder && !globalThis.ordoSpecialOrder.visible(item)) return;
-            prepareKoreanBlessingForActiveDate(item, baseId);
+            selectStoredBlessingForActiveDate(item, baseId);
             if (item.if === 'sunday' && !state.isSunday && !(baseId === 'reading2' && item.__dailyHasSecondReading)) return;
             if (item.if === 'easter_or_pentecost' && !item.__dailyHasSequence && !isEasterOrPentecost(getTargetDate())) return;
             if (item.if === 'not_penitential_C' && state.options.penitential === 'C') return;
@@ -21828,46 +21622,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const songChoice = getSelectedEucharistSongKey(item);
                 const inlineOptionContext = { isStacked, leftKey: leftL.toLowerCase(), rightKey: rightL.toLowerCase() };
                 let compiledLines = markEucharistLines(item.common_dialogue, 'dialogue');
-                if (!['1','2','3','4'].includes(selectedForm)) {
-                    // Additional national prayers are collected with their
-                    // complete dialogue/preface/Sanctus frame already present.
-                    compiledLines = markEucharistLines(expandEucharistInlineOptions(item.forms?.[selectedForm] || [], inlineOptionContext), 'form');
-                } else if (selectedForm === '4') {
-                    if (item.forms && Array.isArray(item.forms['4'])) compiledLines = compiledLines.concat(markEucharistLines(expandEucharistInlineOptions(item.__ordinaryFourthSources?.length ? ordoOrdinaryAlignment.alignFourth(item.__ordinaryFourthSources) : item.forms['4'], inlineOptionContext), 'form'));
-                } else {
-                    const songLines = getEucharistSongLines(item, songChoice);
-                    if (songLines.length) compiledLines = compiledLines.concat(markEucharistLines(songLines, 'preface'));
-                    if (Array.isArray(item.sanctus)) compiledLines = compiledLines.concat(markEucharistLines(item.sanctus, 'sanctus'));
-                    if (item.forms && Array.isArray(item.forms[selectedForm])) {
-                        let formLines = selectedForm === '1'
-                            ? (item.__ordinaryCanonSources?.length
-                                ? ordoOrdinaryAlignment.alignCanon(item.__ordinaryCanonSources, romanCanonSeasonalKeyForDate(getActiveLiturgicalSourceDate()))
-                                : filterRomanCanonSeasonalLines(item.forms[selectedForm], getActiveLiturgicalSourceDate()))
-                            : item.forms[selectedForm];
-                        formLines = expandEucharistInlineOptions(formLines, inlineOptionContext);
-                        if (['2','3'].includes(selectedForm) && item.__ordinaryFormSources?.[selectedForm]?.length
-                            && !/_([a-z]{2})$/u.test(state.options.eucharist3_intercession || '')) {
-                            const controls = formLines.filter(line => line.type === 'inlineOptionControl');
-                            const sources = item.__ordinaryFormSources[selectedForm].map(source => ({
-                                ...source,
-                                rows: source.rows.flatMap(line => {
-                                    if (line?.type !== 'optionBlock') return [line];
-                                    const key = state.options[line.optionKey] || line.defaultOption;
-                                    return line.options?.[key]?.lines || line.options?.[line.defaultOption]?.lines || [];
-                                })
-                            }));
-                            formLines = ordoOrdinaryAlignment.alignForm(sources);
-                            const controlIndex = formLines.findIndex(line => line.__ordinaryStage === 'anamnesis_intercessions');
-                            formLines.splice(controlIndex < 0 ? formLines.length : controlIndex, 0, ...controls);
-                        }
-                        compiledLines = compiledLines.concat(markEucharistLines(formLines, 'form'));
-                    }
+                const frame = item.formFrames?.[selectedForm];
+                if (selectedForm === '1') {
+                    const automatic = romanCanonSeasonalKeyForDate(getActiveLiturgicalSourceDate());
+                    if (!state.options.roman_canon_season || state.options.roman_canon_season === state.autoRomanCanonSeason) state.options.roman_canon_season = automatic;
+                    state.autoRomanCanonSeason = automatic;
                 }
-                if (Array.isArray(item.amen)) {
-                    compiledLines = compiledLines.concat(markEucharistLines(item.amen, 'amen'));
-                } else if (item.amen) {
-                    compiledLines.push(Object.assign({}, item.amen, { __eucharistSection: 'amen' }));
-                }
+                const sections = frame?.sections || (!['1','2','3','4'].includes(selectedForm) ? ['form'] : selectedForm === '4' ? ['dialogue','form','amen'] : ['dialogue','preface','sanctus','form','amen']);
+                compiledLines = sections.flatMap(section => {
+                    const stored = section === 'dialogue' ? item.common_dialogue : section === 'preface' ? getEucharistSongLines(item, songChoice) : section === 'form' ? item.forms?.[selectedForm] : section === 'ending' ? item.formEndings?.[selectedForm] || item.amen : item[section];
+                    return markEucharistLines(expandEucharistInlineOptions(Array.isArray(stored) ? stored : stored ? [stored] : [], inlineOptionContext), section);
+                });
                 data.lines = addEucharisticDottedDividers(globalThis.ordoSpecialOrder?.eucharistLines(compiledLines, selectedForm) || compiledLines);
             }
 
@@ -21907,8 +21672,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const sourceLines = sourceOnly && ['reading1', 'reading2', 'psalm', 'gospel'].includes(baseId)
                 ? (data.lines || []).map(line => Object.assign({}, line, {__sourceChoiceOriginal:true}))
                 : data.lines;
-            const paragraphAlignedLines = splitDailyReadingBodyRowsByKorean(sourceLines, baseId);
-            const displayLines = splitMismatchedDailyLinesForActiveLanguages(paragraphAlignedLines, baseId, data, leftL.toLowerCase(), rightL.toLowerCase());
+            const storedOrdinary = !['entrance','collect','reading1','psalm','reading2','Sequence','gospel_accl','gospel','prayer_offerings','communion','prayer_after'].includes(baseId);
+            const paragraphAlignedLines = storedOrdinary ? sourceLines : splitDailyReadingBodyRowsByKorean(sourceLines, baseId);
+            const displayLines = storedOrdinary ? paragraphAlignedLines : splitMismatchedDailyLinesForActiveLanguages(paragraphAlignedLines, baseId, data, leftL.toLowerCase(), rightL.toLowerCase());
             const displayRows = baseId === 'psalm'
                 ? groupPsalmDisplayLinesForActiveLanguages(displayLines, leftL.toLowerCase(), rightL.toLowerCase())
                 : displayLines;
@@ -21952,8 +21718,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const rightSp = line['sp_' + rightKey] || '';
                 let leftTxt = line['text_' + leftKey] || '';
                 let rightTxt = line['text_' + rightKey] || '';
-                if (isLiturgicalPlaceholderText(leftTxt)) leftTxt = '';
-                if (isLiturgicalPlaceholderText(rightTxt)) rightTxt = '';
+                if (!storedOrdinary && isLiturgicalPlaceholderText(leftTxt)) leftTxt = '';
+                if (!storedOrdinary && isLiturgicalPlaceholderText(rightTxt)) rightTxt = '';
                 const leftAi = line['text_' + leftKey + '_ai'] || '';
                 const rightAi = line['text_' + rightKey + '_ai'] || '';
                 const suppressLeftAiFallback = shouldSuppressAIFallbackForLine(line, baseId, leftKey);
@@ -21980,14 +21746,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const block = document.createElement('div');
                     block.className = 'pair-block';
                     if (line.__ordinaryStage) block.dataset.ordinaryStage = line.__ordinaryStage;
+                    if (line.__eucharistSection) block.dataset.eucharistSection = line.__eucharistSection;
                     const rubricLeft = line['rubric_' + leftKey] || '';
                     const rubricRight = line['rubric_' + rightKey] || '';
-                    if (rubricLeft) block.innerHTML += `<div class="rubric">${rubricLeft}</div>`;
+                    if (line.__ordinarySource && line['cit_' + leftKey]) block.innerHTML += '<div class="citation">' + escapeHtml(line['cit_' + leftKey]) + '</div>';
+                    if (line.__ordinarySource && line['cit_' + rightKey]) block.innerHTML += '<div class="citation translation">' + escapeHtml(line['cit_' + rightKey]) + '</div>';
+                    if (rubricLeft) block.innerHTML += `<div class="rubric" data-rubric-language="${leftKey}">${rubricLeft}</div>`;
                     const leftRoleClass = roleClassForLine(line, leftKey);
                     const rightRoleClass = roleClassForLine(line, rightKey);
-                    block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, shouldSuppressSpeaker(baseId));
-                    if (rubricRight) block.innerHTML += `<div class="rubric translation">${rubricRight}</div>`;
-                    block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), shouldSuppressSpeaker(baseId));
+                    block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, line.__ordinarySource ? false : shouldSuppressSpeaker(baseId));
+                    if (rubricRight) block.innerHTML += `<div class="rubric translation" data-rubric-language="${rightKey}">${rubricRight}</div>`;
+                    block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), line.__ordinarySource ? false : shouldSuppressSpeaker(baseId));
                     if (block.innerHTML.trim()) partContainer.appendChild(block);
                 } else {
                     const leftHtml = genLineHTML(line, leftL, baseId);
@@ -21996,6 +21765,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const lineRow = document.createElement('div');
                     lineRow.className = 'pc-line-row';
                     if (line.__ordinaryStage) lineRow.dataset.ordinaryStage = line.__ordinaryStage;
+                    if (line.__eucharistSection) lineRow.dataset.eucharistSection = line.__eucharistSection;
                     const lCol = document.createElement('div');
                     lCol.className = 'pc-col';
                     lCol.innerHTML = leftHtml;
@@ -22135,15 +21905,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const lowerLang = lang.toLowerCase();
         const sp = line['sp_' + lowerLang] || '';
         let txt = line['text_' + lowerLang] || '';
-        if (isLiturgicalPlaceholderText(txt)) txt = '';
+        if (!line.__ordinarySource && isLiturgicalPlaceholderText(txt)) txt = '';
 
         const otherLang = (lang === state.currentLoc) ? state.targetLang : state.currentLoc;
         let otherTxt = line['text_' + otherLang.toLowerCase()] || '';
-        if (isLiturgicalPlaceholderText(otherTxt)) otherTxt = '';
+        if (!line.__ordinarySource && isLiturgicalPlaceholderText(otherTxt)) otherTxt = '';
 
         const rubric = line['rubric_' + lowerLang] || '';
-        let html = '';
-        if (rubric) html += `<span class="rubric">${rubric}</span>`;
+        let html = line.__ordinarySource && line['cit_' + lowerLang] ? '<span class="citation">' + escapeHtml(line['cit_' + lowerLang]) + '</span>' : '';
+        if (rubric) html += `<span class="rubric" data-rubric-language="${lowerLang}">${rubric}</span>`;
 
         const suppressAiFallback = shouldSuppressAIFallbackForLine(line, baseId, lowerLang);
         if ((!txt || txt.trim() === '') && otherTxt && !suppressAiFallback) {
@@ -22162,7 +21932,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
         if (!hasNoContent || keepBlank) {
             const roleClass = roleClassForLine(line, lowerLang);
-            html += linePairHTML(sp, txt, lowerLang, roleClass, shouldSuppressSpeaker(baseId), keepBlank);
+            html += linePairHTML(sp, txt, lowerLang, roleClass, line.__ordinarySource ? false : shouldSuppressSpeaker(baseId), keepBlank);
         }
         return html;
     }

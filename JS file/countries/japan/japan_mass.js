@@ -3,11 +3,4380 @@
   'use strict';
 
   global.countryMassData = global.countryMassData || {};
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "1"
+        ],
+        "rows": [
+          {
+            "sp_jp": "司",
+            "text_jp": "いつくしみ深い父よ、",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "御子わたしたちの主イエス・キリストによって、",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いまつつしんでお願いいたします。",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "この汚れのない聖なるささげものを受け入れ、✠ 祝福してください。",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちは、まず聖なる普遍の教会のために、これをあなたにささげます。",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "全世界に広がる教会に平和を与え、これを守り、一つに集め、治めてください。",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:5:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "教皇 [教皇名]、わたしたちの司教 [司教名]、",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:6:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "また、使徒からの普遍の信仰を正しく伝えるすべての人のためにこの供えものをささげます。",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:te_igitur:7:text"
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "聖なる父よ、あなたに信頼する人々（[洗礼名]）を心に留めてください。",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:living:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "また、ここに集うすべての人を心に留めてください。",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:living:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "その信仰と敬虔な心をあなたはご存じです。",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:living:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちとすべての親しい人々のためにこの賛美のいけにえをささげ、",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:living:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あがないと救いと平穏を願って、",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:living:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "永遠のまことの神、あなたに祈ります。",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:living:5:text"
+            }
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": true,
+            "label": {
+              "jp": "年間"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "jp": "年間"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "全教会の交わりの中で、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光に満ちた終生おとめマリアを思い起こし、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖ヨセフ、使徒と殉教者、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ペトロとパウロ、アンデレ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（ヤコブ、ヨハネ、トマス、ヤコブ、フィリポ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "バルトロマイ、マタイ、シモンとタダイ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "リノ、クレト、クレメンス、シスト、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "コルネリオ、チプリアノ、ラウレンチオ、クリソゴノ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ヨハネとパウロ、コスマとダミアノ）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "そして、すべての聖人を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "彼らのいさおしと取り次ぎによって、わたしたちをいつも守り強めてください。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:12:text"
+                    }
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "jp": "主の降誕"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "全教会の交わりの中で、わたしたちは、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "汚れのないおとめマリアによって世に救い主が与えられたこの聖なる夜（日）を祝います。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光に満ちた終生おとめマリアを思い起こし、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖ヨセフ、使徒と殉教者、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ペトロとパウロ、アンデレ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（ヤコブ、ヨハネ、トマス、ヤコブ、フィリポ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "バルトロマイ、マタイ、シモンとタダイ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "リノ、クレト、クレメンス、シスト、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "コルネリオ、チプリアノ、ラウレンチオ、クリソゴノ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ヨハネとパウロ、コスマとダミアノ）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "そして、すべての聖人を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "彼らのいさおしと取り次ぎによって、わたしたちをいつも守り強めてください。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:14:text"
+                    }
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "jp": "主の公現"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "全教会の交わりの中で、わたしたちは、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光のうちにあなたとともに永遠の神であるひとり子が、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "まことの人間として、見えるからだをもって現れたこの聖なる日を祝います。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光に満ちた終生おとめマリアを思い起こし、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖ヨセフ、使徒と殉教者、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ペトロとパウロ、アンデレ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（ヤコブ、ヨハネ、トマス、ヤコブ、フィリポ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "バルトロマイ、マタイ、シモンとタダイ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "リノ、クレト、クレメンス、シスト、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "コルネリオ、チプリアノ、ラウレンチオ、クリソゴノ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ヨハネとパウロ、コスマとダミアノ）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "そして、すべての聖人を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "彼らのいさおしと取り次ぎによって、わたしたちをいつも守り強めてください。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:15:text"
+                    }
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "jp": "復活"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "全教会の交わりの中で、わたしたちは、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "主イエス・キリストが、まことに復活されたこの聖なる夜（日）を祝います。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光に満ちた終生おとめマリアを思い起こし、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖ヨセフ、使徒と殉教者、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ペトロとパウロ、アンデレ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（ヤコブ、ヨハネ、トマス、ヤコブ、フィリポ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "バルトロマイ、マタイ、シモンとタダイ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "リノ、クレト、クレメンス、シスト、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "コルネリオ、チプリアノ、ラウレンチオ、クリソゴノ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ヨハネとパウロ、コスマとダミアノ）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "そして、すべての聖人を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "彼らのいさおしと取り次ぎによって、わたしたちをいつも守り強めてください。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:14:text"
+                    }
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "jp": "主の昇天"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "全教会の交わりの中で、わたしたちは、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "御ひとり子が人となり、わたしたちの弱さを身に受けて、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの栄光の右の座に高めてくださったこの聖なる日を祝います。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光に満ちた終生おとめマリアを思い起こし、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖ヨセフ、使徒と殉教者、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ペトロとパウロ、アンデレ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（ヤコブ、ヨハネ、トマス、ヤコブ、フィリポ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "バルトロマイ、マタイ、シモンとタダイ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "リノ、クレト、クレメンス、シスト、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "コルネリオ、チプリアノ、ラウレンチオ、クリソゴノ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ヨハネとパウロ、コスマとダミアノ）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "そして、すべての聖人を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "彼らのいさおしと取り次ぎによって、わたしたちをいつも守り強めてください。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:15:text"
+                    }
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "jp": "聖霊降臨"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "全教会の交わりの中で、わたしたちは、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖霊が使徒たちの上に炎の舌のような形で現れたこの聖なる日を祝います。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちはまず、神である主イエス・キリストの母、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "栄光に満ちた終生おとめマリアを思い起こし、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "聖ヨセフ、使徒と殉教者、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ペトロとパウロ、アンデレ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（ヤコブ、ヨハネ、トマス、ヤコブ、フィリポ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "バルトロマイ、マタイ、シモンとタダイ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "リノ、クレト、クレメンス、シスト、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "コルネリオ、チプリアノ、ラウレンチオ、クリソゴノ、",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "ヨハネとパウロ、コスマとダミアノ）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "そして、すべての聖人を思い起こします。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "彼らのいさおしと取り次ぎによって、わたしたちをいつも守り強めてください。",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:communicantes:14:text"
+                    }
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:communicantes:choice"
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": false,
+            "label": {
+              "jp": "年間"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "jp": "年間"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "聖なる父よ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたち奉仕者とあなたの家族の",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "この奉献を受け入れてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの平和を日々わたしたちに与え、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "永遠の滅びから救い、選ばれた者の集いに加えてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "jp": "主の降誕"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "聖なる父よ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたち奉仕者とあなたの家族の",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "この奉献を受け入れてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの平和を日々わたしたちに与え、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "永遠の滅びから救い、選ばれた者の集いに加えてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "jp": "主の公現"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "聖なる父よ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたち奉仕者とあなたの家族の",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "この奉献を受け入れてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの平和を日々わたしたちに与え、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "永遠の滅びから救い、選ばれた者の集いに加えてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "jp": "復活"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "聖なる父よ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたち奉仕者とあなたの家族の",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "この奉献を受け入れてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "水と聖霊によって新しく生まれ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "すべての罪のゆるしを受けた人々のためにもこれをささげます。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの平和を日々わたしたちに与え、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "永遠の滅びから救い、選ばれた者の集いに加えてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:6:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:7:text"
+                    }
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "jp": "主の昇天"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "聖なる父よ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたち奉仕者とあなたの家族の",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "この奉献を受け入れてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの平和を日々わたしたちに与え、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "永遠の滅びから救い、選ばれた者の集いに加えてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "jp": "聖霊降臨"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "司",
+                    "text_jp": "聖なる父よ、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたち奉仕者とあなたの家族の",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "この奉献を受け入れてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたの平和を日々わたしたちに与え、",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "永遠の滅びから救い、選ばれた者の集いに加えてください。",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_jp": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:hanc_igitur:choice"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "神よ、この供えものを祝福し、受け入れ、<br>み心にかなうまことのいけにえとしてください。",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:quam_oblationem:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちのために、最愛のひとり子、",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:quam_oblationem:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主イエス・キリストの御からだと御血になりますように。",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:quam_oblationem:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主イエスは受難の前夜、",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖なる手にパンを取り、",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "全能の父、",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "神であるあなたを仰ぎ、",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "賛美と感謝をささげ、裂いて、",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "弟子に与えて仰せになりました。",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:5:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "「皆、これを取って食べなさい。",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:6:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "これはあなたがたのために渡される",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:7:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしのからだ（である）。」",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:bread:8:text"
+            }
+          },
+          {
+            "rubric_jp": "司祭が示されるホスティアを仰ぎ見た後、<br>司祭がそれをパテナに置くとき、皆で深く礼をする(またはひざまずく)。",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_jp": "canon:bread:9:rubric"
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "食事の後に同じように、",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖なる手に、このとうとい杯を取り、",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "賛美と感謝をささげ、",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "弟子に与えて仰せになりました。",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "「皆、これを受けて飲みなさい。",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "これはわたしの血の杯、",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:5:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたがたと多くの人のために流されて",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:6:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "罪のゆるしとなる新しい永遠の契約の血（である）。",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:7:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "これをわたしの記念として行いなさい。」",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:cup:8:text"
+            }
+          },
+          {
+            "rubric_jp": "司祭가 示されるカリスを仰ぎ見た後、司祭がそれをコーポラルに置くとき、皆で深く礼をする(またはひざまずく)。",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_jp": "canon:cup:9:rubric"
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "信仰の神秘。",
+            "__ordinaryStage": "mystery_invitation",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:mystery_invitation:0:text"
+            }
+          },
+          {
+            "sp_jp": "会",
+            "text_jp": "主よ、あなたの死を告げ知らせ、復活をほめたたえます。再び来られるときまで。",
+            "__ordinaryStage": "mystery_a",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:mystery_a:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主よ、このパンを食べ、この杯を飲むたびに、あなたの死を告げ知らせます。再び来られるときまで。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": "主よ、このパンを食べ、この杯を飲むたびに、あなたの死を告げ知らせ"
+                }
+              ]
+            },
+            "__ordinaryStage": "mystery_b",
+            "__massEditorPairKeys": {
+              "rubric_jp": "canon:mystery_b:0:rubric",
+              "text_jp": "canon:mystery_b:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "十字架と復活によってわたしたちを解放された世の救い主、わたしたちをお救いください。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": "十字架と復活によってわたしたちを解放された世の救い主、わたしたち"
+                }
+              ]
+            },
+            "__ordinaryStage": "mystery_c",
+            "__massEditorPairKeys": {
+              "rubric_jp": "canon:mystery_c:0:rubric",
+              "text_jp": "canon:mystery_c:0:text"
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "聖なる父よ、わたしたち奉仕者と聖なる民も、",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いま、御子わたしたちの主キリストのとうとい受難、",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "死者のうちからの復活、栄光に満ちた昇天を記念し、",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたが与えてくださったたまものの中から、",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "清く、聖なる、汚れのないいけにえ、",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "永遠のいのちのパンと救いの杯を、",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:5:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "栄光の神、あなたにささげます。",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:anamnesis:6:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "このささげものをいつくしみ深く顧み、快く受け入れてください。",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supra_quae:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "義人アベルの供えもの、",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supra_quae:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "太祖アブラハムのいけにえ、",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supra_quae:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "また、大祭司メルキセデクが供えた聖なるささげもの、",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supra_quae:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "汚れのないいけにえを受け入れてくださったように。",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supra_quae:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "全能の神よ、つつしんでお願いいたします。",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supplices:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "このささげものをみ使いによって、",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supplices:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたの栄光に輝く祭壇に運ばせてください。",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supplices:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いま、この祭壇で、御子の聖なるからだと血にあずかるわたしたちが、",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supplices:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "天の祝福と恵みで満たされますように。",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supplices:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:supplices:5:text"
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "聖なる父よ、信仰をもってわたしたちに先だち、",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:departed:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "安らかに眠る人々（[洗礼名]）を心に留めてください。",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:departed:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "神よ、",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:departed:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "この人々とキリストのうちに眠りについたすべての人に、",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:departed:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "慰めと光と安らぎをお与えください。",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:departed:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "（わたしたちの主イエス・キリストによって。アーメン。）",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:departed:5:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたの豊かなあわれみに信頼する",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "罪深いわたしたちを、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "使徒と殉教者の集いに受け入れてください。",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "洗礼者ヨハネ、ステファノ、マチア、バルナバ、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:3:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "（イグナチオ、アレキサンドロ、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:4:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "マルチェリノとペトロ、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:5:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "フェリチタス、ペルペトゥア、アガタ、ルチア、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:6:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "アグネス、セシリア、アナスタシア）",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:7:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "そして、すべての聖人にならう恵みを、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:8:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちの行いによるのではなく、",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:nobis_quoque:9:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたのあわれみによってお与えください。",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:per_quem:0:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖なる父よ、キリストによって、あなたは常にこのよいものを造り、",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:per_quem:1:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖なるものとし、これにいのちを与え、祝福し、",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:per_quem:2:text"
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちに与えてくださいます。",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_jp": "canon:per_quem:3:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "2"
+        ],
+        "rows": [
+          {
+            "sp_jp": "司",
+            "text_jp": "まことに聖なる神、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "すべての聖性の源である父よ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いま、聖霊を注ぎ、<br>この供えものを聖なるものとしてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちのために、主イエス・キリストの御からだと ✠ 御血になりますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主イエスはすすんで受難に向かう前に、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "パンを取り、感謝をささげ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "裂いて、弟子に与えて仰せになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>「皆、これを取って食べなさい。</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>これはあなたがたのために渡される</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>わたしのからだ(である)。」</b>"
+          },
+          {
+            "rubric_jp": "司祭が示されるホスティアを仰ぎ見た後、<br>司祭がそれをパテナに置くとき、皆で深く礼をする(またはひざまずく)。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "食事の後に"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "同じように杯を取り、感謝をささげ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "弟子に与えて仰せになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>「皆、これを受けて飲みなさい。</B>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>これはわたしの血の杯、</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>あなたがたと多くの人のために流されて</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>罪のゆるしとなる新しい永遠の契約の血(である)。</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>これをわたしの記念として行いなさい。」</b>"
+          },
+          {
+            "rubric_jp": "司祭가 示されるカリスを仰ぎ見た後、司祭がそれをコーポラルに置くとき、皆で深く礼をする(またはひざまずく)。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "信仰の神秘。"
+          },
+          {
+            "sp_jp": "会",
+            "text_jp": "主よ、あなたの死を告げ知らせ、復活をほめたたえます。<br>再び来られるときまで。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " 主よ、このパンを食べ、この杯を飲むたびに、<br>あなたの死を告げ知らせます。再び来られるときまで。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": " 主よ、このパンを食べ、この杯を飲むたびに、<br>あなたの死を"
+                }
+              ]
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " 十字架と復活によってわたしたちを解放された世の救い主、<br>わたしたちをお救いください。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": " 十字架と復活によってわたしたちを解放された世の救い主、<br>"
+                }
+              ]
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "聖なる父よ、わたしたちはいま、主イエスの死と復活の記念を行い、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "み前であなたに奉仕できることを感謝し、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いのちのパンと救いの杯をささげます。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": ""
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "キリストの御からだと御血にともにあずかるわたしたちが、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖霊によって一つに結ばれますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "世界に広がるあなたの教会を思い起こし、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": ""
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "教皇 [教皇名]、わたしたちの司教 [司教名]、すべての奉仕者とともに、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたの民をまことの愛で満たしてください。"
+          },
+          {
+            "rubric_jp": "死者のためのミサの場合は、次の祈りを加えることができる。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "(きょう) この世からあなたのもとに召された"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "[洗礼名]を心に留めてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "洗礼によってキリストの死に結ばれた者が、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "その復活にも結ばれますように。"
+          },
+          {
+            "rubric_jp": "死者のための祈りの後、"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "また、復活の希望をもって眠りについたわたしたちの兄弟姉妹と、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたのいつくしみのうちに亡くなったすべての人を心に留め、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたの光の中に受け入れてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いま、ここに集うわたしたちをあわれみ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "神の母おとめマリアと聖ヨセフ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": ""
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "使徒とすべての時代の聖人とともに、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "永遠のいのちにあずからせてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "御子イエス・キリストを通して、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたをほめたたえることができますように。"
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "3"
+        ],
+        "rows": [
+          {
+            "sp_jp": "司",
+            "text_jp": "まことに聖なる父よ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "造られたものはすべて、あなたをほめたたえています。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "御子わたしたちの主イエス・キリストを通して、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖霊の力強い働きにより、すべてにいのちを与え、聖なるものとし、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "たえず人々をあなたの民としてお集めになるからです。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "日の昇る所から日の沈む所まで、あなたに清いささげものが供えられるために。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖なる父よ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたにささげるこの供えものを、いま、<br>聖霊によって聖なるものとしてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "御子わたしたちの主イエス・キリストの御からだと ✠ 御血になりますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "キリストのことばに従って、いま、わたしたちはこの神秘を祝います。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主イエスは渡される夜、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " パンを取り、あなたに賛美と感謝をささげ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "裂いて、弟子に与えて仰せになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>「皆、これを取って食べなさい。</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>これはあなたがたのために渡される</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>わたしのからだ(である)。」</b>"
+          },
+          {
+            "rubric_jp": "司祭が示されるホスティアを仰ぎ見た後、<br>司祭がそれをパテナに置くとき、皆で深く礼をする(またはひざまずく)。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "食事の後に同じように杯を取り、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "食事の後に同じように杯を取り、あなたに賛美と感謝をささげ、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "弟子に与えて仰せになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>「皆、これを受けて飲みなさい。</B>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>これはわたしの血の杯、</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>あなたがたと多くの人のために流されて</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>罪のゆるしとなる新しい永遠の契約の血(である)。</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>これをわたしの記念として行いなさい。」</b>"
+          },
+          {
+            "rubric_jp": "司祭가 示されるカリスを仰ぎ見た後、司祭がそれをコーポラルに置くとき、皆で深く礼をする(またはひざまずく)。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "信仰の神秘。"
+          },
+          {
+            "sp_jp": "会",
+            "text_jp": "主よ、あなたの死を告げ知らせ、復活をほめたたえます。<br>再び来られるときまで。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " 主よ、このパンを食べ、この杯を飲むたびに、<br>あなたの死を告げ知らせます。再び来られるときまで。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": " 主よ、このパンを食べ、この杯を飲むたびに、<br>あなたの死を"
+                }
+              ]
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " 十字架と復活によってわたしたちを解放された世の救い主、<br>わたしたちをお救いください。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": " 十字架と復活によってわたしたちを解放された世の救い主、<br>"
+                }
+              ]
+            }
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "聖なる父よ、わたしたちはいま、御子キリストの救いをもたらす受難、復活、昇天を記念し、その再臨を待ち望み、いのちに満ちたこの聖なるいけにえを感謝してささげます。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたの教会のささげものを顧み、まことの和解のいけにえとして認め、受け入れてください。御子キリストの御からだと御血によってわたしたちが養われ、聖霊に満たされて、キリストのうちに、一つのからだ、一つの心となりますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖霊によってわたしたちを、あなたにささげられた永遠の供えものとしてください。選ばれた人々、神の母おとめマリアと聖ヨセフ、使徒と殉教者、(聖 [聖人名]、)すべての聖人とともに神の国を継ぎ、その取り次ぎによってたえず助けられますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちの罪のゆるしとなるこのいけにえが、全世界の平和と救いのためになりますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "地上を旅するあなたの教会、教皇 [教皇名]、わたしたちの司教 [司教名]、司教団とすべての奉仕者を導き、あなたの民となったすべての人の信仰と愛を強めてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたがここにお集めになったこの家族の願いを聞き入れてください。いつくしみ深い父よ、あなたの子がどこにいても、すべてあなたのもとに呼び寄せてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " "
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "eucharist3_intercession",
+            "defaultOption": "ordinary",
+            "label": {
+              "jp": "第三奉献文の共同祈願"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "jp": "通常のミサ"
+                },
+                "lines": [
+                  {
+                    "sp_jp": "",
+                    "text_jp": "亡くなったわたしたちの兄弟姉妹、また、み旨に従って生活し、いまはこの世を去ったすべての人を、あなたの国に受け入れてください。わたしたちもいつかその国で、いつまでもともにあなたの栄光にあずかり、喜びに満たされますように。"
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちの主イエス・キリストを通して、"
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたはすべてのよいものを世にお与えになります。"
+                  }
+                ]
+              },
+              "funeral": {
+                "splitByLanguage": true,
+                "label": {
+                  "jp": "死者のためのミサ"
+                },
+                "lines": [
+                  {
+                    "rubric_jp": "死者のためのミサがささげられる場合は、次の祈りを唱えることができる。"
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "(きょう、)この世からあなたのもとに召された[洗礼名]を心に留めてください。洗礼によってキリストの死にあずかった者が、その復活にもあずかることができますように。キリストは死者を復活させるとき、滅びゆくわたしたちのからだを、ご自分の栄光のからだに変えてくださいます。また、亡くなったわたしたちの兄弟姉妹、み旨に従って生活し、いまはこの世を去ったすべての人を、あなたの国に受け入れてください。わたしたちもいつかその国で、いつまでもともにあなたの栄光にあずかり、喜びに満たされますように。そのときあなたは、わたしたちの目から涙をすべてぬぐい去り、わたしたちは神であるあなたをありのままに見て、永遠にあなたに似るものとなり、終わりなくあなたをたたえることができるのです。"
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": " "
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "わたしたちの主イエス・キリストを通して、"
+                  },
+                  {
+                    "sp_jp": "",
+                    "text_jp": "あなたはすべてのよいものを世にお与えになります。"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "4"
+        ],
+        "rows": [
+          {
+            "sp_jp": "?",
+            "text_jp": "聖なる父よ、あなたの偉大なわざをたたえ、感謝をささげることは、まことにとうとい大切な務め（です）。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたは唯一のまことの神、初めもなく終わりもなく、すべてを超えて光り輝くかた。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あふれる愛、いのちの泉、万物の造り主。造られたものは祝福され、光を受けて喜びに満たされます。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "数知れない天使は昼も夜もあなたに仕え、栄光を仰ぎ見て絶え間なくほめたたえます。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちはこれに声を合わせ、造られたすべてのものとともに、あなたをたたえて歌います。"
+          },
+          {
+            "sp_jp": "会",
+            "text_jp": "聖なる、聖なる、聖なる神、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "すべてを治める神なる主。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主の栄光は天地に満つ。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "天には神にホザンナ。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主の名によって来られるかたに賛美。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "天には神にホザンナ。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "聖なる父、偉大な神よ、あなたをたたえます。あなたは、英知と愛によってすべてのわざを行われました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "ご自分にかたどって人を造り、造り主であるあなたに仕え、造られたものをすべて治めるよう、全世界を人の手におゆだねになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "人があなたにそむいて親しい交わりを失ってからも、死の支配のもとにおくことなく、すべての人があなたを求めて見いだすことができるよう、いつくしみの手を差し伸べられました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "また、たびたび人と契約を結び、預言者を通して、救いを待ち望むよう励ましてくださいました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "時が満ちると、あなたはひとり子を救い主としてお遣わしになりました。聖なる父よ、あなたはこれほど世を愛してくださったのです。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "御ひとり子は聖霊によって人となり、おとめマリアから生まれ、罪のほかは、すべてにおいてわたしたちと同じものとなられました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "貧しい人には救いの福音を告げ、とらわれ人には自由を、悲しむ人には喜びをもたらし、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "あなたの計画を実現するため、死に身をゆだね、死者のうちから復活して死を滅ぼし、いのちを新しくしてくださいました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "わたしたちが自分に生きるのではなく、わたしたちのために死んで復活されたキリストに生きるために、父よ、御子は信じる者に最初のたまものとしてあなたのもとから聖霊を遣わしてくださいました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖霊は、世にあってキリストの救いを全うし、聖なるものとするわざをすべて完成してくださいます。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いつくしみ深い父よ、聖霊によってこの供えものを聖なるものとしてください。主イエス・キリストの御からだと御血になりますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "キリストが永遠の契約としてわたしたちに残されたこの偉大な神秘を祝うために、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "聖なる父よ、世にいる弟子を愛しておられたイエスは、あなたから栄光を受ける時が来たことを知り、彼らを限りなく愛されました。主イエスは、食事をともにする間に"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "パンを取り、賛美をささげ、裂いて、弟子に与えて仰せになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>「皆、これを取って食べなさい。</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>これはあなたがたのために渡される</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<B>わたしのからだ(である)。」</b>"
+          },
+          {
+            "rubric_jp": "司祭が示されるホスティアを仰ぎ見た後、<br>司祭がそれをパテナに置くとき、皆で深く礼をする(またはひざまずく)。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "同じようにぶどう酒の満ちた杯を取り、感謝をささげ、弟子に与えて仰せになりました。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>「皆、これを受けて飲みなさい。</B>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>これはわたしの血の杯、</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>あなたがたと多くの人のために流されて</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>罪のゆるしとなる新しい永遠の契約の血(である)。</b>"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "<b>これをわたしの記念として行いなさい。」</b>"
+          },
+          {
+            "rubric_jp": "司祭가 示されるカリスを仰ぎ見た後、司祭がそれをコーポラルに置くとき、皆で深く礼をする(またはひざまずく)。"
+          },
+          {
+            "sp_jp": "司",
+            "text_jp": "信仰の神秘。"
+          },
+          {
+            "sp_jp": "会",
+            "text_jp": "主よ、あなたの死を告げ知らせ、復活をほめたたえます。<br>再び来られるときまで。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " 主よ、このパンを食べ、この杯を飲むたびに、<br>あなたの死を告げ知らせます。再び来られるときまで。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": " 主よ、このパンを食べ、この杯を飲むたびに、<br>あなたの死を"
+                }
+              ]
+            }
+          },
+          {
+            "sp_jp": "",
+            "text_jp": " 十字架と復活によってわたしたちを解放された世の救い主、<br>わたしたちをお救いください。",
+            "rubric_jp": "または ",
+            "rubricLayout_jp": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 4,
+                  "left": "",
+                  "right": " 十字架と復活によってわたしたちを解放された世の救い主、<br>"
+                }
+              ]
+            }
+          },
+          {
+            "sp_jp": "?",
+            "text_jp": "聖なる父よ、わたしたちはいま、あがないの記念をともに行い、キリストの死と、陰府に下られたことを思い起こし、その復活と、あなたの右に上げられたことを宣言します。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "主が栄光のうちに来られる日を待ち望み、あなたに受け入れられ、全世界の救いとなるこのいけにえ、キリストの御からだと御血をささげます。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "父よ、あなたが教会にお与えになったこのいけにえを顧み、この一つのパンと杯を分かち合うすべての人を、聖霊によって一つのからだに集めてください。キリストのうちにあって、あなたの栄光をたたえる生きたささげものとなりますように。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "父よ、すべての人を心に留めてください。その人々のために、この供えものをささげます。教皇○○○○をはじめ、わたしたちの司教○○○○、司教団とすべての奉仕者、ここに集う人々、あなたの民と、神を求めるすべての人、"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "また、キリストを信じて亡くなった人、あなただけがその信仰を知っておられるすべての死者を心に留めてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "いつくしみ深い父よ、あなたの子であるわたしたちすべてを顧み、神の母おとめマリアと聖ヨセフ、使徒と聖人とともに、あなたの国で、約束されたいのちにあずからせてください。"
+          },
+          {
+            "sp_jp": "",
+            "text_jp": "その国で、罪と死の腐敗から解放された宇宙万物とともに、主キリストによって、あなたの栄光をたたえることができますように。わたしたちの主イエス・キリストを通して、あなたはすべてのよいものを世にお与えになります。"
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formEndings"
+        ],
+        "rows": {}
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formFrames"
+        ],
+        "rows": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "ending"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "ordinarySourceLayoutVersion"
+        ],
+        "rows": 1
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_advent"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 待降節"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "わたしたちはひとり子の到来を信じ、その再臨を待ち望んでいます。全能の神、あわれみ深い父が、近づいて来られるひとり子の輝きによって皆さんを聖なる者とし、祝福で満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "日々の生活の中で、神が皆さんに揺るぎない信仰を与え、希望をもって生きる喜びと、尽きることのない愛で満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "救い主の栄光に満ちた再臨のとき、神が皆さんに、永遠のいのちの恵みを豊かに与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:advent:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_christmas"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 降誕節"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "いつくしみ深い神は、イエスの栄光に満ちた誕生によって世の闇を取り除き、この聖なる夜（日）を照らしてくださいます。神が皆さんを罪の暗闇から解放し、御子の輝きで満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "天使によって、羊飼いに救い主の誕生を告げることをお望みになった神が、皆さんの心を喜びで満たし、福音をのべ伝える者としてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "ひとり子の受肉によって天と地を結んでくださった神が、皆さんにみ心を行う恵みと平和を豊かに与え、天の教会の喜びにあずからせてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:christmas:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_new_year"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年の初め"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "あらゆる祝福の源である神が、皆さんを豊かな恵みと祝福で満たし、この一年を通してたえず見守ってくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "神が、皆さんの信仰を清く保ち、揺るぎない希望と最後まで耐え忍ぶ愛を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "神が、皆さんの生活と働きを平和のうちに保ち、祈りを聞き入れ、永遠のいのちに導いてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:new_year:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_epiphany"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 主の公現"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "闇から光に招いてくださった神が、祝福を豊かに注ぎ、信仰、希望、愛によって皆さんの心を強めてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "皆さんが、きょう、世界を照らす光として現れたキリストに従い、人々を照らす光となることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "星に導かれ、まことの光キリストを見いだした博士たちのように、皆さんも、喜びのうちに主キリストを見いだすことができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:epiphany:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_passion"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 主の受難"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "いつくしみ深い父から遣わされたひとり子は、その受難によって愛の模範を示してくださいました。皆さんが神と人々に仕えることによって、豊かな祝福を受けることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "キリストの死によって永遠の死から救われた皆さんが、永遠のいのちにあずかることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "皆さんが、自らを低くされたイエスにならい、その復活の栄光にともにあずかることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:passion:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_easter"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 復活節"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "ひとり子の復活によって皆さんをあがない、ご自分の子としてくださった神が、皆さんを祝福し、喜びで満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "すべての人をあがない、まことの自由を与えてくださった神が、皆さんを祝福し、天の国を受け継ぐ者としてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "信仰をもって洗礼を受け、新しいいのちに満たされた皆さんが、み心にかなう生活を送り、御父のもとに迎えられますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:easter:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ascension"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 主の昇天"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "きょう、御ひとり子を天に上げられた神が、皆さんを祝福し、キリストのもとに導いてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "復活の後、弟子たちに現れたキリストが、再び来られるときも、皆さんに変わることのないいつくしみを示してくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "栄光のうちに御父のもとに座しておられるキリストが、約束されたとおり、世の終わりまで皆さんとともにいてくださり、救いの喜びを味わわせてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ascension:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_pentecost"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 聖霊"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "光の源である神は、弟子たちに聖霊を注ぎ、その心を照らしてくださいました。神が皆さんを祝福し、喜びで満たし、聖霊のたまものを豊かに与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "弟子たちの上に注がれた聖霊の火が、皆さんをあらゆる悪から清め、その輝きによって照らしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "ことばの異なる人々を唯一の信仰告白へと導いてくださった聖霊が、皆さんの信仰を強め、希望を揺るぎないものとしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:pentecost:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_1"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年間　一"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "神が皆さんを祝福し、守ってくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "神がみ顔の輝きで皆さんを照らし、恵みで満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "神がみ顔を皆さんに向け、その平和を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_1:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_2"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年間　二"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "人の知恵をはるかに超える神の平和が、皆さんの心と思いを満たし、御父とひとり子キリストを知り、愛する恵みを与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_2:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_2:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_2:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_2:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_3"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年間　三"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "いつくしみ深い神が皆さんを祝福し、救いに導く知恵を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "神が信仰の恵みで皆さんを支え、み心を行う恵みで満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "神が平和と愛の道を示し、皆さんをご自分のもとに立ち返らせてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_3:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_4"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年間　四"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "慰めの源である神が、世界をまことの平和に導き、皆さんに祝福を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "神が、皆さんをあらゆる困難から解放し、一人ひとりの心を、愛のうちに揺るぎないものとしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "皆さんが、信仰、希望、愛のたまものを豊かに受け、この世においてよいわざを行い、永遠の喜びを見いだすことができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_4:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_5"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年間　五"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "全能の神が、あらゆる困難から皆さんを守り、いつくしみをもって祝福してくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "皆さんが神の語りかけを心から受け入れ、変わることのない喜びで満たされますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "神が示してくださる正しい道を皆さんがいつも歩み、神の国を受け継ぐことができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_5:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_6"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 年間　六"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "神が、天のあらゆる祝福で皆さんを満たし、聖なる者、汚れのない者としてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_6:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_6:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "神がその栄光を豊かに注ぎ、真理のことばによって導き、救いの福音によって教え、互いに愛し合う心を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_6:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_6:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_6:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:ordinary_6:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_blessed_virgin_mary"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 聖母マリア"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "おとめマリアから生まれたひとり子によって、全人類を救ってくださった神が、皆さんに豊かな祝福を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "いのちの源である主キリストを産み育てたマリアの愛を、皆さんがいつどこにいても感じとることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "聖母マリアの祝日に集まった皆さんが、天の喜びと恵みで満たされますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:blessed_virgin_mary:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_peter_and_paul"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 聖ペトロ 聖パウロ"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "ペトロの信仰告白を礎として教会を建ててくださった全能の神が、皆さんに揺るぎない信仰を与えてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "ひるむことなく宣教に励んだパウロのように、皆さんが、人々をキリストのもとに導くことができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "ペトロとパウロの殉教を記念する皆さんが、二人の使徒の取り次ぎに支えられて信仰の道を歩み、天の喜びにあずかることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:peter_and_paul:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_apostles"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 使徒"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "使徒たちを礎として教会を築いてくださった神が、聖○○○○の取り次ぎを願う皆さんを、祝福してくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "使徒たちの教えと模範によって教会を強めてくださる神が、皆さんをキリストの証人としてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "使徒たちの教えによって信仰を固めてくださった神が、皆さんを永遠の住まいへと導いてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:apostles:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_all_saints"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 聖人"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "聖人の誉れと喜びである神が、皆さんを豊かな祝福で満たし、強めてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "聖人の取り次ぎによって、皆さんがこの世の悪から解放され、その聖なる生活を模範とし、神と人々に心から仕える者となりますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "地上を旅する教会が、天の集いに迎えられ、すべての聖人とともに、永遠の喜びを味わうことができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:all_saints:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_church_dedication"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 教会献堂"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "きょう、献堂の祝いに招いてくださった神が、皆さんを天の祝福で満たしてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "すべての人を御子のうちに一つに集めてくださる神が、皆さんを聖霊の神殿としてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "清い心を与えてくださる神が、皆さんをすべての聖人とともに、永遠のいのちを受け継ぐ者としてくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:church_dedication:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_for_the_dead"
+        ],
+        "rows": {
+          "label": {
+            "jp": "荘厳な祝福 - 死者"
+          },
+          "lines": [
+            {
+              "sp_jp": "教",
+              "text_jp": "主は皆さんとともに。"
+            },
+            {
+              "sp_jp": "会",
+              "text_jp": "またあなたとともに。"
+            },
+            {
+              "rubric_jp": "頭を垂れて祝福を受ける。"
+            },
+            {
+              "text_jp": "神は、限りないいつくしみによって人間を造り、ひとり子の復活によって、人類に復活の希望を与えてくださいました。慰めの源である神が、皆さんを祝福してくださいますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:petition:0:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:petition:1:text"
+              }
+            },
+            {
+              "text_jp": "地上を旅するわたしたちの心がいやされ、亡くなったすべての人に永遠のいのちが与えられますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:petition:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:petition:3:text"
+              }
+            },
+            {
+              "text_jp": "キリストの復活を信じるわたしたちが、主とともに終わりなく生きることができますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:petition:4:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:petition:5:text"
+              }
+            },
+            {
+              "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+              "sp_jp": "司祭",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:ending:2:text"
+              }
+            },
+            {
+              "text_jp": "アーメン。",
+              "sp_jp": "会衆",
+              "__massEditorPairKeys": {
+                "text_jp": "blessing:for_the_dead:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "isEucharist"
+        ],
+        "rows": true
+      }
+    }
+  ];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }
+      if (override.create) {
+        const entry = target.find(item => item && item.id === override.create.entryId);
+        if (!entry) throw new Error("JP" + ' Mass editor entry is missing: ' + override.create.entryId);
+        let rows = entry;
+        for (const part of override.create.relativePath) {
+          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};
+          rows = rows[part];
+        }
+        if (!Array.isArray(rows)) throw new Error("JP" + ' Mass editor block is invalid: ' + override.create.entryId);
+        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);
+        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];
+        if (!row) { row = {}; rows.push(row); }
+        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });
+        row[override.create.field] = String(override.value ?? '');
+        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
+        return;
+      }
+      if (override.rename) {
+        let row = target;
+        for (const part of override.rename.rowPath) row = row && row[part];
+        if (!row || typeof row !== 'object') throw new Error("JP" + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));
+        const fromField = override.rename.fromField;
+        const toField = override.rename.toField;
+        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error("JP" + ' Mass editor rename field is stale: ' + fromField);
+        if (fromField !== toField) delete row[fromField];
+        row[toField] = String(override.value ?? '');
+        const keys = Object.assign({}, row.__massEditorPairKeys);
+        delete keys[fromField];
+        keys[toField] = override.rename.rowKey;
+        row.__massEditorPairKeys = keys;
+        return;
+      }
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error("JP" + ' Mass editor override path is stale: ' + JSON.stringify(editPath));
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
   global.countryMassData["JP"] = Object.assign(global.countryMassData["JP"] || {}, {
     jurisdiction: "JP",
     name: "Japan",
     language: "JP",
-    ordinary: [{
+    ordinary: applyOrdinaryEditorOverrides([{
       "id": (
         "1. "
         + "THE INTRODUCTORY RITES"
@@ -4281,7 +8650,7 @@
           + "他の祭儀が続く場合、派遣の式は省かれる。"
         )
       }]
-    }]
+    }])
   });
   const deepMerge = (left, right) => {
     if (Array.isArray(left) || Array.isArray(right)) {

@@ -27,5 +27,9 @@ for(const note of ['다른 감사송은 123쪽을 참조하세요.','Other prefa
  assert.equal(matcher.extract({lines:[{text:'Authorized prayer.'},{text:note}]}).body,'Authorized prayer.',note);
 }
 assert.equal(matcher.extract({lines:[{text:'Future title',role:'preface_title'},{text:'Prayer.'},{text:'Future-language footer',role:'preface_reference'}]}).body,'Prayer.');
+for(const sentence of ['수집된 감사송의 정확한 첫 본문.','This prayer mentions the preface without being a heading.','本禱文中的頌謝詞不可刪除。','Esta oração menciona o prefácio.']){
+ assert.equal(matcher.extract({lines:[{text:sentence}]}).body,sentence,'A body sentence mentioning a preface was removed');
+}
+assert.equal(matcher.match({lines:[{text:'COMMON PREFACE II.'},{text:'Prayer body.'}]},'en',catalog).key,'common_2','Numbered heading punctuation must remain supported');
 for(const[value,number]of [['卅一',31],['三一',31],['XIV',14],['二',2],['12',12]])assert.equal(matcher.ordinal(value),number);
 console.log(JSON.stringify({chineseTitles:titles,languages:10,bodyAndTitleMatching:true,ambiguousPrefacesPreserved:true}));

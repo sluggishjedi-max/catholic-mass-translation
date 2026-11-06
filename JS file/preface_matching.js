@@ -42,6 +42,9 @@
   }
   function heading(text){
     const value=plain(text).trim();if(!value||value.length>210)return false;
+    // A prayer sentence can mention a preface. Terminal sentence punctuation
+    // is body text unless it simply closes a numbered heading (Preface II.).
+    if(/[.!?。！？][)）»”"’']?$/u.test(value)&&!/(?:\b[IVXLCDM]+|\d+)\.$/u.test(value))return false;
     return /^(?:[（(]\s*[〇零一二三四五六七八九十廿卅IVX\d]+\s*[）)]\s*[（(]|[^。.!?\n]{0,45}(?:頌謝詞|叙唱|감사송|preface|praefatio|præfatio|prefazio|prefacio|prafation|kinh tien tung|loi tien tung))/iu.test(value.normalize('NFD').replace(/[\u0300-\u036f]/gu,'').normalize('NFC'));
   }
   function extract(section,catalog={}){

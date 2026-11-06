@@ -116,19 +116,22 @@
     return global.firebase.firestore();
   }
   async function loadScope(name, code, force) {
-    const key = name+':'+code;
+    const key = name+':'+code+(name === 'order_of_mass' ? ':source-layout-v1' : '');
     if (!force && complete.has(key)) return;
     if (requests.has(key)) return requests.get(key);
     const request = (async () => {
       const previous = await cached(key);
-      if (!force && previous && Date.now()-previous.savedAt < cacheAge) {
+      // A normal reload must see an editor's newly published ordinary. Its
+      // cached copy is an offline fallback, while auxiliary data keeps its TTL.
+      if (name !== 'order_of_mass' && !force && previous && Date.now()-previous.savedAt < cacheAge) {
         publish(name,previous.items); complete.add(key); return;
       }
       let timer;
       try {
+        const timeoutMs = name === 'order_of_mass' ? 65000 : 8000;
         const items = await Promise.race([
           readCollection(database(),name,code),
-          new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Firebase country data timed out')),8000);})
+          new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Firebase country data timed out')),timeoutMs);})
         ]);
         publish(name,items);
         complete.add(key);

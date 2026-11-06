@@ -3,11 +3,6924 @@
   'use strict';
 
   global.countryMassData = global.countryMassData || {};
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "1"
+        ],
+        "rows": [
+          {
+            "sp_kr": "✚",
+            "text_kr": "인자하신 아버지,",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:0:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자 우리 주 예수 그리스도를 통하여 간절히 청하오니",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:1:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이 거룩하고 흠 없는 예물을 받으시고 ✠ 강복하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:2:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "먼저 거룩하고 보편된 교회를 위하여 이 예물을 바치오니 주님의 일꾼,",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:3:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "교황 [교황명]와 저희 주교 [주교명]와 (협력주교들과)",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:4:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "사도로부터 이어 오는 보편 신앙을 오롯이 받드는 모든 이를 돌보시어",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:5:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "세상 어디서나 교회를 평화롭게 하시고 일치하게 하시며",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:6:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "지켜 주시고 다스리소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:te_igitur:7:text"
+            },
+            "__ordinaryStage": "te_igitur"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "주님, 주님의 종 [세례명]와 [세례명]를 생각하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:living:0:text"
+            },
+            "__ordinaryStage": "living"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아울러, 주님께서 여기 모인 모든 이의 믿음과 정성을 아시오니 이들도 굽어보소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:living:1:text"
+            },
+            "__ordinaryStage": "living"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희는 이들을 위하여 찬미의 제사를 바치나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:living:2:text"
+            },
+            "__ordinaryStage": "living"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이들도 자신과 일가친척과 친지들이",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:living:3:text"
+            },
+            "__ordinaryStage": "living"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "안전하게 구원되기를 바라는 마음으로 정성을 모아",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:living:4:text"
+            },
+            "__ordinaryStage": "living"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "영원하시며 살아 계신 참하느님께 이 찬미의 제사를 바치나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:living:5:text"
+            },
+            "__ordinaryStage": "living"
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": true,
+            "label": {
+              "kr": "연중 시기"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "kr": "연중 시기"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "저희는 온 교회와 일치하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:0:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 천주 예수 그리스도의 어머니이시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:1:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영광스러운 평생 동정이신 마리아를 비롯하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:2:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 배필이신 성 요셉과 사도들과 순교자들",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:3:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "베드로와 바오로, 안드레아와",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:4:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(야고보, 요한과 토마스, 야고보와 필립보,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:5:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "바르톨로메오와 마태오, 시몬과 타대오,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:6:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "리노와 클레토, 클레멘스와 식스토,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:7:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "고르넬리오와 치프리아노, 라우렌시오와 크리소고노,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:8:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "요한과 바오로, 고스마와 다미아노)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:9:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 밖의 모든 성인을 생각하며 공경하오니",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:10:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그들의 공로와 기도를 보시어 모든 일에서 저희를 도우시고 보호하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:11:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:12:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "kr": "성탄"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "저희는 온 교회와 일치하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:0:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "복되신 마리아께서 동정의 순결한 몸으로",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:1:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 세상에 구세주를 낳아 주신 이 거룩한 밤(날)을 경축하나이다.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:2:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 천주 예수 그리스도의 어머니이시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:3:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영광스러운 평생 동정이신 마리아를 비롯하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:4:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 배필이신 성 요셉과 사도들과 순교자들",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:5:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "베드로와 바오로, 안드레아와",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:6:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(야고보, 요한과 토마스, 야고보와 필립보,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:7:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "바르톨로메오와 마태오, 시몬과 타대오,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:8:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "리노와 클레토, 클레멘스와 식스토,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:9:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "고르넬리오와 치프리아노, 라우렌시오와 크리소고노,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:10:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "요한과 바오로, 고스마와 다미아노)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:11:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 밖의 모든 성인을 생각하며 공경하오니",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:12:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그들의 공로와 기도를 보시어 모든 일에서 저희를 도우시고 보호하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:13:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:14:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "kr": "주님 공현"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "저희는 온 교회와 일치하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:0:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "아버지의 영광을 영원히 함께 누리시는 외아들 그리스도께서",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:1:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희와 같은 인간의 몸으로 나타나신",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:2:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 거룩한 날을 경축하나이다.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:3:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 천주 예수 그리스도의 어머니이시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:4:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영광스러운 평생 동정이신 마리아를 비롯하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:5:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 배필이신 성 요셉과 사도들과 순교자들",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:6:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "베드로와 바오로, 안드레아와",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:7:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(야고보, 요한과 토마스, 야고보와 필립보,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:8:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "바르톨로메오와 마태오, 시몬과 타대오,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:9:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "리노와 클레토, 클레멘스와 식스토,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:10:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "고르넬리오와 치프리아노, 라우렌시오와 크리소고노,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:11:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "요한과 바오로, 고스마와 다미아노)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:12:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 밖의 모든 성인을 생각하며 공경하오니",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:13:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그들의 공로와 기도를 보시어 모든 일에서 저희를 도우시고 보호하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:14:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:15:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "kr": "부활"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "저희는 온 교회와 일치하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:0:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 그리스도께서 육신으로 부활하신",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:1:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 거룩한 밤(날)을 경축하나이다.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:2:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 천주 예수 그리스도의 어머니이시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:3:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영광스러운 평생 동정이신 마리아를 비롯하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:4:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 배필이신 성 요셉과 사도들과 순교자들",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:5:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "베드로와 바오로, 안드레아와",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:6:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(야고보, 요한과 토마스, 야고보와 필립보,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:7:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "바르톨로메오와 마태오, 시몬과 타대오,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:8:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "리노와 클레토, 클레멘스와 식스토,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:9:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "고르넬리오와 치프리아노, 라우렌시오와 크리소고노,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:10:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "요한과 바오로, 고스마와 다미아노)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:11:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 밖의 모든 성인을 생각하며 공경하오니",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:12:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그들의 공로와 기도를 보시어 모든 일에서 저희를 도우시고 보호하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:13:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:14:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "kr": "주님 승천"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "저희는 온 교회와 일치하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:0:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희의 연약한 육신을 취하신 성자 우리 주님께서",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:1:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "성부 오른편에 앉으신",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:2:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 거룩한 날을 경축하나이다.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:3:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 천주 예수 그리스도의 어머니이시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:4:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영광스러운 평생 동정이신 마리아를 비롯하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:5:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 배필이신 성 요셉과 사도들과 순교자들",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:6:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "베드로와 바오로, 안드레아와",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:7:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(야고보, 요한과 토마스, 야고보와 필립보,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:8:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "바르톨로메오와 마태오, 시몬과 타대오,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:9:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "리노와 클레토, 클레멘스와 식스토,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:10:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "고르넬리오와 치프리아노, 라우렌시오와 크리소고노,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:11:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "요한과 바오로, 고스마와 다미아노)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:12:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 밖의 모든 성인을 생각하며 공경하오니",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:13:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그들의 공로와 기도를 보시어 모든 일에서 저희를 도우시고 보호하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:14:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:15:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "kr": "성령 강림"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "저희는 온 교회와 일치하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:0:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "성령께서 사도들에게 혀 모양의 불길로 나타나신",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:1:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 거룩한 날을 경축하나이다.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:2:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "우리 주 천주 예수 그리스도의 어머니이시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:3:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영광스러운 평생 동정이신 마리아를 비롯하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:4:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 배필이신 성 요셉과 사도들과 순교자들",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:5:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "베드로와 바오로, 안드레아와",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:6:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(야고보, 요한과 토마스, 야고보와 필립보,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:7:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "바르톨로메오와 마태오, 시몬과 타대오,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:8:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "리노와 클레토, 클레멘스와 식스토,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:9:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "고르넬리오와 치프리아노, 라우렌시오와 크리소고노,",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:10:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "요한과 바오로, 고스마와 다미아노)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:11:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 밖의 모든 성인을 생각하며 공경하오니",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:12:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그들의 공로와 기도를 보시어 모든 일에서 저희를 도우시고 보호하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:13:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:communicantes:14:text"
+                    },
+                    "__ordinaryStage": "communicantes"
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:communicantes:choice"
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": false,
+            "label": {
+              "kr": "연중 시기"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "kr": "연중 시기"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "주님, 저희 봉사자들과 온 가족이 바치는",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:0:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 예물을 기꺼이 받아들이소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:1:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희를 한평생 평화롭게 하시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:2:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영원한 벌을 면하고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:3:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "뽑힌 이들의 무리에 들게 하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:4:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:5:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "kr": "성탄"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "주님, 저희 봉사자들과 온 가족이 바치는",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:0:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 예물을 기꺼이 받아들이소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:1:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희를 한평생 평화롭게 하시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:2:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영원한 벌을 면하고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:3:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "뽑힌 이들의 무리에 들게 하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:4:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:5:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "kr": "주님 공현"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "주님, 저희 봉사자들과 온 가족이 바치는",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:0:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 예물을 기꺼이 받아들이소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:1:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희를 한평생 평화롭게 하시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:2:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영원한 벌을 면하고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:3:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "뽑힌 이들의 무리에 들게 하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:4:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:5:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "kr": "부활"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "주님, 물과 성령으로 모든 죄를 용서하시고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:0:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "새로 나게 하신 형제들을 위하여",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:1:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희 봉사자들과 온 가족이 바치는",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:2:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 예물을 기꺼이 받아들이소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:3:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희를 한평생 평화롭게 하시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:4:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영원한 벌을 면하고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:5:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "뽑힌 이들의 무리에 들게 하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:6:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:7:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "kr": "주님 승천"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "주님, 저희 봉사자들과 온 가족이 바치는",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:0:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 예물을 기꺼이 받아들이소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:1:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희를 한평생 평화롭게 하시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:2:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영원한 벌을 면하고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:3:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "뽑힌 이들의 무리에 들게 하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:4:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:5:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "kr": "성령 강림"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "✚",
+                    "text_kr": "주님, 저희 봉사자들과 온 가족이 바치는",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:0:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "이 예물을 기꺼이 받아들이소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:1:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희를 한평생 평화롭게 하시며",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:2:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "영원한 벌을 면하고",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:3:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "뽑힌 이들의 무리에 들게 하소서.",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:4:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+                    "__massEditorPairKeys": {
+                      "text_kr": "canon:hanc_igitur:5:text"
+                    },
+                    "__ordinaryStage": "hanc_igitur"
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:hanc_igitur:choice"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": " 주 하느님, 이 예물을 너그러이 받아들이고 강복하시어",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:quam_oblationem:0:text"
+            },
+            "__ordinaryStage": "quam_oblationem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "참되고 완전하며 합당한 제물",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:quam_oblationem:1:text"
+            },
+            "__ordinaryStage": "quam_oblationem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "사랑하시는 성자 우리 주 예수 그리스도의 몸과 피가 되게 하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:quam_oblationem:2:text"
+            },
+            "__ordinaryStage": "quam_oblationem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "예수님께서는 수난 전날",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:0:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "거룩하신 손에 빵을 드시고",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:1:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "하늘을 우러러",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:2:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "전능하신 아버지께 감사를 드리며",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:3:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "축복하시고 쪼개어",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:4:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "제자들에게 주시며 말씀하셨나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:5:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 먹어라</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:6:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 너희를 위하여 내어 줄</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:7:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<b>내 몸이다.</b>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:bread:8:text"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "rubric_kr": "사제가 보이는 축성된 빵을 바라본 뒤,<br>사제가 빵을 성반에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다).",
+            "__massEditorPairKeys": {
+              "rubric_kr": "canon:bread:9:rubric"
+            },
+            "__ordinaryStage": "bread"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "저녁을 잡수시고 같은 모양으로",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:0:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "거룩하신 손에 이 귀중한 잔을 드시고",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:1:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "다시 감사를 드리며 축복하신 다음",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:2:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "제자들에게 주시며 말씀하셨나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:3:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 마셔라</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:4:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 새롭고 영원한 계약을 맺는 내 피의 잔이니</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:5:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>죄를 사하여 주려고</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:6:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희와 많은 이를 위하여 흘릴 피다.</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:7:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 나를 기억하여 이를 행하여라.</B>",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:cup:8:text"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "rubric_kr": "사제가 보이는 성작을 바라본 뒤,<br>사제가 성작을 성체포 위에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다).",
+            "__massEditorPairKeys": {
+              "rubric_kr": "canon:cup:9:rubric"
+            },
+            "__ordinaryStage": "cup"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "신앙의 신비여!",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:mystery_invitation:0:text"
+            },
+            "__ordinaryStage": "mystery_invitation"
+          },
+          {
+            "sp_kr": "◎",
+            "text_kr": "주님께서 오실 때 까지<br>주님의 죽음을 전하며<br>부활을 선포 하나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:mystery_a:0:text"
+            },
+            "__ordinaryStage": "mystery_a"
+          },
+          {
+            "sp_kr": "",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": ""
+                }
+              ]
+            },
+            "rubric_kr": "또는 (특히 사순시기에) ",
+            "__massEditorPairKeys": {
+              "rubric_kr": "canon:mystery_b:0:rubric"
+            },
+            "__ordinaryStage": "mystery_b",
+            "text_kr": ""
+          },
+          {
+            "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+            "sp_kr": "",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:mystery_c:0:text"
+            },
+            "__ordinaryStage": "mystery_c"
+          },
+          {
+            "sp_kr": "",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": ""
+                }
+              ]
+            },
+            "rubric_kr": "또는 (특히 부활시기에) ",
+            "__massEditorPairKeys": {
+              "rubric_kr": "canon:anamnesis:0:rubric"
+            },
+            "__ordinaryStage": "anamnesis",
+            "text_kr": ""
+          },
+          {
+            "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+            "sp_kr": "",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:anamnesis:1:text"
+            },
+            "__ordinaryStage": "anamnesis"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "주님, 저희 봉사자들과 주님의 거룩한 백성은",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:anamnesis:2:text"
+            },
+            "__ordinaryStage": "anamnesis"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자 우리 주 그리스도의 복된 수난과",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:anamnesis:3:text"
+            },
+            "__ordinaryStage": "anamnesis"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "죽음을 이기신 부활과 영광스러운 승천을 기념하나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:anamnesis:4:text"
+            },
+            "__ordinaryStage": "anamnesis"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희는 아버지께서 베풀어 주신 선물 가운데서",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:anamnesis:5:text"
+            },
+            "__ordinaryStage": "anamnesis"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이 깨끗한 제물, 거룩한 제물, 흠 없는 제물",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:anamnesis:6:text"
+            },
+            "__ordinaryStage": "anamnesis"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "영원한 생명의 빵과 구원의 잔을",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supra_quae:0:text"
+            },
+            "__ordinaryStage": "supra_quae"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "존엄한 대전에 봉헌하나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supra_quae:1:text"
+            },
+            "__ordinaryStage": "supra_quae"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이 제물을 인자로이 굽어보시고",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supra_quae:2:text"
+            },
+            "__ordinaryStage": "supra_quae"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "일찍이 주님의 의로운 종 아벨의 제물과",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supra_quae:3:text"
+            },
+            "__ordinaryStage": "supra_quae"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희 조상 아브라함의 제사와",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supra_quae:4:text"
+            },
+            "__ordinaryStage": "supra_quae"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "대사제 멜카체덱이 바친 거룩하고 흠 없는 제물을 받아 주셨듯이",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supplices:0:text"
+            },
+            "__ordinaryStage": "supplices"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이를 받아들이소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supplices:1:text"
+            },
+            "__ordinaryStage": "supplices"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "전능하신 아버지, 간절히 청하오니",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supplices:2:text"
+            },
+            "__ordinaryStage": "supplices"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "거룩한 천사의 손으로",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supplices:3:text"
+            },
+            "__ordinaryStage": "supplices"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이 제물이 존엄한 천상 제단에 오르게 하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supplices:4:text"
+            },
+            "__ordinaryStage": "supplices"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리하여 이 제단에서 성자의 거룩한 몸과 피를 받아 모실 때마다",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:supplices:5:text"
+            },
+            "__ordinaryStage": "supplices"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "하늘의 온갖 은총과 복을 가득히 내려 주소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:departed:0:text"
+            },
+            "__ordinaryStage": "departed"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:departed:1:text"
+            },
+            "__ordinaryStage": "departed"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "주님, 신앙의 표를 지니고 저희보다 먼저 평안히 잠든",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:departed:2:text"
+            },
+            "__ordinaryStage": "departed"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님의 종 [세례명]와 [세례명]를 생각하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:departed:3:text"
+            },
+            "__ordinaryStage": "departed"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님, 간구하오니",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:departed:4:text"
+            },
+            "__ordinaryStage": "departed"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그들과 그리스도 안에 쉬는 모든 이를",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:departed:5:text"
+            },
+            "__ordinaryStage": "departed"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "행복과 광명과 평화의 나라로 인도하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:0:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "(우리 주 그리스도를 통하여 비나이다. 아멘.)",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:1:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님의 끝없는 자비를 바라는 주님의 종인 저희 죄인들도",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:2:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:3:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "거룩한 사도들과 순교자들",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:4:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "요한과 스테파노, 마티아와 바르나바",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:5:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "(이냐시오와 알렉산데르, 마르첼리노와 베드로",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:6:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "펠리치타와 페르페투아, 아가타와 루치아",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:7:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아녜스와 체칠리아, 아나스타시아와)",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:8:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그 밖의 모든 성인과 더불어 살게 하시며",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:nobis_quoque:9:text"
+            },
+            "__ordinaryStage": "nobis_quoque"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희의 공과 덕이 부족하오나 용서를 베푸시어",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:per_quem:0:text"
+            },
+            "__ordinaryStage": "per_quem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그들 무리에 들게 하소서.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:per_quem:1:text"
+            },
+            "__ordinaryStage": "per_quem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지께서는 그리스도를 통하여",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:per_quem:2:text"
+            },
+            "__ordinaryStage": "per_quem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "언제나 온갖 좋은 것을 창조하시고 거룩하게 하시며",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:per_quem:3:text"
+            },
+            "__ordinaryStage": "per_quem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "생명을 주고 강복하시어",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:per_quem:4:text"
+            },
+            "__ordinaryStage": "per_quem"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희에게 베풀어 주시나이다.",
+            "__massEditorPairKeys": {
+              "text_kr": "canon:per_quem:5:text"
+            },
+            "__ordinaryStage": "per_quem"
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "2"
+        ],
+        "rows": [
+          {
+            "sp_kr": "✚",
+            "text_kr": "인자하신 아버지,"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지께서는 모든 거룩함의 샘이시옵니다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "간구하오니, 성령의 힘으로 이 예물을 거룩하게 하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "우리 주 예수 그리스도의 몸과 ✠ 피가 되게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "스스로 원하신 수난이 다가오자 예수님께서는"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "빵을 들고 감사를 드리신 다음"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "쪼개어 제자들에게 주시며 말씀하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 먹어라</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 너희를 위하여 내어 줄</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>내 몸이다.</b>"
+          },
+          {
+            "rubric_kr": "사제가 보이는 축성된 빵을 바라본 뒤,<br>사제가 빵을 성반에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다)."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "저녁을 잡수시고 같은 모양으로"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "잔을 들어 다시 감사를 드리신 다음"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "제자들에게 주시며 말씀하셨나이다"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 마셔라</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 새롭고 영원한 계약을 맺는 내 피의 잔이니</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>죄를 사하여 주려고</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희와 많은 이를 위하여 흘릴 피다.</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 나를 기억하여 이를 행하여라.</B>"
+          },
+          {
+            "rubric_kr": "사제가 보이는 성작을 바라본 뒤,<br>사제가 성작을 성체포 위에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다)."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "신앙의 신비여!"
+          },
+          {
+            "sp_kr": "◎",
+            "text_kr": "주님께서 오실 때 까지<br>주님의 죽음을 전하며<br>부활을 선포 하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+            "rubric_kr": "또는 (특히 사순시기에) ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+            "rubric_kr": "또는 (특히 부활시기에) ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "아버지, 저희는 그리스도의 죽음과 부활을 기념하며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "생명의 빵과 구원의 잔을 봉헌하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "또한 저희가 아버지 앞에 나아와 봉사하게 하시니 감사하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "간절히 청하오니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희가 그리스도의 몸과 피를 받아 모시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성령으로 모두 한 몸을 이루게 하소서"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님, 온 세상에 널리 퍼져 있는 교회를 생각하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": ""
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "교황 [교황명]와(과), 저희 주교 [주교명]와(과) (협력 주교들과)"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "모든 성직자와 더불어 사랑의 교회를 이루게 하소서."
+          },
+          {
+            "rubric_kr": "죽은 이를 위한 미사에서는 아래의 고유 전구를 덧붙일 수 있다."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "(오늘) 이 세상에서 불러가신 주님의 종 [세례명]을(를) 생각하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": ""
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그는 세례를 통하여 성자의 죽음에 동참하였으니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그 부활도 함께 누리게 하소서"
+          },
+          {
+            "rubric_kr": "죽은이를 위한 기도가 끝난 뒤"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "부활의 희망 속에 고이 잠든 교우들과"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "세상을 떠난 다른 이들도 모두 생각하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그들이 주님의 빛나는 얼굴을 뵈옵게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희에게도 자비를 베푸시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "영원으로부터 주님의 사랑을 받는 하느님의 어머니 복되신 동정 마리아와"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그 베필이신 성 요셉과"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "복된 사도들과 모든 성인과 함께"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "영원한 삶을 누리며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자 예수 그리스도를 통하여"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지를 찬양하게 하소서."
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "3"
+        ],
+        "rows": [
+          {
+            "sp_kr": "✚",
+            "text_kr": "거룩하신 아버지,"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "몸소 창조하신 만물이 아버지를 찬미하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지께서는 성자 우리 주 예수 그리스도를 통하여"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성령의 힘으로 만물을 살리시고 거룩하게 하시며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지의 백성을 끊임없이 모으시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "해돋이에서 해넘이까지 깨끗한 제물을 드리게 하시나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지, 간절히 청하오니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지께 봉헌하는 이 예물을 성령으로 거룩하게 하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자 우리 주 예수 그리스도의 몸과 ✠ 피가 되게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희는 그리스도의 명을 받들어 이 신비를 거행하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "예수님께서는 잡히시던 날 밤에"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "빵을 들고 감사를 드리며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "축복하시고 쪼개어<br>제자들에게 주시며 말씀하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 먹어라</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 너희를 위하여 내어 줄</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<b>내 몸이다.</b>"
+          },
+          {
+            "rubric_kr": "사제가 보이는 축성된 빵을 바라본 뒤,<br>사제가 빵을 성반에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다)."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "저녁을 잡수시고 같은 모양으로"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "잔을 들고 감사를 드리며 축복하신 다음"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "제자들에게 주시며 말씀하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 마셔라</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 새롭고 영원한 계약을 맺는 내 피의 잔이니</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>죄를 사하여 주려고</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희와 많은 이를 위하여 흘릴 피다.</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 나를 기억하여 이를 행하여라.</B>"
+          },
+          {
+            "rubric_kr": "사제가 보이는 성작을 바라본 뒤,<br>사제가 성작을 성체포 위에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다)."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "신앙의 신비여!"
+          },
+          {
+            "sp_kr": "◎",
+            "text_kr": "주님께서 오실 때 까지<br>주님의 죽음을 전하며<br>부활을 선포 하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+            "rubric_kr": "또는 (특히 사순시기에) ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+            "rubric_kr": "또는 (특히 부활시기에) ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "아버지, 저희를 구원해 주신 성자의 수난과"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "영광스러운 부활과 승천을 기념하고 성자의 재림을 기다리며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "감사하는 마음으로 거룩하고 살아 있는 이 제물을 아버지께 봉헌하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님, 교회가 바치는 이 제사를 굽어보소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이는 주님 뜻에 맞갖은 희생 제물이오니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "너그러이 받아들이시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자의 몸과 피를 받아 모시는 저희가 성령으로 충만하여"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리스도 안에서 한마음 한 몸이 되게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리스도 몸소 저희를 영원한 제물로 완성하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지께서 뽑으신 이들,"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "특히 하느님의 어머니 복되신 동정 마리아와"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그 배필이신 성 요셉과 복된 사도들과 영광스러운 순교자들과"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "([성인이름] 과)",
+            "rubric_kr": "그날의 성인이나 수호자 이름",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 15,
+                  "left": "",
+                  "right": "([성인이름] 과)"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그 밖의 모든 성인과 함께 상속을 받게 하여 주소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희는 성인들의 전구로 언제나 도움을 받으리라 믿나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님, 이 화해의 제물이"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "온 세상의 평화와 구원에 이바지하게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "지상의 나그네인 교회를 돌보시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님의 일꾼, 교황 [교황명]와(과)"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희 주교 [주교명]와(과) (협력 주교들과)"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "모든 주교와 성직자와 주님께서 구원하신 온 백성과 함께"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "믿음과 사랑으로 굳건하게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님 앞에 모이게 하신 이 가족의 기원도<br>너그러이 받아들이소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "인자하신 아버지,"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "사방에 흩어진 모든 자녀를 자비로이 모아들이소서."
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "eucharist3_intercession",
+            "defaultOption": "ordinary",
+            "label": {
+              "kr": "제3양식 전구"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "kr": "일반 미사"
+                },
+                "lines": [
+                  {
+                    "sp_kr": "",
+                    "text_kr": "세상을 떠난 교우들과"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "주님의 뜻대로 살다가 떠난 이들을 모두"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": ""
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "주님의 나라에 너그러이 받아들이시며"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희도 거기서 주님의 영광을 영원히 함께 누리게 하소서."
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "아버지께서는 우리 주 그리스도를 통하여"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "세상에 온갖 좋은 것을 다 베풀어 주시나이다."
+                  }
+                ]
+              },
+              "funeral": {
+                "splitByLanguage": true,
+                "label": {
+                  "kr": "죽은 이를 위한 미사"
+                },
+                "lines": [
+                  {
+                    "rubric_kr": "죽은 이를 위한 미사를 드릴 때에는<br>아래의 고유 전구를 바칠 수 있다."
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "(오늘) 이 세상에서 불러 가신 주님의 종 [세례명]를 생각하소서."
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그는 세례를 통하여 성자의 죽음에 동참하였으니"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "그 부활도 함께 누리게 하소서."
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "성자께서 죽은 이들의 육신을 다시 일으키실 때에"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희의 비천한 몸도 성자의 빛나는 몸을 닮게 하소서."
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "또한 세상을 떠난 교우들과 주님의 뜻대로 살다가 떠난 이들을"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "모두 주님 나라에 너그러이 받아들이시며"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "저희도 거기서 주님의 영광을 영원히 함께 누리게 하소서"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "하느님을 바로 뵈오며"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "주님을 닮고"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "끝없이 주님을 찬미하리이다."
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "아버지께서는 우리 주 그리스도를 통하여"
+                  },
+                  {
+                    "sp_kr": "",
+                    "text_kr": "세상에 온갖 좋은 것을 다 베풀어 주시나이다."
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "4"
+        ],
+        "rows": [
+          {
+            "sp_kr": "?",
+            "text_kr": "거룩하신 아버지, 아버지께 감사와 영광을 드림은 참으로 마땅하고 옳은 일이옵니다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지 홀로 살아 계신 참하느님이시고 영원으로부터 무궁히 계시며 가까이 할 수 없는 빛 속에 머무시나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "또한 생명의 샘이시며 지선하신 아버지께서는 만물을 창조하시어 온갖 복을 가득히 내려 주시고 밝은 빛으로 기쁨을 주시나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그러므로 무수한 천사가 밤낮으로 아버지를 섬기고 그 빛나는 얼굴을 뵈오며 끊임없이 찬양하오니 저희도 그들과 함께 하늘 아래 모든 조물과 더불어 기뻐하며 아버지의 이름을 찬송하나이다."
+          },
+          {
+            "sp_kr": "◎",
+            "text_kr": "거룩하시도다! 거룩하시도다! 거룩하시도다!"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "온누리의 주 하느님!"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "하늘과 땅에 가득찬 그 영광!"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "높은데서 호산나!"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님의 이름으로 오시는 분, 찬미 받으소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "높은데서 호산나!"
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "거룩하신 아버지, 아버지께서는 위대하시며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "지혜와 사랑으로 모든 일을 이루셨으니 찬미받으소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "사람을 아버지의 모습대로 지으시어 우주 만물을 돌보게 하시고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "창조주이신 아버지만을 섬기며 모든 조물을 다스리게 하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "비록 사람이 순종치 아니하여 아버지의 사랑을 잃었으나"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "죽음의 세력 아래 버려두시지 않고 자비로이 도와주시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지를 찾는 이는 모두 만나 뵈옵게 하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "또한 사람들과 거듭 계약을 맺으시고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "구원을 기다리도록 예언자들을 통하여 가르치셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "거룩하신 아버지, 아버지께서는 세상을 이토록 사랑하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "때가 차자 외아드님을 저희에게 구세주로 보내 주셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자께서는 성령으로 인하여 사람이 되시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "동정 마리아에게서 태어나시고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "죄 말고는 모든 점에서 저희와 똑같은 사람으로 사셨으며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "가난한 사람에게는 구원을, 갇힌 사람에게는 해방을"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "슬퍼하는 사람에게는 기쁨을 선포하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성자께서는 아버지의 구원 경륜을 이루시려고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "당신 자신을 죽음에 넘기셨으며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "죽은 이들 가운데서 부활하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "죽음을 없애시고 생명을 새롭게 하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "또한 이제는 저희가 저희를 위하여 살지 않고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저희를 위하여 돌아가시고 부활하신 분을 위하여 살도록"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "믿는 이들에게 성령을 첫 열매로 보내셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성령께서는 성자의 구원 사업을 세상에서 이루시며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "모든 것을 거룩하게 하시나이다."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "주님, 간구하오니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성령으로 이 예물을 거룩하게 하시어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "우리 주 예수 그리스도의 몸과 ✠ 피가 되게 하시며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리스도 몸소 저희에게 영원한 계약으로 남겨 주신"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이 큰 신비를 거행하게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "거룩하신 아버지,"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "예수님께서는 아버지께 현양받으실 때가 되자"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "세상에서 사랑하시던 제자들을 끝까지 사랑하셨으니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "저녁을 잡수시면서"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "빵을 들어 축복하시고<br>쪼개어 제자들에게 주시며 말씀하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 먹어라</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 너희를 위하여 내어 줄</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<b>내 몸이다.</b>"
+          },
+          {
+            "rubric_kr": "사제가 보이는 축성된 빵을 바라본 뒤,<br>사제가 빵을 성반에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다)."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "같은 모양으로 포도주가 담긴 잔을 들어 감사를 드리시고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "제자들에게 주시며 말씀하셨나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 모두 이것을 받아 마셔라</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>이는 새롭고 영원한 계약을 맺는 내 피의 잔이니</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>죄를 사하여 주려고</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희와 많은 이를 위하여 흘릴 피다.</B>"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "<B>너희는 나를 기억하여 이를 행하여라.</B>"
+          },
+          {
+            "rubric_kr": "사제가 보이는 성작을 바라본 뒤,<br>사제가 성작을 성체포 위에 내려놓으면 모두 깊은 절을 한다 (혹은 무릎을 꿇는다)."
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "신앙의 신비여!"
+          },
+          {
+            "sp_kr": "◎",
+            "text_kr": "주님께서 오실 때 까지<br>주님의 죽음을 전하며<br>부활을 선포 하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적마다<br>주님의 죽음을 전하나이다.",
+            "rubric_kr": "또는 (특히 사순시기에) ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": "주님께서 오실 때 까지<br>이 빵을 먹고 이 잔을 마실적"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받으소서.",
+            "rubric_kr": "또는 (특히 부활시기에) ",
+            "rubricLayout_kr": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 14,
+                  "left": "",
+                  "right": "십자가와 부활로 저희를 구원하신 주님,<br>길이 영광 받"
+                }
+              ]
+            }
+          },
+          {
+            "sp_kr": "✚",
+            "text_kr": "주님, 저희는 지금 구원의 기념제를 거행하오니"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리스도의 죽음과 저승에 가심을 기억하며"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "부활하시어 성부 오른편에 오르심을 증언하나이다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "또한 영광 중에 다시 오실 것을 기다리며 그리스도의 몸과 피를 봉헌하나이다. "
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이는 주님께서 기꺼이 받으시는 제사이며 세상에 구원을 주는 제사이옵니다."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님, 몸소 교회에 마련하여 주신 이 제물을 굽어보시고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "같은 빵과 같은 잔을 나누어 받으려는 저희가 모두"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "성령으로 한 몸을 이루고"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리스도 안에서 산 제물이 되어"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님의 영광을 찬미하게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님, 저희가 이 제물을 바치며 기억하는 이들을"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "모두 생각하여 주소서. "
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "특히 주님의 일꾼, 교황 [교황명]와(과) 저희 주교 [주교명]와(과) (협력 주교들과)"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "세계의 모든 주교와 성직자와"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "이 제사를 봉헌하는 이와 여기 모인 이들"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리고 주님의 온 백성과"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "진심으로 주님을 찾는 이도 모두 생각하여 주소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "또한 그리스도의 평화 속에 잠든 교우들과"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "주님만이 그 믿음을 아시는 죽은 이들도 모두 생각하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "인자하신 아버지, 자녀인 저희가"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "하느님의 어머니 복되신 동정 마리아와"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그 배필이신 성 요셉과 사도들과 그 밖의 모든 성인과 함께"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지의 나라에서 영원한 생명을 받아 누리게 하소서."
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "그리하여 죄와 죽음의 세력에서 건져 주신 피조물과 함께"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "우리 주 그리스도를 통하여 아버지를 찬양하게 하소서. "
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "아버지께서는 우리 주 그리스도를 통하여"
+          },
+          {
+            "sp_kr": "",
+            "text_kr": "세상에 온갖 좋은 것을 다 베풀어 주시나이다."
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formEndings"
+        ],
+        "rows": {}
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formFrames"
+        ],
+        "rows": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "ending"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "ordinarySourceLayoutVersion"
+        ],
+        "rows": 1
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_advent"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 대림"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하시고 자비하신 하느님께서는 성자께서 이미 오셨음을 믿고 다시 오실 것을 기다리는 이 교우들을 비추시어 거룩하게 하시고 강복하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "현세의 인생 여정에 있는 이 교우들이 믿음으로 굳건하여지고 희망으로 기뻐하며 사랑으로 새로 나게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "경건하고 기쁜 마음으로 구세주의 성탄을 기다리는 이 교우들에게 성자께서 영광 중에 다시 오실 때에 영원한 생명을 상급으로 내려 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:advent:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_christmas"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 주님성탄"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "성자의 탄생으로 세상의 어둠을 몰아내시고 이 거룩한 밤(날)을 비추어 주신 지극히 좋으신 하느님께서는 이 교우들에게서 악습의 어둠을 몰아내시고 그 마음을 성덕의 빛으로 밝혀 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "천사를 시켜 목자들에게 구세주 탄생의 큰 기쁨을 전해 주신 하느님께서는 이 교우들의 마음을 기쁨으로 채워 주시고 복음을 전하는 일꾼으로 불러 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "성자의 강생으로 땅을 하늘과 결합시키신 하느님께서는 이 교우들에게 평화와 사랑의 선물을 가득히 내리시고 천상 교회의 한 가족이 되게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:christmas:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_new_year"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 새해"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "모든 복의 원천이신 하느님께서는 이 교우들에게 은총과 복을 가득히 내리시고 한 해 동안 평안하게 보호하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들의 믿음을 온전히 지켜 주시고 희망을 잃지 않게 하시며 한결같은 사랑을 지니게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들의 하루하루 삶을 평화로이 돌보아 주시고 언제 어디서나 그 기도를 들어주시며 영원한 생명으로 이끌어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:new_year:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_passion"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 주님수난"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "성자의 수난으로 사랑의 모범을 보여 주신 자비하신 하느님 아버지께서는 이 교우들이 하느님과 인간을 섬김으로써 더없이 귀한 강복을 선물로 받게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "성자께서 한 번 돌아가시어 인간을 영원한 죽음에서 구원하셨음을 믿는 이 교우들에게 영원한 생명을 베풀어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들이 그리스도께서 보여 주신 겸손을 본받아 주님의 부활에도 참여하게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:passion:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_easter"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 부활"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "성자의 부활로 인간을 구원하시고 자녀가 되게 하신 하느님께서는 이 교우들에게 강복하시어 기쁨을 누리게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들은 성자의 구원으로 영원한 자유를 선물로 받았으니 주님의 은덕으로 영원한 상속도 받게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들은 믿고 세례를 받아 성자와 함께 부활하였으니 이제부터 올바르게 살아 천상 고향에서 성자와 결합하게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:easter:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ascension"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 주님승천"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "성자께서 하늘 높이 오르시고 인류에게도 하늘로 오르는 길을 열어 주신 오늘 전능하신 하느님 아버지께서는 이 교우들에게 강복하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "부활하신 뒤에 제자들에게 나타나신 그리스도께서 심판하러 다시 오실 때에는 이 교우들에게도 나타나시어 영원한 생명을 누리게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "이들은 성자께서 영광 중에 성부 오른편에 앉아 계심을 믿으오니 몸소 약속하신 대로 성자께서 세상 끝 날까지 이들과 함께 계시게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ascension:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_1"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 연중1"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님께서는 이 교우들에게 강복하시고 보호하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "주님께서는 그 빛나는 모습을 이 교우들에게 보여 주시고 자비를 베풀어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "주님께서는 이 교우들을 굽어보시고 평화를 내려 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_1:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 연중4"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "온갖 위로의 원천이신 하느님께서는 이 교우들의 하루하루를 평화롭게 하시고 은총을 베풀어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "온갖 시련에서 언제나 이 교우들을 구하여 주시고 주님 사랑으로 그 마음을 굳건하게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "희망과 믿음과 사랑의 선물을 풍성히 베푸시어 이 교우들이 이 세상의 삶을 성실하게 마치고 영원한 행복에 이르게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_4:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 연중5"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하신 하느님께서는 이 교우들의 모든 어려움을 없애 주시고 자비로이 은총을 베풀어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들이 하느님의 말씀을 듣고 깨달아 영원한 기쁨으로 가득 차게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들이 바르고 좋은 것을 깨달아 언제나 하느님께서 일러 주신 길을 걷게 하시고 마침내 하늘 나라의 백성이 되게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_5:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_blessed_virgin_mary"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 복되신 동정마리아"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "복되신 동정 마리아께 태어나시어 인류를 구원하신 하느님께서는 이 교우들에게 강복하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "성모님을 통하여 생명의 주인을 모신 이 교우들이 언제 어디서나 성모님의 보호를 깨닫게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "오늘 성모님의 축제를 지내려고 모인 이 교우들이 영적 기쁨과 천상 상급을 가득히 받게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:blessed_virgin_mary:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_apostles"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 사도"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님께서는 사도들을 기초로 교회를 세우시고 이 교우들을 그 지체가 되게 하셨으니 아무(와 아무) 사도의 공로를 보시어 강복하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "사도들의 증거와 모범을 이 교우들에게 보여 주신 하느님께서는 사도들의 보호로 이 교우들도 모든 사람에게 진리의 증거자와 되게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "사도들의 가르침을 듣고 굳건한 믿음을 가지게 된 이 교우들이 사도들의 전구로 영원한 고향에 이르게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:apostles:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_all_saints"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 모든성인"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "성인들의 영광이요 기쁨이신 하느님께서는 이 교우들이 성인들의 뛰어난 전구로 힘을 얻게 하셨으니 이 교우들에게 길이 강복하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들이 성인들의 기도로 현세의 악에서 벗어나고 성인들의 거룩한 생활로 감화를 받아 언제나 충실히 하느님과 이웃을 섬기게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "거룩한 교회는 그 자녀들이 천상 시민과 일치하여 영원한 평화를 누리고 있음을 기뻐하오니 이 교우들도 모든 성인과 함께 천상 고향의 기쁨을 누리게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:all_saints:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_church_dedication"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 성당봉헌"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "오늘 이 성당을 봉헌하기 (이 성당의 봉헌을 기념하기) 위하여 모인 교우들에게 하늘과 땅의 주인이신 하느님께서는 천상 복을 풍성히 내려 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "흩어진 자녀들을 모두 성자께 모아들이시는 하느님께서는 이 교우들을 하느님의 성전이 되게 하시며 성령의 거처가 되게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "하느님께서 은혜를 베푸시어 이 교우들을 깨끗하게 하셨으니 이 교우들이 주님을 모시고 살다가 모든 성인과 함께 영원한 행복을 상속받게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:church_dedication:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_for_the_dead"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 위령"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "위로의 원천이신 하느님께서는 사랑으로 사람을 창조하시고 성자의 부활로써 믿는 이들에게 부활의 희망을 주셨으니 이 교우들에게 강복하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "살아 있는 저희에게는 죄를 용서하여 주시고 죽은 모든 이에게는 빛과 평화의 안식을 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "그리스도께서 죽음에서 부활하셨음을 믿는 교우들이 그리스도와 함께 끝없는 행복을 누리게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:for_the_dead:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_epiphany"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 주님 공현"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "어둠에서 눈부신 빛으로 이 교우들을 불러 주신 하느님께서는 인자로이 복을 내려 주시고 그 마음을 믿음과 희망과 사랑으로 굳건하게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "오늘 어둠을 밝히는 빛으로 세상에 나타나신 그리스도를 충실히 따르는 이 교우들이 이웃 형제들에게 빛이 되게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "동방의 박사들이 별의 인도를 받아 빛이신 주 그리스도를 찾아뵙고 기뻐하였듯이 이 교우들도 현세의 여정을 마친 다음 주님을 만나 뵙게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:epiphany:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_pentecost"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 성령 강림"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "빛의 아버지이신 하느님께서는 (오늘) 위로자 성령을 보내시어 제자들의 마음을 비추셨으니 이 교우들에게도 강복하시어 기쁨을 주시고 성령의 선물을 가득히 내려 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "제자들 위에 기묘히 불 모양으로 나타나신 성령께서는 이 교우들의 마음을 모든 악에서 깨끗이 씻어 주시고 밝은 빛으로 비추어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "말이 서로 다른 사람들을 일치시켜 한 신앙을 고백하게 하신 성령께서는 이 교우들이 언제나 같은 신앙 안에 머물게 하시고 그 신앙의 힘으로 마침내 주님을 뵙게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:pentecost:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_2"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 연중 시기 2"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "사람의 모든 이해를 뛰어넘는 평화를 주시는 하느님께서는 하느님과 성자 우리 주 예수 그리스도의 지식과 사랑으로 이 교우들의 마음과 지성을 밝혀 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_2:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_2:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_2:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_2:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 연중 시기 3"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하시고 인자하신 하느님께서는 이 교우들에게 강복하시고 구원의 지혜를 내려 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "자연과 계시를 통하여 신앙을 길러 주시고 이 교우들이 꾸준히 선행을 하도록 이끌어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "이 교우들의 발걸음을 하느님께 향하게 하시고 평화와 사랑의 길로 이끌어 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_3:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 연중 시기 6"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님께서는 여기 모인 교우들에게 천상 복을 내리시어 하느님의 영광으로 가득 차 언제나 거룩하고 깨끗하게 살게 하시고 진리의 말씀으로 가르치시고 구원의 복음으로 길러 주시어 언제나 이웃 사랑에 힘쓰게 하소서. 우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_6:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_6:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_6:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:ordinary_6:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_peter_and_paul"
+        ],
+        "rows": {
+          "label": {
+            "kr": "장엄강복 - 성 베드로와 성 바오로 축일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하신 하느님께서는 베드로 사도의 신앙 고백을 들으시고 그 굳건한 믿음을 기초로 교회를 세우셨으니 이 교우들에게 강복하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:petition:0:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:petition:1:text"
+              }
+            },
+            {
+              "text_kr": "바오로 사도의 지칠 줄 모르는 설교로 이 교우들을 가르치신 하느님께서는 이들도 바오로의 모범을 따라 형제들에게 그리스도를 전하게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:petition:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:petition:3:text"
+              }
+            },
+            {
+              "text_kr": "베드로와 바오로는 십자가와 칼날에 순교하여 영원한 고향에 이르렀으니 이 교우들도 두 사도의 전구로 천상 고향에 이르게 하여 주소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:petition:4:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:petition:5:text"
+              }
+            },
+            {
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는 여기 모인 모든 이에게 강복하시어 길이 머물게 하소서.",
+              "sp_kr": "✚",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:ending:2:text"
+              }
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎",
+              "__massEditorPairKeys": {
+                "text_kr": "blessing:peter_and_paul:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_0_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 재의 수요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "엄위하신 하느님 앞에 머리 숙여 비는 이들에게",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "깊이 뉘우치는 마음을 부어 주시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "참회하는 이들에게 약속하신 상급을 자비로이 내려 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_0_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 재의 예식 다음 목요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하신 하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님의 백성에게 영원한 생명의 길을 알려 주시니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "그 길을 통하여 불멸의 빛이신 하느님께 이르게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_0_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 재의 예식 다음 금요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "자비로우신 하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성이 언제나 하느님의 크신 은총에 감사하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "지난 삶을 뉘우치오니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 세상 순례를 마치고 영원토록 주님을 비옵게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_0_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 재의 예식 다음 토요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "거룩한 신비에 참여한 이 백성에게 자비를 베푸시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "어떠한 위험도 겪지 않고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 보호를 받게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_1_1"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제1주간 월요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성의 마음을 주님의 밝은 빛으로 비추시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "해야 할 것을 깨닫고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "올바른 일을 실천하게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_1_2"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제1주간 화요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님의 강복으로 믿는 이들을 굳세게 하시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "슬픔에는 위로를",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "고통에는 인내를 주시며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "위험할 때에는 보호하여 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_1_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제1주간 수요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 백성을 보살피시고 모든 죄를 인자로이 씻어 주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "그들이 온갖 역경에서도 해를 입지 않고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "어떤 불의에도 굴복하지 않게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_1_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제1주간 목요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "간절히 비오니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성이 바라던 자비를 베푸시고 천상 은혜를 내리시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "청해야 할 것을 올바로 알고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "또한 청한 것을 얻게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_1_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제1주간 금요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 백성을 인자로이 굽어보시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "겉으로 지키는 재계로 마음속 깊이 회개하게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_1_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제1주간 토요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "믿는 이들이 바라던 복을 내리시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "그 믿음을 굳건하게 하시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "언제나 하느님의 은혜에 감사하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "온전히 하느님의 뜻을 이루게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_2_1"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제2주간 월요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "믿는 이들의 마음을 굳건하게 하시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님 은총으로 힘을 북돋아 주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "경건한 마음으로 주님께 기도하고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "참된 마음으로 서로 사랑하게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_2_2"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제2주간 화요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "믿는 이들의 기도를 자비로이 들으시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "영혼의 병을 고쳐 주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "죄를 용서받고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 강복으로 언제나 기뻐하게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_2_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제2주간 수요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 종들을 언제나 보호하시고 풍성한 은총을 베푸시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "건강한 몸과 마음으로 형제들을 한없이 사랑하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "언제나 주님과 하나 되어 살게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_2_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제2주간 목요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 도우심을 간청하는 종들을 굽어보시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 힘으로 보호하시고 이끌어 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_2_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제2주간 금요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 백성이 건강한 몸과 마음으로 선행에 힘쓰고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "언제나 주님의 보호를 받게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_2_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제2주간 토요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님께 간청하는 이들의 기도에 자비로이 귀를 기울이시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님 뜻에 맞는 것을 청하고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "바라는 것을 얻게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_0"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님을 믿는 이들의 마음을 이끄시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님을 섬기는 이들에게 자비로이 은총을 베푸시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님 사랑과 이웃 사랑을 실천하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 계명을 완수하게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_1"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주간 월요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "간절히 기도하는 백성을",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 오른손으로 지켜 주시고 깨끗하게 하시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "현세의 위로를 받으며 미래의 행복에 이르게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_2"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주간 화요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "저희를 하느님 백성으로 세우시고 이끄시니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "저희를 괴롭히는 죄를 물리치시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "저희가 언제나 하느님 마음에 들게 하시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "안전하게 지켜 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주간 수요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님의 뜻을 백성들이 따르게 하시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님의 가르침에 맞는 것을 실천하고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "넘치는 행복을 얻게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주간 목요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "인자하신 주님을 믿고 자비를 청하오니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님께 생명을 얻어 살아가는 이 백성이",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님 은총으로 좋은 것을 바라고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "바라는 것을 얻게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주간 금요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 자비를 간청하는 이 백성을 인자로이 굽어보시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "언제나 주님의 자애에 의지하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "어디서나 주님의 사랑을 전하게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_3_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제3주간 토요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 오른팔을 펼치시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "믿는 이들에게 하늘의 도움을 내려 주시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "마음을 다하여 주님을 찾아",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "합당하게 청한 것을 얻게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_0"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님께 탄원하는 이들을 지켜 주시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "약한 이들의 힘을 북돋아 주시며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "세상의 어둠 속에서 방황하는 이들을",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "언제나 주님 빛으로 이끄시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "온갖 악에서 인자로이 구해 주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "모두 완전한 행복에 이르게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_1"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주간 월요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성의 몸과 마음을 새롭게 하시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "육신의 쾌락에 빠지지 않고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "영신의 목적을 향하여 나아가게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_2"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주간 화요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "자비로우신 하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성이 언제나 하느님께 자신을 봉헌하게 하시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "인자로이 돌보시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "풍성한 은혜를 베풀어 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주간 수요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 종들을 자애로이 지켜 주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 세상에서 좋은 일을 하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "지극히 좋으신 주님께 나아가게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주간 목요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님께 희망을 두는 이들을 보살피고 이끄시며 구원하시니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성에게 강복하시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "원수에게서 풀려나 죄에서 해방되고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "언제나 하느님 사랑 안에 머물게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주간 금요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 종들을 굽어보시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 자비에 의지하는 이들을",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "천상 은총으로 자애로이 지켜 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_4_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제4주간 토요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 백성을 보살피시고 천상 은총을 풍성히 베푸시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "다가오는 거룩한 신비를 올바로 준비하며",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "보이는 위로로 도움을 받고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "보이지 않는 선을 향하여 달리게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_0"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "자비의 은총을 바라는 주님의 백성에게 강복하시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "저희가 청해야 할 것을 가르쳐 주시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "청한 것을 너그러이 베풀어 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_1"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주간 월요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님께 간청하는 백성을 죄에서 구하시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "어떤 어려움에도 흔들리지 않고 거룩히 살게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_2"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주간 화요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님께 희망을 두는 이들에게 분노보다는 자비를 베푸시니",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "믿는 이들이 눈물로 악행을 뉘우치고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "위로의 은총을 얻게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_3"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주간 수요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하신 하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님의 사랑을 굳게 믿고 바라는 이 백성의 간청을 들어주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "풍성한 자비를 끊임없이 베풀어 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_4"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주간 목요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "이 백성에게 자비를 베푸시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님의 뜻에 어긋나는 것을 물리치고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "나날이 주님 계명을 지키며 더욱더 큰 기쁨을 누리게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_5"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주간 금요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "전능하신 하느님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "하느님의 이 종들을 은혜로이 지켜 주시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "모든 악에서 풀려나",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "평온한 마음으로 하느님을 섬기게 하소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "people_lent_5_6"
+        ],
+        "rows": {
+          "label": {
+            "kr": "백성을 위한 기도 - 사순 제5주간 토요일"
+          },
+          "lines": [
+            {
+              "sp_kr": "✚",
+              "text_kr": "주님께서 여러분과 함께."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "또한 사제의 영과 함께."
+            },
+            {
+              "rubric_kr": "고개를 숙여 강복을 받는다."
+            },
+            {
+              "text_kr": "주님,",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "기도하는 교회에 자비를 베푸시고",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "주님께 마음을 두는 이들을 인자로이 돌보시어",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "외아드님의 죽음으로 구원하신 이들이",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "다시 죄에 빠져 불행을 겪지 않도록 지켜 주소서.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "우리 주 그리스도를 통하여 비나이다.",
+              "sp_kr": "✚"
+            },
+            {
+              "text_kr": "아멘.",
+              "sp_kr": "◎"
+            },
+            {
+              "sp_kr": "✚",
+              "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
+            },
+            {
+              "sp_kr": "",
+              "text_kr": "여기 모인 모든 이에게 강복하소서."
+            },
+            {
+              "sp_kr": "◎",
+              "text_kr": "아멘."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "isEucharist"
+        ],
+        "rows": true
+      }
+    }
+  ];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }
+      if (override.create) {
+        const entry = target.find(item => item && item.id === override.create.entryId);
+        if (!entry) throw new Error("KR" + ' Mass editor entry is missing: ' + override.create.entryId);
+        let rows = entry;
+        for (const part of override.create.relativePath) {
+          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};
+          rows = rows[part];
+        }
+        if (!Array.isArray(rows)) throw new Error("KR" + ' Mass editor block is invalid: ' + override.create.entryId);
+        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);
+        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];
+        if (!row) { row = {}; rows.push(row); }
+        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });
+        row[override.create.field] = String(override.value ?? '');
+        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
+        return;
+      }
+      if (override.rename) {
+        let row = target;
+        for (const part of override.rename.rowPath) row = row && row[part];
+        if (!row || typeof row !== 'object') throw new Error("KR" + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));
+        const fromField = override.rename.fromField;
+        const toField = override.rename.toField;
+        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error("KR" + ' Mass editor rename field is stale: ' + fromField);
+        if (fromField !== toField) delete row[fromField];
+        row[toField] = String(override.value ?? '');
+        const keys = Object.assign({}, row.__massEditorPairKeys);
+        delete keys[fromField];
+        keys[toField] = override.rename.rowKey;
+        row.__massEditorPairKeys = keys;
+        return;
+      }
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error("KR" + ' Mass editor override path is stale: ' + JSON.stringify(editPath));
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
   global.countryMassData["KR"] = Object.assign(global.countryMassData["KR"] || {}, {
     jurisdiction: "KR",
     name: "Korea",
     language: "KR",
-    ordinary: [{
+    ordinary: applyOrdinaryEditorOverrides([{
       "id": (
         "1. "
         + "THE INTRODUCTORY RITES"
@@ -4395,7 +11308,7 @@
           + "미사 끝에 곧바로 다른 전례가 이어지면 강복과 파견예식은 생략한다."
         )
       }]
-    }]
+    }])
   });
   const deepMerge = (left, right) => {
     if (Array.isArray(left) || Array.isArray(right)) {

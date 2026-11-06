@@ -3,11 +3,4462 @@
   'use strict';
 
   global.countryMassData = global.countryMassData || {};
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "1"
+        ],
+        "rows": [
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Cha rất nhân từ,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Nhờ Đức Giêsu Kitô, Con Cha, Chúa chúng con,<br>chúng con khẩn khoản nài xin Cha thương nhận",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và ban phúc ✠ cho những của lễ hiến dâng, của lễ thượng tiến,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "của lễ hy sinh tinh tuyền và thánh thiện này.<br>Chúng con dâng lên Cha để cầu cách riêng cho Hội Thánh của Cha,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "xin Cha thương ban bình an, giữ gìn, hợp nhất",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và cai quản Hội Thánh Công giáo khắp hoàn cầu:",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:5:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đồng thời cũng cầu cho tôi tớ của Cha là Đức Giáo Hoàng [Tên GH.], Đức Giám Mục [Tên GM.] chúng con",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:6:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và mọi đấng trung thành gìn giữ đức tin công giáo và tông truyền.",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:te_igitur:7:text"
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Chúa xin nhớ đến (những) tôi tớ của Chúa là [Tên Thánh] (và [Tên Thánh])",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:living:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và mọi người đang sum họp nơi đây, mà Chúa biết rõ lòng tin kính và sùng mộ.",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:living:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúng con dâng thay hoặc chính họ dâng lên Chúa hy lễ ca tụng này",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:living:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cầu cho mình và cho mọi người thân thuộc:",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:living:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "hầu linh hồn được cứu chuộc, thân xác được an lành mạnh khỏe như lòng mong ước:",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:living:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "như vậy, họ được tôn vinh Chúa là Thiên Chúa thật, hằng hữu và hằng sống.",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:living:5:text"
+            }
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": true,
+            "label": {
+              "vn": "Thường niên"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "vn": "Thường niên"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Hiệp thông cùng Hội Thánh, chúng con kính nhớ",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "trước hết Đức Maria vinh hiển trọn đời đồng trinh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Mẹ của Đức Giêsu Kitô, là Thiên Chúa và là Chúa chúng con:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "sau là Thánh Giuse, bạn Đức Trinh Nữ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "các Thánh Tông Đồ và Tử Đạo: Thánh Phêrô và Phaolô, Anrê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Giacôbê, Gioan, Tôma, Giacôbê, Philipphê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Bartôlômêô, Matthêô, Simon và Tađêô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Linô, Clêtô, Clementê, Xistô, Cornêliô, Cyprianô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Laurensô, Crisôgônô, Gioan và Phaolô, Cosma và Đamianô)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cùng toàn thể các Thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "vì công nghiệp và lời cầu khẩn của các ngài,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin Chúa phù hộ chúng con trong mọi sự.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:12:text"
+                    }
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "vn": "Giáng Sinh"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Hiệp thông cùng Hội Thánh, chúng con mừng ngày (đêm) cực thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là ngày (đêm) Đức Maria đã sinh Đấng Cứu Thế cho trần gian,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "mà vẫn trinh khiết vẹn tuyền, và chúng con kính nhớ",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "trước hết Đức Maria vinh hiển trọn đời đồng trinh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Mẹ của Đức Giêsu Kitô, là Thiên Chúa và là Chúa chúng con:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "sau là Thánh Giuse, bạn Đức Trinh Nữ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "các Thánh Tông Đồ và Tử Đạo: Thánh Phêrô và Phaolô, Anrê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Giacôbê, Gioan, Tôma, Giacôbê, Philipphê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Bartôlômêô, Matthêô, Simon và Tađêô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Linô, Clêtô, Clementê, Xistô, Cornêliô, Cyprianô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Laurensô, Crisôgônô, Gioan và Phaolô, Cosma và Đamianô)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cùng toàn thể các Thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "vì công nghiệp và lời cầu khẩn của các ngài,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin Chúa phù hộ chúng con trong mọi sự.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:14:text"
+                    }
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "vn": "Hiển Linh"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Hiệp thông cùng Hội Thánh chúng con mừng ngày cực thánh",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là ngày Con Một Chúa, đồng hằng hữu với Chúa trong vinh quang,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "đã xuất hiện hữu hình, mang xác phàm thực sự như chúng con,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và chúng con kính nhớ",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "trước hết Đức Maria vinh hiển trọn đời đồng trinh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Mẹ của Đức Giêsu Kitô, là Thiên Chúa và là Chúa chúng con:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "sau là Thánh Giuse, bạn Đức Trinh Nữ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "các Thánh Tông Đồ và Tử Đạo: Thánh Phêrô và Phaolô, Anrê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Giacôbê, Gioan, Tôma, Giacôbê, Philipphê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Bartôlômêô, Matthêô, Simon và Tađêô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Linô, Clêtô, Clementê, Xistô, Cornêliô, Cyprianô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Laurensô, Crisôgônô, Gioan và Phaolô, Cosma và Đamianô)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cùng toàn thể các Thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "vì công nghiệp và lời cầu khẩn của các ngài,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin Chúa phù hộ chúng con trong mọi sự.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:15:text"
+                    }
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "vn": "Phục Sinh"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Hiệp thông cùng Hội Thánh, chúng con mừng đêm (ngày) cực thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là đêm (ngày) Đức Giêsu Kitô, Chúa chúng con đã sống lại về phần xác,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và chúng con kính nhớ",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "trước hết Đức Maria vinh hiển trọn đời đồng trinh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Mẹ của Đức Giêsu Kitô, là Thiên Chúa và là Chúa chúng con:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "sau là Thánh Giuse, bạn Đức Trinh Nữ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "các Thánh Tông Đồ và Tử Đạo: Thánh Phêrô và Phaolô, Anrê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Giacôbê, Gioan, Tôma, Giacôbê, Philipphê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Bartôlômêô, Matthêô, Simon và Tađêô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Linô, Clêtô, Clementê, Xistô, Cornêliô, Cyprianô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Laurensô, Crisôgônô, Gioan và Phaolô, Cosma và Đamianô)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cùng toàn thể các Thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "vì công nghiệp và lời cầu khẩn của các ngài,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin Chúa phù hộ chúng con trong mọi sự.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:14:text"
+                    }
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "vn": "Thăng Thiên"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Hiệp thông cùng Hội Thánh chúng con mừng ngày cực thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là ngày Con Một Chúa, Chúa chúng con,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "đem thân thể yếu hèn của chúng con, đã được kết hợp với Người,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "về ngự bên hữu Chúa vinh quang, và chúng con kính nhớ",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "trước hết Đức Maria vinh hiển trọn đời đồng trinh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Mẹ của Đức Giêsu Kitô, là Thiên Chúa và là Chúa chúng con:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "sau là Thánh Giuse, bạn Đức Trinh Nữ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "các Thánh Tông Đồ và Tử Đạo: Thánh Phêrô và Phaolô, Anrê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Giacôbê, Gioan, Tôma, Giacôbê, Philipphê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Bartôlômêô, Matthêô, Simon và Tađêô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Linô, Clêtô, Clementê, Xistô, Cornêliô, Cyprianô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Laurensô, Crisôgônô, Gioan và Phaolô, Cosma và Đamianô)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cùng toàn thể các Thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "vì công nghiệp và lời cầu khẩn của các ngài,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin Chúa phù hộ chúng con trong mọi sự.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:15:text"
+                    }
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "vn": "Hiện Xuống"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Hiệp thông cùng Hội Thánh, chúng con mừng ngày cực thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là ngày Chúa Thánh Thần lấy hình lưỡi lửa hiện xuống trên các Tông Đồ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và chúng con kính nhớ",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "trước hết Đức Maria vinh hiển trọn đời đồng trinh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Mẹ của Đức Giêsu Kitô, là Thiên Chúa và là Chúa chúng con:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "sau là Thánh Giuse, bạn Đức Trinh Nữ,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "các Thánh Tông Đồ và Tử Đạo: Thánh Phêrô và Phaolô, Anrê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Giacôbê, Gioan, Tôma, Giacôbê, Philipphê,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Bartôlômêô, Matthêô, Simon và Tađêô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Linô, Clêtô, Clementê, Xistô, Cornêliô, Cyprianô,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Laurensô, Crisôgônô, Gioan và Phaolô, Cosma và Đamianô)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cùng toàn thể các Thánh,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "vì công nghiệp và lời cầu khẩn của các ngài,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin Chúa phù hộ chúng con trong mọi sự.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:communicantes:14:text"
+                    }
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:communicantes:choice"
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": false,
+            "label": {
+              "vn": "Thường niên"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "vn": "Thường niên"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Vì vậy, lạy Chúa, xin vui lòng chấp nhận lễ vật của chúng con,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là tôi tớ Chúa, và của toàn thể gia đình Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin an bài cho đời chúng con được sống trong bình an của Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cứu chúng con thoát khỏi án phạt đời đời",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và nhận chúng con vào đoàn những người Chúa chọn.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "vn": "Giáng Sinh"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Vì vậy, lạy Chúa, xin vui lòng chấp nhận lễ vật của chúng con,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là tôi tớ Chúa, và của toàn thể gia đình Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin an bài cho đời chúng con được sống trong bình an của Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cứu chúng con thoát khỏi án phạt đời đời",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và nhận chúng con vào đoàn những người Chúa chọn.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "vn": "Hiển Linh"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Vì vậy, lạy Chúa, xin vui lòng chấp nhận lễ vật của chúng con,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là tôi tớ Chúa, và của toàn thể gia đình Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin an bài cho đời chúng con được sống trong bình an của Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cứu chúng con thoát khỏi án phạt đời đời",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và nhận chúng con vào đoàn những người Chúa chọn.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "L",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "vn": "Phục Sinh"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Vì vậy, lạy Chúa, xin vui lòng chấp nhận lễ vật của chúng con,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là tôi tớ Chúa, và của toàn thể gia đình Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "chúng con dâng lên Chúa lễ vật này",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cũng để cầu cho những người Chúa đã thương tái sinh bởi nước và Thánh Thần,<br>tha thứ mọi tội lỗi cho họ,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin an bài cho đời chúng con được sống trong bình an của Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cứu chúng con thoát khỏi án phạt đời đời",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và nhận chúng con vào đoàn những người Chúa chọn.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:6:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:7:text"
+                    }
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "vn": "Thăng Thiên"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Vì vậy, lạy Chúa, xin vui lòng chấp nhận lễ vật của chúng con,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là tôi tớ Chúa, và của toàn thể gia đình Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin an bài cho đời chúng con được sống trong bình an của Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cứu chúng con thoát khỏi án phạt đời đời",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và nhận chúng con vào đoàn những người Chúa chọn.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "vn": "Hiện Xuống"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "LM.",
+                    "text_vn": "Vì vậy, lạy Chúa, xin vui lòng chấp nhận lễ vật của chúng con,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "là tôi tớ Chúa, và của toàn thể gia đình Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "xin an bài cho đời chúng con được sống trong bình an của Chúa,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "cứu chúng con thoát khỏi án phạt đời đời",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và nhận chúng con vào đoàn những người Chúa chọn.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_vn": "canon:hanc_igitur:5:text"
+                    }
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:hanc_igitur:choice"
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Chúa, xin thương ban phúc, chấp nhận, chuẩn y,<br>làm cho những lễ vật này được hoàn hảo và đẹp lòng Chúa,",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:quam_oblationem:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "hầu trở nên cho chúng con Mình và Máu Con chí ái của Chúa",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:quam_oblationem:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "là Đức Giêsu Kitô, Chúa chúng con.",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:quam_oblationem:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Hôm trước ngày chịu khổ hình,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Người cầm bánh trong tay thánh thiện khả kính,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "ngước mắt lên trời",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "hướng về Chúa là Cha toàn năng của Người,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "tạ ơn Chúa, dâng lời chúc tụng,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "bẻ ra và trao cho các môn đệ mà nói:",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:5:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ ĂN:</b>",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:6:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ MÌNH THẦY</b>",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:7:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ BỊ NỘP VÌ CÁC CON.</b>",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:bread:8:text"
+            }
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm Bánh đã truyền phép được linh mục nâng lên,<br>tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt bánh lại trên đĩa thánh.",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_vn": "canon:bread:9:rubric"
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Cùng một thể thức ấy, sau bữa ăn tối,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Người cầm chén quý trọng này trong tay thánh thiện khả kính,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cũng tạ ơn Chúa, dâng lời chúc tụng,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và trao cho các môn đệ mà nói:",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ UỐNG:</b>",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ CHÉN MÁU THẦY,</b><br><b>MÁU GIAO ƯỚC MỚI VÀ VĨNH CỬU,</b>",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:5:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ ĐỔ RA CHO CÁC CON</b>",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:6:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÀ NHIỀU NGƯỜI ĐƯỢC THA TỘI</b>",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:7:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>CÁC CON HÃY LÀM VIỆC NÀY MÀ NHỚ ĐẾN THẦY.</b>",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:cup:8:text"
+            }
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm chén thánh được linh mục nâng lên, tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt chén thánh lại trên khăn thánh.",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_vn": "canon:cup:9:rubric"
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Đây là mầu nhiệm đức tin.",
+            "__ordinaryStage": "mystery_invitation",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:mystery_invitation:0:text"
+            }
+          },
+          {
+            "sp_vn": "CĐ.",
+            "text_vn": "Lạy Chúa, chúng con loan truyền Chúa chết và tuyên xưng Chúa sống lại, cho tới khi Chúa đến.",
+            "__ordinaryStage": "mystery_a",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:mystery_a:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này, chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+            "rubric_vn": "Hoặc: ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 6,
+                  "left": "",
+                  "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+                }
+              ]
+            },
+            "__ordinaryStage": "mystery_b",
+            "__massEditorPairKeys": {
+              "rubric_vn": "canon:mystery_b:0:rubric",
+              "text_vn": "canon:mystery_b:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá và sự Phục Sinh của Chúa để giải thoát chúng con, xin cứu độ chúng con.",
+            "rubric_vn": "Hoặc: ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 6,
+                  "left": "",
+                  "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+                }
+              ]
+            },
+            "__ordinaryStage": "mystery_c",
+            "__massEditorPairKeys": {
+              "rubric_vn": "canon:mystery_c:0:rubric",
+              "text_vn": "canon:mystery_c:0:text"
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Vì vậy, lạy Chúa, chúng con là tôi tớ Chúa, và toàn thể dân Thánh Chúa,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "kính nhớ cuộc khổ hình hồng phúc, sự sống lại từ cõi chết",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và lên trời vinh hiển của Đức Kitô, Con Chúa, Chúa chúng con,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "chúng con lựa chọn trong những của Chúa đã ban",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "mà dâng lên trước tôn nhan uy linh Chúa:",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "lễ vật thanh khiết, lễ vật thánh thiện, lễ vật tinh tuyền,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:5:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "bánh Thánh ban sự sống vĩnh cửu và chén cứu độ muôn đời.",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:anamnesis:6:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Xin Chúa ghé mắt nhân từ và khoan hậu nhìn đến những lễ vật này",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supra_quae:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và thương nhận như đã nhận lễ vật của Abel tôi trung của Chúa,",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supra_quae:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "hy lễ của Abraham tổ phụ chúng con,",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supra_quae:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "hy lễ thánh thiện",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supra_quae:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và lễ vật tinh tuyền của Melkisêđê, Thượng tế của Chúa.",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supra_quae:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa toàn năng, chúng con nài xin Chúa",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supplices:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "sai Sứ Thần dâng lễ vật này lên bàn thờ cao sang,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supplices:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "trước tôn nhan uy linh Chúa,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supplices:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để hết thảy khi tham dự bàn tiệc này, là rước Mình và Máu cực Thánh Con Chúa,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supplices:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "chúng con được ✠ tràn đầy ân phúc bởi trời.",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supplices:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:supplices:5:text"
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Chúa, xin cũng nhớ đến (những) tôi tớ Chúa là [Tên Thánh] (và [Tên Thánh])",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:departed:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "được ghi dấu đức tin, đã ra đi trước chúng con và đang nghỉ giấc bình an.",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:departed:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, chúng con xin Chúa thương ban cho các tín hữu ấy, và tất cả mọi người,",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:departed:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đặc biệt các bậc tổ tiên, ông bà, cha mẹ và thân bằng quyến thuộc chúng con,",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:departed:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đã an nghỉ trong Đức Kitô được vào nơi hạnh phúc sáng láng và bình an.",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:departed:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "(Nhờ Đức Kitô, Chúa chúng con. Amen.)",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:departed:5:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Xin cũng cho chúng con, là tôi tớ tội lỗi,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đang hy vọng vào lượng từ bi hải hà của Chúa",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "được thông phần với cộng đoàn các Thánh Tông Đồ và các Thánh Tử Đạo:",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Thánh Gioan, Têphanô, Matthia, Barnaba,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:3:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "(Inhaxiô, Alexanđrô, Marcellinô, Phêrô,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:4:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Phêlixita, Perpetua, Agata, Luxia, Anê, Xêxilia, Anastasia)",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:5:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và toàn thể các Thánh,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:6:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "xin Chúa đừng xét theo công nghiệp chúng con,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:7:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "nhưng rộng lòng tha thứ",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:8:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "mà cho chúng con được đồng phận với các ngài.",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:nobis_quoque:9:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Nhờ Đức Kitô, Chúa chúng con.",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:per_quem:0:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, nhờ Người,",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:per_quem:1:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúa hằng sáng tạo, thánh hóa, ban sinh lực, giáng phúc",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:per_quem:2:text"
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và phân phát cho chúng con tất cả những lễ vật này.",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_vn": "canon:per_quem:3:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "2"
+        ],
+        "rows": [
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúa thật là Ðấng Thánh, là nguồn mọi sự thánh thiện."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Vì thế, chúng con nài xin Chúa dùng ơn Thánh Thần Chúa thánh hóa những của lễ này,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để trở nên cho chúng con,<br> Mình và ✠ Máu Đức Giêsu Kitô, Chúa chúng con."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Khi tự nguyện nộp mình chịu khổ hình,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Người cầm lấy bánh, tạ ơn,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "bẻ ra và trao cho các môn đệ mà nói :"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ ĂN:</B>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ MÌNH THẦY,</>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ BỊ NỘP VÌ CÁC CON.</b>"
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm Bánh đã truyền phép được linh mục nâng lên,<br>tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt bánh lại trên đĩa thánh."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Cùng một thể thức ấy, sau bữa ăn tối,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Người cầm lấy chén, cũng tạ ơn,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "trao cho các môn đệ mà nói :"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ UỐNG:</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ CHÉN MÁU THẦY,<br>MÁU GIAO ƯỚC MỚI VÀ VĨNH CỬU</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ ĐỔ RA CHO CÁC CON</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÀ NHIỀU NGƯỜI ĐƯỢC THA TỘI</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>CÁC CON HÃY LÀM VIỆC NÀY MÀ NHỚ ĐẾN THẦY.</b>"
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm chén thánh được linh mục nâng lên, tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt chén thánh lại trên khăn thánh."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Đây là mầu nhiệm đức tin."
+          },
+          {
+            "sp_vn": "CĐ.",
+            "text_vn": "Lạy Chúa, chúng con loan truyền Chúa chịu chết<br>và tuyên xưng Chúa sống lại, cho tới khi Chúa đến."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+            "rubric_vn": "Hoặc: ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 6,
+                  "left": "",
+                  "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con.",
+            "rubric_vn": "Hoặc:  ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 7,
+                  "left": "",
+                  "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Vì vậy, lạy Chúa, khi kính nhớ Con Chúa chịu chết và sống lại,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "chúng con dâng lên Chúa bánh trường sinh và chén cứu độ để tạ ơn Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "vì Chúa đã thương cho chúng con<br>được xứng đáng hầu cận trước Tôn Nhan và phụng sự Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúng con tha thiết nài xin Chúa"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cho chúng con khi thông phần Mình và Máu Đức Kitô,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "được quy tụ nên một nhờ Chúa Thánh Thần."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, xin nhớ đến Hội Thánh Chúa lan rộng khắp hoàn cầu,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để kiện toàn Hội Thánh trong đức mến,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng với Đức Giáo Hoàng [Tên GH.], Đức Giám Mục [Tên GM.], (hay Giám Mục khác) chúng con"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và toàn thể hàng giáo sĩ."
+          },
+          {
+            "rubric_vn": "Trong lễ cầu cho người đã qua đời, có thể thêm:"
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Xin nhớ đến tôi tớ Chúa là [Tên Thánh]"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "mà (hôm nay) Chúa đã gọi ra khỏi đời này về với Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Xin ban cho kẻ đã chết như Con Chúa"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "thì cũng được sống lại như Người."
+          },
+          {
+            "rubric_vn": "Sau các lời nguyện cầu cho người đã qua đời,"
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Xin Chúa cũng nhớ đến anh chị em chúng con<br>đang an nghỉ trong niềm hy vọng sống lại,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và mọi người, đặc biệt các bậc tổ tiên, ông bà, cha mẹ<br>và thân bằng quyến thuộc chúng con,<br>đã ly trần trong tình thương của Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Xin cho hết thảy được vào hưởng ánh sáng tôn nhan Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúng con nài xin Chúa thương xót tất cả chúng con,<br>cho chúng con được đồng hưởng sự sống đời đời,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng với Đức Trinh Nữ Maria, Mẹ Thiên Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "thánh Giuse, Bạn trăm năm Đức Trinh Nữ,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "các Thánh Tông Ðồ, và toàn thể các Thánh"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đã sống đẹp lòng Chúa qua mọi thời đại,<br>và cùng với các Ngài,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "chúng con được ca ngợi và tôn vinh Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "nhờ Ðức Giê-su Ki-tô, Con Chúa."
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "3"
+        ],
+        "rows": [
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Chúa, Chúa thật là Đấng Thánh,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và muôn vật Chúa đã tạo thành đều phải ca ngợi Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "vì nhờ Đức Giêsu Kitô, Con Chúa, Chúa chúng con"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "do quyền năng tác động của Chúa Thánh Thần, Chúa ban sự sống và thánh hóa mọi loài,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và không ngừng quy tụ một dân riêng,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để từ đông sang tây họ dâng lên Chúa một hiến lễ tinh tuyền."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Vì vậy, lạy Chúa, chúng con tha thiết nài xin Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "nhờ cũng một Chúa Thánh Thần, đoái thương thánh hóa của lễ chúng con dâng tiến Chúa đây"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để trở nên Mình và ✠ Máu Đức Giêsu Kitô, Con Chúa, Chúa chúng con,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "thừa lệnh Người chúng con cử hành mầu nhiệm này."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Trong đêm bị trao nộp,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "chính Người cầm lấy bánh, tạ ơn Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "dâng lời chúc tụng, bẻ ra và trao cho các môn đệ mà nói :"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ ĂN:</B>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ MÌNH THẦY,</>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ BỊ NỘP VÌ CÁC CON.</b>"
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm Bánh đã truyền phép được linh mục nâng lên,<br>tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt bánh lại trên đĩa thánh."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Cùng một thể thức ấy, sau bữa ăn tối,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Người cầm lấy chén, tạ ơn Chúa, dâng lời chúc tụng,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và trao cho các môn đệ mà nói :"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ UỐNG:</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ CHÉN MÁU THẦY,<br>MÁU GIAO ƯỚC MỚI VÀ VĨNH CỬU</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ ĐỔ RA CHO CÁC CON</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÀ NHIỀU NGƯỜI ĐƯỢC THA TỘI</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>CÁC CON HÃY LÀM VIỆC NÀY MÀ NHỚ ĐẾN THẦY.</b>"
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm chén thánh được linh mục nâng lên, tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt chén thánh lại trên khăn thánh."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Đây là mầu nhiệm đức tin."
+          },
+          {
+            "sp_vn": "CĐ.",
+            "text_vn": "Lạy Chúa, chúng con loan truyền Chúa chịu chết<br>và tuyên xưng Chúa sống lại, cho tới khi Chúa đến."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+            "rubric_vn": "Hoặc: ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 6,
+                  "left": "",
+                  "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con.",
+            "rubric_vn": "Hoặc:  ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 7,
+                  "left": "",
+                  "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Vì vậy, lạy Chúa, khi kính nhớ cuộc khổ hình sinh ơn cứu độ,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "sự sống lại và lên trời vinh hiển của Con Chúa, đồng thời mong đợi Người lại đến,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "chúng con dâng lên Chúa hy lễ hằng sống và thánh thiện này để tạ ơn Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúng con nài xin Chúa đoái nhìn hiến lễ Hội Thánh dâng lên Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và khi Chúa nhận đây chính là Của Lễ"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "mà Chúa muốn được hiến tế để nguôi lòng Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "xin cho chúng con được bổ dưỡng bởi Mình và Máu Con Chúa,<br>và được tràn đầy Thánh Thần của Người,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "thì trở nên một thân thể và một tinh thần trong Đức Kitô."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Nguyện xin Chúa Thánh Thần<br>làm cho chúng con trở nên của lễ muôn đời dâng tiến Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để chúng con được thừa hưởng gia nghiệp cùng với các người Chúa đã chọn,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "nhất là với Đức Trinh Nữ Maria rất Thánh, Mẹ Thiên Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "các Thánh Tông Đồ và các Thánh Tử đạo hiển vinh,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "(cùng với Thánh [tên thánh] )",
+            "rubric_vn": "tên Thánh kính trong ngày hoặc Thánh bổn mạng",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 45,
+                  "left": "",
+                  "right": "(cùng với Thánh [tên thánh] )"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và toàn thể các Thánh,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "vì chúng con tin tưởng các ngài luôn chuyển cầu cùng Chúa for chúng con."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, chúng con nguyện xin Của Lễ hòa giải này"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đem lại bình an và ơn cứu độ cho tất cả thế giới."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Xin thương ban cho Hội Thánh Chúa trên đường lữ thứ trần gian"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "được vững mạnh trong đức tin và đức mến"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng với tôi tớ Chúa là Đức Giáo Hoàng [Ten GH.]"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và Đức Giám Mục [Ten GM.], (hay Giám Mục khác) chúng con,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng toàn thể hàng Giám Mục, giáo sĩ khắp nơi, và tất cả dân riêng Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng toàn thể hàng Giám Mục, giáo sĩ khắp nơi, và tất cả dân riêng Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng toàn thể hàng Giám Mục, giáo sĩ khắp nơi, và tất cả dân riêng Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "cùng toàn thể hàng Giám Mục, giáo sĩ khắp nơi, và tất cả dân riêng Chúa."
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "eucharist3_intercession",
+            "defaultOption": "ordinary",
+            "label": {
+              "vn": "Lời chuyển cầu Kinh Nguyện Thánh Thể III"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "vn": "Thánh lễ thông thường"
+                },
+                "lines": [
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Xin Cha thương đến anh chị em chúng con đã ly trần,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và mọi người, đặc biệt các bậc tổ tiên, ông bà, cha mẹ"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và thân bằng quyến thuộc chúng con."
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "đã sống đẹp lòng Cha mà nay đã lìa cõi thế,<br>Xin thương nhận hết thảy vào Nước Cha,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "nơi chúng con hy vọng sẽ tới, để cùng nhau tận hưởng vinh quang Cha muôn đời."
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "nhờ Đức Kitô, Chúa chúng con,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "nhờ Người, Cha rộng ban mọi ơn lành cho thế gian."
+                  }
+                ]
+              },
+              "funeral": {
+                "splitByLanguage": true,
+                "label": {
+                  "vn": "Thánh lễ cầu cho người qua đời"
+                },
+                "lines": [
+                  {
+                    "rubric_vn": "Khi dùng Kinh nguyện Thánh Thể này trong lễ cầu cho người đã qua đời,<br>có thể thay thế phần như sau:"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Lạy Cha xin nhớ đến (những) tôi tớ Cha là [Tên Thánh]<br>mà (hôm nay) Cha đã gọi ra khỏi đời này về với Cha."
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Xin ban cho kẻ đã chết như Con Cha,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "thì cũng được sống lại như Người,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "khi Người cho xác kẻ chết sống lại từ bụi đất"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và cho thân xác mọn hèn chúng con<br>trở nên giống thân xác sáng láng của Người."
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "Xin Cha thương đến anh chị em chúng con đã ly trần,<br>và mọi người, đặc biệt các bậc tổ tiên, ông bà, cha mẹ<br>và thân bằng quyến thuộc chúng con,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "đã sống đẹp lòng Cha mà nay đã lìa cõi thế.<br>Xin thương nhận hết thảy vào Nước Cha, nơi chúng con hy vọng sẽ tới,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "để cùng nhau tận hưởng vinh quang Cha muôn đời,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "khi Cha lau sạch nước mắt chúng con,<br>vì khi được thấy tường tận Cha là Thiên Chúa chúng con,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "thì muôn đời chúng con sẽ trở nên giống Cha"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "và sẽ ca ngợi Cha khôn cùng,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "nhờ Đức Kitô, Chúa chúng con,"
+                  },
+                  {
+                    "sp_vn": "",
+                    "text_vn": "nhờ Người, Cha rộng ban mọi ơn lành cho thế gian."
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "4"
+        ],
+        "rows": [
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Cha chí Thánh, tạ ơn Cha thật là xứng hợp, tôn vinh Cha thật là chính đáng,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "vì Cha là Thiên Chúa thật, duy nhất và hằng sống, hiện hữu từ trước muôn thuở và tồn tại đến muôn đời, ngự trị trong ánh sáng siêu phàm,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "nhưng Cha cũng là Đấng duy nhất tốt lành và là nguồn mạch sự sống, đã tác tạo mọi loài để chúng được đầy tràn ơn phúc, và nhiều thụ tạo vui hưởng ánh sáng huy hoàng của Cha."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Vì thế, có vô số Thiên thần hầu cận trước nhan Cha, ngày đêm phụng sự Cha, chiêm ngưỡng Thánh nhan Cha vinh hiển và không ngớt tôn vinh Cha."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Hiệp cùng các ngài, chúng con và mọi thụ tạo dưới bầu trời, nhờ tiếng nói của chúng con, hân hoan tuyên xưng danh Cha mà ca hát rằng:"
+          },
+          {
+            "sp_vn": "CĐ.",
+            "text_vn": "Thánh! Thánh! Thánh!"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúa là Thiên Chúa các đạo binh."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Trời đất đầy vinh quang Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Hoan hô Chúa trên các tầng trời."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Chúc tụng Ðấng ngự đến nhân danh Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Hoan hô Chúa trên các tầng trời."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Cha chí Thánh, chúng con tuyên xưng Cha là Đấng cao cả, đã tác tạo mọi sự theo thượng trí và tình thương."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Cha đã dựng nên con người giống hình ảnh Cha và trao cho việc trông coi vũ trụ, để khi phụng sự một mình Cha là Đấng Tạo Hóa, con người cai quản mọi loài thụ tạo."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Và khi con người đã mất tình nghĩa với Cha vì bất phục tùng, Cha đã không bỏ mặc con người dưới quyền lực sự chết. Thật vậy, Cha đã thương cứu giúp mọi người, để những ai tìm Cha đều gặp Cha."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Hơn nữa, nhiều lần Cha đã giao ước với loài người, và dùng các tiên tri mà dạy dỗ loài người đợi chờ ơn cứu độ."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Cha chí Thánh, Cha yêu thương thế gian, đến nỗi, khi tới thời viên mãn, Cha đã sai Con Một đến làm Đấng Cứu Độ chúng con."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Bởi phép Chúa Thánh Thần, Người đã nhập thể và được Đức Trinh Nữ Maria sinh ra, đã sống trọn thân phận con người của chúng con, ngoại trừ tội lỗi,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "đã loan báo Tin Mừng cứu độ cho người nghèo khó, sự giải thoát cho kẻ bị giam cầm, niềm hân hoan cho người sầu khổ trong tâm hồn."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Để chu toàn ý định của Cha, Người đã nộp mình chịu chết, và từ cõi chết sống lại, Người hủy diệt sự chết và canh tân sự sống."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Và để chúng con không còn sống cho chính mình nữa, mà sống cho Đấng đã chết và sống lại vì chúng con, thì lạy Cha, từ nơi Cha, Người đã sai Chúa Thánh Thần như ân huệ khởi đầu đến với các tín hữu,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "để Chúa Thánh Thần kiện toàn công trình của Người nơi trần gian, và hoàn tất công việc thánh hóa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Vì vậy, lạy Chúa, chúng con nài xin Chúa cho Chúa Thánh Thần thương thánh hóa những của lễ này, để trở nên Mình và Máu Đức Giêsu Kitô, Chúa chúng con"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "hầu chúng con cử hành mầu nhiệm cao cả mà chính Người đã trối lại cho chúng con làm giao ước muôn đời."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Vậy, lạy Cha chí Thánh, khi đến giờ Người được Cha tôn vinh, và vì yêu thương những kẻ thuộc về mình còn ở trần gian, Người đã yêu thương họ đến cùng: nên trong bữa ăn tối,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Người cầm lấy bánh, dâng lời chúc tụng, bẻ ra, và trao cho các môn đệ mà nói :"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ ĂN:</B>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ MÌNH THẦY,</>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ BỊ NỘP VÌ CÁC CON.</b>"
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm Bánh đã truyền phép được linh mục nâng lên,<br>tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt bánh lại trên đĩa thánh."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Cùng một thể thức ấy, Người cầm lấy chén rượu nho, tạ ơn và trao cho các môn đệ mà nói :"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ UỐNG:</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÌ NÀY LÀ CHÉN MÁU THẦY,<br>MÁU GIAO ƯỚC MỚI VÀ VĨNH CỬU</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>SẼ ĐỔ RA CHO CÁC CON</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>VÀ NHIỀU NGƯỜI ĐƯỢC THA TỘI</b>"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "<b>CÁC CON HÃY LÀM VIỆC NÀY MÀ NHỚ ĐẾN THẦY.</b>"
+          },
+          {
+            "rubric_vn": "Sau khi chiêm ngắm chén thánh được linh mục nâng lên, tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt chén thánh lại trên khăn thánh."
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Đây là mầu nhiệm đức tin."
+          },
+          {
+            "sp_vn": "CĐ.",
+            "text_vn": "Lạy Chúa, chúng con loan truyền Chúa chịu chết<br>và tuyên xưng Chúa sống lại, cho tới khi Chúa đến."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến.",
+            "rubric_vn": "Hoặc: ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 6,
+                  "left": "",
+                  "right": "Lạy Chúa, mỗi lần ăn bánh và uốn"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con.",
+            "rubric_vn": "Hoặc:  ",
+            "rubricLayout_vn": {
+              "blockEnd": 0,
+              "pieces": [
+                {
+                  "at": 0,
+                  "from": 0,
+                  "to": 7,
+                  "left": "",
+                  "right": "Lạy Chúa Cứu Thế, Chúa đã dùng T"
+                }
+              ]
+            }
+          },
+          {
+            "sp_vn": "LM.",
+            "text_vn": "Vì vậy, lạy Chúa, giờ đây cử hành lễ tưởng niệm công trình cứu chuộc, chúng con kính nhớ Đức Kitô chịu chết và xuống ngục tổ tông, chúng con tuyên xưng Người sống lại và lên trời ngự bên hữu Chúa,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "và đang khi đợi chờ Người đến trong vinh quang, chúng con dâng lên Chúa Mình và Máu Người làm hy lễ đẹp lòng Chúa và sinh ơn cứu độ cho cả trần gian."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Chúa, xin đoái nhìn Hiến Lễ chính Chúa đã dọn sẵn cho Hội Thánh Chúa, xin Chúa nhân từ ban cho tất cả những ai sẽ thông phần cùng một bánh và chén này, được Chúa Thánh Thần quy tụ tất cả thành một thân thể, trở nên hiến lễ sống động trong Đức Kitô để ca tụng vinh quang Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Vậy giờ đây, lạy Chúa, xin nhớ đến mọi người mà chúng con dâng của lễ này cầu cho họ : trước hết, tôi tớ Chúa là Đức Giáo Hoàng T… Đức Giám Mục T… chúng con và toàn thể hàng Giám Mục, sau là tất cả các giáo sĩ, những người xin dâng lễ, những người hiện diện chung quanh đây và toàn thể dân Chúa, cùng mọi người đang thành tâm tìm Chúa."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Xin Chúa cũng nhớ đến những người đã qua đời trong bình an của Đức Kitô,... cùng tất cả mọi người quá cố mà chỉ một mình Chúa biết lòng tin của họ."
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "Lạy Cha nhân từ, xin ban cho tất cả chúng con là con cái Cha được hưởng phần gia nghiệp thiên quốc, cùng với Đức Trinh Nữ Maria, Mẹ Thiên Chúa, các Thánh Tông Đồ và các Thánh trong nước Cha,"
+          },
+          {
+            "sp_vn": "",
+            "text_vn": "ở đó, cùng với muôn loài thụ tạo đã được giải thoát khỏi cảnh hư nát vì tội lỗi và sự chết, chúng con được tôn vinh Cha, nhờ Đức Kitô, Chúa chúng con, nhờ Người, Cha rộng ban mọi ơn lành cho thế gian."
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formEndings"
+        ],
+        "rows": {}
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formFrames"
+        ],
+        "rows": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "ending"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "ordinarySourceLayoutVersion"
+        ],
+        "rows": 1
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_advent"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - MÙA VỌNG"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa toàn năng và từ bi, nhờ việc Con Chúa đến trong ánh huy hoàng, thánh hoá và đổ tràn phúc lành của Ngài cho anh chị em là những kẻ tin Con Một Chúa đã đến và mong đợi Người sẽ đến.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Thiên Chúa làm cho anh chị em, trong cuộc sống hiện tại được bền vững trong đức tin, vui mừng trong đức cậy, và sinh hoa kết quả trong đức mến.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Anh chị em vui mừng sốt sắng đón nhận Ðấng Cứu chuộc chúng ta đến trong xác phàm, xin Thiên Chúa ban cho anh chị em phần thưởng cuộc sống đời đời khi Người vinh quang ngự đến lần thứ hai.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:advent:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_christmas"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ GIÁNG SINH"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa vô cùng thiện hảo đã nhờ Con của Ngài nhập thể mà xua đuổi bóng tối trần gian và nhờ Con của Ngài Giáng Sinh vinh hiển mà sáng soi đêm (ngày) cực thánh này. Xin Ngài xóa tan bóng đen tật xấu khỏi anh chị em, và chiếu soi tâm hồn anh chị em nhờ ánh sáng nhân đức.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Thiên Chúa đã muốn nhờ Thiên thần loan báo cho các mục đồng niềm vui trọng đại Con Ngài Giáng Sinh đem lại ơn cứu độ. Xin Ngài đổ tràn niềm vui vào tâm trí anh chị em, và làm cho anh chị em thành những người loan báo Tin Mừng của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Thiên Chúa đã dùng việc nhập thể của Con Ngài mà nối kết đất với trời. Xin Ngài cho anh chị em được tràn đầy ơn bình an và lòng thương mến của Ngài. Và xin Ngài làm cho anh chị em được dự phần với Hội Thánh trên trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:christmas:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_new_year"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - DỊP ĐẦU NĂM"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa là nguồn suối mọi phúc lành ban cho anh chị em muôn ơn: tuôn đổ trên anh chị em dư tràn phúc lành của Ngài, và gìn giữ anh chị em suốt cả năm được hồn an xác mạnh.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Thiên Chúa gìn giữ anh chị em được vẹn toàn trong đức tin, ban cho anh chị em được bền bỉ trong đức cậy, và cùng với lòng nhẫn nại thánh thiện được kiên vững đến cùng trong đức mến.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Xin Thiên Chúa xếp đặt ngày tháng và công ăn việc làm của anh chị em trong bình an của Ngài, xin Ngài nhận lời cầu nguyện của anh chị em trong mọi nơi mọi lúc, và thương dẫn đưa anh chị em đến sự sống muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:new_year:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_epiphany"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ CHÚA HIỂN LINH"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa, Ðấng đã kêu gọi anh chị em từ chốn tối tăm đến ánh sáng kỳ diệu của Ngài, xin thương đổ phúc lành của Ngài xuống trên anh chị em, và làm cho tâm hồn anh chị em, được vững mạnh trong đức tin, đức cậy và đức mến.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Vì anh chị em tin tưởng bước theo Ðức Ki-tô, Ðấng hôm nay đã tỏ cho thế giới thấy Người là ánh sáng chiếu dọi nơi tối tăm. Xin Người cũng làm cho anh chị em trở nên ánh sáng cho anh chị em mình.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Ước gì sau khi hoàn tất cuộc lữ hành trần gian, anh chị em đến được với Ðấng mà nhờ ngôi sao dẫn đường, các đạo sĩ đã tìm kiếm và đã rất vui mừng gặp được. Người là Chúa Ki-tô, là ánh sáng bởi ánh sáng.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:epiphany:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_passion"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - MÙA CHAY"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa là Cha đầy lòng thương xót, Ðấng đã dùng cuộc khổ nạn của Con Một Ngài mà để lại cho anh chị em gương mẫu yêu thương, ban cho anh chị em được lãnh nhận ơn phúc lành khôn tả của Ngài, nhờ việc phục vụ Thiên Chúa và loài người.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin cho anh chị em được lãnh nhận phúc trường sinh bởi Ðấng mà anh chị em tin là nhờ cái chết tạm thời của Người, anh chị em được thoát khỏi cái chết muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Ước gì khi noi gương khiêm nhường của Ðức Ki-tô, anh chị em được thông phần sự sống lại của Người.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:passion:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_easter_vigil"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - VỌNG PHỤC SINH VÀ LỄ PHỤC SINH"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Nhân ngày đại lễ phục sinh hôm nay, xin Thiên Chúa toàn năng tuôn đổ phúc lành và thương gìn giữ anh chị em khỏi sa vòng tội lỗi",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Nhờ mầu nhiệm Ðức Giêsu sống lại Thiên Chúa đã cứu chuộc và dẫn đưa anh chị em vào đời sống mới, xin Người cũng cho anh chị em được hưởng phúc trường sinh.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Sau những ngày kỷ niệm cuộc thương khó, hôm nay anh chị em hoan hỷ mừng lễ Chúa phục sinh. Vậy xin Thiên Chúa ban ơn trợ lực, giúp anh chị em phấn khởi đạt tới lễ Vượt Qua muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter_vigil:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_easter"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - MÙA PHỤC SINH"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa Ðấng đã thương ban cho anh chị em ơn cứu chuộc và ơn làm nghĩa tử nhờ sự phục sinh của Con Một Ngài, xin ngài cho anh chị em được vui hưởng phúc lành của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Nhờ Con Một Chúa cứu chuộc, anh chị em đã lãnh nhận ơn được tự do mãi mãi. Ước chi, nhờ ơn Người rộng ban, anh chị em cũng được thông phần gia nghiệp của Người đến muôn đời",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Nhờ tin vào Con Một Thiên Chúa, anh chị em đã được sống lại trong phép rửa tội. Ước chi giờ đây, nhờ sống ngay chính, anh chị em cũng đáng được đến với Người trong Nước Trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:easter:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ascension"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ THĂNG THIÊN"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Hôm nay Con Một Thiên Chúa đã lên trời cao và mở lối cho anh chị em vào nơi chính Người đang ngự trị, xin Thiên Chúa toàn năng ban phúc lành cho anh chị em.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Như Chúa Ki-tô sau khi phục sinh đã tỏ mình ra cho các môn đệ thấy thế nào, thì khi Người đến xét xử, xin Thiên Chúa cũng cho Người tỏ ra nhân từ với anh chị em đến muôn đời như vậy.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Anh chị em tin Ðức Ki-tô đang uy linh hiển trị cùng Chúa Cha, ước chi anh chị em cũng có thể vui mừng cảm nghiệm được Người đang ở cùng anh chị em mọi ngày cho đến tận thế như lời Người đã hứa.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ascension:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_pentecost"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ HIỆN XUỐNG"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa là Cha sự sáng, Ðấng đã thương ban Thánh Thần Bảo Trợ để soi sáng lòng trí các môn đệ, ban cho anh chị em được hưởng phúc lành của Ngài và luôn được tràn đầy ân huệ của cùng một Thánh Thần.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin ngọn lửa đã xuất hiện cách lạ lùng trên các môn đệ tẩy sạch tâm hồn anh chị em khỏi mọi sự dữ, và làm cho tâm hồn anh chị em được tràn đầy ánh sáng của ngọn lửa ấy.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Xin Ðấng đã đoái thương kết hợp nhiều ngôn ngữ khác nhau để tuyên xưng một đức tin duy nhất, làm cho anh chị em được kiên vững trong cùng một đức tin, và nhờ đức tin ấy, xin Ngài ban cho anh chị em đi từ cảnh trông đợi đến chỗ được nhìn thấy Chúa nhãn tiền.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:pentecost:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_1"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - THƯỜNG NIÊN 1"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Chúa ban phúc lành cho anh chị em, và gìn giữ anh chị em.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Chúa chiếu nhan Thánh rạng ngời của Ngài trên anh chị em và thương xót anh chị em.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Xin Chúa quay mặt lại nhìn anh chị em, và ban cho anh chị em được hưởng bình an của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_1:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_2"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - THƯỜNG NIÊN 2"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin bình an của Thiên Chúa vượt trên mọi cảm thức, gìn giữ tâm hồn và trí khôn anh chị em, để anh chị em hiểu biết, yêu mến Thiên Chúa và Con của Ngài là Đức Giêsu Kitô, Chúa chúng ta.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_2:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_2:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_2:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_2:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_3"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - THƯỜNG NIÊN 3"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa toàn năng ban phúc lành cho anh chị em theo lượng khoan dung của Ngài, và cho anh chị em cảm nhận được sự khôn ngoan sinh ơn cứu độ.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Ngài luôn nuôi dưỡng anh chị em bằng giáo lý đức tin, và cho anh chị em được kiên tâm bền chí thực hiện các việc lành thánh.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Xin Thiên Chúa dẫn bước anh chị em đến với Ngài, và tỏ cho anh chị em con đường đưa tới bình an và bác ái.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_3:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_4"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - THƯỜNG NIÊN 4"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa là nguồn mọi niềm an ủi, an bài chuỗi ngày đời anh chị em trong bình an của Ngài, và ban cho anh chị em ơn phúc lành của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Thiên Chúa luôn giải thoát anh chị em khỏi mọi biến loạn, và củng cố tâm hồn anh chị em trong tình yêu của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Ước gì nhờ sự sung mãn các ơn tin cậy mến, anh chị em trải qua cuộc đời này với nhiều thành quả trong công việc, và đời sau có thể đạt được hạnh phúc.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_4:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_5"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - THƯỜNG NIÊN 5"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa toàn năng luôn loại trừ khỏi anh chị em hết mọi điều tai hại, và đoái thương tuôn đổ trên anh chị em phúc lành của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Thiên Chúa làm cho tâm hồn anh chị em biết lắng nghe lời Chúa, để tâm hồn anh chị em được tràn đầy niềm vui muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Ước gì nhờ thông hiểu những điều hay lẽ phải, anh chị em luôn tiến bước theo huấn lệnh Chúa, và được nên đồng thừa tự với các công dân Nước Trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_5:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_ordinary_6"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - THƯỜNG NIÊN 6"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Xin Thiên Chúa ban cho anh chị em mọi phúc lành thiên quốc, và luôn làm cho anh chị em được thánh thiện và tinh tuyền trước nhan Ngài; xin Ngài đổ tràn trên anh chị em nguồn phong phú vinh quang của Ngài; xin Ngài huấn luyện anh chị em bằng lời chân lý, giáo huần anh chị em bằng Tin Mừng cứu độ, và luôn ban cho anh chị em được giàu lòng bác ái huynh đệ, nhờ Đức Kitô Chúa chúng ta.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_6:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_6:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_6:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:ordinary_6:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_blessed_virgin_mary"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ ĐỨC TRINH NỮ MARIA"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa vì lòng nhân từ đã muốn dùng việc Đức Trinh Nữ Maria sinh con mà cứu chuộc nhân loại, xin Ngài đoái thương ban cho anh chị em nên phong phú nhờ phúc lành của Ngài.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin cho anh chị em mọi nơi mọi lúc cảm nhận được sự bảo trợ của Đức Maria, nhờ Người, anh chị em đã đáng lãnh nhận Đấng ban sự sống.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Hôm nay anh chị em đã lấy lòng sốt sắng quy tụ lại đây, xin cho anh chị em được vui hưởng phúc lộc, là niềm vui thiêng liêng và phần thưởng trên trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:blessed_virgin_mary:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_peter_and_paul"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ HAI THÁNH TÔNG ĐỒ PHÊRÔ & PHAOLÔ"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa toàn năng đã làm cho anh chị em nên kiên vững trong lời tuyên xưng rất hữu ích của thánh Phêrô, và qua đó đã kiến tạo anh chị em trên nền tảng đức tin vững chắc của Hội Thánh, xin Ngài ban phúc lành cho anh chị em.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Thiên Chúa đã dùng việc rao giảng không mệt mỏi của thánh Phaolô mà giáo huấn anh chị em, xin Ngài luôn dùng gương sáng của thánh nhân mà dạy anh chị em biết đem nhiều người khác về với Chúa Kitô.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Thánh Phêrô đã chịu khổ hình thập giá, còn thánh Phaolô đã chết vì gươm để đáng được vinh hiển vào quê trời. Xin thánh Phêrô dùng quyền chìa khóa, thánh Phaolô dùng lời giảng dạy, và cả hai đấng dùng lời chuyển cầu, mà gắng đưa chúng ta vào quê trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:peter_and_paul:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_apostles"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ CÁC THÁNH TÔNG ĐỒ"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa đã cho anh chị em đứng vững trên nền tảng các Tông Đồ, vì công phúc vinh hiển của các Thánh Tông Đồ (…) và (…) (Thánh … Tông Đồ), xin Chúa đoái thương ban phúc lành cho anh chị em.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Thiên Chúa đã muốn ban tặng anh chị em bằng chứng và gương sáng của các Thánh Tông Đồ, vì sự phù trợ của các ngài, xin Chúa làm cho anh chị em nên chứng nhân chân lý cho mọi người.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Anh chị em đã được vững vàng trong đức tin nhờ giáo lý của các Thánh Tông Đồ, vì lời chuyển cầu của các ngài, xin Chúa cho anh chị em có thể được hưởng gia nghiệp nơi quê hương muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:apostles:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_all_saints"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ CÁC THÁNH NAM NỮ"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa là vinh quang và nguồn vui của các Thánh, đã cho anh chị em được nâng đỡ nhờ những lời chuyển cầu tuyệt hảo. Xin Ngài ban cho anh chị em được hưởng phúc lành bền lâu.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Anh chị em đã được giải thoát khỏi những sự dữ đời này nhờ lời chuyển cầu của các Thánh, và được chỉ bảo nhờ mấu gương đời sống thánh thiện của các ngài. Xin Chúa cho anh chị em luôn biết chú tâm làm tôi Thiên Chúa và phục vụ tha nhân.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Cùng với toàn thể các Thánh, xin cho anh chị em đáng được hưởng niềm vui thiên quốc, nơi Hội Thánh hân hoan liên kết con cái mình với công dân Nước Chúa trong bình an muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:all_saints:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_church_dedication"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ CUNG HIẾN THÁNH ĐƯỜNG"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa là Chúa trời đất, hôm nay đã tập hợp anh chị em đến cung hiến ngôi nhà này. Xin Chúa cho anh chị em được tràn đầy phúc lành bởi trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Thiên Chúa đã muốn quy tụ trong Con của Ngài mọi con cái tản mác khắp nơi. Xin Ngài ban cho anh chị em được trở nên đền thờ của Ngài và ngôi nhà của Chúa Thánh Thần.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Như những người đã được phúc thanh tẩy, xin cho anh chị em được Thiên Chúa ở cùng, và được hưởng phần gia nghiệp hạnh phúc muôn đời cùng với toàn thể các Thánh.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "A-men.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:church_dedication:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "4.2 blessing",
+        "relativePath": [
+          "variants",
+          "solemn_for_the_dead"
+        ],
+        "rows": {
+          "label": {
+            "vn": "Phép lành trọng thể - LỄ CẦU CHO CÁC TÍN HỮU QUA ĐỜI"
+          },
+          "lines": [
+            {
+              "sp_vn": "GM.",
+              "text_vn": "Chúa ở cùng anh chị em."
+            },
+            {
+              "sp_vn": "GĐ.",
+              "text_vn": "Và ở cùng cha."
+            },
+            {
+              "rubric_vn": "Cúi đầu nhận phép lành."
+            },
+            {
+              "text_vn": "Thiên Chúa là nguồn mọi sự an ủi, đã lấy lòng nhân từ khôn tả mà tạo dựng con người và cho các tín hữu được hy vọng sống lại trong sự Phục Sinh của Con Một Ngài, xin Ngài ban phúc lành cho anh chị em.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:petition:0:text"
+              }
+            },
+            {
+              "text_vn": "Amen.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:petition:1:text"
+              }
+            },
+            {
+              "text_vn": "Xin Chúa ban cho chúng ta là những người còn sống được ơn tha tội và cho mọi người đã qua đời được vào nơi đầy ánh sáng và bình an.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:petition:2:text"
+              }
+            },
+            {
+              "text_vn": "Amen.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:petition:3:text"
+              }
+            },
+            {
+              "text_vn": "Chúng ta tin thật Đức Kitô đã sống lại từ trong kẻ chết, xin cho tất cả chúng ta được sống hạnh phúc với Người đến muôn đời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:petition:4:text"
+              }
+            },
+            {
+              "text_vn": "Amen.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:petition:5:text"
+              }
+            },
+            {
+              "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:ending:2:text"
+              }
+            },
+            {
+              "text_vn": "Amen.",
+              "sp_vn": "CĐ.",
+              "__massEditorPairKeys": {
+                "text_vn": "blessing:for_the_dead:ending:1:text"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "isEucharist"
+        ],
+        "rows": true
+      }
+    }
+  ];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }
+      if (override.create) {
+        const entry = target.find(item => item && item.id === override.create.entryId);
+        if (!entry) throw new Error("VN" + ' Mass editor entry is missing: ' + override.create.entryId);
+        let rows = entry;
+        for (const part of override.create.relativePath) {
+          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};
+          rows = rows[part];
+        }
+        if (!Array.isArray(rows)) throw new Error("VN" + ' Mass editor block is invalid: ' + override.create.entryId);
+        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);
+        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];
+        if (!row) { row = {}; rows.push(row); }
+        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });
+        row[override.create.field] = String(override.value ?? '');
+        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
+        return;
+      }
+      if (override.rename) {
+        let row = target;
+        for (const part of override.rename.rowPath) row = row && row[part];
+        if (!row || typeof row !== 'object') throw new Error("VN" + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));
+        const fromField = override.rename.fromField;
+        const toField = override.rename.toField;
+        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error("VN" + ' Mass editor rename field is stale: ' + fromField);
+        if (fromField !== toField) delete row[fromField];
+        row[toField] = String(override.value ?? '');
+        const keys = Object.assign({}, row.__massEditorPairKeys);
+        delete keys[fromField];
+        keys[toField] = override.rename.rowKey;
+        row.__massEditorPairKeys = keys;
+        return;
+      }
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error("VN" + ' Mass editor override path is stale: ' + JSON.stringify(editPath));
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
   global.countryMassData["VN"] = Object.assign(global.countryMassData["VN"] || {}, {
     jurisdiction: "VN",
     name: "Vietnam",
     language: "VN",
-    ordinary: [{
+    ordinary: applyOrdinaryEditorOverrides([{
       "id": (
         "1. "
         + "THE INTRODUCTORY RITES"
@@ -4406,7 +8857,7 @@
           + " Nếu ngay sau thánh lễ có nghi thức phụng vụ thì bỏ nghi thức giải tán."
         )
       }]
-    }]
+    }])
   });
   const deepMerge = (left, right) => {
     if (Array.isArray(left) || Array.isArray(right)) {

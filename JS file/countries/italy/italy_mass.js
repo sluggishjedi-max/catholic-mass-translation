@@ -21091,6 +21091,5087 @@
     )))))))))
   });
   const dailyUrl = dateKey => `https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=${dateKey}`;
+  // MASS_DATA_EDITOR_OVERRIDES_START
+  const ordinaryEditorOverrides = [
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "1"
+        ],
+        "rows": [
+          {
+            "sp_it": "C",
+            "text_it": "Padre clementissimo,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "noi ti supplichiamo e ti chiediamo",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Gesù Cristo, tuo Figlio e nostro Signore,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:2:text"
+            }
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:3:rubric"
+            },
+            "rubric_it": "congiunge le mani e dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di accettare",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:4:text"
+            }
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:5:rubric"
+            },
+            "rubric_it": "traccia un unico segno di croce sul pane e sul calice, dicendo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e benedire ^ questi doni,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "queste offerte, questo sacrificio puro e santo.",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:7:text"
+            }
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:8:rubric"
+            },
+            "rubric_it": "Allargando le braccia, continua:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Noi te l’offriamo anzitutto",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:9:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la tua Chiesa santa e cattolica,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:10:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché tu le dia pace,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:11:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "la protegga, la raduni",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:12:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la governi su tutta la terra",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:13:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "in unione con il tuo servo il nostro papa N.,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:14:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "il nostro vescovo N.* [con me indegno tuo servo]",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:15:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e con tutti quelli che custodiscono",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:16:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "la fede cattolica,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:17:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "trasmessa dagli apostoli.",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "text_it": "canon:te_igitur:18:text"
+            }
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:19:rubric"
+            },
+            "rubric_it": "o Canone Romano"
+          },
+          {
+            "rubric_it": "* Qui è permesso nominare anche il vescovo coadiutore o gli ausiliari,",
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:20:rubric"
+            }
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:21:rubric"
+            },
+            "rubric_it": "come indicato al n. 149 dell’Ordinamento Generale del Messale Romano ."
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:22:rubric"
+            },
+            "rubric_it": "413Preghiera Eucaristica I"
+          },
+          {
+            "__ordinaryStage": "te_igitur",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:te_igitur:23:rubric"
+            },
+            "rubric_it": "Intercessione per i vivi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati, Signore, dei tuoi fedeli [ N. e N.].",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:0:text"
+            }
+          },
+          {
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:living:1:rubric"
+            },
+            "rubric_it": "Congiunge le mani e prega brevemente per quelli che vuole ricordare."
+          },
+          {
+            "rubric_it": "Poi, con le braccia allargate, continua:",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:living:2:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati di tutti coloro che sono qui riuniti,",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "dei quali conosci la fede e la devozione:",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "per loro ti offriamo",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e anch’essi ti offrono questo sacrificio di lode,",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e innalzano la preghiera a te, Dio eterno, vivo e vero,",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:7:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "per ottenere a sé e ai loro cari",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:8:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "redenzione, sicurezza di vita e salute.",
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "text_it": "canon:living:9:text"
+            }
+          },
+          {
+            "__ordinaryStage": "living",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:living:10:rubric"
+            },
+            "rubric_it": "Memoria dei santi"
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": true,
+            "label": {
+              "it": "Tempo ordinario"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "it": "Tempo ordinario"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "In comunione con tutta la Chiesa,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "ricordiamo e veneriamo anzitutto",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "la gloriosa e sempre Vergine Maria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Madre del nostro Dio e Signore Gesù Cristo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "san Giuseppe, suo sposo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "i tuoi santi apostoli e martiri:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Pietro e Paolo, Andrea,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[Giacomo, Giovanni,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "T ommaso, Giacomo, Filippo, Bartolomeo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Matteo, Simone e Taddeo;",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Lino, Cleto, Clemente, Sisto,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Cornelio e Cipriano, Lorenzo, Crisogono,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Giovanni e Paolo, Cosma e Damiano]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e tutti i tuoi santi:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "per i loro meriti e le loro preghiere",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "donaci sempre aiuto e protezione.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:15:text"
+                    }
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "it": "Natale"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "In comunione con tutta la Chiesa,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "mentre celebriamo il giorno santissimo nel quale",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[la notte santissima nella quale]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Maria, vergine illibata, diede al mondo il Salvatore,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "ricordiamo e veneriamo anzitutto lei,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "la gloriosa e sempre V ergine Maria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Madre del nostro Dio e Signore Gesù Cristo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "† san Giuseppe, suo sposo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "i tuoi santi apostoli e martiri:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Pietro e Paolo, Andrea,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[Giacomo, Giovanni,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "T ommaso, Giacomo, Filippo, Bartolomeo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Matteo, Simone e Taddeo;",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Lino, Cleto, Clemente, Sisto,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Cornelio e Cipriano, Lorenzo, Crisogono,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Giovanni e Paolo, Cosma e Damiano]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:15:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e tutti i tuoi santi:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:16:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "per i loro meriti e le loro preghiere",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:17:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "donaci sempre aiuto e protezione.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:18:text"
+                    }
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "it": "Epifania"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "In comunione con tutta la Chiesa,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "mentre celebriamo il giorno santissimo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "nel quale il tuo unigenito Figlio, eterno con te nella gloria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "si è manifestato nella verità della nostra carne",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "in un corpo visibile, ricordiamo e veneriamo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "anzitutto la gloriosa e sempre V ergine Maria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Madre del nostro Dio e Signore Gesù Cristo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "† san Giuseppe, suo sposo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "i tuoi santi apostoli e martiri:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Pietro e Paolo, Andrea,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[Giacomo, Giovanni,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "T ommaso, Giacomo, Filippo, Bartolomeo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Matteo, Simone e Taddeo;",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Lino, Cleto, Clemente, Sisto,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Cornelio e Cipriano, Lorenzo, Crisogono,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Giovanni e Paolo, Cosma e Damiano]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:15:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e tutti i tuoi santi:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:16:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "per i loro meriti e le loro preghiere",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:17:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "donaci sempre aiuto e protezione.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:18:text"
+                    }
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "it": "Pasqua"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "In comunione con tutta la Chiesa,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "mentre celebriamo il giorno santissimo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[la notte santissima]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "della risurrezione di nostro Signore Gesù Cristo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "nel suo vero corpo, ricordiamo e veneriamo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "anzitutto la gloriosa e sempre V ergine Maria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Madre del nostro Dio e Signore Gesù Cristo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "† san Giuseppe, suo sposo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "i tuoi santi apostoli e martiri:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Pietro e Paolo, Andrea,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[Giacomo, Giovanni,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "T ommaso, Giacomo, Filippo, Bartolomeo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Matteo, Simone e Taddeo;",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Lino, Cleto, Clemente, Sisto,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Cornelio e Cipriano, Lorenzo, Crisogono,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Giovanni e Paolo, Cosma e Damiano]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:15:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e tutti i tuoi santi:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:16:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "per i loro meriti e le loro preghiere",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:17:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "donaci sempre aiuto e protezione.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:18:text"
+                    }
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "it": "Ascensione"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "In comunione con tutta la Chiesa,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "mentre celebriamo il giorno santissimo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "nel quale il tuo unigenito Figlio, nostro Signore,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "ha portato alla tua destra nella gloria la fragile nostra natura,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "che egli aveva unito a sé,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "ricordiamo e veneriamo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "anzitutto la gloriosa e sempre V ergine Maria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Madre del nostro Dio e Signore Gesù Cristo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "† san Giuseppe, suo sposo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "i tuoi santi apostoli e martiri:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Pietro e Paolo, Andrea,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[Giacomo, Giovanni,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "T ommaso, Giacomo, Filippo, Bartolomeo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Matteo, Simone e Taddeo;",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Lino, Cleto, Clemente, Sisto,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Cornelio e Cipriano, Lorenzo, Crisogono,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:15:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Giovanni e Paolo, Cosma e Damiano]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:16:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e tutti i tuoi santi:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:17:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "per i loro meriti e le loro preghiere",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:18:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "donaci sempre aiuto e protezione.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:19:text"
+                    }
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "it": "Pentecoste"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "In comunione con tutta la Chiesa,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "mentre celebriamo il giorno santissimo della Pentecoste,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "nel quale lo Spirito Santo si manifestò agli apostoli",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "in molteplici lingue di fuoco,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "ricordiamo e veneriamo",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "anzitutto la gloriosa e sempre V ergine Maria,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Madre del nostro Dio e Signore Gesù Cristo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "† san Giuseppe, suo sposo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "i tuoi santi apostoli e martiri:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Pietro e Paolo, Andrea,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:9:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "[Giacomo, Giovanni,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:10:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "T ommaso, Giacomo, Filippo, Bartolomeo,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:11:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Matteo, Simone e Taddeo;",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:12:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Lino, Cleto, Clemente, Sisto,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:13:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Cornelio e Cipriano, Lorenzo, Crisogono,",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:14:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Giovanni e Paolo, Cosma e Damiano]",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:15:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e tutti i tuoi santi:",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:16:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "per i loro meriti e le loro preghiere",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:17:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "donaci sempre aiuto e protezione.",
+                    "__ordinaryStage": "communicantes",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:communicantes:18:text"
+                    }
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:communicantes:choice"
+          },
+          {
+            "type": "optionBlock",
+            "optionKey": "roman_canon_season",
+            "defaultOption": "ordinary",
+            "showControl": false,
+            "label": {
+              "it": "Tempo ordinario"
+            },
+            "options": {
+              "ordinary": {
+                "label": {
+                  "it": "Tempo ordinario"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "Accetta con benevolenza, o Signore,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "questa offerta che ti presentiamo",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "noi tuoi ministri e tutta la tua famiglia:",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "disponi nella tua pace i nostri giorni,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "salvaci dalla dannazione eterna,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e accoglici nel gregge dei tuoi eletti.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "rubric_it": "canon:hanc_igitur:6:rubric"
+                    },
+                    "rubric_it": "Congiunge le mani."
+                  }
+                ]
+              },
+              "christmas": {
+                "label": {
+                  "it": "Natale"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "Accetta con benevolenza, o Signore,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "questa offerta che ti presentiamo",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "noi tuoi ministri e tutta la tua famiglia:",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "disponi nella tua pace i nostri giorni,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "salvaci dalla dannazione eterna,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e accoglici nel gregge dei tuoi eletti.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "rubric_it": "canon:hanc_igitur:6:rubric"
+                    },
+                    "rubric_it": "Congiunge le mani."
+                  }
+                ]
+              },
+              "epiphany": {
+                "label": {
+                  "it": "Epifania"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "Accetta con benevolenza, o Signore,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "questa offerta che ti presentiamo",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "noi tuoi ministri e tutta la tua famiglia:",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "disponi nella tua pace i nostri giorni,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "salvaci dalla dannazione eterna,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e accoglici nel gregge dei tuoi eletti.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "rubric_it": "canon:hanc_igitur:6:rubric"
+                    },
+                    "rubric_it": "Congiunge le mani."
+                  }
+                ]
+              },
+              "easter": {
+                "label": {
+                  "it": "Pasqua"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "Accetta con benevolenza, o Signore,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "questa offerta che noi tuoi ministri e tutta la tua famiglia",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "ti presentiamo",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "anche per i nostri fratelli [N. e N.],",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "che ti sei degnato di far rinascere",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "dall’acqua e dallo Spirito Santo,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "accordando loro il perdono di tutti i peccati.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:6:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "Disponi nella tua pace i nostri giorni,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:7:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "salvaci dalla dannazione eterna,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:8:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e accoglici nel gregge dei tuoi eletti.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:9:text"
+                    }
+                  }
+                ]
+              },
+              "ascension": {
+                "label": {
+                  "it": "Ascensione"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "Accetta con benevolenza, o Signore,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "questa offerta che ti presentiamo",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "noi tuoi ministri e tutta la tua famiglia:",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "disponi nella tua pace i nostri giorni,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "salvaci dalla dannazione eterna,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e accoglici nel gregge dei tuoi eletti.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "rubric_it": "canon:hanc_igitur:6:rubric"
+                    },
+                    "rubric_it": "Congiunge le mani."
+                  }
+                ]
+              },
+              "pentecost": {
+                "label": {
+                  "it": "Pentecoste"
+                },
+                "lines": [
+                  {
+                    "sp_it": "",
+                    "text_it": "Accetta con benevolenza, o Signore,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:0:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "questa offerta che ti presentiamo",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:1:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "noi tuoi ministri e tutta la tua famiglia:",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:2:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "disponi nella tua pace i nostri giorni,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:3:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "salvaci dalla dannazione eterna,",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:4:text"
+                    }
+                  },
+                  {
+                    "sp_it": "",
+                    "text_it": "e accoglici nel gregge dei tuoi eletti.",
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "text_it": "canon:hanc_igitur:5:text"
+                    }
+                  },
+                  {
+                    "__ordinaryStage": "hanc_igitur",
+                    "__massEditorPairKeys": {
+                      "rubric_it": "canon:hanc_igitur:6:rubric"
+                    },
+                    "rubric_it": "Congiunge le mani."
+                  }
+                ]
+              }
+            },
+            "pairKey": "canon:hanc_igitur:choice"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Santifica, o Dio, questa offerta",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la potenza della tua benedizione,",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e degnati di accettarla a nostro favore,",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "in sacrificio spirituale e perfetto,",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché diventi per noi il Corpo e il Sangue",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "del tuo amatissimo Figlio,",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "il Signore nostro Gesù Cristo.",
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:quam_oblationem:6:text"
+            }
+          },
+          {
+            "__ordinaryStage": "quam_oblationem",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:quam_oblationem:7:rubric"
+            },
+            "rubric_it": "Congiunge le mani."
+          },
+          {
+            "sp_it": "",
+            "text_it": "La vigilia della sua passione,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:0:text"
+            }
+          },
+          {
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:bread:1:rubric"
+            },
+            "rubric_it": "prende il pane e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli prese il pane nelle sue mani sante e venerabili,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:2:text"
+            }
+          },
+          {
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:bread:3:rubric"
+            },
+            "rubric_it": "alza gli occhi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e alzando gli occhi al cielo",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Dio Padre suo onnipotente,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "rese grazie con la preghiera di benedizione,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "spezzò il pane,",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:7:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo diede ai suoi discepoli e disse:",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:8:text"
+            }
+          },
+          {
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:bread:9:rubric"
+            },
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e mangiatene tutti:",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:10:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il mio Corpo",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:11:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "offerto in sacrificio per voi.",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "text_it": "canon:bread:12:text"
+            }
+          },
+          {
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:bread:13:rubric"
+            },
+            "rubric_it": "Presenta al popolo l’ostia consacrata, la depone sulla patena e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Poi prosegue:",
+            "__ordinaryStage": "bread",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:bread:14:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Allo stesso modo, dopo aver cenato,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:0:text"
+            }
+          },
+          {
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:cup:1:rubric"
+            },
+            "rubric_it": "prende il calice e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese nelle sue mani sante e venerabili",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo glorioso calice,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti rese grazie con la preghiera di benedizione,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo diede ai suoi discepoli e disse:",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:5:text"
+            }
+          },
+          {
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:cup:6:rubric"
+            },
+            "rubric_it": "419Preghiera Eucaristica I"
+          },
+          {
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:cup:7:rubric"
+            },
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e bevetene tutti:",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:8:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il calice del mio Sangue,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:9:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la nuova ed eterna alleanza,",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:10:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "versato per voi e per tutti",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:11:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "in remissione dei peccati.",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:12:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Fate questo in memoria di me.",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "text_it": "canon:cup:13:text"
+            }
+          },
+          {
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:cup:14:rubric"
+            },
+            "rubric_it": "Presenta al popolo il calice, lo depone sul corporale e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Quindi, il sacerdote canta o dice:",
+            "__ordinaryStage": "cup",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:cup:15:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Mistero della fede.",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:0:text"
+            }
+          },
+          {
+            "rubric_it": "Il popolo prosegue acclamando:",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:mystery:1:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Annunciamo la tua morte, Signore,",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo la tua risurrezione,",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta.",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:4:text"
+            }
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:mystery:5:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ogni volta che mangiamo di questo pane",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e beviamo a questo calice,",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:7:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "annunciamo la tua morte, Signore,",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:8:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta.",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:9:text"
+            }
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:mystery:10:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu ci hai redenti con la tua croce",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:11:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la tua risurrezione:",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:12:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "salvaci, o Salvatore del mondo.",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "text_it": "canon:mystery:13:text"
+            }
+          },
+          {
+            "rubric_it": "Quindi, con le braccia allargate, il sacerdote dice:",
+            "__ordinaryStage": "mystery",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:mystery:14:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "In questo sacrificio, o Padre,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "noi tuoi ministri e il tuo popolo santo",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "celebriamo il memoriale",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "della beata passione,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "della risurrezione dai morti",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e della gloriosa ascensione al cielo",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "del Cristo tuo Figlio e nostro Signore;",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e offriamo alla tua maestà divina,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:7:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "tra i doni che ci hai dato,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:8:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "la vittima pura, santa e immacolata,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:9:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "pane santo della vita eterna,",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:10:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "calice dell’eterna salvezza.",
+            "__ordinaryStage": "anamnesis",
+            "__massEditorPairKeys": {
+              "text_it": "canon:anamnesis:11:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Volgi sulla nostra offerta",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "il tuo sguardo sereno e benigno,",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "come hai voluto accettare",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "i doni di Abele, il giusto,",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "il sacrificio di Abramo, nostro padre nella fede,",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e l’oblazione pura e santa",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "di Melchisedek, tuo sommo sacerdote.",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supra_quae:6:text"
+            }
+          },
+          {
+            "rubric_it": "Si inchina e, a mani giunte, prosegue:",
+            "__ordinaryStage": "supra_quae",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:supra_quae:7:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ti supplichiamo, Dio onnipotente:",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "fa’ che questa offerta,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "per le mani del tuo angelo santo,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "sia portata sull’altare del cielo",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "davanti alla tua maestà divina,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché su tutti noi che partecipiamo di questo altare,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "comunicando al santo mistero",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "del Corpo e Sangue del tuo Figlio,",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:7:text"
+            }
+          },
+          {
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:supplices:8:rubric"
+            },
+            "rubric_it": "in posizione eretta, facendosi il segno della croce, dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "scenda la pienezza di ogni grazia",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:9:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e benedizione del cielo.",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "text_it": "canon:supplices:10:text"
+            }
+          },
+          {
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:supplices:11:rubric"
+            },
+            "rubric_it": "Congiunge le mani."
+          },
+          {
+            "rubric_it": "4C",
+            "__ordinaryStage": "supplices",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:supplices:12:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati, o Signore, dei tuoi fedeli [ N. e N.],",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_it": "canon:departed:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ci hanno preceduto con il segno della fede",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_it": "canon:departed:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e dormono il sonno della pace.",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_it": "canon:departed:2:text"
+            }
+          },
+          {
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:departed:3:rubric"
+            },
+            "rubric_it": "Congiunge le mani e prega brevemente per quelli che vuole ricordare."
+          },
+          {
+            "rubric_it": "Poi, con le braccia allargate, continua:",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:departed:4:rubric"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dona loro, o Signore,",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_it": "canon:departed:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e a tutti quelli che riposano in Cristo,",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_it": "canon:departed:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "la beatitudine, la luce e la pace.",
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "text_it": "canon:departed:7:text"
+            }
+          },
+          {
+            "__ordinaryStage": "departed",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:departed:8:rubric"
+            },
+            "rubric_it": "Congiunge le mani."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Anche a noi, tuoi ministri, peccatori,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:0:text"
+            }
+          },
+          {
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:nobis_quoque:1:rubric"
+            },
+            "rubric_it": "e con le braccia allargate, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma fiduciosi nella tua infinita misericordia,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi, o Signore,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:3:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "di aver parte alla comunità",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:4:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "dei tuoi santi apostoli e martiri:",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:5:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Giovanni, Stefano, Mattia, Barnaba,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:6:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "[Ignazio, Alessandro, Marcellino, Pietro,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:7:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Felicita, Perpetua, Agata, Lucia,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:8:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "Agnese, Cecilia, Anastasia]",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:9:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e tutti i tuoi santi;",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:10:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "ammettici a godere della loro sorte beata",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:11:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "non per i nostri meriti,",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:12:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma per la ricchezza del tuo perdono.",
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "text_it": "canon:nobis_quoque:13:text"
+            }
+          },
+          {
+            "__ordinaryStage": "nobis_quoque",
+            "__massEditorPairKeys": {
+              "rubric_it": "canon:nobis_quoque:14:rubric"
+            },
+            "rubric_it": "Congiunge le mani e prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per Cristo Signore nostro,",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:per_quem:0:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu, o Dio, crei e santifichi sempre,",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:per_quem:1:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "fai vivere, benedici",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:per_quem:2:text"
+            }
+          },
+          {
+            "sp_it": "",
+            "text_it": "e doni al mondo ogni bene.",
+            "__ordinaryStage": "per_quem",
+            "__massEditorPairKeys": {
+              "text_it": "canon:per_quem:3:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "2"
+        ],
+        "rows": [
+          {
+            "sp_it": "",
+            "text_it": "Questa Preghiera Eucaristica ha un prefazio proprio, che fa parte della sua struttura."
+          },
+          {
+            "rubric_it": "Si possono però usare anche altri prefazi, specialmente quelli che presentano in breve"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sintesi il mistero della salvezza, per esempio i prefazi comuni."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . Il Signore sia con voi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . E con il tuo spirito."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . In alto i nostri cuori."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . S ono rivolti al Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . Rendiamo grazie al Signore nostro Dio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . È c osa buona e giusta."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente cosa buona e giusta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nostro dovere e fonte di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendere grazie sempre e in ogni luogo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Padre santo, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per Gesù Cristo, tuo amatissimo Figlio. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli è la tua parola vivente: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo di lui hai creato tutte le cose,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo hai mandato a noi salvatore e redentore, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fatto uomo per opera dello Spirito Santo +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nato dalla Vergine Maria. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per compiere la tua volontà"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e acquistarti un popolo santo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "egli, nell’ ora della passione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "stese le braccia sulla croce, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "morendo distrusse la morte +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e proclamò la risurrezione. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per questo mistero di salvezza, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "uniti agli angeli e ai santi, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "cantiamo a una sola voce +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua gloria: **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "I cieli e la terra sono pieni della tua gloria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Osanna nell’alto dei cieli."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Benedetto colui che viene nel nome del Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Osanna nell’alto dei cieli."
+          },
+          {
+            "rubric_it": "424 Preghiera Eucaristica II"
+          },
+          {
+            "rubric_it": "Il sacerdote, con le braccia allargate, dice:"
+          },
+          {
+            "sp_it": "C",
+            "text_it": "Veramente santo sei tu, o Padre, fonte di ogni santità."
+          },
+          {
+            "rubric_it": "Congiunge le mani e, tenendole stese sulle offerte, dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ti preghiamo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "santifica questi doni con la rugiada del tuo Spirito"
+          },
+          {
+            "rubric_it": "congiunge le mani e traccia un unico segno di croce sul pane e sul calice, dicendo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché diventino per noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il Corpo e ^ il Sangue del Signore nostro Gesù Cristo."
+          },
+          {
+            "rubric_it": "Congiunge le mani."
+          },
+          {
+            "rubric_it": "Nelle formule seguenti, le parole del Signore si pronuncino con voce chiara e distinta,"
+          },
+          {
+            "rubric_it": "come è richiesto dalla loro natura."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli (*), consegnandosi volontariamente alla passione,"
+          },
+          {
+            "rubric_it": "prende il pane e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese il pane, rese grazie,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo spezzò, lo diede ai suoi discepoli e disse:"
+          },
+          {
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e mangiatene tutti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il mio Corpo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "offerto in sacrificio per voi."
+          },
+          {
+            "rubric_it": "Presenta al popolo l’ostia consacrata, la depone sulla patena e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Poi prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Allo stesso modo, dopo aver cenato,"
+          },
+          {
+            "rubric_it": "prende il calice e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese il calice,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di nuovo ti rese grazie, lo diede ai suoi discepoli e disse:"
+          },
+          {
+            "rubric_it": "★ Giovedì Santo alla Messa vespertina «Cena del Signore»:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "(*) Egli, in questa notte,"
+          },
+          {
+            "rubric_it": "425Preghiera Eucaristica II"
+          },
+          {
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e bevetene tutti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il calice del mio Sangue,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la nuova ed eterna alleanza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "versato per voi e per tutti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in remissione dei peccati."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Fate questo in memoria di me."
+          },
+          {
+            "rubric_it": "Presenta al popolo il calice, lo depone sul corporale e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Quindi, il sacerdote canta o dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Mistero della fede."
+          },
+          {
+            "rubric_it": "Il popolo prosegue acclamando:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Annunciamo la tua morte, Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo la tua risurrezione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta."
+          },
+          {
+            "rubric_it": "Oppure:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ogni volta che mangiamo di questo pane"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e beviamo a questo calice,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "annunciamo la tua morte, Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta."
+          },
+          {
+            "rubric_it": "Oppure:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu ci hai redenti con la tua croce"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la tua risurrezione:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "salvaci, o Salvatore del mondo."
+          },
+          {
+            "rubric_it": "426 Preghiera Eucaristica II"
+          },
+          {
+            "rubric_it": "Quindi, con le braccia allargate, il sacerdote dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Celebrando il memoriale"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della morte e risurrezione del tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti offriamo, Padre,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il pane della vita e il calice della salvezza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ti rendiamo grazie"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché ci hai resi degni di stare alla tua presenza"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a compiere il servizio sacerdotale."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ti preghiamo umilmente:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la comunione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "al Corpo e al Sangue di Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo Spirito Santo ci riunisca in un solo corpo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati, Padre, della tua Chiesa"
+          },
+          {
+            "sp_it": "",
+            "text_it": "diffusa su tutta la terra:"
+          },
+          {
+            "rubric_it": "†"
+          },
+          {
+            "rubric_it": "★ D omenica"
+          },
+          {
+            "rubric_it": "Si può dire in tutte le domeniche, a esclusione di quando c’è un altro ricordo proprio."
+          },
+          {
+            "sp_it": "1C",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno in cui Cristo ha vinto la morte"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ci ha resi partecipi della sua vita immortale:"
+          },
+          {
+            "rubric_it": "★ Natale del Signore e Ottava"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno santissimo [nella notte santissima]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in cui la V ergine Maria"
+          },
+          {
+            "sp_it": "",
+            "text_it": "diede al mondo il Salvatore:"
+          },
+          {
+            "rubric_it": "★ Epifania del Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno santissimo in cui il tuo unico Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "eterno con te nella gloria,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si è manifestato nella nostra natura umana:"
+          },
+          {
+            "rubric_it": "★ Giovedì Santo alla Messa vespertina"
+          },
+          {
+            "sp_it": "",
+            "text_it": "« Cena del Signore»"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno santissimo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel quale Gesù Cristo nostro Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fu consegnato alla morte per noi:"
+          },
+          {
+            "rubric_it": "427Preghiera Eucaristica II"
+          },
+          {
+            "rubric_it": "★ Dalla Veglia Pasquale alla II domenica di Pasqua"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno glorioso [nella notte gloriosa]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della risurrezione di Cristo Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel suo vero corpo:"
+          },
+          {
+            "rubric_it": "★ Ascensione del Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno glorioso dell’Ascensione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in cui Cristo è stato costituito Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del cielo e della terra:"
+          },
+          {
+            "rubric_it": "★ Domenica di Pentecoste"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† e qui convocata"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel giorno santissimo in cui l’effusione del tuo Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’ha costituita sacramento di unità per tutti i popoli:"
+          },
+          {
+            "rubric_it": "* Qui è permesso nominare anche il vescovo coadiutore o gli ausiliari,"
+          },
+          {
+            "rubric_it": "come indicato al n. 149 dell’Ordinamento Generale del Messale Romano ."
+          },
+          {
+            "sp_it": "",
+            "text_it": "rendila perfetta nell’amore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in unione con il nostro papa N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il nostro vescovo N.*,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i presbiteri e i diaconi. †"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Intercessioni particolari, p. 428."
+          },
+          {
+            "rubric_it": "428 Preghiera Eucaristica II"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Intercessioni particolari"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dalla Veglia Pasquale alla II domenica di Pasqua"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per il Battesimo degli adulti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati anche dei nostri fratelli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi mediante il Battesimo [e la Confermazione]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sono entrati a far parte della tua famiglia:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fa’ che seguano Cristo tuo Figlio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con animo generoso e ardente."
+          },
+          {
+            "rubric_it": "★ Per il Battesimo dei bambini"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati anche dei nostri fratelli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi hai liberato dal peccato"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e rigenerato dall’acqua e dallo Spirito Santo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu, che li hai inseriti come membra vive nel corpo di Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "scrivi i loro nomi nel libro della vita."
+          },
+          {
+            "rubric_it": "★ Per la Confermazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati anche dei tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che, rigenerati nel Battesimo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "oggi hai confermato con il sigillo dello Spirito Santo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "custodisci in loro il dono del tuo amore."
+          },
+          {
+            "rubric_it": "★ Per la Messa di prima comunione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati anche dei tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi per la prima volta"
+          },
+          {
+            "sp_it": "",
+            "text_it": "raduni a lla mensa della tua famiglia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella partecipazione al pane della vita"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e al calice della salvezza:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi loro di crescere sempre nella tua amicizia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nella comunione con la tua Chiesa."
+          },
+          {
+            "rubric_it": "★ Per il Matrimonio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati anche di N. e N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che hai voluto condurre al giorno delle nozze:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per tua grazia vivano nell’amore vicendevole e nella pace."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Le intercessioni delle altre Messe rituali si trovano nei rispettivi formulari."
+          },
+          {
+            "rubric_it": "429Preghiera Eucaristica II"
+          },
+          {
+            "rubric_it": "Nelle Messe per i defunti si può aggiungere:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati del nostro fratello"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[della nostra sorella] N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che [oggi] hai chiamato a te da questa vita;"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e come per il Battesimo l’hai unito[a]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "alla morte di Cristo, tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "così rendilo[a] partecipe della sua risurrezione."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati anche dei nostri fratelli e sorelle"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che si sono addormentati"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella speranza della risurrezione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e, nella tua misericordia, di tutti i defunti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ammettili alla luce del tuo volto."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Di noi tutti abbi misericordia,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "donaci di aver parte alla vita eterna,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "insieme con la beata Maria, Vergine e Madre di Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "san Giuseppe, suo sposo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "gli apostoli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[san N.: santo del giorno o patrono]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e tutti i santi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che in ogni tempo ti furono graditi,"
+          },
+          {
+            "rubric_it": "congiunge le mani,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e in Gesù Cristo tuo Figlio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "canteremo la tua lode e la tua gloria."
+          },
+          {
+            "rubric_it": "Prende sia la patena con l’ostia sia il calice ed elevandoli insieme canta o dice:"
+          },
+          {
+            "rubric_it": "430 Preghiera Eucaristica II"
+          },
+          {
+            "sp_it": "CP",
+            "text_it": "o"
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "3"
+        ],
+        "rows": [
+          {
+            "sp_it": "",
+            "text_it": "V/ . Il Signore sia con voi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . E con il tuo spirito."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . I n alto i nostri cuori."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . S ono rivolti al Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . R endiamo grazie al Signore nostro Dio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . È c osa buona e giusta."
+          },
+          {
+            "rubric_it": "Segue il prefazio, scelto secondo le rubriche, che si conclude con l’acclamazione:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Santo, Santo, Santo il Signore Dio dell’universo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "I cieli e la terra sono pieni della tua gloria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Osanna nell’alto dei cieli."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Benedetto colui che viene nel nome del Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Osanna nell’alto dei cieli."
+          },
+          {
+            "rubric_it": "Il sacerdote, con le braccia allargate, dice:"
+          },
+          {
+            "sp_it": "C",
+            "text_it": "Veramente santo sei tu, o Padre,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed è giusto che ogni creatura ti lodi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per mezzo del tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il Signore nostro Gesù Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella potenza dello Spirito Santo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fai vivere e santifichi l’universo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e continui a radunare intorno a te un popolo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che, dall’oriente all’occidente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "offra al tuo nome il sacrificio perfetto."
+          },
+          {
+            "rubric_it": "Congiunge le mani e, tenendole stese sulle offerte, dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ti preghiamo umilmente:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "santifica e consacra con il tuo Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i doni che ti abbiamo presentato"
+          },
+          {
+            "rubric_it": "congiunge le mani e traccia un unico segno di croce sul pane e sul calice, dicendo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché diventino il Corpo e ^ il Sangue"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del tuo Figlio, il Signore nostro Gesù Cristo,"
+          },
+          {
+            "rubric_it": "congiunge le mani,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ci ha comandato"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di celebrare questi misteri."
+          },
+          {
+            "rubric_it": "432 Preghiera Eucaristica III"
+          },
+          {
+            "rubric_it": "Nelle formule seguenti, le parole del Signore si pronuncino con voce chiara e distinta,"
+          },
+          {
+            "rubric_it": "come è richiesto dalla loro natura."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli, nella notte in cui veniva tradito (*),"
+          },
+          {
+            "rubric_it": "prende il pane e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese il pane,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti rese grazie con la preghiera di benedizione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo spezzò, lo diede ai suoi discepoli e disse:"
+          },
+          {
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e mangiatene tutti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il mio Corpo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "offerto in sacrificio per voi."
+          },
+          {
+            "rubric_it": "Presenta al popolo l’ostia consacrata, la depone sulla patena e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Poi prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Allo stesso modo, dopo aver cenato,"
+          },
+          {
+            "rubric_it": "prende il calice e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese il calice,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti rese grazie con la preghiera di benedizione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo diede ai suoi discepoli e disse:"
+          },
+          {
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e bevetene tutti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il calice del mio Sangue,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la nuova ed eterna alleanza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "versato per voi e per tutti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in remissione dei peccati."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Fate questo in memoria di me."
+          },
+          {
+            "rubric_it": "Presenta al popolo il calice, lo depone sul corporale e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Quindi, il sacerdote canta o dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Mistero della fede."
+          },
+          {
+            "rubric_it": "Il popolo prosegue acclamando:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Annunciamo la tua morte, Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo la tua risurrezione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta."
+          },
+          {
+            "rubric_it": "Oppure:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ogni volta che mangiamo di questo pane"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e beviamo a questo calice,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "annunciamo la tua morte, Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta."
+          },
+          {
+            "rubric_it": "Oppure:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu ci hai redenti con la tua croce"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la tua risurrezione:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "salvaci, o Salvatore del mondo."
+          },
+          {
+            "rubric_it": "Quindi, con le braccia allargate, il sacerdote dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Celebrando il memoriale"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della passione redentrice del tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della sua mirabile risurrezione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ascensione al cielo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della sua venuta nella gloria,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti offriamo, o Padre, in rendimento di grazie,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo sacrificio vivo e santo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Guarda con amore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e riconosci nell’offerta della tua Chiesa"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la vittima immolata per la nostra redenzione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e a noi, che ci nutriamo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del Corpo e del Sangue del tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dona la pienezza dello Spirito Santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché diventiamo in Cristo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "un solo corpo e un solo spirito."
+          },
+          {
+            "sp_it": "CC",
+            "text_it": "Lo Spirito Santo faccia di noi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "un’offerta perenne a te gradita,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché possiamo ottenere il regno promesso con i tuoi eletti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la beata Maria, Vergine e Madre di Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "san Giuseppe, suo sposo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i tuoi santi apostoli,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i gloriosi martiri,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[san N.: santo del giorno o patrono]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e tutti i santi, nostri intercessori presso di te."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ti preghiamo, o Padre:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo sacrificio della nostra riconciliazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "doni pace e salvezza al mondo intero."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Conferma nella fede e nell’amore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la tua Chiesa pellegrina sulla terra:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il tuo servo e nostro papa N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il nostro vescovo N.*, l’ordine episcopale,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i presbiteri, i diaconi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e il popolo che tu hai redento."
+          },
+          {
+            "rubric_it": "†"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Intercessioni particolari"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Dalla Veglia Pasquale alla II domenica di Pasqua"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per il Battesimo degli adulti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Sostieni nell’impegno cristiano i tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi mediante il lavacro della rigenerazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "[e il dono dello Spirito Santo]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai chiamato a far parte del tuo popolo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con il tuo aiuto possano camminare sempre in novità di vita."
+          },
+          {
+            "rubric_it": "★ Per il Battesimo dei bambini"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Assisti i nostri fratelli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi hai liberato dal peccato"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e rigenerato dall’acqua e dallo Spirito Santo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu che li hai inseriti come membra vive nel corpo di Cristo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "scrivi i loro nomi nel libro della vita."
+          },
+          {
+            "rubric_it": "* Qui è permesso nominare anche il vescovo coadiutore o gli ausiliari,"
+          },
+          {
+            "rubric_it": "come indicato al n. 149 dell’Ordinamento Generale del Messale Romano ."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ascolta la preghiera di questa famiglia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che hai convocato alla tua presenza † [.]"
+          },
+          {
+            "rubric_it": "★ D omenica"
+          },
+          {
+            "rubric_it": "Si può dire in tutte le domeniche, a esclusione di quando c’è un altro ricordo proprio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno in cui Cristo ha vinto la morte"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ci ha resi partecipi della sua vita immortale."
+          },
+          {
+            "rubric_it": "★ Natale del Signore e Ottava"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno santissimo [nella notte santissima]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in cui la V ergine Maria diede al mondo il Salvatore."
+          },
+          {
+            "rubric_it": "★ Epifania del Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno santissimo in cui il tuo unico Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "eterno con te nella gloria,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "si è manifestato nella nostra natura umana."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per il ricordo proprio delle altre solennità cf. p. 436."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per la Confermazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati anche dei tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che, rigenerati nel Battesimo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "oggi hai confermato con il sigillo dello Spirito Santo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "custodisci in loro il dono del tuo amore."
+          },
+          {
+            "rubric_it": "★ Per la Messa di prima Comunione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Assisti i tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi per la prima volta raduni alla mensa della tua famiglia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella partecipazione al pane della vita e al calice della salvezza:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi loro di crescere sempre nella tua amicizia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e nella comunione con la tua Chiesa."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per il Matrimonio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Sostieni nella grazia del Matrimonio N. e N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che hai condotto felicemente al giorno delle nozze:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con il tuo aiuto custodiscano per tutta la vita"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’alleanza sponsale che hanno stretto davanti a te."
+          },
+          {
+            "rubric_it": "★ Giovedì Santo alla Messa vespertina"
+          },
+          {
+            "sp_it": "",
+            "text_it": "« Cena del Signore»"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno santissimo nel quale Gesù Cristo nostro Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fu consegnato alla morte per noi."
+          },
+          {
+            "rubric_it": "★ Dalla Veglia Pasquale alla II domenica di Pasqua"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno glorioso [nella notte gloriosa]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della risurrezione di Cristo Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel suo vero corpo."
+          },
+          {
+            "rubric_it": "★ Ascensione del Signore"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno glorioso dell’Ascensione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in cui Cristo è stato costituito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Signore del cielo e della terra."
+          },
+          {
+            "rubric_it": "★ Domenica di Pentecoste"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† nel giorno santissimo in cui l’effusione del tuo Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’ha costituita sacramento di unità per tutti i popoli."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricongiungi a te, Padre misericordioso,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tutti i tuoi figli ovunque dispersi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Accogli nel tuo regno"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i nostri fratelli e sorelle defunti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e tutti coloro che, in pace con te,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hanno lasciato questo mondo;"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi anche a noi di ritrovarci insieme"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a godere per sempre della tua gloria,"
+          },
+          {
+            "rubric_it": "congiunge le mani,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in Cristo, nostro Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo del quale tu, o Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "doni al mondo ogni bene."
+          },
+          {
+            "rubric_it": "Quando questa Preghiera Eucaristica viene usata nelle Messe per i defunti, si può dire:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† Ricordati del nostro fratello N."
+          },
+          {
+            "sp_it": "",
+            "text_it": "[della nostra sorella N.]"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che [oggi] hai chiamato a te da questa vita,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e come per il Battesimo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’hai unito[a] alla morte di Cristo, tuo Figlio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "così rendilo[a] partecipe della sua risurrezione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "quando egli farà sorgere i morti dalla terra"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e trasfigurerà il nostro corpo mortale"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per conformarlo al suo corpo glorioso."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Accogli nel tuo regno"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i nostri fratelli e sorelle defunti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e tutti coloro che, in pace con te,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hanno lasciato questo mondo;"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi anche a noi di ritrovarci insieme"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a godere della tua gloria"
+          },
+          {
+            "sp_it": "",
+            "text_it": "quando, asciugata ogni lacrima,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "i nostri occhi vedranno il tuo volto"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e noi saremo simili a te,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e canteremo per sempre la tua lode,"
+          },
+          {
+            "rubric_it": "congiunge le mani,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in Cristo, nostro Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo del quale tu, o Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "doni al mondo ogni bene."
+          },
+          {
+            "rubric_it": "Prende sia la patena con l’ostia sia il calice ed elevandoli insieme canta o dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "P er Cristo, con Cristo e in Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a te, Dio Padre onnipotente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’unità dello Spirito Santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ogni onore e gloria"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per tutti i secoli dei secoli."
+          },
+          {
+            "sp_it": "Tutti",
+            "text_it": "Amen."
+          },
+          {
+            "sp_it": "CP",
+            "text_it": "o"
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "4"
+        ],
+        "rows": [
+          {
+            "sp_it": "",
+            "text_it": "Il prefazio di questa Preghiera Eucaristica non può essere sostituito con altri, in ragione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della struttura della stessa Preghiera Eucaristica, che offre un compendio della storia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "della salvezza."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . Il Signore sia con voi."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . E con il tuo spirito."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . In alto i nostri cuori."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . S ono rivolti al Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "V/ . Rendiamo grazie al Signore nostro Dio."
+          },
+          {
+            "sp_it": "",
+            "text_it": "R/ . È c osa buona e giusta."
+          },
+          {
+            "sp_it": "",
+            "text_it": "È veramente giusto renderti grazie,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "è bello cantare la tua gloria, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, unico Dio vivo e vero: *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prima del tempo e in eterno tu sei, +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nel tuo regno di luce inaccessibile. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu solo sei buono e fonte della vita, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e hai dato origine all’universo *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per effondere le tue benedizioni su tutte le creature +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e allietarle con gli splendori della tua luce. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Schiere innumerevoli di angeli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "stanno davanti a te per servirti, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "contemplano la gloria del tuo volto, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e giorno e notte + cantano la tua lode. **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Insieme con loro anche noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "fatti voce di ogni creatura che è sotto il cielo, *"
+          },
+          {
+            "sp_it": "",
+            "text_it": "confessiamo il tuo nome +"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed esultanti cantiamo: **"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Santo, Santo, Santo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il Signore Dio dell’universo."
+          },
+          {
+            "sp_it": "",
+            "text_it": "I cieli e la terra sono pieni della tua gloria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Osanna nell’alto dei cieli."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Benedetto colui che viene nel nome del Signore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Osanna nell’alto dei cieli."
+          },
+          {
+            "rubric_it": "439Preghiera Eucaristica IV"
+          },
+          {
+            "rubric_it": "Il sacerdote, con le braccia allargate, dice:"
+          },
+          {
+            "sp_it": "C",
+            "text_it": "Noi ti lodiamo, Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la tua grandezza:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu hai fatto ogni cosa"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con sapienza e amore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Hai creato l’uomo a tua immagine,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "alle sue mani hai affdato la cura del mondo intero"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché nell’obbedienza a te, unico creatore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "esercitasse la signoria su tutte le creature."
+          },
+          {
+            "sp_it": "",
+            "text_it": "E quando, per la sua disobbedienza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’uomo perse la tua amicizia,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "tu non l’hai abbandonato in potere della morte,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma, nella tua misericordia, a tutti sei venuto incontro,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché coloro che ti cercano ti possano trovare."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Molte volte hai offerto agli uomini la tua alleanza"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e per mezzo dei profeti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "hai insegnato a sperare nella salvezza."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo, hai tanto amato il mondo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "da mandare a noi, nella pienezza dei tempi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il tuo unigenito Figlio come salvatore."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli si è fatto uomo per opera dello Spirito Santo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ed è nato dalla Vergine Maria;"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha condiviso in tutto, eccetto il peccato,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la nostra condizione umana."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ai poveri annunciò il Vangelo di salvezza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la libertà ai prigionieri,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "agli affitti la gioia."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per attuare il tuo disegno di redenzione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "consegnò se stesso alla morte"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e risorgendo distrusse la morte e rinnovò la vita."
+          },
+          {
+            "sp_it": "",
+            "text_it": "E perché non vivessimo più per noi stessi"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ma per lui che è morto e risorto per noi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ha mandato, o Padre, lo Spirito Santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "primo dono ai credenti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a perfezionare la sua opera nel mondo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e compiere ogni santificazione."
+          },
+          {
+            "rubric_it": "Congiunge le mani e, tenendole stese sulle offerte, dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ora ti preghiamo, o Padre:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "venga il tuo santo Spirito"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a santificare questi doni"
+          },
+          {
+            "rubric_it": "congiunge le mani e traccia un unico segno di croce sul pane e sul calice, dicendo:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "perché diventino il Corpo e ^ il Sangue"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del Signore nostro, Gesù Cristo,"
+          },
+          {
+            "rubric_it": "congiunge le mani,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella celebrazione di questo grande mistero,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che ci ha lasciato come alleanza eterna."
+          },
+          {
+            "rubric_it": "Nelle formule seguenti, le parole del Signore si pronuncino con voce chiara e distinta,"
+          },
+          {
+            "rubric_it": "come è richiesto dalla loro natura."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Egli, venuta l’ora di essere glorificato da te,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "avendo amato i suoi che erano nel mondo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "li amò sino alla fine;"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e mentre cenava con loro,"
+          },
+          {
+            "rubric_it": "prende il pane e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese il pane, pronunciò la benedizione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo spezzò, lo diede ai suoi discepoli e disse:"
+          },
+          {
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e mangiatene tutti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il mio Corpo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "offerto in sacrificio per voi."
+          },
+          {
+            "rubric_it": "Presenta al popolo l’ostia consacrata, la depone sulla patena e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Poi prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Allo stesso modo, dopo aver cenato,"
+          },
+          {
+            "rubric_it": "prende il calice e, tenendolo leggermente sollevato sull’altare, prosegue:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "prese il calice,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti rese grazie con la preghiera di benedizione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "lo diede ai suoi discepoli e disse:"
+          },
+          {
+            "rubric_it": "si inchina leggermente,"
+          },
+          {
+            "rubric_it": "441Preghiera Eucaristica IV"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Prendete, e bevetene tutti:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "questo è il calice del mio Sangue,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per la nuova ed eterna alleanza,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "versato per voi e per tutti"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in remissione dei peccati."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Fate questo in memoria di me."
+          },
+          {
+            "rubric_it": "Presenta al popolo il calice, lo depone sul corporale e genuflette in adorazione."
+          },
+          {
+            "rubric_it": "Quindi, il sacerdote canta o dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Mistero della fede."
+          },
+          {
+            "rubric_it": "Il popolo prosegue acclamando:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Annunciamo la tua morte, Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo la tua risurrezione,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta."
+          },
+          {
+            "rubric_it": "Oppure:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ogni volta che mangiamo di questo pane"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e beviamo a questo calice,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "annunciamo la tua morte, Signore,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nell’attesa della tua venuta."
+          },
+          {
+            "rubric_it": "Oppure:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Tu ci hai redenti con la tua croce"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e la tua risurrezione:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "salvaci, o Salvatore del mondo."
+          },
+          {
+            "rubric_it": "Quindi, con le braccia allargate, il sacerdote dice:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "In questo memoriale della nostra redenzione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "celebriamo, o Padre, la morte di Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "la sua discesa agli inferi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "proclamiamo la sua risurrezione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e ascensione al cielo, dove siede alla tua destra;"
+          },
+          {
+            "sp_it": "CC",
+            "text_it": "e, in attesa della sua venuta nella gloria,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "ti offriamo il suo Corpo e il suo Sangue,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "sacrificio a te gradito e fonte di salvezza per il mondo intero."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Guarda con amore, o Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "il sacrificio che tu stesso hai preparato per la tua Chiesa,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e a tutti coloro che parteciperanno"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a quest’unico pane e a quest’unico calice"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi che, riuniti in un solo corpo dallo Spirito Santo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "diventino offerta viva in Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "a lode della tua gloria."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ora, Padre, ricordati di tutti quelli"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per i quali noi ti offriamo questo sacrificio:"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del tuo servo e nostro papa N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "del nostro vescovo N.*, dell’ordine episcopale,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dei presbiteri, dei diaconi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di coloro che si uniscono alla nostra offerta,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "di quanti sono qui riuniti, †"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Intercessioni particolari"
+          },
+          {
+            "sp_it": "",
+            "text_it": "Per il Battesimo"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† dei nostri fratelli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi hai rigenerato dall’acqua e dallo Spirito Santo,"
+          },
+          {
+            "rubric_it": "★ Per la Confermazione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† dei tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi hai confermato con il sigillo dello Spirito Santo,"
+          },
+          {
+            "rubric_it": "★ Per la Messa di prima comunione"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† dei tuoi figli [N. e N.],"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che oggi per la prima volta raduni alla mensa della tua famiglia"
+          },
+          {
+            "sp_it": "",
+            "text_it": "nella partecipazione al pane della vita e al calice della salvezza,"
+          },
+          {
+            "rubric_it": "★ Per il Matrimonio"
+          },
+          {
+            "sp_it": "",
+            "text_it": "† dei tuoi figli N. e N.,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che in Cristo hanno costituito una nuova famiglia,"
+          },
+          {
+            "rubric_it": "* Qui è permesso nominare anche il vescovo coadiutore o gli ausiliari,"
+          },
+          {
+            "rubric_it": "come indicato al n. 149 dell’Ordinamento Generale del Messale Romano ."
+          },
+          {
+            "rubric_it": "443Preghiera Eucaristica IV"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dell’intero tuo popolo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e di tutti quelli che ti cercano con cuore sincero."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Ricordati anche di coloro"
+          },
+          {
+            "sp_it": "",
+            "text_it": "che sono morti nella pace del tuo Cristo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "e di tutti i defunti,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dei quali tu solo hai conosciuto la fede."
+          },
+          {
+            "sp_it": "",
+            "text_it": "Padre misericordioso,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "concedi a tutti noi, tuoi figli, di ottenere"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con la beata Maria, Vergine e Madre di Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "con san Giuseppe, suo sposo,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "gli apostoli e i santi,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "l’eredità eterna nel tuo regno,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "dove con tutte le creature,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "liberate dalla corruzione del peccato e della morte,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "canteremo la tua gloria,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "in Cristo nostro Signore,"
+          },
+          {
+            "rubric_it": "congiunge le mani,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "per mezzo del quale tu, o Dio,"
+          },
+          {
+            "sp_it": "",
+            "text_it": "doni al mondo ogni bene."
+          },
+          {
+            "rubric_it": "Prende sia la patena con l’ostia sia il calice ed elevandoli insieme canta o dice:"
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formEndings"
+        ],
+        "rows": {
+          "1": [
+            {
+              "sp_it": "",
+              "text_it": "Per Cristo, con Cristo e in Cristo,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "a te, Dio Padre onnipotente,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "nell’unità dello Spirito Santo,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "ogni onore e gloria"
+            },
+            {
+              "sp_it": "",
+              "text_it": "per tutti i secoli dei secoli."
+            },
+            {
+              "sp_it": "Tutti",
+              "text_it": "Amen."
+            }
+          ],
+          "2": [
+            {
+              "sp_it": "CC",
+              "text_it": "Per Cristo, con Cristo e in Cristo,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "a te, Dio Padre onnipotente,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "nell’unità dello Spirito Santo,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "ogni onore e gloria"
+            },
+            {
+              "sp_it": "",
+              "text_it": "per tutti i secoli dei secoli."
+            },
+            {
+              "sp_it": "Tutti",
+              "text_it": "Amen."
+            }
+          ],
+          "4": [
+            {
+              "sp_it": "",
+              "text_it": "Per Cristo, con Cristo e in Cristo,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "a te, Dio Padre onnipotente,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "nell’unità dello Spirito Santo,"
+            },
+            {
+              "sp_it": "",
+              "text_it": "ogni onore e gloria"
+            },
+            {
+              "sp_it": "",
+              "text_it": "per tutti i secoli dei secoli."
+            },
+            {
+              "sp_it": "Tutti",
+              "text_it": "Amen."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "formFrames"
+        ],
+        "rows": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "ending"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "ordinarySourceLayoutVersion"
+        ],
+        "rows": 1
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "isEucharist"
+        ],
+        "rows": true
+      }
+    }
+  ];
+  // MASS_DATA_EDITOR_OVERRIDES_END
+  function applyOrdinaryEditorOverrides(target) {
+    ordinaryEditorOverrides.forEach(override => {
+      if (override.replace) {
+        const entry = target.find(item => item && item.id === override.replace.entryId);
+        if (!entry) throw new Error('Mass editor replacement entry is missing');
+        let parent = entry;
+        const parts = override.replace.relativePath;
+        for (let index = 0; index < parts.length - 1; index++) {
+          const part = parts[index];
+          if (parent[part] === undefined) parent[part] = typeof parts[index + 1] === 'number' ? [] : {};
+          parent = parent[part];
+        }
+        parent[parts[parts.length - 1]] = JSON.parse(JSON.stringify(override.replace.rows));
+        return;
+      }
+      if (override.create) {
+        const entry = target.find(item => item && item.id === override.create.entryId);
+        if (!entry) throw new Error("IT" + ' Mass editor entry is missing: ' + override.create.entryId);
+        let rows = entry;
+        for (const part of override.create.relativePath) {
+          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};
+          rows = rows[part];
+        }
+        if (!Array.isArray(rows)) throw new Error("IT" + ' Mass editor block is invalid: ' + override.create.entryId);
+        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);
+        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];
+        if (!row) { row = {}; rows.push(row); }
+        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });
+        row[override.create.field] = String(override.value ?? '');
+        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');
+        return;
+      }
+      if (override.rename) {
+        let row = target;
+        for (const part of override.rename.rowPath) row = row && row[part];
+        if (!row || typeof row !== 'object') throw new Error("IT" + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));
+        const fromField = override.rename.fromField;
+        const toField = override.rename.toField;
+        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error("IT" + ' Mass editor rename field is stale: ' + fromField);
+        if (fromField !== toField) delete row[fromField];
+        row[toField] = String(override.value ?? '');
+        const keys = Object.assign({}, row.__massEditorPairKeys);
+        delete keys[fromField];
+        keys[toField] = override.rename.rowKey;
+        row.__massEditorPairKeys = keys;
+        return;
+      }
+      const editPath = Array.isArray(override.path) ? override.path : [];
+      let parent = target;
+      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];
+      const field = editPath[editPath.length - 1];
+      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error("IT" + ' Mass editor override path is stale: ' + JSON.stringify(editPath));
+      parent[field] = String(override.value ?? '');
+    });
+    return target;
+  }
+  applyOrdinaryEditorOverrides(ordinary);
   global.countryMassData.IT = Object.freeze({
     schemaVersion: 2,
     jurisdiction: 'IT',

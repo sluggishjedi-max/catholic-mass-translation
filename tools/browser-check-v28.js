@@ -719,10 +719,10 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         check(names.every(name => renderedBishops.includes(name)), `${lang} named auxiliary bishops missing`);
       }
       state.bishopContext = previousBishopContext;
-      // Whole semantic paragraphs follow Korean order. Source sentences must
-      // never be sliced by character weights to fit 88 physical rows.
+      // Every stored sentence and rubric remains in its edited source order.
+      // The renderer must not collapse them into inferred semantic paragraphs.
       const koreanPrayerFour = eucharisticPrayerEntry(countryMassData.KR.ordinary).forms['4'];
-      check(koreanPrayerFour.length === 88, 'Korean Eucharistic Prayer IV clause count');
+      check(koreanPrayerFour.length > 0, 'Korean Eucharistic Prayer IV source rows missing');
       const ep4Locations = ['KR','VN','US','IE','GB-ENG','GB-WLS','GB-SCT','PH','TW','AU','NZ','JP','IT','PT','MX','DE','BR','VA'];
       const ep4Language = {KR:'KR',VN:'VN',US:'EN',IE:'EN','GB-ENG':'EN','GB-WLS':'EN','GB-SCT':'EN',PH:'EN',TW:'ZH',AU:'EN',NZ:'EN',JP:'JP',IT:'IT',PT:'PT',MX:'ES',DE:'DE',BR:'PT',VA:'LA'};
       const ep4EmptyRows = {};
@@ -732,22 +732,18 @@ Jesús dijo: tome su cruz de cada día y me siga.`;
         const normalizedOrdinary = normalizedOrdinaryForMerge(module,code,koreanPrayerFour);
         const lower = eucharisticPrayerLanguageLower(module,code);
         const rawPrayer = eucharisticPrayerEntry(normalizedOrdinary).forms['4'];
-        const normalizedPrayer = ordoOrdinaryAlignment.alignFourth([{rows:rawPrayer,lower,location:code}]);
-        check(normalizedPrayer.length === 6, `${code} Eucharistic Prayer IV semantic paragraph count`);
-        ep4EmptyRows[code] = normalizedPrayer.filter(row => !(row[`text_${lower}`] || row[`rubric_${lower}`])).length;
-        check(ep4EmptyRows[code] === 0, `${code} unexpected empty Eucharistic Prayer IV paragraphs`);
-        const bodyText = normalizedPrayer[2][`text_${lower}`] || '';
-        const epiclesisText = normalizedPrayer[3][`text_${lower}`] || '';
-        const endingText = normalizedPrayer[5][`text_${lower}`] || '';
-        check(bodyText.trim().length > 20, `${code} salvation-history clauses missing`);
-        check(epiclesisText.trim().length > 20, `${code} institution clauses missing`);
-        check(endingText.trim().length > 20, `${code} intercession clauses missing`);
+        const project = rows => rows.flatMap(row => ordoMassStorage.lineParts(row,lower))
+          .map(({kind,text,speaker}) => ({kind,text,speaker}));
+        const storedPrayer = eucharisticPrayerEntry(module.ordinary).forms['4'];
+        const expected = project(storedPrayer);
+        check(expected.length > 10 && expected.map(row=>row.text).join(' ').length > 200, `${code} complete Eucharistic Prayer IV source missing`);
+        check(JSON.stringify(project(rawPrayer)) === JSON.stringify(expected), `${code} preparing the source changed its sentences or rubric kinds`);
         state.selectedLocationCode='KR'; state.currentLoc='KR';
         state.targetLocationCode=code; state.targetLang=ep4Language[code];
         resetMassDataFrom(getStartupOrdinaryMassData());
-        const mergedPrayer = ordoOrdinaryAlignment.alignFourth(eucharisticPrayerEntry(massData).__ordinaryFourthSources);
-        check(mergedPrayer.length === 6, `${code} merged Eucharistic Prayer IV paragraph count`);
-        check(mergedPrayer.some(row => row[`text_${lower}`] || row[`rubric_${lower}`]), `${code} merged language text missing`);
+        const mergedPrayer = eucharisticPrayerEntry(massData).forms['4'];
+        check(JSON.stringify(project(mergedPrayer)) === JSON.stringify(expected), `${code} merged Eucharistic Prayer IV changed edited source rows`);
+        ep4EmptyRows[code] = mergedPrayer.filter(row => !(row[`text_${lower}`] || row[`rubric_${lower}`])).length;
       }
       const repeated = [];
       for (const [lang, locationCode] of [['VN','VN'], ['EN','US'], ['ZH','TW']]) {

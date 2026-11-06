@@ -365,7 +365,7 @@
     }
     return result;
   }
-  const api=Object.freeze({tokens,prepare,mergeRows,mergeValue,applyRubricPolicy,congregationRubric,alignCanon,alignFourth,alignForm,formRanges,baseFormRows,commonAmen,trimDoxology,equivalentRows,legacyCanon,independentCanon,CANON_STAGES,CANON_PROFILES});
+  const api=Object.freeze({tokens,prepare,mergeRows,mergeValue,applyRubricPolicy,congregationRubric,alignCanon,alignFourth,alignForm,formRanges,baseFormRows,commonAmen,trimDoxology,equivalentRows,legacyCanon,independentCanon,nationalSpoken,cleanSpoken,CANON_STAGES,CANON_PROFILES});
   if(typeof module==='object'&&module.exports)module.exports=api;
   root.ordoOrdinaryAlignment=api;
 })(globalThis);

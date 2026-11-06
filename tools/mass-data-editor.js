@@ -316,7 +316,11 @@ function parsePropertyKey(source, initial) {
   if (source[index] === '"' || source[index] === "'") {
     const end = scanString(source, index);
     const literal = source.slice(index, end);
-    const key = vm.runInNewContext(literal);
+    // Editor snapshots are JSON. Avoid creating a V8 context for every key
+    // in a large ordinary, while retaining legacy JavaScript string escapes.
+    let key;
+    try { key = JSON.parse(literal); }
+    catch { key = vm.runInNewContext(literal); }
     return { key: String(key), end };
   }
   const match = /^[A-Za-z_$][\w$-]*/u.exec(source.slice(index));
@@ -399,7 +403,10 @@ function ordinaryOverrideBlock(source) {
   if (arrayStart === -1 || arrayStart > markerEnd) throw new Error('Mass editor override array is invalid');
   const arrayNode = parseArrayNode(source, arrayStart);
   if (arrayNode.end > markerEnd) throw new Error('Mass editor override array crosses its end marker');
-  const entries = vm.runInNewContext(source.slice(arrayStart, arrayNode.end));
+  const literal = source.slice(arrayStart, arrayNode.end);
+  let entries;
+  try { entries = JSON.parse(literal); }
+  catch { entries = vm.runInNewContext(literal); }
   if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create && !entry.rename && !entry.replace))) {
     throw new Error('Mass editor overrides must contain a path, create, or rename descriptor');
   }
@@ -563,6 +570,7 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
     return { sources, sourceIndex, changed: [], nextCode: sources[sourceIndex].code, country, block };
   }
   // Retain rows without an editable sentence and any other-language fields in deleted rows.
+  const orderedRows = new Map(order.map((key, index) => [key, nextRows[index]]));
   rawRows.forEach((raw, index) => {
     if (owners.has(index)) return;
     const residual = JSON.parse(JSON.stringify(raw));
@@ -576,8 +584,11 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
       else delete residual.__massEditorPairKeys;
       if (!Object.keys(residual).some(field => /^(?:text|rubric|cit)_[a-z]{2}$/iu.test(field))) return;
     }
-    const anchor = order.findIndex(key => originals.get(key)?.rowIndex > index);
-    nextRows.splice(anchor < 0 ? nextRows.length : anchor, 0, residual);
+    const anchorKey = order.filter(key => originals.get(key)?.rowIndex > index)
+      .sort((left, right) => originals.get(left).rowIndex - originals.get(right).rowIndex)[0];
+    const anchorRow = anchorKey && orderedRows.get(anchorKey);
+    const anchor = anchorRow ? nextRows.indexOf(anchorRow) : nextRows.length;
+    nextRows.splice(anchor, 0, residual);
   });
   nextRows.splice(0, nextRows.length, ...canonicalMassEntry(nextRows));
   const source = sources[sourceIndex];
@@ -587,10 +598,19 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
   let workingCode = ensureBlockReplacementSupport(ensureOrdinaryOverrideSection(source.code, country.jurisdiction));
   const overrides = ordinaryOverrideBlock(workingCode);
   const entries = overrides.entries;
-  const replacement = entries.find(entry => entry.replace && entry.replace.entryId === block.entryId
-    && JSON.stringify(entry.replace.relativePath) === JSON.stringify(block.relativePath));
-  if (replacement) replacement.replace.rows = nextRows;
-  else entries.push({ replace: { entryId: block.entryId, relativePath: block.relativePath, rows: nextRows } });
+  const prefix = (candidate, parent) => Array.isArray(candidate) && candidate.length >= parent.length
+    && parent.every((part, index) => String(candidate[index]) === String(part));
+  const absolute = [block.entryIndex, ...block.relativePath];
+  // The new parent snapshot already contains its current nested edits. Old
+  // child descriptors use physical row offsets and must not replay after a
+  // parent insertion/move. Fold them into this final authoritative snapshot.
+  for (let index = entries.length - 1; index >= 0; index--) {
+    const edit = entries[index];
+    if (prefix(edit.path, absolute) || prefix(edit.rename?.rowPath, absolute)
+      || (edit.create?.entryId === block.entryId && prefix(edit.create.relativePath, block.relativePath))
+      || (edit.replace?.entryId === block.entryId && prefix(edit.replace.relativePath, block.relativePath))) entries.splice(index, 1);
+  }
+  entries.push({ replace: { entryId: block.entryId, relativePath: block.relativePath, rows: nextRows } });
   const nextCode = `${workingCode.slice(0, overrides.start)}${formatOrdinaryOverrides(entries)}${workingCode.slice(overrides.end)}`;
   const nextSources = sources.map((item, index) => index === sourceIndex ? { ...item, code: nextCode } : item);
   const runtime = runCountryMassSources(nextSources);
@@ -1103,6 +1123,8 @@ module.exports = {
   createServer,
   countryMassModules,
   findOrdinaryArrayStart,
+  ordinaryOverrideBlock,
+  ensureOrdinaryOverrideSection,
   ensureBlockReplacementSupport,
   firebaseMassItems,
   getLoadedState,

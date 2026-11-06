@@ -72,8 +72,8 @@
     "browser:check:kr-zh-citations": "node tools/browser-check-kr-zh-citations.js",
     "browser:check:taiwan-display": "node tools/verify-preface-matching.js && node tools/browser-check-taiwan-display.js",
     "browser:check:v31.2": "set ORDO_CHECK_HTML=V31.2.html&& node tools/browser-check-v28.js",
-    "ordinary:check": "node tools/test-ordinary-alignment.js && node tools/repair-eucharistic-prayer-three.js --check && node tools/repair-german-fourth-preface.js --check",
-    "browser:check:ordinary": "node tools/browser-check-ordinary-alignment.js",
+    "ordinary:check": "node tools/test-ordinary-display.js && node tools/test-firebase-ordinary-cache.js && node tools/test-mass-editor-literals.js && node tools/test-ordinary-nested-edit.js && node tools/verify-preface-matching.js && node tools/materialize-ordinary-source.js --check && node tools/repair-eucharistic-prayer-three.js --check && node tools/repair-german-fourth-preface.js --check",
+    "browser:check:ordinary": "node tools/browser-check-ordinary-source.js && node tools/browser-check-ordinary-choices.js",
     "browser:check:vatican-notice": "node tools/browser-check-vatican-notice.js"
   },
   "keywords": [],
