@@ -8077,6 +8077,17 @@
         "field": "rubricInset_kr"
       },
       "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          1
+        ],
+        "field": "rubricInset_kr"
+      },
+      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END

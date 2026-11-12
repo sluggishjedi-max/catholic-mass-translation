@@ -5,7 +5,7 @@ const storage=require('./mass-storage-schema');
 const plain=value=>String(value||'').replace(/<[^>]*>/gu,'').trim();
 function markRows(rows,lower){
  const parts=(rows||[]).flatMap((row,index)=>storage.lineParts(row,lower).map(part=>({...part,index})));
- const body=parts.map((part,index)=>part.kind==='text'&&plain(part.text)?index:-1).filter(index=>index>=0),first=body[0],last=body.at(-1),insets=new Map(),counts=new Map();
+ const body=parts.map((part,index)=>part.kind==='text'&&plain(part.text)?index:-1).filter(index=>index>=0),first=parts.findIndex(part=>plain(part.text)),last=body.at(-1),insets=new Map(),counts=new Map();
  parts.forEach((part,index)=>{if(part.kind!=='rubric'||!plain(part.text))return;counts.set(part.index,(counts.get(part.index)||0)+1);if(index>first&&index<last)insets.set(part.index,[...(insets.get(part.index)||[]),part.segmentIndex]);});
  let changed=0;for(const[rowIndex,row]of(rows||[]).entries()){if(!row||typeof row!=='object')continue;const field='rubricInset_'+lower,segments=insets.get(rowIndex),value=segments?(segments.length===counts.get(rowIndex)?true:segments):undefined;if(JSON.stringify(row[field])===JSON.stringify(value))continue;if(value)row[field]=value;else delete row[field];changed++;}
  return changed;

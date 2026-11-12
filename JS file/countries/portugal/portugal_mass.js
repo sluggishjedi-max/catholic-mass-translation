@@ -27451,6 +27451,54 @@
         "field": "rubricInset_pt"
       },
       "value": true
+    },
+    {
+      "rename": {
+        "rowPath": [
+          18,
+          "lines",
+          6
+        ],
+        "rowKey": "6:text",
+        "fromField": "text_pt",
+        "toField": "rubric_pt"
+      },
+      "value": "23. O sacerdote, junto do altar, toma a patena com o pão e, elevando-a com ambas"
+    },
+    {
+      "rename": {
+        "rowPath": [
+          18,
+          "lines",
+          7
+        ],
+        "rowKey": "7:text",
+        "fromField": "text_pt",
+        "toField": "rubric_pt"
+      },
+      "value": "as mãos um pouco acima do altar, diz em voz baixa:"
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          6
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END

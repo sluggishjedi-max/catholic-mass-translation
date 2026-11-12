@@ -19320,6 +19320,17 @@ God, for ever and ever.`
         "field": "rubricInset_en"
       },
       "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          1
+        ],
+        "field": "rubricInset_en"
+      },
+      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END

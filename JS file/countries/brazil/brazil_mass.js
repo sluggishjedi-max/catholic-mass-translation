@@ -29801,6 +29801,351 @@
         "field": "rubricInset_pt"
       },
       "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.8 communion",
+        "path": [
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.9 prayer_after",
+        "path": [
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.4 final_song",
+        "path": [
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END

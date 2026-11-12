@@ -30019,6 +30019,43 @@
         "field": "rubricInset_it"
       },
       "value": true
+    },
+    {
+      "rename": {
+        "rowPath": [
+          18,
+          "lines",
+          6
+        ],
+        "rowKey": "6:text",
+        "fromField": "text_it",
+        "toField": "rubric_it"
+      },
+      "value": "mani un po’ sollevata sull’altare, dice sottovoce:"
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          6
+        ],
+        "field": "rubricInset_it"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_it"
+      },
+      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END
