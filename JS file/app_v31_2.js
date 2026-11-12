@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261106-6';
+    const APP_VERSION = 'V31.2-20261112-1';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10126,7 +10126,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict110-canonical-antiphon-citations';
+    const STRICT_PARSER_CACHE_VERSION = 'strict111-reading-boundaries-single-chapter';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10633,7 +10633,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictHtmlLinesFromDoc(doc, options = {}) {
-        doc.querySelectorAll('script, style, nav, footer, iframe, noscript, a.missaList').forEach(node => node.remove());
+        doc.querySelectorAll('script, style, nav, footer, iframe, noscript, a.missaList, .bibbiaedu-linked .verses').forEach(node => node.remove());
         // Some Schott pages contain an unclosed source heading tag inside
         // commentary. Give that heading its own block before selecting leaves.
         doc.querySelectorAll('lb_u1').forEach(node => {
@@ -11056,7 +11056,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const markers = strictSectionMarkers[lang] || [];
         for (const [key, regex] of markers) {
             if (!regex.test(cleaned)) continue;
-            return { key, rest: strictCleanLine(cleaned.replace(regex, '').replace(/^[:：\s\-–—―]+/, '')) };
+            const rest = strictCleanLine(cleaned.replace(regex, '').replace(/^[:：\s\-–—―]+/, ''));
+            // Heading words also occur in Scripture, such as "복음 때문에".
+            if (['reading1','reading2','gospel'].includes(key) && rest
+                && !/^[（(〈<]/u.test(rest)
+                && !strictLooksLikeCitation(rest.replace(/^[（(]|[）)]$/gu,''), lang)) continue;
+            return { key, rest };
         }
         return null;
     }
@@ -11074,7 +11079,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (marker && strictDailySectionKeys.has(marker.key)) {
                 current = { key: marker.key, heading: line, lines: [] };
                 if (!result[marker.key]) result[marker.key] = current;
-                else current = result[marker.key];
+                else (result[marker.key].repeated ||= []).push(current);
                 if (marker.rest) current.lines.push(marker.rest);
                 return;
             }
@@ -11417,7 +11422,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function strictExtractIntro(blocks, lang, baseId) {
         const introPatterns = {
-            KR: [/말씀입니다\.?$/u, /복음입니다\.?$/u],
+            KR: [/말씀입니다\.?$/u, /복음입니다\.?$/u, /시작입니다\.?$/u],
             EN: [/^A reading from/i, /^A Reading from/i],
             JP: [/朗読/u, /福音/u],
             VN: [/^Trích/iu, /^Tin Mừng Chúa/iu, /Chúa Giêsu Kitô theo/iu],
@@ -11806,7 +11811,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         let response = '';
         let verseBuffer = [];
         const flushVerse = () => {
-            const verse = strictCleanLine(verseBuffer.join(' '));
+            const verse = strictCleanLine(verseBuffer.map(line => strictStripArabicVerseNumbers(line, citation)).join(' '));
             verseBuffer = [];
             if (verse) out.push(strictParsedLine('V.', /-\s*R\.?$/iu.test(verse) ? verse : `${verse} - R.`));
         };
@@ -12032,12 +12037,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return !!match && !match.rest;
     }
 
-    function strictGroupAlternativeBlocks(blocks) {
+    function strictGroupAlternativeBlocks(blocks, readingLang = '') {
         const groups = [];
         let current = [];
-        (blocks || []).forEach(line => {
+        (blocks || []).forEach((line, index) => {
             const match = strictAlternativeMatch(line);
-            if (match) {
+            const narrative = match && readingLang && match.rest
+                && !strictLooksLikeCitation(match.rest, readingLang)
+                && !strictExtractIntro([match.rest, ...(blocks || []).slice(index + 1, index + 4)], readingLang, 'reading1').intro
+                && !(blocks || []).slice(index + 1, index + 3).some(next => strictLooksLikeCitation(next, readingLang));
+            if (match && !narrative) {
                 if (current.length) groups.push(current);
                 current = match.rest ? [match.rest] : [];
                 return;
@@ -12232,7 +12241,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             : '';
         const introParts = strictSplitLeadingSpeaker(lang, key, introResult.intro || generatedIntro || japaneseIntroResult.intro);
         const out = [];
-        const bodyGroups = strictGroupAlternativeBlocks(blocks);
+        const bodyGroups = strictGroupAlternativeBlocks(blocks, lang);
         bodyGroups.forEach((group, index) => {
             if (index > 0) out.push(strictParsedLine('', 'Or:'));
             out.push(strictParsedLine('', summaryResult.summary || '', 'summary', summaryResult.summary ? '' : strictMissingSummaryAI(lang)));
@@ -12250,6 +12259,39 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return result;
     }
 
+    function strictPsalmRefrainAlternatives(lang, section, citation, blocks) {
+        const lines = (blocks || []).map(strictCleanLine).filter(Boolean);
+        const responseText = line => strictCleanLine(String(line || '').replace(/^(?:R\.|℟\.?|Refrão\s*:|Đ\.|Ð\.|◎|答[:：]?|Kv\b)\s*/iu, '').replace(/^\(\s*\d+[a-z]?\s*\)\s*/iu, ''));
+        const marked = line => /^(?:R\.|℟\.?|Refrão\s*:|Đ\.|Ð\.|◎|答[:：]?|Kv\b)\s*/iu.test(line);
+        if (!lines.length || (!marked(lines[0]) && lang !== 'EN')) return null;
+        const responses = [responseText(lines[0])];
+        let cursor = 1;
+        while (cursor < lines.length) {
+            const alternative = strictAlternativeMatch(lines[cursor]);
+            if (!alternative) break;
+            const value = alternative.rest || lines[cursor + 1];
+            if (!value || strictLooksLikeCitation(value, lang)) break;
+            responses.push(responseText(value));
+            cursor += alternative.rest ? 1 : 2;
+        }
+        if (responses.length < 2 || responses.some(text => !text)) return null;
+        const meanings = new Set(responses.map(normalizeSemanticText));
+        const stanzas = lines.slice(cursor).filter(line => {
+            const alternative = strictAlternativeMatch(line);
+            return !(alternative && (!alternative.rest || meanings.has(normalizeSemanticText(responseText(alternative.rest)))))
+                && !meanings.has(normalizeSemanticText(responseText(line)));
+        });
+        if (!stanzas.length) return null;
+        const marker = {VN:'Đ.',KR:'◎',ZH:'答：',LA:'℟',DE:'Kv'}[lang] || 'R.';
+        const options = responses.map(response => strictParsePsalmOrAcclamation(lang, 'psalm', {
+            ...section, lines: [citation, marker + ' ' + response, ...stanzas].filter(Boolean)
+        }));
+        const out = options.flatMap((option,index) => (index ? [strictParsedLine('', 'Or:')] : []).concat(option.lines));
+        const field = 'cit_' + lang.toLowerCase();
+        return {text:parsedLinesToText(out),lines:out,[field]:options[0][field] || citation,
+            optionCits:options.map(option => ({[field]:option[field] || citation}))};
+    }
+
     function strictParsePsalmOrAcclamation(lang, key, section) {
         const blocks = strictSplitBlocks(section.lines).filter(line => key !== 'gospel_accl' || !isLiturgicalReferenceLabel(line));
         const citationResult = strictExtractCitation(section, blocks, lang, { preserveParentheses: true });
@@ -12258,6 +12300,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             : citationResult.blocks;
         const out = [];
         if (key === 'psalm') {
+            const alternatives = strictPsalmRefrainAlternatives(lang, section, citationResult.citation, citationResult.blocks);
+            if (alternatives) return alternatives;
             const repeatedPsalm = strictParseUnmarkedRepeatedPsalm(lang, citationResult.citation, citationResult.blocks);
             if (repeatedPsalm) return repeatedPsalm;
         }
@@ -13235,7 +13279,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const psalm = ibreviaryBlock(lines, labels.psalm, labels.reading2.concat(labels.accl, labels.gospel));
         const reading2 = ibreviaryBlock(lines, labels.reading2, labels.accl.concat(labels.gospel));
         const accl = ibreviaryBlock(lines, labels.accl, labels.gospel);
-        const gospel = ibreviaryBlock(lines, labels.gospel);
+        const gospel = ibreviaryBlock(lines, labels.gospel, labels.reading1.concat(labels.psalm, labels.reading2, labels.accl, [/^(?:Letture feriali|Readings of the day|Alternative readings|Common readings)$/iu]));
         const data = {};
         if (reading1.lines.length) data.reading1 = strictFormatSection(lang, 'reading1', ibreviaryMarkReadingSummary(lang, 'reading1', reading1));
         if (psalm.lines.length) data.psalm = strictFormatSection(lang, 'psalm', psalm);
@@ -13302,6 +13346,25 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictFormatSection(lang, key, section) {
+        if (section.repeated?.length) {
+            const sourceSections = [{heading:section.heading,lines:section.lines}, ...section.repeated];
+            const options = [], seen = new Set();
+            for (const source of sourceSections) {
+                const parsed = strictFormatSection(lang, key, {...section, ...source, repeated:null});
+                for (const option of globalThis.ordoDailyContent.options(parsed)) {
+                    const citation = option['cit_' + lang.toLowerCase()] || '';
+                    const text = String(option.text || '').normalize('NFKC').replace(/[‘’]/gu,"'").replace(/[“”]/gu,'"').replace(/\s+/gu,' ').trim();
+                    const identity = JSON.stringify([citation,text]);
+                    if (!text || seen.has(identity)) continue;
+                    seen.add(identity);options.push({...option,id:String.fromCharCode(65+options.length)});
+                }
+            }
+            if (options.length === 1) return options[0];
+            if (options.length) {
+                const lines = options.flatMap((option,index)=>(index?[strictParsedLine('', 'Or:')]:[]).concat(option.lines));
+                return {...options[0],options,lines,text:parsedLinesToText(lines),optionCits:options.map(option=>({['cit_'+lang.toLowerCase()]:option['cit_'+lang.toLowerCase()]||''}))};
+            }
+        }
         if (lang === 'ZH' && strictReadingKeys.has(key)) {
             const groups = [];
             let current = [];
@@ -13322,7 +13385,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (options.length) return options[0];
         }
         if (strictReadingKeys.has(key)) {
-            const groups = strictGroupAlternativeBlocks(section.lines || []);
+            const groups = strictGroupAlternativeBlocks(section.lines || [], lang);
             if (groups.length > 1) {
                 const citationKey = `cit_${lang.toLowerCase()}`;
                 const options = groups.map(lines => strictParseReadingSection(lang, key, { ...section, lines }));
@@ -13815,7 +13878,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function koreanBibleReadingIntro(bookKey, isGospel) {
         const gospelNames = { 마태: '마태오', 마르: '마르코', 루카: '루카', 요한: '요한' };
-        if (isGospel && gospelNames[bookKey]) return `${gospelNames[bookKey]}가 전한 거룩한 복음입니다.`;
+        if (isGospel && gospelNames[bookKey]) return `${gospelNames[bookKey]}${bookKey === '요한' ? '이' : '가'} 전한 거룩한 복음입니다.`;
         const bookNames = {
             지혜: '지혜서', 집회: '집회서', 사도: '사도행전', 로마: '사도 바오로의 로마서',
             '1코린': '사도 바오로의 코린토 1서', '2코린': '사도 바오로의 코린토 2서',
@@ -14732,7 +14795,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const abbreviated = lang === 'VN' && /^Bài\s+trích\s+[^.]+[.]?$/iu.test(cleanNodeText(existing.text_vn))
                     && !/^Bài\s+trích\s+(?:sách|thư|thơ)\b/iu.test(cleanNodeText(existing.text_vn));
                 const sourceBook = canonicalBookIdFromReadingIntro(existing[`text_${lower}`], lang, baseId);
-                if (existing[`intro_origin_${lower}`] === 'derived' || abbreviated || (sourceBook && sourceBook !== bookId)) {
+                const placeholder = /[~～…]|\.{3,}|\{(?:book|gospel)\}/u.test(cleanNodeText(existing[`text_${lower}`]));
+                if (existing[`intro_origin_${lower}`] === 'derived' || placeholder || abbreviated || (sourceBook && sourceBook !== bookId)) {
                     existing[`text_${lower}`] = text;
                     existing[`text_${lower}_ai`] = '';
                 }
@@ -16822,7 +16886,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align12-multilingual-verse-references';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align13-single-chapter-passages';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -21751,12 +21815,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const rubricRight = line['rubric_' + rightKey] || '';
                     if (line.__ordinarySource && line['cit_' + leftKey]) block.innerHTML += '<div class="citation">' + escapeHtml(line['cit_' + leftKey]) + '</div>';
                     if (line.__ordinarySource && line['cit_' + rightKey]) block.innerHTML += '<div class="citation translation">' + escapeHtml(line['cit_' + rightKey]) + '</div>';
-                    if (rubricLeft) block.innerHTML += `<div class="rubric" data-rubric-language="${leftKey}">${rubricLeft}</div>`;
+                    if (rubricLeft) block.innerHTML += `<div class="rubric${line['rubricInset_' + leftKey] ? ' rubric-inset line-' + leftKey : ''}" data-rubric-language="${leftKey}">${rubricLeft}</div>`;
                     const leftRoleClass = roleClassForLine(line, leftKey);
                     const rightRoleClass = roleClassForLine(line, rightKey);
-                    block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, line.__ordinarySource ? false : shouldSuppressSpeaker(baseId));
-                    if (rubricRight) block.innerHTML += `<div class="rubric translation" data-rubric-language="${rightKey}">${rubricRight}</div>`;
-                    block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), line.__ordinarySource ? false : shouldSuppressSpeaker(baseId));
+                    block.innerHTML += linePairHTML(leftSp, leftTxt, leftKey, leftRoleClass, shouldSuppressSpeaker(baseId) && (!line.__ordinarySource || !leftSp));
+                    if (rubricRight) block.innerHTML += `<div class="rubric translation${line['rubricInset_' + rightKey] ? ' rubric-inset line-' + rightKey : ''}" data-rubric-language="${rightKey}">${rubricRight}</div>`;
+                    block.innerHTML += linePairHTML(rightSp, rightTxt, rightKey, ['translation', rightRoleClass].filter(Boolean).join(' '), shouldSuppressSpeaker(baseId) && (!line.__ordinarySource || !rightSp));
                     if (block.innerHTML.trim()) partContainer.appendChild(block);
                 } else {
                     const leftHtml = genLineHTML(line, leftL, baseId);
@@ -21913,7 +21977,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
         const rubric = line['rubric_' + lowerLang] || '';
         let html = line.__ordinarySource && line['cit_' + lowerLang] ? '<span class="citation">' + escapeHtml(line['cit_' + lowerLang]) + '</span>' : '';
-        if (rubric) html += `<span class="rubric" data-rubric-language="${lowerLang}">${rubric}</span>`;
+        if (rubric) html += `<span class="rubric${line['rubricInset_' + lowerLang] ? ' rubric-inset line-' + lowerLang : ''}" data-rubric-language="${lowerLang}">${rubric}</span>`;
 
         const suppressAiFallback = shouldSuppressAIFallbackForLine(line, baseId, lowerLang);
         if ((!txt || txt.trim() === '') && otherTxt && !suppressAiFallback) {
@@ -21932,7 +21996,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
         if (!hasNoContent || keepBlank) {
             const roleClass = roleClassForLine(line, lowerLang);
-            html += linePairHTML(sp, txt, lowerLang, roleClass, line.__ordinarySource ? false : shouldSuppressSpeaker(baseId), keepBlank);
+            html += linePairHTML(sp, txt, lowerLang, roleClass, shouldSuppressSpeaker(baseId) && (!line.__ordinarySource || !sp), keepBlank);
         }
         return html;
     }

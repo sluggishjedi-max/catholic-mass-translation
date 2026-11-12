@@ -20979,11 +20979,8841 @@
         ],
         "rows": true
       }
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "F",
+          "lines",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "G",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.2 greeting",
+        "path": [
+          "variants",
+          "H",
+          "lines",
+          12
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          24
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          51
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          20
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          29
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          49
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          77
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          87
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          99
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          110
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          120
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          130
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          141
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          151
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          162
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          172
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          182
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          193
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          203
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          213
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          223
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.3 penitential",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          233
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.4 kyrie",
+        "path": [
+          "lines",
+          6
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.4 kyrie",
+        "path": [
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.4 kyrie",
+        "path": [
+          "lines",
+          12
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.4 kyrie",
+        "path": [
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.4 kyrie",
+        "path": [
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "1.4 kyrie",
+        "path": [
+          "lines",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          4
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          6
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          11
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          13
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "2.6 gospel",
+        "path": [
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          4
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          11
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          13
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          19
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          28
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          29
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          36
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          61
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.1 offertory",
+        "path": [
+          "lines",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          11
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          19
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          24
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          28
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          35
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          68
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          71
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          75
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          79
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          82
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          88
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "ordinary",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "ordinary",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "christmas",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "christmas",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "epiphany",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "epiphany",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "easter",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "easter",
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "ascension",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "ascension",
+          "lines",
+          11
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "pentecost",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          21,
+          "options",
+          "pentecost",
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          22,
+          "options",
+          "ordinary",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          22,
+          "options",
+          "christmas",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          22,
+          "options",
+          "epiphany",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          22,
+          "options",
+          "easter",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          22,
+          "options",
+          "ascension",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "1",
+          22,
+          "options",
+          "pentecost",
+          "lines",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          19
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          28
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          35
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          63
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          65
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          69
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          76
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          91
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          96
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "2",
+          100
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          6
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          12
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          20
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          24
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          29
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          36
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          45
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "3",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          36
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          45
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          49
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          51
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          56
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          69
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          72
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          74
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          76
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          78
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          80
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          82
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          83
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          85
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          87
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          89
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          91
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          92
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          94
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          96
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          98
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          100
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          101
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          103
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          105
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          107
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          110
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "4",
+          113
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          43
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          56
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          61
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          65
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          69
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          75
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          78
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          80
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          83
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "5",
+          85
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          49
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          51
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          59
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          61
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          71
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          75
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          77
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          80
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          82
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          84
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          89
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          95
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D1",
+          97
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          49
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          51
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          59
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          61
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          69
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          71
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          76
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          78
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          80
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          85
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          91
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D2",
+          93
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          24
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          28
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          40
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          56
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          63
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          70
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          72
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          74
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          78
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          81
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          83
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          85
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          87
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          91
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          95
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D3",
+          97
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          20
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          45
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          56
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          61
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          65
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          68
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          70
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          72
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          76
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          79
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          81
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          83
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          85
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          89
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          93
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "D4",
+          95
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          24
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          35
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          56
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          59
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          70
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R1",
+          72
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          20
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          35
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          36
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          43
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          45
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          49
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          51
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          63
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          65
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          72
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "R2",
+          74
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          20
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          29
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          45
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          58
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          63
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          68
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C1",
+          75
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          19
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          24
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          28
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          37
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          39
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          45
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          46
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          53
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          59
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          61
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          69
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          71
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C2",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          28
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          32
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          41
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          42
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          43
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          49
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          50
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          60
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          66
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          68
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          71
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          73
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          75
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          77
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          79
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          82
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          84
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "forms",
+          "C3",
+          86
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "amen",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "formEndings",
+          "1",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "formEndings",
+          "2",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "formEndings",
+          "3",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.3 eucharist",
+        "path": [
+          "formEndings",
+          "4",
+          1
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          4
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          13
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          23
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          27
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          43
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          44
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          54
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.4 lords_prayer",
+        "path": [
+          "lines",
+          55
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          12
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          13
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          29
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.5 peace",
+        "path": [
+          "lines",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.6 lamb",
+        "path": [
+          "lines",
+          4
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.6 lamb",
+        "path": [
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          14
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          17
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          21
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          22
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          25
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          26
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          30
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          31
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          33
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          47
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          48
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          52
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          56
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          57
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          59
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          62
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          63
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.7 communion_rite",
+        "path": [
+          "lines",
+          64
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.8 communion",
+        "path": [
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.8 communion",
+        "path": [
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "3.8 communion",
+        "path": [
+          "lines",
+          10
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          4
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          7
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          4
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          12
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          16
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          18
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          20
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          5
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          8
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          9
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          15
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          34
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          38
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          63
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          67
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          85
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          89
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          108
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          112
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          128
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          132
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          148
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          152
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          170
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          174
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          193
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          197
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          207
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          211
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          220
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          224
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          237
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          241
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          256
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          260
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          276
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          280
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          291
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          296
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          311
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          315
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          333
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          337
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          342
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          344
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          346
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          359
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          363
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          366
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          370
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          372
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          380
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          386
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          393
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          397
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          415
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          420
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          439
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          443
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          460
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_advent",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_christmas",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_new_year",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_epiphany",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_lent",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_passion",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_easter",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ascension",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_pentecost",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ordinary_1",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ordinary_2",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ordinary_3",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ordinary_4",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ordinary_5",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_ordinary_6",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_blessed_virgin_mary",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_peter_and_paul",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_apostles",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_all_saints",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_saint",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_church_dedication",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.2 blessing",
+        "path": [
+          "variants",
+          "solemn_for_the_dead",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.3 dismissal",
+        "path": [
+          "variants",
+          "A",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.3 dismissal",
+        "path": [
+          "variants",
+          "B",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.3 dismissal",
+        "path": [
+          "variants",
+          "C",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.3 dismissal",
+        "path": [
+          "variants",
+          "D",
+          "lines",
+          2
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
+    },
+    {
+      "layout": {
+        "entryId": "4.3 dismissal",
+        "path": [
+          "variants",
+          "E",
+          "lines",
+          3
+        ],
+        "field": "rubricInset_pt"
+      },
+      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END
   function applyOrdinaryEditorOverrides(target) {
     ordinaryEditorOverrides.forEach(override => {
+      if (override.layout) {
+        let row = target.find(item => item && item.id === override.layout.entryId);
+        for (const part of override.layout.path) row = row && row[part];
+        if (!row) throw new Error('Mass editor layout path is stale');
+        if (override.value) row[override.layout.field] = JSON.parse(JSON.stringify(override.value));
+        else delete row[override.layout.field];
+        return;
+      }
       if (override.replace) {
         const entry = target.find(item => item && item.id === override.replace.entryId);
         if (!entry) throw new Error('Mass editor replacement entry is missing');

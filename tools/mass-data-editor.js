@@ -407,7 +407,7 @@ function ordinaryOverrideBlock(source) {
   let entries;
   try { entries = JSON.parse(literal); }
   catch { entries = vm.runInNewContext(literal); }
-  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create && !entry.rename && !entry.replace))) {
+  if (!Array.isArray(entries) || entries.some(entry => !entry || (!Array.isArray(entry.path) && !entry.create && !entry.rename && !entry.replace && !entry.layout))) {
     throw new Error('Mass editor overrides must contain a path, create, or rename descriptor');
   }
   return { start: arrayStart, end: arrayNode.end, entries: JSON.parse(JSON.stringify(entries)) };
@@ -591,6 +591,7 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
     nextRows.splice(anchor, 0, residual);
   });
   nextRows.splice(0, nextRows.length, ...canonicalMassEntry(nextRows));
+  require('./ordinary-rubric-layout').markRows(nextRows, country.language.toLowerCase());
   const source = sources[sourceIndex];
   if (require('node:util').isDeepStrictEqual(JSON.parse(JSON.stringify(rawRows)), nextRows)) {
     return { sources, sourceIndex, changed: [], nextCode: source.code, country, block };
@@ -607,6 +608,7 @@ function prepareMassStructureEdit(payload, sources, loaded, country, block, sour
   for (let index = entries.length - 1; index >= 0; index--) {
     const edit = entries[index];
     if (prefix(edit.path, absolute) || prefix(edit.rename?.rowPath, absolute)
+      || (edit.layout?.entryId === block.entryId && prefix(edit.layout.path, block.relativePath))
       || (edit.create?.entryId === block.entryId && prefix(edit.create.relativePath, block.relativePath))
       || (edit.replace?.entryId === block.entryId && prefix(edit.replace.relativePath, block.relativePath))) entries.splice(index, 1);
   }

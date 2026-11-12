@@ -2,7 +2,7 @@
   'use strict';
   const copy=value=>value===undefined?undefined:JSON.parse(JSON.stringify(value));
   const storage=()=>root.ordoMassStorage||(typeof require==='function'?require('./mass_storage_schema'):null);
-  const languageField=/^(?:text|rubric|rubricLayout|sp|cit)_[a-z]{2}(?:_ai)?$/u;
+  const languageField=/^(?:text|rubric|rubricLayout|rubricInset|sp|cit)_[a-z]{2}(?:_ai)?$/u;
   function rows(source,lower){
     const occurrences=new Map();
     return (source||[]).flatMap((row,index)=>{
@@ -18,6 +18,8 @@
         const identity=saved.replace(/:(?:text|rubric|cit)$/u,':'+part.kind)+(part.segment?':segment:'+part.segmentIndex:'');
         const count=occurrences.get(identity)||0;occurrences.set(identity,count+1);
         const result={...prepare(metadata,lower),[part.field]:part.text,__ordinarySource:true,__ordinaryPairKey:identity+(count?':occurrence:'+count:''),__ordinaryKinds:{[lower]:part.kind}};
+        const inset=row['rubricInset_'+lower];
+        if(part.kind==='rubric'&&(inset===true||Array.isArray(inset)&&inset.includes(part.segmentIndex)))result['rubricInset_'+lower]=true;
         if(part.speaker)result['sp_'+lower]=part.speaker;
         return result;
       });

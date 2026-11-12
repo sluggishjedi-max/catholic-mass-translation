@@ -1174,7 +1174,7 @@ function prepareCountryModuleSources(data, sources = readCountryModuleSources())
         titles: assignment.titles,
         texts: assignment.texts,
         sourceCategory: assignment.sourceCategory,
-        tags: sameStringSet(existing.tags, prayer.tags)
+        tags: sameStringSet(current.data.prayers.find(item => item.id === prayer.id)?.tags, prayer.tags) || sameStringSet(existing.tags, prayer.tags)
           ? existing.tags
           : (Array.isArray(prayer.tags) ? prayer.tags.slice() : [])
       }];

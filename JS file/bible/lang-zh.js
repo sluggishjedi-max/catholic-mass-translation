@@ -83,14 +83,14 @@
     "1TI": {"koreanName":"티모테오 1서","name":"弟茂德前書","aliases":["弟茂德前書","弟前","1Ti","聖保祿宗徒致茂德前書"],"koreanKey":"1티모"},
     "2TI": {"koreanName":"티모테오 2서","name":"弟茂德後書","aliases":["弟茂德後書","弟後","2Ti","聖保祿宗徒致茂德後書","聖保祿宗徒致弟茂德後書"],"koreanKey":"2티모"},
     "TIT": {"koreanName":"티토서","name":"弟鐸書","aliases":["弟鐸書","鐸","Tit","聖保祿宗徒致弟鐸書","聖保祿宗徒致迪德書"],"koreanKey":"티토"},
-    "PHM": {"koreanName":"필레몬서","name":"費肋孟書","aliases":["費肋孟書","門","Phm"],"koreanKey":"필레"},
+    "PHM": {"koreanName":"필레몬서","name":"費肋孟書","aliases":["費肋孟書","門","Phm","聖保祿宗徒致費肋孟書"],"koreanKey":"필레"},
     "HEB": {"koreanName":"히브리서","name":"希伯來書","aliases":["希伯來書","希","Heb","致希伯來人書"],"koreanKey":"히브"},
     "JAS": {"koreanName":"야고보서","name":"雅各伯書","aliases":["雅各伯書","雅","Jas","聖雅格書","聖雅格宗徒書","聖雅各伯書"],"koreanKey":"야고"},
     "1PE": {"koreanName":"베드로 1서","name":"伯多祿前書","aliases":["伯多祿前書","伯前","1Pe","聖伯鐸宗徒前書","聖伯鐸前書","聖伯多祿前書"],"koreanKey":"1베드"},
     "2PE": {"koreanName":"베드로 2서","name":"伯多祿後書","aliases":["伯多祿後書","伯後","2Pe","聖伯鐸宗徒後書","聖伯多祿後書"],"koreanKey":"2베드"},
     "1JN": {"koreanName":"요한 1서","name":"若望一書","aliases":["若望一書","若一","1Jo","聖若望宗徒壹書","聖若望壹書","聖若望一書"],"koreanKey":"1요한"},
-    "2JN": {"koreanName":"요한 2서","name":"若望二書","aliases":["若望二書","若二","2Jo"],"koreanKey":"2요한"},
-    "3JN": {"koreanName":"요한 3서","name":"若望三書","aliases":["若望三書","若三","3Jo"],"koreanKey":"3요한"},
+    "2JN": {"koreanName":"요한 2서","name":"若望二書","aliases":["若望二書","若二","2Jo","聖若望貳書"],"koreanKey":"2요한"},
+    "3JN": {"koreanName":"요한 3서","name":"若望三書","aliases":["若望三書","若三","3Jo","聖若望參書","聖若望叁書"],"koreanKey":"3요한"},
     "JUD": {"koreanName":"유다서","name":"猶達書","aliases":["猶達書","猶","Jud"],"koreanKey":"유다"},
     "REV": {"koreanName":"요한 묵시록","name":"若望默示錄","aliases":["若望默示錄","默","Rev","聖若望默示錄","聖若望宗徒默示錄","默示錄"],"koreanKey":"묵시"}
   }

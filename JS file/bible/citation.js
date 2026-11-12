@@ -9,6 +9,7 @@
   const fold = value => String(value || '').normalize('NFKC').toLowerCase();
   const aliasKey = value => fold(value).replace(/[\s.()（）]/g, '');
   const indices = new Map();
+  const singleChapterBooks = new Set(['OBA','PHM','2JN','3JN','JUD']);
   function entries(lang) {
     const code = language(lang), table = (root.bibleLanguageTables || {})[code];
     if (!table) return [];
@@ -61,12 +62,15 @@
       // for the refrain, not part of the Psalm stanza range.
       .replace(/\s+(?:đ|dap|r(?:esp)?|response|refrain)\.?\s*(?:x\.?\s*)?(?:c\.?\s*)?\d+[a-z]?(?:\s*[-–—.]\s*\d+[a-z]?)?\s*$/iu,'')
       .replace(/\s*[℟◎]\.?\s*\d[^\n]*$/u,'')
+      .replace(/\s*[℟◎]\s+[^\n]*$/u,'')
       .replace(/\s*(?:참고|참조|参照|參照|參閱)$/u,'')
       .replace(/^(?:cf\.?|cfr\.?|x\.?|see|vgl\.?)\s+/,'')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
       let tail = normalizeChapterNumbers(text.slice(entry.key.length).replace(/^\./,''));
+      // One-chapter books are legitimately cited with only their verses.
+      if (singleChapterBooks.has(entry.id) && /^\d+[a-z]*(?:[-–—―−~～.,;+]\d+[a-z]*)*$/iu.test(tail)) tail = '1,' + tail;
       // A Psalm's trailing parenthetical verse identifies its refrain, not
       // another stanza. Keep the alternate chapter number before the colon.
       if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
@@ -82,6 +86,7 @@
       if (!Number.isInteger(chapter) || chapter < 1) return null;
       const rawVerses = code === 'EN' ? match[4] : match[4].replace(/[—―─](\d+),(\d+)/g,'-$1:$2');
       const verses = rawVerses.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c])
+        .replace(/[;、](\d+)[,・](\d+)/g,';$1:$2')
         // Dots separate verses. In comma-style notation a descending endpoint
         // followed by a comma denotes a chapter boundary: 5,20-6,2.
         .replace(/[–—―−~～]/g,'-')

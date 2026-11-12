@@ -351,6 +351,8 @@
         /* 지시문은 각 언어의 본문 바로 위에 독립된 줄로 보입니다. */
         .rubric { display: block; color: var(--rubric-color); font-style: italic; font-size: 0.9em; margin-bottom: 2px; white-space: pre-line; }
         .rubric.translation { margin-top: 5px; }
+        .rubric-inset { margin-inline-start: 38px; }
+        .rubric-inset:is(.line-kr,.line-jp,.line-vn,.line-en,.line-la) { margin-inline-start: 36px; }
 
         .pair-block { margin-bottom: 5px; }
         .pair-line { --speaker-width: 36px; --speaker-gap: 2px; display: flex; gap: var(--speaker-gap); margin-bottom: 2px; line-height: 1.5; align-items: flex-start; }
@@ -949,10 +951,10 @@
 <script defer src="JS%20file/bible/lang-it.js?v=20261024-psalm-alias"></script>
 <script defer src="JS%20file/bible/lang-pt.js?v=20261024-psalm-alias"></script>
 <script defer src="JS%20file/bible/lang-es.js?v=20261024-psalm-alias"></script>
-<script defer src="JS%20file/bible/lang-jp.js?v=20261024-psalm-alias"></script>
+<script defer src="JS%20file/bible/lang-jp.js?v=20261112-single-chapter"></script>
 <script defer src="JS%20file/bible/lang-la.js?v=20260910"></script>
-<script defer src="JS%20file/bible/lang-zh.js?v=20261103-han-chapters"></script>
-<script defer src="JS%20file/bible/citation.js?v=20261103-contextual-han-citations"></script>
+<script defer src="JS%20file/bible/lang-zh.js?v=20261112-single-chapter"></script>
+<script defer src="JS%20file/bible/citation.js?v=20261112-single-chapter"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
@@ -964,6 +966,6 @@
 <script defer src="JS%20file/mass_storage_schema.js?v=20261106-v31-2-ordinary"></script>
 <script defer src="JS%20file/daily_mass_content.js?v=20261028-v31-content-1"></script>
 <script defer src="JS%20file/daily_server_loader.js?v=20261103-server-wait65"></script>
-<script defer src="JS%20file/app_v31_2.min.js?v=20261106-v31-2-ordinary-6"></script>
+<script defer src="JS%20file/app_v31_2.min.js?v=20261112-reading-layout"></script>
 </body>
 </html>
