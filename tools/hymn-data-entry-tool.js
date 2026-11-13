@@ -4,6 +4,8 @@ const http = require('http');
 const path = require('path');
 const vm = require('vm');
 const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
+const { serveEditorLayout } = require('./editor-layout-support');
+const { serveHymnPreview } = require('./hymn-editor-preview');
 
 const root = path.resolve(__dirname, '..');
 const defaultHymnDataPath = path.join(root, 'JS file', 'hymn_data.js');
@@ -323,7 +325,7 @@ function aliasesForEntry(entry) {
   ]);
 }
 
-function normalizePayload(body) {
+function normalizePayload(body, { draft = false } = {}) {
   const book = cleanLine(body.book);
   const season = cleanLine(body.season);
   const number = cleanLine(body.number);
@@ -339,10 +341,10 @@ function normalizePayload(body) {
   const extraTags = parseTagList(body.extraTags);
   const voiceType = normalizeVoiceType(body.voiceType);
 
-  if (!book) throw Object.assign(new Error('책이름을 입력하세요.'), { statusCode: 400 });
-  if (!season) throw Object.assign(new Error('시기를 입력하세요.'), { statusCode: 400 });
-  if (!title) throw Object.assign(new Error('제목을 입력하세요.'), { statusCode: 400 });
-  if (!lyrics) throw Object.assign(new Error('가사를 입력하세요.'), { statusCode: 400 });
+  if (!draft && !book) throw Object.assign(new Error('책이름을 입력하세요.'), { statusCode: 400 });
+  if (!draft && !season) throw Object.assign(new Error('시기를 입력하세요.'), { statusCode: 400 });
+  if (!draft && !title) throw Object.assign(new Error('제목을 입력하세요.'), { statusCode: 400 });
+  if (!draft && !lyrics) throw Object.assign(new Error('가사를 입력하세요.'), { statusCode: 400 });
 
   return {
     book,
@@ -405,7 +407,9 @@ function findEntryIndexById(data, targetId) {
 }
 
 function buildStoredEntry(data, payload, existing) {
-  const country = cleanLine(existing && (existing.country || existing.language)) || countryForBook(payload.book);
+  const bookEntry = data.find(entry => cleanLine(entry.book) === payload.book);
+  const country = cleanLine(existing && (existing.country || existing.language))
+    || cleanLine(bookEntry && (bookEntry.country || bookEntry.language)) || countryForBook(payload.book);
   const number = payload.number || cleanLine(existing && existing.number) || nextNumberForBook(data, payload.book);
   const id = cleanLine(existing && existing.id) || nextIdForBook(data, payload.book, country);
   const tags = unique([payload.book, payload.season, ...payload.extraTags]);
@@ -439,7 +443,9 @@ function buildStoredEntry(data, payload, existing) {
     delete entry.voiceType;
   }
 
-  entry.verses = parseLyricsVerses(payload.lyrics);
+  // Unchanged lyrics retain the stored section labels and ordering shown in the app.
+  entry.verses = existing && cleanText(existing.text || existing.lyrics) === payload.lyrics && Array.isArray(existing.verses)
+    ? structuredClone(existing.verses) : parseLyricsVerses(payload.lyrics);
   entry.searchAliases = unique([
     ...aliasesForEntry(entry),
     ...((existing && Array.isArray(existing.searchAliases)) ? existing.searchAliases : [])
@@ -556,7 +562,9 @@ function scoreSuggestion(entry, query) {
     entry.bibleVerse,
     entry.scriptureReference,
     entry.copyright,
-    entry.voiceType
+    entry.voiceType,
+    entry.text,
+    entry.lyrics
   ].join(' ');
   const target = normalizeSearch(searchable);
 
@@ -574,6 +582,7 @@ function findSuggestions(data, body) {
   const season = normalizeSearch(body.season || '');
   const rows = data
     .filter(entry => !book || normalizeSearch(entry.book) === book)
+    .filter(entry => !/^\d+$/.test(query) || (/^\d+$/.test(cleanLine(entry.number)) && Number(entry.number) === Number(query)))
     .filter(entry => {
       if (!season) return true;
       const tags = Array.isArray(entry.tags) ? entry.tags : [];
@@ -585,7 +594,7 @@ function findSuggestions(data, body) {
     .filter(item => item.score > 0)
     .sort((a, b) => b.score - a.score || cleanLine(a.entry.title).localeCompare(cleanLine(b.entry.title), 'ko'));
 
-  return rows.slice(0, 30).map(item => publicEntry(item.entry));
+  return rows.map(item => publicEntry(item.entry));
 }
 
 function saveHymn(data, body) {
@@ -905,8 +914,9 @@ function createServer() {
   return http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+      if (serveEditorLayout(req, res, url) || serveHymnPreview(req, res, url)) return;
       if (req.method === 'GET' && url.pathname === '/') {
-        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+        res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
         res.end(INDEX_HTML);
         return;
       }
@@ -928,6 +938,15 @@ function createServer() {
           items: firebaseHymnItems(),
           idPrefix: 'hymn'
         }));
+        return;
+      }
+
+      if (req.method === 'POST' && url.pathname === '/api/preview') {
+        const body = await readJsonBody(req);
+        const data = loadHymnData();
+        const payload = normalizePayload(body, { draft: true });
+        const existing = data.find(entry => cleanLine(entry.id) === payload.targetId);
+        sendJson(res, 200, { ok: true, entry: buildStoredEntry(data, payload, existing) });
         return;
       }
 
@@ -1009,326 +1028,74 @@ const INDEX_HTML = String.raw`<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>성가 데이터 편집기</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #1f2933;
-      --muted: #637083;
-      --line: #d9e0e7;
-      --panel: #f7f9fb;
-      --panel-strong: #edf6f2;
-      --accent: #237b5a;
-      --accent-dark: #15523c;
-      --warn: #9a5b00;
-      --error: #b3261e;
-      --ok: #176b48;
+    :root { color-scheme:light; --ink:#172033; --muted:#687188; --line:#d8deea; --panel:#fff; --accent:#315ee8; --accent-dark:#2349b8; --warn:#9a5b00; --error:#b3261e; --ok:#176b48; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f3f5fa; color:var(--ink); font-family:Inter,"Noto Sans KR","Malgun Gothic",sans-serif; line-height:1.5; }
+    button,input,select,textarea { font:inherit; }
+    button { cursor:pointer; min-height:40px; border:0; border-radius:10px; padding:10px 14px; color:#263451; background:#e9edf5; font-weight:800; }
+    button.primary { background:var(--accent); color:white; }
+    button.primary:hover { background:var(--accent-dark); }
+    button:disabled { opacity:.45; cursor:not-allowed; }
+    label { display:grid; gap:6px; min-width:0; color:var(--muted); font-size:12px; font-weight:700; }
+    input,select,textarea { width:100%; min-width:0; border:1px solid #cbd3e2; border-radius:10px; background:white; color:var(--ink); padding:10px 12px; }
+    input:focus,select:focus,textarea:focus { outline:0; border-color:var(--accent); box-shadow:0 0 0 3px #315ee820; }
+    main { max-width:1500px; margin:auto; padding:20px; }
+    .controls { display:grid; grid-template-columns:minmax(170px,1fr) minmax(200px,1.2fr) minmax(210px,1.5fr) auto; gap:12px; align-items:end; }
+    .search-row { display:flex; gap:6px; }
+    .search-row input { flex:1; }
+    .workspace { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; align-items:start; }
+    .panel { min-width:0; background:white; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 8px 24px #1720330b; }
+    .panel h2 { margin:0 0 14px; font-size:18px; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .lyrics-panel { display:flex; flex-direction:column; }
+    textarea { min-height:510px; resize:vertical; line-height:1.65; }
+    .small { color:var(--muted); font-size:12px; overflow-wrap:anywhere; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .pill { max-width:100%; border:1px solid var(--line); border-radius:999px; padding:3px 9px; color:var(--muted); font-size:12px; overflow-wrap:anywhere; }
+    .entry-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .entry-actions button { padding:7px 10px; font-size:12px; }
+    #delete { color:#ad2434; background:#fff0f2; }
+    .preview-panel { margin-top:18px; }
+    .preview-heading { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+    .preview-heading h2 { margin:0; }
+    .preview-heading select { width:auto; max-width:100%; }
+    .app-preview { display:block; width:100%; max-width:1100px; min-height:380px; margin:auto; border:1px solid var(--line); border-radius:12px; background:white; }
+    .status { position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+    .toast { position:fixed; left:50%; bottom:22px; z-index:70; max-width:calc(100vw - 32px); padding:12px 18px; border-radius:12px; background:#263451; color:white; box-shadow:0 8px 24px #17203330; font-size:13px; font-weight:800; text-align:center; pointer-events:none; opacity:0; visibility:hidden; transform:translate(-50%,12px); transition:opacity .18s,transform .18s,visibility .18s; }
+    .toast.show { opacity:1; visibility:visible; transform:translate(-50%,0); }
+    .toast.ok { background:#15523c; }
+    .toast.warn { background:#8a4f00; }
+    .toast.error { background:var(--error); }
+    @media(max-width:850px) {
+      main { padding:12px; }
+      .controls { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .controls > label:nth-child(3) { grid-column:1 / -1; }
+      .workspace { grid-template-columns:1fr; }
+      .panel { padding:14px; }
+      textarea { min-height:330px; }
     }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: #ffffff;
-      color: var(--ink);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.5;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 12px 18px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
-    }
-    h1 {
-      margin: 0;
-      font-size: 1.1rem;
-      font-weight: 900;
-    }
-    main {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr);
-      gap: 18px;
-      padding: 18px;
-    }
-    label {
-      display: grid;
-      gap: 6px;
-      min-width: 0;
-      font-size: 0.86rem;
-      font-weight: 800;
-      color: #334155;
-    }
-    input, select, textarea, button {
-      font: inherit;
-    }
-    input, select, textarea {
-      width: 100%;
-      min-width: 0;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 9px 10px;
-      background: #fff;
-      color: var(--ink);
-    }
-    textarea {
-      min-height: 390px;
-      resize: vertical;
-      white-space: pre-wrap;
-      line-height: 1.55;
-    }
-    button {
-      min-height: 38px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 8px 12px;
-      background: #fff;
-      color: var(--ink);
-      font-weight: 850;
-      cursor: pointer;
-    }
-    button:hover { border-color: #9fb1c1; }
-    button.primary {
-      border-color: var(--accent);
-      background: var(--accent);
-      color: #fff;
-    }
-    button.primary:hover { background: var(--accent-dark); }
-    button.secondary { background: var(--panel); }
-    .status {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-    .status.ok { color: var(--ok); }
-    .status.warn { color: var(--warn); }
-    .status.error { color: var(--error); }
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: 22px;
-      z-index: 12;
-      max-width: calc(100vw - 32px);
-      padding: 10px 14px;
-      border-radius: 8px;
-      background: #1f2933;
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.24);
-      font-size: 0.9rem;
-      font-weight: 900;
-      line-height: 1.35;
-      opacity: 0;
-      pointer-events: none;
-      transform: translate(-50%, 12px);
-      transition: opacity 0.18s ease, transform 0.18s ease;
-    }
-    .toast.show {
-      opacity: 1;
-      transform: translate(-50%, 0);
-    }
-    .toast.ok { background: var(--accent-dark); }
-    .toast.warn { background: #8a4f00; }
-    .toast.error { background: var(--error); }
-    .form {
-      display: grid;
-      gap: 14px;
-      align-content: start;
-    }
-    .workflow {
-      grid-column: 1 / -1;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding: 12px 14px;
-      border: 1px solid #cfe3da;
-      border-radius: 10px;
-      background: var(--panel-strong);
-      color: var(--accent-dark);
-      font-size: 0.86rem;
-      font-weight: 800;
-    }
-    .workflow span { display:inline-flex; align-items:center; gap:5px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-    }
-    .toolbar.actions {
-      position: sticky;
-      bottom: 10px;
-      z-index: 3;
-      padding: 10px;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      background: rgba(255,255,255,0.96);
-      box-shadow: 0 8px 24px rgba(15,23,42,0.12);
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 0.82rem;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      max-width: 100%;
-      min-height: 26px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 3px 9px;
-      background: var(--panel);
-      overflow-wrap: anywhere;
-    }
-    .side {
-      display: grid;
-      gap: 14px;
-      align-content: start;
-      min-width: 0;
-    }
-    .panel {
-      display: grid;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px;
-      background: var(--panel);
-      min-width: 0;
-      overflow: hidden;
-    }
-    .panel h2 {
-      margin: 0;
-      font-size: 0.95rem;
-    }
-    .results {
-      display: grid;
-      gap: 8px;
-      max-height: min(62vh, 640px);
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding-right: 4px;
-      min-width: 0;
-      max-width: 100%;
-    }
-    .search-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 8px;
-      min-width: 0;
-    }
-    .result {
-      display: grid;
-      gap: 3px;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      min-height: 66px;
-      text-align: left;
-      background: #fff;
-      overflow: hidden;
-      min-width: 0;
-      white-space: normal;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-    }
-    .result.selected {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px rgba(35, 123, 90, 0.14);
-    }
-    .result-title {
-      font-weight: 900;
-      min-width: 0;
-      max-width: 100%;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-    }
-    .small {
-      color: var(--muted);
-      font-size: 0.78rem;
-      min-width: 0;
-      max-width: 100%;
-      overflow-wrap: anywhere;
-      word-break: break-word;
-    }
-    .preview {
-      display: grid;
-      gap: 8px;
-      padding: 12px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
-      min-height: 180px;
-    }
-    .preview h3 {
-      margin: 0;
-      color: var(--accent-dark);
-      font-size: 1rem;
-      overflow-wrap: anywhere;
-    }
-    .preview-body {
-      margin: 0;
-      white-space: pre-wrap;
-      color: #354052;
-      font-size: 0.9rem;
-    }
-    .preview-body strong {
-      color: var(--accent-dark);
-      font-weight: 900;
-    }
-    .verse-preview {
-      display: grid;
-      gap: 8px;
-    }
-    .verse-block {
-      display: grid;
-      gap: 4px;
-      border-top: 1px solid var(--line);
-      padding-top: 8px;
-    }
-    .verse-label {
-      color: var(--accent-dark);
-      font-size: 0.82rem;
-      font-weight: 900;
-    }
-    .file {
-      overflow-wrap: anywhere;
-    }
-    @media (max-width: 880px) {
-      header { align-items: flex-start; flex-direction: column; }
-      main { grid-template-columns: minmax(0, 1fr); padding: 12px; }
-      .grid { grid-template-columns: minmax(0, 1fr); }
-      .search-row { grid-template-columns: minmax(0, 1fr); }
-      textarea { min-height: 300px; }
-    }
+    @media(max-width:380px) { .grid { grid-template-columns:1fr; } }
   </style>
+  <link rel="stylesheet" href="/editor-layout.css">
+  <script defer src="/editor-layout.js"></script>
 </head>
 <body>
-  <header>
+  <header class="editor-top">
     <h1>성가 데이터 편집기</h1>
-    <div id="status" class="status" role="status" aria-live="polite">불러오는 중</div>
+    <p>성가집에서 같은 번호의 성가를 찾아 성가 정보와 가사를 편집합니다.</p>
   </header>
+  <div id="status" class="status" role="status" aria-live="polite">불러오는 중</div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <main>
-    <div class="workflow" aria-label="작업 순서"><span>① 오른쪽에서 성가 검색</span><span>→</span><span>② 선택 후 왼쪽 내용 수정</span><span>→</span><span>③ 로컬 저장</span><span>→</span><span>④ 필요할 때 Firebase 업로드</span><span>· 새 성가는 ‘새 성가’부터</span></div>
-    <section class="form" aria-label="성가 입력">
+    <section class="controls editor-controls" aria-label="성가 선택 및 검색">
+      <label>성가집<select id="filter-book" aria-label="검색할 성가집"></select></label>
+      <label>검색<div class="search-row"><input id="search-query" type="search" autocomplete="off" placeholder="번호, 제목, 가사 검색"><button id="search-button" type="button">검색</button></div></label>
+      <label>성가목록<select id="results" aria-label="성가목록"></select></label>
+      <div class="control-actions"><button id="reload" type="button">새로고침</button><button id="firebase-upload" type="button">Firebase에 업로드</button></div>
+    </section>
+    <div class="workspace">
+      <section class="panel form" aria-label="성가 정보">
+        <h2>성가 정보</h2>
       <div class="grid">
         <label>책이름
           <input id="book" list="book-list" autocomplete="off">
@@ -1376,53 +1143,34 @@ const INDEX_HTML = String.raw`<!doctype html>
           </select>
         </label>
       </div>
-      <label>가사
-        <textarea id="lyrics" spellcheck="false"></textarea>
-      </label>
-      <div class="toolbar actions">
-        <button id="save" class="primary" type="button">로컬에 저장</button>
-        <button id="firebase-upload" class="secondary" type="button">Firebase에 업로드</button>
-        <button id="save-number" class="secondary" type="button">성가번호 수정</button>
-        <button id="save-tags" class="secondary" type="button">기타 태그 수정</button>
-        <button id="save-voice-type" class="secondary" type="button">성부 구분 수정</button>
-        <button id="delete" class="secondary" type="button">삭제</button>
-        <button id="new" class="secondary" type="button">＋ 새 성가</button>
-        <button id="reload" class="secondary" type="button">새로고침</button>
-      </div>
-      <div class="meta">
-        <span class="pill" id="count">0곡</span>
-        <span class="pill" id="next-number">번호 자동</span>
-        <span class="pill file" id="file-path"></span>
-      </div>
+        <div class="entry-actions" aria-label="선택한 성가 수정">
+          <button id="save-number" type="button">성가번호 수정</button>
+          <button id="save-tags" type="button">기타 태그 수정</button>
+          <button id="save-voice-type" type="button">성부 구분 수정</button>
+          <button id="delete" type="button">삭제</button>
+        </div>
+        <div class="meta">
+          <span class="pill" id="count">0곡</span>
+          <span class="pill" id="next-number">번호 자동</span>
+          <span class="pill" id="file-path"></span>
+        </div>
+      </section>
+      <section class="panel lyrics-panel" aria-label="가사 편집">
+        <h2>가사 편집</h2>
+        <label>가사<textarea id="lyrics" spellcheck="false" placeholder="절·후렴 표시와 가사를 입력하세요."></textarea></label>
+        <p class="small">수정한 내용은 아래 앱 표시 미리보기에 반영됩니다. 로컬에 저장을 눌러 적용하세요.</p>
+      </section>
+    </div>
+    <section class="panel preview-panel" aria-label="앱 표시 미리보기">
+      <div class="preview-heading"><h2>앱 표시 미리보기</h2><label>번역 언어<select id="preview-target-language"><option value="EN">English</option><option value="KR">한국어</option><option value="VN">Tiếng Việt</option><option value="JP">日本語</option><option value="LA">Latin</option><option value="ZH">繁體中文</option><option value="IT">Italiano</option><option value="ES">Español</option><option value="PT">Português</option><option value="DE">Deutsch</option></select></label></div>
+      <iframe id="app-preview-frame" class="app-preview" src="/app-preview.html" title="실제 앱 성가 표시 미리보기"></iframe>
+      <p class="small">실제 앱의 표시 방식으로 확인합니다. 미리보기에서는 AI 번역을 실행하지 않습니다.</p>
     </section>
-
-    <aside class="side" aria-label="성가 확인">
-      <section class="panel">
-        <h2>검색 결과</h2>
-        <div class="search-row">
-          <input id="search-query" type="search" autocomplete="off" placeholder="제목, 번호, 가사, 작곡자 검색">
-          <button id="search-button" class="secondary" type="button">검색</button>
-        </div>
-        <div id="results" class="results"></div>
-      </section>
-      <section class="panel">
-        <h2>미리보기</h2>
-        <div class="preview">
-          <h3 id="preview-title"></h3>
-          <div class="meta">
-            <span class="pill" id="preview-book"></span>
-            <span class="pill" id="preview-season"></span>
-            <span class="pill" id="preview-people"></span>
-            <span class="pill" id="preview-extra"></span>
-            <span class="pill" id="preview-copyright"></span>
-            <span class="pill" id="preview-voice-type"></span>
-          </div>
-          <p id="preview-body" class="preview-body"></p>
-          <div id="preview-verses" class="verse-preview"></div>
-        </div>
-      </section>
-    </aside>
   </main>
+  <footer class="editor-footer" aria-label="성가 저장 및 추가">
+    <button id="save" class="primary" type="button">로컬에 저장</button>
+    <button id="new" type="button">＋ 새 성가 추가</button>
+  </footer>
 
   <script>
     const state = {
@@ -1431,7 +1179,12 @@ const INDEX_HTML = String.raw`<!doctype html>
       selected: null,
       suggestTimer: 0,
       resultRows: [],
-      toastTimer: 0
+      toastTimer: 0,
+      searchSequence: 0,
+      previewSequence: 0,
+      previewTimer: 0,
+      previewReady: false,
+      loaded: false
     };
 
     const el = {
@@ -1466,15 +1219,9 @@ const INDEX_HTML = String.raw`<!doctype html>
       filePath: document.getElementById('file-path'),
       bookList: document.getElementById('book-list'),
       seasonList: document.getElementById('season-list'),
-      previewTitle: document.getElementById('preview-title'),
-      previewBook: document.getElementById('preview-book'),
-      previewSeason: document.getElementById('preview-season'),
-      previewPeople: document.getElementById('preview-people'),
-      previewExtra: document.getElementById('preview-extra'),
-      previewCopyright: document.getElementById('preview-copyright'),
-      previewVoiceType: document.getElementById('preview-voice-type'),
-      previewBody: document.getElementById('preview-body'),
-      previewVerses: document.getElementById('preview-verses')
+      filterBook: document.getElementById('filter-book'),
+      previewTargetLanguage: document.getElementById('preview-target-language'),
+      appPreviewFrame: document.getElementById('app-preview-frame')
     };
 
     function setStatus(message, kind) {
@@ -1516,35 +1263,13 @@ const INDEX_HTML = String.raw`<!doctype html>
       })[char]);
     }
 
-    const REFRAIN_HEADING_RE = /^(?:\[\s*(?:후렴구?|후렴|반복|응송|refrain|chorus|ref\.?|antiphona|antiphon|antífona|ant\.?|[đdð]\.?|[đdð]k\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?)\s*\]\s*|(?:후렴구?|후렴|반복|응송|refrain|chorus|ref\.?|antiphona|antiphon|antífona|ant\.?|[đdð]\.?|[đdð]k\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?|[r℟])(?=\s|[:：.)\]-]|$)\s*[:：.)\]-]?\s*)(.*)$/iu;
-    const REFRAIN_MARKER_HTML_RE = /(^|\n)(\s*)((?:(?:ĐK|ÐK|DK|Đ|Ð|D|R|℟|Ref)\.|(?:후렴구?|후렴|コーラス|リフレイン)(?:[):：.]|\s*-)?|(?:refrain|chorus|antiphona|antiphon|antífona|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|答唱(?:詩編|詩篇)?)(?:[:：.)\]-])?))(?=\s|&nbsp;|$)/giu;
-    const REFRAIN_BRACKET_HTML_RE = /\[\s*(?:(?:ĐK|ÐK|DK|Đ|Ð|D|R|℟|Ref)\.?|후렴구?|후렴|refrain|chorus|antiphona|antiphon|antífona|ant\.?|điệp\s*(?:khúc|ca|xướng)|diep\s*(?:khuc|ca|xuong)|đáp\s*ca|dap\s*ca|コーラス|リフレイン|答唱(?:詩編|詩篇)?)(?=\s|:|：|\.|\)|\x5d|-|$)[^\]\n]*\]/giu;
-
-    function headingComparableText(line) {
-      return String(line || '')
-        .trim()
-        .replace(/&lt;(\/?)(b|strong)&gt;/gi, '<$1$2>')
-        .replace(/<\/?(?:b|strong)>/gi, ' ')
-        .replace(/\*\*/g, ' ')
-        .replace(/\s+/g, ' ')
-        .trim();
-    }
-
-    function lyricsHtml(value) {
-      let html = escapeHtml(value);
-      html = html.replace(/&lt;(b|strong)&gt;([\s\S]*?)&lt;\/(?:b|strong)&gt;/gi, '<strong>$2</strong>');
-      html = html.replace(/\*\*([\s\S]*?)\*\*/g, '<strong>$1</strong>');
-      html = html.replace(REFRAIN_BRACKET_HTML_RE, '<strong>$&</strong>');
-      return html.replace(REFRAIN_MARKER_HTML_RE, '$1$2<strong>$3</strong>');
-    }
-
     function fillDatalist(target, values) {
       target.innerHTML = values.map(value => '<option value="' + escapeHtml(value) + '"></option>').join('');
     }
 
     function clearSelected() {
       state.selected = null;
-      [...el.results.querySelectorAll('.result')].forEach(button => button.classList.remove('selected'));
+      el.results.value = '';
     }
 
     function currentPayload() {
@@ -1566,52 +1291,6 @@ const INDEX_HTML = String.raw`<!doctype html>
       };
     }
 
-    function parseVerseHeading(line) {
-      const value = headingComparableText(line);
-      if (!value) return null;
-      let match = value.match(/^(\d+)\s*절\s*[:：.)\]-]?\s*(.*)$/u);
-      if (match) return { label: Number(match[1]) + '절', rest: match[2] || '' };
-      match = value.match(/^(\d+)\s*[.)]\s*(.*)$/u);
-      if (match) return { label: Number(match[1]) + '절', rest: match[2] || '' };
-      match = value.match(/^\((\d+)\)\s*(.*)$/u);
-      if (match) return { label: Number(match[1]) + '절', rest: match[2] || '' };
-      match = value.match(/^(?:verse|v)\s*(\d+)\s*[:：.)\]-]?\s*(.*)$/iu);
-      if (match) return { label: Number(match[1]) + '절', rest: match[2] || '' };
-      match = value.match(REFRAIN_HEADING_RE);
-      if (match) return { label: '후렴', rest: match[1] || '' };
-      return null;
-    }
-
-    function parseLyricsVerses(lyrics) {
-      const lines = String(lyrics || '').replace(/\r\n?/g, '\n').trim().split('\n');
-      const verses = [];
-      let current = null;
-      let foundHeading = false;
-
-      function pushCurrent() {
-        if (!current) return;
-        const text = current.lines.join('\n').trim();
-        if (current.label || text) verses.push({ label: current.label, text });
-        current = null;
-      }
-
-      for (const line of lines) {
-        const heading = parseVerseHeading(line);
-        if (heading) {
-          foundHeading = true;
-          pushCurrent();
-          current = { label: heading.label, lines: [] };
-          if (heading.rest) current.lines.push(heading.rest);
-          continue;
-        }
-        if (!current) current = { label: '', lines: [] };
-        current.lines.push(line);
-      }
-
-      pushCurrent();
-      return foundHeading ? verses.filter(verse => verse.label || verse.text) : [];
-    }
-
     function updateNextNumber() {
       const book = el.book.value.trim();
       const found = state.books.find(item => item.book === book);
@@ -1619,80 +1298,50 @@ const INDEX_HTML = String.raw`<!doctype html>
     }
 
     function updatePreview() {
-      const payload = currentPayload();
-      const title = [payload.number, payload.title || '제목'].filter(Boolean).join('. ');
-      el.previewTitle.textContent = title;
-      el.previewBook.textContent = payload.book || '책이름';
-      el.previewSeason.textContent = payload.season || '시기';
-      const people = [
-        payload.lyricist && '작사: ' + payload.lyricist,
-        payload.composer && '작곡: ' + payload.composer,
-        payload.arranger && '편곡: ' + payload.arranger,
-        payload.selector && '선곡: ' + payload.selector
-      ].filter(Boolean).join(' / ');
-      el.previewPeople.textContent = people || '작사/작곡/편곡/선곡';
-      el.previewExtra.textContent = payload.scripture || '성경구절';
-      el.previewCopyright.textContent = payload.copyright || '저작권';
-      el.previewVoiceType.textContent = payload.voiceType ? '성부: ' + payload.voiceType : '';
-      el.previewVoiceType.hidden = !payload.voiceType;
-      const verses = parseLyricsVerses(payload.lyrics);
-      el.previewBody.innerHTML = verses.length ? '' : (payload.lyrics ? lyricsHtml(payload.lyrics) : '가사');
-      el.previewVerses.innerHTML = verses.map(verse => [
-        '<div class="verse-block">',
-        '  <div class="verse-label">' + escapeHtml(verse.label || '가사') + '</div>',
-        '  <p class="preview-body">' + lyricsHtml(verse.text || '') + '</p>',
-        '</div>'
-      ].join('')).join('');
       updateNextNumber();
+      clearTimeout(state.previewTimer);
+      const sequence = ++state.previewSequence;
+      if (!state.previewReady) return;
+      const payload = currentPayload();
+      state.previewTimer = setTimeout(async () => {
+        try {
+          const body = await api('/api/preview', { method:'POST', body:JSON.stringify(payload) });
+          if (sequence !== state.previewSequence) return;
+          const source = body.entry.country || 'KR';
+          [...el.previewTargetLanguage.options].forEach(option => { option.disabled = option.value === source; });
+          if (el.previewTargetLanguage.value === source) el.previewTargetLanguage.value = source === 'KR' ? 'EN' : 'KR';
+          el.appPreviewFrame.contentWindow.postMessage({
+            type:'ordo:hymn-preview', entry:body.entry, targetLanguage:el.previewTargetLanguage.value
+          }, location.origin);
+        } catch (error) {
+          if (sequence === state.previewSequence) setStatus('미리보기: ' + error.message, 'error');
+        }
+      }, 150);
     }
 
     function renderResults(rows) {
-      rows = rows || [];
-      state.resultRows = rows;
-      if (!rows.length) {
-        el.results.innerHTML = '<div class="small">검색 결과 없음</div>';
-        return;
-      }
-      el.results.innerHTML = rows.map((entry, index) => {
-        const selectedClass = state.selected && state.selected.id === entry.id ? ' selected' : '';
-        const tags = (entry.tags || []).join(' / ');
-        const people = [
-          entry.lyricist && '작사 ' + entry.lyricist,
-          entry.composer && '작곡 ' + entry.composer,
-          entry.arranger && '편곡 ' + entry.arranger,
-          entry.selector && '선곡 ' + entry.selector,
-          entry.scripture
-        ].filter(Boolean).join(' · ');
-        return [
-          '<button class="result' + selectedClass + '" type="button" data-index="' + index + '">',
-          '  <span class="result-title">' + escapeHtml(entry.displayTitle || entry.title) + '</span>',
-          '  <span class="small">' + escapeHtml(entry.id) + ' · ' + escapeHtml(tags) + '</span>',
-          '  <span class="small">' + escapeHtml(people || entry.firstLine || '') + '</span>',
-          '</button>'
-        ].join('');
-      }).join('');
-      [...el.results.querySelectorAll('.result')].forEach(button => {
-        button.addEventListener('click', () => {
-          const entry = rows[Number(button.dataset.index)];
-          state.selected = entry;
-          [...el.results.querySelectorAll('.result')].forEach(item => item.classList.remove('selected'));
-          button.classList.add('selected');
-          fillFromEntry(entry);
-          setStatus(entry.id + ' 선택됨', 'ok');
-        });
-      });
+      state.resultRows = rows || [];
+      const selected = state.selected && state.selected.id;
+      el.results.innerHTML = '<option value="">' + (rows.length ? rows.length + '곡 · 성가를 선택하세요' : '검색 결과 없음') + '</option>'
+        + rows.map((entry,index) => '<option value="' + index + '">' + escapeHtml(entry.displayTitle || entry.title) + '</option>').join('');
+      const index = rows.findIndex(entry => entry.id === selected);
+      el.results.value = index < 0 ? '' : String(index);
+    }
+
+    function selectResult(index) {
+      const entry = state.resultRows[Number(index)];
+      if (index === '' || !entry) return;
+      state.selected = entry;
+      fillFromEntry(entry);
+      setStatus((entry.displayTitle || entry.id) + ' 선택됨', 'ok');
     }
 
     function refreshSavedEntry(entry) {
       if (!entry || !entry.id) return;
-      const index = state.resultRows.findIndex(row => row && row.id === entry.id);
-      if (index >= 0) {
-        const rows = state.resultRows.slice();
-        rows[index] = entry;
-        renderResults(rows);
-        const selectedButton = el.results.querySelector('.result.selected');
-        if (selectedButton) selectedButton.scrollIntoView({ block: 'nearest' });
-      }
+      const rows = state.resultRows.slice();
+      const index = rows.findIndex(row => row.id === entry.id);
+      if (index < 0) rows.unshift(entry); else rows[index] = entry;
+      renderResults(rows);
     }
 
     function applySavedEntry(entry) {
@@ -1727,21 +1376,34 @@ const INDEX_HTML = String.raw`<!doctype html>
       el.filePath.textContent = body.file;
       fillDatalist(el.bookList, state.books.map(item => item.book));
       fillDatalist(el.seasonList, state.seasons);
-      if (!el.searchQuery.value.trim()) renderResults(body.recent || []);
+      const book = state.loaded ? el.filterBook.value : '가톨릭성가';
+      state.loaded = true;
+      el.filterBook.innerHTML = '<option value="">전체 성가집</option>' + state.books.map(item =>
+        '<option value="' + escapeHtml(item.book) + '">' + escapeHtml(item.book) + ' (' + item.count + '곡)</option>').join('');
+      el.filterBook.value = state.books.some(item => item.book === book) ? book : '';
+      await suggest();
+      if (state.selected) {
+        const refreshed = state.resultRows.find(entry => entry.id === state.selected.id);
+        if (refreshed) { state.selected = refreshed; fillFromEntry(refreshed); }
+      }
       updatePreview();
       setStatus(body.count + '곡 로드됨', 'ok');
     }
 
     async function suggest() {
       clearTimeout(state.suggestTimer);
+      const sequence = ++state.searchSequence;
       const body = await api('/api/suggest', {
-          method: 'POST',
-          body: JSON.stringify({
-          query: el.searchQuery.value.trim()
-        })
+        method:'POST', body:JSON.stringify({ query:el.searchQuery.value.trim(), book:el.filterBook.value })
       });
-      renderResults(body.suggestions || []);
-      setStatus((body.suggestions || []).length + '개 결과', body.suggestions && body.suggestions.length ? 'ok' : 'warn');
+      if (sequence !== state.searchSequence) return;
+      const rows = body.suggestions || [];
+      renderResults(rows);
+      if (el.searchQuery.value.trim() && rows.length === 1) {
+        el.results.value = '0';
+        selectResult('0');
+      }
+      setStatus(rows.length + '개 결과', rows.length ? 'ok' : 'warn');
     }
 
     async function save() {
@@ -1857,6 +1519,7 @@ const INDEX_HTML = String.raw`<!doctype html>
 
     function startFresh() {
       clearSelected();
+      el.book.value = el.filterBook.value || el.book.value;
       el.number.value = '';
       el.title.value = '';
       el.lyricist.value = '';
@@ -1869,13 +1532,14 @@ const INDEX_HTML = String.raw`<!doctype html>
       el.voiceType.value = '';
       el.lyrics.value = '';
       updatePreview();
-      setStatus('새 항목', 'ok');
+      el.title.focus();
+      setStatus('새 성가를 입력한 뒤 로컬에 저장하세요.', 'ok');
     }
 
     function debounceSuggest() {
       clearTimeout(state.suggestTimer);
       state.suggestTimer = setTimeout(() => {
-        if (el.searchQuery.value.trim()) suggest().catch(error => setStatus(error.message, 'error'));
+        suggest().catch(error => setStatus(error.message, 'error'));
       }, 350);
     }
 
@@ -1885,7 +1549,18 @@ const INDEX_HTML = String.raw`<!doctype html>
       });
     });
     el.book.addEventListener('change', updateNextNumber);
-    el.searchQuery.addEventListener('input', debounceSuggest);
+    el.searchQuery.addEventListener('input', () => { ++state.searchSequence; debounceSuggest(); });
+    el.searchQuery.addEventListener('keydown', event => { if (event.key === 'Enter') { event.preventDefault(); suggest().catch(error => setStatus(error.message, 'error')); } });
+    el.filterBook.addEventListener('change', () => suggest().catch(error => setStatus(error.message, 'error')));
+    el.results.addEventListener('change', () => selectResult(el.results.value));
+    el.previewTargetLanguage.addEventListener('change', updatePreview);
+    window.addEventListener('message', event => {
+      if (event.source !== el.appPreviewFrame.contentWindow || event.origin !== location.origin) return;
+      if (event.data?.type === 'ordo:hymn-preview-ready') { state.previewReady = true; updatePreview(); }
+      if (event.data?.type === 'ordo:hymn-preview-rendered') {
+        el.appPreviewFrame.style.height = Math.max(380, Number(event.data.height) || 0) + 'px';
+      }
+    });
     el.searchButton.addEventListener('click', () => suggest().catch(error => setStatus(error.message, 'error')));
     el.save.addEventListener('click', () => save().catch(error => setStatus(error.message, 'error')));
     el.firebaseUpload.addEventListener('click', () => window.ordoFirebaseUploader.upload({

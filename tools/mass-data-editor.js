@@ -4,6 +4,7 @@ const path = require('path');
 const vm = require('vm');
 const { buildFirebaseUploadPayload, serveFirebaseUploadClient } = require('./firebase-upload-support');
 const { createSpecialEditorBackend } = require('./special-liturgy-editor');
+const { serveEditorLayout } = require('./editor-layout-support');
 const massStorage = require('./mass-storage-schema');
 const { canonicalMassEntry } = massStorage;
 const { translateEditorRequest } = require('./mass-editor-translation');
@@ -1018,6 +1019,7 @@ function createServer(options = {}) {
   return http.createServer(async (req, res) => {
     try {
       const url = new URL(req.url, `http://${DEFAULT_HOST}`);
+      if (serveEditorLayout(req, res, url)) return;
       if (req.method === 'GET' && url.pathname === '/special-liturgies') {
         res.writeHead(200, { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' });
         res.end(fs.readFileSync(path.join(__dirname, 'special-liturgy-editor.html'), 'utf8'));
@@ -1229,15 +1231,17 @@ const INDEX_HTML = String.raw`<!doctype html>
       .top { position:relative; }
     }
   </style>
+  <link rel="stylesheet" href="/editor-layout.css">
+  <script defer src="/editor-layout.js"></script>
 </head>
 <body>
-  <header class="top">
+  <header class="top editor-top">
     <h1>미사통상문 원문 · 번역문 편집기</h1>
     <p>같은 구절을 양쪽에서 비교하고 국가별 원본 파일에 직접 저장합니다.</p>
     <p><a href="/special-liturgies">성주간 · 성야 · 전야미사 · 위령의 날 편집 →</a></p>
   </header>
   <main>
-    <section class="controls">
+    <section class="controls editor-controls" aria-label="미사통상문 선택 및 검색">
       <label>원문 국가·언어<select id="left-country"></select></label>
       <label>번역문 국가·언어<select id="right-country"></select></label>
       <div class="section-tools">
