@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261113-1';
+    const APP_VERSION = 'V31.2-20261113-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -9175,7 +9175,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return primary.data?.[lang] || primary.riteData?.[lang] ? primary : null;
     }
 
+    function selectedTemporalMissalEntry(lang, date) {
+        const corpus = localMissalLanguageData(lang);
+        if (!corpus) return null;
+        const dated = (corpus.calendar?.[calendarDateKey(date)] || []).filter(entry => entry.kind === 'temporal');
+        if (dated.length === 1) return dated[0];
+        const meta = getSeasonMeta(date), title = formatSeasonalName(lang, meta.season, meta.week, meta.day, meta.sundayCycle);
+        const match = bestLocalMissalEntry([...dated, ...(corpus.catalog || []).filter(entry => entry.kind === 'temporal')], title);
+        return match && match.score >= 0.72 ? match.entry : null;
+    }
+
     function primaryCalendarMissalEntry(lang, date, info = state.liturgyInfo) {
+        if (isGeneratedSeasonalNameForInfo(lang, info.names?.[lang], info)) return selectedTemporalMissalEntry(lang, date);
         const registered = primaryCalendarSpecialRecord(lang, date);
         if (registered?.data?.[lang]) return { title:info.names?.[lang] || '',
             data:cloneData(registered.data[lang]), source:registered.source, structured:true };
@@ -9311,7 +9322,6 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!parsed) return;
         parsed = sanitizeDailyAcclamationReferences(parsed);
         const sourceDate = getActiveLiturgicalSourceDate();
-        if (!parsed.primaryCalendarProjection) parsed = completeMissingDailyProperSections(parsed, lang, sourceDate);
         const sourceMeta = getSeasonMeta(sourceDate);
         if (sourceMeta.season === 'advent' && sourceDate.getMonth() === 11
             && sourceDate.getDate() >= 17 && sourceDate.getDate() <= 24 && sourceDate.getDay() !== 0
@@ -9332,6 +9342,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             });
         }
         const isPrimarySource = lang === normalizeSelectableLang(state.currentLoc, '');
+        if (isPrimarySource && !parsed.calendarForm && isGeneratedSeasonalNameForInfo(lang, parsed.title, {meta:getSeasonMeta(sourceDate)})) {
+            parsed = Object.assign({}, parsed, {calendarForm:'temporal'});
+        }
         if (isPrimarySource && parsed.calendarForm !== 'temporal') delete state.liturgyInfo.primaryCalendarForm;
         const currentRank = state.liturgyInfo.meta && state.liturgyInfo.meta.rank;
         if (isPrimarySource && parsed.calendarForm === 'temporal' && !state.liturgyInfo.isSolemnity
@@ -9349,6 +9362,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 isSunday: date.getDay() === 0, isSolemnity: false
             }, date);
         }
+        if (!parsed.primaryCalendarProjection) parsed = completeMissingDailyProperSections(parsed, lang, sourceDate);
         const officialLocalProperSections = new Set(
             parsed.officialLocalProper && Array.isArray(parsed.officialLocalProper.sectionKeys)
                 ? parsed.officialLocalProper.sectionKeys
@@ -10299,7 +10313,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict113-preserve-source-complete-propers';
+    const STRICT_PARSER_CACHE_VERSION = 'strict114-primary-calendar-selected-form';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -16180,7 +16194,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (!parsed || !parsed.data || !date || parsed.serverRecord?.kind === 'edited') return parsed;
         const missing = Array.from(localMissalPrayerSectionIds).filter(key => !sourceSectionHasContent(parsed.data[key]));
         if (!missing.length) return parsed;
-        const entry = localMissalEntryForLanguage(lang, date);
+        const temporalSource = parsed.calendarForm === 'temporal'
+            || isGeneratedSeasonalNameForInfo(lang, parsed.title, {meta:getSeasonMeta(date)});
+        const entry = temporalSource ? selectedTemporalMissalEntry(lang, date) : localMissalEntryForLanguage(lang, date);
         if (!entry || !entry.data) return parsed;
         const data = Object.assign({}, parsed.data), sources = Object.assign({}, parsed.properSources || {});
         let changed = false;
