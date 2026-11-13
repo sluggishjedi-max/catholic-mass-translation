@@ -51,7 +51,7 @@
     const templates = new Map(ordinary.map(item => [getBaseId(item.id), item]));
     const gospel = templates.get('gospel');
     gospelDialogues = new Set([0,1,3].flatMap(index => SUPPORTED_LANGS.map(lang => norm(gospel?.lines?.[index]?.[`text_${lang.toLowerCase()}`]))).filter(Boolean));
-    const records = Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang, countrySpecialMassRecord(date, dailySourceLocationCode(lang))]));
+    const records = Object.fromEntries(SUPPORTED_LANGS.map(lang => [lang, lang === state.currentLoc ? record : primaryCalendarSpecialRecord(lang, date)]));
     activeCountryRecords = records;
     const activeLanguages = new Set(getActiveDailySourceLanguages());
     const result = [];

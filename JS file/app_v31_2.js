@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261112-2';
+    const APP_VERSION = 'V31.2-20261113-1';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -1439,6 +1439,8 @@
             && normalizeCalendarNameForCompare(leftName) !== normalizeCalendarNameForCompare(info.names[leftLang]);
         return Object.assign({}, info, {
             names,
+            meta:Object.assign({}, info.meta || {}, override.meta || {}),
+            isSolemnity:override.meta?.rank ? override.meta.rank === 'solemnity' : info.isSolemnity,
             krName: names.KR,
             vnName: names.VN,
             color: getLocalCalendarColor(override, info.color),
@@ -9143,10 +9145,173 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+
+    // Country-native records remain immutable. Translation views select the
+    // original country's observance, including its rank and transferred date.
+    const dailyPrimaryCalendarSources = new WeakMap();
+
+    function calendarInfoForCountry(date, locationCode) {
+        const saved = {currentLoc:state.currentLoc, selectedLocationCode:state.selectedLocationCode,
+            liturgyInfo:state.liturgyInfo};
+        try {
+            state.selectedLocationCode = locationCode;
+            state.currentLoc = getLangFromLocation(locationCode);
+            return cloneData(buildGeneratedLiturgyInfo(date));
+        } finally { Object.assign(state, saved); }
+    }
+
+    function primaryCalendarRank(info) {
+        return info?.meta?.rank || (info?.isSolemnity ? 'solemnity' : info?.isSunday ? 'sunday' : 'weekday');
+    }
+
+    function primaryCalendarSpecialRecord(lang, date) {
+        const primary = countrySpecialMassRecord(date, state.selectedLocationCode || state.currentLoc);
+        if (!primary) return null;
+        const location = dailySourceLocationCode(lang), profile = specialLiturgyProfile(location);
+        const selector = getStrictMassSelector(date);
+        const counterpart = selector.allSoulsChoice ? profile.allSouls[selector.allSoulsChoice]
+            : [...profile.vigils, ...profile.celebrations].find(entry => entry.id === primary.id);
+        if (counterpart?.id === primary.id) return counterpart;
+        return primary.data?.[lang] || primary.riteData?.[lang] ? primary : null;
+    }
+
+    function primaryCalendarMissalEntry(lang, date, info = state.liturgyInfo) {
+        const registered = primaryCalendarSpecialRecord(lang, date);
+        if (registered?.data?.[lang]) return { title:info.names?.[lang] || '',
+            data:cloneData(registered.data[lang]), source:registered.source, structured:true };
+        const primaryCountry = getLiturgicalCalendarProfile(state.selectedLocationCode || state.currentLoc).countryCalendar;
+        const foreign = lang === 'KR' && koreanMissalForeignProperData[primaryCountry + ':' + calendarDateKey(date)];
+        if (foreign?.data) return { ...foreign, structured:true };
+        const corpus = localMissalLanguageData(lang);
+        if (!corpus) return null;
+        const title = info.names?.[lang] || '', temporal = isGeneratedSeasonalNameForInfo(lang, title, info);
+        const entries = temporal ? (corpus.catalog || []).filter(entry => entry.kind === 'temporal')
+            : [...(corpus.calendar?.[calendarDateKey(date)] || []), ...(corpus.catalog || [])];
+        const match = bestLocalMissalEntry(entries, title);
+        if (!match || match.score < (temporal ? 0.72 : 0.85)) return null;
+        const entry = !temporal && lang === 'EN'
+            ? localMissalComposeCountryProper(match.entry, corpus, date, title) || match.entry : match.entry;
+        return entry;
+    }
+
+    function calendarSectionOptions(section, lang) {
+        if (!sourceSectionHasContent(section)) return [];
+        const normalized = globalThis.ordoDailyContent.normalizeSection(section);
+        return (normalized.options?.length ? normalized.options : [normalized]).map((option, index) => ({
+            option, citation:cleanNodeText(option['cit_' + lang.toLowerCase()]
+                || normalized.optionCits?.[index]?.['cit_' + lang.toLowerCase()]
+                || (index === 0 ? normalized['cit_' + lang.toLowerCase()] : '')),
+            label:normalized.optionLabels?.[index], kind:normalized.optionKinds?.[index]
+        }));
+    }
+
+    function primaryCalendarScriptureSection(key, original, translated, primaryLang, lang) {
+        const primary = calendarSectionOptions(original, primaryLang), secondary = calendarSectionOptions(translated, lang);
+        const selected = primary.flatMap(left => {
+            const right = secondary.find(candidate => left.citation && candidate.citation
+                && passageCitationsEquivalent(key, left.citation, candidate.citation, primaryLang, lang));
+            return right ? [right] : [];
+        });
+        if (!selected.length) return null;
+        const result = cloneData(globalThis.ordoDailyContent.normalizeSection(translated));
+        if (selected.length === secondary.length && selected.every((row,index) => row === secondary[index])) return result;
+        result.options = selected.map(row => cloneData(row.option));
+        result.optionCits = selected.map(row => ({['cit_' + lang.toLowerCase()]:row.citation}));
+        result.optionLabels = selected.map(row => row.label || '');
+        result.optionKinds = selected.map(row => row.kind || '');
+        result['cit_' + lang.toLowerCase()] = selected[0].citation;
+        result.lines = result.options.flatMap((option,index) => [
+            ...(index ? [parsedLine('', 'Or:')] : []), ...(option.lines || [parsedLine('',option.text || '')])]);
+        result.text = result.lines.map(line => line.text || line.rubric || '').join('\n');
+        return result;
+    }
+
+    function projectDailySourceToPrimaryCalendar(parsed, lang, primary, date, info = state.liturgyInfo, nativeCalendar = null) {
+        const primaryLang = normalizeSelectableLang(state.currentLoc, 'KR');
+        const nativeInfo = nativeCalendar || calendarInfoForCountry(date, dailySourceLocationCode(lang));
+        const expected = info.names?.[lang] || '';
+        const temporal = isGeneratedSeasonalNameForInfo(lang, expected, info);
+        const sourceTemporal = temporal && isGeneratedSeasonalNameForInfo(lang, parsed.title, info);
+        const sameName = !!(expected && parsed.title && (normalizeCalendarNameForCompare(parsed.title) === normalizeCalendarNameForCompare(expected)
+            || localMissalTitleScore(expected, parsed.title) >= 0.85));
+        const sameRank = primaryCalendarRank(info) === primaryCalendarRank(nativeInfo);
+        const identityLang = ['EN', primaryLang, ...SUPPORTED_LANGS].find(code => info.names?.[code] && nativeInfo.names?.[code]);
+        const sameNativeIdentity = !!identityLang && normalizeCalendarNameForCompare(info.names[identityLang])
+            === normalizeCalendarNameForCompare(nativeInfo.names[identityLang]);
+        const sameCelebration = !!(sameRank && (sourceTemporal || (sameName && sameNativeIdentity)));
+        const data = {}, properSources = {}, unavailable = [];
+        const primarySpecial = countrySpecialMassRecord(date, state.selectedLocationCode || state.currentLoc);
+        const primaryData = Object.assign({}, primarySpecial?.data?.[primaryLang] || {}, primary.data || {});
+        const localized = primaryCalendarMissalEntry(lang, date, info);
+        const fixed = primaryCalendarSpecialRecord(lang, date)?.data?.[lang] || {};
+        const scripture = new Set(['reading1','reading2','psalm','gospel_accl','gospel']);
+        for (const key of scripture) {
+            const candidate = fixed[key] || parsed.data?.[key];
+            const matched = primaryCalendarScriptureSection(key, primaryData[key], candidate, primaryLang, lang);
+            if (matched) data[key] = matched;
+            else if (sourceSectionHasContent(primaryData[key])) unavailable.push(key);
+        }
+        for (const key of localMissalPrayerSectionIds) {
+            if (sameCelebration && parsed.serverRecord?.kind === 'edited' && !sourceSectionHasContent(parsed.data?.[key])) continue;
+            if (sameCelebration && sourceSectionHasContent(parsed.data?.[key])) {
+                data[key] = cloneData(parsed.data[key]);
+                if (parsed.properSources?.[key]) properSources[key] = cloneData(parsed.properSources[key]);
+                continue;
+            }
+            const stored = fixed[key] || localized?.data?.[key];
+            if (sourceSectionHasContent(stored)) {
+                data[key] = typeof stored === 'object' ? cloneData(stored) : formattedLocalMissalSection(lang, key, stored);
+                properSources[key] = {kind:'primary-calendar-missal',title:localized?.title || expected,page:localized?.page || 0};
+            } else if (sourceSectionHasContent(primaryData[key])) unavailable.push(key);
+        }
+        return {...parsed, title:expected, data, properSources, officialLocalProper:null, calendarContext:null, primaryCalendarProjection:{
+            country:state.selectedLocationCode, rank:primaryCalendarRank(info), date:formatDateIso(date),
+            nativeTitle:parsed.title || '', nativeRank:primaryCalendarRank(nativeInfo),
+            sameCelebration, unavailable
+        }};
+    }
+
     function mergeSourceData(target, parsed, lang, options = {}) {
+        if (!parsed) return;
+        const date = getActiveLiturgicalSourceDate(), primaryLang = normalizeSelectableLang(state.currentLoc, 'KR');
+        let context = dailyPrimaryCalendarSources.get(target);
+        if (!context) {
+            context = {info:cloneData(state.liturgyInfo), sources:new Map()};
+            dailyPrimaryCalendarSources.set(target, context);
+        }
+        context.sources.set(lang, {parsed:cloneData(parsed), options});
+        Object.keys(target).forEach(key => delete target[key]);
+        state.liturgyInfo = cloneData(context.info);
+        const original = context.sources.get(primaryLang);
+        // Mark the pending context so prayer supplements also wait for the original.
+        // The native record is retained in this view's Map, never in another country's cache.
+        if (!original) {
+            state.liturgyInfo.primaryCalendar = {country:state.selectedLocationCode, language:primaryLang,
+                date:formatDateIso(date), rank:primaryCalendarRank(state.liturgyInfo), pending:true};
+            return;
+        }
+        mergeNativeDailySourceData(target, original.parsed, primaryLang, original.options);
+        const info = cloneData(state.liturgyInfo);
+        info.primaryCalendar = {country:state.selectedLocationCode, language:primaryLang,
+            date:formatDateIso(date), rank:primaryCalendarRank(info)};
+        info.nativeSourceCelebrations = {};
+        for (const [code, source] of context.sources) {
+            if (code === primaryLang) continue;
+            state.liturgyInfo = cloneData(info);
+            const projected = projectDailySourceToPrimaryCalendar(source.parsed, code, original.parsed, date, info);
+            mergeNativeDailySourceData(target, projected, code, {...source.options, allowExternalLiturgy:false});
+            info.nativeSourceCelebrations[code] = projected.primaryCalendarProjection;
+            info.sourceCelebrations ||= {};
+            info.sourceCelebrations[code] = {title:info.names?.[code] || '', seasonal:isGeneratedSeasonalNameForInfo(code,info.names?.[code],info)};
+        }
+        state.liturgyInfo = info;
+    }
+
+    function mergeNativeDailySourceData(target, parsed, lang, options = {}) {
         if (!parsed) return;
         parsed = sanitizeDailyAcclamationReferences(parsed);
         const sourceDate = getActiveLiturgicalSourceDate();
+        if (!parsed.primaryCalendarProjection) parsed = completeMissingDailyProperSections(parsed, lang, sourceDate);
         const sourceMeta = getSeasonMeta(sourceDate);
         if (sourceMeta.season === 'advent' && sourceDate.getMonth() === 11
             && sourceDate.getDate() >= 17 && sourceDate.getDate() <= 24 && sourceDate.getDay() !== 0
@@ -9159,6 +9324,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (parsed.fallbackSource) state.dailySourceProvenance[lang] = { date:formatDateIso(getActiveLiturgicalSourceDate()), source:parsed.fallbackSource };
         else delete state.dailySourceProvenance[lang];
         const lower = lang.toLowerCase();
+        if (parsed.serverRecord?.kind === 'edited') {
+            localMissalPrayerSectionIds.forEach(key => {
+                target[key] ||= {};
+                target[key].__serverEditedLanguages ||= {};
+                target[key].__serverEditedLanguages[lower] = true;
+            });
+        }
         const isPrimarySource = lang === normalizeSelectableLang(state.currentLoc, '');
         if (isPrimarySource && parsed.calendarForm !== 'temporal') delete state.liturgyInfo.primaryCalendarForm;
         const currentRank = state.liturgyInfo.meta && state.liturgyInfo.meta.rank;
@@ -9208,13 +9380,13 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             });
             if (calendarContext.color) state.liturgyInfo.color = calendarContext.color;
         }
-        const suppressNonLeftProper = calendarPriority ? false : isNonLeftLocalProperSource(lang, parsed.title);
+        const suppressNonLeftProper = parsed.primaryCalendarProjection || calendarPriority ? false : isNonLeftLocalProperSource(lang, parsed.title);
         if (allowExternalLiturgy && parsed.title && !options.suppressTitle) rememberLeftSourceTitleAsLocalProper(lang, parsed.title);
         Object.keys(parsed.data || {}).forEach(key => {
             const isOfficialLocalProperSection = officialLocalProperSections.has(key);
             if (officialLocalProperSections.size && properLocalDailySectionIds.has(key) && !isOfficialLocalProperSection) return;
             if (suppressNonLeftProper && properLocalDailySectionIds.has(key) && !isOfficialLocalProperSection) return;
-            if (shouldSuppressMismatchedLocalProperSection(lang, key) && !isOfficialLocalProperSection) return;
+            if (!parsed.primaryCalendarProjection && shouldSuppressMismatchedLocalProperSection(lang, key) && !isOfficialLocalProperSection) return;
             const value = globalThis.ordoDailyContent?.normalizeSection(parsed.data[key]) ?? parsed.data[key];
             if (!sourceSectionHasContent(value)) return;
             if (key === 'preface') {
@@ -9228,6 +9400,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 if (!parsed.serverRecord) return;
             }
             if (!target[key]) target[key] = {};
+            if (parsed.properSources?.[key]) { target[key].__properSources ||= {}; target[key].__properSources[lower] = cloneData(parsed.properSources[key]); }
             if (key === 'preface' && parsed.serverRecord) { target[key].__serverPrefaceLanguages ||= {}; target[key].__serverPrefaceLanguages[lower] = true; }
             if (parsed.serverRecord?.kind === 'edited') { target[key].__serverEditedLanguages ||= {}; target[key].__serverEditedLanguages[lower] = true; }
             if (sourceCelebration) {
@@ -10126,7 +10299,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict112-published-reading-layout';
+    const STRICT_PARSER_CACHE_VERSION = 'strict113-preserve-source-complete-propers';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11038,6 +11211,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             /^Saint of the Day\b/i,
             /^Continue$/i,
             /^You can also view this page/i,
+            /^You can read the Gospels in Greek in parallel with the English/iu,
+            /^You can get (?:it|the (?:Universalis )?app) here[.!]?$/iu,
             /^Christian Art$/i,
             /^The responsorial psalms at Mass cannot be displayed/i,
             /^The readings on this page are from/i
@@ -11233,6 +11408,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictLooksLikeCitation(line, lang) {
         const text = strictCitationCandidate(line, lang);
         if (!text || text.length > 120 || !/\d/.test(text)) return false;
+        if (globalThis.bibleCitation?.parse(text, lang)) return true;
         if (/^\d[\d\s,.;:·+\-–—―─()ㄱ-ㅎ]*$/.test(text)) return true;
         if (lang === 'KR') {
             const book = text.match(/^((?:[1-3]\s*)?[가-힣]{1,12})\s*(?=\d)/u);
@@ -11400,6 +11576,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function strictStripArabicVerseNumbers(text, citation = '') {
         let source = String(text || '');
+        const verseNumbers = new Set(strictCitationVerseNumbers(citation));
+        // An omitted verse may be shown as "(36)·37" before the next verse.
+        // Remove the complete locator before generic number cleanup can leave
+        // empty brackets, while retaining parenthetical prose and quantities.
+        source = source.replace(/(^|[\r\n])([ \t]*[“"‘'「『]?[ \t]*)[（(]\s*(\d{1,3})\s*[）)]\s*[·・•.．]\s*(\d{1,3})(?=\s|[\p{L}])/gu,
+            (whole, boundary, prefix, skipped, next) => !verseNumbers.size || [skipped,next].every(value => verseNumbers.has(Number(value))) ? boundary + prefix : whole);
         // Japanese sources repeat a chapter/verse locator (for example
         // "2・10b") at the start of the biblical text.  The same locator is
         // already shown in the section citation, so remove the whole marker,
@@ -11415,7 +11597,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             source = source.replace(attachedMarker, '$1');
         }
         return cleanNodeText(source
-            .replace(/(^|[\s([{「『"“‘、。，．])\d+[a-zㄱ-ㅎ]?(?:[\s,.;:·・•*+\-–—/]\d+[a-zㄱ-ㅎ]?)*(?=$|[\s)\]}「」『』,.;:!?"'”’、。，．])/giu, '$1')
+            .replace(/(^|[\s([{「『"“‘、。，．])\d+[a-zㄱ-ㅎ]?(?:[\s,.;:·・•*+\-–—/]\d+[a-zㄱ-ㅎ]?)*(?=$|[\s)\]}「」『』,.;:!?"'”’、。，．])/giu, (whole, prefix) => {
+                const numbers = (whole.slice(prefix.length).match(/\d+/g) || []).map(Number);
+                return verseNumbers.size && numbers.some(value => !verseNumbers.has(value)) ? whole : prefix;
+            })
             .replace(/\s+([,.;:!?])/g, '$1')
             .replace(/\s{2,}/g, ' '));
     }
@@ -11982,8 +12167,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     function strictParseJoinedAcclamation(lang, blocks) {
         const out = [];
         let verseBuffer = [];
-        const responsePattern = /^(R\.|℟\.?|Alleluia)\s*[:.：]?\s*(.+)$/iu;
-        const speakerOnlyPattern = /^(R\.|℟\.?|Alleluia)\s*[:.：]?\s*$/iu;
+        const responsePattern = /^(R\.|℟\.?)\s*[:.：]?\s*(.+)$/iu;
+        const speakerOnlyPattern = /^(R\.|℟\.?)\s*[:.：]?\s*$/iu;
         const flushVerse = () => {
             const text = strictCleanLine(verseBuffer.join(' '));
             if (text) out.push(strictParsedLine(lang === 'EN' ? 'Versicle' : '', text));
@@ -11993,6 +12178,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (isStandaloneDashText(line)) return;
             if (strictLooksLikeCitation(line, lang)) return;
             if (speakerOnlyPattern.test(line)) return;
+            if (isAlleluiaOnlyText(line)) { flushVerse(); out.push(strictParsedLine('R.', line)); return; }
             const split = line.match(responsePattern);
             if (split) {
                 flushVerse();
@@ -15831,6 +16017,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function localMissalCommonPageForCountryEntry(entry) {
+        const declaredPage = Number(entry?.commonPage || String(entry?.title || '').match(/(?:p{1,2}\.|page)\s*(\d{1,4})/iu)?.[1] || 0);
+        if (declaredPage) return declaredPage;
         const title = normalizeSemanticText(entry && entry.title || '');
         if (!title) return null;
         if (/blessed virgin|our lady|virgin mary|immaculate conception|assumption/.test(title)) return 1039;
@@ -15856,7 +16044,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const commonPage = localMissalCommonPageForCountryEntry(entry);
         const common = commonPage == null ? null : (languageData.catalog || [])
             .find(candidate => candidate && candidate.kind === 'common' && Number(candidate.page) === commonPage) || null;
-        const data = Object.assign({}, common && common.data || {}, base && base.data || {}, entry.data || {});
+        const data = Object.assign({}, ...[common?.data, base?.data, entry.data].filter(Boolean)
+            .map(source => Object.fromEntries(Object.entries(source).filter(([, value]) => cleanNodeText(value)))));
         if (!Array.from(localMissalPrayerSectionIds).some(key => cleanNodeText(data[key]))) return null;
         return Object.assign({}, common || {}, base || {}, entry, { data });
     }
@@ -15869,7 +16058,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function localMissalEntryForLanguage(lang, date) {
         const code = normalizeSelectableLang(lang, '');
-        if (!date || !localMissalDataLanguages.has(code)) return null;
+        if (!date || !code) return null;
         const selector = getStrictMassSelector(date);
         const registered = countrySpecialMassRecord(date, dailySourceLocationCode(code));
         if (registered?.source?.kind === 'missal-fixed-formulary' && registered.data?.[code]) {
@@ -15908,7 +16097,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const currentTitle = info.names && info.names[code] || '';
         const datedEntries = languageData.calendar && languageData.calendar[calendarDateKey(date)] || [];
         const dated = bestLocalMissalEntry(datedEntries, currentTitle);
-        if (dated && dated.score >= 0.52) return dated.entry;
+        if (dated && dated.score >= 0.52) return code === 'EN'
+            ? (localMissalComposeCountryProper(dated.entry, languageData, date, currentTitle) || dated.entry)
+            : dated.entry;
         const seasonalTitle = isGeneratedSeasonalNameForInfo(code, currentTitle, info);
         if (dated && !seasonalTitle && datedEntries.length === 1) return dated.entry;
         const catalog = bestLocalMissalEntry(languageData.catalog || [], currentTitle);
@@ -15983,77 +16174,50 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    // A validated daily source owns its words, alternatives and citations.
+    // The Missal supplements absent proper sections only, on server and client.
+    function completeMissingDailyProperSections(parsed, lang, date) {
+        if (!parsed || !parsed.data || !date || parsed.serverRecord?.kind === 'edited') return parsed;
+        const missing = Array.from(localMissalPrayerSectionIds).filter(key => !sourceSectionHasContent(parsed.data[key]));
+        if (!missing.length) return parsed;
+        const entry = localMissalEntryForLanguage(lang, date);
+        if (!entry || !entry.data) return parsed;
+        const data = Object.assign({}, parsed.data), sources = Object.assign({}, parsed.properSources || {});
+        let changed = false;
+        missing.forEach(key => {
+            const text = cleanNodeText(entry.data[key]);
+            if (!text) return;
+            const section = formattedLocalMissalSection(lang, key, text);
+            if (!sourceSectionHasContent(section)) return;
+            data[key] = globalThis.ordoDailyContent.normalizeSection(section);
+            sources[key] = { kind: 'missal-supplement', title: entry.title || '', page: entry.page || 0 };
+            changed = true;
+        });
+        return changed ? Object.assign({}, parsed, { data, properSources: sources }) : parsed;
+    }
+
     function applyLocalMissalPrayerOverlay(fetchedData, date) {
-        if (!fetchedData || !date || !globalThis.localMissalPrayerData) return [];
-        if (!fetchedData.__localMissalEntries) fetchedData.__localMissalEntries = {};
+        if (!fetchedData || !date) return [];
         const applied = [];
         getActiveDailySourceLanguages().forEach(lang => {
-            if (!localMissalDataLanguages.has(lang)) return;
-            const info = localMissalLiturgyInfoForDate(date);
-            const titleKey = cleanNodeText(info && info.names && info.names[lang]);
-            const cachedEntry = fetchedData.__localMissalEntries[lang];
-            if (!cachedEntry || cachedEntry.titleKey !== titleKey) {
-                fetchedData.__localMissalEntries[lang] = {
-                    titleKey,
-                    entry: localMissalEntryForLanguage(lang, date) || null
-                };
-            }
-            const entry = fetchedData.__localMissalEntries[lang].entry;
+            if (state.liturgyInfo.primaryCalendar && lang !== normalizeSelectableLang(state.currentLoc, 'KR')) return;
             const lower = lang.toLowerCase();
-            if (!entry || !entry.data) {
-                localMissalPrayerSectionIds.forEach(sectionKey => {
-                    const section = fetchedData[sectionKey];
-                    if (!section || !section.__localMissalOverlays || !section.__localMissalOverlays[lower]) return;
-                    restoreLocalMissalSnapshot(section, section.__localMissalParsedSnapshots && section.__localMissalParsedSnapshots[lower]);
-                    delete section.__localMissalOverlays[lower];
-                });
-                return;
-            }
-            localMissalPrayerSectionIds.forEach(sectionKey => {
-                const localText = cleanNodeText(entry.data[sectionKey]);
-                if (!localText) {
-                    const previousSection = fetchedData[sectionKey];
-                    if (previousSection && previousSection.__localMissalOverlays && previousSection.__localMissalOverlays[lower]) {
-                        restoreLocalMissalSnapshot(
-                            previousSection,
-                            previousSection.__localMissalParsedSnapshots && previousSection.__localMissalParsedSnapshots[lower]
-                        );
-                        delete previousSection.__localMissalOverlays[lower];
-                    }
-                    return;
-                }
-                if (!fetchedData[sectionKey]) fetchedData[sectionKey] = {};
-                const section = fetchedData[sectionKey];
+            const data = Object.fromEntries(Array.from(localMissalPrayerSectionIds).map(key => {
+                const section = fetchedData[key] || {};
+                return [key, { text: section[lower] || '', lines: section[lower + '_lines'] || [], options: section[lower + '_options'] || [] }];
+            }));
+            const completed = completeMissingDailyProperSections({ data }, lang, date);
+            Object.entries(completed.properSources || {}).forEach(([key, provenance]) => {
+                const formatted = completed.data[key], section = fetchedData[key] || (fetchedData[key] = {});
                 if (section.__serverEditedLanguages?.[lower] || section.__serverPrefaceLanguages?.[lower]) return;
-                const snapshot = localMissalParsedSnapshot(section, lower);
-                const parsedText = localMissalSnapshotText(snapshot, lower);
-                const equivalent = parsedText
-                    ? readCachedLocalMissalComparison(date, lang, sectionKey, localText, parsedText)
-                    : true;
-                if (equivalent === false) {
-                    restoreLocalMissalSnapshot(section, snapshot);
-                    if (section.__localMissalOverlays) delete section.__localMissalOverlays[lower];
-                    return;
-                }
-                const formatted = formattedLocalMissalSection(lang, sectionKey, localText);
-                if (!formatted) return;
-                section[lower] = formatted.text || localText;
-                section[`${lower}_lines`] = Array.isArray(formatted.lines) && formatted.lines.length
-                    ? formatted.lines
-                    : [parsedLine('', localText)];
-                delete section[`optionCits_${lower}`];
-                delete section[`optionLabels_${lower}`];
-                delete section[`optionKinds_${lower}`];
-                if (!section.__localMissalOverlays) section.__localMissalOverlays = {};
-                section.__localMissalOverlays[lower] = {
-                    lang,
-                    sectionKey,
-                    entryTitle: entry.title || '',
-                    page: entry.page || 0,
-                    localText,
-                    parsedText
-                };
-                applied.push(section.__localMissalOverlays[lower]);
+                section[lower] = formatted.text;
+                section[lower + '_lines'] = cloneData(formatted.lines || []);
+                if (formatted.options?.length) section[lower + '_options'] = cloneData(formatted.options);
+                if (formatted.optionCits?.length) section['optionCits_' + lower] = cloneData(formatted.optionCits);
+                if (formatted['cit_' + lower]) section['cit_' + lower] = formatted['cit_' + lower];
+                section.__properSources ||= {};
+                section.__properSources[lower] = provenance;
+                applied.push({lang,sectionKey:key,entryTitle:provenance.title,page:provenance.page});
             });
         });
         return applied;
@@ -16144,18 +16308,41 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     // the same liturgical day, their formular order is authoritative.  Pair
     // those options before the asynchronous semantic check so the UI never
     // flashes source-only choices and then collapses them after a click.
+    function missalOptionBodyKey(option, lower, baseId = '') {
+        const lines = Array.isArray(option) ? option : option?.lines || [];
+        const text = lines.filter(line => !line.rubric && !['intro','summary','conclusion'].includes(line.role || line['role_' + lower])
+            && (!strictPrayerKeys.has(baseId) || (!isPrayerConclusionText(line.text) && !isPrayerOpenerText(line.text) && !isPrayerAmenText(line.text))))
+            .map(line => line.text || line['text_' + lower] || '').join(' ');
+        return normalizeSemanticText(text).replace(/[^\p{L}\p{N}]+/gu, '');
+    }
+
     function buildLocalMissalTranslationAlignment(baseId, section, optionMap) {
-        if (!localMissalPrayerSectionIds.has(baseId) || !section || !section.__localMissalOverlays) return [];
-        const lowers = ['kr', 'vn', 'en', 'la']
-            .filter(lower => section.__localMissalOverlays[lower]
-                && Array.isArray(optionMap && optionMap[lower])
-                && optionMap[lower].length);
-        if (lowers.length < 2) return [];
-        const maxOptions = Math.max(...lowers.map(lower => optionMap[lower].length));
-        const groups = Array.from({ length: maxOptions }, (_, index) => Object.fromEntries(
-            lowers.filter(lower => optionMap[lower][index]).map(lower => [lower, index])
-        )).filter(group => Object.keys(group).length);
-        return normalizeVariantAlignmentGroups(optionMap, groups);
+        if (!localMissalPrayerSectionIds.has(baseId) || !section) return [];
+        const date = getActiveLiturgicalSourceDate(), meta = getSeasonMeta(date), groups = new Map();
+        section.__verifiedMissalFormKeys = {};
+        SUPPORTED_LANGS.forEach(lang => {
+            const lower = lang.toLowerCase(), options = optionMap?.[lower];
+            if (!options?.length) return;
+            const data = localMissalLanguageData(lang);
+            if (!data?.catalog) return;
+            const expected = formatSeasonalName(lang, meta.season, meta.week, meta.day, meta.sundayCycle);
+            const candidate = bestLocalMissalEntry(data.catalog.filter(entry => /^temporal/u.test(entry.kind || '')), expected);
+            if (!candidate || candidate.score < 0.72 || !candidate.entry.data?.[baseId]) return;
+            const formatted = formattedLocalMissalSection(lang, baseId, candidate.entry.data[baseId]);
+            const known = globalThis.ordoDailyContent.options(formatted).map(option => missalOptionBodyKey(option, lower, baseId));
+            const keys = options.map(option => {
+                const text = missalOptionBodyKey(option, lower, baseId), index = text ? known.indexOf(text) : -1;
+                return index < 0 ? '' : [meta.season, meta.week, meta.day, baseId, index].join(':');
+            });
+            section.__verifiedMissalFormKeys[lower] = keys;
+            keys.forEach((key, index) => {
+                if (!key || keys.filter(value => value === key).length !== 1) return;
+                const group = groups.get(key) || {};
+                group[lower] = index; groups.set(key, group);
+            });
+        });
+        const matched = [...groups.values()].filter(group => Object.keys(group).length > 1);
+        return matched.length ? normalizeVariantAlignmentGroups(optionMap, matched) : [];
     }
 
     const dailyLengthVariantLabels = {
@@ -16886,7 +17073,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align13-single-chapter-passages';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align14-verified-formularies';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -16976,6 +17163,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     // outrank that partial-text heuristic for cited passages.
                     if (citedVariantSectionIds.has(baseId)
                         && passageCitationsEquivalent(baseId, item.citation, other.citation, item.lower, other.lower)) return true;
+                    const verified = section.__verifiedMissalFormKeys?.[item.lower]?.[item.index];
+                    if (verified && verified === section.__verifiedMissalFormKeys?.[other.lower]?.[other.index]) return true;
                     if (sourceCelebrationsConflict(baseId, section, item.lower, other.lower, item.semanticKey, other.semanticKey)) return false;
                     if (distinctKeys.size > 1 && (!item.semanticKey || !other.semanticKey)) return false;
                     if (item.semanticKey && other.semanticKey && item.semanticKey !== other.semanticKey) return false;
@@ -18160,8 +18349,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     // AI 번역 버튼
     function finalizeDailyReadingsData(fetchedData) {
         const activeDate = getActiveLiturgicalSourceDate();
-        applyKoreanMissalForeignProperOverlay(fetchedData, activeDate);
-        applyKoreanMissalOrdinaryConflictOverlay(fetchedData, activeDate);
+        if (!state.liturgyInfo.primaryCalendar) {
+            applyKoreanMissalForeignProperOverlay(fetchedData, activeDate);
+            applyKoreanMissalOrdinaryConflictOverlay(fetchedData, activeDate);
+        }
         applyLocalMissalPrayerOverlay(fetchedData, activeDate);
         // The Korean Missal overlays are added after remote sources merge, so
         // their source-pairing rule must be evaluated at this point as well.
@@ -19128,29 +19319,30 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const lang = normalizeSelectableLang(langCode || 'KR', 'KR');
         const localized = titleCaseLocalizedLanguageName(localizedLanguageNameForUi(lang, ui));
         const native = nativeLanguageNames[lang] || appLanguageName(lang);
-        const beta = lang === 'JP' ? ' (Beta)' : '';
+        const beta = ['KR', 'VN', 'EN'].includes(lang) ? '' : ' (Beta)';
         return `${localized}${localized.toLocaleLowerCase() === native.toLocaleLowerCase() ? '' : ` / ${native}`}${beta}`;
     }
 
     function localizedLocationOptionLabel(locationCode, uiLang = state.uiLang) {
         const ui = normalizeSelectableLang(uiLang || 'KR', 'KR');
         const representativeCode = representativeLocationSelectionCode(locationCode);
+        const beta = ['KR', 'VN', 'US'].includes(representativeCode) ? '' : ' (Beta)';
         const location = locationMeta[representativeCode];
         if (!location) return locationCode;
         const combinedNames = localizedCombinedJurisdictionNames[ui] || localizedCombinedJurisdictionNames.KR;
         if (representativeCode === 'VA') {
-            return `${combinedNames.VA || 'Universal Roman Rite'} | Lingua Latina`;
+            return `${combinedNames.VA || 'Universal Roman Rite'} | Lingua Latina${beta}`;
         }
         if (representativeCode === 'INTL') {
             const country = (localizedCountryNames[ui] && localizedCountryNames[ui].INTL) || 'Other region';
-            return `${country} | English`;
+            return `${country} | English${beta}`;
         }
         const entry = locationSelectionEntries.find(candidate => candidate.code === representativeCode);
         if (!entry) return locationCode;
         const country = combinedNames[representativeCode]
             || (localizedCountryNames[ui] && localizedCountryNames[ui][representativeCode])
             || representativeCode;
-        return `${country}(${entry.conference}) | ${entry.nativeLanguage}${entry.beta ? ' (Beta)' : ''}`;
+        return `${country}(${entry.conference}) | ${entry.nativeLanguage}${beta}`;
     }
 
     function appendLocationSelectionOption(parent, entry, ui) {
@@ -19216,6 +19408,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (element) element.textContent = value;
     }
 
+    function auxiliaryTabLabel(tab, label, ui = state.uiLang) {
+        return ['prayers','hymns'].includes(tab) ? label + (ui === 'KR' ? ' (베타)' : ' (Beta)') : label;
+    }
+
     function syncLocalizedChromeAndSettings() {
         const ui = normalizeSelectableLang(state.uiLang || 'KR', 'KR');
         if (globalThis.ordoAdminReview) {
@@ -19229,12 +19425,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const nav = document.querySelector('nav');
         if (nav) nav.setAttribute('aria-label', chrome.navAria);
         document.querySelectorAll('nav .nav-item[data-tab]').forEach(button => {
-            if (chrome.nav[button.dataset.tab]) button.textContent = chrome.nav[button.dataset.tab];
+            if (chrome.nav[button.dataset.tab]) button.textContent = auxiliaryTabLabel(button.dataset.tab, chrome.nav[button.dataset.tab], ui);
         });
         const quickMenu = document.getElementById('quick-home-menu');
         if (quickMenu) quickMenu.setAttribute('aria-label', chrome.quickAria);
         document.querySelectorAll('#quick-home-menu .quick-home-btn[data-home-tab]').forEach(button => {
-            if (chrome.quick[button.dataset.homeTab]) button.textContent = chrome.quick[button.dataset.homeTab];
+            if (chrome.quick[button.dataset.homeTab]) button.textContent = auxiliaryTabLabel(button.dataset.homeTab, chrome.quick[button.dataset.homeTab], ui);
         });
         document.querySelectorAll('.settings-btn, .floating-settings-btn').forEach(button => {
             button.setAttribute('aria-label', chrome.settingsOpen);

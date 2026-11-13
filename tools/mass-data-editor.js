@@ -192,9 +192,10 @@ function collectMassBlocks(ordinary, language) {
           value.forEach((row, rowIndex) => {
             const speakerField = speakerFieldForRow(row, language);
             rowContentFields(row, language).forEach(({ field, kind, text, speaker, segment, segmentIndex }) => {
-              const pairedKey = row.__massEditorPairKeys && row.__massEditorPairKeys[field];
+              const segmentPairKey = segment && row.__massEditorPairKeys?.[field + ':segment:' + segmentIndex];
+              const pairedKey = segmentPairKey || (row.__massEditorPairKeys && row.__massEditorPairKeys[field]);
               rows.push({
-                key: (pairedKey || `${rowIndex}:${kind}`) + (segment ? `:segment:${segmentIndex}` : ''),
+                key: (pairedKey || `${rowIndex}:${kind}`) + (segment && !segmentPairKey ? `:segment:${segmentIndex}` : ''),
                 rowIndex,
                 kind,
                 text: cleanText(text),
@@ -478,8 +479,16 @@ function injectedOverrideSection(jurisdiction, applyToOrdinary = true) {
   return `  ${OVERRIDES_START}\n  const ordinaryEditorOverrides = [];\n  ${OVERRIDES_END}\n  function applyOrdinaryEditorOverrides(target) {\n    ordinaryEditorOverrides.forEach(override => {\n      if (override.create) {\n        const entry = target.find(item => item && item.id === override.create.entryId);\n        if (!entry) throw new Error(${label} + ' Mass editor entry is missing: ' + override.create.entryId);\n        let rows = entry;\n        for (const part of override.create.relativePath) {\n          if (rows[part] === undefined) rows[part] = part === 'lines' || part === 'content' ? [] : {};\n          rows = rows[part];\n        }\n        if (!Array.isArray(rows)) throw new Error(${label} + ' Mass editor block is invalid: ' + override.create.entryId);\n        let row = rows.find(item => item && item.__massEditorPairKeys && item.__massEditorPairKeys[override.create.field] === override.create.rowKey);\n        if (!row && rows[override.create.preferredIndex] && !Object.prototype.hasOwnProperty.call(rows[override.create.preferredIndex], override.create.field)) row = rows[override.create.preferredIndex];\n        if (!row) { row = {}; rows.push(row); }\n        row.__massEditorPairKeys = Object.assign({}, row.__massEditorPairKeys, { [override.create.field]: override.create.rowKey });\n        row[override.create.field] = String(override.value ?? '');\n        if (override.create.speakerField) row[override.create.speakerField] = String(override.speaker ?? '');\n        return;\n      }\n      if (override.rename) {\n        let row = target;\n        for (const part of override.rename.rowPath) row = row && row[part];\n        if (!row || typeof row !== 'object') throw new Error(${label} + ' Mass editor rename path is stale: ' + JSON.stringify(override.rename.rowPath));\n        const fromField = override.rename.fromField;\n        const toField = override.rename.toField;\n        if (!Object.prototype.hasOwnProperty.call(row, fromField) && !Object.prototype.hasOwnProperty.call(row, toField)) throw new Error(${label} + ' Mass editor rename field is stale: ' + fromField);\n        if (fromField !== toField) delete row[fromField];\n        row[toField] = String(override.value ?? '');\n        const keys = Object.assign({}, row.__massEditorPairKeys);\n        delete keys[fromField];\n        keys[toField] = override.rename.rowKey;\n        row.__massEditorPairKeys = keys;\n        return;\n      }\n      const editPath = Array.isArray(override.path) ? override.path : [];\n      let parent = target;\n      for (const part of editPath.slice(0, -1)) parent = parent && parent[part];\n      const field = editPath[editPath.length - 1];\n      if (!parent || !Object.prototype.hasOwnProperty.call(parent, field)) throw new Error(${label} + ' Mass editor override path is stale: ' + JSON.stringify(editPath));\n      parent[field] = String(override.value ?? '');\n    });\n    return target;\n  }\n${applyLine}`;
 }
 
+function ensureRootSnapshotSupport(source) {
+  if (source.includes('if (override.path?.length === 1 && override.value')) return source;
+  const anchor = '      const editPath = Array.isArray(override.path) ? override.path : [];';
+  if (!source.includes(anchor)) throw new Error('Mass editor override handler is missing');
+  const branch = "      if (override.path?.length === 1 && override.value && typeof override.value === 'object' && !Array.isArray(override.value)) {\n        const entry = target[override.path[0]];\n        if (!entry || entry.id !== override.value.id) throw new Error('Mass editor entry snapshot is stale');\n        Object.keys(entry).forEach(key => { delete entry[key]; });\n        Object.assign(entry, JSON.parse(JSON.stringify(override.value)));\n        return;\n      }\n";
+  return source.replace(anchor, branch + anchor);
+}
+
 function ensureOrdinaryOverrideSection(source, jurisdiction) {
-  if (ordinaryOverrideBlock(source)) return source;
+  if (ordinaryOverrideBlock(source)) return ensureRootSnapshotSupport(source);
   const ordinaryStart = findOrdinaryArrayStart(source);
   const directProperty = ordinaryStart !== -1 && /\bordinary\s*:\s*$/u.test(source.slice(Math.max(0, ordinaryStart - 80), ordinaryStart));
   const registrations = Array.from(source.matchAll(/\n[ \t]*(?:global|globalThis)\.countryMassData(?:\[[^\r\n]+\]|\.[A-Za-z0-9_$-]+)\s*=/gu));
@@ -491,7 +500,7 @@ function ensureOrdinaryOverrideSection(source, jurisdiction) {
     const arrayNode = parseArrayNode(output, nextStart);
     output = `${output.slice(0, nextStart)}applyOrdinaryEditorOverrides(${output.slice(nextStart, arrayNode.end)})${output.slice(arrayNode.end)}`;
   }
-  return output;
+  return ensureRootSnapshotSupport(output);
 }
 
 // Keep structural edits after older field overrides, whose paths refer to the original rows.

@@ -5026,2151 +5026,6883 @@
   // MASS_DATA_EDITOR_OVERRIDES_START
   const ordinaryEditorOverrides = [
     {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "forms",
-          "1"
-        ],
-        "rows": [
+      "path": [
+        1
+      ],
+      "value": {
+        "id": "1.1 entrance",
+        "type": "part",
+        "header": {
+          "es": "Antífona de entrada"
+        },
+        "lines": [
           {
-            "sp_es": "C.",
-            "text_es": "CP P adre misericordioso, te pedimos humildemente por Jesucristo, tu Hijo, nuestro Señor, Junta las manos y dice: que aceptes y bendigas Traza, una sola vez, el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: estos ✠ dones, este sacrificio santo y puro que te ofrecemos, Con las manos extendidas, prosigue: ante todo, por tu Iglesia santa y católica,",
-            "__ordinaryStage": "te_igitur",
+            "text_es": "(Antífona de entrada del día)",
             "__massEditorPairKeys": {
-              "text_es": "canon:te_igitur:0:text"
+              "text_es": "0:text"
             }
-          },
-          {
-            "sp_es": "",
-            "text_es": "para que le concedas la paz, la protejas, la congregues en la unidad",
-            "__ordinaryStage": "te_igitur",
-            "__massEditorPairKeys": {
-              "text_es": "canon:te_igitur:1:text"
-            }
-          },
-          {
-            "rubric_es": "y la gobiernes en el mundo entero, con tu servidor el Papa N., con nuestro obispo N., Puede hacerse mención de los Obispos coadjutores o auxiliares. ________________________________ El Obispo, cuando celebra en su diócesis, dice:",
-            "__ordinaryStage": "te_igitur",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:te_igitur:2:rubric"
-            }
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "conmigo, indigno siervo tuyo, Cuando celebra un Obispo que no es el ordinario diocesano, dice: con mi hermano N., Obispo de esta Iglesia de N., conmigo,",
-            "__ordinaryStage": "te_igitur",
-            "__massEditorPairKeys": {
-              "text_es": "canon:te_igitur:3:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "indigno siervo tuyo, ________________________________ y todos los demás Obispos que, fieles a la verdad, promueven la fe católica y apostólica.",
-            "__ordinaryStage": "te_igitur",
-            "__massEditorPairKeys": {
-              "text_es": "canon:te_igitur:4:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Acuérdate, Señor, de tus hijos N. y N.",
-            "__ordinaryStage": "living",
-            "__massEditorPairKeys": {
-              "text_es": "canon:living:0:text"
-            },
-            "rubric_es": "Conmemoración de los vivos C1 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 30,
-                  "left": "",
-                  "right": "Acuérdate, Señor, de tus hijos N"
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "Después, con las manos extendidas, prosigue: y de todos los aquí reunidos, cuya fe y entrega bien conoces; por ellos y todos los suyos, por el perdón de sus pecados y la salvación que esperan, te ofrecemos, y ellos mismos te ofrecen, este sacrificio de alabanza, a ti, eterno Dios, vivo y verdadero.",
-            "__ordinaryStage": "living",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:living:1:rubric"
-            }
-          },
-          {
-            "type": "optionBlock",
-            "optionKey": "roman_canon_season",
-            "defaultOption": "ordinary",
-            "showControl": true,
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        2
+      ],
+      "value": {
+        "id": "1.2 greeting",
+        "type": "selectable",
+        "header": {
+          "es": "Saludo"
+        },
+        "variants": {
+          "A": {
             "label": {
-              "es": "Tiempo Ordinario"
+              "es": "Fórmula 1"
             },
-            "options": {
-              "ordinary": {
-                "label": {
-                  "es": "Tiempo Ordinario"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Reunidos en comunión con toda la Iglesia, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* la de su esposo, San José; la de los santos apóstoles y mártires",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:0:text"
-                    },
-                    "rubric_es": "Conmemoración de los santos C2 ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 31,
-                          "left": "",
-                          "right": "Reunidos en comunión con toda la"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:1:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:2:text"
-                    }
-                  }
-                ]
+            "lines": [
+              {
+                "text_es": ".",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                }
               },
-              "christmas": {
-                "label": {
-                  "es": "Navidad"
+              {
+                "rubric_es": "Reunido el pueblo, el sacerdote con los ministros va al altar mientras se entona el canto de entrada.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "1:rubric"
                 },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "nuestro Dios y Señor;* En la Natividad del Señor y durante su octava: Reunidos en comunión con toda la Iglesia para celebrar (la noche santa) el día santo en que la Virgen María, conservando intacta su virginidad, dio a luz al Salvador del mundo, veneramos la memoria, ante todo, de esta gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En la Epifanía del Señor:",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:0:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:1:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:2:text"
-                    }
-                  }
-                ]
+                "rubricInset_es": true
               },
-              "epiphany": {
-                "label": {
-                  "es": "Epifanía"
+              {
+                "rubric_es": "Cuando llega al altar, el sacerdote con los ministros hace la debida reverencia, besa el altar y, si se juzga oportuno, lo inciensa.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
                 },
-                "lines": [
-                  {
-                    "rubric_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que tu único Hijo, eterno como tú en la gloria, se manifestó en la verdad de nuestra carne, hecho hombre como nosotros, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En el Jueves Santo:",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "rubric_es": "canon:communicantes:0:rubric"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:1:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:2:text"
-                    }
-                  }
-                ]
+                "rubricInset_es": true
               },
-              "easter": {
-                "label": {
-                  "es": "Pascua"
+              {
+                "rubric_es": "Después se dirige con los ministros a la sede.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
                 },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Desde la misa de la Vigilia Pascual hasta el Segundo Domingo de Pascua: Reunidos en comunión con toda la Iglesia para celebrar (la noche santa) el día santo de la resurrección de nuestro Señor Jesucristo según la carne, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En la Ascensión del Señor:",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:0:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:1:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:2:text"
-                    }
-                  }
-                ]
+                "rubricInset_es": true
               },
-              "ascension": {
-                "label": {
-                  "es": "Ascensión"
+              {
+                "rubric_es": "Terminado el canto de entrada, el sacerdote y los fieles, de pie, se santiguan mientras el sacerdote, de cara al pueblo, dice:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "4:rubric"
                 },
-                "lines": [
-                  {
-                    "rubric_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que tu único Hijo, nuestro Señor Jesucristo, habiendo tomado nuestra débil condición humana, la exaltó a la derecha de tu gloria, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En el Domingo de Pentecostés:",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "rubric_es": "canon:communicantes:0:rubric"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:1:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:2:text"
-                    }
-                  }
-                ]
+                "rubricInset_es": true
               },
-              "pentecost": {
-                "label": {
-                  "es": "Pentecostés"
+              {
+                "text_es": "En el nombre del Padre, y del Hijo, y del Espíritu Santo.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
                 },
-                "lines": [
-                  {
-                    "rubric_es": "Reunidos en comunión con toda la Iglesia para celebrar el día de Pentecostés, en que el Espíritu Santo se manifestó a los apóstoles en lenguas de fuego, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* __________________________________",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "rubric_es": "canon:communicantes:0:rubric"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:1:text"
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
-                    "__ordinaryStage": "communicantes",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:communicantes:2:text"
-                    }
-                  }
-                ]
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "2.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "El sacerdote, extendiendo las manos, saluda al pueblo con una de las fórmulas siguientes:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "8:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "El Señor esté con ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "9:text"
+                },
+                "sp_es": "Todos"
               }
-            },
-            "pairKey": "canon:communicantes:choice"
+            ]
           },
-          {
-            "type": "optionBlock",
-            "optionKey": "roman_canon_season",
-            "defaultOption": "ordinary",
-            "showControl": false,
+          "B": {
             "label": {
-              "es": "Tiempo Ordinario"
+              "es": "Fórmula 2"
             },
-            "options": {
-              "ordinary": {
-                "label": {
-                  "es": "Tiempo Ordinario"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:0:text"
-                    },
-                    "rubric_es": "Con las manos extendidas prosigue: CP ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 38,
-                          "left": "",
-                          "right": "Acepta, Señor, en tu bondad, est"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "[Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:1:text"
-                    },
-                    "rubric_es": "Junta las manos. ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 17,
-                          "left": "",
-                          "right": "[Por Cristo nuestro Señor."
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:2:text"
-                    }
-                  }
-                ]
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
               },
-              "christmas": {
-                "label": {
-                  "es": "Navidad"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:0:text"
-                    },
-                    "rubric_es": "Con las manos extendidas prosigue: CP ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 38,
-                          "left": "",
-                          "right": "Acepta, Señor, en tu bondad, est"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "[Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:1:text"
-                    },
-                    "rubric_es": "Junta las manos. ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 17,
-                          "left": "",
-                          "right": "[Por Cristo nuestro Señor."
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:2:text"
-                    }
-                  }
-                ]
-              },
-              "epiphany": {
-                "label": {
-                  "es": "Epifanía"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:0:text"
-                    },
-                    "rubric_es": "Con las manos extendidas prosigue: CP ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 38,
-                          "left": "",
-                          "right": "Acepta, Señor, en tu bondad, est"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "[Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:1:text"
-                    },
-                    "rubric_es": "Junta las manos. ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 17,
-                          "left": "",
-                          "right": "[Por Cristo nuestro Señor."
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:2:text"
-                    }
-                  }
-                ]
-              },
-              "easter": {
-                "label": {
-                  "es": "Pascua"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:0:text"
-                    },
-                    "rubric_es": "Con las manos extendidas prosigue: CP ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 38,
-                          "left": "",
-                          "right": "Acepta, Señor, en tu bondad, est"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "[Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:1:text"
-                    },
-                    "rubric_es": "Junta las manos. ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 17,
-                          "left": "",
-                          "right": "[Por Cristo nuestro Señor."
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:2:text"
-                    }
-                  }
-                ]
-              },
-              "ascension": {
-                "label": {
-                  "es": "Ascensión"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:0:text"
-                    },
-                    "rubric_es": "Con las manos extendidas prosigue: CP ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 38,
-                          "left": "",
-                          "right": "Acepta, Señor, en tu bondad, est"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "[Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:1:text"
-                    },
-                    "rubric_es": "Junta las manos. ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 17,
-                          "left": "",
-                          "right": "[Por Cristo nuestro Señor."
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:2:text"
-                    }
-                  }
-                ]
-              },
-              "pentecost": {
-                "label": {
-                  "es": "Pentecostés"
-                },
-                "lines": [
-                  {
-                    "sp_es": "",
-                    "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:0:text"
-                    },
-                    "rubric_es": "Con las manos extendidas prosigue: CP ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 38,
-                          "left": "",
-                          "right": "Acepta, Señor, en tu bondad, est"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "[Por Cristo nuestro Señor.",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:1:text"
-                    },
-                    "rubric_es": "Junta las manos. ",
-                    "rubricLayout_es": {
-                      "blockEnd": 0,
-                      "pieces": [
-                        {
-                          "at": 0,
-                          "from": 0,
-                          "to": 17,
-                          "left": "",
-                          "right": "[Por Cristo nuestro Señor."
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "sp_es": "",
-                    "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
-                    "__ordinaryStage": "hanc_igitur",
-                    "__massEditorPairKeys": {
-                      "text_es": "canon:hanc_igitur:2:text"
-                    }
-                  }
-                ]
+              {
+                "text_es": "La gracia de nuestro Señor Jesucristo, el amor del Padre y la comunión del Espíritu Santo esté con todos ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
               }
+            ]
+          },
+          "C": {
+            "label": {
+              "es": "Fórmula 3"
             },
-            "pairKey": "canon:hanc_igitur:choice"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Extendiendo las manos sobre las ofrendas, dice: CC Bendice y santifica, oh Padre, esta ofrenda haciéndola perfecta, espiritual y digna de ti, de manera que sea para nosotros Cuerpo y Sangre de tu Hijo amado, Jesucristo, nuestro Señor.",
-            "__ordinaryStage": "quam_oblationem",
-            "__massEditorPairKeys": {
-              "text_es": "canon:quam_oblationem:0:text"
-            }
-          },
-          {
-            "__ordinaryStage": "quam_oblationem",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:quam_oblationem:1:rubric"
-            },
-            "rubric_es": "Junta las manos."
-          },
-          {
-            "sp_es": "",
-            "text_es": "El cual, la víspera de su Pasión, ___________________________________ En la Misa Vespertina del Jueves santo: El cual, hoy, la víspera de padecer por nuestra salvación y la de todos los hombres, ___________________________________ Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: tomó pan en sus santas y venerables manos, Eleva los ojos. y elevando los ojos al cielo, hacia ti,",
-            "__ordinaryStage": "bread",
-            "__massEditorPairKeys": {
-              "text_es": "canon:bread:0:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Dios Padre suyo todopoderoso, dando gracias te bendijo, lo partió y lo dio a sus discípulos diciendo: ",
-            "__ordinaryStage": "bread",
-            "__massEditorPairKeys": {
-              "text_es": "canon:bread:1:text"
-            },
-            "rubric_es": "Se inclina un poco.",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 102,
-                  "from": 0,
-                  "to": 19,
-                  "left": " dio a sus discípulos diciendo: ",
-                  "right": ""
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
                 }
-              ]
-            }
-          },
-          {
-            "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES.",
-            "__ordinaryStage": "bread",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:bread:2:rubric"
-            }
-          },
-          {
-            "__ordinaryStage": "bread",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:bread:3:rubric"
-            },
-            "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo:",
-            "__ordinaryStage": "cup",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:cup:0:rubric"
-            }
-          },
-          {
-            "rubric_es": "Se inclina un poco.",
-            "__ordinaryStage": "cup",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:cup:1:rubric"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS.",
-            "__ordinaryStage": "cup",
-            "__massEditorPairKeys": {
-              "text_es": "canon:cup:2:text"
-            }
-          },
-          {
-            "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA.",
-            "__ordinaryStage": "cup",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:cup:3:rubric"
-            }
-          },
-          {
-            "__ordinaryStage": "cup",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:cup:4:rubric"
-            },
-            "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "Luego dice una de las siguientes fórmulas: CP Éste es el Misterio de la fe.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:mystery:0:rubric"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:mystery:1:rubric"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Sacramento de nuestra fe.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:2:text"
-            }
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:mystery:3:rubric"
-            }
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús! ___________________________________ También puede decirse: Éste es el Misterio de la fe.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:4:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Cristo nos redimió.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:5:text"
-            }
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:mystery:6:rubric"
-            }
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz,",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:7:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "anunciamos tu muerte, Señor, hasta que vuelvas.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:8:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:mystery:9:rubric"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Misterio de la fe.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:10:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Cristo se entregó por nosotros.",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:11:text"
-            }
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:mystery:12:rubric"
-            }
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. ___________________________________",
-            "__ordinaryStage": "mystery",
-            "__massEditorPairKeys": {
-              "text_es": "canon:mystery:13:text"
-            }
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "Por eso, Padre, nosotros, tus siervos, y todo tu pueblo santo, al celebrar este memorial de la muerte gloriosa de Jesucristo, tu Hijo, nuestro Señor; de su santa resurrección del lugar de los muertos y de su admirable ascensión a los cielos, te ofrecemos, Dios de gloria y majestad, de los mismos bienes que nos has dado, el sacrificio puro, inmaculado y santo;",
-            "__ordinaryStage": "anamnesis",
-            "__massEditorPairKeys": {
-              "text_es": "canon:anamnesis:0:text"
-            },
-            "rubric_es": "CC ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Por eso, Padre, nosotros, tus si"
+              },
+              {
+                "text_es": "La gracia y la paz de Dios, nuestro Padre, y de Jesucristo, el Señor, esté con todos ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
                 }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "pan de vida eterna y cáliz de eterna salvación.",
-            "__ordinaryStage": "anamnesis",
-            "__massEditorPairKeys": {
-              "text_es": "canon:anamnesis:1:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Mira con ojos de bondad esta ofrenda y acéptala, como aceptaste los dones del justo Abel, el sacrificio de Abrahán, nuestro padre en la fe, y la oblación pura de tu sumo sacerdote Melquisedec.",
-            "__ordinaryStage": "supra_quae",
-            "__massEditorPairKeys": {
-              "text_es": "canon:supra_quae:0:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Te pedimos humildemente, Dios todopoderoso,",
-            "__ordinaryStage": "supplices",
-            "__massEditorPairKeys": {
-              "text_es": "canon:supplices:0:text"
-            },
-            "rubric_es": "Inclinado, con las manos juntas prosigue: ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 42,
-                  "left": "",
-                  "right": "Te pedimos humildemente, Dios to"
+              },
+              {
+                "text_es": "Y con tu espíritu.",
+                "__massEditorPairKeys": {
+                  "text_es": "2:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "También pueden usarse las fórmulas de saludo propias de cada tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
                 }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "que esta ofrenda sea llevada a tu presencia, hasta el altar del cielo, por manos tu ángel, para que cuantos recibimos el Cuerpo y la Sangre de tu Hijo, al participar aquí de este altar, Se endereza y se signa diciendo: seamos colmados de gracia y bendición. [Por Cristo, nuestro Señor.",
-            "__ordinaryStage": "supplices",
-            "__massEditorPairKeys": {
-              "text_es": "canon:supplices:1:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Amén.]",
-            "__ordinaryStage": "supplices",
-            "__massEditorPairKeys": {
-              "text_es": "canon:supplices:2:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Acuérdate también, Señor, de tus hijos N. y N., Puede decir los nombres de los difuntos por quienes se quiere orar. que nos han precedido con el signo de la fe y duermen ya el sueño de la paz.",
-            "__ordinaryStage": "departed",
-            "__massEditorPairKeys": {
-              "text_es": "canon:departed:0:text"
-            },
-            "rubric_es": "Con las manos expendidas dice: C3 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 34,
-                  "left": "",
-                  "right": "Acuérdate también, Señor, de tus"
-                }
-              ]
-            }
-          },
-          {
-            "__ordinaryStage": "departed",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:departed:1:rubric"
-            },
-            "rubric_es": "Junta las manos y ora unos momentos por los difuntos por quienes tiene intención de orar."
-          },
-          {
-            "rubric_es": "Después, con las manos extendidas, prosigue: A ellos, Señor, y a cuantos descansan en Cristo, concédeles el lugar del consuelo, de la luz y de la paz.",
-            "__ordinaryStage": "departed",
-            "__massEditorPairKeys": {
-              "rubric_es": "canon:departed:2:rubric"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "[Por Cristo nuestro Señor.",
-            "__ordinaryStage": "departed",
-            "__massEditorPairKeys": {
-              "text_es": "canon:departed:3:text"
-            },
-            "rubric_es": "Junta las manos. ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 17,
-                  "left": "",
-                  "right": "[Por Cristo nuestro Señor."
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Amén.]",
-            "__ordinaryStage": "departed",
-            "__massEditorPairKeys": {
-              "text_es": "canon:departed:4:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Con la mano derecha se golpea el pecho diciendo: C4 Y a nosotros, pecadores, siervos tuyos, Con las manos extendidas prosigue: que confiamos en tu infinita misericordia, admítenos en la asamblea de los santos apóstoles y mártires Juan el Bautista, Esteban, Matías y Bernabé,",
-            "__ordinaryStage": "nobis_quoque",
-            "__massEditorPairKeys": {
-              "text_es": "canon:nobis_quoque:0:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "[Ignacio, Alejandro, Marcelino y Pedro, Felicidad y Perpetua, Águeda, Lucía, Inés, Cecilia y Anastasia] y de todos los santos; y acéptanos en su compañía, no por nuestros méritos, sino conforme a tu bondad.",
-            "__ordinaryStage": "nobis_quoque",
-            "__massEditorPairKeys": {
-              "text_es": "canon:nobis_quoque:1:text"
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Por Cristo, Señor nuestro.",
-            "__ordinaryStage": "nobis_quoque",
-            "__massEditorPairKeys": {
-              "text_es": "canon:nobis_quoque:2:text"
-            },
-            "rubric_es": "Junta las manos: ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 17,
-                  "left": "",
-                  "right": "Por Cristo, Señor nuestro."
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Por quien sigues creando todos los bienes, los santificas, los llenas de vida, los bendices y los repartes entre nosotros.",
-            "__ordinaryStage": "per_quem",
-            "__massEditorPairKeys": {
-              "text_es": "canon:per_quem:0:text"
-            },
-            "rubric_es": "Y continúa: CP ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 15,
-                  "left": "",
-                  "right": "Por quien sigues creando todos l"
-                }
-              ]
-            }
+              },
+              {
+                "rubric_es": "El obispo, en vez de las anteriores fórmulas, en este primer saludo dice:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "4:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "La paz esté con ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                },
+                "sp_es": "C."
+              }
+            ]
           }
-        ]
-      }
-    },
-    {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "forms",
-          "2"
-        ],
-        "rows": [
-          {
-            "sp_es": "",
-            "text_es": "Santo, Santo, Santo es el Señor, Dios del universo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Llenos están el cielo y la tierra de tu gloria."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Hosanna. en el cielo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Bendito el que viene en nombre del Señor."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Hosanna en el cielo."
-          },
-          {
-            "rubric_es": "100."
-          },
-          {
-            "rubric_es": "El sacerdote, con las manos extendidas, dice:"
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "CP S anto eres en verdad, Señor, fuente de toda santidad;"
-          },
-          {
-            "rubric_es": "101."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice: CC por eso te pedimos que santifiques estos dones con la efusión de tu Espíritu, Junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: de manera que sean para nosotros Cuerpo y ✠ Sangre de Jesucristo, nuestro Señor."
-          },
-          {
-            "rubric_es": "Junta las manos."
-          },
-          {
-            "rubric_es": "102."
-          },
-          {
-            "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse con claridad, como lo requiere la naturaleza de éstas."
-          },
-          {
-            "sp_es": "",
-            "text_es": "El cual,  cuando iba a ser entregado a su Pasión, voluntariamente aceptada, "
-          },
-          {
-            "sp_es": "",
-            "text_es": "tomó pan, dándote gracias, lo partió y lo dio a sus discípulos, diciendo: ",
-            "rubric_es": "Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: \nSe inclina un poco.",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 71,
-                  "left": "",
-                  "right": "tomó pan, dándote gracias, lo pa"
-                },
-                {
-                  "at": 74,
-                  "from": 72,
-                  "to": 91,
-                  "left": "dio a sus discípulos, diciendo: ",
-                  "right": ""
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES."
-          },
-          {
-            "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "103."
-          },
-          {
-            "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo: Se inclina un poco."
-          },
-          {
-            "sp_es": "",
-            "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS."
-          },
-          {
-            "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
-          },
-          {
-            "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "104."
-          },
-          {
-            "rubric_es": "Luego dice una de las siguientes fórmulas:"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Misterio de la fe.",
-            "rubric_es": "CP ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Éste es el Misterio de la fe."
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "O bien:"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Sacramento de nuestra fe."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús!  También puede decirse: Éste es el Misterio de la fe."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Cristo nos redimió."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz, anunciamos tu muerte, Señor, hasta que vuelvas."
-          },
-          {
-            "rubric_es": "O bien:"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Misterio de la fe."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Cristo se entregó por nosotros."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. "
-          },
-          {
-            "rubric_es": "105."
-          },
-          {
-            "rubric_es": "Después el sacerdote, con las manos extendidas, dice:"
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "Así, pues, Padre, al celebrar ahora el memorial de la muerte y resurrección de tu Hijo,",
-            "rubric_es": "CC ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Así, pues, Padre, al celebrar ah"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "te ofrecemos el pan de vida y el cáliz de salvación, y te damos gracias porque nos haces dignos de servirte en tu presencia."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Te pedimos humildemente que el Espíritu Santo congregue en la unidad a cuantos participamos del Cuerpo y Sangre de Cristo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra;",
-            "rubric_es": "C1 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Acuérdate, Señor, de tu Iglesia "
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": " y con el Papa N., con nuestro Obispo N."
-          },
-          {
-            "rubric_es": " y todos los pastores que cuidan de tu pueblo, llévala a su perfección por la caridad. "
-          },
-          {
-            "sp_es": "",
-            "text_es": "En la misa por los difuntos: Recuerda a tu hijo (hija) N., a quien llamaste (hoy) de este mundo a tu presencia; concédele que, así como ha compartido ya la muerte de Jesucristo, comparta también con él la gloria de la resurrección. "
-          },
-          {
-            "sp_es": "",
-            "text_es": "Acuérdate también de nuestros hermanos que se durmieron en la esperanza de la resurrección, y de todos los que han muerto en tu misericordia; admítelos a contemplar la luz de tu rostro.",
-            "rubric_es": "C2 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Acuérdate también de nuestros he"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Ten misericordia de todos nosotros, y así, con María, la Virgen Madre de Dios, su esposo san José, los apóstoles y cuantos vivieron en tu amistad a través de los tiempos, merezcamos, por tu Hijo Jesucristo, compartir la vida eterna y cantar tus alabanzas."
-          },
-          {
-            "rubric_es": "Junta las manos."
-          },
-          {
-            "rubric_es": "106."
-          }
-        ]
-      }
-    },
-    {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "forms",
-          "3"
-        ],
-        "rows": [
-          {
-            "rubric_es": "PLEGARIA EUCARÍSTICA III"
-          },
-          {
-            "rubric_es": "107."
-          },
-          {
-            "sp_es": "V/.",
-            "text_es": "El Señor esté con ustedes."
-          },
-          {
-            "sp_es": "R/.",
-            "text_es": "Y con tu espíritu."
-          },
-          {
-            "sp_es": "V/.",
-            "text_es": "Levantemos el corazón."
-          },
-          {
-            "sp_es": "R/.",
-            "text_es": "Lo tenemos levantado hacia el Señor."
-          },
-          {
-            "sp_es": "V/.",
-            "text_es": "Demos gracias al Señor, nuestro Dios."
-          },
-          {
-            "sp_es": "R/.",
-            "text_es": "Es justo y necesario."
-          },
-          {
-            "rubric_es": "Sigue el prefacio, dicho según las rúbricas, que concluye: Santo, Santo, Santo es el Señor, Dios del universo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Llenos están el cielo y la tierra de tu gloria."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Hosanna. en el cielo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Bendito el que viene en nombre del Señor."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Hosanna en el cielo."
-          },
-          {
-            "rubric_es": "122."
-          },
-          {
-            "rubric_es": "El sacerdote, con las manos extendidas, dice:"
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "CP S anto eres en verdad, Padre, y con razón te alaban todas tus criaturas, ya que por Jesucristo, tu Hijo, Señor nuestro, con la fuerza del Espíritu Santo, das vida y santificas todo, y congregas a tu pueblo sin cesar, para que ofrezca en tu honor un sacrificio sin mancha desde donde sale el sol hasta el ocaso."
-          },
-          {
-            "rubric_es": "109."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Por eso, Padre, te suplicamos que santifiques por el mismo Espíritu estos dones que hemos separado para ti,",
-            "rubric_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice: CC ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 74,
-                  "left": "",
-                  "right": "Por eso, Padre, te suplicamos qu"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "de manera que sean Cuerpo y ✠ Sangre de Jesucristo, Hijo tuyo y Señor nuestro, junta las manos que nos mandó celebrar estos misterios.",
-            "rubric_es": "junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 93,
-                  "left": "",
-                  "right": "de manera que sean Cuerpo y ✠ Sa"
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "110."
-          },
-          {
-            "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse con claridad, como lo requiere la naturaleza de las mismas palabras."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Porque él mismo, la noche en que iba a ser entregado,  Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: tomó pan, y dando gracias te bendijo,"
-          },
-          {
-            "sp_es": "",
-            "text_es": "lo partió y lo dio a sus discípulos diciendo: ",
-            "rubric_es": "Se inclina un poco.",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 46,
-                  "from": 0,
-                  "to": 19,
-                  "left": " dio a sus discípulos diciendo: ",
-                  "right": ""
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES."
-          },
-          {
-            "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "111."
-          },
-          {
-            "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso"
-          },
-          {
-            "sp_es": "",
-            "text_es": "en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo: ",
-            "rubric_es": "Se inclina un poco.",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 96,
-                  "from": 0,
-                  "to": 19,
-                  "left": " dio a sus discípulos diciendo: ",
-                  "right": ""
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS."
-          },
-          {
-            "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
-          },
-          {
-            "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "112."
-          },
-          {
-            "rubric_es": "Luego dice una de las siguientes fórmulas: CP Éste es el Misterio de la fe."
-          },
-          {
-            "rubric_es": "O bien:"
-          },
-          {
-            "rubric_es": "Éste es el Sacramento de nuestra fe. Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús!  También puede decirse: Éste es el Misterio de la fe. Cristo nos redimió."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz, anunciamos tu muerte, Señor, hasta que vuelvas."
-          },
-          {
-            "rubric_es": "O bien:"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Misterio de la fe."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Cristo se entregó por nosotros."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. "
-          },
-          {
-            "rubric_es": "113."
-          },
-          {
-            "rubric_es": "Después el sacerdote, con las manos extendidas, dice:"
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "Así, pues, Padre, al celebrar ahora el memorial de la pasión salvadora de tu Hijo, de su admirable resurrección y ascensión al cielo, mientras esperamos su venida gloriosa, te ofrecemos, en esta acción de gracias, el sacrificio vivo y santo.",
-            "rubric_es": "CC ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Así, pues, Padre, al celebrar ah"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Dirige tu mirada sobre la ofrenda de tu Iglesia, y reconoce en ella la Víctima por cuya inmolación quisiste devolvernos tu amistad, para que, fortalecidos con el Cuerpo y Sangre de tu Hijo y llenos de su Espíritu Santo, formemos en Cristo un solo cuerpo y un solo espíritu."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Que él nos transforme en ofrenda permanente, para que gocemos de tu heredad junto con tus elegidos: con María, la Virgen Madre de Dios, su esposo, san José, los apóstoles y los mártires, [san N.: santo del día o patrono] y todos los santos, por cuya intercesión confiamos obtener siempre tu ayuda.",
-            "rubric_es": "C1 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Que él nos transforme en ofrenda"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Te pedimos, Padre, que esta Víctima de reconciliación traiga la paz y la salvación al mundo entero.",
-            "rubric_es": "C2 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Te pedimos, Padre, que esta Víct"
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "Confirma en la fe y en la caridad a tu Iglesia, peregrina en la tierra: al tu servidor, el Papa N., a nuestro obispo N., Puede hacerse también mención de los Obispos coadjutores o auxiliares.  El Obispo, cuando celebra en su diócesis, dice:"
-          },
-          {
-            "sp_es": "",
-            "text_es": " al orden episcopal, a los presbíteros y diáconos, y a todo el pueblo redimido por ti. "
-          },
-          {
-            "sp_es": "",
-            "text_es": " Atiende los deseos y súplicas de esta familia que has congregado en tu presencia. "
-          },
-          {
-            "sp_es": "",
-            "text_es": "donde esperamos gozar todos juntos de la plenitud eterna de tu gloria, "
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y a nuestros hermanos difuntos y a cuantos murieron en tu amistad recíbelos en tu reino, donde esperamos gozar todos juntos de la plenitud eterna de tu gloria; allí enjugarás las lágrimas de nuestros ojos, porque, al contemplarte como tú eres, Dios nuestro, seremos para siempre semejantes a ti y cantaremos eternamente tus alabanzas, "
-          },
-          {
-            "sp_es": "",
-            "text_es": "por Cristo, Señor nuestro, por quien concedes al mundo todos los bienes.",
-            "rubric_es": "Junta las manos. ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 17,
-                  "left": "",
-                  "right": "por Cristo, Señor nuestro, por q"
-                }
-              ]
-            }
-          },
-          {
-            "rubric_es": "116."
-          }
-        ]
-      }
-    },
-    {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "forms",
-          "4"
-        ],
-        "rows": [
-          {
-            "rubric_es": "PLEGARIA EUCARÍSTICA IV"
-          },
-          {
-            "rubric_es": "116."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Esta plegaria eucarística forma un todo con su prefacio, el cual nunca puede cambiarse."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Por consiguiente, no puede decirse cuando está prescrito un prefacio propio."
-          },
-          {
-            "sp_es": "",
-            "text_es": "En los otros casos puede decirse, incluso cuando las rúbricas prescriban un prefacio del tiempo."
-          },
-          {
-            "sp_es": "V/.",
-            "text_es": "El Señor esté con ustedes."
-          },
-          {
-            "sp_es": "R/.",
-            "text_es": "Y con tu espíritu."
-          },
-          {
-            "sp_es": "V/.",
-            "text_es": "Levantemos el corazón."
-          },
-          {
-            "sp_es": "R/.",
-            "text_es": "Lo tenemos levantado hacia el Señor."
-          },
-          {
-            "sp_es": "V/.",
-            "text_es": "Demos gracias al Señor, nuestro Dios."
-          },
-          {
-            "sp_es": "R/.",
-            "text_es": "Es justo y necesario."
-          },
-          {
-            "sp_es": "",
-            "text_es": "En verdad es justo darte gracias, y deber nuestro glorificarte, Padre santo, porque tú eres el único Dios vivo y verdadero que existes desde siempre y vives para siempre; luz sobre toda luz.",
-            "rubric_es": "CP ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "En verdad es justo darte gracias"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Porque tú solo eres bueno y fuente de vida, hiciste todas las cosas para colmarlas de tus bendiciones y alegrar su multitud con la claridad de tu gloria."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Por eso, innumerables ángeles en tu presencia, contemplando la gloria de tu rostro, te sirven siempre y te glorifican sin cesar."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y con ellos también nosotros, llenos de alegría, y por nuestra voz las demás criaturas, aclamamos tu nombre cantando: Santo, Santo, Santo es el Señor, Dios del Universo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Llenos están el cielo y la tierra de tu gloria."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Hosanna en el cielo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Bendito el que viene en nombre del Señor."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Hosanna en el cielo."
-          },
-          {
-            "rubric_es": "117."
-          },
-          {
-            "rubric_es": "El sacerdote, con las manos extendidas, dice:"
-          },
-          {
-            "sp_es": "C.",
-            "text_es": "T alabamos, Padre santo, porque eres grande, porque hiciste todas las cosas con sabiduría y amor.",
-            "rubric_es": "CP ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "T alabamos, Padre santo, porque "
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "A imagen tuya creaste al hombre y le encomendaste el universo entero, para que, sirviéndote sólo a ti, su Creador, dominara todo lo creado."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y cuando por desobediencia perdió tu amistad, no lo abandonaste al poder de la muerte, sino que, compadecido, tendiste la mano a todos, para que te encuentre el que te busca."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Reiteraste, además, tu alianza a los hombres; por los profetas los fuiste llevando con la esperanza de salvación."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y tanto amaste al mundo, Padre santo, que, al cumplirse la plenitud de los tiempos, nos enviaste como salvador a tu único Hijo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "El cual se encarnó por obra del Espíritu Santo, nació de María, la Virgen, y así compartió en todo nuestra condición humana menos en el pecado; anunció la salvación a los pobres, la liberación a los oprimidos y a los afligidos el consuelo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Para cumplir tus designios, él mismo se entregó a la muerte, y, resucitando, destruyó la muerte y nos dio nueva vida."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y porque no vivamos ya para nosotros mismos, sino para él, que por nosotros murió y resucitó, envió, Padre, desde tu seno al Espíritu Santo como primicia para los creyentes, a fin de santificar todas las cosas, llevando a plenitud su obra en el mundo."
-          },
-          {
-            "rubric_es": "118."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice: CC Por eso, Padre, te rogamos que este mismo Espíritu santifique, Señor, estas ofrendas, Junta las manos y traza, una sola vez, el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: para que sean Cuerpo y ✠ Sangre de Jesucristo, nuestro Señor, Junta las manos. y así celebremos el gran misterio que nos dejó como alianza eterna."
-          },
-          {
-            "rubric_es": "119."
-          },
-          {
-            "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse con claridad, como lo requiere la naturaleza de éstas."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Porque él mismo, llegada la hora en que había de ser glorificado por ti, Padre santo, habiendo amado a los suyos que estaban en el mundo, los amó hasta el extremo."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y, mientras cenaba con sus discípulos, Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: tomó pan, te bendijo, lo partió y se lo dio diciendo: Se inclina un poco."
-          },
-          {
-            "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES."
-          },
-          {
-            "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "120."
-          },
-          {
-            "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo: Se inclina un poco."
-          },
-          {
-            "sp_es": "",
-            "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS."
-          },
-          {
-            "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA."
-          },
-          {
-            "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión."
-          },
-          {
-            "rubric_es": "121. Luego dice una de las siguientes fórmulas: CP Éste es el Misterio de la fe."
-          },
-          {
-            "rubric_es": "O bien:"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Éste es el Sacramento de nuestra fe."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús! ___________________________________ También puede decirse: Éste es el Misterio de la fe."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Cristo nos redimió."
-          },
-          {
-            "rubric_es": "Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz, anunciamos tu muerte, Señor, hasta que vuelvas."
-          },
-          {
-            "rubric_es": "O bien:"
-          },
-          {
-            "rubric_es": "Éste es el Misterio de la fe. Cristo se entregó por nosotros. Y el pueblo prosigue, aclamando:"
-          },
-          {
-            "sp_es": "Todos",
-            "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. ___________________________________"
-          },
-          {
-            "rubric_es": "122. Después el sacerdote, con las manos extendidas, dice:"
-          },
-          {
-            "sp_es": "",
-            "text_es": "Por eso, Padre, al celebrar ahora el memorial de nuestra redención, recordamos la muerte de Cristo y su descenso al lugar de los muertos, proclamamos su resurrección y ascensión a tu derecha; y mientras esperamos su venida gloriosa, te ofrecemos su Cuerpo y su Sangre, sacrificio agradable a ti y salvación para todo el mundo.",
-            "rubric_es": "CC ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Por eso, Padre, al celebrar ahor"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Dirige tu mirada sobre esta Víctima que tú mismo has preparado a tu Iglesia, y concede a cuantos compartimos este pan y este cáliz, que, congregados en un solo cuerpo por el Espíritu Santo, seamos en Cristo víctima viva para alabanza de tu gloria."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Y ahora, Señor, acuérdate de todos aquellos por quienes se ofrece este sacrificio: de tu servidor el Papa N., de nuestro obispo N., Puede hacerse también mención de los Obispos coadjutores o auxiliares. ____________________________ El Obispo, cuando celebra en su diócesis, dice: conmigo, indigno siervo tuyo, Cuando celebra un Obispo que no es el Ordinario diocesano, dice: con mi hermano N.,",
-            "rubric_es": "C1 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Y ahora, Señor, acuérdate de tod"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Obispo de esta Iglesia de N., conmigo, indigno siervo tuyo, ______________________________"
-          },
-          {
-            "rubric_es": "del orden episcopal y de los presbíteros y diáconos, de los oferentes y de los aquí reunidos, ________________________________ INTERCESIONES PARTICULARES En las misas de Pascua y en la del bautismos:"
-          },
-          {
-            "sp_es": "D.",
-            "text_es": "* de nuestros hermanos [N. y N.] que hoy has hecho renacer del agua del Espíritu Santo, En la misa de la confirmación: * de tus hijos [N. y N.], que hoy has confirmado marcándolos con el sello del Espíritu Santo,"
-          },
-          {
-            "sp_es": "",
-            "text_es": "En la misa de primera comunión: * de tus hijos [N. y N.], que por vez primera invitas en este día a participar del pan de vida y del cáliz de salvación, en la mesa de tu familia, En la misa del matrimonio: * de tus hijos [N. y N.], que en Cristo hoy han fundado una nueva familia, ____________________________ de todo tu pueblo santo y de aquellos que te buscan con sincero corazón."
-          },
-          {
-            "sp_es": "",
-            "text_es": "Acuérdate también de los que murieron en la paz de Cristo y de todos los difuntos, cuya fe sólo tú conociste.",
-            "rubric_es": "C2 ",
-            "rubricLayout_es": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 3,
-                  "left": "",
-                  "right": "Acuérdate también de los que mur"
-                }
-              ]
-            }
-          },
-          {
-            "sp_es": "",
-            "text_es": "Padre de bondad, que todos tus hijos nos reunamos en la heredad de tu reino, con María, la Virgen Madre de Dios, con su esposo san José,"
-          },
-          {
-            "sp_es": "",
-            "text_es": "con los apóstoles y los santos; y allí, junto con toda la creación libre ya de pecado y de muerte, Junta las manos. te glorifiquemos por Cristo, Señor nuestro, por quien concedes al mundo todos los bienes."
-          },
-          {
-            "rubric_es": "123."
-          }
-        ]
-      }
-    },
-    {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "formEndings"
-        ],
-        "rows": {
-          "1": [
-            {
-              "sp_es": "",
-              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
-              "rubric_es": "Toma la patena con el pan consagrado, y el cáliz y, sosteniéndolos elevados, dice: CP ",
-              "rubricLayout_es": {
-                "blockEnd": 0,
-                "pieces": [
-                  {
-                    "at": 0,
-                    "from": 0,
-                    "to": 86,
-                    "left": "",
-                    "right": "Por Cristo, con él y en él, o a "
-                  }
-                ]
-              }
-            },
-            {
-              "sp_es": "Todos",
-              "text_es": "Amén."
-            },
-            {
-              "rubric_es": "Después sigue el rito de la Comunión."
-            },
-            {
-              "rubric_es": "PLEGARIA EUCARÍSTICA II"
-            },
-            {
-              "rubric_es": "99."
-            },
-            {
-              "sp_es": "",
-              "text_es": "Esta plegaria eucarística tiene un prefacio propio que forma parte de su misma estructura."
-            },
-            {
-              "sp_es": "",
-              "text_es": "Con todo, se pueden usar también con esta plegaria otros prefacios, especialmente aquellos que presentan una breve síntesis del misterio de la salvación."
-            },
-            {
-              "sp_es": "V/.",
-              "text_es": "El Señor esté con ustedes."
-            },
-            {
-              "sp_es": "R/.",
-              "text_es": "Y con tu espíritu."
-            },
-            {
-              "sp_es": "V/.",
-              "text_es": "Levantemos el corazón."
-            },
-            {
-              "sp_es": "R/.",
-              "text_es": "Lo tenemos levantado hacia el Señor."
-            },
-            {
-              "sp_es": "V/.",
-              "text_es": "Demos gracias al Señor, nuestro Dios."
-            },
-            {
-              "sp_es": "R/.",
-              "text_es": "Es justo y necesario."
-            },
-            {
-              "sp_es": "",
-              "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias, Padre santo, siempre y en todo lugar, por Jesucristo, tu Hijo amado.",
-              "rubric_es": "CP ",
-              "rubricLayout_es": {
-                "blockEnd": 0,
-                "pieces": [
-                  {
-                    "at": 0,
-                    "from": 0,
-                    "to": 3,
-                    "left": "",
-                    "right": "En verdad es justo y necesario, "
-                  }
-                ]
-              }
-            },
-            {
-              "sp_es": "",
-              "text_es": "Por él, que es tu Palabra, hiciste todas las cosas; tú nos lo enviaste para que, hecho hombre por obra del Espíritu Santo y nacido de María, la Virgen, fuera nuestro Salvador y Redentor."
-            },
-            {
-              "sp_es": "",
-              "text_es": "Él, en cumplimiento de tu voluntad, para destruir la muerte y manifestar la resurrección, extendió sus brazos en la cruz, y así adquirió para ti un pueblo santo."
-            },
-            {
-              "sp_es": "",
-              "text_es": "Por eso, con los ángeles y los santos, proclamamos tu gloria, diciendo:"
-            }
-          ],
-          "2": [
-            {
-              "sp_es": "",
-              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
-              "rubric_es": "Toma la patena con el pan consagrado, y el cáliz y, sosteniéndolos elevados, dice: CP ",
-              "rubricLayout_es": {
-                "blockEnd": 0,
-                "pieces": [
-                  {
-                    "at": 0,
-                    "from": 0,
-                    "to": 86,
-                    "left": "",
-                    "right": "Por Cristo, con él y en él, o a "
-                  }
-                ]
-              }
-            },
-            {
-              "sp_es": "Todos",
-              "text_es": "Amén."
-            },
-            {
-              "rubric_es": "Después sigue el rito de la Comunión."
-            }
-          ],
-          "3": [
-            {
-              "sp_es": "",
-              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
-              "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, sosteniéndolos elevados, dice: CP ",
-              "rubricLayout_es": {
-                "blockEnd": 0,
-                "pieces": [
-                  {
-                    "at": 0,
-                    "from": 0,
-                    "to": 85,
-                    "left": "",
-                    "right": "Por Cristo, con él y en él, o a "
-                  }
-                ]
-              }
-            },
-            {
-              "sp_es": "Todos",
-              "text_es": "Amén."
-            },
-            {
-              "rubric_es": "Después sigue el rito de la Comunión."
-            }
-          ],
-          "4": [
-            {
-              "sp_es": "",
-              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
-              "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, sosteniéndolos elevados, dice: CP ",
-              "rubricLayout_es": {
-                "blockEnd": 0,
-                "pieces": [
-                  {
-                    "at": 0,
-                    "from": 0,
-                    "to": 85,
-                    "left": "",
-                    "right": "Por Cristo, con él y en él, o a "
-                  }
-                ]
-              }
-            },
-            {
-              "sp_es": "Todos",
-              "text_es": "Amén."
-            },
-            {
-              "rubric_es": "Después sigue el rito de la Comunión."
-            },
-            {
-              "rubric_es": "RITO DE COMUNIÓN"
-            },
-            {
-              "rubric_es": "124. Una vez que ha dejado el cáliz y la patena, el sacerdote, con las manos juntas, dice:"
-            },
-            {
-              "sp_es": "C.",
-              "text_es": "Fieles a la recomendación del Salvador y siguiendo su divina enseñanza, nos atrevemos a decir: ____________________________"
-            },
-            {
-              "rubric_es": "O bien:"
-            },
-            {
-              "sp_es": "",
-              "text_es": "Llenos de alegría por ser hijos de Dios, digamos confiadamente la oración que Cristo nos enseñó:"
-            },
-            {
-              "rubric_es": "O bien:"
-            },
-            {
-              "sp_es": "",
-              "text_es": "El amor de Dios ha sido derramado en nuestros corazones con el Espíritu Santo que se nos ha dado; digamos con fe y esperanza:"
-            },
-            {
-              "rubric_es": "O bien:"
-            },
-            {
-              "sp_es": "",
-              "text_es": "Antes de participar en el banquete de la Eucaristía, signo de reconciliación y vínculo de unión fraterna, oremos juntos como el Señor nos ha enseñado: ____________________________ Extiende las manos y, junto con el pueblo, continúa: Padre nuestro, que estás en el cielo, santificado sea tu nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo."
-            },
-            {
-              "sp_es": "",
-              "text_es": "Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal."
-            }
-          ]
         }
       }
     },
     {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "formFrames"
+      "path": [
+        3
+      ],
+      "value": {
+        "id": "1.3 penitential",
+        "type": "selectable",
+        "header": {
+          "es": "Acto penitencial"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "es": "Primera fórmula"
+            },
+            "lines": [
+              {
+                "rubric_es": "3.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "rubric_es": "El sacerdote, o el diácono, u otro ministro puede hacer una monición muy breve para introducir la Misa del día Acto Penitencial",
+                "__massEditorPairKeys": {
+                  "rubric_es": "1:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "4.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "A continuación se hace el acto penitencial, y el sacerdote invita a los fieles al arrepentimiento diciendo:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Hermanos: para celebrar dignamente estos sagrados misterios reconozcamos nuestros pecados.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "5:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "El Señor Jesús, que nos invita a la mesa de la Palabra y de la Eucaristía, nos llama ahora a la conversión. Reconozcamos, pues, que somos pecadores e invoquemos con esperanza la misericordia de Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Al comenzar esta celebración eucarística, pidamos a Dios que nos conceda la conversión de nuestros corazones; así obtendremos la reconciliación y se acrecentará nuestra comunión con Dios y con nuestros hermanos.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "9:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Humildes y penitentes, como el publicano en el templo, acerquémonos al Dios justo, y pidámosle que tenga piedad de nosotros, que también nos reconocemos pecadores.",
+                "__massEditorPairKeys": {
+                  "text_es": "10:text"
+                }
+              },
+              {
+                "text_es": "Fórmula I Se hace una breve pausa en silencio. Después, hacen todos en común la confesión de sus pecados:",
+                "__massEditorPairKeys": {
+                  "text_es": "11:text"
+                }
+              },
+              {
+                "text_es": "Yo confieso ante Dios todopoderoso y ante ustedes, hermanos, que he pecado mucho de pensamiento, palabra, obra y omisión: Golpeándose el pecho, dicen: por mi culpa, por mi culpa, por mi gran culpa.",
+                "__massEditorPairKeys": {
+                  "text_es": "12:text"
+                }
+              },
+              {
+                "rubric_es": "Luego prosiguen: Por eso ruego a santa María, siempre Virgen, a los ángeles, a los santos y a ustedes, hermanos, que intercedan por mí ante Dios, nuestro Señor.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "13:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "El sacerdote concluye con la siguiente plegaria:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "14:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Dios todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna.",
+                "__massEditorPairKeys": {
+                  "text_es": "15:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "text_es": "Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "16:text"
+                },
+                "sp_es": "Todos"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "es": "Segunda fórmula"
+            },
+            "lines": [
+              {
+                "rubric_es": "3.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "rubric_es": "El sacerdote, o el diácono, u otro ministro puede hacer una monición muy breve para introducir la Misa del día Acto Penitencial",
+                "__massEditorPairKeys": {
+                  "rubric_es": "1:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "4.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "A continuación se hace el acto penitencial, y el sacerdote invita a los fieles al arrepentimiento diciendo:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Hermanos: para celebrar dignamente estos sagrados misterios reconozcamos nuestros pecados.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "5:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "El Señor Jesús, que nos invita a la mesa de la Palabra y de la Eucaristía, nos llama ahora a la conversión. Reconozcamos, pues, que somos pecadores e invoquemos con esperanza la misericordia de Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Al comenzar esta celebración eucarística, pidamos a Dios que nos conceda la conversión de nuestros corazones; así obtendremos la reconciliación y se acrecentará nuestra comunión con Dios y con nuestros hermanos.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "9:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Humildes y penitentes, como el publicano en el templo, acerquémonos al Dios justo, y pidámosle que tenga piedad de nosotros, que también nos reconocemos pecadores.",
+                "__massEditorPairKeys": {
+                  "text_es": "10:text"
+                }
+              },
+              {
+                "text_es": "Fórmula II",
+                "__massEditorPairKeys": {
+                  "text_es": "11:text"
+                }
+              },
+              {
+                "rubric_es": "5. Se hace una breve pausa en silencio. Después el sacerdote dice: Señor, ten misericordia de nosotros. El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "12:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Porque hemos pecado contra ti. El sacerdote prosigue: Muéstranos, Señor, tu misericordia. El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "text_es": "13:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "Y danos tu salvación. El sacerdote concluye con la siguiente plegaria:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "14:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Dios todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna. El pueblo responde: Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "15:text"
+                },
+                "sp_es": "C."
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "es": "Tercera fórmula"
+            },
+            "lines": [
+              {
+                "rubric_es": "3.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "rubric_es": "El sacerdote, o el diácono, u otro ministro puede hacer una monición muy breve para introducir la Misa del día Acto Penitencial",
+                "__massEditorPairKeys": {
+                  "rubric_es": "1:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "4.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "A continuación se hace el acto penitencial, y el sacerdote invita a los fieles al arrepentimiento diciendo:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Hermanos: para celebrar dignamente estos sagrados misterios reconozcamos nuestros pecados.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "5:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "El Señor Jesús, que nos invita a la mesa de la Palabra y de la Eucaristía, nos llama ahora a la conversión. Reconozcamos, pues, que somos pecadores e invoquemos con esperanza la misericordia de Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Al comenzar esta celebración eucarística, pidamos a Dios que nos conceda la conversión de nuestros corazones; así obtendremos la reconciliación y se acrecentará nuestra comunión con Dios y con nuestros hermanos.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "9:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Humildes y penitentes, como el publicano en el templo, acerquémonos al Dios justo, y pidámosle que tenga piedad de nosotros, que también nos reconocemos pecadores.",
+                "__massEditorPairKeys": {
+                  "text_es": "10:text"
+                }
+              },
+              {
+                "text_es": "Fórmula III",
+                "__massEditorPairKeys": {
+                  "text_es": "11:text"
+                }
+              },
+              {
+                "rubric_es": "6.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "12:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "Se hace una breve pausa en silencio.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "13:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "Después el sacerdote dice:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "14:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Tú que has sido enviado a sanar los corazones afligidos: Señor, ten piedad. (O bien: Kyrie, eléison).",
+                "__massEditorPairKeys": {
+                  "text_es": "15:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "text_es": "Señor, ten piedad. (O bien: Kyrie, eléison).",
+                "__massEditorPairKeys": {
+                  "text_es": "16:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "El sacerdote prosigue:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "17:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Tú que has venido a llamar a los pecadores: Cristo ten piedad. (O bien: Christe, eléison).",
+                "__massEditorPairKeys": {
+                  "text_es": "18:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "text_es": "Cristo ten piedad. (O bien: Christe, eléison).",
+                "__massEditorPairKeys": {
+                  "text_es": "19:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "El sacerdote prosigue:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "20:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Tú que estás sentado a la derecha del Padre para interceder por nosotros: Señor, ten piedad. (O bien: Kyrie, eléison).",
+                "__massEditorPairKeys": {
+                  "text_es": "21:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "rubric_es": "El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "22:rubric"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        4
+      ],
+      "value": {
+        "id": "1.4 kyrie",
+        "type": "part",
+        "header": {
+          "es": "Señor, ten piedad"
+        },
+        "lines": [
+          {
+            "rubric_es": "Y danos tu salvación. El sacerdote concluye con la siguiente plegaria:",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          },
+          {
+            "text_es": "Dios todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna. El pueblo responde: Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Fórmula III",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "6.",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Se hace una breve pausa en silencio.",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "5:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Tú que has sido enviado a sanar los corazones afligidos: Señor, ten piedad. (O bien: Kyrie, eléison).",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Señor, ten piedad. (O bien: Kyrie, eléison).",
+            "__massEditorPairKeys": {
+              "text_es": "7:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "El sacerdote prosigue:",
+            "__massEditorPairKeys": {
+              "rubric_es": "8:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Tú que has venido a llamar a los pecadores: Cristo ten piedad. (O bien: Christe, eléison).",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Cristo ten piedad. (O bien: Christe, eléison).",
+            "__massEditorPairKeys": {
+              "text_es": "10:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "El sacerdote prosigue:",
+            "__massEditorPairKeys": {
+              "rubric_es": "11:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Tú que estás sentado a la derecha del Padre para interceder por nosotros: Señor, ten piedad. (O bien: Kyrie, eléison).",
+            "__massEditorPairKeys": {
+              "text_es": "12:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "rubric_es": "El pueblo responde:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        5
+      ],
+      "value": {
+        "id": "1.5 gloria",
+        "type": "part",
+        "header": {
+          "es": "Gloria"
+        },
+        "lines": [
+          {
+            "text_es": "Señor, ten piedad. (O bien: Kyrie, eléison).",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote concluye con la siguiente plegaria:",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Dios todopoderoso tenga misericordia de nosotros, perdone nuestros pecados y nos lleve a la vida eterna.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "7.",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Siguen las invocaciones Señor, ten piedad, a no ser que ya se hayan utilizado en alguna de las fórmulas del acto penitencial.",
+            "__massEditorPairKeys": {
+              "rubric_es": "5:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            },
+            "sp_es": "V/."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "__massEditorPairKeys": {
+              "text_es": "7:text"
+            },
+            "sp_es": "R/."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            },
+            "sp_es": "V/."
+          },
+          {
+            "text_es": "Cristo, ten piedad.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            },
+            "sp_es": "R/."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "__massEditorPairKeys": {
+              "text_es": "10:text"
+            },
+            "sp_es": "V/."
+          },
+          {
+            "text_es": "Señor, ten piedad.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "R/."
+          },
+          {
+            "rubric_es": "7.",
+            "__massEditorPairKeys": {
+              "rubric_es": "12:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación, si está prescrito, se canta el himno: Gloria a Dios en el cielo, y en la tierra paz a los hombres que ama el Señor.",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Por tu inmensa gloria te alabamos, te bendecimos, te adoramos, te glorificamos, te damos gracias, Señor Dios, Rey celestial, Dios Padre todopoderoso.",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            }
+          },
+          {
+            "text_es": "Señor, Hijo único, Jesucristo.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            }
+          }
         ],
-        "rows": {
+        "if": "sunday"
+      }
+    },
+    {
+      "path": [
+        6
+      ],
+      "value": {
+        "id": "1.6 collect",
+        "type": "part",
+        "header": {
+          "es": "Oración colecta"
+        },
+        "lines": [
+          {
+            "text_es": "Oremos.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "(Oración colecta del día)",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        8
+      ],
+      "value": {
+        "id": "2.1 reading1",
+        "type": "part",
+        "header": {
+          "es": "Primera lectura"
+        },
+        "lines": [
+          {
+            "text_es": "(Resumen)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "text_es": "(Primera lectura del día)",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        9
+      ],
+      "value": {
+        "id": "2.2 psalm",
+        "type": "part",
+        "header": {
+          "es": "Salmo responsorial"
+        },
+        "lines": [
+          {
+            "text_es": "(Salmo responsorial del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        10
+      ],
+      "value": {
+        "id": "2.3 reading2",
+        "type": "part",
+        "header": {
+          "es": "Segunda lectura"
+        },
+        "lines": [
+          {
+            "text_es": "(Resumen)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "text_es": "(Segunda lectura del día)",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          }
+        ],
+        "if": "sunday"
+      }
+    },
+    {
+      "path": [
+        11
+      ],
+      "value": {
+        "id": "2.4 Sequence",
+        "type": "part",
+        "header": {
+          "es": "Secuencia"
+        },
+        "lines": [
+          {
+            "text_es": "(Secuencia del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          }
+        ],
+        "if": "easter_or_pentecost"
+      }
+    },
+    {
+      "path": [
+        12
+      ],
+      "value": {
+        "id": "2.5 gospel_accl",
+        "type": "part",
+        "header": {
+          "es": "Aclamación antes del Evangelio"
+        },
+        "lines": [
+          {
+            "text_es": "(Aclamación antes del Evangelio del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        13
+      ],
+      "value": {
+        "id": "2.6 gospel",
+        "type": "part",
+        "header": {
+          "es": "Evangelio"
+        },
+        "lines": [
+          {
+            "text_es": "(Evangelio del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        14
+      ],
+      "value": {
+        "id": "2.7 homily",
+        "type": "part",
+        "header": {
+          "es": "Homilía"
+        },
+        "lines": [
+          {
+            "rubric_es": "Después del Evangelio se pronuncia la homilía.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          },
+          {
+            "rubric_es": "Sigue la homilía.",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        15
+      ],
+      "value": {
+        "id": "2.8 creed",
+        "type": "selectable",
+        "header": {
+          "es": "Profesión de fe"
+        },
+        "if": "sunday",
+        "variants": {
+          "A": {
+            "label": {
+              "es": "Símbolo niceno-constantinopolitano"
+            },
+            "lines": [
+              {
+                "text_es": "Creo en un solo Dios, Padre Todopoderoso, Creador del cielo y de la tierra. de todo lo visible y lo invisible.",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "text_es": "Creo en un solo Señor, Jesucristo, Hijo único de Dios, nacido del Padre antes de todos los siglos: Dios de Dios, Luz de Luz, Dios verdadero de Dios verdadero, engendrado, no creado, de la misma naturaleza del Padre, por quien todo fue hecho; que por nosotros, los hombres, y por nuestra salvación bajó del cielo,",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              },
+              {
+                "rubric_es": "En las palabras que siguen, hasta se hizo hombre, todos se inclinan.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "y por obra del Espíritu Santo",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
+                }
+              },
+              {
+                "text_es": "se encarnó de María, la Virgen, y se hizo hombre; y por nuestra causa fue crucificado en tiempos de Poncio Pilato; padeció y fue sepultado, y resucitó al tercer día, según las Escrituras, y subió al cielo, y está sentado a la derecha del Padre; y de nuevo vendrá con gloria para juzgar a vivos y muertos, y su reino no tendrá fin.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                }
+              },
+              {
+                "text_es": "Creo en el Espíritu Santo, Señor y dador de vida, que procede del Padre y del Hijo, que con el Padre y el Hijo recibe una misma adoración y gloria, y que habló por los profetas.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                }
+              },
+              {
+                "text_es": "Creo en la Iglesia, que es una, santa, católica y apostólica.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                }
+              },
+              {
+                "text_es": "Confieso que hay un solo Bautismo para el perdón de los pecados.",
+                "__massEditorPairKeys": {
+                  "text_es": "7:text"
+                }
+              },
+              {
+                "text_es": "Espero la resurrección de los muertos y la vida del mundo futuro.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "text_es": "Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "9:text"
+                }
+              },
+              {
+                "rubric_es": "19.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "10:rubric"
+                }
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "es": "Símbolo de los Apóstoles"
+            },
+            "lines": [
+              {
+                "rubric_es": "Para utilidad de los fieles, en lugar del símbolo niceno-constantinopolitano, la profesión de fe se puede hacer, especialmente en el tiempo de Cuaresma y en la Cincuentena pascual, con el siguiente símbolo llamado «de los apóstoles»:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                },
+                "sp_es": "C."
+              },
+              {
+                "text_es": "Creo en Jesucristo, su único Hijo, nuestro Señor,",
+                "__massEditorPairKeys": {
+                  "text_es": "2:text"
+                }
+              },
+              {
+                "rubric_es": "En las palabras que siguen, hasta María Virgen, todos se inclinan.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "que fue concebido por obra y gracia del Espíritu Santo, nació de santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado,",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                }
+              },
+              {
+                "text_es": "descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                }
+              },
+              {
+                "text_es": "Desde allí ha de venir a juzgar a vivos y muertos.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                }
+              },
+              {
+                "text_es": "Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna.",
+                "__massEditorPairKeys": {
+                  "text_es": "7:text"
+                }
+              },
+              {
+                "text_es": "Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "rubric_es": "20.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "9:rubric"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        16
+      ],
+      "value": {
+        "id": "2.9 universal",
+        "type": "part",
+        "header": {
+          "es": "Oración universal"
+        },
+        "lines": [
+          {
+            "rubric_es": "Sigue la oración universal u oración de los fieles.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          }
+        ],
+        "if": "sunday"
+      }
+    },
+    {
+      "path": [
+        18
+      ],
+      "value": {
+        "id": "3.1 offertory",
+        "type": "part",
+        "header": {
+          "es": "Preparación de los dones"
+        },
+        "lines": [
+          {
+            "text_es": ".",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "text_es": "Acabada la Liturgia de la palabra, los ministros colocan en el altar el corporal, el purificador, el cáliz y el misal; mientras tanto puede ejecutarse un canto adecuado.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "rubric_es": "22.",
+            "__massEditorPairKeys": {
+              "rubric_es": "2:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Conviene que los fieles expresan su participación en la ofrenda, bien sea llevando el pan y el vino para la celebración de la eucaristía, bien aportando otros dones para las necesidades de la Iglesia o de los pobres.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "23.",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote se acerca al altar, toma la patena con el pan y, manteniéndola un poco elevada sobre el altar, dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "5:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Bendito seas, Señor, Dios del universo, por este pan, fruto de la tierra y del trabajo del hombre, que recibimos de tu generosidad y ahora te presentamos; él será para nosotros pan de vida.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "rubric_es": "Después deja la patena con el pan sobre el corporal.",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Si no se canta durante la presentación de las ofrendas, el sacerdote puede decir en voz alta estas palabras; al final el pueblo aclama:",
+            "__massEditorPairKeys": {
+              "rubric_es": "8:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Bendito seas por siempre, Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "24.",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El diácono, o el sacerdote, echa vino y un poco de agua en el cáliz, diciendo en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "11:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "El agua unido al vino sea signo de nuestra participación en la vida divina de quien ha querido compartir nuestra condición humana.",
+            "__massEditorPairKeys": {
+              "text_es": "12:text"
+            },
+            "sp_es": "D."
+          },
+          {
+            "rubric_es": "25.",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote toma el cáliz y, manteniéndolo un poco elevado sobre el altar, dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "14:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Bendito seas, Señor, Dios del universo, por este vino, fruto de la vid y del trabajo del hombre, que recibimos de tu generosidad y ahora te presentamos; él será para nosotros bebida de salvación.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "rubric_es": "Después deja el cáliz sobre el corporal.",
+            "__massEditorPairKeys": {
+              "rubric_es": "16:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Si no se canta durante la presentación de las ofrendas, el sacerdote puede decir en voz alta estas palabras; al final el pueblo puede aclamar:",
+            "__massEditorPairKeys": {
+              "rubric_es": "17:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Bendito seas por siempre, Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "18:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "26.",
+            "__massEditorPairKeys": {
+              "rubric_es": "19:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación, el sacerdote, inclinado, dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Acepta Señor, nuestro corazón contrito y nuestro espíritu humilde; que éste sea hoy nuestro sacrificio y que sea agradable en tu presencia, Señor, Dios nuestro.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "rubric_es": "27.",
+            "__massEditorPairKeys": {
+              "rubric_es": "22:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Y, si se juzga oportuno, inciensa las ofrendas y el altar.",
+            "__massEditorPairKeys": {
+              "text_es": "23:text"
+            }
+          },
+          {
+            "rubric_es": "A continuación el diácono o un ministro inciensa al sacerdote y al pueblo.",
+            "__massEditorPairKeys": {
+              "rubric_es": "24:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "28.",
+            "__massEditorPairKeys": {
+              "rubric_es": "25:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Luego el sacerdote, de pie a un lado del altar, se lava las manos, diciendo en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Lava del todo mi delito, Señor, limpia mi pecado.",
+            "__massEditorPairKeys": {
+              "text_es": "27:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "rubric_es": "29.",
+            "__massEditorPairKeys": {
+              "rubric_es": "28:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después, de pie en el centro del altar y de cara al pueblo, extendiendo y juntando las manos, dice una de las siguientes fórmulas:",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Oren, hermanos, para que este sacrificio, mío y de ustedes, sea agradable a Dios, Padre todopoderoso.",
+            "__massEditorPairKeys": {
+              "text_es": "30:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "31:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En el momento de ofrecer el sacrificio de toda la Iglesia, oremos a Dios, Padre todopoderoso.",
+            "__massEditorPairKeys": {
+              "text_es": "32:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "33:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Oren, hermanos, para que, llevando al altar",
+            "__massEditorPairKeys": {
+              "text_es": "34:text"
+            }
+          },
+          {
+            "text_es": "los gozos y las fatigas de cada día nos dispongamos a ofrecer el sacrificio agradable a Dios, Padre todopoderoso.",
+            "__massEditorPairKeys": {
+              "text_es": "35:text"
+            }
+          },
+          {
+            "text_es": "El Señor reciba de tus manos este sacrificio, para alabanza y gloria de su nombre, para nuestro bien y el de toda su santa Iglesia.",
+            "__massEditorPairKeys": {
+              "text_es": "36:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "30.",
+            "__massEditorPairKeys": {
+              "rubric_es": "37:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Luego el sacerdote, con las manos extendidas, dice la oración sobre las ofrendas.",
+            "__massEditorPairKeys": {
+              "rubric_es": "38:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Al final el pueblo aclama:",
+            "__massEditorPairKeys": {
+              "rubric_es": "39:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "40:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "PLEGARIA EUCARÍSTICA",
+            "__massEditorPairKeys": {
+              "rubric_es": "41:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "31.",
+            "__massEditorPairKeys": {
+              "rubric_es": "42:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote comienza la plegaria eucarística con el prefacio.",
+            "__massEditorPairKeys": {
+              "rubric_es": "43:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Con las manos extendidas dice: El Señor esté con ustedes.",
+            "__massEditorPairKeys": {
+              "text_es": "44:text"
+            }
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "__massEditorPairKeys": {
+              "text_es": "45:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "El sacerdote, elevando las manos, prosigue:",
+            "__massEditorPairKeys": {
+              "rubric_es": "46:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Levantemos el corazón.",
+            "__massEditorPairKeys": {
+              "text_es": "47:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Lo tenemos levantado hacia el Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "48:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "El sacerdote, con las manos extendidas, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "49:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Demos gracias al Señor, nuestro Dios.",
+            "__massEditorPairKeys": {
+              "text_es": "50:text"
+            },
+            "sp_es": "C."
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        19
+      ],
+      "value": {
+        "id": "3.2 prayer_offerings",
+        "type": "part",
+        "header": {
+          "es": "Oración sobre las ofrendas"
+        },
+        "lines": [
+          {
+            "text_es": "(Oración sobre las ofrendas del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        20
+      ],
+      "value": {
+        "id": "3.3 eucharist",
+        "type": "selectable",
+        "isEucharist": true,
+        "header": {
+          "es": "Plegaria eucarística"
+        },
+        "variants": {
+          "1": {
+            "label": {
+              "es": "Plegaria eucarística I (Canon romano)"
+            }
+          },
+          "2": {
+            "label": {
+              "es": "Plegaria eucarística II"
+            }
+          },
+          "3": {
+            "label": {
+              "es": "Plegaria eucarística III"
+            }
+          },
+          "4": {
+            "label": {
+              "es": "Plegaria eucarística IV"
+            }
+          }
+        },
+        "common_dialogue": [
+          {
+            "text_es": "El Señor esté con ustedes.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "V/."
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            },
+            "sp_es": "R/."
+          },
+          {
+            "text_es": "Levantemos el corazón.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "V/."
+          },
+          {
+            "text_es": "Lo tenemos levantado hacia el Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            },
+            "sp_es": "R/."
+          },
+          {
+            "text_es": "Demos gracias al Señor, nuestro Dios.",
+            "__massEditorPairKeys": {
+              "text_es": "4:text"
+            },
+            "sp_es": "V/."
+          },
+          {
+            "text_es": "Es justo y necesario.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "R/."
+          }
+        ],
+        "songs": {
+          "cem_complete_prefaces": {
+            "title": {
+              "es": "Prefacios completos del Misal Romano para México"
+            },
+            "content": [
+              {
+                "text_es": "Es justo y necesario.",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "El sacerdote prosigue el Prefacio con las manos extendidas.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "1:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "Al final del Prefacio, junta las manos y en unión del pueblo, concluye el prefacio, cantando o diciendo en voz alta:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Santo, Santo, Santo es el Señor, Dios del universo.",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "Llenos están el cielo y la tierra de tu gloria.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                }
+              },
+              {
+                "text_es": "Hosanna en el cielo.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                }
+              },
+              {
+                "text_es": "Bendito el que viene en nombre del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                }
+              },
+              {
+                "text_es": "Hosanna en el cielo.",
+                "__massEditorPairKeys": {
+                  "text_es": "7:text"
+                }
+              },
+              {
+                "rubric_es": "32.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "8:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En todas las Misas, el sacerdote puede cantar algunas partes de la Plegaria eucarística, especialmente las principales.",
+                "__massEditorPairKeys": {
+                  "text_es": "9:text"
+                }
+              },
+              {
+                "text_es": "En la Plegaria eucarística I, o Canon Romano, se puede omitir lo que se encuentra entre paréntesis.",
+                "__massEditorPairKeys": {
+                  "text_es": "10:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE ADVIENTO LAS DOS VENIDAS DE CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "11:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "33.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "12:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el 16 de diciembre, y en las restantes misas que se celebran durante este tiempo y que no tienen prefacio propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "13:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "14:text"
+                }
+              },
+              {
+                "text_es": "Quien al venir por vez primera en la humildad de nuestra carne, realizó el plan de redención trazado desde antiguo y nos abrió el camino de la salvación; para que cuando venga de nuevo en la majestad de su gloria, revelando así la plenitud de su obra, podamos recibir los bienes prometidos que ahora, en vigilante espera, confiamos alcanzar.",
+                "__massEditorPairKeys": {
+                  "text_es": "15:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo…",
+                "__massEditorPairKeys": {
+                  "text_es": "16:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE ADVIENTO LA DOBLE ESPERA DE CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "17:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "34.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "18:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas del tiempo, desde el 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y que no tienen prefacio propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "19:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "20:text"
+                }
+              },
+              {
+                "text_es": "A quien todos los profetas anunciaron, la Virgen esperó con inefable amor de Madre; Juan lo proclamó ya próximo y lo señaló después entre los hombres.",
+                "__massEditorPairKeys": {
+                  "text_es": "21:text"
+                }
+              },
+              {
+                "text_es": "El mismo Señor nos concede ahora prepararnos con alegría al misterio de su nacimiento, para encontrarnos así cuando llegue, velando en oración y cantando su alabanza.",
+                "__massEditorPairKeys": {
+                  "text_es": "22:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo…",
+                "__massEditorPairKeys": {
+                  "text_es": "23:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO III DE ADVIENTO CRISTO, SEÑOR Y JUEZ DE LA HISTORIA Este prefacio se dice en las misas del tiempo, desde el primer domingo de Adviento hasta el día 16 de diciembre, y en las restantes Misas que se celebran durante este mismo tiempo y no tienen prefacio propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "24:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, es nuestro deber cantar en tu honor himnos de bendición y de alabanza, Padre todopoderoso, principio y fin de todo lo creado.",
+                "__massEditorPairKeys": {
+                  "text_es": "25:text"
+                }
+              },
+              {
+                "text_es": "Tú nos has ocultado el día y la hora en que Cristo, tu Hijo, Señor y Juez de la historia, aparecerá revestido de poder y de gloria, sobre las nubes del cielo.",
+                "__massEditorPairKeys": {
+                  "text_es": "26:text"
+                }
+              },
+              {
+                "text_es": "En aquel día terrible y glorioso pasará la figura de este mundo y nacerán los cielos nuevos y la tierra nueva.",
+                "__massEditorPairKeys": {
+                  "text_es": "27:text"
+                }
+              },
+              {
+                "text_es": "El mismo Señor que se nos mostrará entonces lleno de gloria viene ahora a nuestro encuentro en cada hombre y en cada acontecimiento, para que lo recibamos en la fe y por el amor demos testimonio de la esperanza dichosa de su reino.",
+                "__massEditorPairKeys": {
+                  "text_es": "28:text"
+                }
+              },
+              {
+                "text_es": "Por eso, mientras aguardamos su última venida, unidos a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "29:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO IV DE ADVIENTO MARÍA, NUEVA EVA Este prefacio se dice en las misas del tiempo, desde el día 17 al 24 de diciembre, y en las restantes misas que se celebran durante este mismo tiempo y no tienen prefacio propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "30:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "31:text"
+                }
+              },
+              {
+                "text_es": "Te alabamos, te bendecimos y te glorificamos por el misterio de la Virgen Madre.",
+                "__massEditorPairKeys": {
+                  "text_es": "32:text"
+                }
+              },
+              {
+                "text_es": "Porque, si del antiguo adversario nos vino la ruina, en el seno virginal de la hija de Sión ha germinado aquel que nos nutre con el pan de los ángeles, y ha brotado para todo el género humano la salvación y la paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "33:text"
+                }
+              },
+              {
+                "text_es": "La gracia que Eva nos arrebató nos ha sido devuelta en María.",
+                "__massEditorPairKeys": {
+                  "text_es": "34:text"
+                }
+              },
+              {
+                "text_es": "En ella, madre de todos los hombres, la maternidad, redimida del pecado y de la muerte, se abre al don de una vida nueva.",
+                "__massEditorPairKeys": {
+                  "text_es": "35:text"
+                }
+              },
+              {
+                "text_es": "Así, donde había crecido el pecado, se ha desbordado tu misericordia en Cristo, nuestro Salvador.",
+                "__massEditorPairKeys": {
+                  "text_es": "36:text"
+                }
+              },
+              {
+                "text_es": "Por eso nosotros, mientras esperamos la venida de Cristo, unido a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "37:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE NAVIDAD CRISTO, LUZ DEL MUNDO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "38:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "35.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "39:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios.",
+                "__massEditorPairKeys": {
+                  "text_es": "40:text"
+                }
+              },
+              {
+                "text_es": "También se dice en las ferias del tiempo de Navidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "41:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "42:text"
+                }
+              },
+              {
+                "text_es": "Porque gracias al misterio de la Palabra hecha carne, la luz de tu gloria brilló ante nuestros ojos con nuevo resplandor para que conociendo a Dios visiblemente, él nos lleve al amor de lo invisible.",
+                "__massEditorPairKeys": {
+                  "text_es": "43:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "44:text"
+                }
+              },
+              {
+                "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "45:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva.",
+                "__massEditorPairKeys": {
+                  "text_es": "46:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE NAVIDAD LA RESTAURACIÓN DEL UNIVERSO EN LA ENCARNACIÓN",
+                "__massEditorPairKeys": {
+                  "rubric_es": "47:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "36.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "48:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios.",
+                "__massEditorPairKeys": {
+                  "text_es": "49:text"
+                }
+              },
+              {
+                "text_es": "También se dice en las ferias del tiempo de Navidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "50:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "51:text"
+                }
+              },
+              {
+                "text_es": "Porque en el misterio santo que hoy celebramos, Cristo, el Señor, sin dejar la gloria del Padre, se hace presente entre nosotros de un modo nuevo; el que era invisible en su naturaleza, se hice visible al adoptar la nuestra; el eterno, engendrado antes del tiempo, comparte nuestra vida temporal para asumir en sí todo lo creado, para reconstruir los que estaba caído y restaurar de esto modo el universo,",
+                "__massEditorPairKeys": {
+                  "text_es": "52:text"
+                }
+              },
+              {
+                "text_es": "para llamar de nuevo al reino de los cielos al hombre sumergido el pecado.",
+                "__massEditorPairKeys": {
+                  "text_es": "53:text"
+                }
+              },
+              {
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos, llenos de alegría: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "54:text"
+                }
+              },
+              {
+                "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "55:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva.",
+                "__massEditorPairKeys": {
+                  "text_es": "56:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO III DE NAVIDAD EL INTERCAMBIO EFECTUADO EN LA ENCARNACIÓN DEL VERBO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "57:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "37.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "58:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de Navidad y de su octava; durante la octava, se dice incluso en aquellas misas que, si se celebraran en otro tiempo tendrían prefacio propio, pero no en aquellas que tienen prefacio propio referido a las Personas divinas o sus misterios.",
+                "__massEditorPairKeys": {
+                  "text_es": "59:text"
+                }
+              },
+              {
+                "text_es": "También se dice en las ferias del tiempo de Navidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "60:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo nuestro Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "61:text"
+                }
+              },
+              {
+                "text_es": "Por él, hoy resplandece ante el mundo el maravilloso intercambio que nos salva, pues al revestirse tu Hijo de nuestra frágil condición, no sólo confiere dignidad eterna a la naturaleza humana, sino que por esta unión admirable, nos hace a nosotros eternos.",
+                "__massEditorPairKeys": {
+                  "text_es": "62:text"
+                }
+              },
+              {
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "63:text"
+                }
+              },
+              {
+                "rubric_es": "Si se usa el Canon romano, se dice Reunidos en comunión propio.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "64:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En la misa que se celebra en la vigilia o en la noche de Navidad se dice: para celebrar la noche santa en que...; después se dice siempre: para celebrar el día santa en que..., hasta la octava de Navidad inclusiva.",
+                "__massEditorPairKeys": {
+                  "text_es": "65:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO DE LA EPIFANÍA DEL SEÑOR CRISTO, LUZ DE LOS PUEBLOS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "66:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "38.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "67:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de la solemnidad de la Epifanía.",
+                "__massEditorPairKeys": {
+                  "text_es": "68:text"
+                }
+              },
+              {
+                "text_es": "También puede decirse este prefacio, o bien uno de los de Navidad, en los días que van desde la solemnidad de la Epifanía hasta el sábado antes del domingo del Bautismo del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "69:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "70:text"
+                }
+              },
+              {
+                "text_es": "Porque [hoy] has revelado en Cristo, para luz de los pueblos, el verdadero misterio de nuestra salvación; pues al manifestarse Cristo en nuestra carne mortal nos hiciste partícipes de la gloria de su inmortalidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "71:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "72:text"
+                }
+              },
+              {
+                "text_es": "En la solemnidad de la Epifanía, si se usa el Canon romano, se dice Reunidos en comunión propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "73:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE CUARESMA SIGNIFICACIÓN ESPIRITUAL DE LA CUARESMA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "74:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "39.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "75:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado.",
+                "__massEditorPairKeys": {
+                  "text_es": "76:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "77:text"
+                }
+              },
+              {
+                "text_es": "Por él concedes a tus hijos anhelar, años tras año, con el gozo de habernos purificado, la solemnidad de la Pascua, para que, dedicados con mayor entrega a la alabanza divina y al amor fraterno, por la celebración de los misterios que nos dieron nuestra vida, lleguemos a ser con plenitud hijos de Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "78:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coro celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "79:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE CUARESMA LA PENITENCIA ESPIRITUAL",
+                "__massEditorPairKeys": {
+                  "rubric_es": "80:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "40.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "81:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en el tiempo de Cuaresma, sobre todo en los domingos, cuando no corresponda decir un prefacio que sea más indicado.",
+                "__massEditorPairKeys": {
+                  "text_es": "82:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "83:text"
+                }
+              },
+              {
+                "text_es": "Porque has establecido generosamente este tiempo de gracia para renovar en santidad a tus hijos, de modo que, libres de todo afecto desordenado, vivamos las realidades temporales como primicias de las realidades eternas.",
+                "__massEditorPairKeys": {
+                  "text_es": "84:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "85:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO III DE CUARESMA LOS FRUTOS DE LAS PRIVACIONES VOLUNTARIAS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "86:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "41.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "87:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales.",
+                "__massEditorPairKeys": {
+                  "text_es": "88:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "89:text"
+                }
+              },
+              {
+                "text_es": "Porque con nuestras privaciones voluntarias nos enseñas a reconocer y agradecer tus dones, a dominar nuestro afán de suficiencia y a repartir nuestros bienes con los necesitados, imitando así tu generosidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "90:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con todos los ángeles y santos, te glorificamos y te aclamamos diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "91:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO IV DE CUARESMA LOS FRUTOS DEL AYUNO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "92:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "42.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "93:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las Misas de los días feriales de Cuaresma y en los días penitenciales.",
+                "__massEditorPairKeys": {
+                  "text_es": "94:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "95:text"
+                }
+              },
+              {
+                "text_es": "Porque con el ayuno corporal refrenas nuestras pasiones, elevas nuestro espíritu, nos das fuerza y recompensa, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "96:text"
+                }
+              },
+              {
+                "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría.",
+                "__massEditorPairKeys": {
+                  "text_es": "97:text"
+                }
+              },
+              {
+                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "98:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO V DE CUARESMA EL CAMINO DEL ÉXODO EN EL DESIERTO CUARESMAL Este prefacio se dice en las misas de las ferias de Cuaresma.",
+                "__massEditorPairKeys": {
+                  "text_es": "99:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo bendecir tu nombre, Padre rico en misericordia, ahora que, en nuestro itinerario hacia la luz pascual, seguimos los pasos de Cristo, maestro y modelo de la humanidad, reconciliada en el amor.",
+                "__massEditorPairKeys": {
+                  "text_es": "100:text"
+                }
+              },
+              {
+                "text_es": "Tú abres a la Iglesia el comino de un nuevo éxodo a través del desierto cuaresmal, para que, llegados a la montaña santa, con el corazón contrito y humillado, reavivemos nuestra vocación de pueblo de la alianza, convocado para bendecir tu nombre, escuchar tu Palabra y experimentar con gozo tus maravillas.",
+                "__massEditorPairKeys": {
+                  "text_es": "101:text"
+                }
+              },
+              {
+                "text_es": "Por estos signos de salvación, unidos a los ángeles, ministros de tu gloria, proclamamos el canto de tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "102:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE LA PASIÓN DEL SEÑOR LA FUERZA DE LA CRUZ",
+                "__massEditorPairKeys": {
+                  "rubric_es": "103:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "43.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "104:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las ferias de la quinta semana de Cuaresma y en las misas de los misterios de la cruz y de la pasión del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "105:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "106:text"
+                }
+              },
+              {
+                "text_es": "Porque en la pasión salvadora de tu Hijo el universo aprende a proclamar tu grandeza y, por la fuerza de la cruz, el mundo es juzgado como reo y el Crucificado exaltado como juez poderoso.",
+                "__massEditorPairKeys": {
+                  "text_es": "107:text"
+                }
+              },
+              {
+                "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "108:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE LA PASIÓN DEL SEÑOR LA VICTORIA DE LA PASIÓN",
+                "__massEditorPairKeys": {
+                  "rubric_es": "109:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "44.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "110:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice el lunes, martes y miércoles de la Semana Santa.",
+                "__massEditorPairKeys": {
+                  "text_es": "111:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "112:text"
+                }
+              },
+              {
+                "text_es": "Porque se acercan ya los días santos de su pasión salvadora y de su resurrección gloriosa; en ellos celebramos su triunfo sobre el poder de nuestro enemigo y renovamos el misterio de nuestra redención.",
+                "__massEditorPairKeys": {
+                  "text_es": "113:text"
+                }
+              },
+              {
+                "text_es": "Por eso, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "114:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO PASCUAL I EL MISTERIO PASCUAL",
+                "__massEditorPairKeys": {
+                  "rubric_es": "115:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "46.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "116:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice durante el tiempo pascual.",
+                "__massEditorPairKeys": {
+                  "text_es": "117:text"
+                }
+              },
+              {
+                "text_es": "En la misa de la Vigilia pascual se dice en esta noche; el día de Pascua y durante la octava: en este día; en las restantes misas: en este tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "118:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en esta noche (este día) (este tiempo) en que Cristo, nuestra Pascua, ha sido inmolado.",
+                "__massEditorPairKeys": {
+                  "text_es": "119:text"
+                }
+              },
+              {
+                "text_es": "Porque él es el verdadero Cordero que quitó el pecado del mundo; muriendo destruyó nuestra muerte, y resucitando restauró la vida.",
+                "__massEditorPairKeys": {
+                  "text_es": "120:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo.",
+                "__massEditorPairKeys": {
+                  "text_es": "121:text"
+                }
+              },
+              {
+                "rubric_es": "Cuando se utiliza el Canon romano, se dice Reunidos en comunión y Acepta, Señor, en tu bondad, propios.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "122:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En la misa de la Vigilia pascual se dice: para celebrar la noche santa...",
+                "__massEditorPairKeys": {
+                  "text_es": "123:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO PASCUAL II LA NUEVA VIDA EN CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "124:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "46.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "125:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice durante el tiempo pascual.",
+                "__massEditorPairKeys": {
+                  "text_es": "126:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
+                "__massEditorPairKeys": {
+                  "text_es": "127:text"
+                }
+              },
+              {
+                "text_es": "Por él, los hijos de la luz amanecen a la vida eterna, los creyentes atraviesan los umbrales del reino de los cielos; porque en la muerte de Cristo nuestra muerte ha sido vencida y en su resurrección hemos resucitado todos.",
+                "__massEditorPairKeys": {
+                  "text_es": "128:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "129:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO PASCUAL III CRISTO VIVO E INTERCESOR PERPETUO EN FAVOR NUESTRO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "130:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "47.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "131:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice durante el tiempo pascual.",
+                "__massEditorPairKeys": {
+                  "text_es": "132:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
+                "__massEditorPairKeys": {
+                  "text_es": "133:text"
+                }
+              },
+              {
+                "text_es": "Porque él no cesa de ofrecerse por nosotros, de interceder por todos ante ti; inmolado, ya no vuelve a morir; sacrificado, vive para siempre.",
+                "__massEditorPairKeys": {
+                  "text_es": "134:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "135:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO PASCUAL IV LA RESTAURACIÓN DEL UNIVERSO POR LE MISTERIO PASCUAL",
+                "__massEditorPairKeys": {
+                  "rubric_es": "136:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "48.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "137:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice durante el tiempo pascual.",
+                "__massEditorPairKeys": {
+                  "text_es": "138:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
+                "__massEditorPairKeys": {
+                  "text_es": "139:text"
+                }
+              },
+              {
+                "text_es": "Porque en él fue demolida nuestra antigua miseria, reconstruido cuanto estaba derrumbado y renovada en plenitud la salvación.",
+                "__massEditorPairKeys": {
+                  "text_es": "140:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "141:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO PASCUAL V CRISTO, SACERDOTE Y VÍCTIMA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "142:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "49.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "143:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice durante el tiempo pascual.",
+                "__massEditorPairKeys": {
+                  "text_es": "144:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación glorificarte siempre, Señor; pero más que nunca en este tiempo en que Cristo, nuestra Pascua, ha sido inmolado.",
+                "__massEditorPairKeys": {
+                  "text_es": "145:text"
+                }
+              },
+              {
+                "text_es": "Porque él, con la inmolación de su cuerpo en la cruz, dio pleno cumplimiento a lo que anunciaban los sacrificios de la antigua alianza, y ofreciéndose a sí mismo por nuestra salvación, quiso ser al mismo tiempo sacerdote, víctima y altar.",
+                "__massEditorPairKeys": {
+                  "text_es": "146:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "147:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE LA ASCENSIÓN DEL SEÑOR EL MISTERIO DE LA ASCENSIÓN",
+                "__massEditorPairKeys": {
+                  "rubric_es": "148:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "50.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "149:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "150:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "151:text"
+                }
+              },
+              {
+                "text_es": "Porque Jesús, el Señor, el rey de la gloria, vencedor del pecado y de la muerte, ha ascendido [hoy] ante el asombro de los ángeles a lo más alto del cielo, como mediador entre Dios y los hombres, como juez de vivos y muertos.",
+                "__massEditorPairKeys": {
+                  "text_es": "152:text"
+                }
+              },
+              {
+                "text_es": "No se ha ido para desentenderse de este mundo, sino que ha querido precedernos como cabeza nuestra para que nosotros, miembros de su Cuerpo, vivamos con la ardiente esperanza de seguirlo en su reino.",
+                "__massEditorPairKeys": {
+                  "text_es": "153:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "154:text"
+                }
+              },
+              {
+                "text_es": "El día de la Ascensión, cuando se utiliza el Canon romano, se dice Reunidos en comunión propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "155:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE LA ASCENSIÓN DEL SEÑOR EL MISTERIO DE LA ASCENSIÓN",
+                "__massEditorPairKeys": {
+                  "rubric_es": "156:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "51.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "157:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice el día de la Ascensión del Señor; puede decirse también en los días después de la Ascensión hasta el sábado antes de Pentecostés en aquellas misas que no tienen prefacio propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "158:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "159:text"
+                }
+              },
+              {
+                "text_es": "Que después de su resurrección se apareció visiblemente a todos sus discípulos y, ante sus ojos, fue elevado al cielo para hacernos compartir su divinidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "160:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con esta efusión de gozo pascual, el mundo entero se desborda de alegría, y también los coros celestiales, los ángeles y los arcángeles, cantan sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "161:text"
+                }
+              },
+              {
+                "text_es": "El día de la Ascensión, cuando se utiliza el Canon romano, se dice Reunidos en comunión propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "162:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO PARA DESPUÉS DE LA ASCENSIÓN EN LA ESPERA DE LA VENIDA DEL ESPÍRITU SANTO Este prefacio se dice en los días que siguen a la Ascensión hasta el sábado antes del domingo de Pentecostés.",
+                "__massEditorPairKeys": {
+                  "text_es": "163:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, que todas las criaturas, en el cielo y en la tierra, se unan en tu alabanza, Dios todopoderoso y eterno, por Jesucristo, tu Hijo, Señor del Universo.",
+                "__massEditorPairKeys": {
+                  "text_es": "164:text"
+                }
+              },
+              {
+                "text_es": "El cual, habiendo entrado una vez para siempre en el santuario del cielo, ahora intercede por nosotros, como mediador que asegura la perenne efusión del Espíritu.",
+                "__massEditorPairKeys": {
+                  "text_es": "165:text"
+                }
+              },
+              {
+                "text_es": "Pastor y obispo de nuestras almas, nos invita a la plegaria unánime, a ejemplo de María y los Apóstoles, en la espera de un nuevo Pentecostés.",
+                "__massEditorPairKeys": {
+                  "text_es": "166:text"
+                }
+              },
+              {
+                "text_es": "Por este misterio de santificación y de amor, unidos a los ángeles y a los santos, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo....",
+                "__massEditorPairKeys": {
+                  "text_es": "167:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO I PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL MISTERIO PASCUAL HA HECHO DE NOSOTROS EL PUEBLO DE DIOS",
+                "__massEditorPairKeys": {
+                  "text_es": "168:text"
+                }
+              },
+              {
+                "rubric_es": "52.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "169:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "170:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "171:text"
+                }
+              },
+              {
+                "text_es": "Quien, por su misterio pascual, realizó la obra maravillosa de llamarnos del pecado y de la muerte al honor de ser estirpe elegida, sacerdocio real, nación consagrada, pueblo de su propiedad, para que, trasladados de las tinieblas a tu luz admirable, proclamemos ante el mundo tus maravillas.",
+                "__massEditorPairKeys": {
+                  "text_es": "172:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "173:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "174:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL PLAN DIVINO DE LA SALVACIÓN",
+                "__massEditorPairKeys": {
+                  "rubric_es": "175:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "53.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "176:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "177:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "178:text"
+                }
+              },
+              {
+                "text_es": "El cual, compadecido del extravío de los hombres, quiso nacer de la Virgen; sufriendo la cruz, nos libró de eterna muerte, y, resucitando, nos dio vida eterna.",
+                "__massEditorPairKeys": {
+                  "text_es": "179:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "180:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "181:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO III PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL HOMBRE SALVADO POR UN HOMBRE",
+                "__massEditorPairKeys": {
+                  "rubric_es": "182:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "54.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "183:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "184:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "185:text"
+                }
+              },
+              {
+                "text_es": "Porque reconocemos como obra de tu poder admirable no sólo haber socorrido nuestra débil naturaleza con la fuerza de tu divinidad, sino haber previsto el remedio en la misma debilidad humana, y de lo que era nuestra ruina haber hecho nuestra salvación, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "186:text"
+                }
+              },
+              {
+                "text_es": "Por él, los ángeles te cantan con júbilo eterno, y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "187:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO IV PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LAS ETAPAS DE LA HISTORIA DE LA SALVACIÓN EN CRISTO",
+                "__massEditorPairKeys": {
+                  "text_es": "188:text"
+                }
+              },
+              {
+                "rubric_es": "55.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "189:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "190:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "191:text"
+                }
+              },
+              {
+                "text_es": "Porque él, con su nacimiento, restauró nuestra naturaleza caída; con su muerte, destruyó nuestro pecado; al resucitar, nos dio nueva vida; y en su ascensión, nos abrió el camino de tu reino.",
+                "__massEditorPairKeys": {
+                  "text_es": "192:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "193:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "194:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO V PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LAS MARAVILLAS DE LA CREACIÓN",
+                "__massEditorPairKeys": {
+                  "rubric_es": "195:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "56.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "196:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice los domingo del tiempo ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "197:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "198:text"
+                }
+              },
+              {
+                "text_es": "Porque creaste el universo entero, estableciste el continuo retorno de las estaciones, y al hombre, formado a tu imagen y semejanza, sometiste las maravillas del mundo, para que, en nombre tuyo, dominara la creación, y, al contemplar tus grandezas, en todo momento te alabara, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "199:text"
+                }
+              },
+              {
+                "text_es": "A quien cantan los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "200:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "201:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO VI PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA PRENDA DE NUESTRA PASCUA ETERNA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "202:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "57.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "203:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del tiempo ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "204:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "205:text"
+                }
+              },
+              {
+                "text_es": "En ti vivimos, nos movemos y existimos; y, todavía peregrinos en este mundo, no sólo experimentamos las pruebas cotidianas de tu amor, sino que poseemos ya en prenda la vida futura, pues esperamos gozar de la Pascua eterna, porque tenemos las primicias del Espíritu por el que resucitaste a Jesús de entre los muertos.",
+                "__massEditorPairKeys": {
+                  "text_es": "206:text"
+                }
+              },
+              {
+                "text_es": "Por eso, Señor, te damos gracias y proclamamos tu grandeza cantando con los ángeles: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "207:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "208:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO VII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA SALVACIÓN, FRUTO DE LA OBEDIENCIA DE CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "209:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "58.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "210:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "211:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "212:text"
+                }
+              },
+              {
+                "text_es": "Porque tu amor al mundo fue tan misericordioso que no sólo nos enviaste como redentor a tu propio Hijo, sino que en todo lo quisiste semejante al hombre, menos en el pecado, para poder así amar en nosotros lo que amabas en él.",
+                "__massEditorPairKeys": {
+                  "text_es": "213:text"
+                }
+              },
+              {
+                "text_es": "Con su obediencia has restaurado aquellos dones que por nuestra desobediencia habíamos perdido.",
+                "__massEditorPairKeys": {
+                  "text_es": "214:text"
+                }
+              },
+              {
+                "text_es": "Por eso, ahora nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "215:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "216:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO VIII PARA LOS DOMINGOS DEL TIEMPO ORDINARIO LA IGLESIA UNIFICADA POR VIRTUD Y A IMAGEN DE LA TRINIDAD",
+                "__massEditorPairKeys": {
+                  "text_es": "217:text"
+                }
+              },
+              {
+                "rubric_es": "59.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "218:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en los domingos del Tiempo Ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "219:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "220:text"
+                }
+              },
+              {
+                "text_es": "Porque has querido reunir de nuevo, por la sangre de tu Hijo y la fuerza del Espíritu, a los hijos dispersos por el pecado; de este modo tu Iglesia, unificada por virtud y a imagen de la Trinidad, aparece ante el mundo como cuerpo de Cristo y templo del Espíritu, para alabanza de tu infinita sabiduría.",
+                "__massEditorPairKeys": {
+                  "text_es": "221:text"
+                }
+              },
+              {
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "222:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "223:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO IX PARA LOS DOMINGOS DEL TIEMPO ORDINARIO (Prefacio II del Espíritu Santo) LA ACCIÓN DEL ESPÍRITU SANTO EN LA IGLESIA Este prefacio se dice en los domingo del tiempo ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "224:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "225:text"
+                }
+              },
+              {
+                "text_es": "Porque nos concedes en cada momento lo que más conviene y diriges sabiamente la nave de tu Iglesia, asistiéndola siempre con la fuerza del Espíritu Santo, para que, a impulso de su amor confiado, no abandone la plegaria en la tribulación, ni la acción de gracias en el gozo, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "226:text"
+                }
+              },
+              {
+                "text_es": "A quien alaban los cielos y la tierra, los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "227:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "228:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO X PARA LOS DOMINGOS DEL TIEMPO ORDINARIO EL DÍA DEL SEÑOR Este prefacio se dice en los domingo del tiempo ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "229:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo bendecirte y darte gracias, Padre santo, fuente de la verdad y de la vida, porque nos has convocado en tu casa en este día de fiesta.",
+                "__massEditorPairKeys": {
+                  "text_es": "230:text"
+                }
+              },
+              {
+                "text_es": "Hoy, tu familia, reunida en la escucha de tu Palabra y en la comunión del pan único y partido, celebra el memorial del Señor resucitado, mientras espera el domingo sin ocaso en el que la humanidad entera entrará en tu descanso.",
+                "__massEditorPairKeys": {
+                  "text_es": "231:text"
+                }
+              },
+              {
+                "text_es": "Entonces contemplaremos tu rostro y alabaremos por siempre tu misericordia.",
+                "__massEditorPairKeys": {
+                  "text_es": "232:text"
+                }
+              },
+              {
+                "text_es": "Con esta gozosa esperanza, y unidos a los ángeles y a los santos, cantamos unánimes el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "233:text"
+                }
+              },
+              {
+                "text_es": "Los domingos en las plegarias eucarísticas I, II y III se puede hacer el recuerdo dominical propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "234:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO DEL BAUTISMO EL BAUTISMO, INICIO DE LA VIDA NUEVA Este prefacio se puede decir en la misa del bautismo.",
+                "__massEditorPairKeys": {
+                  "text_es": "235:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias y exaltar tu nombre, Padre santo y misericordioso, por Jesucristo, Señor y Redentor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "236:text"
+                }
+              },
+              {
+                "text_es": "Te alabamos, te bendecimos y te glorificamos por el sacramento del nuevo nacimiento.",
+                "__massEditorPairKeys": {
+                  "text_es": "237:text"
+                }
+              },
+              {
+                "text_es": "Tú has querido que del corazón abierto de tu Hijo manara para nosotros el don nupcial del Bautismo, primera Pascua de los creyentes, puerta de nuestra salvación. inicio de la vida en Cristo, fuente de la humanidad nueva.",
+                "__massEditorPairKeys": {
+                  "text_es": "238:text"
+                }
+              },
+              {
+                "text_es": "Del agua y del Espíritu engendras en el seno de la Iglesia, virgen y madre, un pueblo de sacerdotes y reyes, congregado de entre todas las naciones en la unidad y santidad del amor.",
+                "__massEditorPairKeys": {
+                  "text_es": "239:text"
+                }
+              },
+              {
+                "text_es": "Por este don de tu benevolencia tu familia te adora y, unida a los ángeles y a los santos, canta el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "240:text"
+                }
+              },
+              {
+                "text_es": "En las plegarias eucarísticas se hace recuerdo de los recién bautizados.",
+                "__massEditorPairKeys": {
+                  "text_es": "241:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO DE LA CONFIRMACIÓN MARCADOS CON EL SELLO DEL ESPÍRITU Este prefacio se puede decir en la misa de la confirmación.",
+                "__massEditorPairKeys": {
+                  "text_es": "242:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre santo, fuente y origen de todo bien.",
+                "__massEditorPairKeys": {
+                  "text_es": "243:text"
+                }
+              },
+              {
+                "text_es": "Tú, en el Bautismo das nueva vida a los creyentes y los haces partícipes del misterio pascual de tu Hijo.",
+                "__massEditorPairKeys": {
+                  "text_es": "244:text"
+                }
+              },
+              {
+                "text_es": "Tú los confirmas con el sello del Espíritu, mediante la imposición de manos y la unción del crisma.",
+                "__massEditorPairKeys": {
+                  "text_es": "245:text"
+                }
+              },
+              {
+                "text_es": "Así, renovados a imagen de Cristo, el ungido por el Espíritu Santo y enviado para anunciar la buena nueva de la salvación, los haces tus comensales en el banquete eucarístico y testigos de la fe en la Iglesia y en el mundo.",
+                "__massEditorPairKeys": {
+                  "text_es": "246:text"
+                }
+              },
+              {
+                "text_es": "Por eso, nosotros, reunidos en esta asamblea festiva para celebrar los prodigios de un renovado Pentecostés, y unidos a los ángeles y a los santos, cantamos el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "247:text"
+                }
+              },
+              {
+                "text_es": "En las plegarias eucarísticas se hace mención de los recién confirmados.",
+                "__massEditorPairKeys": {
+                  "text_es": "248:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE LA SANTÍSIMA EUCARISTÍA EL SACRIFICIO Y EL SACRAMENTO DE CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "249:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "60.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "250:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en la misa de la Cena del Señor; puede decirse también en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía.",
+                "__massEditorPairKeys": {
+                  "text_es": "251:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro, verdadero y único sacerdote.",
+                "__massEditorPairKeys": {
+                  "text_es": "252:text"
+                }
+              },
+              {
+                "text_es": "El cual, al instituir el sacrificio de la eterna alianza, se ofreció a sí mismo como víctima de salvación, y nos mandó perpetuar esta ofrenda en conmemoración suya.",
+                "__massEditorPairKeys": {
+                  "text_es": "253:text"
+                }
+              },
+              {
+                "text_es": "Su carne, inmolada por nosotros, es alimento que nos fortalece; su sangre, derramada por nosotros, es bebida que nos purifica.",
+                "__massEditorPairKeys": {
+                  "text_es": "254:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y los arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "255:text"
+                }
+              },
+              {
+                "text_es": "En la misa de la Cena del Señor, cuando se utiliza el Canon romano, se dice Reunidos en comunión, Acepta, Señor, en tu bondad y Él cual, la víspera de su Pasión propios.",
+                "__massEditorPairKeys": {
+                  "text_es": "256:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO II DE LA SANTÍSIMA EUCARISTÍA LOS FRUTOS DE LA SANTÍSIMA EUCARISTÍA Este prefacio se dice en la solemnidad del Cuerpo y Sangre de Cristo y en las misas votivas de la Santísima Eucaristía.",
+                "__massEditorPairKeys": {
+                  "text_es": "257:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "258:text"
+                }
+              },
+              {
+                "text_es": "El cual, en la última cena con los apóstoles, para perpetuar su pasión salvadora, se entregó a sí mismo como Cordero inmaculado y Eucaristía perfecta.",
+                "__massEditorPairKeys": {
+                  "text_es": "259:text"
+                }
+              },
+              {
+                "text_es": "Con este sacramento alimentas y santificas a tus fieles, para que una misma fe ilumine y un mismo amor congregue a todos los hombres que habitan un mismo mundo.",
+                "__massEditorPairKeys": {
+                  "text_es": "260:text"
+                }
+              },
+              {
+                "text_es": "Así, pues, nos reunimos en torno a la mesa de este sacramento admirable, para que la abundancia de tu gracia nos lleve a poseer la vida celestial.",
+                "__massEditorPairKeys": {
+                  "text_es": "261:text"
+                }
+              },
+              {
+                "text_es": "Por eso, Señor, todas tus criaturas, en el cielo y en la tierra, te adoran cantando un cántico nuevo; y también nosotros, con los ángeles, te aclamamos por siempre diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "262:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO III DE LA SANTÍSIMA EUCARISTÍA LA EUCARISTÍA, VIÁTICO PARA LA PASCUA ETERNA Este prefacio se puede decir en la misa del viático.",
+                "__massEditorPairKeys": {
+                  "text_es": "263:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario darte gracias, es bueno bendecir tu nombre, Padre santo, Dios de misericordia y de paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "264:text"
+                }
+              },
+              {
+                "text_es": "Porque has querido que tu Hijo, obediente hasta la muerte de cruz, nos precediera en el camino de retorno a ti, término de toda esperanza humana.",
+                "__massEditorPairKeys": {
+                  "text_es": "265:text"
+                }
+              },
+              {
+                "text_es": "En la Eucaristía, testamento de su amor, él se hace comida y bebida espiritual, para alimentarnos en nuestro viaje hacia la Pascua eterna.",
+                "__massEditorPairKeys": {
+                  "text_es": "266:text"
+                }
+              },
+              {
+                "text_es": "Con esta prenda de la resurrección futura, en la esperanza participamos ya de la mesa gloriosa de tu reino y, unidos a los ángeles y a los santos, proclamamos el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "267:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO DE LA PENITENCIA EL SACRAMENTO DE LA RECONCILIACIÓN EN EL ESPÍRITU Este prefacio se puede decir en el tiempo de Cuaresma.",
+                "__massEditorPairKeys": {
+                  "text_es": "268:text"
+                }
+              },
+              {
+                "rubric_es": "Si dice también en las misas de reconciliación y en las otras misas de carácter penitencial.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "269:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo alabarte y darte gracias, Padre santo, Dios todopoderoso, por tus beneficios, sobre todo por la gracia del perdón.",
+                "__massEditorPairKeys": {
+                  "text_es": "270:text"
+                }
+              },
+              {
+                "text_es": "Al hombre, náufrago a causa del pecado, con el sacramento de la reconciliación le abres el puerto de la misericordia y de la paz, en Cristo muerto y resucitado.",
+                "__massEditorPairKeys": {
+                  "text_es": "271:text"
+                }
+              },
+              {
+                "text_es": "Con el poder de tu Espíritu, has dispuesto para la Iglesia, santa y al mismo tiempo necesitada de penitencia, una segunda tabla de salvación después del Bautismo, y así la renuevas incesantemente, para congregarla en el banquete festivo de tu amor.",
+                "__massEditorPairKeys": {
+                  "text_es": "272:text"
+                }
+              },
+              {
+                "text_es": "Por ese don de tu benevolencia, unidos a los ángeles y a los santos, contamos, a una voz, el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "273:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO DE LA UNCIÓN DE ENFERMOS EL SUFRIMIENTO, PARTICIPACIÓN EN LA PASCUA DE CRISTO Este prefacio se puede decir en las misas de unción de los enfermos.",
+                "__massEditorPairKeys": {
+                  "text_es": "274:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, Dios de misericordia, Señor todopoderoso, por Jesucristo, Señor y Redentor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "275:text"
+                }
+              },
+              {
+                "text_es": "Porque has querido que tu único Hijo, autor de la vida, médico de los cuerpos y de las almas, tomase sobre sí nuestras debilidades, para socorrernos en los momentos de prueba y santificarnos en la experiencia del dolor.",
+                "__massEditorPairKeys": {
+                  "text_es": "276:text"
+                }
+              },
+              {
+                "text_es": "En el signo sacramental de la Unción, por la oración de la Iglesia, nos librar del pecado, nos confortas con la gracia del Espíritu Santo y nos haces partícipes de la victoria pascual.",
+                "__massEditorPairKeys": {
+                  "text_es": "277:text"
+                }
+              },
+              {
+                "text_es": "Por este signo de tu benevolencia, unidos a los ángeles y a los santos, cantamos, a una voz, el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "278:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE SANTA MARÍA VIRGEN LA MATERNIDAD DE MARÍA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "279:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "62.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "280:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de la Santísima Virgen, añadiendo en su lugar (***) la mención de la celebración del día, según se indica en cada misa.",
+                "__massEditorPairKeys": {
+                  "text_es": "281:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "282:text"
+                }
+              },
+              {
+                "text_es": "Y alabar, bendecir y proclamar tu gloria en la (***) de santa María, siempre virgen.",
+                "__massEditorPairKeys": {
+                  "text_es": "283:text"
+                }
+              },
+              {
+                "text_es": "Porque ella concibió a tu único Hijo por obra del Espíritu Santo, y, sin perder la gloria de su virginidad, derramó sobre el mundo la luz eterna, Jesucristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "284:text"
+                }
+              },
+              {
+                "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría.",
+                "__massEditorPairKeys": {
+                  "text_es": "285:text"
+                }
+              },
+              {
+                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "286:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE SANTA MARÍA VIRGEN LA IGLESIA ALABA A DIOS INSPIRÁNDOSE EN LAS PALABRAS DE MARÍA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "287:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "63.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "288:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las Misas de la Santísima Virgen.",
+                "__massEditorPairKeys": {
+                  "text_es": "289:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias, Señor, y proclamar tus maravillas en la perfección de tus santos; y, al conmemorar a la bienaventurada Virgen María, exaltar especialmente tu generosidad inspirándonos en su mismo cántico de alabanza.",
+                "__massEditorPairKeys": {
+                  "text_es": "290:text"
+                }
+              },
+              {
+                "text_es": "En verdad hiciste obras grandes en favor de todos los pueblos, y has mantenido tu misericordia de generación en generación, cuando, al mirar la humillación de tu esclava, por ella nos diste al autor de la vida, Jesucristo, Hijo tuyo y Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "291:text"
+                }
+              },
+              {
+                "text_es": "Por él, los ángeles y los arcángeles te adoran eternamente, gozosos en tu presencia.",
+                "__massEditorPairKeys": {
+                  "text_es": "292:text"
+                }
+              },
+              {
+                "text_es": "Permítenos unirnos a sus voces cantando tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "293:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO III DE SANTA MARÍA VIRGEN MARÍA, MODELO Y MADRE DE LA IGLESIA Este prefacio se dice en las misas de la Santísima Virgen.",
+                "__massEditorPairKeys": {
+                  "text_es": "294:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, y alabarte debidamente en esta celebración en honor de la Virgen María.",
+                "__massEditorPairKeys": {
+                  "text_es": "295:text"
+                }
+              },
+              {
+                "text_es": "Ella, al aceptar tu Palabra con limpio corazón, mereció concebirla en su seno virginal, y al dar a luz a su Hijo preparó el nacimiento de la Iglesia.",
+                "__massEditorPairKeys": {
+                  "text_es": "296:text"
+                }
+              },
+              {
+                "text_es": "Ella, al recibir junto a la cruz el testamento de tu amor divino, tomó como hijos a todos los hombres, nacidos a la vida sobrenatural por la muerte de Cristo.",
+                "__massEditorPairKeys": {
+                  "text_es": "297:text"
+                }
+              },
+              {
+                "text_es": "Ella, en la espera pentecostal del Espíritu, al unir sus oraciones a las de los discípulos, se convirtió en el modelos de la Iglesia suplicante.",
+                "__massEditorPairKeys": {
+                  "text_es": "298:text"
+                }
+              },
+              {
+                "text_es": "Desde su asunción a los cielos, acompaña con amor materno a la Iglesia peregrina, y protege sus pasos hacia la patria celeste, hasta la venida gloriosa del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "299:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos diciendo sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "300:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO IV DE SANTA MARÍA VIRGEN MARÍA, SIGNO DE CONSUELO Y DE ESPERANZA Este prefacio se dice en las misas de la Santísima Virgen.",
+                "__massEditorPairKeys": {
+                  "text_es": "301:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, es bueno cantar tu gloria, Padre Santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "302:text"
+                }
+              },
+              {
+                "text_es": "Te alabamos y te bendecimos, por Jesucristo, tu Hijo, en esta fiesta (memoria) de la bienaventurada Virgen María.",
+                "__massEditorPairKeys": {
+                  "text_es": "303:text"
+                }
+              },
+              {
+                "text_es": "Ella, como humilde sierva, escuchó tu palabra y la conservó en su corazón; admirablemente unida al misterio de la redención, perseveró con los apóstoles en la plegaria, mientras esperaban al Espíritu Santo, y ahora brilla en nuestro camino como signo de consuelo y de firme esperanza.",
+                "__massEditorPairKeys": {
+                  "text_es": "304:text"
+                }
+              },
+              {
+                "text_es": "Por este don de tu benevolencia, unidos a los ángeles y a los santos, te entonamos nuestro canto y proclamamos tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "305:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO V DE SANTA MARÍA VIRGEN MARÍA, IMAGEN DE LA HUMANIDAD NUEVA Este prefacio se dice en las misas de la Santísima Virgen.",
+                "__massEditorPairKeys": {
+                  "text_es": "306:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, Padre Santo, fuente de la vida y de la alegría.",
+                "__massEditorPairKeys": {
+                  "text_es": "307:text"
+                }
+              },
+              {
+                "text_es": "Porque en esta etapa final de la historia has querido revelarnos el misterio escondido desde siglos, para que así el mundo entero retorne a la vida y recobre la esperanza.",
+                "__massEditorPairKeys": {
+                  "text_es": "308:text"
+                }
+              },
+              {
+                "text_es": "En Cristo, nuevo Adán, y en María, nueva Eva, se revela el misterio de tu Iglesia, como primicia de la humanidad redimida.",
+                "__massEditorPairKeys": {
+                  "text_es": "309:text"
+                }
+              },
+              {
+                "text_es": "Por este inefable don la creación entera, con la fuerza del Espíritu Santo, emprende de nuevo su camino hacia la Pascua eterna.",
+                "__massEditorPairKeys": {
+                  "text_es": "310:text"
+                }
+              },
+              {
+                "text_es": "Por eso, nosotros, unidos a los ángeles y a los santos, cantamos a una voz el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "311:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE LOS APÓSTOLES LOS APÓSTOLES, PASTORES DEL PUEBLO DE DIOS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "312:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "64.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "313:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de los Apóstoles, principalmente en las de san Pedro y san Pablo.",
+                "__massEditorPairKeys": {
+                  "text_es": "314:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso, Pastor eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "315:text"
+                }
+              },
+              {
+                "text_es": "Porque no abandonas nunca a tu rebaño, sino que por medio de los santos Apóstoles lo proteges y conservas, y quieres que tenga siempre por guía la palabra de aquellos mismos pastores a quienes tu Hijo dio la misión de anunciar el Evangelio.",
+                "__massEditorPairKeys": {
+                  "text_es": "316:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "317:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE LOS APÓSTOLES LOS APÓSTOLES, FUNDAMENTO DE LA IGLESIA Y TESTIMONIO PARA EL MUNDO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "318:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "65.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "319:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de los Apóstoles y de los Evangelistas.",
+                "__massEditorPairKeys": {
+                  "text_es": "320:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "321:text"
+                }
+              },
+              {
+                "text_es": "Porque has cimentado tu Iglesia sobre la roca de los Apóstoles, para que permanezca en el mundo como signo de santidad y señale a todos los hombres el camino que nos lleva hacia ti.",
+                "__massEditorPairKeys": {
+                  "text_es": "322:text"
+                }
+              },
+              {
+                "text_es": "Por eso, Señor, con todos los ángeles te alabamos ahora y por siempre diciendo con humilde fe: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "323:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE LOS SANTOS LA GLORIA DE LOS SANTOS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "324:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "66.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "325:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "326:text"
+                }
+              },
+              {
+                "rubric_es": "Se puede decir también en las memorias de los Santos.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "327:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre Santo, porque manifiestas tu gloria en la asamblea de los santos, y, al coronar sus méritos, coronas tu propia obra.",
+                "__massEditorPairKeys": {
+                  "text_es": "328:text"
+                }
+              },
+              {
+                "text_es": "Tú nos ofreces el ejemplo de su vida, la ayuda de su intercesión y la participación en su destino, para que, animados por su presencia alentadora, luchemos sin desfallecer en la carrera y alcancemos, como ellos, la corona de gloria que no se marchita, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "329:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con la multitud de los santos, cantamos sin cesar el himno de alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "330:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE LOS SANTOS EFICACIA DE LA ACCIÓN DE LOS SANTOS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "331:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "67.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "332:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de «Todos los Santos», de los santos Patronos y Titulares de la iglesia, y en las solemnidades y fiestas de los Santos, a no ser que haya que decir un prefacio más propio.",
+                "__massEditorPairKeys": {
+                  "text_es": "333:text"
+                }
+              },
+              {
+                "rubric_es": "Se puede decir también en las memorias de los Santos.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "334:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "335:text"
+                }
+              },
+              {
+                "text_es": "Porque mediante el testimonio admirable de tus santos fecundas sin cesar a tu Iglesia con vitalidad siempre nueva, dándonos así pruebas evidentes de tu amor.",
+                "__massEditorPairKeys": {
+                  "text_es": "336:text"
+                }
+              },
+              {
+                "text_es": "Ellos nos estimulan con su ejemplo en el camino de la vida y nos ayudan con su intercesión.",
+                "__massEditorPairKeys": {
+                  "text_es": "337:text"
+                }
+              },
+              {
+                "text_es": "Por eso, ahora, nosotros, llenos de alegría, te aclamamos con los ángeles y los santos diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "338:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE LOS SANTOS MÁRTIRES SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "339:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "68.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "340:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires.",
+                "__massEditorPairKeys": {
+                  "text_es": "341:text"
+                }
+              },
+              {
+                "rubric_es": "Se puede decir también en las memorias de los mismos.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "342:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "343:text"
+                }
+              },
+              {
+                "text_es": "Porque la sangre del glorioso mártir san (santa) N., derramada, como la de Cristo, para confesar tu nombre, manifiesta las maravillas de tu poder; pues en su martirio, Señor, has sacado fuerza de lo débil, haciendo de la fragilidad tu propio testimonio; por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "344:text"
+                }
+              },
+              {
+                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "345:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE LOS SANTOS MÁRTIRES SIGNIFICADO Y EJEMPLARIDAD DEL MARTIRIO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "346:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "69.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "347:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Mártires.",
+                "__massEditorPairKeys": {
+                  "text_es": "348:text"
+                }
+              },
+              {
+                "rubric_es": "Se puede decir también en las memorias de los mismos.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "349:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "350:text"
+                }
+              },
+              {
+                "text_es": "Porque al alabar nosotros a los santos mártires, tu eres glorificado ya que todo lo que concierne a su pasión es obra admirable de tu poder.",
+                "__massEditorPairKeys": {
+                  "text_es": "351:text"
+                }
+              },
+              {
+                "text_es": "En efecto, tu misericordiosamente les proporcionas el ardor de la fe, tu les otorgas la firmeza de la perseverancia y les concedes la victoria en la batalla, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "352:text"
+                }
+              },
+              {
+                "text_es": "Por eso, tus creaturas del cielo y de la tierra te adoran cantando un cántico nuevo, y nosotros con todos los coros de los ángeles, proclamamos tu gloria diciendo: Santo, Santo, Santo…",
+                "__massEditorPairKeys": {
+                  "text_es": "353:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO DE LOS SANTOS PASTORES LA PRESENCIA DE LOS SANTOS PASTORES EN LA IGLESIA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "354:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "70.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "355:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las solemnidades y fiestas de los santos Pastores.",
+                "__massEditorPairKeys": {
+                  "text_es": "356:text"
+                }
+              },
+              {
+                "rubric_es": "Se puede decir también en las memorias de los mismos.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "357:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre Santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "358:text"
+                }
+              },
+              {
+                "text_es": "Porque nos concedes la alegría de celebrar hoy la fiesta de san N., fortaleciendo a tu Iglesia con el ejemplo de su vida, instruyéndola con su palabra y protegiéndola con su intercesión.",
+                "__massEditorPairKeys": {
+                  "text_es": "359:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y los santos, te cantamos el himno de alabanza diciendo sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "360:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO DE SANTAS VÍRGENES Y RELIGIOSOS SIGNIFICADO DE LA VIDA CONSAGRADA EXCLUSIVA A DIOS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "361:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "71.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "362:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las solemnidades y fiestas de las santas Vírgenes y de los santos Religiosos.",
+                "__massEditorPairKeys": {
+                  "text_es": "363:text"
+                }
+              },
+              {
+                "rubric_es": "Se puede decir también en las memorias de los mismos.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "364:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En verdad es justo y necesario, que te alaben, Señor, tus criaturas del cielo y de la tierra, y, al recordar a los santos que por el reino de los cielos se consagraron a Cristo, celebremos la grandeza de tus designios.",
+                "__massEditorPairKeys": {
+                  "text_es": "365:text"
+                }
+              },
+              {
+                "text_es": "En ellos recobra el hombre la santidad primera, que de ti había recibido, y gusta ya en la tierra los dones reservados para el cielo.",
+                "__massEditorPairKeys": {
+                  "text_es": "366:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "367:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO COMÚN I EL UNIVERSO RESTAURADO EN CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "368:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "72.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "369:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "370:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "371:text"
+                }
+              },
+              {
+                "text_es": "A quien hiciste fundamento de todo y de cuya plenitud quisiste que participáramos todos.",
+                "__massEditorPairKeys": {
+                  "text_es": "372:text"
+                }
+              },
+              {
+                "text_es": "Siendo él de condición divina se despojó de su rango, y por su sangre derramada en la cruz puso en paz todas las cosas; y así, constituido Señor del universo, es fuente de salvación eterna para cuantos creen en él.",
+                "__massEditorPairKeys": {
+                  "text_es": "373:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "374:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO COMÚN II LA SALVACIÓN POR CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "375:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "73.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "376:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "377:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, que por amor creaste al hombre, y, aunque condenado justamente, con tu misericordia lo redimiste, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "378:text"
+                }
+              },
+              {
+                "text_es": "Por él, los ángeles y los arcángeles y todos los coros celestiales celebran tu gloria, unidos en común alegría.",
+                "__massEditorPairKeys": {
+                  "text_es": "379:text"
+                }
+              },
+              {
+                "text_es": "Permítenos asociarnos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "380:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO COMÚN III ALABANZA A DIOS QUE NOS CREÓ Y NOS HA REDIMIDO EN CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "381:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "74.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "382:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "383:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "384:text"
+                }
+              },
+              {
+                "text_es": "Porque has querido ser, por medio de tu amado Hijo, no sólo el creador del género humano, sino también el autor generoso de la nueva creación.",
+                "__massEditorPairKeys": {
+                  "text_es": "385:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con razón te sirven todas las criaturas, con justicia te alaban todos los redimidos y unánimes te bendicen tus santos.",
+                "__massEditorPairKeys": {
+                  "text_es": "386:text"
+                }
+              },
+              {
+                "text_es": "Con ellos, unidos a los ángeles, nosotros queremos celebrarte y te alabamos diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "387:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO COMÚN IV NUESTRA MISMA ACCIÓN DE GRACIAS ES UN DON DE DIOS",
+                "__massEditorPairKeys": {
+                  "rubric_es": "388:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "75.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "389:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "390:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "391:text"
+                }
+              },
+              {
+                "text_es": "Pues aunque no necesitas nuestra alabanza, ni nuestras bendiciones te enriquecen, tú inspiras y haces tuya nuestra acción de gracias, para que nos sirva de salvación, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "392:text"
+                }
+              },
+              {
+                "text_es": "A quien alaban los ángeles y los arcángeles, proclamando sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "393:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO COMÚN V PROCLAMACIÓN DEL MISTERIO DE CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "394:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "76.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "395:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "396:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias siempre y en todo lugar Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "397:text"
+                }
+              },
+              {
+                "text_es": "Porque, unidos en la caridad, celebramos la muerte de tu Hijo, con fe viva proclamamos su resurrección, y con esperanza firme anhelamos su venida gloriosa.",
+                "__massEditorPairKeys": {
+                  "text_es": "398:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con todos los ángeles y santos, te alabamos, proclamando sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "399:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO COMÚN VI EL MISTERIO DE LA SALVACIÓN EN CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "400:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "77.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "401:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio, tomado de la Plegaria eucarística II, se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "402:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación, darte gracias, Padre santo, siempre y en todo lugar, por Jesucristo, tu Hijo amado.",
+                "__massEditorPairKeys": {
+                  "text_es": "403:text"
+                }
+              },
+              {
+                "text_es": "Por él, que es tu palabra, hiciste todas las cosas; tú nos lo enviaste para que, hecho hombre por obra del Espíritu Santo y nacido de María la Virgen, fuera nuestro Salvador y Redentor.",
+                "__massEditorPairKeys": {
+                  "text_es": "404:text"
+                }
+              },
+              {
+                "text_es": "Él, en cumplimiento de tu voluntad, para destruir la muerte y manifestar la resurrección, extendió sus brazos en la cruz, y así adquirió para ti un pueblo santo.",
+                "__massEditorPairKeys": {
+                  "text_es": "405:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y los santos, cantamos tu gloria diciendo: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "406:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO COMÚN VII CRISTO, HUÉSPED Y PEREGRINO EN MEDIO DE NOSOTROS Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "407:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias, Señor, Padre santo, Dios de la alianza y de la paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "408:text"
+                }
+              },
+              {
+                "text_es": "Porque tú llamaste a Abrahán y le mandaste salir de su tierra, para constituirlo padre de todas las naciones.",
+                "__massEditorPairKeys": {
+                  "text_es": "409:text"
+                }
+              },
+              {
+                "text_es": "Tú suscitaste a Moisés para librar a tu pueblo y guiarlo a la tierra de promisión.",
+                "__massEditorPairKeys": {
+                  "text_es": "410:text"
+                }
+              },
+              {
+                "text_es": "Tú, en la etapa final de la historia, has enviado a tu Hijo, como huésped y peregrino en medio de nosotros, para redimirnos del pecado y de la muerte; y has derramado el Espíritu, para hacer de todas las naciones un solo pueblo nuevo, que tiene como meta, tu reino, como estado, la libertad de tus hijos, como ley, el precepto del amor.",
+                "__massEditorPairKeys": {
+                  "text_es": "411:text"
+                }
+              },
+              {
+                "text_es": "Por estos dones de tu benevolencia, unidos a los ángeles y a los santos, cantamos con gozo el himno de tu gloría: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "412:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO COMÚN VIII JESÚS, BUEN SAMARITANO Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "413:text"
+                }
+              },
+              {
+                "text_es": "Especialmente es recomendable usarlo en el domingo XV del tiempo ordinario del año C y el lunes de la semana XXVII del tiempo ordinario.",
+                "__massEditorPairKeys": {
+                  "text_es": "414:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias y deber nuestro alabarte, Padre santo, Dios todopoderoso y eterno, en todos los momentos y circunstancias de la vida, en la salud y en la enfermedad, en el sufrimiento y en el gozo, por tu siervo, Jesús, nuestro Redentor.",
+                "__massEditorPairKeys": {
+                  "text_es": "415:text"
+                }
+              },
+              {
+                "text_es": "Porque él, en su vida terrena, pasó haciendo el bien y curando a los oprimidos por el mal.",
+                "__massEditorPairKeys": {
+                  "text_es": "416:text"
+                }
+              },
+              {
+                "text_es": "También hoy, como buen samaritano, se acerca a todo hombre que sufre en su cuerpo o en su espíritu, y cura sus heridas con el aceite del consuelo y el vino de la esperanza.",
+                "__massEditorPairKeys": {
+                  "text_es": "417:text"
+                }
+              },
+              {
+                "text_es": "Por este don de tu gracia, incluso cuando nos vemos sumergidos en la noche del dolor, vislumbramos la luz pascual en tu Hijo, muerto y resucitado.",
+                "__massEditorPairKeys": {
+                  "text_es": "418:text"
+                }
+              },
+              {
+                "text_es": "Por eso, unidos a los ángeles y santos, cantamos a una voz el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "419:text"
+                }
+              },
+              {
+                "text_es": "PREFACIO COMÚN IX LA GLORIA DE DIOS ES EL HOMBRE VIVIENTE Este prefacio se dice en las misas que carecen de prefacio propio y no deben tomar un prefacio del tiempo.",
+                "__massEditorPairKeys": {
+                  "text_es": "420:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "421:text"
+                }
+              },
+              {
+                "text_es": "Tú eres el Dios vivo y verdadero; el universo está lleno de tu presencia, pero sobre todo has dejado la huella de tu gloria en el hombre creado a tu imagen.",
+                "__massEditorPairKeys": {
+                  "text_es": "422:text"
+                }
+              },
+              {
+                "text_es": "Tú lo llamas a cooperar con el trabajo cotidiano en el proyecto de la creación y le das tu Espíritu para que sea artífice de justicia y de paz, en Cristo, el hombre nuevo.",
+                "__massEditorPairKeys": {
+                  "text_es": "423:text"
+                }
+              },
+              {
+                "text_es": "Por eso, unidos a los ángeles y a los santos, cantamos con alegría el himno de tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "424:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO I DE DIFUNTOS LA ESPERANZA DE LA RESURRECCIÓN EN CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "425:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "78.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "426:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de difuntos.",
+                "__massEditorPairKeys": {
+                  "text_es": "427:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "428:text"
+                }
+              },
+              {
+                "text_es": "En él brilla la esperanza de nuestra feliz resurrección; y así, aunque la certeza de morir nos entristece, nos consuela la promesa de la futura inmortalidad.",
+                "__massEditorPairKeys": {
+                  "text_es": "429:text"
+                }
+              },
+              {
+                "text_es": "Porque la vida de los que en ti creemos, Señor, no termina, se transforma; y, al deshacerse nuestra morada terrenal, adquirimos una mansión eterna en el cielo.",
+                "__massEditorPairKeys": {
+                  "text_es": "430:text"
+                }
+              },
+              {
+                "text_es": "Por eso, con los ángeles y arcángeles y con todos los coros celestiales, cantamos sin cesar el himno de tu gloria: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "431:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO II DE DIFUNTOS CRISTO HA MUERTO PARA NUESTRA VIDA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "432:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "79.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "433:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de difuntos.",
+                "__massEditorPairKeys": {
+                  "text_es": "434:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "435:text"
+                }
+              },
+              {
+                "text_es": "Porque él aceptó la muerte, uno por todos, para librarnos del morir eterno; es más, quiso entregar su vida para que todos tuviéramos vida eterna.",
+                "__massEditorPairKeys": {
+                  "text_es": "436:text"
+                }
+              },
+              {
+                "text_es": "Por eso, unidos a los coros angélicos, te aclamamos llenos de alegría: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "437:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO III DE DIFUNTOS CRISTO, SALVACIÓN Y VIDA",
+                "__massEditorPairKeys": {
+                  "rubric_es": "438:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "80.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "439:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de difuntos.",
+                "__massEditorPairKeys": {
+                  "text_es": "440:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno, por Cristo, Señor nuestro.",
+                "__massEditorPairKeys": {
+                  "text_es": "441:text"
+                }
+              },
+              {
+                "text_es": "Porque él es la salvación del mundo, la vida de los hombres, la resurrección de los muertos.",
+                "__massEditorPairKeys": {
+                  "text_es": "442:text"
+                }
+              },
+              {
+                "text_es": "Por él, los ángeles te cantan con júbilo eterno y nosotros nos unimos a sus voces cantando humildemente tu alabanza: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "443:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO IV DE DIFUNTOS LA VIDA TERRENA Y LA GLORIA CELESTE",
+                "__massEditorPairKeys": {
+                  "rubric_es": "444:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "81.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "445:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de difuntos.",
+                "__massEditorPairKeys": {
+                  "text_es": "446:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias siempre y en todo lugar, Señor, Padre santo, Dios todopoderoso y eterno.",
+                "__massEditorPairKeys": {
+                  "text_es": "447:text"
+                }
+              },
+              {
+                "text_es": "Porque tu voluntad nos da la vida, tus decretos la dirigen y un mandato tuyo, en castigo del pecado, nos devuelve a la tierra de la que habíamos sido sacados.",
+                "__massEditorPairKeys": {
+                  "text_es": "448:text"
+                }
+              },
+              {
+                "text_es": "Y también te damos gracias porque, al redimirnos con la muerte de tu Hijo Jesucristo, por tu voluntad salvadora nos llevas a nueva vida para que tengamos parte en su gloriosa resurrección.",
+                "__massEditorPairKeys": {
+                  "text_es": "449:text"
+                }
+              },
+              {
+                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros en la tierra te aclamamos diciendo sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "450:text"
+                }
+              },
+              {
+                "rubric_es": "PREFACIO V DE DIFUNTOS NUESTRA RESURRECCIÓN POR MEDIO DE LA VICTORIA DE CRISTO",
+                "__massEditorPairKeys": {
+                  "rubric_es": "451:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "82.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "452:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Este prefacio se dice en las misas de difuntos.",
+                "__massEditorPairKeys": {
+                  "text_es": "453:text"
+                }
+              },
+              {
+                "text_es": "En verdad es justo darte gracias y deber nuestro glorificarte, Padre santo.",
+                "__massEditorPairKeys": {
+                  "text_es": "454:text"
+                }
+              },
+              {
+                "text_es": "Porque si el morir se debe al hombre, el ser llamados a la vida con Cristo es obra gratuita de tu amor, ya que, habiendo muerto por el pecado, hemos sido redimidos por la victoria de tu Hijo.",
+                "__massEditorPairKeys": {
+                  "text_es": "455:text"
+                }
+              },
+              {
+                "text_es": "Por eso, como los ángeles te cantan en el cielo, así nosotros te proclamamos en la tierra, diciendo sin cesar: Santo, Santo, Santo...",
+                "__massEditorPairKeys": {
+                  "text_es": "456:text"
+                }
+              }
+            ]
+          }
+        },
+        "sanctus": [
+          {
+            "text_es": "Santo, Santo, Santo es el Señor, Dios del universo.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Llenos están el cielo y la tierra de tu gloria.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "text_es": "Hosanna en el cielo.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "text_es": "Bendito el que viene en nombre del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "text_es": "Hosanna en el cielo.",
+            "__massEditorPairKeys": {
+              "text_es": "4:text"
+            }
+          }
+        ],
+        "forms": {
+          "1": [
+            {
+              "text_es": "CP P adre misericordioso, te pedimos humildemente por Jesucristo, tu Hijo, nuestro Señor, Junta las manos y dice: que aceptes y bendigas Traza, una sola vez, el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: estos ✠ dones, este sacrificio santo y puro que te ofrecemos, Con las manos extendidas, prosigue: ante todo, por tu Iglesia santa y católica,",
+              "__massEditorPairKeys": {
+                "text_es": "canon:te_igitur:0:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "text_es": "para que le concedas la paz, la protejas, la congregues en la unidad",
+              "__massEditorPairKeys": {
+                "text_es": "canon:te_igitur:1:text"
+              }
+            },
+            {
+              "rubric_es": "y la gobiernes en el mundo entero, con tu servidor el Papa N., con nuestro obispo N., Puede hacerse mención de los Obispos coadjutores o auxiliares. ________________________________ El Obispo, cuando celebra en su diócesis, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:te_igitur:2:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "conmigo, indigno siervo tuyo, Cuando celebra un Obispo que no es el ordinario diocesano, dice: con mi hermano N., Obispo de esta Iglesia de N., conmigo,",
+              "__massEditorPairKeys": {
+                "text_es": "canon:te_igitur:3:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "text_es": "indigno siervo tuyo, ________________________________ y todos los demás Obispos que, fieles a la verdad, promueven la fe católica y apostólica.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:te_igitur:4:text"
+              }
+            },
+            {
+              "rubric_es": "Conmemoración de los vivos C1 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "5:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Acuérdate, Señor, de tus hijos N. y N.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:living:0:text"
+              }
+            },
+            {
+              "rubric_es": "Después, con las manos extendidas, prosigue: y de todos los aquí reunidos, cuya fe y entrega bien conoces; por ellos y todos los suyos, por el perdón de sus pecados y la salvación que esperan, te ofrecemos, y ellos mismos te ofrecen, este sacrificio de alabanza, a ti, eterno Dios, vivo y verdadero.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:living:1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "type": "optionBlock",
+              "optionKey": "roman_canon_season",
+              "defaultOption": "ordinary",
+              "showControl": true,
+              "label": {
+                "es": "Tiempo Ordinario"
+              },
+              "options": {
+                "ordinary": {
+                  "label": {
+                    "es": "Tiempo Ordinario"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Conmemoración de los santos C2 ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Reunidos en comunión con toda la Iglesia, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* la de su esposo, San José; la de los santos apóstoles y mártires",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:2:text"
+                      }
+                    }
+                  ]
+                },
+                "christmas": {
+                  "label": {
+                    "es": "Navidad"
+                  },
+                  "lines": [
+                    {
+                      "text_es": "nuestro Dios y Señor;* En la Natividad del Señor y durante su octava: Reunidos en comunión con toda la Iglesia para celebrar (la noche santa) el día santo en que la Virgen María, conservando intacta su virginidad, dio a luz al Salvador del mundo, veneramos la memoria, ante todo, de esta gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En la Epifanía del Señor:",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:2:text"
+                      }
+                    }
+                  ]
+                },
+                "epiphany": {
+                  "label": {
+                    "es": "Epifanía"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que tu único Hijo, eterno como tú en la gloria, se manifestó en la verdad de nuestra carne, hecho hombre como nosotros, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En el Jueves Santo:",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "canon:communicantes:0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:2:text"
+                      }
+                    }
+                  ]
+                },
+                "easter": {
+                  "label": {
+                    "es": "Pascua"
+                  },
+                  "lines": [
+                    {
+                      "text_es": "Desde la misa de la Vigilia Pascual hasta el Segundo Domingo de Pascua: Reunidos en comunión con toda la Iglesia para celebrar (la noche santa) el día santo de la resurrección de nuestro Señor Jesucristo según la carne, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En la Ascensión del Señor:",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:2:text"
+                      }
+                    }
+                  ]
+                },
+                "ascension": {
+                  "label": {
+                    "es": "Ascensión"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Reunidos en comunión con toda la Iglesia para celebrar el día santo en que tu único Hijo, nuestro Señor Jesucristo, habiendo tomado nuestra débil condición humana, la exaltó a la derecha de tu gloria, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* En el Domingo de Pentecostés:",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "canon:communicantes:0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:2:text"
+                      }
+                    }
+                  ]
+                },
+                "pentecost": {
+                  "label": {
+                    "es": "Pentecostés"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Reunidos en comunión con toda la Iglesia para celebrar el día de Pentecostés, en que el Espíritu Santo se manifestó a los apóstoles en lenguas de fuego, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo, nuestro Dios y Señor;* __________________________________",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "canon:communicantes:0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Pedro y Pablo, Andrés, [Santiago y Juan, Tomás, Santiago y Felipe, Bartolomé, Mateo, Simón y Tadeo; Lino, Cleto, Clemente, Sixto, Cornelio, Cipriano, Lorenzo, Crisógono, Juan y Pablo, Cosme y Damián,] y la de todos los santos; por sus méritos y oraciones concédenos en todo tu protección. [Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] ____________________________________ REUNIDOS EN COMUNIÓN PROPIOS En los domingos, cuando no hay otro Reunidos en comunión propio: Reunidos en comunión con toda la Iglesia, para celebrar el domingo, día en que Cristo ha vencido a la muerte y nos ha hecho partícipes de su vida inmortal, veneramos la memoria, ante todo, de la gloriosa siempre Virgen María, Madre de Jesucristo,",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:communicantes:2:text"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pairKey": "canon:communicantes:choice"
+            },
+            {
+              "type": "optionBlock",
+              "optionKey": "roman_canon_season",
+              "defaultOption": "ordinary",
+              "showControl": false,
+              "label": {
+                "es": "Tiempo Ordinario"
+              },
+              "options": {
+                "ordinary": {
+                  "label": {
+                    "es": "Tiempo Ordinario"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Con las manos extendidas prosigue: CP ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "rubric_es": "Junta las manos. ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "1:rubric"
+                      },
+                      "rubricInset_es": true
+                    },
+                    {
+                      "text_es": "[Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:2:text"
+                      }
+                    }
+                  ]
+                },
+                "christmas": {
+                  "label": {
+                    "es": "Navidad"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Con las manos extendidas prosigue: CP ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "rubric_es": "Junta las manos. ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "1:rubric"
+                      },
+                      "rubricInset_es": true
+                    },
+                    {
+                      "text_es": "[Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:2:text"
+                      }
+                    }
+                  ]
+                },
+                "epiphany": {
+                  "label": {
+                    "es": "Epifanía"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Con las manos extendidas prosigue: CP ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "rubric_es": "Junta las manos. ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "1:rubric"
+                      },
+                      "rubricInset_es": true
+                    },
+                    {
+                      "text_es": "[Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:2:text"
+                      }
+                    }
+                  ]
+                },
+                "easter": {
+                  "label": {
+                    "es": "Pascua"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Con las manos extendidas prosigue: CP ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "rubric_es": "Junta las manos. ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "1:rubric"
+                      },
+                      "rubricInset_es": true
+                    },
+                    {
+                      "text_es": "[Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:2:text"
+                      }
+                    }
+                  ]
+                },
+                "ascension": {
+                  "label": {
+                    "es": "Ascensión"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Con las manos extendidas prosigue: CP ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "rubric_es": "Junta las manos. ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "1:rubric"
+                      },
+                      "rubricInset_es": true
+                    },
+                    {
+                      "text_es": "[Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:2:text"
+                      }
+                    }
+                  ]
+                },
+                "pentecost": {
+                  "label": {
+                    "es": "Pentecostés"
+                  },
+                  "lines": [
+                    {
+                      "rubric_es": "Con las manos extendidas prosigue: CP ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "0:rubric"
+                      }
+                    },
+                    {
+                      "text_es": "Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa; ordena en tu paz nuestros días, líbranos de la condenación eterna y cuéntanos entre tus elegidos.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "rubric_es": "Junta las manos. ",
+                      "__massEditorPairKeys": {
+                        "rubric_es": "1:rubric"
+                      },
+                      "rubricInset_es": true
+                    },
+                    {
+                      "text_es": "[Por Cristo nuestro Señor.",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_es": "Amén.] __________________________________ En el Jueves Santo durante la Misa Vespertina de la Cena del Señor: Acepta, Señor, en tu bondad, esta ofrenda de tus siervos y de toda tu familia santa, que te presentamos en el día mismo en que nuestro Señor Jesucristo encomendó a sus discípulos la celebración del sacramento de su Cuerpo y de su Sangre; ordena en tu paz nuestros días, líbranos de la condenación eterna",
+                      "__massEditorPairKeys": {
+                        "text_es": "canon:hanc_igitur:2:text"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pairKey": "canon:hanc_igitur:choice"
+            },
+            {
+              "text_es": "Extendiendo las manos sobre las ofrendas, dice: CC Bendice y santifica, oh Padre, esta ofrenda haciéndola perfecta, espiritual y digna de ti, de manera que sea para nosotros Cuerpo y Sangre de tu Hijo amado, Jesucristo, nuestro Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:quam_oblationem:0:text"
+              }
+            },
+            {
+              "rubric_es": "Junta las manos.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:quam_oblationem:1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "El cual, la víspera de su Pasión, ___________________________________ En la Misa Vespertina del Jueves santo: El cual, hoy, la víspera de padecer por nuestra salvación y la de todos los hombres, ___________________________________ Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: tomó pan en sus santas y venerables manos, Eleva los ojos. y elevando los ojos al cielo, hacia ti,",
+              "__massEditorPairKeys": {
+                "text_es": "canon:bread:0:text"
+              }
+            },
+            {
+              "text_es": "Dios Padre suyo todopoderoso, dando gracias te bendijo, lo partió y lo dio a sus discípulos diciendo: ",
+              "__massEditorPairKeys": {
+                "text_es": "canon:bread:1:text"
+              }
+            },
+            {
+              "rubric_es": "Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "12:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:bread:2:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:bread:3:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:cup:0:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:cup:1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:cup:2:text"
+              }
+            },
+            {
+              "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:cup:3:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:cup:4:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Luego dice una de las siguientes fórmulas: CP Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:mystery:0:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:mystery:1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Sacramento de nuestra fe.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:2:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:mystery:3:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús! ___________________________________ También puede decirse: Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:4:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "text_es": "Cristo nos redimió.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:5:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:mystery:6:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz,",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:7:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "text_es": "anunciamos tu muerte, Señor, hasta que vuelvas.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:8:text"
+              }
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:mystery:9:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:10:text"
+              }
+            },
+            {
+              "text_es": "Cristo se entregó por nosotros.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:11:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:mystery:12:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. ___________________________________",
+              "__massEditorPairKeys": {
+                "text_es": "canon:mystery:13:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "CC ",
+              "__massEditorPairKeys": {
+                "rubric_es": "34:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Por eso, Padre, nosotros, tus siervos, y todo tu pueblo santo, al celebrar este memorial de la muerte gloriosa de Jesucristo, tu Hijo, nuestro Señor; de su santa resurrección del lugar de los muertos y de su admirable ascensión a los cielos, te ofrecemos, Dios de gloria y majestad, de los mismos bienes que nos has dado, el sacrificio puro, inmaculado y santo;",
+              "__massEditorPairKeys": {
+                "text_es": "canon:anamnesis:0:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "text_es": "pan de vida eterna y cáliz de eterna salvación.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:anamnesis:1:text"
+              }
+            },
+            {
+              "text_es": "Mira con ojos de bondad esta ofrenda y acéptala, como aceptaste los dones del justo Abel, el sacrificio de Abrahán, nuestro padre en la fe, y la oblación pura de tu sumo sacerdote Melquisedec.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:supra_quae:0:text"
+              }
+            },
+            {
+              "rubric_es": "Inclinado, con las manos juntas prosigue: ",
+              "__massEditorPairKeys": {
+                "rubric_es": "37:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Te pedimos humildemente, Dios todopoderoso,",
+              "__massEditorPairKeys": {
+                "text_es": "canon:supplices:0:text"
+              }
+            },
+            {
+              "text_es": "que esta ofrenda sea llevada a tu presencia, hasta el altar del cielo, por manos tu ángel, para que cuantos recibimos el Cuerpo y la Sangre de tu Hijo, al participar aquí de este altar, Se endereza y se signa diciendo: seamos colmados de gracia y bendición. [Por Cristo, nuestro Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:supplices:1:text"
+              }
+            },
+            {
+              "text_es": "Amén.]",
+              "__massEditorPairKeys": {
+                "text_es": "canon:supplices:2:text"
+              }
+            },
+            {
+              "rubric_es": "Con las manos expendidas dice: C3 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "40:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Acuérdate también, Señor, de tus hijos N. y N., Puede decir los nombres de los difuntos por quienes se quiere orar. que nos han precedido con el signo de la fe y duermen ya el sueño de la paz.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:departed:0:text"
+              }
+            },
+            {
+              "rubric_es": "Junta las manos y ora unos momentos por los difuntos por quienes tiene intención de orar.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:departed:1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después, con las manos extendidas, prosigue: A ellos, Señor, y a cuantos descansan en Cristo, concédeles el lugar del consuelo, de la luz y de la paz.",
+              "__massEditorPairKeys": {
+                "rubric_es": "canon:departed:2:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Junta las manos. ",
+              "__massEditorPairKeys": {
+                "rubric_es": "43:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "[Por Cristo nuestro Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:departed:3:text"
+              }
+            },
+            {
+              "text_es": "Amén.]",
+              "__massEditorPairKeys": {
+                "text_es": "canon:departed:4:text"
+              }
+            },
+            {
+              "text_es": "Con la mano derecha se golpea el pecho diciendo: C4 Y a nosotros, pecadores, siervos tuyos, Con las manos extendidas prosigue: que confiamos en tu infinita misericordia, admítenos en la asamblea de los santos apóstoles y mártires Juan el Bautista, Esteban, Matías y Bernabé,",
+              "__massEditorPairKeys": {
+                "text_es": "canon:nobis_quoque:0:text"
+              }
+            },
+            {
+              "text_es": "[Ignacio, Alejandro, Marcelino y Pedro, Felicidad y Perpetua, Águeda, Lucía, Inés, Cecilia y Anastasia] y de todos los santos; y acéptanos en su compañía, no por nuestros méritos, sino conforme a tu bondad.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:nobis_quoque:1:text"
+              }
+            },
+            {
+              "rubric_es": "Junta las manos: ",
+              "__massEditorPairKeys": {
+                "rubric_es": "47:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Por Cristo, Señor nuestro.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:nobis_quoque:2:text"
+              }
+            },
+            {
+              "rubric_es": "Y continúa: CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "48:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Por quien sigues creando todos los bienes, los santificas, los llenas de vida, los bendices y los repartes entre nosotros.",
+              "__massEditorPairKeys": {
+                "text_es": "canon:per_quem:0:text"
+              }
+            }
+          ],
+          "2": [
+            {
+              "text_es": "Santo, Santo, Santo es el Señor, Dios del universo.",
+              "__massEditorPairKeys": {
+                "text_es": "0:text"
+              }
+            },
+            {
+              "text_es": "Llenos están el cielo y la tierra de tu gloria.",
+              "__massEditorPairKeys": {
+                "text_es": "1:text"
+              }
+            },
+            {
+              "text_es": "Hosanna. en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "2:text"
+              }
+            },
+            {
+              "text_es": "Bendito el que viene en nombre del Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "3:text"
+              }
+            },
+            {
+              "text_es": "Hosanna en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "4:text"
+              }
+            },
+            {
+              "rubric_es": "100.",
+              "__massEditorPairKeys": {
+                "rubric_es": "5:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "El sacerdote, con las manos extendidas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "6:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "CP S anto eres en verdad, Señor, fuente de toda santidad;",
+              "__massEditorPairKeys": {
+                "text_es": "7:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "rubric_es": "101.",
+              "__massEditorPairKeys": {
+                "rubric_es": "8:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice: CC por eso te pedimos que santifiques estos dones con la efusión de tu Espíritu, Junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: de manera que sean para nosotros Cuerpo y ✠ Sangre de Jesucristo, nuestro Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "9:text"
+              }
+            },
+            {
+              "rubric_es": "Junta las manos.",
+              "__massEditorPairKeys": {
+                "rubric_es": "10:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "102.",
+              "__massEditorPairKeys": {
+                "rubric_es": "11:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse con claridad, como lo requiere la naturaleza de éstas.",
+              "__massEditorPairKeys": {
+                "rubric_es": "12:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "El cual,  cuando iba a ser entregado a su Pasión, voluntariamente aceptada, ",
+              "__massEditorPairKeys": {
+                "text_es": "13:text"
+              }
+            },
+            {
+              "rubric_es": "Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: ",
+              "__massEditorPairKeys": {
+                "rubric_es": "14:rubric:segment:0"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "tomó pan, dándote gracias, lo partió y lo dio a sus discípulos, diciendo: ",
+              "__massEditorPairKeys": {
+                "text_es": "14:text"
+              }
+            },
+            {
+              "rubric_es": "Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "14:rubric:segment:1"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES.",
+              "__massEditorPairKeys": {
+                "rubric_es": "15:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "16:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "103.",
+              "__massEditorPairKeys": {
+                "rubric_es": "17:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo: Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "18:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS.",
+              "__massEditorPairKeys": {
+                "text_es": "19:text"
+              }
+            },
+            {
+              "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA.",
+              "__massEditorPairKeys": {
+                "rubric_es": "20:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "21:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "104.",
+              "__massEditorPairKeys": {
+                "rubric_es": "22:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Luego dice una de las siguientes fórmulas:",
+              "__massEditorPairKeys": {
+                "rubric_es": "23:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "24:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "24:text"
+              }
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "25:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Sacramento de nuestra fe.",
+              "__massEditorPairKeys": {
+                "text_es": "26:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "27:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús!  También puede decirse: Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "28:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "text_es": "Cristo nos redimió.",
+              "__massEditorPairKeys": {
+                "text_es": "29:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "30:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz, anunciamos tu muerte, Señor, hasta que vuelvas.",
+              "__massEditorPairKeys": {
+                "text_es": "31:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "32:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "33:text"
+              }
+            },
+            {
+              "text_es": "Cristo se entregó por nosotros.",
+              "__massEditorPairKeys": {
+                "text_es": "34:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "35:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. ",
+              "__massEditorPairKeys": {
+                "text_es": "36:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "105.",
+              "__massEditorPairKeys": {
+                "rubric_es": "37:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después el sacerdote, con las manos extendidas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "38:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "CC ",
+              "__massEditorPairKeys": {
+                "rubric_es": "39:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Así, pues, Padre, al celebrar ahora el memorial de la muerte y resurrección de tu Hijo,",
+              "__massEditorPairKeys": {
+                "text_es": "39:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "text_es": "te ofrecemos el pan de vida y el cáliz de salvación, y te damos gracias porque nos haces dignos de servirte en tu presencia.",
+              "__massEditorPairKeys": {
+                "text_es": "40:text"
+              }
+            },
+            {
+              "text_es": "Te pedimos humildemente que el Espíritu Santo congregue en la unidad a cuantos participamos del Cuerpo y Sangre de Cristo.",
+              "__massEditorPairKeys": {
+                "text_es": "41:text"
+              }
+            },
+            {
+              "rubric_es": "C1 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "42:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Acuérdate, Señor, de tu Iglesia extendida por toda la tierra;",
+              "__massEditorPairKeys": {
+                "text_es": "42:text"
+              }
+            },
+            {
+              "text_es": " y con el Papa N., con nuestro Obispo N.",
+              "__massEditorPairKeys": {
+                "text_es": "43:text"
+              }
+            },
+            {
+              "rubric_es": " y todos los pastores que cuidan de tu pueblo, llévala a su perfección por la caridad. ",
+              "__massEditorPairKeys": {
+                "rubric_es": "44:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "En la misa por los difuntos: Recuerda a tu hijo (hija) N., a quien llamaste (hoy) de este mundo a tu presencia; concédele que, así como ha compartido ya la muerte de Jesucristo, comparta también con él la gloria de la resurrección. ",
+              "__massEditorPairKeys": {
+                "text_es": "45:text"
+              }
+            },
+            {
+              "rubric_es": "C2 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "46:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Acuérdate también de nuestros hermanos que se durmieron en la esperanza de la resurrección, y de todos los que han muerto en tu misericordia; admítelos a contemplar la luz de tu rostro.",
+              "__massEditorPairKeys": {
+                "text_es": "46:text"
+              }
+            },
+            {
+              "text_es": "Ten misericordia de todos nosotros, y así, con María, la Virgen Madre de Dios, su esposo san José, los apóstoles y cuantos vivieron en tu amistad a través de los tiempos, merezcamos, por tu Hijo Jesucristo, compartir la vida eterna y cantar tus alabanzas.",
+              "__massEditorPairKeys": {
+                "text_es": "47:text"
+              }
+            },
+            {
+              "rubric_es": "Junta las manos.",
+              "__massEditorPairKeys": {
+                "rubric_es": "48:rubric"
+              }
+            },
+            {
+              "rubric_es": "106.",
+              "__massEditorPairKeys": {
+                "rubric_es": "49:rubric"
+              }
+            }
+          ],
+          "3": [
+            {
+              "rubric_es": "PLEGARIA EUCARÍSTICA III",
+              "__massEditorPairKeys": {
+                "rubric_es": "0:rubric"
+              }
+            },
+            {
+              "rubric_es": "107.",
+              "__massEditorPairKeys": {
+                "rubric_es": "1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "El Señor esté con ustedes.",
+              "__massEditorPairKeys": {
+                "text_es": "2:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Y con tu espíritu.",
+              "__massEditorPairKeys": {
+                "text_es": "3:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "text_es": "Levantemos el corazón.",
+              "__massEditorPairKeys": {
+                "text_es": "4:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Lo tenemos levantado hacia el Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "5:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "text_es": "Demos gracias al Señor, nuestro Dios.",
+              "__massEditorPairKeys": {
+                "text_es": "6:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Es justo y necesario.",
+              "__massEditorPairKeys": {
+                "text_es": "7:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "rubric_es": "Sigue el prefacio, dicho según las rúbricas, que concluye: Santo, Santo, Santo es el Señor, Dios del universo.",
+              "__massEditorPairKeys": {
+                "rubric_es": "8:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Llenos están el cielo y la tierra de tu gloria.",
+              "__massEditorPairKeys": {
+                "text_es": "9:text"
+              }
+            },
+            {
+              "text_es": "Hosanna. en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "10:text"
+              }
+            },
+            {
+              "text_es": "Bendito el que viene en nombre del Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "11:text"
+              }
+            },
+            {
+              "text_es": "Hosanna en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "12:text"
+              }
+            },
+            {
+              "rubric_es": "122.",
+              "__massEditorPairKeys": {
+                "rubric_es": "13:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "El sacerdote, con las manos extendidas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "14:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "CP S anto eres en verdad, Padre, y con razón te alaban todas tus criaturas, ya que por Jesucristo, tu Hijo, Señor nuestro, con la fuerza del Espíritu Santo, das vida y santificas todo, y congregas a tu pueblo sin cesar, para que ofrezca en tu honor un sacrificio sin mancha desde donde sale el sol hasta el ocaso.",
+              "__massEditorPairKeys": {
+                "text_es": "15:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "rubric_es": "109.",
+              "__massEditorPairKeys": {
+                "rubric_es": "16:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice: CC ",
+              "__massEditorPairKeys": {
+                "rubric_es": "17:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Por eso, Padre, te suplicamos que santifiques por el mismo Espíritu estos dones que hemos separado para ti,",
+              "__massEditorPairKeys": {
+                "text_es": "17:text"
+              }
+            },
+            {
+              "rubric_es": "junta las manos y traza el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: ",
+              "__massEditorPairKeys": {
+                "rubric_es": "18:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "de manera que sean Cuerpo y ✠ Sangre de Jesucristo, Hijo tuyo y Señor nuestro, junta las manos que nos mandó celebrar estos misterios.",
+              "__massEditorPairKeys": {
+                "text_es": "18:text"
+              }
+            },
+            {
+              "rubric_es": "110.",
+              "__massEditorPairKeys": {
+                "rubric_es": "19:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse con claridad, como lo requiere la naturaleza de las mismas palabras.",
+              "__massEditorPairKeys": {
+                "rubric_es": "20:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Porque él mismo, la noche en que iba a ser entregado,  Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: tomó pan, y dando gracias te bendijo,",
+              "__massEditorPairKeys": {
+                "text_es": "21:text"
+              }
+            },
+            {
+              "text_es": "lo partió y lo dio a sus discípulos diciendo: ",
+              "__massEditorPairKeys": {
+                "text_es": "22:text"
+              }
+            },
+            {
+              "rubric_es": "Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "22:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES.",
+              "__massEditorPairKeys": {
+                "rubric_es": "23:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "24:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "111.",
+              "__massEditorPairKeys": {
+                "rubric_es": "25:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso",
+              "__massEditorPairKeys": {
+                "rubric_es": "26:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo: ",
+              "__massEditorPairKeys": {
+                "text_es": "27:text"
+              }
+            },
+            {
+              "rubric_es": "Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "27:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS.",
+              "__massEditorPairKeys": {
+                "text_es": "28:text"
+              }
+            },
+            {
+              "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA.",
+              "__massEditorPairKeys": {
+                "rubric_es": "29:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "30:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "112.",
+              "__massEditorPairKeys": {
+                "rubric_es": "31:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Luego dice una de las siguientes fórmulas: CP Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "rubric_es": "32:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "33:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Éste es el Sacramento de nuestra fe. Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "34:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús!  También puede decirse: Éste es el Misterio de la fe. Cristo nos redimió.",
+              "__massEditorPairKeys": {
+                "text_es": "35:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "36:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz, anunciamos tu muerte, Señor, hasta que vuelvas.",
+              "__massEditorPairKeys": {
+                "text_es": "37:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "38:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "39:text"
+              }
+            },
+            {
+              "text_es": "Cristo se entregó por nosotros.",
+              "__massEditorPairKeys": {
+                "text_es": "40:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "41:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. ",
+              "__massEditorPairKeys": {
+                "text_es": "42:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "113.",
+              "__massEditorPairKeys": {
+                "rubric_es": "43:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después el sacerdote, con las manos extendidas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "44:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "CC ",
+              "__massEditorPairKeys": {
+                "rubric_es": "45:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Así, pues, Padre, al celebrar ahora el memorial de la pasión salvadora de tu Hijo, de su admirable resurrección y ascensión al cielo, mientras esperamos su venida gloriosa, te ofrecemos, en esta acción de gracias, el sacrificio vivo y santo.",
+              "__massEditorPairKeys": {
+                "text_es": "45:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "text_es": "Dirige tu mirada sobre la ofrenda de tu Iglesia, y reconoce en ella la Víctima por cuya inmolación quisiste devolvernos tu amistad, para que, fortalecidos con el Cuerpo y Sangre de tu Hijo y llenos de su Espíritu Santo, formemos en Cristo un solo cuerpo y un solo espíritu.",
+              "__massEditorPairKeys": {
+                "text_es": "46:text"
+              }
+            },
+            {
+              "rubric_es": "C1 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "47:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Que él nos transforme en ofrenda permanente, para que gocemos de tu heredad junto con tus elegidos: con María, la Virgen Madre de Dios, su esposo, san José, los apóstoles y los mártires, [san N.: santo del día o patrono] y todos los santos, por cuya intercesión confiamos obtener siempre tu ayuda.",
+              "__massEditorPairKeys": {
+                "text_es": "47:text"
+              }
+            },
+            {
+              "rubric_es": "C2 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "48:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Te pedimos, Padre, que esta Víctima de reconciliación traiga la paz y la salvación al mundo entero.",
+              "__massEditorPairKeys": {
+                "text_es": "48:text"
+              }
+            },
+            {
+              "rubric_es": "Confirma en la fe y en la caridad a tu Iglesia, peregrina en la tierra: al tu servidor, el Papa N., a nuestro obispo N., Puede hacerse también mención de los Obispos coadjutores o auxiliares.  El Obispo, cuando celebra en su diócesis, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "49:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": " al orden episcopal, a los presbíteros y diáconos, y a todo el pueblo redimido por ti. ",
+              "__massEditorPairKeys": {
+                "text_es": "50:text"
+              }
+            },
+            {
+              "text_es": " Atiende los deseos y súplicas de esta familia que has congregado en tu presencia. ",
+              "__massEditorPairKeys": {
+                "text_es": "51:text"
+              }
+            },
+            {
+              "text_es": "donde esperamos gozar todos juntos de la plenitud eterna de tu gloria, ",
+              "__massEditorPairKeys": {
+                "text_es": "52:text"
+              }
+            },
+            {
+              "text_es": "Y a nuestros hermanos difuntos y a cuantos murieron en tu amistad recíbelos en tu reino, donde esperamos gozar todos juntos de la plenitud eterna de tu gloria; allí enjugarás las lágrimas de nuestros ojos, porque, al contemplarte como tú eres, Dios nuestro, seremos para siempre semejantes a ti y cantaremos eternamente tus alabanzas, ",
+              "__massEditorPairKeys": {
+                "text_es": "53:text"
+              }
+            },
+            {
+              "rubric_es": "Junta las manos. ",
+              "__massEditorPairKeys": {
+                "rubric_es": "54:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "por Cristo, Señor nuestro, por quien concedes al mundo todos los bienes.",
+              "__massEditorPairKeys": {
+                "text_es": "54:text"
+              }
+            },
+            {
+              "rubric_es": "116.",
+              "__massEditorPairKeys": {
+                "rubric_es": "55:rubric"
+              }
+            }
+          ],
+          "4": [
+            {
+              "rubric_es": "PLEGARIA EUCARÍSTICA IV",
+              "__massEditorPairKeys": {
+                "rubric_es": "0:rubric"
+              }
+            },
+            {
+              "rubric_es": "116.",
+              "__massEditorPairKeys": {
+                "rubric_es": "1:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Esta plegaria eucarística forma un todo con su prefacio, el cual nunca puede cambiarse.",
+              "__massEditorPairKeys": {
+                "text_es": "2:text"
+              }
+            },
+            {
+              "text_es": "Por consiguiente, no puede decirse cuando está prescrito un prefacio propio.",
+              "__massEditorPairKeys": {
+                "text_es": "3:text"
+              }
+            },
+            {
+              "text_es": "En los otros casos puede decirse, incluso cuando las rúbricas prescriban un prefacio del tiempo.",
+              "__massEditorPairKeys": {
+                "text_es": "4:text"
+              }
+            },
+            {
+              "text_es": "El Señor esté con ustedes.",
+              "__massEditorPairKeys": {
+                "text_es": "5:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Y con tu espíritu.",
+              "__massEditorPairKeys": {
+                "text_es": "6:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "text_es": "Levantemos el corazón.",
+              "__massEditorPairKeys": {
+                "text_es": "7:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Lo tenemos levantado hacia el Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "8:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "text_es": "Demos gracias al Señor, nuestro Dios.",
+              "__massEditorPairKeys": {
+                "text_es": "9:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Es justo y necesario.",
+              "__massEditorPairKeys": {
+                "text_es": "10:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "rubric_es": "CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "11:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "En verdad es justo darte gracias, y deber nuestro glorificarte, Padre santo, porque tú eres el único Dios vivo y verdadero que existes desde siempre y vives para siempre; luz sobre toda luz.",
+              "__massEditorPairKeys": {
+                "text_es": "11:text"
+              }
+            },
+            {
+              "text_es": "Porque tú solo eres bueno y fuente de vida, hiciste todas las cosas para colmarlas de tus bendiciones y alegrar su multitud con la claridad de tu gloria.",
+              "__massEditorPairKeys": {
+                "text_es": "12:text"
+              }
+            },
+            {
+              "text_es": "Por eso, innumerables ángeles en tu presencia, contemplando la gloria de tu rostro, te sirven siempre y te glorifican sin cesar.",
+              "__massEditorPairKeys": {
+                "text_es": "13:text"
+              }
+            },
+            {
+              "text_es": "Y con ellos también nosotros, llenos de alegría, y por nuestra voz las demás criaturas, aclamamos tu nombre cantando: Santo, Santo, Santo es el Señor, Dios del Universo.",
+              "__massEditorPairKeys": {
+                "text_es": "14:text"
+              }
+            },
+            {
+              "text_es": "Llenos están el cielo y la tierra de tu gloria.",
+              "__massEditorPairKeys": {
+                "text_es": "15:text"
+              }
+            },
+            {
+              "text_es": "Hosanna en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "16:text"
+              }
+            },
+            {
+              "text_es": "Bendito el que viene en nombre del Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "17:text"
+              }
+            },
+            {
+              "text_es": "Hosanna en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "18:text"
+              }
+            },
+            {
+              "rubric_es": "117.",
+              "__massEditorPairKeys": {
+                "rubric_es": "19:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "El sacerdote, con las manos extendidas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "20:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "21:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "T alabamos, Padre santo, porque eres grande, porque hiciste todas las cosas con sabiduría y amor.",
+              "__massEditorPairKeys": {
+                "text_es": "21:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "text_es": "A imagen tuya creaste al hombre y le encomendaste el universo entero, para que, sirviéndote sólo a ti, su Creador, dominara todo lo creado.",
+              "__massEditorPairKeys": {
+                "text_es": "22:text"
+              }
+            },
+            {
+              "text_es": "Y cuando por desobediencia perdió tu amistad, no lo abandonaste al poder de la muerte, sino que, compadecido, tendiste la mano a todos, para que te encuentre el que te busca.",
+              "__massEditorPairKeys": {
+                "text_es": "23:text"
+              }
+            },
+            {
+              "text_es": "Reiteraste, además, tu alianza a los hombres; por los profetas los fuiste llevando con la esperanza de salvación.",
+              "__massEditorPairKeys": {
+                "text_es": "24:text"
+              }
+            },
+            {
+              "text_es": "Y tanto amaste al mundo, Padre santo, que, al cumplirse la plenitud de los tiempos, nos enviaste como salvador a tu único Hijo.",
+              "__massEditorPairKeys": {
+                "text_es": "25:text"
+              }
+            },
+            {
+              "text_es": "El cual se encarnó por obra del Espíritu Santo, nació de María, la Virgen, y así compartió en todo nuestra condición humana menos en el pecado; anunció la salvación a los pobres, la liberación a los oprimidos y a los afligidos el consuelo.",
+              "__massEditorPairKeys": {
+                "text_es": "26:text"
+              }
+            },
+            {
+              "text_es": "Para cumplir tus designios, él mismo se entregó a la muerte, y, resucitando, destruyó la muerte y nos dio nueva vida.",
+              "__massEditorPairKeys": {
+                "text_es": "27:text"
+              }
+            },
+            {
+              "text_es": "Y porque no vivamos ya para nosotros mismos, sino para él, que por nosotros murió y resucitó, envió, Padre, desde tu seno al Espíritu Santo como primicia para los creyentes, a fin de santificar todas las cosas, llevando a plenitud su obra en el mundo.",
+              "__massEditorPairKeys": {
+                "text_es": "28:text"
+              }
+            },
+            {
+              "rubric_es": "118.",
+              "__massEditorPairKeys": {
+                "rubric_es": "29:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Junta las manos y, manteniéndolas extendidas sobre las ofrendas, dice: CC Por eso, Padre, te rogamos que este mismo Espíritu santifique, Señor, estas ofrendas, Junta las manos y traza, una sola vez, el signo de la cruz sobre el pan y el cáliz conjuntamente, diciendo: para que sean Cuerpo y ✠ Sangre de Jesucristo, nuestro Señor, Junta las manos. y así celebremos el gran misterio que nos dejó como alianza eterna.",
+              "__massEditorPairKeys": {
+                "text_es": "30:text"
+              }
+            },
+            {
+              "rubric_es": "119.",
+              "__massEditorPairKeys": {
+                "rubric_es": "31:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "En las fórmulas que siguen, las palabras del Señor han de pronunciarse con claridad, como lo requiere la naturaleza de éstas.",
+              "__massEditorPairKeys": {
+                "rubric_es": "32:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Porque él mismo, llegada la hora en que había de ser glorificado por ti, Padre santo, habiendo amado a los suyos que estaban en el mundo, los amó hasta el extremo.",
+              "__massEditorPairKeys": {
+                "text_es": "33:text"
+              }
+            },
+            {
+              "text_es": "Y, mientras cenaba con sus discípulos, Toma el pan y, sosteniéndolo un poco elevado sobre el altar, prosigue: tomó pan, te bendijo, lo partió y se lo dio diciendo: Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "text_es": "34:text"
+              }
+            },
+            {
+              "rubric_es": "TOMEN Y COMAN TODOS DE ÉL, PORQUE ÉSTO ES MI CUERPO QUE SERÁ ENTREGADO POR USTEDES.",
+              "__massEditorPairKeys": {
+                "rubric_es": "35:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el pan consagrado al pueblo, lo deposita luego sobre la patena y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "36:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "120.",
+              "__massEditorPairKeys": {
+                "rubric_es": "37:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Después prosigue: Del mismo modo, acabada la cena, Toma el cáliz y, sosteniéndolo un poco elevado sobre el altar, dice: tomó este cáliz glorioso en sus santas y venerables manos; dando gracias te bendijo, y lo dio a sus discípulos diciendo: Se inclina un poco.",
+              "__massEditorPairKeys": {
+                "rubric_es": "38:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "TOMEN Y BEBAN TODOS DE ÉL, PORQUE ÉSTE ES EL CÁLIZ DE MI SANGRE, SANGRE DE LA ALIANZA NUEVA Y ETERNA, QUE SERÁ DERRAMADA POR USTEDES Y POR MUCHOS PARA EL PERDÓN DE LOS PECADOS.",
+              "__massEditorPairKeys": {
+                "text_es": "39:text"
+              }
+            },
+            {
+              "rubric_es": "HAGAN ESTO EN CONMEMORACIÓN MÍA.",
+              "__massEditorPairKeys": {
+                "rubric_es": "40:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Muestra el cáliz al pueblo, lo deposita luego sobre el corporal y lo adora haciendo genuflexión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "41:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "121. Luego dice una de las siguientes fórmulas: CP Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "rubric_es": "42:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "43:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Éste es el Sacramento de nuestra fe.",
+              "__massEditorPairKeys": {
+                "text_es": "44:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "45:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús! ___________________________________ También puede decirse: Éste es el Misterio de la fe.",
+              "__massEditorPairKeys": {
+                "text_es": "46:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "text_es": "Cristo nos redimió.",
+              "__massEditorPairKeys": {
+                "text_es": "47:text"
+              }
+            },
+            {
+              "rubric_es": "Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "48:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Cada vez que comemos de este pan y bebemos de este cáliz, anunciamos tu muerte, Señor, hasta que vuelvas.",
+              "__massEditorPairKeys": {
+                "text_es": "49:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "50:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "Éste es el Misterio de la fe. Cristo se entregó por nosotros. Y el pueblo prosigue, aclamando:",
+              "__massEditorPairKeys": {
+                "rubric_es": "51:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Salvador del mundo, sálvanos, tu que nos has liberado por tu cruz y resurrección. ___________________________________",
+              "__massEditorPairKeys": {
+                "text_es": "52:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "122. Después el sacerdote, con las manos extendidas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "53:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "CC ",
+              "__massEditorPairKeys": {
+                "rubric_es": "54:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Por eso, Padre, al celebrar ahora el memorial de nuestra redención, recordamos la muerte de Cristo y su descenso al lugar de los muertos, proclamamos su resurrección y ascensión a tu derecha; y mientras esperamos su venida gloriosa, te ofrecemos su Cuerpo y su Sangre, sacrificio agradable a ti y salvación para todo el mundo.",
+              "__massEditorPairKeys": {
+                "text_es": "54:text"
+              }
+            },
+            {
+              "text_es": "Dirige tu mirada sobre esta Víctima que tú mismo has preparado a tu Iglesia, y concede a cuantos compartimos este pan y este cáliz, que, congregados en un solo cuerpo por el Espíritu Santo, seamos en Cristo víctima viva para alabanza de tu gloria.",
+              "__massEditorPairKeys": {
+                "text_es": "55:text"
+              }
+            },
+            {
+              "rubric_es": "C1 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "56:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Y ahora, Señor, acuérdate de todos aquellos por quienes se ofrece este sacrificio: de tu servidor el Papa N., de nuestro obispo N., Puede hacerse también mención de los Obispos coadjutores o auxiliares. ____________________________ El Obispo, cuando celebra en su diócesis, dice: conmigo, indigno siervo tuyo, Cuando celebra un Obispo que no es el Ordinario diocesano, dice: con mi hermano N.,",
+              "__massEditorPairKeys": {
+                "text_es": "56:text"
+              }
+            },
+            {
+              "text_es": "Obispo de esta Iglesia de N., conmigo, indigno siervo tuyo, ______________________________",
+              "__massEditorPairKeys": {
+                "text_es": "57:text"
+              }
+            },
+            {
+              "rubric_es": "del orden episcopal y de los presbíteros y diáconos, de los oferentes y de los aquí reunidos, ________________________________ INTERCESIONES PARTICULARES En las misas de Pascua y en la del bautismos:",
+              "__massEditorPairKeys": {
+                "rubric_es": "58:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "* de nuestros hermanos [N. y N.] que hoy has hecho renacer del agua del Espíritu Santo, En la misa de la confirmación: * de tus hijos [N. y N.], que hoy has confirmado marcándolos con el sello del Espíritu Santo,",
+              "__massEditorPairKeys": {
+                "text_es": "59:text"
+              },
+              "sp_es": "D."
+            },
+            {
+              "text_es": "En la misa de primera comunión: * de tus hijos [N. y N.], que por vez primera invitas en este día a participar del pan de vida y del cáliz de salvación, en la mesa de tu familia, En la misa del matrimonio: * de tus hijos [N. y N.], que en Cristo hoy han fundado una nueva familia, ____________________________ de todo tu pueblo santo y de aquellos que te buscan con sincero corazón.",
+              "__massEditorPairKeys": {
+                "text_es": "60:text"
+              }
+            },
+            {
+              "rubric_es": "C2 ",
+              "__massEditorPairKeys": {
+                "rubric_es": "61:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Acuérdate también de los que murieron en la paz de Cristo y de todos los difuntos, cuya fe sólo tú conociste.",
+              "__massEditorPairKeys": {
+                "text_es": "61:text"
+              }
+            },
+            {
+              "text_es": "Padre de bondad, que todos tus hijos nos reunamos en la heredad de tu reino, con María, la Virgen Madre de Dios, con su esposo san José,",
+              "__massEditorPairKeys": {
+                "text_es": "62:text"
+              }
+            },
+            {
+              "text_es": "con los apóstoles y los santos; y allí, junto con toda la creación libre ya de pecado y de muerte, Junta las manos. te glorifiquemos por Cristo, Señor nuestro, por quien concedes al mundo todos los bienes.",
+              "__massEditorPairKeys": {
+                "text_es": "63:text"
+              }
+            },
+            {
+              "rubric_es": "123.",
+              "__massEditorPairKeys": {
+                "rubric_es": "64:rubric"
+              }
+            }
+          ]
+        },
+        "amen": [
+          {
+            "text_es": "Por Cristo, con él y en él, a ti, Dios Padre omnipotente, en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            },
+            "sp_es": "Todos"
+          }
+        ],
+        "formEndings": {
+          "1": [
+            {
+              "rubric_es": "Toma la patena con el pan consagrado, y el cáliz y, sosteniéndolos elevados, dice: CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "0:rubric"
+              }
+            },
+            {
+              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
+              "__massEditorPairKeys": {
+                "text_es": "0:text"
+              }
+            },
+            {
+              "text_es": "Amén.",
+              "__massEditorPairKeys": {
+                "text_es": "1:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "Después sigue el rito de la Comunión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "2:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "PLEGARIA EUCARÍSTICA II",
+              "__massEditorPairKeys": {
+                "rubric_es": "3:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "99.",
+              "__massEditorPairKeys": {
+                "rubric_es": "4:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Esta plegaria eucarística tiene un prefacio propio que forma parte de su misma estructura.",
+              "__massEditorPairKeys": {
+                "text_es": "5:text"
+              }
+            },
+            {
+              "text_es": "Con todo, se pueden usar también con esta plegaria otros prefacios, especialmente aquellos que presentan una breve síntesis del misterio de la salvación.",
+              "__massEditorPairKeys": {
+                "text_es": "6:text"
+              }
+            },
+            {
+              "text_es": "El Señor esté con ustedes.",
+              "__massEditorPairKeys": {
+                "text_es": "7:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Y con tu espíritu.",
+              "__massEditorPairKeys": {
+                "text_es": "8:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "text_es": "Levantemos el corazón.",
+              "__massEditorPairKeys": {
+                "text_es": "9:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Lo tenemos levantado hacia el Señor.",
+              "__massEditorPairKeys": {
+                "text_es": "10:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "text_es": "Demos gracias al Señor, nuestro Dios.",
+              "__massEditorPairKeys": {
+                "text_es": "11:text"
+              },
+              "sp_es": "V/."
+            },
+            {
+              "text_es": "Es justo y necesario.",
+              "__massEditorPairKeys": {
+                "text_es": "12:text"
+              },
+              "sp_es": "R/."
+            },
+            {
+              "rubric_es": "CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "13:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "En verdad es justo y necesario, es nuestro deber y salvación darte gracias, Padre santo, siempre y en todo lugar, por Jesucristo, tu Hijo amado.",
+              "__massEditorPairKeys": {
+                "text_es": "13:text"
+              }
+            },
+            {
+              "text_es": "Por él, que es tu Palabra, hiciste todas las cosas; tú nos lo enviaste para que, hecho hombre por obra del Espíritu Santo y nacido de María, la Virgen, fuera nuestro Salvador y Redentor.",
+              "__massEditorPairKeys": {
+                "text_es": "14:text"
+              }
+            },
+            {
+              "text_es": "Él, en cumplimiento de tu voluntad, para destruir la muerte y manifestar la resurrección, extendió sus brazos en la cruz, y así adquirió para ti un pueblo santo.",
+              "__massEditorPairKeys": {
+                "text_es": "15:text"
+              }
+            },
+            {
+              "text_es": "Por eso, con los ángeles y los santos, proclamamos tu gloria, diciendo:",
+              "__massEditorPairKeys": {
+                "text_es": "16:text"
+              }
+            }
+          ],
+          "2": [
+            {
+              "rubric_es": "Toma la patena con el pan consagrado, y el cáliz y, sosteniéndolos elevados, dice: CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "0:rubric"
+              }
+            },
+            {
+              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
+              "__massEditorPairKeys": {
+                "text_es": "0:text"
+              }
+            },
+            {
+              "text_es": "Amén.",
+              "__massEditorPairKeys": {
+                "text_es": "1:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "Después sigue el rito de la Comunión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "2:rubric"
+              }
+            }
+          ],
+          "3": [
+            {
+              "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, sosteniéndolos elevados, dice: CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "0:rubric"
+              }
+            },
+            {
+              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
+              "__massEditorPairKeys": {
+                "text_es": "0:text"
+              }
+            },
+            {
+              "text_es": "Amén.",
+              "__massEditorPairKeys": {
+                "text_es": "1:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "Después sigue el rito de la Comunión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "2:rubric"
+              }
+            }
+          ],
+          "4": [
+            {
+              "rubric_es": "Toma la patena con el pan consagrado y el cáliz y, sosteniéndolos elevados, dice: CP ",
+              "__massEditorPairKeys": {
+                "rubric_es": "0:rubric"
+              }
+            },
+            {
+              "text_es": "Por Cristo, con él y en él, o a ti, Dios Padre omnipotente, CC en la unidad del Espíritu Santo, todo honor y toda gloria por los siglos de los siglos.",
+              "__massEditorPairKeys": {
+                "text_es": "0:text"
+              }
+            },
+            {
+              "text_es": "Amén.",
+              "__massEditorPairKeys": {
+                "text_es": "1:text"
+              },
+              "sp_es": "Todos"
+            },
+            {
+              "rubric_es": "Después sigue el rito de la Comunión.",
+              "__massEditorPairKeys": {
+                "rubric_es": "2:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "RITO DE COMUNIÓN",
+              "__massEditorPairKeys": {
+                "rubric_es": "3:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "rubric_es": "124. Una vez que ha dejado el cáliz y la patena, el sacerdote, con las manos juntas, dice:",
+              "__massEditorPairKeys": {
+                "rubric_es": "4:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Fieles a la recomendación del Salvador y siguiendo su divina enseñanza, nos atrevemos a decir: ____________________________",
+              "__massEditorPairKeys": {
+                "text_es": "5:text"
+              },
+              "sp_es": "C."
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "6:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Llenos de alegría por ser hijos de Dios, digamos confiadamente la oración que Cristo nos enseñó:",
+              "__massEditorPairKeys": {
+                "text_es": "7:text"
+              }
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "8:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "El amor de Dios ha sido derramado en nuestros corazones con el Espíritu Santo que se nos ha dado; digamos con fe y esperanza:",
+              "__massEditorPairKeys": {
+                "text_es": "9:text"
+              }
+            },
+            {
+              "rubric_es": "O bien:",
+              "__massEditorPairKeys": {
+                "rubric_es": "10:rubric"
+              },
+              "rubricInset_es": true
+            },
+            {
+              "text_es": "Antes de participar en el banquete de la Eucaristía, signo de reconciliación y vínculo de unión fraterna, oremos juntos como el Señor nos ha enseñado: ____________________________ Extiende las manos y, junto con el pueblo, continúa: Padre nuestro, que estás en el cielo, santificado sea tu nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo.",
+              "__massEditorPairKeys": {
+                "text_es": "11:text"
+              }
+            },
+            {
+              "text_es": "Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal.",
+              "__massEditorPairKeys": {
+                "text_es": "12:text"
+              }
+            }
+          ]
+        },
+        "formFrames": {
           "1": {
             "sections": [
               "dialogue",
@@ -7205,4712 +11937,1417 @@
               "ending"
             ]
           }
+        },
+        "ordinarySourceLayoutVersion": 1
+      }
+    },
+    {
+      "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "es": "Rito de la Comunión — Padrenuestro"
+        },
+        "lines": [
+          {
+            "rubric_es": "125.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote, con las manos extendidas, prosigue él solo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Líbranos de todos los males, Señor, y concédenos la paz en nuestros días, para que, ayudados por tu misericordia, vivamos siempre libres de pecado y protegidos de toda perturbación, mientras esperamos la gloriosa venida de nuestro Salvador Jesucristo.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Junta las manos.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo concluye la oración aclamando:",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Tuyo es el reino, tuyo el poder y la gloria por siempre, Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "126.",
+            "__massEditorPairKeys": {
+              "rubric_es": "6:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote, con las manos extendidas, dice en voz alta:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, que dijiste a tus Apóstoles: «La paz les dejo, mi paz les doy», no tengas en cuenta nuestros pecados, sino la fe de tu Iglesia, y conforme a tu palabra, concédele la paz y la unidad.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Junta las manos.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            }
+          },
+          {
+            "text_es": "Tú que vives y reinas por los siglos de los siglos.",
+            "__massEditorPairKeys": {
+              "text_es": "10:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "127.",
+            "__massEditorPairKeys": {
+              "rubric_es": "12:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote, extendiendo y juntando las manos, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La paz del Señor esté siempre con ustedes.",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "128. Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "16:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Dense fraternalmente la paz. ____________________________",
+            "__massEditorPairKeys": {
+              "text_es": "17:text"
+            },
+            "sp_es": "D."
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "18:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Como hijos de Dios, intercambien ahora un signo de comunión fraterna.",
+            "__massEditorPairKeys": {
+              "text_es": "19:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En Cristo, que nos ha hecho hermanos con su cruz, dense la paz como signo de reconciliación.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "22:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En el Espíritu de Cristo resucitado, dense fraternalmente la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "23:text"
+            }
+          },
+          {
+            "text_es": "Y todos, según la costumbre del lugar, se dan la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "24:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote da la paz al diácono o ministro.",
+            "__massEditorPairKeys": {
+              "rubric_es": "25:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "129.",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena, y deja caer una parte del mismo en el cáliz, diciendo en secreto: El Cuerpo y la Sangre de nuestro Señor Jesucristo, unidos en este cáliz, sean para nosotros alimento de vida eterna.",
+            "__massEditorPairKeys": {
+              "rubric_es": "27:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "144.",
+            "__massEditorPairKeys": {
+              "rubric_es": "28:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Mientras tanto se canta o se dice: Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "text_es": "30:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "es": "Rito de la paz"
+        },
+        "lines": [
+          {
+            "text_es": "Y con tu espíritu.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "128. Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Dense fraternalmente la paz. ____________________________",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "D."
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Como hijos de Dios, intercambien ahora un signo de comunión fraterna.",
+            "__massEditorPairKeys": {
+              "text_es": "4:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "5:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En Cristo, que nos ha hecho hermanos con su cruz, dense la paz como signo de reconciliación.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En el Espíritu de Cristo resucitado, dense fraternalmente la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
+          },
+          {
+            "text_es": "Y todos, según la costumbre del lugar, se dan la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote da la paz al diácono o ministro.",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "129.",
+            "__massEditorPairKeys": {
+              "rubric_es": "11:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena, y deja caer una parte del mismo en el cáliz, diciendo en secreto: El Cuerpo y la Sangre de nuestro Señor Jesucristo, unidos en este cáliz, sean para nosotros alimento de vida eterna.",
+            "__massEditorPairKeys": {
+              "rubric_es": "12:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "144.",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Mientras tanto se canta o se dice: Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "rubric_es": "14:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            }
+          },
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "16:text"
+            }
+          },
+          {
+            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
+            "__massEditorPairKeys": {
+              "rubric_es": "17:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La última vez se dice: danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "18:text"
+            }
+          },
+          {
+            "rubric_es": "131.",
+            "__massEditorPairKeys": {
+              "rubric_es": "19:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
+            "__massEditorPairKeys": {
+              "text_es": "22:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "23:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
+            "__massEditorPairKeys": {
+              "text_es": "24:text"
+            }
+          },
+          {
+            "rubric_es": "132.",
+            "__massEditorPairKeys": {
+              "rubric_es": "25:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
+            "__massEditorPairKeys": {
+              "text_es": "27:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Dichosos los invitados a la cena del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "28:text"
+            }
+          },
+          {
+            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, no soy digno de que entres en mi casa,",
+            "__massEditorPairKeys": {
+              "text_es": "30:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "es": "Fracción del pan — Cordero de Dios"
+        },
+        "lines": [
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La última vez se dice: danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "131.",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
+          },
+          {
+            "rubric_es": "132.",
+            "__massEditorPairKeys": {
+              "rubric_es": "9:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Dichosos los invitados a la cena del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "12:text"
+            }
+          },
+          {
+            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, no soy digno de que entres en mi casa,",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "es": "Comunión"
+        },
+        "lines": [
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La última vez se dice: danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "131.",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
+          },
+          {
+            "rubric_es": "132.",
+            "__massEditorPairKeys": {
+              "rubric_es": "9:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Dichosos los invitados a la cena del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "12:text"
+            }
+          },
+          {
+            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, no soy digno de que entres en mi casa,",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "pero una palabra tuya bastará para sanarme.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            }
+          },
+          {
+            "rubric_es": "133.",
+            "__massEditorPairKeys": {
+              "rubric_es": "16:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "17:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "El Cuerpo de Cristo me guarde para la vida eterna.",
+            "__massEditorPairKeys": {
+              "text_es": "18:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Y comulga reverentemente el Cuerpo de Cristo.",
+            "__massEditorPairKeys": {
+              "text_es": "19:text"
+            }
+          },
+          {
+            "rubric_es": "Después toma el cáliz y dice en secreto: La Sangre de Cristo me guarde para la vida eterna.",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Y bebe reverentemente la Sangre de Cristo.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            }
+          },
+          {
+            "rubric_es": "134.",
+            "__massEditorPairKeys": {
+              "rubric_es": "22:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después toma la patena o la píxide, se acerca a los que quieren comulgar y les presenta el pan consagrado, que sostiene un poco elevado, diciendo a cada uno de ellos: El Cuerpo de Cristo.",
+            "__massEditorPairKeys": {
+              "rubric_es": "23:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "El que va a comulgar responde: Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "24:text"
+            }
+          },
+          {
+            "text_es": "Y comulga.",
+            "__massEditorPairKeys": {
+              "text_es": "25:text"
+            }
+          },
+          {
+            "rubric_es": "El diácono y los ministros que distribuyen la Eucaristía observan los mismos ritos.",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "135.",
+            "__massEditorPairKeys": {
+              "rubric_es": "27:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Si se comulga bajo las dos especies, se observa el rito descrito en su lugar.",
+            "__massEditorPairKeys": {
+              "rubric_es": "28:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "136.",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Cuando el sacerdote comulga el Cuerpo de Cristo, comienza el canto de comunión.",
+            "__massEditorPairKeys": {
+              "rubric_es": "30:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "137.",
+            "__massEditorPairKeys": {
+              "rubric_es": "31:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Acabada la comunión, el diácono, el acólito, o el mismo sacerdote, purifica la patena sobre el cáliz y también el mismo cáliz, a no ser que se prefiera purificarlo en la credencia después de la misa.",
+            "__massEditorPairKeys": {
+              "text_es": "32:text"
+            }
+          },
+          {
+            "rubric_es": "Si el sacerdote hace la purificación, dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "33:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Haz, Señor, que recibamos con un corazón limpio el alimento que acabamos de tomar, y que el don que nos haces en esta vida",
+            "__massEditorPairKeys": {
+              "text_es": "34:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "nos aproveche para la eterna.",
+            "__massEditorPairKeys": {
+              "text_es": "35:text"
+            }
+          },
+          {
+            "rubric_es": "138.",
+            "__massEditorPairKeys": {
+              "rubric_es": "36:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote puede ir a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "37:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Si se juzga oportuno, se pueden guardar unos momentos de silencio o cantar un salmo o cántico de alabanza.",
+            "__massEditorPairKeys": {
+              "rubric_es": "38:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "139.",
+            "__massEditorPairKeys": {
+              "rubric_es": "39:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Luego, de pie en la sede o en el altar, el sacerdote dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "40:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Oremos.",
+            "__massEditorPairKeys": {
+              "text_es": "41:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Y todos, junto con el sacerdote, oran en silencio durante unos momentos, a no ser que este silencio ya se haya hecho antes.",
+            "__massEditorPairKeys": {
+              "text_es": "42:text"
+            }
+          },
+          {
+            "rubric_es": "153.",
+            "__massEditorPairKeys": {
+              "rubric_es": "43:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote, con las manos extendidas, dice la oración después de la comunión.",
+            "__massEditorPairKeys": {
+              "rubric_es": "44:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La oración después de la comunión termina con la conclusión breve.",
+            "__massEditorPairKeys": {
+              "text_es": "45:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "46:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "es": "Antífona de la comunión"
+        },
+        "lines": [
+          {
+            "text_es": "(Antífona de la comunión del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "es": "Oración después de la comunión"
+        },
+        "lines": [
+          {
+            "text_es": "Oremos.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "(Oración después de la comunión del día)",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "es": "Avisos"
+        },
+        "lines": [
+          {
+            "rubric_es": "Se hacen, si es necesario, breves avisos al pueblo.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "es": "Bendición"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "es": "Bendición"
+            },
+            "lines": [
+              {
+                "text_es": ".",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                }
+              },
+              {
+                "text_es": "En este momento se hacen, si es necesario y con brevedad, los oportunos anuncios o advertencias al pueblo.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              },
+              {
+                "rubric_es": "141.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "Después tiene lugar la despedida.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "El sacerdote extiende las manos hacia el pueblo y dice:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "4:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "El Señor esté con ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "Y con tu espíritu.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "El sacerdote bendice al pueblo, diciendo:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "La bendición de Dios todopoderoso, Padre, Hijo ✠ y Espíritu Santo, descienda sobre ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "9:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "142.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "10:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En algunas ocasiones y en determinadas misas rituales puede darse una de la bendiciones solemnes o de las oraciones sobre el pueblo.",
+                "__massEditorPairKeys": {
+                  "text_es": "11:text"
+                }
+              },
+              {
+                "rubric_es": "143.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "12:rubric"
+                }
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "es": "Bendición pontifical"
+            },
+            "lines": [
+              {
+                "text_es": "El Obispo, para bendecir al pueblo, usa el siguiente formulario, a no ser que prefiera utilizar una de las bendiciones solemnes o una de las oraciones sobre el pueblo.",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                }
+              },
+              {
+                "text_es": "El Señor esté con ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Y con tu espíritu.",
+                "__massEditorPairKeys": {
+                  "text_es": "2:text"
+                },
+                "sp_es": "R/."
+              },
+              {
+                "text_es": "Bendito se al nombre del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Ahora y por todos los siglos.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                },
+                "sp_es": "R/."
+              },
+              {
+                "text_es": "Nuestro auxilio es el nombre del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Que hizo el cielo y la tierra.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                },
+                "sp_es": "R/."
+              },
+              {
+                "text_es": "La bendición de Dios todopoderoso,",
+                "__massEditorPairKeys": {
+                  "text_es": "7:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Pa✠dre, Hi✠jo y Espíritu ✠ Santo, descienda sobre ustedes. R/. Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "rubric_es": "144. Luego el diácono, o el mismo sacerdote, con las manos juntas, despide al pueblo con una de las fórmulas siguientes:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "9:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Pueden ir en paz. ____________________________",
+                "__massEditorPairKeys": {
+                  "text_es": "10:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "11:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "12:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "13:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Glorifiquen al Señor con su vida. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "14:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "15:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En el nombre del Señor, pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "16:text"
+                }
+              },
+              {
+                "rubric_es": "O bien, especialmente en los domingos de Pascua:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "17:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Anuncien a todos la alegría del Señor resucitado.",
+                "__massEditorPairKeys": {
+                  "text_es": "18:text"
+                }
+              },
+              {
+                "rubric_es": "Pueden ir en paz. ____________________________ El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "19:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Demos gracias a Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "20:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "145.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "21:rubric"
+                }
+              },
+              {
+                "rubric_es": "Después el sacerdote besa con veneración el altar, como al comienzo, y, hecha la debida reverencia con los ministros, se retira a la sacristía.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "22:rubric"
+                }
+              },
+              {
+                "rubric_es": "146.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "23:rubric"
+                }
+              },
+              {
+                "rubric_es": "Si sigue inmediatamente otra acción litúrgica, se omite el rito de despedida.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "24:rubric"
+                }
+              }
+            ]
+          }
         }
       }
     },
     {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "ordinarySourceLayoutVersion"
-        ],
-        "rows": 1
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "es": "Despedida"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "es": "Fórmula 1"
+            },
+            "lines": [
+              {
+                "rubric_es": "144. Luego el diácono, o el mismo sacerdote, con las manos juntas, despide al pueblo con una de las fórmulas siguientes:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Pueden ir en paz. ____________________________",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                },
+                "sp_es": "Todos"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "es": "Fórmula 2"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "es": "Fórmula 3"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Glorifiquen al Señor con su vida. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "es": "Fórmula 4"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "En el nombre del Señor, pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              }
+            ]
+          },
+          "E": {
+            "label": {
+              "es": "Fórmula 5"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien, especialmente en los domingos de Pascua:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Anuncien a todos la alegría del Señor resucitado.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              },
+              {
+                "rubric_es": "Pueden ir en paz. ____________________________ El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Demos gracias a Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "145.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "4:rubric"
+                }
+              },
+              {
+                "rubric_es": "Después el sacerdote besa con veneración el altar, como al comienzo, y, hecha la debida reverencia con los ministros, se retira a la sacristía.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "5:rubric"
+                }
+              },
+              {
+                "rubric_es": "146.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "6:rubric"
+                }
+              },
+              {
+                "rubric_es": "Si sigue inmediatamente otra acción litúrgica, se omite el rito de despedida.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                }
+              }
+            ]
+          }
+        }
       }
     },
     {
-      "replace": {
-        "entryId": "3.3 eucharist",
-        "relativePath": [
-          "isEucharist"
-        ],
-        "rows": true
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "es": "Canto final"
+        },
+        "lines": [
+          {
+            "rubric_es": "El sacerdote besa el altar y se retira con los ministros.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          }
+        ]
       }
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.2 greeting",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          9
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          9
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          9
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.4 kyrie",
-        "path": [
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.4 kyrie",
-        "path": [
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.4 kyrie",
-        "path": [
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.4 kyrie",
-        "path": [
-          "lines",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.4 kyrie",
-        "path": [
-          "lines",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.5 gloria",
-        "path": [
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.5 gloria",
-        "path": [
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.5 gloria",
-        "path": [
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.5 gloria",
-        "path": [
-          "lines",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.5 gloria",
-        "path": [
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "2.8 creed",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "2.8 creed",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          16
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          19
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          22
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          24
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          25
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          26
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          28
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          31
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          33
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          37
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          38
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          39
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          41
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          42
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          43
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          46
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.1 offertory",
-        "path": [
-          "lines",
-          49
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          18
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          38
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          39
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          45
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          47
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          48
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          55
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          57
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          58
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          64
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          66
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          67
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          74
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          75
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          80
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          81
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          86
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          87
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          92
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          93
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          103
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          104
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          109
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          110
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          115
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          116
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          122
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          124
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          125
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          130
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          131
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          136
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          137
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          142
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          143
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          148
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          149
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          156
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          157
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          169
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          175
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          176
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          182
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          183
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          189
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          195
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          196
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          202
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          203
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          209
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          210
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          218
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          249
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          250
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          269
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          279
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          280
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          287
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          288
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          312
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          313
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          318
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          319
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          324
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          325
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          327
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          331
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          332
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          334
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          339
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          340
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          342
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          346
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          347
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          349
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          354
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          355
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          357
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          361
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          362
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          364
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          368
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          369
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          375
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          376
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          381
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          382
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          388
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          389
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          394
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          395
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          400
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          401
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          425
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          426
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          432
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          433
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          438
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          439
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          444
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          445
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          451
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "songs",
-          "cem_complete_prefaces",
-          "content",
-          452
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          6
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          15
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          16
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          18
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          19
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          21
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          23
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          26
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          32
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          34
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          37
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          40
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          41
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          42
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          43
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          47
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          48
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          8,
-          "options",
-          "ordinary",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          8,
-          "options",
-          "christmas",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          8,
-          "options",
-          "epiphany",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          8,
-          "options",
-          "easter",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          8,
-          "options",
-          "ascension",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "1",
-          8,
-          "options",
-          "pentecost",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          6
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          15
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          16
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          18
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          21
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          22
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          23
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          24
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          25
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          27
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          30
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          32
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          35
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          37
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          38
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          39
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          42
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          44
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "2",
-          46
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          16
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          18
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          19
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          22
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          23
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          24
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          25
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          26
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          27
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          30
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          31
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          32
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          33
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          34
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          36
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          38
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          41
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          43
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          44
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          45
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          47
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          48
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          49
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          54
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          19
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          21
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          31
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          32
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          35
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          36
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          37
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          38
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          40
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          41
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          42
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          43
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          45
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          48
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          50
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          51
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          53
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          54
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          56
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          58
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          61
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "1",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "1",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "1",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "1",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "4",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "4",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "4",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "4",
-          6
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "4",
-          8
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "formEndings",
-          "4",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          6
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          16
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          18
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          22
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          25
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          26
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          27
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          28
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          5
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          12
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          14
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          19
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          23
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          25
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          26
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.5 peace",
-        "path": [
-          "lines",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          9
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.6 lamb",
-        "path": [
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          9
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          16
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          20
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          22
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          23
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          26
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          27
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          28
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          29
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          30
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          31
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          33
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          36
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          37
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          38
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          39
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          40
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          43
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.7 communion_rite",
-        "path": [
-          "lines",
-          44
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          4
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          7
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          10
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          9
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          11
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          13
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          15
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          17
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.2 blessing",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          19
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "4.3 dismissal",
-        "path": [
-          "variants",
-          "E",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "A",
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "B",
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          2
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "1.3 penitential",
-        "path": [
-          "variants",
-          "C",
-          "lines",
-          3
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "3",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.3 eucharist",
-        "path": [
-          "forms",
-          "4",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
-    },
-    {
-      "layout": {
-        "entryId": "3.4 lords_prayer",
-        "path": [
-          "lines",
-          1
-        ],
-        "field": "rubricInset_es"
-      },
-      "value": true
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END
@@ -11967,6 +13404,13 @@
         delete keys[fromField];
         keys[toField] = override.rename.rowKey;
         row.__massEditorPairKeys = keys;
+        return;
+      }
+      if (override.path?.length === 1 && override.value && typeof override.value === 'object' && !Array.isArray(override.value)) {
+        const entry = target[override.path[0]];
+        if (!entry || entry.id !== override.value.id) throw new Error('Mass editor entry snapshot is stale');
+        Object.keys(entry).forEach(key => { delete entry[key]; });
+        Object.assign(entry, JSON.parse(JSON.stringify(override.value)));
         return;
       }
       const editPath = Array.isArray(override.path) ? override.path : [];

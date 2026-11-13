@@ -15,7 +15,8 @@
       }
       return parts.map(part=>{
         const saved=row.__massEditorPairKeys?.[part.field]||index+':'+part.kind;
-        const identity=saved.replace(/:(?:text|rubric|cit)$/u,':'+part.kind)+(part.segment?':segment:'+part.segmentIndex:'');
+        const segmentKey=part.segment&&row.__massEditorPairKeys?.[part.field+':segment:'+part.segmentIndex];
+        const identity=segmentKey||saved.replace(/:(?:text|rubric|cit)$/u,':'+part.kind)+(part.segment?':segment:'+part.segmentIndex:'');
         const count=occurrences.get(identity)||0;occurrences.set(identity,count+1);
         const result={...prepare(metadata,lower),[part.field]:part.text,__ordinarySource:true,__ordinaryPairKey:identity+(count?':occurrence:'+count:''),__ordinaryKinds:{[lower]:part.kind}};
         const inset=row['rubricInset_'+lower];

@@ -58,7 +58,7 @@
 
         /* 상단 이동 탭은 아직 준비 중인 메뉴까지 한곳에서 보여줍니다. */
         nav { width: 100%; margin: 0; background: var(--nav-color); color: white; font-size: var(--chrome-compact-font-size); }
-        .nav-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; justify-content: center; align-items: stretch; padding: 7px 4px; gap: 3px; }
+        .nav-inner { width: 100%; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; padding: 7px 4px; gap: 3px; }
         .nav-item { flex: 0 0 auto; min-width: 0; cursor: pointer; padding: 7px 6px; border: 0; border-radius: 5px; color: inherit; background: transparent; opacity: 0.6; font: inherit; line-height: 1.2; white-space: nowrap; }
         .nav-item.active { opacity: 1; font-weight: bold; background: rgba(255, 255, 255, 0.2); }
 
@@ -642,8 +642,8 @@
 <nav aria-label="주요 메뉴">
     <div class="nav-inner">
         <button type="button" class="nav-item active" data-tab="mass" onclick="showAppTab('mass')">미사</button>
-        <button type="button" class="nav-item" data-tab="prayers" onclick="showAppTab('prayers')">기도문</button>
-        <button type="button" class="nav-item" data-tab="hymns" onclick="showAppTab('hymns')">성가</button>
+        <button type="button" class="nav-item" data-tab="prayers" onclick="showAppTab('prayers')">기도문 (베타)</button>
+        <button type="button" class="nav-item" data-tab="hymns" onclick="showAppTab('hymns')">성가 (베타)</button>
         <button type="button" class="nav-item" data-tab="churches" onclick="showAppTab('churches')">성당</button>
     </div>
 </nav>
@@ -814,8 +814,8 @@
 
 <div id="quick-home-menu" class="quick-home-menu" aria-label="홈 바로가기">
     <button type="button" class="quick-home-btn" data-home-tab="mass" onclick="goAppHome('mass')">미사</button>
-    <button type="button" class="quick-home-btn" data-home-tab="prayers" onclick="goAppHome('prayers')">기도문</button>
-    <button type="button" class="quick-home-btn" data-home-tab="hymns" onclick="goAppHome('hymns')">성가</button>
+    <button type="button" class="quick-home-btn" data-home-tab="prayers" onclick="goAppHome('prayers')">기도문 (베타)</button>
+    <button type="button" class="quick-home-btn" data-home-tab="hymns" onclick="goAppHome('hymns')">성가 (베타)</button>
     <button type="button" class="quick-home-btn" data-home-tab="churches" onclick="goAppHome('churches')">성당</button>
 </div>
 
@@ -936,7 +936,7 @@
     </footer>
 
 <script defer src="JS%20file/prayer_data_api.js?v=20261027-lazy"></script>
-<script defer src="JS%20file/lazy_data_manifest.js?v=20261103-christmas-crib"></script>
+<script defer src="JS%20file/lazy_data_manifest.js?v=20261113-source-integrity"></script>
 <script defer src="JS%20file/lazy_data_loader.js?v=20261027-lazy"></script>
 <script defer src="JS%20file/korean_temporal_data.js?v=20260822-v26"></script>
 <script defer src="JS%20file/korean_blessing_data.js?v=20260822-v26"></script>
@@ -958,7 +958,7 @@
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script defer src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script defer src="JS%20file/firebase_data_loader.js?v=20261106-ordinary-source"></script>
+<script defer src="JS%20file/firebase_data_loader.js?v=20261113-source-rows"></script>
 <script defer src="JS%20file/admin_date_review.js?v=20261024-main-date-picker"></script>
 <script defer src="JS%20file/lazy/special-common.js?v=20261103-christmas-crib"></script>
 <script defer src="JS%20file/special_liturgy_order.js?v=20261103-christmas-crib"></script>
@@ -966,6 +966,6 @@
 <script defer src="JS%20file/mass_storage_schema.js?v=20261106-v31-2-ordinary"></script>
 <script defer src="JS%20file/daily_mass_content.js?v=20261028-v31-content-1"></script>
 <script defer src="JS%20file/daily_server_loader.js?v=20261103-server-wait65"></script>
-<script defer src="JS%20file/app_v31_2.min.js?v=20261112-reading-layout-2"></script>
+<script defer src="JS%20file/app_v31_2.min.js?v=20261113-source-integrity"></script>
 </body>
 </html>

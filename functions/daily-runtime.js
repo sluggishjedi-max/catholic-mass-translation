@@ -126,6 +126,8 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
         snapshots.push({url:document.sourceUrl,status:200,kind:'pdf-extraction',file:document.file,body:document.text});
       }else parsed=await run('Promise.resolve(dailySourceFetchers[__collectorInput.lang](getActiveLiturgicalSourceDate(),{locationCode:__collectorInput.country})).then(sanitizeDailyAcclamationReferences).then(ordoDailyContent.normalizeParsed)');
       window.__parsed=parsed;
+      parsed=run('completeMissingDailyProperSections(__parsed,__collectorInput.lang,getActiveLiturgicalSourceDate())');
+      window.__parsed=parsed;
       const validation=run(`({missing:missingCoreDailyReadingSections(__parsed,getActiveLiturgicalSourceDate(),__collectorInput.lang,__collectorInput.country),fixed:countrySpecialMassRecord(getActiveLiturgicalSourceDate(),__collectorInput.country)?.fetchDaily===false})`);
       if(validation.missing.length&&!validation.fixed&&!Object.keys(parsed.data||{}).length)throw Error('incomplete-source:'+validation.missing.join(','));
       // Store Missal prayers when a public diocesan source supplies them; no AI is used.

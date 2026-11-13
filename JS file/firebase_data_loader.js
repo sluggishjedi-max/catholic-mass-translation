@@ -116,7 +116,7 @@
     return global.firebase.firestore();
   }
   async function loadScope(name, code, force) {
-    const key = name+':'+code+(name === 'order_of_mass' ? ':source-layout-v1' : '');
+    const key = name+':'+code+(name === 'order_of_mass' ? ':source-rows-v2' : '');
     if (!force && complete.has(key)) return;
     if (requests.has(key)) return requests.get(key);
     const request = (async () => {
