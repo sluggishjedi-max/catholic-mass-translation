@@ -5358,6 +5358,606 @@
     },
     {
       "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "zh": "天主經"
+        },
+        "lines": [
+          {
+            "text_zh": "我們既遵從救主的訓示，",
+            "__massEditorPairKeys": {
+              "text_zh": "0:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "text_zh": "又承受祂的教導，才敢說：",
+            "__massEditorPairKeys": {
+              "text_zh": "1:text"
+            }
+          },
+          {
+            "text_zh": "我們的天父，",
+            "__massEditorPairKeys": {
+              "text_zh": "2:text"
+            },
+            "sp_zh": "信友"
+          },
+          {
+            "text_zh": "願祢的名受顯揚，",
+            "__massEditorPairKeys": {
+              "text_zh": "3:text"
+            }
+          },
+          {
+            "text_zh": "願祢的國來臨，",
+            "__massEditorPairKeys": {
+              "text_zh": "4:text"
+            }
+          },
+          {
+            "text_zh": "願祢的旨意奉行在人間，如同在天上。",
+            "__massEditorPairKeys": {
+              "text_zh": "5:text"
+            }
+          },
+          {
+            "text_zh": "求祢今天賞給我們日用的食糧；",
+            "__massEditorPairKeys": {
+              "text_zh": "6:text"
+            }
+          },
+          {
+            "text_zh": "求祢寬恕我們的罪過，",
+            "__massEditorPairKeys": {
+              "text_zh": "7:text"
+            }
+          },
+          {
+            "text_zh": "如同我們寬恕別人一樣；",
+            "__massEditorPairKeys": {
+              "text_zh": "8:text"
+            }
+          },
+          {
+            "text_zh": "不要讓我們陷於誘惑；",
+            "__massEditorPairKeys": {
+              "text_zh": "9:text"
+            }
+          },
+          {
+            "text_zh": "但救我們免於凶惡。",
+            "__massEditorPairKeys": {
+              "text_zh": "10:text"
+            }
+          },
+          {
+            "text_zh": "上主，求祢從一切災禍中拯救我們，",
+            "__massEditorPairKeys": {
+              "text_zh": "11:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "text_zh": "恩賜我們的時代得享平安；",
+            "__massEditorPairKeys": {
+              "text_zh": "12:text"
+            }
+          },
+          {
+            "text_zh": "更求祢大發慈悲，保佑我們脫免罪惡，",
+            "__massEditorPairKeys": {
+              "text_zh": "13:text"
+            }
+          },
+          {
+            "text_zh": "並在一切困擾中，獲得安全，",
+            "__massEditorPairKeys": {
+              "text_zh": "14:text"
+            }
+          },
+          {
+            "text_zh": "使我們虔誠期待永生的幸福，",
+            "__massEditorPairKeys": {
+              "text_zh": "15:text"
+            }
+          },
+          {
+            "text_zh": "和救主耶穌的來臨。",
+            "__massEditorPairKeys": {
+              "text_zh": "16:text"
+            }
+          },
+          {
+            "text_zh": "天下萬國，普世權威，一切榮耀，永歸於祢。",
+            "__massEditorPairKeys": {
+              "text_zh": "17:text"
+            },
+            "sp_zh": "信友"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "zh": "平安禮"
+        },
+        "lines": [
+          {
+            "text_zh": "主耶穌基督，",
+            "__massEditorPairKeys": {
+              "text_zh": "0:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "text_zh": "祢曾對宗徒們說：",
+            "__massEditorPairKeys": {
+              "text_zh": "1:text"
+            }
+          },
+          {
+            "text_zh": "「我將平安留給你們，",
+            "__massEditorPairKeys": {
+              "text_zh": "2:text"
+            }
+          },
+          {
+            "text_zh": "將我的平安賞給你們。」",
+            "__massEditorPairKeys": {
+              "text_zh": "3:text"
+            }
+          },
+          {
+            "text_zh": "求祢不要看我們的罪過，",
+            "__massEditorPairKeys": {
+              "text_zh": "4:text"
+            }
+          },
+          {
+            "text_zh": "但看祢教會的信德，",
+            "__massEditorPairKeys": {
+              "text_zh": "5:text"
+            }
+          },
+          {
+            "text_zh": "並按照祢的聖意，使教會安定團結，",
+            "__massEditorPairKeys": {
+              "text_zh": "6:text"
+            }
+          },
+          {
+            "text_zh": "祢是天主，永生永王。",
+            "__massEditorPairKeys": {
+              "text_zh": "7:text"
+            }
+          },
+          {
+            "text_zh": "阿們。",
+            "__massEditorPairKeys": {
+              "text_zh": "8:text"
+            },
+            "sp_zh": "信友"
+          },
+          {
+            "text_zh": "願主的平安常與你們同在。",
+            "__massEditorPairKeys": {
+              "text_zh": "9:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "text_zh": "也與你的心靈同在。",
+            "__massEditorPairKeys": {
+              "text_zh": "10:text"
+            },
+            "sp_zh": "信友"
+          },
+          {
+            "text_zh": "請大家互祝平安。",
+            "__massEditorPairKeys": {
+              "text_zh": "11:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "rubric_zh": "主祭與信友互相鞠躬；然後信友可分二邊，相對鞠躬。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "12:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "zh": "擘餅及羔羊頌"
+        },
+        "lines": [
+          {
+            "rubric_zh": "主祭默念：願我們的主耶穌基督聖體聖血的攙合，使我們領受的人獲得永生。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "0:rubric"
+            }
+          },
+          {
+            "text_zh": "除免世罪的天主羔羊，",
+            "__massEditorPairKeys": {
+              "text_zh": "0:text"
+            },
+            "sp_zh": "全體"
+          },
+          {
+            "text_zh": "求祢垂憐我們。",
+            "__massEditorPairKeys": {
+              "text_zh": "1:text"
+            }
+          },
+          {
+            "text_zh": "除免世罪的天主羔羊，",
+            "__massEditorPairKeys": {
+              "text_zh": "2:text"
+            }
+          },
+          {
+            "text_zh": "求祢垂憐我們。",
+            "__massEditorPairKeys": {
+              "text_zh": "3:text"
+            }
+          },
+          {
+            "text_zh": "除免世罪的天主羔羊，",
+            "__massEditorPairKeys": {
+              "text_zh": "4:text"
+            }
+          },
+          {
+            "text_zh": "求祢賜給我們平安。",
+            "__massEditorPairKeys": {
+              "text_zh": "5:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "zh": "領聖體"
+        },
+        "lines": [
+          {
+            "rubric_zh": "主祭默念領聖體前經。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "0:rubric"
+            }
+          },
+          {
+            "text_zh": "請看，天主的羔羊；",
+            "__massEditorPairKeys": {
+              "text_zh": "0:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "text_zh": "請看，除免世罪者。",
+            "__massEditorPairKeys": {
+              "text_zh": "1:text"
+            }
+          },
+          {
+            "text_zh": "蒙召來赴聖宴的人是有福的。",
+            "__massEditorPairKeys": {
+              "text_zh": "2:text"
+            }
+          },
+          {
+            "text_zh": "主，我當不起祢到我心裡來，",
+            "__massEditorPairKeys": {
+              "text_zh": "3:text"
+            },
+            "sp_zh": "全體"
+          },
+          {
+            "text_zh": "只要祢說一句話，",
+            "__massEditorPairKeys": {
+              "text_zh": "4:text"
+            }
+          },
+          {
+            "text_zh": "我的靈魂就會痊癒。",
+            "__massEditorPairKeys": {
+              "text_zh": "5:text"
+            }
+          },
+          {
+            "rubric_zh": "信友前往恭領聖體。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "6:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "zh": "領主詠"
+        },
+        "lines": [
+          {
+            "rubric_zh": "見專有彌撒經文。當主祭領聖體時，就開始唱領主詠。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "0:rubric"
+            }
+          },
+          {
+            "text_zh": "（當日領主詠）",
+            "__massEditorPairKeys": {
+              "text_zh": "1:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "zh": "領聖體後經"
+        },
+        "lines": [
+          {
+            "text_zh": "請大家祈禱。",
+            "__massEditorPairKeys": {
+              "text_zh": "0:text"
+            },
+            "sp_zh": "主祭"
+          },
+          {
+            "rubric_zh": "見專有彌撒經文。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "1:rubric"
+            },
+            "rubricInset_zh": true
+          },
+          {},
+          {
+            "text_zh": "阿們。",
+            "__massEditorPairKeys": {
+              "text_zh": "3:text"
+            },
+            "sp_zh": "信友"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "zh": "報告事項"
+        },
+        "lines": [
+          {
+            "rubric_zh": "如有需要，作簡短報告。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "zh": "降福"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "zh": "普通降福"
+            },
+            "lines": [
+              {
+                "text_zh": "願主與你們同在。",
+                "__massEditorPairKeys": {
+                  "text_zh": "0:text"
+                },
+                "sp_zh": "主祭"
+              },
+              {
+                "text_zh": "也與你的心靈同在。",
+                "__massEditorPairKeys": {
+                  "text_zh": "1:text"
+                },
+                "sp_zh": "信友"
+              },
+              {},
+              {
+                "text_zh": "願全能的天主，聖父、聖子 ✠、聖神，",
+                "__massEditorPairKeys": {
+                  "text_zh": "3:text"
+                },
+                "sp_zh": "主祭"
+              },
+              {
+                "text_zh": "降福你們。",
+                "__massEditorPairKeys": {
+                  "text_zh": "4:text"
+                }
+              },
+              {
+                "text_zh": "阿們。",
+                "__massEditorPairKeys": {
+                  "text_zh": "5:text"
+                },
+                "sp_zh": "信友"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "zh": "遣散"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "zh": "彌撒禮成"
+            },
+            "lines": [
+              {
+                "text_zh": "彌撒禮成！",
+                "__massEditorPairKeys": {
+                  "text_zh": "0:text"
+                },
+                "sp_zh": "主祭"
+              },
+              {
+                "text_zh": "感謝天主。",
+                "__massEditorPairKeys": {
+                  "text_zh": "1:text"
+                },
+                "sp_zh": "信友"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "zh": "傳揚福音"
+            },
+            "lines": [
+              {
+                "text_zh": "去傳揚上主的福音！",
+                "__massEditorPairKeys": {
+                  "text_zh": "0:text"
+                },
+                "sp_zh": "主祭"
+              },
+              {
+                "text_zh": "感謝天主。",
+                "__massEditorPairKeys": {
+                  "text_zh": "1:text"
+                },
+                "sp_zh": "信友"
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "zh": "以生活光榮天主"
+            },
+            "lines": [
+              {
+                "text_zh": "平安回去，在生活中光榮天主！",
+                "__massEditorPairKeys": {
+                  "text_zh": "0:text"
+                },
+                "sp_zh": "主祭"
+              },
+              {
+                "text_zh": "感謝天主。",
+                "__massEditorPairKeys": {
+                  "text_zh": "1:text"
+                },
+                "sp_zh": "信友"
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "zh": "平安回去"
+            },
+            "lines": [
+              {
+                "text_zh": "平安回去！",
+                "__massEditorPairKeys": {
+                  "text_zh": "0:text"
+                },
+                "sp_zh": "主祭"
+              },
+              {
+                "text_zh": "感謝天主。",
+                "__massEditorPairKeys": {
+                  "text_zh": "1:text"
+                },
+                "sp_zh": "信友"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "zh": "禮成詠"
+        },
+        "lines": [
+          {
+            "rubric_zh": "唱合適的禮成詠。",
+            "__massEditorPairKeys": {
+              "rubric_zh": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
         20
       ],
       "value": {
@@ -5512,6 +6112,7 @@
             }
           },
           {
+            "dividerAfter": "after-sanctus",
             "text_zh": "歡呼之聲，響徹雲霄。",
             "__massEditorPairKeys": {
               "text_zh": "5:text"
@@ -6638,6 +7239,7 @@
               "rubricInset_zh": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_zh": "信德的奧蹟:",
               "__massEditorPairKeys": {
                 "text_zh": "canon:mystery:0:text"
@@ -7036,6 +7638,7 @@
               "rubricInset_zh": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_zh": "信德的奧蹟:",
               "__massEditorPairKeys": {
                 "text_zh": "12:text"
@@ -7297,6 +7900,7 @@
               "rubricInset_zh": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_zh": "信德的奧蹟:",
               "__massEditorPairKeys": {
                 "text_zh": "15:text"
@@ -7788,6 +8392,7 @@
               "rubricInset_zh": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_zh": "信德的奧蹟:",
               "__massEditorPairKeys": {
                 "text_zh": "33:text"
@@ -8022,606 +8627,6 @@
           }
         },
         "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
-        21
-      ],
-      "value": {
-        "id": "3.4 lords_prayer",
-        "type": "part",
-        "header": {
-          "zh": "天主經"
-        },
-        "lines": [
-          {
-            "text_zh": "我們既遵從救主的訓示，",
-            "__massEditorPairKeys": {
-              "text_zh": "0:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "text_zh": "又承受祂的教導，才敢說：",
-            "__massEditorPairKeys": {
-              "text_zh": "1:text"
-            }
-          },
-          {
-            "text_zh": "我們的天父，",
-            "__massEditorPairKeys": {
-              "text_zh": "2:text"
-            },
-            "sp_zh": "信友"
-          },
-          {
-            "text_zh": "願祢的名受顯揚，",
-            "__massEditorPairKeys": {
-              "text_zh": "3:text"
-            }
-          },
-          {
-            "text_zh": "願祢的國來臨，",
-            "__massEditorPairKeys": {
-              "text_zh": "4:text"
-            }
-          },
-          {
-            "text_zh": "願祢的旨意奉行在人間，如同在天上。",
-            "__massEditorPairKeys": {
-              "text_zh": "5:text"
-            }
-          },
-          {
-            "text_zh": "求祢今天賞給我們日用的食糧；",
-            "__massEditorPairKeys": {
-              "text_zh": "6:text"
-            }
-          },
-          {
-            "text_zh": "求祢寬恕我們的罪過，",
-            "__massEditorPairKeys": {
-              "text_zh": "7:text"
-            }
-          },
-          {
-            "text_zh": "如同我們寬恕別人一樣；",
-            "__massEditorPairKeys": {
-              "text_zh": "8:text"
-            }
-          },
-          {
-            "text_zh": "不要讓我們陷於誘惑；",
-            "__massEditorPairKeys": {
-              "text_zh": "9:text"
-            }
-          },
-          {
-            "text_zh": "但救我們免於凶惡。",
-            "__massEditorPairKeys": {
-              "text_zh": "10:text"
-            }
-          },
-          {
-            "text_zh": "上主，求祢從一切災禍中拯救我們，",
-            "__massEditorPairKeys": {
-              "text_zh": "11:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "text_zh": "恩賜我們的時代得享平安；",
-            "__massEditorPairKeys": {
-              "text_zh": "12:text"
-            }
-          },
-          {
-            "text_zh": "更求祢大發慈悲，保佑我們脫免罪惡，",
-            "__massEditorPairKeys": {
-              "text_zh": "13:text"
-            }
-          },
-          {
-            "text_zh": "並在一切困擾中，獲得安全，",
-            "__massEditorPairKeys": {
-              "text_zh": "14:text"
-            }
-          },
-          {
-            "text_zh": "使我們虔誠期待永生的幸福，",
-            "__massEditorPairKeys": {
-              "text_zh": "15:text"
-            }
-          },
-          {
-            "text_zh": "和救主耶穌的來臨。",
-            "__massEditorPairKeys": {
-              "text_zh": "16:text"
-            }
-          },
-          {
-            "text_zh": "天下萬國，普世權威，一切榮耀，永歸於祢。",
-            "__massEditorPairKeys": {
-              "text_zh": "17:text"
-            },
-            "sp_zh": "信友"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        22
-      ],
-      "value": {
-        "id": "3.5 peace",
-        "type": "part",
-        "header": {
-          "zh": "平安禮"
-        },
-        "lines": [
-          {
-            "text_zh": "主耶穌基督，",
-            "__massEditorPairKeys": {
-              "text_zh": "0:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "text_zh": "祢曾對宗徒們說：",
-            "__massEditorPairKeys": {
-              "text_zh": "1:text"
-            }
-          },
-          {
-            "text_zh": "「我將平安留給你們，",
-            "__massEditorPairKeys": {
-              "text_zh": "2:text"
-            }
-          },
-          {
-            "text_zh": "將我的平安賞給你們。」",
-            "__massEditorPairKeys": {
-              "text_zh": "3:text"
-            }
-          },
-          {
-            "text_zh": "求祢不要看我們的罪過，",
-            "__massEditorPairKeys": {
-              "text_zh": "4:text"
-            }
-          },
-          {
-            "text_zh": "但看祢教會的信德，",
-            "__massEditorPairKeys": {
-              "text_zh": "5:text"
-            }
-          },
-          {
-            "text_zh": "並按照祢的聖意，使教會安定團結，",
-            "__massEditorPairKeys": {
-              "text_zh": "6:text"
-            }
-          },
-          {
-            "text_zh": "祢是天主，永生永王。",
-            "__massEditorPairKeys": {
-              "text_zh": "7:text"
-            }
-          },
-          {
-            "text_zh": "阿們。",
-            "__massEditorPairKeys": {
-              "text_zh": "8:text"
-            },
-            "sp_zh": "信友"
-          },
-          {
-            "text_zh": "願主的平安常與你們同在。",
-            "__massEditorPairKeys": {
-              "text_zh": "9:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "text_zh": "也與你的心靈同在。",
-            "__massEditorPairKeys": {
-              "text_zh": "10:text"
-            },
-            "sp_zh": "信友"
-          },
-          {
-            "text_zh": "請大家互祝平安。",
-            "__massEditorPairKeys": {
-              "text_zh": "11:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "rubric_zh": "主祭與信友互相鞠躬；然後信友可分二邊，相對鞠躬。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "12:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        23
-      ],
-      "value": {
-        "id": "3.6 lamb",
-        "type": "part",
-        "header": {
-          "zh": "擘餅及羔羊頌"
-        },
-        "lines": [
-          {
-            "rubric_zh": "主祭默念：願我們的主耶穌基督聖體聖血的攙合，使我們領受的人獲得永生。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "0:rubric"
-            }
-          },
-          {
-            "text_zh": "除免世罪的天主羔羊，",
-            "__massEditorPairKeys": {
-              "text_zh": "0:text"
-            },
-            "sp_zh": "全體"
-          },
-          {
-            "text_zh": "求祢垂憐我們。",
-            "__massEditorPairKeys": {
-              "text_zh": "1:text"
-            }
-          },
-          {
-            "text_zh": "除免世罪的天主羔羊，",
-            "__massEditorPairKeys": {
-              "text_zh": "2:text"
-            }
-          },
-          {
-            "text_zh": "求祢垂憐我們。",
-            "__massEditorPairKeys": {
-              "text_zh": "3:text"
-            }
-          },
-          {
-            "text_zh": "除免世罪的天主羔羊，",
-            "__massEditorPairKeys": {
-              "text_zh": "4:text"
-            }
-          },
-          {
-            "text_zh": "求祢賜給我們平安。",
-            "__massEditorPairKeys": {
-              "text_zh": "5:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        24
-      ],
-      "value": {
-        "id": "3.7 communion_rite",
-        "type": "part",
-        "header": {
-          "zh": "領聖體"
-        },
-        "lines": [
-          {
-            "rubric_zh": "主祭默念領聖體前經。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "0:rubric"
-            }
-          },
-          {
-            "text_zh": "請看，天主的羔羊；",
-            "__massEditorPairKeys": {
-              "text_zh": "0:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "text_zh": "請看，除免世罪者。",
-            "__massEditorPairKeys": {
-              "text_zh": "1:text"
-            }
-          },
-          {
-            "text_zh": "蒙召來赴聖宴的人是有福的。",
-            "__massEditorPairKeys": {
-              "text_zh": "2:text"
-            }
-          },
-          {
-            "text_zh": "主，我當不起祢到我心裡來，",
-            "__massEditorPairKeys": {
-              "text_zh": "3:text"
-            },
-            "sp_zh": "全體"
-          },
-          {
-            "text_zh": "只要祢說一句話，",
-            "__massEditorPairKeys": {
-              "text_zh": "4:text"
-            }
-          },
-          {
-            "text_zh": "我的靈魂就會痊癒。",
-            "__massEditorPairKeys": {
-              "text_zh": "5:text"
-            }
-          },
-          {
-            "rubric_zh": "信友前往恭領聖體。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "6:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        25
-      ],
-      "value": {
-        "id": "3.8 communion",
-        "type": "part",
-        "header": {
-          "zh": "領主詠"
-        },
-        "lines": [
-          {
-            "rubric_zh": "見專有彌撒經文。當主祭領聖體時，就開始唱領主詠。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "0:rubric"
-            }
-          },
-          {
-            "text_zh": "（當日領主詠）",
-            "__massEditorPairKeys": {
-              "text_zh": "1:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        26
-      ],
-      "value": {
-        "id": "3.9 prayer_after",
-        "type": "part",
-        "header": {
-          "zh": "領聖體後經"
-        },
-        "lines": [
-          {
-            "text_zh": "請大家祈禱。",
-            "__massEditorPairKeys": {
-              "text_zh": "0:text"
-            },
-            "sp_zh": "主祭"
-          },
-          {
-            "rubric_zh": "見專有彌撒經文。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "1:rubric"
-            },
-            "rubricInset_zh": true
-          },
-          {},
-          {
-            "text_zh": "阿們。",
-            "__massEditorPairKeys": {
-              "text_zh": "3:text"
-            },
-            "sp_zh": "信友"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        28
-      ],
-      "value": {
-        "id": "4.1 announcement",
-        "type": "part",
-        "header": {
-          "zh": "報告事項"
-        },
-        "lines": [
-          {
-            "rubric_zh": "如有需要，作簡短報告。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "0:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        29
-      ],
-      "value": {
-        "id": "4.2 blessing",
-        "type": "selectable",
-        "header": {
-          "zh": "降福"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "zh": "普通降福"
-            },
-            "lines": [
-              {
-                "text_zh": "願主與你們同在。",
-                "__massEditorPairKeys": {
-                  "text_zh": "0:text"
-                },
-                "sp_zh": "主祭"
-              },
-              {
-                "text_zh": "也與你的心靈同在。",
-                "__massEditorPairKeys": {
-                  "text_zh": "1:text"
-                },
-                "sp_zh": "信友"
-              },
-              {},
-              {
-                "text_zh": "願全能的天主，聖父、聖子 ✠、聖神，",
-                "__massEditorPairKeys": {
-                  "text_zh": "3:text"
-                },
-                "sp_zh": "主祭"
-              },
-              {
-                "text_zh": "降福你們。",
-                "__massEditorPairKeys": {
-                  "text_zh": "4:text"
-                }
-              },
-              {
-                "text_zh": "阿們。",
-                "__massEditorPairKeys": {
-                  "text_zh": "5:text"
-                },
-                "sp_zh": "信友"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        30
-      ],
-      "value": {
-        "id": "4.3 dismissal",
-        "type": "selectable",
-        "header": {
-          "zh": "遣散"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "zh": "彌撒禮成"
-            },
-            "lines": [
-              {
-                "text_zh": "彌撒禮成！",
-                "__massEditorPairKeys": {
-                  "text_zh": "0:text"
-                },
-                "sp_zh": "主祭"
-              },
-              {
-                "text_zh": "感謝天主。",
-                "__massEditorPairKeys": {
-                  "text_zh": "1:text"
-                },
-                "sp_zh": "信友"
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "zh": "傳揚福音"
-            },
-            "lines": [
-              {
-                "text_zh": "去傳揚上主的福音！",
-                "__massEditorPairKeys": {
-                  "text_zh": "0:text"
-                },
-                "sp_zh": "主祭"
-              },
-              {
-                "text_zh": "感謝天主。",
-                "__massEditorPairKeys": {
-                  "text_zh": "1:text"
-                },
-                "sp_zh": "信友"
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "zh": "以生活光榮天主"
-            },
-            "lines": [
-              {
-                "text_zh": "平安回去，在生活中光榮天主！",
-                "__massEditorPairKeys": {
-                  "text_zh": "0:text"
-                },
-                "sp_zh": "主祭"
-              },
-              {
-                "text_zh": "感謝天主。",
-                "__massEditorPairKeys": {
-                  "text_zh": "1:text"
-                },
-                "sp_zh": "信友"
-              }
-            ]
-          },
-          "D": {
-            "label": {
-              "zh": "平安回去"
-            },
-            "lines": [
-              {
-                "text_zh": "平安回去！",
-                "__massEditorPairKeys": {
-                  "text_zh": "0:text"
-                },
-                "sp_zh": "主祭"
-              },
-              {
-                "text_zh": "感謝天主。",
-                "__massEditorPairKeys": {
-                  "text_zh": "1:text"
-                },
-                "sp_zh": "信友"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        31
-      ],
-      "value": {
-        "id": "4.4 final_song",
-        "type": "part",
-        "header": {
-          "zh": "禮成詠"
-        },
-        "lines": [
-          {
-            "rubric_zh": "唱合適的禮成詠。",
-            "__massEditorPairKeys": {
-              "rubric_zh": "0:rubric"
-            }
-          }
-        ]
       }
     }
   ];

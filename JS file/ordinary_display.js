@@ -14,9 +14,7 @@
         return [{...prepare(metadata,lower),__ordinaryPairKey:row.pairKey||(row.optionKey?'option:'+row.optionKey:'structure:'+index),__ordinarySource:true}];
       }
       return parts.map(part=>{
-        const saved=row.__massEditorPairKeys?.[part.field]||index+':'+part.kind;
-        const segmentKey=part.segment&&row.__massEditorPairKeys?.[part.field+':segment:'+part.segmentIndex];
-        const identity=segmentKey||saved.replace(/:(?:text|rubric|cit)$/u,':'+part.kind)+(part.segment?':segment:'+part.segmentIndex:'');
+        const identity=index+':'+part.kind+(part.segment?':segment:'+part.segmentIndex:'');
         const count=occurrences.get(identity)||0;occurrences.set(identity,count+1);
         const result={...prepare(metadata,lower),[part.field]:part.text,__ordinarySource:true,__ordinaryPairKey:identity+(count?':occurrence:'+count:''),__ordinaryKinds:{[lower]:part.kind}};
         const inset=row['rubricInset_'+lower];
@@ -31,16 +29,27 @@
     if(value&&typeof value==='object')return Object.fromEntries(Object.entries(value).map(([key,child])=>[key,prepare(child,lower)]));
     return value;
   }
-  // Pair only anchors which occur in the same order in both edited sources.
-  // Conflicting anchors remain separate rows; neither language is reordered.
+  // Sentence rows are shown in the editor's stored order. Editing IDs never
+  // choose their position. Explicit option containers keep their own rows.
   function mergeRows(left,right){
-    const a=left||[],b=right||[],table=Array.from({length:a.length+1},()=>new Uint16Array(b.length+1));
-    for(let i=a.length-1;i>=0;i--)for(let j=b.length-1;j>=0;j--)table[i][j]=a[i].__ordinaryPairKey===b[j].__ordinaryPairKey?table[i+1][j+1]+1:Math.max(table[i+1][j],table[i][j+1]);
-    const output=[];let i=0,j=0;
+    const a=left||[],b=right||[],output=[];
+    const control=row=>row?.optionKey||row?.type==='optionBlock'||row?.isDivider;
+    const key=row=>control(row)?row.pairKey||row.optionKey||'divider:'+row.isDivider:'';
+    const append=(x,y)=>{let i=0,j=0;while(i<x.length||j<y.length){
+      if(i>=x.length){output.push(copy(y[j++]));continue;}
+      if(j>=y.length){output.push(copy(x[i++]));continue;}
+      if(control(x[i])||control(y[j])){
+        if(control(x[i])&&control(y[j])&&key(x[i])===key(y[j]))output.push(merge(x[i++],y[j++]));
+        else if(control(x[i]))output.push(copy(x[i++]));
+        else output.push(copy(y[j++]));
+      }else output.push(merge(x[i++],y[j++]));
+    }};
+    let i=0,j=0;
     while(i<a.length||j<b.length){
-      if(i<a.length&&j<b.length&&a[i].__ordinaryPairKey===b[j].__ordinaryPairKey){output.push(merge(a[i],b[j]));i++;j++;}
-      else if(i<a.length&&(j>=b.length||table[i+1][j]>=table[i][j+1]))output.push(copy(a[i++]));
-      else output.push(copy(b[j++]));
+      let ai=-1,bj=-1;
+      for(let index=i;index<a.length;index++){if(!control(a[index]))continue;const match=b.findIndex((row,at)=>at>=j&&control(row)&&key(row)===key(a[index]));if(match>=0){ai=index;bj=match;break;}}
+      if(ai<0){append(a.slice(i),b.slice(j));break;}
+      append(a.slice(i,ai),b.slice(j,bj));output.push(merge(a[ai],b[bj]));i=ai+1;j=bj+1;
     }
     return output;
   }

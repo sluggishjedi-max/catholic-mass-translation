@@ -7534,4433 +7534,6 @@
     },
     {
       "path": [
-        20
-      ],
-      "value": {
-        "id": "3.3 eucharist",
-        "type": "selectable",
-        "isEucharist": true,
-        "header": {
-          "de": "Eucharistisches Hochgebet"
-        },
-        "variants": {
-          "1": {
-            "label": {
-              "de": "Erstes Hochgebet (Römischer Messkanon)"
-            }
-          },
-          "2": {
-            "label": {
-              "de": "Zweites Hochgebet"
-            }
-          },
-          "3": {
-            "label": {
-              "de": "Drittes Hochgebet"
-            }
-          },
-          "4": {
-            "label": {
-              "de": "Viertes Hochgebet"
-            }
-          }
-        },
-        "common_dialogue": [
-          {
-            "text_de": "Der Herr sei mit euch.",
-            "__massEditorPairKeys": {
-              "text_de": "0:text"
-            },
-            "sp_de": "P."
-          },
-          {
-            "text_de": "Und mit deinem Geiste.",
-            "__massEditorPairKeys": {
-              "text_de": "1:text"
-            },
-            "sp_de": "A."
-          },
-          {
-            "text_de": "Erhebet die Herzen.",
-            "__massEditorPairKeys": {
-              "text_de": "2:text"
-            },
-            "sp_de": "P."
-          },
-          {
-            "text_de": "Wir haben sie beim Herrn.",
-            "__massEditorPairKeys": {
-              "text_de": "3:text"
-            },
-            "sp_de": "A."
-          },
-          {
-            "text_de": "Lasset uns danken dem Herrn, unserm Gott.",
-            "__massEditorPairKeys": {
-              "text_de": "4:text"
-            },
-            "sp_de": "P."
-          },
-          {
-            "text_de": "Das ist würdig und recht.",
-            "__massEditorPairKeys": {
-              "text_de": "5:text"
-            },
-            "sp_de": "A."
-          }
-        ],
-        "songs": {
-          "de_preface_dialogue": {
-            "title": {
-              "de": "Einladung zum Hochgebet und Präfation"
-            },
-            "content": [
-              {
-                "text_de": "Das Eucharistische Hochgebet",
-                "__massEditorPairKeys": {
-                  "text_de": "0:text"
-                }
-              },
-              {
-                "rubric_de": "EINLADUNG ZUM HOCHGEBET",
-                "__massEditorPairKeys": {
-                  "rubric_de": "1:rubric"
-                },
-                "rubricInset_de": true
-              },
-              {
-                "text_de": "Der Herr sei mit euch.",
-                "__massEditorPairKeys": {
-                  "text_de": "2:text"
-                },
-                "sp_de": "P."
-              },
-              {
-                "text_de": "Und mit deinem Geiste.",
-                "__massEditorPairKeys": {
-                  "text_de": "3:text"
-                },
-                "sp_de": "A."
-              },
-              {
-                "text_de": "Erhebet die Herzen.",
-                "__massEditorPairKeys": {
-                  "text_de": "4:text"
-                },
-                "sp_de": "P."
-              },
-              {
-                "text_de": "Wir haben sie beim Herrn.",
-                "__massEditorPairKeys": {
-                  "text_de": "5:text"
-                },
-                "sp_de": "A."
-              },
-              {
-                "text_de": "Lasset uns danken dem Herrn, unserm Gott.",
-                "__massEditorPairKeys": {
-                  "text_de": "6:text"
-                },
-                "sp_de": "P."
-              },
-              {
-                "text_de": "Das ist würdig und recht.",
-                "__massEditorPairKeys": {
-                  "text_de": "7:text"
-                },
-                "sp_de": "A."
-              },
-              {
-                "rubric_de": "PRÄFATION",
-                "__massEditorPairKeys": {
-                  "rubric_de": "8:rubric"
-                },
-                "rubricInset_de": true
-              },
-              {
-                "rubric_de": "SANCTUS",
-                "__massEditorPairKeys": {
-                  "rubric_de": "9:rubric"
-                },
-                "rubricInset_de": true
-              },
-              {
-                "text_de": "Heilig, heilig, heilig",
-                "__massEditorPairKeys": {
-                  "text_de": "10:text"
-                }
-              },
-              {
-                "text_de": "Gott, Herr aller Mächte und Gewalten.",
-                "__massEditorPairKeys": {
-                  "text_de": "11:text"
-                }
-              },
-              {
-                "text_de": "Erfüllt sind Himmel und Erde",
-                "__massEditorPairKeys": {
-                  "text_de": "12:text"
-                }
-              },
-              {
-                "text_de": "von deiner Herrlichkeit.",
-                "__massEditorPairKeys": {
-                  "text_de": "13:text"
-                }
-              },
-              {
-                "text_de": "Hosanna in der Höhe.",
-                "__massEditorPairKeys": {
-                  "text_de": "14:text"
-                }
-              },
-              {
-                "text_de": "Hoch gelobt sei,",
-                "__massEditorPairKeys": {
-                  "text_de": "15:text"
-                }
-              },
-              {
-                "text_de": "der da kommt im Namen des Herrn.",
-                "__massEditorPairKeys": {
-                  "text_de": "16:text"
-                }
-              },
-              {
-                "text_de": "Hosanna in der Höhe.",
-                "__massEditorPairKeys": {
-                  "text_de": "17:text"
-                }
-              }
-            ]
-          }
-        },
-        "sanctus": [
-          {
-            "text_de": "Heilig, heilig, heilig, Gott, Herr aller Mächte und Gewalten.",
-            "__massEditorPairKeys": {
-              "text_de": "0:text"
-            },
-            "sp_de": "A."
-          },
-          {
-            "text_de": "Erfüllt sind Himmel und Erde von deiner Herrlichkeit.",
-            "__massEditorPairKeys": {
-              "text_de": "1:text"
-            }
-          },
-          {
-            "text_de": "Hosanna in der Höhe.",
-            "__massEditorPairKeys": {
-              "text_de": "2:text"
-            }
-          },
-          {
-            "text_de": "Hochgelobt sei, der da kommt im Namen des Herrn.",
-            "__massEditorPairKeys": {
-              "text_de": "3:text"
-            }
-          },
-          {
-            "text_de": "Hosanna in der Höhe.",
-            "__massEditorPairKeys": {
-              "text_de": "4:text"
-            }
-          }
-        ],
-        "forms": {
-          "1": [
-            {
-              "text_de": "Dich, gütiger Vater, bitten wir",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:0:text"
-              }
-            },
-            {
-              "text_de": "durch deinen Sohn,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:1:text"
-              }
-            },
-            {
-              "text_de": "unseren Herrn Jesus Christus:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:2:text"
-              }
-            },
-            {
-              "text_de": "Nimm diese heiligen,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:3:text"
-              }
-            },
-            {
-              "text_de": "makellosen Opfergaben an",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:4:text"
-              }
-            },
-            {
-              "text_de": "und segne",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:5:text"
-              }
-            },
-            {
-              "text_de": "✠ sie.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:6:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Kirche und ihre Hirten",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:te_igitur:7:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Wir bringen sie dar",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:8:text"
-              }
-            },
-            {
-              "text_de": "vor allem für deine heilige katholische Kirche",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:9:text"
-              }
-            },
-            {
-              "text_de": "in Gemeinschaft mit deinem Diener,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:10:text"
-              }
-            },
-            {
-              "text_de": "unserem Papst",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:11:text"
-              }
-            },
-            {
-              "rubric_de": "N.,",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:te_igitur:12:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "mit unserem Bischof N.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:13:text"
-              }
-            },
-            {
-              "text_de": "und mit allen, die Sorge tragen",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:14:text"
-              }
-            },
-            {
-              "text_de": "für den rechten,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:15:text"
-              }
-            },
-            {
-              "text_de": "katholischen und apostolischen Glauben.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:16:text"
-              }
-            },
-            {
-              "text_de": "Schenke deiner Kirche Frieden und Einheit,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:17:text"
-              }
-            },
-            {
-              "text_de": "behüte und leite sie auf der ganz Erde.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:te_igitur:18:text"
-              }
-            },
-            {
-              "text_de": "Gedenke deiner Diener",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:0:text"
-              }
-            },
-            {
-              "text_de": "und Dienerinnen N.N.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:1:text"
-              }
-            },
-            {
-              "text_de": "(für die heute besonders beten)",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:2:text"
-              }
-            },
-            {
-              "text_de": "und aller, die hier versammelt sind.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:3:text"
-              }
-            },
-            {
-              "rubric_de": "Stilles Gedenken",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:living:4:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Herr, du kennst ihren Glauben",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:5:text"
-              }
-            },
-            {
-              "text_de": "und ihre Hingabe;",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:6:text"
-              }
-            },
-            {
-              "text_de": "für sie bringen wir dieses Opfer des Lobes dar,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:7:text"
-              }
-            },
-            {
-              "text_de": "und sie selber weihen es dir",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:8:text"
-              }
-            },
-            {
-              "text_de": "für sich und für alle, die ihnen verbunden sind,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:9:text"
-              }
-            },
-            {
-              "text_de": "für ihre Erlösung",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:10:text"
-              }
-            },
-            {
-              "text_de": "und für ihre Hoffnung",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:11:text"
-              }
-            },
-            {
-              "text_de": "auf das unverlierbare Heil.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:12:text"
-              }
-            },
-            {
-              "rubric_de": "Vor dich, den ewigen, lebendigen und wahren Gott,",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:living:13:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "bringen sie ihre Gebete und Gaben.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:living:14:text"
-              }
-            },
-            {
-              "type": "optionBlock",
-              "optionKey": "roman_canon_season",
-              "defaultOption": "ordinary",
-              "showControl": true,
-              "label": {
-                "de": "Im Jahreskreis"
-              },
-              "options": {
-                "ordinary": {
-                  "label": {
-                    "de": "Im Jahreskreis"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "gedenken wir deiner Heiligen.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren vor allem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_de": "deine heiligen Apostel und Märtyrer:",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_de": "Petrus und Paulus, Andreas",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_de": "Philippus, Bartholomäus, Matthäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_de": "Simon und Thaddäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "text_de": ")",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:14:text"
-                      }
-                    },
-                    {
-                      "text_de": "und alle deine Heiligen;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:15:text"
-                      }
-                    },
-                    {
-                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:16:text"
-                      }
-                    },
-                    {
-                      "text_de": "und gewähre uns auf ihre Fürsprache",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:17:text"
-                      }
-                    },
-                    {
-                      "text_de": "in allem deine Hilfe und deinen Schutz.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:18:text"
-                      }
-                    }
-                  ]
-                },
-                "christmas": {
-                  "label": {
-                    "de": "Weihnachten"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "gedenken wir deiner Heiligen.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren vor allem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_de": "deine heiligen Apostel und Märtyrer:",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_de": "Petrus und Paulus, Andreas",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_de": "Philippus, Bartholomäus, Matthäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_de": "Simon und Thaddäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "text_de": ")",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:14:text"
-                      }
-                    },
-                    {
-                      "text_de": "und alle deine Heiligen;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:15:text"
-                      }
-                    },
-                    {
-                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:16:text"
-                      }
-                    },
-                    {
-                      "text_de": "und gewähre uns auf ihre Fürsprache",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:17:text"
-                      }
-                    },
-                    {
-                      "text_de": "in allem deine Hilfe und deinen Schutz.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:18:text"
-                      }
-                    }
-                  ]
-                },
-                "epiphany": {
-                  "label": {
-                    "de": "Erscheinung des Herrn"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "gedenken wir deiner Heiligen.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren vor allem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_de": "deine heiligen Apostel und Märtyrer:",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_de": "Petrus und Paulus, Andreas",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_de": "Philippus, Bartholomäus, Matthäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_de": "Simon und Thaddäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "text_de": ")",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:14:text"
-                      }
-                    },
-                    {
-                      "text_de": "und alle deine Heiligen;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:15:text"
-                      }
-                    },
-                    {
-                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:16:text"
-                      }
-                    },
-                    {
-                      "text_de": "und gewähre uns auf ihre Fürsprache",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:17:text"
-                      }
-                    },
-                    {
-                      "text_de": "in allem deine Hilfe und deinen Schutz.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:18:text"
-                      }
-                    }
-                  ]
-                },
-                "easter": {
-                  "label": {
-                    "de": "Ostern"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "gedenken wir deiner Heiligen.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren vor allem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_de": "deine heiligen Apostel und Märtyrer:",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_de": "Petrus und Paulus, Andreas",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_de": "Philippus, Bartholomäus, Matthäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_de": "Simon und Thaddäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "text_de": ")",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:14:text"
-                      }
-                    },
-                    {
-                      "text_de": "und alle deine Heiligen;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:15:text"
-                      }
-                    },
-                    {
-                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:16:text"
-                      }
-                    },
-                    {
-                      "text_de": "und gewähre uns auf ihre Fürsprache",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:17:text"
-                      }
-                    },
-                    {
-                      "text_de": "in allem deine Hilfe und deinen Schutz.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:18:text"
-                      }
-                    }
-                  ]
-                },
-                "ascension": {
-                  "label": {
-                    "de": "Christi Himmelfahrt"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "gedenken wir deiner Heiligen.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren vor allem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_de": "deine heiligen Apostel und Märtyrer:",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_de": "Petrus und Paulus, Andreas",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_de": "Philippus, Bartholomäus, Matthäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_de": "Simon und Thaddäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "text_de": ")",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:14:text"
-                      }
-                    },
-                    {
-                      "text_de": "und alle deine Heiligen;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:15:text"
-                      }
-                    },
-                    {
-                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:16:text"
-                      }
-                    },
-                    {
-                      "text_de": "und gewähre uns auf ihre Fürsprache",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:17:text"
-                      }
-                    },
-                    {
-                      "text_de": "in allem deine Hilfe und deinen Schutz.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:18:text"
-                      }
-                    }
-                  ]
-                },
-                "pentecost": {
-                  "label": {
-                    "de": "Pfingsten"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "gedenken wir deiner Heiligen.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren vor allem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_de": "deine heiligen Apostel und Märtyrer:",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_de": "Petrus und Paulus, Andreas",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_de": "Philippus, Bartholomäus, Matthäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_de": "Simon und Thaddäus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "text_de": ")",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:14:text"
-                      }
-                    },
-                    {
-                      "text_de": "und alle deine Heiligen;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:15:text"
-                      }
-                    },
-                    {
-                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:16:text"
-                      }
-                    },
-                    {
-                      "text_de": "und gewähre uns auf ihre Fürsprache",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:17:text"
-                      }
-                    },
-                    {
-                      "text_de": "in allem deine Hilfe und deinen Schutz.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:communicantes:18:text"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pairKey": "canon:communicantes:choice"
-            },
-            {
-              "type": "optionBlock",
-              "optionKey": "roman_canon_season",
-              "defaultOption": "ordinary",
-              "showControl": false,
-              "label": {
-                "de": "Im Jahreskreis"
-              },
-              "options": {
-                "ordinary": {
-                  "label": {
-                    "de": "Im Jahreskreis"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "Nimm gnädig an, o Gott,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "diese Gaben deiner Diener",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "und deiner ganzen Gemeinde;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "ordne unsere Tage in deinem Frieden,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "rette uns vor dem ewigen Verderben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                },
-                "christmas": {
-                  "label": {
-                    "de": "Weihnachten"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "Nimm gnädig an, o Gott,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "diese Gaben deiner Diener",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "und deiner ganzen Gemeinde;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "ordne unsere Tage in deinem Frieden,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "rette uns vor dem ewigen Verderben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                },
-                "epiphany": {
-                  "label": {
-                    "de": "Erscheinung des Herrn"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "Nimm gnädig an, o Gott,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "diese Gaben deiner Diener",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "und deiner ganzen Gemeinde;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "ordne unsere Tage in deinem Frieden,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "rette uns vor dem ewigen Verderben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                },
-                "easter": {
-                  "label": {
-                    "de": "Ostern"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "Nimm gnädig an, o Gott,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "diese Gaben deiner Diener",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "und deiner ganzen Gemeinde;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "ordne unsere Tage in deinem Frieden,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "rette uns vor dem ewigen Verderben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                },
-                "ascension": {
-                  "label": {
-                    "de": "Christi Himmelfahrt"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "Nimm gnädig an, o Gott,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "diese Gaben deiner Diener",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "und deiner ganzen Gemeinde;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "ordne unsere Tage in deinem Frieden,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "rette uns vor dem ewigen Verderben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                },
-                "pentecost": {
-                  "label": {
-                    "de": "Pfingsten"
-                  },
-                  "lines": [
-                    {
-                      "text_de": "Nimm gnädig an, o Gott,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_de": "diese Gaben deiner Diener",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "text_de": "und deiner ganzen Gemeinde;",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_de": "ordne unsere Tage in deinem Frieden,",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_de": "rette uns vor dem ewigen Verderben",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
-                      "__massEditorPairKeys": {
-                        "text_de": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pairKey": "canon:hanc_igitur:choice"
-            },
-            {
-              "text_de": "Schenke, o Gott, diesen Gaben Segen in Fülle",
-              "__massEditorPairKeys": {
-                "text_de": "canon:quam_oblationem:0:text"
-              }
-            },
-            {
-              "text_de": "und nimm sie zu eigen an.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:quam_oblationem:1:text"
-              }
-            },
-            {
-              "text_de": "Mache sie uns zum wahren Opfer im Geiste,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:quam_oblationem:2:text"
-              }
-            },
-            {
-              "text_de": "das dir wohl gefällt",
-              "__massEditorPairKeys": {
-                "text_de": "canon:quam_oblationem:3:text"
-              }
-            },
-            {
-              "text_de": "zum Leib und Blut deines Sohnes,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:quam_oblationem:4:text"
-              }
-            },
-            {
-              "text_de": "unseres Herrn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:quam_oblationem:5:text"
-              }
-            },
-            {
-              "text_de": "Am Abend vor seinem Leiden",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:0:text"
-              }
-            },
-            {
-              "text_de": "nahm er das Brot",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:1:text"
-              }
-            },
-            {
-              "text_de": "in seine heiligen und ehrwürdigen Hände,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:2:text"
-              }
-            },
-            {
-              "text_de": "erhob die Augen zum Himmel,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:3:text"
-              }
-            },
-            {
-              "text_de": "zu dir, seinem Vater, dem allmächtigen Gott,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:4:text"
-              }
-            },
-            {
-              "text_de": "sagte dir Lob und Dank,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:5:text"
-              }
-            },
-            {
-              "text_de": "brach das Brot,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:6:text"
-              }
-            },
-            {
-              "text_de": "reichte es seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:bread:7:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:bread:8:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST MEIN LEIB,",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:bread:9:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:bread:10:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Ebenso nahm er nach dem Mahl",
-              "__massEditorPairKeys": {
-                "text_de": "canon:cup:0:text"
-              }
-            },
-            {
-              "text_de": "diesen erhabenen Kelch",
-              "__massEditorPairKeys": {
-                "text_de": "canon:cup:1:text"
-              }
-            },
-            {
-              "text_de": "in seine heiligen und ehrwürdigen Hände,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:cup:2:text"
-              }
-            },
-            {
-              "text_de": "sagte dir Lob und Dank,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:cup:3:text"
-              }
-            },
-            {
-              "text_de": "reichte den Kelch seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:cup:4:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:5:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST DER KELCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:6:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:7:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "MEIN BLUT,",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:8:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS FÜR EUCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:9:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:10:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:11:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:cup:12:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Geheimnis des Glaubens.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:mystery:0:text"
-              },
-              "sp_de": "P. (D.)"
-            },
-            {
-              "text_de": "Deinen Tod, o Herr, verkünden wir,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:mystery:1:text"
-              },
-              "sp_de": "A."
-            },
-            {
-              "text_de": "und deine Auferstehung preisen wir,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:mystery:2:text"
-              }
-            },
-            {
-              "text_de": "bis du kommst in Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:mystery:3:text"
-              }
-            },
-            {
-              "rubric_de": "(Hauptzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:mystery:4:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum, gütiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:0:text"
-              }
-            },
-            {
-              "text_de": "feiern wir, deine Diener",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:1:text"
-              }
-            },
-            {
-              "text_de": "und dein heiliges Volk,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:2:text"
-              }
-            },
-            {
-              "text_de": "das Gedächtnis deines Sohnes,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:3:text"
-              }
-            },
-            {
-              "text_de": "unseres Herrn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:4:text"
-              }
-            },
-            {
-              "text_de": "Wir verkünden sein heilbringendes Leiden,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:5:text"
-              }
-            },
-            {
-              "text_de": "seine Auferstehung von den Toten",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:6:text"
-              }
-            },
-            {
-              "text_de": "und seine glorreiche Himmelfahrt.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:7:text"
-              }
-            },
-            {
-              "text_de": "So bringen wir aus den Gaben,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:8:text"
-              }
-            },
-            {
-              "text_de": "die du uns geschenkt hast,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:9:text"
-              }
-            },
-            {
-              "text_de": "dir, dem erhabenen Gott,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:10:text"
-              }
-            },
-            {
-              "text_de": "die reine, heilige und makellose Opfergabe dar:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:11:text"
-              }
-            },
-            {
-              "text_de": "das Brot des Lebens",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:12:text"
-              }
-            },
-            {
-              "text_de": "und den Kelch des ewigen Heiles.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:anamnesis:13:text"
-              }
-            },
-            {
-              "text_de": "Blicke versöhnt und gütig darauf nieder",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:0:text"
-              }
-            },
-            {
-              "text_de": "und nimm sie an",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:1:text"
-              }
-            },
-            {
-              "text_de": "wie einst die Gaben",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:2:text"
-              }
-            },
-            {
-              "text_de": "deines gerechten Dieners Abel,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:3:text"
-              }
-            },
-            {
-              "text_de": "wie das Opfer unseres Vaters Abraham,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:4:text"
-              }
-            },
-            {
-              "text_de": "wie die heilige Gabe, das reine Opfer",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:5:text"
-              }
-            },
-            {
-              "text_de": "deines Hohenpriesters Melchisedek.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supra_quae:6:text"
-              }
-            },
-            {
-              "rubric_de": "Der Priester faltet die Hände, verneigt sich und spricht:",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:supra_quae:7:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Wir bitten dich,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:0:text"
-              },
-              "sp_de": "P."
-            },
-            {
-              "text_de": "allmächtiger Gott:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:1:text"
-              }
-            },
-            {
-              "text_de": "Dein heiliger Engel trage diese Opfergabe",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:2:text"
-              }
-            },
-            {
-              "text_de": "auf deinen himmlischen Altar",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:3:text"
-              }
-            },
-            {
-              "text_de": "vor deine göttliche Herrlichkeit;",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:4:text"
-              }
-            },
-            {
-              "text_de": "und wenn wir durch unsere Teilnahme am Altar",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:5:text"
-              }
-            },
-            {
-              "text_de": "den heiligen Leib und das Blut",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:6:text"
-              }
-            },
-            {
-              "text_de": "deines Sohnes empfangen,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:7:text"
-              }
-            },
-            {
-              "rubric_de": "Der Priester richtet sich auf, macht das Kreuzzeichen und spricht:",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:supplices:8:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "erfülle uns mit aller Gnade",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:9:text"
-              },
-              "sp_de": "P."
-            },
-            {
-              "text_de": "und allem Segen des Himmels.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:supplices:10:text"
-              }
-            },
-            {
-              "text_de": "Gedenke auch deiner Diener",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:0:text"
-              }
-            },
-            {
-              "text_de": "und Dienerinnen (N. und N.),",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:1:text"
-              }
-            },
-            {
-              "text_de": "die uns vorangegangen sind,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:2:text"
-              }
-            },
-            {
-              "text_de": "bezeichnet mit dem Siegel des Glaubens,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:3:text"
-              }
-            },
-            {
-              "text_de": "und die nun ruhen in Frieden.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:4:text"
-              }
-            },
-            {
-              "rubric_de": "Stilles Gedenken",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:departed:5:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Wir bitten dich:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:6:text"
-              }
-            },
-            {
-              "text_de": "Führe sie und alle,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:7:text"
-              }
-            },
-            {
-              "text_de": "die in Christus entschlafen sind,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:8:text"
-              }
-            },
-            {
-              "text_de": "in das Land der Verheißung,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:9:text"
-              }
-            },
-            {
-              "text_de": "des Lichtes und des Friedens.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:departed:10:text"
-              }
-            },
-            {
-              "text_de": "Auch uns, deinen sündigen Dienern,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:0:text"
-              },
-              "sp_de": "P."
-            },
-            {
-              "text_de": "die auf deine reiche Barmherzigkeit hoffen,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:1:text"
-              }
-            },
-            {
-              "text_de": "gib Anteil und Gemeinschaft",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:2:text"
-              }
-            },
-            {
-              "text_de": "mit deinen heiligen Aposteln und Märtyrern:",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:3:text"
-              }
-            },
-            {
-              "text_de": "Johannes, Stephanus, Matthias, Barnabas",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:4:text"
-              }
-            },
-            {
-              "text_de": "(Ignatius, Alexander, Marzellinus, Petrus,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:5:text"
-              }
-            },
-            {
-              "text_de": "Felizitas, Perpetua, Agatha, Luzia,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:6:text"
-              }
-            },
-            {
-              "text_de": "Agnes, Cäcilia, Anastasia",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:7:text"
-              }
-            },
-            {
-              "text_de": ")",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:8:text"
-              }
-            },
-            {
-              "text_de": "und mit allen deinen Heiligen;",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:9:text"
-              }
-            },
-            {
-              "text_de": "wäge nicht unser Verdienst,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:10:text"
-              }
-            },
-            {
-              "text_de": "sondern schenke gnädig Verzeihung",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:11:text"
-              }
-            },
-            {
-              "text_de": "und gib uns mit ihnen das Erbe des Himmels.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:12:text"
-              }
-            },
-            {
-              "rubric_de": "(Hauptzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "canon:nobis_quoque:13:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum bitten wir dich",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:14:text"
-              }
-            },
-            {
-              "text_de": "durch unseren Herrn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:nobis_quoque:15:text"
-              }
-            },
-            {
-              "text_de": "Denn durch ihn erschaffst du immerfort",
-              "__massEditorPairKeys": {
-                "text_de": "canon:per_quem:0:text"
-              }
-            },
-            {
-              "text_de": "all diese gute Gaben,",
-              "__massEditorPairKeys": {
-                "text_de": "canon:per_quem:1:text"
-              }
-            },
-            {
-              "text_de": "gibst ihnen Leben und Weihe",
-              "__massEditorPairKeys": {
-                "text_de": "canon:per_quem:2:text"
-              }
-            },
-            {
-              "text_de": "und spendest sie uns.",
-              "__massEditorPairKeys": {
-                "text_de": "canon:per_quem:3:text"
-              }
-            }
-          ],
-          "2": [
-            {
-              "text_de": "Zweites Hochgebet",
-              "__massEditorPairKeys": {
-                "text_de": "0:text"
-              }
-            },
-            {
-              "rubric_de": "PRÄFATION",
-              "__massEditorPairKeys": {
-                "rubric_de": "1:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "Bitte um Heiligung der Gaben",
-              "__massEditorPairKeys": {
-                "rubric_de": "2:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Ja, du bist heilig, großer Gott,",
-              "__massEditorPairKeys": {
-                "text_de": "3:text"
-              }
-            },
-            {
-              "text_de": "du bist der Quell aller Heiligkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "4:text"
-              }
-            },
-            {
-              "text_de": "Darum bitten wir dich:",
-              "__massEditorPairKeys": {
-                "text_de": "5:text"
-              }
-            },
-            {
-              "text_de": "Sende deinen Geist auf diese Gaben herab",
-              "__massEditorPairKeys": {
-                "text_de": "6:text"
-              }
-            },
-            {
-              "text_de": "und heilige sie,",
-              "__massEditorPairKeys": {
-                "text_de": "7:text"
-              }
-            },
-            {
-              "text_de": "damit sie uns werden Leib",
-              "__massEditorPairKeys": {
-                "text_de": "8:text"
-              }
-            },
-            {
-              "text_de": "✠ und Blut",
-              "__massEditorPairKeys": {
-                "text_de": "9:text"
-              }
-            },
-            {
-              "text_de": "deines Sohnes, unseres Herrn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "10:text"
-              }
-            },
-            {
-              "text_de": "Denn am Abend,",
-              "__massEditorPairKeys": {
-                "text_de": "11:text"
-              }
-            },
-            {
-              "text_de": "an dem er ausgeliefert wurde",
-              "__massEditorPairKeys": {
-                "text_de": "12:text"
-              }
-            },
-            {
-              "text_de": "und sich aus freiem Willen",
-              "__massEditorPairKeys": {
-                "text_de": "13:text"
-              }
-            },
-            {
-              "text_de": "dem Leiden unterwarf,",
-              "__massEditorPairKeys": {
-                "text_de": "14:text"
-              }
-            },
-            {
-              "text_de": "nahm er das Brot und sagte Dank,",
-              "__massEditorPairKeys": {
-                "text_de": "15:text"
-              }
-            },
-            {
-              "text_de": "brach es,",
-              "__massEditorPairKeys": {
-                "text_de": "16:text"
-              }
-            },
-            {
-              "text_de": "reichte es seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "17:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
-              "__massEditorPairKeys": {
-                "rubric_de": "18:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST MEIN LEIB,",
-              "__massEditorPairKeys": {
-                "rubric_de": "19:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
-              "__massEditorPairKeys": {
-                "rubric_de": "20:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Ebenso nahm er nach dem Mahl den Kelch,",
-              "__massEditorPairKeys": {
-                "text_de": "21:text"
-              }
-            },
-            {
-              "text_de": "dankte wiederum,",
-              "__massEditorPairKeys": {
-                "text_de": "22:text"
-              }
-            },
-            {
-              "text_de": "reichte ihn seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "23:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
-              "__massEditorPairKeys": {
-                "rubric_de": "24:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST DER KELCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "25:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
-              "__massEditorPairKeys": {
-                "rubric_de": "26:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "MEIN BLUT,",
-              "__massEditorPairKeys": {
-                "rubric_de": "27:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS FÜR EUCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "28:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
-              "__massEditorPairKeys": {
-                "rubric_de": "29:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
-              "__massEditorPairKeys": {
-                "rubric_de": "30:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
-              "__massEditorPairKeys": {
-                "rubric_de": "31:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Geheimnis des Glaubens.",
-              "__massEditorPairKeys": {
-                "text_de": "32:text"
-              },
-              "sp_de": "P. (D.)"
-            },
-            {
-              "text_de": "Deinen Tod, o Herr, verkünden wir,",
-              "__massEditorPairKeys": {
-                "text_de": "33:text"
-              },
-              "sp_de": "A."
-            },
-            {
-              "text_de": "und deine Auferstehung preisen wir,",
-              "__massEditorPairKeys": {
-                "text_de": "34:text"
-              }
-            },
-            {
-              "text_de": "bis du kommst in Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "35:text"
-              }
-            },
-            {
-              "rubric_de": "Gedächtnis – Darbringung – Dank und Bitte",
-              "__massEditorPairKeys": {
-                "rubric_de": "36:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Hauptzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "37:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum, gütiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "38:text"
-              }
-            },
-            {
-              "text_de": "feiern wir das Gedächtnis",
-              "__massEditorPairKeys": {
-                "text_de": "39:text"
-              }
-            },
-            {
-              "text_de": "des Todes und der Auferstehung deines Sohnes",
-              "__massEditorPairKeys": {
-                "text_de": "40:text"
-              }
-            },
-            {
-              "text_de": "und bringen dir so das Brot des Lebens",
-              "__massEditorPairKeys": {
-                "text_de": "41:text"
-              }
-            },
-            {
-              "text_de": "und den Kelch des Heiles dar.",
-              "__massEditorPairKeys": {
-                "text_de": "42:text"
-              }
-            },
-            {
-              "text_de": "Wir danken dir, dass du uns berufen hast,",
-              "__massEditorPairKeys": {
-                "text_de": "43:text"
-              }
-            },
-            {
-              "text_de": "vor dir zu stehen und dir zu dienen.",
-              "__massEditorPairKeys": {
-                "text_de": "44:text"
-              }
-            },
-            {
-              "text_de": "Wir bitten dich:",
-              "__massEditorPairKeys": {
-                "text_de": "45:text"
-              }
-            },
-            {
-              "text_de": "Schenke uns Anteil an Christi Leib und Blut",
-              "__massEditorPairKeys": {
-                "text_de": "46:text"
-              }
-            },
-            {
-              "text_de": "und lass uns eins werden",
-              "__massEditorPairKeys": {
-                "text_de": "47:text"
-              }
-            },
-            {
-              "text_de": "durch den Heiligen Geist.",
-              "__massEditorPairKeys": {
-                "text_de": "48:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Kirche und ihre Hirten",
-              "__massEditorPairKeys": {
-                "rubric_de": "49:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "50:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Gedenke deiner Kirche auf der ganzen Erde",
-              "__massEditorPairKeys": {
-                "text_de": "51:text"
-              }
-            },
-            {
-              "text_de": "und vollende dein Volk in der Liebe,",
-              "__massEditorPairKeys": {
-                "text_de": "52:text"
-              }
-            },
-            {
-              "text_de": "vereint mit unserem Papst",
-              "__massEditorPairKeys": {
-                "text_de": "53:text"
-              }
-            },
-            {
-              "rubric_de": "N.,",
-              "__massEditorPairKeys": {
-                "rubric_de": "54:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "unserem Bischof N. und allen Bischöfen,",
-              "__massEditorPairKeys": {
-                "text_de": "55:text"
-              }
-            },
-            {
-              "text_de": "unseren Priestern und Diakonen",
-              "__massEditorPairKeys": {
-                "text_de": "56:text"
-              }
-            },
-            {
-              "text_de": "und mit allen,",
-              "__massEditorPairKeys": {
-                "text_de": "57:text"
-              }
-            },
-            {
-              "text_de": "die zum Dienst in der Kirche bestellt sind.",
-              "__massEditorPairKeys": {
-                "text_de": "58:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Verstorbenen",
-              "__massEditorPairKeys": {
-                "rubric_de": "59:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "60:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Gedenke",
-              "__massEditorPairKeys": {
-                "text_de": "61:text"
-              }
-            },
-            {
-              "text_de": "(aller) unserer Brüder und Schwestern,",
-              "__massEditorPairKeys": {
-                "text_de": "62:text"
-              }
-            },
-            {
-              "text_de": "die entschlafen sind in der Hoffnung,",
-              "__massEditorPairKeys": {
-                "text_de": "63:text"
-              }
-            },
-            {
-              "text_de": "dass sie auferstehen.",
-              "__massEditorPairKeys": {
-                "text_de": "64:text"
-              }
-            },
-            {
-              "text_de": "Nimm sie",
-              "__massEditorPairKeys": {
-                "text_de": "65:text"
-              }
-            },
-            {
-              "text_de": "und alle, die in deiner Gnade",
-              "__massEditorPairKeys": {
-                "text_de": "66:text"
-              }
-            },
-            {
-              "text_de": "aus dieser Welt geschieden sind,",
-              "__massEditorPairKeys": {
-                "text_de": "67:text"
-              }
-            },
-            {
-              "text_de": "in dein Reich auf,",
-              "__massEditorPairKeys": {
-                "text_de": "68:text"
-              }
-            },
-            {
-              "text_de": "wo sie dich schauen",
-              "__massEditorPairKeys": {
-                "text_de": "69:text"
-              }
-            },
-            {
-              "text_de": "von Angesicht zu Angesicht.",
-              "__massEditorPairKeys": {
-                "text_de": "70:text"
-              }
-            },
-            {
-              "text_de": "Für alle",
-              "__massEditorPairKeys": {
-                "text_de": "71:text"
-              }
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "72:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Vater, erbarme dich über uns alle,",
-              "__massEditorPairKeys": {
-                "text_de": "73:text"
-              }
-            },
-            {
-              "text_de": "damit uns das ewige Leben zuteil wird",
-              "__massEditorPairKeys": {
-                "text_de": "74:text"
-              }
-            },
-            {
-              "text_de": "in der Gemeinschaft mit der seligen",
-              "__massEditorPairKeys": {
-                "text_de": "75:text"
-              }
-            },
-            {
-              "text_de": "Jungfrau und Gottesmutter Maria,",
-              "__massEditorPairKeys": {
-                "text_de": "76:text"
-              }
-            },
-            {
-              "text_de": "mit deinen Aposteln",
-              "__massEditorPairKeys": {
-                "text_de": "77:text"
-              }
-            },
-            {
-              "text_de": "und mit allen,",
-              "__massEditorPairKeys": {
-                "text_de": "78:text"
-              }
-            },
-            {
-              "text_de": "die bei dir Gnade gefunden haben",
-              "__massEditorPairKeys": {
-                "text_de": "79:text"
-              }
-            },
-            {
-              "text_de": "von Anbeginn der Welt,",
-              "__massEditorPairKeys": {
-                "text_de": "80:text"
-              }
-            },
-            {
-              "text_de": "dass wir dich loben und preisen",
-              "__massEditorPairKeys": {
-                "text_de": "81:text"
-              }
-            },
-            {
-              "text_de": "durch deinen Sohn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "82:text"
-              }
-            },
-            {
-              "rubric_de": "Abschließender Lobpreis",
-              "__massEditorPairKeys": {
-                "rubric_de": "83:rubric"
-              }
-            },
-            {
-              "rubric_de": "(Hauptzelebrant und Konzelebranten)",
-              "__massEditorPairKeys": {
-                "rubric_de": "84:rubric"
-              }
-            }
-          ],
-          "3": [
-            {
-              "text_de": "Drittes Hochgebet",
-              "__massEditorPairKeys": {
-                "text_de": "0:text"
-              }
-            },
-            {
-              "text_de": "Ja, du bist heilig, großer Gott,",
-              "__massEditorPairKeys": {
-                "text_de": "1:text"
-              },
-              "sp_de": "P."
-            },
-            {
-              "text_de": "und alle deine Werke verkünden dein Lob.",
-              "__massEditorPairKeys": {
-                "text_de": "2:text"
-              }
-            },
-            {
-              "text_de": "Denn durch deinen Sohn,",
-              "__massEditorPairKeys": {
-                "text_de": "3:text"
-              }
-            },
-            {
-              "text_de": "unseren Herrn Jesus Christus,",
-              "__massEditorPairKeys": {
-                "text_de": "4:text"
-              }
-            },
-            {
-              "text_de": "und in der Kraft des Heiligen Geistes",
-              "__massEditorPairKeys": {
-                "text_de": "5:text"
-              }
-            },
-            {
-              "text_de": "erfüllst du die ganze Schöpfung",
-              "__massEditorPairKeys": {
-                "text_de": "6:text"
-              }
-            },
-            {
-              "text_de": "mit Leben und Gnade.",
-              "__massEditorPairKeys": {
-                "text_de": "7:text"
-              }
-            },
-            {
-              "text_de": "Bis ans Ende der Zeiten",
-              "__massEditorPairKeys": {
-                "text_de": "8:text"
-              }
-            },
-            {
-              "text_de": "versammelst du dir ein Volk,",
-              "__massEditorPairKeys": {
-                "text_de": "9:text"
-              }
-            },
-            {
-              "text_de": "damit deinem Namen",
-              "__massEditorPairKeys": {
-                "text_de": "10:text"
-              }
-            },
-            {
-              "text_de": "das reine Opfer dargebracht werde",
-              "__massEditorPairKeys": {
-                "text_de": "11:text"
-              }
-            },
-            {
-              "text_de": "vom Aufgang der Sonne bis zu Untergang.",
-              "__massEditorPairKeys": {
-                "text_de": "12:text"
-              }
-            },
-            {
-              "rubric_de": "Bitte um Heiligung der Gaben",
-              "__massEditorPairKeys": {
-                "rubric_de": "13:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum bitten wir dich,",
-              "__massEditorPairKeys": {
-                "text_de": "14:text"
-              }
-            },
-            {
-              "text_de": "allmächtiger Gott:",
-              "__massEditorPairKeys": {
-                "text_de": "15:text"
-              }
-            },
-            {
-              "text_de": "Heilige unsere Gaben durch deinen Geist,",
-              "__massEditorPairKeys": {
-                "text_de": "16:text"
-              }
-            },
-            {
-              "text_de": "damit sie uns werden Leib",
-              "__massEditorPairKeys": {
-                "text_de": "17:text"
-              }
-            },
-            {
-              "text_de": "✠ und Blut",
-              "__massEditorPairKeys": {
-                "text_de": "18:text"
-              }
-            },
-            {
-              "text_de": "deines Sohnes, unseres Herrn Jesus Christus,",
-              "__massEditorPairKeys": {
-                "text_de": "19:text"
-              }
-            },
-            {
-              "text_de": "der uns aufgetragen hat,",
-              "__massEditorPairKeys": {
-                "text_de": "20:text"
-              }
-            },
-            {
-              "text_de": "dieses Geheimnis zu feiern.",
-              "__massEditorPairKeys": {
-                "text_de": "21:text"
-              }
-            },
-            {
-              "text_de": "Denn in der Nacht, da er verraten wurde,",
-              "__massEditorPairKeys": {
-                "text_de": "22:text"
-              }
-            },
-            {
-              "text_de": "nahm er das Brot und sagte Dank,",
-              "__massEditorPairKeys": {
-                "text_de": "23:text"
-              }
-            },
-            {
-              "text_de": "brach es,",
-              "__massEditorPairKeys": {
-                "text_de": "24:text"
-              }
-            },
-            {
-              "text_de": "reichte es seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "25:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
-              "__massEditorPairKeys": {
-                "rubric_de": "26:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST MEIN LEIB,",
-              "__massEditorPairKeys": {
-                "rubric_de": "27:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
-              "__massEditorPairKeys": {
-                "rubric_de": "28:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Ebenso nahm er nach dem Mahl den Kelch,",
-              "__massEditorPairKeys": {
-                "text_de": "29:text"
-              }
-            },
-            {
-              "text_de": "dankte wiederum,",
-              "__massEditorPairKeys": {
-                "text_de": "30:text"
-              }
-            },
-            {
-              "text_de": "reichte ihn seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "31:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
-              "__massEditorPairKeys": {
-                "rubric_de": "32:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST DER KELCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "33:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
-              "__massEditorPairKeys": {
-                "rubric_de": "34:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "MEIN BLUT,",
-              "__massEditorPairKeys": {
-                "rubric_de": "35:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS FÜR EUCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "36:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
-              "__massEditorPairKeys": {
-                "rubric_de": "37:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
-              "__massEditorPairKeys": {
-                "rubric_de": "38:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
-              "__massEditorPairKeys": {
-                "rubric_de": "39:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Geheimnis des Glaubens.",
-              "__massEditorPairKeys": {
-                "text_de": "40:text"
-              },
-              "sp_de": "P. (D.)"
-            },
-            {
-              "text_de": "Deinen Tod, o Herr, verkünden wir,",
-              "__massEditorPairKeys": {
-                "text_de": "41:text"
-              },
-              "sp_de": "A."
-            },
-            {
-              "text_de": "und deine Auferstehung preisen wir,",
-              "__massEditorPairKeys": {
-                "text_de": "42:text"
-              }
-            },
-            {
-              "text_de": "bis du kommst in Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "43:text"
-              }
-            },
-            {
-              "rubric_de": "Gedächtnis – Darbringung – Bitte",
-              "__massEditorPairKeys": {
-                "rubric_de": "44:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Hauptzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "45:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum, gütiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "46:text"
-              }
-            },
-            {
-              "text_de": "feiern wir das Gedächtnis deines Sohnes.",
-              "__massEditorPairKeys": {
-                "text_de": "47:text"
-              }
-            },
-            {
-              "text_de": "Wir verkünden sein heilbringendes Leiden,",
-              "__massEditorPairKeys": {
-                "text_de": "48:text"
-              }
-            },
-            {
-              "text_de": "seine glorreiche Auferstehung",
-              "__massEditorPairKeys": {
-                "text_de": "49:text"
-              }
-            },
-            {
-              "text_de": "und Himmelfahrt",
-              "__massEditorPairKeys": {
-                "text_de": "50:text"
-              }
-            },
-            {
-              "text_de": "und erwarten seine Wiederkunft.",
-              "__massEditorPairKeys": {
-                "text_de": "51:text"
-              }
-            },
-            {
-              "text_de": "So bringen wir dir mit Lob und Dank",
-              "__massEditorPairKeys": {
-                "text_de": "52:text"
-              }
-            },
-            {
-              "text_de": "dieses heilige und lebendige Opfer dar.",
-              "__massEditorPairKeys": {
-                "text_de": "53:text"
-              }
-            },
-            {
-              "text_de": "Schau gütig auf die Gabe deiner Kirche.",
-              "__massEditorPairKeys": {
-                "text_de": "54:text"
-              }
-            },
-            {
-              "text_de": "Denn sie stellt dir",
-              "__massEditorPairKeys": {
-                "text_de": "55:text"
-              }
-            },
-            {
-              "text_de": "das Lamm vor Augen,",
-              "__massEditorPairKeys": {
-                "text_de": "56:text"
-              }
-            },
-            {
-              "text_de": "das geopfert wurde",
-              "__massEditorPairKeys": {
-                "text_de": "57:text"
-              }
-            },
-            {
-              "text_de": "und uns nach deinem Willen",
-              "__massEditorPairKeys": {
-                "text_de": "58:text"
-              }
-            },
-            {
-              "text_de": "mit dir versöhnt hat.",
-              "__massEditorPairKeys": {
-                "text_de": "59:text"
-              }
-            },
-            {
-              "text_de": "Stärke uns durch den Leib und das Blut",
-              "__massEditorPairKeys": {
-                "text_de": "60:text"
-              }
-            },
-            {
-              "text_de": "deines Sohnes",
-              "__massEditorPairKeys": {
-                "text_de": "61:text"
-              }
-            },
-            {
-              "text_de": "und erfülle uns mit seinem Heiligen Geist,",
-              "__massEditorPairKeys": {
-                "text_de": "62:text"
-              }
-            },
-            {
-              "text_de": "damit wir ein Leib und ein Geist werden",
-              "__massEditorPairKeys": {
-                "text_de": "63:text"
-              }
-            },
-            {
-              "text_de": "in Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "64:text"
-              }
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "65:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Er mache uns auf immer",
-              "__massEditorPairKeys": {
-                "text_de": "66:text"
-              }
-            },
-            {
-              "text_de": "zu einer Gabe, die dir wohl gefällt,",
-              "__massEditorPairKeys": {
-                "text_de": "67:text"
-              }
-            },
-            {
-              "text_de": "damit wir das verheißene Erbe erlangen",
-              "__massEditorPairKeys": {
-                "text_de": "68:text"
-              }
-            },
-            {
-              "text_de": "mit deinen Auserwählten,",
-              "__massEditorPairKeys": {
-                "text_de": "69:text"
-              }
-            },
-            {
-              "text_de": "mit der seligen Jungfrau",
-              "__massEditorPairKeys": {
-                "text_de": "70:text"
-              }
-            },
-            {
-              "text_de": "und Gottesmutter Maria,",
-              "__massEditorPairKeys": {
-                "text_de": "71:text"
-              }
-            },
-            {
-              "text_de": "mit deinen Aposteln und Märtyrern",
-              "__massEditorPairKeys": {
-                "text_de": "72:text"
-              }
-            },
-            {
-              "text_de": "(mit dem heiligen N.)",
-              "__massEditorPairKeys": {
-                "text_de": "73:text"
-              }
-            },
-            {
-              "text_de": "(mit dem – den – seligen N.)",
-              "__massEditorPairKeys": {
-                "text_de": "74:text"
-              }
-            },
-            {
-              "text_de": "und mit allen Heiligen (und Seligen),",
-              "__massEditorPairKeys": {
-                "text_de": "75:text"
-              }
-            },
-            {
-              "text_de": "auf deren Fürsprache wir vertrauen.",
-              "__massEditorPairKeys": {
-                "text_de": "76:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Welt, die Kirche und ihre Hirten",
-              "__massEditorPairKeys": {
-                "rubric_de": "77:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "78:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Barmherziger Gott, wir bitten dich:",
-              "__massEditorPairKeys": {
-                "text_de": "79:text"
-              }
-            },
-            {
-              "text_de": "Dieses Opfer unserer Versöhnung",
-              "__massEditorPairKeys": {
-                "text_de": "80:text"
-              }
-            },
-            {
-              "text_de": "bringe der ganzen Welt Frieden und Heil.",
-              "__massEditorPairKeys": {
-                "text_de": "81:text"
-              }
-            },
-            {
-              "text_de": "Beschütze deine Kirche",
-              "__massEditorPairKeys": {
-                "text_de": "82:text"
-              }
-            },
-            {
-              "text_de": "auf ihrem Weg durch die Zeit",
-              "__massEditorPairKeys": {
-                "text_de": "83:text"
-              }
-            },
-            {
-              "text_de": "und stärke sie im Glauben und in der Liebe:",
-              "__massEditorPairKeys": {
-                "text_de": "84:text"
-              }
-            },
-            {
-              "text_de": "deinen Diener, unseren Papst",
-              "__massEditorPairKeys": {
-                "text_de": "85:text"
-              }
-            },
-            {
-              "rubric_de": "N.,",
-              "__massEditorPairKeys": {
-                "rubric_de": "86:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "unseren Bischof N.",
-              "__massEditorPairKeys": {
-                "text_de": "87:text"
-              }
-            },
-            {
-              "text_de": "und die Gemeinschaft der Bischöfe,",
-              "__massEditorPairKeys": {
-                "text_de": "88:text"
-              }
-            },
-            {
-              "text_de": "unsere Priester und Diakone,",
-              "__massEditorPairKeys": {
-                "text_de": "89:text"
-              }
-            },
-            {
-              "text_de": "alle, die zum Dienst in der Kirche bestellt sind,",
-              "__massEditorPairKeys": {
-                "text_de": "90:text"
-              }
-            },
-            {
-              "text_de": "und das ganze Volk deiner Erlösten.",
-              "__massEditorPairKeys": {
-                "text_de": "91:text"
-              }
-            },
-            {
-              "rubric_de": "Für die anwesende Gemeinde und für alle",
-              "__massEditorPairKeys": {
-                "rubric_de": "92:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Erhöre, gütiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "93:text"
-              }
-            },
-            {
-              "text_de": "die Gebete der hier versammelten Gemeinde",
-              "__massEditorPairKeys": {
-                "text_de": "94:text"
-              }
-            },
-            {
-              "text_de": "und führe zu dir",
-              "__massEditorPairKeys": {
-                "text_de": "95:text"
-              }
-            },
-            {
-              "text_de": "auch alle deine Söhne und Töchter,",
-              "__massEditorPairKeys": {
-                "text_de": "96:text"
-              }
-            },
-            {
-              "text_de": "die noch fern sind von dir.",
-              "__massEditorPairKeys": {
-                "text_de": "97:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Verstorbenen",
-              "__massEditorPairKeys": {
-                "rubric_de": "98:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "99:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Erbarme dich (aller) unserer",
-              "__massEditorPairKeys": {
-                "text_de": "100:text"
-              }
-            },
-            {
-              "text_de": "verstorbenen Brüder und Schwestern",
-              "__massEditorPairKeys": {
-                "text_de": "101:text"
-              }
-            },
-            {
-              "text_de": "und aller, die in deiner Gnade",
-              "__massEditorPairKeys": {
-                "text_de": "102:text"
-              }
-            },
-            {
-              "text_de": "aus dieser Welt geschieden sind.",
-              "__massEditorPairKeys": {
-                "text_de": "103:text"
-              }
-            },
-            {
-              "text_de": "Nimm sie auf in deine Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "104:text"
-              }
-            },
-            {
-              "text_de": "Und mit ihnen lass auch uns,",
-              "__massEditorPairKeys": {
-                "text_de": "105:text"
-              }
-            },
-            {
-              "text_de": "wie du verheißen hast,",
-              "__massEditorPairKeys": {
-                "text_de": "106:text"
-              }
-            },
-            {
-              "text_de": "zu Tische sitzen in deinem Reich.",
-              "__massEditorPairKeys": {
-                "text_de": "107:text"
-              }
-            },
-            {
-              "rubric_de": "(Hauptzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "108:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum bitten wir dich",
-              "__massEditorPairKeys": {
-                "text_de": "109:text"
-              }
-            },
-            {
-              "text_de": "durch unseren Herrn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "110:text"
-              }
-            },
-            {
-              "text_de": "Denn durch ihn",
-              "__massEditorPairKeys": {
-                "text_de": "111:text"
-              }
-            },
-            {
-              "text_de": "schenkst du der Welt alle guten Gaben.",
-              "__massEditorPairKeys": {
-                "text_de": "112:text"
-              }
-            },
-            {
-              "rubric_de": "Abschließender Lobpreis",
-              "__massEditorPairKeys": {
-                "rubric_de": "113:rubric"
-              }
-            },
-            {
-              "rubric_de": "(Hauptzelebrant und Konzelebranten)",
-              "__massEditorPairKeys": {
-                "rubric_de": "114:rubric"
-              }
-            }
-          ],
-          "4": [
-            {
-              "text_de": "Viertes Hochgebet",
-              "__massEditorPairKeys": {
-                "text_de": "0:text"
-              }
-            },
-            {
-              "rubric_de": "PRÄFATION",
-              "__massEditorPairKeys": {
-                "rubric_de": "1:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Dank für das Werk der Schöpfung und der Erlösung",
-              "__massEditorPairKeys": {
-                "text_de": "2:text"
-              }
-            },
-            {
-              "text_de": "In Wahrheit ist es würdig, dir zu danken, heiliger Vater.\nEs ist recht, dich zu preisen.\nDenn du allein bist der lebendige und wahre Gott.\nDu bist vor den Zeiten und lebst in Ewigkeit.\nDu wohnst in unzugänglichem Lichte.\nAlles hast du erschaffen, denn du bist die Liebe und der Ursprung des Lebens.\nDu erfüllst deine Geschöpfe mit Segen und erfreust sie alle mit dem Glanz deines Lichtes.\nVor dir stehen die Scharen der Engel und schauen dein Angesicht.\nSie dienen dir Tag und Nacht, nie endet ihr Lobgesang.\nMit ihnen preisen auch wir deinen Namen, durch unseren Mund rühmen dich alle Geschöpfe und künden voll Freude das Lob deiner Herrlichkeit:",
-              "__massEditorPairKeys": {
-                "text_de": "german-fourth-recovery-0"
-              },
-              "sp_de": "P."
-            },
-            {
-              "text_de": "Heilig, heilig, heilig, Gott, Herr aller Mächte und Gewalten.\nErfüllt sind Himmel und Erde von deiner Herrlichkeit.\nHosanna in der Höhe.\nHochgelobt sei, der da kommt im Namen des Herrn.\nHosanna in der Höhe.",
-              "__massEditorPairKeys": {
-                "text_de": "german-fourth-recovery-1"
-              },
-              "sp_de": "A."
-            },
-            {
-              "text_de": "Wir preisen dich, heiliger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "3:text"
-              }
-            },
-            {
-              "text_de": "denn groß bist du,",
-              "__massEditorPairKeys": {
-                "text_de": "4:text"
-              }
-            },
-            {
-              "text_de": "und alle deine Werke",
-              "__massEditorPairKeys": {
-                "text_de": "5:text"
-              }
-            },
-            {
-              "text_de": "künden deine Weisheit und Liebe.",
-              "__massEditorPairKeys": {
-                "text_de": "6:text"
-              }
-            },
-            {
-              "text_de": "Den Menschen hast du",
-              "__massEditorPairKeys": {
-                "text_de": "7:text"
-              }
-            },
-            {
-              "text_de": "nach deinem Bild geschaffen",
-              "__massEditorPairKeys": {
-                "text_de": "8:text"
-              }
-            },
-            {
-              "text_de": "und ihm die Sorge für die ganze Welt anvertraut.",
-              "__massEditorPairKeys": {
-                "text_de": "9:text"
-              }
-            },
-            {
-              "text_de": "Über alle Geschöpfe sollte er herrschen",
-              "__massEditorPairKeys": {
-                "text_de": "10:text"
-              }
-            },
-            {
-              "text_de": "und allein dir, seinem Schöpfer, dienen.",
-              "__massEditorPairKeys": {
-                "text_de": "11:text"
-              }
-            },
-            {
-              "text_de": "Als er im Ungehorsam deine Freundschaft verlor",
-              "__massEditorPairKeys": {
-                "text_de": "12:text"
-              }
-            },
-            {
-              "text_de": "und der Macht des Todes verﬁ el,",
-              "__massEditorPairKeys": {
-                "text_de": "13:text"
-              }
-            },
-            {
-              "text_de": "hast du ihn dennoch nicht verlassen,",
-              "__massEditorPairKeys": {
-                "text_de": "14:text"
-              }
-            },
-            {
-              "text_de": "sondern voll Erbarmen allen geholfen,",
-              "__massEditorPairKeys": {
-                "text_de": "15:text"
-              }
-            },
-            {
-              "text_de": "dich zu suchen und zu ﬁ nden.",
-              "__massEditorPairKeys": {
-                "text_de": "16:text"
-              }
-            },
-            {
-              "text_de": "Immer wieder hast du den Menschen",
-              "__massEditorPairKeys": {
-                "text_de": "17:text"
-              }
-            },
-            {
-              "text_de": "deinen Bund angeboten",
-              "__massEditorPairKeys": {
-                "text_de": "18:text"
-              }
-            },
-            {
-              "text_de": "und sie durch die Propheten gelehrt,",
-              "__massEditorPairKeys": {
-                "text_de": "19:text"
-              }
-            },
-            {
-              "text_de": "das Heil zu erwarten.",
-              "__massEditorPairKeys": {
-                "text_de": "20:text"
-              }
-            },
-            {
-              "text_de": "So sehr hast du die Welt geliebt,",
-              "__massEditorPairKeys": {
-                "text_de": "21:text"
-              }
-            },
-            {
-              "text_de": "heiliger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "22:text"
-              }
-            },
-            {
-              "text_de": "dass du deinen eingeborenen Sohn",
-              "__massEditorPairKeys": {
-                "text_de": "23:text"
-              }
-            },
-            {
-              "text_de": "als Retter gesandt hast,",
-              "__massEditorPairKeys": {
-                "text_de": "24:text"
-              }
-            },
-            {
-              "text_de": "nachdem die Fülle der Zeiten gekommen war.",
-              "__massEditorPairKeys": {
-                "text_de": "25:text"
-              }
-            },
-            {
-              "text_de": "Er ist Mensch geworden",
-              "__massEditorPairKeys": {
-                "text_de": "26:text"
-              }
-            },
-            {
-              "text_de": "durch den Heiligen Geist,",
-              "__massEditorPairKeys": {
-                "text_de": "27:text"
-              }
-            },
-            {
-              "text_de": "geboren von der Jungfrau Maria.",
-              "__massEditorPairKeys": {
-                "text_de": "28:text"
-              }
-            },
-            {
-              "text_de": "Er hat wie wir als Mensch gelebt,",
-              "__massEditorPairKeys": {
-                "text_de": "29:text"
-              }
-            },
-            {
-              "text_de": "in allem uns gleich außer der Sünde.",
-              "__massEditorPairKeys": {
-                "text_de": "30:text"
-              }
-            },
-            {
-              "text_de": "Den Armen verkündete er",
-              "__massEditorPairKeys": {
-                "text_de": "31:text"
-              }
-            },
-            {
-              "text_de": "die Botschaft vom Heil,",
-              "__massEditorPairKeys": {
-                "text_de": "32:text"
-              }
-            },
-            {
-              "text_de": "den Gefangenen Freiheit,",
-              "__massEditorPairKeys": {
-                "text_de": "33:text"
-              }
-            },
-            {
-              "text_de": "den Trauernden Freude.",
-              "__massEditorPairKeys": {
-                "text_de": "34:text"
-              }
-            },
-            {
-              "text_de": "Um deinen Ratschluss zu erfüllen,",
-              "__massEditorPairKeys": {
-                "text_de": "35:text"
-              }
-            },
-            {
-              "text_de": "hat er sich dem Tod überliefert,",
-              "__massEditorPairKeys": {
-                "text_de": "36:text"
-              }
-            },
-            {
-              "text_de": "durch seine Auferstehung",
-              "__massEditorPairKeys": {
-                "text_de": "37:text"
-              }
-            },
-            {
-              "text_de": "den Tod bezwungen",
-              "__massEditorPairKeys": {
-                "text_de": "38:text"
-              }
-            },
-            {
-              "text_de": "und das Leben neu geschaffen.",
-              "__massEditorPairKeys": {
-                "text_de": "39:text"
-              }
-            },
-            {
-              "text_de": "Damit wir nicht mehr uns selber leben,",
-              "__massEditorPairKeys": {
-                "text_de": "40:text"
-              }
-            },
-            {
-              "text_de": "sondern ihm,",
-              "__massEditorPairKeys": {
-                "text_de": "41:text"
-              }
-            },
-            {
-              "text_de": "der für uns gestorben und auferstanden ist,",
-              "__massEditorPairKeys": {
-                "text_de": "42:text"
-              }
-            },
-            {
-              "text_de": "hat er von dir, Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "43:text"
-              }
-            },
-            {
-              "text_de": "als erste Gabe für alle, die glauben,",
-              "__massEditorPairKeys": {
-                "text_de": "44:text"
-              }
-            },
-            {
-              "text_de": "den Heiligen Geist gesandt,",
-              "__massEditorPairKeys": {
-                "text_de": "45:text"
-              }
-            },
-            {
-              "text_de": "der das Werk deines Sohnes",
-              "__massEditorPairKeys": {
-                "text_de": "46:text"
-              }
-            },
-            {
-              "text_de": "auf Erden weiter führt",
-              "__massEditorPairKeys": {
-                "text_de": "47:text"
-              }
-            },
-            {
-              "text_de": "und alle Heiligung vollendet.",
-              "__massEditorPairKeys": {
-                "text_de": "48:text"
-              }
-            },
-            {
-              "rubric_de": "Bitte um Heiligung der Gaben",
-              "__massEditorPairKeys": {
-                "rubric_de": "49:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "So bitten wir dich, Vater:",
-              "__massEditorPairKeys": {
-                "text_de": "50:text"
-              }
-            },
-            {
-              "text_de": "Der Geist heilige diese Gaben,",
-              "__massEditorPairKeys": {
-                "text_de": "51:text"
-              }
-            },
-            {
-              "text_de": "damit sie uns werden Leib",
-              "__massEditorPairKeys": {
-                "text_de": "52:text"
-              }
-            },
-            {
-              "text_de": "✠ und Blut",
-              "__massEditorPairKeys": {
-                "text_de": "53:text"
-              }
-            },
-            {
-              "text_de": "unseres Herrn Jesus Christus,",
-              "__massEditorPairKeys": {
-                "text_de": "54:text"
-              }
-            },
-            {
-              "text_de": "der uns die Feier dieses Geheimnisses",
-              "__massEditorPairKeys": {
-                "text_de": "55:text"
-              }
-            },
-            {
-              "text_de": "aufgetragen hat",
-              "__massEditorPairKeys": {
-                "text_de": "56:text"
-              }
-            },
-            {
-              "text_de": "als Zeichen des ewigen Bundes.",
-              "__massEditorPairKeys": {
-                "text_de": "57:text"
-              }
-            },
-            {
-              "text_de": "Da er die Seinen liebte,",
-              "__massEditorPairKeys": {
-                "text_de": "58:text"
-              }
-            },
-            {
-              "text_de": "die in der Welt waren,",
-              "__massEditorPairKeys": {
-                "text_de": "59:text"
-              }
-            },
-            {
-              "text_de": "liebte er sie bis zur Vollendung.",
-              "__massEditorPairKeys": {
-                "text_de": "60:text"
-              }
-            },
-            {
-              "text_de": "Und als die Stunde kam,",
-              "__massEditorPairKeys": {
-                "text_de": "61:text"
-              }
-            },
-            {
-              "text_de": "da er von dir verherrlicht werden sollte,",
-              "__massEditorPairKeys": {
-                "text_de": "62:text"
-              }
-            },
-            {
-              "text_de": "nahm er beim",
-              "__massEditorPairKeys": {
-                "text_de": "63:text"
-              }
-            },
-            {
-              "text_de": "Mahl das Brot und sagte Dank,",
-              "__massEditorPairKeys": {
-                "text_de": "64:text"
-              }
-            },
-            {
-              "text_de": "brach das Brot,",
-              "__massEditorPairKeys": {
-                "text_de": "65:text"
-              }
-            },
-            {
-              "text_de": "reichte es seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "66:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
-              "__massEditorPairKeys": {
-                "rubric_de": "67:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST MEIN LEIB,",
-              "__massEditorPairKeys": {
-                "rubric_de": "68:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
-              "__massEditorPairKeys": {
-                "rubric_de": "69:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Ebenso nahm er den Kelch mit Wein,",
-              "__massEditorPairKeys": {
-                "text_de": "70:text"
-              }
-            },
-            {
-              "text_de": "dankte wiederum,",
-              "__massEditorPairKeys": {
-                "text_de": "71:text"
-              }
-            },
-            {
-              "text_de": "reichte den Kelch seinen Jüngern und sprach:",
-              "__massEditorPairKeys": {
-                "text_de": "72:text"
-              }
-            },
-            {
-              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
-              "__massEditorPairKeys": {
-                "rubric_de": "73:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS IST DER KELCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "74:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
-              "__massEditorPairKeys": {
-                "rubric_de": "75:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "MEIN BLUT,",
-              "__massEditorPairKeys": {
-                "rubric_de": "76:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "DAS FÜR EUCH",
-              "__massEditorPairKeys": {
-                "rubric_de": "77:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
-              "__massEditorPairKeys": {
-                "rubric_de": "78:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
-              "__massEditorPairKeys": {
-                "rubric_de": "79:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
-              "__massEditorPairKeys": {
-                "rubric_de": "80:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Geheimnis des Glaubens:",
-              "__massEditorPairKeys": {
-                "text_de": "81:text"
-              },
-              "sp_de": "P. (D.)"
-            },
-            {
-              "text_de": "Deinen Tod, o Herr, verkünden wir,",
-              "__massEditorPairKeys": {
-                "text_de": "82:text"
-              },
-              "sp_de": "A."
-            },
-            {
-              "text_de": "und deine Auferstehung preisen wir,",
-              "__massEditorPairKeys": {
-                "text_de": "83:text"
-              }
-            },
-            {
-              "text_de": "bis du kommst in Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "84:text"
-              }
-            },
-            {
-              "rubric_de": "Gedächtnis – Darbringung – Bitte",
-              "__massEditorPairKeys": {
-                "rubric_de": "85:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Hauptzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "86:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Darum, gütiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "87:text"
-              }
-            },
-            {
-              "text_de": "feiern wir das Gedächtnis unserer Erlösung.",
-              "__massEditorPairKeys": {
-                "text_de": "88:text"
-              }
-            },
-            {
-              "text_de": "Wir verkünden den Tod deines Sohnes",
-              "__massEditorPairKeys": {
-                "text_de": "89:text"
-              }
-            },
-            {
-              "text_de": "und sein Herabsteigen zu den Vätern,",
-              "__massEditorPairKeys": {
-                "text_de": "90:text"
-              }
-            },
-            {
-              "text_de": "bekennen seine Auferstehung",
-              "__massEditorPairKeys": {
-                "text_de": "91:text"
-              }
-            },
-            {
-              "text_de": "und Himmelfahrt",
-              "__massEditorPairKeys": {
-                "text_de": "92:text"
-              }
-            },
-            {
-              "text_de": "und erwarten sein Kommen in Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "93:text"
-              }
-            },
-            {
-              "text_de": "So bringen wir dir seinen Leib und sein Blut dar,",
-              "__massEditorPairKeys": {
-                "text_de": "94:text"
-              }
-            },
-            {
-              "text_de": "das Opfer, das dir wohl gefällt",
-              "__massEditorPairKeys": {
-                "text_de": "95:text"
-              }
-            },
-            {
-              "text_de": "und der ganzen Welt Heil bringt.",
-              "__massEditorPairKeys": {
-                "text_de": "96:text"
-              }
-            },
-            {
-              "text_de": "Sieh her auf die Opfergabe,",
-              "__massEditorPairKeys": {
-                "text_de": "97:text"
-              }
-            },
-            {
-              "text_de": "die du selber deiner Kirche bereitet hast,",
-              "__massEditorPairKeys": {
-                "text_de": "98:text"
-              }
-            },
-            {
-              "text_de": "und gib, dass alle, die Anteil erhalten",
-              "__massEditorPairKeys": {
-                "text_de": "99:text"
-              }
-            },
-            {
-              "text_de": "an dem einen Brot und dem einen Kelch,",
-              "__massEditorPairKeys": {
-                "text_de": "100:text"
-              }
-            },
-            {
-              "text_de": "ein Leib werden im Heiligen Geist,",
-              "__massEditorPairKeys": {
-                "text_de": "101:text"
-              }
-            },
-            {
-              "text_de": "eine lebendige Opfergabe in Christus",
-              "__massEditorPairKeys": {
-                "text_de": "102:text"
-              }
-            },
-            {
-              "text_de": "zum Lob deiner Herrlichkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "103:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Kirche und ihre Hirten, für die anwesende Gemeinde und für alle",
-              "__massEditorPairKeys": {
-                "rubric_de": "104:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "105:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Herr, gedenke aller, für deren Heil",
-              "__massEditorPairKeys": {
-                "text_de": "106:text"
-              }
-            },
-            {
-              "text_de": "wir das Opfer darbringen.",
-              "__massEditorPairKeys": {
-                "text_de": "107:text"
-              }
-            },
-            {
-              "text_de": "Wir bitten dich für unseren Papst",
-              "__massEditorPairKeys": {
-                "text_de": "108:text"
-              }
-            },
-            {
-              "rubric_de": "N.,",
-              "__massEditorPairKeys": {
-                "rubric_de": "109:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "unseren Bischof N.",
-              "__massEditorPairKeys": {
-                "text_de": "110:text"
-              }
-            },
-            {
-              "text_de": "und die Gemeinschaft der Bischöfe,",
-              "__massEditorPairKeys": {
-                "text_de": "111:text"
-              }
-            },
-            {
-              "text_de": "für unsere Priester und Diakone",
-              "__massEditorPairKeys": {
-                "text_de": "112:text"
-              }
-            },
-            {
-              "text_de": "und für alle,",
-              "__massEditorPairKeys": {
-                "text_de": "113:text"
-              }
-            },
-            {
-              "text_de": "die zum Dienst in der Kirche bestellt sind,",
-              "__massEditorPairKeys": {
-                "text_de": "114:text"
-              }
-            },
-            {
-              "text_de": "für alle, die ihre Gaben spenden,",
-              "__massEditorPairKeys": {
-                "text_de": "115:text"
-              }
-            },
-            {
-              "rubric_de": "für die hier versammelte Gemeinde,",
-              "__massEditorPairKeys": {
-                "rubric_de": "116:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "für dein ganzes Volk",
-              "__massEditorPairKeys": {
-                "text_de": "117:text"
-              }
-            },
-            {
-              "text_de": "und für alle Menschen,",
-              "__massEditorPairKeys": {
-                "text_de": "118:text"
-              }
-            },
-            {
-              "text_de": "die mit lauterem Herzen dich suchen.",
-              "__massEditorPairKeys": {
-                "text_de": "119:text"
-              }
-            },
-            {
-              "rubric_de": "Für die Verstorbenen",
-              "__massEditorPairKeys": {
-                "rubric_de": "120:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "rubric_de": "(Konzelebrant)",
-              "__massEditorPairKeys": {
-                "rubric_de": "121:rubric"
-              },
-              "rubricInset_de": true
-            },
-            {
-              "text_de": "Wir empfehlen dir auch jene,",
-              "__massEditorPairKeys": {
-                "text_de": "122:text"
-              }
-            },
-            {
-              "text_de": "die im Frieden Christi heimgegangen sind,",
-              "__massEditorPairKeys": {
-                "text_de": "123:text"
-              }
-            },
-            {
-              "text_de": "und alle Verstorbenen,",
-              "__massEditorPairKeys": {
-                "text_de": "124:text"
-              }
-            },
-            {
-              "text_de": "um deren Glauben niemand weiß als du.",
-              "__massEditorPairKeys": {
-                "text_de": "125:text"
-              }
-            },
-            {
-              "text_de": "Gütiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "126:text"
-              }
-            },
-            {
-              "text_de": "gedenke, dass wir deine Kinder sind,",
-              "__massEditorPairKeys": {
-                "text_de": "127:text"
-              }
-            },
-            {
-              "text_de": "und schenke uns allen das Erbe des Himmels",
-              "__massEditorPairKeys": {
-                "text_de": "128:text"
-              }
-            },
-            {
-              "text_de": "in Gemeinschaft mit der seligen Jungfrau",
-              "__massEditorPairKeys": {
-                "text_de": "129:text"
-              }
-            },
-            {
-              "text_de": "und Gottesmutter Maria,",
-              "__massEditorPairKeys": {
-                "text_de": "130:text"
-              }
-            },
-            {
-              "text_de": "mit deinen Aposteln und mit allen Heiligen.",
-              "__massEditorPairKeys": {
-                "text_de": "131:text"
-              }
-            },
-            {
-              "text_de": "Und wenn die ganze Schöpfung",
-              "__massEditorPairKeys": {
-                "text_de": "132:text"
-              }
-            },
-            {
-              "text_de": "von der Verderbnis der Sünde",
-              "__massEditorPairKeys": {
-                "text_de": "133:text"
-              }
-            },
-            {
-              "text_de": "und des Todes befreit ist,",
-              "__massEditorPairKeys": {
-                "text_de": "134:text"
-              }
-            },
-            {
-              "text_de": "lass uns zusammen mit ihr dich verherrlichen",
-              "__massEditorPairKeys": {
-                "text_de": "135:text"
-              }
-            },
-            {
-              "text_de": "in deinem Reich",
-              "__massEditorPairKeys": {
-                "text_de": "136:text"
-              }
-            },
-            {
-              "text_de": "durch unseren Herrn Jesus Christus.",
-              "__massEditorPairKeys": {
-                "text_de": "137:text"
-              }
-            },
-            {
-              "text_de": "Denn durch ihn",
-              "__massEditorPairKeys": {
-                "text_de": "138:text"
-              }
-            },
-            {
-              "text_de": "schenkst du der Welt alle guten Gaben.",
-              "__massEditorPairKeys": {
-                "text_de": "139:text"
-              }
-            },
-            {
-              "rubric_de": "Abschließender Lobpreis",
-              "__massEditorPairKeys": {
-                "rubric_de": "140:rubric"
-              }
-            },
-            {
-              "rubric_de": "(Hauptzelebrant und Konzelebranten)",
-              "__massEditorPairKeys": {
-                "rubric_de": "141:rubric"
-              }
-            }
-          ]
-        },
-        "amen": [
-          {
-            "text_de": "Durch ihn und mit ihm und in ihm ist dir, Gott, allmächtiger Vater, in der Einheit des Heiligen Geistes alle Herrlichkeit und Ehre jetzt und in Ewigkeit.",
-            "__massEditorPairKeys": {
-              "text_de": "0:text"
-            },
-            "sp_de": "P."
-          },
-          {
-            "text_de": "Amen.",
-            "__massEditorPairKeys": {
-              "text_de": "1:text"
-            },
-            "sp_de": "A."
-          }
-        ],
-        "formEndings": {
-          "1": [
-            {
-              "text_de": "Durch ihn und mit ihm und in ihm ist dir,",
-              "__massEditorPairKeys": {
-                "text_de": "0:text"
-              }
-            },
-            {
-              "text_de": "Gott, allmächtiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "1:text"
-              }
-            },
-            {
-              "text_de": "in der Einheit des Heiligen Geistes",
-              "__massEditorPairKeys": {
-                "text_de": "2:text"
-              }
-            },
-            {
-              "text_de": "alle Herrlichkeit und Ehre",
-              "__massEditorPairKeys": {
-                "text_de": "3:text"
-              }
-            },
-            {
-              "text_de": "jetzt und in Ewigkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "4:text"
-              }
-            },
-            {
-              "text_de": "Amen.",
-              "__massEditorPairKeys": {
-                "text_de": "5:text"
-              },
-              "sp_de": "A."
-            }
-          ],
-          "2": [
-            {
-              "text_de": "Durch ihn und mit ihm und in ihm ist dir,",
-              "__massEditorPairKeys": {
-                "text_de": "0:text"
-              }
-            },
-            {
-              "text_de": "Gott, allmächtiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "1:text"
-              }
-            },
-            {
-              "text_de": "in der Einheit des Heiligen Geistes",
-              "__massEditorPairKeys": {
-                "text_de": "2:text"
-              }
-            },
-            {
-              "text_de": "alle Herrlichkeit und Ehre",
-              "__massEditorPairKeys": {
-                "text_de": "3:text"
-              }
-            },
-            {
-              "text_de": "jetzt und in Ewigkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "4:text"
-              }
-            },
-            {
-              "text_de": "Amen.",
-              "__massEditorPairKeys": {
-                "text_de": "5:text"
-              },
-              "sp_de": "A."
-            }
-          ],
-          "3": [
-            {
-              "text_de": "Durch ihn und mit ihm und in ihm ist dir,",
-              "__massEditorPairKeys": {
-                "text_de": "0:text"
-              }
-            },
-            {
-              "text_de": "Gott, allmächtiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "1:text"
-              }
-            },
-            {
-              "text_de": "in der Einheit des Heiligen Geistes",
-              "__massEditorPairKeys": {
-                "text_de": "2:text"
-              }
-            },
-            {
-              "text_de": "alle Herrlichkeit und Ehre",
-              "__massEditorPairKeys": {
-                "text_de": "3:text"
-              }
-            },
-            {
-              "text_de": "jetzt und in Ewigkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "4:text"
-              }
-            },
-            {
-              "text_de": "Amen.",
-              "__massEditorPairKeys": {
-                "text_de": "5:text"
-              },
-              "sp_de": "A."
-            }
-          ],
-          "4": [
-            {
-              "text_de": "Durch ihn und mit ihm und in ihm",
-              "__massEditorPairKeys": {
-                "text_de": "142:text"
-              }
-            },
-            {
-              "text_de": "ist dir, Gott, allmächtiger Vater,",
-              "__massEditorPairKeys": {
-                "text_de": "143:text"
-              }
-            },
-            {
-              "text_de": "in der Einheit des Heiligen Geistes",
-              "__massEditorPairKeys": {
-                "text_de": "144:text"
-              }
-            },
-            {
-              "text_de": "alle Herrlichkeit und Ehre",
-              "__massEditorPairKeys": {
-                "text_de": "145:text"
-              }
-            },
-            {
-              "text_de": "jetzt und in Ewigkeit.",
-              "__massEditorPairKeys": {
-                "text_de": "146:text"
-              }
-            },
-            {
-              "text_de": "Amen.",
-              "__massEditorPairKeys": {
-                "text_de": "147:text"
-              },
-              "sp_de": "A."
-            }
-          ]
-        },
-        "formFrames": {
-          "1": {
-            "sections": [
-              "dialogue",
-              "preface",
-              "sanctus",
-              "form",
-              "ending"
-            ]
-          },
-          "2": {
-            "sections": [
-              "dialogue",
-              "preface",
-              "sanctus",
-              "form",
-              "ending"
-            ]
-          },
-          "3": {
-            "sections": [
-              "dialogue",
-              "preface",
-              "sanctus",
-              "form",
-              "ending"
-            ]
-          },
-          "4": {
-            "sections": [
-              "dialogue",
-              "form",
-              "ending"
-            ]
-          }
-        },
-        "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
         21
       ],
       "value": {
@@ -13493,6 +9066,4439 @@
             }
           }
         ]
+      }
+    },
+    {
+      "path": [
+        20
+      ],
+      "value": {
+        "id": "3.3 eucharist",
+        "type": "selectable",
+        "isEucharist": true,
+        "header": {
+          "de": "Eucharistisches Hochgebet"
+        },
+        "variants": {
+          "1": {
+            "label": {
+              "de": "Erstes Hochgebet (Römischer Messkanon)"
+            }
+          },
+          "2": {
+            "label": {
+              "de": "Zweites Hochgebet"
+            }
+          },
+          "3": {
+            "label": {
+              "de": "Drittes Hochgebet"
+            }
+          },
+          "4": {
+            "label": {
+              "de": "Viertes Hochgebet"
+            }
+          }
+        },
+        "common_dialogue": [
+          {
+            "text_de": "Der Herr sei mit euch.",
+            "__massEditorPairKeys": {
+              "text_de": "0:text"
+            },
+            "sp_de": "P."
+          },
+          {
+            "text_de": "Und mit deinem Geiste.",
+            "__massEditorPairKeys": {
+              "text_de": "1:text"
+            },
+            "sp_de": "A."
+          },
+          {
+            "text_de": "Erhebet die Herzen.",
+            "__massEditorPairKeys": {
+              "text_de": "2:text"
+            },
+            "sp_de": "P."
+          },
+          {
+            "text_de": "Wir haben sie beim Herrn.",
+            "__massEditorPairKeys": {
+              "text_de": "3:text"
+            },
+            "sp_de": "A."
+          },
+          {
+            "text_de": "Lasset uns danken dem Herrn, unserm Gott.",
+            "__massEditorPairKeys": {
+              "text_de": "4:text"
+            },
+            "sp_de": "P."
+          },
+          {
+            "text_de": "Das ist würdig und recht.",
+            "__massEditorPairKeys": {
+              "text_de": "5:text"
+            },
+            "sp_de": "A."
+          }
+        ],
+        "songs": {
+          "de_preface_dialogue": {
+            "title": {
+              "de": "Einladung zum Hochgebet und Präfation"
+            },
+            "content": [
+              {
+                "text_de": "Das Eucharistische Hochgebet",
+                "__massEditorPairKeys": {
+                  "text_de": "0:text"
+                }
+              },
+              {
+                "rubric_de": "EINLADUNG ZUM HOCHGEBET",
+                "__massEditorPairKeys": {
+                  "rubric_de": "1:rubric"
+                },
+                "rubricInset_de": true
+              },
+              {
+                "text_de": "Der Herr sei mit euch.",
+                "__massEditorPairKeys": {
+                  "text_de": "2:text"
+                },
+                "sp_de": "P."
+              },
+              {
+                "text_de": "Und mit deinem Geiste.",
+                "__massEditorPairKeys": {
+                  "text_de": "3:text"
+                },
+                "sp_de": "A."
+              },
+              {
+                "text_de": "Erhebet die Herzen.",
+                "__massEditorPairKeys": {
+                  "text_de": "4:text"
+                },
+                "sp_de": "P."
+              },
+              {
+                "text_de": "Wir haben sie beim Herrn.",
+                "__massEditorPairKeys": {
+                  "text_de": "5:text"
+                },
+                "sp_de": "A."
+              },
+              {
+                "text_de": "Lasset uns danken dem Herrn, unserm Gott.",
+                "__massEditorPairKeys": {
+                  "text_de": "6:text"
+                },
+                "sp_de": "P."
+              },
+              {
+                "text_de": "Das ist würdig und recht.",
+                "__massEditorPairKeys": {
+                  "text_de": "7:text"
+                },
+                "sp_de": "A."
+              },
+              {
+                "rubric_de": "PRÄFATION",
+                "__massEditorPairKeys": {
+                  "rubric_de": "8:rubric"
+                },
+                "rubricInset_de": true
+              },
+              {
+                "rubric_de": "SANCTUS",
+                "__massEditorPairKeys": {
+                  "rubric_de": "9:rubric"
+                },
+                "rubricInset_de": true
+              },
+              {
+                "text_de": "Heilig, heilig, heilig",
+                "__massEditorPairKeys": {
+                  "text_de": "10:text"
+                }
+              },
+              {
+                "text_de": "Gott, Herr aller Mächte und Gewalten.",
+                "__massEditorPairKeys": {
+                  "text_de": "11:text"
+                }
+              },
+              {
+                "text_de": "Erfüllt sind Himmel und Erde",
+                "__massEditorPairKeys": {
+                  "text_de": "12:text"
+                }
+              },
+              {
+                "text_de": "von deiner Herrlichkeit.",
+                "__massEditorPairKeys": {
+                  "text_de": "13:text"
+                }
+              },
+              {
+                "text_de": "Hosanna in der Höhe.",
+                "__massEditorPairKeys": {
+                  "text_de": "14:text"
+                }
+              },
+              {
+                "text_de": "Hoch gelobt sei,",
+                "__massEditorPairKeys": {
+                  "text_de": "15:text"
+                }
+              },
+              {
+                "text_de": "der da kommt im Namen des Herrn.",
+                "__massEditorPairKeys": {
+                  "text_de": "16:text"
+                }
+              },
+              {
+                "text_de": "Hosanna in der Höhe.",
+                "__massEditorPairKeys": {
+                  "text_de": "17:text"
+                }
+              }
+            ]
+          }
+        },
+        "sanctus": [
+          {
+            "text_de": "Heilig, heilig, heilig, Gott, Herr aller Mächte und Gewalten.",
+            "__massEditorPairKeys": {
+              "text_de": "0:text"
+            },
+            "sp_de": "A."
+          },
+          {
+            "text_de": "Erfüllt sind Himmel und Erde von deiner Herrlichkeit.",
+            "__massEditorPairKeys": {
+              "text_de": "1:text"
+            }
+          },
+          {
+            "text_de": "Hosanna in der Höhe.",
+            "__massEditorPairKeys": {
+              "text_de": "2:text"
+            }
+          },
+          {
+            "text_de": "Hochgelobt sei, der da kommt im Namen des Herrn.",
+            "__massEditorPairKeys": {
+              "text_de": "3:text"
+            }
+          },
+          {
+            "dividerAfter": "after-sanctus",
+            "text_de": "Hosanna in der Höhe.",
+            "__massEditorPairKeys": {
+              "text_de": "4:text"
+            }
+          }
+        ],
+        "forms": {
+          "1": [
+            {
+              "text_de": "Dich, gütiger Vater, bitten wir",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:0:text"
+              }
+            },
+            {
+              "text_de": "durch deinen Sohn,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:1:text"
+              }
+            },
+            {
+              "text_de": "unseren Herrn Jesus Christus:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:2:text"
+              }
+            },
+            {
+              "text_de": "Nimm diese heiligen,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:3:text"
+              }
+            },
+            {
+              "text_de": "makellosen Opfergaben an",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:4:text"
+              }
+            },
+            {
+              "text_de": "und segne",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:5:text"
+              }
+            },
+            {
+              "text_de": "✠ sie.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:6:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Kirche und ihre Hirten",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:te_igitur:7:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Wir bringen sie dar",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:8:text"
+              }
+            },
+            {
+              "text_de": "vor allem für deine heilige katholische Kirche",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:9:text"
+              }
+            },
+            {
+              "text_de": "in Gemeinschaft mit deinem Diener,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:10:text"
+              }
+            },
+            {
+              "text_de": "unserem Papst",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:11:text"
+              }
+            },
+            {
+              "rubric_de": "N.,",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:te_igitur:12:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "mit unserem Bischof N.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:13:text"
+              }
+            },
+            {
+              "text_de": "und mit allen, die Sorge tragen",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:14:text"
+              }
+            },
+            {
+              "text_de": "für den rechten,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:15:text"
+              }
+            },
+            {
+              "text_de": "katholischen und apostolischen Glauben.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:16:text"
+              }
+            },
+            {
+              "text_de": "Schenke deiner Kirche Frieden und Einheit,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:17:text"
+              }
+            },
+            {
+              "text_de": "behüte und leite sie auf der ganz Erde.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:te_igitur:18:text"
+              }
+            },
+            {
+              "text_de": "Gedenke deiner Diener",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:0:text"
+              }
+            },
+            {
+              "text_de": "und Dienerinnen N.N.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:1:text"
+              }
+            },
+            {
+              "text_de": "(für die heute besonders beten)",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:2:text"
+              }
+            },
+            {
+              "text_de": "und aller, die hier versammelt sind.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:3:text"
+              }
+            },
+            {
+              "rubric_de": "Stilles Gedenken",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:living:4:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Herr, du kennst ihren Glauben",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:5:text"
+              }
+            },
+            {
+              "text_de": "und ihre Hingabe;",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:6:text"
+              }
+            },
+            {
+              "text_de": "für sie bringen wir dieses Opfer des Lobes dar,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:7:text"
+              }
+            },
+            {
+              "text_de": "und sie selber weihen es dir",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:8:text"
+              }
+            },
+            {
+              "text_de": "für sich und für alle, die ihnen verbunden sind,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:9:text"
+              }
+            },
+            {
+              "text_de": "für ihre Erlösung",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:10:text"
+              }
+            },
+            {
+              "text_de": "und für ihre Hoffnung",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:11:text"
+              }
+            },
+            {
+              "text_de": "auf das unverlierbare Heil.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:12:text"
+              }
+            },
+            {
+              "rubric_de": "Vor dich, den ewigen, lebendigen und wahren Gott,",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:living:13:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "bringen sie ihre Gebete und Gaben.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:living:14:text"
+              }
+            },
+            {
+              "type": "optionBlock",
+              "optionKey": "roman_canon_season",
+              "defaultOption": "ordinary",
+              "showControl": true,
+              "label": {
+                "de": "Im Jahreskreis"
+              },
+              "options": {
+                "ordinary": {
+                  "label": {
+                    "de": "Im Jahreskreis"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "gedenken wir deiner Heiligen.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren vor allem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_de": "deine heiligen Apostel und Märtyrer:",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_de": "Petrus und Paulus, Andreas",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_de": "Philippus, Bartholomäus, Matthäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_de": "Simon und Thaddäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "text_de": ")",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:14:text"
+                      }
+                    },
+                    {
+                      "text_de": "und alle deine Heiligen;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:15:text"
+                      }
+                    },
+                    {
+                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:16:text"
+                      }
+                    },
+                    {
+                      "text_de": "und gewähre uns auf ihre Fürsprache",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:17:text"
+                      }
+                    },
+                    {
+                      "text_de": "in allem deine Hilfe und deinen Schutz.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:18:text"
+                      }
+                    }
+                  ]
+                },
+                "christmas": {
+                  "label": {
+                    "de": "Weihnachten"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "gedenken wir deiner Heiligen.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren vor allem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_de": "deine heiligen Apostel und Märtyrer:",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_de": "Petrus und Paulus, Andreas",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_de": "Philippus, Bartholomäus, Matthäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_de": "Simon und Thaddäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "text_de": ")",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:14:text"
+                      }
+                    },
+                    {
+                      "text_de": "und alle deine Heiligen;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:15:text"
+                      }
+                    },
+                    {
+                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:16:text"
+                      }
+                    },
+                    {
+                      "text_de": "und gewähre uns auf ihre Fürsprache",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:17:text"
+                      }
+                    },
+                    {
+                      "text_de": "in allem deine Hilfe und deinen Schutz.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:18:text"
+                      }
+                    }
+                  ]
+                },
+                "epiphany": {
+                  "label": {
+                    "de": "Erscheinung des Herrn"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "gedenken wir deiner Heiligen.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren vor allem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_de": "deine heiligen Apostel und Märtyrer:",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_de": "Petrus und Paulus, Andreas",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_de": "Philippus, Bartholomäus, Matthäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_de": "Simon und Thaddäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "text_de": ")",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:14:text"
+                      }
+                    },
+                    {
+                      "text_de": "und alle deine Heiligen;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:15:text"
+                      }
+                    },
+                    {
+                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:16:text"
+                      }
+                    },
+                    {
+                      "text_de": "und gewähre uns auf ihre Fürsprache",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:17:text"
+                      }
+                    },
+                    {
+                      "text_de": "in allem deine Hilfe und deinen Schutz.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:18:text"
+                      }
+                    }
+                  ]
+                },
+                "easter": {
+                  "label": {
+                    "de": "Ostern"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "gedenken wir deiner Heiligen.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren vor allem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_de": "deine heiligen Apostel und Märtyrer:",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_de": "Petrus und Paulus, Andreas",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_de": "Philippus, Bartholomäus, Matthäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_de": "Simon und Thaddäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "text_de": ")",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:14:text"
+                      }
+                    },
+                    {
+                      "text_de": "und alle deine Heiligen;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:15:text"
+                      }
+                    },
+                    {
+                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:16:text"
+                      }
+                    },
+                    {
+                      "text_de": "und gewähre uns auf ihre Fürsprache",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:17:text"
+                      }
+                    },
+                    {
+                      "text_de": "in allem deine Hilfe und deinen Schutz.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:18:text"
+                      }
+                    }
+                  ]
+                },
+                "ascension": {
+                  "label": {
+                    "de": "Christi Himmelfahrt"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "gedenken wir deiner Heiligen.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren vor allem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_de": "deine heiligen Apostel und Märtyrer:",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_de": "Petrus und Paulus, Andreas",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_de": "Philippus, Bartholomäus, Matthäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_de": "Simon und Thaddäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "text_de": ")",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:14:text"
+                      }
+                    },
+                    {
+                      "text_de": "und alle deine Heiligen;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:15:text"
+                      }
+                    },
+                    {
+                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:16:text"
+                      }
+                    },
+                    {
+                      "text_de": "und gewähre uns auf ihre Fürsprache",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:17:text"
+                      }
+                    },
+                    {
+                      "text_de": "in allem deine Hilfe und deinen Schutz.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:18:text"
+                      }
+                    }
+                  ]
+                },
+                "pentecost": {
+                  "label": {
+                    "de": "Pfingsten"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "In Gemeinschaft mit der ganzen Kirche",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "gedenken wir deiner Heiligen.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren vor allem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "die glorreiche, allzeit jungfräuliche Mutter",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "unseres Herrn und Gottes Jesus Christus.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "Wir ehren ihren Bräutigam, den heiligen Josef,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_de": "deine heiligen Apostel und Märtyrer:",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_de": "Petrus und Paulus, Andreas",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_de": "(Jakobus, Johannes, Thomas, Jakobus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_de": "Philippus, Bartholomäus, Matthäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_de": "Simon und Thaddäus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_de": "Linus, Kletus, Klemens, Xystus, Kornelius,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_de": "Cyprianus, Laurentius, Chrysogonus,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_de": "Johannes und Paulus, Kosmas und Damianus",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "text_de": ")",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:14:text"
+                      }
+                    },
+                    {
+                      "text_de": "und alle deine Heiligen;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:15:text"
+                      }
+                    },
+                    {
+                      "text_de": "blicke auf ihr heiliges Leben und Sterben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:16:text"
+                      }
+                    },
+                    {
+                      "text_de": "und gewähre uns auf ihre Fürsprache",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:17:text"
+                      }
+                    },
+                    {
+                      "text_de": "in allem deine Hilfe und deinen Schutz.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:communicantes:18:text"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pairKey": "canon:communicantes:choice"
+            },
+            {
+              "type": "optionBlock",
+              "optionKey": "roman_canon_season",
+              "defaultOption": "ordinary",
+              "showControl": false,
+              "label": {
+                "de": "Im Jahreskreis"
+              },
+              "options": {
+                "ordinary": {
+                  "label": {
+                    "de": "Im Jahreskreis"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "Nimm gnädig an, o Gott,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "diese Gaben deiner Diener",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "und deiner ganzen Gemeinde;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "ordne unsere Tage in deinem Frieden,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "rette uns vor dem ewigen Verderben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                },
+                "christmas": {
+                  "label": {
+                    "de": "Weihnachten"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "Nimm gnädig an, o Gott,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "diese Gaben deiner Diener",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "und deiner ganzen Gemeinde;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "ordne unsere Tage in deinem Frieden,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "rette uns vor dem ewigen Verderben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                },
+                "epiphany": {
+                  "label": {
+                    "de": "Erscheinung des Herrn"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "Nimm gnädig an, o Gott,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "diese Gaben deiner Diener",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "und deiner ganzen Gemeinde;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "ordne unsere Tage in deinem Frieden,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "rette uns vor dem ewigen Verderben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                },
+                "easter": {
+                  "label": {
+                    "de": "Ostern"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "Nimm gnädig an, o Gott,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "diese Gaben deiner Diener",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "und deiner ganzen Gemeinde;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "ordne unsere Tage in deinem Frieden,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "rette uns vor dem ewigen Verderben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                },
+                "ascension": {
+                  "label": {
+                    "de": "Christi Himmelfahrt"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "Nimm gnädig an, o Gott,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "diese Gaben deiner Diener",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "und deiner ganzen Gemeinde;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "ordne unsere Tage in deinem Frieden,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "rette uns vor dem ewigen Verderben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                },
+                "pentecost": {
+                  "label": {
+                    "de": "Pfingsten"
+                  },
+                  "lines": [
+                    {
+                      "text_de": "Nimm gnädig an, o Gott,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_de": "diese Gaben deiner Diener",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "text_de": "und deiner ganzen Gemeinde;",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_de": "ordne unsere Tage in deinem Frieden,",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_de": "rette uns vor dem ewigen Verderben",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_de": "und nimm uns auf in die Schar deiner Erwählten.",
+                      "__massEditorPairKeys": {
+                        "text_de": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pairKey": "canon:hanc_igitur:choice"
+            },
+            {
+              "text_de": "Schenke, o Gott, diesen Gaben Segen in Fülle",
+              "__massEditorPairKeys": {
+                "text_de": "canon:quam_oblationem:0:text"
+              }
+            },
+            {
+              "text_de": "und nimm sie zu eigen an.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:quam_oblationem:1:text"
+              }
+            },
+            {
+              "text_de": "Mache sie uns zum wahren Opfer im Geiste,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:quam_oblationem:2:text"
+              }
+            },
+            {
+              "text_de": "das dir wohl gefällt",
+              "__massEditorPairKeys": {
+                "text_de": "canon:quam_oblationem:3:text"
+              }
+            },
+            {
+              "text_de": "zum Leib und Blut deines Sohnes,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:quam_oblationem:4:text"
+              }
+            },
+            {
+              "text_de": "unseres Herrn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:quam_oblationem:5:text"
+              }
+            },
+            {
+              "text_de": "Am Abend vor seinem Leiden",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:0:text"
+              }
+            },
+            {
+              "text_de": "nahm er das Brot",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:1:text"
+              }
+            },
+            {
+              "text_de": "in seine heiligen und ehrwürdigen Hände,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:2:text"
+              }
+            },
+            {
+              "text_de": "erhob die Augen zum Himmel,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:3:text"
+              }
+            },
+            {
+              "text_de": "zu dir, seinem Vater, dem allmächtigen Gott,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:4:text"
+              }
+            },
+            {
+              "text_de": "sagte dir Lob und Dank,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:5:text"
+              }
+            },
+            {
+              "text_de": "brach das Brot,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:6:text"
+              }
+            },
+            {
+              "text_de": "reichte es seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:bread:7:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:bread:8:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST MEIN LEIB,",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:bread:9:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:bread:10:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Ebenso nahm er nach dem Mahl",
+              "__massEditorPairKeys": {
+                "text_de": "canon:cup:0:text"
+              }
+            },
+            {
+              "text_de": "diesen erhabenen Kelch",
+              "__massEditorPairKeys": {
+                "text_de": "canon:cup:1:text"
+              }
+            },
+            {
+              "text_de": "in seine heiligen und ehrwürdigen Hände,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:cup:2:text"
+              }
+            },
+            {
+              "text_de": "sagte dir Lob und Dank,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:cup:3:text"
+              }
+            },
+            {
+              "text_de": "reichte den Kelch seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:cup:4:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:5:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST DER KELCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:6:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:7:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "MEIN BLUT,",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:8:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS FÜR EUCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:9:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:10:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:11:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:cup:12:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_de": "Geheimnis des Glaubens.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:mystery:0:text"
+              },
+              "sp_de": "P. (D.)"
+            },
+            {
+              "text_de": "Deinen Tod, o Herr, verkünden wir,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:mystery:1:text"
+              },
+              "sp_de": "A."
+            },
+            {
+              "text_de": "und deine Auferstehung preisen wir,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:mystery:2:text"
+              }
+            },
+            {
+              "text_de": "bis du kommst in Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:mystery:3:text"
+              }
+            },
+            {
+              "rubric_de": "(Hauptzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:mystery:4:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum, gütiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:0:text"
+              }
+            },
+            {
+              "text_de": "feiern wir, deine Diener",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:1:text"
+              }
+            },
+            {
+              "text_de": "und dein heiliges Volk,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:2:text"
+              }
+            },
+            {
+              "text_de": "das Gedächtnis deines Sohnes,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:3:text"
+              }
+            },
+            {
+              "text_de": "unseres Herrn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:4:text"
+              }
+            },
+            {
+              "text_de": "Wir verkünden sein heilbringendes Leiden,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:5:text"
+              }
+            },
+            {
+              "text_de": "seine Auferstehung von den Toten",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:6:text"
+              }
+            },
+            {
+              "text_de": "und seine glorreiche Himmelfahrt.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:7:text"
+              }
+            },
+            {
+              "text_de": "So bringen wir aus den Gaben,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:8:text"
+              }
+            },
+            {
+              "text_de": "die du uns geschenkt hast,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:9:text"
+              }
+            },
+            {
+              "text_de": "dir, dem erhabenen Gott,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:10:text"
+              }
+            },
+            {
+              "text_de": "die reine, heilige und makellose Opfergabe dar:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:11:text"
+              }
+            },
+            {
+              "text_de": "das Brot des Lebens",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:12:text"
+              }
+            },
+            {
+              "text_de": "und den Kelch des ewigen Heiles.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:anamnesis:13:text"
+              }
+            },
+            {
+              "text_de": "Blicke versöhnt und gütig darauf nieder",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:0:text"
+              }
+            },
+            {
+              "text_de": "und nimm sie an",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:1:text"
+              }
+            },
+            {
+              "text_de": "wie einst die Gaben",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:2:text"
+              }
+            },
+            {
+              "text_de": "deines gerechten Dieners Abel,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:3:text"
+              }
+            },
+            {
+              "text_de": "wie das Opfer unseres Vaters Abraham,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:4:text"
+              }
+            },
+            {
+              "text_de": "wie die heilige Gabe, das reine Opfer",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:5:text"
+              }
+            },
+            {
+              "text_de": "deines Hohenpriesters Melchisedek.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supra_quae:6:text"
+              }
+            },
+            {
+              "rubric_de": "Der Priester faltet die Hände, verneigt sich und spricht:",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:supra_quae:7:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Wir bitten dich,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:0:text"
+              },
+              "sp_de": "P."
+            },
+            {
+              "text_de": "allmächtiger Gott:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:1:text"
+              }
+            },
+            {
+              "text_de": "Dein heiliger Engel trage diese Opfergabe",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:2:text"
+              }
+            },
+            {
+              "text_de": "auf deinen himmlischen Altar",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:3:text"
+              }
+            },
+            {
+              "text_de": "vor deine göttliche Herrlichkeit;",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:4:text"
+              }
+            },
+            {
+              "text_de": "und wenn wir durch unsere Teilnahme am Altar",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:5:text"
+              }
+            },
+            {
+              "text_de": "den heiligen Leib und das Blut",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:6:text"
+              }
+            },
+            {
+              "text_de": "deines Sohnes empfangen,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:7:text"
+              }
+            },
+            {
+              "rubric_de": "Der Priester richtet sich auf, macht das Kreuzzeichen und spricht:",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:supplices:8:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "erfülle uns mit aller Gnade",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:9:text"
+              },
+              "sp_de": "P."
+            },
+            {
+              "text_de": "und allem Segen des Himmels.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:supplices:10:text"
+              }
+            },
+            {
+              "text_de": "Gedenke auch deiner Diener",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:0:text"
+              }
+            },
+            {
+              "text_de": "und Dienerinnen (N. und N.),",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:1:text"
+              }
+            },
+            {
+              "text_de": "die uns vorangegangen sind,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:2:text"
+              }
+            },
+            {
+              "text_de": "bezeichnet mit dem Siegel des Glaubens,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:3:text"
+              }
+            },
+            {
+              "text_de": "und die nun ruhen in Frieden.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:4:text"
+              }
+            },
+            {
+              "rubric_de": "Stilles Gedenken",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:departed:5:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Wir bitten dich:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:6:text"
+              }
+            },
+            {
+              "text_de": "Führe sie und alle,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:7:text"
+              }
+            },
+            {
+              "text_de": "die in Christus entschlafen sind,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:8:text"
+              }
+            },
+            {
+              "text_de": "in das Land der Verheißung,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:9:text"
+              }
+            },
+            {
+              "text_de": "des Lichtes und des Friedens.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:departed:10:text"
+              }
+            },
+            {
+              "text_de": "Auch uns, deinen sündigen Dienern,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:0:text"
+              },
+              "sp_de": "P."
+            },
+            {
+              "text_de": "die auf deine reiche Barmherzigkeit hoffen,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:1:text"
+              }
+            },
+            {
+              "text_de": "gib Anteil und Gemeinschaft",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:2:text"
+              }
+            },
+            {
+              "text_de": "mit deinen heiligen Aposteln und Märtyrern:",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:3:text"
+              }
+            },
+            {
+              "text_de": "Johannes, Stephanus, Matthias, Barnabas",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:4:text"
+              }
+            },
+            {
+              "text_de": "(Ignatius, Alexander, Marzellinus, Petrus,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:5:text"
+              }
+            },
+            {
+              "text_de": "Felizitas, Perpetua, Agatha, Luzia,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:6:text"
+              }
+            },
+            {
+              "text_de": "Agnes, Cäcilia, Anastasia",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:7:text"
+              }
+            },
+            {
+              "text_de": ")",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:8:text"
+              }
+            },
+            {
+              "text_de": "und mit allen deinen Heiligen;",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:9:text"
+              }
+            },
+            {
+              "text_de": "wäge nicht unser Verdienst,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:10:text"
+              }
+            },
+            {
+              "text_de": "sondern schenke gnädig Verzeihung",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:11:text"
+              }
+            },
+            {
+              "text_de": "und gib uns mit ihnen das Erbe des Himmels.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:12:text"
+              }
+            },
+            {
+              "rubric_de": "(Hauptzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "canon:nobis_quoque:13:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum bitten wir dich",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:14:text"
+              }
+            },
+            {
+              "text_de": "durch unseren Herrn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:nobis_quoque:15:text"
+              }
+            },
+            {
+              "text_de": "Denn durch ihn erschaffst du immerfort",
+              "__massEditorPairKeys": {
+                "text_de": "canon:per_quem:0:text"
+              }
+            },
+            {
+              "text_de": "all diese gute Gaben,",
+              "__massEditorPairKeys": {
+                "text_de": "canon:per_quem:1:text"
+              }
+            },
+            {
+              "text_de": "gibst ihnen Leben und Weihe",
+              "__massEditorPairKeys": {
+                "text_de": "canon:per_quem:2:text"
+              }
+            },
+            {
+              "text_de": "und spendest sie uns.",
+              "__massEditorPairKeys": {
+                "text_de": "canon:per_quem:3:text"
+              }
+            }
+          ],
+          "2": [
+            {
+              "text_de": "Zweites Hochgebet",
+              "__massEditorPairKeys": {
+                "text_de": "0:text"
+              }
+            },
+            {
+              "rubric_de": "PRÄFATION",
+              "__massEditorPairKeys": {
+                "rubric_de": "1:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "Bitte um Heiligung der Gaben",
+              "__massEditorPairKeys": {
+                "rubric_de": "2:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Ja, du bist heilig, großer Gott,",
+              "__massEditorPairKeys": {
+                "text_de": "3:text"
+              }
+            },
+            {
+              "text_de": "du bist der Quell aller Heiligkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "4:text"
+              }
+            },
+            {
+              "text_de": "Darum bitten wir dich:",
+              "__massEditorPairKeys": {
+                "text_de": "5:text"
+              }
+            },
+            {
+              "text_de": "Sende deinen Geist auf diese Gaben herab",
+              "__massEditorPairKeys": {
+                "text_de": "6:text"
+              }
+            },
+            {
+              "text_de": "und heilige sie,",
+              "__massEditorPairKeys": {
+                "text_de": "7:text"
+              }
+            },
+            {
+              "text_de": "damit sie uns werden Leib",
+              "__massEditorPairKeys": {
+                "text_de": "8:text"
+              }
+            },
+            {
+              "text_de": "✠ und Blut",
+              "__massEditorPairKeys": {
+                "text_de": "9:text"
+              }
+            },
+            {
+              "text_de": "deines Sohnes, unseres Herrn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "10:text"
+              }
+            },
+            {
+              "text_de": "Denn am Abend,",
+              "__massEditorPairKeys": {
+                "text_de": "11:text"
+              }
+            },
+            {
+              "text_de": "an dem er ausgeliefert wurde",
+              "__massEditorPairKeys": {
+                "text_de": "12:text"
+              }
+            },
+            {
+              "text_de": "und sich aus freiem Willen",
+              "__massEditorPairKeys": {
+                "text_de": "13:text"
+              }
+            },
+            {
+              "text_de": "dem Leiden unterwarf,",
+              "__massEditorPairKeys": {
+                "text_de": "14:text"
+              }
+            },
+            {
+              "text_de": "nahm er das Brot und sagte Dank,",
+              "__massEditorPairKeys": {
+                "text_de": "15:text"
+              }
+            },
+            {
+              "text_de": "brach es,",
+              "__massEditorPairKeys": {
+                "text_de": "16:text"
+              }
+            },
+            {
+              "text_de": "reichte es seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "17:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
+              "__massEditorPairKeys": {
+                "rubric_de": "18:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST MEIN LEIB,",
+              "__massEditorPairKeys": {
+                "rubric_de": "19:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
+              "__massEditorPairKeys": {
+                "rubric_de": "20:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Ebenso nahm er nach dem Mahl den Kelch,",
+              "__massEditorPairKeys": {
+                "text_de": "21:text"
+              }
+            },
+            {
+              "text_de": "dankte wiederum,",
+              "__massEditorPairKeys": {
+                "text_de": "22:text"
+              }
+            },
+            {
+              "text_de": "reichte ihn seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "23:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
+              "__massEditorPairKeys": {
+                "rubric_de": "24:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST DER KELCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "25:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
+              "__massEditorPairKeys": {
+                "rubric_de": "26:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "MEIN BLUT,",
+              "__massEditorPairKeys": {
+                "rubric_de": "27:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS FÜR EUCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "28:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
+              "__massEditorPairKeys": {
+                "rubric_de": "29:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
+              "__massEditorPairKeys": {
+                "rubric_de": "30:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
+              "__massEditorPairKeys": {
+                "rubric_de": "31:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_de": "Geheimnis des Glaubens.",
+              "__massEditorPairKeys": {
+                "text_de": "32:text"
+              },
+              "sp_de": "P. (D.)"
+            },
+            {
+              "text_de": "Deinen Tod, o Herr, verkünden wir,",
+              "__massEditorPairKeys": {
+                "text_de": "33:text"
+              },
+              "sp_de": "A."
+            },
+            {
+              "text_de": "und deine Auferstehung preisen wir,",
+              "__massEditorPairKeys": {
+                "text_de": "34:text"
+              }
+            },
+            {
+              "text_de": "bis du kommst in Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "35:text"
+              }
+            },
+            {
+              "rubric_de": "Gedächtnis – Darbringung – Dank und Bitte",
+              "__massEditorPairKeys": {
+                "rubric_de": "36:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Hauptzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "37:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum, gütiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "38:text"
+              }
+            },
+            {
+              "text_de": "feiern wir das Gedächtnis",
+              "__massEditorPairKeys": {
+                "text_de": "39:text"
+              }
+            },
+            {
+              "text_de": "des Todes und der Auferstehung deines Sohnes",
+              "__massEditorPairKeys": {
+                "text_de": "40:text"
+              }
+            },
+            {
+              "text_de": "und bringen dir so das Brot des Lebens",
+              "__massEditorPairKeys": {
+                "text_de": "41:text"
+              }
+            },
+            {
+              "text_de": "und den Kelch des Heiles dar.",
+              "__massEditorPairKeys": {
+                "text_de": "42:text"
+              }
+            },
+            {
+              "text_de": "Wir danken dir, dass du uns berufen hast,",
+              "__massEditorPairKeys": {
+                "text_de": "43:text"
+              }
+            },
+            {
+              "text_de": "vor dir zu stehen und dir zu dienen.",
+              "__massEditorPairKeys": {
+                "text_de": "44:text"
+              }
+            },
+            {
+              "text_de": "Wir bitten dich:",
+              "__massEditorPairKeys": {
+                "text_de": "45:text"
+              }
+            },
+            {
+              "text_de": "Schenke uns Anteil an Christi Leib und Blut",
+              "__massEditorPairKeys": {
+                "text_de": "46:text"
+              }
+            },
+            {
+              "text_de": "und lass uns eins werden",
+              "__massEditorPairKeys": {
+                "text_de": "47:text"
+              }
+            },
+            {
+              "text_de": "durch den Heiligen Geist.",
+              "__massEditorPairKeys": {
+                "text_de": "48:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Kirche und ihre Hirten",
+              "__massEditorPairKeys": {
+                "rubric_de": "49:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "50:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Gedenke deiner Kirche auf der ganzen Erde",
+              "__massEditorPairKeys": {
+                "text_de": "51:text"
+              }
+            },
+            {
+              "text_de": "und vollende dein Volk in der Liebe,",
+              "__massEditorPairKeys": {
+                "text_de": "52:text"
+              }
+            },
+            {
+              "text_de": "vereint mit unserem Papst",
+              "__massEditorPairKeys": {
+                "text_de": "53:text"
+              }
+            },
+            {
+              "rubric_de": "N.,",
+              "__massEditorPairKeys": {
+                "rubric_de": "54:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "unserem Bischof N. und allen Bischöfen,",
+              "__massEditorPairKeys": {
+                "text_de": "55:text"
+              }
+            },
+            {
+              "text_de": "unseren Priestern und Diakonen",
+              "__massEditorPairKeys": {
+                "text_de": "56:text"
+              }
+            },
+            {
+              "text_de": "und mit allen,",
+              "__massEditorPairKeys": {
+                "text_de": "57:text"
+              }
+            },
+            {
+              "text_de": "die zum Dienst in der Kirche bestellt sind.",
+              "__massEditorPairKeys": {
+                "text_de": "58:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Verstorbenen",
+              "__massEditorPairKeys": {
+                "rubric_de": "59:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "60:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Gedenke",
+              "__massEditorPairKeys": {
+                "text_de": "61:text"
+              }
+            },
+            {
+              "text_de": "(aller) unserer Brüder und Schwestern,",
+              "__massEditorPairKeys": {
+                "text_de": "62:text"
+              }
+            },
+            {
+              "text_de": "die entschlafen sind in der Hoffnung,",
+              "__massEditorPairKeys": {
+                "text_de": "63:text"
+              }
+            },
+            {
+              "text_de": "dass sie auferstehen.",
+              "__massEditorPairKeys": {
+                "text_de": "64:text"
+              }
+            },
+            {
+              "text_de": "Nimm sie",
+              "__massEditorPairKeys": {
+                "text_de": "65:text"
+              }
+            },
+            {
+              "text_de": "und alle, die in deiner Gnade",
+              "__massEditorPairKeys": {
+                "text_de": "66:text"
+              }
+            },
+            {
+              "text_de": "aus dieser Welt geschieden sind,",
+              "__massEditorPairKeys": {
+                "text_de": "67:text"
+              }
+            },
+            {
+              "text_de": "in dein Reich auf,",
+              "__massEditorPairKeys": {
+                "text_de": "68:text"
+              }
+            },
+            {
+              "text_de": "wo sie dich schauen",
+              "__massEditorPairKeys": {
+                "text_de": "69:text"
+              }
+            },
+            {
+              "text_de": "von Angesicht zu Angesicht.",
+              "__massEditorPairKeys": {
+                "text_de": "70:text"
+              }
+            },
+            {
+              "text_de": "Für alle",
+              "__massEditorPairKeys": {
+                "text_de": "71:text"
+              }
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "72:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Vater, erbarme dich über uns alle,",
+              "__massEditorPairKeys": {
+                "text_de": "73:text"
+              }
+            },
+            {
+              "text_de": "damit uns das ewige Leben zuteil wird",
+              "__massEditorPairKeys": {
+                "text_de": "74:text"
+              }
+            },
+            {
+              "text_de": "in der Gemeinschaft mit der seligen",
+              "__massEditorPairKeys": {
+                "text_de": "75:text"
+              }
+            },
+            {
+              "text_de": "Jungfrau und Gottesmutter Maria,",
+              "__massEditorPairKeys": {
+                "text_de": "76:text"
+              }
+            },
+            {
+              "text_de": "mit deinen Aposteln",
+              "__massEditorPairKeys": {
+                "text_de": "77:text"
+              }
+            },
+            {
+              "text_de": "und mit allen,",
+              "__massEditorPairKeys": {
+                "text_de": "78:text"
+              }
+            },
+            {
+              "text_de": "die bei dir Gnade gefunden haben",
+              "__massEditorPairKeys": {
+                "text_de": "79:text"
+              }
+            },
+            {
+              "text_de": "von Anbeginn der Welt,",
+              "__massEditorPairKeys": {
+                "text_de": "80:text"
+              }
+            },
+            {
+              "text_de": "dass wir dich loben und preisen",
+              "__massEditorPairKeys": {
+                "text_de": "81:text"
+              }
+            },
+            {
+              "text_de": "durch deinen Sohn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "82:text"
+              }
+            },
+            {
+              "rubric_de": "Abschließender Lobpreis",
+              "__massEditorPairKeys": {
+                "rubric_de": "83:rubric"
+              }
+            },
+            {
+              "rubric_de": "(Hauptzelebrant und Konzelebranten)",
+              "__massEditorPairKeys": {
+                "rubric_de": "84:rubric"
+              }
+            }
+          ],
+          "3": [
+            {
+              "text_de": "Drittes Hochgebet",
+              "__massEditorPairKeys": {
+                "text_de": "0:text"
+              }
+            },
+            {
+              "text_de": "Ja, du bist heilig, großer Gott,",
+              "__massEditorPairKeys": {
+                "text_de": "1:text"
+              },
+              "sp_de": "P."
+            },
+            {
+              "text_de": "und alle deine Werke verkünden dein Lob.",
+              "__massEditorPairKeys": {
+                "text_de": "2:text"
+              }
+            },
+            {
+              "text_de": "Denn durch deinen Sohn,",
+              "__massEditorPairKeys": {
+                "text_de": "3:text"
+              }
+            },
+            {
+              "text_de": "unseren Herrn Jesus Christus,",
+              "__massEditorPairKeys": {
+                "text_de": "4:text"
+              }
+            },
+            {
+              "text_de": "und in der Kraft des Heiligen Geistes",
+              "__massEditorPairKeys": {
+                "text_de": "5:text"
+              }
+            },
+            {
+              "text_de": "erfüllst du die ganze Schöpfung",
+              "__massEditorPairKeys": {
+                "text_de": "6:text"
+              }
+            },
+            {
+              "text_de": "mit Leben und Gnade.",
+              "__massEditorPairKeys": {
+                "text_de": "7:text"
+              }
+            },
+            {
+              "text_de": "Bis ans Ende der Zeiten",
+              "__massEditorPairKeys": {
+                "text_de": "8:text"
+              }
+            },
+            {
+              "text_de": "versammelst du dir ein Volk,",
+              "__massEditorPairKeys": {
+                "text_de": "9:text"
+              }
+            },
+            {
+              "text_de": "damit deinem Namen",
+              "__massEditorPairKeys": {
+                "text_de": "10:text"
+              }
+            },
+            {
+              "text_de": "das reine Opfer dargebracht werde",
+              "__massEditorPairKeys": {
+                "text_de": "11:text"
+              }
+            },
+            {
+              "text_de": "vom Aufgang der Sonne bis zu Untergang.",
+              "__massEditorPairKeys": {
+                "text_de": "12:text"
+              }
+            },
+            {
+              "rubric_de": "Bitte um Heiligung der Gaben",
+              "__massEditorPairKeys": {
+                "rubric_de": "13:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum bitten wir dich,",
+              "__massEditorPairKeys": {
+                "text_de": "14:text"
+              }
+            },
+            {
+              "text_de": "allmächtiger Gott:",
+              "__massEditorPairKeys": {
+                "text_de": "15:text"
+              }
+            },
+            {
+              "text_de": "Heilige unsere Gaben durch deinen Geist,",
+              "__massEditorPairKeys": {
+                "text_de": "16:text"
+              }
+            },
+            {
+              "text_de": "damit sie uns werden Leib",
+              "__massEditorPairKeys": {
+                "text_de": "17:text"
+              }
+            },
+            {
+              "text_de": "✠ und Blut",
+              "__massEditorPairKeys": {
+                "text_de": "18:text"
+              }
+            },
+            {
+              "text_de": "deines Sohnes, unseres Herrn Jesus Christus,",
+              "__massEditorPairKeys": {
+                "text_de": "19:text"
+              }
+            },
+            {
+              "text_de": "der uns aufgetragen hat,",
+              "__massEditorPairKeys": {
+                "text_de": "20:text"
+              }
+            },
+            {
+              "text_de": "dieses Geheimnis zu feiern.",
+              "__massEditorPairKeys": {
+                "text_de": "21:text"
+              }
+            },
+            {
+              "text_de": "Denn in der Nacht, da er verraten wurde,",
+              "__massEditorPairKeys": {
+                "text_de": "22:text"
+              }
+            },
+            {
+              "text_de": "nahm er das Brot und sagte Dank,",
+              "__massEditorPairKeys": {
+                "text_de": "23:text"
+              }
+            },
+            {
+              "text_de": "brach es,",
+              "__massEditorPairKeys": {
+                "text_de": "24:text"
+              }
+            },
+            {
+              "text_de": "reichte es seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "25:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
+              "__massEditorPairKeys": {
+                "rubric_de": "26:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST MEIN LEIB,",
+              "__massEditorPairKeys": {
+                "rubric_de": "27:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
+              "__massEditorPairKeys": {
+                "rubric_de": "28:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Ebenso nahm er nach dem Mahl den Kelch,",
+              "__massEditorPairKeys": {
+                "text_de": "29:text"
+              }
+            },
+            {
+              "text_de": "dankte wiederum,",
+              "__massEditorPairKeys": {
+                "text_de": "30:text"
+              }
+            },
+            {
+              "text_de": "reichte ihn seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "31:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
+              "__massEditorPairKeys": {
+                "rubric_de": "32:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST DER KELCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "33:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
+              "__massEditorPairKeys": {
+                "rubric_de": "34:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "MEIN BLUT,",
+              "__massEditorPairKeys": {
+                "rubric_de": "35:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS FÜR EUCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "36:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
+              "__massEditorPairKeys": {
+                "rubric_de": "37:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
+              "__massEditorPairKeys": {
+                "rubric_de": "38:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
+              "__massEditorPairKeys": {
+                "rubric_de": "39:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_de": "Geheimnis des Glaubens.",
+              "__massEditorPairKeys": {
+                "text_de": "40:text"
+              },
+              "sp_de": "P. (D.)"
+            },
+            {
+              "text_de": "Deinen Tod, o Herr, verkünden wir,",
+              "__massEditorPairKeys": {
+                "text_de": "41:text"
+              },
+              "sp_de": "A."
+            },
+            {
+              "text_de": "und deine Auferstehung preisen wir,",
+              "__massEditorPairKeys": {
+                "text_de": "42:text"
+              }
+            },
+            {
+              "text_de": "bis du kommst in Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "43:text"
+              }
+            },
+            {
+              "rubric_de": "Gedächtnis – Darbringung – Bitte",
+              "__massEditorPairKeys": {
+                "rubric_de": "44:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Hauptzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "45:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum, gütiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "46:text"
+              }
+            },
+            {
+              "text_de": "feiern wir das Gedächtnis deines Sohnes.",
+              "__massEditorPairKeys": {
+                "text_de": "47:text"
+              }
+            },
+            {
+              "text_de": "Wir verkünden sein heilbringendes Leiden,",
+              "__massEditorPairKeys": {
+                "text_de": "48:text"
+              }
+            },
+            {
+              "text_de": "seine glorreiche Auferstehung",
+              "__massEditorPairKeys": {
+                "text_de": "49:text"
+              }
+            },
+            {
+              "text_de": "und Himmelfahrt",
+              "__massEditorPairKeys": {
+                "text_de": "50:text"
+              }
+            },
+            {
+              "text_de": "und erwarten seine Wiederkunft.",
+              "__massEditorPairKeys": {
+                "text_de": "51:text"
+              }
+            },
+            {
+              "text_de": "So bringen wir dir mit Lob und Dank",
+              "__massEditorPairKeys": {
+                "text_de": "52:text"
+              }
+            },
+            {
+              "text_de": "dieses heilige und lebendige Opfer dar.",
+              "__massEditorPairKeys": {
+                "text_de": "53:text"
+              }
+            },
+            {
+              "text_de": "Schau gütig auf die Gabe deiner Kirche.",
+              "__massEditorPairKeys": {
+                "text_de": "54:text"
+              }
+            },
+            {
+              "text_de": "Denn sie stellt dir",
+              "__massEditorPairKeys": {
+                "text_de": "55:text"
+              }
+            },
+            {
+              "text_de": "das Lamm vor Augen,",
+              "__massEditorPairKeys": {
+                "text_de": "56:text"
+              }
+            },
+            {
+              "text_de": "das geopfert wurde",
+              "__massEditorPairKeys": {
+                "text_de": "57:text"
+              }
+            },
+            {
+              "text_de": "und uns nach deinem Willen",
+              "__massEditorPairKeys": {
+                "text_de": "58:text"
+              }
+            },
+            {
+              "text_de": "mit dir versöhnt hat.",
+              "__massEditorPairKeys": {
+                "text_de": "59:text"
+              }
+            },
+            {
+              "text_de": "Stärke uns durch den Leib und das Blut",
+              "__massEditorPairKeys": {
+                "text_de": "60:text"
+              }
+            },
+            {
+              "text_de": "deines Sohnes",
+              "__massEditorPairKeys": {
+                "text_de": "61:text"
+              }
+            },
+            {
+              "text_de": "und erfülle uns mit seinem Heiligen Geist,",
+              "__massEditorPairKeys": {
+                "text_de": "62:text"
+              }
+            },
+            {
+              "text_de": "damit wir ein Leib und ein Geist werden",
+              "__massEditorPairKeys": {
+                "text_de": "63:text"
+              }
+            },
+            {
+              "text_de": "in Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "64:text"
+              }
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "65:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Er mache uns auf immer",
+              "__massEditorPairKeys": {
+                "text_de": "66:text"
+              }
+            },
+            {
+              "text_de": "zu einer Gabe, die dir wohl gefällt,",
+              "__massEditorPairKeys": {
+                "text_de": "67:text"
+              }
+            },
+            {
+              "text_de": "damit wir das verheißene Erbe erlangen",
+              "__massEditorPairKeys": {
+                "text_de": "68:text"
+              }
+            },
+            {
+              "text_de": "mit deinen Auserwählten,",
+              "__massEditorPairKeys": {
+                "text_de": "69:text"
+              }
+            },
+            {
+              "text_de": "mit der seligen Jungfrau",
+              "__massEditorPairKeys": {
+                "text_de": "70:text"
+              }
+            },
+            {
+              "text_de": "und Gottesmutter Maria,",
+              "__massEditorPairKeys": {
+                "text_de": "71:text"
+              }
+            },
+            {
+              "text_de": "mit deinen Aposteln und Märtyrern",
+              "__massEditorPairKeys": {
+                "text_de": "72:text"
+              }
+            },
+            {
+              "text_de": "(mit dem heiligen N.)",
+              "__massEditorPairKeys": {
+                "text_de": "73:text"
+              }
+            },
+            {
+              "text_de": "(mit dem – den – seligen N.)",
+              "__massEditorPairKeys": {
+                "text_de": "74:text"
+              }
+            },
+            {
+              "text_de": "und mit allen Heiligen (und Seligen),",
+              "__massEditorPairKeys": {
+                "text_de": "75:text"
+              }
+            },
+            {
+              "text_de": "auf deren Fürsprache wir vertrauen.",
+              "__massEditorPairKeys": {
+                "text_de": "76:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Welt, die Kirche und ihre Hirten",
+              "__massEditorPairKeys": {
+                "rubric_de": "77:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "78:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Barmherziger Gott, wir bitten dich:",
+              "__massEditorPairKeys": {
+                "text_de": "79:text"
+              }
+            },
+            {
+              "text_de": "Dieses Opfer unserer Versöhnung",
+              "__massEditorPairKeys": {
+                "text_de": "80:text"
+              }
+            },
+            {
+              "text_de": "bringe der ganzen Welt Frieden und Heil.",
+              "__massEditorPairKeys": {
+                "text_de": "81:text"
+              }
+            },
+            {
+              "text_de": "Beschütze deine Kirche",
+              "__massEditorPairKeys": {
+                "text_de": "82:text"
+              }
+            },
+            {
+              "text_de": "auf ihrem Weg durch die Zeit",
+              "__massEditorPairKeys": {
+                "text_de": "83:text"
+              }
+            },
+            {
+              "text_de": "und stärke sie im Glauben und in der Liebe:",
+              "__massEditorPairKeys": {
+                "text_de": "84:text"
+              }
+            },
+            {
+              "text_de": "deinen Diener, unseren Papst",
+              "__massEditorPairKeys": {
+                "text_de": "85:text"
+              }
+            },
+            {
+              "rubric_de": "N.,",
+              "__massEditorPairKeys": {
+                "rubric_de": "86:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "unseren Bischof N.",
+              "__massEditorPairKeys": {
+                "text_de": "87:text"
+              }
+            },
+            {
+              "text_de": "und die Gemeinschaft der Bischöfe,",
+              "__massEditorPairKeys": {
+                "text_de": "88:text"
+              }
+            },
+            {
+              "text_de": "unsere Priester und Diakone,",
+              "__massEditorPairKeys": {
+                "text_de": "89:text"
+              }
+            },
+            {
+              "text_de": "alle, die zum Dienst in der Kirche bestellt sind,",
+              "__massEditorPairKeys": {
+                "text_de": "90:text"
+              }
+            },
+            {
+              "text_de": "und das ganze Volk deiner Erlösten.",
+              "__massEditorPairKeys": {
+                "text_de": "91:text"
+              }
+            },
+            {
+              "rubric_de": "Für die anwesende Gemeinde und für alle",
+              "__massEditorPairKeys": {
+                "rubric_de": "92:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Erhöre, gütiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "93:text"
+              }
+            },
+            {
+              "text_de": "die Gebete der hier versammelten Gemeinde",
+              "__massEditorPairKeys": {
+                "text_de": "94:text"
+              }
+            },
+            {
+              "text_de": "und führe zu dir",
+              "__massEditorPairKeys": {
+                "text_de": "95:text"
+              }
+            },
+            {
+              "text_de": "auch alle deine Söhne und Töchter,",
+              "__massEditorPairKeys": {
+                "text_de": "96:text"
+              }
+            },
+            {
+              "text_de": "die noch fern sind von dir.",
+              "__massEditorPairKeys": {
+                "text_de": "97:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Verstorbenen",
+              "__massEditorPairKeys": {
+                "rubric_de": "98:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "99:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Erbarme dich (aller) unserer",
+              "__massEditorPairKeys": {
+                "text_de": "100:text"
+              }
+            },
+            {
+              "text_de": "verstorbenen Brüder und Schwestern",
+              "__massEditorPairKeys": {
+                "text_de": "101:text"
+              }
+            },
+            {
+              "text_de": "und aller, die in deiner Gnade",
+              "__massEditorPairKeys": {
+                "text_de": "102:text"
+              }
+            },
+            {
+              "text_de": "aus dieser Welt geschieden sind.",
+              "__massEditorPairKeys": {
+                "text_de": "103:text"
+              }
+            },
+            {
+              "text_de": "Nimm sie auf in deine Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "104:text"
+              }
+            },
+            {
+              "text_de": "Und mit ihnen lass auch uns,",
+              "__massEditorPairKeys": {
+                "text_de": "105:text"
+              }
+            },
+            {
+              "text_de": "wie du verheißen hast,",
+              "__massEditorPairKeys": {
+                "text_de": "106:text"
+              }
+            },
+            {
+              "text_de": "zu Tische sitzen in deinem Reich.",
+              "__massEditorPairKeys": {
+                "text_de": "107:text"
+              }
+            },
+            {
+              "rubric_de": "(Hauptzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "108:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum bitten wir dich",
+              "__massEditorPairKeys": {
+                "text_de": "109:text"
+              }
+            },
+            {
+              "text_de": "durch unseren Herrn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "110:text"
+              }
+            },
+            {
+              "text_de": "Denn durch ihn",
+              "__massEditorPairKeys": {
+                "text_de": "111:text"
+              }
+            },
+            {
+              "text_de": "schenkst du der Welt alle guten Gaben.",
+              "__massEditorPairKeys": {
+                "text_de": "112:text"
+              }
+            },
+            {
+              "rubric_de": "Abschließender Lobpreis",
+              "__massEditorPairKeys": {
+                "rubric_de": "113:rubric"
+              }
+            },
+            {
+              "rubric_de": "(Hauptzelebrant und Konzelebranten)",
+              "__massEditorPairKeys": {
+                "rubric_de": "114:rubric"
+              }
+            }
+          ],
+          "4": [
+            {
+              "text_de": "Viertes Hochgebet",
+              "__massEditorPairKeys": {
+                "text_de": "0:text"
+              }
+            },
+            {
+              "rubric_de": "PRÄFATION",
+              "__massEditorPairKeys": {
+                "rubric_de": "1:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Dank für das Werk der Schöpfung und der Erlösung",
+              "__massEditorPairKeys": {
+                "text_de": "2:text"
+              }
+            },
+            {
+              "text_de": "In Wahrheit ist es würdig, dir zu danken, heiliger Vater.\nEs ist recht, dich zu preisen.\nDenn du allein bist der lebendige und wahre Gott.\nDu bist vor den Zeiten und lebst in Ewigkeit.\nDu wohnst in unzugänglichem Lichte.\nAlles hast du erschaffen, denn du bist die Liebe und der Ursprung des Lebens.\nDu erfüllst deine Geschöpfe mit Segen und erfreust sie alle mit dem Glanz deines Lichtes.\nVor dir stehen die Scharen der Engel und schauen dein Angesicht.\nSie dienen dir Tag und Nacht, nie endet ihr Lobgesang.\nMit ihnen preisen auch wir deinen Namen, durch unseren Mund rühmen dich alle Geschöpfe und künden voll Freude das Lob deiner Herrlichkeit:",
+              "__massEditorPairKeys": {
+                "text_de": "german-fourth-recovery-0"
+              },
+              "sp_de": "P."
+            },
+            {
+              "dividerAfter": "after-sanctus",
+              "text_de": "Heilig, heilig, heilig, Gott, Herr aller Mächte und Gewalten.\nErfüllt sind Himmel und Erde von deiner Herrlichkeit.\nHosanna in der Höhe.\nHochgelobt sei, der da kommt im Namen des Herrn.\nHosanna in der Höhe.",
+              "__massEditorPairKeys": {
+                "text_de": "german-fourth-recovery-1"
+              },
+              "sp_de": "A."
+            },
+            {
+              "text_de": "Wir preisen dich, heiliger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "3:text"
+              }
+            },
+            {
+              "text_de": "denn groß bist du,",
+              "__massEditorPairKeys": {
+                "text_de": "4:text"
+              }
+            },
+            {
+              "text_de": "und alle deine Werke",
+              "__massEditorPairKeys": {
+                "text_de": "5:text"
+              }
+            },
+            {
+              "text_de": "künden deine Weisheit und Liebe.",
+              "__massEditorPairKeys": {
+                "text_de": "6:text"
+              }
+            },
+            {
+              "text_de": "Den Menschen hast du",
+              "__massEditorPairKeys": {
+                "text_de": "7:text"
+              }
+            },
+            {
+              "text_de": "nach deinem Bild geschaffen",
+              "__massEditorPairKeys": {
+                "text_de": "8:text"
+              }
+            },
+            {
+              "text_de": "und ihm die Sorge für die ganze Welt anvertraut.",
+              "__massEditorPairKeys": {
+                "text_de": "9:text"
+              }
+            },
+            {
+              "text_de": "Über alle Geschöpfe sollte er herrschen",
+              "__massEditorPairKeys": {
+                "text_de": "10:text"
+              }
+            },
+            {
+              "text_de": "und allein dir, seinem Schöpfer, dienen.",
+              "__massEditorPairKeys": {
+                "text_de": "11:text"
+              }
+            },
+            {
+              "text_de": "Als er im Ungehorsam deine Freundschaft verlor",
+              "__massEditorPairKeys": {
+                "text_de": "12:text"
+              }
+            },
+            {
+              "text_de": "und der Macht des Todes verﬁ el,",
+              "__massEditorPairKeys": {
+                "text_de": "13:text"
+              }
+            },
+            {
+              "text_de": "hast du ihn dennoch nicht verlassen,",
+              "__massEditorPairKeys": {
+                "text_de": "14:text"
+              }
+            },
+            {
+              "text_de": "sondern voll Erbarmen allen geholfen,",
+              "__massEditorPairKeys": {
+                "text_de": "15:text"
+              }
+            },
+            {
+              "text_de": "dich zu suchen und zu ﬁ nden.",
+              "__massEditorPairKeys": {
+                "text_de": "16:text"
+              }
+            },
+            {
+              "text_de": "Immer wieder hast du den Menschen",
+              "__massEditorPairKeys": {
+                "text_de": "17:text"
+              }
+            },
+            {
+              "text_de": "deinen Bund angeboten",
+              "__massEditorPairKeys": {
+                "text_de": "18:text"
+              }
+            },
+            {
+              "text_de": "und sie durch die Propheten gelehrt,",
+              "__massEditorPairKeys": {
+                "text_de": "19:text"
+              }
+            },
+            {
+              "text_de": "das Heil zu erwarten.",
+              "__massEditorPairKeys": {
+                "text_de": "20:text"
+              }
+            },
+            {
+              "text_de": "So sehr hast du die Welt geliebt,",
+              "__massEditorPairKeys": {
+                "text_de": "21:text"
+              }
+            },
+            {
+              "text_de": "heiliger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "22:text"
+              }
+            },
+            {
+              "text_de": "dass du deinen eingeborenen Sohn",
+              "__massEditorPairKeys": {
+                "text_de": "23:text"
+              }
+            },
+            {
+              "text_de": "als Retter gesandt hast,",
+              "__massEditorPairKeys": {
+                "text_de": "24:text"
+              }
+            },
+            {
+              "text_de": "nachdem die Fülle der Zeiten gekommen war.",
+              "__massEditorPairKeys": {
+                "text_de": "25:text"
+              }
+            },
+            {
+              "text_de": "Er ist Mensch geworden",
+              "__massEditorPairKeys": {
+                "text_de": "26:text"
+              }
+            },
+            {
+              "text_de": "durch den Heiligen Geist,",
+              "__massEditorPairKeys": {
+                "text_de": "27:text"
+              }
+            },
+            {
+              "text_de": "geboren von der Jungfrau Maria.",
+              "__massEditorPairKeys": {
+                "text_de": "28:text"
+              }
+            },
+            {
+              "text_de": "Er hat wie wir als Mensch gelebt,",
+              "__massEditorPairKeys": {
+                "text_de": "29:text"
+              }
+            },
+            {
+              "text_de": "in allem uns gleich außer der Sünde.",
+              "__massEditorPairKeys": {
+                "text_de": "30:text"
+              }
+            },
+            {
+              "text_de": "Den Armen verkündete er",
+              "__massEditorPairKeys": {
+                "text_de": "31:text"
+              }
+            },
+            {
+              "text_de": "die Botschaft vom Heil,",
+              "__massEditorPairKeys": {
+                "text_de": "32:text"
+              }
+            },
+            {
+              "text_de": "den Gefangenen Freiheit,",
+              "__massEditorPairKeys": {
+                "text_de": "33:text"
+              }
+            },
+            {
+              "text_de": "den Trauernden Freude.",
+              "__massEditorPairKeys": {
+                "text_de": "34:text"
+              }
+            },
+            {
+              "text_de": "Um deinen Ratschluss zu erfüllen,",
+              "__massEditorPairKeys": {
+                "text_de": "35:text"
+              }
+            },
+            {
+              "text_de": "hat er sich dem Tod überliefert,",
+              "__massEditorPairKeys": {
+                "text_de": "36:text"
+              }
+            },
+            {
+              "text_de": "durch seine Auferstehung",
+              "__massEditorPairKeys": {
+                "text_de": "37:text"
+              }
+            },
+            {
+              "text_de": "den Tod bezwungen",
+              "__massEditorPairKeys": {
+                "text_de": "38:text"
+              }
+            },
+            {
+              "text_de": "und das Leben neu geschaffen.",
+              "__massEditorPairKeys": {
+                "text_de": "39:text"
+              }
+            },
+            {
+              "text_de": "Damit wir nicht mehr uns selber leben,",
+              "__massEditorPairKeys": {
+                "text_de": "40:text"
+              }
+            },
+            {
+              "text_de": "sondern ihm,",
+              "__massEditorPairKeys": {
+                "text_de": "41:text"
+              }
+            },
+            {
+              "text_de": "der für uns gestorben und auferstanden ist,",
+              "__massEditorPairKeys": {
+                "text_de": "42:text"
+              }
+            },
+            {
+              "text_de": "hat er von dir, Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "43:text"
+              }
+            },
+            {
+              "text_de": "als erste Gabe für alle, die glauben,",
+              "__massEditorPairKeys": {
+                "text_de": "44:text"
+              }
+            },
+            {
+              "text_de": "den Heiligen Geist gesandt,",
+              "__massEditorPairKeys": {
+                "text_de": "45:text"
+              }
+            },
+            {
+              "text_de": "der das Werk deines Sohnes",
+              "__massEditorPairKeys": {
+                "text_de": "46:text"
+              }
+            },
+            {
+              "text_de": "auf Erden weiter führt",
+              "__massEditorPairKeys": {
+                "text_de": "47:text"
+              }
+            },
+            {
+              "text_de": "und alle Heiligung vollendet.",
+              "__massEditorPairKeys": {
+                "text_de": "48:text"
+              }
+            },
+            {
+              "rubric_de": "Bitte um Heiligung der Gaben",
+              "__massEditorPairKeys": {
+                "rubric_de": "49:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "So bitten wir dich, Vater:",
+              "__massEditorPairKeys": {
+                "text_de": "50:text"
+              }
+            },
+            {
+              "text_de": "Der Geist heilige diese Gaben,",
+              "__massEditorPairKeys": {
+                "text_de": "51:text"
+              }
+            },
+            {
+              "text_de": "damit sie uns werden Leib",
+              "__massEditorPairKeys": {
+                "text_de": "52:text"
+              }
+            },
+            {
+              "text_de": "✠ und Blut",
+              "__massEditorPairKeys": {
+                "text_de": "53:text"
+              }
+            },
+            {
+              "text_de": "unseres Herrn Jesus Christus,",
+              "__massEditorPairKeys": {
+                "text_de": "54:text"
+              }
+            },
+            {
+              "text_de": "der uns die Feier dieses Geheimnisses",
+              "__massEditorPairKeys": {
+                "text_de": "55:text"
+              }
+            },
+            {
+              "text_de": "aufgetragen hat",
+              "__massEditorPairKeys": {
+                "text_de": "56:text"
+              }
+            },
+            {
+              "text_de": "als Zeichen des ewigen Bundes.",
+              "__massEditorPairKeys": {
+                "text_de": "57:text"
+              }
+            },
+            {
+              "text_de": "Da er die Seinen liebte,",
+              "__massEditorPairKeys": {
+                "text_de": "58:text"
+              }
+            },
+            {
+              "text_de": "die in der Welt waren,",
+              "__massEditorPairKeys": {
+                "text_de": "59:text"
+              }
+            },
+            {
+              "text_de": "liebte er sie bis zur Vollendung.",
+              "__massEditorPairKeys": {
+                "text_de": "60:text"
+              }
+            },
+            {
+              "text_de": "Und als die Stunde kam,",
+              "__massEditorPairKeys": {
+                "text_de": "61:text"
+              }
+            },
+            {
+              "text_de": "da er von dir verherrlicht werden sollte,",
+              "__massEditorPairKeys": {
+                "text_de": "62:text"
+              }
+            },
+            {
+              "text_de": "nahm er beim",
+              "__massEditorPairKeys": {
+                "text_de": "63:text"
+              }
+            },
+            {
+              "text_de": "Mahl das Brot und sagte Dank,",
+              "__massEditorPairKeys": {
+                "text_de": "64:text"
+              }
+            },
+            {
+              "text_de": "brach das Brot,",
+              "__massEditorPairKeys": {
+                "text_de": "65:text"
+              }
+            },
+            {
+              "text_de": "reichte es seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "66:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND ESSET ALLE DAVON:",
+              "__massEditorPairKeys": {
+                "rubric_de": "67:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST MEIN LEIB,",
+              "__massEditorPairKeys": {
+                "rubric_de": "68:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DER FÜR EUCH HINGEGEBEN WIRD.",
+              "__massEditorPairKeys": {
+                "rubric_de": "69:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Ebenso nahm er den Kelch mit Wein,",
+              "__massEditorPairKeys": {
+                "text_de": "70:text"
+              }
+            },
+            {
+              "text_de": "dankte wiederum,",
+              "__massEditorPairKeys": {
+                "text_de": "71:text"
+              }
+            },
+            {
+              "text_de": "reichte den Kelch seinen Jüngern und sprach:",
+              "__massEditorPairKeys": {
+                "text_de": "72:text"
+              }
+            },
+            {
+              "rubric_de": "NEHMET UND TRINKET ALLE DARAUS:",
+              "__massEditorPairKeys": {
+                "rubric_de": "73:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS IST DER KELCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "74:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DES NEUEN UND EWIGEN BUNDES,",
+              "__massEditorPairKeys": {
+                "rubric_de": "75:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "MEIN BLUT,",
+              "__massEditorPairKeys": {
+                "rubric_de": "76:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "DAS FÜR EUCH",
+              "__massEditorPairKeys": {
+                "rubric_de": "77:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "UND FÜR ALLE VERGOSSEN WIRD",
+              "__massEditorPairKeys": {
+                "rubric_de": "78:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "ZUR VERGEBUNG DER SÜNDEN.",
+              "__massEditorPairKeys": {
+                "rubric_de": "79:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "TUT DIES ZU MEINEM GEDÄCHTNIS.",
+              "__massEditorPairKeys": {
+                "rubric_de": "80:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_de": "Geheimnis des Glaubens:",
+              "__massEditorPairKeys": {
+                "text_de": "81:text"
+              },
+              "sp_de": "P. (D.)"
+            },
+            {
+              "text_de": "Deinen Tod, o Herr, verkünden wir,",
+              "__massEditorPairKeys": {
+                "text_de": "82:text"
+              },
+              "sp_de": "A."
+            },
+            {
+              "text_de": "und deine Auferstehung preisen wir,",
+              "__massEditorPairKeys": {
+                "text_de": "83:text"
+              }
+            },
+            {
+              "text_de": "bis du kommst in Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "84:text"
+              }
+            },
+            {
+              "rubric_de": "Gedächtnis – Darbringung – Bitte",
+              "__massEditorPairKeys": {
+                "rubric_de": "85:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Hauptzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "86:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Darum, gütiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "87:text"
+              }
+            },
+            {
+              "text_de": "feiern wir das Gedächtnis unserer Erlösung.",
+              "__massEditorPairKeys": {
+                "text_de": "88:text"
+              }
+            },
+            {
+              "text_de": "Wir verkünden den Tod deines Sohnes",
+              "__massEditorPairKeys": {
+                "text_de": "89:text"
+              }
+            },
+            {
+              "text_de": "und sein Herabsteigen zu den Vätern,",
+              "__massEditorPairKeys": {
+                "text_de": "90:text"
+              }
+            },
+            {
+              "text_de": "bekennen seine Auferstehung",
+              "__massEditorPairKeys": {
+                "text_de": "91:text"
+              }
+            },
+            {
+              "text_de": "und Himmelfahrt",
+              "__massEditorPairKeys": {
+                "text_de": "92:text"
+              }
+            },
+            {
+              "text_de": "und erwarten sein Kommen in Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "93:text"
+              }
+            },
+            {
+              "text_de": "So bringen wir dir seinen Leib und sein Blut dar,",
+              "__massEditorPairKeys": {
+                "text_de": "94:text"
+              }
+            },
+            {
+              "text_de": "das Opfer, das dir wohl gefällt",
+              "__massEditorPairKeys": {
+                "text_de": "95:text"
+              }
+            },
+            {
+              "text_de": "und der ganzen Welt Heil bringt.",
+              "__massEditorPairKeys": {
+                "text_de": "96:text"
+              }
+            },
+            {
+              "text_de": "Sieh her auf die Opfergabe,",
+              "__massEditorPairKeys": {
+                "text_de": "97:text"
+              }
+            },
+            {
+              "text_de": "die du selber deiner Kirche bereitet hast,",
+              "__massEditorPairKeys": {
+                "text_de": "98:text"
+              }
+            },
+            {
+              "text_de": "und gib, dass alle, die Anteil erhalten",
+              "__massEditorPairKeys": {
+                "text_de": "99:text"
+              }
+            },
+            {
+              "text_de": "an dem einen Brot und dem einen Kelch,",
+              "__massEditorPairKeys": {
+                "text_de": "100:text"
+              }
+            },
+            {
+              "text_de": "ein Leib werden im Heiligen Geist,",
+              "__massEditorPairKeys": {
+                "text_de": "101:text"
+              }
+            },
+            {
+              "text_de": "eine lebendige Opfergabe in Christus",
+              "__massEditorPairKeys": {
+                "text_de": "102:text"
+              }
+            },
+            {
+              "text_de": "zum Lob deiner Herrlichkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "103:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Kirche und ihre Hirten, für die anwesende Gemeinde und für alle",
+              "__massEditorPairKeys": {
+                "rubric_de": "104:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "105:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Herr, gedenke aller, für deren Heil",
+              "__massEditorPairKeys": {
+                "text_de": "106:text"
+              }
+            },
+            {
+              "text_de": "wir das Opfer darbringen.",
+              "__massEditorPairKeys": {
+                "text_de": "107:text"
+              }
+            },
+            {
+              "text_de": "Wir bitten dich für unseren Papst",
+              "__massEditorPairKeys": {
+                "text_de": "108:text"
+              }
+            },
+            {
+              "rubric_de": "N.,",
+              "__massEditorPairKeys": {
+                "rubric_de": "109:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "unseren Bischof N.",
+              "__massEditorPairKeys": {
+                "text_de": "110:text"
+              }
+            },
+            {
+              "text_de": "und die Gemeinschaft der Bischöfe,",
+              "__massEditorPairKeys": {
+                "text_de": "111:text"
+              }
+            },
+            {
+              "text_de": "für unsere Priester und Diakone",
+              "__massEditorPairKeys": {
+                "text_de": "112:text"
+              }
+            },
+            {
+              "text_de": "und für alle,",
+              "__massEditorPairKeys": {
+                "text_de": "113:text"
+              }
+            },
+            {
+              "text_de": "die zum Dienst in der Kirche bestellt sind,",
+              "__massEditorPairKeys": {
+                "text_de": "114:text"
+              }
+            },
+            {
+              "text_de": "für alle, die ihre Gaben spenden,",
+              "__massEditorPairKeys": {
+                "text_de": "115:text"
+              }
+            },
+            {
+              "rubric_de": "für die hier versammelte Gemeinde,",
+              "__massEditorPairKeys": {
+                "rubric_de": "116:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "für dein ganzes Volk",
+              "__massEditorPairKeys": {
+                "text_de": "117:text"
+              }
+            },
+            {
+              "text_de": "und für alle Menschen,",
+              "__massEditorPairKeys": {
+                "text_de": "118:text"
+              }
+            },
+            {
+              "text_de": "die mit lauterem Herzen dich suchen.",
+              "__massEditorPairKeys": {
+                "text_de": "119:text"
+              }
+            },
+            {
+              "rubric_de": "Für die Verstorbenen",
+              "__massEditorPairKeys": {
+                "rubric_de": "120:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "rubric_de": "(Konzelebrant)",
+              "__massEditorPairKeys": {
+                "rubric_de": "121:rubric"
+              },
+              "rubricInset_de": true
+            },
+            {
+              "text_de": "Wir empfehlen dir auch jene,",
+              "__massEditorPairKeys": {
+                "text_de": "122:text"
+              }
+            },
+            {
+              "text_de": "die im Frieden Christi heimgegangen sind,",
+              "__massEditorPairKeys": {
+                "text_de": "123:text"
+              }
+            },
+            {
+              "text_de": "und alle Verstorbenen,",
+              "__massEditorPairKeys": {
+                "text_de": "124:text"
+              }
+            },
+            {
+              "text_de": "um deren Glauben niemand weiß als du.",
+              "__massEditorPairKeys": {
+                "text_de": "125:text"
+              }
+            },
+            {
+              "text_de": "Gütiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "126:text"
+              }
+            },
+            {
+              "text_de": "gedenke, dass wir deine Kinder sind,",
+              "__massEditorPairKeys": {
+                "text_de": "127:text"
+              }
+            },
+            {
+              "text_de": "und schenke uns allen das Erbe des Himmels",
+              "__massEditorPairKeys": {
+                "text_de": "128:text"
+              }
+            },
+            {
+              "text_de": "in Gemeinschaft mit der seligen Jungfrau",
+              "__massEditorPairKeys": {
+                "text_de": "129:text"
+              }
+            },
+            {
+              "text_de": "und Gottesmutter Maria,",
+              "__massEditorPairKeys": {
+                "text_de": "130:text"
+              }
+            },
+            {
+              "text_de": "mit deinen Aposteln und mit allen Heiligen.",
+              "__massEditorPairKeys": {
+                "text_de": "131:text"
+              }
+            },
+            {
+              "text_de": "Und wenn die ganze Schöpfung",
+              "__massEditorPairKeys": {
+                "text_de": "132:text"
+              }
+            },
+            {
+              "text_de": "von der Verderbnis der Sünde",
+              "__massEditorPairKeys": {
+                "text_de": "133:text"
+              }
+            },
+            {
+              "text_de": "und des Todes befreit ist,",
+              "__massEditorPairKeys": {
+                "text_de": "134:text"
+              }
+            },
+            {
+              "text_de": "lass uns zusammen mit ihr dich verherrlichen",
+              "__massEditorPairKeys": {
+                "text_de": "135:text"
+              }
+            },
+            {
+              "text_de": "in deinem Reich",
+              "__massEditorPairKeys": {
+                "text_de": "136:text"
+              }
+            },
+            {
+              "text_de": "durch unseren Herrn Jesus Christus.",
+              "__massEditorPairKeys": {
+                "text_de": "137:text"
+              }
+            },
+            {
+              "text_de": "Denn durch ihn",
+              "__massEditorPairKeys": {
+                "text_de": "138:text"
+              }
+            },
+            {
+              "text_de": "schenkst du der Welt alle guten Gaben.",
+              "__massEditorPairKeys": {
+                "text_de": "139:text"
+              }
+            },
+            {
+              "rubric_de": "Abschließender Lobpreis",
+              "__massEditorPairKeys": {
+                "rubric_de": "140:rubric"
+              }
+            },
+            {
+              "rubric_de": "(Hauptzelebrant und Konzelebranten)",
+              "__massEditorPairKeys": {
+                "rubric_de": "141:rubric"
+              }
+            }
+          ]
+        },
+        "amen": [
+          {
+            "text_de": "Durch ihn und mit ihm und in ihm ist dir, Gott, allmächtiger Vater, in der Einheit des Heiligen Geistes alle Herrlichkeit und Ehre jetzt und in Ewigkeit.",
+            "__massEditorPairKeys": {
+              "text_de": "0:text"
+            },
+            "sp_de": "P."
+          },
+          {
+            "text_de": "Amen.",
+            "__massEditorPairKeys": {
+              "text_de": "1:text"
+            },
+            "sp_de": "A."
+          }
+        ],
+        "formEndings": {
+          "1": [
+            {
+              "text_de": "Durch ihn und mit ihm und in ihm ist dir,",
+              "__massEditorPairKeys": {
+                "text_de": "0:text"
+              }
+            },
+            {
+              "text_de": "Gott, allmächtiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "1:text"
+              }
+            },
+            {
+              "text_de": "in der Einheit des Heiligen Geistes",
+              "__massEditorPairKeys": {
+                "text_de": "2:text"
+              }
+            },
+            {
+              "text_de": "alle Herrlichkeit und Ehre",
+              "__massEditorPairKeys": {
+                "text_de": "3:text"
+              }
+            },
+            {
+              "text_de": "jetzt und in Ewigkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "4:text"
+              }
+            },
+            {
+              "text_de": "Amen.",
+              "__massEditorPairKeys": {
+                "text_de": "5:text"
+              },
+              "sp_de": "A."
+            }
+          ],
+          "2": [
+            {
+              "text_de": "Durch ihn und mit ihm und in ihm ist dir,",
+              "__massEditorPairKeys": {
+                "text_de": "0:text"
+              }
+            },
+            {
+              "text_de": "Gott, allmächtiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "1:text"
+              }
+            },
+            {
+              "text_de": "in der Einheit des Heiligen Geistes",
+              "__massEditorPairKeys": {
+                "text_de": "2:text"
+              }
+            },
+            {
+              "text_de": "alle Herrlichkeit und Ehre",
+              "__massEditorPairKeys": {
+                "text_de": "3:text"
+              }
+            },
+            {
+              "text_de": "jetzt und in Ewigkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "4:text"
+              }
+            },
+            {
+              "text_de": "Amen.",
+              "__massEditorPairKeys": {
+                "text_de": "5:text"
+              },
+              "sp_de": "A."
+            }
+          ],
+          "3": [
+            {
+              "text_de": "Durch ihn und mit ihm und in ihm ist dir,",
+              "__massEditorPairKeys": {
+                "text_de": "0:text"
+              }
+            },
+            {
+              "text_de": "Gott, allmächtiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "1:text"
+              }
+            },
+            {
+              "text_de": "in der Einheit des Heiligen Geistes",
+              "__massEditorPairKeys": {
+                "text_de": "2:text"
+              }
+            },
+            {
+              "text_de": "alle Herrlichkeit und Ehre",
+              "__massEditorPairKeys": {
+                "text_de": "3:text"
+              }
+            },
+            {
+              "text_de": "jetzt und in Ewigkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "4:text"
+              }
+            },
+            {
+              "text_de": "Amen.",
+              "__massEditorPairKeys": {
+                "text_de": "5:text"
+              },
+              "sp_de": "A."
+            }
+          ],
+          "4": [
+            {
+              "text_de": "Durch ihn und mit ihm und in ihm",
+              "__massEditorPairKeys": {
+                "text_de": "142:text"
+              }
+            },
+            {
+              "text_de": "ist dir, Gott, allmächtiger Vater,",
+              "__massEditorPairKeys": {
+                "text_de": "143:text"
+              }
+            },
+            {
+              "text_de": "in der Einheit des Heiligen Geistes",
+              "__massEditorPairKeys": {
+                "text_de": "144:text"
+              }
+            },
+            {
+              "text_de": "alle Herrlichkeit und Ehre",
+              "__massEditorPairKeys": {
+                "text_de": "145:text"
+              }
+            },
+            {
+              "text_de": "jetzt und in Ewigkeit.",
+              "__massEditorPairKeys": {
+                "text_de": "146:text"
+              }
+            },
+            {
+              "text_de": "Amen.",
+              "__massEditorPairKeys": {
+                "text_de": "147:text"
+              },
+              "sp_de": "A."
+            }
+          ]
+        },
+        "formFrames": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "ending"
+            ]
+          }
+        },
+        "ordinarySourceLayoutVersion": 1
       }
     }
   ];

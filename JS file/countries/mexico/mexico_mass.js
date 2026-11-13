@@ -6609,6 +6609,1414 @@
     },
     {
       "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "es": "Rito de la Comunión — Padrenuestro"
+        },
+        "lines": [
+          {
+            "rubric_es": "125.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote, con las manos extendidas, prosigue él solo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Líbranos de todos los males, Señor, y concédenos la paz en nuestros días, para que, ayudados por tu misericordia, vivamos siempre libres de pecado y protegidos de toda perturbación, mientras esperamos la gloriosa venida de nuestro Salvador Jesucristo.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Junta las manos.",
+            "__massEditorPairKeys": {
+              "text_es": "3:text"
+            }
+          },
+          {
+            "rubric_es": "El pueblo concluye la oración aclamando:",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Tuyo es el reino, tuyo el poder y la gloria por siempre, Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "126.",
+            "__massEditorPairKeys": {
+              "rubric_es": "6:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote, con las manos extendidas, dice en voz alta:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, que dijiste a tus Apóstoles: «La paz les dejo, mi paz les doy», no tengas en cuenta nuestros pecados, sino la fe de tu Iglesia, y conforme a tu palabra, concédele la paz y la unidad.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Junta las manos.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            }
+          },
+          {
+            "text_es": "Tú que vives y reinas por los siglos de los siglos.",
+            "__massEditorPairKeys": {
+              "text_es": "10:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "127.",
+            "__massEditorPairKeys": {
+              "rubric_es": "12:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote, extendiendo y juntando las manos, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La paz del Señor esté siempre con ustedes.",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Y con tu espíritu.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "128. Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "16:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Dense fraternalmente la paz. ____________________________",
+            "__massEditorPairKeys": {
+              "text_es": "17:text"
+            },
+            "sp_es": "D."
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "18:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Como hijos de Dios, intercambien ahora un signo de comunión fraterna.",
+            "__massEditorPairKeys": {
+              "text_es": "19:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En Cristo, que nos ha hecho hermanos con su cruz, dense la paz como signo de reconciliación.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "22:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En el Espíritu de Cristo resucitado, dense fraternalmente la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "23:text"
+            }
+          },
+          {
+            "text_es": "Y todos, según la costumbre del lugar, se dan la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "24:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote da la paz al diácono o ministro.",
+            "__massEditorPairKeys": {
+              "rubric_es": "25:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "129.",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena, y deja caer una parte del mismo en el cáliz, diciendo en secreto: El Cuerpo y la Sangre de nuestro Señor Jesucristo, unidos en este cáliz, sean para nosotros alimento de vida eterna.",
+            "__massEditorPairKeys": {
+              "rubric_es": "27:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "144.",
+            "__massEditorPairKeys": {
+              "rubric_es": "28:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Mientras tanto se canta o se dice: Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "text_es": "30:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "es": "Rito de la paz"
+        },
+        "lines": [
+          {
+            "text_es": "Y con tu espíritu.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "rubric_es": "128. Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Dense fraternalmente la paz. ____________________________",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "D."
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Como hijos de Dios, intercambien ahora un signo de comunión fraterna.",
+            "__massEditorPairKeys": {
+              "text_es": "4:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "5:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En Cristo, que nos ha hecho hermanos con su cruz, dense la paz como signo de reconciliación.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "En el Espíritu de Cristo resucitado, dense fraternalmente la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
+          },
+          {
+            "text_es": "Y todos, según la costumbre del lugar, se dan la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "9:text"
+            }
+          },
+          {
+            "rubric_es": "El sacerdote da la paz al diácono o ministro.",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "129.",
+            "__massEditorPairKeys": {
+              "rubric_es": "11:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena, y deja caer una parte del mismo en el cáliz, diciendo en secreto: El Cuerpo y la Sangre de nuestro Señor Jesucristo, unidos en este cáliz, sean para nosotros alimento de vida eterna.",
+            "__massEditorPairKeys": {
+              "rubric_es": "12:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "144.",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Mientras tanto se canta o se dice: Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "rubric_es": "14:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            }
+          },
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "16:text"
+            }
+          },
+          {
+            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
+            "__massEditorPairKeys": {
+              "rubric_es": "17:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La última vez se dice: danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "18:text"
+            }
+          },
+          {
+            "rubric_es": "131.",
+            "__massEditorPairKeys": {
+              "rubric_es": "19:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
+            "__massEditorPairKeys": {
+              "text_es": "22:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "23:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
+            "__massEditorPairKeys": {
+              "text_es": "24:text"
+            }
+          },
+          {
+            "rubric_es": "132.",
+            "__massEditorPairKeys": {
+              "rubric_es": "25:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
+            "__massEditorPairKeys": {
+              "text_es": "27:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Dichosos los invitados a la cena del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "28:text"
+            }
+          },
+          {
+            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, no soy digno de que entres en mi casa,",
+            "__massEditorPairKeys": {
+              "text_es": "30:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "es": "Fracción del pan — Cordero de Dios"
+        },
+        "lines": [
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La última vez se dice: danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "131.",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
+          },
+          {
+            "rubric_es": "132.",
+            "__massEditorPairKeys": {
+              "rubric_es": "9:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Dichosos los invitados a la cena del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "12:text"
+            }
+          },
+          {
+            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, no soy digno de que entres en mi casa,",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "es": "Comunión"
+        },
+        "lines": [
+          {
+            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          },
+          {
+            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
+            "__massEditorPairKeys": {
+              "rubric_es": "1:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La última vez se dice: danos la paz.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            }
+          },
+          {
+            "rubric_es": "131.",
+            "__massEditorPairKeys": {
+              "rubric_es": "3:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
+            "__massEditorPairKeys": {
+              "rubric_es": "4:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
+            "__massEditorPairKeys": {
+              "text_es": "5:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
+            "__massEditorPairKeys": {
+              "text_es": "6:text"
+            }
+          },
+          {
+            "rubric_es": "O bien:",
+            "__massEditorPairKeys": {
+              "rubric_es": "7:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
+            "__massEditorPairKeys": {
+              "text_es": "8:text"
+            }
+          },
+          {
+            "rubric_es": "132.",
+            "__massEditorPairKeys": {
+              "rubric_es": "9:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
+            "__massEditorPairKeys": {
+              "rubric_es": "10:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
+            "__massEditorPairKeys": {
+              "text_es": "11:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "Dichosos los invitados a la cena del Señor.",
+            "__massEditorPairKeys": {
+              "text_es": "12:text"
+            }
+          },
+          {
+            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
+            "__massEditorPairKeys": {
+              "rubric_es": "13:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Señor, no soy digno de que entres en mi casa,",
+            "__massEditorPairKeys": {
+              "text_es": "14:text"
+            },
+            "sp_es": "Todos"
+          },
+          {
+            "text_es": "pero una palabra tuya bastará para sanarme.",
+            "__massEditorPairKeys": {
+              "text_es": "15:text"
+            }
+          },
+          {
+            "rubric_es": "133.",
+            "__massEditorPairKeys": {
+              "rubric_es": "16:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "El sacerdote dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "17:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "El Cuerpo de Cristo me guarde para la vida eterna.",
+            "__massEditorPairKeys": {
+              "text_es": "18:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Y comulga reverentemente el Cuerpo de Cristo.",
+            "__massEditorPairKeys": {
+              "text_es": "19:text"
+            }
+          },
+          {
+            "rubric_es": "Después toma el cáliz y dice en secreto: La Sangre de Cristo me guarde para la vida eterna.",
+            "__massEditorPairKeys": {
+              "rubric_es": "20:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Y bebe reverentemente la Sangre de Cristo.",
+            "__massEditorPairKeys": {
+              "text_es": "21:text"
+            }
+          },
+          {
+            "rubric_es": "134.",
+            "__massEditorPairKeys": {
+              "rubric_es": "22:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después toma la patena o la píxide, se acerca a los que quieren comulgar y les presenta el pan consagrado, que sostiene un poco elevado, diciendo a cada uno de ellos: El Cuerpo de Cristo.",
+            "__massEditorPairKeys": {
+              "rubric_es": "23:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "El que va a comulgar responde: Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "24:text"
+            }
+          },
+          {
+            "text_es": "Y comulga.",
+            "__massEditorPairKeys": {
+              "text_es": "25:text"
+            }
+          },
+          {
+            "rubric_es": "El diácono y los ministros que distribuyen la Eucaristía observan los mismos ritos.",
+            "__massEditorPairKeys": {
+              "rubric_es": "26:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "135.",
+            "__massEditorPairKeys": {
+              "rubric_es": "27:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Si se comulga bajo las dos especies, se observa el rito descrito en su lugar.",
+            "__massEditorPairKeys": {
+              "rubric_es": "28:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "136.",
+            "__massEditorPairKeys": {
+              "rubric_es": "29:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Cuando el sacerdote comulga el Cuerpo de Cristo, comienza el canto de comunión.",
+            "__massEditorPairKeys": {
+              "rubric_es": "30:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "137.",
+            "__massEditorPairKeys": {
+              "rubric_es": "31:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Acabada la comunión, el diácono, el acólito, o el mismo sacerdote, purifica la patena sobre el cáliz y también el mismo cáliz, a no ser que se prefiera purificarlo en la credencia después de la misa.",
+            "__massEditorPairKeys": {
+              "text_es": "32:text"
+            }
+          },
+          {
+            "rubric_es": "Si el sacerdote hace la purificación, dice en secreto:",
+            "__massEditorPairKeys": {
+              "rubric_es": "33:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Haz, Señor, que recibamos con un corazón limpio el alimento que acabamos de tomar, y que el don que nos haces en esta vida",
+            "__massEditorPairKeys": {
+              "text_es": "34:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "nos aproveche para la eterna.",
+            "__massEditorPairKeys": {
+              "text_es": "35:text"
+            }
+          },
+          {
+            "rubric_es": "138.",
+            "__massEditorPairKeys": {
+              "rubric_es": "36:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote puede ir a la sede.",
+            "__massEditorPairKeys": {
+              "rubric_es": "37:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Si se juzga oportuno, se pueden guardar unos momentos de silencio o cantar un salmo o cántico de alabanza.",
+            "__massEditorPairKeys": {
+              "rubric_es": "38:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "139.",
+            "__massEditorPairKeys": {
+              "rubric_es": "39:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Luego, de pie en la sede o en el altar, el sacerdote dice:",
+            "__massEditorPairKeys": {
+              "rubric_es": "40:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "Oremos.",
+            "__massEditorPairKeys": {
+              "text_es": "41:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "Y todos, junto con el sacerdote, oran en silencio durante unos momentos, a no ser que este silencio ya se haya hecho antes.",
+            "__massEditorPairKeys": {
+              "text_es": "42:text"
+            }
+          },
+          {
+            "rubric_es": "153.",
+            "__massEditorPairKeys": {
+              "rubric_es": "43:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "rubric_es": "Después el sacerdote, con las manos extendidas, dice la oración después de la comunión.",
+            "__massEditorPairKeys": {
+              "rubric_es": "44:rubric"
+            },
+            "rubricInset_es": true
+          },
+          {
+            "text_es": "La oración después de la comunión termina con la conclusión breve.",
+            "__massEditorPairKeys": {
+              "text_es": "45:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "46:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "es": "Antífona de la comunión"
+        },
+        "lines": [
+          {
+            "text_es": "(Antífona de la comunión del día)",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "es": "Oración después de la comunión"
+        },
+        "lines": [
+          {
+            "text_es": "Oremos.",
+            "__massEditorPairKeys": {
+              "text_es": "0:text"
+            },
+            "sp_es": "C."
+          },
+          {
+            "text_es": "(Oración después de la comunión del día)",
+            "__massEditorPairKeys": {
+              "text_es": "1:text"
+            }
+          },
+          {
+            "text_es": "Amén.",
+            "__massEditorPairKeys": {
+              "text_es": "2:text"
+            },
+            "sp_es": "Todos"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "es": "Avisos"
+        },
+        "lines": [
+          {
+            "rubric_es": "Se hacen, si es necesario, breves avisos al pueblo.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "es": "Bendición"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "es": "Bendición"
+            },
+            "lines": [
+              {
+                "text_es": ".",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                }
+              },
+              {
+                "text_es": "En este momento se hacen, si es necesario y con brevedad, los oportunos anuncios o advertencias al pueblo.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              },
+              {
+                "rubric_es": "141.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "Después tiene lugar la despedida.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "3:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "rubric_es": "El sacerdote extiende las manos hacia el pueblo y dice:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "4:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "El Señor esté con ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "Y con tu espíritu.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "El sacerdote bendice al pueblo, diciendo:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "La bendición de Dios todopoderoso, Padre, Hijo ✠ y Espíritu Santo, descienda sobre ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "text_es": "Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "9:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "142.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "10:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En algunas ocasiones y en determinadas misas rituales puede darse una de la bendiciones solemnes o de las oraciones sobre el pueblo.",
+                "__massEditorPairKeys": {
+                  "text_es": "11:text"
+                }
+              },
+              {
+                "rubric_es": "143.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "12:rubric"
+                }
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "es": "Bendición pontifical"
+            },
+            "lines": [
+              {
+                "text_es": "El Obispo, para bendecir al pueblo, usa el siguiente formulario, a no ser que prefiera utilizar una de las bendiciones solemnes o una de las oraciones sobre el pueblo.",
+                "__massEditorPairKeys": {
+                  "text_es": "0:text"
+                }
+              },
+              {
+                "text_es": "El Señor esté con ustedes.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Y con tu espíritu.",
+                "__massEditorPairKeys": {
+                  "text_es": "2:text"
+                },
+                "sp_es": "R/."
+              },
+              {
+                "text_es": "Bendito se al nombre del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Ahora y por todos los siglos.",
+                "__massEditorPairKeys": {
+                  "text_es": "4:text"
+                },
+                "sp_es": "R/."
+              },
+              {
+                "text_es": "Nuestro auxilio es el nombre del Señor.",
+                "__massEditorPairKeys": {
+                  "text_es": "5:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Que hizo el cielo y la tierra.",
+                "__massEditorPairKeys": {
+                  "text_es": "6:text"
+                },
+                "sp_es": "R/."
+              },
+              {
+                "text_es": "La bendición de Dios todopoderoso,",
+                "__massEditorPairKeys": {
+                  "text_es": "7:text"
+                },
+                "sp_es": "V/."
+              },
+              {
+                "text_es": "Pa✠dre, Hi✠jo y Espíritu ✠ Santo, descienda sobre ustedes. R/. Amén.",
+                "__massEditorPairKeys": {
+                  "text_es": "8:text"
+                }
+              },
+              {
+                "rubric_es": "144. Luego el diácono, o el mismo sacerdote, con las manos juntas, despide al pueblo con una de las fórmulas siguientes:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "9:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Pueden ir en paz. ____________________________",
+                "__massEditorPairKeys": {
+                  "text_es": "10:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "11:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "12:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "13:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Glorifiquen al Señor con su vida. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "14:text"
+                }
+              },
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "15:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "En el nombre del Señor, pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "16:text"
+                }
+              },
+              {
+                "rubric_es": "O bien, especialmente en los domingos de Pascua:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "17:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Anuncien a todos la alegría del Señor resucitado.",
+                "__massEditorPairKeys": {
+                  "text_es": "18:text"
+                }
+              },
+              {
+                "rubric_es": "Pueden ir en paz. ____________________________ El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "19:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Demos gracias a Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "20:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "145.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "21:rubric"
+                }
+              },
+              {
+                "rubric_es": "Después el sacerdote besa con veneración el altar, como al comienzo, y, hecha la debida reverencia con los ministros, se retira a la sacristía.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "22:rubric"
+                }
+              },
+              {
+                "rubric_es": "146.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "23:rubric"
+                }
+              },
+              {
+                "rubric_es": "Si sigue inmediatamente otra acción litúrgica, se omite el rito de despedida.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "24:rubric"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "es": "Despedida"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "es": "Fórmula 1"
+            },
+            "lines": [
+              {
+                "rubric_es": "144. Luego el diácono, o el mismo sacerdote, con las manos juntas, despide al pueblo con una de las fórmulas siguientes:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Pueden ir en paz. ____________________________",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                },
+                "sp_es": "Todos"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "es": "Fórmula 2"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "es": "Fórmula 3"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Glorifiquen al Señor con su vida. Pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "es": "Fórmula 4"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "En el nombre del Señor, pueden ir en paz.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              }
+            ]
+          },
+          "E": {
+            "label": {
+              "es": "Fórmula 5"
+            },
+            "lines": [
+              {
+                "rubric_es": "O bien, especialmente en los domingos de Pascua:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "0:rubric"
+                }
+              },
+              {
+                "text_es": "Anuncien a todos la alegría del Señor resucitado.",
+                "__massEditorPairKeys": {
+                  "text_es": "1:text"
+                }
+              },
+              {
+                "rubric_es": "Pueden ir en paz. ____________________________ El pueblo responde:",
+                "__massEditorPairKeys": {
+                  "rubric_es": "2:rubric"
+                },
+                "rubricInset_es": true
+              },
+              {
+                "text_es": "Demos gracias a Dios.",
+                "__massEditorPairKeys": {
+                  "text_es": "3:text"
+                },
+                "sp_es": "Todos"
+              },
+              {
+                "rubric_es": "145.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "4:rubric"
+                }
+              },
+              {
+                "rubric_es": "Después el sacerdote besa con veneración el altar, como al comienzo, y, hecha la debida reverencia con los ministros, se retira a la sacristía.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "5:rubric"
+                }
+              },
+              {
+                "rubric_es": "146.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "6:rubric"
+                }
+              },
+              {
+                "rubric_es": "Si sigue inmediatamente otra acción litúrgica, se omite el rito de despedida.",
+                "__massEditorPairKeys": {
+                  "rubric_es": "7:rubric"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "es": "Canto final"
+        },
+        "lines": [
+          {
+            "rubric_es": "El sacerdote besa el altar y se retira con los ministros.",
+            "__massEditorPairKeys": {
+              "rubric_es": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
         20
       ],
       "value": {
@@ -9573,6 +10981,7 @@
             }
           },
           {
+            "dividerAfter": "after-sanctus",
             "text_es": "Hosanna en el cielo.",
             "__massEditorPairKeys": {
               "text_es": "4:text"
@@ -10150,6 +11559,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús! ___________________________________ También puede decirse: Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "canon:mystery:4:text"
@@ -10190,6 +11600,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "canon:mystery:10:text"
@@ -10533,6 +11944,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "24:text"
@@ -10559,6 +11971,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús!  También puede decirse: Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "28:text"
@@ -10593,6 +12006,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "33:text"
@@ -10986,6 +12400,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús!  También puede decirse: Éste es el Misterio de la fe. Cristo nos redimió.",
               "__massEditorPairKeys": {
                 "text_es": "35:text"
@@ -11014,6 +12429,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "39:text"
@@ -11274,6 +12690,7 @@
               }
             },
             {
+              "dividerAfter": "after-sanctus",
               "text_es": "Hosanna en el cielo.",
               "__massEditorPairKeys": {
                 "text_es": "18:text"
@@ -11464,6 +12881,7 @@
               "rubricInset_es": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_es": "Anunciamos tu muerte, proclamamos tu resurrección. ¡Ven, Señor Jesús! ___________________________________ También puede decirse: Éste es el Misterio de la fe.",
               "__massEditorPairKeys": {
                 "text_es": "46:text"
@@ -11939,1414 +13357,6 @@
           }
         },
         "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
-        21
-      ],
-      "value": {
-        "id": "3.4 lords_prayer",
-        "type": "part",
-        "header": {
-          "es": "Rito de la Comunión — Padrenuestro"
-        },
-        "lines": [
-          {
-            "rubric_es": "125.",
-            "__massEditorPairKeys": {
-              "rubric_es": "0:rubric"
-            }
-          },
-          {
-            "rubric_es": "El sacerdote, con las manos extendidas, prosigue él solo:",
-            "__massEditorPairKeys": {
-              "rubric_es": "1:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Líbranos de todos los males, Señor, y concédenos la paz en nuestros días, para que, ayudados por tu misericordia, vivamos siempre libres de pecado y protegidos de toda perturbación, mientras esperamos la gloriosa venida de nuestro Salvador Jesucristo.",
-            "__massEditorPairKeys": {
-              "text_es": "2:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Junta las manos.",
-            "__massEditorPairKeys": {
-              "text_es": "3:text"
-            }
-          },
-          {
-            "rubric_es": "El pueblo concluye la oración aclamando:",
-            "__massEditorPairKeys": {
-              "rubric_es": "4:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Tuyo es el reino, tuyo el poder y la gloria por siempre, Señor.",
-            "__massEditorPairKeys": {
-              "text_es": "5:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "rubric_es": "126.",
-            "__massEditorPairKeys": {
-              "rubric_es": "6:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Después el sacerdote, con las manos extendidas, dice en voz alta:",
-            "__massEditorPairKeys": {
-              "rubric_es": "7:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, que dijiste a tus Apóstoles: «La paz les dejo, mi paz les doy», no tengas en cuenta nuestros pecados, sino la fe de tu Iglesia, y conforme a tu palabra, concédele la paz y la unidad.",
-            "__massEditorPairKeys": {
-              "text_es": "8:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Junta las manos.",
-            "__massEditorPairKeys": {
-              "text_es": "9:text"
-            }
-          },
-          {
-            "text_es": "Tú que vives y reinas por los siglos de los siglos.",
-            "__massEditorPairKeys": {
-              "text_es": "10:text"
-            }
-          },
-          {
-            "text_es": "Amén.",
-            "__massEditorPairKeys": {
-              "text_es": "11:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "rubric_es": "127.",
-            "__massEditorPairKeys": {
-              "rubric_es": "12:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "El sacerdote, extendiendo y juntando las manos, añade:",
-            "__massEditorPairKeys": {
-              "rubric_es": "13:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "La paz del Señor esté siempre con ustedes.",
-            "__massEditorPairKeys": {
-              "text_es": "14:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Y con tu espíritu.",
-            "__massEditorPairKeys": {
-              "text_es": "15:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "rubric_es": "128. Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:",
-            "__massEditorPairKeys": {
-              "rubric_es": "16:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Dense fraternalmente la paz. ____________________________",
-            "__massEditorPairKeys": {
-              "text_es": "17:text"
-            },
-            "sp_es": "D."
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "18:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Como hijos de Dios, intercambien ahora un signo de comunión fraterna.",
-            "__massEditorPairKeys": {
-              "text_es": "19:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "20:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "En Cristo, que nos ha hecho hermanos con su cruz, dense la paz como signo de reconciliación.",
-            "__massEditorPairKeys": {
-              "text_es": "21:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "22:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "En el Espíritu de Cristo resucitado, dense fraternalmente la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "23:text"
-            }
-          },
-          {
-            "text_es": "Y todos, según la costumbre del lugar, se dan la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "24:text"
-            }
-          },
-          {
-            "rubric_es": "El sacerdote da la paz al diácono o ministro.",
-            "__massEditorPairKeys": {
-              "rubric_es": "25:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "129.",
-            "__massEditorPairKeys": {
-              "rubric_es": "26:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena, y deja caer una parte del mismo en el cáliz, diciendo en secreto: El Cuerpo y la Sangre de nuestro Señor Jesucristo, unidos en este cáliz, sean para nosotros alimento de vida eterna.",
-            "__massEditorPairKeys": {
-              "rubric_es": "27:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "144.",
-            "__massEditorPairKeys": {
-              "rubric_es": "28:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Mientras tanto se canta o se dice: Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
-            "__massEditorPairKeys": {
-              "rubric_es": "29:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
-            "__massEditorPairKeys": {
-              "text_es": "30:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        22
-      ],
-      "value": {
-        "id": "3.5 peace",
-        "type": "part",
-        "header": {
-          "es": "Rito de la paz"
-        },
-        "lines": [
-          {
-            "text_es": "Y con tu espíritu.",
-            "__massEditorPairKeys": {
-              "text_es": "0:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "rubric_es": "128. Luego, si se juzga oportuno, el diácono, o el sacerdote, añade:",
-            "__massEditorPairKeys": {
-              "rubric_es": "1:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Dense fraternalmente la paz. ____________________________",
-            "__massEditorPairKeys": {
-              "text_es": "2:text"
-            },
-            "sp_es": "D."
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "3:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Como hijos de Dios, intercambien ahora un signo de comunión fraterna.",
-            "__massEditorPairKeys": {
-              "text_es": "4:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "5:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "En Cristo, que nos ha hecho hermanos con su cruz, dense la paz como signo de reconciliación.",
-            "__massEditorPairKeys": {
-              "text_es": "6:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "7:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "En el Espíritu de Cristo resucitado, dense fraternalmente la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "8:text"
-            }
-          },
-          {
-            "text_es": "Y todos, según la costumbre del lugar, se dan la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "9:text"
-            }
-          },
-          {
-            "rubric_es": "El sacerdote da la paz al diácono o ministro.",
-            "__massEditorPairKeys": {
-              "rubric_es": "10:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "129.",
-            "__massEditorPairKeys": {
-              "rubric_es": "11:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Después toma el pan consagrado, lo parte sobre la patena, y deja caer una parte del mismo en el cáliz, diciendo en secreto: El Cuerpo y la Sangre de nuestro Señor Jesucristo, unidos en este cáliz, sean para nosotros alimento de vida eterna.",
-            "__massEditorPairKeys": {
-              "rubric_es": "12:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "144.",
-            "__massEditorPairKeys": {
-              "rubric_es": "13:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Mientras tanto se canta o se dice: Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
-            "__massEditorPairKeys": {
-              "rubric_es": "14:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Cordero de Dios que quitas el pecado del mundo, ten piedad de nosotros.",
-            "__massEditorPairKeys": {
-              "text_es": "15:text"
-            }
-          },
-          {
-            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "16:text"
-            }
-          },
-          {
-            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
-            "__massEditorPairKeys": {
-              "rubric_es": "17:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "La última vez se dice: danos la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "18:text"
-            }
-          },
-          {
-            "rubric_es": "131.",
-            "__massEditorPairKeys": {
-              "rubric_es": "19:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
-            "__massEditorPairKeys": {
-              "rubric_es": "20:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
-            "__massEditorPairKeys": {
-              "text_es": "21:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
-            "__massEditorPairKeys": {
-              "text_es": "22:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "23:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
-            "__massEditorPairKeys": {
-              "text_es": "24:text"
-            }
-          },
-          {
-            "rubric_es": "132.",
-            "__massEditorPairKeys": {
-              "rubric_es": "25:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
-            "__massEditorPairKeys": {
-              "rubric_es": "26:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
-            "__massEditorPairKeys": {
-              "text_es": "27:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "text_es": "Dichosos los invitados a la cena del Señor.",
-            "__massEditorPairKeys": {
-              "text_es": "28:text"
-            }
-          },
-          {
-            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
-            "__massEditorPairKeys": {
-              "rubric_es": "29:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor, no soy digno de que entres en mi casa,",
-            "__massEditorPairKeys": {
-              "text_es": "30:text"
-            },
-            "sp_es": "Todos"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        23
-      ],
-      "value": {
-        "id": "3.6 lamb",
-        "type": "part",
-        "header": {
-          "es": "Fracción del pan — Cordero de Dios"
-        },
-        "lines": [
-          {
-            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "0:text"
-            }
-          },
-          {
-            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
-            "__massEditorPairKeys": {
-              "rubric_es": "1:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "La última vez se dice: danos la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "2:text"
-            }
-          },
-          {
-            "rubric_es": "131.",
-            "__massEditorPairKeys": {
-              "rubric_es": "3:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
-            "__massEditorPairKeys": {
-              "rubric_es": "4:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
-            "__massEditorPairKeys": {
-              "text_es": "5:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
-            "__massEditorPairKeys": {
-              "text_es": "6:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "7:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
-            "__massEditorPairKeys": {
-              "text_es": "8:text"
-            }
-          },
-          {
-            "rubric_es": "132.",
-            "__massEditorPairKeys": {
-              "rubric_es": "9:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
-            "__massEditorPairKeys": {
-              "rubric_es": "10:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
-            "__massEditorPairKeys": {
-              "text_es": "11:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "text_es": "Dichosos los invitados a la cena del Señor.",
-            "__massEditorPairKeys": {
-              "text_es": "12:text"
-            }
-          },
-          {
-            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
-            "__massEditorPairKeys": {
-              "rubric_es": "13:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor, no soy digno de que entres en mi casa,",
-            "__massEditorPairKeys": {
-              "text_es": "14:text"
-            },
-            "sp_es": "Todos"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        24
-      ],
-      "value": {
-        "id": "3.7 communion_rite",
-        "type": "part",
-        "header": {
-          "es": "Comunión"
-        },
-        "lines": [
-          {
-            "text_es": "Cordero de Dios que quitas el pecado del mundo, danos la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "0:text"
-            }
-          },
-          {
-            "rubric_es": "Si la fracción del pan se prolonga, el canto precedente puede repetirse varias veces.",
-            "__massEditorPairKeys": {
-              "rubric_es": "1:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "La última vez se dice: danos la paz.",
-            "__massEditorPairKeys": {
-              "text_es": "2:text"
-            }
-          },
-          {
-            "rubric_es": "131.",
-            "__massEditorPairKeys": {
-              "rubric_es": "3:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "A continuación el sacerdote, con las manos juntas, dice en secreto una de las dos oraciones siguientes:",
-            "__massEditorPairKeys": {
-              "rubric_es": "4:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, Hijo de Dios vivo, que por voluntad del Padre, cooperando el Espíritu Santo, diste con tu muerte la vida al mundo, líbrame, por la recepción de tu Cuerpo y de tu Sangre, de todas mis culpas y de todo mal.",
-            "__massEditorPairKeys": {
-              "text_es": "5:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Concédeme cumplir siempre tus mandamientos y jamás permitas que me separe de ti.",
-            "__massEditorPairKeys": {
-              "text_es": "6:text"
-            }
-          },
-          {
-            "rubric_es": "O bien:",
-            "__massEditorPairKeys": {
-              "rubric_es": "7:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor Jesucristo, la comunión de tu Cuerpo y de tu Sangre, no sea para mí un motivo de juicio y condenación, sino que, por tu piedad, me aproveche para defensa de alma y cuerpo y como remedio saludable.",
-            "__massEditorPairKeys": {
-              "text_es": "8:text"
-            }
-          },
-          {
-            "rubric_es": "132.",
-            "__massEditorPairKeys": {
-              "rubric_es": "9:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "El sacerdote hace genuflexión, toma el pan consagrado y, sosteniéndolo un poco elevado sobre la patena, lo muestra al pueblo, diciendo:",
-            "__massEditorPairKeys": {
-              "rubric_es": "10:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Éste es el Cordero de Dios, que quita el pecado del mundo.",
-            "__massEditorPairKeys": {
-              "text_es": "11:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "text_es": "Dichosos los invitados a la cena del Señor.",
-            "__massEditorPairKeys": {
-              "text_es": "12:text"
-            }
-          },
-          {
-            "rubric_es": "Y, juntamente con el pueblo, añade una vez:",
-            "__massEditorPairKeys": {
-              "rubric_es": "13:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Señor, no soy digno de que entres en mi casa,",
-            "__massEditorPairKeys": {
-              "text_es": "14:text"
-            },
-            "sp_es": "Todos"
-          },
-          {
-            "text_es": "pero una palabra tuya bastará para sanarme.",
-            "__massEditorPairKeys": {
-              "text_es": "15:text"
-            }
-          },
-          {
-            "rubric_es": "133.",
-            "__massEditorPairKeys": {
-              "rubric_es": "16:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "El sacerdote dice en secreto:",
-            "__massEditorPairKeys": {
-              "rubric_es": "17:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "El Cuerpo de Cristo me guarde para la vida eterna.",
-            "__massEditorPairKeys": {
-              "text_es": "18:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Y comulga reverentemente el Cuerpo de Cristo.",
-            "__massEditorPairKeys": {
-              "text_es": "19:text"
-            }
-          },
-          {
-            "rubric_es": "Después toma el cáliz y dice en secreto: La Sangre de Cristo me guarde para la vida eterna.",
-            "__massEditorPairKeys": {
-              "rubric_es": "20:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Y bebe reverentemente la Sangre de Cristo.",
-            "__massEditorPairKeys": {
-              "text_es": "21:text"
-            }
-          },
-          {
-            "rubric_es": "134.",
-            "__massEditorPairKeys": {
-              "rubric_es": "22:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Después toma la patena o la píxide, se acerca a los que quieren comulgar y les presenta el pan consagrado, que sostiene un poco elevado, diciendo a cada uno de ellos: El Cuerpo de Cristo.",
-            "__massEditorPairKeys": {
-              "rubric_es": "23:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "El que va a comulgar responde: Amén.",
-            "__massEditorPairKeys": {
-              "text_es": "24:text"
-            }
-          },
-          {
-            "text_es": "Y comulga.",
-            "__massEditorPairKeys": {
-              "text_es": "25:text"
-            }
-          },
-          {
-            "rubric_es": "El diácono y los ministros que distribuyen la Eucaristía observan los mismos ritos.",
-            "__massEditorPairKeys": {
-              "rubric_es": "26:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "135.",
-            "__massEditorPairKeys": {
-              "rubric_es": "27:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Si se comulga bajo las dos especies, se observa el rito descrito en su lugar.",
-            "__massEditorPairKeys": {
-              "rubric_es": "28:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "136.",
-            "__massEditorPairKeys": {
-              "rubric_es": "29:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Cuando el sacerdote comulga el Cuerpo de Cristo, comienza el canto de comunión.",
-            "__massEditorPairKeys": {
-              "rubric_es": "30:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "137.",
-            "__massEditorPairKeys": {
-              "rubric_es": "31:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Acabada la comunión, el diácono, el acólito, o el mismo sacerdote, purifica la patena sobre el cáliz y también el mismo cáliz, a no ser que se prefiera purificarlo en la credencia después de la misa.",
-            "__massEditorPairKeys": {
-              "text_es": "32:text"
-            }
-          },
-          {
-            "rubric_es": "Si el sacerdote hace la purificación, dice en secreto:",
-            "__massEditorPairKeys": {
-              "rubric_es": "33:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Haz, Señor, que recibamos con un corazón limpio el alimento que acabamos de tomar, y que el don que nos haces en esta vida",
-            "__massEditorPairKeys": {
-              "text_es": "34:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "nos aproveche para la eterna.",
-            "__massEditorPairKeys": {
-              "text_es": "35:text"
-            }
-          },
-          {
-            "rubric_es": "138.",
-            "__massEditorPairKeys": {
-              "rubric_es": "36:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Después el sacerdote puede ir a la sede.",
-            "__massEditorPairKeys": {
-              "rubric_es": "37:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Si se juzga oportuno, se pueden guardar unos momentos de silencio o cantar un salmo o cántico de alabanza.",
-            "__massEditorPairKeys": {
-              "rubric_es": "38:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "139.",
-            "__massEditorPairKeys": {
-              "rubric_es": "39:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Luego, de pie en la sede o en el altar, el sacerdote dice:",
-            "__massEditorPairKeys": {
-              "rubric_es": "40:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "Oremos.",
-            "__massEditorPairKeys": {
-              "text_es": "41:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "Y todos, junto con el sacerdote, oran en silencio durante unos momentos, a no ser que este silencio ya se haya hecho antes.",
-            "__massEditorPairKeys": {
-              "text_es": "42:text"
-            }
-          },
-          {
-            "rubric_es": "153.",
-            "__massEditorPairKeys": {
-              "rubric_es": "43:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "rubric_es": "Después el sacerdote, con las manos extendidas, dice la oración después de la comunión.",
-            "__massEditorPairKeys": {
-              "rubric_es": "44:rubric"
-            },
-            "rubricInset_es": true
-          },
-          {
-            "text_es": "La oración después de la comunión termina con la conclusión breve.",
-            "__massEditorPairKeys": {
-              "text_es": "45:text"
-            }
-          },
-          {
-            "text_es": "Amén.",
-            "__massEditorPairKeys": {
-              "text_es": "46:text"
-            },
-            "sp_es": "Todos"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        25
-      ],
-      "value": {
-        "id": "3.8 communion",
-        "type": "part",
-        "header": {
-          "es": "Antífona de la comunión"
-        },
-        "lines": [
-          {
-            "text_es": "(Antífona de la comunión del día)",
-            "__massEditorPairKeys": {
-              "text_es": "0:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        26
-      ],
-      "value": {
-        "id": "3.9 prayer_after",
-        "type": "part",
-        "header": {
-          "es": "Oración después de la comunión"
-        },
-        "lines": [
-          {
-            "text_es": "Oremos.",
-            "__massEditorPairKeys": {
-              "text_es": "0:text"
-            },
-            "sp_es": "C."
-          },
-          {
-            "text_es": "(Oración después de la comunión del día)",
-            "__massEditorPairKeys": {
-              "text_es": "1:text"
-            }
-          },
-          {
-            "text_es": "Amén.",
-            "__massEditorPairKeys": {
-              "text_es": "2:text"
-            },
-            "sp_es": "Todos"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        28
-      ],
-      "value": {
-        "id": "4.1 announcement",
-        "type": "part",
-        "header": {
-          "es": "Avisos"
-        },
-        "lines": [
-          {
-            "rubric_es": "Se hacen, si es necesario, breves avisos al pueblo.",
-            "__massEditorPairKeys": {
-              "rubric_es": "0:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        29
-      ],
-      "value": {
-        "id": "4.2 blessing",
-        "type": "selectable",
-        "header": {
-          "es": "Bendición"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "es": "Bendición"
-            },
-            "lines": [
-              {
-                "text_es": ".",
-                "__massEditorPairKeys": {
-                  "text_es": "0:text"
-                }
-              },
-              {
-                "text_es": "En este momento se hacen, si es necesario y con brevedad, los oportunos anuncios o advertencias al pueblo.",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                }
-              },
-              {
-                "rubric_es": "141.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "2:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "Después tiene lugar la despedida.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "3:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "rubric_es": "El sacerdote extiende las manos hacia el pueblo y dice:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "4:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "El Señor esté con ustedes.",
-                "__massEditorPairKeys": {
-                  "text_es": "5:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "text_es": "Y con tu espíritu.",
-                "__massEditorPairKeys": {
-                  "text_es": "6:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "rubric_es": "El sacerdote bendice al pueblo, diciendo:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "7:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "La bendición de Dios todopoderoso, Padre, Hijo ✠ y Espíritu Santo, descienda sobre ustedes.",
-                "__massEditorPairKeys": {
-                  "text_es": "8:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "text_es": "Amén.",
-                "__massEditorPairKeys": {
-                  "text_es": "9:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "rubric_es": "142.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "10:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En algunas ocasiones y en determinadas misas rituales puede darse una de la bendiciones solemnes o de las oraciones sobre el pueblo.",
-                "__massEditorPairKeys": {
-                  "text_es": "11:text"
-                }
-              },
-              {
-                "rubric_es": "143.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "12:rubric"
-                }
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "es": "Bendición pontifical"
-            },
-            "lines": [
-              {
-                "text_es": "El Obispo, para bendecir al pueblo, usa el siguiente formulario, a no ser que prefiera utilizar una de las bendiciones solemnes o una de las oraciones sobre el pueblo.",
-                "__massEditorPairKeys": {
-                  "text_es": "0:text"
-                }
-              },
-              {
-                "text_es": "El Señor esté con ustedes.",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                },
-                "sp_es": "V/."
-              },
-              {
-                "text_es": "Y con tu espíritu.",
-                "__massEditorPairKeys": {
-                  "text_es": "2:text"
-                },
-                "sp_es": "R/."
-              },
-              {
-                "text_es": "Bendito se al nombre del Señor.",
-                "__massEditorPairKeys": {
-                  "text_es": "3:text"
-                },
-                "sp_es": "V/."
-              },
-              {
-                "text_es": "Ahora y por todos los siglos.",
-                "__massEditorPairKeys": {
-                  "text_es": "4:text"
-                },
-                "sp_es": "R/."
-              },
-              {
-                "text_es": "Nuestro auxilio es el nombre del Señor.",
-                "__massEditorPairKeys": {
-                  "text_es": "5:text"
-                },
-                "sp_es": "V/."
-              },
-              {
-                "text_es": "Que hizo el cielo y la tierra.",
-                "__massEditorPairKeys": {
-                  "text_es": "6:text"
-                },
-                "sp_es": "R/."
-              },
-              {
-                "text_es": "La bendición de Dios todopoderoso,",
-                "__massEditorPairKeys": {
-                  "text_es": "7:text"
-                },
-                "sp_es": "V/."
-              },
-              {
-                "text_es": "Pa✠dre, Hi✠jo y Espíritu ✠ Santo, descienda sobre ustedes. R/. Amén.",
-                "__massEditorPairKeys": {
-                  "text_es": "8:text"
-                }
-              },
-              {
-                "rubric_es": "144. Luego el diácono, o el mismo sacerdote, con las manos juntas, despide al pueblo con una de las fórmulas siguientes:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "9:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Pueden ir en paz. ____________________________",
-                "__massEditorPairKeys": {
-                  "text_es": "10:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "rubric_es": "O bien:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "11:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz.",
-                "__massEditorPairKeys": {
-                  "text_es": "12:text"
-                }
-              },
-              {
-                "rubric_es": "O bien:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "13:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Glorifiquen al Señor con su vida. Pueden ir en paz.",
-                "__massEditorPairKeys": {
-                  "text_es": "14:text"
-                }
-              },
-              {
-                "rubric_es": "O bien:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "15:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "En el nombre del Señor, pueden ir en paz.",
-                "__massEditorPairKeys": {
-                  "text_es": "16:text"
-                }
-              },
-              {
-                "rubric_es": "O bien, especialmente en los domingos de Pascua:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "17:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Anuncien a todos la alegría del Señor resucitado.",
-                "__massEditorPairKeys": {
-                  "text_es": "18:text"
-                }
-              },
-              {
-                "rubric_es": "Pueden ir en paz. ____________________________ El pueblo responde:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "19:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Demos gracias a Dios.",
-                "__massEditorPairKeys": {
-                  "text_es": "20:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "rubric_es": "145.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "21:rubric"
-                }
-              },
-              {
-                "rubric_es": "Después el sacerdote besa con veneración el altar, como al comienzo, y, hecha la debida reverencia con los ministros, se retira a la sacristía.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "22:rubric"
-                }
-              },
-              {
-                "rubric_es": "146.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "23:rubric"
-                }
-              },
-              {
-                "rubric_es": "Si sigue inmediatamente otra acción litúrgica, se omite el rito de despedida.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "24:rubric"
-                }
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        30
-      ],
-      "value": {
-        "id": "4.3 dismissal",
-        "type": "selectable",
-        "header": {
-          "es": "Despedida"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "es": "Fórmula 1"
-            },
-            "lines": [
-              {
-                "rubric_es": "144. Luego el diácono, o el mismo sacerdote, con las manos juntas, despide al pueblo con una de las fórmulas siguientes:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "0:rubric"
-                }
-              },
-              {
-                "text_es": "Pueden ir en paz. ____________________________",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                },
-                "sp_es": "Todos"
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "es": "Fórmula 2"
-            },
-            "lines": [
-              {
-                "rubric_es": "O bien:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "0:rubric"
-                }
-              },
-              {
-                "text_es": "La alegría del Señor sea nuestra fuerza. Pueden ir en paz.",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                }
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "es": "Fórmula 3"
-            },
-            "lines": [
-              {
-                "rubric_es": "O bien:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "0:rubric"
-                }
-              },
-              {
-                "text_es": "Glorifiquen al Señor con su vida. Pueden ir en paz.",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                }
-              }
-            ]
-          },
-          "D": {
-            "label": {
-              "es": "Fórmula 4"
-            },
-            "lines": [
-              {
-                "rubric_es": "O bien:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "0:rubric"
-                }
-              },
-              {
-                "text_es": "En el nombre del Señor, pueden ir en paz.",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                }
-              }
-            ]
-          },
-          "E": {
-            "label": {
-              "es": "Fórmula 5"
-            },
-            "lines": [
-              {
-                "rubric_es": "O bien, especialmente en los domingos de Pascua:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "0:rubric"
-                }
-              },
-              {
-                "text_es": "Anuncien a todos la alegría del Señor resucitado.",
-                "__massEditorPairKeys": {
-                  "text_es": "1:text"
-                }
-              },
-              {
-                "rubric_es": "Pueden ir en paz. ____________________________ El pueblo responde:",
-                "__massEditorPairKeys": {
-                  "rubric_es": "2:rubric"
-                },
-                "rubricInset_es": true
-              },
-              {
-                "text_es": "Demos gracias a Dios.",
-                "__massEditorPairKeys": {
-                  "text_es": "3:text"
-                },
-                "sp_es": "Todos"
-              },
-              {
-                "rubric_es": "145.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "4:rubric"
-                }
-              },
-              {
-                "rubric_es": "Después el sacerdote besa con veneración el altar, como al comienzo, y, hecha la debida reverencia con los ministros, se retira a la sacristía.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "5:rubric"
-                }
-              },
-              {
-                "rubric_es": "146.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "6:rubric"
-                }
-              },
-              {
-                "rubric_es": "Si sigue inmediatamente otra acción litúrgica, se omite el rito de despedida.",
-                "__massEditorPairKeys": {
-                  "rubric_es": "7:rubric"
-                }
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        31
-      ],
-      "value": {
-        "id": "4.4 final_song",
-        "type": "part",
-        "header": {
-          "es": "Canto final"
-        },
-        "lines": [
-          {
-            "rubric_es": "El sacerdote besa el altar y se retira con los ministros.",
-            "__massEditorPairKeys": {
-              "rubric_es": "0:rubric"
-            }
-          }
-        ]
       }
     }
   ];

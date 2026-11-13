@@ -1552,6 +1552,2402 @@
     },
     {
       "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "jp": "主の祈り"
+        },
+        "lines": [
+          {
+            "text_jp": "主の教えを守り、",
+            "__massEditorPairKeys": {
+              "text_jp": "0:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "みことばに従い、つつしんで主の祈りを唱えましょう。",
+            "__massEditorPairKeys": {
+              "text_jp": "1:text"
+            }
+          },
+          {
+            "text_jp": "天におられるわたしたちの父よ、",
+            "__massEditorPairKeys": {
+              "text_jp": "2:text"
+            },
+            "sp_jp": "会"
+          },
+          {
+            "text_jp": "み名が聖とされますように。",
+            "__massEditorPairKeys": {
+              "text_jp": "3:text"
+            }
+          },
+          {
+            "text_jp": "み国が来ますように。",
+            "__massEditorPairKeys": {
+              "text_jp": "4:text"
+            }
+          },
+          {
+            "text_jp": "みこころが天に行われるとおり地にも行われますように。",
+            "__massEditorPairKeys": {
+              "text_jp": "5:text"
+            }
+          },
+          {
+            "text_jp": "わたしたちの日ごとの糧を今日もお与えください。",
+            "__massEditorPairKeys": {
+              "text_jp": "6:text"
+            }
+          },
+          {
+            "text_jp": "わたしたちの罪をおゆるしください。",
+            "__massEditorPairKeys": {
+              "text_jp": "7:text"
+            }
+          },
+          {
+            "text_jp": "わたしたちも人をゆるします。",
+            "__massEditorPairKeys": {
+              "text_jp": "8:text"
+            }
+          },
+          {
+            "text_jp": "わたしたちを誘惑におちいらせず、",
+            "__massEditorPairKeys": {
+              "text_jp": "9:text"
+            }
+          },
+          {
+            "text_jp": "悪からお救いください。",
+            "__massEditorPairKeys": {
+              "text_jp": "10:text"
+            }
+          },
+          {
+            "text_jp": "いつくしみ深い父よ、すべての悪からわたしたちを救い、",
+            "__massEditorPairKeys": {
+              "text_jp": "11:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "世界に平和をお与えください。",
+            "__massEditorPairKeys": {
+              "text_jp": "12:text"
+            }
+          },
+          {
+            "text_jp": "あなたのあわれみに支えられて、罪から解放され、",
+            "__massEditorPairKeys": {
+              "text_jp": "13:text"
+            }
+          },
+          {
+            "text_jp": "すべての困難に打ち勝つことができますように。",
+            "__massEditorPairKeys": {
+              "text_jp": "14:text"
+            }
+          },
+          {
+            "text_jp": "わたしたちの希望、",
+            "__massEditorPairKeys": {
+              "text_jp": "15:text"
+            }
+          },
+          {
+            "text_jp": "救い主イエス・キリストが来られるのを待ち望んでいます。",
+            "__massEditorPairKeys": {
+              "text_jp": "16:text"
+            }
+          },
+          {
+            "text_jp": "国と力と栄光は、永遠にあなたのもの。",
+            "__massEditorPairKeys": {
+              "text_jp": "17:text"
+            },
+            "sp_jp": "会"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "jp": "平和のあいさつ"
+        },
+        "lines": [
+          {
+            "text_jp": "主イエス・キリスト、",
+            "__massEditorPairKeys": {
+              "text_jp": "0:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "あなたは使徒に仰せになりました。",
+            "__massEditorPairKeys": {
+              "text_jp": "1:text"
+            }
+          },
+          {
+            "text_jp": "「わたしは平和を残し、",
+            "__massEditorPairKeys": {
+              "text_jp": "2:text"
+            }
+          },
+          {
+            "text_jp": "わたしの平和をあなたがたに与える。」",
+            "__massEditorPairKeys": {
+              "text_jp": "3:text"
+            }
+          },
+          {
+            "text_jp": "主よ、わたしたちの罪ではなく、",
+            "__massEditorPairKeys": {
+              "text_jp": "4:text"
+            }
+          },
+          {
+            "text_jp": "教会の信仰を顧み、",
+            "__massEditorPairKeys": {
+              "text_jp": "5:text"
+            }
+          },
+          {
+            "text_jp": "おことばのとおり教会に平和と一致をお与えください。",
+            "__massEditorPairKeys": {
+              "text_jp": "6:text"
+            }
+          },
+          {
+            "text_jp": "あなたはまことのいのち、すべてを導かれる神、世々とこしえに。",
+            "__massEditorPairKeys": {
+              "text_jp": "7:text"
+            }
+          },
+          {
+            "text_jp": "アーメン。",
+            "__massEditorPairKeys": {
+              "text_jp": "8:text"
+            },
+            "sp_jp": "会"
+          },
+          {
+            "text_jp": "主の平和がいつも皆さんとともに。",
+            "__massEditorPairKeys": {
+              "text_jp": "9:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "またあなたとともに。",
+            "__massEditorPairKeys": {
+              "text_jp": "10:text"
+            },
+            "sp_jp": "会"
+          },
+          {
+            "text_jp": "互いに平和のあいさつを交わしましょう",
+            "__massEditorPairKeys": {
+              "text_jp": "11:text"
+            },
+            "sp_jp": "助(司)"
+          },
+          {
+            "rubric_jp": "地域の慣習に従って互いにあいさつを交わす。",
+            "__massEditorPairKeys": {
+              "rubric_jp": "12:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "jp": "平和の賛歌 (アニュス・デイ)"
+        },
+        "lines": [
+          {
+            "text_jp": "世の罪を取り除く神の小羊、",
+            "__massEditorPairKeys": {
+              "text_jp": "0:text"
+            },
+            "sp_jp": "会"
+          },
+          {
+            "text_jp": "いつくしみをわたしたちに。",
+            "__massEditorPairKeys": {
+              "text_jp": "1:text"
+            }
+          },
+          {
+            "text_jp": "世の罪を取り除く神の小羊、",
+            "__massEditorPairKeys": {
+              "text_jp": "2:text"
+            }
+          },
+          {
+            "text_jp": "いつくしみをわたしたちに。",
+            "__massEditorPairKeys": {
+              "text_jp": "3:text"
+            }
+          },
+          {
+            "text_jp": "世の罪を取り除く神の小羊、",
+            "__massEditorPairKeys": {
+              "text_jp": "4:text"
+            }
+          },
+          {
+            "text_jp": "平和をわたしたちに。",
+            "__massEditorPairKeys": {
+              "text_jp": "5:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "jp": "拝領"
+        },
+        "lines": [
+          {
+            "text_jp": "世の罪を取り除く神の小羊。",
+            "__massEditorPairKeys": {
+              "text_jp": "0:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "",
+            "__massEditorPairKeys": {
+              "text_jp": "1:text"
+            }
+          },
+          {
+            "text_jp": "神の小羊の食卓に招かれた人は幸い。",
+            "__massEditorPairKeys": {
+              "text_jp": "2:text"
+            }
+          },
+          {
+            "text_jp": "主よ、わたしはあなたをお迎えするにふさわしい者ではありません。",
+            "__massEditorPairKeys": {
+              "text_jp": "3:text"
+            },
+            "sp_jp": "会"
+          },
+          {
+            "text_jp": "おことばをいただくだけで救われます。",
+            "__massEditorPairKeys": {
+              "text_jp": "4:text"
+            }
+          },
+          {
+            "rubric_jp": "または ",
+            "__massEditorPairKeys": {
+              "rubric_jp": "5:rubric"
+            },
+            "rubricInset_jp": true
+          },
+          {
+            "text_jp": "主よ、あなたは神の子キリスト、永遠のいのちの糧、<br>あなたをおいてだれのところに行きましょう。",
+            "__massEditorPairKeys": {
+              "text_jp": "5:text"
+            }
+          },
+          {
+            "rubric_jp": "聖体を拝領できるカトリック信者は前に進み出る。",
+            "__massEditorPairKeys": {
+              "rubric_jp": "6:rubric"
+            },
+            "rubricInset_jp": true
+          },
+          {
+            "text_jp": "キリストの御からだ(と御血)。",
+            "__massEditorPairKeys": {
+              "text_jp": "7:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "アーメン。",
+            "__massEditorPairKeys": {
+              "text_jp": "8:text"
+            },
+            "sp_jp": "答"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "jp": "拝領唱"
+        },
+        "lines": [
+          {
+            "rubric_jp": "拝領の歌を歌わない場合は、拝領唱を一緒に唱えることができる。",
+            "__massEditorPairKeys": {
+              "rubric_jp": "0:rubric"
+            }
+          },
+          {
+            "text_jp": "(今日の拝領唱…)",
+            "__massEditorPairKeys": {
+              "text_jp": "1:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "jp": "拝領祈願"
+        },
+        "lines": [
+          {
+            "text_jp": "祈りましょう。",
+            "__massEditorPairKeys": {
+              "text_jp": "0:text"
+            },
+            "sp_jp": "司"
+          },
+          {
+            "text_jp": "(今日の拝領祈願…)",
+            "__massEditorPairKeys": {
+              "text_jp": "1:text"
+            }
+          },
+          {
+            "text_jp": "(祈りの終わり)",
+            "__massEditorPairKeys": {
+              "text_jp": "2:text"
+            }
+          },
+          {
+            "text_jp": "アーメン。",
+            "__massEditorPairKeys": {
+              "text_jp": "3:text"
+            },
+            "sp_jp": "会"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "jp": "お知らせ"
+        },
+        "lines": [
+          {
+            "rubric_jp": "必要があれば、会衆への短いお知らせが行われる。",
+            "__massEditorPairKeys": {
+              "rubric_jp": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "jp": "祝福の祈り"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "jp": "祝福の祈り"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の ✠ 祝福が",
+                "__massEditorPairKeys": {
+                  "text_jp": "3:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "皆さんの上にありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "4:text"
+                }
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "5:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "jp": "司教の入場様式"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "text_jp": "主のみ名がいつもたたえられますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "2:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "いまよりとこしえに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "3:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "text_jp": "主のみ名はわたしたちの助け。",
+                "__massEditorPairKeys": {
+                  "text_jp": "4:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "主は天地の造り主。",
+                "__massEditorPairKeys": {
+                  "text_jp": "5:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "6:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "全能の神、父と ✠ 子と ✠ 聖霊の  ✠ 祝福が",
+                "__massEditorPairKeys": {
+                  "text_jp": "7:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "皆さんの上にありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "8:text"
+                }
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "9:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "jp": "荘厳な祝福 [会衆のための祈願]"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "rubric_jp": "司祭の祈りの終わりに、",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "3:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "3:text"
+                },
+                "sp_jp": "答"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の ✠ 祝福が",
+                "__massEditorPairKeys": {
+                  "text_jp": "4:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "皆さんの上にありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "5:text"
+                }
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "6:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          },
+          "solemn_advent": {
+            "label": {
+              "jp": "荘厳な祝福 - 待降節"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "わたしたちはひとり子の到来を信じ、その再臨を待ち望んでいます。全能の神、あわれみ深い父が、近づいて来られるひとり子の輝きによって皆さんを聖なる者とし、祝福で満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "日々の生活の中で、神が皆さんに揺るぎない信仰を与え、希望をもって生きる喜びと、尽きることのない愛で満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "救い主の栄光に満ちた再臨のとき、神が皆さんに、永遠のいのちの恵みを豊かに与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:advent:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_christmas": {
+            "label": {
+              "jp": "荘厳な祝福 - 降誕節"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "いつくしみ深い神は、イエスの栄光に満ちた誕生によって世の闇を取り除き、この聖なる夜（日）を照らしてくださいます。神が皆さんを罪の暗闇から解放し、御子の輝きで満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "天使によって、羊飼いに救い主の誕生を告げることをお望みになった神が、皆さんの心を喜びで満たし、福音をのべ伝える者としてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "ひとり子の受肉によって天と地を結んでくださった神が、皆さんにみ心を行う恵みと平和を豊かに与え、天の教会の喜びにあずからせてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:christmas:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_new_year": {
+            "label": {
+              "jp": "荘厳な祝福 - 年の初め"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "あらゆる祝福の源である神が、皆さんを豊かな恵みと祝福で満たし、この一年を通してたえず見守ってくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神が、皆さんの信仰を清く保ち、揺るぎない希望と最後まで耐え忍ぶ愛を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神が、皆さんの生活と働きを平和のうちに保ち、祈りを聞き入れ、永遠のいのちに導いてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:new_year:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_epiphany": {
+            "label": {
+              "jp": "荘厳な祝福 - 主の公現"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "闇から光に招いてくださった神が、祝福を豊かに注ぎ、信仰、希望、愛によって皆さんの心を強めてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "皆さんが、きょう、世界を照らす光として現れたキリストに従い、人々を照らす光となることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "星に導かれ、まことの光キリストを見いだした博士たちのように、皆さんも、喜びのうちに主キリストを見いだすことができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:epiphany:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_passion": {
+            "label": {
+              "jp": "荘厳な祝福 - 主の受難"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "いつくしみ深い父から遣わされたひとり子は、その受難によって愛の模範を示してくださいました。皆さんが神と人々に仕えることによって、豊かな祝福を受けることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "キリストの死によって永遠の死から救われた皆さんが、永遠のいのちにあずかることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "皆さんが、自らを低くされたイエスにならい、その復活の栄光にともにあずかることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:passion:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_easter": {
+            "label": {
+              "jp": "荘厳な祝福 - 復活節"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "ひとり子の復活によって皆さんをあがない、ご自分の子としてくださった神が、皆さんを祝福し、喜びで満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "すべての人をあがない、まことの自由を与えてくださった神が、皆さんを祝福し、天の国を受け継ぐ者としてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "信仰をもって洗礼を受け、新しいいのちに満たされた皆さんが、み心にかなう生活を送り、御父のもとに迎えられますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:easter:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ascension": {
+            "label": {
+              "jp": "荘厳な祝福 - 主の昇天"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "きょう、御ひとり子を天に上げられた神が、皆さんを祝福し、キリストのもとに導いてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "復活の後、弟子たちに現れたキリストが、再び来られるときも、皆さんに変わることのないいつくしみを示してくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "栄光のうちに御父のもとに座しておられるキリストが、約束されたとおり、世の終わりまで皆さんとともにいてくださり、救いの喜びを味わわせてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ascension:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_pentecost": {
+            "label": {
+              "jp": "荘厳な祝福 - 聖霊"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "光の源である神は、弟子たちに聖霊を注ぎ、その心を照らしてくださいました。神が皆さんを祝福し、喜びで満たし、聖霊のたまものを豊かに与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "弟子たちの上に注がれた聖霊の火が、皆さんをあらゆる悪から清め、その輝きによって照らしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "ことばの異なる人々を唯一の信仰告白へと導いてくださった聖霊が、皆さんの信仰を強め、希望を揺るぎないものとしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:pentecost:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ordinary_1": {
+            "label": {
+              "jp": "荘厳な祝福 - 年間　一"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "神が皆さんを祝福し、守ってくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神がみ顔の輝きで皆さんを照らし、恵みで満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神がみ顔を皆さんに向け、その平和を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_1:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ordinary_2": {
+            "label": {
+              "jp": "荘厳な祝福 - 年間　二"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "人の知恵をはるかに超える神の平和が、皆さんの心と思いを満たし、御父とひとり子キリストを知り、愛する恵みを与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_2:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_2:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_2:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_2:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ordinary_3": {
+            "label": {
+              "jp": "荘厳な祝福 - 年間　三"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "いつくしみ深い神が皆さんを祝福し、救いに導く知恵を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神が信仰の恵みで皆さんを支え、み心を行う恵みで満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神が平和と愛の道を示し、皆さんをご自分のもとに立ち返らせてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_3:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ordinary_4": {
+            "label": {
+              "jp": "荘厳な祝福 - 年間　四"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "慰めの源である神が、世界をまことの平和に導き、皆さんに祝福を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神が、皆さんをあらゆる困難から解放し、一人ひとりの心を、愛のうちに揺るぎないものとしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "皆さんが、信仰、希望、愛のたまものを豊かに受け、この世においてよいわざを行い、永遠の喜びを見いだすことができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_4:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ordinary_5": {
+            "label": {
+              "jp": "荘厳な祝福 - 年間　五"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "全能の神が、あらゆる困難から皆さんを守り、いつくしみをもって祝福してくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "皆さんが神の語りかけを心から受け入れ、変わることのない喜びで満たされますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神が示してくださる正しい道を皆さんがいつも歩み、神の国を受け継ぐことができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_5:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_ordinary_6": {
+            "label": {
+              "jp": "荘厳な祝福 - 年間　六"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "神が、天のあらゆる祝福で皆さんを満たし、聖なる者、汚れのない者としてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_6:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_6:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "神がその栄光を豊かに注ぎ、真理のことばによって導き、救いの福音によって教え、互いに愛し合う心を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_6:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_6:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_6:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:ordinary_6:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_blessed_virgin_mary": {
+            "label": {
+              "jp": "荘厳な祝福 - 聖母マリア"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "おとめマリアから生まれたひとり子によって、全人類を救ってくださった神が、皆さんに豊かな祝福を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "いのちの源である主キリストを産み育てたマリアの愛を、皆さんがいつどこにいても感じとることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "聖母マリアの祝日に集まった皆さんが、天の喜びと恵みで満たされますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:blessed_virgin_mary:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_peter_and_paul": {
+            "label": {
+              "jp": "荘厳な祝福 - 聖ペトロ 聖パウロ"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "ペトロの信仰告白を礎として教会を建ててくださった全能の神が、皆さんに揺るぎない信仰を与えてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "ひるむことなく宣教に励んだパウロのように、皆さんが、人々をキリストのもとに導くことができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "ペトロとパウロの殉教を記念する皆さんが、二人の使徒の取り次ぎに支えられて信仰の道を歩み、天の喜びにあずかることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:peter_and_paul:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_apostles": {
+            "label": {
+              "jp": "荘厳な祝福 - 使徒"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "使徒たちを礎として教会を築いてくださった神が、聖○○○○の取り次ぎを願う皆さんを、祝福してくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "使徒たちの教えと模範によって教会を強めてくださる神が、皆さんをキリストの証人としてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "使徒たちの教えによって信仰を固めてくださった神が、皆さんを永遠の住まいへと導いてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:apostles:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_all_saints": {
+            "label": {
+              "jp": "荘厳な祝福 - 聖人"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "聖人の誉れと喜びである神が、皆さんを豊かな祝福で満たし、強めてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "聖人の取り次ぎによって、皆さんがこの世の悪から解放され、その聖なる生活を模範とし、神と人々に心から仕える者となりますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "地上を旅する教会が、天の集いに迎えられ、すべての聖人とともに、永遠の喜びを味わうことができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:all_saints:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_church_dedication": {
+            "label": {
+              "jp": "荘厳な祝福 - 教会献堂"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "きょう、献堂の祝いに招いてくださった神が、皆さんを天の祝福で満たしてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "すべての人を御子のうちに一つに集めてくださる神が、皆さんを聖霊の神殿としてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "清い心を与えてくださる神が、皆さんをすべての聖人とともに、永遠のいのちを受け継ぐ者としてくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:church_dedication:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          },
+          "solemn_for_the_dead": {
+            "label": {
+              "jp": "荘厳な祝福 - 死者"
+            },
+            "lines": [
+              {
+                "text_jp": "主は皆さんとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "教"
+              },
+              {
+                "text_jp": "またあなたとともに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              },
+              {
+                "rubric_jp": "頭を垂れて祝福を受ける。",
+                "__massEditorPairKeys": {
+                  "rubric_jp": "2:rubric"
+                },
+                "rubricInset_jp": true
+              },
+              {
+                "text_jp": "神は、限りないいつくしみによって人間を造り、ひとり子の復活によって、人類に復活の希望を与えてくださいました。慰めの源である神が、皆さんを祝福してくださいますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:petition:0:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:petition:1:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "地上を旅するわたしたちの心がいやされ、亡くなったすべての人に永遠のいのちが与えられますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:petition:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:petition:3:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "キリストの復活を信じるわたしたちが、主とともに終わりなく生きることができますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:petition:4:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:petition:5:text"
+                },
+                "sp_jp": "会衆"
+              },
+              {
+                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:ending:2:text"
+                },
+                "sp_jp": "司祭"
+              },
+              {
+                "text_jp": "アーメン。",
+                "__massEditorPairKeys": {
+                  "text_jp": "blessing:for_the_dead:ending:1:text"
+                },
+                "sp_jp": "会衆"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "jp": "派遣"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "jp": "派遣 一"
+            },
+            "lines": [
+              {
+                "text_jp": "(感謝の祭儀を終わります。)<br>行きましょう、主の福音を告げ知らせるために。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "神に感謝。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "jp": "派遣 二"
+            },
+            "lines": [
+              {
+                "text_jp": "",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "神に感謝。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "jp": "派遣 三"
+            },
+            "lines": [
+              {
+                "text_jp": "(感謝の祭儀を終わります。)<br>平和のうちに行きましょう、日々の生活の中で主の栄光をあらわすために。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "神に感謝。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "jp": "派遣 四"
+            },
+            "lines": [
+              {
+                "text_jp": "感謝の祭儀を終わります。<br>行きましょう、主の平和のうちに。",
+                "__massEditorPairKeys": {
+                  "text_jp": "0:text"
+                },
+                "sp_jp": "司"
+              },
+              {
+                "text_jp": "神に感謝。",
+                "__massEditorPairKeys": {
+                  "text_jp": "1:text"
+                },
+                "sp_jp": "会"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "jp": "閉祭の歌"
+        },
+        "lines": [
+          {
+            "rubric_jp": "閉祭の歌を歌う。<br>他の祭儀が続く場合、派遣の式は省かれる。",
+            "__massEditorPairKeys": {
+              "rubric_jp": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
         20
       ],
       "value": {
@@ -4210,6 +6606,7 @@
             }
           },
           {
+            "dividerAfter": "after-sanctus",
             "text_jp": "天には神にホザンナ。",
             "__massEditorPairKeys": {
               "text_jp": "5:text"
@@ -5335,6 +7732,7 @@
               "rubricInset_jp": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_jp": "信仰の神秘。",
               "__massEditorPairKeys": {
                 "text_jp": "canon:mystery_invitation:0:text"
@@ -5731,6 +8129,7 @@
               "rubricInset_jp": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_jp": "信仰の神秘。",
               "__massEditorPairKeys": {
                 "text_jp": "20:text"
@@ -6094,6 +8493,7 @@
               "rubricInset_jp": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_jp": "信仰の神秘。",
               "__massEditorPairKeys": {
                 "text_jp": "26:text"
@@ -6500,6 +8900,7 @@
               }
             },
             {
+              "dividerAfter": "after-sanctus",
               "text_jp": "天には神にホザンナ。",
               "__massEditorPairKeys": {
                 "text_jp": "10:text"
@@ -6660,6 +9061,7 @@
               "rubricInset_jp": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_jp": "信仰の神秘。",
               "__massEditorPairKeys": {
                 "text_jp": "36:text"
@@ -6816,2402 +9218,6 @@
           }
         },
         "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
-        21
-      ],
-      "value": {
-        "id": "3.4 lords_prayer",
-        "type": "part",
-        "header": {
-          "jp": "主の祈り"
-        },
-        "lines": [
-          {
-            "text_jp": "主の教えを守り、",
-            "__massEditorPairKeys": {
-              "text_jp": "0:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "みことばに従い、つつしんで主の祈りを唱えましょう。",
-            "__massEditorPairKeys": {
-              "text_jp": "1:text"
-            }
-          },
-          {
-            "text_jp": "天におられるわたしたちの父よ、",
-            "__massEditorPairKeys": {
-              "text_jp": "2:text"
-            },
-            "sp_jp": "会"
-          },
-          {
-            "text_jp": "み名が聖とされますように。",
-            "__massEditorPairKeys": {
-              "text_jp": "3:text"
-            }
-          },
-          {
-            "text_jp": "み国が来ますように。",
-            "__massEditorPairKeys": {
-              "text_jp": "4:text"
-            }
-          },
-          {
-            "text_jp": "みこころが天に行われるとおり地にも行われますように。",
-            "__massEditorPairKeys": {
-              "text_jp": "5:text"
-            }
-          },
-          {
-            "text_jp": "わたしたちの日ごとの糧を今日もお与えください。",
-            "__massEditorPairKeys": {
-              "text_jp": "6:text"
-            }
-          },
-          {
-            "text_jp": "わたしたちの罪をおゆるしください。",
-            "__massEditorPairKeys": {
-              "text_jp": "7:text"
-            }
-          },
-          {
-            "text_jp": "わたしたちも人をゆるします。",
-            "__massEditorPairKeys": {
-              "text_jp": "8:text"
-            }
-          },
-          {
-            "text_jp": "わたしたちを誘惑におちいらせず、",
-            "__massEditorPairKeys": {
-              "text_jp": "9:text"
-            }
-          },
-          {
-            "text_jp": "悪からお救いください。",
-            "__massEditorPairKeys": {
-              "text_jp": "10:text"
-            }
-          },
-          {
-            "text_jp": "いつくしみ深い父よ、すべての悪からわたしたちを救い、",
-            "__massEditorPairKeys": {
-              "text_jp": "11:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "世界に平和をお与えください。",
-            "__massEditorPairKeys": {
-              "text_jp": "12:text"
-            }
-          },
-          {
-            "text_jp": "あなたのあわれみに支えられて、罪から解放され、",
-            "__massEditorPairKeys": {
-              "text_jp": "13:text"
-            }
-          },
-          {
-            "text_jp": "すべての困難に打ち勝つことができますように。",
-            "__massEditorPairKeys": {
-              "text_jp": "14:text"
-            }
-          },
-          {
-            "text_jp": "わたしたちの希望、",
-            "__massEditorPairKeys": {
-              "text_jp": "15:text"
-            }
-          },
-          {
-            "text_jp": "救い主イエス・キリストが来られるのを待ち望んでいます。",
-            "__massEditorPairKeys": {
-              "text_jp": "16:text"
-            }
-          },
-          {
-            "text_jp": "国と力と栄光は、永遠にあなたのもの。",
-            "__massEditorPairKeys": {
-              "text_jp": "17:text"
-            },
-            "sp_jp": "会"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        22
-      ],
-      "value": {
-        "id": "3.5 peace",
-        "type": "part",
-        "header": {
-          "jp": "平和のあいさつ"
-        },
-        "lines": [
-          {
-            "text_jp": "主イエス・キリスト、",
-            "__massEditorPairKeys": {
-              "text_jp": "0:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "あなたは使徒に仰せになりました。",
-            "__massEditorPairKeys": {
-              "text_jp": "1:text"
-            }
-          },
-          {
-            "text_jp": "「わたしは平和を残し、",
-            "__massEditorPairKeys": {
-              "text_jp": "2:text"
-            }
-          },
-          {
-            "text_jp": "わたしの平和をあなたがたに与える。」",
-            "__massEditorPairKeys": {
-              "text_jp": "3:text"
-            }
-          },
-          {
-            "text_jp": "主よ、わたしたちの罪ではなく、",
-            "__massEditorPairKeys": {
-              "text_jp": "4:text"
-            }
-          },
-          {
-            "text_jp": "教会の信仰を顧み、",
-            "__massEditorPairKeys": {
-              "text_jp": "5:text"
-            }
-          },
-          {
-            "text_jp": "おことばのとおり教会に平和と一致をお与えください。",
-            "__massEditorPairKeys": {
-              "text_jp": "6:text"
-            }
-          },
-          {
-            "text_jp": "あなたはまことのいのち、すべてを導かれる神、世々とこしえに。",
-            "__massEditorPairKeys": {
-              "text_jp": "7:text"
-            }
-          },
-          {
-            "text_jp": "アーメン。",
-            "__massEditorPairKeys": {
-              "text_jp": "8:text"
-            },
-            "sp_jp": "会"
-          },
-          {
-            "text_jp": "主の平和がいつも皆さんとともに。",
-            "__massEditorPairKeys": {
-              "text_jp": "9:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "またあなたとともに。",
-            "__massEditorPairKeys": {
-              "text_jp": "10:text"
-            },
-            "sp_jp": "会"
-          },
-          {
-            "text_jp": "互いに平和のあいさつを交わしましょう",
-            "__massEditorPairKeys": {
-              "text_jp": "11:text"
-            },
-            "sp_jp": "助(司)"
-          },
-          {
-            "rubric_jp": "地域の慣習に従って互いにあいさつを交わす。",
-            "__massEditorPairKeys": {
-              "rubric_jp": "12:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        23
-      ],
-      "value": {
-        "id": "3.6 lamb",
-        "type": "part",
-        "header": {
-          "jp": "平和の賛歌 (アニュス・デイ)"
-        },
-        "lines": [
-          {
-            "text_jp": "世の罪を取り除く神の小羊、",
-            "__massEditorPairKeys": {
-              "text_jp": "0:text"
-            },
-            "sp_jp": "会"
-          },
-          {
-            "text_jp": "いつくしみをわたしたちに。",
-            "__massEditorPairKeys": {
-              "text_jp": "1:text"
-            }
-          },
-          {
-            "text_jp": "世の罪を取り除く神の小羊、",
-            "__massEditorPairKeys": {
-              "text_jp": "2:text"
-            }
-          },
-          {
-            "text_jp": "いつくしみをわたしたちに。",
-            "__massEditorPairKeys": {
-              "text_jp": "3:text"
-            }
-          },
-          {
-            "text_jp": "世の罪を取り除く神の小羊、",
-            "__massEditorPairKeys": {
-              "text_jp": "4:text"
-            }
-          },
-          {
-            "text_jp": "平和をわたしたちに。",
-            "__massEditorPairKeys": {
-              "text_jp": "5:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        24
-      ],
-      "value": {
-        "id": "3.7 communion_rite",
-        "type": "part",
-        "header": {
-          "jp": "拝領"
-        },
-        "lines": [
-          {
-            "text_jp": "世の罪を取り除く神の小羊。",
-            "__massEditorPairKeys": {
-              "text_jp": "0:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "",
-            "__massEditorPairKeys": {
-              "text_jp": "1:text"
-            }
-          },
-          {
-            "text_jp": "神の小羊の食卓に招かれた人は幸い。",
-            "__massEditorPairKeys": {
-              "text_jp": "2:text"
-            }
-          },
-          {
-            "text_jp": "主よ、わたしはあなたをお迎えするにふさわしい者ではありません。",
-            "__massEditorPairKeys": {
-              "text_jp": "3:text"
-            },
-            "sp_jp": "会"
-          },
-          {
-            "text_jp": "おことばをいただくだけで救われます。",
-            "__massEditorPairKeys": {
-              "text_jp": "4:text"
-            }
-          },
-          {
-            "rubric_jp": "または ",
-            "__massEditorPairKeys": {
-              "rubric_jp": "5:rubric"
-            },
-            "rubricInset_jp": true
-          },
-          {
-            "text_jp": "主よ、あなたは神の子キリスト、永遠のいのちの糧、<br>あなたをおいてだれのところに行きましょう。",
-            "__massEditorPairKeys": {
-              "text_jp": "5:text"
-            }
-          },
-          {
-            "rubric_jp": "聖体を拝領できるカトリック信者は前に進み出る。",
-            "__massEditorPairKeys": {
-              "rubric_jp": "6:rubric"
-            },
-            "rubricInset_jp": true
-          },
-          {
-            "text_jp": "キリストの御からだ(と御血)。",
-            "__massEditorPairKeys": {
-              "text_jp": "7:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "アーメン。",
-            "__massEditorPairKeys": {
-              "text_jp": "8:text"
-            },
-            "sp_jp": "答"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        25
-      ],
-      "value": {
-        "id": "3.8 communion",
-        "type": "part",
-        "header": {
-          "jp": "拝領唱"
-        },
-        "lines": [
-          {
-            "rubric_jp": "拝領の歌を歌わない場合は、拝領唱を一緒に唱えることができる。",
-            "__massEditorPairKeys": {
-              "rubric_jp": "0:rubric"
-            }
-          },
-          {
-            "text_jp": "(今日の拝領唱…)",
-            "__massEditorPairKeys": {
-              "text_jp": "1:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        26
-      ],
-      "value": {
-        "id": "3.9 prayer_after",
-        "type": "part",
-        "header": {
-          "jp": "拝領祈願"
-        },
-        "lines": [
-          {
-            "text_jp": "祈りましょう。",
-            "__massEditorPairKeys": {
-              "text_jp": "0:text"
-            },
-            "sp_jp": "司"
-          },
-          {
-            "text_jp": "(今日の拝領祈願…)",
-            "__massEditorPairKeys": {
-              "text_jp": "1:text"
-            }
-          },
-          {
-            "text_jp": "(祈りの終わり)",
-            "__massEditorPairKeys": {
-              "text_jp": "2:text"
-            }
-          },
-          {
-            "text_jp": "アーメン。",
-            "__massEditorPairKeys": {
-              "text_jp": "3:text"
-            },
-            "sp_jp": "会"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        28
-      ],
-      "value": {
-        "id": "4.1 announcement",
-        "type": "part",
-        "header": {
-          "jp": "お知らせ"
-        },
-        "lines": [
-          {
-            "rubric_jp": "必要があれば、会衆への短いお知らせが行われる。",
-            "__massEditorPairKeys": {
-              "rubric_jp": "0:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        29
-      ],
-      "value": {
-        "id": "4.2 blessing",
-        "type": "selectable",
-        "header": {
-          "jp": "祝福の祈り"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "jp": "祝福の祈り"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の ✠ 祝福が",
-                "__massEditorPairKeys": {
-                  "text_jp": "3:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "皆さんの上にありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "4:text"
-                }
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "5:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "jp": "司教の入場様式"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "text_jp": "主のみ名がいつもたたえられますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "2:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "いまよりとこしえに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "3:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "text_jp": "主のみ名はわたしたちの助け。",
-                "__massEditorPairKeys": {
-                  "text_jp": "4:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "主は天地の造り主。",
-                "__massEditorPairKeys": {
-                  "text_jp": "5:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "6:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "全能の神、父と ✠ 子と ✠ 聖霊の  ✠ 祝福が",
-                "__massEditorPairKeys": {
-                  "text_jp": "7:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "皆さんの上にありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "8:text"
-                }
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "9:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "jp": "荘厳な祝福 [会衆のための祈願]"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "rubric_jp": "司祭の祈りの終わりに、",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "3:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "3:text"
-                },
-                "sp_jp": "答"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の ✠ 祝福が",
-                "__massEditorPairKeys": {
-                  "text_jp": "4:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "皆さんの上にありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "5:text"
-                }
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "6:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
-          "solemn_advent": {
-            "label": {
-              "jp": "荘厳な祝福 - 待降節"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "わたしたちはひとり子の到来を信じ、その再臨を待ち望んでいます。全能の神、あわれみ深い父が、近づいて来られるひとり子の輝きによって皆さんを聖なる者とし、祝福で満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "日々の生活の中で、神が皆さんに揺るぎない信仰を与え、希望をもって生きる喜びと、尽きることのない愛で満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "救い主の栄光に満ちた再臨のとき、神が皆さんに、永遠のいのちの恵みを豊かに与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:advent:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_christmas": {
-            "label": {
-              "jp": "荘厳な祝福 - 降誕節"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "いつくしみ深い神は、イエスの栄光に満ちた誕生によって世の闇を取り除き、この聖なる夜（日）を照らしてくださいます。神が皆さんを罪の暗闇から解放し、御子の輝きで満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "天使によって、羊飼いに救い主の誕生を告げることをお望みになった神が、皆さんの心を喜びで満たし、福音をのべ伝える者としてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "ひとり子の受肉によって天と地を結んでくださった神が、皆さんにみ心を行う恵みと平和を豊かに与え、天の教会の喜びにあずからせてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:christmas:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_new_year": {
-            "label": {
-              "jp": "荘厳な祝福 - 年の初め"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "あらゆる祝福の源である神が、皆さんを豊かな恵みと祝福で満たし、この一年を通してたえず見守ってくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神が、皆さんの信仰を清く保ち、揺るぎない希望と最後まで耐え忍ぶ愛を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神が、皆さんの生活と働きを平和のうちに保ち、祈りを聞き入れ、永遠のいのちに導いてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:new_year:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_epiphany": {
-            "label": {
-              "jp": "荘厳な祝福 - 主の公現"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "闇から光に招いてくださった神が、祝福を豊かに注ぎ、信仰、希望、愛によって皆さんの心を強めてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "皆さんが、きょう、世界を照らす光として現れたキリストに従い、人々を照らす光となることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "星に導かれ、まことの光キリストを見いだした博士たちのように、皆さんも、喜びのうちに主キリストを見いだすことができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:epiphany:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_passion": {
-            "label": {
-              "jp": "荘厳な祝福 - 主の受難"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "いつくしみ深い父から遣わされたひとり子は、その受難によって愛の模範を示してくださいました。皆さんが神と人々に仕えることによって、豊かな祝福を受けることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "キリストの死によって永遠の死から救われた皆さんが、永遠のいのちにあずかることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "皆さんが、自らを低くされたイエスにならい、その復活の栄光にともにあずかることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:passion:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_easter": {
-            "label": {
-              "jp": "荘厳な祝福 - 復活節"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "ひとり子の復活によって皆さんをあがない、ご自分の子としてくださった神が、皆さんを祝福し、喜びで満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "すべての人をあがない、まことの自由を与えてくださった神が、皆さんを祝福し、天の国を受け継ぐ者としてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "信仰をもって洗礼を受け、新しいいのちに満たされた皆さんが、み心にかなう生活を送り、御父のもとに迎えられますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:easter:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ascension": {
-            "label": {
-              "jp": "荘厳な祝福 - 主の昇天"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "きょう、御ひとり子を天に上げられた神が、皆さんを祝福し、キリストのもとに導いてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "復活の後、弟子たちに現れたキリストが、再び来られるときも、皆さんに変わることのないいつくしみを示してくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "栄光のうちに御父のもとに座しておられるキリストが、約束されたとおり、世の終わりまで皆さんとともにいてくださり、救いの喜びを味わわせてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ascension:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_pentecost": {
-            "label": {
-              "jp": "荘厳な祝福 - 聖霊"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "光の源である神は、弟子たちに聖霊を注ぎ、その心を照らしてくださいました。神が皆さんを祝福し、喜びで満たし、聖霊のたまものを豊かに与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "弟子たちの上に注がれた聖霊の火が、皆さんをあらゆる悪から清め、その輝きによって照らしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "ことばの異なる人々を唯一の信仰告白へと導いてくださった聖霊が、皆さんの信仰を強め、希望を揺るぎないものとしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:pentecost:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ordinary_1": {
-            "label": {
-              "jp": "荘厳な祝福 - 年間　一"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "神が皆さんを祝福し、守ってくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神がみ顔の輝きで皆さんを照らし、恵みで満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神がみ顔を皆さんに向け、その平和を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_1:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ordinary_2": {
-            "label": {
-              "jp": "荘厳な祝福 - 年間　二"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "人の知恵をはるかに超える神の平和が、皆さんの心と思いを満たし、御父とひとり子キリストを知り、愛する恵みを与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_2:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_2:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_2:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_2:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ordinary_3": {
-            "label": {
-              "jp": "荘厳な祝福 - 年間　三"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "いつくしみ深い神が皆さんを祝福し、救いに導く知恵を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神が信仰の恵みで皆さんを支え、み心を行う恵みで満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神が平和と愛の道を示し、皆さんをご自分のもとに立ち返らせてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_3:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ordinary_4": {
-            "label": {
-              "jp": "荘厳な祝福 - 年間　四"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "慰めの源である神が、世界をまことの平和に導き、皆さんに祝福を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神が、皆さんをあらゆる困難から解放し、一人ひとりの心を、愛のうちに揺るぎないものとしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "皆さんが、信仰、希望、愛のたまものを豊かに受け、この世においてよいわざを行い、永遠の喜びを見いだすことができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_4:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ordinary_5": {
-            "label": {
-              "jp": "荘厳な祝福 - 年間　五"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "全能の神が、あらゆる困難から皆さんを守り、いつくしみをもって祝福してくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "皆さんが神の語りかけを心から受け入れ、変わることのない喜びで満たされますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神が示してくださる正しい道を皆さんがいつも歩み、神の国を受け継ぐことができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_5:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_ordinary_6": {
-            "label": {
-              "jp": "荘厳な祝福 - 年間　六"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "神が、天のあらゆる祝福で皆さんを満たし、聖なる者、汚れのない者としてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_6:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_6:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "神がその栄光を豊かに注ぎ、真理のことばによって導き、救いの福音によって教え、互いに愛し合う心を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_6:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_6:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_6:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:ordinary_6:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_blessed_virgin_mary": {
-            "label": {
-              "jp": "荘厳な祝福 - 聖母マリア"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "おとめマリアから生まれたひとり子によって、全人類を救ってくださった神が、皆さんに豊かな祝福を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "いのちの源である主キリストを産み育てたマリアの愛を、皆さんがいつどこにいても感じとることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "聖母マリアの祝日に集まった皆さんが、天の喜びと恵みで満たされますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:blessed_virgin_mary:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_peter_and_paul": {
-            "label": {
-              "jp": "荘厳な祝福 - 聖ペトロ 聖パウロ"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "ペトロの信仰告白を礎として教会を建ててくださった全能の神が、皆さんに揺るぎない信仰を与えてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "ひるむことなく宣教に励んだパウロのように、皆さんが、人々をキリストのもとに導くことができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "ペトロとパウロの殉教を記念する皆さんが、二人の使徒の取り次ぎに支えられて信仰の道を歩み、天の喜びにあずかることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:peter_and_paul:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_apostles": {
-            "label": {
-              "jp": "荘厳な祝福 - 使徒"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "使徒たちを礎として教会を築いてくださった神が、聖○○○○の取り次ぎを願う皆さんを、祝福してくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "使徒たちの教えと模範によって教会を強めてくださる神が、皆さんをキリストの証人としてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "使徒たちの教えによって信仰を固めてくださった神が、皆さんを永遠の住まいへと導いてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:apostles:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_all_saints": {
-            "label": {
-              "jp": "荘厳な祝福 - 聖人"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "聖人の誉れと喜びである神が、皆さんを豊かな祝福で満たし、強めてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "聖人の取り次ぎによって、皆さんがこの世の悪から解放され、その聖なる生活を模範とし、神と人々に心から仕える者となりますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "地上を旅する教会が、天の集いに迎えられ、すべての聖人とともに、永遠の喜びを味わうことができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:all_saints:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_church_dedication": {
-            "label": {
-              "jp": "荘厳な祝福 - 教会献堂"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "きょう、献堂の祝いに招いてくださった神が、皆さんを天の祝福で満たしてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "すべての人を御子のうちに一つに集めてくださる神が、皆さんを聖霊の神殿としてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "清い心を与えてくださる神が、皆さんをすべての聖人とともに、永遠のいのちを受け継ぐ者としてくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:church_dedication:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          },
-          "solemn_for_the_dead": {
-            "label": {
-              "jp": "荘厳な祝福 - 死者"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "神は、限りないいつくしみによって人間を造り、ひとり子の復活によって、人類に復活の希望を与えてくださいました。慰めの源である神が、皆さんを祝福してくださいますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:petition:0:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:petition:1:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "地上を旅するわたしたちの心がいやされ、亡くなったすべての人に永遠のいのちが与えられますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:petition:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:petition:3:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "キリストの復活を信じるわたしたちが、主とともに終わりなく生きることができますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:petition:4:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:petition:5:text"
-                },
-                "sp_jp": "会衆"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の祝福が 皆さんの上にいつもありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:ending:2:text"
-                },
-                "sp_jp": "司祭"
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "blessing:for_the_dead:ending:1:text"
-                },
-                "sp_jp": "会衆"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        30
-      ],
-      "value": {
-        "id": "4.3 dismissal",
-        "type": "selectable",
-        "header": {
-          "jp": "派遣"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "jp": "派遣 一"
-            },
-            "lines": [
-              {
-                "text_jp": "(感謝の祭儀を終わります。)<br>行きましょう、主の福音を告げ知らせるために。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "神に感謝。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "jp": "派遣 二"
-            },
-            "lines": [
-              {
-                "text_jp": "",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "神に感謝。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "jp": "派遣 三"
-            },
-            "lines": [
-              {
-                "text_jp": "(感謝の祭儀を終わります。)<br>平和のうちに行きましょう、日々の生活の中で主の栄光をあらわすために。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "神に感謝。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
-          "D": {
-            "label": {
-              "jp": "派遣 四"
-            },
-            "lines": [
-              {
-                "text_jp": "感謝の祭儀を終わります。<br>行きましょう、主の平和のうちに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "神に感謝。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        31
-      ],
-      "value": {
-        "id": "4.4 final_song",
-        "type": "part",
-        "header": {
-          "jp": "閉祭の歌"
-        },
-        "lines": [
-          {
-            "rubric_jp": "閉祭の歌を歌う。<br>他の祭儀が続く場合、派遣の式は省かれる。",
-            "__massEditorPairKeys": {
-              "rubric_jp": "0:rubric"
-            }
-          }
-        ]
       }
     }
   ];

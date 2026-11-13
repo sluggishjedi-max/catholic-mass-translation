@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261113-2';
+    const APP_VERSION = 'V31.2-20261113-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -21057,45 +21057,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .join(' | ');
     }
 
-    function isSanctusHosannaLine(line) {
-        const text = massLineSearchText(line);
-        return /호산나|Hosanna|Hoan hô|Hosánna|ホザンナ/i.test(text);
-    }
-
-    function isMemorialAcclamationIntroLine(line) {
-        const text = massLineSearchText(line);
-        return /신앙의 신비|Mystery of faith|Mầu nhiệm đức tin|Mysterium fidei|信仰の神秘/i.test(text);
-    }
-
-    function dottedDividerLine(key) {
-        return { isDivider: key || 'dotted' };
-    }
-
-    function pushDottedDividerLine(out, key) {
-        if (!out.length || !out[out.length - 1] || !out[out.length - 1].isDivider) {
-            out.push(dottedDividerLine(key));
-        }
-    }
-
     function addEucharisticDottedDividers(lines) {
         const out = [];
-        let hosannaCount = 0;
-        let insertedAfterSanctus = false;
-        let insertedBeforeMystery = false;
-        (Array.isArray(lines) ? lines : []).forEach(line => {
-            if (!insertedBeforeMystery && isMemorialAcclamationIntroLine(line)) {
-                pushDottedDividerLine(out, 'before-memorial-acclamation');
-                insertedBeforeMystery = true;
-            }
+        const divider = key => { if (!out.at(-1)?.isDivider) out.push({isDivider:key}); };
+        for (const line of Array.isArray(lines) ? lines : []) {
+            if (line?.dividerBefore) divider(line.dividerBefore);
             out.push(line);
-            if (isSanctusHosannaLine(line)) {
-                hosannaCount += 1;
-                if (!insertedAfterSanctus && hosannaCount >= 2) {
-                    pushDottedDividerLine(out, 'after-sanctus');
-                    insertedAfterSanctus = true;
-                }
-            }
-        });
+            if (line?.dividerAfter) divider(line.dividerAfter);
+        }
         return out;
     }
 

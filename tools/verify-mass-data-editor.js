@@ -11,8 +11,15 @@ const {
   readCountryMassSources
 } = require('./mass-data-editor');
 
+const sourceDigests = new Map();
 function digest(file) {
-  return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+  const stat = fs.statSync(file);
+  const version = [stat.size, stat.mtimeMs, stat.ctimeMs].join(':');
+  const cached = sourceDigests.get(file);
+  if (cached && cached.version === version) return cached.digest;
+  const digest = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+  sourceDigests.set(file, { version, digest });
+  return digest;
 }
 
 function firstEditableRow(loaded, jurisdiction) {

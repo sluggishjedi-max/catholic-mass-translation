@@ -1472,6 +1472,2380 @@
     },
     {
       "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "la": "Oratio Dominica"
+        },
+        "lines": [
+          {
+            "text_la": "Præcéptis salutáribus móniti,",
+            "__massEditorPairKeys": {
+              "text_la": "0:text"
+            },
+            "sp_la": "S."
+          },
+          {
+            "text_la": "et divína institutióne formáti,<br>audémus dícere:",
+            "__massEditorPairKeys": {
+              "text_la": "1:text"
+            }
+          },
+          {
+            "text_la": "Pater noster, qui es in cælis:",
+            "__massEditorPairKeys": {
+              "text_la": "2:text"
+            },
+            "sp_la": "P."
+          },
+          {
+            "text_la": "sanctificétur nomen tuum;",
+            "__massEditorPairKeys": {
+              "text_la": "3:text"
+            }
+          },
+          {
+            "text_la": "advéniat regnum tuum;",
+            "__massEditorPairKeys": {
+              "text_la": "4:text"
+            }
+          },
+          {
+            "text_la": "fiat volúntas tua, sicut in cælo, et in terra.",
+            "__massEditorPairKeys": {
+              "text_la": "5:text"
+            }
+          },
+          {
+            "text_la": "Panem nostrum cotidiánum da nobis hódie;",
+            "__massEditorPairKeys": {
+              "text_la": "6:text"
+            }
+          },
+          {
+            "text_la": "et dimítte nobis débita nostra,",
+            "__massEditorPairKeys": {
+              "text_la": "7:text"
+            }
+          },
+          {
+            "text_la": "sicut et nos dimíttimus debitóribus nostris;",
+            "__massEditorPairKeys": {
+              "text_la": "8:text"
+            }
+          },
+          {
+            "text_la": "et ne nos indúcas in tentatiónem;",
+            "__massEditorPairKeys": {
+              "text_la": "9:text"
+            }
+          },
+          {
+            "text_la": "sed líbera nos a malo.",
+            "__massEditorPairKeys": {
+              "text_la": "10:text"
+            }
+          },
+          {
+            "text_la": "Líbera nos, quǽsumus, Dómine, ab ómnibus malis,",
+            "__massEditorPairKeys": {
+              "text_la": "11:text"
+            },
+            "sp_la": "S."
+          },
+          {
+            "text_la": "da propítius pacem in diébus nostris,",
+            "__massEditorPairKeys": {
+              "text_la": "12:text"
+            }
+          },
+          {
+            "text_la": "ut, ope misericórdiæ tuæ adiúti,<br>et a peccáto simus semper líberi",
+            "__massEditorPairKeys": {
+              "text_la": "13:text"
+            }
+          },
+          {
+            "text_la": "et ab omni perturbatióne secúri:",
+            "__massEditorPairKeys": {
+              "text_la": "14:text"
+            }
+          },
+          {
+            "text_la": "exspectántes beátam spem",
+            "__massEditorPairKeys": {
+              "text_la": "15:text"
+            }
+          },
+          {
+            "text_la": "et advéntum Salvatóris nostri Iesu Christi.",
+            "__massEditorPairKeys": {
+              "text_la": "16:text"
+            }
+          },
+          {
+            "text_la": "Quia tuum est regnum,<br>et potéstas, et glória<br>in sǽcula.",
+            "__massEditorPairKeys": {
+              "text_la": "17:text"
+            },
+            "sp_la": "P."
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "la": "Ritus pacis"
+        },
+        "lines": [
+          {
+            "text_la": "Dómine Iesu Christe,",
+            "__massEditorPairKeys": {
+              "text_la": "0:text"
+            },
+            "sp_la": "S."
+          },
+          {
+            "text_la": "qui dixísti Apóstolis tuis:",
+            "__massEditorPairKeys": {
+              "text_la": "1:text"
+            }
+          },
+          {
+            "text_la": "Pacem relínquo vobis,",
+            "__massEditorPairKeys": {
+              "text_la": "2:text"
+            }
+          },
+          {
+            "text_la": "pacem meam do vobis:",
+            "__massEditorPairKeys": {
+              "text_la": "3:text"
+            }
+          },
+          {
+            "text_la": "ne respícias peccáta nostra,",
+            "__massEditorPairKeys": {
+              "text_la": "4:text"
+            }
+          },
+          {
+            "text_la": "sed fidem Ecclésiæ tuæ;",
+            "__massEditorPairKeys": {
+              "text_la": "5:text"
+            }
+          },
+          {
+            "text_la": "eámque secúndum voluntátem tuam<br>pacificáre et coadunáre dignéris.",
+            "__massEditorPairKeys": {
+              "text_la": "6:text"
+            }
+          },
+          {
+            "text_la": "Qui vivis et regnas in sǽcula sæculórum.",
+            "__massEditorPairKeys": {
+              "text_la": "7:text"
+            }
+          },
+          {
+            "text_la": "Amen.",
+            "__massEditorPairKeys": {
+              "text_la": "8:text"
+            },
+            "sp_la": "P."
+          },
+          {
+            "text_la": "Pax Dómini sit semper vobíscum.",
+            "__massEditorPairKeys": {
+              "text_la": "9:text"
+            },
+            "sp_la": "S."
+          },
+          {
+            "text_la": "Et cum spíritu tuo.",
+            "__massEditorPairKeys": {
+              "text_la": "10:text"
+            },
+            "sp_la": "P."
+          },
+          {
+            "text_la": "Offérte vobis pacem.",
+            "__massEditorPairKeys": {
+              "text_la": "11:text"
+            },
+            "sp_la": "D.(S.)"
+          },
+          {
+            "rubric_la": "Iuxta locorum consuetudines, pacem, communionem<br>et caritatem sibi invicem significant.",
+            "__massEditorPairKeys": {
+              "rubric_la": "12:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "la": "Agnus Dei"
+        },
+        "lines": [
+          {
+            "text_la": "Agnus Dei, qui tollis peccáta mundi:",
+            "__massEditorPairKeys": {
+              "text_la": "0:text"
+            },
+            "sp_la": "P."
+          },
+          {
+            "text_la": "miserére nobis.",
+            "__massEditorPairKeys": {
+              "text_la": "1:text"
+            }
+          },
+          {
+            "text_la": "Agnus Dei, qui tollis peccáta mundi:",
+            "__massEditorPairKeys": {
+              "text_la": "2:text"
+            }
+          },
+          {
+            "text_la": "miserére nobis.",
+            "__massEditorPairKeys": {
+              "text_la": "3:text"
+            }
+          },
+          {
+            "text_la": "Agnus Dei, qui tollis peccáta mundi:",
+            "__massEditorPairKeys": {
+              "text_la": "4:text"
+            }
+          },
+          {
+            "text_la": "dona nobis pacem.",
+            "__massEditorPairKeys": {
+              "text_la": "5:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "la": "Communio"
+        },
+        "lines": [
+          {
+            "text_la": "Ecce Agnus Dei,",
+            "__massEditorPairKeys": {
+              "text_la": "0:text"
+            }
+          },
+          {
+            "text_la": "ecce qui tollit peccáta mundi.",
+            "__massEditorPairKeys": {
+              "text_la": "1:text"
+            }
+          },
+          {
+            "text_la": "Beáti qui ad cenam Agni vocáti sunt.",
+            "__massEditorPairKeys": {
+              "text_la": "2:text"
+            }
+          },
+          {
+            "text_la": "Dómine, non sum dignus, ut intres sub téctum meum,",
+            "__massEditorPairKeys": {
+              "text_la": "3:text"
+            },
+            "sp_la": "P."
+          },
+          {
+            "text_la": "sed tantum dic verbo,",
+            "__massEditorPairKeys": {
+              "text_la": "4:text"
+            }
+          },
+          {
+            "text_la": "et sanábitur ánima mea.",
+            "__massEditorPairKeys": {
+              "text_la": "5:text"
+            }
+          },
+          {
+            "rubric_la": "Fideles catholici qui Communionem suscipere possunt accedunt",
+            "__massEditorPairKeys": {
+              "rubric_la": "6:rubric"
+            },
+            "rubricInset_la": true
+          },
+          {
+            "text_la": "Corpus (et Sanguis) Christi.",
+            "__massEditorPairKeys": {
+              "text_la": "7:text"
+            },
+            "sp_la": "S."
+          },
+          {
+            "text_la": "Amen.",
+            "__massEditorPairKeys": {
+              "text_la": "8:text"
+            },
+            "sp_la": "℣"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "la": "Antiphona ad communionem"
+        },
+        "lines": [
+          {
+            "rubric_la": "Si cantus non habetur, antiphona dicitur.",
+            "__massEditorPairKeys": {
+              "rubric_la": "0:rubric"
+            }
+          },
+          {
+            "text_la": "(Antiphona ad communionem…)",
+            "__massEditorPairKeys": {
+              "text_la": "1:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "la": "Oratio post communionem"
+        },
+        "lines": [
+          {
+            "text_la": "Orémus.",
+            "__massEditorPairKeys": {
+              "text_la": "0:text"
+            },
+            "sp_la": "S."
+          },
+          {
+            "text_la": "(Oratio post communionem…)",
+            "__massEditorPairKeys": {
+              "text_la": "1:text"
+            }
+          },
+          {
+            "text_la": "(Fines Precum)",
+            "__massEditorPairKeys": {
+              "text_la": "2:text"
+            }
+          },
+          {
+            "text_la": "Amen.",
+            "__massEditorPairKeys": {
+              "text_la": "3:text"
+            },
+            "sp_la": "P."
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "la": "annuntiationes"
+        },
+        "lines": [
+          {
+            "rubric_la": "Sequuntur, si necessariæ sint, breves annuntiationes ad populum.",
+            "__massEditorPairKeys": {
+              "rubric_la": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "la": "Benedictio"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "la": "Benedictio simplex"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vos omnípotens Deus,",
+                "__massEditorPairKeys": {
+                  "text_la": "3:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Pater, et Fílius, ✠ et Spíritus Sanctus.",
+                "__massEditorPairKeys": {
+                  "text_la": "4:text"
+                }
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "5:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "la": "Forma Introitus Episcopi"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Sit nomen Dómini benedíctum.",
+                "__massEditorPairKeys": {
+                  "text_la": "2:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Ex hoc nunc et usque in sǽculum.",
+                "__massEditorPairKeys": {
+                  "text_la": "3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Adiutórium nostrum in nómine Dómini,",
+                "__massEditorPairKeys": {
+                  "text_la": "4:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Qui fecit cælum et terram.",
+                "__massEditorPairKeys": {
+                  "text_la": "5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "6:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vos omnípotens Deus,",
+                "__massEditorPairKeys": {
+                  "text_la": "7:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Pater, ✠ et Fílius, ✠ et Spíritus ✠ Sanctus.",
+                "__massEditorPairKeys": {
+                  "text_la": "8:text"
+                }
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "9:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "la": "Formula benedictionis sollemnior/Oratio super populum,"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "rubric_la": "In fine orationis Sacerdotis, ",
+                "__massEditorPairKeys": {
+                  "rubric_la": "3:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "3:text"
+                },
+                "sp_la": "R."
+              },
+              {
+                "text_la": "Benedícat vos omnípotens Deus,",
+                "__massEditorPairKeys": {
+                  "text_la": "4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Pater, et Fílius, ✠ et Spíritus Sanctus.",
+                "__massEditorPairKeys": {
+                  "text_la": "5:text"
+                }
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "6:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_advent": {
+            "label": {
+              "la": "Benedictio sollemnis - In Adventu"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Omnípotens et miséricors Deus, cuius Unigéniti advéntum et prætéritum créditis, et futúrum exspectátis, eiúsdem advéntus vos illustratióne sanctíficet et sua benedictióne locuplétet.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "In præséntis vitæ stádio reddat vos in fide stábiles, spe gaudéntes, et in caritáte efficáces.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ut, qui de advéntu Redemptóris nostri secúndum carnem devóta mente lætámini, in secúndo, cum in maiestáte sua vénerit, prǽmiis ætérnæ vitæ ditémini.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Filii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:advent:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_christmas": {
+            "label": {
+              "la": "Benedictio sollemnis - In Nativitate Domini"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus infinítæ bonitátis, qui incarnatióne Fílii sui mundi ténebras effugávit, et eius gloriósa nativitáte hanc noctem (diem) sacratíssimam irradiávit, effúget a vobis ténebras vitiórum, et irrádiet corda vestra luce virtútum.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quique eius salutíferæ nativitátis gáudium magnum pastóribus ab Angelo vóluit nuntiári, ipse mentes vestras suo gáudio ímpleat, et vos Evangélii sui núntios effíciat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et, qui per eius incarnatiónem terréna cæléstibus sociávit, dono vos suæ pacis et bonæ répleat voluntátis, et vos fáciat Ecclésiæ consórtes esse cæléstis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:christmas:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_new_year": {
+            "label": {
+              "la": "Benedictio sollemnis - Initio anni"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, fons et orígo totíus benedictiónis, grátiam vobis concédat, benedictiónis suæ largitátem infúndat, atque per totum annum vos salvos et incólumes prótegat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Custódiat fídei vobis integritátem, tríbuat spei longanimitátem, perseverántem usque ad finem cum sancta patiéntia caritátem.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Dies et actus vestros in sua pace dispónat, preces hic et ubíque exáudiat, et ad vitam ætérnam felíciter vos perdúcat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:new_year:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_epiphany": {
+            "label": {
+              "la": "Benedictio sollemnis - In Epiphania Domini"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, qui vos de ténebris vocávit in admirábile lumen suum, suam vobis benedictiónem benígnus infúndat, et corda vestra fide, spe et caritáte stabíliat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et quia Christum sequímini confidénter, qui hódie mundo appáruit lux relúcens in ténebris, fáciat et vos lucem esse frátribus vestris.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quátenus, peregrinatióne perácta, perveniátis ad eum, quem magi stella prǽvia quæsiérunt, et gáudio magno, lucem de luce, Christum Dóminum invenérunt.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:epiphany:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_passion": {
+            "label": {
+              "la": "Benedictio sollemnis - De Passione Domini"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, Pater misericordiárum, qui Unigéniti sui passióne tríbuit vobis caritátis exémplum, præstet ut, per servítium Dei et hóminum, percipiátis suæ benedictiónis ineffábile donum.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ut ab eo sempitérnæ vitæ munus obtineátis, per cuius temporálem mortem, ætérnam vos evádere créditis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quátenus, cuius humilitátis sequímini documénta, eius resurrectiónis possideátis consórtia.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:passion:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_easter": {
+            "label": {
+              "la": "Benedictio sollemnis - Tempore paschali"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, qui per resurrectiónem Unigéniti sui dignátus est vobis bonum redemptiónis adoptionísque conférre, sua benedictióne vos tríbuat congaudére.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et quo rediménte percepístis donum perpétuæ libertátis, eo largiénte hereditátis ætérnæ consórtes éffici valeátis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et cui resurrexístis in baptísmate iam credéndo, adiúngi mereámini in pátria cælésti nunc recte vivéndo.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:easter:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ascension": {
+            "label": {
+              "la": "Benedictio sollemnis - In Ascensione Domini"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vos omnípotens Deus, cuius Unigénitus hodiérna die cælórum alta penetrávit, et vobis, ubi est ipse, ascendéndi áditum reserávit.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Concédat ut, sicut Christus post resurrectiónem suam visus est discípulis maniféstus, ita vobis in iudícium véniens appáreat pro æternitáte placátus.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et qui eum consedére Patri in sua créditis maiestáte, ipsum usque in finem sǽculi vobíscum permanére secúndum eius promissiónem læti valeátis experíre.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ascension:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_pentecost": {
+            "label": {
+              "la": "Benedictio sollemnis - De Spiritu Sancto"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, Pater lúminum, qui discipulórum mentes Spíritus Parácliti infusióne dignátus est illustráre, sua vos fáciat benedictióne gaudére, et perpétuo donis eiúsdem Spíritus abundáre.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ignis ille, qui super discípulos mirándus appáruit, corda vestra ab omni malo poténter expúrget, et sui lúminis infusióne perlústret.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quique dignátus est in uníus fídei confessióne diversitátem adunáre linguárum, in eádem fide perseveráre vos fáciat, et per illam a spe ad spéciem perveníre concédat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:pentecost:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ordinary_1": {
+            "label": {
+              "la": "Benedictio sollemnis - Per annum, I"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vobis Dóminus, et custódiat vos.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Illúminet fáciem suam super vos, et misereátur vestri.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Convértat vultum suum ad vos, et donet vobis suam pacem.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_1:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ordinary_2": {
+            "label": {
+              "la": "Benedictio sollemnis - Per annum, II"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Pax Dei, quæ exsúperat omnem sensum, custódiat corda vestra et intellegéntias vestras in sciéntia et caritáte Dei, et Fílii sui, Dómini nostri Iesu Christi.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_2:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_2:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_2:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_2:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ordinary_3": {
+            "label": {
+              "la": "Benedictio sollemnis - Per annum, III"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Omnipotens Deus sua vos cleméntia benedícat, et sensum in vobis sapiéntiæ salutáris infúndat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Fídei documéntis vos semper enútriat, et in sanctis opéribus, ut perseverétis, effíciat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Gressus vestros ad se convértat, et viam vobis pacis et caritátis osténdat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_3:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ordinary_4": {
+            "label": {
+              "la": "Benedictio sollemnis - Per annum, IV"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus totíus consolatiónis dies vestros in sua pace dispónat, et suæ vobis benedictiónis dona concédat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ab omni semper perturbatióne vos líberet, et corda vestra in suo amóre confírmet.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quátenus donis spei, fídei et caritátis dívites, et præséntem vitam transigátis in ópere efficáces, et possítis ad ætérnam perveníre felíces.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_4:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ordinary_5": {
+            "label": {
+              "la": "Benedictio sollemnis - Per annum, V"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Omnípotens Deus univérsa a vobis advérsa semper exclúdat, et suæ super vos benedictiónis dona propitiátus infúndat.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Corda vestra effíciat divínis inténta elóquiis, ut repléri possint gáudiis sempitérnis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quátenus, quæ bona et recta intellegéntes, viam mandatórum Dei inveniámini semper curréntes, et cívium supernórum efficiámini coherédes.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_5:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_ordinary_6": {
+            "label": {
+              "la": "Benedictio sollemnis - Per annum, VI"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vos Deus omni benedictióne cælésti, sanctósque vos et puros in conspéctu suo semper effíciat; divítias glóriæ suæ in vos abundánter effúndat, verbis veritátis ínstruat, Evangélio salútis erúdiat, et caritáte fratérna semper locuplétet. Per Christum Dóminum nostrum.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_6:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_6:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_6:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:ordinary_6:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_blessed_virgin_mary": {
+            "label": {
+              "la": "Benedictio sollemnis - De beata Maria Virgine"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, qui per beátæ Maríæ Vírginis partum genus humánum sua vóluit benignitáte redímere, sua vos dignétur benedictióne ditáre.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Eiúsque semper et ubíque patrocínia sentiátis, per quam auctórem vitæ suscípere meruístis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et qui hodiérna die devótis méntibus convenístis, spiritálium gaudiórum cælestiúmque præmiórum vobíscum múnera reportétis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:blessed_virgin_mary:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_peter_and_paul": {
+            "label": {
+              "la": "Benedictio sollemnis - De sanctis Petro et Paulo"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vos omnípotens Deus, qui in beáti Petri confessióne vos salubérrima stabilívit, et per eam in Ecclésiæ soliditáte fídei fundávit.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et quos beáti Pauli instrúxit indeféssa prædicatióne, suo semper exémplo dóceat Christo fratres lucrifácere.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ut Petrus clave, Paulus verbo, ope intercessiónis utérque in illam pátriam nos certent indúcere, ad quam meruérunt illi, alter cruce, alter gládio, felíciter perveníre.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:peter_and_paul:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_apostles": {
+            "label": {
+              "la": "Benedictio sollemnis - De Apostolis"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, qui vos in apostólicis tríbuit consístere fundaméntis, benedícere vobis dignétur beatórum Apostolórum N. et N. (beáti Apóstoli N.) méritis intercedéntibus gloriósis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et apostólicis præsídiis vos pro cunctis fáciat testes veritátis, qui vos eórum munerári documéntis vóluit et exémplis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ut eórum intercessióne ad ætérnæ pátriæ hereditátem perveníre possítis, per quorum doctrínam fídei firmitátem possidétis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:apostles:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_all_saints": {
+            "label": {
+              "la": "Benedictio sollemnis - De omnibus Sanctis"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, glória et exsultátio Sanctórum, benedícat vos benedictióne perpétua, qui vobis tríbuit exímiis suffrágiis roborári.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Eórum intercessióne a præséntibus malis liberáti, et exémplis sanctæ conversatiónis instrúcti, in servítio Dei fratrúmque inveniámini semper inténti.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quátenus cum iis ómnibus valeátis illíus pátriæ vos gáudia possidére, in qua fílios suos supérnis coniúngi cívibus in pace perpétua sancta lætátur Ecclésia.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:all_saints:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_church_dedication": {
+            "label": {
+              "la": "Benedictio sollemnis - In dedicatione ecclesiæ"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Deus, Dóminus cæli et terræ, qui vos hódie ad huius domus dedicatiónem adunávit, ipse vos cælésti benedictióne fáciat abundáre.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Concedátque vobis fíeri templum suum et habitáculum Spíritus Sancti, qui omnes fílios dispérsos vóluit in Fílio suo congregári.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Quátenus felíciter emundáti, habitatórem Deum in vobismetípsis possítis habére, et ætérnæ beatitúdinis hereditátem cum ómnibus Sanctis possidére.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:church_dedication:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "solemn_for_the_dead": {
+            "label": {
+              "la": "Benedictio sollemnis - In celebrationibus pro defunctis"
+            },
+            "lines": [
+              {
+                "text_la": "Dóminus vobíscum.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "E."
+              },
+              {
+                "text_la": "Et cum Spíritu tuo.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
+                "__massEditorPairKeys": {
+                  "rubric_la": "2:rubric"
+                },
+                "rubricInset_la": true
+              },
+              {
+                "text_la": "Benedícat vos Deus totíus consolatiónis, qui hóminem ineffábili bonitáte creávit, et in resurrectióne Unigéniti sui spem credéntibus resurgéndi concéssit.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:petition:0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:petition:1:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Nobis, qui vívimus, véniam tríbuat pro peccátis, et ómnibus defúnctis locum concédat lucis et pacis.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:petition:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:petition:3:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Ut omnes cum Christo sine fine felíciter vivámus, quem resurrexísse a mórtuis veráciter crédimus.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:petition:4:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:petition:5:text"
+                },
+                "sp_la": "P."
+              },
+              {
+                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:ending:2:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_la": "blessing:for_the_dead:ending:1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "la": "Dimissio"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "la": "Forma I"
+            },
+            "lines": [
+              {
+                "text_la": "",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Deo grátias.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "la": "Forma II"
+            },
+            "lines": [
+              {
+                "text_la": "",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Deo grátias.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "la": "Forma III"
+            },
+            "lines": [
+              {
+                "text_la": "",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Deo grátias.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "la": "Forma IV"
+            },
+            "lines": [
+              {
+                "text_la": "Ite, missa est.",
+                "__massEditorPairKeys": {
+                  "text_la": "0:text"
+                },
+                "sp_la": "S."
+              },
+              {
+                "text_la": "Deo grátias.",
+                "__massEditorPairKeys": {
+                  "text_la": "1:text"
+                },
+                "sp_la": "P."
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "la": "Cantus ad dimissionem"
+        },
+        "lines": [
+          {
+            "rubric_la": "Cantum ad dimissionem canere.<br>Si qua actio liturgica immediate sequatur, ritus dimissionis omittuntur.",
+            "__massEditorPairKeys": {
+              "rubric_la": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
         20
       ],
       "value": {
@@ -4128,6 +6502,7 @@
             }
           },
           {
+            "dividerAfter": "after-sanctus",
             "text_la": "Hosánna in excélsis.",
             "__massEditorPairKeys": {
               "text_la": "5:text"
@@ -6418,6 +8793,7 @@
               }
             },
             {
+              "dividerAfter": "after-sanctus",
               "text_la": "Hosánna in excélsis.",
               "__massEditorPairKeys": {
                 "text_la": "10:text"
@@ -6734,2380 +9110,6 @@
           }
         },
         "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
-        21
-      ],
-      "value": {
-        "id": "3.4 lords_prayer",
-        "type": "part",
-        "header": {
-          "la": "Oratio Dominica"
-        },
-        "lines": [
-          {
-            "text_la": "Præcéptis salutáribus móniti,",
-            "__massEditorPairKeys": {
-              "text_la": "0:text"
-            },
-            "sp_la": "S."
-          },
-          {
-            "text_la": "et divína institutióne formáti,<br>audémus dícere:",
-            "__massEditorPairKeys": {
-              "text_la": "1:text"
-            }
-          },
-          {
-            "text_la": "Pater noster, qui es in cælis:",
-            "__massEditorPairKeys": {
-              "text_la": "2:text"
-            },
-            "sp_la": "P."
-          },
-          {
-            "text_la": "sanctificétur nomen tuum;",
-            "__massEditorPairKeys": {
-              "text_la": "3:text"
-            }
-          },
-          {
-            "text_la": "advéniat regnum tuum;",
-            "__massEditorPairKeys": {
-              "text_la": "4:text"
-            }
-          },
-          {
-            "text_la": "fiat volúntas tua, sicut in cælo, et in terra.",
-            "__massEditorPairKeys": {
-              "text_la": "5:text"
-            }
-          },
-          {
-            "text_la": "Panem nostrum cotidiánum da nobis hódie;",
-            "__massEditorPairKeys": {
-              "text_la": "6:text"
-            }
-          },
-          {
-            "text_la": "et dimítte nobis débita nostra,",
-            "__massEditorPairKeys": {
-              "text_la": "7:text"
-            }
-          },
-          {
-            "text_la": "sicut et nos dimíttimus debitóribus nostris;",
-            "__massEditorPairKeys": {
-              "text_la": "8:text"
-            }
-          },
-          {
-            "text_la": "et ne nos indúcas in tentatiónem;",
-            "__massEditorPairKeys": {
-              "text_la": "9:text"
-            }
-          },
-          {
-            "text_la": "sed líbera nos a malo.",
-            "__massEditorPairKeys": {
-              "text_la": "10:text"
-            }
-          },
-          {
-            "text_la": "Líbera nos, quǽsumus, Dómine, ab ómnibus malis,",
-            "__massEditorPairKeys": {
-              "text_la": "11:text"
-            },
-            "sp_la": "S."
-          },
-          {
-            "text_la": "da propítius pacem in diébus nostris,",
-            "__massEditorPairKeys": {
-              "text_la": "12:text"
-            }
-          },
-          {
-            "text_la": "ut, ope misericórdiæ tuæ adiúti,<br>et a peccáto simus semper líberi",
-            "__massEditorPairKeys": {
-              "text_la": "13:text"
-            }
-          },
-          {
-            "text_la": "et ab omni perturbatióne secúri:",
-            "__massEditorPairKeys": {
-              "text_la": "14:text"
-            }
-          },
-          {
-            "text_la": "exspectántes beátam spem",
-            "__massEditorPairKeys": {
-              "text_la": "15:text"
-            }
-          },
-          {
-            "text_la": "et advéntum Salvatóris nostri Iesu Christi.",
-            "__massEditorPairKeys": {
-              "text_la": "16:text"
-            }
-          },
-          {
-            "text_la": "Quia tuum est regnum,<br>et potéstas, et glória<br>in sǽcula.",
-            "__massEditorPairKeys": {
-              "text_la": "17:text"
-            },
-            "sp_la": "P."
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        22
-      ],
-      "value": {
-        "id": "3.5 peace",
-        "type": "part",
-        "header": {
-          "la": "Ritus pacis"
-        },
-        "lines": [
-          {
-            "text_la": "Dómine Iesu Christe,",
-            "__massEditorPairKeys": {
-              "text_la": "0:text"
-            },
-            "sp_la": "S."
-          },
-          {
-            "text_la": "qui dixísti Apóstolis tuis:",
-            "__massEditorPairKeys": {
-              "text_la": "1:text"
-            }
-          },
-          {
-            "text_la": "Pacem relínquo vobis,",
-            "__massEditorPairKeys": {
-              "text_la": "2:text"
-            }
-          },
-          {
-            "text_la": "pacem meam do vobis:",
-            "__massEditorPairKeys": {
-              "text_la": "3:text"
-            }
-          },
-          {
-            "text_la": "ne respícias peccáta nostra,",
-            "__massEditorPairKeys": {
-              "text_la": "4:text"
-            }
-          },
-          {
-            "text_la": "sed fidem Ecclésiæ tuæ;",
-            "__massEditorPairKeys": {
-              "text_la": "5:text"
-            }
-          },
-          {
-            "text_la": "eámque secúndum voluntátem tuam<br>pacificáre et coadunáre dignéris.",
-            "__massEditorPairKeys": {
-              "text_la": "6:text"
-            }
-          },
-          {
-            "text_la": "Qui vivis et regnas in sǽcula sæculórum.",
-            "__massEditorPairKeys": {
-              "text_la": "7:text"
-            }
-          },
-          {
-            "text_la": "Amen.",
-            "__massEditorPairKeys": {
-              "text_la": "8:text"
-            },
-            "sp_la": "P."
-          },
-          {
-            "text_la": "Pax Dómini sit semper vobíscum.",
-            "__massEditorPairKeys": {
-              "text_la": "9:text"
-            },
-            "sp_la": "S."
-          },
-          {
-            "text_la": "Et cum spíritu tuo.",
-            "__massEditorPairKeys": {
-              "text_la": "10:text"
-            },
-            "sp_la": "P."
-          },
-          {
-            "text_la": "Offérte vobis pacem.",
-            "__massEditorPairKeys": {
-              "text_la": "11:text"
-            },
-            "sp_la": "D.(S.)"
-          },
-          {
-            "rubric_la": "Iuxta locorum consuetudines, pacem, communionem<br>et caritatem sibi invicem significant.",
-            "__massEditorPairKeys": {
-              "rubric_la": "12:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        23
-      ],
-      "value": {
-        "id": "3.6 lamb",
-        "type": "part",
-        "header": {
-          "la": "Agnus Dei"
-        },
-        "lines": [
-          {
-            "text_la": "Agnus Dei, qui tollis peccáta mundi:",
-            "__massEditorPairKeys": {
-              "text_la": "0:text"
-            },
-            "sp_la": "P."
-          },
-          {
-            "text_la": "miserére nobis.",
-            "__massEditorPairKeys": {
-              "text_la": "1:text"
-            }
-          },
-          {
-            "text_la": "Agnus Dei, qui tollis peccáta mundi:",
-            "__massEditorPairKeys": {
-              "text_la": "2:text"
-            }
-          },
-          {
-            "text_la": "miserére nobis.",
-            "__massEditorPairKeys": {
-              "text_la": "3:text"
-            }
-          },
-          {
-            "text_la": "Agnus Dei, qui tollis peccáta mundi:",
-            "__massEditorPairKeys": {
-              "text_la": "4:text"
-            }
-          },
-          {
-            "text_la": "dona nobis pacem.",
-            "__massEditorPairKeys": {
-              "text_la": "5:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        24
-      ],
-      "value": {
-        "id": "3.7 communion_rite",
-        "type": "part",
-        "header": {
-          "la": "Communio"
-        },
-        "lines": [
-          {
-            "text_la": "Ecce Agnus Dei,",
-            "__massEditorPairKeys": {
-              "text_la": "0:text"
-            }
-          },
-          {
-            "text_la": "ecce qui tollit peccáta mundi.",
-            "__massEditorPairKeys": {
-              "text_la": "1:text"
-            }
-          },
-          {
-            "text_la": "Beáti qui ad cenam Agni vocáti sunt.",
-            "__massEditorPairKeys": {
-              "text_la": "2:text"
-            }
-          },
-          {
-            "text_la": "Dómine, non sum dignus, ut intres sub téctum meum,",
-            "__massEditorPairKeys": {
-              "text_la": "3:text"
-            },
-            "sp_la": "P."
-          },
-          {
-            "text_la": "sed tantum dic verbo,",
-            "__massEditorPairKeys": {
-              "text_la": "4:text"
-            }
-          },
-          {
-            "text_la": "et sanábitur ánima mea.",
-            "__massEditorPairKeys": {
-              "text_la": "5:text"
-            }
-          },
-          {
-            "rubric_la": "Fideles catholici qui Communionem suscipere possunt accedunt",
-            "__massEditorPairKeys": {
-              "rubric_la": "6:rubric"
-            },
-            "rubricInset_la": true
-          },
-          {
-            "text_la": "Corpus (et Sanguis) Christi.",
-            "__massEditorPairKeys": {
-              "text_la": "7:text"
-            },
-            "sp_la": "S."
-          },
-          {
-            "text_la": "Amen.",
-            "__massEditorPairKeys": {
-              "text_la": "8:text"
-            },
-            "sp_la": "℣"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        25
-      ],
-      "value": {
-        "id": "3.8 communion",
-        "type": "part",
-        "header": {
-          "la": "Antiphona ad communionem"
-        },
-        "lines": [
-          {
-            "rubric_la": "Si cantus non habetur, antiphona dicitur.",
-            "__massEditorPairKeys": {
-              "rubric_la": "0:rubric"
-            }
-          },
-          {
-            "text_la": "(Antiphona ad communionem…)",
-            "__massEditorPairKeys": {
-              "text_la": "1:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        26
-      ],
-      "value": {
-        "id": "3.9 prayer_after",
-        "type": "part",
-        "header": {
-          "la": "Oratio post communionem"
-        },
-        "lines": [
-          {
-            "text_la": "Orémus.",
-            "__massEditorPairKeys": {
-              "text_la": "0:text"
-            },
-            "sp_la": "S."
-          },
-          {
-            "text_la": "(Oratio post communionem…)",
-            "__massEditorPairKeys": {
-              "text_la": "1:text"
-            }
-          },
-          {
-            "text_la": "(Fines Precum)",
-            "__massEditorPairKeys": {
-              "text_la": "2:text"
-            }
-          },
-          {
-            "text_la": "Amen.",
-            "__massEditorPairKeys": {
-              "text_la": "3:text"
-            },
-            "sp_la": "P."
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        28
-      ],
-      "value": {
-        "id": "4.1 announcement",
-        "type": "part",
-        "header": {
-          "la": "annuntiationes"
-        },
-        "lines": [
-          {
-            "rubric_la": "Sequuntur, si necessariæ sint, breves annuntiationes ad populum.",
-            "__massEditorPairKeys": {
-              "rubric_la": "0:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        29
-      ],
-      "value": {
-        "id": "4.2 blessing",
-        "type": "selectable",
-        "header": {
-          "la": "Benedictio"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "la": "Benedictio simplex"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vos omnípotens Deus,",
-                "__massEditorPairKeys": {
-                  "text_la": "3:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Pater, et Fílius, ✠ et Spíritus Sanctus.",
-                "__massEditorPairKeys": {
-                  "text_la": "4:text"
-                }
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "5:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "la": "Forma Introitus Episcopi"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Sit nomen Dómini benedíctum.",
-                "__massEditorPairKeys": {
-                  "text_la": "2:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Ex hoc nunc et usque in sǽculum.",
-                "__massEditorPairKeys": {
-                  "text_la": "3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Adiutórium nostrum in nómine Dómini,",
-                "__massEditorPairKeys": {
-                  "text_la": "4:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Qui fecit cælum et terram.",
-                "__massEditorPairKeys": {
-                  "text_la": "5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "6:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vos omnípotens Deus,",
-                "__massEditorPairKeys": {
-                  "text_la": "7:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Pater, ✠ et Fílius, ✠ et Spíritus ✠ Sanctus.",
-                "__massEditorPairKeys": {
-                  "text_la": "8:text"
-                }
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "9:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "la": "Formula benedictionis sollemnior/Oratio super populum,"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "rubric_la": "In fine orationis Sacerdotis, ",
-                "__massEditorPairKeys": {
-                  "rubric_la": "3:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "3:text"
-                },
-                "sp_la": "R."
-              },
-              {
-                "text_la": "Benedícat vos omnípotens Deus,",
-                "__massEditorPairKeys": {
-                  "text_la": "4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Pater, et Fílius, ✠ et Spíritus Sanctus.",
-                "__massEditorPairKeys": {
-                  "text_la": "5:text"
-                }
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "6:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_advent": {
-            "label": {
-              "la": "Benedictio sollemnis - In Adventu"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Omnípotens et miséricors Deus, cuius Unigéniti advéntum et prætéritum créditis, et futúrum exspectátis, eiúsdem advéntus vos illustratióne sanctíficet et sua benedictióne locuplétet.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "In præséntis vitæ stádio reddat vos in fide stábiles, spe gaudéntes, et in caritáte efficáces.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ut, qui de advéntu Redemptóris nostri secúndum carnem devóta mente lætámini, in secúndo, cum in maiestáte sua vénerit, prǽmiis ætérnæ vitæ ditémini.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Filii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:advent:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_christmas": {
-            "label": {
-              "la": "Benedictio sollemnis - In Nativitate Domini"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus infinítæ bonitátis, qui incarnatióne Fílii sui mundi ténebras effugávit, et eius gloriósa nativitáte hanc noctem (diem) sacratíssimam irradiávit, effúget a vobis ténebras vitiórum, et irrádiet corda vestra luce virtútum.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quique eius salutíferæ nativitátis gáudium magnum pastóribus ab Angelo vóluit nuntiári, ipse mentes vestras suo gáudio ímpleat, et vos Evangélii sui núntios effíciat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et, qui per eius incarnatiónem terréna cæléstibus sociávit, dono vos suæ pacis et bonæ répleat voluntátis, et vos fáciat Ecclésiæ consórtes esse cæléstis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:christmas:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_new_year": {
-            "label": {
-              "la": "Benedictio sollemnis - Initio anni"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, fons et orígo totíus benedictiónis, grátiam vobis concédat, benedictiónis suæ largitátem infúndat, atque per totum annum vos salvos et incólumes prótegat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Custódiat fídei vobis integritátem, tríbuat spei longanimitátem, perseverántem usque ad finem cum sancta patiéntia caritátem.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Dies et actus vestros in sua pace dispónat, preces hic et ubíque exáudiat, et ad vitam ætérnam felíciter vos perdúcat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:new_year:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_epiphany": {
-            "label": {
-              "la": "Benedictio sollemnis - In Epiphania Domini"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, qui vos de ténebris vocávit in admirábile lumen suum, suam vobis benedictiónem benígnus infúndat, et corda vestra fide, spe et caritáte stabíliat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et quia Christum sequímini confidénter, qui hódie mundo appáruit lux relúcens in ténebris, fáciat et vos lucem esse frátribus vestris.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quátenus, peregrinatióne perácta, perveniátis ad eum, quem magi stella prǽvia quæsiérunt, et gáudio magno, lucem de luce, Christum Dóminum invenérunt.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:epiphany:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_passion": {
-            "label": {
-              "la": "Benedictio sollemnis - De Passione Domini"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, Pater misericordiárum, qui Unigéniti sui passióne tríbuit vobis caritátis exémplum, præstet ut, per servítium Dei et hóminum, percipiátis suæ benedictiónis ineffábile donum.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ut ab eo sempitérnæ vitæ munus obtineátis, per cuius temporálem mortem, ætérnam vos evádere créditis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quátenus, cuius humilitátis sequímini documénta, eius resurrectiónis possideátis consórtia.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:passion:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_easter": {
-            "label": {
-              "la": "Benedictio sollemnis - Tempore paschali"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, qui per resurrectiónem Unigéniti sui dignátus est vobis bonum redemptiónis adoptionísque conférre, sua benedictióne vos tríbuat congaudére.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et quo rediménte percepístis donum perpétuæ libertátis, eo largiénte hereditátis ætérnæ consórtes éffici valeátis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et cui resurrexístis in baptísmate iam credéndo, adiúngi mereámini in pátria cælésti nunc recte vivéndo.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:easter:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ascension": {
-            "label": {
-              "la": "Benedictio sollemnis - In Ascensione Domini"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vos omnípotens Deus, cuius Unigénitus hodiérna die cælórum alta penetrávit, et vobis, ubi est ipse, ascendéndi áditum reserávit.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Concédat ut, sicut Christus post resurrectiónem suam visus est discípulis maniféstus, ita vobis in iudícium véniens appáreat pro æternitáte placátus.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et qui eum consedére Patri in sua créditis maiestáte, ipsum usque in finem sǽculi vobíscum permanére secúndum eius promissiónem læti valeátis experíre.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ascension:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_pentecost": {
-            "label": {
-              "la": "Benedictio sollemnis - De Spiritu Sancto"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, Pater lúminum, qui discipulórum mentes Spíritus Parácliti infusióne dignátus est illustráre, sua vos fáciat benedictióne gaudére, et perpétuo donis eiúsdem Spíritus abundáre.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ignis ille, qui super discípulos mirándus appáruit, corda vestra ab omni malo poténter expúrget, et sui lúminis infusióne perlústret.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quique dignátus est in uníus fídei confessióne diversitátem adunáre linguárum, in eádem fide perseveráre vos fáciat, et per illam a spe ad spéciem perveníre concédat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:pentecost:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ordinary_1": {
-            "label": {
-              "la": "Benedictio sollemnis - Per annum, I"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vobis Dóminus, et custódiat vos.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Illúminet fáciem suam super vos, et misereátur vestri.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Convértat vultum suum ad vos, et donet vobis suam pacem.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_1:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ordinary_2": {
-            "label": {
-              "la": "Benedictio sollemnis - Per annum, II"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Pax Dei, quæ exsúperat omnem sensum, custódiat corda vestra et intellegéntias vestras in sciéntia et caritáte Dei, et Fílii sui, Dómini nostri Iesu Christi.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_2:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_2:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_2:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_2:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ordinary_3": {
-            "label": {
-              "la": "Benedictio sollemnis - Per annum, III"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Omnipotens Deus sua vos cleméntia benedícat, et sensum in vobis sapiéntiæ salutáris infúndat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Fídei documéntis vos semper enútriat, et in sanctis opéribus, ut perseverétis, effíciat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Gressus vestros ad se convértat, et viam vobis pacis et caritátis osténdat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_3:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ordinary_4": {
-            "label": {
-              "la": "Benedictio sollemnis - Per annum, IV"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus totíus consolatiónis dies vestros in sua pace dispónat, et suæ vobis benedictiónis dona concédat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ab omni semper perturbatióne vos líberet, et corda vestra in suo amóre confírmet.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quátenus donis spei, fídei et caritátis dívites, et præséntem vitam transigátis in ópere efficáces, et possítis ad ætérnam perveníre felíces.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_4:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ordinary_5": {
-            "label": {
-              "la": "Benedictio sollemnis - Per annum, V"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Omnípotens Deus univérsa a vobis advérsa semper exclúdat, et suæ super vos benedictiónis dona propitiátus infúndat.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Corda vestra effíciat divínis inténta elóquiis, ut repléri possint gáudiis sempitérnis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quátenus, quæ bona et recta intellegéntes, viam mandatórum Dei inveniámini semper curréntes, et cívium supernórum efficiámini coherédes.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_5:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_ordinary_6": {
-            "label": {
-              "la": "Benedictio sollemnis - Per annum, VI"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vos Deus omni benedictióne cælésti, sanctósque vos et puros in conspéctu suo semper effíciat; divítias glóriæ suæ in vos abundánter effúndat, verbis veritátis ínstruat, Evangélio salútis erúdiat, et caritáte fratérna semper locuplétet. Per Christum Dóminum nostrum.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_6:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_6:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_6:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:ordinary_6:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_blessed_virgin_mary": {
-            "label": {
-              "la": "Benedictio sollemnis - De beata Maria Virgine"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, qui per beátæ Maríæ Vírginis partum genus humánum sua vóluit benignitáte redímere, sua vos dignétur benedictióne ditáre.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Eiúsque semper et ubíque patrocínia sentiátis, per quam auctórem vitæ suscípere meruístis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et qui hodiérna die devótis méntibus convenístis, spiritálium gaudiórum cælestiúmque præmiórum vobíscum múnera reportétis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:blessed_virgin_mary:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_peter_and_paul": {
-            "label": {
-              "la": "Benedictio sollemnis - De sanctis Petro et Paulo"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vos omnípotens Deus, qui in beáti Petri confessióne vos salubérrima stabilívit, et per eam in Ecclésiæ soliditáte fídei fundávit.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et quos beáti Pauli instrúxit indeféssa prædicatióne, suo semper exémplo dóceat Christo fratres lucrifácere.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ut Petrus clave, Paulus verbo, ope intercessiónis utérque in illam pátriam nos certent indúcere, ad quam meruérunt illi, alter cruce, alter gládio, felíciter perveníre.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:peter_and_paul:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_apostles": {
-            "label": {
-              "la": "Benedictio sollemnis - De Apostolis"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, qui vos in apostólicis tríbuit consístere fundaméntis, benedícere vobis dignétur beatórum Apostolórum N. et N. (beáti Apóstoli N.) méritis intercedéntibus gloriósis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et apostólicis præsídiis vos pro cunctis fáciat testes veritátis, qui vos eórum munerári documéntis vóluit et exémplis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ut eórum intercessióne ad ætérnæ pátriæ hereditátem perveníre possítis, per quorum doctrínam fídei firmitátem possidétis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:apostles:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_all_saints": {
-            "label": {
-              "la": "Benedictio sollemnis - De omnibus Sanctis"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, glória et exsultátio Sanctórum, benedícat vos benedictióne perpétua, qui vobis tríbuit exímiis suffrágiis roborári.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Eórum intercessióne a præséntibus malis liberáti, et exémplis sanctæ conversatiónis instrúcti, in servítio Dei fratrúmque inveniámini semper inténti.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quátenus cum iis ómnibus valeátis illíus pátriæ vos gáudia possidére, in qua fílios suos supérnis coniúngi cívibus in pace perpétua sancta lætátur Ecclésia.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:all_saints:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_church_dedication": {
-            "label": {
-              "la": "Benedictio sollemnis - In dedicatione ecclesiæ"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Deus, Dóminus cæli et terræ, qui vos hódie ad huius domus dedicatiónem adunávit, ipse vos cælésti benedictióne fáciat abundáre.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Concedátque vobis fíeri templum suum et habitáculum Spíritus Sancti, qui omnes fílios dispérsos vóluit in Fílio suo congregári.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Quátenus felíciter emundáti, habitatórem Deum in vobismetípsis possítis habére, et ætérnæ beatitúdinis hereditátem cum ómnibus Sanctis possidére.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:church_dedication:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "solemn_for_the_dead": {
-            "label": {
-              "la": "Benedictio sollemnis - In celebrationibus pro defunctis"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Benedícat vos Deus totíus consolatiónis, qui hóminem ineffábili bonitáte creávit, et in resurrectióne Unigéniti sui spem credéntibus resurgéndi concéssit.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:petition:0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:petition:1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Nobis, qui vívimus, véniam tríbuat pro peccátis, et ómnibus defúnctis locum concédat lucis et pacis.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:petition:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:petition:3:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Ut omnes cum Christo sine fine felíciter vivámus, quem resurrexísse a mórtuis veráciter crédimus.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:petition:4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:petition:5:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "text_la": "Et benedíctio Dei omnipoténtis, Patris, et Fílii, ✠ et Spíritus Sancti, descéndat super vos et máneat semper.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:ending:2:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "blessing:for_the_dead:ending:1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        30
-      ],
-      "value": {
-        "id": "4.3 dismissal",
-        "type": "selectable",
-        "header": {
-          "la": "Dimissio"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "la": "Forma I"
-            },
-            "lines": [
-              {
-                "text_la": "",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Deo grátias.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "la": "Forma II"
-            },
-            "lines": [
-              {
-                "text_la": "",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Deo grátias.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "la": "Forma III"
-            },
-            "lines": [
-              {
-                "text_la": "",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Deo grátias.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
-          "D": {
-            "label": {
-              "la": "Forma IV"
-            },
-            "lines": [
-              {
-                "text_la": "Ite, missa est.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Deo grátias.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        31
-      ],
-      "value": {
-        "id": "4.4 final_song",
-        "type": "part",
-        "header": {
-          "la": "Cantus ad dimissionem"
-        },
-        "lines": [
-          {
-            "rubric_la": "Cantum ad dimissionem canere.<br>Si qua actio liturgica immediate sequatur, ritus dimissionis omittuntur.",
-            "__massEditorPairKeys": {
-              "rubric_la": "0:rubric"
-            }
-          }
-        ]
       }
     }
   ];

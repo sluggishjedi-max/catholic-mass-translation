@@ -16514,6 +16514,2394 @@ one God, for ever and ever.`
     },
     {
       "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "en": "The Lord's Prayer"
+        },
+        "lines": [
+          {
+            "text_en": "At the Savior's command",
+            "__massEditorPairKeys": {
+              "text_en": "0:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "and formed by divine teaching,<br>we dare to say:",
+            "__massEditorPairKeys": {
+              "text_en": "1:text"
+            }
+          },
+          {
+            "text_en": "Our Father, who art in heaven,",
+            "__massEditorPairKeys": {
+              "text_en": "2:text"
+            },
+            "sp_en": "ALL"
+          },
+          {
+            "text_en": "hallowed be thy name;",
+            "__massEditorPairKeys": {
+              "text_en": "3:text"
+            }
+          },
+          {
+            "text_en": "thy kingdom come,",
+            "__massEditorPairKeys": {
+              "text_en": "4:text"
+            }
+          },
+          {
+            "text_en": "thy will be done<br>on earth as it is in heaven.",
+            "__massEditorPairKeys": {
+              "text_en": "5:text"
+            }
+          },
+          {
+            "text_en": "Give us this day our daily bread,",
+            "__massEditorPairKeys": {
+              "text_en": "6:text"
+            }
+          },
+          {
+            "text_en": "and forgive us our trespasses,",
+            "__massEditorPairKeys": {
+              "text_en": "7:text"
+            }
+          },
+          {
+            "text_en": "as we forgive those who trespass against us;",
+            "__massEditorPairKeys": {
+              "text_en": "8:text"
+            }
+          },
+          {
+            "text_en": "and lead us not into temptation,",
+            "__massEditorPairKeys": {
+              "text_en": "9:text"
+            }
+          },
+          {
+            "text_en": "but deliver us from evil.",
+            "__massEditorPairKeys": {
+              "text_en": "10:text"
+            }
+          },
+          {
+            "text_en": "Deliver us, Lord, we pray, from every evil,",
+            "__massEditorPairKeys": {
+              "text_en": "11:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "graciously grant peace in our days,",
+            "__massEditorPairKeys": {
+              "text_en": "12:text"
+            }
+          },
+          {
+            "text_en": "that, by the help of your mercy,<br>we may be always free from sin",
+            "__massEditorPairKeys": {
+              "text_en": "13:text"
+            }
+          },
+          {
+            "text_en": "and safe from all distress,",
+            "__massEditorPairKeys": {
+              "text_en": "14:text"
+            }
+          },
+          {
+            "text_en": "as we await the blessed hope",
+            "__massEditorPairKeys": {
+              "text_en": "15:text"
+            }
+          },
+          {
+            "text_en": "and the coming of our Savior, Jesus Christ.",
+            "__massEditorPairKeys": {
+              "text_en": "16:text"
+            }
+          },
+          {
+            "text_en": "For the kingdom,<br>the power and the glory are yours<br>now and for ever.",
+            "__massEditorPairKeys": {
+              "text_en": "17:text"
+            },
+            "sp_en": "ALL"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "en": "The Rite of Peace"
+        },
+        "lines": [
+          {
+            "text_en": "Lord Jesus Christ,",
+            "__massEditorPairKeys": {
+              "text_en": "0:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "who said to your Apostles,",
+            "__massEditorPairKeys": {
+              "text_en": "1:text"
+            }
+          },
+          {
+            "text_en": "'Peace I leave you,",
+            "__massEditorPairKeys": {
+              "text_en": "2:text"
+            }
+          },
+          {
+            "text_en": "my peace I give you,'",
+            "__massEditorPairKeys": {
+              "text_en": "3:text"
+            }
+          },
+          {
+            "text_en": "look not on our sins,",
+            "__massEditorPairKeys": {
+              "text_en": "4:text"
+            }
+          },
+          {
+            "text_en": "but on the faith of your Church,",
+            "__massEditorPairKeys": {
+              "text_en": "5:text"
+            }
+          },
+          {
+            "text_en": "and graciously grant her peace and unity<br>in accordance with your will.",
+            "__massEditorPairKeys": {
+              "text_en": "6:text"
+            }
+          },
+          {
+            "text_en": "Who live and reign for ever and ever.",
+            "__massEditorPairKeys": {
+              "text_en": "7:text"
+            }
+          },
+          {
+            "text_en": "Amen.",
+            "__massEditorPairKeys": {
+              "text_en": "8:text"
+            },
+            "sp_en": "ALL"
+          },
+          {
+            "text_en": "The peace of the Lord be with you always.",
+            "__massEditorPairKeys": {
+              "text_en": "9:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "And with your spirit.",
+            "__massEditorPairKeys": {
+              "text_en": "10:text"
+            },
+            "sp_en": "ALL"
+          },
+          {
+            "text_en": "Let us offer each other the sign of peace.",
+            "__massEditorPairKeys": {
+              "text_en": "11:text"
+            },
+            "sp_en": "D.(P.)"
+          },
+          {
+            "rubric_en": "All offer one another a sign, in keeping with local customs,<br>that expresses peace, communion, and charity.",
+            "__massEditorPairKeys": {
+              "rubric_en": "12:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "en": "The Lamb of God"
+        },
+        "lines": [
+          {
+            "text_en": "Lamb of God, you take away the sins of the world,",
+            "__massEditorPairKeys": {
+              "text_en": "0:text"
+            },
+            "sp_en": "ALL"
+          },
+          {
+            "text_en": "have mercy on us.",
+            "__massEditorPairKeys": {
+              "text_en": "1:text"
+            }
+          },
+          {
+            "text_en": "Lamb of God, you take away the sins of the world,",
+            "__massEditorPairKeys": {
+              "text_en": "2:text"
+            }
+          },
+          {
+            "text_en": "have mercy on us.",
+            "__massEditorPairKeys": {
+              "text_en": "3:text"
+            }
+          },
+          {
+            "text_en": "Lamb of God, you take away the sins of the world,",
+            "__massEditorPairKeys": {
+              "text_en": "4:text"
+            }
+          },
+          {
+            "text_en": "grant us peace.",
+            "__massEditorPairKeys": {
+              "text_en": "5:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "en": "Holy Communion"
+        },
+        "lines": [
+          {
+            "text_en": "Behold the Lamb of God,",
+            "__massEditorPairKeys": {
+              "text_en": "0:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "behold him who takes away the sins of the world.",
+            "__massEditorPairKeys": {
+              "text_en": "1:text"
+            }
+          },
+          {
+            "text_en": "Blessed are those called to the supper of the Lamb.",
+            "__massEditorPairKeys": {
+              "text_en": "2:text"
+            }
+          },
+          {
+            "text_en": "Lord, I am not worthy<br>that you should enter under my roof,",
+            "__massEditorPairKeys": {
+              "text_en": "3:text"
+            },
+            "sp_en": "ALL"
+          },
+          {
+            "text_en": "but only say the word",
+            "__massEditorPairKeys": {
+              "text_en": "4:text"
+            }
+          },
+          {
+            "text_en": "and my soul shall be healed.",
+            "__massEditorPairKeys": {
+              "text_en": "5:text"
+            }
+          },
+          {
+            "rubric_en": "Catholic faithful who are able to receive Holy Communion come forward.",
+            "__massEditorPairKeys": {
+              "rubric_en": "6:rubric"
+            },
+            "rubricInset_en": true
+          },
+          {
+            "text_en": "The Body (and Blood) of Christ.",
+            "__massEditorPairKeys": {
+              "text_en": "7:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "Amen.",
+            "__massEditorPairKeys": {
+              "text_en": "8:text"
+            },
+            "sp_en": "R."
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "en": "Communion Antiphon"
+        },
+        "lines": [
+          {
+            "rubric_en": "If there is no singing, the Communion Antiphon may be recited.",
+            "__massEditorPairKeys": {
+              "rubric_en": "0:rubric"
+            }
+          },
+          {
+            "text_en": "(Today's Communion Antiphon…)",
+            "__massEditorPairKeys": {
+              "text_en": "1:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "en": "Prayer after Communion"
+        },
+        "lines": [
+          {
+            "text_en": "Let us pray.",
+            "__massEditorPairKeys": {
+              "text_en": "0:text"
+            },
+            "sp_en": "P."
+          },
+          {
+            "text_en": "(Today's Prayer after Communion…)",
+            "__massEditorPairKeys": {
+              "text_en": "1:text"
+            }
+          },
+          {
+            "text_en": "(Prayer Ending)",
+            "__massEditorPairKeys": {
+              "text_en": "2:text"
+            }
+          },
+          {
+            "text_en": "Amen.",
+            "__massEditorPairKeys": {
+              "text_en": "3:text"
+            },
+            "sp_en": "All"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "en": "announcements"
+        },
+        "lines": [
+          {
+            "rubric_en": "If they are necessary, any brief announcements to the people follow here.",
+            "__massEditorPairKeys": {
+              "rubric_en": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "en": "Blessing"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "en": "Simple Blessing"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May almighty God bless you:",
+                "__massEditorPairKeys": {
+                  "text_en": "3:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "the Father, and the Son, ✠ and the Holy Spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "4:text"
+                }
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "5:text"
+                },
+                "sp_en": "All"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "en": "Bishop's Introit Form"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "Blessed be the name of the Lord.",
+                "__massEditorPairKeys": {
+                  "text_en": "2:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "Now and for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "Our help is in the name of the Lord.",
+                "__massEditorPairKeys": {
+                  "text_en": "4:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "Who made heaven and earth.",
+                "__massEditorPairKeys": {
+                  "text_en": "5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "6:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May almighty God bless you,",
+                "__massEditorPairKeys": {
+                  "text_en": "7:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "the Father, ✠ and the Son, ✠ and the Holy ✠ Spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "8:text"
+                }
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "9:text"
+                },
+                "sp_en": "All"
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "en": "A Solemn formula of blessing/The prayer over the people"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "rubric_en": "At the end of the Priest's prayer, ",
+                "__massEditorPairKeys": {
+                  "rubric_en": "3:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "3:text"
+                },
+                "sp_en": "R."
+              },
+              {
+                "text_en": "May almighty God bless you:",
+                "__massEditorPairKeys": {
+                  "text_en": "4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "the Father, and the Son, ✠ and the Holy Spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "5:text"
+                }
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "6:text"
+                },
+                "sp_en": "All"
+              }
+            ]
+          },
+          "solemn_advent": {
+            "label": {
+              "en": "Solemn Blessing - Advent"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May the almighty and merciful God, by whose grace you have placed your faith in the First Coming of his Only Begotten Son and yearn for his coming again sanctify you by the radiance of Christ’s Advent and enrich you with his blessing.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "As you run the race of this present life, may he make you firm in faith, joyful in hope and active in charity.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So that, rejoicing now with devotion at the Redeemer’s coming in the flesh, you may be endowed with the rich reward of eternal life when he comes again in majesty.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:advent:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_christmas": {
+            "label": {
+              "en": "Solemn Blessing - The Nativity of the Lord"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May the God of infinite goodness, who by the Incarnation of his Son has driven darkness from the world and by that glorious Birth has illumined this most holy night (day), drive far from you the darkness of vice and illumine your hearts with the light of virtue.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May God, who willed that the great joy of his Son’s saving Birth be announced to shepherds by the Angel, fill your minds with the gladness he gives and make you heralds of his Gospel.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may God, who by the Incarnation brought together the earthly and heavenly realm, fill you with the gift of his peace and favor and make you sharers with the Church in heaven.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:christmas:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_new_year": {
+            "label": {
+              "en": "Solemn Blessing - The Beginning of the Year"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, the source and origin of all blessing, grant you grace, pour out his blessing in abundance, and keep you safe from harm throughout the year.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he give you integrity in the faith, endurance in hope, and perseverance in charity with holy patience to the end.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he order your days and your deeds in his peace, grant your prayers in this and in every place, and lead you happily to eternal life.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:new_year:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_epiphany": {
+            "label": {
+              "en": "Solemn Blessing - The Epiphany of the Lord"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, who has called you out of darkness into his wonderful light, pour out in kindness his blessing upon you and make your hearts firm in faith, hope and charity.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And since in all confidence you follow Christ, who today appeared in the world as a light shining in darkness, may God make you, too, a light for your brothers and sisters.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And so when your pilgrimage is ended, may you come to him whom the Magi sought as they followed the star and whom they found with great joy, the Light from Light, who is Christ the Lord.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:epiphany:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_passion": {
+            "label": {
+              "en": "Solemn Blessing - The Passion of the Lord"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, the Father of mercies, who has given you an example of love in the Passion of his Only Begotten Son, grant that, by serving God and your neighbor, you may lay hold of the wondrous gift of his blessing.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So that you may receive the reward of everlasting life from him, through whose earthly Death you believe that you escape eternal death.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And by following the example of his self-abasement, may you possess a share in his Resurrection.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:passion:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_easter": {
+            "label": {
+              "en": "Solemn Blessing - Easter Time"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, who by the Resurrection of his Only Begotten Son was pleased to confer on you the gift of redemption and of adoption, give you gladness by his blessing.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he, by whose redeeming work you have received the gift of everlasting freedom, make you heirs to an eternal inheritance.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may you, who have already risen with Christ in Baptism through faith, by living in a right manner on this earth, be united with him in the homeland of heaven.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:easter:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ascension": {
+            "label": {
+              "en": "Solemn Blessing - The Ascension of the Lord"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May almighty God bless you, for on this very day his Only Begotten Son pierced the heights of heaven and unlocked for you the way to ascend to where he is.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he grant that, as Christ after his Resurrection was seen plainly by his disciples, so when he comes as Judge he may show himself merciful to you for all eternity.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may you, who believe he is seated with the Father in his majesty, know with joy the fulfillment of his promise to stay with you until the end of time.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ascension:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_pentecost": {
+            "label": {
+              "en": "Solemn Blessing - The Holy Spirit"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, the Father of lights, who was pleased to enlighten the disciples’ minds by the outpouring of the Spirit, the Paraclete, grant you gladness by his blessing and make you always abound with the gifts of the same Spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May the wondrous flame that appeared above the disciples, powerfully cleanse your hearts from every evil and pervade them with its purifying light.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may God, who has been pleased to unite many tongues in the profession of one faith, give you perseverance in that same faith and, by believing, may you journey from hope to clear vision.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:pentecost:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ordinary_1": {
+            "label": {
+              "en": "Solemn Blessing - Ordinary Time I"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May the Lord bless you and keep you.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he let his face shine upon you and show you his mercy.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he turn his countenance towards you and give you his peace.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_1:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ordinary_2": {
+            "label": {
+              "en": "Solemn Blessing - Ordinary Time II"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May the peace of God, which surpasses all understanding, keep your hearts and minds in the knowledge and love of God, and of his Son, our Lord Jesus Christ.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_2:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_2:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_2:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_2:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ordinary_3": {
+            "label": {
+              "en": "Solemn Blessing - Ordinary Time III"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May almighty God bless you in his kindness and pour out saving wisdom upon you.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he nourish you always with the teachings of the faith and make you persevere in holy deeds.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he turn your steps towards himself and show you the path of charity and peace.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_3:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ordinary_4": {
+            "label": {
+              "en": "Solemn Blessing - Ordinary Time IV"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May the God of all consolation order your days in his peace and grant you the gifts of his blessing.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May he free you always from every distress and confirm your hearts in his love.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So that on this life’s journey you may be effective in good works, rich in the gifts of hope, faith and charity, and may come happily to eternal life.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_4:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ordinary_5": {
+            "label": {
+              "en": "Solemn Blessing - Ordinary Time V"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May almighty God always keep every adversity far from you and in his kindness pour out upon you the gifts of his blessing.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May God keep your hearts attentive to his words, that they may be filled with everlasting gladness.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And so, may you always understand what is good and right, and be found ever hastening along in the path of God’s commands, made coheirs with the citizens of heaven.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_5:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_ordinary_6": {
+            "label": {
+              "en": "Solemn Blessing - Ordinary Time VI"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God bless you with every heavenly blessing, make you always holy and pure in his sight, pour out in abundance upon you the riches of his glory, and teach you with the words of truth; may he instruct you in the Gospel of salvation, and ever endow you with fraternal charity. Through Christ our Lord.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_6:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_6:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_6:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:ordinary_6:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_blessed_virgin_mary": {
+            "label": {
+              "en": "Solemn Blessing - The Blessed Virgin Mary"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, who through the childbearing of the Blessed Virgin Mary willed in his great kindness to redeem the human race, be pleased to enrich you with his blessing.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May you know always and everywhere the protection of her, through whom you have been found worthy to receive the author of life.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "May you, who have devoutly gathered on this day, carry away with you the gifts of spiritual joys and heavenly rewards.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:blessed_virgin_mary:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_peter_and_paul": {
+            "label": {
+              "en": "Solemn Blessing - Saints Peter and Paul, Apostles"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May almighty God bless you, for he has made you steadfast in Saint Peter’s saving confession and through it has set you on the solid rock of the Church’s faith.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And having instructed you by the tireless preaching of Saint Paul, may God teach you constantly by his example to win brothers and sisters for Christ.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So that by the keys of St Peter and the words of St Paul, and by the support of their intercession, God may bring us happily to that homeland that Peter attained on a cross and Paul by the blade of a sword.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:peter_and_paul:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_apostles": {
+            "label": {
+              "en": "Solemn Blessing - The Apostles"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, who has granted you to stand firm on apostolic foundations, graciously bless you through the glorious merits of the holy Apostles N. and N. (the holy Apostle N.).",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may he who endowed you with the teaching and example of the Apostles, make you, under their protection, witnesses to the truth before all.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So that through the intercession of the Apostles, you may inherit the eternal homeland, for by their teaching you possess firmness of faith.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:apostles:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_all_saints": {
+            "label": {
+              "en": "Solemn Blessing - All Saints"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, the glory and joy of the Saints, who has caused you to be strengthened by means of their outstanding prayers, bless you with unending blessings.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "Freed through their intercession from present ills and formed by the example of their holy way of life, may you be ever devoted to serving God and your neighbor.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So that, together with all, you may possess the joys of the homeland, where Holy Church rejoices that her children are admitted in perpetual peace to the company of the citizens of heaven.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:all_saints:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_church_dedication": {
+            "label": {
+              "en": "Solemn Blessing - For the Dedication of a Church"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May God, the Lord of heaven and earth, who has gathered you today for the dedication of this church, make you abound in heavenly blessings.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may he who has willed that all his scattered children should be gathered together in his Son, grant that you may become his temple and the dwelling place of the Holy Spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And so, when you are thoroughly cleansed, may God dwell within you and grant you to possess with all the Saints the inheritance of eternal happiness.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, ✠ and the Son, ✠ and the Holy ✠ Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:church_dedication:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "solemn_for_the_dead": {
+            "label": {
+              "en": "Solemn Blessing - In Celebrations for the Dead"
+            },
+            "lines": [
+              {
+                "text_en": "The Lord be with you.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "B."
+              },
+              {
+                "text_en": "And with your spirit.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "rubric_en": "Bow your heads and pray for God's blessing.",
+                "__massEditorPairKeys": {
+                  "rubric_en": "2:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": "May the God of all consolation bless you, for in his unfathomable goodness he created the human race, and in the Resurrection of his Only Begotten Son he has given believers the hope of rising again.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:petition:0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:petition:1:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "To us who are alive, may God grant pardon for our sins, and to all the dead, a place of light and peace.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:petition:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:petition:3:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "So may we all live happily for ever with Christ, whom we believe truly rose from the dead.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:petition:4:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:petition:5:text"
+                },
+                "sp_en": "ALL"
+              },
+              {
+                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:ending:2:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_en": "blessing:for_the_dead:ending:1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "en": "Dismissal"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "en": "Form I"
+            },
+            "lines": [
+              {
+                "text_en": "Go and announce the Gospel of the Lord.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Thanks be to God.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "en": "Form II"
+            },
+            "lines": [
+              {
+                "text_en": "",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Thanks be to God.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "en": "Form III"
+            },
+            "lines": [
+              {
+                "text_en": "Go in peace, glorifying the Lord by your life.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text"
+                },
+                "sp_en": "P."
+              },
+              {
+                "text_en": "Thanks be to God.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "en": "Form IV"
+            },
+            "lines": [
+              {
+                "text_en": "Go forth, the Mass is ended. ",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text:segment:0"
+                },
+                "sp_en": "P."
+              },
+              {
+                "rubric_en": "Or ",
+                "__massEditorPairKeys": {
+                  "rubric_en": "0:rubric"
+                },
+                "rubricInset_en": true
+              },
+              {
+                "text_en": " Go in peace.",
+                "__massEditorPairKeys": {
+                  "text_en": "0:text:segment:1"
+                }
+              },
+              {
+                "text_en": "Thanks be to God.",
+                "__massEditorPairKeys": {
+                  "text_en": "1:text"
+                },
+                "sp_en": "ALL"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "en": "The Recessional Hymn"
+        },
+        "lines": [
+          {
+            "rubric_en": "Singing a Recessional Hymn.<br>If any liturgical action follows immediately, the rites of dismissal are omitted.",
+            "__massEditorPairKeys": {
+              "rubric_en": "0:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
         20
       ],
       "value": {
@@ -19173,6 +21561,7 @@ one God, for ever and ever.`
             }
           },
           {
+            "dividerAfter": "after-sanctus",
             "text_en": "Hosanna in the highest.",
             "__massEditorPairKeys": {
               "text_en": "5:text"
@@ -20299,6 +22688,7 @@ one God, for ever and ever.`
               "rubricInset_en": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_en": "The mystery of faith.",
               "__massEditorPairKeys": {
                 "text_en": "canon:mystery_invitation:0:text"
@@ -20695,6 +23085,7 @@ one God, for ever and ever.`
               "rubricInset_en": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_en": "The mystery of faith.",
               "__massEditorPairKeys": {
                 "text_en": "20:text"
@@ -21058,6 +23449,7 @@ one God, for ever and ever.`
               "rubricInset_en": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_en": "The mystery of faith.",
               "__massEditorPairKeys": {
                 "text_en": "26:text"
@@ -21464,6 +23856,7 @@ one God, for ever and ever.`
               }
             },
             {
+              "dividerAfter": "after-sanctus",
               "text_en": "Hosanna in the highest.",
               "__massEditorPairKeys": {
                 "text_en": "10:text"
@@ -21624,6 +24017,7 @@ one God, for ever and ever.`
               "rubricInset_en": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_en": "The mystery of faith.",
               "__massEditorPairKeys": {
                 "text_en": "36:text"
@@ -21780,2394 +24174,6 @@ one God, for ever and ever.`
           }
         },
         "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
-        21
-      ],
-      "value": {
-        "id": "3.4 lords_prayer",
-        "type": "part",
-        "header": {
-          "en": "The Lord's Prayer"
-        },
-        "lines": [
-          {
-            "text_en": "At the Savior's command",
-            "__massEditorPairKeys": {
-              "text_en": "0:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "and formed by divine teaching,<br>we dare to say:",
-            "__massEditorPairKeys": {
-              "text_en": "1:text"
-            }
-          },
-          {
-            "text_en": "Our Father, who art in heaven,",
-            "__massEditorPairKeys": {
-              "text_en": "2:text"
-            },
-            "sp_en": "ALL"
-          },
-          {
-            "text_en": "hallowed be thy name;",
-            "__massEditorPairKeys": {
-              "text_en": "3:text"
-            }
-          },
-          {
-            "text_en": "thy kingdom come,",
-            "__massEditorPairKeys": {
-              "text_en": "4:text"
-            }
-          },
-          {
-            "text_en": "thy will be done<br>on earth as it is in heaven.",
-            "__massEditorPairKeys": {
-              "text_en": "5:text"
-            }
-          },
-          {
-            "text_en": "Give us this day our daily bread,",
-            "__massEditorPairKeys": {
-              "text_en": "6:text"
-            }
-          },
-          {
-            "text_en": "and forgive us our trespasses,",
-            "__massEditorPairKeys": {
-              "text_en": "7:text"
-            }
-          },
-          {
-            "text_en": "as we forgive those who trespass against us;",
-            "__massEditorPairKeys": {
-              "text_en": "8:text"
-            }
-          },
-          {
-            "text_en": "and lead us not into temptation,",
-            "__massEditorPairKeys": {
-              "text_en": "9:text"
-            }
-          },
-          {
-            "text_en": "but deliver us from evil.",
-            "__massEditorPairKeys": {
-              "text_en": "10:text"
-            }
-          },
-          {
-            "text_en": "Deliver us, Lord, we pray, from every evil,",
-            "__massEditorPairKeys": {
-              "text_en": "11:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "graciously grant peace in our days,",
-            "__massEditorPairKeys": {
-              "text_en": "12:text"
-            }
-          },
-          {
-            "text_en": "that, by the help of your mercy,<br>we may be always free from sin",
-            "__massEditorPairKeys": {
-              "text_en": "13:text"
-            }
-          },
-          {
-            "text_en": "and safe from all distress,",
-            "__massEditorPairKeys": {
-              "text_en": "14:text"
-            }
-          },
-          {
-            "text_en": "as we await the blessed hope",
-            "__massEditorPairKeys": {
-              "text_en": "15:text"
-            }
-          },
-          {
-            "text_en": "and the coming of our Savior, Jesus Christ.",
-            "__massEditorPairKeys": {
-              "text_en": "16:text"
-            }
-          },
-          {
-            "text_en": "For the kingdom,<br>the power and the glory are yours<br>now and for ever.",
-            "__massEditorPairKeys": {
-              "text_en": "17:text"
-            },
-            "sp_en": "ALL"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        22
-      ],
-      "value": {
-        "id": "3.5 peace",
-        "type": "part",
-        "header": {
-          "en": "The Rite of Peace"
-        },
-        "lines": [
-          {
-            "text_en": "Lord Jesus Christ,",
-            "__massEditorPairKeys": {
-              "text_en": "0:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "who said to your Apostles,",
-            "__massEditorPairKeys": {
-              "text_en": "1:text"
-            }
-          },
-          {
-            "text_en": "'Peace I leave you,",
-            "__massEditorPairKeys": {
-              "text_en": "2:text"
-            }
-          },
-          {
-            "text_en": "my peace I give you,'",
-            "__massEditorPairKeys": {
-              "text_en": "3:text"
-            }
-          },
-          {
-            "text_en": "look not on our sins,",
-            "__massEditorPairKeys": {
-              "text_en": "4:text"
-            }
-          },
-          {
-            "text_en": "but on the faith of your Church,",
-            "__massEditorPairKeys": {
-              "text_en": "5:text"
-            }
-          },
-          {
-            "text_en": "and graciously grant her peace and unity<br>in accordance with your will.",
-            "__massEditorPairKeys": {
-              "text_en": "6:text"
-            }
-          },
-          {
-            "text_en": "Who live and reign for ever and ever.",
-            "__massEditorPairKeys": {
-              "text_en": "7:text"
-            }
-          },
-          {
-            "text_en": "Amen.",
-            "__massEditorPairKeys": {
-              "text_en": "8:text"
-            },
-            "sp_en": "ALL"
-          },
-          {
-            "text_en": "The peace of the Lord be with you always.",
-            "__massEditorPairKeys": {
-              "text_en": "9:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "And with your spirit.",
-            "__massEditorPairKeys": {
-              "text_en": "10:text"
-            },
-            "sp_en": "ALL"
-          },
-          {
-            "text_en": "Let us offer each other the sign of peace.",
-            "__massEditorPairKeys": {
-              "text_en": "11:text"
-            },
-            "sp_en": "D.(P.)"
-          },
-          {
-            "rubric_en": "All offer one another a sign, in keeping with local customs,<br>that expresses peace, communion, and charity.",
-            "__massEditorPairKeys": {
-              "rubric_en": "12:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        23
-      ],
-      "value": {
-        "id": "3.6 lamb",
-        "type": "part",
-        "header": {
-          "en": "The Lamb of God"
-        },
-        "lines": [
-          {
-            "text_en": "Lamb of God, you take away the sins of the world,",
-            "__massEditorPairKeys": {
-              "text_en": "0:text"
-            },
-            "sp_en": "ALL"
-          },
-          {
-            "text_en": "have mercy on us.",
-            "__massEditorPairKeys": {
-              "text_en": "1:text"
-            }
-          },
-          {
-            "text_en": "Lamb of God, you take away the sins of the world,",
-            "__massEditorPairKeys": {
-              "text_en": "2:text"
-            }
-          },
-          {
-            "text_en": "have mercy on us.",
-            "__massEditorPairKeys": {
-              "text_en": "3:text"
-            }
-          },
-          {
-            "text_en": "Lamb of God, you take away the sins of the world,",
-            "__massEditorPairKeys": {
-              "text_en": "4:text"
-            }
-          },
-          {
-            "text_en": "grant us peace.",
-            "__massEditorPairKeys": {
-              "text_en": "5:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        24
-      ],
-      "value": {
-        "id": "3.7 communion_rite",
-        "type": "part",
-        "header": {
-          "en": "Holy Communion"
-        },
-        "lines": [
-          {
-            "text_en": "Behold the Lamb of God,",
-            "__massEditorPairKeys": {
-              "text_en": "0:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "behold him who takes away the sins of the world.",
-            "__massEditorPairKeys": {
-              "text_en": "1:text"
-            }
-          },
-          {
-            "text_en": "Blessed are those called to the supper of the Lamb.",
-            "__massEditorPairKeys": {
-              "text_en": "2:text"
-            }
-          },
-          {
-            "text_en": "Lord, I am not worthy<br>that you should enter under my roof,",
-            "__massEditorPairKeys": {
-              "text_en": "3:text"
-            },
-            "sp_en": "ALL"
-          },
-          {
-            "text_en": "but only say the word",
-            "__massEditorPairKeys": {
-              "text_en": "4:text"
-            }
-          },
-          {
-            "text_en": "and my soul shall be healed.",
-            "__massEditorPairKeys": {
-              "text_en": "5:text"
-            }
-          },
-          {
-            "rubric_en": "Catholic faithful who are able to receive Holy Communion come forward.",
-            "__massEditorPairKeys": {
-              "rubric_en": "6:rubric"
-            },
-            "rubricInset_en": true
-          },
-          {
-            "text_en": "The Body (and Blood) of Christ.",
-            "__massEditorPairKeys": {
-              "text_en": "7:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "Amen.",
-            "__massEditorPairKeys": {
-              "text_en": "8:text"
-            },
-            "sp_en": "R."
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        25
-      ],
-      "value": {
-        "id": "3.8 communion",
-        "type": "part",
-        "header": {
-          "en": "Communion Antiphon"
-        },
-        "lines": [
-          {
-            "rubric_en": "If there is no singing, the Communion Antiphon may be recited.",
-            "__massEditorPairKeys": {
-              "rubric_en": "0:rubric"
-            }
-          },
-          {
-            "text_en": "(Today's Communion Antiphon…)",
-            "__massEditorPairKeys": {
-              "text_en": "1:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        26
-      ],
-      "value": {
-        "id": "3.9 prayer_after",
-        "type": "part",
-        "header": {
-          "en": "Prayer after Communion"
-        },
-        "lines": [
-          {
-            "text_en": "Let us pray.",
-            "__massEditorPairKeys": {
-              "text_en": "0:text"
-            },
-            "sp_en": "P."
-          },
-          {
-            "text_en": "(Today's Prayer after Communion…)",
-            "__massEditorPairKeys": {
-              "text_en": "1:text"
-            }
-          },
-          {
-            "text_en": "(Prayer Ending)",
-            "__massEditorPairKeys": {
-              "text_en": "2:text"
-            }
-          },
-          {
-            "text_en": "Amen.",
-            "__massEditorPairKeys": {
-              "text_en": "3:text"
-            },
-            "sp_en": "All"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        28
-      ],
-      "value": {
-        "id": "4.1 announcement",
-        "type": "part",
-        "header": {
-          "en": "announcements"
-        },
-        "lines": [
-          {
-            "rubric_en": "If they are necessary, any brief announcements to the people follow here.",
-            "__massEditorPairKeys": {
-              "rubric_en": "0:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        29
-      ],
-      "value": {
-        "id": "4.2 blessing",
-        "type": "selectable",
-        "header": {
-          "en": "Blessing"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "en": "Simple Blessing"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May almighty God bless you:",
-                "__massEditorPairKeys": {
-                  "text_en": "3:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "the Father, and the Son, ✠ and the Holy Spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "4:text"
-                }
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "5:text"
-                },
-                "sp_en": "All"
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "en": "Bishop's Introit Form"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "Blessed be the name of the Lord.",
-                "__massEditorPairKeys": {
-                  "text_en": "2:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "Now and for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "Our help is in the name of the Lord.",
-                "__massEditorPairKeys": {
-                  "text_en": "4:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "Who made heaven and earth.",
-                "__massEditorPairKeys": {
-                  "text_en": "5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "6:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May almighty God bless you,",
-                "__massEditorPairKeys": {
-                  "text_en": "7:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "the Father, ✠ and the Son, ✠ and the Holy ✠ Spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "8:text"
-                }
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "9:text"
-                },
-                "sp_en": "All"
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "en": "A Solemn formula of blessing/The prayer over the people"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "rubric_en": "At the end of the Priest's prayer, ",
-                "__massEditorPairKeys": {
-                  "rubric_en": "3:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "3:text"
-                },
-                "sp_en": "R."
-              },
-              {
-                "text_en": "May almighty God bless you:",
-                "__massEditorPairKeys": {
-                  "text_en": "4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "the Father, and the Son, ✠ and the Holy Spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "5:text"
-                }
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "6:text"
-                },
-                "sp_en": "All"
-              }
-            ]
-          },
-          "solemn_advent": {
-            "label": {
-              "en": "Solemn Blessing - Advent"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May the almighty and merciful God, by whose grace you have placed your faith in the First Coming of his Only Begotten Son and yearn for his coming again sanctify you by the radiance of Christ’s Advent and enrich you with his blessing.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "As you run the race of this present life, may he make you firm in faith, joyful in hope and active in charity.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So that, rejoicing now with devotion at the Redeemer’s coming in the flesh, you may be endowed with the rich reward of eternal life when he comes again in majesty.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:advent:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_christmas": {
-            "label": {
-              "en": "Solemn Blessing - The Nativity of the Lord"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May the God of infinite goodness, who by the Incarnation of his Son has driven darkness from the world and by that glorious Birth has illumined this most holy night (day), drive far from you the darkness of vice and illumine your hearts with the light of virtue.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May God, who willed that the great joy of his Son’s saving Birth be announced to shepherds by the Angel, fill your minds with the gladness he gives and make you heralds of his Gospel.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may God, who by the Incarnation brought together the earthly and heavenly realm, fill you with the gift of his peace and favor and make you sharers with the Church in heaven.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:christmas:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_new_year": {
-            "label": {
-              "en": "Solemn Blessing - The Beginning of the Year"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, the source and origin of all blessing, grant you grace, pour out his blessing in abundance, and keep you safe from harm throughout the year.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he give you integrity in the faith, endurance in hope, and perseverance in charity with holy patience to the end.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he order your days and your deeds in his peace, grant your prayers in this and in every place, and lead you happily to eternal life.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:new_year:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_epiphany": {
-            "label": {
-              "en": "Solemn Blessing - The Epiphany of the Lord"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, who has called you out of darkness into his wonderful light, pour out in kindness his blessing upon you and make your hearts firm in faith, hope and charity.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And since in all confidence you follow Christ, who today appeared in the world as a light shining in darkness, may God make you, too, a light for your brothers and sisters.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And so when your pilgrimage is ended, may you come to him whom the Magi sought as they followed the star and whom they found with great joy, the Light from Light, who is Christ the Lord.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:epiphany:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_passion": {
-            "label": {
-              "en": "Solemn Blessing - The Passion of the Lord"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, the Father of mercies, who has given you an example of love in the Passion of his Only Begotten Son, grant that, by serving God and your neighbor, you may lay hold of the wondrous gift of his blessing.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So that you may receive the reward of everlasting life from him, through whose earthly Death you believe that you escape eternal death.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And by following the example of his self-abasement, may you possess a share in his Resurrection.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:passion:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_easter": {
-            "label": {
-              "en": "Solemn Blessing - Easter Time"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, who by the Resurrection of his Only Begotten Son was pleased to confer on you the gift of redemption and of adoption, give you gladness by his blessing.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he, by whose redeeming work you have received the gift of everlasting freedom, make you heirs to an eternal inheritance.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may you, who have already risen with Christ in Baptism through faith, by living in a right manner on this earth, be united with him in the homeland of heaven.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:easter:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ascension": {
-            "label": {
-              "en": "Solemn Blessing - The Ascension of the Lord"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May almighty God bless you, for on this very day his Only Begotten Son pierced the heights of heaven and unlocked for you the way to ascend to where he is.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he grant that, as Christ after his Resurrection was seen plainly by his disciples, so when he comes as Judge he may show himself merciful to you for all eternity.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may you, who believe he is seated with the Father in his majesty, know with joy the fulfillment of his promise to stay with you until the end of time.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ascension:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_pentecost": {
-            "label": {
-              "en": "Solemn Blessing - The Holy Spirit"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, the Father of lights, who was pleased to enlighten the disciples’ minds by the outpouring of the Spirit, the Paraclete, grant you gladness by his blessing and make you always abound with the gifts of the same Spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May the wondrous flame that appeared above the disciples, powerfully cleanse your hearts from every evil and pervade them with its purifying light.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may God, who has been pleased to unite many tongues in the profession of one faith, give you perseverance in that same faith and, by believing, may you journey from hope to clear vision.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:pentecost:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ordinary_1": {
-            "label": {
-              "en": "Solemn Blessing - Ordinary Time I"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May the Lord bless you and keep you.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he let his face shine upon you and show you his mercy.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he turn his countenance towards you and give you his peace.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_1:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ordinary_2": {
-            "label": {
-              "en": "Solemn Blessing - Ordinary Time II"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May the peace of God, which surpasses all understanding, keep your hearts and minds in the knowledge and love of God, and of his Son, our Lord Jesus Christ.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_2:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_2:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_2:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_2:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ordinary_3": {
-            "label": {
-              "en": "Solemn Blessing - Ordinary Time III"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May almighty God bless you in his kindness and pour out saving wisdom upon you.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he nourish you always with the teachings of the faith and make you persevere in holy deeds.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he turn your steps towards himself and show you the path of charity and peace.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_3:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ordinary_4": {
-            "label": {
-              "en": "Solemn Blessing - Ordinary Time IV"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May the God of all consolation order your days in his peace and grant you the gifts of his blessing.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May he free you always from every distress and confirm your hearts in his love.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So that on this life’s journey you may be effective in good works, rich in the gifts of hope, faith and charity, and may come happily to eternal life.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_4:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ordinary_5": {
-            "label": {
-              "en": "Solemn Blessing - Ordinary Time V"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May almighty God always keep every adversity far from you and in his kindness pour out upon you the gifts of his blessing.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May God keep your hearts attentive to his words, that they may be filled with everlasting gladness.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And so, may you always understand what is good and right, and be found ever hastening along in the path of God’s commands, made coheirs with the citizens of heaven.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_5:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_ordinary_6": {
-            "label": {
-              "en": "Solemn Blessing - Ordinary Time VI"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God bless you with every heavenly blessing, make you always holy and pure in his sight, pour out in abundance upon you the riches of his glory, and teach you with the words of truth; may he instruct you in the Gospel of salvation, and ever endow you with fraternal charity. Through Christ our Lord.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_6:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_6:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_6:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:ordinary_6:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_blessed_virgin_mary": {
-            "label": {
-              "en": "Solemn Blessing - The Blessed Virgin Mary"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, who through the childbearing of the Blessed Virgin Mary willed in his great kindness to redeem the human race, be pleased to enrich you with his blessing.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May you know always and everywhere the protection of her, through whom you have been found worthy to receive the author of life.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "May you, who have devoutly gathered on this day, carry away with you the gifts of spiritual joys and heavenly rewards.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:blessed_virgin_mary:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_peter_and_paul": {
-            "label": {
-              "en": "Solemn Blessing - Saints Peter and Paul, Apostles"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May almighty God bless you, for he has made you steadfast in Saint Peter’s saving confession and through it has set you on the solid rock of the Church’s faith.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And having instructed you by the tireless preaching of Saint Paul, may God teach you constantly by his example to win brothers and sisters for Christ.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So that by the keys of St Peter and the words of St Paul, and by the support of their intercession, God may bring us happily to that homeland that Peter attained on a cross and Paul by the blade of a sword.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:peter_and_paul:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_apostles": {
-            "label": {
-              "en": "Solemn Blessing - The Apostles"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, who has granted you to stand firm on apostolic foundations, graciously bless you through the glorious merits of the holy Apostles N. and N. (the holy Apostle N.).",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may he who endowed you with the teaching and example of the Apostles, make you, under their protection, witnesses to the truth before all.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So that through the intercession of the Apostles, you may inherit the eternal homeland, for by their teaching you possess firmness of faith.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:apostles:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_all_saints": {
-            "label": {
-              "en": "Solemn Blessing - All Saints"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, the glory and joy of the Saints, who has caused you to be strengthened by means of their outstanding prayers, bless you with unending blessings.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "Freed through their intercession from present ills and formed by the example of their holy way of life, may you be ever devoted to serving God and your neighbor.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So that, together with all, you may possess the joys of the homeland, where Holy Church rejoices that her children are admitted in perpetual peace to the company of the citizens of heaven.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:all_saints:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_church_dedication": {
-            "label": {
-              "en": "Solemn Blessing - For the Dedication of a Church"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May God, the Lord of heaven and earth, who has gathered you today for the dedication of this church, make you abound in heavenly blessings.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may he who has willed that all his scattered children should be gathered together in his Son, grant that you may become his temple and the dwelling place of the Holy Spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And so, when you are thoroughly cleansed, may God dwell within you and grant you to possess with all the Saints the inheritance of eternal happiness.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, ✠ and the Son, ✠ and the Holy ✠ Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:church_dedication:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "solemn_for_the_dead": {
-            "label": {
-              "en": "Solemn Blessing - In Celebrations for the Dead"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "May the God of all consolation bless you, for in his unfathomable goodness he created the human race, and in the Resurrection of his Only Begotten Son he has given believers the hope of rising again.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:petition:0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:petition:1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "To us who are alive, may God grant pardon for our sins, and to all the dead, a place of light and peace.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:petition:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:petition:3:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "So may we all live happily for ever with Christ, whom we believe truly rose from the dead.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:petition:4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:petition:5:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "text_en": "And may the blessing of almighty God, the Father, and the Son, ✠ and the Holy Spirit, come down on you and remain with you for ever.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:ending:2:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "blessing:for_the_dead:ending:1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        30
-      ],
-      "value": {
-        "id": "4.3 dismissal",
-        "type": "selectable",
-        "header": {
-          "en": "Dismissal"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "en": "Form I"
-            },
-            "lines": [
-              {
-                "text_en": "Go and announce the Gospel of the Lord.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Thanks be to God.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "en": "Form II"
-            },
-            "lines": [
-              {
-                "text_en": "",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Thanks be to God.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "en": "Form III"
-            },
-            "lines": [
-              {
-                "text_en": "Go in peace, glorifying the Lord by your life.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "Thanks be to God.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          },
-          "D": {
-            "label": {
-              "en": "Form IV"
-            },
-            "lines": [
-              {
-                "text_en": "Go forth, the Mass is ended. ",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text:segment:0"
-                },
-                "sp_en": "P."
-              },
-              {
-                "rubric_en": "Or ",
-                "__massEditorPairKeys": {
-                  "rubric_en": "0:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": " Go in peace.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text:segment:1"
-                }
-              },
-              {
-                "text_en": "Thanks be to God.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        31
-      ],
-      "value": {
-        "id": "4.4 final_song",
-        "type": "part",
-        "header": {
-          "en": "The Recessional Hymn"
-        },
-        "lines": [
-          {
-            "rubric_en": "Singing a Recessional Hymn.<br>If any liturgical action follows immediately, the rites of dismissal are omitted.",
-            "__massEditorPairKeys": {
-              "rubric_en": "0:rubric"
-            }
-          }
-        ]
       }
     }
   ];

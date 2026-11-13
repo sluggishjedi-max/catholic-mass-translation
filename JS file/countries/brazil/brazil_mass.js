@@ -21077,9356 +21077,6 @@
     },
     {
       "path": [
-        20
-      ],
-      "value": {
-        "id": "3.3 eucharist",
-        "type": "selectable",
-        "isEucharist": true,
-        "header": {
-          "pt": "Oração Eucarística"
-        },
-        "variants": {
-          "1": {
-            "label": {
-              "pt": "Oração Eucarística I"
-            }
-          },
-          "2": {
-            "label": {
-              "pt": "Oração Eucarística II"
-            }
-          },
-          "3": {
-            "label": {
-              "pt": "Oração Eucarística III"
-            }
-          },
-          "4": {
-            "label": {
-              "pt": "Oração Eucarística IV"
-            }
-          },
-          "5": {
-            "label": {
-              "pt": "Oração Eucarística V"
-            }
-          },
-          "D1": {
-            "label": {
-              "pt": "Para diversas circunstâncias I"
-            }
-          },
-          "D2": {
-            "label": {
-              "pt": "Para diversas circunstâncias II"
-            }
-          },
-          "D3": {
-            "label": {
-              "pt": "Para diversas circunstâncias III"
-            }
-          },
-          "D4": {
-            "label": {
-              "pt": "Para diversas circunstâncias IV"
-            }
-          },
-          "R1": {
-            "label": {
-              "pt": "Sobre a reconciliação I"
-            }
-          },
-          "R2": {
-            "label": {
-              "pt": "Sobre a reconciliação II"
-            }
-          },
-          "C1": {
-            "label": {
-              "pt": "Para Missas com crianças I"
-            }
-          },
-          "C2": {
-            "label": {
-              "pt": "Para Missas com crianças II"
-            }
-          },
-          "C3": {
-            "label": {
-              "pt": "Para Missas com crianças III"
-            }
-          }
-        },
-        "common_dialogue": [],
-        "songs": {},
-        "sanctus": [],
-        "forms": {
-          "1": [
-            {
-              "text_pt": "Pai de misericórdia, a quem sobem nossos louvores, suplicantes, vos rogamos e pedimos por Jesus Cristo, vosso Filho e Senhor nosso,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:0:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:te_igitur:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "que aceiteis e abençoeis",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:2:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:te_igitur:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "estes dons, estas oferendas, este sacrifício puro e santo,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:4:text"
-              }
-            },
-            {
-              "rubric_pt": "de braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:te_igitur:5:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "que oferecemos, antes de tudo, pela vossa Igreja santa e católica: concedei-lhe paz e proteção, unindo-a num só corpo e governando-a por toda a terra, em comunhão com vosso servo o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:6:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:te_igitur:7:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:8:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:te_igitur:9:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", e todos os que guardam a fé católica que receberam dos Apóstolos.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:10:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:te_igitur:11:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Abençoai nossa oferenda, ó Senhor!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:te_igitur:12:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, dos vossos filhos e filhas",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:living:0:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N. N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:living:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Une as mãos e reza por alguns momentos em silêncio por aqueles que quer recordar. De braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:living:2:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e de todos os que circundam este altar, dos quais conheceis a fé e a dedicação ao vosso serviço.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:living:3:text"
-              }
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:living:4:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por eles nós vos oferecemos e também eles vos oferecem este sacrifício de louvor por si e por todos os seus, e elevam a vós as suas preces, Deus eterno, vivo e verdadeiro, para alcançar o perdão de suas faltas, a segurança em suas vidas e a salvação que esperam.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:living:5:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:living:6:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, dos vossos filhos!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:living:7:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "type": "optionBlock",
-              "optionKey": "roman_canon_season",
-              "defaultOption": "ordinary",
-              "showControl": true,
-              "label": {
-                "pt": "Tempo Comum"
-              },
-              "options": {
-                "ordinary": {
-                  "label": {
-                    "pt": "Tempo Comum"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Em comunhão com toda a Igreja, celebramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:0:text"
-                      },
-                      "sp_pt": "2C"
-                    },
-                    {
-                      "rubric_pt": "★",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "A assembleia aclama:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:10:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:11:text"
-                      },
-                      "sp_pt": "Todos"
-                    },
-                    {
-                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:12:rubric"
-                      }
-                    }
-                  ]
-                },
-                "christmas": {
-                  "label": {
-                    "pt": "Natal"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Em comunhão com toda a Igreja, celebramos",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_pt": "a noite santíssima",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "o dia santíssimo em que Maria, intacta em sua virgindade, deu à luz o Salvador do mundo. Veneramos em primeiro lugar a memória da mesma Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "★",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:5:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "A assembleia aclama:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:14:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:15:text"
-                      },
-                      "sp_pt": "Todos"
-                    },
-                    {
-                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:16:rubric"
-                      }
-                    }
-                  ]
-                },
-                "epiphany": {
-                  "label": {
-                    "pt": "Epifania"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Em comunhão com toda a Igreja, celebramos o dia santíssimo em que vosso Filho unigênito, eterno convosco na glória, se manifestou visivelmente em nossa carne. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "★",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "A assembleia aclama:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:10:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:11:text"
-                      },
-                      "sp_pt": "Todos"
-                    },
-                    {
-                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:12:rubric"
-                      }
-                    }
-                  ]
-                },
-                "easter": {
-                  "label": {
-                    "pt": "Páscoa"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Em comunhão com toda a Igreja, celebramos",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "text_pt": "a noite santíssima",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "o dia santíssimo da Ressurreição de nosso Senhor Jesus Cristo segunda a carne. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "★",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:5:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:11:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:12:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:13:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "A assembleia aclama:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:14:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:15:text"
-                      },
-                      "sp_pt": "Todos"
-                    },
-                    {
-                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:16:rubric"
-                      }
-                    }
-                  ]
-                },
-                "ascension": {
-                  "label": {
-                    "pt": "Ascensão"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Em comunhão com toda a Igreja, celebramos o dia santíssimo em que nosso Senhor, vosso Filho unigênito, elevou à vossa direita na glória a nossa frágil natureza humana.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:1:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "★",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:2:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:10:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "A assembleia aclama:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:11:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:12:text"
-                      },
-                      "sp_pt": "Todos"
-                    },
-                    {
-                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:13:rubric"
-                      }
-                    }
-                  ]
-                },
-                "pentecost": {
-                  "label": {
-                    "pt": "Pentecostes"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Em comunhão com toda a Igreja, celebramos o dia santíssimo de Pentecostes em que o Espírito Santo, em línguas de fogo, se manifestou aos Apóstolos. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:0:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "★",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:4:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:5:text"
-                      }
-                    },
-                    {
-                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:6:text"
-                      }
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:7:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:8:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:9:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "A assembleia aclama:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:10:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:communicantes:11:text"
-                      },
-                      "sp_pt": "Todos"
-                    },
-                    {
-                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:communicantes:12:rubric"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pairKey": "canon:communicantes:choice"
-            },
-            {
-              "type": "optionBlock",
-              "optionKey": "roman_canon_season",
-              "defaultOption": "ordinary",
-              "showControl": false,
-              "label": {
-                "pt": "Tempo Comum"
-              },
-              "options": {
-                "ordinary": {
-                  "label": {
-                    "pt": "Tempo Comum"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:0:text"
-                      },
-                      "sp_pt": "CP"
-                    },
-                    {
-                      "rubric_pt": "Une as mãos.",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:hanc_igitur:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:4:text"
-                      }
-                    }
-                  ]
-                },
-                "christmas": {
-                  "label": {
-                    "pt": "Natal"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:0:text"
-                      },
-                      "sp_pt": "CP"
-                    },
-                    {
-                      "rubric_pt": "Une as mãos.",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:hanc_igitur:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:4:text"
-                      }
-                    }
-                  ]
-                },
-                "epiphany": {
-                  "label": {
-                    "pt": "Epifania"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:0:text"
-                      },
-                      "sp_pt": "CP"
-                    },
-                    {
-                      "rubric_pt": "Une as mãos.",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:hanc_igitur:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:4:text"
-                      }
-                    }
-                  ]
-                },
-                "easter": {
-                  "label": {
-                    "pt": "Páscoa"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos também por aqueles que vos dignastes regenerar pela água e pelo Espírito Santo, concedendo-lhes a remissão de todos os pecados.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:0:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Dai aos nossos dias a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:1:text"
-                      }
-                    },
-                    {
-                      "rubric_pt": "Une as mãos.",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:hanc_igitur:2:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:4:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:5:text"
-                      }
-                    }
-                  ]
-                },
-                "ascension": {
-                  "label": {
-                    "pt": "Ascensão"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:0:text"
-                      },
-                      "sp_pt": "CP"
-                    },
-                    {
-                      "rubric_pt": "Une as mãos.",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:hanc_igitur:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:4:text"
-                      }
-                    }
-                  ]
-                },
-                "pentecost": {
-                  "label": {
-                    "pt": "Pentecostes"
-                  },
-                  "lines": [
-                    {
-                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:0:text"
-                      },
-                      "sp_pt": "CP"
-                    },
-                    {
-                      "rubric_pt": "Une as mãos.",
-                      "__massEditorPairKeys": {
-                        "rubric_pt": "canon:hanc_igitur:1:rubric"
-                      },
-                      "rubricInset_pt": true
-                    },
-                    {
-                      "text_pt": "(",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:2:text"
-                      }
-                    },
-                    {
-                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:3:text"
-                      }
-                    },
-                    {
-                      "text_pt": ")",
-                      "__massEditorPairKeys": {
-                        "text_pt": "canon:hanc_igitur:4:text"
-                      }
-                    }
-                  ]
-                }
-              },
-              "pairKey": "canon:hanc_igitur:choice"
-            },
-            {
-              "text_pt": "Dignai-vos, ó Pai, aceitar, abençoar e santificar estas oferendas; recebei-as como sacrifício espiritual perfeito, a fim de que se tornem para nós o Corpo e o Sangue de vosso amado Filho, nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:quam_oblationem:0:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "Une as mãos.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:quam_oblationem:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:quam_oblationem:2:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:quam_oblationem:3:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Na véspera de sua paixão,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:bread:0:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:bread:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "ele tomou o pão em suas santas e veneráveis mãos,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:bread:2:text"
-              }
-            },
-            {
-              "rubric_pt": "eleva os olhos,",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:bread:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "elevou os olhos ao céu, a vós, ó Pai todo-poderoso, pronunciou a bênção de ação de graças, partiu o pão e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:bread:4:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:bread:5:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:bread:6:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:bread:7:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:bread:8:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:cup:0:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:cup:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "ele tomou este precioso cálice em suas santas e veneráveis mãos, pronunciou novamente a bênção de ação de graças e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:cup:2:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:cup:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:cup:4:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:cup:5:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:cup:6:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:mystery:0:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:mystery:2:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:mystery:4:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:5:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:mystery:6:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:7:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:mystery:8:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:9:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:mystery:10:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:11:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:mystery:12:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, pois, a memória da bem-aventurada paixão do vosso Filho, da sua ressurreição dentre os mortos e gloriosa ascensão aos céus, nós, vossos servos, e também vosso povo santo, vos oferecemos, ó Pai, dentre os bens que nos destes, o sacrifício puro, santo e imaculado, Pão santo da vida eterna e Cálice da perpétua salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:anamnesis:0:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "Recebei, ó Pai, com olhar benigno, esta oferta, como recebestes os dons do justo Abel, o sacrifício de nosso patriarca Abraão e a oblação pura e santa do sumo sacerdote Melquisedeque.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supra_quae:0:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:supra_quae:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supra_quae:2:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, inclinando-se, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:supra_quae:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Suplicantes, vos pedimos, ó Deus onipotente, que esta nossa oferenda seja levada à vossa presença, no altar do céu, pelas mãos do vosso santo Anjo, para que todos nós, participando deste altar pela comunhão do santíssimo Corpo e Sangue do vosso Filho,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supplices:0:text"
-              }
-            },
-            {
-              "rubric_pt": "ergue-se e faz sobre si o sinal da cruz, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:supplices:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "sejamos repletos de todas as graças e bênçãos do céu.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supplices:2:text"
-              }
-            },
-            {
-              "rubric_pt": "Une as mãos.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:supplices:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supplices:4:text"
-              }
-            },
-            {
-              "text_pt": "Por Cristo, nosso Senhor. Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supplices:5:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supplices:6:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:supplices:7:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:supplices:8:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, dos vossos filhos e filhas",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:0:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "rubric_pt": "N. N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:departed:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "que nos precederam com o sinal da fé e dormem o sono da paz.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:2:text"
-              }
-            },
-            {
-              "rubric_pt": "Une as mãos e, em silêncio, reza brevemente pelos defuntos que deseja recordar. De braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:departed:3:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "A eles, e a todos os que descansam no Cristo, concedei o repouso, a luz e a paz.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:4:text"
-              }
-            },
-            {
-              "rubric_pt": "Une as mãos.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:departed:5:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:6:text"
-              }
-            },
-            {
-              "text_pt": "Por Cristo, nosso Senhor. Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:7:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:8:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:departed:9:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:departed:10:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "E a todos nós pecadores,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:0:text"
-              }
-            },
-            {
-              "rubric_pt": "e, de braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:nobis_quoque:1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "que esperamos na vossa infinita misericórdia, concedei, não por nossos méritos, mas por vossa bondade, o convívio dos Apóstolos e Mártires: João Batista e Estêvão, Matias e Barnabé,",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:2:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:3:text"
-              }
-            },
-            {
-              "text_pt": "Inácio, Alexandre, Marcelino e Pedro, Felicidade e Perpétua, Águeda e Luzia, Inês, Cecília, Anastácia",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:4:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:5:text"
-              }
-            },
-            {
-              "text_pt": "e de todos os vossos Santos.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:6:text"
-              }
-            },
-            {
-              "rubric_pt": "Une as mãos:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:nobis_quoque:7:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, nosso Senhor.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:nobis_quoque:8:text"
-              }
-            },
-            {
-              "text_pt": "Por ele não cessais de criar, santificar, vivificar, abençoar estes bens e distribuí-los entre nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "canon:per_quem:0:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "canon:per_quem:1:rubric"
-              }
-            }
-          ],
-          "2": [
-            {
-              "text_pt": "Embora tenha prefácio próprio, esta Oração Eucarística pode ser usada também com outros prefácios, sobretudo aqueles que de maneira sucinta apresentem o mistério da salvação, por exemplo, os prefácios comuns.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças sempre e em todo lugar, Senhor, Pai santo, por vosso amado Filho, Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              }
-            },
-            {
-              "text_pt": "Ele é a vossa Palavra, pela qual tudo criastes.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Ele é o nosso Salvador e Redentor, que se encarnou pelo Espírito Santo e nasceu da Virgem Maria.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Ele, para cumprir a vossa vontade e adquirir para vós um povo santo, estendeu os braços na hora da sua paixão, a fim de vencer a morte e manifestar a ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, com os Anjos e todos os Santos, proclamamos vossa glória, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, ó Pai, vós sois Santo, fonte de toda santidade.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "19:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Santificai, pois, estes dons, derramando sobre eles o vosso Espírito,",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "21:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "a fim de que se tornem para nós o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "23:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              }
-            },
-            {
-              "rubric_pt": "Une as mãos.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "25:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "26:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "28:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Estando para ser entregue e abraçando livremente a paixão,",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "30:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "32:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "33:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "35:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "37:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "ele tomou o cálice em suas mãos e, dando graças novamente, o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "39:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "41:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "42:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "44:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "48:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "52:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "54:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, pois, o memorial da morte e ressurreição do vosso Filho, nós vos oferecemos, ó Pai, o Pão da vida e o Cálice da salvação; e vos agradecemos porque nos tornastes dignos de estar aqui na vossa presença e vos servir.",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "57:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Suplicantes, vos pedimos que, participando do Corpo e Sangue de Cristo, sejamos reunidos pelo Espírito Santo num só corpo.",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja que se faz presente pelo mundo inteiro;",
-              "__massEditorPairKeys": {
-                "text_pt": "62:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "63:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "que ela cresça na caridade, em comunhão com o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "65:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", com o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "67:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros do vosso povo.",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "69:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Nas Missas pelos fiéis defuntos",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              }
-            },
-            {
-              "text_pt": "Lembrai-vos do vosso filho",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "73:text"
-              }
-            },
-            {
-              "text_pt": "da vossa filha",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "75:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "76:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", que",
-              "__massEditorPairKeys": {
-                "text_pt": "77:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "78:text"
-              }
-            },
-            {
-              "text_pt": "hoje",
-              "__massEditorPairKeys": {
-                "text_pt": "79:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "80:text"
-              }
-            },
-            {
-              "text_pt": "chamastes deste mundo à vossa presença. Tendo sido sepultado",
-              "__massEditorPairKeys": {
-                "text_pt": "81:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "82:text"
-              }
-            },
-            {
-              "text_pt": "a",
-              "__massEditorPairKeys": {
-                "text_pt": "83:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "84:text"
-              }
-            },
-            {
-              "text_pt": "com Cristo em sua morte, no Batismo, participe igualmente da sua ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "85:text"
-              }
-            },
-            {
-              "text_pt": "Lembrai-vos também, na vossa misericórdia, dos",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "87:text"
-              }
-            },
-            {
-              "text_pt": "outros",
-              "__massEditorPairKeys": {
-                "text_pt": "88:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "89:text"
-              }
-            },
-            {
-              "text_pt": "nossos irmãos e irmãs que adormeceram na esperança da ressurreição e de todos os que partiram desta vida; acolhei-os junto a vós na luz da vossa face.",
-              "__massEditorPairKeys": {
-                "text_pt": "90:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "91:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "92:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Enfim, nós vos pedimos, tende piedade de todos nós e dai-nos participar da vida eterna, com a Virgem Maria, Mãe de Deus, São José, seu esposo, os Apóstolos,",
-              "__massEditorPairKeys": {
-                "text_pt": "93:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "94:text"
-              }
-            },
-            {
-              "text_pt": "São",
-              "__massEditorPairKeys": {
-                "text_pt": "95:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "96:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ":",
-              "__massEditorPairKeys": {
-                "text_pt": "97:text"
-              }
-            },
-            {
-              "text_pt": "Santo do dia ou padroeiro)",
-              "__massEditorPairKeys": {
-                "text_pt": "98:text"
-              }
-            },
-            {
-              "text_pt": "e todos os Santos que neste mundo viveram na vossa amizade, a fim de vos louvarmos e glorificarmos",
-              "__massEditorPairKeys": {
-                "text_pt": "99:text"
-              }
-            },
-            {
-              "rubric_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "rubric_pt": "100:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "por Jesus Cristo, vosso Filho.",
-              "__massEditorPairKeys": {
-                "text_pt": "101:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "102:rubric"
-              }
-            }
-          ],
-          "3": [
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "rubric_pt": "Segue-se conforme as rubricas, o prefácio, com a conclusão:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "6:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "8:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, vós sois Santo, ó Deus do universo, e tudo o que criastes proclama o vosso louvor, porque, por Jesus Cristo, vosso Filho e Senhor nosso, e pela força do Espírito Santo, dais vida e santidade a todas as coisas e não cessais de reunir para vós um povo que vos ofereça em toda parte, do nascer ao pôr do sol, um sacrifício perfeito.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "10:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por isso, ó Pai, nós vos suplicamos: santificai pelo Espírito Santo as oferendas que vos apresentamos para serem consagradas",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "12:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "a fim de que se tornem o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "14:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue de vosso Filho, nosso Senhor Jesus Cristo,",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "rubric_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "rubric_pt": "16:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "que nos mandou celebrar estes mistérios.",
-              "__massEditorPairKeys": {
-                "text_pt": "17:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "18:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "20:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na noite em que ia ser entregue,",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "22:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo: TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "24:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "25:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "27:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "ele tomou o cálice em suas mãos, pronunciou a bênção de ação de graças, e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "29:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "31:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "32:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "36:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "38:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "40:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "42:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "44:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "45:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando agora, ó Pai, o memorial da paixão redentora do vosso Filho, da sua gloriosa ressurreição e ascensão ao céu, e enquanto esperamos sua nova vinda, nós vos oferecemos em ação de graças este sacrifício vivo e santo.",
-              "__massEditorPairKeys": {
-                "text_pt": "46:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "47:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai com bondade a oblação da vossa Igreja e reconhecei nela o sacrifício que nos reconciliou convosco; concedei que, alimentando-nos com o Corpo e o Sangue do vosso Filho, repletos do Espírito Santo, nos tornemos em Cristo um só corpo e um só espírito.",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Que o mesmo Espírito faça de nós uma eterna oferenda para alcançarmos a herança com os vossos eleitos: a santíssima Virgem Maria, Mãe de Deus, São José, seu esposo, os vossos santos Apóstolos e gloriosos Mártires,",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "text_pt": "(Santo do dia ou padroeiro)",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              }
-            },
-            {
-              "text_pt": "e todos os Santos, que não cessam de interceder por nós na vossa presença.",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazei de nós uma perfeita oferenda!",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Nós vos suplicamos, Senhor, que este sacrifício da nossa reconciliação estenda a paz e a salvação ao mundo inteiro. Confirmai na fé e na caridade a vossa Igreja que caminha neste mundo com o vosso servo o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "58:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", com os bispos do mundo inteiro, os presbíteros e diáconos, os outros ministros e o povo por vós redimido.",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              }
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Atendei propício às preces desta família, que reunistes em vossa presença. Reconduzi a vós, Pai de misericórdia, todos os vossos filhos e filhas dispersos pelo mundo inteiro.",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "64:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Acolhei com bondade no vosso reino os nossos irmãos e irmãs que partiram desta vida e todos os que morreram na vossa amizade. Unidos a eles, esperamos também nós saciar-nos eternamente da vossa glória,",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "rubric_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "rubric_pt": "67:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "por Cristo, Senhor nosso. Por ele dais ao mundo todo bem e toda graça.",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "69:rubric"
-              }
-            }
-          ],
-          "4": [
-            {
-              "text_pt": "Este prefácio não pode ser substituído por outro, porque introduz a Oração Eucarística cuja estrutura apresenta um resumo da História da Salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, ó Pai, é nosso dever dar-vos graças, é nossa salvação dar-vos glória. Só vós sois o Deus vivo e verdadeiro que existis antes de todo o tempo e permaneceis para sempre, habitando em luz inacessível.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              }
-            },
-            {
-              "text_pt": "Mas, porque sois o Deus de bondade e a fonte da vida, fizestes todas as coisas para cobrir de bênçãos as vossas criaturas e a muitos alegrar com o esplendor da vossa luz.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Eis, pois, diante de vós os inumeráveis coros dos Anjos que dia e noite vos servem e, contemplando a glória da vossa face, vos louvam sem cessar. Com eles também nós e, por nossa voz, tudo o que criastes celebramos vosso Nome e, exultantes de alegria, cantamos",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "dizemos",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "15:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "16:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Nós proclamamos vossa grandeza, Pai santo, a sabedoria e o amor com que fizestes todas as coisas.",
-              "__massEditorPairKeys": {
-                "text_pt": "17:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Criastes o ser humano à vossa imagem e lhe confiastes todo o universo, para que, servindo somente a vós, seu Criador, cuidasse de toda criatura.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              }
-            },
-            {
-              "text_pt": "E quando pela desobediência perdeu a vossa amizade, não o abandonastes ao poder da morte.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "text_pt": "A todos, porém, socorrestes com misericórdia, para que, ao procurar-vos, vos encontrassem.",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "text_pt": "Muitas vezes oferecestes aliança à família humana e a instruístes pelos profetas na esperança da salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "22:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "A todos socorrestes com bondade!",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "E de tal modo, Pai santo, amastes o mundo que, chegada a plenitude dos tempos, nos enviastes vosso próprio Filho para ser o nosso Salvador.",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              }
-            },
-            {
-              "text_pt": "Encarnado pelo poder do Espírito Santo e nascido da Virgem Maria, Jesus viveu em tudo a condição humana, menos o pecado; anunciou aos pobres a salvação, aos oprimidos, a liberdade, aos tristes, a alegria.",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "text_pt": "Para cumprir o vosso plano de amor, entregou-se à morte e, ressuscitando, destruiu a morte e renovou a vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "27:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por amor nos enviastes vosso Filho!",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "E, a fim de não mais vivermos para nós, mas para ele, que por nós morreu e ressuscitou, enviou de vós, ó Pai, como primeiro dom aos vossos fiéis, o Espírito Santo, que continua sua obra no mundo para levar à plenitude toda a santificação.",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "30:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por isso, nós vos pedimos, ó Pai, que o mesmo Espírito Santo santifique estas oferendas,",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "32:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "a fim de que se tornem o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue de Jesus Cristo, vosso Filho e Senhor nosso,",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "rubric_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "rubric_pt": "36:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "para celebrarmos este grande mistério que ele nos deixou em sinal da eterna aliança.",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "38:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "40:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Quando, pois, chegou a hora em que por vós, ó Pai, ia ser glorificado, tendo amado os seus que estavam no mundo, amou-os até o fim. Enquanto ceavam,",
-              "__massEditorPairKeys": {
-                "rubric_pt": "41:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "42:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "44:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "45:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "47:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo,",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "49:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "ele tomou em suas mãos o cálice com vinho, deu-vos graças novamente, e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "50:text"
-              }
-            },
-            {
-              "rubric_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "rubric_pt": "51:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "53:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "54:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "55:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "56:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "58:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "64:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "66:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "67:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, agora, ó Pai, o memorial da nossa redenção, anunciamos a morte de Cristo e sua descida entre os mortos, proclamamos a sua ressurreição e ascensão à vossa direita e, esperando a sua vinda gloriosa, nós vos oferecemos o seu Corpo e Sangue, sacrifício do vosso agrado e salvação para o mundo inteiro.",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "69:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai, com bondade, a oblação que destes à vossa Igreja e concedei aos que vamos participar do mesmo pão e do mesmo cálice que, reunidos pelo Espírito Santo num só corpo, nos tornemos em Cristo uma oferenda viva para o louvor da vossa glória.",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "72:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "73:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "74:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "75:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "76:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "77:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "78:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos, e todos os ministros da vossa Igreja, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
-              "__massEditorPairKeys": {
-                "text_pt": "79:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "80:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "81:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Na Missa com Batismo",
-              "__massEditorPairKeys": {
-                "rubric_pt": "82:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "83:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "84:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "85:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "87:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros da vossa Igreja, os que hoje fizestes renascer da água e do Espírito Santo, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
-              "__massEditorPairKeys": {
-                "text_pt": "88:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "89:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "90:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Na Missa com Crisma",
-              "__massEditorPairKeys": {
-                "rubric_pt": "91:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "92:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "93:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "94:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "95:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "96:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros da vossa Igreja, os que hoje foram ungidos pelo Espírito Santo, dom de Deus, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
-              "__massEditorPairKeys": {
-                "text_pt": "97:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "98:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "99:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ⓑ Na Missa com Primeira Comunhão Eucarística",
-              "__massEditorPairKeys": {
-                "rubric_pt": "100:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "101:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "102:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "103:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "104:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "105:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros da vossa Igreja, os que hoje reunis pela primeira vez à vossa mesa na participação do Pão da vida e do Cálice da salvação, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
-              "__massEditorPairKeys": {
-                "text_pt": "106:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "107:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "108:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos também dos que morreram na paz do vosso Cristo e de todos os defuntos dos quais só vós conhecestes a fé.",
-              "__massEditorPairKeys": {
-                "text_pt": "109:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "110:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "111:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "E a todos nós, vossos filhos e filhas, concedei, ó Pai de bondade, alcançar a herança eterna, com a Virgem Maria, Mãe de Deus, São José, seu esposo, os Apóstolos e todos os Santos, no vosso reino, onde, com todas as criaturas, libertas da corrupção do pecado e da morte, vos glorificaremos,",
-              "__massEditorPairKeys": {
-                "text_pt": "112:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "rubric_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "rubric_pt": "113:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "por Cristo, Senhor nosso, por quem dais ao mundo todo bem e toda graça.",
-              "__massEditorPairKeys": {
-                "text_pt": "114:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "115:rubric"
-              }
-            }
-          ],
-          "5": [
-            {
-              "text_pt": "O prefácio não pode ser substituído por outro.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "É justo e nos faz todos ser mais santos, louvar a vós, ó Pai, no mundo inteiro, de dia e de noite, agradecendo com Cristo, vosso Filho, nosso irmão.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              }
-            },
-            {
-              "text_pt": "É ele o sacerdote verdadeiro que sempre se oferece por nós todos, mandando que se faça a mesma coisa que fez naquela Ceia derradeira.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, aqui estamos reunidos, louvando e agradecendo com alegria, juntando nossa voz à voz dos Anjos e dos Santos todos, para cantar",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "dizer",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": ":",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "15:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ó Pai, vós que sempre quisestes ficar muito perto de nós, vivendo conosco no Cristo, falando conosco por ele,",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "mandai o vosso Espírito Santo,",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "text_pt": "a fim de que as nossas ofertas se mudem no Corpo",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "21:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e no Sangue de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "23:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mandai vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "text_pt": "Na noite em que ia ser entregue, ceando com seus Apóstolos,",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou o pão em suas mãos,",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              }
-            },
-            {
-              "text_pt": "eleva os olhos",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "text_pt": "olhou para o céu e vos deu graças, partiu o pão e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "32:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "33:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "text_pt": "tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "40:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "41:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Tudo isto é mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "43:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Toda vez que",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "comemos",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              }
-            },
-            {
-              "text_pt": "deste Pão, toda vez que",
-              "__massEditorPairKeys": {
-                "text_pt": "46:text"
-              }
-            },
-            {
-              "text_pt": "bebemos",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "text_pt": "deste Vinho,",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "text_pt": "recordamos",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              }
-            },
-            {
-              "text_pt": "a paixão de Jesus Cristo e",
-              "__massEditorPairKeys": {
-                "text_pt": "50:text"
-              }
-            },
-            {
-              "text_pt": "ficamos",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "text_pt": "esperando sua",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              }
-            },
-            {
-              "text_pt": "vinda",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              }
-            },
-            {
-              "text_pt": ".",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              }
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "56:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Recordando, ó Pai, neste momento, a paixão de Jesus, nosso Senhor, sua ressurreição e ascensão, nós queremos a vós oferecer este Pão que alimenta e que dá vida, este Vinho que nos salva e dá coragem.",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              },
-              "sp_pt": "C."
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "58:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Recebei, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "E quando recebermos Pão e Vinho, o Corpo e Sangue dele oferecidos, o Espírito nos una num só corpo, para sermos um só povo em seu amor.",
-              "__massEditorPairKeys": {
-                "text_pt": "60:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "61:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "62:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Protegei vossa Igreja que caminha nas estradas do mundo rumo ao céu, cada dia renovando a",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "text_pt": "esperança de chegar junto a vós, na vossa paz.",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "65:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Caminhamos na estrada de Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Dai ao vosso servo, o Papa N., ser bem firme na fé, na caridade, e a N., que é Bispo desta",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "text_pt": "Igreja, muita luz para guiar o vosso Povo.",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "69:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Esperamos entrar na vida eterna com Maria, Mãe de Deus e da Igreja, os Apóstolos, e todos",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "text_pt": "os que na vida souberam amar Cristo e seus irmãos.",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "73:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Esperamos entrar na vida eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "4C",
-              "__massEditorPairKeys": {
-                "rubric_pt": "75:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Abri as portas da misericórdia aos que chamastes para a outra vida; acolhei-os junto a vós,",
-              "__massEditorPairKeys": {
-                "text_pt": "76:text"
-              }
-            },
-            {
-              "text_pt": "bem felizes, no reino que para todos preparastes.",
-              "__massEditorPairKeys": {
-                "text_pt": "77:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "78:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "A todos dai a luz que não se apaga!",
-              "__massEditorPairKeys": {
-                "text_pt": "79:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, continua:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "80:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "E a todos nós, aqui reunidos, que somos povo santo e pecador, dai-nos a graça de participar",
-              "__massEditorPairKeys": {
-                "text_pt": "81:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "do vosso reino que também é nosso.",
-              "__massEditorPairKeys": {
-                "text_pt": "82:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "83:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "84:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "85:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "87:rubric"
-              }
-            }
-          ],
-          "D1": [
-            {
-              "rubric_pt": "A IGREJA A CAMINHO DA UNIDADE",
-              "__massEditorPairKeys": {
-                "rubric_pt": "0:rubric"
-              }
-            },
-            {
-              "text_pt": "Convém usar Oração Eucarística com os formulários de Missa, pela Igreja, pelo Papa, pelo Bispo, para a eleição do Papa ou Bispo, por um Concílio ou Sínodo, pelos sacerdotes, pelo próprio sacerdote, pelos ministros da Igreja, para uma reunião espiritual ou pastoralⒷ e quando houver sintonia com a Liturgia da Palavra.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças e cantar-vos um hino de glória e louvor, Senhor, Pai de infinita bondade.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Pela palavra do Evangelho do vosso Filho reunistes uma só Igreja de todos os povos, línguas e nações. Por ela, vivificada pela força do vosso Espírito, não deixais de congregar na unidade todo o gênero humano.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Manifestando a aliança do vosso amor, a Igreja irradia sem cessar a alegre esperança do vosso reino e brilha como sinal da vossa fidelidade que prometestes para sempre em Cristo Jesus, Senhor nosso.",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, unidos a todos os Anjos dos céus, nós vos celebramos na terra, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "com a Igreja inteira a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "21:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Bendito o vosso Filho, presente entre nós!",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "23:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "text_pt": "e se tornem para nós o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "27:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "text_pt": "de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "31:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "34:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "38:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "39:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "40:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "47:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "49:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "50:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "51:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "53:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "57:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "59:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
-              "__massEditorPairKeys": {
-                "text_pt": "60:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "61:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              }
-            },
-            {
-              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "66:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Renovai, ó Pai, com a luz do Evangelho, a vossa Igreja",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              }
-            },
-            {
-              "text_pt": "que está em",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              }
-            },
-            {
-              "rubric_pt": "N.)",
-              "__massEditorPairKeys": {
-                "rubric_pt": "71:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ". Fortalecei o vínculo da unidade entre os fiéis e os pastores do vosso povo, em comunhão com o nosso Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "73:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "75:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e toda a ordem episcopal. Assim, neste mundo dilacerado por discórdias, o vosso povo brilhe como sinal profético de unidade e concórdia.",
-              "__massEditorPairKeys": {
-                "text_pt": "76:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "77:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Confirmai na unidade a vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "78:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
-              "__massEditorPairKeys": {
-                "text_pt": "79:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "rubric_pt": "(N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "80:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e",
-              "__massEditorPairKeys": {
-                "text_pt": "81:text"
-              }
-            },
-            {
-              "rubric_pt": "N.)",
-              "__massEditorPairKeys": {
-                "rubric_pt": "82:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "83:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "84:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "85:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "87:text"
-              }
-            },
-            {
-              "text_pt": "São",
-              "__massEditorPairKeys": {
-                "text_pt": "88:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "89:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ":",
-              "__massEditorPairKeys": {
-                "text_pt": "90:text"
-              }
-            },
-            {
-              "text_pt": "Santo do dia ou padroeiro)",
-              "__massEditorPairKeys": {
-                "text_pt": "91:text"
-              }
-            },
-            {
-              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos,",
-              "__massEditorPairKeys": {
-                "text_pt": "92:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "93:text"
-              }
-            },
-            {
-              "text_pt": "por Jesus Cristo, vosso Filho.",
-              "__massEditorPairKeys": {
-                "text_pt": "94:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "95:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "96:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "97:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "98:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "99:rubric"
-              }
-            }
-          ],
-          "D2": [
-            {
-              "rubric_pt": "DEUS CONDUZ SUA IGREJA NO CAMINHO DA SALVAÇÃO",
-              "__massEditorPairKeys": {
-                "rubric_pt": "0:rubric"
-              }
-            },
-            {
-              "text_pt": "Convém usar esta Oração Eucarística com os formulários de Missa, pela Igreja, pelas vocações às ordens sagradas, pelos leigos, pela família, pelos religiosos, pelas vocações à vida religiosa, para pedir caridade, pelos parentes e amigos, em ação de graças Ⓑ e quando houver sintonia com a Liturgia da Palavra.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças, sempre e em todo lugar, Senhor, Pai santo, criador do mundo e fonte de toda vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Nunca abandonais a obra da vossa sabedoria, mas, em vossa providência, continuais agindo no meio de nós. Com braço estendido e mão forte, guiastes o vosso povo de Israel pelo deserto.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Agora, com a força do Espírito Santo, acompanhais sempre a vossa Igreja, peregrina neste mundo, e a conduzis pelos caminhos da história até à felicidade perfeita em vosso reino por Jesus Cristo, Senhor nosso.",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, também nós, com os Anjos e Santos, proclamamos o hino de vossa glória, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "sem cessar:",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "21:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Bendito o vosso Filho, presente entre nós!",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "23:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "text_pt": "e se tornem para nós o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "27:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "text_pt": "de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "31:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "34:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "38:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "39:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "40:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "47:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "49:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "50:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "51:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "53:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "57:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "59:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
-              "__massEditorPairKeys": {
-                "text_pt": "60:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "61:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              }
-            },
-            {
-              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "66:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Ó Pai, confirmai na unidade os convidados a participar da vossa mesa, para que, seguindo na fé e na esperança pelos vossos caminhos, possamos irradiar no mundo alegria e confiança em comunhão com o nosso Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "69:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "71:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", todos os bispos, presbíteros, diáconos e todo o vosso povo.",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "73:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Confirmai na unidade a vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
-              "__massEditorPairKeys": {
-                "text_pt": "75:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "rubric_pt": "(N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "76:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e",
-              "__massEditorPairKeys": {
-                "text_pt": "77:text"
-              }
-            },
-            {
-              "rubric_pt": "N.)",
-              "__massEditorPairKeys": {
-                "rubric_pt": "78:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "79:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "80:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "81:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
-              "__massEditorPairKeys": {
-                "text_pt": "82:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "83:text"
-              }
-            },
-            {
-              "text_pt": "São",
-              "__massEditorPairKeys": {
-                "text_pt": "84:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "85:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ":",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              }
-            },
-            {
-              "text_pt": "Santo do dia ou padroeiro)",
-              "__massEditorPairKeys": {
-                "text_pt": "87:text"
-              }
-            },
-            {
-              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos,",
-              "__massEditorPairKeys": {
-                "text_pt": "88:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "89:text"
-              }
-            },
-            {
-              "text_pt": "por Jesus Cristo, vosso Filho.",
-              "__massEditorPairKeys": {
-                "text_pt": "90:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "91:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "92:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "93:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "94:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "95:rubric"
-              }
-            }
-          ],
-          "D3": [
-            {
-              "rubric_pt": "JESUS, CAMINHO PARA O PAI",
-              "__massEditorPairKeys": {
-                "rubric_pt": "0:rubric"
-              }
-            },
-            {
-              "text_pt": "Convém usar esta Oração Eucarística com os formulários de Missa, pela evangelização dos povos, pelos cristãos perseguidos, pela pátria ou pela cidade, pelos governantes, pelo encontro de chefes das nações, no início do ano civil, pelo progresso dos povos Ⓑ e quando houver sintonia com a Liturgia da Palavra.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças, sempre e em todo lugar, Pai santo, Senhor do céu e da terra, por Cristo, Senhor nosso.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "De fato, pelo vosso Verbo criastes o universo e tudo governais com equidade. Vós nos destes vosso Filho, feito carne, como mediador; ele nos dirigiu a vossa palavra e nos chamou a seguir os seus passos.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Ele é o caminho que nos conduz até vós, a verdade que nos liberta, a vida que nos enche de alegria.",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "Por vosso Filho, reunis em uma só família os homens e as mulheres, criados para a glória do vosso nome, redimidos pelo sangue de sua cruz e marcados com o selo do vosso Espírito.",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, agora e para sempre, unidos a todos os Anjos, proclamamos a vossa glória, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "text_pt": "com alegria:",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "17:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "18:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "22:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Bendito o vosso Filho, presente entre nós!",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "24:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "text_pt": "e se tornem para nós o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "28:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "text_pt": "de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "32:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "34:text"
-              }
-            },
-            {
-              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "39:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "40:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "41:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "46:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "47:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "48:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "52:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "54:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "55:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "56:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "58:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "63:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              }
-            },
-            {
-              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "67:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Pela participação neste mistério, ó Pai todo-poderoso, vivificai-nos no Espírito, tornai-nos semelhantes à imagem do vosso Filho e confirmai-nos no vínculo da comunhão com o nosso Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "70:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "72:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os outros bispos, os presbíteros e diáconos e todo o vosso povo.",
-              "__massEditorPairKeys": {
-                "text_pt": "73:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "74:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Confirmai na unidade a vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "75:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Fazei que todos os fiéis da Igreja, discernindo os sinais dos tempos à luz da fé, empenhem-se coerentemente no serviço do Evangelho.",
-              "__massEditorPairKeys": {
-                "text_pt": "76:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "text_pt": "Tornai-nos atentos às necessidades de todas as pessoas para que, participando de suas dores e angústias, de suas alegrias e esperanças, fielmente lhes anunciemos a salvação e, com eles, sigamos no caminho do vosso reino.",
-              "__massEditorPairKeys": {
-                "text_pt": "77:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "78:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ajudai-nos a criar um mundo novo!",
-              "__massEditorPairKeys": {
-                "text_pt": "79:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
-              "__massEditorPairKeys": {
-                "text_pt": "80:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "rubric_pt": "(N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "81:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e",
-              "__massEditorPairKeys": {
-                "text_pt": "82:text"
-              }
-            },
-            {
-              "rubric_pt": "N.)",
-              "__massEditorPairKeys": {
-                "rubric_pt": "83:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "84:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "85:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "4C",
-              "__massEditorPairKeys": {
-                "rubric_pt": "87:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
-              "__massEditorPairKeys": {
-                "text_pt": "88:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "89:text"
-              }
-            },
-            {
-              "text_pt": "São",
-              "__massEditorPairKeys": {
-                "text_pt": "90:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "91:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ":",
-              "__massEditorPairKeys": {
-                "text_pt": "92:text"
-              }
-            },
-            {
-              "text_pt": "Santo do dia ou padroeiro)",
-              "__massEditorPairKeys": {
-                "text_pt": "93:text"
-              }
-            },
-            {
-              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos, por Jesus Cristo, vosso Filho.",
-              "__massEditorPairKeys": {
-                "text_pt": "94:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "95:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "96:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "97:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "98:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "99:rubric"
-              }
-            }
-          ],
-          "D4": [
-            {
-              "rubric_pt": "JESUS QUE PASSA FAZENDO O BEM",
-              "__massEditorPairKeys": {
-                "rubric_pt": "0:rubric"
-              }
-            },
-            {
-              "text_pt": "Convém usar esta Oração Eucarística com os formulários de Missa, pelos refugiados e exilados, em tempo de fome ou pelos que passam fome, pelos que nos afligem, pelos mantidos em cativeiro, pelos prisioneiros, pelos enfermos, pelos agonizantes, para pedir a graça de uma boa morte, em qualquer necessidade Ⓑ e quando houver sintonia com a Liturgia da Palavra.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças, sempre e em todo lugar, Pai das misericórdias e Deus fiel, pois nos destes vosso Filho Jesus Cristo, como Senhor e Redentor.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Ele sempre se mostrou cheio de misericórdia para com os pequenos e os pobres, os doentes e os pecadores, e se fez próximo dos aflitos e oprimidos. Por sua palavra e ação anunciou ao mundo que sois Pai e cuidais de todos os vossos filhos e filhas.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, com todos os Anjos e Santos, nós vos louvamos e bendizemos, e proclamamos o hino de vossa glória, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "sem cessar:",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "16:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "17:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              }
-            },
-            {
-              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "20:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Bendito o vosso Filho, presente entre nós!",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "22:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              }
-            },
-            {
-              "text_pt": "e se tornem para nós o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "26:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              }
-            },
-            {
-              "text_pt": "de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "30:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              }
-            },
-            {
-              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "34:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "37:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "38:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Então prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "39:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "45:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "48:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "52:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "54:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "55:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "56:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "58:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "61:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "62:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              }
-            },
-            {
-              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "65:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Dignai-vos, Senhor, conduzir a vossa Igreja à perfeição na fé e no amor, em comunhão com o nosso Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "68:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "70:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", com todos os bispos, presbíteros, diáconos e todo o povo que adquiristes para vós.",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "72:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Confirmai na unidade a vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "73:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Abri os nossos olhos para perceber as necessidades dos irmãos e irmãs; inspirai-nos palavras e ações para confortar os cansados e oprimidos; fazei que os sirvamos de coração sincero, seguindo o exemplo e o mandamento de Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "text_pt": "Vossa Igreja seja testemunha viva da verdade e da liberdade, da justiça e da paz, para que toda a humanidade se reanime com uma nova esperança.",
-              "__massEditorPairKeys": {
-                "text_pt": "75:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "76:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ajudai-nos a criar um mundo novo!",
-              "__massEditorPairKeys": {
-                "text_pt": "77:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
-              "__massEditorPairKeys": {
-                "text_pt": "78:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "rubric_pt": "(N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "79:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e",
-              "__massEditorPairKeys": {
-                "text_pt": "80:text"
-              }
-            },
-            {
-              "rubric_pt": "N.)",
-              "__massEditorPairKeys": {
-                "rubric_pt": "81:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
-              "__massEditorPairKeys": {
-                "text_pt": "82:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "83:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
-              "__massEditorPairKeys": {
-                "text_pt": "84:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "4C",
-              "__massEditorPairKeys": {
-                "rubric_pt": "85:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
-              "__massEditorPairKeys": {
-                "text_pt": "86:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "87:text"
-              }
-            },
-            {
-              "text_pt": "São",
-              "__massEditorPairKeys": {
-                "text_pt": "88:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "89:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ":",
-              "__massEditorPairKeys": {
-                "text_pt": "90:text"
-              }
-            },
-            {
-              "text_pt": "Santo do dia ou padroeiro)",
-              "__massEditorPairKeys": {
-                "text_pt": "91:text"
-              }
-            },
-            {
-              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos, por Jesus Cristo, vosso Filho.",
-              "__massEditorPairKeys": {
-                "text_pt": "92:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "93:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "94:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "95:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "96:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "97:rubric"
-              }
-            }
-          ],
-          "R1": [
-            {
-              "rubric_pt": "SOBRE A RECONCILIAÇÃO I",
-              "__massEditorPairKeys": {
-                "rubric_pt": "0:rubric"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo dar-vos graças sempre, Senhor, Pai santo, Deus eterno e todo- poderoso. Constantemente nos chamais a uma vida mais plena e, porque sois rico em misericórdia, sempre ofereceis o perdão e convidais os pecadores a confiar somente na vossa bondade.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              }
-            },
-            {
-              "text_pt": "E a nós, que tantas vezes quebramos a vossa aliança, nunca nos rejeitastes, mas, por Jesus, vosso Filho, nosso Redentor, unistes convosco a família humana com um vínculo novo de caridade, tão estreito e forte, que nada poderá romper.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Também hoje, ofereceis tempo de graça e reconciliação ao vosso povo e um novo alento para que, em Cristo, se converta a vós, enquanto, sempre mais dócil ao Espírito Santo, se coloca ao serviço de todos.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, cheios de admiração, exaltamos a força do vosso amor e, proclamando nossa alegria pela salvação, nos unimos às multidões dos céus, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "sem cessar:",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "16:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, ó Pai, vós sois Santo e, desde a origem do mundo, tudo fazeis para sermos santos como vós sois Santo.",
-              "__massEditorPairKeys": {
-                "text_pt": "17:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "18:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Olhai as oferendas do vosso povo e derramai sobre elas a força do vosso Espírito, para que se tornem",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "text_pt": "o Corpo",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "22:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o Sangue do vosso amado Filho, Jesus Cristo, no qual também nós somos vossos filhos.",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "24:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Quando outrora estávamos perdidos e incapazes de vos encontrar, vós nos amastes com imenso amor, pois vosso Filho, o único Justo, entregou-se à morte, não rejeitando ser pregado no lenho da cruz.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "26:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Antes, porém, de seus braços abertos traçarem entre o céu e a terra o sinal permanente da vossa aliança, Jesus quis celebrar a Páscoa com seus discípulos.",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              }
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              }
-            },
-            {
-              "text_pt": "Ceando com eles,",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "text_pt": "tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "33:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "35:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia, Jesus, sabendo que ia reconciliar em si todas as coisas pelo sangue a ser derramado na cruz,",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "text_pt": "tomou o cálice repleto do fruto da videira, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "41:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "42:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "44:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "48:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "52:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "A seguir o sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              }
-            },
-            {
-              "text_pt": "Fazendo, pois, memória de vosso Filho, Jesus Cristo, nossa Páscoa e certeza da paz definitiva, celebramos sua morte e ressurreição e, aguardando o dia feliz de sua vinda gloriosa, nós vos oferecemos, Deus fiel e misericordioso, a vítima que nos reconcilia convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "55:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "56:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Olhai, com amor, Pai misericordioso, aqueles que unis a vós pelo sacrifício do vosso Filho, e concedei que, pela força do Espírito Santo, os que participam do único pão e do mesmo cálice sejam congregados em Cristo num só corpo, no qual todas as divisões sejam superadas.",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "59:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "60:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Conservai-nos sempre em comunhão de fé e amor unidos ao Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e ao Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "64:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ".",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              }
-            },
-            {
-              "text_pt": "Ajudai-nos a esperar juntos a vinda do vosso reino, até o dia em que, diante de vós, formos santos entre os Santos na morada celeste, ao lado da Virgem Maria, Mãe de Deus, dos Apóstolos e todos os Santos e com nossos irmãos e irmãs já falecidos que confiamos à vossa misericórdia.",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              }
-            },
-            {
-              "text_pt": "Enfim, libertos das feridas do pecado e plenamente transformados em novas criaturas, felizes cantaremos a ação de graças",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              }
-            },
-            {
-              "text_pt": "do vosso Cristo que vive para sempre.",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "70:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "72:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "73:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "74:rubric"
-              }
-            }
-          ],
-          "R2": [
-            {
-              "rubric_pt": "SOBRE A RECONCILIAÇÃO II",
-              "__massEditorPairKeys": {
-                "rubric_pt": "0:rubric"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Na verdade, é digno e justo dar-vos graças e cantar vossos louvores, Deus Pai todo-poderoso, por tudo que operais neste mundo, por Cristo, nosso Senhor.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              }
-            },
-            {
-              "text_pt": "No meio da humanidade dividida por inimizades e discórdias, sabemos por experiência que vós levais as pessoas a se converter e buscar a reconciliação.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Pelo vosso Espírito Santo moveis os corações, de modo que os inimigos voltem à amizade, os adversários se deem as mãos e os povos procurem reencontrar a paz.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "É também obra do vosso poder, ó Pai, quando o ódio é vencido pelo amor, a vingança dá lugar ao perdão e a discórdia se converte em mútua afeição.",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, com os coros celestes, nós vos damos graças sem cessar e proclamamos aqui na terra a vossa glória, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Pai onipotente, louvado sois por vosso Filho Jesus Cristo, que veio em vosso nome.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Ele é a Palavra de salvação para a humanidade, a mão que estendeis aos pecadores e o caminho pelo qual nos é concedida a vossa paz.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "rubric_pt": "Quando vos abandonamos por nossos pecados, vós nos reconduzistes à reconciliação por vosso Filho, que por nós entregastes à morte, para que voltássemos a vós e nos amássemos uns aos outros.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "20:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "21:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "E agora, celebrando a reconciliação que Cristo nos trouxe, vos pedimos: santificai estas oferendas pela efusão do vosso Espírito,",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              }
-            },
-            {
-              "text_pt": "a fim de que se tornem o Corpo e",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "25:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "o Sangue do vosso Filho que nos mandou celebrar estes mistérios.",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "27:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "text_pt": "Antes de dar a vida para nos libertar, estando à mesa,",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou o pão em suas mãos, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "35:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Depois prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "36:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, naquela noite,",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              }
-            },
-            {
-              "text_pt": "ele tomou o cálice da bênção em suas mãos e, proclamando a vossa misericórdia, o deu a seus discípulos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "42:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "43:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "45:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "46:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "47:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé e do amor!",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "49:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
-              "__massEditorPairKeys": {
-                "text_pt": "50:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "51:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé para a salvação do mundo!",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "53:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazendo, pois, memória da morte e ressurreição do vosso Filho que nos deixou esta prova de amor, nós vos oferecemos aquilo que nos destes: o sacrifício da perfeita reconciliação.",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "57:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Pai santo, neste banquete salvífico, suplicantes, vos pedimos: aceitai-nos também com vosso Filho e dai-nos o seu Espírito para que nos liberte de tudo que nos separa uns dos outros.",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "O Espírito nos una num só corpo!",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Ele faça da vossa Igreja sinal de unidade do gênero humano e instrumento da vossa paz, e nos conserve em comunhão com o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "62:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "63:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "65:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os Bispos do mundo inteiro e todo o vosso povo.",
-              "__massEditorPairKeys": {
-                "text_pt": "66:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "67:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Ó Pai, que agora nos reunistes, à mesa do vosso Filho, congregai-nos também na Ceia da comunhão eterna nos novos céus e nova terra, onde brilha a plenitude da vossa paz, junto com a gloriosa Virgem Maria, Mãe de Deus, os Apóstolos e todos os Santos, os nossos irmãos e as pessoas de todos os povos e línguas que morreram na vossa amizade,",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              }
-            },
-            {
-              "text_pt": "em Cristo Jesus, Senhor nosso.",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "72:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "73:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "74:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "75:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "76:rubric"
-              }
-            }
-          ],
-          "C1": [
-            {
-              "text_pt": "O uso desta Oração Eucarística é restrito às Missas que se celebram só com crianças, isto é, as que ainda não entraram na adolescência, ou àquelas Missas nas quais a maior parte dos participantes é criança.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              }
-            },
-            {
-              "text_pt": "O prefácio dessa Oração Eucarística, por sua estrutura e índole peculiar, não pode ser substituído por outros prefácios.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Senhor, Pai de bondade, nos reunistes diante de vós para vos celebrar e proclamar vossos louvores com o coração em festa.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Nós vos louvamos por todas as coisas bonitas que existem no mundo e pela alegria que dais a todos nós. Nós vos louvamos pela luz do dia e por vossa Palavra que nos ilumina. Nós vos louvamos também pela terra, pelas pessoas que nela habitam e pela vida que de vós recebemos.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "10:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Sim, ó Pai, sois muito bom: vós nos amais e fazeis por nós coisas maravilhosas, sempre pensais em todas as pessoas e nunca desistis de estar perto delas.",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "Enviastes vosso Filho querido para nos salvar.",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "Ele curou os doentes, perdoou os pecadores, mostrou a todos o vosso amor, acolheu e abençoou as crianças.",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "15:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Pai de bondade, nós não estamos sozinhos para celebrar vossos louvores, pois em toda a terra o vosso povo vos glorifica. Por isso, rezamos com a Igreja inteira, com o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "17:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "18:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "20:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ". No céu também vos louvam sem cessar Maria, a Mãe de Jesus, os Apóstolos e todos os Santos. Unidos a eles e aos Anjos nós vos adoramos, cantando",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              }
-            },
-            {
-              "text_pt": "dizendo",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              }
-            },
-            {
-              "text_pt": "a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "27:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Pai santo, para vos agradecer, trouxemos este pão e este vinho;",
-              "__massEditorPairKeys": {
-                "text_pt": "28:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "29:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "pela ação do Espírito Santo fazei que eles se tornem",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo, sobre o pão e cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "text_pt": "o Corpo",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "33:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o Sangue de Jesus Cristo, vosso Filho muito amado.",
-              "__massEditorPairKeys": {
-                "text_pt": "34:text"
-              }
-            },
-            {
-              "text_pt": "une as mãos",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "Assim, ó Pai, possamos oferecer o mesmo dom que vós nos dais.",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "37:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              }
-            },
-            {
-              "text_pt": "Jesus, na noite antes de sua morte na cruz, pôs-se à mesa com seus apóstolos,",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "text_pt": "tomou o pão em suas mãos, e, rezando, deu graças; partiu o pão e o deu a seus amigos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "44:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "45:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Depois prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou em suas mãos o cálice com vinho, rezou, de novo, em ação de graças e o deu a seus amigos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "50:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "52:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "53:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "57:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "58:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Nesta Eucaristia, nós fazemos com amor o que Jesus mandou e, anunciando a sua morte e ressurreição, vos oferecemos o Pão da vida e o Cálice da salvação. Pai querido, é Jesus que nos conduz a vós; por isso, vos pedimos, recebei-nos com Ele.",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Com Jesus, recebei a nossa vida!",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Pai, que tanto nos amais, deixai-nos aproximar desta mesa e enviai sobre nós o Espírito Santo para que, alimentando-nos com o Corpo e Sangue do vosso Filho, sejamos um só coração e uma só alma.",
-              "__massEditorPairKeys": {
-                "text_pt": "62:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "63:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazei de nós um só corpo e um só espírito!",
-              "__massEditorPairKeys": {
-                "text_pt": "64:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Senhor, que sempre vos lembrais de todos, nós vos pedimos por aqueles que amamos: o Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "66:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "68:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", nossos pais, irmãos, amigos e os que cuidam de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              }
-            },
-            {
-              "text_pt": "Lembrai-vos também dos que sofrem em suas dores e andam tristes, e dos que morreram na vossa paz.",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              }
-            },
-            {
-              "text_pt": "Ó Pai, olhai com carinho o povo cristão e as pessoas do mundo inteiro.",
-              "__massEditorPairKeys": {
-                "text_pt": "71:text"
-              }
-            },
-            {
-              "text_pt": "Diante de tudo o que fazeis em nosso favor por meio de Jesus Cristo, vosso Filho, nós vos bendizemos e louvamos.",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "73:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "75:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "76:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "77:rubric"
-              }
-            }
-          ],
-          "C2": [
-            {
-              "text_pt": "O uso desta Oração Eucarística é restrito às Missas que se celebram só com crianças, isto é, as que ainda não entraram na adolescência, ou àquelas Missas nas quais a maior parte dos participantes é criança.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              }
-            },
-            {
-              "text_pt": "O prefácio dessa Oração Eucarística, por sua estrutura e índole peculiar, não pode ser substituído por outros prefácios.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Ó Pai querido, que tanto nos amais, como é grande a nossa alegria em vos agradecer e com Jesus, na vossa Igreja, cantar vosso louvor.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Vós nos amastes tanto que criastes para nós este mundo imenso e maravilhoso. Vós nos amais tanto que nos dais vosso Filho Jesus para nos guiar até vós. Vós nos amais tanto que nos reunis em vosso Filho Jesus e, pelo Espírito Santo, nos tornais filhos e filhas da mesma família.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Por este amor tão grande nós vos agradecemos e com os Anjos e os Santos, que vos adoram, cantamos",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "dizemos",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": "a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "16:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Sim, bendito seja Jesus que vós nos enviastes, amigo das crianças e dos pobres. Ele nos ensina a vos amar, ó Pai querido, e amar-nos uns aos outros.",
-              "__massEditorPairKeys": {
-                "text_pt": "18:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "19:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Jesus veio tirar do coração o pecado, a maldade e o ódio que impedem a amizade e não nos deixam ser felizes. Ele prometeu que o Espírito Santo ficaria sempre conosco para vivermos bem unidos a vós como filhos e filhas.",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "22:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
-              "__massEditorPairKeys": {
-                "text_pt": "23:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "24:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ó Deus, nosso Pai, enviai vosso Espírito Santo para que estes dons do pão e do vinho",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "26:text"
-              }
-            },
-            {
-              "text_pt": "se tornem o Corpo",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "28:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o Sangue de nosso Senhor Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "30:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "32:text"
-              }
-            },
-            {
-              "text_pt": "Jesus, na noite antes de sua morte na cruz, nos mostrou como é grande vosso amor. Quando ele estava à mesa com os apóstolos,",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "34:text"
-              }
-            },
-            {
-              "text_pt": "tomou o pão em suas mãos e rezou, louvando e agradecendo. Depois partiu o pão e o deu a seus amigos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "37:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "38:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Depois prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "39:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "41:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou em suas mãos o cálice com vinho, rezou, de novo, em ação de graças e o deu a seus amigos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "42:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "43:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "45:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "46:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "48:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "49:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "A seguir, o sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, Pai querido, celebramos a memória da morte e ressurreição de Jesus, Salvador do mundo. Ele mesmo se colocou em nossas mãos para ser este dom de reconciliação e de paz, nosso sacrifício que agora vos oferecemos e pelo qual somos atraídos para vós.",
-              "__massEditorPairKeys": {
-                "text_pt": "52:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "53:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Com Jesus, recebei a nossa vida!",
-              "__massEditorPairKeys": {
-                "text_pt": "54:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "55:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Escutai-nos, Senhor nosso Deus, e dai o Espírito do vosso amor aos que participam desta Ceia, para que fiquem sempre mais unidos na vossa Igreja, com o nosso Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "57:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", o nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "59:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", os outros bispos e todos aqueles que servem o vosso povo.",
-              "__massEditorPairKeys": {
-                "text_pt": "60:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "61:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazei de nós um só corpo e um só espírito!",
-              "__massEditorPairKeys": {
-                "text_pt": "62:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Não vos esqueçais daqueles que amamos: nossos pais, parentes, amigos e os que cuidam de nós; e também daqueles que ainda não amamos bastante. Lembrai-vos dos que em paz partiram desta vida",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              },
-              "sp_pt": "2C"
-            },
-            {
-              "rubric_pt": "(N. N.)",
-              "__massEditorPairKeys": {
-                "rubric_pt": "64:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "; acolhei-os com amor na alegria da vossa casa.",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "66:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazei de nós um só corpo e um só espírito!",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Um dia, enfim, ó Pai, reuni a todos nós em vosso reino, com a Virgem Maria, Mãe de Deus e nossa Mãe, para celebrar a festa que no céu nunca se acaba, onde todos os amigos de Jesus cantam sem cessar o vosso louvor.",
-              "__massEditorPairKeys": {
-                "text_pt": "68:text"
-              },
-              "sp_pt": "3C"
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "69:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "71:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "73:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "14x",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              }
-            }
-          ],
-          "C3": [
-            {
-              "text_pt": "O uso desta Oração Eucarística é restrito às Missas que se celebram só com crianças, isto é, as que ainda não entraram na adolescência, ou àquelas Missas nas quais a maior parte dos participantes é criança.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              }
-            },
-            {
-              "text_pt": "O prefácio dessa Oração Eucarística, por sua estrutura e índole peculiar, não pode ser substituído por outros prefácios.",
-              "__massEditorPairKeys": {
-                "text_pt": "1:text"
-              }
-            },
-            {
-              "text_pt": "O Senhor esteja convosco.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "Ele está no meio de nós.",
-              "__massEditorPairKeys": {
-                "text_pt": "3:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Corações ao alto.",
-              "__massEditorPairKeys": {
-                "text_pt": "4:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "O nosso coração está em Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "5:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Demos graças ao Senhor, nosso Deus.",
-              "__massEditorPairKeys": {
-                "text_pt": "6:text"
-              },
-              "sp_pt": "V."
-            },
-            {
-              "text_pt": "É nosso dever e nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "7:text"
-              },
-              "sp_pt": "R."
-            },
-            {
-              "text_pt": "Deus, nosso Pai, nós vos agradecemos, porque nos criastes, a fim de vivermos para vós, amando-nos como irmãos.",
-              "__massEditorPairKeys": {
-                "text_pt": "8:text"
-              }
-            },
-            {
-              "text_pt": "Por vosso dom, podemos viver como amigos e repartir uns com os outros as coisas bonitas que temos e as dificuldades que passamos.",
-              "__massEditorPairKeys": {
-                "text_pt": "9:text"
-              }
-            },
-            {
-              "text_pt": "Porque sois o Deus dos vivos, nos chamastes à vida e quereis que sejamos felizes para sempre. Jesus é o primeiro que vós ressuscitastes dentre os mortos e lhe destes a vida nova. Também a nós prometestes vida sem fim, sem miséria e sem dor.",
-              "__massEditorPairKeys": {
-                "text_pt": "10:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, ó Pai, felizes e agradecidos, em comunhão com todos os que acreditam em vós, com os Santos e os Anjos, exultantes, cantamos",
-              "__massEditorPairKeys": {
-                "text_pt": "11:text"
-              }
-            },
-            {
-              "text_pt": "(",
-              "__massEditorPairKeys": {
-                "text_pt": "12:text"
-              }
-            },
-            {
-              "text_pt": "dizemos",
-              "__massEditorPairKeys": {
-                "text_pt": "13:text"
-              }
-            },
-            {
-              "text_pt": ")",
-              "__massEditorPairKeys": {
-                "text_pt": "14:text"
-              }
-            },
-            {
-              "text_pt": "a uma só voz:",
-              "__massEditorPairKeys": {
-                "text_pt": "15:text"
-              }
-            },
-            {
-              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
-              "__massEditorPairKeys": {
-                "text_pt": "16:text"
-              }
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "17:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "18:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Na verdade, ó Pai, vós sois santo, sois muito bom para nós e amais todas as pessoas do mundo.",
-              "__massEditorPairKeys": {
-                "text_pt": "19:text"
-              },
-              "sp_pt": "CP"
-            },
-            {
-              "text_pt": "Agradecemos, em primeiro lugar, pelo vosso Filho, Jesus Cristo.",
-              "__massEditorPairKeys": {
-                "text_pt": "20:text"
-              }
-            },
-            {
-              "text_pt": "Ele veio ao mundo porque as pessoas se afastaram de vós pelo pecado e não conseguiam mais se entender.",
-              "__massEditorPairKeys": {
-                "text_pt": "21:text"
-              }
-            },
-            {
-              "text_pt": "Ele abriu nossos olhos e ouvidos para vos conhecer como Pai e nos amarmos como irmãos e irmãs.",
-              "__massEditorPairKeys": {
-                "text_pt": "22:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "23:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, ó Pai, que em Cristo nos salvais!",
-              "__massEditorPairKeys": {
-                "text_pt": "24:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Ele nos anunciou a vida plena da ressurreição que viveremos para sempre junto de vós. Ele percorreu, antes de nós, o caminho do amor para que seguíssemos seus passos. Jesus agora nos reúne ao redor deste altar para fazermos o que na última Ceia ele mesmo fez com seus discípulos.",
-              "__massEditorPairKeys": {
-                "text_pt": "25:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "26:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, ó Pai, que em Cristo nos salvais!",
-              "__massEditorPairKeys": {
-                "text_pt": "27:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "28:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ó Pai, vós que sois tão bom, mandai vosso Espírito Santo para santificar estes dons do pão e do vinho.",
-              "__massEditorPairKeys": {
-                "text_pt": "29:text"
-              },
-              "sp_pt": "CC"
-            },
-            {
-              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "30:text"
-              }
-            },
-            {
-              "text_pt": "Eles serão para nós o Corpo",
-              "__massEditorPairKeys": {
-                "text_pt": "31:text"
-              }
-            },
-            {
-              "rubric_pt": "✠",
-              "__massEditorPairKeys": {
-                "rubric_pt": "32:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e o Sangue de Jesus Cristo, vosso Filho.",
-              "__massEditorPairKeys": {
-                "text_pt": "33:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "34:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Enviai o vosso Espírito Santo!",
-              "__massEditorPairKeys": {
-                "text_pt": "35:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
-              "__massEditorPairKeys": {
-                "text_pt": "36:text"
-              }
-            },
-            {
-              "text_pt": "Na noite antes de morrer por nós, Jesus pôs-se à mesa com seus apóstolos,",
-              "__massEditorPairKeys": {
-                "text_pt": "37:text"
-              }
-            },
-            {
-              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "38:text"
-              }
-            },
-            {
-              "text_pt": "tomou o pão em suas mãos, e, rezando, deu graças; partiu o pão e o deu a seus amigos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "39:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "40:text"
-              }
-            },
-            {
-              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "41:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "42:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Depois prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "43:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Do mesmo modo, no fim da Ceia,",
-              "__massEditorPairKeys": {
-                "text_pt": "44:text"
-              }
-            },
-            {
-              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
-              "__massEditorPairKeys": {
-                "text_pt": "45:text"
-              }
-            },
-            {
-              "text_pt": "Jesus tomou em suas mãos o cálice com vinho, rezou em ação de graças e o deu a seus amigos, dizendo:",
-              "__massEditorPairKeys": {
-                "text_pt": "46:text"
-              }
-            },
-            {
-              "text_pt": "inclina-se levemente",
-              "__massEditorPairKeys": {
-                "text_pt": "47:text"
-              }
-            },
-            {
-              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
-              "__massEditorPairKeys": {
-                "text_pt": "48:text"
-              }
-            },
-            {
-              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "49:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "rubric_pt": "Em seguida, diz:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "50:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Mistério da fé!",
-              "__massEditorPairKeys": {
-                "text_pt": "51:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "52:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
-              "__massEditorPairKeys": {
-                "text_pt": "53:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "ou",
-              "__massEditorPairKeys": {
-                "rubric_pt": "54:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "A seguir, o sacerdote, de braços abertos, diz:",
-              "__massEditorPairKeys": {
-                "text_pt": "55:text"
-              }
-            },
-            {
-              "text_pt": "Por isso, Pai santo, aqui estamos diante de vós, e, com alegria, celebramos a memória do que Jesus Cristo fez para nossa salvação.",
-              "__massEditorPairKeys": {
-                "text_pt": "56:text"
-              }
-            },
-            {
-              "text_pt": "Neste santo sacrifício, que ele confiou à sua Igreja, celebramos sua morte e ressurreição.",
-              "__massEditorPairKeys": {
-                "text_pt": "57:text"
-              }
-            },
-            {
-              "text_pt": "Pai santo, que estais nos céus, aceitai-nos com vosso Filho amado.",
-              "__massEditorPairKeys": {
-                "text_pt": "58:text"
-              }
-            },
-            {
-              "text_pt": "Ele sofreu livremente a morte por nós; vós, porém, o ressuscitastes.",
-              "__massEditorPairKeys": {
-                "text_pt": "59:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "60:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Com Jesus, recebei a nossa vida!",
-              "__massEditorPairKeys": {
-                "text_pt": "61:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "62:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ó Pai, Jesus agora vive sempre junto de vós, mas ao mesmo tempo está aqui conosco. Um dia, ele virá em sua glória e o seu reino não terá fim. Então, ninguém mais vai sofrer, ninguém mais vai chorar, ninguém mais vai ficar triste: o pecado e a morte não mais dominarão.",
-              "__massEditorPairKeys": {
-                "text_pt": "63:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "64:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Glória a vós, ó Pai, que em Cristo nos salvais!",
-              "__massEditorPairKeys": {
-                "text_pt": "65:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "O sacerdote, de braços abertos, prossegue:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "66:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Pai santo, vós nos chamastes para recebermos nesta mesa, com alegria, o Corpo de Cristo. Fortificados por este alimento, possamos agradar-vos sempre mais e pela comunhão do Espírito Santo nos tornemos um só corpo no amor.",
-              "__massEditorPairKeys": {
-                "text_pt": "67:text"
-              }
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "68:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazei de nós um só corpo e um só espírito!",
-              "__massEditorPairKeys": {
-                "text_pt": "69:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "text_pt": "Lembrai-vos, ó Pai, do nosso Papa",
-              "__massEditorPairKeys": {
-                "text_pt": "70:text"
-              },
-              "sp_pt": "1C"
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "71:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": ", do nosso Bispo",
-              "__massEditorPairKeys": {
-                "text_pt": "72:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "73:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e dos outros bispos.",
-              "__massEditorPairKeys": {
-                "text_pt": "74:text"
-              }
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "75:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "No Tempo Pascal o sacerdote diz:",
-              "__massEditorPairKeys": {
-                "text_pt": "76:text"
-              }
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "77:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Fazei que os corações dos vossos fiéis sejam repletos com as alegrias da Páscoa e levem estas mesmas alegrias aos que vivem na tristeza.",
-              "__massEditorPairKeys": {
-                "text_pt": "78:text"
-              }
-            },
-            {
-              "rubric_pt": "★",
-              "__massEditorPairKeys": {
-                "rubric_pt": "79:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Ajudai os discípulos de Cristo, para que vivam em paz e repartam com todos o dom da alegria.",
-              "__massEditorPairKeys": {
-                "text_pt": "80:text"
-              }
-            },
-            {
-              "text_pt": "Concedei que, um dia, estejamos junto a vós, morando para sempre em vossa casa com Jesus e Maria, sua Mãe, São",
-              "__massEditorPairKeys": {
-                "text_pt": "81:text"
-              }
-            },
-            {
-              "rubric_pt": "N.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "82:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "e todos os Santos, e com nossos irmãos falecidos.",
-              "__massEditorPairKeys": {
-                "text_pt": "83:text"
-              }
-            },
-            {
-              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "84:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "85:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "86:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "87:text"
-              },
-              "sp_pt": "Todos"
-            },
-            {
-              "rubric_pt": "Segue-se o Rito da Comunhão.",
-              "__massEditorPairKeys": {
-                "rubric_pt": "88:rubric"
-              }
-            }
-          ]
-        },
-        "amen": [
-          {
-            "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-            "__massEditorPairKeys": {
-              "text_pt": "0:text"
-            },
-            "sp_pt": "CP ou CC"
-          },
-          {
-            "rubric_pt": "A assembleia aclama:",
-            "__massEditorPairKeys": {
-              "rubric_pt": "1:rubric"
-            },
-            "rubricInset_pt": true
-          },
-          {
-            "text_pt": "Amém.",
-            "__massEditorPairKeys": {
-              "text_pt": "2:text"
-            },
-            "sp_pt": "Todos"
-          }
-        ],
-        "formEndings": {
-          "1": [
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "Todos"
-            }
-          ],
-          "2": [
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "Todos"
-            }
-          ],
-          "3": [
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "Todos"
-            }
-          ],
-          "4": [
-            {
-              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
-              "__massEditorPairKeys": {
-                "text_pt": "0:text"
-              },
-              "sp_pt": "CP ou CC"
-            },
-            {
-              "rubric_pt": "A assembleia aclama:",
-              "__massEditorPairKeys": {
-                "rubric_pt": "1:rubric"
-              },
-              "rubricInset_pt": true
-            },
-            {
-              "text_pt": "Amém.",
-              "__massEditorPairKeys": {
-                "text_pt": "2:text"
-              },
-              "sp_pt": "Todos"
-            }
-          ]
-        },
-        "formFrames": {
-          "1": {
-            "sections": [
-              "dialogue",
-              "preface",
-              "sanctus",
-              "form",
-              "ending"
-            ]
-          },
-          "2": {
-            "sections": [
-              "dialogue",
-              "preface",
-              "sanctus",
-              "form",
-              "ending"
-            ]
-          },
-          "3": {
-            "sections": [
-              "dialogue",
-              "preface",
-              "sanctus",
-              "form",
-              "ending"
-            ]
-          },
-          "4": {
-            "sections": [
-              "dialogue",
-              "form",
-              "ending"
-            ]
-          }
-        },
-        "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
         21
       ],
       "value": {
@@ -36904,6 +27554,9391 @@
             }
           }
         ]
+      }
+    },
+    {
+      "path": [
+        20
+      ],
+      "value": {
+        "id": "3.3 eucharist",
+        "type": "selectable",
+        "isEucharist": true,
+        "header": {
+          "pt": "Oração Eucarística"
+        },
+        "variants": {
+          "1": {
+            "label": {
+              "pt": "Oração Eucarística I"
+            }
+          },
+          "2": {
+            "label": {
+              "pt": "Oração Eucarística II"
+            }
+          },
+          "3": {
+            "label": {
+              "pt": "Oração Eucarística III"
+            }
+          },
+          "4": {
+            "label": {
+              "pt": "Oração Eucarística IV"
+            }
+          },
+          "5": {
+            "label": {
+              "pt": "Oração Eucarística V"
+            }
+          },
+          "D1": {
+            "label": {
+              "pt": "Para diversas circunstâncias I"
+            }
+          },
+          "D2": {
+            "label": {
+              "pt": "Para diversas circunstâncias II"
+            }
+          },
+          "D3": {
+            "label": {
+              "pt": "Para diversas circunstâncias III"
+            }
+          },
+          "D4": {
+            "label": {
+              "pt": "Para diversas circunstâncias IV"
+            }
+          },
+          "R1": {
+            "label": {
+              "pt": "Sobre a reconciliação I"
+            }
+          },
+          "R2": {
+            "label": {
+              "pt": "Sobre a reconciliação II"
+            }
+          },
+          "C1": {
+            "label": {
+              "pt": "Para Missas com crianças I"
+            }
+          },
+          "C2": {
+            "label": {
+              "pt": "Para Missas com crianças II"
+            }
+          },
+          "C3": {
+            "label": {
+              "pt": "Para Missas com crianças III"
+            }
+          }
+        },
+        "common_dialogue": [],
+        "songs": {},
+        "sanctus": [],
+        "forms": {
+          "1": [
+            {
+              "text_pt": "Pai de misericórdia, a quem sobem nossos louvores, suplicantes, vos rogamos e pedimos por Jesus Cristo, vosso Filho e Senhor nosso,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:0:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:te_igitur:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "que aceiteis e abençoeis",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:2:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:te_igitur:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "estes dons, estas oferendas, este sacrifício puro e santo,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:4:text"
+              }
+            },
+            {
+              "rubric_pt": "de braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:te_igitur:5:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "que oferecemos, antes de tudo, pela vossa Igreja santa e católica: concedei-lhe paz e proteção, unindo-a num só corpo e governando-a por toda a terra, em comunhão com vosso servo o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:6:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:te_igitur:7:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:8:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:te_igitur:9:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", e todos os que guardam a fé católica que receberam dos Apóstolos.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:10:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:te_igitur:11:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Abençoai nossa oferenda, ó Senhor!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:te_igitur:12:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, dos vossos filhos e filhas",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:living:0:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N. N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:living:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Une as mãos e reza por alguns momentos em silêncio por aqueles que quer recordar. De braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:living:2:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e de todos os que circundam este altar, dos quais conheceis a fé e a dedicação ao vosso serviço.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:living:3:text"
+              }
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:living:4:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por eles nós vos oferecemos e também eles vos oferecem este sacrifício de louvor por si e por todos os seus, e elevam a vós as suas preces, Deus eterno, vivo e verdadeiro, para alcançar o perdão de suas faltas, a segurança em suas vidas e a salvação que esperam.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:living:5:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:living:6:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, dos vossos filhos!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:living:7:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "type": "optionBlock",
+              "optionKey": "roman_canon_season",
+              "defaultOption": "ordinary",
+              "showControl": true,
+              "label": {
+                "pt": "Tempo Comum"
+              },
+              "options": {
+                "ordinary": {
+                  "label": {
+                    "pt": "Tempo Comum"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Em comunhão com toda a Igreja, celebramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:0:text"
+                      },
+                      "sp_pt": "2C"
+                    },
+                    {
+                      "rubric_pt": "★",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "A assembleia aclama:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:10:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:11:text"
+                      },
+                      "sp_pt": "Todos"
+                    },
+                    {
+                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:12:rubric"
+                      }
+                    }
+                  ]
+                },
+                "christmas": {
+                  "label": {
+                    "pt": "Natal"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Em comunhão com toda a Igreja, celebramos",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_pt": "a noite santíssima",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "o dia santíssimo em que Maria, intacta em sua virgindade, deu à luz o Salvador do mundo. Veneramos em primeiro lugar a memória da mesma Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "★",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:5:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "A assembleia aclama:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:14:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:15:text"
+                      },
+                      "sp_pt": "Todos"
+                    },
+                    {
+                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:16:rubric"
+                      }
+                    }
+                  ]
+                },
+                "epiphany": {
+                  "label": {
+                    "pt": "Epifania"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Em comunhão com toda a Igreja, celebramos o dia santíssimo em que vosso Filho unigênito, eterno convosco na glória, se manifestou visivelmente em nossa carne. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "★",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "A assembleia aclama:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:10:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:11:text"
+                      },
+                      "sp_pt": "Todos"
+                    },
+                    {
+                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:12:rubric"
+                      }
+                    }
+                  ]
+                },
+                "easter": {
+                  "label": {
+                    "pt": "Páscoa"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Em comunhão com toda a Igreja, celebramos",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "text_pt": "a noite santíssima",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "o dia santíssimo da Ressurreição de nosso Senhor Jesus Cristo segunda a carne. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "★",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:5:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:11:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:12:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:13:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "A assembleia aclama:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:14:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:15:text"
+                      },
+                      "sp_pt": "Todos"
+                    },
+                    {
+                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:16:rubric"
+                      }
+                    }
+                  ]
+                },
+                "ascension": {
+                  "label": {
+                    "pt": "Ascensão"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Em comunhão com toda a Igreja, celebramos o dia santíssimo em que nosso Senhor, vosso Filho unigênito, elevou à vossa direita na glória a nossa frágil natureza humana.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:1:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "★",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:2:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:10:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "A assembleia aclama:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:11:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:12:text"
+                      },
+                      "sp_pt": "Todos"
+                    },
+                    {
+                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:13:rubric"
+                      }
+                    }
+                  ]
+                },
+                "pentecost": {
+                  "label": {
+                    "pt": "Pentecostes"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Em comunhão com toda a Igreja, celebramos o dia santíssimo de Pentecostes em que o Espírito Santo, em línguas de fogo, se manifestou aos Apóstolos. Veneramos em primeiro lugar a memória da Mãe de nosso Deus e Senhor Jesus Cristo, a gloriosa sempre Virgem Maria,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:0:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "★",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "a de seu esposo São José, e também a dos Santos Apóstolos e Mártires: Pedro e Paulo, André,",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Tiago e João, Tomé, Tiago e Filipe, Bartolomeu e Mateus, Simão e Tadeu, Lino, Cleto, Clemente, Sisto, Cornélio e Cipriano, Lourenço e Crisógono, João e Paulo, Cosme e Damião",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:4:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:5:text"
+                      }
+                    },
+                    {
+                      "text_pt": "e a de todos os vossos Santos. Por seus méritos e preces concedei-nos sem cessar a vossa proteção.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:6:text"
+                      }
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:7:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:8:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:9:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "A assembleia aclama:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:10:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "Em comunhão com vossos Santos vos louvamos!",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:communicantes:11:text"
+                      },
+                      "sp_pt": "Todos"
+                    },
+                    {
+                      "rubric_pt": "O sacerdote, com os braços abertos, continua:",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:communicantes:12:rubric"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pairKey": "canon:communicantes:choice"
+            },
+            {
+              "type": "optionBlock",
+              "optionKey": "roman_canon_season",
+              "defaultOption": "ordinary",
+              "showControl": false,
+              "label": {
+                "pt": "Tempo Comum"
+              },
+              "options": {
+                "ordinary": {
+                  "label": {
+                    "pt": "Tempo Comum"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:0:text"
+                      },
+                      "sp_pt": "CP"
+                    },
+                    {
+                      "rubric_pt": "Une as mãos.",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:hanc_igitur:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:4:text"
+                      }
+                    }
+                  ]
+                },
+                "christmas": {
+                  "label": {
+                    "pt": "Natal"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:0:text"
+                      },
+                      "sp_pt": "CP"
+                    },
+                    {
+                      "rubric_pt": "Une as mãos.",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:hanc_igitur:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:4:text"
+                      }
+                    }
+                  ]
+                },
+                "epiphany": {
+                  "label": {
+                    "pt": "Epifania"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:0:text"
+                      },
+                      "sp_pt": "CP"
+                    },
+                    {
+                      "rubric_pt": "Une as mãos.",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:hanc_igitur:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:4:text"
+                      }
+                    }
+                  ]
+                },
+                "easter": {
+                  "label": {
+                    "pt": "Páscoa"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; nós a oferecemos também por aqueles que vos dignastes regenerar pela água e pelo Espírito Santo, concedendo-lhes a remissão de todos os pecados.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:0:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Dai aos nossos dias a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:1:text"
+                      }
+                    },
+                    {
+                      "rubric_pt": "Une as mãos.",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:hanc_igitur:2:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:4:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:5:text"
+                      }
+                    }
+                  ]
+                },
+                "ascension": {
+                  "label": {
+                    "pt": "Ascensão"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:0:text"
+                      },
+                      "sp_pt": "CP"
+                    },
+                    {
+                      "rubric_pt": "Une as mãos.",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:hanc_igitur:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:4:text"
+                      }
+                    }
+                  ]
+                },
+                "pentecost": {
+                  "label": {
+                    "pt": "Pentecostes"
+                  },
+                  "lines": [
+                    {
+                      "text_pt": "Aceitai, ó Pai, com bondade, a oblação dos vossos servos e de toda a vossa família; dai-nos sempre a vossa paz, livrai-nos da condenação eterna e acolhei-nos entre os vossos eleitos.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:0:text"
+                      },
+                      "sp_pt": "CP"
+                    },
+                    {
+                      "rubric_pt": "Une as mãos.",
+                      "__massEditorPairKeys": {
+                        "rubric_pt": "canon:hanc_igitur:1:rubric"
+                      },
+                      "rubricInset_pt": true
+                    },
+                    {
+                      "text_pt": "(",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:2:text"
+                      }
+                    },
+                    {
+                      "text_pt": "Por Cristo, nosso Senhor. Amém.",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:3:text"
+                      }
+                    },
+                    {
+                      "text_pt": ")",
+                      "__massEditorPairKeys": {
+                        "text_pt": "canon:hanc_igitur:4:text"
+                      }
+                    }
+                  ]
+                }
+              },
+              "pairKey": "canon:hanc_igitur:choice"
+            },
+            {
+              "text_pt": "Dignai-vos, ó Pai, aceitar, abençoar e santificar estas oferendas; recebei-as como sacrifício espiritual perfeito, a fim de que se tornem para nós o Corpo e o Sangue de vosso amado Filho, nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:quam_oblationem:0:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "Une as mãos.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:quam_oblationem:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:quam_oblationem:2:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:quam_oblationem:3:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Na véspera de sua paixão,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:bread:0:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:bread:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "ele tomou o pão em suas santas e veneráveis mãos,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:bread:2:text"
+              }
+            },
+            {
+              "rubric_pt": "eleva os olhos,",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:bread:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "elevou os olhos ao céu, a vós, ó Pai todo-poderoso, pronunciou a bênção de ação de graças, partiu o pão e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:bread:4:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:bread:5:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:bread:6:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:bread:7:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:bread:8:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:cup:0:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:cup:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "ele tomou este precioso cálice em suas santas e veneráveis mãos, pronunciou novamente a bênção de ação de graças e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:cup:2:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:cup:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:cup:4:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:cup:5:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:cup:6:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:mystery:0:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:mystery:2:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:mystery:4:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:5:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:mystery:6:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:7:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:mystery:8:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:9:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:mystery:10:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:11:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:mystery:12:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, pois, a memória da bem-aventurada paixão do vosso Filho, da sua ressurreição dentre os mortos e gloriosa ascensão aos céus, nós, vossos servos, e também vosso povo santo, vos oferecemos, ó Pai, dentre os bens que nos destes, o sacrifício puro, santo e imaculado, Pão santo da vida eterna e Cálice da perpétua salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:anamnesis:0:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "Recebei, ó Pai, com olhar benigno, esta oferta, como recebestes os dons do justo Abel, o sacrifício de nosso patriarca Abraão e a oblação pura e santa do sumo sacerdote Melquisedeque.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supra_quae:0:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:supra_quae:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supra_quae:2:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, inclinando-se, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:supra_quae:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Suplicantes, vos pedimos, ó Deus onipotente, que esta nossa oferenda seja levada à vossa presença, no altar do céu, pelas mãos do vosso santo Anjo, para que todos nós, participando deste altar pela comunhão do santíssimo Corpo e Sangue do vosso Filho,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supplices:0:text"
+              }
+            },
+            {
+              "rubric_pt": "ergue-se e faz sobre si o sinal da cruz, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:supplices:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "sejamos repletos de todas as graças e bênçãos do céu.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supplices:2:text"
+              }
+            },
+            {
+              "rubric_pt": "Une as mãos.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:supplices:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supplices:4:text"
+              }
+            },
+            {
+              "text_pt": "Por Cristo, nosso Senhor. Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supplices:5:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supplices:6:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:supplices:7:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:supplices:8:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, dos vossos filhos e filhas",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:0:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "rubric_pt": "N. N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:departed:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "que nos precederam com o sinal da fé e dormem o sono da paz.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:2:text"
+              }
+            },
+            {
+              "rubric_pt": "Une as mãos e, em silêncio, reza brevemente pelos defuntos que deseja recordar. De braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:departed:3:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "A eles, e a todos os que descansam no Cristo, concedei o repouso, a luz e a paz.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:4:text"
+              }
+            },
+            {
+              "rubric_pt": "Une as mãos.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:departed:5:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:6:text"
+              }
+            },
+            {
+              "text_pt": "Por Cristo, nosso Senhor. Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:7:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:8:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:departed:9:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:departed:10:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "E a todos nós pecadores,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:0:text"
+              }
+            },
+            {
+              "rubric_pt": "e, de braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:nobis_quoque:1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "que esperamos na vossa infinita misericórdia, concedei, não por nossos méritos, mas por vossa bondade, o convívio dos Apóstolos e Mártires: João Batista e Estêvão, Matias e Barnabé,",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:2:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:3:text"
+              }
+            },
+            {
+              "text_pt": "Inácio, Alexandre, Marcelino e Pedro, Felicidade e Perpétua, Águeda e Luzia, Inês, Cecília, Anastácia",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:4:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:5:text"
+              }
+            },
+            {
+              "text_pt": "e de todos os vossos Santos.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:6:text"
+              }
+            },
+            {
+              "rubric_pt": "Une as mãos:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:nobis_quoque:7:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, nosso Senhor.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:nobis_quoque:8:text"
+              }
+            },
+            {
+              "text_pt": "Por ele não cessais de criar, santificar, vivificar, abençoar estes bens e distribuí-los entre nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "canon:per_quem:0:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "canon:per_quem:1:rubric"
+              }
+            }
+          ],
+          "2": [
+            {
+              "text_pt": "Embora tenha prefácio próprio, esta Oração Eucarística pode ser usada também com outros prefácios, sobretudo aqueles que de maneira sucinta apresentem o mistério da salvação, por exemplo, os prefácios comuns.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças sempre e em todo lugar, Senhor, Pai santo, por vosso amado Filho, Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              }
+            },
+            {
+              "text_pt": "Ele é a vossa Palavra, pela qual tudo criastes.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Ele é o nosso Salvador e Redentor, que se encarnou pelo Espírito Santo e nasceu da Virgem Maria.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Ele, para cumprir a vossa vontade e adquirir para vós um povo santo, estendeu os braços na hora da sua paixão, a fim de vencer a morte e manifestar a ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, com os Anjos e todos os Santos, proclamamos vossa glória, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, ó Pai, vós sois Santo, fonte de toda santidade.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "19:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Santificai, pois, estes dons, derramando sobre eles o vosso Espírito,",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "21:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "a fim de que se tornem para nós o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "23:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              }
+            },
+            {
+              "rubric_pt": "Une as mãos.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "25:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "26:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "28:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Estando para ser entregue e abraçando livremente a paixão,",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "30:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "32:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "33:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "35:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "37:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "ele tomou o cálice em suas mãos e, dando graças novamente, o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "39:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "41:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "42:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "44:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "48:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "52:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "54:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, pois, o memorial da morte e ressurreição do vosso Filho, nós vos oferecemos, ó Pai, o Pão da vida e o Cálice da salvação; e vos agradecemos porque nos tornastes dignos de estar aqui na vossa presença e vos servir.",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "57:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Suplicantes, vos pedimos que, participando do Corpo e Sangue de Cristo, sejamos reunidos pelo Espírito Santo num só corpo.",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja que se faz presente pelo mundo inteiro;",
+              "__massEditorPairKeys": {
+                "text_pt": "62:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "63:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "que ela cresça na caridade, em comunhão com o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "65:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", com o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "67:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros do vosso povo.",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "69:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Nas Missas pelos fiéis defuntos",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              }
+            },
+            {
+              "text_pt": "Lembrai-vos do vosso filho",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "73:text"
+              }
+            },
+            {
+              "text_pt": "da vossa filha",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "75:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "76:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", que",
+              "__massEditorPairKeys": {
+                "text_pt": "77:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "78:text"
+              }
+            },
+            {
+              "text_pt": "hoje",
+              "__massEditorPairKeys": {
+                "text_pt": "79:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "80:text"
+              }
+            },
+            {
+              "text_pt": "chamastes deste mundo à vossa presença. Tendo sido sepultado",
+              "__massEditorPairKeys": {
+                "text_pt": "81:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "82:text"
+              }
+            },
+            {
+              "text_pt": "a",
+              "__massEditorPairKeys": {
+                "text_pt": "83:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "84:text"
+              }
+            },
+            {
+              "text_pt": "com Cristo em sua morte, no Batismo, participe igualmente da sua ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "85:text"
+              }
+            },
+            {
+              "text_pt": "Lembrai-vos também, na vossa misericórdia, dos",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "87:text"
+              }
+            },
+            {
+              "text_pt": "outros",
+              "__massEditorPairKeys": {
+                "text_pt": "88:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "89:text"
+              }
+            },
+            {
+              "text_pt": "nossos irmãos e irmãs que adormeceram na esperança da ressurreição e de todos os que partiram desta vida; acolhei-os junto a vós na luz da vossa face.",
+              "__massEditorPairKeys": {
+                "text_pt": "90:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "91:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "92:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Enfim, nós vos pedimos, tende piedade de todos nós e dai-nos participar da vida eterna, com a Virgem Maria, Mãe de Deus, São José, seu esposo, os Apóstolos,",
+              "__massEditorPairKeys": {
+                "text_pt": "93:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "94:text"
+              }
+            },
+            {
+              "text_pt": "São",
+              "__massEditorPairKeys": {
+                "text_pt": "95:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "96:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ":",
+              "__massEditorPairKeys": {
+                "text_pt": "97:text"
+              }
+            },
+            {
+              "text_pt": "Santo do dia ou padroeiro)",
+              "__massEditorPairKeys": {
+                "text_pt": "98:text"
+              }
+            },
+            {
+              "text_pt": "e todos os Santos que neste mundo viveram na vossa amizade, a fim de vos louvarmos e glorificarmos",
+              "__massEditorPairKeys": {
+                "text_pt": "99:text"
+              }
+            },
+            {
+              "rubric_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "rubric_pt": "100:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "por Jesus Cristo, vosso Filho.",
+              "__massEditorPairKeys": {
+                "text_pt": "101:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "102:rubric"
+              }
+            }
+          ],
+          "3": [
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "rubric_pt": "Segue-se conforme as rubricas, o prefácio, com a conclusão:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "6:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "8:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, vós sois Santo, ó Deus do universo, e tudo o que criastes proclama o vosso louvor, porque, por Jesus Cristo, vosso Filho e Senhor nosso, e pela força do Espírito Santo, dais vida e santidade a todas as coisas e não cessais de reunir para vós um povo que vos ofereça em toda parte, do nascer ao pôr do sol, um sacrifício perfeito.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "10:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por isso, ó Pai, nós vos suplicamos: santificai pelo Espírito Santo as oferendas que vos apresentamos para serem consagradas",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "12:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "a fim de que se tornem o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "14:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue de vosso Filho, nosso Senhor Jesus Cristo,",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "rubric_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "rubric_pt": "16:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "que nos mandou celebrar estes mistérios.",
+              "__massEditorPairKeys": {
+                "text_pt": "17:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "18:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "20:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na noite em que ia ser entregue,",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "22:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo: TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "24:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "25:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "27:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "ele tomou o cálice em suas mãos, pronunciou a bênção de ação de graças, e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "29:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "31:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "32:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "36:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "38:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "40:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "42:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "44:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "45:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando agora, ó Pai, o memorial da paixão redentora do vosso Filho, da sua gloriosa ressurreição e ascensão ao céu, e enquanto esperamos sua nova vinda, nós vos oferecemos em ação de graças este sacrifício vivo e santo.",
+              "__massEditorPairKeys": {
+                "text_pt": "46:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "47:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai com bondade a oblação da vossa Igreja e reconhecei nela o sacrifício que nos reconciliou convosco; concedei que, alimentando-nos com o Corpo e o Sangue do vosso Filho, repletos do Espírito Santo, nos tornemos em Cristo um só corpo e um só espírito.",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Que o mesmo Espírito faça de nós uma eterna oferenda para alcançarmos a herança com os vossos eleitos: a santíssima Virgem Maria, Mãe de Deus, São José, seu esposo, os vossos santos Apóstolos e gloriosos Mártires,",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "text_pt": "(Santo do dia ou padroeiro)",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              }
+            },
+            {
+              "text_pt": "e todos os Santos, que não cessam de interceder por nós na vossa presença.",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazei de nós uma perfeita oferenda!",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Nós vos suplicamos, Senhor, que este sacrifício da nossa reconciliação estenda a paz e a salvação ao mundo inteiro. Confirmai na fé e na caridade a vossa Igreja que caminha neste mundo com o vosso servo o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "58:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", com os bispos do mundo inteiro, os presbíteros e diáconos, os outros ministros e o povo por vós redimido.",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              }
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Atendei propício às preces desta família, que reunistes em vossa presença. Reconduzi a vós, Pai de misericórdia, todos os vossos filhos e filhas dispersos pelo mundo inteiro.",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "64:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Acolhei com bondade no vosso reino os nossos irmãos e irmãs que partiram desta vida e todos os que morreram na vossa amizade. Unidos a eles, esperamos também nós saciar-nos eternamente da vossa glória,",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "rubric_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "rubric_pt": "67:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "por Cristo, Senhor nosso. Por ele dais ao mundo todo bem e toda graça.",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "69:rubric"
+              }
+            }
+          ],
+          "4": [
+            {
+              "text_pt": "Este prefácio não pode ser substituído por outro, porque introduz a Oração Eucarística cuja estrutura apresenta um resumo da História da Salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, ó Pai, é nosso dever dar-vos graças, é nossa salvação dar-vos glória. Só vós sois o Deus vivo e verdadeiro que existis antes de todo o tempo e permaneceis para sempre, habitando em luz inacessível.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              }
+            },
+            {
+              "text_pt": "Mas, porque sois o Deus de bondade e a fonte da vida, fizestes todas as coisas para cobrir de bênçãos as vossas criaturas e a muitos alegrar com o esplendor da vossa luz.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Eis, pois, diante de vós os inumeráveis coros dos Anjos que dia e noite vos servem e, contemplando a glória da vossa face, vos louvam sem cessar. Com eles também nós e, por nossa voz, tudo o que criastes celebramos vosso Nome e, exultantes de alegria, cantamos",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "dizemos",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "dividerAfter": "after-sanctus",
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "15:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "16:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Nós proclamamos vossa grandeza, Pai santo, a sabedoria e o amor com que fizestes todas as coisas.",
+              "__massEditorPairKeys": {
+                "text_pt": "17:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Criastes o ser humano à vossa imagem e lhe confiastes todo o universo, para que, servindo somente a vós, seu Criador, cuidasse de toda criatura.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              }
+            },
+            {
+              "text_pt": "E quando pela desobediência perdeu a vossa amizade, não o abandonastes ao poder da morte.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "text_pt": "A todos, porém, socorrestes com misericórdia, para que, ao procurar-vos, vos encontrassem.",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "text_pt": "Muitas vezes oferecestes aliança à família humana e a instruístes pelos profetas na esperança da salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "22:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "A todos socorrestes com bondade!",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "E de tal modo, Pai santo, amastes o mundo que, chegada a plenitude dos tempos, nos enviastes vosso próprio Filho para ser o nosso Salvador.",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              }
+            },
+            {
+              "text_pt": "Encarnado pelo poder do Espírito Santo e nascido da Virgem Maria, Jesus viveu em tudo a condição humana, menos o pecado; anunciou aos pobres a salvação, aos oprimidos, a liberdade, aos tristes, a alegria.",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "text_pt": "Para cumprir o vosso plano de amor, entregou-se à morte e, ressuscitando, destruiu a morte e renovou a vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "27:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por amor nos enviastes vosso Filho!",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "E, a fim de não mais vivermos para nós, mas para ele, que por nós morreu e ressuscitou, enviou de vós, ó Pai, como primeiro dom aos vossos fiéis, o Espírito Santo, que continua sua obra no mundo para levar à plenitude toda a santificação.",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "30:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por isso, nós vos pedimos, ó Pai, que o mesmo Espírito Santo santifique estas oferendas,",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "32:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "a fim de que se tornem o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue de Jesus Cristo, vosso Filho e Senhor nosso,",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "rubric_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "rubric_pt": "36:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "para celebrarmos este grande mistério que ele nos deixou em sinal da eterna aliança.",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "38:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "40:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Quando, pois, chegou a hora em que por vós, ó Pai, ia ser glorificado, tendo amado os seus que estavam no mundo, amou-os até o fim. Enquanto ceavam,",
+              "__massEditorPairKeys": {
+                "rubric_pt": "41:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "42:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "44:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "45:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "47:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo,",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "rubric_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "49:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "ele tomou em suas mãos o cálice com vinho, deu-vos graças novamente, e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "50:text"
+              }
+            },
+            {
+              "rubric_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "rubric_pt": "51:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "53:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "54:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "55:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "56:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "58:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "64:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "66:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "67:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, agora, ó Pai, o memorial da nossa redenção, anunciamos a morte de Cristo e sua descida entre os mortos, proclamamos a sua ressurreição e ascensão à vossa direita e, esperando a sua vinda gloriosa, nós vos oferecemos o seu Corpo e Sangue, sacrifício do vosso agrado e salvação para o mundo inteiro.",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "69:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai, com bondade, a oblação que destes à vossa Igreja e concedei aos que vamos participar do mesmo pão e do mesmo cálice que, reunidos pelo Espírito Santo num só corpo, nos tornemos em Cristo uma oferenda viva para o louvor da vossa glória.",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "72:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "73:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "74:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "75:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "76:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "77:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "78:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos, e todos os ministros da vossa Igreja, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
+              "__massEditorPairKeys": {
+                "text_pt": "79:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "80:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "81:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Na Missa com Batismo",
+              "__massEditorPairKeys": {
+                "rubric_pt": "82:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "83:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "84:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "85:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "87:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros da vossa Igreja, os que hoje fizestes renascer da água e do Espírito Santo, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
+              "__massEditorPairKeys": {
+                "text_pt": "88:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "89:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "90:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Na Missa com Crisma",
+              "__massEditorPairKeys": {
+                "rubric_pt": "91:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "92:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "93:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "94:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "95:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "96:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros da vossa Igreja, os que hoje foram ungidos pelo Espírito Santo, dom de Deus, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
+              "__massEditorPairKeys": {
+                "text_pt": "97:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "98:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "99:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ⓑ Na Missa com Primeira Comunhão Eucarística",
+              "__massEditorPairKeys": {
+                "rubric_pt": "100:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "101:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "E agora, ó Pai, lembrai-vos de todos pelos quais vos oferecemos este sacrifício: o vosso servo o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "102:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "103:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "104:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "105:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os bispos do mundo inteiro, os presbíteros, os diáconos e todos os ministros da vossa Igreja, os que hoje reunis pela primeira vez à vossa mesa na participação do Pão da vida e do Cálice da salvação, os fiéis que, ao redor deste altar, se unem à nossa oferta, o povo que vos pertence e aqueles que vos procuram de coração sincero.",
+              "__massEditorPairKeys": {
+                "text_pt": "106:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "107:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "108:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos também dos que morreram na paz do vosso Cristo e de todos os defuntos dos quais só vós conhecestes a fé.",
+              "__massEditorPairKeys": {
+                "text_pt": "109:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "110:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "111:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "E a todos nós, vossos filhos e filhas, concedei, ó Pai de bondade, alcançar a herança eterna, com a Virgem Maria, Mãe de Deus, São José, seu esposo, os Apóstolos e todos os Santos, no vosso reino, onde, com todas as criaturas, libertas da corrupção do pecado e da morte, vos glorificaremos,",
+              "__massEditorPairKeys": {
+                "text_pt": "112:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "rubric_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "rubric_pt": "113:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "por Cristo, Senhor nosso, por quem dais ao mundo todo bem e toda graça.",
+              "__massEditorPairKeys": {
+                "text_pt": "114:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "115:rubric"
+              }
+            }
+          ],
+          "5": [
+            {
+              "text_pt": "O prefácio não pode ser substituído por outro.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "É justo e nos faz todos ser mais santos, louvar a vós, ó Pai, no mundo inteiro, de dia e de noite, agradecendo com Cristo, vosso Filho, nosso irmão.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              }
+            },
+            {
+              "text_pt": "É ele o sacerdote verdadeiro que sempre se oferece por nós todos, mandando que se faça a mesma coisa que fez naquela Ceia derradeira.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, aqui estamos reunidos, louvando e agradecendo com alegria, juntando nossa voz à voz dos Anjos e dos Santos todos, para cantar",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "dizer",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": ":",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "15:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ó Pai, vós que sempre quisestes ficar muito perto de nós, vivendo conosco no Cristo, falando conosco por ele,",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "mandai o vosso Espírito Santo,",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "text_pt": "a fim de que as nossas ofertas se mudem no Corpo",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "21:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e no Sangue de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "23:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Mandai vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "text_pt": "Na noite em que ia ser entregue, ceando com seus Apóstolos,",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou o pão em suas mãos,",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              }
+            },
+            {
+              "text_pt": "eleva os olhos",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "text_pt": "olhou para o céu e vos deu graças, partiu o pão e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "32:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "33:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "text_pt": "tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "40:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "41:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Tudo isto é mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "43:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Toda vez que",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "comemos",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              }
+            },
+            {
+              "text_pt": "deste Pão, toda vez que",
+              "__massEditorPairKeys": {
+                "text_pt": "46:text"
+              }
+            },
+            {
+              "text_pt": "bebemos",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "text_pt": "deste Vinho,",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "text_pt": "recordamos",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              }
+            },
+            {
+              "text_pt": "a paixão de Jesus Cristo e",
+              "__massEditorPairKeys": {
+                "text_pt": "50:text"
+              }
+            },
+            {
+              "text_pt": "ficamos",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "text_pt": "esperando sua",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              }
+            },
+            {
+              "text_pt": "vinda",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              }
+            },
+            {
+              "text_pt": ".",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              }
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "56:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Recordando, ó Pai, neste momento, a paixão de Jesus, nosso Senhor, sua ressurreição e ascensão, nós queremos a vós oferecer este Pão que alimenta e que dá vida, este Vinho que nos salva e dá coragem.",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              },
+              "sp_pt": "C."
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "58:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Recebei, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "E quando recebermos Pão e Vinho, o Corpo e Sangue dele oferecidos, o Espírito nos una num só corpo, para sermos um só povo em seu amor.",
+              "__massEditorPairKeys": {
+                "text_pt": "60:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "61:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "62:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Protegei vossa Igreja que caminha nas estradas do mundo rumo ao céu, cada dia renovando a",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "text_pt": "esperança de chegar junto a vós, na vossa paz.",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "65:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Caminhamos na estrada de Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Dai ao vosso servo, o Papa N., ser bem firme na fé, na caridade, e a N., que é Bispo desta",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "text_pt": "Igreja, muita luz para guiar o vosso Povo.",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "69:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Esperamos entrar na vida eterna com Maria, Mãe de Deus e da Igreja, os Apóstolos, e todos",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "text_pt": "os que na vida souberam amar Cristo e seus irmãos.",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "73:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Esperamos entrar na vida eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "4C",
+              "__massEditorPairKeys": {
+                "rubric_pt": "75:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Abri as portas da misericórdia aos que chamastes para a outra vida; acolhei-os junto a vós,",
+              "__massEditorPairKeys": {
+                "text_pt": "76:text"
+              }
+            },
+            {
+              "text_pt": "bem felizes, no reino que para todos preparastes.",
+              "__massEditorPairKeys": {
+                "text_pt": "77:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "78:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "A todos dai a luz que não se apaga!",
+              "__massEditorPairKeys": {
+                "text_pt": "79:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, continua:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "80:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "E a todos nós, aqui reunidos, que somos povo santo e pecador, dai-nos a graça de participar",
+              "__massEditorPairKeys": {
+                "text_pt": "81:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "do vosso reino que também é nosso.",
+              "__massEditorPairKeys": {
+                "text_pt": "82:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "83:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "84:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "85:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "87:rubric"
+              }
+            }
+          ],
+          "D1": [
+            {
+              "rubric_pt": "A IGREJA A CAMINHO DA UNIDADE",
+              "__massEditorPairKeys": {
+                "rubric_pt": "0:rubric"
+              }
+            },
+            {
+              "text_pt": "Convém usar Oração Eucarística com os formulários de Missa, pela Igreja, pelo Papa, pelo Bispo, para a eleição do Papa ou Bispo, por um Concílio ou Sínodo, pelos sacerdotes, pelo próprio sacerdote, pelos ministros da Igreja, para uma reunião espiritual ou pastoralⒷ e quando houver sintonia com a Liturgia da Palavra.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças e cantar-vos um hino de glória e louvor, Senhor, Pai de infinita bondade.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Pela palavra do Evangelho do vosso Filho reunistes uma só Igreja de todos os povos, línguas e nações. Por ela, vivificada pela força do vosso Espírito, não deixais de congregar na unidade todo o gênero humano.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Manifestando a aliança do vosso amor, a Igreja irradia sem cessar a alegre esperança do vosso reino e brilha como sinal da vossa fidelidade que prometestes para sempre em Cristo Jesus, Senhor nosso.",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, unidos a todos os Anjos dos céus, nós vos celebramos na terra, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "com a Igreja inteira a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "21:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Bendito o vosso Filho, presente entre nós!",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "23:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "text_pt": "e se tornem para nós o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "27:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "text_pt": "de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "31:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "34:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "38:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "39:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "40:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "47:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "49:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "50:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "51:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "53:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "57:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "59:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
+              "__massEditorPairKeys": {
+                "text_pt": "60:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "61:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              }
+            },
+            {
+              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "66:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Renovai, ó Pai, com a luz do Evangelho, a vossa Igreja",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              }
+            },
+            {
+              "text_pt": "que está em",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              }
+            },
+            {
+              "rubric_pt": "N.)",
+              "__massEditorPairKeys": {
+                "rubric_pt": "71:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ". Fortalecei o vínculo da unidade entre os fiéis e os pastores do vosso povo, em comunhão com o nosso Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "73:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "75:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e toda a ordem episcopal. Assim, neste mundo dilacerado por discórdias, o vosso povo brilhe como sinal profético de unidade e concórdia.",
+              "__massEditorPairKeys": {
+                "text_pt": "76:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "77:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Confirmai na unidade a vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "78:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
+              "__massEditorPairKeys": {
+                "text_pt": "79:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "rubric_pt": "(N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "80:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e",
+              "__massEditorPairKeys": {
+                "text_pt": "81:text"
+              }
+            },
+            {
+              "rubric_pt": "N.)",
+              "__massEditorPairKeys": {
+                "rubric_pt": "82:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "83:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "84:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "85:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "87:text"
+              }
+            },
+            {
+              "text_pt": "São",
+              "__massEditorPairKeys": {
+                "text_pt": "88:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "89:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ":",
+              "__massEditorPairKeys": {
+                "text_pt": "90:text"
+              }
+            },
+            {
+              "text_pt": "Santo do dia ou padroeiro)",
+              "__massEditorPairKeys": {
+                "text_pt": "91:text"
+              }
+            },
+            {
+              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos,",
+              "__massEditorPairKeys": {
+                "text_pt": "92:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "93:text"
+              }
+            },
+            {
+              "text_pt": "por Jesus Cristo, vosso Filho.",
+              "__massEditorPairKeys": {
+                "text_pt": "94:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "95:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "96:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "97:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "98:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "99:rubric"
+              }
+            }
+          ],
+          "D2": [
+            {
+              "rubric_pt": "DEUS CONDUZ SUA IGREJA NO CAMINHO DA SALVAÇÃO",
+              "__massEditorPairKeys": {
+                "rubric_pt": "0:rubric"
+              }
+            },
+            {
+              "text_pt": "Convém usar esta Oração Eucarística com os formulários de Missa, pela Igreja, pelas vocações às ordens sagradas, pelos leigos, pela família, pelos religiosos, pelas vocações à vida religiosa, para pedir caridade, pelos parentes e amigos, em ação de graças Ⓑ e quando houver sintonia com a Liturgia da Palavra.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças, sempre e em todo lugar, Senhor, Pai santo, criador do mundo e fonte de toda vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Nunca abandonais a obra da vossa sabedoria, mas, em vossa providência, continuais agindo no meio de nós. Com braço estendido e mão forte, guiastes o vosso povo de Israel pelo deserto.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Agora, com a força do Espírito Santo, acompanhais sempre a vossa Igreja, peregrina neste mundo, e a conduzis pelos caminhos da história até à felicidade perfeita em vosso reino por Jesus Cristo, Senhor nosso.",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, também nós, com os Anjos e Santos, proclamamos o hino de vossa glória, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "sem cessar:",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "21:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Bendito o vosso Filho, presente entre nós!",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "23:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "text_pt": "e se tornem para nós o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "27:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "text_pt": "de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "31:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "34:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "38:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "39:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "40:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "47:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "49:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "50:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "51:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "53:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "57:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "59:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
+              "__massEditorPairKeys": {
+                "text_pt": "60:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "61:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              }
+            },
+            {
+              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "66:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Ó Pai, confirmai na unidade os convidados a participar da vossa mesa, para que, seguindo na fé e na esperança pelos vossos caminhos, possamos irradiar no mundo alegria e confiança em comunhão com o nosso Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "69:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "71:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", todos os bispos, presbíteros, diáconos e todo o vosso povo.",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "73:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Confirmai na unidade a vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
+              "__massEditorPairKeys": {
+                "text_pt": "75:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "rubric_pt": "(N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "76:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e",
+              "__massEditorPairKeys": {
+                "text_pt": "77:text"
+              }
+            },
+            {
+              "rubric_pt": "N.)",
+              "__massEditorPairKeys": {
+                "rubric_pt": "78:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "79:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "80:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "81:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
+              "__massEditorPairKeys": {
+                "text_pt": "82:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "83:text"
+              }
+            },
+            {
+              "text_pt": "São",
+              "__massEditorPairKeys": {
+                "text_pt": "84:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "85:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ":",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              }
+            },
+            {
+              "text_pt": "Santo do dia ou padroeiro)",
+              "__massEditorPairKeys": {
+                "text_pt": "87:text"
+              }
+            },
+            {
+              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos,",
+              "__massEditorPairKeys": {
+                "text_pt": "88:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "89:text"
+              }
+            },
+            {
+              "text_pt": "por Jesus Cristo, vosso Filho.",
+              "__massEditorPairKeys": {
+                "text_pt": "90:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "91:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "92:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "93:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "94:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "95:rubric"
+              }
+            }
+          ],
+          "D3": [
+            {
+              "rubric_pt": "JESUS, CAMINHO PARA O PAI",
+              "__massEditorPairKeys": {
+                "rubric_pt": "0:rubric"
+              }
+            },
+            {
+              "text_pt": "Convém usar esta Oração Eucarística com os formulários de Missa, pela evangelização dos povos, pelos cristãos perseguidos, pela pátria ou pela cidade, pelos governantes, pelo encontro de chefes das nações, no início do ano civil, pelo progresso dos povos Ⓑ e quando houver sintonia com a Liturgia da Palavra.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças, sempre e em todo lugar, Pai santo, Senhor do céu e da terra, por Cristo, Senhor nosso.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "De fato, pelo vosso Verbo criastes o universo e tudo governais com equidade. Vós nos destes vosso Filho, feito carne, como mediador; ele nos dirigiu a vossa palavra e nos chamou a seguir os seus passos.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Ele é o caminho que nos conduz até vós, a verdade que nos liberta, a vida que nos enche de alegria.",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "Por vosso Filho, reunis em uma só família os homens e as mulheres, criados para a glória do vosso nome, redimidos pelo sangue de sua cruz e marcados com o selo do vosso Espírito.",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, agora e para sempre, unidos a todos os Anjos, proclamamos a vossa glória, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "text_pt": "com alegria:",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "17:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "18:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "22:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Bendito o vosso Filho, presente entre nós!",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "24:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "text_pt": "e se tornem para nós o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "28:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "text_pt": "de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "32:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "34:text"
+              }
+            },
+            {
+              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "39:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "40:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "41:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "46:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "47:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "48:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "52:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "54:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "55:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "56:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "58:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "63:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              }
+            },
+            {
+              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "67:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Pela participação neste mistério, ó Pai todo-poderoso, vivificai-nos no Espírito, tornai-nos semelhantes à imagem do vosso Filho e confirmai-nos no vínculo da comunhão com o nosso Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "70:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "72:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os outros bispos, os presbíteros e diáconos e todo o vosso povo.",
+              "__massEditorPairKeys": {
+                "text_pt": "73:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "74:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Confirmai na unidade a vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "75:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Fazei que todos os fiéis da Igreja, discernindo os sinais dos tempos à luz da fé, empenhem-se coerentemente no serviço do Evangelho.",
+              "__massEditorPairKeys": {
+                "text_pt": "76:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "text_pt": "Tornai-nos atentos às necessidades de todas as pessoas para que, participando de suas dores e angústias, de suas alegrias e esperanças, fielmente lhes anunciemos a salvação e, com eles, sigamos no caminho do vosso reino.",
+              "__massEditorPairKeys": {
+                "text_pt": "77:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "78:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ajudai-nos a criar um mundo novo!",
+              "__massEditorPairKeys": {
+                "text_pt": "79:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
+              "__massEditorPairKeys": {
+                "text_pt": "80:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "rubric_pt": "(N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "81:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e",
+              "__massEditorPairKeys": {
+                "text_pt": "82:text"
+              }
+            },
+            {
+              "rubric_pt": "N.)",
+              "__massEditorPairKeys": {
+                "rubric_pt": "83:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "84:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "85:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "4C",
+              "__massEditorPairKeys": {
+                "rubric_pt": "87:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
+              "__massEditorPairKeys": {
+                "text_pt": "88:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "89:text"
+              }
+            },
+            {
+              "text_pt": "São",
+              "__massEditorPairKeys": {
+                "text_pt": "90:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "91:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ":",
+              "__massEditorPairKeys": {
+                "text_pt": "92:text"
+              }
+            },
+            {
+              "text_pt": "Santo do dia ou padroeiro)",
+              "__massEditorPairKeys": {
+                "text_pt": "93:text"
+              }
+            },
+            {
+              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos, por Jesus Cristo, vosso Filho.",
+              "__massEditorPairKeys": {
+                "text_pt": "94:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "95:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "96:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "97:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "98:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "99:rubric"
+              }
+            }
+          ],
+          "D4": [
+            {
+              "rubric_pt": "JESUS QUE PASSA FAZENDO O BEM",
+              "__massEditorPairKeys": {
+                "rubric_pt": "0:rubric"
+              }
+            },
+            {
+              "text_pt": "Convém usar esta Oração Eucarística com os formulários de Missa, pelos refugiados e exilados, em tempo de fome ou pelos que passam fome, pelos que nos afligem, pelos mantidos em cativeiro, pelos prisioneiros, pelos enfermos, pelos agonizantes, para pedir a graça de uma boa morte, em qualquer necessidade Ⓑ e quando houver sintonia com a Liturgia da Palavra.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo, é nosso dever e salvação dar-vos graças, sempre e em todo lugar, Pai das misericórdias e Deus fiel, pois nos destes vosso Filho Jesus Cristo, como Senhor e Redentor.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Ele sempre se mostrou cheio de misericórdia para com os pequenos e os pobres, os doentes e os pecadores, e se fez próximo dos aflitos e oprimidos. Por sua palavra e ação anunciou ao mundo que sois Pai e cuidais de todos os vossos filhos e filhas.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, com todos os Anjos e Santos, nós vos louvamos e bendizemos, e proclamamos o hino de vossa glória, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": "sem cessar:",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "16:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, vós sois Santo e digno de louvor, ó Deus, que amais os seres humanos e sempre os acompanhais no caminho da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "17:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Na verdade, é bendito o vosso Filho, presente no meio de nós, quando nos reunimos por seu amor.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              }
+            },
+            {
+              "text_pt": "Como outrora aos discípulos de Emaús, ele nos revela as Escrituras e parte o Pão para nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "20:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Bendito o vosso Filho, presente entre nós!",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "22:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por isso, nós vos suplicamos, Pai de bondade: enviai e o vosso Espírito Santo para que santifique estes dons do pão e do vinho,",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              }
+            },
+            {
+              "text_pt": "e se tornem para nós o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "26:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              }
+            },
+            {
+              "text_pt": "de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "30:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              }
+            },
+            {
+              "text_pt": "Na véspera de sua paixão, na noite da última Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "34:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "37:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "38:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Então prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "39:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "text_pt": "ele tomou o cálice em suas mãos, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "45:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "48:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "52:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "54:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "55:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "56:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "58:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Celebrando, pois, ó Pai santo, o memorial da Páscoa de Cristo, vosso Filho, nosso Salvador, anunciamos a obra do vosso amor; pela paixão e morte de cruz, vós o fizestes entrar na glória da ressurreição e o colocastes à vossa direita.",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "Enquanto esperamos sua vinda gloriosa, nós vos oferecemos o Pão da vida e o Cálice da bênção.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "61:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "62:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai com bondade a oferta da vossa Igreja; nela vos apresentamos o sacrifício pascal de Cristo, que nos foi entregue.",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              }
+            },
+            {
+              "text_pt": "E concedei que, pela força do Espírito do vosso amor, sejamos contados, agora e por toda a eternidade, entre os membros do vosso Filho, cujo Corpo e Sangue comungamos.",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "65:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Dignai-vos, Senhor, conduzir a vossa Igreja à perfeição na fé e no amor, em comunhão com o nosso Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "68:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "70:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", com todos os bispos, presbíteros, diáconos e todo o povo que adquiristes para vós.",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "72:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Confirmai na unidade a vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "73:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Abri os nossos olhos para perceber as necessidades dos irmãos e irmãs; inspirai-nos palavras e ações para confortar os cansados e oprimidos; fazei que os sirvamos de coração sincero, seguindo o exemplo e o mandamento de Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "text_pt": "Vossa Igreja seja testemunha viva da verdade e da liberdade, da justiça e da paz, para que toda a humanidade se reanime com uma nova esperança.",
+              "__massEditorPairKeys": {
+                "text_pt": "75:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "76:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ajudai-nos a criar um mundo novo!",
+              "__massEditorPairKeys": {
+                "text_pt": "77:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos dos nossos irmãos e irmãs",
+              "__massEditorPairKeys": {
+                "text_pt": "78:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "rubric_pt": "(N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "79:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e",
+              "__massEditorPairKeys": {
+                "text_pt": "80:text"
+              }
+            },
+            {
+              "rubric_pt": "N.)",
+              "__massEditorPairKeys": {
+                "rubric_pt": "81:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", que adormeceram na paz do vosso Cristo, e de todos os falecidos, cuja fé só vós conhecestes: acolhei-os na luz da vossa face e, na ressurreição, concedei-lhes a plenitude da vida.",
+              "__massEditorPairKeys": {
+                "text_pt": "82:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "83:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei-lhes, ó Senhor, a luz eterna!",
+              "__massEditorPairKeys": {
+                "text_pt": "84:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "4C",
+              "__massEditorPairKeys": {
+                "rubric_pt": "85:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Concedei também a nós, no fim da nossa peregrinação terrestre, chegarmos todos à morada eterna, onde viveremos para sempre convosco e, com a Bem-aventurada Virgem Maria, Mãe de Deus, os Apóstolos e Mártires,",
+              "__massEditorPairKeys": {
+                "text_pt": "86:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "87:text"
+              }
+            },
+            {
+              "text_pt": "São",
+              "__massEditorPairKeys": {
+                "text_pt": "88:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "89:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ":",
+              "__massEditorPairKeys": {
+                "text_pt": "90:text"
+              }
+            },
+            {
+              "text_pt": "Santo do dia ou padroeiro)",
+              "__massEditorPairKeys": {
+                "text_pt": "91:text"
+              }
+            },
+            {
+              "text_pt": "e todos os Santos, vos louvaremos e glorificaremos, por Jesus Cristo, vosso Filho.",
+              "__massEditorPairKeys": {
+                "text_pt": "92:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "93:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "94:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "95:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "96:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "97:rubric"
+              }
+            }
+          ],
+          "R1": [
+            {
+              "rubric_pt": "SOBRE A RECONCILIAÇÃO I",
+              "__massEditorPairKeys": {
+                "rubric_pt": "0:rubric"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo dar-vos graças sempre, Senhor, Pai santo, Deus eterno e todo- poderoso. Constantemente nos chamais a uma vida mais plena e, porque sois rico em misericórdia, sempre ofereceis o perdão e convidais os pecadores a confiar somente na vossa bondade.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              }
+            },
+            {
+              "text_pt": "E a nós, que tantas vezes quebramos a vossa aliança, nunca nos rejeitastes, mas, por Jesus, vosso Filho, nosso Redentor, unistes convosco a família humana com um vínculo novo de caridade, tão estreito e forte, que nada poderá romper.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Também hoje, ofereceis tempo de graça e reconciliação ao vosso povo e um novo alento para que, em Cristo, se converta a vós, enquanto, sempre mais dócil ao Espírito Santo, se coloca ao serviço de todos.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, cheios de admiração, exaltamos a força do vosso amor e, proclamando nossa alegria pela salvação, nos unimos às multidões dos céus, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": "sem cessar:",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "16:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, ó Pai, vós sois Santo e, desde a origem do mundo, tudo fazeis para sermos santos como vós sois Santo.",
+              "__massEditorPairKeys": {
+                "text_pt": "17:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "18:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Olhai as oferendas do vosso povo e derramai sobre elas a força do vosso Espírito, para que se tornem",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "text_pt": "o Corpo",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "22:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o Sangue do vosso amado Filho, Jesus Cristo, no qual também nós somos vossos filhos.",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "24:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Quando outrora estávamos perdidos e incapazes de vos encontrar, vós nos amastes com imenso amor, pois vosso Filho, o único Justo, entregou-se à morte, não rejeitando ser pregado no lenho da cruz.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "26:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Antes, porém, de seus braços abertos traçarem entre o céu e a terra o sinal permanente da vossa aliança, Jesus quis celebrar a Páscoa com seus discípulos.",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              }
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              }
+            },
+            {
+              "text_pt": "Ceando com eles,",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "text_pt": "tomou o pão, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "33:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "35:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia, Jesus, sabendo que ia reconciliar em si todas as coisas pelo sangue a ser derramado na cruz,",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "text_pt": "tomou o cálice repleto do fruto da videira, deu-vos graças novamente e o entregou a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "41:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "42:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "44:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "48:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "52:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "A seguir o sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              }
+            },
+            {
+              "text_pt": "Fazendo, pois, memória de vosso Filho, Jesus Cristo, nossa Páscoa e certeza da paz definitiva, celebramos sua morte e ressurreição e, aguardando o dia feliz de sua vinda gloriosa, nós vos oferecemos, Deus fiel e misericordioso, a vítima que nos reconcilia convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "55:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "56:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Olhai, com amor, Pai misericordioso, aqueles que unis a vós pelo sacrifício do vosso Filho, e concedei que, pela força do Espírito Santo, os que participam do único pão e do mesmo cálice sejam congregados em Cristo num só corpo, no qual todas as divisões sejam superadas.",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "59:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "60:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Conservai-nos sempre em comunhão de fé e amor unidos ao Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e ao Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "64:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ".",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              }
+            },
+            {
+              "text_pt": "Ajudai-nos a esperar juntos a vinda do vosso reino, até o dia em que, diante de vós, formos santos entre os Santos na morada celeste, ao lado da Virgem Maria, Mãe de Deus, dos Apóstolos e todos os Santos e com nossos irmãos e irmãs já falecidos que confiamos à vossa misericórdia.",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              }
+            },
+            {
+              "text_pt": "Enfim, libertos das feridas do pecado e plenamente transformados em novas criaturas, felizes cantaremos a ação de graças",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              }
+            },
+            {
+              "text_pt": "do vosso Cristo que vive para sempre.",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "70:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "72:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "73:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "74:rubric"
+              }
+            }
+          ],
+          "R2": [
+            {
+              "rubric_pt": "SOBRE A RECONCILIAÇÃO II",
+              "__massEditorPairKeys": {
+                "rubric_pt": "0:rubric"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Na verdade, é digno e justo dar-vos graças e cantar vossos louvores, Deus Pai todo-poderoso, por tudo que operais neste mundo, por Cristo, nosso Senhor.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              }
+            },
+            {
+              "text_pt": "No meio da humanidade dividida por inimizades e discórdias, sabemos por experiência que vós levais as pessoas a se converter e buscar a reconciliação.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Pelo vosso Espírito Santo moveis os corações, de modo que os inimigos voltem à amizade, os adversários se deem as mãos e os povos procurem reencontrar a paz.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "É também obra do vosso poder, ó Pai, quando o ódio é vencido pelo amor, a vingança dá lugar ao perdão e a discórdia se converte em mútua afeição.",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, com os coros celestes, nós vos damos graças sem cessar e proclamamos aqui na terra a vossa glória, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Pai onipotente, louvado sois por vosso Filho Jesus Cristo, que veio em vosso nome.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Ele é a Palavra de salvação para a humanidade, a mão que estendeis aos pecadores e o caminho pelo qual nos é concedida a vossa paz.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "rubric_pt": "Quando vos abandonamos por nossos pecados, vós nos reconduzistes à reconciliação por vosso Filho, que por nós entregastes à morte, para que voltássemos a vós e nos amássemos uns aos outros.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "20:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "21:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "E agora, celebrando a reconciliação que Cristo nos trouxe, vos pedimos: santificai estas oferendas pela efusão do vosso Espírito,",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo que sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              }
+            },
+            {
+              "text_pt": "a fim de que se tornem o Corpo e",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "25:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "o Sangue do vosso Filho que nos mandou celebrar estes mistérios.",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "27:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "text_pt": "Antes de dar a vida para nos libertar, estando à mesa,",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou o pão em suas mãos, pronunciou a bênção de ação de graças, partiu e o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "35:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Depois prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "36:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, naquela noite,",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              }
+            },
+            {
+              "text_pt": "ele tomou o cálice da bênção em suas mãos e, proclamando a vossa misericórdia, o deu a seus discípulos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "42:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "43:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "45:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "46:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "47:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé e do amor!",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "49:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Todas as vezes que comemos deste pão e bebemos deste cálice, anunciamos, Senhor, a vossa morte, enquanto esperamos a vossa vinda!",
+              "__massEditorPairKeys": {
+                "text_pt": "50:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "51:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé para a salvação do mundo!",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "53:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Salvador do mundo, salvai-nos, vós que nos libertastes pela cruz e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazendo, pois, memória da morte e ressurreição do vosso Filho que nos deixou esta prova de amor, nós vos oferecemos aquilo que nos destes: o sacrifício da perfeita reconciliação.",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "57:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Aceitai, ó Senhor, a nossa oferta!",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Pai santo, neste banquete salvífico, suplicantes, vos pedimos: aceitai-nos também com vosso Filho e dai-nos o seu Espírito para que nos liberte de tudo que nos separa uns dos outros.",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "O Espírito nos una num só corpo!",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Ele faça da vossa Igreja sinal de unidade do gênero humano e instrumento da vossa paz, e nos conserve em comunhão com o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "62:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "63:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "65:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os Bispos do mundo inteiro e todo o vosso povo.",
+              "__massEditorPairKeys": {
+                "text_pt": "66:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "67:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, da vossa Igreja!",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Ó Pai, que agora nos reunistes, à mesa do vosso Filho, congregai-nos também na Ceia da comunhão eterna nos novos céus e nova terra, onde brilha a plenitude da vossa paz, junto com a gloriosa Virgem Maria, Mãe de Deus, os Apóstolos e todos os Santos, os nossos irmãos e as pessoas de todos os povos e línguas que morreram na vossa amizade,",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              }
+            },
+            {
+              "text_pt": "em Cristo Jesus, Senhor nosso.",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "72:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "73:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "74:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "75:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "76:rubric"
+              }
+            }
+          ],
+          "C1": [
+            {
+              "text_pt": "O uso desta Oração Eucarística é restrito às Missas que se celebram só com crianças, isto é, as que ainda não entraram na adolescência, ou àquelas Missas nas quais a maior parte dos participantes é criança.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              }
+            },
+            {
+              "text_pt": "O prefácio dessa Oração Eucarística, por sua estrutura e índole peculiar, não pode ser substituído por outros prefácios.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Senhor, Pai de bondade, nos reunistes diante de vós para vos celebrar e proclamar vossos louvores com o coração em festa.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Nós vos louvamos por todas as coisas bonitas que existem no mundo e pela alegria que dais a todos nós. Nós vos louvamos pela luz do dia e por vossa Palavra que nos ilumina. Nós vos louvamos também pela terra, pelas pessoas que nela habitam e pela vida que de vós recebemos.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "10:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Sim, ó Pai, sois muito bom: vós nos amais e fazeis por nós coisas maravilhosas, sempre pensais em todas as pessoas e nunca desistis de estar perto delas.",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "Enviastes vosso Filho querido para nos salvar.",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": "Ele curou os doentes, perdoou os pecadores, mostrou a todos o vosso amor, acolheu e abençoou as crianças.",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "15:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Pai de bondade, nós não estamos sozinhos para celebrar vossos louvores, pois em toda a terra o vosso povo vos glorifica. Por isso, rezamos com a Igreja inteira, com o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "17:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "18:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "20:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ". No céu também vos louvam sem cessar Maria, a Mãe de Jesus, os Apóstolos e todos os Santos. Unidos a eles e aos Anjos nós vos adoramos, cantando",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              }
+            },
+            {
+              "text_pt": "dizendo",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              }
+            },
+            {
+              "text_pt": "a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "27:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Pai santo, para vos agradecer, trouxemos este pão e este vinho;",
+              "__massEditorPairKeys": {
+                "text_pt": "28:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "29:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "pela ação do Espírito Santo fazei que eles se tornem",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo, sobre o pão e cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "text_pt": "o Corpo",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "33:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o Sangue de Jesus Cristo, vosso Filho muito amado.",
+              "__massEditorPairKeys": {
+                "text_pt": "34:text"
+              }
+            },
+            {
+              "text_pt": "une as mãos",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "Assim, ó Pai, possamos oferecer o mesmo dom que vós nos dais.",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "37:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              }
+            },
+            {
+              "text_pt": "Jesus, na noite antes de sua morte na cruz, pôs-se à mesa com seus apóstolos,",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "text_pt": "tomou o pão em suas mãos, e, rezando, deu graças; partiu o pão e o deu a seus amigos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "44:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "45:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Depois prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou em suas mãos o cálice com vinho, rezou, de novo, em ação de graças e o deu a seus amigos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "50:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "52:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "53:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "57:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "58:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Nesta Eucaristia, nós fazemos com amor o que Jesus mandou e, anunciando a sua morte e ressurreição, vos oferecemos o Pão da vida e o Cálice da salvação. Pai querido, é Jesus que nos conduz a vós; por isso, vos pedimos, recebei-nos com Ele.",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Com Jesus, recebei a nossa vida!",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Pai, que tanto nos amais, deixai-nos aproximar desta mesa e enviai sobre nós o Espírito Santo para que, alimentando-nos com o Corpo e Sangue do vosso Filho, sejamos um só coração e uma só alma.",
+              "__massEditorPairKeys": {
+                "text_pt": "62:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "63:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazei de nós um só corpo e um só espírito!",
+              "__massEditorPairKeys": {
+                "text_pt": "64:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Senhor, que sempre vos lembrais de todos, nós vos pedimos por aqueles que amamos: o Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "66:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "68:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", nossos pais, irmãos, amigos e os que cuidam de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              }
+            },
+            {
+              "text_pt": "Lembrai-vos também dos que sofrem em suas dores e andam tristes, e dos que morreram na vossa paz.",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              }
+            },
+            {
+              "text_pt": "Ó Pai, olhai com carinho o povo cristão e as pessoas do mundo inteiro.",
+              "__massEditorPairKeys": {
+                "text_pt": "71:text"
+              }
+            },
+            {
+              "text_pt": "Diante de tudo o que fazeis em nosso favor por meio de Jesus Cristo, vosso Filho, nós vos bendizemos e louvamos.",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "73:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "75:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "76:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "77:rubric"
+              }
+            }
+          ],
+          "C2": [
+            {
+              "text_pt": "O uso desta Oração Eucarística é restrito às Missas que se celebram só com crianças, isto é, as que ainda não entraram na adolescência, ou àquelas Missas nas quais a maior parte dos participantes é criança.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              }
+            },
+            {
+              "text_pt": "O prefácio dessa Oração Eucarística, por sua estrutura e índole peculiar, não pode ser substituído por outros prefácios.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Ó Pai querido, que tanto nos amais, como é grande a nossa alegria em vos agradecer e com Jesus, na vossa Igreja, cantar vosso louvor.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Vós nos amastes tanto que criastes para nós este mundo imenso e maravilhoso. Vós nos amais tanto que nos dais vosso Filho Jesus para nos guiar até vós. Vós nos amais tanto que nos reunis em vosso Filho Jesus e, pelo Espírito Santo, nos tornais filhos e filhas da mesma família.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Por este amor tão grande nós vos agradecemos e com os Anjos e os Santos, que vos adoram, cantamos",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "dizemos",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": "a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "16:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Sim, bendito seja Jesus que vós nos enviastes, amigo das crianças e dos pobres. Ele nos ensina a vos amar, ó Pai querido, e amar-nos uns aos outros.",
+              "__massEditorPairKeys": {
+                "text_pt": "18:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "19:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Jesus veio tirar do coração o pecado, a maldade e o ódio que impedem a amizade e não nos deixam ser felizes. Ele prometeu que o Espírito Santo ficaria sempre conosco para vivermos bem unidos a vós como filhos e filhas.",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "22:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, Senhor, que tanto nos amais!",
+              "__massEditorPairKeys": {
+                "text_pt": "23:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "24:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ó Deus, nosso Pai, enviai vosso Espírito Santo para que estes dons do pão e do vinho",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "26:text"
+              }
+            },
+            {
+              "text_pt": "se tornem o Corpo",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "28:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o Sangue de nosso Senhor Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "30:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "32:text"
+              }
+            },
+            {
+              "text_pt": "Jesus, na noite antes de sua morte na cruz, nos mostrou como é grande vosso amor. Quando ele estava à mesa com os apóstolos,",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "34:text"
+              }
+            },
+            {
+              "text_pt": "tomou o pão em suas mãos e rezou, louvando e agradecendo. Depois partiu o pão e o deu a seus amigos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "37:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "38:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Depois prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "39:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "41:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou em suas mãos o cálice com vinho, rezou, de novo, em ação de graças e o deu a seus amigos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "42:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "43:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "45:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "46:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "48:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "49:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "A seguir, o sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, Pai querido, celebramos a memória da morte e ressurreição de Jesus, Salvador do mundo. Ele mesmo se colocou em nossas mãos para ser este dom de reconciliação e de paz, nosso sacrifício que agora vos oferecemos e pelo qual somos atraídos para vós.",
+              "__massEditorPairKeys": {
+                "text_pt": "52:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "53:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Com Jesus, recebei a nossa vida!",
+              "__massEditorPairKeys": {
+                "text_pt": "54:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "55:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Escutai-nos, Senhor nosso Deus, e dai o Espírito do vosso amor aos que participam desta Ceia, para que fiquem sempre mais unidos na vossa Igreja, com o nosso Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "57:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", o nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "59:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", os outros bispos e todos aqueles que servem o vosso povo.",
+              "__massEditorPairKeys": {
+                "text_pt": "60:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "61:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazei de nós um só corpo e um só espírito!",
+              "__massEditorPairKeys": {
+                "text_pt": "62:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Não vos esqueçais daqueles que amamos: nossos pais, parentes, amigos e os que cuidam de nós; e também daqueles que ainda não amamos bastante. Lembrai-vos dos que em paz partiram desta vida",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              },
+              "sp_pt": "2C"
+            },
+            {
+              "rubric_pt": "(N. N.)",
+              "__massEditorPairKeys": {
+                "rubric_pt": "64:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "; acolhei-os com amor na alegria da vossa casa.",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "66:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazei de nós um só corpo e um só espírito!",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Um dia, enfim, ó Pai, reuni a todos nós em vosso reino, com a Virgem Maria, Mãe de Deus e nossa Mãe, para celebrar a festa que no céu nunca se acaba, onde todos os amigos de Jesus cantam sem cessar o vosso louvor.",
+              "__massEditorPairKeys": {
+                "text_pt": "68:text"
+              },
+              "sp_pt": "3C"
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "69:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "71:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "73:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "14x",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              }
+            }
+          ],
+          "C3": [
+            {
+              "text_pt": "O uso desta Oração Eucarística é restrito às Missas que se celebram só com crianças, isto é, as que ainda não entraram na adolescência, ou àquelas Missas nas quais a maior parte dos participantes é criança.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              }
+            },
+            {
+              "text_pt": "O prefácio dessa Oração Eucarística, por sua estrutura e índole peculiar, não pode ser substituído por outros prefácios.",
+              "__massEditorPairKeys": {
+                "text_pt": "1:text"
+              }
+            },
+            {
+              "text_pt": "O Senhor esteja convosco.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "Ele está no meio de nós.",
+              "__massEditorPairKeys": {
+                "text_pt": "3:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Corações ao alto.",
+              "__massEditorPairKeys": {
+                "text_pt": "4:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "O nosso coração está em Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "5:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Demos graças ao Senhor, nosso Deus.",
+              "__massEditorPairKeys": {
+                "text_pt": "6:text"
+              },
+              "sp_pt": "V."
+            },
+            {
+              "text_pt": "É nosso dever e nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "7:text"
+              },
+              "sp_pt": "R."
+            },
+            {
+              "text_pt": "Deus, nosso Pai, nós vos agradecemos, porque nos criastes, a fim de vivermos para vós, amando-nos como irmãos.",
+              "__massEditorPairKeys": {
+                "text_pt": "8:text"
+              }
+            },
+            {
+              "text_pt": "Por vosso dom, podemos viver como amigos e repartir uns com os outros as coisas bonitas que temos e as dificuldades que passamos.",
+              "__massEditorPairKeys": {
+                "text_pt": "9:text"
+              }
+            },
+            {
+              "text_pt": "Porque sois o Deus dos vivos, nos chamastes à vida e quereis que sejamos felizes para sempre. Jesus é o primeiro que vós ressuscitastes dentre os mortos e lhe destes a vida nova. Também a nós prometestes vida sem fim, sem miséria e sem dor.",
+              "__massEditorPairKeys": {
+                "text_pt": "10:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, ó Pai, felizes e agradecidos, em comunhão com todos os que acreditam em vós, com os Santos e os Anjos, exultantes, cantamos",
+              "__massEditorPairKeys": {
+                "text_pt": "11:text"
+              }
+            },
+            {
+              "text_pt": "(",
+              "__massEditorPairKeys": {
+                "text_pt": "12:text"
+              }
+            },
+            {
+              "text_pt": "dizemos",
+              "__massEditorPairKeys": {
+                "text_pt": "13:text"
+              }
+            },
+            {
+              "text_pt": ")",
+              "__massEditorPairKeys": {
+                "text_pt": "14:text"
+              }
+            },
+            {
+              "text_pt": "a uma só voz:",
+              "__massEditorPairKeys": {
+                "text_pt": "15:text"
+              }
+            },
+            {
+              "text_pt": "Santo, Santo, Santo, Senhor Deus do universo. O céu e a terra proclamam a vossa glória. Hosana nas alturas! Bendito o que vem em nome do Senhor! Hosana nas alturas!",
+              "__massEditorPairKeys": {
+                "text_pt": "16:text"
+              }
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "17:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "18:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Na verdade, ó Pai, vós sois santo, sois muito bom para nós e amais todas as pessoas do mundo.",
+              "__massEditorPairKeys": {
+                "text_pt": "19:text"
+              },
+              "sp_pt": "CP"
+            },
+            {
+              "text_pt": "Agradecemos, em primeiro lugar, pelo vosso Filho, Jesus Cristo.",
+              "__massEditorPairKeys": {
+                "text_pt": "20:text"
+              }
+            },
+            {
+              "text_pt": "Ele veio ao mundo porque as pessoas se afastaram de vós pelo pecado e não conseguiam mais se entender.",
+              "__massEditorPairKeys": {
+                "text_pt": "21:text"
+              }
+            },
+            {
+              "text_pt": "Ele abriu nossos olhos e ouvidos para vos conhecer como Pai e nos amarmos como irmãos e irmãs.",
+              "__massEditorPairKeys": {
+                "text_pt": "22:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "23:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, ó Pai, que em Cristo nos salvais!",
+              "__massEditorPairKeys": {
+                "text_pt": "24:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Ele nos anunciou a vida plena da ressurreição que viveremos para sempre junto de vós. Ele percorreu, antes de nós, o caminho do amor para que seguíssemos seus passos. Jesus agora nos reúne ao redor deste altar para fazermos o que na última Ceia ele mesmo fez com seus discípulos.",
+              "__massEditorPairKeys": {
+                "text_pt": "25:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "26:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, ó Pai, que em Cristo nos salvais!",
+              "__massEditorPairKeys": {
+                "text_pt": "27:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Une as mãos e, estendendo-as sobre as oferendas, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "28:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ó Pai, vós que sois tão bom, mandai vosso Espírito Santo para santificar estes dons do pão e do vinho.",
+              "__massEditorPairKeys": {
+                "text_pt": "29:text"
+              },
+              "sp_pt": "CC"
+            },
+            {
+              "text_pt": "une as mãos e traça o sinal da cruz, ao mesmo tempo sobre o pão e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "30:text"
+              }
+            },
+            {
+              "text_pt": "Eles serão para nós o Corpo",
+              "__massEditorPairKeys": {
+                "text_pt": "31:text"
+              }
+            },
+            {
+              "rubric_pt": "✠",
+              "__massEditorPairKeys": {
+                "rubric_pt": "32:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e o Sangue de Jesus Cristo, vosso Filho.",
+              "__massEditorPairKeys": {
+                "text_pt": "33:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "34:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Enviai o vosso Espírito Santo!",
+              "__massEditorPairKeys": {
+                "text_pt": "35:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "O relato da instituição da Eucaristia seja proferido de modo claro e audível como requer a sua natureza.",
+              "__massEditorPairKeys": {
+                "text_pt": "36:text"
+              }
+            },
+            {
+              "text_pt": "Na noite antes de morrer por nós, Jesus pôs-se à mesa com seus apóstolos,",
+              "__massEditorPairKeys": {
+                "text_pt": "37:text"
+              }
+            },
+            {
+              "text_pt": "toma o pão e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "38:text"
+              }
+            },
+            {
+              "text_pt": "tomou o pão em suas mãos, e, rezando, deu graças; partiu o pão e o deu a seus amigos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "39:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "40:text"
+              }
+            },
+            {
+              "rubric_pt": "TOMAI, TODOS, E COMEI: ISTO É O MEU CORPO, QUE SERÁ ENTREGUE POR VÓS.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "41:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Mostra ao povo a hóstia consagrada, coloca-a na patena e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "42:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Depois prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "43:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Do mesmo modo, no fim da Ceia,",
+              "__massEditorPairKeys": {
+                "text_pt": "44:text"
+              }
+            },
+            {
+              "text_pt": "toma o cálice nas mãos e, mantendo-o um pouco elevado acima do altar, prossegue:",
+              "__massEditorPairKeys": {
+                "text_pt": "45:text"
+              }
+            },
+            {
+              "text_pt": "Jesus tomou em suas mãos o cálice com vinho, rezou em ação de graças e o deu a seus amigos, dizendo:",
+              "__massEditorPairKeys": {
+                "text_pt": "46:text"
+              }
+            },
+            {
+              "text_pt": "inclina-se levemente",
+              "__massEditorPairKeys": {
+                "text_pt": "47:text"
+              }
+            },
+            {
+              "text_pt": "TOMAI, TODOS, E BEBEI: ESTE É O CÁLICE DO MEU SANGUE, O SANGUE DA NOVA E ETERNA ALIANÇA, QUE SERÁ DERRAMADO POR VÓS E POR TODOS PARA REMISSÃO DOS PECADOS. FAZEI ISTO EM MEMÓRIA DE MIM.",
+              "__massEditorPairKeys": {
+                "text_pt": "48:text"
+              }
+            },
+            {
+              "rubric_pt": "Mostra o cálice ao povo, coloca-o sobre o corporal e genuflete em adoração.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "49:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "rubric_pt": "Em seguida, diz:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "50:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "dividerBefore": "before-memorial-acclamation",
+              "text_pt": "Mistério da fé!",
+              "__massEditorPairKeys": {
+                "text_pt": "51:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "52:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Anunciamos, Senhor, a vossa morte e proclamamos a vossa ressurreição. Vinde, Senhor Jesus!",
+              "__massEditorPairKeys": {
+                "text_pt": "53:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "ou",
+              "__massEditorPairKeys": {
+                "rubric_pt": "54:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "A seguir, o sacerdote, de braços abertos, diz:",
+              "__massEditorPairKeys": {
+                "text_pt": "55:text"
+              }
+            },
+            {
+              "text_pt": "Por isso, Pai santo, aqui estamos diante de vós, e, com alegria, celebramos a memória do que Jesus Cristo fez para nossa salvação.",
+              "__massEditorPairKeys": {
+                "text_pt": "56:text"
+              }
+            },
+            {
+              "text_pt": "Neste santo sacrifício, que ele confiou à sua Igreja, celebramos sua morte e ressurreição.",
+              "__massEditorPairKeys": {
+                "text_pt": "57:text"
+              }
+            },
+            {
+              "text_pt": "Pai santo, que estais nos céus, aceitai-nos com vosso Filho amado.",
+              "__massEditorPairKeys": {
+                "text_pt": "58:text"
+              }
+            },
+            {
+              "text_pt": "Ele sofreu livremente a morte por nós; vós, porém, o ressuscitastes.",
+              "__massEditorPairKeys": {
+                "text_pt": "59:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "60:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Com Jesus, recebei a nossa vida!",
+              "__massEditorPairKeys": {
+                "text_pt": "61:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "62:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ó Pai, Jesus agora vive sempre junto de vós, mas ao mesmo tempo está aqui conosco. Um dia, ele virá em sua glória e o seu reino não terá fim. Então, ninguém mais vai sofrer, ninguém mais vai chorar, ninguém mais vai ficar triste: o pecado e a morte não mais dominarão.",
+              "__massEditorPairKeys": {
+                "text_pt": "63:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "64:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Glória a vós, ó Pai, que em Cristo nos salvais!",
+              "__massEditorPairKeys": {
+                "text_pt": "65:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "O sacerdote, de braços abertos, prossegue:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "66:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Pai santo, vós nos chamastes para recebermos nesta mesa, com alegria, o Corpo de Cristo. Fortificados por este alimento, possamos agradar-vos sempre mais e pela comunhão do Espírito Santo nos tornemos um só corpo no amor.",
+              "__massEditorPairKeys": {
+                "text_pt": "67:text"
+              }
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "68:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazei de nós um só corpo e um só espírito!",
+              "__massEditorPairKeys": {
+                "text_pt": "69:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "text_pt": "Lembrai-vos, ó Pai, do nosso Papa",
+              "__massEditorPairKeys": {
+                "text_pt": "70:text"
+              },
+              "sp_pt": "1C"
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "71:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": ", do nosso Bispo",
+              "__massEditorPairKeys": {
+                "text_pt": "72:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "73:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e dos outros bispos.",
+              "__massEditorPairKeys": {
+                "text_pt": "74:text"
+              }
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "75:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "No Tempo Pascal o sacerdote diz:",
+              "__massEditorPairKeys": {
+                "text_pt": "76:text"
+              }
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "77:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Fazei que os corações dos vossos fiéis sejam repletos com as alegrias da Páscoa e levem estas mesmas alegrias aos que vivem na tristeza.",
+              "__massEditorPairKeys": {
+                "text_pt": "78:text"
+              }
+            },
+            {
+              "rubric_pt": "★",
+              "__massEditorPairKeys": {
+                "rubric_pt": "79:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Ajudai os discípulos de Cristo, para que vivam em paz e repartam com todos o dom da alegria.",
+              "__massEditorPairKeys": {
+                "text_pt": "80:text"
+              }
+            },
+            {
+              "text_pt": "Concedei que, um dia, estejamos junto a vós, morando para sempre em vossa casa com Jesus e Maria, sua Mãe, São",
+              "__massEditorPairKeys": {
+                "text_pt": "81:text"
+              }
+            },
+            {
+              "rubric_pt": "N.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "82:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "e todos os Santos, e com nossos irmãos falecidos.",
+              "__massEditorPairKeys": {
+                "text_pt": "83:text"
+              }
+            },
+            {
+              "rubric_pt": "Ergue a patena com a hóstia e o cálice, dizendo:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "84:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "85:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "86:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "87:text"
+              },
+              "sp_pt": "Todos"
+            },
+            {
+              "rubric_pt": "Segue-se o Rito da Comunhão.",
+              "__massEditorPairKeys": {
+                "rubric_pt": "88:rubric"
+              }
+            }
+          ]
+        },
+        "amen": [
+          {
+            "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+            "__massEditorPairKeys": {
+              "text_pt": "0:text"
+            },
+            "sp_pt": "CP ou CC"
+          },
+          {
+            "rubric_pt": "A assembleia aclama:",
+            "__massEditorPairKeys": {
+              "rubric_pt": "1:rubric"
+            },
+            "rubricInset_pt": true
+          },
+          {
+            "text_pt": "Amém.",
+            "__massEditorPairKeys": {
+              "text_pt": "2:text"
+            },
+            "sp_pt": "Todos"
+          }
+        ],
+        "formEndings": {
+          "1": [
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "Todos"
+            }
+          ],
+          "2": [
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "Todos"
+            }
+          ],
+          "3": [
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "Todos"
+            }
+          ],
+          "4": [
+            {
+              "text_pt": "Por Cristo, com Cristo, e em Cristo, a vós, Deus Pai todo-poderoso, na unidade do Espírito Santo, toda honra e toda glória, por todos os séculos dos séculos.",
+              "__massEditorPairKeys": {
+                "text_pt": "0:text"
+              },
+              "sp_pt": "CP ou CC"
+            },
+            {
+              "rubric_pt": "A assembleia aclama:",
+              "__massEditorPairKeys": {
+                "rubric_pt": "1:rubric"
+              },
+              "rubricInset_pt": true
+            },
+            {
+              "text_pt": "Amém.",
+              "__massEditorPairKeys": {
+                "text_pt": "2:text"
+              },
+              "sp_pt": "Todos"
+            }
+          ]
+        },
+        "formFrames": {
+          "1": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "2": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "3": {
+            "sections": [
+              "dialogue",
+              "preface",
+              "sanctus",
+              "form",
+              "ending"
+            ]
+          },
+          "4": {
+            "sections": [
+              "dialogue",
+              "form",
+              "ending"
+            ]
+          }
+        },
+        "ordinarySourceLayoutVersion": 1
       }
     }
   ];

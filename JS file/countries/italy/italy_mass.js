@@ -24705,6 +24705,1552 @@
     },
     {
       "path": [
+        21
+      ],
+      "value": {
+        "id": "3.4 lords_prayer",
+        "type": "part",
+        "header": {
+          "it": "Riti di Comunione — Padre nostro"
+        },
+        "lines": [
+          {
+            "rubric_it": "Il sacerdote, deposti il calice e la patena, a mani giunte, canta o dice:",
+            "__massEditorPairKeys": {
+              "rubric_it": "0:rubric"
+            }
+          },
+          {
+            "text_it": "Obbedienti alla parola del Salvatore",
+            "__massEditorPairKeys": {
+              "text_it": "1:text"
+            },
+            "sp_it": "C"
+          },
+          {
+            "text_it": "e formati al suo divino insegnamento,",
+            "__massEditorPairKeys": {
+              "text_it": "2:text"
+            }
+          },
+          {
+            "text_it": "osiamo dire:",
+            "__massEditorPairKeys": {
+              "text_it": "3:text"
+            }
+          },
+          {
+            "rubric_it": "★",
+            "__massEditorPairKeys": {
+              "rubric_it": "4:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "5:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Il Signore ci ha donato il suo Spirito.",
+            "__massEditorPairKeys": {
+              "text_it": "6:text"
+            }
+          },
+          {
+            "text_it": "Con la fiducia e la libertà dei figli",
+            "__massEditorPairKeys": {
+              "text_it": "7:text"
+            }
+          },
+          {
+            "text_it": "preghiamo insieme:",
+            "__massEditorPairKeys": {
+              "text_it": "8:text"
+            }
+          },
+          {
+            "rubric_it": "★",
+            "__massEditorPairKeys": {
+              "rubric_it": "9:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "10:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Prima di partecipare al banchetto dell’Eucaristia,",
+            "__massEditorPairKeys": {
+              "rubric_it": "11:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "segno di riconciliazione",
+            "__massEditorPairKeys": {
+              "text_it": "12:text"
+            }
+          },
+          {
+            "text_it": "e vincolo di comunione fraterna,",
+            "__massEditorPairKeys": {
+              "text_it": "13:text"
+            }
+          },
+          {
+            "text_it": "preghiamo insieme come il Signore",
+            "__massEditorPairKeys": {
+              "text_it": "14:text"
+            }
+          },
+          {
+            "text_it": "ci ha insegnato:",
+            "__massEditorPairKeys": {
+              "text_it": "15:text"
+            }
+          },
+          {
+            "rubric_it": "★",
+            "__massEditorPairKeys": {
+              "rubric_it": "16:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "17:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Guidati dallo Spirito di Gesù",
+            "__massEditorPairKeys": {
+              "text_it": "18:text"
+            }
+          },
+          {
+            "text_it": "e illuminati dalla sapienza del Vangelo,",
+            "__massEditorPairKeys": {
+              "text_it": "19:text"
+            }
+          },
+          {
+            "text_it": "osiamo dire:",
+            "__massEditorPairKeys": {
+              "text_it": "20:text"
+            }
+          },
+          {
+            "text_it": "Allarga le braccia e canta o dice insieme al popolo:",
+            "__massEditorPairKeys": {
+              "text_it": "21:text"
+            }
+          },
+          {
+            "text_it": "445Riti di Comunione",
+            "__massEditorPairKeys": {
+              "text_it": "22:text"
+            }
+          },
+          {
+            "text_it": "Padre nostro che sei nei cieli,",
+            "__massEditorPairKeys": {
+              "text_it": "23:text"
+            }
+          },
+          {
+            "text_it": "sia santificato il tuo nome,",
+            "__massEditorPairKeys": {
+              "text_it": "24:text"
+            }
+          },
+          {
+            "text_it": "venga il tuo regno,",
+            "__massEditorPairKeys": {
+              "text_it": "25:text"
+            }
+          },
+          {
+            "text_it": "sia fatta la tua volontà,",
+            "__massEditorPairKeys": {
+              "text_it": "26:text"
+            }
+          },
+          {
+            "text_it": "come in cielo così in terra.",
+            "__massEditorPairKeys": {
+              "text_it": "27:text"
+            }
+          },
+          {
+            "text_it": "Dacci oggi il nostro pane quotidiano,",
+            "__massEditorPairKeys": {
+              "text_it": "28:text"
+            }
+          },
+          {
+            "text_it": "e rimetti a noi i nostri debiti",
+            "__massEditorPairKeys": {
+              "text_it": "29:text"
+            }
+          },
+          {
+            "text_it": "come anche noi li rimettiamo ai nostri debitori,",
+            "__massEditorPairKeys": {
+              "text_it": "30:text"
+            }
+          },
+          {
+            "text_it": "e non abbandonarci alla tentazione,",
+            "__massEditorPairKeys": {
+              "text_it": "31:text"
+            }
+          },
+          {
+            "text_it": "ma liberaci dal male.",
+            "__massEditorPairKeys": {
+              "text_it": "32:text"
+            }
+          },
+          {
+            "text_it": "Oppure in canto:",
+            "__massEditorPairKeys": {
+              "text_it": "33:text"
+            }
+          },
+          {
+            "text_it": "Pater noster, qui es in caelis:",
+            "__massEditorPairKeys": {
+              "text_it": "34:text"
+            }
+          },
+          {
+            "text_it": "sanctificétur nomen tuum;",
+            "__massEditorPairKeys": {
+              "text_it": "35:text"
+            }
+          },
+          {
+            "text_it": "advéniat regnum tuum;",
+            "__massEditorPairKeys": {
+              "text_it": "36:text"
+            }
+          },
+          {
+            "text_it": "fiat volúntas tua, sicut in caelo, et in terra.",
+            "__massEditorPairKeys": {
+              "text_it": "37:text"
+            }
+          },
+          {
+            "text_it": "Panem nostrum cotidiánum da nobis hódie;",
+            "__massEditorPairKeys": {
+              "text_it": "38:text"
+            }
+          },
+          {
+            "text_it": "et dimítte nobis débita nostra,",
+            "__massEditorPairKeys": {
+              "text_it": "39:text"
+            }
+          },
+          {
+            "text_it": "sicut et nos dimíttimus debitóribus nostris;",
+            "__massEditorPairKeys": {
+              "text_it": "40:text"
+            }
+          },
+          {
+            "text_it": "et ne nos indúcas in tentatiónem;",
+            "__massEditorPairKeys": {
+              "text_it": "41:text"
+            }
+          },
+          {
+            "text_it": "sed líbera nos a malo.",
+            "__massEditorPairKeys": {
+              "text_it": "42:text"
+            }
+          },
+          {
+            "text_it": "Solo il sacerdote, con le braccia allargate, continua:",
+            "__massEditorPairKeys": {
+              "text_it": "43:text"
+            }
+          },
+          {
+            "text_it": "Liberaci, o Signore, da tutti i mali,",
+            "__massEditorPairKeys": {
+              "text_it": "44:text"
+            }
+          },
+          {
+            "text_it": "concedi la pace ai nostri giorni,",
+            "__massEditorPairKeys": {
+              "text_it": "45:text"
+            }
+          },
+          {
+            "text_it": "e con l’aiuto della tua misericordia",
+            "__massEditorPairKeys": {
+              "text_it": "46:text"
+            }
+          },
+          {
+            "text_it": "vivremo sempre liberi dal peccato",
+            "__massEditorPairKeys": {
+              "text_it": "47:text"
+            }
+          },
+          {
+            "text_it": "e sicuri da ogni turbamento,",
+            "__massEditorPairKeys": {
+              "text_it": "48:text"
+            }
+          },
+          {
+            "text_it": "nell’attesa che si compia la beata speranza",
+            "__massEditorPairKeys": {
+              "text_it": "49:text"
+            }
+          },
+          {
+            "text_it": "e venga il nostro salvatore Gesù Cristo.",
+            "__massEditorPairKeys": {
+              "text_it": "50:text"
+            }
+          },
+          {
+            "text_it": "Congiunge le mani.",
+            "__massEditorPairKeys": {
+              "text_it": "51:text"
+            }
+          },
+          {
+            "rubric_it": "Il popolo conclude la preghiera con l’acclamazione:",
+            "__massEditorPairKeys": {
+              "rubric_it": "52:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "T uo è il regno,",
+            "__massEditorPairKeys": {
+              "text_it": "53:text"
+            }
+          },
+          {
+            "text_it": "tua la potenza e la gloria nei secoli.",
+            "__massEditorPairKeys": {
+              "text_it": "54:text"
+            }
+          },
+          {
+            "rubric_it": "Il sacerdote, con le braccia allargate, dice ad alta voce:",
+            "__massEditorPairKeys": {
+              "rubric_it": "55:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        22
+      ],
+      "value": {
+        "id": "3.5 peace",
+        "type": "part",
+        "header": {
+          "it": "Rito della pace"
+        },
+        "lines": [
+          {
+            "text_it": "447Riti di Comunione",
+            "__massEditorPairKeys": {
+              "text_it": "0:text"
+            }
+          },
+          {
+            "text_it": "Signore Gesù Cristo,",
+            "__massEditorPairKeys": {
+              "text_it": "1:text"
+            }
+          },
+          {
+            "text_it": "che hai detto ai tuoi apostoli:",
+            "__massEditorPairKeys": {
+              "text_it": "2:text"
+            }
+          },
+          {
+            "text_it": "«Vi lascio la pace, vi do la mia pace»,",
+            "__massEditorPairKeys": {
+              "text_it": "3:text"
+            }
+          },
+          {
+            "text_it": "non guardare ai nostri peccati,",
+            "__massEditorPairKeys": {
+              "text_it": "4:text"
+            }
+          },
+          {
+            "text_it": "ma alla fede della tua Chiesa,",
+            "__massEditorPairKeys": {
+              "text_it": "5:text"
+            }
+          },
+          {
+            "text_it": "e donale unità e pace",
+            "__massEditorPairKeys": {
+              "text_it": "6:text"
+            }
+          },
+          {
+            "text_it": "secondo la tua volontà.",
+            "__massEditorPairKeys": {
+              "text_it": "7:text"
+            }
+          },
+          {
+            "text_it": "Congiunge le mani.",
+            "__massEditorPairKeys": {
+              "text_it": "8:text"
+            }
+          },
+          {
+            "text_it": "Tu che vivi e regni nei secoli dei secoli.",
+            "__massEditorPairKeys": {
+              "text_it": "9:text"
+            }
+          },
+          {
+            "text_it": "Amen.",
+            "__massEditorPairKeys": {
+              "text_it": "10:text"
+            },
+            "sp_it": "Tutti"
+          },
+          {
+            "rubric_it": "Il sacerdote, rivolto al popolo, allargando e ricongiungendo le mani, dice:",
+            "__massEditorPairKeys": {
+              "rubric_it": "11:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "La pace del Signore sia sempre con voi.",
+            "__massEditorPairKeys": {
+              "text_it": "12:text"
+            },
+            "sp_it": "C"
+          },
+          {
+            "rubric_it": "Il popolo risponde:",
+            "__massEditorPairKeys": {
+              "rubric_it": "13:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "E con il tuo spirito.",
+            "__massEditorPairKeys": {
+              "text_it": "14:text"
+            },
+            "sp_it": "Tutti"
+          },
+          {
+            "rubric_it": "Poi, secondo l’opportunità, il diacono, o il sacerdote, aggiunge:",
+            "__massEditorPairKeys": {
+              "rubric_it": "15:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Scambiatevi il dono della pace.",
+            "__massEditorPairKeys": {
+              "text_it": "16:text"
+            }
+          },
+          {
+            "rubric_it": "★",
+            "__massEditorPairKeys": {
+              "rubric_it": "17:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "18:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Come figli del Dio della pace,",
+            "__massEditorPairKeys": {
+              "text_it": "19:text"
+            }
+          },
+          {
+            "text_it": "scambiatevi un gesto di comunione fraterna.",
+            "__massEditorPairKeys": {
+              "text_it": "20:text"
+            }
+          },
+          {
+            "rubric_it": "★",
+            "__massEditorPairKeys": {
+              "rubric_it": "21:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "22:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "In Cristo, che ci ha resi tutti fratelli con la sua croce,",
+            "__massEditorPairKeys": {
+              "text_it": "23:text"
+            }
+          },
+          {
+            "text_it": "scambiatevi il dono della pace.",
+            "__massEditorPairKeys": {
+              "text_it": "24:text"
+            }
+          },
+          {
+            "rubric_it": "★",
+            "__massEditorPairKeys": {
+              "rubric_it": "25:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "26:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Nello Spirito del Cristo risorto,",
+            "__massEditorPairKeys": {
+              "text_it": "27:text"
+            }
+          },
+          {
+            "text_it": "scambiatevi il dono della pace.",
+            "__massEditorPairKeys": {
+              "text_it": "28:text"
+            }
+          },
+          {
+            "text_it": "E tutti si scambiano vicendevolmente un gesto di pace, di comunione e di carità secondo",
+            "__massEditorPairKeys": {
+              "text_it": "29:text"
+            }
+          },
+          {
+            "text_it": "gli usi locali. Il sacerdote dà la pace al diacono o al ministro.",
+            "__massEditorPairKeys": {
+              "text_it": "30:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        23
+      ],
+      "value": {
+        "id": "3.6 lamb",
+        "type": "part",
+        "header": {
+          "it": "Frazione del pane — Agnello di Dio"
+        },
+        "lines": [
+          {
+            "rubric_it": "Il sacerdote quindi prende l’ostia, la spezza sopra la patena e ne mette un frammento",
+            "__massEditorPairKeys": {
+              "rubric_it": "0:rubric"
+            }
+          },
+          {
+            "text_it": "nel calice, dicendo sottovoce:",
+            "__massEditorPairKeys": {
+              "text_it": "1:text"
+            }
+          },
+          {
+            "text_it": "Il Corpo e il Sangue del Signore nostro Gesù Cristo,",
+            "__massEditorPairKeys": {
+              "text_it": "2:text"
+            }
+          },
+          {
+            "text_it": "uniti in questo calice,",
+            "__massEditorPairKeys": {
+              "text_it": "3:text"
+            }
+          },
+          {
+            "text_it": "siano per noi cibo di vita eterna.",
+            "__massEditorPairKeys": {
+              "text_it": "4:text"
+            }
+          },
+          {
+            "text_it": "Intanto si canta o si dice:",
+            "__massEditorPairKeys": {
+              "text_it": "5:text"
+            }
+          },
+          {
+            "text_it": "Agnello di Dio, che togli i peccati del mondo,",
+            "__massEditorPairKeys": {
+              "text_it": "6:text"
+            }
+          },
+          {
+            "text_it": "abbi pietà di noi.",
+            "__massEditorPairKeys": {
+              "text_it": "7:text"
+            }
+          },
+          {
+            "text_it": "Agnello di Dio, che togli i peccati del mondo,",
+            "__massEditorPairKeys": {
+              "text_it": "8:text"
+            }
+          },
+          {
+            "text_it": "abbi pietà di noi.",
+            "__massEditorPairKeys": {
+              "text_it": "9:text"
+            }
+          },
+          {
+            "text_it": "Agnello di Dio, che togli i peccati del mondo,",
+            "__massEditorPairKeys": {
+              "text_it": "10:text"
+            }
+          },
+          {
+            "text_it": "dona a noi la pace.",
+            "__massEditorPairKeys": {
+              "text_it": "11:text"
+            }
+          },
+          {
+            "text_it": "Oppure in canto:",
+            "__massEditorPairKeys": {
+              "text_it": "12:text"
+            }
+          },
+          {
+            "text_it": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.",
+            "__massEditorPairKeys": {
+              "text_it": "13:text"
+            }
+          },
+          {
+            "text_it": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.",
+            "__massEditorPairKeys": {
+              "text_it": "14:text"
+            }
+          },
+          {
+            "text_it": "Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.",
+            "__massEditorPairKeys": {
+              "text_it": "15:text"
+            }
+          },
+          {
+            "rubric_it": "Se la frazione del pane si prolunga, l’invocazione si può ripetere più volte; l’ultima invocazione si conclude con le parole: dona a noi la pace [dona nobis pacem].",
+            "__massEditorPairKeys": {
+              "rubric_it": "16:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "rubric_it": "Il sacerdote, con le mani giunte, dice sottovoce:",
+            "__massEditorPairKeys": {
+              "rubric_it": "17:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Signore Gesù Cristo, Figlio del Dio vivo,",
+            "__massEditorPairKeys": {
+              "text_it": "18:text"
+            }
+          },
+          {
+            "text_it": "che per volontà del Padre",
+            "__massEditorPairKeys": {
+              "text_it": "19:text"
+            }
+          },
+          {
+            "text_it": "e con l’opera dello Spirito Santo",
+            "__massEditorPairKeys": {
+              "text_it": "20:text"
+            }
+          },
+          {
+            "text_it": "morendo hai dato la vita al mondo,",
+            "__massEditorPairKeys": {
+              "text_it": "21:text"
+            }
+          },
+          {
+            "text_it": "per il santo mistero del tuo Corpo e del tuo Sangue",
+            "__massEditorPairKeys": {
+              "text_it": "22:text"
+            }
+          },
+          {
+            "text_it": "liberami da ogni colpa e da ogni male,",
+            "__massEditorPairKeys": {
+              "text_it": "23:text"
+            }
+          },
+          {
+            "text_it": "fa’ che sia sempre fedele alla tua legge",
+            "__massEditorPairKeys": {
+              "text_it": "24:text"
+            }
+          },
+          {
+            "text_it": "e non sia mai separato da te.",
+            "__massEditorPairKeys": {
+              "text_it": "25:text"
+            }
+          },
+          {
+            "rubric_it": "Oppure:",
+            "__massEditorPairKeys": {
+              "rubric_it": "26:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "La comunione al tuo Corpo e al tuo Sangue,",
+            "__massEditorPairKeys": {
+              "text_it": "27:text"
+            }
+          },
+          {
+            "text_it": "Signore Gesù Cristo,",
+            "__massEditorPairKeys": {
+              "text_it": "28:text"
+            }
+          },
+          {
+            "text_it": "non diventi per me giudizio di condanna,",
+            "__massEditorPairKeys": {
+              "text_it": "29:text"
+            }
+          },
+          {
+            "text_it": "ma per tua misericordia",
+            "__massEditorPairKeys": {
+              "text_it": "30:text"
+            }
+          },
+          {
+            "text_it": "sia rimedio e difesa dell’anima e del corpo.",
+            "__massEditorPairKeys": {
+              "text_it": "31:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        24
+      ],
+      "value": {
+        "id": "3.7 communion_rite",
+        "type": "part",
+        "header": {
+          "it": "Comunione"
+        },
+        "lines": [
+          {
+            "text_it": "449Riti di Comunione",
+            "__massEditorPairKeys": {
+              "text_it": "0:text"
+            }
+          },
+          {
+            "rubric_it": "Il sacerdote genuflette, prende l’ostia e tenendola un po’ sollevata sulla patena o sul calice,",
+            "__massEditorPairKeys": {
+              "rubric_it": "1:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "rivolto al popolo, dice ad alta voce:",
+            "__massEditorPairKeys": {
+              "text_it": "2:text"
+            }
+          },
+          {
+            "text_it": "Ecco l’Agnello di Dio,",
+            "__massEditorPairKeys": {
+              "text_it": "3:text"
+            }
+          },
+          {
+            "text_it": "ecco colui che toglie i peccati del mondo.",
+            "__massEditorPairKeys": {
+              "text_it": "4:text"
+            }
+          },
+          {
+            "text_it": "Beati gli invitati alla cena dell’Agnello.",
+            "__massEditorPairKeys": {
+              "text_it": "5:text"
+            }
+          },
+          {
+            "text_it": "E continua, dicendo insieme con il popolo:",
+            "__massEditorPairKeys": {
+              "text_it": "6:text"
+            }
+          },
+          {
+            "text_it": "O Signore, non sono degno",
+            "__massEditorPairKeys": {
+              "text_it": "7:text"
+            }
+          },
+          {
+            "text_it": "di partecipare alla tua mensa,",
+            "__massEditorPairKeys": {
+              "text_it": "8:text"
+            }
+          },
+          {
+            "text_it": "ma di’ soltanto una parola",
+            "__massEditorPairKeys": {
+              "text_it": "9:text"
+            }
+          },
+          {
+            "text_it": "e io sarò salvato.",
+            "__massEditorPairKeys": {
+              "text_it": "10:text"
+            }
+          },
+          {
+            "rubric_it": "Il sacerdote, rivolto all’altare, dice sottovoce:",
+            "__massEditorPairKeys": {
+              "rubric_it": "11:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Il Corpo di Cristo",
+            "__massEditorPairKeys": {
+              "text_it": "12:text"
+            }
+          },
+          {
+            "text_it": "mi custodisca per la vita eterna.",
+            "__massEditorPairKeys": {
+              "text_it": "13:text"
+            }
+          },
+          {
+            "text_it": "E con riverenza si comunica al Corpo di Cristo. Poi prende il calice e dice sottovoce:",
+            "__massEditorPairKeys": {
+              "text_it": "14:text"
+            }
+          },
+          {
+            "text_it": "Il Sangue di Cristo",
+            "__massEditorPairKeys": {
+              "text_it": "15:text"
+            }
+          },
+          {
+            "text_it": "mi custodisca per la vita eterna.",
+            "__massEditorPairKeys": {
+              "text_it": "16:text"
+            }
+          },
+          {
+            "text_it": "E con riverenza si comunica al Sangue di Cristo.",
+            "__massEditorPairKeys": {
+              "text_it": "17:text"
+            }
+          },
+          {
+            "rubric_it": "Mentre il sacerdote si comunica al Corpo di Cristo, si inizia il Canto di comunione",
+            "__massEditorPairKeys": {
+              "rubric_it": "18:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "o si proclama l’antifona.",
+            "__massEditorPairKeys": {
+              "text_it": "19:text"
+            }
+          },
+          {
+            "rubric_it": "Il sacerdote prende poi la patena o la pisside e si reca verso i comunicandi. Nel presentare",
+            "__massEditorPairKeys": {
+              "rubric_it": "20:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "a ognuno l’ostia, la tiene alquanto sollevata e dice:",
+            "__massEditorPairKeys": {
+              "text_it": "21:text"
+            }
+          },
+          {
+            "text_it": "Il Corpo di Cristo.",
+            "__massEditorPairKeys": {
+              "text_it": "22:text"
+            }
+          },
+          {
+            "text_it": "Il comunicando risponde: Amen.",
+            "__massEditorPairKeys": {
+              "text_it": "23:text"
+            }
+          },
+          {
+            "text_it": "E riceve la comunione.",
+            "__massEditorPairKeys": {
+              "text_it": "24:text"
+            }
+          },
+          {
+            "text_it": "Nello stesso modo si comporta il diacono quando distribuisce la comunione.",
+            "__massEditorPairKeys": {
+              "text_it": "25:text"
+            }
+          },
+          {
+            "rubric_it": "Quando si distribuisce la comunione sotto le due specie, si osservi il rito indicato nell’Ordinamento Generale del Messale Romano , nn. 281-2 87.",
+            "__massEditorPairKeys": {
+              "rubric_it": "26:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Terminata la distribuzione della comunione, il sacerdote, o il diacono, o l’accolito, alla",
+            "__massEditorPairKeys": {
+              "text_it": "27:text"
+            }
+          },
+          {
+            "text_it": "credenza o a lato dell’altare, purifica la patena sul calice e quindi il calice.",
+            "__massEditorPairKeys": {
+              "text_it": "28:text"
+            }
+          },
+          {
+            "rubric_it": "Mentre purifica la patena e il calice, il sacerdote dice sottovoce:",
+            "__massEditorPairKeys": {
+              "rubric_it": "29:rubric"
+            },
+            "rubricInset_it": true
+          },
+          {
+            "text_it": "Il sacramento ricevuto con la bocca",
+            "__massEditorPairKeys": {
+              "text_it": "30:text"
+            }
+          },
+          {
+            "text_it": "sia accolto con purezza nel nostro spirito, o Signore,",
+            "__massEditorPairKeys": {
+              "text_it": "31:text"
+            }
+          },
+          {
+            "text_it": "e il dono a noi fatto nel tempo",
+            "__massEditorPairKeys": {
+              "text_it": "32:text"
+            }
+          },
+          {
+            "text_it": "ci sia rimedio per la vita eterna.",
+            "__massEditorPairKeys": {
+              "text_it": "33:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        25
+      ],
+      "value": {
+        "id": "3.8 communion",
+        "type": "part",
+        "header": {
+          "it": "Antifona alla comunione"
+        },
+        "lines": [
+          {
+            "text_it": "(Antifona alla comunione del giorno)",
+            "__massEditorPairKeys": {
+              "text_it": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        26
+      ],
+      "value": {
+        "id": "3.9 prayer_after",
+        "type": "part",
+        "header": {
+          "it": "Dopo la comunione"
+        },
+        "lines": [
+          {
+            "text_it": "Preghiamo.",
+            "__massEditorPairKeys": {
+              "text_it": "0:text"
+            },
+            "sp_it": "C"
+          },
+          {
+            "text_it": "(Orazione dopo la comunione del giorno)",
+            "__massEditorPairKeys": {
+              "text_it": "1:text"
+            }
+          },
+          {
+            "text_it": "Amen.",
+            "__massEditorPairKeys": {
+              "text_it": "2:text"
+            },
+            "sp_it": "Tutti"
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        28
+      ],
+      "value": {
+        "id": "4.1 announcement",
+        "type": "part",
+        "header": {
+          "it": "Avvisi"
+        },
+        "lines": [
+          {
+            "rubric_it": "Dopo l'orazione e prima della benedizione.",
+            "__massEditorPairKeys": {
+              "rubric_it": "0:rubric"
+            }
+          },
+          {
+            "rubric_it": "Si possono dare brevi comunicazioni al popolo.",
+            "__massEditorPairKeys": {
+              "rubric_it": "1:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
+        29
+      ],
+      "value": {
+        "id": "4.2 blessing",
+        "type": "selectable",
+        "header": {
+          "it": "Benedizione"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "it": "Benedizione"
+            },
+            "lines": [
+              {
+                "rubric_it": "Dopo l’orazione e prima della Benedizione si possono dare, quando occorre, brevi",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "text_it": "comunicazioni al popolo.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              },
+              {
+                "rubric_it": "Segue il congedo. Il sacerdote, allargando le braccia, rivolto verso il popolo, dice:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "2:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Il Signore sia con voi.",
+                "__massEditorPairKeys": {
+                  "text_it": "3:text"
+                }
+              },
+              {
+                "rubric_it": "Il popolo risponde:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "4:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "E con il tuo spirito.",
+                "__massEditorPairKeys": {
+                  "text_it": "5:text"
+                },
+                "sp_it": "Tutti"
+              },
+              {
+                "rubric_it": "Il sacerdote benedice il popolo:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "6:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Vi benedica Dio onnipotente,",
+                "__massEditorPairKeys": {
+                  "text_it": "7:text"
+                }
+              },
+              {
+                "text_it": "Padre e Figlio ^ e Spirito Santo.",
+                "__massEditorPairKeys": {
+                  "text_it": "8:text"
+                }
+              },
+              {
+                "text_it": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_it": "9:text"
+                },
+                "sp_it": "Tutti"
+              },
+              {
+                "text_it": "In certi giorni e in circostanze particolari si usa una forma più solenne di Benedizione",
+                "__massEditorPairKeys": {
+                  "text_it": "10:text"
+                }
+              },
+              {
+                "text_it": "o l’Orazione sul popolo.",
+                "__massEditorPairKeys": {
+                  "text_it": "11:text"
+                }
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "it": "Benedizione pontificale"
+            },
+            "lines": [
+              {
+                "rubric_it": "Nel benedire il popolo, il vescovo, ricevuta la mitra, allargando le braccia, dice:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "rubric_it": "Il vescovo dice:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "1:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Il Signore sia con voi.",
+                "__massEditorPairKeys": {
+                  "text_it": "2:text"
+                },
+                "sp_it": "Vescovo"
+              },
+              {
+                "text_it": "Tutti rispondono:",
+                "__massEditorPairKeys": {
+                  "text_it": "3:text"
+                }
+              },
+              {
+                "text_it": "E con il tuo spirito.",
+                "__massEditorPairKeys": {
+                  "text_it": "4:text"
+                }
+              },
+              {
+                "rubric_it": "Il vescovo dice:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "5:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Sia benedetto il nome del Signore.",
+                "__massEditorPairKeys": {
+                  "text_it": "6:text"
+                },
+                "sp_it": "Vescovo"
+              },
+              {
+                "text_it": "Tutti rispondono:",
+                "__massEditorPairKeys": {
+                  "text_it": "7:text"
+                }
+              },
+              {
+                "text_it": "Ora e sempre.",
+                "__massEditorPairKeys": {
+                  "text_it": "8:text"
+                }
+              },
+              {
+                "rubric_it": "Il vescovo prosegue:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "9:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Il nostro aiuto è nel nome del Signore.",
+                "__massEditorPairKeys": {
+                  "text_it": "10:text"
+                }
+              },
+              {
+                "text_it": "Tutti rispondono:",
+                "__massEditorPairKeys": {
+                  "text_it": "11:text"
+                }
+              },
+              {
+                "text_it": "Egli ha fatto cielo e terra.",
+                "__massEditorPairKeys": {
+                  "text_it": "12:text"
+                }
+              },
+              {
+                "rubric_it": "Quindi, il vescovo, ricevuto il pastorale, dice:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "13:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Vi benedica Dio onnipotente,",
+                "__massEditorPairKeys": {
+                  "text_it": "14:text"
+                }
+              },
+              {
+                "text_it": "e tracciando un triplice segno di croce sul popolo, continua:",
+                "__massEditorPairKeys": {
+                  "text_it": "15:text"
+                }
+              },
+              {
+                "text_it": "Padre ^ e Figlio ^ e Spirito ^ Santo.",
+                "__massEditorPairKeys": {
+                  "text_it": "16:text"
+                }
+              },
+              {
+                "text_it": "Tutti rispondono:",
+                "__massEditorPairKeys": {
+                  "text_it": "17:text"
+                }
+              },
+              {
+                "text_it": "Amen.",
+                "__massEditorPairKeys": {
+                  "text_it": "18:text"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        30
+      ],
+      "value": {
+        "id": "4.3 dismissal",
+        "type": "selectable",
+        "header": {
+          "it": "Congedo"
+        },
+        "variants": {
+          "A": {
+            "label": {
+              "it": "Formula 1"
+            },
+            "lines": [
+              {
+                "text_it": "Infine il diacono o il sacerdote stesso, rivolto al popolo, a mani giunte, dice:",
+                "__massEditorPairKeys": {
+                  "text_it": "0:text"
+                }
+              },
+              {
+                "text_it": "Andate in pace.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              }
+            ]
+          },
+          "B": {
+            "label": {
+              "it": "Formula 2"
+            },
+            "lines": [
+              {
+                "rubric_it": "Oppure:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "text_it": "La Messa è finita: andate in pace.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              }
+            ]
+          },
+          "C": {
+            "label": {
+              "it": "Formula 3"
+            },
+            "lines": [
+              {
+                "rubric_it": "Oppure:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "text_it": "Andate e annunciate il Vangelo del Signore.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              }
+            ]
+          },
+          "D": {
+            "label": {
+              "it": "Formula 4"
+            },
+            "lines": [
+              {
+                "rubric_it": "Oppure:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "text_it": "Glorificate il Signore con la vostra vita. Andate in pace.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              },
+              {
+                "rubric_it": "★",
+                "__massEditorPairKeys": {
+                  "rubric_it": "2:rubric"
+                }
+              }
+            ]
+          },
+          "E": {
+            "label": {
+              "it": "Formula 5"
+            },
+            "lines": [
+              {
+                "rubric_it": "Oppure:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "text_it": "La gioia del Signore sia la vostra forza. Andate in pace.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              },
+              {
+                "rubric_it": "★",
+                "__massEditorPairKeys": {
+                  "rubric_it": "2:rubric"
+                }
+              }
+            ]
+          },
+          "F": {
+            "label": {
+              "it": "Formula 6"
+            },
+            "lines": [
+              {
+                "rubric_it": "Oppure:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "rubric_it": "Nel nome del Signore, andate in pace.",
+                "__massEditorPairKeys": {
+                  "rubric_it": "1:rubric"
+                }
+              },
+              {
+                "rubric_it": "★",
+                "__massEditorPairKeys": {
+                  "rubric_it": "2:rubric"
+                }
+              }
+            ]
+          },
+          "G": {
+            "label": {
+              "it": "Formula 7"
+            },
+            "lines": [
+              {
+                "rubric_it": "Oppure, specialmente nelle domeniche di Pasqua:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "0:rubric"
+                }
+              },
+              {
+                "text_it": "Portate a tutti la gioia del Signore risorto. Andate in pace.",
+                "__massEditorPairKeys": {
+                  "text_it": "1:text"
+                }
+              },
+              {
+                "rubric_it": "Il popolo risponde:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "2:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Rendiamo grazie a Dio.",
+                "__massEditorPairKeys": {
+                  "text_it": "3:text"
+                },
+                "sp_it": "Tutti"
+              },
+              {
+                "rubric_it": "★ Oppure in canto:",
+                "__massEditorPairKeys": {
+                  "rubric_it": "4:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "Ite, missa est. R /. Deo grátias.",
+                "__massEditorPairKeys": {
+                  "text_it": "5:text"
+                }
+              },
+              {
+                "rubric_it": "Il sacerdote bacia l’altare in segno di venerazione come all’inizio; fa quindi con i ministri",
+                "__massEditorPairKeys": {
+                  "rubric_it": "6:rubric"
+                },
+                "rubricInset_it": true
+              },
+              {
+                "text_it": "un profondo inchino e torna in sacrestia.",
+                "__massEditorPairKeys": {
+                  "text_it": "7:text"
+                }
+              },
+              {
+                "rubric_it": "Quando segue immediatamente un’altra azione liturgica, si tralasciano i riti di conclusione.",
+                "__massEditorPairKeys": {
+                  "rubric_it": "8:rubric"
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        31
+      ],
+      "value": {
+        "id": "4.4 final_song",
+        "type": "part",
+        "header": {
+          "it": "Canto finale"
+        },
+        "lines": [
+          {
+            "rubric_it": "Segue il canto finale, secondo l'opportunità.",
+            "__massEditorPairKeys": {
+              "rubric_it": "0:rubric"
+            }
+          },
+          {
+            "rubric_it": "Il sacerdote venera l'altare e si ritira con i ministri.",
+            "__massEditorPairKeys": {
+              "rubric_it": "1:rubric"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": [
         20
       ],
       "value": {
@@ -39975,6 +41521,7 @@
             }
           },
           {
+            "dividerAfter": "after-sanctus",
             "text_it": "Osanna nell'alto dei cieli.",
             "__massEditorPairKeys": {
               "text_it": "4:text"
@@ -41501,6 +43048,7 @@
               "rubricInset_it": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_it": "Mistero della fede.",
               "__massEditorPairKeys": {
                 "text_it": "canon:mystery:0:text"
@@ -42423,6 +43971,7 @@
               "rubricInset_it": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_it": "Mistero della fede.",
               "__massEditorPairKeys": {
                 "text_it": "72:text"
@@ -43629,6 +45178,7 @@
               "rubricInset_it": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_it": "Mistero della fede.",
               "__massEditorPairKeys": {
                 "text_it": "60:text"
@@ -44765,6 +46315,7 @@
               }
             },
             {
+              "dividerAfter": "after-sanctus",
               "text_it": "Osanna nell’alto dei cieli.",
               "__massEditorPairKeys": {
                 "text_it": "31:text"
@@ -45256,6 +46807,7 @@
               "rubricInset_it": true
             },
             {
+              "dividerBefore": "before-memorial-acclamation",
               "text_it": "Mistero della fede.",
               "__massEditorPairKeys": {
                 "text_it": "110:text"
@@ -45886,1552 +47438,6 @@
           }
         },
         "ordinarySourceLayoutVersion": 1
-      }
-    },
-    {
-      "path": [
-        21
-      ],
-      "value": {
-        "id": "3.4 lords_prayer",
-        "type": "part",
-        "header": {
-          "it": "Riti di Comunione — Padre nostro"
-        },
-        "lines": [
-          {
-            "rubric_it": "Il sacerdote, deposti il calice e la patena, a mani giunte, canta o dice:",
-            "__massEditorPairKeys": {
-              "rubric_it": "0:rubric"
-            }
-          },
-          {
-            "text_it": "Obbedienti alla parola del Salvatore",
-            "__massEditorPairKeys": {
-              "text_it": "1:text"
-            },
-            "sp_it": "C"
-          },
-          {
-            "text_it": "e formati al suo divino insegnamento,",
-            "__massEditorPairKeys": {
-              "text_it": "2:text"
-            }
-          },
-          {
-            "text_it": "osiamo dire:",
-            "__massEditorPairKeys": {
-              "text_it": "3:text"
-            }
-          },
-          {
-            "rubric_it": "★",
-            "__massEditorPairKeys": {
-              "rubric_it": "4:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "5:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Il Signore ci ha donato il suo Spirito.",
-            "__massEditorPairKeys": {
-              "text_it": "6:text"
-            }
-          },
-          {
-            "text_it": "Con la fiducia e la libertà dei figli",
-            "__massEditorPairKeys": {
-              "text_it": "7:text"
-            }
-          },
-          {
-            "text_it": "preghiamo insieme:",
-            "__massEditorPairKeys": {
-              "text_it": "8:text"
-            }
-          },
-          {
-            "rubric_it": "★",
-            "__massEditorPairKeys": {
-              "rubric_it": "9:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "10:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Prima di partecipare al banchetto dell’Eucaristia,",
-            "__massEditorPairKeys": {
-              "rubric_it": "11:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "segno di riconciliazione",
-            "__massEditorPairKeys": {
-              "text_it": "12:text"
-            }
-          },
-          {
-            "text_it": "e vincolo di comunione fraterna,",
-            "__massEditorPairKeys": {
-              "text_it": "13:text"
-            }
-          },
-          {
-            "text_it": "preghiamo insieme come il Signore",
-            "__massEditorPairKeys": {
-              "text_it": "14:text"
-            }
-          },
-          {
-            "text_it": "ci ha insegnato:",
-            "__massEditorPairKeys": {
-              "text_it": "15:text"
-            }
-          },
-          {
-            "rubric_it": "★",
-            "__massEditorPairKeys": {
-              "rubric_it": "16:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "17:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Guidati dallo Spirito di Gesù",
-            "__massEditorPairKeys": {
-              "text_it": "18:text"
-            }
-          },
-          {
-            "text_it": "e illuminati dalla sapienza del Vangelo,",
-            "__massEditorPairKeys": {
-              "text_it": "19:text"
-            }
-          },
-          {
-            "text_it": "osiamo dire:",
-            "__massEditorPairKeys": {
-              "text_it": "20:text"
-            }
-          },
-          {
-            "text_it": "Allarga le braccia e canta o dice insieme al popolo:",
-            "__massEditorPairKeys": {
-              "text_it": "21:text"
-            }
-          },
-          {
-            "text_it": "445Riti di Comunione",
-            "__massEditorPairKeys": {
-              "text_it": "22:text"
-            }
-          },
-          {
-            "text_it": "Padre nostro che sei nei cieli,",
-            "__massEditorPairKeys": {
-              "text_it": "23:text"
-            }
-          },
-          {
-            "text_it": "sia santificato il tuo nome,",
-            "__massEditorPairKeys": {
-              "text_it": "24:text"
-            }
-          },
-          {
-            "text_it": "venga il tuo regno,",
-            "__massEditorPairKeys": {
-              "text_it": "25:text"
-            }
-          },
-          {
-            "text_it": "sia fatta la tua volontà,",
-            "__massEditorPairKeys": {
-              "text_it": "26:text"
-            }
-          },
-          {
-            "text_it": "come in cielo così in terra.",
-            "__massEditorPairKeys": {
-              "text_it": "27:text"
-            }
-          },
-          {
-            "text_it": "Dacci oggi il nostro pane quotidiano,",
-            "__massEditorPairKeys": {
-              "text_it": "28:text"
-            }
-          },
-          {
-            "text_it": "e rimetti a noi i nostri debiti",
-            "__massEditorPairKeys": {
-              "text_it": "29:text"
-            }
-          },
-          {
-            "text_it": "come anche noi li rimettiamo ai nostri debitori,",
-            "__massEditorPairKeys": {
-              "text_it": "30:text"
-            }
-          },
-          {
-            "text_it": "e non abbandonarci alla tentazione,",
-            "__massEditorPairKeys": {
-              "text_it": "31:text"
-            }
-          },
-          {
-            "text_it": "ma liberaci dal male.",
-            "__massEditorPairKeys": {
-              "text_it": "32:text"
-            }
-          },
-          {
-            "text_it": "Oppure in canto:",
-            "__massEditorPairKeys": {
-              "text_it": "33:text"
-            }
-          },
-          {
-            "text_it": "Pater noster, qui es in caelis:",
-            "__massEditorPairKeys": {
-              "text_it": "34:text"
-            }
-          },
-          {
-            "text_it": "sanctificétur nomen tuum;",
-            "__massEditorPairKeys": {
-              "text_it": "35:text"
-            }
-          },
-          {
-            "text_it": "advéniat regnum tuum;",
-            "__massEditorPairKeys": {
-              "text_it": "36:text"
-            }
-          },
-          {
-            "text_it": "fiat volúntas tua, sicut in caelo, et in terra.",
-            "__massEditorPairKeys": {
-              "text_it": "37:text"
-            }
-          },
-          {
-            "text_it": "Panem nostrum cotidiánum da nobis hódie;",
-            "__massEditorPairKeys": {
-              "text_it": "38:text"
-            }
-          },
-          {
-            "text_it": "et dimítte nobis débita nostra,",
-            "__massEditorPairKeys": {
-              "text_it": "39:text"
-            }
-          },
-          {
-            "text_it": "sicut et nos dimíttimus debitóribus nostris;",
-            "__massEditorPairKeys": {
-              "text_it": "40:text"
-            }
-          },
-          {
-            "text_it": "et ne nos indúcas in tentatiónem;",
-            "__massEditorPairKeys": {
-              "text_it": "41:text"
-            }
-          },
-          {
-            "text_it": "sed líbera nos a malo.",
-            "__massEditorPairKeys": {
-              "text_it": "42:text"
-            }
-          },
-          {
-            "text_it": "Solo il sacerdote, con le braccia allargate, continua:",
-            "__massEditorPairKeys": {
-              "text_it": "43:text"
-            }
-          },
-          {
-            "text_it": "Liberaci, o Signore, da tutti i mali,",
-            "__massEditorPairKeys": {
-              "text_it": "44:text"
-            }
-          },
-          {
-            "text_it": "concedi la pace ai nostri giorni,",
-            "__massEditorPairKeys": {
-              "text_it": "45:text"
-            }
-          },
-          {
-            "text_it": "e con l’aiuto della tua misericordia",
-            "__massEditorPairKeys": {
-              "text_it": "46:text"
-            }
-          },
-          {
-            "text_it": "vivremo sempre liberi dal peccato",
-            "__massEditorPairKeys": {
-              "text_it": "47:text"
-            }
-          },
-          {
-            "text_it": "e sicuri da ogni turbamento,",
-            "__massEditorPairKeys": {
-              "text_it": "48:text"
-            }
-          },
-          {
-            "text_it": "nell’attesa che si compia la beata speranza",
-            "__massEditorPairKeys": {
-              "text_it": "49:text"
-            }
-          },
-          {
-            "text_it": "e venga il nostro salvatore Gesù Cristo.",
-            "__massEditorPairKeys": {
-              "text_it": "50:text"
-            }
-          },
-          {
-            "text_it": "Congiunge le mani.",
-            "__massEditorPairKeys": {
-              "text_it": "51:text"
-            }
-          },
-          {
-            "rubric_it": "Il popolo conclude la preghiera con l’acclamazione:",
-            "__massEditorPairKeys": {
-              "rubric_it": "52:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "T uo è il regno,",
-            "__massEditorPairKeys": {
-              "text_it": "53:text"
-            }
-          },
-          {
-            "text_it": "tua la potenza e la gloria nei secoli.",
-            "__massEditorPairKeys": {
-              "text_it": "54:text"
-            }
-          },
-          {
-            "rubric_it": "Il sacerdote, con le braccia allargate, dice ad alta voce:",
-            "__massEditorPairKeys": {
-              "rubric_it": "55:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        22
-      ],
-      "value": {
-        "id": "3.5 peace",
-        "type": "part",
-        "header": {
-          "it": "Rito della pace"
-        },
-        "lines": [
-          {
-            "text_it": "447Riti di Comunione",
-            "__massEditorPairKeys": {
-              "text_it": "0:text"
-            }
-          },
-          {
-            "text_it": "Signore Gesù Cristo,",
-            "__massEditorPairKeys": {
-              "text_it": "1:text"
-            }
-          },
-          {
-            "text_it": "che hai detto ai tuoi apostoli:",
-            "__massEditorPairKeys": {
-              "text_it": "2:text"
-            }
-          },
-          {
-            "text_it": "«Vi lascio la pace, vi do la mia pace»,",
-            "__massEditorPairKeys": {
-              "text_it": "3:text"
-            }
-          },
-          {
-            "text_it": "non guardare ai nostri peccati,",
-            "__massEditorPairKeys": {
-              "text_it": "4:text"
-            }
-          },
-          {
-            "text_it": "ma alla fede della tua Chiesa,",
-            "__massEditorPairKeys": {
-              "text_it": "5:text"
-            }
-          },
-          {
-            "text_it": "e donale unità e pace",
-            "__massEditorPairKeys": {
-              "text_it": "6:text"
-            }
-          },
-          {
-            "text_it": "secondo la tua volontà.",
-            "__massEditorPairKeys": {
-              "text_it": "7:text"
-            }
-          },
-          {
-            "text_it": "Congiunge le mani.",
-            "__massEditorPairKeys": {
-              "text_it": "8:text"
-            }
-          },
-          {
-            "text_it": "Tu che vivi e regni nei secoli dei secoli.",
-            "__massEditorPairKeys": {
-              "text_it": "9:text"
-            }
-          },
-          {
-            "text_it": "Amen.",
-            "__massEditorPairKeys": {
-              "text_it": "10:text"
-            },
-            "sp_it": "Tutti"
-          },
-          {
-            "rubric_it": "Il sacerdote, rivolto al popolo, allargando e ricongiungendo le mani, dice:",
-            "__massEditorPairKeys": {
-              "rubric_it": "11:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "La pace del Signore sia sempre con voi.",
-            "__massEditorPairKeys": {
-              "text_it": "12:text"
-            },
-            "sp_it": "C"
-          },
-          {
-            "rubric_it": "Il popolo risponde:",
-            "__massEditorPairKeys": {
-              "rubric_it": "13:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "E con il tuo spirito.",
-            "__massEditorPairKeys": {
-              "text_it": "14:text"
-            },
-            "sp_it": "Tutti"
-          },
-          {
-            "rubric_it": "Poi, secondo l’opportunità, il diacono, o il sacerdote, aggiunge:",
-            "__massEditorPairKeys": {
-              "rubric_it": "15:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Scambiatevi il dono della pace.",
-            "__massEditorPairKeys": {
-              "text_it": "16:text"
-            }
-          },
-          {
-            "rubric_it": "★",
-            "__massEditorPairKeys": {
-              "rubric_it": "17:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "18:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Come figli del Dio della pace,",
-            "__massEditorPairKeys": {
-              "text_it": "19:text"
-            }
-          },
-          {
-            "text_it": "scambiatevi un gesto di comunione fraterna.",
-            "__massEditorPairKeys": {
-              "text_it": "20:text"
-            }
-          },
-          {
-            "rubric_it": "★",
-            "__massEditorPairKeys": {
-              "rubric_it": "21:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "22:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "In Cristo, che ci ha resi tutti fratelli con la sua croce,",
-            "__massEditorPairKeys": {
-              "text_it": "23:text"
-            }
-          },
-          {
-            "text_it": "scambiatevi il dono della pace.",
-            "__massEditorPairKeys": {
-              "text_it": "24:text"
-            }
-          },
-          {
-            "rubric_it": "★",
-            "__massEditorPairKeys": {
-              "rubric_it": "25:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "26:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Nello Spirito del Cristo risorto,",
-            "__massEditorPairKeys": {
-              "text_it": "27:text"
-            }
-          },
-          {
-            "text_it": "scambiatevi il dono della pace.",
-            "__massEditorPairKeys": {
-              "text_it": "28:text"
-            }
-          },
-          {
-            "text_it": "E tutti si scambiano vicendevolmente un gesto di pace, di comunione e di carità secondo",
-            "__massEditorPairKeys": {
-              "text_it": "29:text"
-            }
-          },
-          {
-            "text_it": "gli usi locali. Il sacerdote dà la pace al diacono o al ministro.",
-            "__massEditorPairKeys": {
-              "text_it": "30:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        23
-      ],
-      "value": {
-        "id": "3.6 lamb",
-        "type": "part",
-        "header": {
-          "it": "Frazione del pane — Agnello di Dio"
-        },
-        "lines": [
-          {
-            "rubric_it": "Il sacerdote quindi prende l’ostia, la spezza sopra la patena e ne mette un frammento",
-            "__massEditorPairKeys": {
-              "rubric_it": "0:rubric"
-            }
-          },
-          {
-            "text_it": "nel calice, dicendo sottovoce:",
-            "__massEditorPairKeys": {
-              "text_it": "1:text"
-            }
-          },
-          {
-            "text_it": "Il Corpo e il Sangue del Signore nostro Gesù Cristo,",
-            "__massEditorPairKeys": {
-              "text_it": "2:text"
-            }
-          },
-          {
-            "text_it": "uniti in questo calice,",
-            "__massEditorPairKeys": {
-              "text_it": "3:text"
-            }
-          },
-          {
-            "text_it": "siano per noi cibo di vita eterna.",
-            "__massEditorPairKeys": {
-              "text_it": "4:text"
-            }
-          },
-          {
-            "text_it": "Intanto si canta o si dice:",
-            "__massEditorPairKeys": {
-              "text_it": "5:text"
-            }
-          },
-          {
-            "text_it": "Agnello di Dio, che togli i peccati del mondo,",
-            "__massEditorPairKeys": {
-              "text_it": "6:text"
-            }
-          },
-          {
-            "text_it": "abbi pietà di noi.",
-            "__massEditorPairKeys": {
-              "text_it": "7:text"
-            }
-          },
-          {
-            "text_it": "Agnello di Dio, che togli i peccati del mondo,",
-            "__massEditorPairKeys": {
-              "text_it": "8:text"
-            }
-          },
-          {
-            "text_it": "abbi pietà di noi.",
-            "__massEditorPairKeys": {
-              "text_it": "9:text"
-            }
-          },
-          {
-            "text_it": "Agnello di Dio, che togli i peccati del mondo,",
-            "__massEditorPairKeys": {
-              "text_it": "10:text"
-            }
-          },
-          {
-            "text_it": "dona a noi la pace.",
-            "__massEditorPairKeys": {
-              "text_it": "11:text"
-            }
-          },
-          {
-            "text_it": "Oppure in canto:",
-            "__massEditorPairKeys": {
-              "text_it": "12:text"
-            }
-          },
-          {
-            "text_it": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.",
-            "__massEditorPairKeys": {
-              "text_it": "13:text"
-            }
-          },
-          {
-            "text_it": "Agnus Dei, qui tollis peccáta mundi: miserére nobis.",
-            "__massEditorPairKeys": {
-              "text_it": "14:text"
-            }
-          },
-          {
-            "text_it": "Agnus Dei, qui tollis peccáta mundi: dona nobis pacem.",
-            "__massEditorPairKeys": {
-              "text_it": "15:text"
-            }
-          },
-          {
-            "rubric_it": "Se la frazione del pane si prolunga, l’invocazione si può ripetere più volte; l’ultima invocazione si conclude con le parole: dona a noi la pace [dona nobis pacem].",
-            "__massEditorPairKeys": {
-              "rubric_it": "16:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "rubric_it": "Il sacerdote, con le mani giunte, dice sottovoce:",
-            "__massEditorPairKeys": {
-              "rubric_it": "17:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Signore Gesù Cristo, Figlio del Dio vivo,",
-            "__massEditorPairKeys": {
-              "text_it": "18:text"
-            }
-          },
-          {
-            "text_it": "che per volontà del Padre",
-            "__massEditorPairKeys": {
-              "text_it": "19:text"
-            }
-          },
-          {
-            "text_it": "e con l’opera dello Spirito Santo",
-            "__massEditorPairKeys": {
-              "text_it": "20:text"
-            }
-          },
-          {
-            "text_it": "morendo hai dato la vita al mondo,",
-            "__massEditorPairKeys": {
-              "text_it": "21:text"
-            }
-          },
-          {
-            "text_it": "per il santo mistero del tuo Corpo e del tuo Sangue",
-            "__massEditorPairKeys": {
-              "text_it": "22:text"
-            }
-          },
-          {
-            "text_it": "liberami da ogni colpa e da ogni male,",
-            "__massEditorPairKeys": {
-              "text_it": "23:text"
-            }
-          },
-          {
-            "text_it": "fa’ che sia sempre fedele alla tua legge",
-            "__massEditorPairKeys": {
-              "text_it": "24:text"
-            }
-          },
-          {
-            "text_it": "e non sia mai separato da te.",
-            "__massEditorPairKeys": {
-              "text_it": "25:text"
-            }
-          },
-          {
-            "rubric_it": "Oppure:",
-            "__massEditorPairKeys": {
-              "rubric_it": "26:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "La comunione al tuo Corpo e al tuo Sangue,",
-            "__massEditorPairKeys": {
-              "text_it": "27:text"
-            }
-          },
-          {
-            "text_it": "Signore Gesù Cristo,",
-            "__massEditorPairKeys": {
-              "text_it": "28:text"
-            }
-          },
-          {
-            "text_it": "non diventi per me giudizio di condanna,",
-            "__massEditorPairKeys": {
-              "text_it": "29:text"
-            }
-          },
-          {
-            "text_it": "ma per tua misericordia",
-            "__massEditorPairKeys": {
-              "text_it": "30:text"
-            }
-          },
-          {
-            "text_it": "sia rimedio e difesa dell’anima e del corpo.",
-            "__massEditorPairKeys": {
-              "text_it": "31:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        24
-      ],
-      "value": {
-        "id": "3.7 communion_rite",
-        "type": "part",
-        "header": {
-          "it": "Comunione"
-        },
-        "lines": [
-          {
-            "text_it": "449Riti di Comunione",
-            "__massEditorPairKeys": {
-              "text_it": "0:text"
-            }
-          },
-          {
-            "rubric_it": "Il sacerdote genuflette, prende l’ostia e tenendola un po’ sollevata sulla patena o sul calice,",
-            "__massEditorPairKeys": {
-              "rubric_it": "1:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "rivolto al popolo, dice ad alta voce:",
-            "__massEditorPairKeys": {
-              "text_it": "2:text"
-            }
-          },
-          {
-            "text_it": "Ecco l’Agnello di Dio,",
-            "__massEditorPairKeys": {
-              "text_it": "3:text"
-            }
-          },
-          {
-            "text_it": "ecco colui che toglie i peccati del mondo.",
-            "__massEditorPairKeys": {
-              "text_it": "4:text"
-            }
-          },
-          {
-            "text_it": "Beati gli invitati alla cena dell’Agnello.",
-            "__massEditorPairKeys": {
-              "text_it": "5:text"
-            }
-          },
-          {
-            "text_it": "E continua, dicendo insieme con il popolo:",
-            "__massEditorPairKeys": {
-              "text_it": "6:text"
-            }
-          },
-          {
-            "text_it": "O Signore, non sono degno",
-            "__massEditorPairKeys": {
-              "text_it": "7:text"
-            }
-          },
-          {
-            "text_it": "di partecipare alla tua mensa,",
-            "__massEditorPairKeys": {
-              "text_it": "8:text"
-            }
-          },
-          {
-            "text_it": "ma di’ soltanto una parola",
-            "__massEditorPairKeys": {
-              "text_it": "9:text"
-            }
-          },
-          {
-            "text_it": "e io sarò salvato.",
-            "__massEditorPairKeys": {
-              "text_it": "10:text"
-            }
-          },
-          {
-            "rubric_it": "Il sacerdote, rivolto all’altare, dice sottovoce:",
-            "__massEditorPairKeys": {
-              "rubric_it": "11:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Il Corpo di Cristo",
-            "__massEditorPairKeys": {
-              "text_it": "12:text"
-            }
-          },
-          {
-            "text_it": "mi custodisca per la vita eterna.",
-            "__massEditorPairKeys": {
-              "text_it": "13:text"
-            }
-          },
-          {
-            "text_it": "E con riverenza si comunica al Corpo di Cristo. Poi prende il calice e dice sottovoce:",
-            "__massEditorPairKeys": {
-              "text_it": "14:text"
-            }
-          },
-          {
-            "text_it": "Il Sangue di Cristo",
-            "__massEditorPairKeys": {
-              "text_it": "15:text"
-            }
-          },
-          {
-            "text_it": "mi custodisca per la vita eterna.",
-            "__massEditorPairKeys": {
-              "text_it": "16:text"
-            }
-          },
-          {
-            "text_it": "E con riverenza si comunica al Sangue di Cristo.",
-            "__massEditorPairKeys": {
-              "text_it": "17:text"
-            }
-          },
-          {
-            "rubric_it": "Mentre il sacerdote si comunica al Corpo di Cristo, si inizia il Canto di comunione",
-            "__massEditorPairKeys": {
-              "rubric_it": "18:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "o si proclama l’antifona.",
-            "__massEditorPairKeys": {
-              "text_it": "19:text"
-            }
-          },
-          {
-            "rubric_it": "Il sacerdote prende poi la patena o la pisside e si reca verso i comunicandi. Nel presentare",
-            "__massEditorPairKeys": {
-              "rubric_it": "20:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "a ognuno l’ostia, la tiene alquanto sollevata e dice:",
-            "__massEditorPairKeys": {
-              "text_it": "21:text"
-            }
-          },
-          {
-            "text_it": "Il Corpo di Cristo.",
-            "__massEditorPairKeys": {
-              "text_it": "22:text"
-            }
-          },
-          {
-            "text_it": "Il comunicando risponde: Amen.",
-            "__massEditorPairKeys": {
-              "text_it": "23:text"
-            }
-          },
-          {
-            "text_it": "E riceve la comunione.",
-            "__massEditorPairKeys": {
-              "text_it": "24:text"
-            }
-          },
-          {
-            "text_it": "Nello stesso modo si comporta il diacono quando distribuisce la comunione.",
-            "__massEditorPairKeys": {
-              "text_it": "25:text"
-            }
-          },
-          {
-            "rubric_it": "Quando si distribuisce la comunione sotto le due specie, si osservi il rito indicato nell’Ordinamento Generale del Messale Romano , nn. 281-2 87.",
-            "__massEditorPairKeys": {
-              "rubric_it": "26:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Terminata la distribuzione della comunione, il sacerdote, o il diacono, o l’accolito, alla",
-            "__massEditorPairKeys": {
-              "text_it": "27:text"
-            }
-          },
-          {
-            "text_it": "credenza o a lato dell’altare, purifica la patena sul calice e quindi il calice.",
-            "__massEditorPairKeys": {
-              "text_it": "28:text"
-            }
-          },
-          {
-            "rubric_it": "Mentre purifica la patena e il calice, il sacerdote dice sottovoce:",
-            "__massEditorPairKeys": {
-              "rubric_it": "29:rubric"
-            },
-            "rubricInset_it": true
-          },
-          {
-            "text_it": "Il sacramento ricevuto con la bocca",
-            "__massEditorPairKeys": {
-              "text_it": "30:text"
-            }
-          },
-          {
-            "text_it": "sia accolto con purezza nel nostro spirito, o Signore,",
-            "__massEditorPairKeys": {
-              "text_it": "31:text"
-            }
-          },
-          {
-            "text_it": "e il dono a noi fatto nel tempo",
-            "__massEditorPairKeys": {
-              "text_it": "32:text"
-            }
-          },
-          {
-            "text_it": "ci sia rimedio per la vita eterna.",
-            "__massEditorPairKeys": {
-              "text_it": "33:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        25
-      ],
-      "value": {
-        "id": "3.8 communion",
-        "type": "part",
-        "header": {
-          "it": "Antifona alla comunione"
-        },
-        "lines": [
-          {
-            "text_it": "(Antifona alla comunione del giorno)",
-            "__massEditorPairKeys": {
-              "text_it": "0:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        26
-      ],
-      "value": {
-        "id": "3.9 prayer_after",
-        "type": "part",
-        "header": {
-          "it": "Dopo la comunione"
-        },
-        "lines": [
-          {
-            "text_it": "Preghiamo.",
-            "__massEditorPairKeys": {
-              "text_it": "0:text"
-            },
-            "sp_it": "C"
-          },
-          {
-            "text_it": "(Orazione dopo la comunione del giorno)",
-            "__massEditorPairKeys": {
-              "text_it": "1:text"
-            }
-          },
-          {
-            "text_it": "Amen.",
-            "__massEditorPairKeys": {
-              "text_it": "2:text"
-            },
-            "sp_it": "Tutti"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        28
-      ],
-      "value": {
-        "id": "4.1 announcement",
-        "type": "part",
-        "header": {
-          "it": "Avvisi"
-        },
-        "lines": [
-          {
-            "rubric_it": "Dopo l'orazione e prima della benedizione.",
-            "__massEditorPairKeys": {
-              "rubric_it": "0:rubric"
-            }
-          },
-          {
-            "rubric_it": "Si possono dare brevi comunicazioni al popolo.",
-            "__massEditorPairKeys": {
-              "rubric_it": "1:rubric"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        29
-      ],
-      "value": {
-        "id": "4.2 blessing",
-        "type": "selectable",
-        "header": {
-          "it": "Benedizione"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "it": "Benedizione"
-            },
-            "lines": [
-              {
-                "rubric_it": "Dopo l’orazione e prima della Benedizione si possono dare, quando occorre, brevi",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "text_it": "comunicazioni al popolo.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              },
-              {
-                "rubric_it": "Segue il congedo. Il sacerdote, allargando le braccia, rivolto verso il popolo, dice:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "3:text"
-                }
-              },
-              {
-                "rubric_it": "Il popolo risponde:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "4:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "5:text"
-                },
-                "sp_it": "Tutti"
-              },
-              {
-                "rubric_it": "Il sacerdote benedice il popolo:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "6:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Vi benedica Dio onnipotente,",
-                "__massEditorPairKeys": {
-                  "text_it": "7:text"
-                }
-              },
-              {
-                "text_it": "Padre e Figlio ^ e Spirito Santo.",
-                "__massEditorPairKeys": {
-                  "text_it": "8:text"
-                }
-              },
-              {
-                "text_it": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_it": "9:text"
-                },
-                "sp_it": "Tutti"
-              },
-              {
-                "text_it": "In certi giorni e in circostanze particolari si usa una forma più solenne di Benedizione",
-                "__massEditorPairKeys": {
-                  "text_it": "10:text"
-                }
-              },
-              {
-                "text_it": "o l’Orazione sul popolo.",
-                "__massEditorPairKeys": {
-                  "text_it": "11:text"
-                }
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "it": "Benedizione pontificale"
-            },
-            "lines": [
-              {
-                "rubric_it": "Nel benedire il popolo, il vescovo, ricevuta la mitra, allargando le braccia, dice:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "rubric_it": "Il vescovo dice:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Il Signore sia con voi.",
-                "__massEditorPairKeys": {
-                  "text_it": "2:text"
-                },
-                "sp_it": "Vescovo"
-              },
-              {
-                "text_it": "Tutti rispondono:",
-                "__massEditorPairKeys": {
-                  "text_it": "3:text"
-                }
-              },
-              {
-                "text_it": "E con il tuo spirito.",
-                "__massEditorPairKeys": {
-                  "text_it": "4:text"
-                }
-              },
-              {
-                "rubric_it": "Il vescovo dice:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "5:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Sia benedetto il nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "6:text"
-                },
-                "sp_it": "Vescovo"
-              },
-              {
-                "text_it": "Tutti rispondono:",
-                "__massEditorPairKeys": {
-                  "text_it": "7:text"
-                }
-              },
-              {
-                "text_it": "Ora e sempre.",
-                "__massEditorPairKeys": {
-                  "text_it": "8:text"
-                }
-              },
-              {
-                "rubric_it": "Il vescovo prosegue:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "9:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Il nostro aiuto è nel nome del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "10:text"
-                }
-              },
-              {
-                "text_it": "Tutti rispondono:",
-                "__massEditorPairKeys": {
-                  "text_it": "11:text"
-                }
-              },
-              {
-                "text_it": "Egli ha fatto cielo e terra.",
-                "__massEditorPairKeys": {
-                  "text_it": "12:text"
-                }
-              },
-              {
-                "rubric_it": "Quindi, il vescovo, ricevuto il pastorale, dice:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "13:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Vi benedica Dio onnipotente,",
-                "__massEditorPairKeys": {
-                  "text_it": "14:text"
-                }
-              },
-              {
-                "text_it": "e tracciando un triplice segno di croce sul popolo, continua:",
-                "__massEditorPairKeys": {
-                  "text_it": "15:text"
-                }
-              },
-              {
-                "text_it": "Padre ^ e Figlio ^ e Spirito ^ Santo.",
-                "__massEditorPairKeys": {
-                  "text_it": "16:text"
-                }
-              },
-              {
-                "text_it": "Tutti rispondono:",
-                "__massEditorPairKeys": {
-                  "text_it": "17:text"
-                }
-              },
-              {
-                "text_it": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_it": "18:text"
-                }
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        30
-      ],
-      "value": {
-        "id": "4.3 dismissal",
-        "type": "selectable",
-        "header": {
-          "it": "Congedo"
-        },
-        "variants": {
-          "A": {
-            "label": {
-              "it": "Formula 1"
-            },
-            "lines": [
-              {
-                "text_it": "Infine il diacono o il sacerdote stesso, rivolto al popolo, a mani giunte, dice:",
-                "__massEditorPairKeys": {
-                  "text_it": "0:text"
-                }
-              },
-              {
-                "text_it": "Andate in pace.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              }
-            ]
-          },
-          "B": {
-            "label": {
-              "it": "Formula 2"
-            },
-            "lines": [
-              {
-                "rubric_it": "Oppure:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "text_it": "La Messa è finita: andate in pace.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              }
-            ]
-          },
-          "C": {
-            "label": {
-              "it": "Formula 3"
-            },
-            "lines": [
-              {
-                "rubric_it": "Oppure:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "text_it": "Andate e annunciate il Vangelo del Signore.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              }
-            ]
-          },
-          "D": {
-            "label": {
-              "it": "Formula 4"
-            },
-            "lines": [
-              {
-                "rubric_it": "Oppure:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "text_it": "Glorificate il Signore con la vostra vita. Andate in pace.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              },
-              {
-                "rubric_it": "★",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2:rubric"
-                }
-              }
-            ]
-          },
-          "E": {
-            "label": {
-              "it": "Formula 5"
-            },
-            "lines": [
-              {
-                "rubric_it": "Oppure:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "text_it": "La gioia del Signore sia la vostra forza. Andate in pace.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              },
-              {
-                "rubric_it": "★",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2:rubric"
-                }
-              }
-            ]
-          },
-          "F": {
-            "label": {
-              "it": "Formula 6"
-            },
-            "lines": [
-              {
-                "rubric_it": "Oppure:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "rubric_it": "Nel nome del Signore, andate in pace.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "1:rubric"
-                }
-              },
-              {
-                "rubric_it": "★",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2:rubric"
-                }
-              }
-            ]
-          },
-          "G": {
-            "label": {
-              "it": "Formula 7"
-            },
-            "lines": [
-              {
-                "rubric_it": "Oppure, specialmente nelle domeniche di Pasqua:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "0:rubric"
-                }
-              },
-              {
-                "text_it": "Portate a tutti la gioia del Signore risorto. Andate in pace.",
-                "__massEditorPairKeys": {
-                  "text_it": "1:text"
-                }
-              },
-              {
-                "rubric_it": "Il popolo risponde:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "2:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Rendiamo grazie a Dio.",
-                "__massEditorPairKeys": {
-                  "text_it": "3:text"
-                },
-                "sp_it": "Tutti"
-              },
-              {
-                "rubric_it": "★ Oppure in canto:",
-                "__massEditorPairKeys": {
-                  "rubric_it": "4:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "Ite, missa est. R /. Deo grátias.",
-                "__massEditorPairKeys": {
-                  "text_it": "5:text"
-                }
-              },
-              {
-                "rubric_it": "Il sacerdote bacia l’altare in segno di venerazione come all’inizio; fa quindi con i ministri",
-                "__massEditorPairKeys": {
-                  "rubric_it": "6:rubric"
-                },
-                "rubricInset_it": true
-              },
-              {
-                "text_it": "un profondo inchino e torna in sacrestia.",
-                "__massEditorPairKeys": {
-                  "text_it": "7:text"
-                }
-              },
-              {
-                "rubric_it": "Quando segue immediatamente un’altra azione liturgica, si tralasciano i riti di conclusione.",
-                "__massEditorPairKeys": {
-                  "rubric_it": "8:rubric"
-                }
-              }
-            ]
-          }
-        }
-      }
-    },
-    {
-      "path": [
-        31
-      ],
-      "value": {
-        "id": "4.4 final_song",
-        "type": "part",
-        "header": {
-          "it": "Canto finale"
-        },
-        "lines": [
-          {
-            "rubric_it": "Segue il canto finale, secondo l'opportunità.",
-            "__massEditorPairKeys": {
-              "rubric_it": "0:rubric"
-            }
-          },
-          {
-            "rubric_it": "Il sacerdote venera l'altare e si ritira con i ministri.",
-            "__massEditorPairKeys": {
-              "rubric_it": "1:rubric"
-            }
-          }
-        ]
       }
     }
   ];
