@@ -87,7 +87,7 @@ globalThis.ordoLazyDataManifest = {
   },
   "missal": {
     "KR": "lazy/missal-KR.js?v=85e868827997",
-    "VN": "lazy/missal-VN.js?v=5586e0d2511f",
+    "VN": "lazy/missal-VN.js?v=9ccc1686044f",
     "EN": "lazy/missal-EN.js?v=a340c85e785d",
     "LA": "lazy/missal-LA.js?v=5ddbafcb2b28"
   },

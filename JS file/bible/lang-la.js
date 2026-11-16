@@ -81,7 +81,7 @@
     "2JN": {"koreanName":"요한 2서","name":"2 Io.","aliases":["2 Io."],"koreanKey":"2요한"},
     "3JN": {"koreanName":"요한 3서","name":"3 Io.","aliases":["3 Io."],"koreanKey":"3요한"},
     "JUD": {"koreanName":"유다서","name":"Iud.","aliases":["Iud."],"koreanKey":"유다"},
-    "REV": {"koreanName":"요한 묵시록","name":"Apc.","aliases":["Apc."],"koreanKey":"묵시"}
+    "REV": {"koreanName":"요한 묵시록","name":"Apc.","aliases":["Apc.","Ap"],"koreanKey":"묵시"}
   }
 };
   (root.bibleLanguageTables ||= {})[table.appLanguage] = table;

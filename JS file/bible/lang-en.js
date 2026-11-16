@@ -81,7 +81,7 @@
     "2JN": {"koreanName":"요한 2서","name":"2 John","aliases":["2 Jn","2 John"],"koreanKey":"2요한"},
     "3JN": {"koreanName":"요한 3서","name":"3 John","aliases":["3 Jn","3 John"],"koreanKey":"3요한"},
     "JUD": {"koreanName":"유다서","name":"Jude","aliases":["Jude"],"koreanKey":"유다"},
-    "REV": {"koreanName":"요한 묵시록","name":"Revelation","aliases":["Rv","Revelation"],"koreanKey":"묵시"}
+    "REV": {"koreanName":"요한 묵시록","name":"Revelation","aliases":["Rv","Revelation","Apocalypse","Apoc"],"koreanKey":"묵시"}
   }
 };
   (root.bibleLanguageTables ||= {})[table.appLanguage] = table;

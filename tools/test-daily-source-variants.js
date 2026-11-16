@@ -36,4 +36,9 @@ const page=(name)=>'<html><body><h1>'+name+'</h1>'+links+'<h3>Reading</h3><p>Rev
   cemOriginals++;return new Response('2026-11-08 00:00:00'+page('Approved Mexican text').replaceAll('Reading','PRIMERA LECTURA').replaceAll('Responsorial Psalm','SALMO RESPONSORIAL').replaceAll('Gospel','EVANGELIO').replaceAll('<h3>Alleluia</h3>','<h3>ACLAMACIÓN ANTES DEL EVANGELIO</h3>'));
  }});
  try{const result=await mexican.collect();assert(result.validation.complete,JSON.stringify(result.validation));assert(cemShells>0&&cemOriginals>0,'CEM loading shell hid its published dated rows');console.log('Mexican source: a successful loading shell cannot hide the dated official readings.');}finally{mexican.close();}
+ const philippines=createRuntime({country:'PH',date:'2026-11-26',source:'official'},{metadata,fetchImpl:async url=>{
+  if(String(url).includes('cbcp.ph'))return new Response(page('Foreign national text').replace('<h1>Foreign national text</h1>','<h1>Daily Readings</h1><p>Thanksgiving Day [In the Dioceses of the United States]</p>'));
+  return new Response(String(url).includes('-Ordinary')?page('Ordinary approved text'):'<html><body><h1>Dated Mass choices</h1>'+links+'</body></html>');
+ }});
+ try{const result=await philippines.collect();assert(result.validation.complete,JSON.stringify(result.validation));assert(result.parsed.data.reading1.text.includes('Ordinary approved text'));assert(!result.parsed.data.reading1.text.includes('Foreign national text'));assert(philippines.snapshots.some(item=>item.url.includes('cbcp.ph')),'Rejected regional source was not archived');console.log('Regional source restrictions: a US-only Mass is archived and the Philippines native day uses the approved ordinary fallback.');}finally{philippines.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

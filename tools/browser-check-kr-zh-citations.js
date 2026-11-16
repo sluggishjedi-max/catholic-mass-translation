@@ -43,7 +43,7 @@ const fixtures={
    const legacy={...structuredClone(koreanEntrance),type:'selectable',variants:{header:[koreanEntrance.cit],lines:koreanEntrance.lines}};
    delete legacy.lines;
    for(const type of ['part','selectable']){
-    const mixed={...mergeIndependentOrdinary(legacy,chineseEntrance),type};normalizeDailySelectableTemplate(mixed);
+    const mixed={...ordoOrdinaryDisplay.merge(ordoOrdinaryDisplay.prepare(legacy,'kr'),ordoOrdinaryDisplay.prepare(chineseEntrance,'zh')),type};normalizeDailySelectableTemplate(mixed);
     const lines=type==='selectable'?mixed.variants.A.lines:mixed.lines;
     for(const lower of ['kr','zh'])check(lines.some(line=>line['rubric_'+lower]),'Cached legacy template lost '+lower+' rubric');
    }

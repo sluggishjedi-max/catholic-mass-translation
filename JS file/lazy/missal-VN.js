@@ -2058,7 +2058,9 @@ globalThis.localMissalPrayerData.languages["VN"] = {
         "kind": "proper",
         "data": {
           "collect": "Lạy Chúa, Chúa đã cho thánh nữ Ê-li-sa-bét nhận ra và tôn kính Ðức Ki-tô nơi người nghèo khổ. Xin nhận lời thánh nữ chuyển cầu mà ban cho chúng con luôn hết lòng mến yêu phục vụ những ai đang lâm cảnh khốn cùng. Chúng con cầu xin..."
-        }
+        },
+        "commonPage": 1267,
+        "commonInstruction": "Lấy Phần Chung Các Thánh Lo Việc Bác Ái"
       }
     ],
     "11-18": [

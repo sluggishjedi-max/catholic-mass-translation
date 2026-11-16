@@ -1,0 +1,5319 @@
+{
+  "release": "V31.2-20261117-1",
+  "parserRevision": "v31.2-20261117-1",
+  "checkedAt": "2026-11-16T18:18:06.119Z",
+  "period": {
+    "start": "2026-11-16",
+    "end": "2026-11-30",
+    "days": 15
+  },
+  "coverage": {
+    "countries": 18,
+    "sourceProfiles": 20,
+    "cases": 300,
+    "publishedDayRecords": 197,
+    "partialOrUnavailable": 103,
+    "storedRevisions": 89,
+    "completeRevisions": 88
+  },
+  "criteria": [
+    "Preserve every publisher Mass as a dated native record and archive its raw response.",
+    "Merge equivalent citations; retain different regional Scripture as language-specific options when the observance is the same.",
+    "Do not mix another observance or a higher-rank national formulary into the original calendar prayers.",
+    "Separate explicit speaker markers and structural verse markers from the daily body.",
+    "Supplement daily propers only from the identified Missal formulary and explicitly declared common.",
+    "Reject explicit wrong dates, wrong Sunday cycles, and default sources restricted to another country.",
+    "Protect edited snapshots; ordinary sentence rows, rubrics and order remain controlled by editable country datasets."
+  ],
+  "results": {
+    "parserErrors": 0,
+    "sameObservanceProvidedScriptureUnmatched": 0,
+    "duplicatedSpeakerPrefixes": 0,
+    "automatedChecks": [
+      {
+        "name": "test-daily-multilingual-gaps",
+        "code": 0
+      },
+      {
+        "name": "test-daily-service",
+        "code": 0
+      },
+      {
+        "name": "test-daily-queue",
+        "code": 0
+      },
+      {
+        "name": "test-vatican-daily-schedule",
+        "code": 0
+      },
+      {
+        "name": "test-daily-content",
+        "code": 0
+      },
+      {
+        "name": "test-daily-parser",
+        "code": 0
+      },
+      {
+        "name": "test-daily-loader",
+        "code": 0
+      },
+      {
+        "name": "test-cbck-vigil",
+        "code": 0
+      },
+      {
+        "name": "test-taiwan-reading-options",
+        "code": 0
+      },
+      {
+        "name": "test-daily-source-variants",
+        "code": 0
+      },
+      {
+        "name": "test-daily-source-inventory",
+        "code": 0
+      },
+      {
+        "name": "test-parser-integrity",
+        "code": 0
+      },
+      {
+        "name": "test-daily-layout",
+        "code": 0
+      },
+      {
+        "name": "test-ordinary-row-pairing",
+        "code": 0
+      },
+      {
+        "name": "test-ordinary-display",
+        "code": 0
+      },
+      {
+        "name": "test-firebase-ordinary-cache",
+        "code": 0
+      },
+      {
+        "name": "test-mass-editor-literals",
+        "code": 0
+      },
+      {
+        "name": "test-primary-calendar",
+        "code": 0
+      },
+      {
+        "name": "verify-v27-7-bible-aliases",
+        "code": 0
+      },
+      {
+        "name": "verify-v29-2-citations",
+        "code": 0
+      },
+      {
+        "name": "verify-psalm-numbering",
+        "code": 0
+      },
+      {
+        "name": "browser-check-source-inventory",
+        "code": 0
+      },
+      {
+        "name": "browser-check-kpv-all-souls",
+        "code": 0
+      },
+      {
+        "name": "browser-check-kpv-titles",
+        "code": 0
+      },
+      {
+        "name": "browser-check-kr-zh-citations",
+        "code": 0
+      },
+      {
+        "name": "browser-check-daily-multilingual-gaps",
+        "code": 0
+      }
+    ],
+    "calendarComparisons": 438400,
+    "calendarDates": 1096,
+    "browser": {
+      "widths": [
+        1280,
+        390,
+        320
+      ],
+      "realSourceCases": 18,
+      "optionsPerWidth": 123
+    }
+  },
+  "byCountry": {
+    "KR": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "VN": {
+      "cases": 45,
+      "published": 43,
+      "partial": 0,
+      "unavailable": 2
+    },
+    "US": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "IE": {
+      "cases": 15,
+      "published": 3,
+      "partial": 12,
+      "unavailable": 0
+    },
+    "GB-ENG": {
+      "cases": 15,
+      "published": 6,
+      "partial": 9,
+      "unavailable": 0
+    },
+    "GB-WLS": {
+      "cases": 15,
+      "published": 6,
+      "partial": 9,
+      "unavailable": 0
+    },
+    "GB-SCT": {
+      "cases": 15,
+      "published": 6,
+      "partial": 9,
+      "unavailable": 0
+    },
+    "PH": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "TW": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "AU": {
+      "cases": 15,
+      "published": 3,
+      "partial": 12,
+      "unavailable": 0
+    },
+    "NZ": {
+      "cases": 15,
+      "published": 3,
+      "partial": 12,
+      "unavailable": 0
+    },
+    "JP": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "IT": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "PT": {
+      "cases": 15,
+      "published": 0,
+      "partial": 0,
+      "unavailable": 15
+    },
+    "MX": {
+      "cases": 15,
+      "published": 6,
+      "partial": 0,
+      "unavailable": 9
+    },
+    "DE": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "BR": {
+      "cases": 15,
+      "published": 15,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "VA": {
+      "cases": 15,
+      "published": 1,
+      "partial": 0,
+      "unavailable": 14
+    }
+  },
+  "limitations": [
+    {
+      "country": "PT",
+      "reason": "The official lectionary index is blocked with HTTP 403; no text was fabricated."
+    },
+    {
+      "country": "MX",
+      "reason": "The dated CEM rows for November 22-29 were not available; November 30 returned HTTP 429. CEM also prints week XXXII for some dated week XXXIII rows; the printed title and actual body are retained."
+    },
+    {
+      "country": "VA",
+      "reason": "iBreviary exposes its current Roman day only; future dated lectionaries are not published from a current-day substitute."
+    },
+    {
+      "countries": [
+        "IE",
+        "GB-ENG",
+        "GB-WLS",
+        "GB-SCT",
+        "AU",
+        "NZ"
+      ],
+      "reason": "Universalis future dates outside its public window have incomplete readings. Partial collections remain stored and unpublished."
+    },
+    {
+      "country": "VN",
+      "source": "hanoi",
+      "dates": [
+        "2026-11-22",
+        "2026-11-29"
+      ],
+      "reason": "No complete matching Hanoi source was resolved. November 29 redirects to a Sunday cycle A article although cycle B is required. KPV remains separately available."
+    }
+  ],
+  "cases": [
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Hai Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Hai · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Hai Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Hai · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Hai Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Edmund of Abingdon, Bishop",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Margaret of Scotland",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅三周星期一",
+      "projectedTitle": "常年期第33週星期一",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第33月曜日",
+      "projectedTitle": "年間第33月曜日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "LUNEDÌ DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Lunedì DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "entrance",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-date-not-resolved:2026-11-16:portugal-lectionary-index-http-403:lec_Santoral.php;portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "checked",
+      "nativeTitle": "LUNES XXXII DEL TIEMPO ORDINARIO",
+      "projectedTitle": "Lunes DE LA SEMANA XXXIII DEL TIEMPO ORDINARIO",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "MONTAG",
+      "projectedTitle": "Montag DER XXXIII. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "2ª feira da 33ª Semana do Tempo Comum",
+      "projectedTitle": "Segunda-feira DA SEMANA XXXIII DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-16",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Feria secunda hebdomadae XXXIII per annum",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thánh Êlisabét Hungari, Nữ tu",
+      "projectedTitle": "Thánh nữ Ê-li-sa-bét Hung-ga-ri",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Ba · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thánh nữ Ê-li-sa-bét Hung-ga-ri",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Ba · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thánh nữ Ê-li-sa-bét Hung-ga-ri",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Memorial of Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Hilda, Abbess",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Memorial of Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "聖麗莎‧匈牙利聖婦會士紀念日",
+      "projectedTitle": "聖麗莎‧匈牙利聖婦會士紀念日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saint Elizabeth of Hungary, Religious",
+      "projectedTitle": "Saint Elizabeth of Hungary, Religious",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第33火曜日",
+      "projectedTitle": "ハンガリーの聖エリザベト修道女",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "SANTA ELISABETTA D'UNGHERIA, RELIGIOSA - MEMORIA",
+      "projectedTitle": "Santa Elisabetta d'Ungheria, religiosa",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-date-not-resolved:2026-11-17:portugal-lectionary-index-http-403:lec_Santoral.php;portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "checked",
+      "nativeTitle": "SANTA ISABEL DE HUNGRÍA, religiosa",
+      "projectedTitle": "Santa Isabel de Hungría, religiosa",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "Hl. Gertrud von Helfta Ordensfrau, Mystikerin",
+      "projectedTitle": "Hl. Elisabeth von Ungarn, Ordensfrau",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Santa Isabel da Hungria, Religiosa, Memória",
+      "projectedTitle": "Santa Isabel da Hungria, religiosa",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-17",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-17."
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Tư Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Tư · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Tư Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Tư · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Tư Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅三周星期三",
+      "projectedTitle": "常年期第33週星期三",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第33水曜日",
+      "projectedTitle": "年間第33水曜日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "MERCOLEDÌ DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Mercoledì DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "entrance",
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-date-not-resolved:2026-11-18:portugal-lectionary-index-http-403:lec_Santoral.php;portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "checked",
+      "nativeTitle": "Miércoles XXXII del Tiempo Ordinario",
+      "projectedTitle": "Miércoles DE LA SEMANA XXXIII DEL TIEMPO ORDINARIO",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "MITTWOCH",
+      "projectedTitle": "Mittwoch DER XXXIII. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "4ª feira da 33ª Semana do Tempo Comum",
+      "projectedTitle": "Quarta-feira DA SEMANA XXXIII DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-18",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-18."
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Năm Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Năm · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Năm Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Năm · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Năm Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅三周星期四",
+      "projectedTitle": "常年期第33週星期四",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第33木曜日 年間",
+      "projectedTitle": "年間第33木曜日",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "GIOVEDÌ DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Giovedì DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-date-not-resolved:2026-11-19:portugal-lectionary-index-http-403:lec_Santoral.php;portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "checked",
+      "nativeTitle": "Jueves XXXII del Tiempo Ordinario",
+      "projectedTitle": "Jueves DE LA SEMANA XXXIII DEL TIEMPO ORDINARIO",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "DONNERSTAG",
+      "projectedTitle": "Donnerstag DER XXXIII. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Ss. Roque González, Afonso Rodríguez e João de Castillo, PresbsMts, Memória",
+      "projectedTitle": "Quinta-feira DA SEMANA XXXIII DO TEMPO COMUM",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-19",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-19."
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Sáu Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Sáu · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Sáu Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Sáu · Tuần XXXIII · Mùa Thường Niên",
+      "projectedTitle": "Thứ Sáu Tuần XXXIII Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-third Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅三周星期五",
+      "projectedTitle": "常年期第33週星期五",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第33金曜日 年間",
+      "projectedTitle": "年間第33金曜日",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "VENERDÌ DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Venerdì DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-date-not-resolved:2026-11-20:portugal-lectionary-index-http-403:lec_Santoral.php;portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "checked",
+      "nativeTitle": "VIERNES XXXII DEL TIEMPO ORDINARIO",
+      "projectedTitle": "Viernes DE LA SEMANA XXXIII DEL TIEMPO ORDINARIO",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "FREITAG",
+      "projectedTitle": "Freitag DER XXXIII. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "6ª feira da 33ª Semana do Tempo Comum",
+      "projectedTitle": "Sexta-feira DA SEMANA XXXIII DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-20",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-20."
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Đức Trinh Nữ Maria dâng mình trong Đền thờ",
+      "projectedTitle": "Đức Trinh Nữ Maria dâng mình trong Đền thờ",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Đức Mẹ Dâng Mình Trong Đền Thờ",
+      "projectedTitle": "Đức Trinh Nữ Maria dâng mình trong Đền thờ",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "prayer_offerings",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Đức Mẹ Dâng Mình Trong Đền Thờ",
+      "projectedTitle": "Đức Trinh Nữ Maria dâng mình trong Đền thờ",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "prayer_offerings",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Memorial of the Presentation of the Blessed Virgin Mary",
+      "projectedTitle": "The Presentation of the Blessed Virgin Mary",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "The Presentation of the Blessed Virgin Mary",
+      "projectedTitle": "The Presentation of the Blessed Virgin Mary",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "The Presentation of the Blessed Virgin Mary",
+      "projectedTitle": "The Presentation of the Blessed Virgin Mary",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "The Presentation of the Blessed Virgin Mary",
+      "projectedTitle": "The Presentation of the Blessed Virgin Mary",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Memorial of the Presentation of the Blessed Virgin Mary",
+      "projectedTitle": "The Presentation of the Blessed Virgin Mary",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "聖母奉獻日",
+      "projectedTitle": "聖母奉獻日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "partial"
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第33土曜日",
+      "projectedTitle": "聖マリアの奉献",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "PRESENTAZIONE DELLA BEATA VERGINE MARIA – MEMORIA",
+      "projectedTitle": "Presentazione della Beata Vergine Maria",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-date-not-resolved:2026-11-21:portugal-lectionary-index-http-403:lec_Santoral.php;portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "checked",
+      "nativeTitle": "LA PRESENTACIÓN DE LA SANTÍSIMA VIRGEN MARÍA",
+      "projectedTitle": "Presentación de la Santísima Virgen María",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "21. November",
+      "projectedTitle": "Gedenktag Unserer Lieben Frau in Jerusalem",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Apresentação da Bem-aventurada Virgem Maria, Memória",
+      "projectedTitle": "Apresentação da Bem-aventurada Virgem Maria",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-21",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-21."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "not-published",
+      "error": "No strict VN readings found"
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Lễ Chúa Ki‑tô Vua",
+      "projectedTitle": "Chúa Nhật Lễ Chúa Giêsu Kitô Vua Vũ Trụ",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Lễ Chúa Ki‑tô Vua",
+      "projectedTitle": "Chúa Nhật Lễ Chúa Giêsu Kitô Vua Vũ Trụ",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "The Solemnity of Our Lord Jesus Christ, King of the Universe",
+      "projectedTitle": "The Solemnity of Our Lord Jesus Christ, King of the Universe",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Today's Readings",
+      "projectedTitle": "The Solemnity of Our Lord Jesus Christ, King of the Universe",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "基督普世君王節主日",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "王であるキリスト",
+      "projectedTitle": "王であるキリスト",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "XXXIV DOMENICA DEL TEMPO ORDINARIO – SOLENNITÀ DI NOSTRO SIGNORE GESÚ CRISTO RE DELL'UNIVERSO – ANNO A",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_dom_a.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-22."
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "Christkönigssonntag",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Nosso Senhor Jesus Cristo, Rei do Universo, Solenidade",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-22",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-22."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Hai Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Hai · Tuần XXXIV · Mùa Thường Niên",
+      "projectedTitle": "Thứ Hai Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Hai · Tuần XXXIV · Mùa Thường Niên",
+      "projectedTitle": "Thứ Hai Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Monday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Monday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅四周星期一",
+      "projectedTitle": "常年期第34週星期一",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第34月曜日",
+      "projectedTitle": "年間第34月曜日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "LUNEDÌ DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Lunedì DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "entrance",
+        "psalm",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-23."
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "MONTAG",
+      "projectedTitle": "Montag DER XXXIV. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "2ª feira da 34ª Semana do Tempo Comum",
+      "projectedTitle": "Segunda-feira DA SEMANA XXXIV DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-23",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-23."
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thánh Anrê Dũng Lạc và các bạn tử đạo",
+      "projectedTitle": "Thánh Anrê Dũng Lạc, Linh mục, và các bạn tử đạo",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "gospel_accl",
+        "reading2"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Các Thánh Tử Đạo Việt Nam",
+      "projectedTitle": "Thánh Anrê Dũng Lạc, Linh mục, và các bạn tử đạo",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel",
+        "reading2"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Các Thánh Tử Đạo Việt Nam",
+      "projectedTitle": "Thánh Anrê Dũng Lạc, Linh mục, và các bạn tử đạo",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel",
+        "reading2"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Memorial of Saint Andrew Dung-Lac, Priest, and Companions, Martyrs",
+      "projectedTitle": "Saint Andrew Dung-Lac, Priest, and Companions, Martyrs",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Memorial of Saint Andrew Dung-Lac, Priest, and Companions, Martyrs",
+      "projectedTitle": "Saint Andrew Dung-Lac, Priest, and Companions, Martyrs",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "聖永樂司鐸及同伴殉道紀念日",
+      "projectedTitle": "聖永樂司鐸及同伴殉道紀念日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第34火曜日",
+      "projectedTitle": "聖アンデレ・ズンラク司祭と同志殉教者",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "SANTI ANDREA DUNG-LAC, PRESBITERO, E COMPAGNI, MARTIRI – MEMORIA",
+      "projectedTitle": "Santi Andrea Dung-Lac, presbitero, e compagni, martiri",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-24."
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "DIENSTAG",
+      "projectedTitle": "Hl. Andreas Dung-Lac und Gefährten, Märtyrer",
+      "sameObservance": true,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "gospel_accl"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Santo André Dung-Lac, Presbítero e Companheiros Mártires, Memória",
+      "projectedTitle": "Santos André Dung-Lac e companheiros, mártires",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-24",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-24."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Tư Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Tư Tuần XXXIV - Mùa Thường Niên",
+      "projectedTitle": "Thứ Tư Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "entrance",
+        "reading1",
+        "psalm",
+        "gospel_accl",
+        "gospel",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Tư · Tuần XXXIV · Mùa Thường Niên",
+      "projectedTitle": "Thứ Tư Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Wednesday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Wednesday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅四周星期三",
+      "projectedTitle": "常年期第34週星期三",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第34水曜日",
+      "projectedTitle": "年間第34水曜日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "MERCOLEDÌ DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Mercoledì DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "entrance",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-25."
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "MITTWOCH",
+      "projectedTitle": "Mittwoch DER XXXIV. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "gospel_accl"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "4ª feira da 34ª Semana do Tempo Comum",
+      "projectedTitle": "Quarta-feira DA SEMANA XXXIV DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-25",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-25."
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Năm Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Năm Tuần XXXIV - Mùa Thường Niên",
+      "projectedTitle": "Thứ Năm Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Năm · Tuần XXXIV · Mùa Thường Niên",
+      "projectedTitle": "Thứ Năm Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thursday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Thursday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅四周星期四",
+      "projectedTitle": "常年期第34週星期四",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第34木曜日 年間",
+      "projectedTitle": "年間第34木曜日",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "GIOVEDÌ DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Giovedì DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-26."
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "DONNERSTAG",
+      "projectedTitle": "Donnerstag DER XXXIV. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "5ª feira da 34ª Semana do Tempo Comum",
+      "projectedTitle": "Quinta-feira DA SEMANA XXXIV DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-26",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-26."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Sáu Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Sáu Tuần XXXIV - Mùa Thường Niên",
+      "projectedTitle": "Thứ Sáu Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Sáu · Tuần XXXIV · Mùa Thường Niên",
+      "projectedTitle": "Thứ Sáu Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Friday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Friday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅四周星期五",
+      "projectedTitle": "常年期第34週星期五",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第34金曜日 年間",
+      "projectedTitle": "年間第34金曜日",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "VENERDÌ DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Venerdì DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-27."
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "FREITAG",
+      "projectedTitle": "Freitag DER XXXIV. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "6ª feira da 34ª Semana do Tempo Comum",
+      "projectedTitle": "Sexta-feira DA SEMANA XXXIV DO TEMPO COMUM",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-27",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-27."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "Thứ Bảy Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Bảy Tuần XXXIV - Mùa Thường Niên",
+      "projectedTitle": "Thứ Bảy Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thứ Bảy · Tuần XXXIV · Mùa Thường Niên",
+      "projectedTitle": "Thứ Bảy Tuần XXXIV Mùa Thường Niên",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saturday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Saturday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Saturday of the Thirty-fourth Week in Ordinary Time",
+      "projectedTitle": "Saturday of the Thirty-fourth Week in Ordinary Time",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "常年期第卅四周星期六",
+      "projectedTitle": "常年期第34週星期六",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "gospel_accl",
+        "communion"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "第34土曜日 年間",
+      "projectedTitle": "年間第34土曜日",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "SABATO DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)",
+      "projectedTitle": "Sabato DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_VI.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-28."
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "SAMSTAG",
+      "projectedTitle": "Samstag DER XXXIV. WOCHE IM JAHRESKREIS",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Sábado da 34ª Semana do Tempo Comum",
+      "projectedTitle": "Sábado DA SEMANA XXXIV DO TEMPO COMUM",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-28",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-28."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "not-published",
+      "error": "Daily source declares a different Sunday lectionary cycle."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Chúa Nhật Tuần I - Mùa Vọng",
+      "projectedTitle": "Chúa Nhật I Mùa Vọng",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Chúa Nhật · Tuần I · Mùa Vọng",
+      "projectedTitle": "Chúa Nhật I Mùa Vọng",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "First Sunday of Advent",
+      "projectedTitle": "First Sunday of Advent",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "First Sunday of Advent",
+      "projectedTitle": "First Sunday of Advent",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "將臨期第一主日",
+      "projectedTitle": "將臨期第1主日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "",
+      "projectedTitle": "待降節第1主日",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "I DOMENICA DI AVVENTO - ANNO B",
+      "projectedTitle": "I DOMENICA DI AVVENTO",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_dom_b.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "CEM daily Mass row is unavailable for 2026-11-29."
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "Erster Adventssonntag",
+      "projectedTitle": "I. ADVENTSSONNTAG",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "psalm",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "1º Domingo do Advento",
+      "projectedTitle": "DOMINGO I DO ADVENTO",
+      "sameObservance": false,
+      "sameCelebration": false,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-29",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-29."
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "KR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "KR"
+      },
+      "status": "original-control"
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "VN",
+        "source": "hanoi",
+        "profile": "",
+        "sourceId": "hanoi",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "Thánh Anrê, Tông đồ",
+      "projectedTitle": "Thánh Anrê, Tông đồ",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "gospel_accl"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_SOUTH",
+        "sourceId": "ktcg_south",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "THÁNH AN-RÊ",
+      "projectedTitle": "Thánh Anrê, Tông đồ",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "VN",
+        "source": "ktcg",
+        "profile": "VIETNAM_NORTH",
+        "sourceId": "ktcg_north",
+        "lang": "VN"
+      },
+      "status": "checked",
+      "nativeTitle": "THÁNH AN‑RÊ, TÔNG ĐỒ",
+      "projectedTitle": "Thánh Anrê, Tông đồ",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "US",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Feast of Saint Andrew, Apostle",
+      "projectedTitle": "Saint Andrew, Apostle",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "IE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "GB-ENG",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "GB-WLS",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "GB-SCT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "PH",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "checked",
+      "nativeTitle": "Feast of Saint Andrew, Apostle",
+      "projectedTitle": "Saint Andrew, Apostle",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "TW",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ZH"
+      },
+      "status": "checked",
+      "nativeTitle": "聖安德宗徒",
+      "projectedTitle": "聖安德宗徒",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "AU",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "NZ",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "EN"
+      },
+      "status": "not-published",
+      "error": "source-date-outside-public-window: Universalis publishes only yesterday, today and the week ahead."
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "JP",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "JP"
+      },
+      "status": "checked",
+      "nativeTitle": "聖アンデレ使徒 聖人の記念",
+      "projectedTitle": "聖アンデレ使徒",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": [
+        "entrance",
+        "collect",
+        "prayer_offerings",
+        "communion",
+        "prayer_after"
+      ]
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "IT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "IT"
+      },
+      "status": "checked",
+      "nativeTitle": "SANT'ANDREA APOSTOLO - FESTA",
+      "projectedTitle": "Sant'Andrea apostolo",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "psalm"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "PT",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "not-published",
+      "error": "portugal-lectionary-index-http-403:lec_Santoral.php"
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "MX",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "ES"
+      },
+      "status": "not-published",
+      "error": "HTTP 429"
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "DE",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "DE"
+      },
+      "status": "checked",
+      "nativeTitle": "HL. ANDREAS Apostel",
+      "projectedTitle": "Hl. Andreas, Apostel",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [
+        "gospel_accl"
+      ],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "BR",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "PT"
+      },
+      "status": "checked",
+      "nativeTitle": "Santo André, Apóstolo, Festa",
+      "projectedTitle": "Santo André, apóstolo",
+      "sameObservance": true,
+      "sameCelebration": true,
+      "regionalOptions": [],
+      "unavailableSections": []
+    },
+    {
+      "request": {
+        "date": "2026-11-30",
+        "country": "VA",
+        "source": "official",
+        "profile": "",
+        "sourceId": "official",
+        "lang": "LA"
+      },
+      "status": "not-published",
+      "error": "iBreviary only serves its current Roman date, not 2026-11-30."
+    }
+  ]
+}

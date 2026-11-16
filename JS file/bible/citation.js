@@ -43,7 +43,7 @@
   }
   function normalizeVerseConjunctions(value) {
     // Apply only between numeric verse references, never inside a book name.
-    return String(value).replace(/(\d[a-z]*)(?:\s*(?:과|와|及|和|與|与|と)\s*|\s+(?:and|et|und|y|e|và)\s+)(?=\d)/giu, '$1.');
+    return String(value).replace(/(\d[a-z]*)(?:\s*(?:과|와|及|和|與|与|と)\s*|\s+(?:and|et|und|y|e|và|u\.)\s+)(?=\d)/giu, '$1.');
   }
   function normalizeChapterNumbers(value) {
     return String(value)
@@ -60,11 +60,17 @@
       // Vietnamese lectionaries also append the response reference without
       // parentheses (for example "Đ. c.6b" or "Đ. x. c.5").  It is metadata
       // for the refrain, not part of the Psalm stanza range.
+      // A refrain can cite a different book ("Đ. Kh 2,7b"), rather than a
+      // verse of this Psalm. The explicit response marker ends the main range.
+      .replace(/\s+(?:đ|dap|r(?:esp)?|response|refrain)[.:：]\s*[^\n]*$/iu,'')
       .replace(/\s+(?:đ|dap|r(?:esp)?|response|refrain)\.?\s*(?:x\.?\s*)?(?:c\.?\s*)?\d+[a-z]?(?:\s*[-–—.]\s*\d+[a-z]?)?\s*$/iu,'')
       .replace(/\s*[℟◎]\.?\s*\d[^\n]*$/u,'')
       .replace(/\s*[℟◎]\s+[^\n]*$/u,'')
+      .replace(/\s*[(（]\s*(?:kv|r\.|℟|◎)\s*[:：]?[^\n]*$/iu,'')
       .replace(/\s*(?:참고|참조|参照|參照|參閱)$/u,'')
-      .replace(/^(?:cf\.?|cfr\.?|x\.?|see|vgl\.?)\s+/,'')
+      .replace(/^(?:(?:cf|cfr|x|vgl)\.\s*|(?:cf|cfr|x|see|vgl)\s+)/,'')
+      .replace(code === 'IT' ? /^(?:dal|dall|da)\s+(?=(?:sal|lc)\b)/u : /$a/u,'')
+      .replace(code === 'ES' ? /^del\s+(?=salmo\b)/u : /$a/u,'')
       .replace(/^恭讀/,'').replace(/\s+/g,'').replace(/[（]/g,'(').replace(/[）]/g,')');
     for (const entry of entries(code)) {
       if (!text.startsWith(entry.key)) continue;
@@ -73,7 +79,15 @@
       if (singleChapterBooks.has(entry.id) && /^\d+[a-z]*(?:[-–—―−~～.,;+]\d+[a-z]*)*$/iu.test(tail)) tail = '1,' + tail;
       // A Psalm's trailing parenthetical verse identifies its refrain, not
       // another stanza. Keep the alternate chapter number before the colon.
-      if (entry.id === 'PSA') tail = tail.replace(/\(\d+[a-z]*(?:[-–—.]\d+[a-z]*)?\)$/iu,'');
+      if (entry.id === 'PSA') {
+        tail = tail.replace(/([,.:・][^(]+)\([^()]*\)$/u,'$1');
+        tail = tail.replace(/\((?:(?:c\.)?\d+[a-z]*(?:[-–—.]\d+[a-z]*)?|[a-z]+\d+[,.:][^()]*)\)$/iu,'');
+        // 19A is the publisher's name for the first half of Psalm 19, not
+        // an alternate number containing a subverse.
+        tail = tail.replace(/\((\d+)[ab]\)/iu,'($1)');
+        const chapterOnly = tail.match(/^(\d+)(?:\((\d+)\))?$/u);
+        if (chapterOnly && resolve(entry.key,code)) return {id:entry.id,kr:entry.kr,chapter:Number(chapterOnly[1]),chapterPart:'',alternateChapter:chapterOnly[2]?Number(chapterOnly[2]):null,alternateChapterRange:chapterOnly[2] || '',language:code,verses:'',chapterOnly:true,reference:tail,key:entry.id+':'+tail};
+      }
       const match = tail.match(/^([0-9〇零一二三四五六七八九十百廿卅]+)([ab])?(?:\((\d+(?:[-─–—]\d+)?)\))?[,.:・、]([0-9].*)$/u);
       if (!match) continue;
       if (!resolve(entry.key,code)) {
@@ -86,12 +100,16 @@
       if (!Number.isInteger(chapter) || chapter < 1) return null;
       const rawVerses = code === 'EN' ? match[4] : match[4].replace(/[—―─](\d+),(\d+)/g,'-$1:$2');
       const verses = rawVerses.replace(/[ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ]/g,c => subverses[c])
+        // Printed Chinese references can delimit the next chapter with a
+        // comma too: "默一 1-4, 2,1-5". Keep that boundary as a chapter.
+        .replace(/(\d+[a-z]*)-(\d+)[,、](\d+),(\d+)/g,(all,start,end,next,verse)=>
+          Number(next)===chapter+1 && (Number(next)<Number(end) || Number(verse)<Number(next)) ? start+'-'+end+';'+next+':'+verse : all)
         .replace(/[;、](\d+)[,・](\d+)/g,';$1:$2')
         // Dots separate verses. In comma-style notation a descending endpoint
         // followed by a comma denotes a chapter boundary: 5,20-6,2.
         .replace(/[–—―−~～]/g,'-')
-        .replace(/(\d+)([a-z]*)-(\d+),(\d+)/g, (all,start,suffix,end,verse) =>
-          Number(end) < Number(start) ? start+suffix+'-'+end+':'+verse : all)
+        .replace(/(\d+)([a-z]*)-(\d+)[,・](\d+)/g, (all,start,suffix,end,verse) =>
+          Number(end) < Number(start) || Number(end) === chapter+1 ? start+suffix+'-'+end+':'+verse : all)
         .replace(/[,、]/g,'.').replace(/[。.]$/,'');
       if (!/^[0-9a-z.:;+-]+$/i.test(verses)) return null;
       const reference = chapter + (match[2] || '') + (match[3] ? '('+match[3]+')' : '') + ':' + verses;
@@ -187,7 +205,7 @@
     return [...result].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
   }
   function psalmsShareChapter(left,right) {
-    const chapters=parsed=>new Set(psalmCoverage(parsed,{ignoreSubverses:true}).map(key=>Number(key.split(':')[0])));
+    const chapters=parsed=>new Set(psalmCoverage(parsed?.chapterOnly ? {...parsed,verses:'1'} : parsed,{ignoreSubverses:true}).map(key=>Number(key.split(':')[0])));
     const a=chapters(left),b=chapters(right);
     return a.size>0 && [...a].every(chapter=>b.has(chapter)) && [...b].every(chapter=>a.has(chapter));
   }
