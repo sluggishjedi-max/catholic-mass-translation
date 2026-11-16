@@ -11,7 +11,7 @@ function requestIdentity(value){
   const id=sourceId(country,source,profile);recordId(id,variant);
   return {country,date,source,profile,variant,sourceId:id};
 }
-function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
+function createDailyService({db,enqueue,logger=console,fetchImpl=fetch,runtimeFactory}){
   const store=createStore(db),metadataCache=new Map();
   async function metadata(country){
     const existing=metadataCache.get(country);if(existing&&Date.now()-existing.savedAt<600000)return existing.value;
@@ -94,7 +94,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
       });
     }
     try{
-      const {createRuntime}=require('./daily-runtime');
+      const createRuntime=runtimeFactory||require('./daily-runtime').createRuntime;
       const sourceDocuments=request.country==='TW'?await require('./daily-taiwan').collectTaiwanDocuments({date:request.date,db,fetchImpl}):undefined;
       runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl,sourceDocuments,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
       if(request.country==='PT')runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
@@ -112,7 +112,10 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
           logger.warn('Daily Mass source unavailable',{country:request.country,date:request.date,source:request.sourceId,variant,error:error.message});
         }
         let discovered=false;
-        for(const choice of runtime.refreshVariantChoices?.()||[])if(!registered.has(choice.id)&&registered.size<32){registered.add(choice.id);variants.push(choice.id);discovered=true;}
+        for(const choice of runtime.refreshVariantChoices?.()||[])if(!registered.has(choice.id)){
+          if(registered.size>=128)throw Error('publisher-mass-count-exceeded');
+          registered.add(choice.id);variants.push(choice.id);discovered=true;
+        }
         if(discovered)await store.registerVariants(request,runtime.variantChoices());
       }
       await finish(results.every(result=>result.status==='ready')?'completed':'completed-with-errors');
@@ -126,7 +129,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
     }
     finally{runtime?.close();}
   }
-  async function read(value,{queueMissing=false}={}){
+  async function read(value,{queueMissing=false,includeSourceMasses=queueMissing}={}){
     const request=requestIdentity(value),record=await store.get(request);
     if(queueMissing&&(!record?.parsed||record.latestParserRevision!==PARSER_REVISION)){
       const date=new Date(request.date+'T12:00:00Z'),today=new Date(koreaToday()+'T12:00:00Z');
@@ -135,6 +138,13 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch}){
       // checking a later feast. Keep new missing-date collection at 30 days.
       const repairFixed=!!record?.parsed?.fallbackSource?.calendarInvariant&&offset<366;
       if(offset>=-7&&(offset<30||repairFixed))await queueOne(request,'demand-'+PARSER_REVISION+'-'+koreaToday(),{onDemand:true});
+    }
+    // The editor reads the exact selected snapshot. Public translation reads
+    // additionally receive the other independently published Masses for this
+    // source/date, so a local feast cannot conceal the temporal formulary.
+    if(includeSourceMasses&&record?.parsed&&record.publishedKind!=='edited'){
+      const masses=await store.publishedSourceMasses(request);
+      if(masses.length)return {...record,parsed:{...record.parsed,sourceMasses:masses}};
     }
     return record;
   }

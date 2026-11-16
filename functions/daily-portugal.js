@@ -30,21 +30,22 @@ function temporalSection(pages,context){const lines=pages.join('\n').split(/\r?\
 }
 async function collectPortugalDocuments({date,context,db,fetchImpl=fetch}){
   const month=Number(date.slice(5,7)),index=context.day===0?'lec_dom_'+context.cycle.toLowerCase()+'.php':context.season==='ordinary'?(Number(date.slice(0,4))%2?'lec_V.php':'lec_VI.php'):'lec_IV.php';
-  const errors=[];let selected;
+  const errors=[],available=[];let selected;
   // A fixed feast's own readings take precedence when the date's approved
   // calendar observes it. Memorials otherwise retain the ferial readings.
-  try{const links=await discover('lec_Santoral.php',fetchImpl);for(const link of links.filter(link=>normalize(link.label).includes(MONTHS[month-1]))){const pdf=await book(link,{db,fetchImpl}),section=dateSection(pdf.pages,date);if(section&&(section.proper&&context.day!==0||context.rank==='solemnity'||date.endsWith('-11-02'))){selected={...section,pdf,link};break;}}}catch(error){errors.push(error.message);}
+  try{const links=await discover('lec_Santoral.php',fetchImpl);for(const link of links.filter(link=>normalize(link.label).includes(MONTHS[month-1]))){const pdf=await book(link,{db,fetchImpl}),section=dateSection(pdf.pages,date);if(section){const candidate={...section,pdf,link,index:'lec_Santoral.php'};available.push(candidate);if(section.proper&&context.day!==0||context.rank==='solemnity'||date.endsWith('-11-02'))selected=candidate;}}}catch(error){errors.push(error.message);}
   if(date.endsWith('-11-02')&&!selected)throw Error(errors[0]||'portugal-all-souls-pdf-not-resolved');
   if(!selected&&context.day!==0&&['feast','solemnity'].includes(context.rank))throw Error(errors[0]||'portugal-proper-lectionary-not-resolved:'+date);
-  if(!selected){const links=await discover(index,fetchImpl);for(const link of links){const name=normalize(link.label);if(context.season==='ordinary'&&/advento|natal|quaresma|pascal/.test(name))continue;if(context.season!=='ordinary'&&/tempo comum/.test(name))continue;const pdf=await book(link,{db,fetchImpl}),section=temporalSection(pdf.pages,context);if(section){selected={...section,pdf,link};break;}}}
+  try{const links=await discover(index,fetchImpl);for(const link of links){const name=normalize(link.label);if(context.season==='ordinary'&&/advento|natal|quaresma|pascal/.test(name))continue;if(context.season!=='ordinary'&&/tempo comum/.test(name))continue;const pdf=await book(link,{db,fetchImpl}),section=temporalSection(pdf.pages,{...context,title:context.temporalTitle||context.title});if(section){const candidate={...section,pdf,link,index};available.push(candidate);selected||=candidate;break;}}}catch(error){errors.push(error.message);}
   if(!selected)throw Error('portugal-lectionary-date-not-resolved:'+date+(errors.length?':'+errors.join(';'):''));
-  const {pdf,link}=selected,base={sourceUrl:link.url,sourcePage:ROOT+index,file:{id:pdf.sha256,name:'포르투갈_'+date+'.pdf',url:link.url,pages:pdf.pages.length,bytes:pdf.bytes.length}};
+  const {pdf,link}=selected,base={sourceUrl:link.url,sourcePage:ROOT+(selected.index||index),file:{id:pdf.sha256,name:'포르투갈_'+date+'.pdf',url:link.url,pages:pdf.pages.length,bytes:pdf.bytes.length}};
   if(date.endsWith('-11-02')){
     const markers=[...selected.text.matchAll(/^(?:MISSA\s+(III|II|I)|(?:(PRIMEIRA|SEGUNDA|TERCEIRA)\s+MISSA))\s*$/gmi)];
     const ids={I:'first',II:'second',III:'third',PRIMEIRA:'first',SEGUNDA:'second',TERCEIRA:'third'};
     if(markers.length!==3||new Set(markers.map(match=>ids[(match[1]||match[2]).toUpperCase()])).size!==3)throw Error('portugal-all-souls-pdf-formularies-not-resolved');
     return markers.map((match,i)=>({...base,id:ids[(match[1]||match[2]).toUpperCase()],label:selected.title+' · '+match[0].trim(),text:selected.text.slice(match.index,markers[i+1]?.index||selected.text.length)}));
   }
-  return [{...base,id:'day',label:selected.title,text:selected.text}];
+  const others=available.filter(item=>item!==selected);
+  return [selected,...others].map((item,i)=>({sourceUrl:item.link.url,sourcePage:ROOT+item.index,file:{id:item.pdf.sha256,name:'포르투갈_'+date+'_'+(i+1)+'.pdf',url:item.link.url,pages:item.pdf.pages.length,bytes:item.pdf.bytes.length},id:i===0?'day':'source-'+require('./daily-schema').digest({title:item.title,text:item.text}).slice(0,20),label:item.title,text:item.text}));
 }
 module.exports={ROOT,INDEXES,pdfLinks,dateSection,temporalSection,collectPortugalDocuments};

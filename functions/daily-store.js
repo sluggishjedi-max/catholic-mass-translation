@@ -52,6 +52,18 @@ function createStore(db){
     appendCollected:(request,result)=>append(request,result,{kind:'collected'}),
     appendEdited:(request,parsed,options)=>append(request,{parsed,fingerprint:digest(parsed),validation:{edited:true}}, {...options,kind:'edited'}),
     async get(request){const snapshot=await recordRef(db,request).get();return snapshot.exists?snapshot.data():null;},
+    async publishedSourceMasses(request){
+      const ref=recordRef(db,request),day=await ref.parent.parent.get();
+      const choices=day.exists?day.data().availableVariants?.[request.sourceId]||[]:[];
+      const references=choices.filter(choice=>choice.id!==request.variant).map(choice=>recordRef(db,{...request,variant:choice.id}));
+      if(!references.length)return [];
+      const snapshots=await db.getAll(...references);
+      return snapshots.filter(snapshot=>snapshot.exists).flatMap(snapshot=>{
+        const record=snapshot.data();if(!record.parsed||!record.publishedVersion)return [];
+        const {sourceMasses,...parsed}=record.parsed;
+        return [{...parsed,id:record.variant,serverRecord:{version:record.publishedVersion,kind:record.publishedKind,sourceId:record.sourceId,variant:record.variant}}];
+      });
+    },
     async versions(request,{before}={}){
       let query=recordRef(db,request).collection('versions').orderBy('number','desc');
       if(Number.isInteger(before)&&before>0)query=query.where('number','<',before);

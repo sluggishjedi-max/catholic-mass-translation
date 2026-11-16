@@ -2,6 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const {JSDOM,VirtualConsole}=require('jsdom');
 const {COUNTRIES,PARSER_REVISION,isoDate,countryCode,digest}=require('./daily-schema');
+const {discoverSourceMasses}=require('./daily-source-inventory');
 const directory=path.join(__dirname,'daily-runtime');
 let bundle;
 function bundleFiles(){
@@ -19,7 +20,7 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
   const virtualConsole=new VirtualConsole();
   const dom=new JSDOM(bundleFiles().html,{url:new URL(bundleFiles().manifest.htmlFile||'index.html','https://sluggishjedi-max.github.io/catholic-mass-translation/').href,runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
   const window=dom.window,context=dom.getInternalVMContext();
-  const snapshots=[],nativeChoices=new Map();
+  const snapshots=[],nativeChoices=new Map(),parsedChoices=new Map(),discoveredSources=new Set(),collectedMasses=new Map();
   let snapshotBytes=0;
   const deadline=Date.now()+150000;
   let requests=0;
@@ -80,7 +81,9 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
     getStrictDateBase=()=>({localDay:new Date(__collectorInput.year,__collectorInput.month-1,__collectorInput.day),hour:12,timeZone:'Asia/Seoul'});
     getActiveLiturgicalSourceDate=()=>new Date(__collectorInput.year,__collectorInput.month-1,__collectorInput.day,12);
     const collectorOriginalSourceEntryUrl=strictDailySourceEntryUrl;
-    strictDailySourceEntryUrl=(lang,date,location)=>__nativeSourceUrl&&__collectorInput.country==='US'&&lang==='EN'?__nativeSourceUrl:collectorOriginalSourceEntryUrl(lang,date,location);
+    strictDailySourceEntryUrl=(lang,date,location)=>__nativeSourceUrl&&lang===__collectorInput.lang?__nativeSourceUrl:collectorOriginalSourceEntryUrl(lang,date,location);
+    const collectorOriginalSpecialMassRecord=countrySpecialMassRecord;
+    countrySpecialMassRecord=(date,location)=>__nativeSourceUrl?null:collectorOriginalSpecialMassRecord(date,location);
     state.liturgicalDateContext=null;
     state.liturgyInfo=buildGeneratedLiturgyInfo(getActiveLiturgicalSourceDate());
     fetchGeminiViaFirebase=async()=>{throw Error('AI is disabled in server collection');};
@@ -93,20 +96,55 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
     window.__ktcgProvider=async requestedDate=>ktcgProvider(requestedDate.toISOString().slice(0,10),input.profile||'VIETNAM_SOUTH',runtime);
     run('fetchKtcgkpvMassReadingJson = date => __ktcgProvider(date);');
   }
+  function prepareDocuments(documents){
+    if(!documents)return documents;
+    return documents.flatMap(document=>{
+      if(document.error||!document.text)return [document];
+      window.__documentLines=document.text.split(/\r?\n/u);
+      const markers=JSON.parse(JSON.stringify(run(`(()=>{const markers=__documentLines.flatMap((line,index)=>{const label=strictCleanLine(line);if(!label||label.length>140||/^[<〈]/u.test(label))return [];const kind=strictVariantKind(label);return kind?[{index,kind,label}]:[];});const hasCore=lines=>{const keys=lines.map(line=>strictIdentifySection(line,__collectorInput.lang)?.key);return keys.includes('reading1')&&keys.includes('gospel');};if(markers.length&&hasCore(__documentLines.slice(0,markers[0].index)))markers.unshift({index:0,kind:'day',label:''});return markers.filter((marker,index)=>hasCore(__documentLines.slice(marker.index+1,markers[index+1]?.index||__documentLines.length))).map(marker=>({...marker,end:markers.find(next=>next.index>marker.index)?.index||__documentLines.length}));})()`)));
+      if(markers.length<2)return [document];
+      return markers.map((marker,index)=>({...document,id:['first','second','third'].includes(marker.kind)?marker.kind:index===0?document.id:'pdf-'+digest({parent:document.id,label:marker.label}).slice(0,20),label:marker.label||document.label,text:window.__documentLines.slice(marker.index,marker.end).join('\n')}));
+    });
+  }
+  sourceDocuments=prepareDocuments(sourceDocuments);
   const runtime={
     window,run,snapshots,input:{...input,country,date,lang},
-    setSourceDocuments(documents){sourceDocuments=documents;},
-    portugalContext(){return JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),meta=getSeasonMeta(date),year=date.getFullYear()+(date>=getAdventStart(date.getFullYear())?1:0);return {...meta,cycle:['C','A','B'][year%3],title:state.liturgyInfo.names?.PT||'',rank:state.liturgyInfo.isSolemnity?'solemnity':state.liturgyInfo.meta?.rank||''};})()`)));},
+    setSourceDocuments(documents){sourceDocuments=prepareDocuments(documents);},
+    portugalContext(){return JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),meta=getSeasonMeta(date),year=date.getFullYear()+(date>=getAdventStart(date.getFullYear())?1:0);return {...meta,cycle:['C','A','B'][year%3],title:state.liturgyInfo.names?.PT||'',temporalTitle:formatSeasonalName('PT',meta.season,meta.week,meta.day,meta.sundayCycle),rank:state.liturgyInfo.isSolemnity?'solemnity':state.liturgyInfo.meta?.rank||''};})()`)));},
     async fetch(url,options){return window.fetch(url,options);},
     legacyChoice(mass){window.__mass=mass;return JSON.parse(JSON.stringify(run('kpvMassCandidateAsLegacyChoice(__mass,getActiveLiturgicalSourceDate())')));},
     normalizeLegacy(payload){window.__legacy=payload;return JSON.parse(JSON.stringify(run('normalizeKpvMassReadingPayload(__legacy,getActiveLiturgicalSourceDate())')));},
     variantChoices(){const choices=sourceDocuments?.length?sourceDocuments.map(document=>({id:document.id,label:document.label})):JSON.parse(JSON.stringify(run(`(()=>{const date=getActiveLiturgicalSourceDate(),profile=specialLiturgyProfile(__collectorInput.country);if(isAllSoulsDate(date))return ['first','second','third'].map((id,index)=>({id,label:profile.allSouls[id]?.names?.[__collectorInput.lang]||profile.allSouls[id]?.names?.KR||'위령의 날 '+(index+1)+'미사'}));return [{id:'day',label:'당일 미사'},...profile.vigils.filter(entry=>entry.enabled!==false&&specialDefinitionMatchesDate(entry,date,__collectorInput.country)).map(entry=>({id:entry.id,label:entry.names?.[__collectorInput.lang]||entry.names?.KR||entry.id}))];})()`)));return choices.concat([...nativeChoices.values()].filter(choice=>!choices.some(existing=>existing.id===choice.id)));},
     refreshVariantChoices(){
-      if(country==='US'&&!sourceDocuments){
-        window.__massChoiceSources=snapshots.filter(source=>source.status===200).map(source=>source.body);
-        window.__massChoiceBase='https://bible.usccb.org/bible/readings/'+date.slice(5,7)+date.slice(8,10)+date.slice(2,4)+'.cfm';
-        const choices=run('__massChoiceSources.flatMap(source=>strictUsccbDatedMassChoices(source,__massChoiceBase,getActiveLiturgicalSourceDate()))');
-        for(const choice of choices)if(!nativeChoices.has(choice.id))nativeChoices.set(choice.id,JSON.parse(JSON.stringify(choice)));
+      const native=collectedMasses.get('day')?.parsed;
+      const identity=parsed=>digest({title:parsed.title,data:Object.fromEntries(['reading1','reading2','gospel'].map(key=>[key,parsed.data?.[key]||null]))});
+      const addParsed=(mass,originals)=>{
+        if(!mass?.id||!mass.data||native&&identity(mass)===identity(native))return;
+        const id=mass.id==='day'?'source-day':mass.id;
+        if(!/^[a-z][a-z0-9_-]{0,70}$/u.test(id))throw Error('invalid-publisher-mass-id');
+        const {sourceMasses,...parsed}=mass;
+        if(!parsedChoices.has(id)){
+          parsedChoices.set(id,{parsed,snapshots:originals});
+          nativeChoices.set(id,{id,label:mass.title||id,sourceUrl:mass.sourceUrl||'',sourceMode:mass.sourceMode||'publisher-formulary'});
+        }
+      };
+      for(const collected of collectedMasses.values())for(const mass of collected.parsed.sourceMasses||[])addParsed(mass,collected.snapshots);
+      if(!sourceDocuments)for(const source of snapshots.filter(source=>source.status===200&&!source.verification)){
+        const key=digest({url:source.url,body:source.body});if(discoveredSources.has(key))continue;discoveredSources.add(key);
+        window.__inventorySource=source.body;
+        let inventorySource=source.body;
+        if(country==='MX'){
+          // An earlier HTTP-200 loading shell is not the dated CEM response.
+          try{inventorySource=run('strictScopeMexicanCemDailySource(__inventorySource,getActiveLiturgicalSourceDate())');}catch{continue;}
+        }
+        const discovered=discoverSourceMasses({window,source:inventorySource,url:source.url,date,parse(html){
+          // The CEM response has already been scoped to its exact dated row.
+          // Preserve that declaration when parsing an isolated child formulary.
+          window.__inventoryHtml=country==='MX'?date+' 00:00:00'+html:html;
+          return JSON.parse(JSON.stringify(run(`(()=>{const saved=getStrictMassSelector;try{getStrictMassSelector=()=>({slot:'day'});return ordoDailyContent.normalizeParsed(sanitizeDailyAcclamationReferences(strictParseDailyMass(__collectorInput.lang,__inventoryHtml,getActiveLiturgicalSourceDate(),__collectorInput.country)));}finally{getStrictMassSelector=saved;}})()`)));
+        }});
+        for(const choice of discovered.links)if(!nativeChoices.has(choice.id))nativeChoices.set(choice.id,choice);
+        for(const mass of discovered.masses)addParsed(mass,[source]);
       }
       return runtime.variantChoices();
     },
@@ -115,9 +153,10 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
       const snapshotStart=snapshots.length;
       window.__variant=variant;window.__nativeSourceUrl=nativeChoices.get(variant)?.sourceUrl||'';
       run(`getStrictMassSelector=()=>({slot:__nativeSourceUrl||__variant==='day'||['first','second','third'].includes(__variant)?'day':'vigil',specialVigil:__nativeSourceUrl||__variant==='day'||['first','second','third'].includes(__variant)?'':__variant,sourceChoice:__nativeSourceUrl?__variant:'',allSoulsChoice:['first','second','third'].includes(__variant)?__variant:''});state.allSoulsNavChoice=['first','second','third'].includes(__variant)?__variant:'';`);
-      const document=sourceDocuments?.find(item=>item.id===variant);
+      const document=sourceDocuments?.find(item=>item.id===variant),stored=parsedChoices.get(variant);
       let parsed;
-      if(sourceDocuments){
+      if(stored)parsed=structuredClone(stored.parsed);
+      else if(sourceDocuments){
         if(!document)throw Error('requested-pdf-mass-not-found');
         if(document.error)throw Error(document.error);
         window.__pdfSource='Title: '+document.label+'\nURL Source: '+document.sourceUrl+'\n\nMarkdown Content:\n'+document.text;
@@ -125,6 +164,18 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
         parsed.title=document.label||parsed.title;parsed.sourceUrl=document.sourceUrl;parsed.sourcePage=document.sourcePage;parsed.sourceFiles=[document.file];parsed.sourceMode='official-pdf';
         snapshots.push({url:document.sourceUrl,status:200,kind:'pdf-extraction',file:document.file,body:document.text});
       }else parsed=await run('Promise.resolve(dailySourceFetchers[__collectorInput.lang](getActiveLiturgicalSourceDate(),{locationCode:__collectorInput.country})).then(sanitizeDailyAcclamationReferences).then(ordoDailyContent.normalizeParsed)');
+      if(!stored&&!sourceDocuments){
+        collectedMasses.set(variant,{parsed:JSON.parse(JSON.stringify(parsed)),snapshots:snapshots.slice(snapshotStart)});
+        runtime.refreshVariantChoices();
+        const title=value=>String(value||'').normalize('NFKC').replace(/\s+/gu,' ').trim().toLocaleLowerCase();
+        const isolated=[...parsedChoices.entries()].find(([,choice])=>title(choice.parsed.title)===title(parsed.title));
+        if(isolated){
+          // Several complete formularies on one page are independent Masses.
+          // Repeated scripture headings must not merge them into reading options.
+          const [id,choice]=isolated;parsed={...parsed,...structuredClone(choice.parsed)};
+          if(variant==='day'){parsedChoices.delete(id);nativeChoices.delete(id);}
+        }
+      }
       window.__parsed=parsed;
       parsed=run('completeMissingDailyProperSections(__parsed,__collectorInput.lang,getActiveLiturgicalSourceDate())');
       window.__parsed=parsed;
@@ -137,7 +188,9 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
         result.sourceUrl='https://ktcgkpv.org/readings/mass-reading';result.sourceName='KTCG · ktcgkpv.org';
       }
       const originals=snapshots.slice(snapshotStart);
+      if(stored)originals.push(...stored.snapshots);
       if(!originals.length)originals.push({url:'app-bundle://'+PARSER_REVISION+'/'+country+'/'+date+'/'+variant,status:200,kind:'compiled-data',body:JSON.stringify({parsed:result})});
+      collectedMasses.set(variant,{parsed:result,snapshots:originals});
       return {parsed:result,validation:{complete:!validation.missing.length||validation.fixed,missing:validation.missing,fixed:validation.fixed},parserRevision:PARSER_REVISION,snapshots:originals,fingerprint:digest({parsed:result,sources:originals.filter(s=>s.status===200&&!s.verification).map(s=>({url:s.url,body:s.body.replace(/\r\n/g,'\n').trim()})).sort((a,b)=>a.url.localeCompare(b.url))})};
     },
     close(){dom.window.close();}

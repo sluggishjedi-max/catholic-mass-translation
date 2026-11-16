@@ -9,7 +9,7 @@ const {getFunctions}=require('firebase-admin/functions');
 const logger=require('firebase-functions/logger');
 const {createDailyService}=require('./daily-service');
 const {createDailyHttpHandler}=require('./daily-http');
-const {koreaToday,romeToday}=require('./daily-schema');
+const {COUNTRIES,koreaToday,romeToday}=require('./daily-schema');
 const REGION='asia-northeast3';
 let service;
 function getService(){
@@ -34,6 +34,13 @@ function dailyFunctions({adminSecret,allowedOrigin,rateLimit}){
       const start=koreaToday(new Date(event.scheduleTime||Date.now()));
       const result=await getService().queueRange({start,days:30,runId:'schedule-'+start});
       logger.info('Daily Mass 30-day collection queued',result);
+    }),
+    scheduleDailyMassSourceWindowCollection:onSchedule({region:REGION,schedule:'0 4 * * *',timeZone:'Asia/Seoul',timeoutSeconds:540,memory:'512MiB',retryCount:2},async event=>{
+      // Rolling public windows (for example Universalis) expose new dates
+      // between the existing monthly range runs. Revisit all available forms.
+      const start=koreaToday(new Date(event.scheduleTime||Date.now()));
+      const result=await getService().queueRange({start,days:7,countries:Object.keys(COUNTRIES).filter(country=>country!=='VA'),runId:'source-window-'+start});
+      logger.info('Daily publisher Mass inventories queued',result);
     }),
     scheduleVaticanDailyMassCollection:onSchedule({region:REGION,schedule:'15 0 * * *',timeZone:'Europe/Rome',timeoutSeconds:540,memory:'1GiB',retryCount:3,minBackoffSeconds:600,maxBackoffSeconds:1800,maxRetrySeconds:7200},async event=>{
       const result=await collectVaticanDay(getService(),event);

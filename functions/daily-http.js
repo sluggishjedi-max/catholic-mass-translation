@@ -29,7 +29,7 @@ function createDailyHttpHandler({getService,verifyIdToken,configuredEmails,allow
       }
       const action=value.action||'record';
       if(req.method==='GET'){
-        if(action==='catalog')return res.status(200).json({countries:COUNTRIES,schedule:{days:[10,20,30],hour:4,timeZone:'Asia/Seoul',horizonDays:30},today:koreaToday()});
+        if(action==='catalog')return res.status(200).json({countries:COUNTRIES,schedule:{days:[10,20,30],hour:4,timeZone:'Asia/Seoul',horizonDays:30,dailySourceWindowDays:7},today:koreaToday()});
         if(action==='runs')return res.status(200).json({runs:await service.runs()});
         if(action==='list')return res.status(200).json({days:await service.list({country:value.country,start:value.start||koreaToday(),days:Number(value.days||30)})});
         const request=service.requestIdentity(value);
@@ -45,7 +45,7 @@ function createDailyHttpHandler({getService,verifyIdToken,configuredEmails,allow
           const version=await service.store.version(request,Number(value.version));
           return res.status(version?200:404).json(version?{...version,provenance:await service.store.provenance(request,version)}:{error:'version-not-found'});
         }
-        const record=await service.read(request);
+        const record=await service.read(request,{includeSourceMasses:value.includeSourceMasses==='true'});
         return res.status(200).json({record,versions:record?await service.store.versions(request):[]});
       }
       if(action==='collect'){

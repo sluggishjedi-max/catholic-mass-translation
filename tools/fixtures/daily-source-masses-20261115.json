@@ -1,0 +1,903 @@
+{
+  "kpv": {
+    "date": "2026-11-15",
+    "profile": "VIETNAM_SOUTH",
+    "locale": "vi-VN",
+    "primary": {
+      "setCode": "vietnamese-martyrs",
+      "via": "celebration",
+      "matchedKey": "vietnamese-martyrs/principal",
+      "celebrationCode": "vietnamese-martyrs",
+      "celebration": {
+        "code": "vietnamese-martyrs",
+        "name": "Các Thánh Tử Đạo Việt Nam",
+        "rank": "solemnity",
+        "rankIsAttested": true,
+        "properGroupName": null,
+        "properGroupAbbreviation": null,
+        "color": "red",
+        "saintCategories": [
+          "martyr"
+        ],
+        "heroImageKey": "liturgy/celebrations/hero/vietnamese-martyrs",
+        "description": null
+      },
+      "formCode": "principal",
+      "formName": null,
+      "civilDayOffset": 0,
+      "templates": [
+        {
+          "code": "principal",
+          "position": 1,
+          "isDefault": true,
+          "units": [
+            {
+              "code": "entrance",
+              "position": 1,
+              "isRequired": true,
+              "slots": [
+                {
+                  "type": "entrance_antiphon",
+                  "ordinal": 1,
+                  "code": null,
+                  "heading": "massReadings.slot.entrance_antiphon.1",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {}
+                }
+              ],
+              "options": [
+                {
+                  "code": "option-1",
+                  "label": "Tv 125,5",
+                  "isDefault": true,
+                  "contents": {
+                    "entrance_antiphon/1": {
+                      "code": "entrance-0211",
+                      "ref": "Tv 125,5",
+                      "heading": null,
+                      "lead": null,
+                      "html": "<p>Ai nghẹn ngào ra đi gieo giống,<br />mùa gặt mai sau khấp khởi mừng.</p>",
+                      "text": "Ai nghẹn ngào ra đi gieo giống,\n\nmùa gặt mai sau khấp khởi mừng."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "code": "reading-1",
+              "position": 2,
+              "isRequired": true,
+              "slots": [
+                {
+                  "type": "reading",
+                  "ordinal": 1,
+                  "code": null,
+                  "heading": "massReadings.slot.reading.1",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {}
+                },
+                {
+                  "type": "responsorial_psalm",
+                  "ordinal": 1,
+                  "code": null,
+                  "heading": "massReadings.slot.responsorial_psalm.1",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {
+                    "antiphon": "antiphon/1"
+                  }
+                }
+              ],
+              "options": [
+                {
+                  "code": "option-1",
+                  "label": "2 Mcb 7,1.20-23.27b-29",
+                  "isDefault": true,
+                  "contents": {
+                    "reading/1": {
+                      "code": "reading-0931",
+                      "ref": "2 Mcb 7,1.20-23.27b-29",
+                      "heading": "Bà mẹ là người đáng khâm phục, vì bà can đảm chịu đựng nhờ niềm trông cậy bà đặt nơi Đức Chúa.",
+                      "lead": "Bài trích sách Ma-ca-bê quyển thứ hai.",
+                      "html": "<p><sup>1</sup> Hồi ấy, có bảy anh em bị bắt cùng với bà mẹ. Vua An-ti-ô-khô cho lấy roi và gân bò mà đánh họ, để bắt họ ăn thịt heo là thức ăn luật Mô-sê cấm.</p><p><sup>20</sup> Bà mẹ là người rất mực xứng đáng cho ta khâm phục và kính cẩn ghi nhớ. Bà thấy bảy người con trai phải chết nội trong có một ngày, thế mà bà vẫn can đảm chịu đựng nhờ niềm trông cậy bà đặt nơi Đức Chúa. <sup>21</sup> Bà dùng tiếng mẹ đẻ mà khuyến khích từng người một, lòng bà đầy tâm tình cao thượng ; lời lẽ của bà tuy là của một người phụ nữ, nhưng lại sôi sục một chí khí nam nhi ; bà nói với các con : <sup>22</sup> “Mẹ không rõ các con đã thành hình trong lòng mẹ thế nào. Không phải mẹ ban cho các con thần khí và sự sống. Cũng không phải mẹ sắp đặt các phần cơ thể cho mỗi người trong các con. <sup>23</sup> Chính Đấng Tạo Hoá càn khôn đã nắn đúc nên loài người, và đã sáng tạo nguồn gốc muôn loài. Chính Người do lòng thương xót, cũng sẽ trả lại cho các con thần khí và sự sống, bởi vì bây giờ các con trọng Luật Lệ của Người hơn bản thân mình.”</p><p><sup>27b</sup> Bà nói với người con út : “Con ơi, con hãy thương mẹ : chín tháng cưu mang, ba năm bú mớm, mẹ đã nuôi nấng dạy dỗ con đến ngần này tuổi đầu. <sup>28</sup> Mẹ xin con hãy nhìn xem trời đất và muôn loài trong đó, mà nhận biết rằng Thiên Chúa đã làm nên tất cả từ hư vô, và loài người cũng được tạo thành như vậy. <sup>29</sup> Con đừng sợ tên đao phủ này ; nhưng hãy tỏ ra xứng đáng với các anh con, mà chấp nhận cái chết, để đến ngày Chúa thương xót, Người sẽ trả con và các anh con cho mẹ.”</p>",
+                      "text": "1 Hồi ấy, có bảy anh em bị bắt cùng với bà mẹ. Vua An-ti-ô-khô cho lấy roi và gân bò mà đánh họ, để bắt họ ăn thịt heo là thức ăn luật Mô-sê cấm.\n\n20 Bà mẹ là người rất mực xứng đáng cho ta khâm phục và kính cẩn ghi nhớ. Bà thấy bảy người con trai phải chết nội trong có một ngày, thế mà bà vẫn can đảm chịu đựng nhờ niềm trông cậy bà đặt nơi Đức Chúa. 21 Bà dùng tiếng mẹ đẻ mà khuyến khích từng người một, lòng bà đầy tâm tình cao thượng ; lời lẽ của bà tuy là của một người phụ nữ, nhưng lại sôi sục một chí khí nam nhi ; bà nói với các con : 22 “Mẹ không rõ các con đã thành hình trong lòng mẹ thế nào. Không phải mẹ ban cho các con thần khí và sự sống. Cũng không phải mẹ sắp đặt các phần cơ thể cho mỗi người trong các con. 23 Chính Đấng Tạo Hoá càn khôn đã nắn đúc nên loài người, và đã sáng tạo nguồn gốc muôn loài. Chính Người do lòng thương xót, cũng sẽ trả lại cho các con thần khí và sự sống, bởi vì bây giờ các con trọng Luật Lệ của Người hơn bản thân mình.”\n\n27b Bà nói với người con út : “Con ơi, con hãy thương mẹ : chín tháng cưu mang, ba năm bú mớm, mẹ đã nuôi nấng dạy dỗ con đến ngần này tuổi đầu. 28 Mẹ xin con hãy nhìn xem trời đất và muôn loài trong đó, mà nhận biết rằng Thiên Chúa đã làm nên tất cả từ hư vô, và loài người cũng được tạo thành như vậy. 29 Con đừng sợ tên đao phủ này ; nhưng hãy tỏ ra xứng đáng với các anh con, mà chấp nhận cái chết, để đến ngày Chúa thương xót, Người sẽ trả con và các anh con cho mẹ.”"
+                    },
+                    "responsorial_psalm/1": {
+                      "code": "psalm-0061",
+                      "ref": "Tv 125,1-2ab.2cd-3.4-5.6 (Đ. c.5)",
+                      "heading": null,
+                      "lead": null,
+                      "html": "<div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>1</sup><span>Khi Chúa dẫn tù nhân Xi-on trở về,<br>ta tưởng mình như giữa giấc mơ.</span><sup>2ab</sup><span>Vang vang ngoài miệng câu cười nói,<br>rộn rã trên môi khúc nhạc mừng.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>2cd</sup><span>Bấy giờ trong dân ngoại, người ta bàn tán :<br>“Việc Chúa làm cho họ, vĩ đại thay !”</span><sup>3</sup><span>Việc Chúa làm cho ta, ôi vĩ đại !<br>Ta thấy mình chan chứa một niềm vui.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>4</sup><span>Lạy Chúa, xin dẫn tù nhân chúng con về,<br>như mưa dẫn nước về suối cạn miền Nam.</span><sup>5</sup><span>Ai nghẹn ngào ra đi gieo giống,<br>mùa gặt mai sau khấp khởi mừng.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>6</sup><span>Họ ra đi, đi mà nức nở,<br>mang hạt giống vãi gieo ;<br>lúc trở về, về reo hớn hở,<br>vai nặng gánh lúa vàng.</span></p><div data-kpv-slot=\"antiphon\"></div>",
+                      "text": "1Khi Chúa dẫn tù nhân Xi-on trở về,\nta tưởng mình như giữa giấc mơ.2abVang vang ngoài miệng câu cười nói,\nrộn rã trên môi khúc nhạc mừng.\n\n2cdBấy giờ trong dân ngoại, người ta bàn tán :\n“Việc Chúa làm cho họ, vĩ đại thay !”3Việc Chúa làm cho ta, ôi vĩ đại !\nTa thấy mình chan chứa một niềm vui.\n\n4Lạy Chúa, xin dẫn tù nhân chúng con về,\nnhư mưa dẫn nước về suối cạn miền Nam.5Ai nghẹn ngào ra đi gieo giống,\nmùa gặt mai sau khấp khởi mừng.\n\n6Họ ra đi, đi mà nức nở,\nmang hạt giống vãi gieo ;\nlúc trở về, về reo hớn hở,\nvai nặng gánh lúa vàng."
+                    },
+                    "antiphon/1": {
+                      "code": "antiphon-0061",
+                      "ref": null,
+                      "heading": null,
+                      "lead": null,
+                      "html": "Ai nghẹn ngào ra đi gieo giống,<br>mùa gặt mai sau khấp khởi mừng.",
+                      "text": "Ai nghẹn ngào ra đi gieo giống,\nmùa gặt mai sau khấp khởi mừng."
+                    }
+                  }
+                },
+                {
+                  "code": "option-2",
+                  "label": "Kn 3,1-9",
+                  "isDefault": false,
+                  "contents": {
+                    "reading/1": {
+                      "code": "reading-0050",
+                      "ref": "Kn 3,1-9",
+                      "heading": "Thiên Chúa đón nhận họ như của lễ toàn thiêu.",
+                      "lead": "Bài trích sách Khôn ngoan.",
+                      "html": "<p class=\"poem\"><sup>1</sup><span>Linh hồn người công chính ở trong tay Thiên Chúa<br>và chẳng cực hình nào động tới được nữa.</span><br><sup>2</sup><span>Bọn ngu si coi họ như đã chết rồi ;<br>khi họ ra đi, chúng cho là họ gặp phải điều vô phúc.</span><br><sup>3</sup><span>Lúc họ xa rời chúng ta, chúng tưởng là họ bị tiêu diệt,<br>nhưng thực ra, họ đang hưởng an bình.</span><br><sup>4</sup><span>Người đời nghĩ rằng họ đã bị trừng phạt,<br>nhưng họ vẫn chứa chan hy vọng được trường sinh bất tử.</span><br><sup>5</sup><span>Sau khi chịu sửa dạy đôi chút,<br>họ sẽ được hưởng ân huệ lớn lao.<br>Quả thế, Thiên Chúa đã thử thách họ<br>và thấy họ xứng đáng với Người.</span><br><sup>6</sup><span>Người đã tinh luyện họ<br>như người ta luyện vàng trong lò lửa,<br>và đón nhận họ như của lễ toàn thiêu.</span><br><sup>7</sup><span>Khi đến giờ được Thiên Chúa viếng thăm,<br>họ sẽ rực sáng như tia lửa bén nhanh khắp rừng sậy.</span><br><sup>8</sup><span>Họ sẽ xét xử muôn dân, và thống trị muôn nước.<br>Và Đức Chúa sẽ là vua của họ đến muôn đời.</span><br><sup>9</sup><span>Những ai trông cậy vào Người, sẽ am tường sự thật ;<br>những ai trung thành, sẽ được Người yêu thương<br>và cho ở gần Người, vì Người ban ân phúc<br>và xót thương những ai Người tuyển chọn.<br></span></p>",
+                      "text": "1Linh hồn người công chính ở trong tay Thiên Chúa\nvà chẳng cực hình nào động tới được nữa.\n2Bọn ngu si coi họ như đã chết rồi ;\nkhi họ ra đi, chúng cho là họ gặp phải điều vô phúc.\n3Lúc họ xa rời chúng ta, chúng tưởng là họ bị tiêu diệt,\nnhưng thực ra, họ đang hưởng an bình.\n4Người đời nghĩ rằng họ đã bị trừng phạt,\nnhưng họ vẫn chứa chan hy vọng được trường sinh bất tử.\n5Sau khi chịu sửa dạy đôi chút,\nhọ sẽ được hưởng ân huệ lớn lao.\nQuả thế, Thiên Chúa đã thử thách họ\nvà thấy họ xứng đáng với Người.\n6Người đã tinh luyện họ\nnhư người ta luyện vàng trong lò lửa,\nvà đón nhận họ như của lễ toàn thiêu.\n7Khi đến giờ được Thiên Chúa viếng thăm,\nhọ sẽ rực sáng như tia lửa bén nhanh khắp rừng sậy.\n8Họ sẽ xét xử muôn dân, và thống trị muôn nước.\nVà Đức Chúa sẽ là vua của họ đến muôn đời.\n9Những ai trông cậy vào Người, sẽ am tường sự thật ;\nnhững ai trung thành, sẽ được Người yêu thương\nvà cho ở gần Người, vì Người ban ân phúc\nvà xót thương những ai Người tuyển chọn."
+                    },
+                    "responsorial_psalm/1": {
+                      "code": "psalm-0061",
+                      "ref": "Tv 125,1-2ab.2cd-3.4-5.6 (Đ. c.5)",
+                      "heading": null,
+                      "lead": null,
+                      "html": "<div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>1</sup><span>Khi Chúa dẫn tù nhân Xi-on trở về,<br>ta tưởng mình như giữa giấc mơ.</span><sup>2ab</sup><span>Vang vang ngoài miệng câu cười nói,<br>rộn rã trên môi khúc nhạc mừng.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>2cd</sup><span>Bấy giờ trong dân ngoại, người ta bàn tán :<br>“Việc Chúa làm cho họ, vĩ đại thay !”</span><sup>3</sup><span>Việc Chúa làm cho ta, ôi vĩ đại !<br>Ta thấy mình chan chứa một niềm vui.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>4</sup><span>Lạy Chúa, xin dẫn tù nhân chúng con về,<br>như mưa dẫn nước về suối cạn miền Nam.</span><sup>5</sup><span>Ai nghẹn ngào ra đi gieo giống,<br>mùa gặt mai sau khấp khởi mừng.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>6</sup><span>Họ ra đi, đi mà nức nở,<br>mang hạt giống vãi gieo ;<br>lúc trở về, về reo hớn hở,<br>vai nặng gánh lúa vàng.</span></p><div data-kpv-slot=\"antiphon\"></div>",
+                      "text": "1Khi Chúa dẫn tù nhân Xi-on trở về,\nta tưởng mình như giữa giấc mơ.2abVang vang ngoài miệng câu cười nói,\nrộn rã trên môi khúc nhạc mừng.\n\n2cdBấy giờ trong dân ngoại, người ta bàn tán :\n“Việc Chúa làm cho họ, vĩ đại thay !”3Việc Chúa làm cho ta, ôi vĩ đại !\nTa thấy mình chan chứa một niềm vui.\n\n4Lạy Chúa, xin dẫn tù nhân chúng con về,\nnhư mưa dẫn nước về suối cạn miền Nam.5Ai nghẹn ngào ra đi gieo giống,\nmùa gặt mai sau khấp khởi mừng.\n\n6Họ ra đi, đi mà nức nở,\nmang hạt giống vãi gieo ;\nlúc trở về, về reo hớn hở,\nvai nặng gánh lúa vàng."
+                    },
+                    "antiphon/1": {
+                      "code": "antiphon-0061",
+                      "ref": null,
+                      "heading": null,
+                      "lead": null,
+                      "html": "Ai nghẹn ngào ra đi gieo giống,<br>mùa gặt mai sau khấp khởi mừng.",
+                      "text": "Ai nghẹn ngào ra đi gieo giống,\nmùa gặt mai sau khấp khởi mừng."
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "code": "reading-2",
+              "position": 3,
+              "isRequired": true,
+              "slots": [
+                {
+                  "type": "reading",
+                  "ordinal": 2,
+                  "code": null,
+                  "heading": "massReadings.slot.reading.2",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {}
+                }
+              ],
+              "options": [
+                {
+                  "code": "option-1",
+                  "label": "Rm 8,31b-39",
+                  "isDefault": true,
+                  "contents": {
+                    "reading/2": {
+                      "code": "reading-0932",
+                      "ref": "Rm 8,31b-39",
+                      "heading": "Dù sự chết hay sự sống cũng không tách được chúng ta ra khỏi tình yêu của Thiên Chúa.",
+                      "lead": "Bài trích thư của thánh Phao-lô tông đồ gửi tín hữu Rô-ma.",
+                      "html": "<p><sup>31b</sup> Thưa anh em, có Thiên Chúa bênh đỡ chúng ta, ai còn chống lại được chúng ta ? <sup>32</sup> Đến như chính Con Một, Thiên Chúa cũng chẳng tiếc, nhưng đã trao nộp vì hết thảy chúng ta. Một khi đã ban Người Con đó, lẽ nào Thiên Chúa lại chẳng rộng ban tất cả cho chúng ta ? <sup>33</sup> Ai sẽ buộc tội những người Thiên Chúa đã chọn ? Chẳng lẽ Thiên Chúa, Đấng làm cho nên công chính ? <sup>34</sup> Ai sẽ kết án họ ? Chẳng lẽ Đức Giê-su Ki-tô, Đấng đã chết, hơn nữa, đã sống lại, và đang ngự bên hữu Thiên Chúa mà chuyển cầu cho chúng ta ?</p><p><sup>35</sup> Ai có thể tách chúng ta ra khỏi tình yêu của Đức Ki-tô ? Phải chăng là gian truân, khốn khổ, đói rách, hiểm nguy, bắt bớ, gươm giáo ? <sup>36</sup> Như có lời chép : Chính vì Ngài mà mỗi ngày chúng con bị giết, bị coi như bầy cừu để sát sinh.</p><p><sup>37</sup> Nhưng trong mọi thử thách ấy, chúng ta toàn thắng nhờ Đấng đã yêu mến chúng ta.</p><p><sup>38</sup> Đúng thế, tôi tin chắc rằng : cho dầu là sự chết hay sự sống, thiên thần hay ma vương quỷ lực, hiện tại hay tương lai, hoặc bất cứ sức mạnh nào, <sup>39</sup> trời cao hay vực thẳm, hay bất cứ một loài thọ tạo nào khác, không có gì tách được chúng ta ra khỏi tình yêu của Thiên Chúa thể hiện nơi Đức Ki-tô Giê-su, Chúa chúng ta.</p>",
+                      "text": "31b Thưa anh em, có Thiên Chúa bênh đỡ chúng ta, ai còn chống lại được chúng ta ? 32 Đến như chính Con Một, Thiên Chúa cũng chẳng tiếc, nhưng đã trao nộp vì hết thảy chúng ta. Một khi đã ban Người Con đó, lẽ nào Thiên Chúa lại chẳng rộng ban tất cả cho chúng ta ? 33 Ai sẽ buộc tội những người Thiên Chúa đã chọn ? Chẳng lẽ Thiên Chúa, Đấng làm cho nên công chính ? 34 Ai sẽ kết án họ ? Chẳng lẽ Đức Giê-su Ki-tô, Đấng đã chết, hơn nữa, đã sống lại, và đang ngự bên hữu Thiên Chúa mà chuyển cầu cho chúng ta ?\n\n35 Ai có thể tách chúng ta ra khỏi tình yêu của Đức Ki-tô ? Phải chăng là gian truân, khốn khổ, đói rách, hiểm nguy, bắt bớ, gươm giáo ? 36 Như có lời chép : Chính vì Ngài mà mỗi ngày chúng con bị giết, bị coi như bầy cừu để sát sinh.\n\n37 Nhưng trong mọi thử thách ấy, chúng ta toàn thắng nhờ Đấng đã yêu mến chúng ta.\n\n38 Đúng thế, tôi tin chắc rằng : cho dầu là sự chết hay sự sống, thiên thần hay ma vương quỷ lực, hiện tại hay tương lai, hoặc bất cứ sức mạnh nào, 39 trời cao hay vực thẳm, hay bất cứ một loài thọ tạo nào khác, không có gì tách được chúng ta ra khỏi tình yêu của Thiên Chúa thể hiện nơi Đức Ki-tô Giê-su, Chúa chúng ta."
+                    }
+                  }
+                },
+                {
+                  "code": "option-2",
+                  "label": "Kh 7,9-17",
+                  "isDefault": false,
+                  "contents": {
+                    "reading/2": {
+                      "code": "reading-0933",
+                      "ref": "Kh 7,9-17",
+                      "heading": "Họ là những người đã đến sau khi trải qua cơn thử thách lớn lao.",
+                      "lead": "Bài trích sách Khải huyền của thánh Gio-an tông đồ.",
+                      "html": "<p><sup>9</sup> Tôi là Gio-an, tôi thấy một đoàn người thật đông không tài nào đếm nổi, thuộc mọi dân, mọi chi tộc, mọi nước và mọi ngôn ngữ. Họ đứng trước ngai và trước Con Chiên, mình mặc áo trắng, tay cầm nhành lá thiên tuế. <sup>10</sup> Họ lớn tiếng tung hô : “Chính Thiên Chúa chúng ta, Đấng ngự trên ngai, và chính Con Chiên đã cứu độ chúng ta.” <sup>11</sup> Tất cả các thiên thần đều đứng chung quanh ngai, chung quanh các Kỳ Mục và bốn Con Vật. Họ đều sấp mặt xuống, phủ phục trước ngai và thờ lạy Thiên Chúa mà tung hô <sup>12</sup> rằng :</p><p class=\"poem\"><sup></sup><span>“A-men ! Xin kính dâng Thiên Chúa chúng ta<br>lời chúc tụng và vinh quang, sự khôn ngoan và lời tạ ơn,<br>danh dự, uy quyền và sức mạnh,<br>đến muôn thuở muôn đời ! A-men !”</span></p><p><sup>13</sup> Một trong các Kỳ Mục lên tiếng hỏi tôi : “Những người mặc áo trắng kia là ai vậy ? Họ từ đâu đến ?” <sup>14</sup> Tôi trả lời : “Thưa Ngài, Ngài biết đó.” Vị ấy bảo tôi : “Họ là những người đã đến, sau khi trải qua cơn thử thách lớn lao. Họ đã giặt sạch và tẩy trắng áo mình trong máu Con Chiên. <sup>15</sup> Vì thế, họ được chầu trước ngai Thiên Chúa, đêm ngày thờ phượng trong Đền Thờ của Người ; Đấng ngự trên ngai sẽ căng lều của Người cho họ trú ẩn. <sup>16</sup> Họ sẽ không còn phải đói, phải khát, không còn bị ánh nắng mặt trời thiêu đốt và khí nóng hành hạ nữa. <sup>17</sup> Vì Con Chiên đang ngự ở giữa ngai sẽ chăn dắt và dẫn đưa họ tới nguồn nước trường sinh. Và Thiên Chúa sẽ lau sạch nước mắt họ.”</p>",
+                      "text": "9 Tôi là Gio-an, tôi thấy một đoàn người thật đông không tài nào đếm nổi, thuộc mọi dân, mọi chi tộc, mọi nước và mọi ngôn ngữ. Họ đứng trước ngai và trước Con Chiên, mình mặc áo trắng, tay cầm nhành lá thiên tuế. 10 Họ lớn tiếng tung hô : “Chính Thiên Chúa chúng ta, Đấng ngự trên ngai, và chính Con Chiên đã cứu độ chúng ta.” 11 Tất cả các thiên thần đều đứng chung quanh ngai, chung quanh các Kỳ Mục và bốn Con Vật. Họ đều sấp mặt xuống, phủ phục trước ngai và thờ lạy Thiên Chúa mà tung hô 12 rằng :\n\n“A-men ! Xin kính dâng Thiên Chúa chúng ta\nlời chúc tụng và vinh quang, sự khôn ngoan và lời tạ ơn,\ndanh dự, uy quyền và sức mạnh,\nđến muôn thuở muôn đời ! A-men !”\n\n13 Một trong các Kỳ Mục lên tiếng hỏi tôi : “Những người mặc áo trắng kia là ai vậy ? Họ từ đâu đến ?” 14 Tôi trả lời : “Thưa Ngài, Ngài biết đó.” Vị ấy bảo tôi : “Họ là những người đã đến, sau khi trải qua cơn thử thách lớn lao. Họ đã giặt sạch và tẩy trắng áo mình trong máu Con Chiên. 15 Vì thế, họ được chầu trước ngai Thiên Chúa, đêm ngày thờ phượng trong Đền Thờ của Người ; Đấng ngự trên ngai sẽ căng lều của Người cho họ trú ẩn. 16 Họ sẽ không còn phải đói, phải khát, không còn bị ánh nắng mặt trời thiêu đốt và khí nóng hành hạ nữa. 17 Vì Con Chiên đang ngự ở giữa ngai sẽ chăn dắt và dẫn đưa họ tới nguồn nước trường sinh. Và Thiên Chúa sẽ lau sạch nước mắt họ.”"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "code": "gospel",
+              "position": 4,
+              "isRequired": true,
+              "slots": [
+                {
+                  "type": "gospel_acclamation",
+                  "ordinal": 1,
+                  "code": null,
+                  "heading": "massReadings.slot.gospel_acclamation.1",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {}
+                },
+                {
+                  "type": "gospel",
+                  "ordinal": 1,
+                  "code": null,
+                  "heading": "massReadings.slot.gospel.1",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {}
+                }
+              ],
+              "options": [
+                {
+                  "code": "option-1",
+                  "label": "Lc 9,23-26",
+                  "isDefault": true,
+                  "contents": {
+                    "gospel_acclamation/1": {
+                      "code": "acclamation-0055",
+                      "ref": "Mt 5,10",
+                      "heading": null,
+                      "lead": null,
+                      "html": "<p></p><p>Ha-lê-lui-a. Ha-lê-lui-a.</p><p>Phúc thay ai bị bách hại vì sống công chính,</p><p>vì Nước Trời là của họ. Ha-lê-lui-a.</p>",
+                      "text": "Ha-lê-lui-a. Ha-lê-lui-a.\n\nPhúc thay ai bị bách hại vì sống công chính,\n\nvì Nước Trời là của họ. Ha-lê-lui-a."
+                    },
+                    "gospel/1": {
+                      "code": "gospel-0520",
+                      "ref": "Lc 9,23-26",
+                      "heading": "Ai liều mất mạng sống mình vì tôi, thì sẽ cứu được mạng sống ấy.",
+                      "lead": "<span class=\"holycross\">&#x2720;</span>Tin Mừng Chúa Giê-su Ki-tô theo thánh Lu-ca.",
+                      "html": "<p><sup>23</sup> Khi ấy, Đức Giê-su nói với mọi người rằng : “Ai muốn theo tôi, phải từ bỏ chính mình, vác thập giá mình hằng ngày mà theo. <sup>24</sup> Quả vậy, ai muốn cứu mạng sống mình, thì sẽ mất ; còn ai liều mất mạng sống mình vì tôi, thì sẽ cứu được mạng sống ấy. <sup>25</sup> Vì người nào được cả thế giới mà phải đánh mất chính mình hay là thiệt thân, thì nào có lợi gì ? <sup>26</sup> Ai xấu hổ vì tôi và những lời của tôi, thì Con Người cũng sẽ xấu hổ vì kẻ ấy, khi Người ngự đến trong vinh quang của mình, của Chúa Cha và các thánh thiên thần.”</p>",
+                      "text": "23 Khi ấy, Đức Giê-su nói với mọi người rằng : “Ai muốn theo tôi, phải từ bỏ chính mình, vác thập giá mình hằng ngày mà theo. 24 Quả vậy, ai muốn cứu mạng sống mình, thì sẽ mất ; còn ai liều mất mạng sống mình vì tôi, thì sẽ cứu được mạng sống ấy. 25 Vì người nào được cả thế giới mà phải đánh mất chính mình hay là thiệt thân, thì nào có lợi gì ? 26 Ai xấu hổ vì tôi và những lời của tôi, thì Con Người cũng sẽ xấu hổ vì kẻ ấy, khi Người ngự đến trong vinh quang của mình, của Chúa Cha và các thánh thiên thần.”"
+                    }
+                  }
+                },
+                {
+                  "code": "option-2",
+                  "label": "Ga 17,11b-19",
+                  "isDefault": false,
+                  "contents": {
+                    "gospel_acclamation/1": {
+                      "code": "acclamation-0055",
+                      "ref": "Mt 5,10",
+                      "heading": null,
+                      "lead": null,
+                      "html": "<p></p><p>Ha-lê-lui-a. Ha-lê-lui-a.</p><p>Phúc thay ai bị bách hại vì sống công chính,</p><p>vì Nước Trời là của họ. Ha-lê-lui-a.</p>",
+                      "text": "Ha-lê-lui-a. Ha-lê-lui-a.\n\nPhúc thay ai bị bách hại vì sống công chính,\n\nvì Nước Trời là của họ. Ha-lê-lui-a."
+                    },
+                    "gospel/1": {
+                      "code": "gospel-0028",
+                      "ref": "Ga 17,11b-19",
+                      "heading": "Thế gian đã ghét họ.",
+                      "lead": "<span class=\"holycross\">&#x2720;</span>Tin Mừng Chúa Giê-su Ki-tô theo thánh Gio-an.",
+                      "html": "<p><sup>11b</sup> Khi ấy, Đức Giê-su ngước mắt lên trời và cầu nguyện rằng : “Lạy Cha chí thánh, xin gìn giữ các môn đệ trong danh Cha mà Cha đã ban cho con, để họ nên một như chúng ta. <sup>12</sup> Khi còn ở với họ, con đã gìn giữ họ trong danh Cha mà Cha đã ban cho con. Con đã canh giữ, và không một ai trong họ phải hư mất, trừ đứa con hư hỏng, để ứng nghiệm lời Kinh Thánh. <sup>13</sup> Bây giờ, con đến cùng Cha, và con nói những điều này lúc còn ở thế gian, để họ được hưởng trọn vẹn niềm vui của con. <sup>14</sup> Con đã truyền lại cho họ lời của Cha, và thế gian đã ghét họ, vì họ không thuộc về thế gian, cũng như con đây không thuộc về thế gian. <sup>15</sup> Con không xin Cha cất họ khỏi thế gian, nhưng xin Cha gìn giữ họ khỏi ác thần. <sup>16</sup> Họ không thuộc về thế gian cũng như con đây không thuộc về thế gian. <sup>17</sup> Xin Cha lấy sự thật mà thánh hiến họ. Lời Cha là sự thật. <sup>18</sup> Như Cha đã sai con đến thế gian, thì con cũng sai họ đến thế gian. <sup>19</sup> Vì họ, con xin thánh hiến chính mình con, để nhờ sự thật, họ cũng được thánh hiến.”</p>",
+                      "text": "11b Khi ấy, Đức Giê-su ngước mắt lên trời và cầu nguyện rằng : “Lạy Cha chí thánh, xin gìn giữ các môn đệ trong danh Cha mà Cha đã ban cho con, để họ nên một như chúng ta. 12 Khi còn ở với họ, con đã gìn giữ họ trong danh Cha mà Cha đã ban cho con. Con đã canh giữ, và không một ai trong họ phải hư mất, trừ đứa con hư hỏng, để ứng nghiệm lời Kinh Thánh. 13 Bây giờ, con đến cùng Cha, và con nói những điều này lúc còn ở thế gian, để họ được hưởng trọn vẹn niềm vui của con. 14 Con đã truyền lại cho họ lời của Cha, và thế gian đã ghét họ, vì họ không thuộc về thế gian, cũng như con đây không thuộc về thế gian. 15 Con không xin Cha cất họ khỏi thế gian, nhưng xin Cha gìn giữ họ khỏi ác thần. 16 Họ không thuộc về thế gian cũng như con đây không thuộc về thế gian. 17 Xin Cha lấy sự thật mà thánh hiến họ. Lời Cha là sự thật. 18 Như Cha đã sai con đến thế gian, thì con cũng sai họ đến thế gian. 19 Vì họ, con xin thánh hiến chính mình con, để nhờ sự thật, họ cũng được thánh hiến.”"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "code": "communion",
+              "position": 5,
+              "isRequired": true,
+              "slots": [
+                {
+                  "type": "communion_antiphon",
+                  "ordinal": 1,
+                  "code": null,
+                  "heading": "massReadings.slot.communion_antiphon.1",
+                  "sourceMode": "proper",
+                  "resolvedFrom": null,
+                  "embeds": {}
+                }
+              ],
+              "options": [
+                {
+                  "code": "option-1",
+                  "label": "x. Rm 8,38-39",
+                  "isDefault": true,
+                  "contents": {
+                    "communion_antiphon/1": {
+                      "code": "communion-0240",
+                      "ref": "x. Rm 8,38-39",
+                      "heading": null,
+                      "lead": null,
+                      "html": "<p>Dầu là sự sống hay sự chết.<br />Hoặc bất cứ một thọ sinh nào :<br />Không có gì tách được chúng ta<br />ra khỏi tình yêu của Thiên Chúa.</p>",
+                      "text": "Dầu là sự sống hay sự chết.\n\nHoặc bất cứ một thọ sinh nào :\n\nKhông có gì tách được chúng ta\n\nra khỏi tình yêu của Thiên Chúa."
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "alternatives": [
+      {
+        "setCode": "ot-w33-sunday-a",
+        "via": "temporal",
+        "matchedKey": "ot-w33-sunday",
+        "celebrationCode": null,
+        "celebration": null,
+        "formCode": null,
+        "formName": null,
+        "civilDayOffset": 0,
+        "templates": [
+          {
+            "code": null,
+            "position": 1,
+            "isDefault": true,
+            "units": [
+              {
+                "code": "entrance",
+                "position": 1,
+                "isRequired": true,
+                "slots": [
+                  {
+                    "type": "entrance_antiphon",
+                    "ordinal": 1,
+                    "code": null,
+                    "heading": "massReadings.slot.entrance_antiphon.1",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {}
+                  }
+                ],
+                "options": [
+                  {
+                    "code": "option-1",
+                    "label": "Gr 29,11.12.14",
+                    "isDefault": true,
+                    "contents": {
+                      "entrance_antiphon/1": {
+                        "code": "entrance-0147",
+                        "ref": "Gr 29,11.12.14",
+                        "heading": null,
+                        "lead": null,
+                        "html": "<p>Chúa phán : “Ý định của Ta<br />là làm cho các ngươi được bình an<br />chứ không phải đau khổ.<br />Bấy giờ các ngươi cầu cứu Ta,<br />và Ta sẽ nhận lời,<br />Ta sẽ đưa các ngươi trở về<br />từ khắp chốn lưu đày.”</p>",
+                        "text": "Chúa phán : “Ý định của Ta\n\nlà làm cho các ngươi được bình an\n\nchứ không phải đau khổ.\n\nBấy giờ các ngươi cầu cứu Ta,\n\nvà Ta sẽ nhận lời,\n\nTa sẽ đưa các ngươi trở về\n\ntừ khắp chốn lưu đày.”"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "code": "reading-1",
+                "position": 2,
+                "isRequired": true,
+                "slots": [
+                  {
+                    "type": "reading",
+                    "ordinal": 1,
+                    "code": null,
+                    "heading": "massReadings.slot.reading.1",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {}
+                  },
+                  {
+                    "type": "responsorial_psalm",
+                    "ordinal": 1,
+                    "code": null,
+                    "heading": "massReadings.slot.responsorial_psalm.1",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {
+                      "antiphon": "antiphon/1"
+                    }
+                  }
+                ],
+                "options": [
+                  {
+                    "code": "option-1",
+                    "label": "Cn 31,10-13.19-20.30-31",
+                    "isDefault": true,
+                    "contents": {
+                      "reading/1": {
+                        "code": "reading-0218",
+                        "ref": "Cn 31,10-13.19-20.30-31",
+                        "heading": "Nàng hưởng những thành quả tay nàng làm ra.",
+                        "lead": "Bài trích sách Châm ngôn.",
+                        "html": "<p class=\"poem\"><sup>10</sup><span>Tìm đâu ra một người vợ đảm đang ?<br>Nàng quý giá vượt xa châu ngọc.</span><br><sup>11</sup><span>Chồng nàng hết dạ tin tưởng nàng,<br>chàng sẽ chẳng thiếu chi lợi lộc.</span><br><sup>12</sup><span>Suốt đời, nàng đem lại hạnh phúc<br>chứ không gây tai hoạ cho chồng.</span><br><sup>13</sup><span>Nàng tìm kiếm len và vải gai,<br>rồi vui vẻ ra tay làm việc.</span><br><sup>19</sup><span>Nàng tra tay vào guồng kéo sợi,<br>và cầm chắc suốt chỉ trong tay.</span><br><sup>20</sup><span>Nàng rộng tay giúp người nghèo khổ<br>và đưa tay cứu kẻ khốn cùng.</span><br><sup>30</sup><span>Duyên dáng là giả trá, sắc đẹp là phù vân.<br>Người phụ nữ kính sợ Đức Chúa<br>mới đáng cho người đời ca tụng.</span><br><sup>31</sup><span>Hãy để cho nàng hưởng những thành quả tay nàng làm ra.<br>Ước chi nơi cổng thành nàng luôn được tán dương ca tụng<br>do những việc nàng làm.<br></span></p>",
+                        "text": "10Tìm đâu ra một người vợ đảm đang ?\nNàng quý giá vượt xa châu ngọc.\n11Chồng nàng hết dạ tin tưởng nàng,\nchàng sẽ chẳng thiếu chi lợi lộc.\n12Suốt đời, nàng đem lại hạnh phúc\nchứ không gây tai hoạ cho chồng.\n13Nàng tìm kiếm len và vải gai,\nrồi vui vẻ ra tay làm việc.\n19Nàng tra tay vào guồng kéo sợi,\nvà cầm chắc suốt chỉ trong tay.\n20Nàng rộng tay giúp người nghèo khổ\nvà đưa tay cứu kẻ khốn cùng.\n30Duyên dáng là giả trá, sắc đẹp là phù vân.\nNgười phụ nữ kính sợ Đức Chúa\nmới đáng cho người đời ca tụng.\n31Hãy để cho nàng hưởng những thành quả tay nàng làm ra.\nƯớc chi nơi cổng thành nàng luôn được tán dương ca tụng\ndo những việc nàng làm."
+                      },
+                      "responsorial_psalm/1": {
+                        "code": "psalm-0078",
+                        "ref": "Tv 127,1-2.3.4-5 (Đ. x. c.1a)",
+                        "heading": null,
+                        "lead": null,
+                        "html": "<div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>1</sup><span>Hạnh phúc thay bạn nào kính sợ Chúa,<br>ăn ở theo đường lối của Người.</span><sup>2</sup><span>Công khó tay bạn làm, bạn được an hưởng,<br>bạn quả là lắm phúc nhiều may.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>3</sup><span>Hiền thê bạn trong cửa trong nhà<br>khác nào cây nho đầy hoa trái ;<br>và bầy con tựa những cây ô-liu mơn mởn,<br>xúm xít tại bàn ăn.</span></p><div data-kpv-slot=\"antiphon\"></div><p class=\"leading\"><sup>4</sup><span>Đó chính là phúc lộc Chúa dành cho kẻ kính sợ Người.</span><sup>5</sup><span>Xin Chúa từ Xi-on xuống cho bạn muôn vàn ơn phúc.<br>Ước chi trong suốt cả cuộc đời<br>bạn được thấy Giê-ru-sa-lem phồn thịnh.</span></p><div data-kpv-slot=\"antiphon\"></div>",
+                        "text": "1Hạnh phúc thay bạn nào kính sợ Chúa,\năn ở theo đường lối của Người.2Công khó tay bạn làm, bạn được an hưởng,\nbạn quả là lắm phúc nhiều may.\n\n3Hiền thê bạn trong cửa trong nhà\nkhác nào cây nho đầy hoa trái ;\nvà bầy con tựa những cây ô-liu mơn mởn,\nxúm xít tại bàn ăn.\n\n4Đó chính là phúc lộc Chúa dành cho kẻ kính sợ Người.5Xin Chúa từ Xi-on xuống cho bạn muôn vàn ơn phúc.\nƯớc chi trong suốt cả cuộc đời\nbạn được thấy Giê-ru-sa-lem phồn thịnh."
+                      },
+                      "antiphon/1": {
+                        "code": "antiphon-0081",
+                        "ref": null,
+                        "heading": null,
+                        "lead": null,
+                        "html": "Hạnh phúc thay những người kính sợ Chúa.",
+                        "text": "Hạnh phúc thay những người kính sợ Chúa."
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "code": "reading-2",
+                "position": 3,
+                "isRequired": true,
+                "slots": [
+                  {
+                    "type": "reading",
+                    "ordinal": 2,
+                    "code": null,
+                    "heading": "massReadings.slot.reading.2",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {}
+                  }
+                ],
+                "options": [
+                  {
+                    "code": "option-1",
+                    "label": "1 Tx 5,1-6",
+                    "isDefault": true,
+                    "contents": {
+                      "reading/2": {
+                        "code": "reading-0233",
+                        "ref": "1 Tx 5,1-6",
+                        "heading": "Đừng để ngày của Chúa như kẻ trộm bắt chợt anh em.",
+                        "lead": "Bài trích thư thứ nhất của thánh Phao-lô tông đồ gửi tín hữu Thê-xa-lô-ni-ca.",
+                        "html": "<p><sup>1</sup> Thưa anh em, về ngày giờ và thời kỳ Chúa đến, anh em không cần ai viết cho anh em. <sup>2</sup> Vì chính anh em đã biết rõ : ngày của Chúa sẽ đến như kẻ trộm ban đêm. <sup>3</sup> Khi người ta nói : “Bình an biết bao, yên ổn biết bao !”, thì lúc ấy tai hoạ sẽ thình lình ập xuống, tựa cơn đau chuyển bụng đến với người đàn bà có thai, và sẽ chẳng có ai trốn thoát được.</p><p><sup>4</sup> Thưa anh em, anh em không ở trong bóng tối, để ngày ấy như kẻ trộm bắt chợt anh em. <sup>5</sup> Vì tất cả anh em là con cái ánh sáng, con cái của ban ngày. Chúng ta không thuộc về đêm, cũng không thuộc về bóng tối. <sup>6</sup> Vậy chúng ta đừng ngủ mê như những người khác, nhưng hãy tỉnh thức và sống tiết độ.</p>",
+                        "text": "1 Thưa anh em, về ngày giờ và thời kỳ Chúa đến, anh em không cần ai viết cho anh em. 2 Vì chính anh em đã biết rõ : ngày của Chúa sẽ đến như kẻ trộm ban đêm. 3 Khi người ta nói : “Bình an biết bao, yên ổn biết bao !”, thì lúc ấy tai hoạ sẽ thình lình ập xuống, tựa cơn đau chuyển bụng đến với người đàn bà có thai, và sẽ chẳng có ai trốn thoát được.\n\n4 Thưa anh em, anh em không ở trong bóng tối, để ngày ấy như kẻ trộm bắt chợt anh em. 5 Vì tất cả anh em là con cái ánh sáng, con cái của ban ngày. Chúng ta không thuộc về đêm, cũng không thuộc về bóng tối. 6 Vậy chúng ta đừng ngủ mê như những người khác, nhưng hãy tỉnh thức và sống tiết độ."
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "code": "gospel",
+                "position": 4,
+                "isRequired": true,
+                "slots": [
+                  {
+                    "type": "gospel_acclamation",
+                    "ordinal": 1,
+                    "code": null,
+                    "heading": "massReadings.slot.gospel_acclamation.1",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {}
+                  },
+                  {
+                    "type": "gospel",
+                    "ordinal": 1,
+                    "code": null,
+                    "heading": "massReadings.slot.gospel.1",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {}
+                  }
+                ],
+                "options": [
+                  {
+                    "code": "option-1",
+                    "label": "Mt 25,14-30",
+                    "isDefault": true,
+                    "contents": {
+                      "gospel_acclamation/1": {
+                        "code": "acclamation-0181",
+                        "ref": "Ga 15,4a.5b",
+                        "heading": null,
+                        "lead": null,
+                        "html": "<p>Ha-lê-lui-a. Ha-lê-lui-a. Chúa nói : Hãy ở lại trong Thầy như Thầy ở lại trong anh em. Ai ở lại trong Thầy, thì sinh nhiều hoa trái. Ha-lê-lui-a.</p>",
+                        "text": "Ha-lê-lui-a. Ha-lê-lui-a. Chúa nói : Hãy ở lại trong Thầy như Thầy ở lại trong anh em. Ai ở lại trong Thầy, thì sinh nhiều hoa trái. Ha-lê-lui-a."
+                      },
+                      "gospel/1": {
+                        "code": "gospel-0124",
+                        "ref": "Mt 25,14-30",
+                        "heading": "Được giao ít mà anh đã trung thành, hãy vào mà hưởng niềm vui của chủ anh.",
+                        "lead": "<span class=\"holycross\">&#x2720;</span>Tin Mừng Chúa Giê-su Ki-tô theo thánh Mát-thêu.",
+                        "html": "<p><sup>14</sup> Khi ấy, Đức Giê-su kể cho các môn đệ nghe dụ ngôn này : “Người kia sắp đi xa, gọi đầy tớ đến mà giao phó của cải mình cho họ. <sup>15</sup> Ông đưa cho người này năm yến, người kia hai yến, người khác nữa một yến, tuỳ khả năng riêng mỗi người. Rồi ông ra đi. Lập tức, <sup>16</sup> người đã lãnh năm yến lấy số tiền ấy đi làm ăn, và gây lời được năm yến khác. <sup>17</sup> Cũng vậy, người đã lãnh hai yến gây lời được hai yến khác. <sup>18</sup> Còn người đã lãnh một yến thì đi đào lỗ chôn giấu số bạc của chủ. <sup>19</sup> Sau một thời gian lâu dài, ông chủ các đầy tớ ấy đến và yêu cầu họ thanh toán sổ sách. <sup>20</sup> Người đã lãnh năm yến tiến lại gần, đưa năm yến khác, và nói : ‘Thưa ông chủ, ông đã giao cho tôi năm yến, tôi đã gây lời được năm yến khác đây.’ <sup>21</sup> Ông chủ nói với người ấy : ‘Khá lắm ! Anh đúng là tôi tớ tài giỏi và trung thành ! Được giao ít mà anh đã trung thành, thì tôi sẽ giao nhiều cho anh. Hãy vào mà hưởng niềm vui của chủ anh !’ <sup>22</sup> Người đã lãnh hai yến cũng tiến lại gần và nói : ‘Thưa ông chủ, ông đã giao cho tôi hai yến, tôi đã gây lời được hai yến khác đây.’ <sup>23</sup> Ông chủ nói với người ấy : ‘Khá lắm ! Anh đúng là tôi tớ tài giỏi và trung thành ! Được giao ít mà anh đã trung thành, thì tôi sẽ giao nhiều cho anh. Hãy vào mà hưởng niềm vui của chủ anh !’ <sup>24</sup> Rồi người đã lãnh một yến cũng tiến lại gần và nói : ‘Thưa ông chủ, tôi biết ông là người hà khắc, gặt chỗ không gieo, thu nơi không vãi. <sup>25</sup> Vì thế, tôi đâm sợ, mới đem chôn giấu yến bạc của ông dưới đất. Của ông vẫn còn nguyên đây này !’ <sup>26</sup> Ông chủ đáp : ‘Anh thật là tôi tớ xấu xa và biếng nhác ! Anh đã biết tôi gặt chỗ không gieo, thu nơi không vãi, <sup>27</sup> thì đáng lý anh phải gửi số bạc của tôi vào ngân hàng, để khi tôi đến, tôi thu được cả vốn lẫn lời chứ ! <sup>28</sup> Vậy các ngươi hãy lấy yến bạc khỏi tay nó mà đưa cho người đã có mười yến. <sup>29</sup> Vì phàm ai đã có, thì được cho thêm và sẽ có dư thừa ; còn ai không có, thì ngay cái đang có, cũng sẽ bị lấy đi. <sup>30</sup> Còn tên đầy tớ vô dụng kia, hãy quăng nó ra chỗ tối tăm bên ngoài : ở đó, người ta sẽ phải khóc lóc nghiến răng’.”</p>",
+                        "text": "14 Khi ấy, Đức Giê-su kể cho các môn đệ nghe dụ ngôn này : “Người kia sắp đi xa, gọi đầy tớ đến mà giao phó của cải mình cho họ. 15 Ông đưa cho người này năm yến, người kia hai yến, người khác nữa một yến, tuỳ khả năng riêng mỗi người. Rồi ông ra đi. Lập tức, 16 người đã lãnh năm yến lấy số tiền ấy đi làm ăn, và gây lời được năm yến khác. 17 Cũng vậy, người đã lãnh hai yến gây lời được hai yến khác. 18 Còn người đã lãnh một yến thì đi đào lỗ chôn giấu số bạc của chủ. 19 Sau một thời gian lâu dài, ông chủ các đầy tớ ấy đến và yêu cầu họ thanh toán sổ sách. 20 Người đã lãnh năm yến tiến lại gần, đưa năm yến khác, và nói : ‘Thưa ông chủ, ông đã giao cho tôi năm yến, tôi đã gây lời được năm yến khác đây.’ 21 Ông chủ nói với người ấy : ‘Khá lắm ! Anh đúng là tôi tớ tài giỏi và trung thành ! Được giao ít mà anh đã trung thành, thì tôi sẽ giao nhiều cho anh. Hãy vào mà hưởng niềm vui của chủ anh !’ 22 Người đã lãnh hai yến cũng tiến lại gần và nói : ‘Thưa ông chủ, ông đã giao cho tôi hai yến, tôi đã gây lời được hai yến khác đây.’ 23 Ông chủ nói với người ấy : ‘Khá lắm ! Anh đúng là tôi tớ tài giỏi và trung thành ! Được giao ít mà anh đã trung thành, thì tôi sẽ giao nhiều cho anh. Hãy vào mà hưởng niềm vui của chủ anh !’ 24 Rồi người đã lãnh một yến cũng tiến lại gần và nói : ‘Thưa ông chủ, tôi biết ông là người hà khắc, gặt chỗ không gieo, thu nơi không vãi. 25 Vì thế, tôi đâm sợ, mới đem chôn giấu yến bạc của ông dưới đất. Của ông vẫn còn nguyên đây này !’ 26 Ông chủ đáp : ‘Anh thật là tôi tớ xấu xa và biếng nhác ! Anh đã biết tôi gặt chỗ không gieo, thu nơi không vãi, 27 thì đáng lý anh phải gửi số bạc của tôi vào ngân hàng, để khi tôi đến, tôi thu được cả vốn lẫn lời chứ ! 28 Vậy các ngươi hãy lấy yến bạc khỏi tay nó mà đưa cho người đã có mười yến. 29 Vì phàm ai đã có, thì được cho thêm và sẽ có dư thừa ; còn ai không có, thì ngay cái đang có, cũng sẽ bị lấy đi. 30 Còn tên đầy tớ vô dụng kia, hãy quăng nó ra chỗ tối tăm bên ngoài : ở đó, người ta sẽ phải khóc lóc nghiến răng’.”"
+                      }
+                    }
+                  },
+                  {
+                    "code": "option-2",
+                    "label": "Mt 25,14-15.19-21",
+                    "isDefault": false,
+                    "contents": {
+                      "gospel_acclamation/1": {
+                        "code": "acclamation-0181",
+                        "ref": "Ga 15,4a.5b",
+                        "heading": null,
+                        "lead": null,
+                        "html": "<p>Ha-lê-lui-a. Ha-lê-lui-a. Chúa nói : Hãy ở lại trong Thầy như Thầy ở lại trong anh em. Ai ở lại trong Thầy, thì sinh nhiều hoa trái. Ha-lê-lui-a.</p>",
+                        "text": "Ha-lê-lui-a. Ha-lê-lui-a. Chúa nói : Hãy ở lại trong Thầy như Thầy ở lại trong anh em. Ai ở lại trong Thầy, thì sinh nhiều hoa trái. Ha-lê-lui-a."
+                      },
+                      "gospel/1": {
+                        "code": "gospel-0125",
+                        "ref": "Mt 25,14-15.19-21",
+                        "heading": "Được giao ít mà anh đã trung thành, hãy vào mà hưởng niềm vui của chủ anh.",
+                        "lead": "<span class=\"holycross\">&#x2720;</span>Tin Mừng Chúa Giê-su Ki-tô theo thánh Mát-thêu.",
+                        "html": "<p><sup>14</sup> Khi ấy, Đức Giê-su kể cho các môn đệ nghe dụ ngôn này : “Người kia sắp đi xa, gọi đầy tớ đến mà giao phó của cải mình cho họ. <sup>15</sup> Ông đưa cho người này năm yến, người kia hai yến, người khác nữa một yến, tuỳ khả năng riêng mỗi người. Rồi ông ra đi.</p><p><sup>19</sup> Sau một thời gian lâu dài, ông chủ các đầy tớ ấy đến và yêu cầu họ thanh toán sổ sách. <sup>20</sup> Người đã lãnh năm yến tiến lại gần, đưa năm yến khác, và nói : ‘Thưa ông chủ, ông đã giao cho tôi năm yến, tôi đã gây lời được năm yến khác đây.’ <sup>21</sup> Ông chủ nói với người ấy : ‘Khá lắm ! Anh đúng là tôi tớ tài giỏi và trung thành ! Được giao ít mà anh đã trung thành, thì tôi sẽ giao nhiều cho anh. Hãy vào mà hưởng niềm vui của chủ anh !’”</p>",
+                        "text": "14 Khi ấy, Đức Giê-su kể cho các môn đệ nghe dụ ngôn này : “Người kia sắp đi xa, gọi đầy tớ đến mà giao phó của cải mình cho họ. 15 Ông đưa cho người này năm yến, người kia hai yến, người khác nữa một yến, tuỳ khả năng riêng mỗi người. Rồi ông ra đi.\n\n19 Sau một thời gian lâu dài, ông chủ các đầy tớ ấy đến và yêu cầu họ thanh toán sổ sách. 20 Người đã lãnh năm yến tiến lại gần, đưa năm yến khác, và nói : ‘Thưa ông chủ, ông đã giao cho tôi năm yến, tôi đã gây lời được năm yến khác đây.’ 21 Ông chủ nói với người ấy : ‘Khá lắm ! Anh đúng là tôi tớ tài giỏi và trung thành ! Được giao ít mà anh đã trung thành, thì tôi sẽ giao nhiều cho anh. Hãy vào mà hưởng niềm vui của chủ anh !’”"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "code": "communion",
+                "position": 5,
+                "isRequired": true,
+                "slots": [
+                  {
+                    "type": "communion_antiphon",
+                    "ordinal": 1,
+                    "code": null,
+                    "heading": "massReadings.slot.communion_antiphon.1",
+                    "sourceMode": "proper",
+                    "resolvedFrom": null,
+                    "embeds": {}
+                  }
+                ],
+                "options": [
+                  {
+                    "code": "option-1",
+                    "label": "Tv 72,28",
+                    "isDefault": true,
+                    "contents": {
+                      "communion_antiphon/1": {
+                        "code": "communion-0185",
+                        "ref": "Tv 72,28",
+                        "heading": null,
+                        "lead": null,
+                        "html": "<p>Hạnh phúc của tôi là ở kề bên Chúa,<br />chốn ẩn thân đặt ở Chúa Trời.</p>",
+                        "text": "Hạnh phúc của tôi là ở kề bên Chúa,\n\nchốn ẩn thân đặt ở Chúa Trời."
+                      }
+                    }
+                  },
+                  {
+                    "code": "option-2",
+                    "label": "Mc 11,23-24",
+                    "isDefault": false,
+                    "contents": {
+                      "communion_antiphon/1": {
+                        "code": "communion-0138",
+                        "ref": "Mc 11,23-24",
+                        "heading": null,
+                        "lead": null,
+                        "html": "<p>Chúa nói : “Thầy bảo thật anh em :<br />Tất cả những gì anh em xin khi cầu nguyện,<br />anh em cứ tin là mình đã được rồi,<br />thì sẽ được như ý.”</p>",
+                        "text": "Chúa nói : “Thầy bảo thật anh em :\n\nTất cả những gì anh em xin khi cầu nguyện,\n\nanh em cứ tin là mình đã được rồi,\n\nthì sẽ được như ý.”"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "vigil": null,
+    "vigilAlternatives": [],
+    "accessWindow": {
+      "feature": "mass_readings",
+      "from": "2026-11-09",
+      "to": "2026-12-01",
+      "authenticated": false,
+      "reach": "guest"
+    },
+    "suggestedMass": null,
+    "audio": {
+      "contentCodes": [
+        "acclamation-0055",
+        "acclamation-0181",
+        "gospel-0124",
+        "gospel-0520",
+        "psalm-0061",
+        "psalm-0078",
+        "reading-0218",
+        "reading-0233",
+        "reading-0931",
+        "reading-0932"
+      ],
+      "masses": {
+        "primary": {
+          "allowed": false,
+          "dayClasses": [
+            "solemnity",
+            "sunday"
+          ]
+        },
+        "alternative-0": {
+          "allowed": false,
+          "dayClasses": [
+            "sunday"
+          ]
+        }
+      }
+    }
+  },
+  "korean": {
+    "title": "연중 제33주일 (세계 가난한 이의 날)",
+    "color": "#27ae60",
+    "data": {
+      "entrance": {
+        "text": "주님이 말씀하신다. 나는 재앙이 아니라 평화를 주노라. 나를 부르면 너희 기도를 들어 주고, 사로잡힌 너희를 모든 곳에서 데려오리라.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "주님이 말씀하신다. 나는 재앙이 아니라 평화를 주노라. 나를 부르면 너희 기도를 들어 주고, 사로잡힌 너희를 모든 곳에서 데려오리라."
+          }
+        ],
+        "optionCits": [
+          {
+            "cit_kr": "예레 29,11.12.14 참조"
+          }
+        ],
+        "cit_kr": "예레 29,11.12.14 참조"
+      },
+      "collect": {
+        "text": "주 하느님, 저희를 도와주시어 언제나 모든 선의 근원이신 주님을 기쁜 마음으로 섬기며 완전하고 영원한 행복을 누리게 하소서.\n성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "주 하느님, 저희를 도와주시어 언제나 모든 선의 근원이신 주님을 기쁜 마음으로 섬기며 완전하고 영원한 행복을 누리게 하소서."
+          },
+          {
+            "sp": "",
+            "text": "성부와 성령과 함께 천주로서 영원히 살아 계시며 다스리시는 성자 우리 주 예수 그리스도를 통하여 비나이다."
+          }
+        ]
+      },
+      "reading1": {
+        "text": "훌륭한 아내는 제 손으로 즐거이 일한다\n잠언의 말씀입니다.\n훌륭한 아내를 누가 얻으리오? 그 가치는 산호보다 높다.\n남편은 그를 마음으로 신뢰하고 소득이 모자라지 않는다.\n그 아내는 한평생 남편에게 해 끼치는 일 없이 잘해 준다.\n양모와 아마를 구해다가 제 손으로 즐거이 일한다.\n한 손으로는 물레질하고 다른 손으로는 실을 잣는다.\n가난한 이에게 손을 펼치고 불쌍한 이에게 손을 내밀어 도와준다.\n우아함은 거짓이고 아름다움은 헛것이지만 주님을 경외하는 여인은 칭송을 받는다.\n그 손이 거둔 결실을 그에게 돌리고 그가 한 일을 성문에서 칭송하여라.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "훌륭한 아내는 제 손으로 즐거이 일한다",
+            "role": "summary"
+          },
+          {
+            "sp": "▥",
+            "text": "잠언의 말씀입니다.",
+            "role": "intro"
+          },
+          {
+            "sp": "",
+            "text": "훌륭한 아내를 누가 얻으리오? 그 가치는 산호보다 높다.\n남편은 그를 마음으로 신뢰하고 소득이 모자라지 않는다.\n그 아내는 한평생 남편에게 해 끼치는 일 없이 잘해 준다.\n양모와 아마를 구해다가 제 손으로 즐거이 일한다.\n한 손으로는 물레질하고 다른 손으로는 실을 잣는다.\n가난한 이에게 손을 펼치고 불쌍한 이에게 손을 내밀어 도와준다.\n우아함은 거짓이고 아름다움은 헛것이지만 주님을 경외하는 여인은 칭송을 받는다.\n그 손이 거둔 결실을 그에게 돌리고 그가 한 일을 성문에서 칭송하여라.",
+            "role": "body"
+          }
+        ],
+        "cit_kr": "잠언 31,10-13.19-20.30-31"
+      },
+      "psalm": {
+        "text": "행복하여라, 주님을 경외하는 모든 사람!\n행복하여라, 주님을 경외하는 사람, 그분의 길을 걷는 모든 사람! 네 손으로 벌어 네가 먹으리니, 너는 행복하여라, 너는 복을 받으리라. ◎\n너의 집 안방에 있는 아내는, 풍성한 포도나무 같고, 너의 밥상에 둘러앉은 아들들은 올리브 나무 햇순 같구나. ◎\n보라, 주님을 경외하는 사람은, 이렇듯 복을 받으리라. 주님은 시온에서 너에게 복을 내리시리라. 너는 한평생 모든 날에, 예루살렘의 번영을 보리라. ◎",
+        "lines": [
+          {
+            "sp": "◎",
+            "text": "행복하여라, 주님을 경외하는 모든 사람!"
+          },
+          {
+            "sp": "○",
+            "text": "행복하여라, 주님을 경외하는 사람, 그분의 길을 걷는 모든 사람! 네 손으로 벌어 네가 먹으리니, 너는 행복하여라, 너는 복을 받으리라. ◎",
+            "verseRefs": [
+              1,
+              2
+            ]
+          },
+          {
+            "sp": "○",
+            "text": "너의 집 안방에 있는 아내는, 풍성한 포도나무 같고, 너의 밥상에 둘러앉은 아들들은 올리브 나무 햇순 같구나. ◎",
+            "verseRefs": [
+              3
+            ]
+          },
+          {
+            "sp": "○",
+            "text": "보라, 주님을 경외하는 사람은, 이렇듯 복을 받으리라. 주님은 시온에서 너에게 복을 내리시리라. 너는 한평생 모든 날에, 예루살렘의 번영을 보리라. ◎",
+            "verseRefs": [
+              4,
+              5
+            ]
+          }
+        ],
+        "cit_kr": "시편 128(127),1-2.3.4-5(◎ 1ㄱ 참조)"
+      },
+      "reading2": {
+        "text": "주님의 날이 여러분을 도둑처럼 덮치지는 않을 것입니다\n사도 바오로의 테살로니카 1서 말씀입니다.\n형제 여러분,\n그 시간과 그 때에 관해서는 여러분에게 더 쓸 필요가 없습니다.\n주님의 날이 마치 밤도둑처럼 온다는 것을 여러분 자신도 잘 알고 있습니다.\n사람들이 “평화롭다, 안전하다.” 할 때, 아기를 밴 여자에게 진통이 오는 것처럼\n갑자기 그들에게 파멸이 닥치는데, 아무도 그것을 피하지 못할 것입니다.\n그러나 형제 여러분, 여러분은 어둠 속에 있지 않으므로,\n그날이 여러분을 도둑처럼 덮치지는 않을 것입니다.\n여러분은 모두 빛의 자녀이며 낮의 자녀입니다.\n우리는 밤이나 어둠에 속한 사람이 아닙니다.\n그러므로 이제 우리는 다른 사람들처럼 잠들지 말고,\n맑은 정신으로 깨어 있도록 합시다.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "주님의 날이 여러분을 도둑처럼 덮치지는 않을 것입니다",
+            "role": "summary"
+          },
+          {
+            "sp": "▥",
+            "text": "사도 바오로의 테살로니카 1서 말씀입니다.",
+            "role": "intro"
+          },
+          {
+            "sp": "",
+            "text": "형제 여러분,\n그 시간과 그 때에 관해서는 여러분에게 더 쓸 필요가 없습니다.\n주님의 날이 마치 밤도둑처럼 온다는 것을 여러분 자신도 잘 알고 있습니다.\n사람들이 “평화롭다, 안전하다.” 할 때, 아기를 밴 여자에게 진통이 오는 것처럼\n갑자기 그들에게 파멸이 닥치는데, 아무도 그것을 피하지 못할 것입니다.\n그러나 형제 여러분, 여러분은 어둠 속에 있지 않으므로,\n그날이 여러분을 도둑처럼 덮치지는 않을 것입니다.\n여러분은 모두 빛의 자녀이며 낮의 자녀입니다.\n우리는 밤이나 어둠에 속한 사람이 아닙니다.\n그러므로 이제 우리는 다른 사람들처럼 잠들지 말고,\n맑은 정신으로 깨어 있도록 합시다.",
+            "role": "body"
+          }
+        ],
+        "cit_kr": "1테살 5,1-6"
+      },
+      "gospel_accl": {
+        "text": "알렐루야.\n주님이 말씀하신다. 내 안에 머물러라. 내 안에 머무르고 나도 그 안에 머무르는 사람은 많은 열매를 맺으리라.\n알렐루야.",
+        "lines": [
+          {
+            "sp": "◎",
+            "text": "알렐루야."
+          },
+          {
+            "sp": "○",
+            "text": "주님이 말씀하신다. 내 안에 머물러라. 내 안에 머무르고 나도 그 안에 머무르는 사람은 많은 열매를 맺으리라."
+          },
+          {
+            "sp": "◎",
+            "text": "알렐루야."
+          }
+        ],
+        "cit_kr": "요한 15,4.5 참조"
+      },
+      "gospel": {
+        "text": "네가 작은 일에 성실하였으니, 와서 네 주인과 함께 기쁨을 나누어라\n마태오가 전한 거룩한 복음입니다.\n그때에 예수님께서 제자들에게 이런 비유를 들어 말씀하셨다.\n“하늘 나라는 어떤 사람이 여행을 떠나면서\n종들을 불러 재산을 맡기는 것과 같다.\n그는 각자의 능력에 따라 한 사람에게는 다섯 탈렌트,\n다른 사람에게는 두 탈렌트,\n또 다른 사람에게는 한 탈렌트를 주고 여행을 떠났다.\n다섯 탈렌트를 받은 이는 곧 가서 그 돈을 활용하여 다섯 탈렌트를 더 벌었다.\n두 탈렌트를 받은 이도 그렇게 하여 두 탈렌트를 더 벌었다.\n그러나 한 탈렌트를 받은 이는 물러가서 땅을 파고 주인의 그 돈을 숨겼다.\n오랜 뒤에 종들의 주인이 와서 그들과 셈을 하게 되었다.\n다섯 탈렌트를 받은 이가 나아가서 다섯 탈렌트를 더 바치며,\n‘주인님, 저에게 다섯 탈렌트를 맡기셨는데,\n보십시오, 다섯 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n두 탈렌트를 받은 이도 나아가서, ‘주인님, 저에게 두 탈렌트를 맡기셨는데,\n보십시오, 두 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n그런데 한 탈렌트를 받은 이는 나아가서 이렇게 말하였다.\n‘주인님, 저는 주인님께서 모진 분이시어서, 심지 않은 데에서 거두시고\n뿌리지 않은 데에서 모으신다는 것을 알고 있었습니다.\n그래서 두려운 나머지 물러가서 주인님의 탈렌트를 땅에 숨겨 두었습니다.\n보십시오, 주인님의 것을 도로 받으십시오.’\n그러자 주인이 그에게 대답하였다.\n‘이 악하고 게으른 종아! 내가 심지 않은 데에서 거두고\n뿌리지 않은 데에서 모으는 줄로 알고 있었다는 말이냐?\n그렇다면 내 돈을 대금업자들에게 맡겼어야지.\n그리하였으면 내가 돌아왔을 때에 내 돈에 이자를 붙여 돌려받았을 것이다.\n저자에게서 그 한 탈렌트를 빼앗아 열 탈렌트를 가진 이에게 주어라.\n누구든지 가진 자는 더 받아 넉넉해지고,\n가진 것이 없는 자는 가진 것마저 빼앗길 것이다.\n그리고 저 쓸모없는 종은 바깥 어둠 속으로 내던져 버려라.\n거기에서 그는 울며 이를 갈 것이다.’”",
+        "lines": [
+          {
+            "sp": "",
+            "text": "네가 작은 일에 성실하였으니, 와서 네 주인과 함께 기쁨을 나누어라",
+            "role": "summary"
+          },
+          {
+            "sp": "✠",
+            "text": "마태오가 전한 거룩한 복음입니다.",
+            "role": "intro"
+          },
+          {
+            "sp": "",
+            "text": "그때에 예수님께서 제자들에게 이런 비유를 들어 말씀하셨다.\n“하늘 나라는 어떤 사람이 여행을 떠나면서\n종들을 불러 재산을 맡기는 것과 같다.\n그는 각자의 능력에 따라 한 사람에게는 다섯 탈렌트,\n다른 사람에게는 두 탈렌트,\n또 다른 사람에게는 한 탈렌트를 주고 여행을 떠났다.\n다섯 탈렌트를 받은 이는 곧 가서 그 돈을 활용하여 다섯 탈렌트를 더 벌었다.\n두 탈렌트를 받은 이도 그렇게 하여 두 탈렌트를 더 벌었다.\n그러나 한 탈렌트를 받은 이는 물러가서 땅을 파고 주인의 그 돈을 숨겼다.\n오랜 뒤에 종들의 주인이 와서 그들과 셈을 하게 되었다.\n다섯 탈렌트를 받은 이가 나아가서 다섯 탈렌트를 더 바치며,\n‘주인님, 저에게 다섯 탈렌트를 맡기셨는데,\n보십시오, 다섯 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n두 탈렌트를 받은 이도 나아가서, ‘주인님, 저에게 두 탈렌트를 맡기셨는데,\n보십시오, 두 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n그런데 한 탈렌트를 받은 이는 나아가서 이렇게 말하였다.\n‘주인님, 저는 주인님께서 모진 분이시어서, 심지 않은 데에서 거두시고\n뿌리지 않은 데에서 모으신다는 것을 알고 있었습니다.\n그래서 두려운 나머지 물러가서 주인님의 탈렌트를 땅에 숨겨 두었습니다.\n보십시오, 주인님의 것을 도로 받으십시오.’\n그러자 주인이 그에게 대답하였다.\n‘이 악하고 게으른 종아! 내가 심지 않은 데에서 거두고\n뿌리지 않은 데에서 모으는 줄로 알고 있었다는 말이냐?\n그렇다면 내 돈을 대금업자들에게 맡겼어야지.\n그리하였으면 내가 돌아왔을 때에 내 돈에 이자를 붙여 돌려받았을 것이다.\n저자에게서 그 한 탈렌트를 빼앗아 열 탈렌트를 가진 이에게 주어라.\n누구든지 가진 자는 더 받아 넉넉해지고,\n가진 것이 없는 자는 가진 것마저 빼앗길 것이다.\n그리고 저 쓸모없는 종은 바깥 어둠 속으로 내던져 버려라.\n거기에서 그는 울며 이를 갈 것이다.’”",
+            "role": "body"
+          }
+        ],
+        "cit_kr": "마태 25,14-30",
+        "optionCits": [
+          {
+            "cit_kr": "마태 25,14-30"
+          },
+          {
+            "cit_kr": "마태 25,14-15.19-21"
+          }
+        ],
+        "options": [
+          {
+            "id": "A",
+            "label": "",
+            "kind": "",
+            "cit_kr": "마태 25,14-30",
+            "lines": [
+              {
+                "sp": "",
+                "text": "네가 작은 일에 성실하였으니, 와서 네 주인과 함께 기쁨을 나누어라",
+                "role": "summary"
+              },
+              {
+                "sp": "✠",
+                "text": "마태오가 전한 거룩한 복음입니다.",
+                "role": "intro"
+              },
+              {
+                "sp": "",
+                "text": "그때에 예수님께서 제자들에게 이런 비유를 들어 말씀하셨다.\n“하늘 나라는 어떤 사람이 여행을 떠나면서\n종들을 불러 재산을 맡기는 것과 같다.\n그는 각자의 능력에 따라 한 사람에게는 다섯 탈렌트,\n다른 사람에게는 두 탈렌트,\n또 다른 사람에게는 한 탈렌트를 주고 여행을 떠났다.\n다섯 탈렌트를 받은 이는 곧 가서 그 돈을 활용하여 다섯 탈렌트를 더 벌었다.\n두 탈렌트를 받은 이도 그렇게 하여 두 탈렌트를 더 벌었다.\n그러나 한 탈렌트를 받은 이는 물러가서 땅을 파고 주인의 그 돈을 숨겼다.\n오랜 뒤에 종들의 주인이 와서 그들과 셈을 하게 되었다.\n다섯 탈렌트를 받은 이가 나아가서 다섯 탈렌트를 더 바치며,\n‘주인님, 저에게 다섯 탈렌트를 맡기셨는데,\n보십시오, 다섯 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n두 탈렌트를 받은 이도 나아가서, ‘주인님, 저에게 두 탈렌트를 맡기셨는데,\n보십시오, 두 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n그런데 한 탈렌트를 받은 이는 나아가서 이렇게 말하였다.\n‘주인님, 저는 주인님께서 모진 분이시어서, 심지 않은 데에서 거두시고\n뿌리지 않은 데에서 모으신다는 것을 알고 있었습니다.\n그래서 두려운 나머지 물러가서 주인님의 탈렌트를 땅에 숨겨 두었습니다.\n보십시오, 주인님의 것을 도로 받으십시오.’\n그러자 주인이 그에게 대답하였다.\n‘이 악하고 게으른 종아! 내가 심지 않은 데에서 거두고\n뿌리지 않은 데에서 모으는 줄로 알고 있었다는 말이냐?\n그렇다면 내 돈을 대금업자들에게 맡겼어야지.\n그리하였으면 내가 돌아왔을 때에 내 돈에 이자를 붙여 돌려받았을 것이다.\n저자에게서 그 한 탈렌트를 빼앗아 열 탈렌트를 가진 이에게 주어라.\n누구든지 가진 자는 더 받아 넉넉해지고,\n가진 것이 없는 자는 가진 것마저 빼앗길 것이다.\n그리고 저 쓸모없는 종은 바깥 어둠 속으로 내던져 버려라.\n거기에서 그는 울며 이를 갈 것이다.’”",
+                "role": "body"
+              }
+            ],
+            "text": "네가 작은 일에 성실하였으니, 와서 네 주인과 함께 기쁨을 나누어라\n마태오가 전한 거룩한 복음입니다.\n그때에 예수님께서 제자들에게 이런 비유를 들어 말씀하셨다.\n“하늘 나라는 어떤 사람이 여행을 떠나면서\n종들을 불러 재산을 맡기는 것과 같다.\n그는 각자의 능력에 따라 한 사람에게는 다섯 탈렌트,\n다른 사람에게는 두 탈렌트,\n또 다른 사람에게는 한 탈렌트를 주고 여행을 떠났다.\n다섯 탈렌트를 받은 이는 곧 가서 그 돈을 활용하여 다섯 탈렌트를 더 벌었다.\n두 탈렌트를 받은 이도 그렇게 하여 두 탈렌트를 더 벌었다.\n그러나 한 탈렌트를 받은 이는 물러가서 땅을 파고 주인의 그 돈을 숨겼다.\n오랜 뒤에 종들의 주인이 와서 그들과 셈을 하게 되었다.\n다섯 탈렌트를 받은 이가 나아가서 다섯 탈렌트를 더 바치며,\n‘주인님, 저에게 다섯 탈렌트를 맡기셨는데,\n보십시오, 다섯 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n두 탈렌트를 받은 이도 나아가서, ‘주인님, 저에게 두 탈렌트를 맡기셨는데,\n보십시오, 두 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니 이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’\n그런데 한 탈렌트를 받은 이는 나아가서 이렇게 말하였다.\n‘주인님, 저는 주인님께서 모진 분이시어서, 심지 않은 데에서 거두시고\n뿌리지 않은 데에서 모으신다는 것을 알고 있었습니다.\n그래서 두려운 나머지 물러가서 주인님의 탈렌트를 땅에 숨겨 두었습니다.\n보십시오, 주인님의 것을 도로 받으십시오.’\n그러자 주인이 그에게 대답하였다.\n‘이 악하고 게으른 종아! 내가 심지 않은 데에서 거두고\n뿌리지 않은 데에서 모으는 줄로 알고 있었다는 말이냐?\n그렇다면 내 돈을 대금업자들에게 맡겼어야지.\n그리하였으면 내가 돌아왔을 때에 내 돈에 이자를 붙여 돌려받았을 것이다.\n저자에게서 그 한 탈렌트를 빼앗아 열 탈렌트를 가진 이에게 주어라.\n누구든지 가진 자는 더 받아 넉넉해지고,\n가진 것이 없는 자는 가진 것마저 빼앗길 것이다.\n그리고 저 쓸모없는 종은 바깥 어둠 속으로 내던져 버려라.\n거기에서 그는 울며 이를 갈 것이다.’”"
+          },
+          {
+            "id": "B",
+            "label": "",
+            "kind": "",
+            "cit_kr": "마태 25,14-15.19-21",
+            "lines": [
+              {
+                "sp": "",
+                "text": "네가 작은 일에 성실하였으니, 와서 네 주인과 함께 기쁨을 나누어라",
+                "role": "summary"
+              },
+              {
+                "sp": "✠",
+                "text": "마태오가 전한 거룩한 복음입니다.",
+                "role": "intro"
+              },
+              {
+                "sp": "",
+                "text": "그때에 예수님께서 제자들에게 이런 비유를 들어 말씀하셨다.\n“하늘 나라는 어떤 사람이 여행을 떠나면서\n종들을 불러 재산을 맡기는 것과 같다.\n그는 각자의 능력에 따라 한 사람에게는 다섯 탈렌트,\n다른 사람에게는 두 탈렌트,\n또 다른 사람에게는 한 탈렌트를 주고 여행을 떠났다.\n오랜 뒤에 종들의 주인이 와서 그들과 셈을 하게 되었다.\n다섯 탈렌트를 받은 이가 나아가서 다섯 탈렌트를 더 바치며,\n‘주인님, 저에게 다섯 탈렌트를 맡기셨는데,\n보십시오, 다섯 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니\n이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’”",
+                "role": "body"
+              }
+            ],
+            "text": "네가 작은 일에 성실하였으니, 와서 네 주인과 함께 기쁨을 나누어라\n마태오가 전한 거룩한 복음입니다.\n그때에 예수님께서 제자들에게 이런 비유를 들어 말씀하셨다.\n“하늘 나라는 어떤 사람이 여행을 떠나면서\n종들을 불러 재산을 맡기는 것과 같다.\n그는 각자의 능력에 따라 한 사람에게는 다섯 탈렌트,\n다른 사람에게는 두 탈렌트,\n또 다른 사람에게는 한 탈렌트를 주고 여행을 떠났다.\n오랜 뒤에 종들의 주인이 와서 그들과 셈을 하게 되었다.\n다섯 탈렌트를 받은 이가 나아가서 다섯 탈렌트를 더 바치며,\n‘주인님, 저에게 다섯 탈렌트를 맡기셨는데,\n보십시오, 다섯 탈렌트를 더 벌었습니다.’ 하고 말하였다.\n그러자 주인이 그에게 일렀다. ‘잘하였다, 착하고 성실한 종아!\n네가 작은 일에 성실하였으니\n이제 내가 너에게 많은 일을 맡기겠다.\n와서 네 주인과 함께 기쁨을 나누어라.’”"
+          }
+        ]
+      },
+      "prayer_offerings": {
+        "text": "주님, 지극히 높으신 주님께 바치는 이 예물을 굽어보시어 저희가 오롯이 주님을 사랑하며 살다가 영원한 생명을 얻게 하소서.\n우리 주 그리스도를 통하여 비나이다.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "주님, 지극히 높으신 주님께 바치는 이 예물을 굽어보시어 저희가 오롯이 주님을 사랑하며 살다가 영원한 생명을 얻게 하소서."
+          },
+          {
+            "sp": "",
+            "text": "우리 주 그리스도를 통하여 비나이다."
+          }
+        ]
+      },
+      "communion": {
+        "text": "저는 하느님 곁에 있어 행복하옵니다. 주 하느님을 피신처로 삼으리이다.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "저는 하느님 곁에 있어 행복하옵니다. 주 하느님을 피신처로 삼으리이다."
+          }
+        ],
+        "optionCits": [
+          {
+            "cit_kr": "시편 73(72),28"
+          },
+          {
+            "cit_kr": "마르 11,23.24 참조"
+          }
+        ],
+        "cit_kr": "시편 73(72),28",
+        "options": [
+          {
+            "id": "A",
+            "label": "",
+            "kind": "",
+            "cit_kr": "시편 73(72),28",
+            "lines": [
+              {
+                "sp": "",
+                "text": "저는 하느님 곁에 있어 행복하옵니다. 주 하느님을 피신처로 삼으리이다."
+              }
+            ],
+            "text": "저는 하느님 곁에 있어 행복하옵니다. 주 하느님을 피신처로 삼으리이다."
+          },
+          {
+            "id": "B",
+            "label": "",
+            "kind": "",
+            "cit_kr": "마르 11,23.24 참조",
+            "lines": [
+              {
+                "sp": "",
+                "text": "주님이 말씀하신다. 내가 진실로 너희에게 말한다. 너희가 기도하며 청하는 것은 무엇이든 이미 받은 줄로 믿어라. 너희에게 그대로 이루어지리라."
+              }
+            ],
+            "text": "주님이 말씀하신다. 내가 진실로 너희에게 말한다. 너희가 기도하며 청하는 것은 무엇이든 이미 받은 줄로 믿어라. 너희에게 그대로 이루어지리라."
+          }
+        ]
+      },
+      "prayer_after": {
+        "text": "주님, 이 거룩하신 성체를 받아 모시고 간절히 비오니 성자께서 당신 자신을 기억하여 거행하라 명하신 이 성사로 저희가 언제나 주님의 사랑을 실천하게 하소서.\n우리 주 그리스도를 통하여 비나이다.",
+        "lines": [
+          {
+            "sp": "",
+            "text": "주님, 이 거룩하신 성체를 받아 모시고 간절히 비오니 성자께서 당신 자신을 기억하여 거행하라 명하신 이 성사로 저희가 언제나 주님의 사랑을 실천하게 하소서."
+          },
+          {
+            "sp": "",
+            "text": "우리 주 그리스도를 통하여 비나이다."
+          }
+        ]
+      }
+    },
+    "sourceUrl": "https://missa.cbck.or.kr/DailyMissa/20261115"
+  }
+}

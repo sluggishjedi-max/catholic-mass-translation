@@ -13,12 +13,12 @@
       if(!response.ok)throw Error('administrator-collection-request-failed');return response.json();
     }
     const published=record=>record?.parsed&&record.publishedVersion?{key:record.countryName+'_'+record.date,version:record.publishedVersion,kind:record.publishedKind,parsed:record.parsed,lastCheckedAt:record.lastCheckedAt}:null;
-    const existing=published((await api({...request,action:'record'})).record);if(existing)return existing;
+    const existing=published((await api({...request,action:'record',includeSourceMasses:'true'})).record);if(existing)return existing;
     const queued=await api({action:'collect',country:request.country,start:request.date,days:1,priority:true},'POST');
     while(true){
       const job=await api({...request,action:'collection',runId:queued.runId});
       if(['completed','completed-with-errors','failed'].includes(job.status)){
-        const result=published((await api({...request,action:'record'})).record);
+        const result=published((await api({...request,action:'record',includeSourceMasses:'true'})).record);
         if(!result)throw Error('요청한 날짜의 서버 수집에 실패했습니다. 매일미사 편집기에서 수집 사유를 확인해 주세요.');
         return result;
       }
