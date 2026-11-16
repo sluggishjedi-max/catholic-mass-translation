@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261116-1';
+    const APP_VERSION = 'V31.2-20261116-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10361,7 +10361,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict115-publisher-mass-counterparts';
+    const STRICT_PARSER_CACHE_VERSION = 'strict116-complete-source-validation';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -14292,14 +14292,14 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                             const mergedParsed = properPartialParsed
                                 ? mergeVietnameseProperPartialWithReadings(readingParsedCandidate, properPartialParsed)
                                 : readingParsedCandidate;
-                            const citedParsed = await applyKtcgkpvCitationSource(mergedParsed, date);
+                            const citedParsed = completeMissingDailyProperSections(await applyKtcgkpvCitationSource(mergedParsed, date), lang, date);
                             if (hasCompleteVietnameseParsedMass(citedParsed)
                                 && (!preferProperDate || properPartialParsed || isProperCandidate)) return citedParsed;
                             throw new Error('VN source is incomplete: ' + missingVietnameseDailySections(citedParsed).join(', '));
                         }
                         if (properPartialParsed && readingParsedCandidate) {
                             const mergedParsed = mergeVietnameseProperPartialWithReadings(readingParsedCandidate, properPartialParsed);
-                            const citedParsed = await applyKtcgkpvCitationSource(mergedParsed, date);
+                            const citedParsed = completeMissingDailyProperSections(await applyKtcgkpvCitationSource(mergedParsed, date), lang, date);
                             if (hasCompleteVietnameseParsedMass(citedParsed)) return citedParsed;
                         }
                         throw new Error('No strict VN readings found');
@@ -14316,7 +14316,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const mergedParsed = properPartialParsed
                     ? mergeVietnameseProperPartialWithReadings(readingParsedCandidate, properPartialParsed)
                     : readingParsedCandidate;
-                const citedParsed = await applyKtcgkpvCitationSource(mergedParsed, date);
+                const citedParsed = completeMissingDailyProperSections(await applyKtcgkpvCitationSource(mergedParsed, date), lang, date);
                 if (hasCompleteVietnameseParsedMass(citedParsed)) return citedParsed;
                 lastError = new Error('VN combined source is incomplete: ' + missingVietnameseDailySections(citedParsed).join(', '));
             }

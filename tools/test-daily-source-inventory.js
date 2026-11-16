@@ -9,6 +9,10 @@ const {memoryFirestore}=require('./test-daily-service');
 const fixture=require('./fixtures/daily-source-masses-20261115.json');
 const plain=value=>JSON.parse(JSON.stringify(value));
 async function main(){
+ const {collectQueuedDailyMass}=require('../functions/daily-functions');
+ for(const status of ['partial','unavailable'])await assert.rejects(()=>collectQueuedDailyMass({collect:async()=>({results:[{status}]})},{country:'IT',date:'2026-11-17'}),/queued-source-incomplete/u);
+ assert((await collectQueuedDailyMass({collect:async()=>({duplicate:true})},{})).duplicate);
+ assert.equal((await collectQueuedDailyMass({collect:async()=>({results:[{status:'ready'}]})},{})).results[0].status,'ready');
  for(const profile of ['VIETNAM_SOUTH','VIETNAM_NORTH']){
   const runtime=createRuntime({country:'VN',date:'2026-11-15',source:'ktcg',profile},{ktcgProvider:async()=>({...fixture.kpv,profile})});
   try{
@@ -29,6 +33,10 @@ async function main(){
   }finally{runtime.close();}
  }
  const date='2026-11-16',url='https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=20261116';
+ if(fixture.hanoi){
+  const hanoi=createRuntime({country:'VN',date:'2026-11-15',source:'hanoi'});
+  try{const incomplete=structuredClone(fixture.hanoi);delete incomplete.data.entrance;delete incomplete.properSources;hanoi.window.__hanoi=incomplete;hanoi.run(`resolveVietnameseDailyUrls=async()=>['https://source.example/2026-11-15'];fetchTextWithFallbacks=async()=>'<html>Hanoi dated fixture</html>';strictParseDailyMass=()=>JSON.parse(JSON.stringify(__hanoi));applyKtcgkpvCitationSource=async parsed=>parsed;`);const parsed=plain(await hanoi.run("fetchStrictDailyMass('VN',getActiveLiturgicalSourceDate(),{locationCode:'VN'})"));assert(parsed.data.entrance.text.includes('Ý định'),'A matching Missal antiphon was rejected before source validation');assert.deepEqual(parsed.data.reading1,incomplete.data.reading1,'Hanoi source reading was rewritten');assert(parsed.properSources.entrance);}finally{hanoi.close();}
+ }
  const sections=(name)=>'<h2>Prima Lettura</h2><p>Ap 1,1-4</p><p>'+name+' first approved passage is preserved exactly as supplied by the publisher.</p><h2>Salmo Responsoriale</h2><p>Sal 1,1-2</p><p>R. Beato chi cammina nella legge del Signore.</p><h2>Acclamazione al Vangelo</h2><p>Gv 8,12</p><p>Alleluia, alleluia. Io sono la luce del mondo. Alleluia.</p><h2>Vangelo</h2><p>Lc 18,35-43</p><p>'+name+' approved Gospel passage is preserved exactly as supplied by the publisher.</p>';
  const titles=['LUNEDÌ DELLA XXXIII SETTIMANA DEL TEMPO ORDINARIO','SANTA MARGHERITA DI SCOZIA - MEMORIA FACOLTATIVA','SANTA GERTRUDE - MEMORIA FACOLTATIVA'];
  const html='<html><body>'+titles.map((title,index)=>'<h3 data-bs-target="#m'+index+'">'+title+'</h3><div id="m'+index+'">'+sections('Form '+index)+'</div>').join('')+'</body></html>';

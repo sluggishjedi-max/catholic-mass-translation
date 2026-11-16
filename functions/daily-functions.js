@@ -23,13 +23,20 @@ async function collectVaticanDay(service,_event={},now=new Date()){
   const date=romeToday(now);
   return service.collectScheduledDay({country:'VA',date,source:'official',variant:'day'},'vatican-daily-'+date);
 }
+async function collectQueuedDailyMass(service,input){
+  const result=await service.collect(input);
+  // Persist every variant's result first, then let Cloud Tasks retry a
+  // transient publisher failure instead of acknowledging an incomplete job.
+  if(!result.duplicate&&(!result.results?.length||result.results.some(item=>item.status!=='ready')))throw Error('queued-source-incomplete:'+input.country+':'+input.date);
+  return result;
+}
 function dailyFunctions({adminSecret,allowedOrigin,rateLimit}){
   const common={getService,allowedOrigin,rateLimit,verifyIdToken:(token,revoked)=>{if(!getApps().length)initializeApp();return getAuth().verifyIdToken(token,revoked);},configuredEmails:()=>adminSecret.value()};
   return {
     dailyMassData:onRequest({region:REGION,invoker:'public',timeoutSeconds:60,memory:'256MiB',maxInstances:5},createDailyHttpHandler(common)),
     dailyMassAdmin:onRequest({region:REGION,invoker:'public',timeoutSeconds:540,memory:'512MiB',maxInstances:2,secrets:[adminSecret]},createDailyHttpHandler({...common,admin:true})),
-    collectDailyMassTask:onTaskDispatched({region:REGION,timeoutSeconds:540,memory:'1GiB',cpu:1,concurrency:1,maxInstances:2,retryConfig:{maxAttempts:2,minBackoffSeconds:90,maxBackoffSeconds:600},rateLimits:{maxConcurrentDispatches:2,maxDispatchesPerSecond:1}},request=>getService().collect(request.data)),
-    collectDailyMassOnDemandTask:onTaskDispatched({region:REGION,timeoutSeconds:540,memory:'1GiB',cpu:1,concurrency:1,maxInstances:1,retryConfig:{maxAttempts:2,minBackoffSeconds:90,maxBackoffSeconds:600},rateLimits:{maxConcurrentDispatches:1,maxDispatchesPerSecond:1}},request=>getService().collect(request.data)),
+    collectDailyMassTask:onTaskDispatched({region:REGION,timeoutSeconds:540,memory:'1GiB',cpu:1,concurrency:1,maxInstances:2,retryConfig:{maxAttempts:2,minBackoffSeconds:90,maxBackoffSeconds:600},rateLimits:{maxConcurrentDispatches:2,maxDispatchesPerSecond:1}},request=>collectQueuedDailyMass(getService(),request.data)),
+    collectDailyMassOnDemandTask:onTaskDispatched({region:REGION,timeoutSeconds:540,memory:'1GiB',cpu:1,concurrency:1,maxInstances:1,retryConfig:{maxAttempts:2,minBackoffSeconds:90,maxBackoffSeconds:600},rateLimits:{maxConcurrentDispatches:1,maxDispatchesPerSecond:1}},request=>collectQueuedDailyMass(getService(),request.data)),
     scheduleDailyMassCollection:onSchedule({region:REGION,schedule:'0 4 10,20,30 * *',timeZone:'Asia/Seoul',timeoutSeconds:540,memory:'512MiB',retryCount:2},async event=>{
       const start=koreaToday(new Date(event.scheduleTime||Date.now()));
       const result=await getService().queueRange({start,days:30,runId:'schedule-'+start});
@@ -48,4 +55,4 @@ function dailyFunctions({adminSecret,allowedOrigin,rateLimit}){
     })
   };
 }
-module.exports={dailyFunctions,getService,collectVaticanDay,REGION};
+module.exports={dailyFunctions,getService,collectVaticanDay,collectQueuedDailyMass,REGION};
