@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261117-3';
+    const APP_VERSION = 'V31.2-20261117-4';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10453,7 +10453,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict119-citation-reference-markers';
+    const STRICT_PARSER_CACHE_VERSION = 'strict120-shared-psalm-refrains';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -12657,20 +12657,33 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         if (responses.length < 2 || responses.some(text => !text)) return null;
         const meanings = new Set(responses.map(normalizeSemanticText));
-        const stanzas = lines.slice(cursor).filter(line => {
+        const stanzas = [];
+        let stanza = [];
+        const flushStanza = () => { if (stanza.length) stanzas.push(stanza); stanza = []; };
+        lines.slice(cursor).forEach(line => {
             const alternative = strictAlternativeMatch(line);
-            return !(alternative && (!alternative.rest || meanings.has(normalizeSemanticText(responseText(alternative.rest)))))
-                && !meanings.has(normalizeSemanticText(responseText(line)));
+            if ((alternative && (!alternative.rest || meanings.has(normalizeSemanticText(responseText(alternative.rest)))))
+                || meanings.has(normalizeSemanticText(responseText(line)))) { flushStanza(); return; }
+            stanza.push(line);
         });
+        flushStanza();
         if (!stanzas.length) return null;
         const marker = {VN:'Đ.',KR:'◎',ZH:'答：',LA:'℟',DE:'Kv'}[lang] || 'R.';
-        const options = responses.map(response => strictParsePsalmOrAcclamation(lang, 'psalm', {
-            ...section, lines: [citation, marker + ' ' + response, ...stanzas].filter(Boolean)
-        }));
-        const out = options.flatMap((option,index) => (index ? [strictParsedLine('', 'Or:')] : []).concat(option.lines));
+        const parsed = strictParsePsalmOrAcclamation(lang, 'psalm', {
+            ...section, lines: [citation,marker + ' ' + responses[0],...stanzas.flatMap(verse=>[...verse,marker + ' ' + responses[0]])].filter(Boolean)
+        });
+        const alternative = strictAlternativeMatch(lines[1]);
+        const alternativeLabel = alternative && !alternative.rest ? lines[1] : (alternative?.marker || 'Or') + ':';
+        const responseLines = responses.flatMap((response,index)=>[
+            ...(index ? [strictParsedLine('','','','',alternativeLabel)] : []),
+            strictParsedLine(marker,response)
+        ]);
+        const responseSpeaker = parsed.lines[0]?.sp;
+        const verseLines = parsed.lines.slice(1).filter(line=>line.sp!==responseSpeaker
+            || normalizeSemanticText(line.text)!==normalizeSemanticText(responses[0]));
+        const out = responseLines.concat(verseLines);
         const field = 'cit_' + lang.toLowerCase();
-        return {text:parsedLinesToText(out),lines:out,[field]:options[0][field] || citation,
-            optionCits:options.map(option => ({[field]:option[field] || citation}))};
+        return {text:parsedLinesToText(out),lines:out,[field]:parsed[field] || citation};
     }
 
     function strictParsePsalmOrAcclamation(lang, key, section) {
