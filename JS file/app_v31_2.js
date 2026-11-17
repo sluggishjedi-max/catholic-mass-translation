@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261117-2';
+    const APP_VERSION = 'V31.2-20261117-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10453,7 +10453,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict118-proper-options';
+    const STRICT_PARSER_CACHE_VERSION = 'strict119-citation-reference-markers';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -13365,7 +13365,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     .replace(/\s+Or\s*[:：]\s*/giu,'\nOr:\n');
             }
             return text.split(/\r?\n/u).flatMap(part => {
-                const inline = part.trim().match(/^((?:(?:cf|cfr|see)\.?\s*)?(?:[1-3]\s*)?\p{L}[\p{L}. ]{0,45}?\s+\d{1,3}(?:\(\d{1,3}\))?\s*[:,.]\s*\d{1,3}[a-z]?(?:\s*[-–—,.;:]\s*\d{1,3}[a-z]?)*)(?:\s+)(.+)$/iu);
+                const inline = part.trim().match(/^((?:(?:cf|cfr|see)\.?\s*)?(?:[1-3]\s*)?\p{L}[\p{L}. ]{0,45}?\s+\d{1,3}(?:\(\d{1,3}\))?\s*[:,.]\s*\d{1,3}[a-z]?(?:\s*[-–—,.;:]\s*\d{1,3}[a-z]?)*(?:\s*(?:참조|참고|参照|參閱))?)(?:\s+)(.+)$/iu);
+                if (inline && /^(?:참조|참고|参照|參閱)$/u.test(inline[2])) return [part];
                 return inline && globalThis.bibleCitation?.parse(strictCitationCandidate(inline[1],lang),lang)
                     ? [inline[1],inline[2]] : [part];
             }).map(part=>part.replace(/\s+([.!?,;])/gu,'$1').trim()).filter(Boolean);
