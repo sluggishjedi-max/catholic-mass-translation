@@ -9,7 +9,7 @@ function datedMassUrl(value,base,date){
     const url=new URL(value,base),origin=originalUrl(base);
     if(!origin||url.protocol!=='https:'||url.hostname!==origin.hostname||url.username||url.password)return null;
     const compact=date.replaceAll('-',''),us=date.slice(5,7)+date.slice(8,10)+date.slice(2,4),text=decodeURIComponent(url.href);
-    if(url.hostname==='bible.usccb.org')return new RegExp('/bible/readings/'+us+'(?:[-.][a-z0-9.-]+)?$','iu').test(url.pathname)?url:null;
+    if(url.hostname==='bible.usccb.org')return new RegExp('/bible/readings/(?:'+us+'(?:[-.][a-z0-9.-]+)?|'+us.slice(0,4)+'-[a-z][a-z-]+(?:\\.cfm)?)$','iu').test(url.pathname)?url:null;
     if(url.hostname==='universalis.com'){
       const prefix=origin.pathname.split('/'+compact+'/')[0];
       return url.pathname===prefix+'/'+compact+'/mass.htm'?url:null;

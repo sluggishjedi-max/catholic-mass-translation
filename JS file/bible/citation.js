@@ -258,9 +258,9 @@
     const parts=String(value).trim().split(/\s*;\s*/);
     let previousId='', recognized=false;
     const output=parts.map(part => {
-      const isReference=/^(?:cf\.?|cfr\.?|x\.?|vgl\.?)\s+/iu.test(part)
+      const isReference=/^(?:cf\.?|cfr\.?|see|x\.?|vgl\.?)\s+/iu.test(part)
         || /(?:참조|참고|参照|參閱)\s*$/u.test(part);
-      part=part.replace(/^(?:cf\.?|cfr\.?|x\.?|vgl\.?)\s+/iu,'')
+      part=part.replace(/^(?:cf\.?|cfr\.?|see|x\.?|vgl\.?)\s+/iu,'')
         .replace(/\s*(?:참조|참고|参照|參閱)\s*$/u,'');
       const match=aliases.find(item=>(resolve(item.alias,source)?.id === item.id || source===target)
         && new RegExp('^'+escape(item.alias)+'\\s*\\.?\\s*[0-9〇零一二三四五六七八九十百廿卅]', 'iu').test(part));

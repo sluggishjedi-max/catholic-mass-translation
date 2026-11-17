@@ -70,7 +70,7 @@
     "1TH": {"koreanName":"테살로니카 1서","name":"1 Thessalonians","aliases":["1 Thes","1 Thessalonians"],"koreanKey":"1테살"},
     "2TH": {"koreanName":"테살로니카 2서","name":"2 Thessalonians","aliases":["2 Thes","2 Thessalonians"],"koreanKey":"2테살"},
     "1TI": {"koreanName":"티모테오 1서","name":"1 Timothy","aliases":["1 Tm","1 Timothy"],"koreanKey":"1티모"},
-    "2TI": {"koreanName":"티모테오 2서","name":"2 Timothy","aliases":["2 Tm","2 Timothy"],"koreanKey":"2티모"},
+    "2TI": {"koreanName":"티모테오 2서","name":"2 Timothy","aliases":["2Tm","2 Tm","2 Timothy"],"koreanKey":"2티모"},
     "TIT": {"koreanName":"티토서","name":"Titus","aliases":["Ti","Titus"],"koreanKey":"티토"},
     "PHM": {"koreanName":"필레몬서","name":"Philemon","aliases":["Phlm","Philemon"],"koreanKey":"필레"},
     "HEB": {"koreanName":"히브리서","name":"Hebrews","aliases":["Heb","Hebrews"],"koreanKey":"히브"},

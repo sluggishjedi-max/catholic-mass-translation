@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261117-1';
+    const APP_VERSION = 'V31.2-20261117-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -9290,11 +9290,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return false;
     }
 
-    function regionalCalendarScriptureSection(parsed, key, lang, expectedTitle) {
+    function regionalCalendarScriptureSection(parsed, key, lang, expectedTitle, preferredMass = null) {
         if (parsed.serverRecord?.kind === 'edited') return cloneData(parsed.data[key]);
         const sameTitle = title => [parsed.title,expectedTitle].some(expected=>expected && title
             && normalizeCalendarNameForCompare(title)===normalizeCalendarNameForCompare(expected));
-        const masses = [parsed,...(parsed.sourceMasses || []).filter(mass=>sameTitle(mass.title))];
+        const masses = [...(preferredMass ? [preferredMass] : []),parsed,...(parsed.sourceMasses || []).filter(mass=>sameTitle(mass.title))];
         const rows=[];
         masses.forEach((mass,massIndex)=>calendarSectionOptions(mass.data?.[key],lang).forEach(row=>{
             // Keep a publisher's alternatives, while deduplicating the same
@@ -9304,7 +9304,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     || JSON.stringify(row.option.lines || row.option.text)===JSON.stringify(previous.option.lines || previous.option.text)));
             if (!duplicate) rows.push({...row,massIndex,title:mass.title});
         }));
-        if (rows.length<=1) return cloneData(parsed.data[key]);
+        if (rows.length<=1) return cloneData(masses[0].data[key]);
         const lines=rows.flatMap((row,index)=>[...(index?[parsedLine('','Or:')]:[]),...(row.option.lines || [parsedLine('',row.option.text || '')])]);
         return globalThis.ordoDailyContent.normalizeSection({
             text:lines.map(line=>line.text || '').join('\n'),lines,
@@ -9397,7 +9397,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         for (const key of scripture) {
             const candidate = fixed[key] || scriptureSource.data?.[key];
             const matched = primaryCalendarScriptureSection(key, primaryData[key], candidate, primaryLang, lang);
-            if (sameObservance && sourceSectionHasContent(parsed.data?.[key])) data[key] = regionalCalendarScriptureSection(parsed,key,lang,expected);
+            if (sameObservance && sourceSectionHasContent(parsed.data?.[key])) data[key] = regionalCalendarScriptureSection(parsed,key,lang,expected,scriptureSource.sourceSelection ? scriptureSource : null);
             else if (matched) data[key] = matched;
             else if (sourceSectionHasContent(primaryData[key])) unavailable.push(key);
         }
@@ -10453,7 +10453,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict117-multilingual-source-integrity';
+    const STRICT_PARSER_CACHE_VERSION = 'strict118-proper-options';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11154,7 +11154,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function strictUsccbDatedMassChoices(source, baseUrl, date) {
-        const prefix = formatDateMmddyy(date), seen = new Set();
+        const prefix = '(?:' + formatDateMmddyy(date) + '|' + formatDateMmddyy(date).slice(0,4) + ')', seen = new Set();
         return extractSourceLinks(source, baseUrl).flatMap(link => {
             let url;
             try { url = new URL(link.href, baseUrl); } catch { return []; }
@@ -13353,6 +13353,25 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return result;
     }
 
+    function strictDailyAntiphonSourceLines(lang, key, lines) {
+        if (!['entrance','communion'].includes(key)) return lines;
+        const easter = getSeasonMeta(getActiveLiturgicalSourceDate()).season === 'easter';
+        return (lines || []).flatMap(line => {
+            let text = decodeHtmlEntities(String(line));
+            if (lang === 'EN') {
+                text = text.replace(/\(\s*(?:E\.\s*T\.|Easter Time)\s*([^)]*alleluia[^)]*)\)([.!?]?)/giu,
+                    (all,words,ending,index,input) => easter ? ' ' + words.trim() + ending : (/[.!?]$/u.test(input.slice(0,index).trim()) ? '' : ending));
+                text = text.replace(/(?:^|\s+)Or\s*,\s*for\s+[^:\n]{1,100}[:：]\s*/giu,'\nOr:\n')
+                    .replace(/\s+Or\s*[:：]\s*/giu,'\nOr:\n');
+            }
+            return text.split(/\r?\n/u).flatMap(part => {
+                const inline = part.trim().match(/^((?:(?:cf|cfr|see)\.?\s*)?(?:[1-3]\s*)?\p{L}[\p{L}. ]{0,45}?\s+\d{1,3}(?:\(\d{1,3}\))?\s*[:,.]\s*\d{1,3}[a-z]?(?:\s*[-–—,.;:]\s*\d{1,3}[a-z]?)*)(?:\s+)(.+)$/iu);
+                return inline && globalThis.bibleCitation?.parse(strictCitationCandidate(inline[1],lang),lang)
+                    ? [inline[1],inline[2]] : [part];
+            }).map(part=>part.replace(/\s+([.!?,;])/gu,'$1').trim()).filter(Boolean);
+        });
+    }
+
     function strictParsePrayerOrAntiphon(lang, key, section) {
         const sourceLines = lang === 'ZH' && ['entrance', 'communion'].includes(key)
             ? (section.lines || []).flatMap(line => String(line).replace(/\s*或[:：]\s*/gu, '\nOr:\n').split('\n'))
@@ -13360,7 +13379,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     const inline = strictCleanLine(line).match(/^([\p{Script=Han}]+\d[0-9a-f,，.、:：;；\s\-–—]*)([\p{Script=Han}「『].*)$/u);
                     return inline && strictLooksLikeCitation(inline[1], 'ZH') ? [inline[1], inline[2]] : [line];
                 })
-            : section.lines;
+            : strictDailyAntiphonSourceLines(lang, key, section.lines);
         const sourceBlocks = strictSplitBlocks(sourceLines);
         const blocks = lang === 'VN'
             ? cleanVietnameseSectionSourceLines(key, sourceBlocks)
@@ -13382,7 +13401,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const result = { text: parsedLinesToText(parsed), lines: parsed };
         if (optionCits.length) {
             result.optionCits = optionCits;
-            result[`cit_${lang.toLowerCase()}`] = optionCits.map(item => item[`cit_${lang.toLowerCase()}`]).find(Boolean) || '';
+            result[`cit_${lang.toLowerCase()}`] = optionCits[0][`cit_${lang.toLowerCase()}`] || '';
         }
         return result;
     }
@@ -17384,7 +17403,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return JSON.stringify(payload);
     }
 
-    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align15-regional-scripture-options';
+    const DAILY_VARIANT_ALIGNMENT_CACHE_VERSION = 'align16-preferred-counterpart';
 
     function dailyVariantAlignmentStorageKey(date, baseId) {
         return `${STORAGE_PREFIX}dailyVariantAlignment:${DAILY_VARIANT_ALIGNMENT_CACHE_VERSION}:${formatDateIso(date)}:${baseId}:${strictDailySourceCacheVariant(date)}`;
@@ -18477,6 +18496,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 ? dailyVariantLabelForAlignment(alignmentGroup, i, alignmentGroups, baseId)
                 : dailyVariantLabel(i);
             const label = dailyVariantLabelFromSourceMetadata(newData, alignmentGroup, i, baseLabel, baseId);
+            const activeLowers = [...new Set(Object.values(currentLeftRightLowerKeys()))];
+            if (activeLowers.filter(lower=>Number.isInteger(sourceIndexes[lower])).length === 1) {
+                lines.forEach(line=>{line.__sourceChoiceOriginal=true;});
+            }
             variants[key] = {
                 label,
                 header: item.header || {},
