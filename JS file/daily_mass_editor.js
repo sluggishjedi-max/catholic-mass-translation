@@ -42,9 +42,11 @@
   async function api(value,method='GET'){
     const user=global.firebase?.auth().currentUser;if(!user)throw Error('관리자 로그인이 필요합니다.');
     const token=await user.getIdToken();
-    const response=await fetch(endpoint+(method==='GET'?'?'+new URLSearchParams(value):''),{method,headers:{Authorization:'Bearer '+token,...(method==='POST'?{'Content-Type':'application/json'}:{})},body:method==='POST'?JSON.stringify(value):undefined,cache:'no-store',signal:AbortSignal.timeout(method==='POST'&&value.action==='collect'?530000:30000)});
+    let response=await fetch(endpoint+(method==='GET'?'?'+new URLSearchParams(value):''),{method,headers:{Authorization:'Bearer '+token,...(method==='POST'?{'Content-Type':'application/json'}:{})},body:method==='POST'?JSON.stringify(value):undefined,cache:'no-store',signal:AbortSignal.timeout(method==='POST'&&value.action==='collect'?530000:30000)});
+    if(response.status===401){const renewed=await user.getIdToken(true);response=await fetch(endpoint+(method==='GET'?'?'+new URLSearchParams(value):''),{method,headers:{Authorization:'Bearer '+renewed,...(method==='POST'?{'Content-Type':'application/json'}:{})},body:method==='POST'?JSON.stringify(value):undefined,cache:'no-store',signal:AbortSignal.timeout(method==='POST'&&value.action==='collect'?530000:30000)});}
+
     const result=await response.json();
-    if(!response.ok){const error=Error(result.error||'서버 요청에 실패했습니다.');error.status=response.status;error.latestVersion=result.latestVersion;throw error;}
+    if(!response.ok){const error=Error(response.status===401?'관리자 로그인이 만료되었습니다. 로그아웃 후 기존 Google 관리자 계정으로 다시 로그인해 주세요.':response.status===403?'이 계정의 관리자 권한 또는 접속 주소를 확인해 주세요.':result.error||'서버 요청에 실패했습니다.');error.status=response.status;error.latestVersion=result.latestVersion;throw error;}
     return result;
   }
   function captureSection(){
@@ -92,7 +94,7 @@
     const generation=state.generation,identity=copy(state.identity);
     const version=await api({...identity,action:'version',version:number});
     if(generation!==state.generation||key(identity)!==key())return;
-    state.parsed=content.normalizeParsed(copy(version.parsed));state.optionIndex=0;state.loadedVersion=version.number;state.dirty=false;state.section='';
+    state.parsed=content.normalizeParsed(copy(version.parsed));state.savedSnapshot=copy(state.parsed);state.optionIndex=0;state.loadedVersion=version.number;state.dirty=false;state.section='';
     state.provenance=version.provenance||null;renderSources();
     $('version-history').value=String(version.number);$('newer-version').hidden=state.latestVersion<=version.number;
     $('provenance').textContent=JSON.stringify({kind:version.kind,createdAt:version.createdAt,parserRevision:version.parserRevision,comparison:version.comparison,sourceUrl:version.parsed.sourceUrl,prayerSourceUrl:version.parsed.prayerSourceUrl},null,2);
@@ -154,6 +156,7 @@
     if(!state.parsed)return;captureSection();saveDraft();
     try{
       const result=await api({...state.identity,action:'save',parsed:state.parsed,baseVersion:state.loadedVersion,expectedLatestVersion:state.latestVersion},'POST');
+      global.dispatchEvent(new CustomEvent('ordo:daily-saved',{detail:{action:'save',identity:copy(state.identity),version:result.latestVersion,before:state.savedSnapshot||null,after:copy(state.parsed)}}));
       localStorage.removeItem(draftKey());state.dirty=false;state.loadedVersion=result.latestVersion;
       await refreshRecord({offer:false});await loadVersion(result.latestVersion);message('편집본 v'+result.latestVersion+'을 저장하고 앱에 적용했습니다.');
     }catch(error){if(error.status===409){await refreshRecord();message('새 버전이 추가됐습니다. 편집 내용은 임시 저장돼 있습니다.',true);}else throw error;}
@@ -162,6 +165,7 @@
     if(!state.loadedVersion||!global.confirm('현재 불러온 v'+state.loadedVersion+' 내용을 새 편집 버전으로 저장하고 앱에 적용할까요?'))return;
     if(state.dirty){message('편집 중인 내용은 “편집 저장 및 앱 적용”으로 저장해 주세요.',true);return;}
     const result=await api({...state.identity,action:'publish',version:state.loadedVersion,expectedLatestVersion:state.latestVersion},'POST');
+    global.dispatchEvent(new CustomEvent('ordo:daily-saved',{detail:{action:'publish',identity:copy(state.identity),version:result.latestVersion,before:state.savedSnapshot||null,after:copy(state.parsed)}}));
     await refreshRecord({offer:false});await loadVersion(result.latestVersion);
   }
   function updateSource(){
@@ -222,6 +226,16 @@
   }
   setInterval(()=>guard(authState),1000);
   setInterval(()=>{if(state.verified&&!state.busy&&state.identity)guard(async()=>{const head=await api({...state.identity,action:'head'});if(head.latestVersion!==state.latestVersion||head.publishedVersion!==state.record?.publishedVersion)await refreshRecord();});},20000);
-  global.ordoDailyEditor=Object.freeze({state,loadRecord,refreshRecord,loadVersion,save,saveDraft});
+  function importSource(section){
+    if(!global.ordoAdminReview?.isVerified()||!state.parsed)throw Error('Google 관리자 로그인 후 편집할 국가·날짜의 자료를 먼저 불러와 주세요.');
+    if(!section||typeof section.text!=='string'||section.text.length>150000)throw Error('가져올 원문을 확인해 주세요.');
+    const id=orderedSections(state.parsed.data).find(k=>k.toLowerCase()===String(section.key).toLowerCase());
+    if(!id)throw Error('이 원문의 전례 항목 대응이 미확인입니다. 작업실에서 항목을 확인해 주세요.');
+    if(content.options(state.parsed.data[id]).length>1)throw Error('이 항목에는 선택지가 여러 개 있습니다. 편집기에서 적용할 선택지를 먼저 확인해 주세요.');
+    captureSection();state.section=id;state.optionIndex=0;sectionFields();$('section-body').value=section.text;state.parsed.workspaceImport={filename:section.filename||'',page:section.page,recognition:'원문 추출 · 사용자 검수 필요'};changed();message('PDF 원문을 초안에 넣었습니다. 본문과 성경 구절을 확인한 뒤 편집 저장 및 앱 적용을 눌러 주세요.');
+    global.dispatchEvent(new CustomEvent('ordo:daily-saved',{detail:{action:'source-import',identity:copy(state.identity),version:state.loadedVersion,after:copy(state.parsed),source:state.parsed.workspaceImport}}));
+  }
+  global.ordoDailyEditor=Object.freeze({state,loadRecord,refreshRecord,loadVersion,save,saveDraft,importSource});
   guard(authState);
 })(globalThis);
+

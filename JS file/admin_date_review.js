@@ -95,7 +95,8 @@
     if (!user) { revoke(); return false; }
     try {
       const token = await user.getIdToken();
-      const response = await fetch(endpoint, {method:'POST', headers:{Authorization:'Bearer ' + token}, cache:'no-store', signal:AbortSignal.timeout(15000)});
+      let response = await fetch(endpoint, {method:'POST', headers:{Authorization:'Bearer ' + token}, cache:'no-store', signal:AbortSignal.timeout(15000)});
+      if(response.status===401){const renewed=await user.getIdToken(true);response=await fetch(endpoint,{method:'POST',headers:{Authorization:'Bearer '+renewed},cache:'no-store',signal:AbortSignal.timeout(15000)})}
       const result = await response.json();
       if (version !== generation || !auth.currentUser || auth.currentUser.uid !== user.uid) return false;
       if (!response.ok || result.administrator !== true || result.uid !== user.uid) { revoke(response.status === 403 ? 7 : 8); return false; }
@@ -156,6 +157,7 @@
   }
   function render() {
     const approved = isVerified();
+    global.dispatchEvent(new CustomEvent('ordo:admin-auth-changed', {detail:{verified:approved}}));
     const values = {'admin-review-title':0, 'admin-review-login':1, 'admin-review-logout':2, 'admin-review-date-label':3, 'admin-review-submit':4, 'admin-review-today':5, 'admin-review-help':11};
     for (const [id,index] of Object.entries(values)) { const element = byId(id); if (element) element.textContent = text(index); }
     const words = calendarLabels[language] || calendarLabels.EN;
@@ -224,3 +226,4 @@
   global.addEventListener('focus', () => { if (auth && auth.currentUser) verify(); });
   initialize();
 })(globalThis);
+
