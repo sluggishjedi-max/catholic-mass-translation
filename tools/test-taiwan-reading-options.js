@@ -57,6 +57,28 @@ try {
   assert.equal(result.novemberReadings.communionAlternatives, 2, 'The second approved Communion antiphon was lost');
   assert.match(result.novemberReadings.secondCommunion, /那以我為飲食的人/u);
   assert.equal(result.novemberReadings.communionCitations[1].cit_zh, '若六 57');
+  const psalm = JSON.parse(runtime.run(`JSON.stringify(strictFormatSection('ZH', 'psalm', {
+    heading: '答唱詠 詠一四九 1-6, 9',
+    lines: ['答：我們讚美上主。', '一、請向上主高唱新歌，', '也要向祂歡呼。',
+      '二、', '一切受造物都讚美祂。', '領：三、願眾人讚美上主。答']
+  }))`));
+  assert.equal(psalm.cit_zh, '詠一四九 1-6, 9');
+  assert.deepEqual(psalm.lines.map(({ sp, text }) => [sp, text]), [
+    ['答', '我們讚美上主。'],
+    ['領', '請向上主高唱新歌， 也要向祂歡呼。 - 答。'],
+    ['領', '一切受造物都讚美祂。 - 答。'],
+    ['領', '願眾人讚美上主。 - 答。']
+  ]);
+  assert(runtime.run(`(() => {
+    const section = { text:'一、請向上主高唱新歌。', lines:[{sp:'領',text:'一、請向上主高唱新歌。'}] };
+    const parsed = { data:{psalm:{...section, options:[section]}}, sourceMasses:[{data:{psalm:section}}] };
+    const clean = withoutStoredChinesePsalmStanzaNumbers(parsed);
+    const edited = {...parsed, serverRecord:{kind:'edited'}};
+    return clean.data.psalm.options[0].text === '請向上主高唱新歌。'
+      && clean.sourceMasses[0].data.psalm.text === '請向上主高唱新歌。'
+      && parsed.data.psalm.text.startsWith('一、')
+      && withoutStoredChinesePsalmStanzaNumbers(edited) === edited;
+  })()`), 'Only collected psalm ordinals are removed, including legacy options');
   console.log(JSON.stringify(result));
 } catch (error) {
   console.error(error.message);

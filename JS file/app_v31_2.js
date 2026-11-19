@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261117-4';
+    const APP_VERSION = 'V31.2-20261119-1';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -9430,7 +9430,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             context = {info:cloneData(state.liturgyInfo), sources:new Map()};
             dailyPrimaryCalendarSources.set(target, context);
         }
-        context.sources.set(lang, {parsed:cloneData(sanitizeDailyAcclamationReferences(parsed,lang)), options});
+        const source = lang === 'ZH' ? withoutStoredChinesePsalmStanzaNumbers(parsed) : parsed;
+        context.sources.set(lang, {parsed:cloneData(sanitizeDailyAcclamationReferences(source,lang)), options});
         Object.keys(target).forEach(key => delete target[key]);
         state.liturgyInfo = cloneData(context.info);
         const original = context.sources.get(primaryLang);
@@ -10453,7 +10454,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict120-shared-psalm-refrains';
+    const STRICT_PARSER_CACHE_VERSION = 'strict121-chinese-psalm-stanzas';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11423,6 +11424,30 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return result;
     }
 
+    // Taiwan's lectionary prints these ordinals as labels before the verses.
+    const traditionalChinesePsalmStanzaNumber = /^[一二三四五六七八九十]+[、．.]\s*/u;
+
+    function withoutStoredChinesePsalmStanzaNumbers(parsed) {
+        if (parsed?.serverRecord?.kind === 'edited') return parsed;
+        const psalm = parsed?.data?.psalm;
+        let cleaned = psalm;
+        if (psalm && typeof psalm === 'object') {
+            const stripSection = section => {
+                if (!section.lines?.some(line => line.sp === '領' && traditionalChinesePsalmStanzaNumber.test(line.text))) return section;
+                const lines = section.lines.map(line => line.sp === '領'
+                    ? {...line, text:line.text.replace(traditionalChinesePsalmStanzaNumber, '')} : line);
+                return {...section, lines, text:lines.map(line => line.text || '').join('\n')};
+            };
+            cleaned = stripSection(psalm);
+            const options = psalm.options?.map(stripSection);
+            if (options?.some((option,index) => option !== psalm.options[index])) cleaned = {...cleaned, options};
+        }
+        const sourceMasses = parsed?.sourceMasses?.map(withoutStoredChinesePsalmStanzaNumbers);
+        const changedMasses = sourceMasses?.some((mass,index) => mass !== parsed.sourceMasses[index]);
+        if (cleaned === psalm && !changedMasses) return parsed;
+        return {...parsed, ...(cleaned !== psalm && {data:{...parsed.data, psalm:cleaned}}), ...(changedMasses && {sourceMasses})};
+    }
+
     function strictExpandTraditionalChineseLines(lines) {
         const expanded = (lines || []).flatMap(line => strictCleanLine(line)
             .replace(/）\s*(?=恭讀)/gu, '）\n')
@@ -11432,7 +11457,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .filter(Boolean))
             .filter(line => !/^--\s*\d+\s+of\s+\d+\s*--$/iu.test(line));
         const structural = line => strictIdentifySection(line, 'ZH') || strictIsTerminalSection(line, 'ZH')
-            || /^(?:恭讀|第[一二三四五六七八九十]+式|[（(]|答[:：]|領[:：]|或(?:[:：]|\s|$)|Or:|[一二三四五六七八九十]+、|上主的聖言)/u.test(line)
+            || traditionalChinesePsalmStanzaNumber.test(line)
+            || /^(?:恭讀|第[一二三四五六七八九十]+式|[（(]|答[:：]|領[:：]|或(?:[:：]|\s|$)|Or:|上主的聖言)/u.test(line)
             || /^[\p{Script=Han}〇○Ο]{1,24}\s+\d[\da-z,，.;；:：()（）\s+\-–—]*$/u.test(line);
         const out = [];
         expanded.forEach(line => {
@@ -12788,14 +12814,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     flushVerse();
                     return;
                 }
-                const split = strictSplitLeadingSpeaker('ZH', key, cleaned);
+                const numbered = traditionalChinesePsalmStanzaNumber.test(cleaned);
+                if (numbered) flushVerse();
+                const split = strictSplitLeadingSpeaker('ZH', key, cleaned.replace(traditionalChinesePsalmStanzaNumber, ''));
                 if (split.sp === '答') {
                     flushVerse();
                     if (split.text && !out.some(item => item.sp === '答')) out.push(strictParsedLine('答', split.text));
                     return;
                 }
-                if (split.sp === '領') flushVerse();
-                verseBuffer.push(split.text || cleaned);
+                const verseText = split.text.replace(traditionalChinesePsalmStanzaNumber, '');
+                if (split.sp === '領' || verseText !== split.text) flushVerse();
+                if (verseText) verseBuffer.push(verseText);
                 if (split.sp === '領' || /\s*答。?\s*$/u.test(cleaned)) flushVerse();
             });
             flushVerse();
