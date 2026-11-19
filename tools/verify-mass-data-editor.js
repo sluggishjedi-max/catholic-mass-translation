@@ -249,6 +249,22 @@ function main() {
   assert.equal(loaded.countries.length, 17, 'all country Mass modules should load');
   assert.equal(loaded.countries.filter(country => country.editable).length, 17, 'all country Mass modules should be editable');
 
+  const taiwan = loaded.runtime.countries.TW;
+  const blessing = taiwan.ordinary.find(entry => entry.id === '4.2 blessing');
+  const bishopKey = JSON.stringify([blessing.id, ['variants', 'B', 'lines']]);
+  const legacyTaiwan = { ...taiwan, ordinary: taiwan.ordinary.map(entry => entry === blessing
+    ? { ...entry, variants: { A: entry.variants.A } }
+    : entry) };
+  const legacy = { ...loaded, runtime: { ...loaded.runtime, countries: { ...loaded.runtime.countries, TW: legacyTaiwan } } };
+  const missingBishop = blockPair(legacy, 'KR', 'TW', bishopKey);
+  assert.equal(missingBishop.rightBlockKey, bishopKey);
+  assert.ok(missingBishop.rows.length && missingBishop.rows.every(row => row.right?.virtual),
+    'A missing bishop blessing must have its own empty rows');
+  for (const [code, country] of Object.entries(loaded.runtime.countries)) {
+    const entry = country.ordinary.find(item => item.id === '4.2 blessing');
+    assert.ok(entry.variants.A && !entry.variants.C, code);
+  }
+
   if (process.argv.includes('--structure-only')) {
     const requestedCountry = process.argv.find(arg => arg.startsWith('--country='))?.slice('--country='.length);
     loaded.countries.filter(country => !requestedCountry || country.jurisdiction === requestedCountry).forEach(country => {

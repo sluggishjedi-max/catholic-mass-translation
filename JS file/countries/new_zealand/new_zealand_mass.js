@@ -2425,68 +2425,6 @@
               }
             ]
           },
-          "C": {
-            "label": {
-              "en": "A Solemn formula of blessing/The prayer over the people"
-            },
-            "lines": [
-              {
-                "text_en": "The Lord be with you.",
-                "__massEditorPairKeys": {
-                  "text_en": "0:text"
-                },
-                "sp_en": "B."
-              },
-              {
-                "text_en": "And with your spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "1:text"
-                },
-                "sp_en": "ALL"
-              },
-              {
-                "rubric_en": "Bow your heads and pray for God's blessing.",
-                "__massEditorPairKeys": {
-                  "rubric_en": "2:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "rubric_en": "At the end of the Priest's prayer, ",
-                "__massEditorPairKeys": {
-                  "rubric_en": "3:rubric"
-                },
-                "rubricInset_en": true
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "3:text"
-                },
-                "sp_en": "R."
-              },
-              {
-                "text_en": "May almighty God bless you:",
-                "__massEditorPairKeys": {
-                  "text_en": "4:text"
-                },
-                "sp_en": "P."
-              },
-              {
-                "text_en": "the Father, and the Son, ✠ and the Holy Spirit.",
-                "__massEditorPairKeys": {
-                  "text_en": "5:text"
-                }
-              },
-              {
-                "text_en": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_en": "6:text"
-                },
-                "sp_en": "All"
-              }
-            ]
-          },
           "solemn_advent": {
             "label": {
               "en": "Solemn Blessing - Advent"

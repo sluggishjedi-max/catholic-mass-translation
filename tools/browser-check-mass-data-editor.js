@@ -85,6 +85,39 @@ async function main() {
       assert.equal((await page.locator('.columns-head span').nth(1).textContent()).trim(), '', 'The middle translation heading must be blank');
       await page.selectOption('#right-country', 'TW');
       await page.waitForFunction(() => state.block.rightCountry.jurisdiction === 'TW');
+      const blessingKey = form => JSON.stringify(['4.2 blessing', ['variants', form, 'lines']]);
+      const blessingChoices = await page.locator('#block option').evaluateAll(nodes => nodes.map(node => node.value));
+      assert(!blessingChoices.includes(blessingKey('C')), 'The generic solemn blessing must be absent');
+      assert(blessingChoices.includes(blessingKey('solemn_advent')), 'The seasonal solemn blessing must remain');
+      assert(blessingChoices.includes(blessingKey('people_lent_1_1')), 'The seasonal prayer over the people must remain');
+      const selectBlessing = async form => {
+        const key = blessingKey(form);
+        await page.selectOption('#block', key);
+        await page.waitForFunction(key => state.block.key === key, key);
+        assert.equal(await page.evaluate(() => state.block.rightBlockKey), key);
+      };
+      const firstBlessingLine = page.locator('textarea[data-side="right"][data-role="text"]').first();
+      const saveBlessing = async text => {
+        await firstBlessingLine.fill(text);
+        await page.click('#save-right');
+        await page.waitForFunction(text => !state.saving && state.drafts.right[0]?.text === text, text);
+      };
+      await selectBlessing('B');
+      assert(await page.locator('textarea[data-side="right"][data-role="text"]').evaluateAll(
+        fields => fields.some(field => field.value.includes('願上主的聖名受頌揚'))));
+      const bishopOpening = await firstBlessingLine.inputValue();
+      await selectBlessing('A');
+      const ordinaryOpening = await firstBlessingLine.inputValue();
+      await saveBlessing('普通降福測試');
+      await selectBlessing('B');
+      assert.equal(await firstBlessingLine.inputValue(), bishopOpening);
+      await saveBlessing('主教降福測試');
+      await selectBlessing('A');
+      assert.equal(await firstBlessingLine.inputValue(), '普通降福測試');
+      await saveBlessing(ordinaryOpening);
+      await selectBlessing('B');
+      assert.equal(await firstBlessingLine.inputValue(), '主教降福測試');
+      await saveBlessing(bishopOpening);
       const speakerBlock = mass.blocksForCountry(loaded, 'TW').find(block => block.rows.some(row => row.kind === 'text' && !row.speakerPath)
         && mass.blocksForCountry(loaded, 'KR').some(left => left.key === block.key));
       assert.ok(speakerBlock, 'A translated body sentence without a speaker field is required');

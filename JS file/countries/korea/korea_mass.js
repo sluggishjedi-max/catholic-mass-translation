@@ -2122,68 +2122,6 @@
               }
             ]
           },
-          "C": {
-            "label": {
-              "kr": "장엄강복/백성을 위한 기도"
-            },
-            "lines": [
-              {
-                "text_kr": "주님께서 여러분과 함께.",
-                "__massEditorPairKeys": {
-                  "text_kr": "0:text"
-                },
-                "sp_kr": "✚"
-              },
-              {
-                "text_kr": "또한 사제의 영과 함께.",
-                "__massEditorPairKeys": {
-                  "text_kr": "1:text"
-                },
-                "sp_kr": "◎"
-              },
-              {
-                "rubric_kr": "고개를 숙여 강복을 받는다.",
-                "__massEditorPairKeys": {
-                  "rubric_kr": "2:rubric"
-                },
-                "rubricInset_kr": true
-              },
-              {
-                "rubric_kr": "사제의 기도 끝에, ",
-                "__massEditorPairKeys": {
-                  "rubric_kr": "3:rubric"
-                },
-                "rubricInset_kr": true
-              },
-              {
-                "text_kr": "아멘.",
-                "__massEditorPairKeys": {
-                  "text_kr": "3:text"
-                },
-                "sp_kr": "◎"
-              },
-              {
-                "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는",
-                "__massEditorPairKeys": {
-                  "text_kr": "4:text"
-                },
-                "sp_kr": "✚"
-              },
-              {
-                "text_kr": "여기 모인 모든 이에게 강복하소서.",
-                "__massEditorPairKeys": {
-                  "text_kr": "5:text"
-                }
-              },
-              {
-                "text_kr": "아멘.",
-                "__massEditorPairKeys": {
-                  "text_kr": "6:text"
-                },
-                "sp_kr": "◎"
-              }
-            ]
-          },
           "solemn_advent": {
             "label": {
               "kr": "장엄강복 - 대림"
@@ -17057,45 +16995,6 @@
           }, {
             "sp_kr": "✚",
             "text_kr": "전능하신 천주 성부와 ✠ 성자와 ✠ 성령 ✠ 께서는"
-          }, {
-            "sp_kr": "",
-            "text_kr": "여기 모인 모든 이에게 강복하소서."
-          }, {
-            "sp_kr": "◎",
-            "text_kr": "아멘."
-          }]
-        },
-        "C": {
-          "label": {
-            "kr": "장엄강복/백성을 위한 기도"
-          },
-          "lines": [{
-            "sp_kr": "✚",
-            "text_kr": "주님께서 여러분과 함께."
-          }, {
-            "sp_kr": "◎",
-            "text_kr": "또한 사제의 영과 함께."
-          }, {
-            "rubric_kr": "고개를 숙여 강복을 받는다."
-          }, {
-            "sp_kr": "◎",
-            "text_kr": "아멘.",
-            "rubric_kr": "사제의 기도 끝에, ",
-            "rubricLayout_kr": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 11,
-                  "left": "",
-                  "right": "아멘."
-                }
-              ]
-            }
-          }, {
-            "sp_kr": "✚",
-            "text_kr": "전능하신 천주 성부와 ✠ 성자와 성령께서는"
           }, {
             "sp_kr": "",
             "text_kr": "여기 모인 모든 이에게 강복하소서."

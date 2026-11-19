@@ -2043,68 +2043,6 @@
               }
             ]
           },
-          "C": {
-            "label": {
-              "vn": "Công thức trọng thể hơn/Lời nguyện trên dân Chúa."
-            },
-            "lines": [
-              {
-                "text_vn": "Chúa ở cùng anh chị em.",
-                "__massEditorPairKeys": {
-                  "text_vn": "0:text"
-                },
-                "sp_vn": "GM."
-              },
-              {
-                "text_vn": "Và ở cùng cha.",
-                "__massEditorPairKeys": {
-                  "text_vn": "1:text"
-                },
-                "sp_vn": "GĐ."
-              },
-              {
-                "rubric_vn": "Cúi đầu nhận phép lành.",
-                "__massEditorPairKeys": {
-                  "rubric_vn": "2:rubric"
-                },
-                "rubricInset_vn": true
-              },
-              {
-                "rubric_vn": "Kết thúc lời nguyện của linh mục, ",
-                "__massEditorPairKeys": {
-                  "rubric_vn": "3:rubric"
-                },
-                "rubricInset_vn": true
-              },
-              {
-                "text_vn": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_vn": "3:text"
-                },
-                "sp_vn": "Đ."
-              },
-              {
-                "text_vn": "Xin Thiên Chúa toàn năng,<br>là Cha và Con ✠ và Thánh Thần",
-                "__massEditorPairKeys": {
-                  "text_vn": "4:text"
-                },
-                "sp_vn": "LM."
-              },
-              {
-                "text_vn": "ban phúc lành cho anh chị em.",
-                "__massEditorPairKeys": {
-                  "text_vn": "5:text"
-                }
-              },
-              {
-                "text_vn": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_vn": "6:text"
-                },
-                "sp_vn": "CĐ."
-              }
-            ]
-          },
           "solemn_advent": {
             "label": {
               "vn": "Phép lành trọng thể - MÙA VỌNG"
@@ -13819,48 +13757,6 @@
           }, {
             "sp_vn": "GM.",
             "text_vn": "Xin Thiên Chúa toàn năng là Cha ✠ và Con ✠ và Thánh ✠ Thần"
-          }, {
-            "sp_vn": "",
-            "text_vn": "ban phúc lành cho anh chị em."
-          }, {
-            "sp_vn": "CĐ.",
-            "text_vn": "Amen."
-          }]
-        },
-        "C": {
-          "label": {
-            "vn": "Công thức trọng thể hơn/Lời nguyện trên dân Chúa."
-          },
-          "lines": [{
-            "sp_vn": "GM.",
-            "text_vn": "Chúa ở cùng anh chị em."
-          }, {
-            "sp_vn": "GĐ.",
-            "text_vn": "Và ở cùng cha."
-          }, {
-            "rubric_vn": "Cúi đầu nhận phép lành."
-          }, {
-            "sp_vn": "Đ.",
-            "text_vn": "Amen.",
-            "rubric_vn": "Kết thúc lời nguyện của linh mục, ",
-            "rubricLayout_vn": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 34,
-                  "left": "",
-                  "right": "Amen."
-                }
-              ]
-            }
-          }, {
-            "sp_vn": "LM.",
-            "text_vn": (
-              "Xin Thiên Chúa toàn năng,<br>"
-              + "là Cha và Con ✠ và Thánh Thần"
-            )
           }, {
             "sp_vn": "",
             "text_vn": "ban phúc lành cho anh chị em."

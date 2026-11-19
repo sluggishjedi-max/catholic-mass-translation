@@ -2125,68 +2125,6 @@
               }
             ]
           },
-          "C": {
-            "label": {
-              "jp": "荘厳な祝福 [会衆のための祈願]"
-            },
-            "lines": [
-              {
-                "text_jp": "主は皆さんとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "0:text"
-                },
-                "sp_jp": "教"
-              },
-              {
-                "text_jp": "またあなたとともに。",
-                "__massEditorPairKeys": {
-                  "text_jp": "1:text"
-                },
-                "sp_jp": "会"
-              },
-              {
-                "rubric_jp": "頭を垂れて祝福を受ける。",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "2:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "rubric_jp": "司祭の祈りの終わりに、",
-                "__massEditorPairKeys": {
-                  "rubric_jp": "3:rubric"
-                },
-                "rubricInset_jp": true
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "3:text"
-                },
-                "sp_jp": "答"
-              },
-              {
-                "text_jp": "全能の神、父と子と聖霊の ✠ 祝福が",
-                "__massEditorPairKeys": {
-                  "text_jp": "4:text"
-                },
-                "sp_jp": "司"
-              },
-              {
-                "text_jp": "皆さんの上にありますように。",
-                "__massEditorPairKeys": {
-                  "text_jp": "5:text"
-                }
-              },
-              {
-                "text_jp": "アーメン。",
-                "__massEditorPairKeys": {
-                  "text_jp": "6:text"
-                },
-                "sp_jp": "会"
-              }
-            ]
-          },
           "solemn_advent": {
             "label": {
               "jp": "荘厳な祝福 - 待降節"
@@ -13442,45 +13380,6 @@
           }, {
             "sp_jp": "教",
             "text_jp": "全能の神、父と ✠ 子と ✠ 聖霊の  ✠ 祝福が"
-          }, {
-            "sp_jp": "",
-            "text_jp": "皆さんの上にありますように。"
-          }, {
-            "sp_jp": "会",
-            "text_jp": "アーメン。"
-          }]
-        },
-        "C": {
-          "label": {
-            "jp": "荘厳な祝福 [会衆のための祈願]"
-          },
-          "lines": [{
-            "sp_jp": "教",
-            "text_jp": "主は皆さんとともに。"
-          }, {
-            "sp_jp": "会",
-            "text_jp": "またあなたとともに。"
-          }, {
-            "rubric_jp": "頭を垂れて祝福を受ける。"
-          }, {
-            "sp_jp": "答",
-            "text_jp": "アーメン。",
-            "rubric_jp": "司祭の祈りの終わりに、",
-            "rubricLayout_jp": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 11,
-                  "left": "",
-                  "right": "アーメン。"
-                }
-              ]
-            }
-          }, {
-            "sp_jp": "司",
-            "text_jp": "全能の神、父と子と聖霊の ✠ 祝福が"
           }, {
             "sp_jp": "",
             "text_jp": "皆さんの上にありますように。"

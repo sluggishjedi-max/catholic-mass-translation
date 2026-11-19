@@ -2037,68 +2037,6 @@
               }
             ]
           },
-          "C": {
-            "label": {
-              "la": "Formula benedictionis sollemnior/Oratio super populum,"
-            },
-            "lines": [
-              {
-                "text_la": "Dóminus vobíscum.",
-                "__massEditorPairKeys": {
-                  "text_la": "0:text"
-                },
-                "sp_la": "E."
-              },
-              {
-                "text_la": "Et cum Spíritu tuo.",
-                "__massEditorPairKeys": {
-                  "text_la": "1:text"
-                },
-                "sp_la": "P."
-              },
-              {
-                "rubric_la": "Inclinat se ad benedictionem accipiendam.",
-                "__massEditorPairKeys": {
-                  "rubric_la": "2:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "rubric_la": "In fine orationis Sacerdotis, ",
-                "__massEditorPairKeys": {
-                  "rubric_la": "3:rubric"
-                },
-                "rubricInset_la": true
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "3:text"
-                },
-                "sp_la": "R."
-              },
-              {
-                "text_la": "Benedícat vos omnípotens Deus,",
-                "__massEditorPairKeys": {
-                  "text_la": "4:text"
-                },
-                "sp_la": "S."
-              },
-              {
-                "text_la": "Pater, et Fílius, ✠ et Spíritus Sanctus.",
-                "__massEditorPairKeys": {
-                  "text_la": "5:text"
-                }
-              },
-              {
-                "text_la": "Amen.",
-                "__massEditorPairKeys": {
-                  "text_la": "6:text"
-                },
-                "sp_la": "P."
-              }
-            ]
-          },
           "solemn_advent": {
             "label": {
               "la": "Benedictio sollemnis - In Adventu"
@@ -13376,45 +13314,6 @@
           }, {
             "sp_la": "",
             "text_la": "Pater, ✠ et Fílius, ✠ et Spíritus ✠ Sanctus."
-          }, {
-            "sp_la": "P.",
-            "text_la": "Amen."
-          }]
-        },
-        "C": {
-          "label": {
-            "la": "Formula benedictionis sollemnior/Oratio super populum,"
-          },
-          "lines": [{
-            "sp_la": "E.",
-            "text_la": "Dóminus vobíscum."
-          }, {
-            "sp_la": "P.",
-            "text_la": "Et cum Spíritu tuo."
-          }, {
-            "rubric_la": "Inclinat se ad benedictionem accipiendam."
-          }, {
-            "sp_la": "R.",
-            "text_la": "Amen.",
-            "rubric_la": "In fine orationis Sacerdotis, ",
-            "rubricLayout_la": {
-              "blockEnd": 0,
-              "pieces": [
-                {
-                  "at": 0,
-                  "from": 0,
-                  "to": 30,
-                  "left": "",
-                  "right": "Amen."
-                }
-              ]
-            }
-          }, {
-            "sp_la": "S.",
-            "text_la": "Benedícat vos omnípotens Deus,"
-          }, {
-            "sp_la": "",
-            "text_la": "Pater, et Fílius, ✠ et Spíritus Sanctus."
           }, {
             "sp_la": "P.",
             "text_la": "Amen."

@@ -178,7 +178,10 @@ function blockTitle(entry, language, relativePath) {
   const header = localizedValue(entry.header, language);
   const localTitle = cleanText(entry[language.toLowerCase()] || '');
   const pathLabel = humanizePath(relativePath);
-  return [entry.id, header || localTitle, pathLabel].filter(Boolean).join(' · ');
+  const variantLabel = relativePath[0] === 'variants'
+    ? localizedValue(entry.variants?.[relativePath[1]]?.label, language)
+    : '';
+  return [entry.id, header || localTitle, variantLabel, pathLabel].filter(Boolean).join(' · ');
 }
 
 function collectMassBlocks(ordinary, language) {
@@ -689,6 +692,8 @@ function counterpartBlock(reference, candidates) {
   if (!reference) return null;
   const exact = candidates.find(block => block.key === reference.key);
   if (exact) return exact;
+  // Blessing forms have distinct storage paths, even if only one is published.
+  if (reference.entryId.endsWith(' blessing') && reference.relativePath[0] === 'variants') return null;
   const sameEntry = candidates.filter(block => block.entryId === reference.entryId);
   if (sameEntry.length === 1) return sameEntry[0];
   const referenceTokens = pathTokens(reference.relativePath);
