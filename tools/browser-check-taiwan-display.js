@@ -8,7 +8,7 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
  const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(error,data)=>error?res.writeHead(404).end():res.setHeader('Content-Type',file.endsWith('.js')?'application/javascript':'text/html;charset=utf-8').end(data));});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const browser=await chromium.launch({headless:true});
  try{for(const width of [1280,390]){
-  const page=await browser.newPage({viewport:{width,height:844}}),errors=[];page.on('pageerror',error=>errors.push(error.message));
+  const page=await browser.newPage({viewport:{width,height:844},timezoneId:'Asia/Taipei'}),errors=[];page.on('pageerror',error=>errors.push(error.message));
   await page.addInitScript(({registry,countries})=>{window.ordoPrayerEditorPreview=true;window.uploadedCountryMassData=window.countryMassData=registry;window.uploadedCountryMassMetadata=countries;},{registry,countries});
   await page.route('**/*',route=>{const url=new URL(route.request().url());return url.hostname==='127.0.0.1'&&!url.pathname.endsWith('/preface_matching.js')?route.continue():route.abort();});
   await page.goto('http://127.0.0.1:'+server.address().port+'/V31.2.html');
@@ -44,16 +44,20 @@ const countries=Object.fromEntries(metadata.countryMetadataItems().map(item=>[it
     [25.033,121.5654,'台北總教區'],[24.803,120.968,'新竹教區'],[24.143,120.673,'台中教區'],
     [23.48,120.45,'嘉義教區'],[22.999,120.225,'台南教區'],[22.634,120.308,'高雄教區'],
     [23.99,121.60,'花蓮教區'],[24.4211,118.2892,'金馬宗座署理區'],[26.1617,119.9428,'金馬宗座署理區'],
-    [23.56,119.57,'台南教區']
+    [26.3665,120.4835,'金馬宗座署理區'],[24.9881,119.4564,'金馬宗座署理區'],[23.56,119.57,'台南教區']
    ];
    for(const [lat,lon,diocese] of locations){
+    check(gpsLocationForCoordinates(lat,lon)==='TW','GPS did not select Taiwan for '+diocese);
     const context=await refreshGpsBishopContext(lat,lon,'TW');
     check(context?.dioceseNames.zh===diocese,'GPS returned the wrong diocese for '+diocese);
     check(episcopalIntercession()?.includes(diocese+' 的主教'),'Stored diocese placeholder did not render '+diocese);
     check((await ordoBishopDataApi.contextForDiocese(diocese,'TW'))?.diocese===context.diocese,'Chinese diocese lookup failed');
    }
-   applyGpsBishopContext(null);render();
-   check(episcopalIntercession()?.includes('本教區 的主教'),'Clearing GPS left the previous diocese in Form II');
+   const descriptor=Object.getOwnPropertyDescriptor(navigator,'geolocation');
+   Object.defineProperty(navigator,'geolocation',{configurable:true,value:{getCurrentPosition(_success,error){error({code:1});}}});
+   state.gpsTimeZone='Asia/Taipei';state.useGps=true;simulateGPS();state.useGps=false;
+   if(descriptor)Object.defineProperty(navigator,'geolocation',descriptor);else delete navigator.geolocation;
+   check(episcopalIntercession()?.includes('本教區 的主教'),'GPS permission denial left the previous diocese in Form II');
    state.options.eucharist=savedForm;
    const kr={title:'연중 제31주간 화요일',serverRecord:{kind:'source',version:2},data:{
     collect:{lines:[parsedLine('','전능하시고 자비로우신 하느님, 은총을 베푸시어 저희가 하느님을 합당히 섬기고 영원한 행복을 바라보며 거침없이 달려가게 하소서.')]},

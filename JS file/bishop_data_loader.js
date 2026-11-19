@@ -9,7 +9,7 @@
         CBCEW: { file: 'cbcew.js', locations: ['GB-ENG', 'GB-WLS'] },
         BCOS: { file: 'bcos.js', locations: ['GB-SCT'] },
         CBCP: { file: 'cbcp.js', locations: ['PH'] },
-        CRBC: { file: 'crbc.js', locations: ['TW'], version: '20261119-diocese-names' },
+        CRBC: { file: 'crbc.js', locations: ['TW'], version: '20261119-diocese-gps' },
         ACBC: { file: 'acbc.js', locations: ['AU'] },
         NZCBC: { file: 'nzcbc.js', locations: ['NZ'] },
         CBCJ: { file: 'cbcj.js', locations: ['JP'] },

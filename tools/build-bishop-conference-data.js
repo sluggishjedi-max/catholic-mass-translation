@@ -55,7 +55,8 @@ function addTaiwanDioceseDetails(diocese) {
         result.territory = {
             kind: 'point', spatialReference: 4326, approximate: true,
             center: [118.2892, 24.4211],
-            fallbackCenters: [[118.43, 24.4086], [119.9428, 26.1617]]
+            fallbackCenters: [[118.43, 24.4086], [119.4564, 24.9881], [119.9428, 26.1617],
+                [119.9982, 26.2184], [119.96, 25.9642], [120.4835, 26.3665]]
         };
         result.sourceUrls.push('https://opendata.cwa.gov.tw/opendatadoc/Forecast/F-A0021-001.pdf');
     } else if (diocese.key === 'hwal' && diocese.territory) {

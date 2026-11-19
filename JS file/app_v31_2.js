@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261119-2';
+    const APP_VERSION = 'V31.2-20261119-3';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -4204,6 +4204,7 @@
     }
 
     function applyGpsBishopContext(context) {
+        if (!context) gpsBishopRequestId += 1;
         const previous = JSON.stringify({
             diocese: cleanNodeText(state.gpsDiocese),
             context: state.bishopContext || null
@@ -19062,6 +19063,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lat > 47.2 && lat < 55.1 && lon > 5.8 && lon < 15.1) return 'DE';
         if (lat > -34.1 && lat < 5.4 && lon > -74.1 && lon < -34.0) return 'BR';
         if (lat > 21.7 && lat < 25.6 && lon > 119 && lon < 122.6) return 'TW';
+        // Kinmen and the Matsu island groups lie outside Taiwan’s main GPS box.
+        if ((lat > 24.36 && lat < 24.55 && lon > 118.12 && lon < 118.53)
+            || (lat > 25.92 && lat < 26.30 && lon > 119.85 && lon < 120.06)
+            || (lat > 26.31 && lat < 26.41 && lon > 120.41 && lon < 120.55)) return 'TW';
         if (lat > 33 && lat < 39 && lon > 124 && lon < 132) return 'KR';
         if (lat > 4.5 && lat < 21.5 && lon > 116 && lon < 127) return 'PH';
         if (lat > -48 && lat < -33 && lon > 165 && lon < 180) return 'NZ';
@@ -19126,9 +19131,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             refreshGpsBishopContext(lat, lon, nextLoc);
         }, () => {
             state.gpsCoordinates = null;
-            applyGpsBishopContext(null);
+            const contextChanged = applyGpsBishopContext(null);
             const fallbackZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Asia/Seoul';
             if (applyDetectedLocation(gpsLocationForCoordinates(Number.NaN, Number.NaN), fallbackZone)) fetchMassData();
+            else if (contextChanged) render();
         }, { timeout: 30000, maximumAge: 60000, enableHighAccuracy: true });
     }
 
