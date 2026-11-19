@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261119-1';
+    const APP_VERSION = 'V31.2-20261119-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -20983,12 +20983,18 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             })).join('');
     }
 
+    function replaceDiocesePlaceholder(html, langKey) {
+        if (langKey !== 'zh') return html;
+        const name = state.bishopContext?.dioceseNames?.[langKey] || '本教區';
+        return html.replace(/\[教區名稱\]/gu, () => escapeHtml(name));
+    }
+
     function formatDynamicLineText(html, langKey) {
         if (!html || isAIButton(html)) return html || '';
         // A block rubric already ends its line. Consume one following stored
         // break; preceding breaks and additional intentional gaps stay intact.
         const breaks = /(<span\b[^>]*class=["'][^"']*\brubric\b[^"']*["'][^>]*>[\s\S]*?<\/span>)(?:[\t ]*(?:\r?\n|<br\s*\/?>))?/giu;
-        html = String(html).replace(breaks, '$1');
+        html = replaceDiocesePlaceholder(String(html).replace(breaks, '$1'), langKey);
         return markMutedNamePlaceholders(replaceBishopPlaceholder(replacePopePlaceholder(normalizeContextualNamePlaceholders(html, langKey), langKey), langKey), langKey);
     }
 

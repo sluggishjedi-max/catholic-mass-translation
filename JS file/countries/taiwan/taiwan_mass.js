@@ -5836,18 +5836,46 @@
             ]
           },
           "B": {
-            "label": { "zh": "主教降福" },
+            "label": {
+              "zh": "主教降福"
+            },
             "lines": [
-              { "sp_zh": "主教", "text_zh": "願主與你們同在。" },
-              { "sp_zh": "信友", "text_zh": "也與你的心靈同在。" },
-              { "sp_zh": "主教", "text_zh": "願上主的聖名受頌揚。" },
-              { "sp_zh": "信友", "text_zh": "從現在直到永遠。" },
-              { "sp_zh": "主教", "text_zh": "上主的聖名是我們的助佑。" },
-              { "sp_zh": "信友", "text_zh": "因祂創造了天地。" },
+              {
+                "sp_zh": "主教",
+                "text_zh": "願主與你們同在。"
+              },
+              {
+                "sp_zh": "信友",
+                "text_zh": "也與你的心靈同在。"
+              },
+              {
+                "sp_zh": "主教",
+                "text_zh": "願上主的聖名受頌揚。"
+              },
+              {
+                "sp_zh": "信友",
+                "text_zh": "從現在直到永遠。"
+              },
+              {
+                "sp_zh": "主教",
+                "text_zh": "上主的聖名是我們的助佑。"
+              },
+              {
+                "sp_zh": "信友",
+                "text_zh": "因祂創造了天地。"
+              },
               {},
-              { "sp_zh": "主教", "text_zh": "願全能的天主，聖父 ✠、聖子 ✠、聖神 ✠，" },
-              { "text_zh": "降福你們。" },
-              { "sp_zh": "信友", "text_zh": "阿們。" }
+              {
+                "sp_zh": "主教",
+                "text_zh": "願全能的天主，聖父 ✠、聖子 ✠、聖神 ✠，"
+              },
+              {
+                "text_zh": "降福你們。"
+              },
+              {
+                "sp_zh": "信友",
+                "text_zh": "阿們。"
+              }
             ]
           }
         }
@@ -8642,6 +8670,370 @@
           }
         },
         "ordinarySourceLayoutVersion": 1
+      }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "2"
+        ],
+        "rows": [
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "0:rubric"
+            },
+            "text_zh": "上主，"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "2:text"
+            },
+            "sp_zh": "主祭",
+            "text_zh": "祢實在是神聖的，祢是一切聖德的根源。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "3:text"
+            },
+            "text_zh": "因此我們懇求祢派遣聖神，聖化這些禮品，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794990994226-3:text"
+            },
+            "text_zh": "使成為我們的主耶穌基督的聖體✠聖血。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "5:text:segment:0"
+            },
+            "sp_zh": "主祭",
+            "text_zh": "祂甘願捨身受難時， "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "5:text:segment:1"
+            },
+            "text_zh": " 拿起麵餅，感謝了，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991029856-4:text"
+            },
+            "text_zh": "分開，交給祂的門徒說:(稍微俯身)你們大家拿去吃:"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991038456-5:text"
+            },
+            "text_zh": "<B>這就是我的身體，</b>"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991051851-6:text"
+            },
+            "text_zh": "<B>將為你們而犧牲。</b>"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991060234-7:text"
+            },
+            "text_zh": ""
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "6:rubric"
+            },
+            "rubricInset_zh": true,
+            "rubric_zh": "雙手舉起聖體，置於聖盤內，請安"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "8:text:segment:0"
+            },
+            "sp_zh": "主祭",
+            "text_zh": "晚餐後，祂同樣拿起杯來， "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "8:text:segment:1"
+            },
+            "text_zh": "又感謝了，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991098828-8:text"
+            },
+            "text_zh": "交給祂的門徒說:"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991102347-9:text"
+            },
+            "text_zh": "<B>這一杯就是我的血，</b>"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991118322-10:text"
+            },
+            "text_zh": "<b>新而永久的盟約之血，</b>"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991124376-11:text"
+            },
+            "text_zh": "<b>將為你們和眾人傾流，</b>"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991130910-12:text"
+            },
+            "text_zh": "<b>以赦免罪惡。</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "9:text"
+            },
+            "text_zh": "<b>你們要這樣做、來紀念我。</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "10:rubric"
+            },
+            "rubricInset_zh": true,
+            "rubric_zh": "雙手舉起聖爵，置於聖體布上，請安"
+          },
+          {
+            "dividerBefore": "before-memorial-acclamation",
+            "__massEditorPairKeys": {
+              "text_zh": "12:text"
+            },
+            "sp_zh": "主祭",
+            "text_zh": "信德的奧蹟:"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "14:text"
+            },
+            "sp_zh": "信友",
+            "text_zh": "基督，我們傳報祢的聖死，我們歌頌祢的復活，我們期待祢光榮的來臨。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "15:rubric"
+            },
+            "rubricInset_zh": true,
+            "rubric_zh": "或者:"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "16:text"
+            },
+            "sp_zh": "",
+            "text_zh": "基督，我們每次吃這餅，飲這杯，就是傳報祢的聖死，期待祢光榮的來臨。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "17:rubric"
+            },
+            "rubricInset_zh": true,
+            "rubric_zh": "或者:"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "18:text"
+            },
+            "sp_zh": "",
+            "text_zh": "救世的恩主，祢藉著苦難及復活，恢復了我們的自由，求祢拯救我們。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "19:text"
+            },
+            "sp_zh": "主祭",
+            "text_zh": "上主，因此我們紀念基督的聖死與復活，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991249271-13:text"
+            },
+            "text_zh": "向祢奉獻生命之糧、救恩之杯，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991262725-14:text"
+            },
+            "text_zh": "感謝祢使我們得在祢台前，侍奉祢。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "20:text"
+            },
+            "text_zh": "我們懇求祢，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991281922-15:text"
+            },
+            "text_zh": "使我們分享基督的聖體聖血，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991286035-16:text"
+            },
+            "text_zh": "並因聖神合而為一。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "21:text"
+            },
+            "text_zh": "上主，求祢垂念普世的教會，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991306120-17:text"
+            },
+            "text_zh": ""
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991309881-18:text"
+            },
+            "text_zh": "使祢的子民偕同我們的教宗 [某某]、[教區名稱] 的主教 [某某]，與所有主教，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991415576-19:text"
+            },
+            "text_zh": "以及全體聖職人員、都在愛德中日趨完善。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "22:rubric"
+            },
+            "rubricInset_zh": true,
+            "rubric_zh": "追思彌撒中可以加念此節"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "23:text"
+            },
+            "text_zh": "求祢垂念祢的僕人 [某某]，祢(今天)從人世將他(她)召回。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "24:text"
+            },
+            "text_zh": ""
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991623136-20:text"
+            },
+            "text_zh": "他(她)既因聖洗和祢的聖子一樣的死亡，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991628595-21:text"
+            },
+            "text_zh": "求祢也使他(她)和祢的聖子一樣的復活。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "25:text"
+            },
+            "rubric_zh": "為亡者祈禱結束後",
+            "rubricInset_zh": true
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991638153-22:text"
+            },
+            "text_zh": "求祢也垂念懷著復活的希望而安息的兄弟姊妺;"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991648620-23:text"
+            },
+            "text_zh": "並求祢垂念我們的祖先和所有去世的人，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991652596-24:text"
+            },
+            "text_zh": "使他們享見祢光輝的聖容。"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "26:text"
+            },
+            "text_zh": "求祢垂念我們眾人，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991659790-25:text"
+            },
+            "text_zh": "使我們得與天主之母童貞榮福瑪利亞、"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991671353-26:text"
+            },
+            "text_zh": ""
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991683029-27:text"
+            },
+            "text_zh": "諸聖宗徒，以及祢所喜愛的歷代聖人，"
+          },
+          {
+            "sp_zh": "",
+            "__massEditorPairKeys": {
+              "text_zh": "editor-1794991687881-28:text"
+            },
+            "text_zh": "共享永生;"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_zh": "28:text"
+            },
+            "text_zh": "著祢的聖子耶穌基督，"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_zh": "29:rubric"
+            },
+            "rubric_zh": "讚美祢、顯揚祢。"
+          }
+        ]
       }
     }
   ];

@@ -9,7 +9,7 @@
         CBCEW: { file: 'cbcew.js', locations: ['GB-ENG', 'GB-WLS'] },
         BCOS: { file: 'bcos.js', locations: ['GB-SCT'] },
         CBCP: { file: 'cbcp.js', locations: ['PH'] },
-        CRBC: { file: 'crbc.js', locations: ['TW'], version: '20261103-name-corrections' },
+        CRBC: { file: 'crbc.js', locations: ['TW'], version: '20261119-diocese-names' },
         ACBC: { file: 'acbc.js', locations: ['AU'] },
         NZCBC: { file: 'nzcbc.js', locations: ['NZ'] },
         CBCJ: { file: 'cbcj.js', locations: ['JP'] },
@@ -86,6 +86,7 @@
         if (!diocese) return null;
         return {
             diocese: diocese.name,
+            dioceseNames: diocese.dioceseNames || {},
             ordinary: diocese.ordinary || null,
             auxiliaries: Array.isArray(diocese.auxiliaries) ? diocese.auxiliaries : [],
             collaboratorSummary: !!diocese.collaboratorSummary,
@@ -105,7 +106,8 @@
         for (const conference of conferences) {
             const record = conference.dioceses.find(diocese => {
                 if (!matchesLocation(diocese, locationCode)) return false;
-                return [diocese.name].concat(diocese.aliases || []).some(alias => normalize(alias) === wanted);
+                return [diocese.name, ...Object.values(diocese.dioceseNames || {}), ...(diocese.aliases || [])]
+                    .some(alias => normalize(alias) === wanted);
             });
             if (record) return contextForRecord(record, conference);
         }
@@ -157,11 +159,13 @@
         if (exact) return contextForRecord(exact, conference);
 
         const nearest = candidates
-            .filter(diocese => diocese.territory && Array.isArray(diocese.territory.center))
-            .map(diocese => ({
-                diocese,
-                distance: haversineKm(latitude, longitude, diocese.territory.center[1], diocese.territory.center[0])
-            }))
+            .flatMap(diocese => {
+                const territory = diocese.territory;
+                if (!Array.isArray(territory?.center)) return [];
+                const centers = [territory.center, ...(territory.fallbackCenters || [])];
+                const distance = Math.min(...centers.map(([lon, lat]) => haversineKm(latitude, longitude, lat, lon)));
+                return [{ diocese, distance }];
+            })
             .sort((a, b) => a.distance - b.distance)[0];
         return nearest ? contextForRecord(nearest.diocese, conference) : null;
     }

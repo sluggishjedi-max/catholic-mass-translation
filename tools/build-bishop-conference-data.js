@@ -35,6 +35,36 @@ const CONFERENCES = [
     { id: 'CNBB', file: 'cnbb.js', name: 'National Conference of Bishops of Brazil', official: 'https://www.cnbb.org.br/', countries: [{ code: 'br', label: 'Brazil' }], locations: ['BR'] }
 ];
 
+// Taiwan diocesan directory and official weather-station reference coordinates.
+const TAIWAN_DIOCESE_SOURCE = 'https://hualien.catholic.org.tw/modules/tadnews/page.php?nsn=327';
+const TAIWAN_DIOCESE_NAMES = {
+    taip: '台北總教區', hsin: '新竹教區', tchn: '台中教區', kiay: '嘉義教區',
+    tain: '台南教區', kaoh: '高雄教區', hwal: '花蓮教區', kinm: '金馬宗座署理區'
+};
+
+function addTaiwanDioceseDetails(diocese) {
+    const zh = TAIWAN_DIOCESE_NAMES[diocese.key];
+    if (!zh) return diocese;
+    const result = {
+        ...diocese,
+        dioceseNames: { zh },
+        sourceUrls: [...new Set([...diocese.sourceUrls, TAIWAN_DIOCESE_SOURCE])]
+    };
+    if (diocese.key === 'kinm') {
+        result.aliases = diocese.aliases.filter(alias => alias !== '札幌司教区');
+        result.territory = {
+            kind: 'point', spatialReference: 4326, approximate: true,
+            center: [118.2892, 24.4211],
+            fallbackCenters: [[118.43, 24.4086], [119.9428, 26.1617]]
+        };
+        result.sourceUrls.push('https://opendata.cwa.gov.tw/opendatadoc/Forecast/F-A0021-001.pdf');
+    } else if (diocese.key === 'hwal' && diocese.territory) {
+        result.territory = { ...diocese.territory, fallbackCenters: [[121.60, 23.99]] };
+        result.sourceUrls.push('https://scweb.cwa.gov.tw/special/20061226-1pga.asp');
+    }
+    return result;
+}
+
 const KOREA_LEGACY_ORDER = ['Cheongju', 'Suwon', 'Seoul', 'Chuncheon', 'Daejeon', 'Daegu', 'Busan', 'Andong', 'Masan', 'Incheon', 'Uijeongbu', 'Gwangju', 'Korea Military', 'Jeonju', 'Jeju', 'Wonju'];
 const VIETNAM_LEGACY_ORDER = ['Lang Son and Cao Bang', 'Hung Hoa', 'Bac Ninh', 'Hanoi', 'Hai Phong', 'Thai Binh', 'Bui Chu', 'Phat Diem', 'Thanh Hoa', 'Vinh', 'Ha Tinh', 'Hue', 'Da Nang', 'Qui Nhon', 'Kontum', 'Nha Trang', 'Ban Me Thuot', 'Da Lat', 'Phan Thiet', 'Phu Cuong', 'Xuan Loc', 'Ba Ria', 'Ho Chi Minh City', 'My Tho', 'Vinh Long', 'Long Xuyen', 'Can Tho'];
 const JAPAN_LEGACY_ORDER = ['Tokyo', 'Osaka-Takamatsu', 'Kyoto', 'Nagoya', 'Fukuoka', 'Sapporo'];
@@ -297,7 +327,7 @@ async function countryData(country, legacyIndex) {
                 areaSqKm: Number(boundary.attributes.AreaSqKm) || null,
                 rings: boundary.geometry.rings
             };
-        } else {
+        } else if (country.code !== 'tw' || diocese.key !== 'kinm') {
             const center = await geocodeCenter(diocese.name, country.label);
             if (center) territory = { kind: 'point', spatialReference: 4326, center, approximate: true };
         }
@@ -312,7 +342,7 @@ async function countryData(country, legacyIndex) {
             territory
         });
     }
-    return records;
+    return country.code === 'tw' ? records.map(addTaiwanDioceseDetails) : records;
 }
 
 async function buildConference(config, legacyIndex, updatedAt) {
