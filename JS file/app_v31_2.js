@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261119-3';
+    const APP_VERSION = 'V31.2-20261123-4';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -655,7 +655,7 @@
                 return item && item.id ? `https://drive.usercontent.google.com/download?id=${item.id}&export=download&confirm=t` : '';
             },
             'cei-italy': () => `https://www.chiesacattolica.it/liturgia-del-giorno/?data-liturgia=${parts.compact}`,
-            'liturgia-portugal': () => 'https://www.liturgia.pt/liturgiadiaria/',
+            'liturgia-portugal': () => 'https://liturgia.pt/liturgiadiaria/',
             'cem-mexico': () => 'https://sistemas.cem.org.mx/Controller/Misal/get_misal.php',
             'schott-germany': () => `https://schott.erzabtei-beuron.de/?datum=${parts.year}-${parts.month}-${parts.day}`,
             'pocketterco-brazil': () => `https://pocketterco.com.br/liturgia/${parts.day}/${parts.month}/${parts.year}`,
@@ -689,21 +689,21 @@
         }));
     }
 
-    function countryMassCalendarAsSaintEntries(jurisdiction) {
-        const module = countryMassModuleForJurisdiction(jurisdiction);
-        return Object.fromEntries(Object.entries((module && module.calendar) || {}).map(([dateKey, entries]) => {
-            const entry = Array.isArray(entries) ? entries[0] : entries;
-            const source = module && module.source || {};
-            return [dateKey, saintEntry(entry.color || 'white', entry.names || { EN: entry.title }, {
-                rank: entry.rank || 'optional',
-                localOnly: true,
-                source: source.title || `${jurisdiction} proper calendar`,
-                sourceUrl: entry.sourceUrl || source.calendarUrl || source.url || '',
-                sourcePage: entry.page,
-                countryProper: true,
-                properTitle: entry.title
-            })];
-        }));
+    function countryMassCalendarEntry(jurisdiction, dateKey, module = countryMassModuleForJurisdiction(jurisdiction)) {
+        const entries = module?.calendar?.[dateKey];
+        const entry = Array.isArray(entries) ? entries[0] : entries;
+        if (!entry) return null;
+        const source = module.source || {};
+        return saintEntry(entry.color || 'white', entry.names || { [getLangFromLocation(jurisdiction)]: entry.title }, {
+            rank: entry.rank || 'optional',
+            localOnly: true,
+            source: source.title || (jurisdiction + ' proper calendar'),
+            sourceUrl: entry.sourceUrl || source.calendarUrl || source.url || '',
+            sourcePage: entry.page,
+            countryProper: true,
+            properTitle: entry.title,
+            observanceId: entry.observanceId || ''
+        });
     }
 
     function countryMassProperEntriesForDate(jurisdiction, date) {
@@ -736,13 +736,6 @@
             '11-13': saintEntry('white', { KR: '성녀 프란체스카 하비에르 카브리니 동정 기념일', VN: 'Thánh Frances Xavier Cabrini, Trinh nữ', EN: 'Saint Frances Xavier Cabrini, Virgin', JP: '聖フランシスカ・ザビエル・カブリニおとめ', LA: 'Sanctae Franciscae Xaveriae Cabrini' }, { rank: 'memorial', localOnly: true, source: 'US proper calendar' }),
             '12-12': saintEntry('white', { KR: '과달루페의 복되신 동정 마리아 축일', VN: 'Đức Mẹ Guadalupe', EN: 'Our Lady of Guadalupe', JP: 'グアダルペの聖母マリア', LA: 'Beatae Mariae Virginis de Guadalupe' }, { rank: 'feast', localOnly: true, source: 'US proper calendar' })
         },
-        IE: countryMassCalendarAsSaintEntries('IE'),
-        'GB-ENG': countryMassCalendarAsSaintEntries('GB-ENG'),
-        'GB-WLS': countryMassCalendarAsSaintEntries('GB-WLS'),
-        'GB-SCT': countryMassCalendarAsSaintEntries('GB-SCT'),
-        PH: countryMassCalendarAsSaintEntries('PH'),
-        AU: countryMassCalendarAsSaintEntries('AU'),
-        NZ: countryMassCalendarAsSaintEntries('NZ'),
         JP: {
             '02-03': saintEntry('red', { KR: '복자 유스토 다카야마 우콘 순교자 기념일', VN: 'Chân phước Justo Takayama Ukon, Tử đạo', EN: 'Blessed Justus Takayama Ukon, Martyr', JP: '福者ユスト高山右近殉教者', LA: 'Beati Iusti Takayama Ukon, martyris' }, { rank: 'memorial', localOnly: true, source: 'Japan proper calendar' }),
             '02-05': saintEntry('red', { KR: '일본 26 성인 순교자 축일', VN: 'Hai mươi sáu Thánh Tử đạo Nhật Bản', EN: 'The Twenty-Six Martyrs of Japan', JP: '日本26聖人殉教者（聖パウロ三木と同志殉教者）', LA: 'Viginti sex martyrum Iaponiae' }, { rank: 'feast', localOnly: true, source: 'Japan proper calendar' }),
@@ -1082,6 +1075,15 @@
         }
         const koreanLunarOverride = koreanLunarCalendarOverride(date, countryKey);
         if (koreanLunarOverride) return koreanLunarOverride;
+        // The Mexican bishops establish a solemnity, while the US and the
+        // Philippines observe their own ranks for the same Marian title.
+        if (countryKey === 'MX' && calendarDateKey(date) === '12-12' && date.getDay() !== 0) {
+            return calendarOverrideFromEntry(saintEntry('white', globalThis.ordoLiturgicalObservances.namesFor('guadalupe'), {
+                rank:'solemnity', observanceId:'guadalupe', localOnly:true, countryProper:true,
+                source:'Conferencia del Episcopado Mexicano',
+                sourceUrl:'https://cem.org.mx/wp-content/uploads/2022/04/Normas-CEM-a-luz-del-Nuevo-CDC-2.docx.pdf'
+            }));
+        }
         const countryEntries = countryFixedSaintsCalendar[countryKey] || {};
         const countryModule = countryMassModuleForJurisdiction(countryKey);
         const dynamicEntries = countryDynamicCalendarEntries(countryModule, date);
@@ -1097,7 +1099,8 @@
                 source: source.title || `${countryKey} proper calendar`,
                 sourceUrl: dynamicEntry.sourceUrl || source.calendarUrl || source.url || '',
                 countryProper: true,
-                properTitle: dynamicEntry.title
+                properTitle: dynamicEntry.title,
+                observanceId: dynamicEntry.observanceId || ''
             });
             if (['solemnity', 'feast', 'feastOfLord'].includes(calendarEntry.meta.rank)
                 || fixedCalendarEntryApplies(date, calendarEntry)) return calendarOverrideFromEntry(calendarEntry);
@@ -1121,7 +1124,9 @@
             const jpConflict = jpImmaculateHeartConflictEntry(date);
             if (jpConflict) return jpConflict;
         }
-        const entry = countryEntries[calendarDateKey(date)];
+        const key = calendarDateKey(date);
+        const stored = countryMassCalendarEntry(countryKey, key, countryModule);
+        const entry = stored || countryEntries[key];
         return fixedCalendarEntryApplies(date, entry) ? calendarOverrideFromEntry(entry) : null;
     }
 
@@ -1433,9 +1438,10 @@
         const override = localCalendarOverrideForDate(date);
         if (!override) return info;
         const leftLang = state.currentLoc || 'KR';
-        const leftName = override.names && override.names[leftLang];
+        const calendarNames = Object.assign({}, globalThis.ordoLiturgicalObservances?.namesFor(calendarObservanceId(override)), override.names);
+        const leftName = calendarNames[leftLang];
         if (!leftName) return info;
-        const names = Object.assign({}, info.names, override.names || {});
+        const names = Object.assign({}, info.names, calendarNames);
         const isLocalSpecific = isOverrideLocalOnlyForLang(override, leftLang)
             && normalizeCalendarNameForCompare(leftName) !== normalizeCalendarNameForCompare(info.names[leftLang]);
         return Object.assign({}, info, {
@@ -1961,7 +1967,7 @@
             DE: formatSeasonalName('DE', meta.season, meta.week, meta.day, meta.sundayCycle)
         });
         const info = applyLocalCalendarOverrides({
-            names,
+            names: Object.assign({}, globalThis.ordoLiturgicalObservances?.namesFor(calendarObservanceId({names,meta})), names),
             krName: names.KR,
             vnName: names.VN,
             color: special ? special.color : meta.color,
@@ -9248,7 +9254,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return key;
     }
 
+    function calendarObservanceId(info) {
+        if (info?.meta?.observanceId) return info.meta.observanceId;
+        const catalog = globalThis.ordoLiturgicalObservances;
+        for (const [lang, title] of Object.entries(info?.names || {})) {
+            const id = catalog?.identify(title, lang);
+            if (id) return id;
+        }
+        return '';
+    }
+
     function calendarInfosShareObservance(left,right) {
+        const leftId = calendarObservanceId(left), rightId = calendarObservanceId(right);
+        if (leftId && rightId) return leftId === rightId;
         const lang=['EN',state.currentLoc,...SUPPORTED_LANGS].find(code=>left.names?.[code]&&right.names?.[code]);
         if (!lang || normalizeCalendarObservanceIdentity(left.names[lang])!==normalizeCalendarObservanceIdentity(right.names[lang])) return false;
         return (primaryCalendarIsTemporal(left)&&primaryCalendarIsTemporal(right))
@@ -9337,7 +9355,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     || JSON.stringify(row.option.lines || row.option.text)===JSON.stringify(previous.option.lines || previous.option.text)));
             if (!duplicate) rows.push({...row,massIndex,title:mass.title});
         }));
-        if (rows.length<=1) return cloneData(masses[0].data[key]);
+        if (rows.length<=1) return rows.length ? cloneData(masses[rows[0].massIndex].data[key]) : undefined;
         const lines=rows.flatMap((row,index)=>[...(index?[parsedLine('','Or:')]:[]),...(row.option.lines || [parsedLine('',row.option.text || '')])]);
         return globalThis.ordoDailyContent.normalizeSection({
             text:lines.map(line=>line.text || '').join('\n'),lines,
@@ -9371,14 +9389,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     function dailySourceMassForPrimary(parsed, primaryData, primaryLang, lang, fixed = {}) {
         if (parsed.serverRecord?.kind === 'edited' || !Array.isArray(parsed.sourceMasses)) return parsed;
-        const required = ['reading1','reading2','gospel'].filter(key => sourceSectionHasContent(primaryData[key]));
-        if (!required.length || required.some(key => !calendarSectionOptions(primaryData[key], primaryLang).some(option => option.citation))) return parsed;
+        // Some memorial and All Souls publications omit citations for optional slots.
+        // Use each dated Mass as a unit and require all comparable principal readings.
+        const required = ['reading1','gospel'];
+        if (required.some(key => !calendarSectionOptions(primaryData[key], primaryLang).some(option => option.citation))) return parsed;
         const matches = (candidate, key) => calendarSectionOptions(primaryData[key], primaryLang).filter(original =>
             calendarSectionOptions(fixed[key] || candidate.data?.[key], lang).some(translated =>
                 primaryCalendarOptionsCorrespond(key, original, translated, primaryLang, lang))).length;
         const score = candidate => required.every(key => matches(candidate, key))
             ? required.reduce((sum,key) => sum + 10 * matches(candidate,key), 0)
-                + 3 * matches(candidate,'psalm') + 3 * matches(candidate,'gospel_accl')
+                + 5 * matches(candidate,'reading2') + 3 * matches(candidate,'psalm') + 3 * matches(candidate,'gospel_accl')
             : -1;
         let selected = parsed, best = score(parsed);
         for (const candidate of parsed.sourceMasses) {
@@ -9395,21 +9415,23 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const primaryLang = normalizeSelectableLang(state.currentLoc, 'KR');
         const nativeInfo = nativeCalendar || calendarInfoForCountry(date, dailySourceLocationCode(lang));
         const expected = info.names?.[lang] || '';
-        const identityLang = ['EN',primaryLang,...SUPPORTED_LANGS].find(code=>info.names?.[code] && nativeInfo.names?.[code]);
         const temporal = primaryCalendarIsTemporal(info);
         const expectedIdentityUsable = temporal || !isGeneratedSeasonalNameForInfo(lang,expected,info);
         const sourceTemporal = temporal && isGeneratedSeasonalNameForInfo(lang, parsed.title, info);
-        const sourceTitleAliases = {'11-21':{VN:['Đức Mẹ Dâng Mình Trong Đền Thờ']},
-            '11-24':{VN:['Các Thánh Tử Đạo Việt Nam'],PT:['Santos André Dung-Lac, João Teófanes Venard e companheiros (Memória)']}};
-        const exactAlias = (sourceTitleAliases[calendarDateKey(date)]?.[lang] || []).some(title=>normalizeCalendarNameForCompare(title)===normalizeCalendarNameForCompare(parsed.title));
+        const catalog = globalThis.ordoLiturgicalObservances;
+        const expectedId = calendarObservanceId(info);
+        const knownSourceId = catalog?.identify(parsed.title, lang)
+            || (lang === 'VN' && parsed.kpvSelectedCelebrationCode === 'christ-king' ? 'christ-king' : '');
         const sameNativeIdentity = calendarInfosShareObservance(info,nativeInfo);
-        const sourceMatchesNativeName = sameNativeIdentity && parsed.title && nativeInfo.names?.[lang]
-            && normalizeCalendarNameForCompare(parsed.title)===normalizeCalendarNameForCompare(nativeInfo.names[lang])
+        const sourceKey = catalog?.titleKey(parsed.title, lang);
+        const matchesTitle = title => !!title && (normalizeCalendarNameForCompare(title) === normalizeCalendarNameForCompare(parsed.title)
+            || !!sourceKey && sourceKey === catalog?.titleKey(title, lang));
+        const knownConflict = !!(expectedId && knownSourceId && expectedId !== knownSourceId);
+        const sourceMatchesNativeName = !knownConflict && sameNativeIdentity && matchesTitle(nativeInfo.names?.[lang])
             && (primaryCalendarIsTemporal(nativeInfo)||!isGeneratedSeasonalNameForInfo(lang,nativeInfo.names[lang],nativeInfo));
-        const kpvChristKing = lang === 'VN' && parsed.kpvSelectedCelebrationCode === 'christ-king'
-            && sameDay(date, addDays(getAdventStart(date.getFullYear()), -7));
-        const sameName = exactAlias || kpvChristKing || !!(expectedIdentityUsable && expected && parsed.title && (normalizeCalendarNameForCompare(parsed.title) === normalizeCalendarNameForCompare(expected)
-            || (!temporal && sameNativeIdentity && localMissalTitleScore(expected, parsed.title) >= 0.85)));
+        const sameName = !knownConflict && (!!expectedId && knownSourceId === expectedId
+            || !!(expectedIdentityUsable && expected && parsed.title && (matchesTitle(expected)
+                || (!temporal && !knownSourceId && sameNativeIdentity && localMissalTitleScore(expected, parsed.title) >= 0.85))));
         const sameRank = primaryCalendarRank(info) === primaryCalendarRank(nativeInfo);
         const data = {}, properSources = {}, unavailable = [];
         const primarySpecial = countrySpecialMassRecord(date, state.selectedLocationCode || state.currentLoc);
@@ -9419,12 +9441,15 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         // publisher heading requires both main readings to establish identity.
         const unnamed = !parsed.title || /^(?:MONTAG|DIENSTAG|MITTWOCH|DONNERSTAG|FREITAG|SAMSTAG|Memoria\.\s*Blanco|Today's Readings|Daily Readings)$/iu.test(parsed.title)
             || (sameNativeIdentity && isGeneratedSeasonalNameForInfo(lang,parsed.title,info));
-        const anchorsAgree = sameNativeIdentity && unnamed && ['reading1','gospel'].every(key => calendarSectionOptions(primaryData[key],primaryLang)
+        const anchorsAgree = ['reading1','gospel'].every(key => calendarSectionOptions(primaryData[key],primaryLang)
             .some(left => calendarSectionOptions(parsed.data?.[key],lang).some(right => primaryCalendarOptionsCorrespond(key,left,right,primaryLang,lang))));
         const compatibleDailyCaption = sameNativeIdentity && (!parsed.title
             || (['memorial','optional'].includes(primaryCalendarRank(nativeInfo)) && unnamed));
-        const sameObservance = !!(sourceTemporal || sameName || sourceMatchesNativeName || compatibleDailyCaption || anchorsAgree);
-        const sameCelebration = !!(sourceTemporal || (sameRank && (sameName || sourceMatchesNativeName || (temporal && anchorsAgree))));
+        const confirmedTemporal = temporal && anchorsAgree && (parsed.calendarForm === 'temporal'
+            || (sameNativeIdentity && primaryCalendarIsTemporal(nativeInfo) && !knownSourceId));
+        const sameObservance = !knownConflict && !!(sourceTemporal || sameName || sourceMatchesNativeName || compatibleDailyCaption
+            || confirmedTemporal || (sameNativeIdentity && unnamed && anchorsAgree));
+        const sameCelebration = !knownConflict && !!(sourceTemporal || confirmedTemporal || (sameRank && (sameName || sourceMatchesNativeName)));
         const localized = primaryCalendarMissalEntry(lang, date, info);
         const fixed = primaryCalendarSpecialRecord(lang, date)?.data?.[lang] || {};
         const scriptureSource = dailySourceMassForPrimary(parsed, primaryData, primaryLang, lang, fixed);
@@ -9454,7 +9479,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             country:state.selectedLocationCode, rank:primaryCalendarRank(info), date:formatDateIso(date),
             nativeTitle:parsed.title || '', nativeRank:primaryCalendarRank(nativeInfo),
             selectedSourceMass:scriptureSource.sourceSelection || null,
-            sameObservance, sameCelebration, unavailable
+            observanceId: expectedId, sourceObservanceId: knownSourceId, sameObservance, sameCelebration, unavailable
         }};
     }
 
@@ -10209,6 +10234,17 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             });
             return urls;
         };
+        const base = 'https://www.tonggiaophanhanoi.org/';
+        const adventUrls = [];
+        if (meta.season === 'advent' && meta.day === 0) {
+            const week = toRoman(meta.week).toLowerCase(), cycle = meta.sundayCycle.toLowerCase();
+            adventUrls.push(base + 'chua-nhat-' + week + '-mua-vong-nam-' + cycle + '/',
+                base + 'chua-nhat-tuan-' + week + '-mua-vong-nam-' + cycle + '/');
+            if (week === 'iii' && cycle === 'b') adventUrls.push(base + 'chua-nhat-tuan-iii-mua-vong/');
+        } else if (meta.season === 'advent' && date.getDate() >= 17 && date.getDate() <= 24) {
+            adventUrls.push(base + 'mua-vong-ngay-' + date.getDate() + '-12/');
+        }
+        fixedUrls.push(...adventUrls);
         const properTitleUrls = urlsForTitle(properTitle);
         const seasonalTitleUrls = properTitle === seasonalTitle ? [] : urlsForTitle(seasonalTitle);
         const datedSlugs = properTitle
@@ -10415,6 +10451,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function isMassTitleNoise(value, lang) {
+        if (/^(?:Final URL|URL Source|Navigation|Article source)\s*:/iu.test(cleanNodeText(value))) return true;
         if (lang === 'KR') return isKoreanMassTitleNoise(value);
         if (lang === 'VN') return isVietnameseMassTitleNoise(value);
         if (lang === 'IT') return /^(?:Liturgie del\s*\d+|Liturgia del giorno|Messa del Giorno|HomeMessa del Giorno)$/iu.test(cleanNodeText(value));
@@ -10491,7 +10528,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict122-vietnamese-calendar-links';
+    const STRICT_PARSER_CACHE_VERSION = 'strict123-observance-catalog';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10903,6 +10940,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'IT' && hasCountryDailyReadings(locationCode)) {
             return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(sourceDate));
         }
+        if (lang === 'PT' && jurisdiction === 'PT') return 'https://liturgia.pt/liturgiadiaria/dia.php?data=' + formatDateIso(sourceDate);
         if (lang === 'PT' && hasCountryDailyReadings(locationCode)) {
             return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(sourceDate));
         }
@@ -14066,6 +14104,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 throw new Error('Daily source declares a different Sunday lectionary cycle.');
             }
         }
+        if (lang === 'PT' && dataJurisdictionForLocation(locationCode) === 'PT'
+            && /Agenda litúrgica/iu.test(source) && !new RegExp('Agenda litúrgica[\\s\\S]{0,250}?' + formatDateIso(sourceDate), 'iu').test(source)) {
+            throw new Error('Portuguese daily source declares another calendar date.');
+        }
         if (declared) {
             const declaredKey = `${declared[1]}-${declared[2].padStart(2,'0')}-${declared[3].padStart(2,'0')}`;
             if (declaredKey !== formatDateIso(sourceDate)) throw new Error('Daily source declares a different calendar date.');
@@ -14482,7 +14524,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 return await fetchJinaHtml(url, { validateSource: source => {
                     try {
                         const probe = strictParseDailyMass(lang, source, date, locationCode);
-                        if (probe.data?.reading1 || probe.data?.gospel) return true;
+                        if (probe.data?.reading1 && probe.data?.gospel) return true;
                         // Dated Mass indexes are valid intermediate documents.
                         return lang === 'EN' && !!strictChooseMassLink(lang, source, url, date, getStrictMassSelector(date), locationCode);
                     } catch (error) {
@@ -14507,6 +14549,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const countries={"united states":"US","scotland":"GB-SCT","england":"GB-ENG","wales":"GB-WLS","ireland":"IE","australia":"AU","new zealand":"NZ","philippines":"PH"};
         const country=countries[restriction[1].trim().toLowerCase()];
         if (country && country!==dataJurisdictionForLocation(locationCode)) throw Error("source-region-restricted:"+country);
+    }
+
+    function isVietnameseDatedAdventSource(url, date) {
+        return getSeasonMeta(date).season === 'advent'
+            && new URL(url).pathname === '/mua-vong-ngay-' + date.getDate() + '-12/';
     }
 
     async function includeVietnameseMartyrsWeekdayReadings(parsed, date, locationCode) {
@@ -14571,7 +14618,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                                 : readingParsedCandidate;
                             const citedParsed = completeMissingDailyProperSections(await applyKtcgkpvCitationSource(mergedParsed, date), lang, date);
                             if (hasCompleteVietnameseParsedMass(citedParsed)
-                                && (!preferProperDate || properPartialParsed || isProperCandidate)) {
+                                && (!preferProperDate || properPartialParsed || isProperCandidate || isVietnameseDatedAdventSource(url, date))) {
                                 if (url === calendarUrl && calendarDateKey(date) === '11-24' && getSeasonMeta(date).day !== 0) {
                                     await includeVietnameseMartyrsWeekdayReadings(citedParsed, date, locationCode);
                                 }
@@ -14758,16 +14805,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     fetchLatinDailyMass = date => fetchIbreviaryDailyMass('LA', date, { includeReadings: true });
     fetchTraditionalChineseDailyMass = (date, options = {}) => fetchStrictDailyMass('ZH', date, options);
     fetchItalianDailyMass = (date, options = {}) => fetchStrictDailyMass('IT', date, options);
-    const fetchPortugueseDailyMass = (date, options = {}) => {
-        const locationCode = options.locationCode || dailySourceLocationCode('PT');
-        if (dataJurisdictionForLocation(locationCode) === 'BR') return fetchStrictDailyMass('PT', date, { locationCode });
-        const parts = zonedDateParts(new Date(), 'Europe/Lisbon');
-        const currentPortugalDate = new Date(parts.year, parts.month - 1, parts.day);
-        if (!sameDay(date, currentPortugalDate)) {
-            return Promise.reject(new Error(`Liturgia.pt only serves its current Portuguese date, not ${formatDateIso(date)}.`));
-        }
-        return fetchStrictDailyMass('PT', date, options);
-    };
+    const fetchPortugueseDailyMass = (date, options = {}) => fetchStrictDailyMass('PT', date, options);
     const fetchSpanishDailyMass = (date, options = {}) => fetchStrictDailyMass('ES', date, options);
     const fetchGermanDailyMass = (date, options = {}) => fetchStrictDailyMass('DE', date, options);
 

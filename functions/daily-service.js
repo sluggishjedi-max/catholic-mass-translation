@@ -97,7 +97,7 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch,runtimeFa
       const createRuntime=runtimeFactory||require('./daily-runtime').createRuntime;
       const sourceDocuments=request.country==='TW'?await require('./daily-taiwan').collectTaiwanDocuments({date:request.date,db,fetchImpl}):undefined;
       runtime=createRuntime(request,{metadata:await metadata(request.country),fetchImpl,sourceDocuments,ktcgProvider:(date,profile,instance)=>resolveKtcg(date,profile,instance)});
-      if(request.country==='PT')runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
+      if(request.country==='PT'&&request.date.endsWith('-11-02'))runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
       await store.registerVariants(request,runtime.variantChoices());
       const variants=runtime.variants(),registered=new Set(variants);
       for(const variant of variants){

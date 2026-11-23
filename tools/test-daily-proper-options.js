@@ -26,5 +26,12 @@ try{
  assert.equal(result.actual.data.entrance.text,'KPV antiphon');
  assert.equal(result.actual.data.prayer_offerings.text,'Diocesan prayer');
  assert.equal(result.wrongDay.primaryCalendarProjection.sameCelebration,false);
+ const catalog=king.window.ordoLiturgicalObservances;
+ for(const [lang,title] of Object.entries(catalog.namesFor('christ-king')))assert.equal(catalog.identify(title,lang),'christ-king');
+ assert.equal(catalog.identify('Feast of St. Andrew, Apostle','EN'),'andrew-apostle');
+ assert.equal(catalog.identify('Lễ Chúa Ki‑tô Vua','VN'),'christ-king');
+ assert.equal(catalog.identify('All the Saints of Ireland','EN'),'ireland-all-saints');
+ const ranks=king.run("['MX','US','PH'].map(country=>primaryCalendarRank(calendarInfoForCountry(new Date(2026,11,12,12),country)))");
+ assert.equal(ranks[0],'solemnity');assert.equal(ranks[1],'feast');
 }finally{king.close();}
 console.log(JSON.stringify({conditionalAntiphons:true,easterOnlyAlleluia:true,optionCitations:true,allLanguageSourceChoiceAI:true,annualMemorialDiscovery:true,originalCalendarCounterpartPreferred:true}));

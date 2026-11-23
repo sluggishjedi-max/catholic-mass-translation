@@ -28,7 +28,7 @@ function createStore(db){
         // recursive writes could retain fallback flags absent from the version.
         if(result.validation?.complete!==false&&previous.publishedKind==='collected'&&previous.publishedVersion===previous.latestCollectedVersion)update.parsed=parsed;
         tx.set(ref,update,{mergeFields:Object.keys(update)});
-        return {changed:false,latestVersion:latest,publishedVersion:previous.publishedVersion};
+        return {changed:false,latestVersion:latest,publishedVersion:previous.publishedVersion||0};
       }
       const number=latest+1,partial=kind==='collected'&&result.validation?.complete===false,protectedEdit=kind==='collected'&&previous.publishedKind==='edited',keepPublished=protectedEdit||partial;
       const version={number,kind,createdAt:now,parentVersion:kind==='edited'?Number(baseVersion||latest):Number(previous.latestCollectedVersion||0),originCollectedVersion:kind==='collected'?number:originCollectedVersion,parsed,sourceHash:fingerprint,parserRevision:result.parserRevision||PARSER_REVISION,comparison:result.comparison||null,validation:result.validation||null};
