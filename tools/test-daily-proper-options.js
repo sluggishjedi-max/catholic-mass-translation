@@ -26,6 +26,12 @@ try{
  assert.equal(result.actual.data.entrance.text,'KPV antiphon');
  assert.equal(result.actual.data.prayer_offerings.text,'Diocesan prayer');
  assert.equal(result.wrongDay.primaryCalendarProjection.sameCelebration,false);
+ for(const form of ['longa','breve','curta']) {
+  king.window.__ptGospel='EVANGELHO – Forma '+form+' Mt 25, 14-30';
+  const heading=king.run("strictIdentifySection(__ptGospel,'PT')");
+  assert.equal(heading?.key,'gospel');assert.equal(heading.rest,'Mt 25, 14-30');
+ }
+ assert.equal(king.run("strictIdentifySection('Evangelho de Nosso Senhor Jesus Cristo','PT')"),null);
  const catalog=king.window.ordoLiturgicalObservances;
  for(const [lang,title] of Object.entries(catalog.namesFor('christ-king')))assert.equal(catalog.identify(title,lang),'christ-king');
  assert.equal(catalog.identify('Feast of St. Andrew, Apostle','EN'),'andrew-apostle');

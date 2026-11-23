@@ -80,7 +80,8 @@ async function collectPortugalDocuments({date,context,db,fetchImpl=fetch}){
     const markers=[...selected.text.matchAll(/^(?:MISSA\s+(III|II|I)|(?:(PRIMEIRA|SEGUNDA|TERCEIRA)\s+MISSA))\s*$/gmi)];
     const ids={I:'first',II:'second',III:'third',PRIMEIRA:'first',SEGUNDA:'second',TERCEIRA:'third'};
     if(markers.length!==3||new Set(markers.map(match=>ids[(match[1]||match[2]).toUpperCase()])).size!==3)throw Error('portugal-all-souls-pdf-formularies-not-resolved');
-    return markers.map((match,i)=>({...base,id:ids[(match[1]||match[2]).toUpperCase()],label:selected.title+' · '+match[0].trim(),text:selected.text.slice(match.index,markers[i+1]?.index||selected.text.length)}));
+    const title=selected.title.split(/\s+As leituras\b/iu)[0];
+    return markers.map((match,i)=>({...base,id:ids[(match[1]||match[2]).toUpperCase()],label:title+' · '+match[0].trim(),text:selected.text.slice(match.index,markers[i+1]?.index||selected.text.length)}));
   }
   const others=available.filter(item=>item!==selected);
   return [selected,...others].map((item,i)=>({sourceUrl:item.link.url,sourcePage:ROOT+item.index,file:{id:item.pdf.sha256,name:'포르투갈_'+date+'_'+(i+1)+'.pdf',url:item.link.url,pages:item.pdf.pages.length,bytes:item.pdf.bytes.length},id:i===0?'day':'source-'+require('./daily-schema').digest({title:item.title,text:item.text}).slice(0,20),label:item.title,text:item.text}));

@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-1';
+    const APP_VERSION = 'V31.2-20261124-2';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -10533,7 +10533,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict124-observance-catalog';
+    const STRICT_PARSER_CACHE_VERSION = 'strict125-observance-catalog';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -11406,7 +11406,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             ['reading2', /^(?:LEITURA II(?:\s*\([^)]*\))?|Segunda Leitura)(?:\s|$|[:：.—–-])/iu],
             ['Sequence', /^SEQUÊNCIA(?:\s|$|[:：.])/iu],
             ['gospel_accl', /^(?:ALELUIA|ACLAMAÇÃO AO EVANGELHO)(?:\s|$|[:：.])/iu],
-            ['gospel', /^EVANGELHO(?=\s+(?:[—–-]\s*)?(?:[1-3]\s*)?[A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-Za-zÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç.]{0,12}\s+\d|$|[:：.])/iu],
+            ['gospel', /^EVANGELHO(?:\s+(?:[—–-]\s*)?Forma\s+(?:longa|curta|breve))?(?=\s+(?:[—–-]\s*)?(?:[1-3]\s*)?[A-ZÁÉÍÓÚÂÊÔÃÕÇ][A-Za-zÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç.]{0,12}\s+\d|$|[:：.])/iu],
             ['prayer_offerings', /^(?:Oração sobre as oblatas|Sobre as Oferendas)(?:\s|$|[:：.])/iu],
             ['preface', /^Prefácio(?:\s|$|[:：.])/iu],
             ['prayer_after', /^(?:Oração depois da comunhão|Depois da Comunhão)(?:\s|$|[:：.])/iu]
