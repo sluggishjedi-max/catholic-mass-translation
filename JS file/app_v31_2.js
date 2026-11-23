@@ -9406,7 +9406,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const sourceMatchesNativeName = sameNativeIdentity && parsed.title && nativeInfo.names?.[lang]
             && normalizeCalendarNameForCompare(parsed.title)===normalizeCalendarNameForCompare(nativeInfo.names[lang])
             && (primaryCalendarIsTemporal(nativeInfo)||!isGeneratedSeasonalNameForInfo(lang,nativeInfo.names[lang],nativeInfo));
-        const sameName = exactAlias || !!(expectedIdentityUsable && expected && parsed.title && (normalizeCalendarNameForCompare(parsed.title) === normalizeCalendarNameForCompare(expected)
+        const kpvChristKing = lang === 'VN' && parsed.kpvSelectedCelebrationCode === 'christ-king'
+            && sameDay(date, addDays(getAdventStart(date.getFullYear()), -7));
+        const sameName = exactAlias || kpvChristKing || !!(expectedIdentityUsable && expected && parsed.title && (normalizeCalendarNameForCompare(parsed.title) === normalizeCalendarNameForCompare(expected)
             || (!temporal && sameNativeIdentity && localMissalTitleScore(expected, parsed.title) >= 0.85)));
         const sameRank = primaryCalendarRank(info) === primaryCalendarRank(nativeInfo);
         const data = {}, properSources = {}, unavailable = [];

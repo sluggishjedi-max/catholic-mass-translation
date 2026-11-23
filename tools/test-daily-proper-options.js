@@ -15,4 +15,16 @@ try{for(const lang of ['KR','EN'])s.window.__loadServerModule('JS file/lazy/miss
  const out=s.run(`(()=>{const proper=strictParseDailyMass('EN',__html,getActiveLiturgicalSourceDate(),'US');proper.id='memorial-presentation-virgin-mary';__native.sourceMasses=[proper];state.currentLoc=state.selectedLocationCode='KR';state.targetLang='EN';state.targetLocationCode='US';state.liturgyInfo=buildGeneratedLiturgyInfo(getActiveLiturgicalSourceDate());const data={};mergeSourceData(data,__original,'KR');mergeSourceData(data,__native,'EN');return {data,proper};})()`);
  assert(out.proper.data.reading1.cit_en.includes('Zechariah'));assert(out.data.reading1.en_options[0].lines.some(line=>line.text.includes('Sing and rejoice')));assert(out.data.gospel.en_options[0].lines.some(line=>line.text.includes('While Jesus was speaking')));assert(out.data.reading1.en_options.some(option=>option.lines.some(line=>line.text.includes('two prophets'))),'Other published Scripture was discarded');
 }finally{s.close();}
+const king=createRuntime({country:'KR',date:'2026-11-22',source:'official'});
+try{
+ const result=king.run(`(()=>{const date=getActiveLiturgicalSourceDate();state.targetLang='VN';state.targetLocationCode='VN';
+ const original={data:{entrance:{text:'Korean antiphon'}}};
+ const translated={title:'Lễ Chúa Ki‑tô Vua',kpvSelectedCelebrationCode:'christ-king',calendarForm:'celebration',data:{entrance:{text:'KPV antiphon'},prayer_offerings:{text:'Diocesan prayer'}}};
+ const actual=projectDailySourceToPrimaryCalendar(translated,'VN',original,date,buildGeneratedLiturgyInfo(date));
+ const other=new Date(2026,10,15,12),wrongDay=projectDailySourceToPrimaryCalendar(translated,'VN',original,other,buildGeneratedLiturgyInfo(other));
+ return {actual,wrongDay};})()`);
+ assert.equal(result.actual.data.entrance.text,'KPV antiphon');
+ assert.equal(result.actual.data.prayer_offerings.text,'Diocesan prayer');
+ assert.equal(result.wrongDay.primaryCalendarProjection.sameCelebration,false);
+}finally{king.close();}
 console.log(JSON.stringify({conditionalAntiphons:true,easterOnlyAlleluia:true,optionCitations:true,allLanguageSourceChoiceAI:true,annualMemorialDiscovery:true,originalCalendarCounterpartPreferred:true}));
