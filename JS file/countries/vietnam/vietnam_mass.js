@@ -6519,6 +6519,26 @@
               }
             ]
           },
+          "vn_mid_autumn": {
+            "title": {
+              "vn": "Kinh Tiền Tụng Lễ Tết Trung Thu – Cầu cho Thiếu Nhi"
+            },
+            "content": [
+              {
+                "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con. Vì Cha đã dựng nên muôn vàn tinh tú tô điểm không trung huy hoàng rực rỡ: dùng kim ô điều khiển ban ngày, và trăng sao hướng dẫn ban đêm. Cha còn sai Đức Giêsu là mặt trời công chính đến soi sáng tất cả mọi người, và dạy chúng con phải nên giống trẻ nhỏ để được vào nước trời.",
+                "sp_vn": "LM.",
+                "__massEditorPairKeys": {
+                  "text_vn": "0:text"
+                }
+              },
+              {
+                "text_vn": "Chính vì thế, hiệp cùng các Thiên thần và các thánh nam nữ, chúng con ca ngợi Cha muôn đời vinh hiển và đồng thanh chúc tụng rằng:",
+                "__massEditorPairKeys": {
+                  "text_vn": "1:text"
+                }
+              }
+            ]
+          },
           "us_thanksgiving": {
             "title": {
               "vn": "Kinh Tiền Tụng Riêng Hoa Kỳ: Lễ Tạ Ơn"
@@ -12750,6 +12770,26 @@
               "text_vn": "_Thánh! Thánh! Thánh!…_",
               "__massEditorPairKeys": {
                 "text_vn": "3:text"
+              }
+            }
+          ]
+        },
+        "vn_mid_autumn": {
+          "title": {
+            "vn": "Kinh Tiền Tụng Lễ Tết Trung Thu – Cầu cho Thiếu Nhi"
+          },
+          "content": [
+            {
+              "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con. Vì Cha đã dựng nên muôn vàn tinh tú tô điểm không trung huy hoàng rực rỡ: dùng kim ô điều khiển ban ngày, và trăng sao hướng dẫn ban đêm. Cha còn sai Đức Giêsu là mặt trời công chính đến soi sáng tất cả mọi người, và dạy chúng con phải nên giống trẻ nhỏ để được vào nước trời.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "0:text"
+              }
+            },
+            {
+              "text_vn": "Chính vì thế, hiệp cùng các Thiên thần và các thánh nam nữ, chúng con ca ngợi Cha muôn đời vinh hiển và đồng thanh chúc tụng rằng:",
+              "__massEditorPairKeys": {
+                "text_vn": "1:text"
               }
             }
           ]
