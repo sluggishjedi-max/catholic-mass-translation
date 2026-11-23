@@ -6,6 +6,38 @@
   // MASS_DATA_EDITOR_OVERRIDES_START
   const ordinaryEditorOverrides = [
     {
+      "replace": {
+        "entryId": "2.4 Sequence",
+        "relativePath": [
+          "lines"
+        ],
+        "rows": [
+          {
+            "text_kr": "(오늘의 부속가…)",
+            "__massEditorPairKeys": {
+              "text_kr": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "replace": {
+        "entryId": "2.5 gospel_accl",
+        "relativePath": [
+          "lines"
+        ],
+        "rows": [
+          {
+            "text_kr": "(오늘의 복음환호송…)",
+            "__massEditorPairKeys": {
+              "text_kr": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
       "path": [
         1
       ],
@@ -258,7 +290,7 @@
                 "rubricInset_kr": true
               },
               {
-                "text_kr": "제 탓이오, 제 탓이오, 저의 큰 탓이옵니다.",
+                "text_kr": "<u>제 탓이오, 제 탓이오, 저의 큰 탓이옵니다.</u>",
                 "__massEditorPairKeys": {
                   "text_kr": "7:text"
                 }
@@ -667,12 +699,6 @@
             "sp_kr": "○"
           },
           {
-            "text_kr": "",
-            "__massEditorPairKeys": {
-              "text_kr": "7:text"
-            }
-          },
-          {
             "text_kr": "외 아들 주 예수 그리스도님",
             "__massEditorPairKeys": {
               "text_kr": "8:text"
@@ -805,7 +831,7 @@
             "sp_kr": "▥"
           },
           {
-            "text_kr": "(오늘의 제1독서...)",
+            "text_kr": "(오늘의 제1독서…)",
             "__massEditorPairKeys": {
               "text_kr": "2:text"
             }
@@ -887,7 +913,7 @@
             "sp_kr": "▥"
           },
           {
-            "text_kr": "(오늘의 제2독서...)",
+            "text_kr": "(오늘의 제2독서…)",
             "__massEditorPairKeys": {
               "text_kr": "2:text"
             }
@@ -905,50 +931,6 @@
               "text_kr": "4:text"
             },
             "sp_kr": "◎"
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        11
-      ],
-      "value": {
-        "id": "2.4 Sequence",
-        "type": "part",
-        "if": "easter_or_pentecost",
-        "header": {
-          "kr": "부속가"
-        },
-        "lines": [
-          {
-            "text_kr": "(오늘의 부속가...)",
-            "__massEditorPairKeys": {
-              "text_kr": "0:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
-        12
-      ],
-      "value": {
-        "id": "2.5 gospel_accl",
-        "type": "part",
-        "header": {
-          "kr": "복음 환호송"
-        },
-        "cit": {
-          "cit_kr": ""
-        },
-        "lines": [
-          {
-            "text_kr": "(오늘의 복음환호송...)",
-            "__massEditorPairKeys": {
-              "text_kr": "0:text"
-            }
           }
         ]
       }
@@ -982,7 +964,7 @@
             "sp_kr": "◎"
           },
           {
-            "text_kr": "(...)가(이) 전한 거룩한 복음입니다.",
+            "text_kr": "(…)가(이) 전한 거룩한 복음입니다.",
             "__massEditorPairKeys": {
               "text_kr": "2:text"
             },
@@ -996,7 +978,7 @@
             "sp_kr": "◎"
           },
           {
-            "text_kr": "(오늘의 복음...)",
+            "text_kr": "(오늘의 복음…)",
             "__massEditorPairKeys": {
               "text_kr": "4:text"
             }
@@ -1083,7 +1065,7 @@
                 "rubricInset_kr": true
               },
               {
-                "text_kr": "성령으로 인하여 동정 마리아에게 잉태되어 나시고",
+                "text_kr": " <u>성령으로 인하여 동정 마리아에게 잉태되어 나시고</u>",
                 "__massEditorPairKeys": {
                   "text_kr": "3:text"
                 }
@@ -1225,7 +1207,7 @@
                 "rubricInset_kr": true
               },
               {
-                "text_kr": "또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어<br>사람이 되셨음을 믿나이다.",
+                "text_kr": "<u>또한 성령으로 인하여 동정 마리아에게서 육신을 취하시어<br>사람이 되셨음을 믿나이다.</u>",
                 "__massEditorPairKeys": {
                   "text_kr": "10:text"
                 }
@@ -1346,14 +1328,14 @@
             "rubricInset_kr": true
           },
           {
-            "rubric_kr": "기도 끝에 ",
+            "rubric_kr": "기도 끝에",
             "__massEditorPairKeys": {
               "rubric_kr": "2:rubric"
             },
             "rubricInset_kr": true
           },
           {
-            "text_kr": "주님 저희의 기도를 들어주소서.",
+            "text_kr": " 주님 저희의 기도를 들어주소서.",
             "__massEditorPairKeys": {
               "text_kr": "2:text"
             },
@@ -1404,8 +1386,7 @@
             "text_kr": "온 누리의 주 하느님, 찬미받으소서.",
             "__massEditorPairKeys": {
               "text_kr": "1:text"
-            },
-            "sp_kr": "✚"
+            }
           },
           {
             "text_kr": "주님의 너그러우신 은혜로",
@@ -1443,8 +1424,7 @@
             "text_kr": "온 누리의 주 하느님, 찬미받으소서.",
             "__massEditorPairKeys": {
               "text_kr": "6:text"
-            },
-            "sp_kr": "✚"
+            }
           },
           {
             "text_kr": "주님의 너그러우신 은혜로",
@@ -1531,7 +1511,7 @@
         },
         "lines": [
           {
-            "text_kr": "(오늘의 예물기도)",
+            "text_kr": "(오늘의 예물기도…)",
             "__massEditorPairKeys": {
               "text_kr": "0:text"
             },

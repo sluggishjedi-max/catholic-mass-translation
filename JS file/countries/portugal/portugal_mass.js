@@ -1244,7 +1244,7 @@
           "text_pt": "e recebessem o dom da vida eterna,"
         }, {
           "sp_pt": "",
-          "text_pt": "dignai-Vos abençoar + esta água,"
+          "text_pt": "dignai-Vos abençoar ✠ esta água,"
         }, {
           "sp_pt": "",
           "text_pt": "para que seja sinal da vossa proteção, neste dia a Vós consagrado."
@@ -1279,7 +1279,7 @@
           "text_pt": "fonte e origem de toda a vida do corpo e da alma,"
         }, {
           "sp_pt": "",
-          "text_pt": "abençoai + esta água, que vamos aspergir sobre nós,"
+          "text_pt": "abençoai ✠ esta água, que vamos aspergir sobre nós,"
         }, {
           "sp_pt": "",
           "text_pt": "para implorar o perdão dos nossos pecados"
@@ -1327,7 +1327,7 @@
           "text_pt": "e a maravilha ainda maior da nossa redenção,"
         }, {
           "sp_pt": "",
-          "text_pt": "dignai-Vos abençoar + esta água."
+          "text_pt": "dignai-Vos abençoar ✠ esta água."
         }, {
           "sp_pt": "",
           "text_pt": "Vós a criastes para dar fecundidade à terra"
@@ -1393,7 +1393,7 @@
           "text_pt": "conserve o rito de misturar sal na água benta, o sacerdote abençoa o sal, dizendo:"
         }, {
           "sp_pt": "",
-          "text_pt": "Deus todo-poderoso e eterno, abençoai + este sal,"
+          "text_pt": "Deus todo-poderoso e eterno, abençoai ✠ este sal,"
         }, {
           "sp_pt": "",
           "text_pt": "Vós que ordenastes ao profeta Eliseu que o misturasse na água"
@@ -1747,7 +1747,7 @@
           "text_pt": "renovais os prodígios da criação e da redenção,"
         }, {
           "sp_pt": "",
-          "text_pt": "abençoai + esta água"
+          "text_pt": "abençoai ✠ esta água"
         }, {
           "sp_pt": "",
           "text_pt": "e dai a todos os que renasceram no Batismo"
@@ -10079,7 +10079,7 @@
         "text_pt": "Traça o sinal da cruz, uma só vez, simultaneamente sobre o pão e o cálice, dizendo:"
       }, {
         "sp_pt": "",
-        "text_pt": "e abençoar + estes dons,"
+        "text_pt": "e abençoar ✠ estes dons,"
       }, {
         "sp_pt": "",
         "text_pt": "esta oblação pura e santa."
@@ -10987,7 +10987,7 @@
         "text_pt": "humildemente V os suplicamos: Santificai estes dons, derramando sobre eles"
       }, {
         "sp_pt": "",
-        "text_pt": "o vosso Espírito, de modo que se convertam, para nós, no Corpo e + Sangue"
+        "text_pt": "o vosso Espírito, de modo que se convertam, para nós, no Corpo e ✠ Sangue"
       }, {
         "sp_pt": "",
         "text_pt": (
@@ -11115,7 +11115,7 @@
         "text_pt": "de modo que se convertam, para nós,"
       }, {
         "sp_pt": "",
-        "text_pt": "no Corpo e + Sangue de nosso Senhor Jesus Cristo."
+        "text_pt": "no Corpo e ✠ Sangue de nosso Senhor Jesus Cristo."
       }, {
         "sp_pt": "",
         "text_pt": "Junta as mãos."
@@ -11521,7 +11521,7 @@
         "text_pt": "humildemente, V os suplicamos, Senhor: santificai, pelo Espírito Santo, estes"
       }, {
         "sp_pt": "",
-        "text_pt": "dons que V os apresentamos, para que se convertam no Corpo e + Sangue"
+        "text_pt": "dons que V os apresentamos, para que se convertam no Corpo e ✠ Sangue"
       }, {
         "sp_pt": "",
         "text_pt": "de nosso Senhor Jesus Cristo, vosso Filho, que nos mandou celebrar estes"
@@ -11651,7 +11651,7 @@
         "text_pt": "Junta as mãos e traça o sinal da cruz sobre o pão e sobre o cálice, dizendo:"
       }, {
         "sp_pt": "",
-        "text_pt": "para que se convertam no Corpo e + Sangue"
+        "text_pt": "para que se convertam no Corpo e ✠ Sangue"
       }, {
         "sp_pt": "",
         "text_pt": "de nosso Senhor Jesus Cristo, vosso Filho,"
@@ -12297,7 +12297,7 @@
         "text_pt": "para que se convertam"
       }, {
         "sp_pt": "",
-        "text_pt": "no Corpo e + Sangue de nosso Senhor Jesus Cristo,"
+        "text_pt": "no Corpo e ✠ Sangue de nosso Senhor Jesus Cristo,"
       }, {
         "sp_pt": "",
         "text_pt": "Junta as mãos."
@@ -13338,7 +13338,7 @@
           "text_pt": "Abençoe-vos Deus todo-poderoso,"
         }, {
           "sp_pt": "",
-          "text_pt": "Pai, Filho e + Espírito Santo."
+          "text_pt": "Pai, Filho e ✠ Espírito Santo."
         }, {
           "sp_pt": "Todos",
           "text_pt": "Amen."
@@ -13398,7 +13398,7 @@
           "text_pt": "e, fazendo por três vezes o sinal da cruz sobre o povo, continua:"
         }, {
           "sp_pt": "",
-          "text_pt": "Pai, + Filho + e Espírito + Santo."
+          "text_pt": "Pai, ✠ Filho + e Espírito + Santo."
         }, {
           "sp_pt": "Todos",
           "text_pt": "Amen."
@@ -20961,7 +20961,7 @@
                 }
               },
               {
-                "text_pt": "dignai-Vos abençoar + esta água,",
+                "text_pt": "dignai-Vos abençoar ✠ esta água,",
                 "__massEditorPairKeys": {
                   "text_pt": "211:text"
                 }
@@ -21028,7 +21028,7 @@
                 }
               },
               {
-                "text_pt": "abençoai + esta água, que vamos aspergir sobre nós,",
+                "text_pt": "abençoai ✠ esta água, que vamos aspergir sobre nós,",
                 "__massEditorPairKeys": {
                   "text_pt": "222:text"
                 }
@@ -21118,7 +21118,7 @@
                 }
               },
               {
-                "text_pt": "dignai-Vos abençoar + esta água.",
+                "text_pt": "dignai-Vos abençoar ✠ esta água.",
                 "__massEditorPairKeys": {
                   "text_pt": "237:text"
                 }
@@ -21238,7 +21238,7 @@
                 }
               },
               {
-                "text_pt": "Deus todo-poderoso e eterno, abençoai + este sal,",
+                "text_pt": "Deus todo-poderoso e eterno, abençoai ✠ este sal,",
                 "__massEditorPairKeys": {
                   "text_pt": "257:text"
                 }
@@ -21853,7 +21853,7 @@
                 }
               },
               {
-                "text_pt": "abençoai + esta água",
+                "text_pt": "abençoai ✠ esta água",
                 "__massEditorPairKeys": {
                   "text_pt": "357:text"
                 }
@@ -25956,7 +25956,7 @@
                 }
               },
               {
-                "text_pt": "Pai, Filho e + Espírito Santo.",
+                "text_pt": "Pai, Filho e ✠ Espírito Santo.",
                 "__massEditorPairKeys": {
                   "text_pt": "8:text"
                 }
@@ -26068,7 +26068,7 @@
                 }
               },
               {
-                "text_pt": "Pai, + Filho + e Espírito + Santo.",
+                "text_pt": "Pai, ✠ Filho + e Espírito + Santo.",
                 "__massEditorPairKeys": {
                   "text_pt": "12:text"
                 }
@@ -37469,7 +37469,7 @@
               }
             },
             {
-              "text_pt": "e abençoar + estes dons,",
+              "text_pt": "e abençoar ✠ estes dons,",
               "__massEditorPairKeys": {
                 "text_pt": "canon:te_igitur:6:text"
               }
@@ -39825,7 +39825,7 @@
               }
             },
             {
-              "text_pt": "no Corpo e + Sangue de nosso Senhor Jesus Cristo.",
+              "text_pt": "no Corpo e ✠ Sangue de nosso Senhor Jesus Cristo.",
               "__massEditorPairKeys": {
                 "text_pt": "40:text"
               }
@@ -40559,7 +40559,7 @@
               "rubricInset_pt": true
             },
             {
-              "text_pt": "para que se convertam no Corpo e + Sangue",
+              "text_pt": "para que se convertam no Corpo e ✠ Sangue",
               "__massEditorPairKeys": {
                 "text_pt": "17:text"
               }
@@ -41787,7 +41787,7 @@
               }
             },
             {
-              "text_pt": "no Corpo e + Sangue de nosso Senhor Jesus Cristo,",
+              "text_pt": "no Corpo e ✠ Sangue de nosso Senhor Jesus Cristo,",
               "__massEditorPairKeys": {
                 "text_pt": "73:text"
               }

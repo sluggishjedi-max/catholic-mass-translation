@@ -485,7 +485,7 @@
           {
             "text_en": "Lord, have mercy. ",
             "__massEditorPairKeys": {
-              "text_en": "0:text"
+              "text_en": "0:text:segment:0"
             },
             "sp_en": "V."
           },
@@ -499,13 +499,13 @@
           {
             "text_en": " Kyrie, eleison.",
             "__massEditorPairKeys": {
-              "text_en": "editor-1793688508839-4:text"
+              "text_en": "0:text:segment:1"
             }
           },
           {
             "text_en": "Lord, have mercy. ",
             "__massEditorPairKeys": {
-              "text_en": "1:text"
+              "text_en": "1:text:segment:0"
             },
             "sp_en": "R."
           },
@@ -519,13 +519,13 @@
           {
             "text_en": " Kyrie, eleison.",
             "__massEditorPairKeys": {
-              "text_en": "editor-1793688521090-5:text"
+              "text_en": "1:text:segment:1"
             }
           },
           {
             "text_en": "Christ, have mercy. ",
             "__massEditorPairKeys": {
-              "text_en": "2:text"
+              "text_en": "2:text:segment:0"
             },
             "sp_en": "V."
           },
@@ -539,13 +539,13 @@
           {
             "text_en": " Christe, eleison.",
             "__massEditorPairKeys": {
-              "text_en": "editor-1793688541246-6:text"
+              "text_en": "2:text:segment:1"
             }
           },
           {
             "text_en": "Christ, have mercy. ",
             "__massEditorPairKeys": {
-              "text_en": "3:text"
+              "text_en": "3:text:segment:0"
             },
             "sp_en": "R."
           },
@@ -559,13 +559,13 @@
           {
             "text_en": " Christe, eleison.",
             "__massEditorPairKeys": {
-              "text_en": "editor-1793688554794-7:text"
+              "text_en": "3:text:segment:1"
             }
           },
           {
             "text_en": "Lord, have mercy. ",
             "__massEditorPairKeys": {
-              "text_en": "4:text"
+              "text_en": "4:text:segment:0"
             },
             "sp_en": "V."
           },
@@ -579,13 +579,13 @@
           {
             "text_en": " Kyrie, eleison.",
             "__massEditorPairKeys": {
-              "text_en": "editor-1793688564970-8:text"
+              "text_en": "4:text:segment:1"
             }
           },
           {
             "text_en": "Lord, have mercy. ",
             "__massEditorPairKeys": {
-              "text_en": "5:text"
+              "text_en": "5:text:segment:0"
             },
             "sp_en": "R."
           },
@@ -599,7 +599,7 @@
           {
             "text_en": " Kyrie, eleison.",
             "__massEditorPairKeys": {
-              "text_en": "editor-1793688617347-9:text"
+              "text_en": "5:text:segment:1"
             }
           }
         ]
@@ -639,17 +639,17 @@
             "sp_en": "V."
           },
           {
-            "text_en": "we adore you,<br>we glorify you,",
-            "__massEditorPairKeys": {
-              "text_en": "3:text"
-            },
-            "sp_en": "R."
-          },
-          {
             "text_en": "",
             "__massEditorPairKeys": {
-              "text_en": "4:text"
+              "text_en": "3:text"
             }
+          },
+          {
+            "text_en": "we adore you,<br>we glorify you,",
+            "__massEditorPairKeys": {
+              "text_en": "4:text"
+            },
+            "sp_en": "R."
           },
           {
             "text_en": "",
@@ -684,12 +684,6 @@
               "text_en": "9:text"
             },
             "sp_en": "R."
-          },
-          {
-            "text_en": "",
-            "__massEditorPairKeys": {
-              "text_en": "10:text"
-            }
           },
           {
             "text_en": "you take away the sins of the world,<br>have mercy on us;",

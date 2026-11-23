@@ -7517,13 +7517,45 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return parsed;
     }
 
+    async function applyKpvMissalPrayers(parsed, date) {
+        let url;
+        try { url = await resolveVietnameseCalendarReadingUrl(date); }
+        catch (error) { console.warn('Vietnamese Missal calendar lookup failed.', error); }
+        if (url) {
+            try {
+                const source = await fetchTextWithFallbacks(url, { retries: 0 });
+                const missal = strictParseDailyMass('VN', source, date, 'VN');
+                const required = ['reading1', 'gospel'];
+                const fields = ['collect', 'prayer_offerings', 'prayer_after'];
+                for (const mass of [parsed, ...(parsed.sourceMasses || [])]) {
+                    const matches = required.every(key => calendarSectionOptions(mass.data?.[key], 'VN').some(left =>
+                        calendarSectionOptions(missal.data[key], 'VN').some(right =>
+                            primaryCalendarOptionsCorrespond(key, left, right, 'VN', 'VN'))));
+                    if (!matches) continue;
+                    for (const key of fields) {
+                        if (sourceSectionHasContent(mass.data[key]) || !sourceSectionHasContent(missal.data[key])) continue;
+                        mass.data[key] = missal.data[key];
+                        mass.properSources ||= {};
+                        mass.properSources[key] = { kind: 'diocesan-missal', title: missal.title, sourceUrl: url };
+                    }
+                    if (fields.every(key => sourceSectionHasContent(mass.data[key]))) {
+                        mass.prayerSourceUrl ||= url;
+                        mass.prayerSourceName ||= 'Tổng Giáo phận Hà Nội';
+                    }
+                }
+            } catch (error) { console.warn('Vietnamese Missal source unavailable.', error); }
+        }
+        if (!hasVietnameseKtcgDiocesanPrayers(parsed)) await applyVietnameseKtcgDiocesanPrayers(parsed, date);
+        return parsed;
+    }
+
     function queueVietnameseKtcgPrayerEnrichment(parsed, date) {
         if (!parsed || !parsed.data || hasVietnameseKtcgDiocesanPrayers(parsed)) return Promise.resolve(parsed);
         const key = `${formatDateIso(date)}:${vietnameseKpvSelectionContext(date)}`;
         if (vietnameseKtcgPrayerEnrichmentPromises.has(key)) {
             return vietnameseKtcgPrayerEnrichmentPromises.get(key);
         }
-        const promise = applyVietnameseKtcgDiocesanPrayers(parsed, date)
+        const promise = applyKpvMissalPrayers(parsed, date)
             .then(enriched => {
                 if (hasVietnameseKtcgDiocesanPrayers(enriched)) {
                     writeCachedDailySource('VN', date, enriched, { locationCode: dailySourceLocationCode('VN') });
@@ -9396,6 +9428,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const scriptureSource = dailySourceMassForPrimary(parsed, primaryData, primaryLang, lang, fixed);
         const scripture = new Set(['reading1','reading2','psalm','gospel_accl','gospel']);
         for (const key of scripture) {
+            if (key === 'reading2' && !sourceSectionHasContent(primaryData[key])) continue;
             const candidate = fixed[key] || scriptureSource.data?.[key];
             const matched = primaryCalendarScriptureSection(key, primaryData[key], candidate, primaryLang, lang);
             if (sameObservance && sourceSectionHasContent(parsed.data?.[key])) data[key] = regionalCalendarScriptureSection(parsed,key,lang,expected,scriptureSource.sourceSelection ? scriptureSource : null);
@@ -9861,15 +9894,16 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return date ? Number(match[1]) === date.getDate() : true;
     }
 
-    function extractVietnameseCalendarDayBlock(source, date) {
-        const lines = contentLinesFromSource((source || '').split(/\r?\n/).map(cleanMarkdownLine).filter(Boolean));
-        const start = lines.findIndex(line => isVietnameseCalendarDayHeader(line, date));
+    function extractVietnameseCalendarDayBlock(source, date, { preserveLinks = false } = {}) {
+        const lines = contentLinesFromSource((source || '').split(/\r?\n/).map(line => line.trim()).filter(Boolean));
+        const start = lines.findIndex(line => isVietnameseCalendarDayHeader(cleanMarkdownLine(line), date));
         if (start < 0) return [];
         let end = lines.length;
         for (let i = start + 1; i < lines.length; i++) {
-            if (isVietnameseCalendarDayHeader(lines[i])) { end = i; break; }
+            if (isVietnameseCalendarDayHeader(cleanMarkdownLine(lines[i]))) { end = i; break; }
         }
-        return lines.slice(start, end);
+        const block = lines.slice(start, end);
+        return preserveLinks ? block : block.map(cleanMarkdownLine).filter(Boolean);
     }
 
     const vietnameseCalendarReadingHints = {};
@@ -10040,10 +10074,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function extractVietnameseCalendarReadingUrl(source, date, baseUrl) {
-        const dayBlock = extractVietnameseCalendarDayBlock(source, date);
+        const dayBlock = extractVietnameseCalendarDayBlock(source, date, { preserveLinks: true });
         if (!dayBlock.length) return '';
         const dateKey = formatDateIso(date);
-        const context = parseVietnameseCalendarDayContext(dayBlock, date);
+        const context = parseVietnameseCalendarDayContext(dayBlock.map(cleanMarkdownLine).filter(Boolean), date);
         const readingIndex = dayBlock.findIndex(line => /Bài\s*[ĐÐ]ọc/i.test(line));
         if (readingIndex < 0) {
             vietnameseCalendarReadingHints[dateKey] = {
@@ -10055,7 +10089,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         }
         const readingText = vietnameseCalendarReadingText(dayBlock, readingIndex);
         const links = extractSourceLinks(readingText, baseUrl);
-        const readings = parseVietnameseCalendarReadingHints(readingText, links);
+        const readings = parseVietnameseCalendarReadingHints(cleanMarkdownLine(readingText), links);
         vietnameseCalendarReadingHints[dateKey] = {
             raw: readingText,
             readings,
@@ -10455,7 +10489,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict121-chinese-psalm-stanzas';
+    const STRICT_PARSER_CACHE_VERSION = 'strict122-vietnamese-calendar-links';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -14473,6 +14507,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (country && country!==dataJurisdictionForLocation(locationCode)) throw Error("source-region-restricted:"+country);
     }
 
+    async function includeVietnameseMartyrsWeekdayReadings(parsed, date, locationCode) {
+        const title = vietnameseSeasonalLookupTitle(date);
+        const url = 'https://www.tonggiaophanhanoi.org/' + slugifyVietnamese(title) + '/';
+        try {
+            const text = await fetchTextWithFallbacks(url, { retries: 0 });
+            const weekday = strictParseDailyMass('VN', text, date, locationCode);
+            if (!hasVietnameseParsedMass(weekday) || !vietnameseSourceMatchesTitle(weekday, url, title)) return;
+            if (passageCitationsEquivalent('gospel', parsed.data.gospel.cit_vn, weekday.data.gospel.cit_vn, 'VN', 'VN')) return;
+            parsed.sourceMasses = [...(parsed.sourceMasses || []), {...weekday, id:'weekday', title,
+                sourceUrl:url, calendarForm:'temporal', sourceName:'Tổng Giáo phận Hà Nội'}];
+        } catch (error) { console.warn('Vietnamese weekday readings for the Martyrs memorial unavailable.', error); }
+    }
+
     async function fetchStrictDailyMass(lang, date, options = {}) {
         const locationCode = options.locationCode || dailySourceLocationCode(lang);
         await loadAllSoulsMassConfigIfNeeded(date);
@@ -14488,7 +14535,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (temporalFallback) {
                 return applyKtcgkpvCitationSource(temporalFallback, date);
             }
-            let urls = await resolveVietnameseDailyUrls(date, { directOnly: true });
+            let calendarUrl = '';
+            try { calendarUrl = await resolveVietnameseCalendarReadingUrl(date); }
+            catch (error) { console.warn('Vietnamese dated calendar link unavailable.', error); }
+            const directUrls = await resolveVietnameseDailyUrls(date, { directOnly: true });
+            let urls = [...new Set([calendarUrl, ...directUrls].filter(Boolean))];
             let lastError = null;
             let properPartialParsed = null;
             let readingParsedCandidate = null;
@@ -14499,7 +14550,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     try {
                         const source = await fetchTextWithFallbacks(url);
                         const parsed = strictParseDailyMass(lang, source, date, locationCode);
-                        const isProperCandidate = preferProperDate && vietnameseParsedLooksLikeProperSource(parsed, url, date);
+                        parsed.sourceUrl ||= url;
+                        const isProperCandidate = preferProperDate && (url === calendarUrl || vietnameseParsedLooksLikeProperSource(parsed, url, date));
                         const fixedTitle = strictFixedDailyTitle(lang, date);
                         const calendarTitle = preferProperDate ? vietnameseLookupTitle(date) : '';
                         if (fixedTitle || calendarTitle) parsed.title = fixedTitle || calendarTitle;
@@ -14508,7 +14560,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                             prioritizeVietnameseSeasonalReadingUrl(urls, index, date);
                         }
                         if (hasVietnameseParsedMass(parsed)) {
-                            if (!strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
+                            if ((url === calendarUrl || !isProperCandidate) && !strictVietnameseParsedMatchesCalendarHints(parsed, date)) {
                                 throw new Error('VN source did not match calendar reading hints');
                             }
                             readingParsedCandidate = mergeVietnameseSectionFallbacks(readingParsedCandidate, parsed);
@@ -14517,7 +14569,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                                 : readingParsedCandidate;
                             const citedParsed = completeMissingDailyProperSections(await applyKtcgkpvCitationSource(mergedParsed, date), lang, date);
                             if (hasCompleteVietnameseParsedMass(citedParsed)
-                                && (!preferProperDate || properPartialParsed || isProperCandidate)) return citedParsed;
+                                && (!preferProperDate || properPartialParsed || isProperCandidate)) {
+                                if (url === calendarUrl && calendarDateKey(date) === '11-24' && getSeasonMeta(date).day !== 0) {
+                                    await includeVietnameseMartyrsWeekdayReadings(citedParsed, date, locationCode);
+                                }
+                                return citedParsed;
+                            }
                             throw new Error('VN source is incomplete: ' + missingVietnameseDailySections(citedParsed).join(', '));
                         }
                         if (properPartialParsed && readingParsedCandidate) {
@@ -18594,7 +18651,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             const baseId = getBaseId(item.id);
             if (item.isEucharist || baseId === 'eucharist') item.__dailyServerPreface = fetchedData.preface ? cloneData(fetchedData.preface) : null;
             if (baseId.toLowerCase() === 'sequence') { item.__dailyHasSequence = !!fetchedData[baseId]; if (fetchedData[baseId]) preferMatchingJsSequence(item, fetchedData[baseId]); }
-            if (baseId === 'reading2') item.__dailyHasSecondReading = SUPPORTED_LANGS.some(lang=>sourceSectionHasContent({text:fetchedData[baseId]?.[lang.toLowerCase()]}));
+            if (baseId === 'reading2') item.__dailyHasSecondReading = sourceSectionHasContent({text:fetchedData[baseId]?.[normalizeSelectableLang(state.currentLoc, 'KR').toLowerCase()]});
             if (!fetchedData[baseId]) return;
             const newData = fetchedData[baseId];
             normalizeDailySelectableTemplate(item);

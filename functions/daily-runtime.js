@@ -182,7 +182,7 @@ function createRuntime(input,{metadata={},fetchImpl=fetch,ktcgProvider,sourceDoc
       const validation=run(`({missing:missingCoreDailyReadingSections(__parsed,getActiveLiturgicalSourceDate(),__collectorInput.lang,__collectorInput.country),fixed:countrySpecialMassRecord(getActiveLiturgicalSourceDate(),__collectorInput.country)?.fetchDaily===false})`);
       if(validation.missing.length&&!validation.fixed&&!Object.keys(parsed.data||{}).length)throw Error('incomplete-source:'+validation.missing.join(','));
       // Store Missal prayers when a public diocesan source supplies them; no AI is used.
-      if(input.source==='ktcg')await run('applyVietnameseKtcgDiocesanPrayers(__parsed,getActiveLiturgicalSourceDate())');
+      if(input.source==='ktcg')await run('applyKpvMissalPrayers(__parsed,getActiveLiturgicalSourceDate())');
       const result=JSON.parse(JSON.stringify(parsed));
       if(input.source==='ktcg'&&runtime.ktcgComparison?.selectedProvider==='ktcgkpv.org'){
         result.sourceUrl='https://ktcgkpv.org/readings/mass-reading';result.sourceName='KTCG · ktcgkpv.org';

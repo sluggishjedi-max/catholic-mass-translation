@@ -6,6 +6,22 @@
   // MASS_DATA_EDITOR_OVERRIDES_START
   const ordinaryEditorOverrides = [
     {
+      "replace": {
+        "entryId": "2.5 gospel_accl",
+        "relativePath": [
+          "lines"
+        ],
+        "rows": [
+          {
+            "text_vn": "(Tung Hô Tin Mừng Hôm Nay…)",
+            "__massEditorPairKeys": {
+              "text_vn": "0:text"
+            }
+          }
+        ]
+      }
+    },
+    {
       "path": [
         1
       ],
@@ -258,7 +274,7 @@
                 "rubricInset_vn": true
               },
               {
-                "text_vn": "Lỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng.",
+                "text_vn": "<u>Lỗi tại tôi, lỗi tại tôi, lỗi tại tôi mọi đàng.</u>",
                 "__massEditorPairKeys": {
                   "text_vn": "7:text"
                 }
@@ -490,11 +506,35 @@
             "sp_vn": "X."
           },
           {
+            "rubric_vn": "",
+            "__massEditorPairKeys": {
+              "rubric_vn": "editor-1793930188366-2:text"
+            }
+          },
+          {
+            "text_vn": "",
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1793930187624-1:text"
+            }
+          },
+          {
             "text_vn": "Xin Chúa thương xót chúng con.",
             "__massEditorPairKeys": {
               "text_vn": "1:text"
             },
             "sp_vn": "Đ."
+          },
+          {
+            "rubric_vn": "",
+            "__massEditorPairKeys": {
+              "rubric_vn": "editor-1793930194960-4:text"
+            }
+          },
+          {
+            "text_vn": "",
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1793930194272-3:text"
+            }
           },
           {
             "text_vn": "Xin Chúa Kitô thương xót chúng con.",
@@ -504,11 +544,35 @@
             "sp_vn": "X."
           },
           {
+            "rubric_vn": "",
+            "__massEditorPairKeys": {
+              "rubric_vn": "editor-1793930200597-6:text"
+            }
+          },
+          {
+            "text_vn": "",
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1793930200114-5:text"
+            }
+          },
+          {
             "text_vn": "Xin Chúa Kitô thương xót chúng con.",
             "__massEditorPairKeys": {
               "text_vn": "3:text"
             },
             "sp_vn": "Đ."
+          },
+          {
+            "rubric_vn": "",
+            "__massEditorPairKeys": {
+              "rubric_vn": "editor-1793930210432-8:text"
+            }
+          },
+          {
+            "text_vn": "",
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1793930209841-7:text"
+            }
           },
           {
             "text_vn": "Xin Chúa thương xót chúng con.",
@@ -518,11 +582,35 @@
             "sp_vn": "X."
           },
           {
+            "rubric_vn": "",
+            "__massEditorPairKeys": {
+              "rubric_vn": "editor-1793930214974-10:text"
+            }
+          },
+          {
+            "text_vn": "",
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1793930214782-9:text"
+            }
+          },
+          {
             "text_vn": "Xin Chúa thương xót chúng con.",
             "__massEditorPairKeys": {
               "text_vn": "5:text"
             },
             "sp_vn": "Đ."
+          },
+          {
+            "rubric_vn": "",
+            "__massEditorPairKeys": {
+              "rubric_vn": "editor-1793930221184-12:text"
+            }
+          },
+          {
+            "text_vn": "",
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1793930220992-11:text"
+            }
           }
         ]
       }
@@ -589,14 +677,14 @@
             "sp_vn": "X."
           },
           {
-            "text_vn": "Lạy Chúa là Thiên Chúa, là Vua trên trời, là Chúa Cha toàn năng.",
+            "text_vn": "<u>Lạy Chúa là Thiên Chúa</u>, là Vua trên trời, là Chúa Cha toàn năng.",
             "__massEditorPairKeys": {
               "text_vn": "7:text"
             },
             "sp_vn": "Đ."
           },
           {
-            "text_vn": "Lạy con một Thiên Chúa, Chúa Giêsu Kitô",
+            "text_vn": "Lạy con một Thiên Chúa, <u>Chúa Giêsu Kitô</U>",
             "__massEditorPairKeys": {
               "text_vn": "8:text"
             },
@@ -608,12 +696,6 @@
               "text_vn": "9:text"
             },
             "sp_vn": "Đ."
-          },
-          {
-            "text_vn": "",
-            "__massEditorPairKeys": {
-              "text_vn": "10:text"
-            }
           },
           {
             "text_vn": "Chúa xóa tội trần gian, xin thương xót chúng con.",
@@ -637,7 +719,7 @@
             "sp_vn": "X."
           },
           {
-            "text_vn": "Vì lạy Chúa Giêsu Kitô, chỉ có Chúa là Đấng Thánh,<br>chỉ có Chúa là Chúa, chỉ có Chúa là Đấng Tối Cao,",
+            "text_vn": "<u>Vì lạy Chúa Giêsu Kitô,</u> chỉ có Chúa là Đấng Thánh,<br>chỉ có Chúa là Chúa, chỉ có Chúa là Đấng Tối Cao,",
             "__massEditorPairKeys": {
               "text_vn": "14:text"
             },
@@ -854,29 +936,6 @@
     },
     {
       "path": [
-        12
-      ],
-      "value": {
-        "id": "2.5 gospel_accl",
-        "type": "part",
-        "header": {
-          "vn": "Tung Hô Tin Mừng (Alleluia)"
-        },
-        "cit": {
-          "cit_vn": ""
-        },
-        "lines": [
-          {
-            "text_vn": "(Tung Hô Tin Mừng Hôm Nay...)",
-            "__massEditorPairKeys": {
-              "text_vn": "0:text"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "path": [
         13
       ],
       "value": {
@@ -904,7 +963,7 @@
             "sp_vn": "CĐ."
           },
           {
-            "text_vn": "Tin Mừng Chúa Giêsu Kitô theo thánh (...)",
+            "text_vn": "Tin Mừng Chúa Giêsu Kitô theo thánh (…)",
             "__massEditorPairKeys": {
               "text_vn": "2:text"
             },
@@ -1005,7 +1064,7 @@
                 "rubricInset_vn": true
               },
               {
-                "text_vn": "bởi phép Đức Chúa Thánh Thần mà Người xuống thai sinh bởi Bà Maria Đồng Trinh,",
+                "text_vn": "<u>bởi phép Đức Chúa Thánh Thần mà Người xuống thai sinh bởi Bà Maria Đồng Trinh,</u>",
                 "__massEditorPairKeys": {
                   "text_vn": "3:text"
                 }
@@ -1147,7 +1206,7 @@
                 "rubricInset_vn": true
               },
               {
-                "text_vn": "bởi phép Đức Chúa Thánh Thần, Người đã nhập thể trong lòng Trinh Nữ Maria,<br>và đã làm người.",
+                "text_vn": "<u>bởi phép Đức Chúa Thánh Thần, Người đã nhập thể trong lòng Trinh Nữ Maria,<br>và đã làm người.</u>",
                 "__massEditorPairKeys": {
                   "text_vn": "10:text"
                 }
@@ -1326,8 +1385,7 @@
             "text_vn": "Lạy Chúa là Chúa Cả trời đất, ",
             "__massEditorPairKeys": {
               "text_vn": "1:text"
-            },
-            "sp_vn": "CT."
+            }
           },
           {
             "text_vn": "chúc tụng Chúa đã rộng ban cho chúng con bánh này,",
@@ -1365,8 +1423,7 @@
             "text_vn": "Lạy Chúa là Chúa Cả trời đất,",
             "__massEditorPairKeys": {
               "text_vn": "6:text"
-            },
-            "sp_vn": "CT."
+            }
           },
           {
             "text_vn": "chúc tụng Chúa đã rộng ban cho chúng con rượu này,",
@@ -1840,7 +1897,7 @@
             }
           },
           {
-            "text_vn": "Ca Hiệp Lễ hôm nay…",
+            "text_vn": "(Ca Hiệp Lễ hôm nay…)",
             "__massEditorPairKeys": {
               "text_vn": "1:text"
             }
@@ -2112,7 +2169,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:advent:ending:2:text"
                 },
@@ -2196,7 +2253,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:christmas:ending:2:text"
                 },
@@ -2280,7 +2337,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:new_year:ending:2:text"
                 },
@@ -2364,7 +2421,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:epiphany:ending:2:text"
                 },
@@ -2448,7 +2505,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:passion:ending:2:text"
                 },
@@ -2532,7 +2589,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:easter_vigil:ending:2:text"
                 },
@@ -2616,7 +2673,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:easter:ending:2:text"
                 },
@@ -2700,7 +2757,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ascension:ending:2:text"
                 },
@@ -2784,7 +2841,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:pentecost:ending:2:text"
                 },
@@ -2868,7 +2925,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ordinary_1:ending:2:text"
                 },
@@ -2924,7 +2981,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ordinary_2:ending:2:text"
                 },
@@ -3008,7 +3065,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ordinary_3:ending:2:text"
                 },
@@ -3092,7 +3149,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ordinary_4:ending:2:text"
                 },
@@ -3176,7 +3233,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ordinary_5:ending:2:text"
                 },
@@ -3232,7 +3289,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:ordinary_6:ending:2:text"
                 },
@@ -3316,7 +3373,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:blessed_virgin_mary:ending:2:text"
                 },
@@ -3400,7 +3457,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:peter_and_paul:ending:2:text"
                 },
@@ -3484,7 +3541,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:apostles:ending:2:text"
                 },
@@ -3568,7 +3625,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:all_saints:ending:2:text"
                 },
@@ -3652,7 +3709,7 @@
                 "sp_vn": "CĐ."
               },
               {
-                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con † và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
+                "text_vn": "Và xin phúc lành của Thiên Chúa toàn năng là Cha và Con ✠ và Thánh Thần, xuống trên anh chị em và ở lại cùng anh chị em luôn mãi.",
                 "__massEditorPairKeys": {
                   "text_vn": "blessing:church_dedication:ending:2:text"
                 },
@@ -3771,7 +3828,7 @@
             },
             "lines": [
               {
-                "text_vn": "",
+                "text_vn": "Anh chị em hãy ra đi loan báo Tin Mừng.",
                 "__massEditorPairKeys": {
                   "text_vn": "0:text"
                 },
@@ -3792,7 +3849,7 @@
             },
             "lines": [
               {
-                "text_vn": "",
+                "text_vn": "Chúc anh chị em đi bình an và hãy tôn vinh Chúa trong cuộc sống.",
                 "__massEditorPairKeys": {
                   "text_vn": "0:text"
                 },
@@ -6352,22 +6409,112 @@
             },
             "content": [
               {
-                "text_vn": "Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con.",
+                "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con.",
+                "sp_vn": "LM.",
                 "__massEditorPairKeys": {
                   "text_vn": "0:text"
-                },
-                "sp_vn": "LM."
+                }
               },
               {
-                "text_vn": "Vì Chúa đã ban cho Hội Thánh Việt Nam những chứng nhân anh dũng. Các ngài đã không ngần ngại đổ máu đào để tuyên xưng đức tin vào Đức Kitô, và dùng chính mạng sống mình để gieo hạt giống Tin Mừng trên quê hương đất nước chúng con.",
+                "text_vn": "Cha đã kêu gọi các bậc tiền bối của chúng con bước theo Chúa Kitô trên con đường thập giá để làm chứng cho Cha ngay từ lúc Tin Mừng mới được loan báo trên quê hương đất nước chúng con. Nhờ Cha ban ơn trợ giúp, những con người vốn mỏng dòn yếu đuối đã trở nên can đảm phi thường. Chính khi các ngài chịu trăm bề đau khổ, Cha biểu lộ cho mọi người thấy sức mạnh của tình thương.",
                 "__massEditorPairKeys": {
                   "text_vn": "1:text"
                 }
               },
               {
-                "text_vn": "Vì thế, cùng với các Thiên thần và toàn thể các Thánh, chúng con hân hoan ca ngợi Chúa và không ngừng tung hô rằng:",
+                "text_vn": "Vì thế, cùng với triều thần thiên quốc, chúng con ở dưới trần gian luôn ca tụng Cha uy linh cao cả và không ngừng tung hô rằng:",
                 "__massEditorPairKeys": {
                   "text_vn": "2:text"
+                }
+              },
+              {
+                "text_vn": "_Thánh! Thánh! Thánh!…_",
+                "__massEditorPairKeys": {
+                  "text_vn": "3:text"
+                }
+              }
+            ]
+          },
+          "vn_lunar_new_year": {
+            "title": {
+              "vn": "Kinh Tiền Tụng Lễ Tân Niên (Mùng Một Tết)"
+            },
+            "content": [
+              {
+                "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con. Cha đã sáng tạo muôn loài trong vũ trụ và sắp đặt cho thời tiết bốn mùa thay đổi nối tiếp nhau. Riêng con người, Cha đã tác tạo nên giống hình ảnh Cha và cho điều khiển mọi công trình kỳ diệu trong hoàn vũ để họ thay quyền Cha làm chủ mọi loài, và khi chiêm ngưỡng những kỳ công Cha đã thực hiện, họ hát mừng, ca tụng Cha luôn mãi, nhờ Ðức Kitô, Chúa chúng con. Chính vì thế, chúng con dâng lời cảm tạ Cha, và cùng với triều thần thiên quốc, tuyên xưng Cha là Ðấng toàn năng và tung hô rằng:",
+                "sp_vn": "LM.",
+                "__massEditorPairKeys": {
+                  "text_vn": "0:text"
+                }
+              },
+              {
+                "text_vn": "_Thánh! Thánh! Thánh!.._.",
+                "__massEditorPairKeys": {
+                  "text_vn": "1:text"
+                }
+              }
+            ]
+          },
+          "vn_lunar_ancestors": {
+            "title": {
+              "vn": "Kinh Tiền Tụng Kính Nhớ Tổ Tiên và Ông Bà Cha Mẹ (Mùng Hai Tết)"
+            },
+            "content": [
+              {
+                "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, nhờ Ðức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con.",
+                "sp_vn": "LM.",
+                "__massEditorPairKeys": {
+                  "text_vn": "0:text"
+                }
+              },
+              {
+                "text_vn": "Quả vậy, khi ngẫm xem muôn loài trong vũ trụ, tự nhiên chúng con thấy vạn sự đều có cội rễ căn nguyên: chim có tổ, nước có nguồn, con người sinh ra có cha có mẹ. Nhưng phải nhờ ơn Cha mặc khải, chúng con mới nhận biết Cha là nguyên lý sáng tạo muôn loài, là Cha chung của tất cả chúng con. Cha đã ban sự sống cho tổ tiên và ông bà cha mẹ chúng con, để các ngài truyền lại cho con cháu. Cha cũng đã ban cho các ngài ân huệ dư đầy, để chúng con được thừa hưởng mà nhận biết, tôn thờ và phụng sự Cha.",
+                "__massEditorPairKeys": {
+                  "text_vn": "1:text"
+                }
+              },
+              {
+                "text_vn": "Chính vì thế, hiệp cùng các Thiên thần và các thánh nam nữ, chúng con ca ngợi Cha muôn đời vinh hiển và đồng thanh chúc tụng rằng:",
+                "__massEditorPairKeys": {
+                  "text_vn": "2:text"
+                }
+              },
+              {
+                "text_vn": "_Thánh! Thánh! Thánh!…_",
+                "__massEditorPairKeys": {
+                  "text_vn": "3:text"
+                }
+              }
+            ]
+          },
+          "vn_lunar_work": {
+            "title": {
+              "vn": "Kinh Tiền Tụng Thánh Hóa Công Ăn Việc Làm (Mùng Ba Tết)"
+            },
+            "content": [
+              {
+                "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con.",
+                "sp_vn": "LM.",
+                "__massEditorPairKeys": {
+                  "text_vn": "0:text"
+                }
+              },
+              {
+                "text_vn": "Chính Cha đã dựng nên con người giống hình ảnh Cha, và giao trách nhiệm trông coi trái đất. Cha còn sai Con Một giáng trần, để chia sẻ thân phận người lao động, và thực hiện chương trình cứu độ muôn dân. Quả vậy, Người đã bắt chước Cha hoạt động không ngừng, nêu gương cho chúng con biết chuyên cần làm việc, không những để no cơm ấm áo, và góp phần xây dựng xã hội loài người, mà còn để làm rạng danh Cha, và mở rộng Nước Trời ngay tại trần thế.",
+                "__massEditorPairKeys": {
+                  "text_vn": "1:text"
+                }
+              },
+              {
+                "text_vn": "Chính vì thế, hiệp cùng các Thiên thần và các thánh nam nữ, chúng con ca ngợi Cha muôn đời vinh hiển và đồng thanh chúc tụng rằng:",
+                "__massEditorPairKeys": {
+                  "text_vn": "2:text"
+                }
+              },
+              {
+                "text_vn": "_Thánh! Thánh! Thánh!…_",
+                "__massEditorPairKeys": {
+                  "text_vn": "3:text"
                 }
               }
             ]
@@ -9411,6 +9558,571 @@
         },
         "ordinarySourceLayoutVersion": 1
       }
+    },
+    {
+      "replace": {
+        "entryId": "3.3 eucharist",
+        "relativePath": [
+          "forms",
+          "4"
+        ],
+        "rows": [
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "0:text"
+            },
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Cha chí Thánh, tạ ơn Cha thật là xứng hợp, tôn vinh Cha thật là chính đáng,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "1:text"
+            },
+            "text_vn": "vì Cha là Thiên Chúa thật, duy nhất và hằng sống, hiện hữu từ trước muôn thuở và tồn tại đến muôn đời, ngự trị trong ánh sáng siêu phàm,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "2:text"
+            },
+            "text_vn": "nhưng Cha cũng là Đấng duy nhất tốt lành và là nguồn mạch sự sống, đã tác tạo mọi loài để chúng được đầy tràn ơn phúc, và nhiều thụ tạo vui hưởng ánh sáng huy hoàng của Cha."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "3:text"
+            },
+            "text_vn": "Vì thế, có vô số Thiên thần hầu cận trước nhan Cha, ngày đêm phụng sự Cha, chiêm ngưỡng Thánh nhan Cha vinh hiển và không ngớt tôn vinh Cha. Hiệp cùng các ngài, chúng con và mọi thụ tạo dưới bầu trời, nhờ tiếng nói của chúng con, hân hoan tuyên xưng danh Cha mà ca hát rằng:"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "5:text"
+            },
+            "sp_vn": "CĐ.",
+            "text_vn": "Thánh! Thánh! Thánh!"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "6:text"
+            },
+            "text_vn": "Chúa là Thiên Chúa các đạo binh."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "7:text"
+            },
+            "text_vn": "Trời đất đầy vinh quang Chúa."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "8:text"
+            },
+            "text_vn": "Hoan hô Chúa trên các tầng trời."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "9:text"
+            },
+            "text_vn": "Chúc tụng Ðấng ngự đến nhân danh Chúa."
+          },
+          {
+            "dividerAfter": "after-sanctus",
+            "__massEditorPairKeys": {
+              "text_vn": "10:text"
+            },
+            "text_vn": "Hoan hô Chúa trên các tầng trời."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "11:text"
+            },
+            "sp_vn": "LM.",
+            "text_vn": "Lạy Cha chí Thánh, chúng con tuyên xưng Cha là Đấng cao cả, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531983571-18:text"
+            },
+            "text_vn": "đã tác tạo mọi sự theo thượng trí và tình thương."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "12:text"
+            },
+            "text_vn": "Cha đã dựng nên con người giống hình ảnh Cha và trao cho việc trông coi vũ trụ, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531713227-1:text"
+            },
+            "text_vn": "để khi phụng sự một mình Cha là Đấng Tạo Hóa, con người cai quản mọi loài thụ tạo."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "13:text"
+            },
+            "text_vn": "Và khi con người đã mất tình nghĩa với Cha vì bất phục tùng, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531723685-2:text"
+            },
+            "text_vn": "Cha đã không bỏ mặc con người dưới quyền lực sự chết. "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531731187-3:text"
+            },
+            "text_vn": "Thật vậy, Cha đã thương cứu giúp mọi người, để những ai tìm Cha đều gặp Cha."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "14:text"
+            },
+            "text_vn": "Hơn nữa, nhiều lần Cha đã giao ước với loài người, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531741068-4:text"
+            },
+            "text_vn": "và dùng các tiên tri mà dạy dỗ loài người đợi chờ ơn cứu độ."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "15:text"
+            },
+            "text_vn": "Lạy Cha chí Thánh, Cha yêu thương thế gian,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531746601-5:text"
+            },
+            "text_vn": "đến nỗi, khi tới thời viên mãn, Cha đã sai Con Một đến làm Đấng Cứu Độ chúng con."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "16:text"
+            },
+            "text_vn": "Bởi phép Chúa Thánh Thần, Người đã nhập thể "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531781314-6:text"
+            },
+            "text_vn": "và được Đức Trinh Nữ Maria sinh ra, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531793325-7:text"
+            },
+            "text_vn": "đã sống trọn thân phận con người của chúng con, ngoại trừ tội lỗi,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "17:text"
+            },
+            "text_vn": "đã loan báo Tin Mừng cứu độ cho người nghèo khó, sự giải thoát cho kẻ bị giam cầm, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531804704-8:text"
+            },
+            "text_vn": "niềm hân hoan cho người sầu khổ trong tâm hồn."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "18:text"
+            },
+            "text_vn": "Để chu toàn ý định của Cha, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531820083-9:text"
+            },
+            "text_vn": "Người đã nộp mình chịu chết, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531831633-10:text"
+            },
+            "text_vn": "và từ cõi chết sống lại, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531835575-11:text"
+            },
+            "text_vn": "Người hủy diệt sự chết và canh tân sự sống."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "19:text"
+            },
+            "text_vn": "Và để chúng con không còn sống cho chính mình nữa, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531845241-12:text"
+            },
+            "text_vn": "mà sống cho Đấng đã chết và sống lại vì chúng con, thì lạy Cha, từ nơi Cha,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531854557-13:text"
+            },
+            "text_vn": " Người đã sai Chúa Thánh Thần như ân huệ khởi đầu đến với các tín hữu,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "20:text"
+            },
+            "text_vn": "để Chúa Thánh Thần kiện toàn công trình của Người nơi trần gian, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531877107-14:text"
+            },
+            "text_vn": "và hoàn tất công việc thánh hóa."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "21:text"
+            },
+            "sp_vn": "LM.",
+            "text_vn": "Vì vậy, lạy Chúa, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531885006-15:text"
+            },
+            "text_vn": "chúng con nài xin Chúa cho Chúa Thánh Thần thương thánh hóa những của lễ này, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531890598-16:text"
+            },
+            "text_vn": "để trở nên Mình và Máu Đức Giêsu Kitô, Chúa chúng con"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "22:text"
+            },
+            "text_vn": "hầu chúng con cử hành mầu nhiệm cao cả mà chính Người "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794531914492-17:text"
+            },
+            "text_vn": "đã trối lại cho chúng con làm giao ước muôn đời."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "23:text"
+            },
+            "text_vn": "Vậy, lạy Cha chí Thánh, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532008897-19:text"
+            },
+            "text_vn": "khi đến giờ Người được Cha tôn vinh, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532015114-20:text"
+            },
+            "text_vn": "và vì yêu thương những kẻ thuộc về mình còn ở trần gian, Người đã yêu thương họ đến cùng:"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532023906-21:text"
+            },
+            "text_vn": "nên trong bữa ăn tối,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "24:text"
+            },
+            "text_vn": "Người cầm lấy bánh, dâng lời chúc tụng, bẻ ra, và trao cho các môn đệ mà nói :"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "25:text"
+            },
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ ĂN:</B>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "26:text"
+            },
+            "text_vn": "<b>VÌ NÀY LÀ MÌNH THẦY,</>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "27:text"
+            },
+            "text_vn": "<b>SẼ BỊ NỘP VÌ CÁC CON.</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_vn": "28:rubric"
+            },
+            "rubricInset_vn": true,
+            "rubric_vn": "Sau khi chiêm ngắm Bánh đã truyền phép được linh mục nâng lên,<br>tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt bánh lại trên đĩa thánh."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "29:text"
+            },
+            "sp_vn": "LM.",
+            "text_vn": "Cùng một thể thức ấy, Người cầm lấy chén rượu nho, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532074383-22:text"
+            },
+            "text_vn": "tạ ơn và trao cho các môn đệ mà nói :"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "30:text"
+            },
+            "text_vn": "<b>TẤT CẢ CÁC CON HÃY NHẬN LẤY MÀ UỐNG:</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "31:text"
+            },
+            "text_vn": "<b>VÌ NÀY LÀ CHÉN MÁU THẦY,<br>MÁU GIAO ƯỚC MỚI VÀ VĨNH CỬU</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "32:text"
+            },
+            "text_vn": "<b>SẼ ĐỔ RA CHO CÁC CON</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "33:text"
+            },
+            "text_vn": "<b>VÀ NHIỀU NGƯỜI ĐƯỢC THA TỘI</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "34:text"
+            },
+            "text_vn": "<b>CÁC CON HÃY LÀM VIỆC NÀY MÀ NHỚ ĐẾN THẦY.</b>"
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_vn": "35:rubric"
+            },
+            "rubricInset_vn": true,
+            "rubric_vn": "Sau khi chiêm ngắm chén thánh được linh mục nâng lên, tất cả cúi mình sâu (hoặc quỳ gối) khi linh mục đặt chén thánh lại trên khăn thánh."
+          },
+          {
+            "dividerBefore": "before-memorial-acclamation",
+            "__massEditorPairKeys": {
+              "text_vn": "36:text"
+            },
+            "sp_vn": "LM.",
+            "text_vn": "Đây là mầu nhiệm đức tin."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "37:text"
+            },
+            "sp_vn": "CĐ.",
+            "text_vn": "Lạy Chúa, chúng con loan truyền Chúa chịu chết<br>và tuyên xưng Chúa sống lại, cho tới khi Chúa đến."
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_vn": "38:rubric"
+            },
+            "rubricInset_vn": true,
+            "rubric_vn": "Hoặc: "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "38:text"
+            },
+            "text_vn": "Lạy Chúa, mỗi lần ăn bánh và uống chén này,<br>chúng con loan truyền Chúa chịu chết, cho tới khi Chúa đến."
+          },
+          {
+            "__massEditorPairKeys": {
+              "rubric_vn": "39:rubric"
+            },
+            "rubricInset_vn": true,
+            "rubric_vn": "Hoặc:  "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "39:text"
+            },
+            "text_vn": "Lạy Chúa Cứu Thế, Chúa đã dùng Thánh giá<br>và sự Phục Sinh của Chúa để giải thoát chúng con,<br>xin cứu độ chúng con."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "40:text"
+            },
+            "sp_vn": "LM.",
+            "text_vn": "Vì vậy, lạy Chúa, giờ đây cử hành lễ tưởng niệm công trình cứu chuộc, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532102397-23:text"
+            },
+            "text_vn": "chúng con kính nhớ Đức Kitô chịu chết và xuống ngục tổ tông, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532109900-24:text"
+            },
+            "text_vn": "chúng con tuyên xưng Người sống lại và lên trời ngự bên hữu Chúa,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "41:text"
+            },
+            "text_vn": "và đang khi đợi chờ Người đến trong vinh quang, chúng con dâng lên Chúa Mình và Máu Người "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532117756-25:text"
+            },
+            "text_vn": "làm hy lễ đẹp lòng Chúa và sinh ơn cứu độ cho cả trần gian."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "42:text"
+            },
+            "text_vn": "Lạy Chúa, xin đoái nhìn Hiến Lễ chính Chúa đã dọn sẵn cho Hội Thánh Chúa, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532188734-27:text"
+            },
+            "text_vn": "xin Chúa nhân từ ban cho tất cả những ai sẽ thông phần cùng một bánh và chén này, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532162543-26:text"
+            },
+            "text_vn": "được Chúa Thánh Thần quy tụ tất cả thành một thân thể, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532209067-28:text"
+            },
+            "text_vn": "trở nên hiến lễ sống động trong Đức Kitô "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532214014-29:text"
+            },
+            "text_vn": "để ca tụng vinh quang Chúa."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "43:text"
+            },
+            "text_vn": "Vậy giờ đây, lạy Chúa, xin nhớ đến mọi người mà chúng con dâng của lễ này cầu cho họ :"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532236466-31:text"
+            },
+            "text_vn": ""
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532227648-30:text"
+            },
+            "text_vn": "trước hết, tôi tớ Chúa là Đức Giáo Hoàng [Tên GH.] Đức Giám Mục [Tên GM.] chúng con và toàn thể hàng Giám Mục, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532306669-32:text"
+            },
+            "text_vn": "sau là tất cả các giáo sĩ, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532316640-33:text"
+            },
+            "text_vn": "những người xin dâng lễ, những người hiện diện chung quanh đây "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532324106-34:text"
+            },
+            "text_vn": "và toàn thể dân Chúa, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532340138-35:text"
+            },
+            "text_vn": "cùng mọi người đang thành tâm tìm Chúa."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "44:text"
+            },
+            "text_vn": "Xin Chúa cũng nhớ đến những người đã qua đời trong bình an của Đức Kitô,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532349881-36:text"
+            },
+            "text_vn": "cùng tất cả mọi người quá cố mà chỉ một mình Chúa biết lòng tin của họ."
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "45:text"
+            },
+            "text_vn": "Lạy Cha nhân từ, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532379880-37:text"
+            },
+            "text_vn": "xin ban cho tất cả chúng con là con cái Cha được hưởng phần gia nghiệp thiên quốc, cùng với Đức Trinh Nữ Maria, Mẹ Thiên Chúa, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532383627-38:text"
+            },
+            "text_vn": ""
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532390884-39:text"
+            },
+            "text_vn": "các Thánh Tông Đồ và các Thánh trong nước Cha,"
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "46:text"
+            },
+            "text_vn": "ở đó, cùng với muôn loài thụ tạo đã được giải thoát khỏi cảnh hư nát "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532407847-41:text"
+            },
+            "text_vn": "vì tội lỗi và sự chết, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532427987-42:text"
+            },
+            "text_vn": "chúng con được tôn vinh Cha, nhờ Đức Kitô, Chúa chúng con, "
+          },
+          {
+            "__massEditorPairKeys": {
+              "text_vn": "editor-1794532454074-43:text"
+            },
+            "text_vn": "nhờ Người, Cha rộng ban mọi ơn lành cho thế gian."
+          }
+        ]
+      }
     }
   ];
   // MASS_DATA_EDITOR_OVERRIDES_END
@@ -11930,19 +12642,117 @@
           "title": {
             "vn": "Kinh Tiền Tụng Các Thánh Tử Đạo tại Việt Nam"
           },
-          "content": [{
-            "sp_vn": "LM.",
-            "text_vn": "Lạy Chúa là Cha chí thánh, là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Chúa mọi nơi mọi lúc, thật là chính đáng, phải đạo và đem lại ơn cứu độ cho chúng con."
-          }, {
-            "sp_vn": "",
-            "text_vn": (
-              "Vì Chúa đã ban cho Hội Thánh Việt Nam những chứng nhân anh dũng. "
-              + "Các ngài đã không ngần ngại đổ máu đào để tuyên xưng đức tin vào Đức Kitô, và dùng chính mạng sống mình để gieo hạt giống Tin Mừng trên quê hương đất nước chúng con."
-            )
-          }, {
-            "sp_vn": "",
-            "text_vn": "Vì thế, cùng với các Thiên thần và toàn thể các Thánh, chúng con hân hoan ca ngợi Chúa và không ngừng tung hô rằng:"
-          }]
+          "content": [
+            {
+              "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "0:text"
+              }
+            },
+            {
+              "text_vn": "Cha đã kêu gọi các bậc tiền bối của chúng con bước theo Chúa Kitô trên con đường thập giá để làm chứng cho Cha ngay từ lúc Tin Mừng mới được loan báo trên quê hương đất nước chúng con. Nhờ Cha ban ơn trợ giúp, những con người vốn mỏng dòn yếu đuối đã trở nên can đảm phi thường. Chính khi các ngài chịu trăm bề đau khổ, Cha biểu lộ cho mọi người thấy sức mạnh của tình thương.",
+              "__massEditorPairKeys": {
+                "text_vn": "1:text"
+              }
+            },
+            {
+              "text_vn": "Vì thế, cùng với triều thần thiên quốc, chúng con ở dưới trần gian luôn ca tụng Cha uy linh cao cả và không ngừng tung hô rằng:",
+              "__massEditorPairKeys": {
+                "text_vn": "2:text"
+              }
+            },
+            {
+              "text_vn": "_Thánh! Thánh! Thánh!…_",
+              "__massEditorPairKeys": {
+                "text_vn": "3:text"
+              }
+            }
+          ]
+        },
+        "vn_lunar_new_year": {
+          "title": {
+            "vn": "Kinh Tiền Tụng Lễ Tân Niên (Mùng Một Tết)"
+          },
+          "content": [
+            {
+              "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con. Cha đã sáng tạo muôn loài trong vũ trụ và sắp đặt cho thời tiết bốn mùa thay đổi nối tiếp nhau. Riêng con người, Cha đã tác tạo nên giống hình ảnh Cha và cho điều khiển mọi công trình kỳ diệu trong hoàn vũ để họ thay quyền Cha làm chủ mọi loài, và khi chiêm ngưỡng những kỳ công Cha đã thực hiện, họ hát mừng, ca tụng Cha luôn mãi, nhờ Ðức Kitô, Chúa chúng con. Chính vì thế, chúng con dâng lời cảm tạ Cha, và cùng với triều thần thiên quốc, tuyên xưng Cha là Ðấng toàn năng và tung hô rằng:",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "0:text"
+              }
+            },
+            {
+              "text_vn": "_Thánh! Thánh! Thánh!.._.",
+              "__massEditorPairKeys": {
+                "text_vn": "1:text"
+              }
+            }
+          ]
+        },
+        "vn_lunar_ancestors": {
+          "title": {
+            "vn": "Kinh Tiền Tụng Kính Nhớ Tổ Tiên và Ông Bà Cha Mẹ (Mùng Hai Tết)"
+          },
+          "content": [
+            {
+              "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, nhờ Ðức Kitô, Chúa chúng con, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "0:text"
+              }
+            },
+            {
+              "text_vn": "Quả vậy, khi ngẫm xem muôn loài trong vũ trụ, tự nhiên chúng con thấy vạn sự đều có cội rễ căn nguyên: chim có tổ, nước có nguồn, con người sinh ra có cha có mẹ. Nhưng phải nhờ ơn Cha mặc khải, chúng con mới nhận biết Cha là nguyên lý sáng tạo muôn loài, là Cha chung của tất cả chúng con. Cha đã ban sự sống cho tổ tiên và ông bà cha mẹ chúng con, để các ngài truyền lại cho con cháu. Cha cũng đã ban cho các ngài ân huệ dư đầy, để chúng con được thừa hưởng mà nhận biết, tôn thờ và phụng sự Cha.",
+              "__massEditorPairKeys": {
+                "text_vn": "1:text"
+              }
+            },
+            {
+              "text_vn": "Chính vì thế, hiệp cùng các Thiên thần và các thánh nam nữ, chúng con ca ngợi Cha muôn đời vinh hiển và đồng thanh chúc tụng rằng:",
+              "__massEditorPairKeys": {
+                "text_vn": "2:text"
+              }
+            },
+            {
+              "text_vn": "_Thánh! Thánh! Thánh!…_",
+              "__massEditorPairKeys": {
+                "text_vn": "3:text"
+              }
+            }
+          ]
+        },
+        "vn_lunar_work": {
+          "title": {
+            "vn": "Kinh Tiền Tụng Thánh Hóa Công Ăn Việc Làm (Mùng Ba Tết)"
+          },
+          "content": [
+            {
+              "text_vn": "Lạy Cha chí thánh là Thiên Chúa toàn năng hằng hữu, chúng con tạ ơn Cha mọi nơi mọi lúc, thật là chính đáng, phải đạo và sinh ơn cứu độ cho chúng con.",
+              "sp_vn": "LM.",
+              "__massEditorPairKeys": {
+                "text_vn": "0:text"
+              }
+            },
+            {
+              "text_vn": "Chính Cha đã dựng nên con người giống hình ảnh Cha, và giao trách nhiệm trông coi trái đất. Cha còn sai Con Một giáng trần, để chia sẻ thân phận người lao động, và thực hiện chương trình cứu độ muôn dân. Quả vậy, Người đã bắt chước Cha hoạt động không ngừng, nêu gương cho chúng con biết chuyên cần làm việc, không những để no cơm ấm áo, và góp phần xây dựng xã hội loài người, mà còn để làm rạng danh Cha, và mở rộng Nước Trời ngay tại trần thế.",
+              "__massEditorPairKeys": {
+                "text_vn": "1:text"
+              }
+            },
+            {
+              "text_vn": "Chính vì thế, hiệp cùng các Thiên thần và các thánh nam nữ, chúng con ca ngợi Cha muôn đời vinh hiển và đồng thanh chúc tụng rằng:",
+              "__massEditorPairKeys": {
+                "text_vn": "2:text"
+              }
+            },
+            {
+              "text_vn": "_Thánh! Thánh! Thánh!…_",
+              "__massEditorPairKeys": {
+                "text_vn": "3:text"
+              }
+            }
+          ]
         },
         "us_thanksgiving": {
           "title": {
@@ -13782,7 +14592,7 @@
               "LM.("
               + "PT.)"
             ),
-            "text_vn": ""
+            "text_vn": "Anh chị em hãy ra đi loan báo Tin Mừng."
           }, {
             "sp_vn": "GĐ.",
             "text_vn": "Tạ ơn Chúa."
@@ -13797,7 +14607,7 @@
               "LM.("
               + "PT.)"
             ),
-            "text_vn": ""
+            "text_vn": "Chúc anh chị em đi bình an và hãy tôn vinh Chúa trong cuộc sống."
           }, {
             "sp_vn": "GĐ.",
             "text_vn": "Tạ ơn Chúa."
