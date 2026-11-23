@@ -31,7 +31,20 @@ try{
  assert.equal(catalog.identify('Feast of St. Andrew, Apostle','EN'),'andrew-apostle');
  assert.equal(catalog.identify('Lễ Chúa Ki‑tô Vua','VN'),'christ-king');
  assert.equal(catalog.identify('All the Saints of Ireland','EN'),'ireland-all-saints');
+ assert.equal(catalog.identify('Hl. Simon und Hl. Judas Apostel','DE'),'simon-jude');
+ assert.equal(catalog.identify('São Simão e São Judas (Festa)','PT'),'simon-jude');
+ assert.equal(catalog.identify('SANTO AMBRÓSIO, BISPO E DOUTOR DA IGREJA, MEMÓRIA','PT'),'ambrose');
+ assert.equal(catalog.identify('Thánh Am-rô-xi-ô','VN'),'ambrose');
+ assert.equal(catalog.identify('基督普世君王節主日','ZH'),'christ-king');
+ assert.equal(catalog.identify('Memoria. Blanco','ES'),'');
  const ranks=king.run("['MX','US','PH'].map(country=>primaryCalendarRank(calendarInfoForCountry(new Date(2026,11,12,12),country)))");
  assert.equal(ranks[0],'solemnity');assert.equal(ranks[1],'feast');
 }finally{king.close();}
+const italy=createRuntime({country:'IT',date:'2026-12-24',source:'official'},{metadata:{IT:{dailyReadings:{urlStrategy:'cei-italy'}}}});
+try {
+ const urlFor=(date,slot)=>italy.run(`getStrictMassSelector=()=>({slot:'${slot}'});strictDailySourceEntryUrl('IT',new Date('${date}T12:00:00'),'IT')`);
+ assert.match(urlFor('2026-12-24','day'),/alla-messa-del-mattino-2/);
+ assert.match(urlFor('2026-12-24','vigil'),/data-liturgia=20261224/);
+ assert.match(urlFor('2028-12-24','day'),/data-liturgia=20281224/);
+} finally { italy.close(); }
 console.log(JSON.stringify({conditionalAntiphons:true,easterOnlyAlleluia:true,optionCitations:true,allLanguageSourceChoiceAI:true,annualMemorialDiscovery:true,originalCalendarCounterpartPreferred:true}));

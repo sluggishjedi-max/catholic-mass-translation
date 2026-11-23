@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261123-4';
+    const APP_VERSION = 'V31.2-20261124-1';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -1434,11 +1434,16 @@
             .trim();
     }
 
+    function calendarNamesWithKnownAliases(info) {
+        const aliases = globalThis.ordoLiturgicalObservances?.namesFor(calendarObservanceId(info));
+        return Object.assign({}, aliases, Object.fromEntries(Object.entries(info.names || {}).filter(([, title]) => title)));
+    }
+
     function applyLocalCalendarOverrides(info, date) {
         const override = localCalendarOverrideForDate(date);
         if (!override) return info;
         const leftLang = state.currentLoc || 'KR';
-        const calendarNames = Object.assign({}, globalThis.ordoLiturgicalObservances?.namesFor(calendarObservanceId(override)), override.names);
+        const calendarNames = calendarNamesWithKnownAliases(override);
         const leftName = calendarNames[leftLang];
         if (!leftName) return info;
         const names = Object.assign({}, info.names, calendarNames);
@@ -1967,7 +1972,7 @@
             DE: formatSeasonalName('DE', meta.season, meta.week, meta.day, meta.sundayCycle)
         });
         const info = applyLocalCalendarOverrides({
-            names: Object.assign({}, globalThis.ordoLiturgicalObservances?.namesFor(calendarObservanceId({names,meta})), names),
+            names: calendarNamesWithKnownAliases({names,meta}),
             krName: names.KR,
             vnName: names.VN,
             color: special ? special.color : meta.color,
@@ -10528,7 +10533,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict123-observance-catalog';
+    const STRICT_PARSER_CACHE_VERSION = 'strict124-observance-catalog';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {
@@ -10938,6 +10943,11 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(sourceDate));
         }
         if (lang === 'IT' && hasCountryDailyReadings(locationCode)) {
+            // CEI's December 24 dated page defaults to the evening Christmas Vigil.
+            if (jurisdiction === 'IT' && isChristmasEve(sourceDate) && sourceDate.getDay() !== 0
+                && getStrictMassSelector(date).slot === 'day') {
+                return 'https://www.chiesacattolica.it/liturgia-del-giorno/feria-propria-del-24-dicembre-alla-messa-del-mattino-2/';
+            }
             return activeCountryMassModule(locationCode).dailyReadings.url(formatDateYmd(sourceDate));
         }
         if (lang === 'PT' && jurisdiction === 'PT') return 'https://liturgia.pt/liturgiadiaria/dia.php?data=' + formatDateIso(sourceDate);
@@ -14154,6 +14164,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         if (lang === 'PT' && !isJinaMarkdownSource(scopedSource)) {
             const heading = parseHtml(scopedSource).querySelector('h1')?.textContent?.trim();
             if (heading && /semana|domingo|solenidade|festa|memória|Advento|Quaresma|Páscoa|Natal/iu.test(heading)) title = heading;
+        }
+        if (lang === 'IT' && isChristmasEve(sourceDate) && selector.slot === 'day') {
+            title = lines.find(line => /^Feria propria del 24 dicembre\b/iu.test(line)) || title;
         }
         if(lang==='PT')title=title.replace(/\s*Data\s*[:：][\s\S]*$/iu,'').trim();
         return strictEnsureReadingSummarySlots({

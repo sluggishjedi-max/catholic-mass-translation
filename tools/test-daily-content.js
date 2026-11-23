@@ -12,5 +12,11 @@ const {pdfLinks,dateSection,temporalSection}=require('../functions/daily-portuga
 assert.equal(pdfLinks('<a href="domA/1_02_A_Natal.pdf">Natal</a><a href="https://other.example/file.pdf">Other</a>','https://liturgia.pt/leccionarios/lec_dom_a.php').length,1);
 const pages=['OUTUBRO\n27 de outubro\nOutro Santo\n28 de outubro\nSANTOS SIMÃO E JUDAS\nFesta\nLEITURA I\nEf 2,19-22\nTexto original.\nEVANGELHO\nLc 6,12-16\nTexto original.\n29 de outubro\nOutro Santo'];
 const fixed=dateSection(pages,'2026-10-28');assert(fixed.proper);assert(fixed.title.includes('SIMÃO'));assert(!fixed.text.includes('Outro Santo'));assert.equal(dateSection(pages,'2026-10-30'),null);
+const octoberTail=dateSection(['28 de outubro\nAPÓSTOLOS\nFesta\nLEITURA I Ef 2, 19-22\n32528 DE OUTUBRO\nEVANGELHO Lc 6, 12-19\nPalavra da salvação.\n327SÁBADO ANTES DO ÚLTIMO DOMINGO DE OUTUBRO\nLEITURA II Gl 4, 4-7'],'2026-10-28');
+assert(!octoberTail.text.includes('327'));assert(!octoberTail.text.includes('Gl 4'));assert(!octoberTail.text.includes('32528'));
+const lateran=['9 de novembro\nDEDICAÇÃO DA BASÍLICA DE LATRÃO\nFesta\nQuando esta festa não ocorre ao domingo, escolhe-se uma só das seguintes leituras\nantes do Evangelho.\nLEITURA I Ez 47, 1-2.8-9.12\nLEITURA II 1Cor 3, 9c-11.16-17\nEVANGELHO Jo 2, 13-22'];
+assert.equal(dateSection(lateran,'2026-11-09').title,'DEDICAÇÃO DA BASÍLICA DE LATRÃO');
+assert.match(dateSection(lateran,'2026-11-09').text,/LEITURA I 1Cor/);
+assert.match(dateSection(lateran,'2025-11-09').text,/LEITURA II 1Cor/);
 const ferial=temporalSection(['SEMANA XXX\nQUARTA-FEIRA\nLEITURA I\nUma leitura.\nEVANGELHO\nUm evangelho.\nQUINTA-FEIRA\nOutro dia.'],{week:30,day:3,season:'ordinary'});assert(ferial.text.includes('Uma leitura.'));assert(!ferial.text.includes('Outro dia'));
 console.log('Daily content: structured multilingual alternatives, independent option edits, leading empty summaries and Portuguese calendar/PDF selection passed.');

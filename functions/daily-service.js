@@ -103,7 +103,15 @@ function createDailyService({db,enqueue,logger=console,fetchImpl=fetch,runtimeFa
       for(const variant of variants){
         const scoped={...request,variant};
         try{
-          const result=await runtime.collect(variant);
+          let result, htmlError;
+          try{result=await runtime.collect(variant);}catch(error){htmlError=error;}
+          if((htmlError||!result.validation.complete)&&request.country==='PT'&&variant==='day'&&!request.date.endsWith('-11-02')){
+            try{
+              runtime.setSourceDocuments(await require('./daily-portugal').collectPortugalDocuments({date:request.date,context:runtime.portugalContext(),db,fetchImpl}));
+              result=await runtime.collect(variant);htmlError=null;
+            }catch(error){logger.warn('Portuguese daily lectionary fallback unavailable',{date:request.date,error:error.message});}
+          }
+          if(htmlError)throw htmlError;
           result.comparison=runtime.ktcgComparison||null;
           const saved=await store.appendCollected(scoped,result);
           results.push({variant,status:result.validation.complete?'ready':'partial',missing:result.validation.missing,...saved});
