@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-10';
+    const APP_VERSION = 'V31.2-20261124-11';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -19311,7 +19311,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
         if (!response.ok) {
             const detail = await response.text().catch(() => '');
-            throw new Error(`${label} failed: HTTP ${response.status}${detail ? ` ${detail.slice(0, 180)}` : ''}`);
+            const error = new Error(`${label} failed: HTTP ${response.status}${detail ? ` ${detail.slice(0, 180)}` : ''}`);
+            error.status = response.status;
+            throw error;
         }
         return await response.json();
     }
@@ -19324,7 +19326,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .trim();
     }
 
-    async function translateWithGemini(srcText, targetLangCode) {
+    async function translateWithGemini(srcText, targetLangCode, timeoutMs = 30000) {
         const targetName = aiLanguageNames[targetLangCode] || targetLangCode || 'the target language';
         const source = plainTextFromHtml(srcText);
         if (!source) throw new Error('번역할 원문이 없습니다.');
@@ -19340,7 +19342,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             contents: [{ parts: [{ text: prompt }] }],
             generationConfig: { temperature: 0.2 }
         }, {
-            timeoutMs: 30000,
+            timeoutMs,
             label: 'AI translation'
         });
         const translated = geminiTextFromPayload(payload);
@@ -19365,12 +19367,12 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return `${normalizeSelectableLang(targetLangCode, DEFAULT_TARGET_LANG)}:${source.length}:${stableTextHash(source)}`;
     }
 
-    async function requestAITranslation(source, target, fallback = '', key = aiTranslationKey(source, target)) {
+    async function requestAITranslation(source, target, fallback = '', key = aiTranslationKey(source, target), translate = translateWithGemini) {
         const existing = aiTranslationRecords.get(key);
         if (existing?.status === 'pending' || existing?.status === 'done') return;
         aiTranslationRecords.set(key, {status:'pending'});
         try {
-            const text = await translateWithGemini(source, target);
+            const text = await translate(source, target);
             aiTranslationRecords.set(key, {status:'done', text});
         } catch (error) {
             console.warn('AI translation failed', error);
@@ -21828,9 +21830,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
+    async function translatePrefaceBody(source, lang) {
+        try {
+            return await translateWithGemini(source, lang);
+        } catch (error) {
+            if (error.name !== 'AbortError' && !(error instanceof TypeError) && error.status !== 429 && !(error.status >= 500)) throw error;
+            return translateWithGemini(source, lang, 50000);
+        }
+    }
+
     function queuePrefaceTranslation(source, lang) {
-        if (startupNoticeDecision === true && source && !aiTranslationRecords.has(aiTranslationKey(source, lang))) {
-            void requestAITranslation(source, lang);
+        const key = aiTranslationKey(source, lang);
+        if (startupNoticeDecision === true && source && !aiTranslationRecords.has(key)) {
+            void requestAITranslation(source, lang, '', key, translatePrefaceBody);
         }
     }
 
