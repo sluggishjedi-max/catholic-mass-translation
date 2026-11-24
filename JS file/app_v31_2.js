@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-11';
+    const APP_VERSION = 'V31.2-20261124-12';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -21739,7 +21739,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (!source) return {text: ''};
             const original = source.parts[index];
             const id = aiTranslationKey(original, lang);
-            return {text:prefaceCaptionTranslations.get(id) || '', original, id, sourceLang:source.code};
+            return {text:prefaceCaptionTranslations.get(id) || '', original, id, sourceLang:source.code, field:index ? 'subtitle' : 'title'};
         });
         return {parts, labels, missingBody: !prefaceBodyRows(entry, lang).length &&
             sources.some(({code}) => prefaceBodyRows(entry, code).length)};
@@ -21781,17 +21781,19 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             let translations = {};
             try {
                 const target = aiLanguageNames[lang] || lang;
-                const request = Object.fromEntries(batch.map(({id, original}) => [id, original]));
+                const request = Object.fromEntries(batch.map(({id, original, field}) => [id, {field, text:original}]));
                 const prompt = [
                     'Translate every Roman Missal preface title or subtitle below into ' + target + '.',
                     catholicTranslationStyleInstruction(lang),
-                    'Keep the number or Roman numeral in every heading. Return only a JSON object with the same keys and translated string values.',
+                    'Preserve edition numbers and Roman numerals in titles. In Italian subtitles, a leading I before a plural noun is the article, and should be translated.',
+                    'Return only a JSON object with the same keys and translated string values.',
                     JSON.stringify(request)
                 ].filter(Boolean).join('\n');
-                const payload = await fetchGeminiViaFirebase('translate', {
+                const translate = timeoutMs => fetchGeminiViaFirebase('translate', {
                     contents: [{parts:[{text:prompt}]}],
                     generationConfig: {temperature:0.1, responseMimeType:'application/json'}
-                }, {label:'Preface caption translation'});
+                }, {label:'Preface caption translation', timeoutMs});
+                const payload = await (fallback ? retryPrefaceTranslation(translate) : translate(30000));
                 translations = JSON.parse(geminiTextFromPayload(payload)) || {};
             } catch (error) {
                 console.warn('Preface caption translation failed', error);
@@ -21830,19 +21832,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         });
     }
 
-    async function translatePrefaceBody(source, lang) {
+    async function retryPrefaceTranslation(translate) {
         try {
-            return await translateWithGemini(source, lang);
+            return await translate(30000);
         } catch (error) {
             if (error.name !== 'AbortError' && !(error instanceof TypeError) && error.status !== 429 && !(error.status >= 500)) throw error;
-            return translateWithGemini(source, lang, 50000);
+            return translate(50000);
         }
     }
 
     function queuePrefaceTranslation(source, lang) {
         const key = aiTranslationKey(source, lang);
         if (startupNoticeDecision === true && source && !aiTranslationRecords.has(key)) {
-            void requestAITranslation(source, lang, '', key, translatePrefaceBody);
+            const translate = (text, target) => retryPrefaceTranslation(timeoutMs => translateWithGemini(text, target, timeoutMs));
+            void requestAITranslation(source, lang, '', key, translate);
         }
     }
 
