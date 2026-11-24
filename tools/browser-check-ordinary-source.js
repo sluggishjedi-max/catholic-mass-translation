@@ -5,7 +5,14 @@ const fixtures={};for(const country of ['KR','VN']){const module=registry[countr
 (async()=>{
  const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(error,data)=>error?res.writeHead(404).end():res.setHeader('Content-Type',file.endsWith('.js')?'application/javascript':'text/html;charset=utf-8').end(data));});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const browser=await chromium.launch({headless:true}),results=[];
  try{for(const width of [1280,390,320]){
-  const page=await browser.newPage({viewport:{width,height:900}}),errors=[];page.on('pageerror',error=>errors.push(error.message));await page.addInitScript(registry=>{window.ordoPrayerEditorPreview=true;window.countryMassData=window.uploadedCountryMassData=registry;},registry);await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());await page.goto('http://127.0.0.1:'+server.address().port+'/V31.2.html');
+  const page=await browser.newPage({viewport:{width,height:900}}),errors=[];page.on('pageerror',error=>errors.push(error.message));await page.addInitScript(registry=>{window.ordoPrayerEditorPreview=true;window.ORDO_GEMINI_PROXY_ENDPOINT=location.origin+'/geminiProxy';window.countryMassData=window.uploadedCountryMassData=registry;},registry);await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());await page.goto('http://127.0.0.1:'+server.address().port+'/V31.2.html');
+  const translations=[];
+  await page.route('**/geminiProxy',route=>{
+   const prompt=route.request().postDataJSON().promptConfig.contents[0].parts[0].text;
+   translations.push(prompt);
+   const text=prompt.includes('A ação do Espírito na Igreja')?'교회 안에서 이루어지는 성령의 활동': 'Generated preface for verification.';
+   return route.fulfill({json:{candidates:[{content:{parts:[{text}]}}]}});
+  });
   const result=await page.evaluate(fixtures=>{
    const check=(ok,message)=>{if(!ok)throw Error(message)},plain=html=>{const node=document.createElement('div');node.innerHTML=String(html||'').replace(/<br\s*\/?>/giu,'\n');return node.textContent.replace(/\u00ad/gu,'').trim();};startupNoticeDecision=true;state.useGps=false;document.getElementById('consent-modal').style.display='none';document.body.classList.remove('consent-pending','startup-loading');let cases=0;
    for(const reverse of [false,true]){
@@ -22,6 +29,40 @@ const fixtures={};for(const country of ['KR','VN']){const module=registry[countr
    const euch=eucharisticPrayerEntry(massData),sourceCount=getEucharistSongMap(euch).ordinary_1.content.length,stored=euch.songs.ordinary_1.content.map(row=>row.text_kr||'').filter(Boolean).join('\n\n');euch.__dailyServerPreface={kr:stored};const selected=getEucharistSongMap(euch).ordinary_1;check(selected.content.length===sourceCount,'A matching daily preface regrouped stored sentences');
    const first=euch.songs.ordinary_1.content.find(row=>row.text_kr);first.text_kr='EDITOR_WORDING '+first.text_kr;euch.__dailyServerPreface={kr_options:[{text:euch.songs.ordinary_1.title.kr+'\n'+stored}]};const editedMap=getEucharistSongMap(euch),edited=editedMap.ordinary_1;check(edited.__dailySourceLanguages?.kr,'A known daily preface was not linked to its stored choice');check(edited.content.some(row=>row.text_kr?.startsWith('EDITOR_WORDING ')),'A dated source overwrote the edited canonical preface');check(edited.content.length===sourceCount,'A dated source regrouped an edited canonical preface');
    return{cases,bothOrientations:true,editorOrderAndRubricKinds:true,prefaceSentenceRows:true,noOrdinaryAI:true,matchingDailyPrefaceRetainsStoredRows:true,datedSourceNeverOverridesEditedPreface:true};
-  },fixtures);assert.deepEqual(errors,[]);results.push({width,editorSaveRoundtrip:editing,...result,errors});console.log(JSON.stringify(results.at(-1)));await page.locator('[data-part-id="offertory"]').screenshot({path:path.join(root,'tmp','ordinary-source'+(editing?'-edited':'')+'-offertory-'+width+'.png')});await page.close();
+  },fixtures);
+  await page.evaluate(()=>{
+   state.currentLoc=state.selectedLocationCode='KR';
+   state.targetLang=state.targetLocationCode='PT';
+   resetMassDataFrom(getStartupOrdinaryMassData());
+   state.options.eucharist='2';state.options.eucharist_song='ordinary_1';state.autoEucharistSongKey='';
+   render();
+  });
+  const eucharist=page.locator('[data-part-id="eucharist"]');
+  const preface=eucharist.locator('[data-eucharist-section="preface"]');
+  const selector=eucharist.getByRole('combobox',{name:'Preface'}).first();
+  await selector.selectOption('ordinary_9');
+  await preface.locator('.line-kr .ai-badge').waitFor();
+  assert.match(await preface.locator('.line-kr').innerText(),/한국어 본문 없음/);
+  await page.waitForFunction(()=>document.querySelector('.preface-translation-title')?.textContent.includes('교회 안에서 이루어지는 성령의 활동'));
+  const expectedPT=registry.PT.ordinary.find(entry=>entry.songs).songs.ordinary_9.content
+   .map(row=>row.text_pt).filter(Boolean).map(text=>text.trim());
+  assert.deepEqual(await preface.locator('.line-pt .text-content').allTextContents(),Array.from(expectedPT));
+  assert.equal(translations.length,2);
+  await page.evaluate(()=>{
+   state.currentLoc=state.selectedLocationCode='PT';
+   state.targetLang=state.targetLocationCode='KR';
+   resetMassDataFrom(getStartupOrdinaryMassData());render();
+  });
+  await preface.locator('.line-kr .ai-badge').waitFor();
+  assert.equal(translations.length,2,'Swapping columns started the same translation again');
+  await page.evaluate(()=>{
+   state.targetLang='JP';state.targetLocationCode='JP';
+   resetMassDataFrom(getStartupOrdinaryMassData());render();
+  });
+  await preface.locator('.line-jp .ai-badge').waitFor();
+  assert.match(await preface.locator('.line-jp').innerText(),/日本語本文なし/);
+  assert.deepEqual(await preface.locator('.line-pt .text-content').allTextContents(),Array.from(expectedPT));
+  assert.equal(await eucharist.locator('[data-eucharist-section="dialogue"] .ai-badge').count(),0);
+  assert.deepEqual(errors,[]);result.prefaceAi=true;results.push({width,editorSaveRoundtrip:editing,...result,errors});console.log(JSON.stringify(results.at(-1)));await page.locator('[data-part-id="offertory"]').screenshot({path:path.join(root,'tmp','ordinary-source'+(editing?'-edited':'')+'-offertory-'+width+'.png')});await page.close();
  }}finally{await browser.close();server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}fs.writeFileSync(path.join(root,'tmp','ordinary-source'+(editing?'-edited':'')+'-browser-check.json'),JSON.stringify(results,null,2));
 })().catch(error=>{console.error(error);process.exitCode=1});

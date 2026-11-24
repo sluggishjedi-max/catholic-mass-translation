@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-8';
+    const APP_VERSION = 'V31.2-20261124-9';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -19365,9 +19365,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return `${normalizeSelectableLang(targetLangCode, DEFAULT_TARGET_LANG)}:${source.length}:${stableTextHash(source)}`;
     }
 
-    function applyAITranslationResultToButton(btn, resultText) {
-        const parent = btn && btn.parentElement;
-        if (parent) parent.innerHTML = `<span class="ai-badge">AI</span>${aiTranslatedHtml(resultText)}`;
+    async function requestAITranslation(source, target, fallback = '', key = aiTranslationKey(source, target)) {
+        const existing = aiTranslationRecords.get(key);
+        if (existing?.status === 'pending' || existing?.status === 'done') return;
+        aiTranslationRecords.set(key, {status:'pending'});
+        try {
+            const text = await translateWithGemini(source, target);
+            aiTranslationRecords.set(key, {status:'done', text});
+        } catch (error) {
+            console.warn('AI translation failed', error);
+            const text = enforceCatholicTranslationTerminology(cleanNodeText(fallback), target);
+            aiTranslationRecords.set(key, text ? {status:'done', text}
+                : {status:'error', message:error instanceof Error ? error.message : 'AI 번역 실패'});
+        }
+        render();
     }
 
     let voiceRecognition = null;
@@ -20611,37 +20622,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
 
     window.stopVoiceRecognitionFromBar = window.pauseVoiceRecognitionFromBar;
 
-    window.simAITrans = async function(btn, srcText, predefinedAiText, targetLangCode, recordKey) {
-        const key = recordKey || aiTranslationKey(srcText, targetLangCode);
-        const existing = aiTranslationRecords.get(key);
-        if (existing && existing.status === 'pending') return;
-        const originalLabel = btn.innerHTML;
-        btn.innerHTML = '번역중...';
-        btn.disabled = true;
-        aiTranslationRecords.set(key, { status: 'pending' });
-        try {
-            const resultText = await translateWithGemini(srcText, targetLangCode);
-            aiTranslationRecords.set(key, { status: 'done', text: resultText });
-            applyAITranslationResultToButton(btn, resultText);
-            render();
-        } catch (error) {
-            console.warn('AI translation failed', error);
-            const fallback = enforceCatholicTranslationTerminology(cleanNodeText(predefinedAiText), targetLangCode);
-            if (fallback) {
-                aiTranslationRecords.set(key, { status: 'done', text: fallback });
-                applyAITranslationResultToButton(btn, fallback);
-                render();
-                return;
-            }
-            aiTranslationRecords.set(key, {
-                status: 'error',
-                message: error && error.message ? error.message : 'AI 번역 실패'
-            });
-            btn.innerHTML = originalLabel;
-            btn.disabled = false;
-            btn.title = aiTranslationRecords.get(key).message;
-            render();
-        }
+    window.simAITrans = (button, source, fallback, target, key) => {
+        button.textContent = '번역중...';
+        button.disabled = true;
+        return requestAITranslation(source, target, fallback, key);
     };
 
     window.optChange = (id, val) => {
@@ -20663,7 +20647,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function escapeInlineArg(value) {
-        return escapeAttr(JSON.stringify(String(value || '').replace(/\r?\n/g, ' ')));
+        return escapeAttr(JSON.stringify(String(value || '')));
     }
 
     function makeAIButton(srcText, predefinedAiText, targetLang) {
@@ -21697,12 +21681,101 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         return getEucharistSongLinesFromEntry(songs[key]);
     }
 
-    function getEucharistSongLabel(item, key, langCode) {
+    const prefaceLabels = {
+        KR:['감사송', '연중 주일 감사송', '공통 감사송', '한국어 본문 없음'],
+        VN:['Kinh tiền tụng', 'Kinh tiền tụng Chúa Nhật Thường Niên', 'Kinh tiền tụng chung', 'Không có bản văn tiếng Việt'],
+        EN:['Preface', 'Sunday Preface in Ordinary Time', 'Common Preface', 'No English text'],
+        JP:['叙唱', '年間主日叙唱', '共通叙唱', '日本語本文なし'],
+        LA:['Præfatio', 'Præfatio dominicalis per annum', 'Præfatio communis', 'Textus Latinus deest'],
+        ZH:['頌謝詞', '常年主日頌謝詞', '通用頌謝詞', '無繁體中文本文'],
+        IT:['Prefazio', 'Prefazio delle domeniche del Tempo Ordinario', 'Prefazio comune', 'Testo italiano assente'],
+        PT:['Prefácio', 'Prefácio dominical do Tempo Comum', 'Prefácio comum', 'Sem texto em português'],
+        ES:['Prefacio', 'Prefacio dominical del Tiempo Ordinario', 'Prefacio común', 'Sin texto en español'],
+        DE:['Präfation', 'Präfation für die Sonntage im Jahreskreis', 'Allgemeine Präfation', 'Kein deutscher Text']
+    };
+
+    function prefaceNativeTitle(entry, lang) {
+        return [entry?.title, entry?.label, entry?.prefaceTitle].map(value =>
+            cleanNodeText(value?.[lang.toLowerCase()] || value?.[lang])).find(Boolean) || '';
+    }
+
+    function prefaceBodyRows(entry, lang) {
+        return (entry?.content || []).map(row => row['text_' + lang.toLowerCase()])
+            .filter(text => cleanNodeText(String(text || '').replace(/<[^>]*>/gu, '')));
+    }
+
+    function prefaceSourceLanguages(lang) {
+        return [...new Set([state.currentLoc, state.targetLang, ...SUPPORTED_LANGS])].filter(code => code && code !== lang);
+    }
+
+    function prefaceTranslationTitleSource(entry, key, lang) {
+        const title = prefaceSourceLanguages(lang).map(code => prefaceNativeTitle(entry, code)).find(Boolean) || '';
+        if (!/^(?:ordinary|common)_\d+$/u.test(key)) return title;
+        return title.match(/(?:(?:[:：]|[-–—])\s+|「)(.+?)(?:」)?$/u)?.[1] || '';
+    }
+
+    function getEucharistSongLabel(item, key, lang, compact = false) {
         const entry = getEucharistSongMap(item)[key];
-        const title = localizedChoiceLabel(entry, langCode);
-        if (title) return title;
-        const songLabels = { KR: '감사송', VN: 'Kinh Tiền Tụng', EN: 'Preface', JP: '叙唱', LA: 'Præfatio', ZH: '頌謝詞', IT: 'Prefazio', PT: 'Prefácio', ES: 'Prefacio', DE: 'Präfation' };
-        return `${songLabels[langCode] || '감사송'} ${key}`;
+        const labels = prefaceLabels[lang] || prefaceLabels.EN;
+        const native = prefaceNativeTitle(entry, lang);
+        const source = native ? '' : prefaceTranslationTitleSource(entry, key, lang);
+        const translated = source && aiTranslationRecords.get(aiTranslationKey(source, lang))?.text;
+        const [, family, number] = key.match(/^(ordinary|common)_(\d+)$/u) || [];
+        const title = native || (number
+            ? labels[family === 'ordinary' ? 1 : 2] + ' ' + number + (translated ? ' — ' + translated : '')
+            : translated || source || labels[0] + ' ' + key);
+        const bodyAvailable = prefaceBodyRows(entry, lang).length > 0;
+        const hasSourceBody = !bodyAvailable && prefaceSourceLanguages(lang).some(code => prefaceBodyRows(entry, code).length);
+        const note = hasSourceBody ? ' (' + labels[3] + ')' : '';
+        return (compact ? compactEucharistSongLabel(title) : title) + note;
+    }
+
+    function queuePrefaceTranslation(source, lang) {
+        if (startupNoticeDecision === true && source && !aiTranslationRecords.has(aiTranslationKey(source, lang))) {
+            void requestAITranslation(source, lang);
+        }
+    }
+
+    function withPrefaceTranslations(lines, item, key, left, right) {
+        const entry = getEucharistSongMap(item)[key];
+        if (!entry || !lines.length || key.endsWith('_complete_prefaces')) return lines;
+        const added = {};
+        for (const lang of [left, right]) {
+            const titleSource = !prefaceNativeTitle(entry, lang) && prefaceTranslationTitleSource(entry, key, lang);
+            if (titleSource) queuePrefaceTranslation(titleSource, lang);
+            if (prefaceBodyRows(entry, lang).length) continue;
+            const sourceRows = prefaceSourceLanguages(lang).map(code => prefaceBodyRows(entry, code)).find(rows => rows.length);
+            if (!sourceRows) continue;
+            const source = sourceRows.map(text => plainTextFromHtml(text.replace(/<br\s*\/?>/giu, '\n'))).join('\n\n');
+            if (!source.trim()) continue;
+            queuePrefaceTranslation(source, lang);
+            const lower = lang.toLowerCase();
+            added[lower] = '<strong class="preface-translation-title">' + escapeHtml(getEucharistSongLabel(item, key, lang))
+                + '</strong><br>' + makeAIButton(source, '', lang);
+        }
+        return Object.keys(added).length ? [{__prefaceTranslations:added, rows:lines}] : lines;
+    }
+
+    function appendPrefaceTranslationGroup(container, group, left, right, stacked) {
+        const wrapper = document.createElement('div');
+        wrapper.className = stacked ? 'pair-block' : 'pc-line-row';
+        wrapper.dataset.eucharistSection = 'preface';
+        [left, right].forEach((lang, index) => {
+            const lower = lang.toLowerCase();
+            const column = document.createElement('div');
+            if (!stacked) column.className = index ? 'pc-col pc-col-sub' : 'pc-col';
+            if (index && stacked) column.className = 'translation';
+            const translation = group.__prefaceTranslations[lower];
+            if (translation) column.innerHTML = linePairHTML('', translation, lower);
+            // Keep each published line intact and render the AI text in its own column.
+            for (const row of group.rows) {
+                if (row.isDivider || row.type === 'inlineOptionControl') continue;
+                const html = genLineHTML({...row, __ordinarySource:true}, lang, 'eucharist');
+                if (html) column.insertAdjacentHTML('beforeend', html);
+            }
+            wrapper.appendChild(column);
+        });
+        container.appendChild(wrapper);
     }
 
     function liturgyDateNavigationHtml(leftName, rightName) {
@@ -22327,7 +22400,9 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 const sections = frame?.sections || (!['1','2','3','4'].includes(selectedForm) ? ['form'] : selectedForm === '4' ? ['dialogue','form','amen'] : ['dialogue','preface','sanctus','form','amen']);
                 compiledLines = sections.flatMap(section => {
                     const stored = section === 'dialogue' ? item.common_dialogue : section === 'preface' ? getEucharistSongLines(item, songChoice) : section === 'form' ? item.forms?.[selectedForm] : section === 'ending' ? item.formEndings?.[selectedForm] || item.amen : item[section];
-                    return markEucharistLines(expandEucharistInlineOptions(Array.isArray(stored) ? stored : stored ? [stored] : [], inlineOptionContext), section);
+                    const expanded = expandEucharistInlineOptions(Array.isArray(stored) ? stored : stored ? [stored] : [], inlineOptionContext);
+                    const lines = section === 'preface' ? withPrefaceTranslations(expanded, item, songChoice, leftL, rightL) : expanded;
+                    return markEucharistLines(lines, section);
                 });
                 data.lines = addEucharisticDottedDividers(globalThis.ordoSpecialOrder?.eucharistLines(compiledLines, selectedForm) || compiledLines);
             }
@@ -22375,6 +22450,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                 ? groupPsalmDisplayLinesForActiveLanguages(displayLines, leftL.toLowerCase(), rightL.toLowerCase())
                 : displayLines;
             displayRows.forEach(displayRow => {
+                if (displayRow?.__prefaceTranslations) {
+                    appendPrefaceTranslationGroup(partContainer, displayRow, leftL, rightL, isStacked);
+                    return;
+                }
                 if (displayRow && displayRow.__psalmDisplayGroup) {
                     const groupLines = displayRow.lines || [];
                     if (isStacked) {
@@ -22539,7 +22618,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
                     songKeys.forEach(songKey => {
                         const selected = selectedSongKey === songKey ? 'selected' : '';
                         const fullLabel = getEucharistSongLabel(orig, songKey, langCode);
-                        const compactLabel = compactEucharistSongLabel(fullLabel);
+                        const compactLabel = getEucharistSongLabel(orig, songKey, langCode, true);
                         const visibleLabel = selected ? compactLabel : fullLabel;
                         secondarySelectHtml += `<option value="${escapeAttr(songKey)}" data-full-label="${escapeAttr(fullLabel)}" data-compact-label="${escapeAttr(compactLabel)}" ${selected}>${escapeHtml(visibleLabel)}</option>`;
                     });
