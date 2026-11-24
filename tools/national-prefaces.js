@@ -84,7 +84,7 @@ function parseHeading(value, edition, lang) {
   throw Error('Unrecognized preface heading: ' + value);
 }
 
-function splitNationalPrefaces(rows, lang) {
+function splitNationalPrefaces(rows, lang, jurisdiction) {
   const edition = editions[lang];
   if (!edition) throw Error('Unknown missal language: ' + lang);
   const textField = 'text_' + lang;
@@ -92,8 +92,9 @@ function splitNationalPrefaces(rows, lang) {
   const text = row => String(row?.[rubricField] || row?.[textField] || '').trim();
   const entries = rows.filter(row => text(row) && !edition.pageHeader.test(text(row)));
   const boundaries = entries.flatMap((row, index) => edition.marker.test(text(row)) ? [index] : []);
-  if (boundaries.length !== edition.count) {
-    throw Error(lang + ' preface count: expected ' + edition.count + ', found ' + boundaries.length);
+  const count = lang === 'es' && jurisdiction === 'ES' ? 66 : edition.count;
+  if (boundaries.length !== count) {
+    throw Error(lang + ' preface count: expected ' + count + ', found ' + boundaries.length);
   }
   const result = {};
   boundaries.forEach((start, index) => {
@@ -131,5 +132,5 @@ function splitNationalPrefaces(rows, lang) {
 module.exports = { splitNationalPrefaces };
 if (require.main === module) {
   const rows = JSON.parse(fs.readFileSync(0, 'utf8'));
-  process.stdout.write(JSON.stringify(splitNationalPrefaces(rows, process.argv[2])));
+  process.stdout.write(JSON.stringify(splitNationalPrefaces(rows, process.argv[2], process.argv[3])));
 }

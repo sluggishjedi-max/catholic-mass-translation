@@ -30,7 +30,7 @@
     "browser:check:prayers": "node tools/browser-check-prayer-display.js",
     "browser:check:startup-preview": "node tools/browser-check-startup-and-preview.js",
     "browser:check:startup-loading": "node tools/browser-check-startup-loading.js",
-    "browser:check": "set ORDO_CHECK_HTML=V31.2.html&& node tools/browser-check-v28.js",
+    "browser:check": "set ORDO_CHECK_HTML=V31.3.html&& node tools/browser-check-v28.js",
     "browser:check:daily-memorial": "node tools/browser-check-daily-memorial.js",
     "browser:check:v21": "node tools/browser-check-v21.js",
     "browser:check:v21.1-antigravity": "node tools/browser-check-v21-1-antigravity.js",

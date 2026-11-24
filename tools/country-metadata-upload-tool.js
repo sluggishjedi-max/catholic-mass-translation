@@ -20,7 +20,7 @@ const DAILY_READING_STRATEGIES = Object.freeze({
   NZ: 'universalis-new-zealand',
   IT: 'cei-italy',
   PT: 'liturgia-portugal',
-  MX: 'cem-mexico',
+  ES:'cee-spain', MX: 'cem-mexico',
   DE: 'schott-germany',
   BR: 'pocketterco-brazil'
 });

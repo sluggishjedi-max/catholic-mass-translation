@@ -4,13 +4,13 @@ const COUNTRIES = Object.freeze({
   KR:['대한민국','KR'], VN:['베트남','VN'], US:['미국','EN'], IE:['아일랜드','EN'],
   'GB-ENG':['잉글랜드','EN'], 'GB-WLS':['웨일스','EN'], 'GB-SCT':['스코틀랜드','EN'],
   PH:['필리핀','EN'], TW:['대만','ZH'], AU:['호주','EN'], NZ:['뉴질랜드','EN'],
-  JP:['일본','JP'], IT:['이탈리아','IT'], PT:['포르투갈','PT'], MX:['멕시코','ES'],
+  JP:['일본','JP'], IT:['이탈리아','IT'], PT:['포르투갈','PT'], ES:['스페인','ES'], MX:['멕시코','ES'],
   DE:['독일','DE'], BR:['브라질','PT'], VA:['바티칸','LA']
 });
 const COLLECTION = 'daily_mass';
 const JOBS = 'daily_mass_jobs';
 const RUNS = 'daily_mass_runs';
-const PARSER_REVISION = 'v31.2-20261124-5';
+const PARSER_REVISION = 'v31.2-20261124-6';
 function isoDate(value) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(value || ''))) throw Error('invalid-date');
   const date = new Date(value+'T12:00:00Z');

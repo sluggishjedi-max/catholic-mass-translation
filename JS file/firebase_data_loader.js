@@ -13,7 +13,7 @@
   const LANGUAGE_BY_JURISDICTION = Object.freeze({
     KR:'KR', VN:'VN', US:'EN', JP:'JP', VA:'LA', IE:'EN', 'GB-EW':'EN',
     'GB-ENG':'EN', 'GB-WLS':'EN', 'GB-SCT':'EN', PH:'EN', TW:'ZH', AU:'EN',
-    NZ:'EN', IT:'IT', PT:'PT', MX:'ES', DE:'DE', BR:'PT'
+    NZ:'EN', IT:'IT', PT:'PT', ES:'ES', MX:'ES', DE:'DE', BR:'PT'
   });
 
   async function readCollection(db, name, jurisdiction) {
