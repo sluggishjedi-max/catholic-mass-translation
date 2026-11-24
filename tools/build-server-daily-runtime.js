@@ -7,6 +7,9 @@ const core=[...html.matchAll(/<script[^>]*src="([^"]+)"/g)].map(m=>decodeURIComp
 const files=[...new Set([...core,...fs.readdirSync(path.join(root,'JS file/lazy')).filter(f=>f.endsWith('.js')).map(f=>'JS file/lazy/'+f),'JS file/countries/taiwan/taiwan_daily_mass_data.js','JS file/all-souls-config.js'])];
 const manifest={version:release.version,htmlFile:release.html,core,hashes:{}};
 for(const file of files){const data=fs.readFileSync(path.join(root,file));const target=path.join(destination,file);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,data);manifest.hashes[file]=crypto.createHash('sha256').update(data).digest('hex');}
+const license='licenses/LiturgicalCalendarAPI.txt';
+fs.mkdirSync(path.join(destination,'licenses'),{recursive:true});
+fs.copyFileSync(path.join(root,license),path.join(destination,license));
 fs.writeFileSync(path.join(destination,'index.html'),html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g,''));
 fs.writeFileSync(path.join(destination,'manifest.json'),JSON.stringify(manifest,null,2));
 console.log('Packaged '+files.length+' shared '+release.version+' parser/data modules for server collection.');

@@ -2,7 +2,7 @@
 (function registerLiturgicalObservances(global) {
     'use strict';
 
-    const titles = {
+    const curatedTitles = {
         "all-saints": {
             KR: ["모든 성인"],
             VN: ["Các Thánh Nam Nữ"],
@@ -228,40 +228,98 @@
             EN: ["Thanksgiving Day","Mass for Thanksgiving Day"]
         }
     };
-    const rank = {
-        KR: /(?:대축일|축일|기념일)\s*$/u, VN: /^(?:lễ(?:\s+(?:trọng|kính|nhớ))?|kính)\s+/iu,
-        EN: /^(?:(?:the\s+)?(?:solemnity|feast|memorial)(?:\s+of)?|the)\s+/iu,
-        JP: /(?:の)?(?:大祝日|祝日|記念日)\s*$/u, ZH: /(?:隆重節日|大節|慶日|紀念日)\s*$/u,
-        IT: /^(?:solennità|festa|memoria)\s+(?:di\s+)?/iu, PT: /^(?:solenidade|festa|memória)\s+(?:de\s+)?/iu,
-        ES: /^(?:solemnidad|fiesta|memoria)\s+(?:de\s+)?/iu, DE: /^(?:hochfest|fest|gedenktag)\s*/iu,
-        LA: /^in\s+(?:sollemnitate\s+)?/iu
-    };
-    const shortSaint = { EN:[/\bsts?\.?\s+/giu,'saint '], IT:[/\bs\.\s*/giu,'san '],
-        PT:[/\bs\.\s*/giu,'são '], ES:[/\bs\.\s*/giu,'san '], DE:[/\bhl\.\s*/giu,'heiliger '] };
-
-    function titleKey(value, lang) {
-        let name = String(value || '').normalize('NFKC').replace(/^[\[(][^\])]{1,5}[\])]\s*/u, '').trim();
-        if (rank[lang]) name = name.replace(rank[lang], '');
-        if (lang === 'PT' || lang === 'IT' || lang === 'ES') {
-            name = name.replace(/,\s*(?:memória|memoria|festa|fiesta|solenidade|solennità|solemnidad)\s*$/iu, '');
-        }
-        if (shortSaint[lang]) name = name.replace(...shortSaint[lang]);
-        return name.replace(/\s*[–—-]\s*(?:memoria(?:\s+facoltativa)?|memória|memorial|feast|festa|solennità|solenidade)\s*$/iu, '')
-            .replace(/\((?:memória|memoria|memorial|feast|festa|solenidade)\)\s*$/iu, '')
-            .normalize('NFD').toLowerCase().replace(/\p{M}/gu, '').replace(/đ/gu, 'd').replace(/[^\p{L}\p{N}]/gu, '');
+    const titles = new Map();
+    for (const [id, , , names] of global.ordoAnnualObservanceCatalog || []) titles.set(id, names);
+    for (const [id, names] of Object.entries(curatedTitles)) {
+        const combined = { ...titles.get(id) };
+        for (const [lang, spellings] of Object.entries(names)) combined[lang] = [...spellings, ...(combined[lang] || [])];
+        titles.set(id, combined);
     }
 
-    const index = new Map();
-    for (const [id, spellings] of Object.entries(titles)) {
+    const rank = {
+        KR: [/(?:\s+(?:선택|의무))?\s*(?:대축일|축일|기념일)\s*$/u],
+        VN: [/^(?:(?:thánh\s+)?lễ(?:\s+(?:trọng|kính|nhớ))?|kính)\s+/iu, /[,\s-]+lễ\s+(?:trọng|kính|nhớ)\s*$/iu],
+        EN: [/^(?:the\s+)?(?:(?:optional\s+|obligatory\s+)?(?:solemnity|feast|memorial)(?:\s+of)?\s+|the\s+)/iu],
+        JP: [/(?:の)?(?:大祝日|祭日|祝日|記念日|記念)\s*$/u],
+        ZH: [/(?:隆重節日|大節|慶日|紀念日|紀念)\s*$/u],
+        IT: [/^(?:solennità|festa|memoria)\s+(?:di\s+)?/iu],
+        PT: [/^(?:solenidade|festa|memória)\s+(?:de\s+)?/iu],
+        ES: [/^(?:solemnidad|fiesta|memoria)\s+(?:de\s+)?/iu],
+        DE: [/^(?:hochfest|fest|(?:gebotener|nicht gebotener)\s+gedenktag|gedenktag)\s+/iu],
+        LA: [/^in\s+(?:sollemnitate\s+)?/iu]
+    };
+    const rankLabel = /^(?:대|축|기|선|백|홍|자|녹|대축일|축일|기념일|선택 기념일|祭|祝|記|任|祭日|祝日|記念|記念日|任意|節|慶|紀|自|慶日|紀念日|solemnity|feast|memorial|optional memorial|memoria(?:\s+facoltativa|\s+libre)?|memória(?:\s+facultativa)?|fiesta|festa|solenidade|solennità|gedenktag|hochfest|lễ\s+(?:trọng|nhớ|kính)|đ|k|nh|mo|mf|m|f|s)$/iu;
+    const saintForms = {
+        EN:/\b(?:saints?\s+|sts?\.\s*|sts?\s+)/giu, IT:/\b(?:sant['’]|san\s+|santi?\s+|santo\s+|santa\s+|s\.)\s*/giu,
+        PT:/\b(?:santos?\s+|santa\s+|são\s+|s\.)\s*/giu,
+        ES:/\b(?:san\s+|santos?\s+|santas?\s+|s\.)\s*/giu,
+        DE:/\b(?:hl\.|hll\.|heilige[rn]?\s+)\s*/giu
+    };
+    const alternateRanks = /\s*[,–—-]\s*((?:memoria|memória|feast|festa|fiesta|solennità|solenidade|memorial|gedenktag)[^,–—-]*)$/iu;
+    const brackets = /[\[(【〖（]\s*([^\])】〗）]+?)\s*[\])】〗）]/gu;
+
+    function cleanTitle(value, lang) {
+        let name = String(value || '').normalize('NFKC').replace(brackets, (text,label)=>rankLabel.test(label) ? ' ' : text).trim();
+        for (const wrapper of rank[lang] || []) name = name.replace(wrapper, '');
+        name = name.replace(alternateRanks, (text,label)=>rankLabel.test(label.trim()) ? '' : text);
+        return name.trim().replace(/^the\s+/iu, lang === 'EN' ? '' : '$&');
+    }
+
+    function compact(value) {
+        return value.normalize('NFD').toLowerCase().replace(/\p{M}/gu, '').replace(/đ/gu, 'd').replace(/[^\p{L}\p{N}]/gu, '');
+    }
+
+    function titleKey(value, lang) {
+        return compact(cleanTitle(value, lang));
+    }
+
+    function abbreviatedKey(value, lang) {
+        const title = cleanTitle(value, lang);
+        return compact(saintForms[lang] ? title.replace(saintForms[lang], '') : title);
+    }
+
+    const full = new Map(), abbreviated = new Map();
+    function register(index, lang, key, id) {
+        if (!key || rankLabel.test(key)) return;
+        const slot = lang + ':' + key;
+        index.set(slot, index.has(slot) && index.get(slot) !== id ? '' : id);
+    }
+    for (const [id, spellings] of titles) {
         for (const [lang, values] of Object.entries(spellings)) for (const spelling of values) {
-            const key = lang + ':' + titleKey(spelling, lang);
-            index.set(key, index.has(key) && index.get(key) !== id ? '' : id);
+            register(full, lang, titleKey(spelling, lang), id);
+            register(abbreviated, lang, abbreviatedKey(spelling, lang), id);
         }
+    }
+
+    const vietnameseSunday = /^cn\s*(?:tu[aâ]n\s*)?(\d{1,2}|[ivxl]+)\s*(tn|mv|mc|ps)(?:\s*n[aă]m\s*[abc])?$/iu;
+    function sundayAbbreviation(value, lang) {
+        if (lang !== 'VN') return '';
+        const match = cleanTitle(value, lang).match(vietnameseSunday);
+        if (!match) return '';
+        const token = match[1].toUpperCase();
+        const number = /^\d+$/.test(token) ? Number(token)
+            : Array.from({length:34},(_,i)=>i+1).find(n=>roman(n)===token);
+        const prefix = {tn:'OrdSunday',mv:'Advent',mc:'Lent',ps:'Easter'}[match[2].toLowerCase()];
+        // Week 34's Christ the King is equivalent to the abbreviated Sunday.
+        const id = prefix==='OrdSunday' && number===34 ? 'christ-king' : prefix + number;
+        return titles.has(id) ? id : '';
+    }
+
+    function roman(number) {
+        let result = '';
+        for (const [n,token] of [[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']]) {
+            while (number >= n) { result += token; number -= n; }
+        }
+        return result;
     }
 
     global.ordoLiturgicalObservances = Object.freeze({
-        identify(value, lang) { return index.get(lang + ':' + titleKey(value, lang)) || ''; },
+        identify(value, lang) {
+            const exact = lang + ':' + titleKey(value, lang);
+            if (full.has(exact)) return full.get(exact);
+            return abbreviated.get(lang + ':' + abbreviatedKey(value, lang)) || sundayAbbreviation(value, lang);
+        },
         titleKey,
-        namesFor(id) { return Object.fromEntries(Object.entries(titles[id] || {}).map(([lang, spellings]) => [lang, spellings[0]])); }
+        namesFor(id) { return Object.fromEntries(Object.entries(titles.get(id) || {}).map(([lang, spellings]) => [lang, spellings[0]])); }
     });
 })(globalThis);
