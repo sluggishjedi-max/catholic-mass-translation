@@ -146,6 +146,16 @@
         return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     }
 
+    async function containsCoordinates(lat, lon, locationCode) {
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+        const conference = await loadForLocation(locationCode);
+        if (!conference) return null;
+        const territories = conference.dioceses.filter(diocese => matchesLocation(diocese, locationCode))
+            .map(diocese => diocese.territory)
+            .filter(territory => territory?.kind === 'polygon' && territory.rings?.length);
+        return territories.length ? territories.some(territory => pointInTerritory(lon, lat, territory)) : null;
+    }
+
     async function resolveForCoordinates(lat, lon, locationCode) {
         const latitude = Number(lat);
         const longitude = Number(lon);
@@ -178,6 +188,7 @@
         loadForLocation,
         contextForDiocese,
         resolveForCoordinates,
+        containsCoordinates,
         _findByName: findByName,
         _dataByConference: dataByConference
     };

@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-12';
+    const APP_VERSION = 'V31.2-20261124-13';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -492,7 +492,6 @@
         IT: Object.freeze({ id: 'ITALY', countryCalendar: 'IT', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
         LA: Object.freeze({ id: 'GENERAL_ROMAN', countryCalendar: 'LA', epiphany: 'fixed', ascension: 'thursday', corpusChristi: 'thursday' }),
         FR: Object.freeze({ id: 'FR', countryCalendar: 'FR', epiphany: 'sunday', ascension: 'thursday', corpusChristi: 'sunday' }),
-        ES: Object.freeze({ id: 'ES', countryCalendar: 'ES', epiphany: 'fixed', ascension: 'sunday', corpusChristi: 'sunday' }),
         PT: Object.freeze({ id: 'PT', countryCalendar: 'PT', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'thursday' }),
         MX: Object.freeze({ id: 'MX', countryCalendar: 'MX', epiphany: 'sunday', ascension: 'sunday', corpusChristi: 'thursday' }),
         DE: Object.freeze({ id: 'DE', countryCalendar: 'DE', epiphany: 'fixed', ascension: 'thursday', corpusChristi: 'thursday' }),
@@ -741,9 +740,6 @@
         },
         FR: {
             '05-30': saintEntry('white', { KR: '프랑스의 제2수호자 성녀 잔 다르크 동정 기념일', VN: 'Thánh Jeanne d’Arc, Trinh nữ, Bổn mạng thứ hai của Pháp', EN: 'Saint Joan of Arc, Virgin, Secondary Patroness of France', JP: 'フランスの副保護者聖ジャンヌ・ダルクおとめ', LA: 'Sanctae Ioannae de Arc, virginis, patronae secundariae Galliae', FR: 'Sainte Jeanne d’Arc, vierge, patronne secondaire de la France' }, { rank: 'memorial', localOnly: true, source: 'France proper calendar' })
-        },
-        ES: {
-            '07-25': saintEntry('red', { KR: '스페인의 수호자 성 야고보 사도 대축일', VN: 'Thánh Giacôbê Tông đồ, Bổn mạng Tây Ban Nha', EN: 'Saint James, Apostle, Patron of Spain', JP: 'スペインの保護者聖ヤコブ使徒', LA: 'Sancti Iacobi, apostoli, patroni Hispaniae', ES: 'Santiago, apóstol, patrono de España' }, { rank: 'solemnity', localOnly: true, source: 'Spain proper calendar' })
         },
         PT: {
             '12-08': saintEntry('white', { KR: '포르투갈의 수호자 원죄 없이 잉태되신 복되신 동정 마리아 대축일', VN: 'Đức Mẹ Vô Nhiễm Nguyên Tội, Bổn mạng Bồ Đào Nha', EN: 'The Immaculate Conception of the Blessed Virgin Mary, Patroness of Portugal', JP: 'ポルトガルの保護者・無原罪の聖マリア', LA: 'In Conceptione Immaculata Beatae Mariae Virginis, patronae Portugalliae', PT: 'Imaculada Conceição da Virgem Santa Maria, Padroeira principal de Portugal' }, { rank: 'solemnity', localOnly: true, source: 'Portugal proper calendar' })
@@ -19186,13 +19182,20 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             if (applyDetectedLocation(gpsLanguageForTimeZone(fallbackZone), fallbackZone)) fetchMassData();
             return;
         }
-        navigator.geolocation.getCurrentPosition(pos => {
+        navigator.geolocation.getCurrentPosition(async pos => {
             const lat = pos.coords.latitude;
             const lon = pos.coords.longitude;
             const previousKpvProfile = currentVietnameseKpvProfile();
-            state.gpsCoordinates = { lat, lon };
+            const coordinates = { lat, lon };
+            state.gpsCoordinates = coordinates;
             const kpvProfileChanged = previousKpvProfile !== currentVietnameseKpvProfile();
-            const nextLoc = gpsLocationForCoordinates(lat, lon);
+            let nextLoc = gpsLocationForCoordinates(lat, lon);
+            if (nextLoc === 'PT' && lon > -10 && globalThis.ordoBishopDataApi?.containsCoordinates) {
+                // Portugal's GPS bounds overlap Spain. Check the diocesan boundaries before selecting a Missal.
+                const inside = await globalThis.ordoBishopDataApi.containsCoordinates(lat, lon, 'PT').catch(() => null);
+                if (inside === false) nextLoc = 'INTL';
+            }
+            if (!state.useGps || state.gpsCoordinates !== coordinates) return;
             const detectedTimeZone = gpsTimeZoneForCoordinates(lat, lon, nextLoc);
             if (applyDetectedLocation(nextLoc, detectedTimeZone) || kpvProfileChanged) fetchMassData();
             else render();
