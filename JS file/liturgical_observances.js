@@ -3,7 +3,7 @@
     'use strict';
 
     const curatedTitles = {
-        "all-saints": {
+        "roman-11-01-allsaints": {
             KR: ["모든 성인"],
             VN: ["Các Thánh Nam Nữ"],
             EN: ["All Saints","All Saints’ Day"],
@@ -15,7 +15,7 @@
             DE: ["Allerheiligen"],
             LA: ["Omnium Sanctorum"]
         },
-        "all-souls": {
+        "roman-11-02-allsouls": {
             KR: ["위령의 날"],
             VN: ["Cầu cho các tín hữu đã qua đời","Các Đẳng"],
             EN: ["All Souls","All Souls’ Day","The Commemoration of All the Faithful Departed"],
@@ -27,7 +27,7 @@
             DE: ["Allerseelen"],
             LA: ["Commemoratio Omnium Fidelium Defunctorum"]
         },
-        "lateran-dedication": {
+        "roman-11-09-laterandedication": {
             KR: ["라테라노 대성전 봉헌"],
             VN: ["Cung hiến Đền thờ Latêranô","Cung hiến Thánh đường Latêranô"],
             EN: ["Dedication of the Lateran Basilica","Dedication of St John Lateran"],
@@ -39,7 +39,7 @@
             DE: ["Weihetag der Lateranbasilika"],
             LA: ["In Dedicatione Basilicae Lateranensis"]
         },
-        "presentation-mary": {
+        "roman-11-21-presentationmary": {
             KR: ["복되신 동정 마리아의 자헌"],
             VN: ["Đức Mẹ Dâng Mình Trong Đền Thờ","Đức Trinh Nữ Ma-ri-a dâng mình trong đền thờ"],
             EN: ["Presentation of the Blessed Virgin Mary","Presentation of Mary"],
@@ -51,7 +51,7 @@
             DE: ["Gedenktag Unserer Lieben Frau in Jerusalem","Mariä Tempelgang"],
             LA: ["Praesentatio Beatae Mariae Virginis"]
         },
-        "christ-king": {
+        "roman-00-00-christking": {
             KR: ["그리스도왕","온 누리의 임금이신 우리 주 예수 그리스도왕"],
             VN: ["Chúa Ki-tô Vua","Chúa Ki-tô Vua Vũ Trụ","Chúa Giê-su Ki-tô Vua Vũ Trụ","Chúa Nhật Lễ Chúa Giêsu Kitô Vua Vũ Trụ","CN XXXIV TN Năm A – Chúa Ki-tô Vua vũ trụ"],
             EN: ["Christ the King","Our Lord Jesus Christ, King of the Universe"],
@@ -63,7 +63,7 @@
             DE: ["Christkönig","Christkönigssonntag"],
             LA: ["Domini Nostri Iesu Christi Universorum Regis","Christi Regis"]
         },
-        "vietnam-martyrs": {
+        "roman-11-24-vietnammartyrs": {
             KR: ["성 안드레아 둥락 사제와 동료 순교자들"],
             VN: ["Các Thánh Tử Đạo Việt Nam","Thánh An-rê Dũng Lạc và các bạn tử đạo","Thánh Anrê Dũng Lạc, Linh mục, và các bạn tử đạo"],
             EN: ["Vietnamese Martyrs","Saint Andrew Dung-Lac, Priest, and Companions, Martyrs"],
@@ -75,7 +75,7 @@
             DE: ["Andreas Dung-Lac und Gefährten"],
             LA: ["Sanctorum Andreae Dung-Lac et sociorum"]
         },
-        "andrew-apostle": {
+        "roman-11-30-andrewapostle": {
             KR: ["성 안드레아 사도"],
             VN: ["Thánh An-rê, Tông đồ"],
             EN: ["Saint Andrew","Saint Andrew, Apostle","Saint Andrew the Apostle"],
@@ -87,7 +87,7 @@
             DE: ["Andreas, Apostel"],
             LA: ["Sancti Andreae, Apostoli"]
         },
-        "francis-xavier": {
+        "roman-12-03-francisxavier": {
             KR: ["성 프란치스코 하비에르 사제"],
             VN: ["Thánh Phanxicô Xaviê, Linh mục"],
             EN: ["Saint Francis Xavier, Priest"],
@@ -99,7 +99,7 @@
             DE: ["Franz Xaver, Priester","Hl. Franz Xaver Ordenspriester, Glaubensbote"],
             LA: ["Sancti Francisci Xavier, presbyteri"]
         },
-        "immaculate-conception": {
+        "roman-12-08-immaculateconception": {
             KR: ["복되신 동정 마리아의 원죄 없으신 잉태","원죄 없으신 잉태"],
             VN: ["Đức Mẹ Vô Nhiễm Nguyên Tội"],
             EN: ["Immaculate Conception","Immaculate Conception of the Blessed Virgin Mary"],
@@ -111,7 +111,7 @@
             DE: ["Mariä Empfängnis","Hochfest der ohne Erbsünde empfangenen Jungfrau und Gottesmutter Maria"],
             LA: ["In Conceptione Immaculata Beatae Mariae Virginis"]
         },
-        "guadalupe": {
+        "roman-12-12-guadalupe": {
             KR: ["과달루페의 복되신 동정 마리아"],
             VN: ["Đức Mẹ Guadalupe","Đức Trinh Nữ Ma-ri-a Goa-đa-lu-pê"],
             EN: ["Our Lady of Guadalupe","Our Lady of Guadalupe, Heavenly Patroness of the Philippines"],
@@ -123,7 +123,7 @@
             DE: ["Unsere Liebe Frau von Guadalupe"],
             LA: ["Beatae Mariae Virginis de Guadalupe"]
         },
-        "simon-jude": {
+        "roman-10-28-simonjude": {
             KR: ["성 시몬과 성 유다 사도"],
             VN: ["Thánh Simon và Thánh Giuđa, Tông đồ","Thánh Si-môn và Thánh Giu-đa, Tông đồ"],
             EN: ["Saints Simon and Jude, Apostles","Saint Simon and Saint Jude, Apostles"],
@@ -135,7 +135,7 @@
             DE: ["Hl. Simon und Hl. Judas Apostel","Simon und Judas, Apostel"],
             LA: ["Sanctorum Simonis et Iudae"]
         },
-        "charles-borromeo": {
+        "roman-11-04-charlesborromeo": {
             KR: ["성 가롤로 보로메오 주교"],
             VN: ["Thánh Carôlô Bôrômêô, Giám mục"],
             EN: ["Saint Charles Borromeo, Bishop"],
@@ -147,7 +147,7 @@
             DE: ["Karl Borromäus, Bischof"],
             LA: ["Sancti Caroli Borromaei, episcopi"]
         },
-        "leo-the-great": {
+        "roman-11-10-leothegreat": {
             KR: ["성 대 레오 교황 학자"],
             VN: ["Thánh Lêô Cả, Giáo hoàng, Tiến sĩ Hội Thánh"],
             EN: ["Saint Leo the Great, Pope and Doctor of the Church"],
@@ -159,7 +159,7 @@
             DE: ["Leo der Große, Papst und Kirchenlehrer"],
             LA: ["Sancti Leonis Magni, papae et Ecclesiae doctoris"]
         },
-        "martin-of-tours": {
+        "roman-11-11-martinoftours": {
             KR: ["투르의 성 마르티노 주교"],
             VN: ["Thánh Martinô thành Tours, Giám mục"],
             EN: ["Saint Martin of Tours, Bishop"],
@@ -171,7 +171,7 @@
             DE: ["Martin von Tours, Bischof","Hl. Martin Bischof"],
             LA: ["Sancti Martini Turonensis, episcopi"]
         },
-        "josaphat": {
+        "roman-11-12-josaphat": {
             KR: ["성 요사팟 주교 순교자"],
             VN: ["Thánh Giôsaphát, Giám mục, Tử đạo"],
             EN: ["Saint Josaphat, Bishop and Martyr"],
@@ -183,7 +183,7 @@
             DE: ["Josaphat, Bischof und Märtyrer"],
             LA: ["Sancti Iosaphat, episcopi et martyris"]
         },
-        "elizabeth-of-hungary": {
+        "roman-11-17-elizabethofhungary": {
             KR: ["헝가리의 성녀 엘리사벳 수도자"],
             VN: ["Thánh nữ Ê-li-sa-bét Hung-ga-ri","Thánh Êlisabét Hungari"],
             EN: ["Saint Elizabeth of Hungary, Religious"],
@@ -195,7 +195,7 @@
             DE: ["Hl. Elisabeth von Ungarn, Ordensfrau"],
             LA: ["Sanctae Elisabeth Hungariae, religiosae"]
         },
-        "ambrose": {
+        "roman-12-07-ambrose": {
             KR: ["성 암브로시오 주교 학자"],
             VN: ["Thánh Ambrôsiô, Giám mục, Tiến sĩ Hội Thánh","Thánh Am-rô-xi-ô"],
             EN: ["Saint Ambrose, Bishop and Doctor of the Church"],
@@ -207,7 +207,7 @@
             DE: ["Ambrosius, Bischof und Kirchenlehrer"],
             LA: ["Sancti Ambrosii, episcopi et Ecclesiae doctoris"]
         },
-        "john-of-the-cross": {
+        "roman-12-14-johnofthecross": {
             KR: ["십자가의 성 요한 사제 학자"],
             VN: ["Thánh Gioan Thánh Giá, Linh mục, Tiến sĩ Hội Thánh","Thánh Gio-an Thánh Giá"],
             EN: ["Saint John of the Cross, Priest and Doctor of the Church"],
@@ -219,10 +219,10 @@
             DE: ["Johannes vom Kreuz, Ordenspriester und Kirchenlehrer","Hl. Johannes vom Kreuz Ordenspriester, Kirchenlehrer"],
             LA: ["Sancti Ioannis a Cruce"]
         },
-        "ireland-all-saints": {
+        "particular-11-06-irelandallsaints": {
             EN: ["All Saints of Ireland","All the Saints of Ireland","The Saints of Ireland"]
         },
-        "us-thanksgiving": {
+        "particular-00-00-thanksgiving": {
             KR: ["미국 추수감사절"],
             VN: ["Ngày Tạ Ơn"],
             EN: ["Thanksgiving Day","Mass for Thanksgiving Day"]
@@ -299,9 +299,10 @@
         const token = match[1].toUpperCase();
         const number = /^\d+$/.test(token) ? Number(token)
             : Array.from({length:34},(_,i)=>i+1).find(n=>roman(n)===token);
-        const prefix = {tn:'OrdSunday',mv:'Advent',mc:'Lent',ps:'Easter'}[match[2].toLowerCase()];
+        const prefix = {tn:'ordsunday',mv:'advent',mc:'lent',ps:'easter'}[match[2].toLowerCase()];
         // Week 34's Christ the King is equivalent to the abbreviated Sunday.
-        const id = prefix==='OrdSunday' && number===34 ? 'christ-king' : prefix + number;
+        const suffix = prefix==='ordsunday' && number===34 ? 'christking' : prefix + number;
+        const id = 'roman-00-00-'+suffix;
         return titles.has(id) ? id : '';
     }
 

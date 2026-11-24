@@ -20,6 +20,8 @@
 
 나머지 보편 명칭 77개는 부활 시기·성주간·연중 주일 또는 이동 전례에 해당한다. 날짜 칸은 고정 전례의 명목상 월일이다. 실제 거행일과 등급은 각 국가 전례력에서 결정한다. 예를 들어 일본의 일본 26성인과 보편 전례의 바오로 미키와 동료 순교자들은 전례 ID를 공유하며, 일본의 3월 17일 고유 축일인 일본 신자 발견의 성모는 같은 날짜의 성 파트리치오와 별도의 ID를 갖는다. 한국 설과 베트남 설의 각 미사 양식도 독립 ID를 갖는다. 7월 5일 한국 성직자의 수호자 성 김대건 신심 미사와 9월 20일 한국 순교자 전례도 구별한다. [한국천주교주교회의 7월 5일 미사](https://missa.cbck.or.kr/DailyMissa/20260705)
 
+전례 코드는 보편 전례에 `roman-MM-DD-이름`을, 국가·지역 고유 전례에 `particular-MM-DD-이름`을 사용한다. 이름 부분은 영문 소문자와 숫자로 표기한다. 고정 날짜가 없는 전례와 기존 국가 접두어를 정리한 고유 전례는 코드에 `00-00`을 쓴다. 국가와 명목상 월일은 전례별 필드에 기록한다.
+
 ## 출처
 
 - 보편 전례의 기본 명칭과 전례 ID는 로마 미사 경본의 고유 전례 자료와 교황청 교령을 정리한 Liturgical Calendar API의 고정 리비전에서 왔다. 해당 데이터에 언어별 발행 표기와 기존 앱의 국가별 명칭을 추가했다. [데이터 소스와 리비전](https://github.com/Liturgical-Calendar/LiturgicalCalendarAPI/tree/0eb0504271b0fb4be4103b4dd08cbff135c457ac/jsondata/sourcedata/rite/roman) · [교황청 경신성사부 문서](https://www.vatican.va/content/romancuria/en/dicasteri/dicastero-culto-divino-e-disciplina-sacramenti/documenti.html) · [미국 주교회의 전례력](https://www.usccb.org/committees/divine-worship/liturgical-calendar)

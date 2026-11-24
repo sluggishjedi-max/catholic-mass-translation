@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-5';
+    const APP_VERSION = 'V31.2-20261124-6';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -1078,8 +1078,8 @@
         // The Mexican bishops establish a solemnity, while the US and the
         // Philippines observe their own ranks for the same Marian title.
         if (countryKey === 'MX' && calendarDateKey(date) === '12-12' && date.getDay() !== 0) {
-            return calendarOverrideFromEntry(saintEntry('white', globalThis.ordoLiturgicalObservances.namesFor('guadalupe'), {
-                rank:'solemnity', observanceId:'guadalupe', localOnly:true, countryProper:true,
+            return calendarOverrideFromEntry(saintEntry('white', globalThis.ordoLiturgicalObservances.namesFor('roman-12-12-guadalupe'), {
+                rank:'solemnity', observanceId:'roman-12-12-guadalupe', localOnly:true, countryProper:true,
                 source:'Conferencia del Episcopado Mexicano',
                 sourceUrl:'https://cem.org.mx/wp-content/uploads/2022/04/Normas-CEM-a-luz-del-Nuevo-CDC-2.docx.pdf'
             }));
@@ -9262,8 +9262,8 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
             .replace(/^(?:solemnity|feast|memorial)(?:\s+of)?\s+/iu,'')
             .replace(/^the\s+/iu,'')
             .replace(/[,\s(]+(?:(?:principal|secondary)\s+)?patron(?:ess)?\s+of[\s\S]*$/iu,''));
-        if (key.includes('vietnameseMartyrs'.toLowerCase()) || key.includes('andrewdunglac')) return 'vietnam-martyrs';
-        if (['saintandrew','saintandrewapostle','saintandrewtheapostle','standrew','standrewapostle'].includes(key)) return 'andrew-apostle';
+        if (key.includes('vietnameseMartyrs'.toLowerCase()) || key.includes('andrewdunglac')) return 'roman-11-24-vietnammartyrs';
+        if (['saintandrew','saintandrewapostle','saintandrewtheapostle','standrew','standrewapostle'].includes(key)) return 'roman-11-30-andrewapostle';
         return key;
     }
 
@@ -9434,7 +9434,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
         const catalog = globalThis.ordoLiturgicalObservances;
         const expectedId = calendarObservanceId(info);
         const knownSourceId = catalog?.identify(parsed.title, lang)
-            || (lang === 'VN' && parsed.kpvSelectedCelebrationCode === 'christ-king' ? 'christ-king' : '');
+            || (lang === 'VN' && parsed.kpvSelectedCelebrationCode === 'christ-king' ? 'roman-00-00-christking' : '');
         const sameNativeIdentity = calendarInfosShareObservance(info,nativeInfo);
         const sourceKey = catalog?.titleKey(parsed.title, lang);
         const matchesTitle = title => !!title && (normalizeCalendarNameForCompare(title) === normalizeCalendarNameForCompare(parsed.title)
@@ -10541,7 +10541,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict128-annual-observances';
+    const STRICT_PARSER_CACHE_VERSION = 'strict129-observance-ids';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {

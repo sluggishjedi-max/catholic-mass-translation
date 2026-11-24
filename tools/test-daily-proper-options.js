@@ -33,15 +33,15 @@ try{
  }
  assert.equal(king.run("strictIdentifySection('Evangelho de Nosso Senhor Jesus Cristo','PT')"),null);
  const catalog=king.window.ordoLiturgicalObservances;
- for(const [lang,title] of Object.entries(catalog.namesFor('christ-king')))assert.equal(catalog.identify(title,lang),'christ-king');
- assert.equal(catalog.identify('Feast of St. Andrew, Apostle','EN'),'andrew-apostle');
- assert.equal(catalog.identify('Lễ Chúa Ki‑tô Vua','VN'),'christ-king');
- assert.equal(catalog.identify('All the Saints of Ireland','EN'),'ireland-all-saints');
- assert.equal(catalog.identify('Hl. Simon und Hl. Judas Apostel','DE'),'simon-jude');
- assert.equal(catalog.identify('São Simão e São Judas (Festa)','PT'),'simon-jude');
- assert.equal(catalog.identify('SANTO AMBRÓSIO, BISPO E DOUTOR DA IGREJA, MEMÓRIA','PT'),'ambrose');
- assert.equal(catalog.identify('Thánh Am-rô-xi-ô','VN'),'ambrose');
- assert.equal(catalog.identify('基督普世君王節主日','ZH'),'christ-king');
+ for(const [lang,title] of Object.entries(catalog.namesFor('roman-00-00-christking')))assert.equal(catalog.identify(title,lang),'roman-00-00-christking');
+ assert.equal(catalog.identify('Feast of St. Andrew, Apostle','EN'),'roman-11-30-andrewapostle');
+ assert.equal(catalog.identify('Lễ Chúa Ki‑tô Vua','VN'),'roman-00-00-christking');
+ assert.equal(catalog.identify('All the Saints of Ireland','EN'),'particular-11-06-irelandallsaints');
+ assert.equal(catalog.identify('Hl. Simon und Hl. Judas Apostel','DE'),'roman-10-28-simonjude');
+ assert.equal(catalog.identify('São Simão e São Judas (Festa)','PT'),'roman-10-28-simonjude');
+ assert.equal(catalog.identify('SANTO AMBRÓSIO, BISPO E DOUTOR DA IGREJA, MEMÓRIA','PT'),'roman-12-07-ambrose');
+ assert.equal(catalog.identify('Thánh Am-rô-xi-ô','VN'),'roman-12-07-ambrose');
+ assert.equal(catalog.identify('基督普世君王節主日','ZH'),'roman-00-00-christking');
  assert.equal(catalog.identify('Memoria. Blanco','ES'),'');
  const ranks=king.run("['MX','US','PH'].map(country=>primaryCalendarRank(calendarInfoForCountry(new Date(2026,11,12,12),country)))");
  assert.equal(ranks[0],'solemnity');assert.equal(ranks[1],'feast');

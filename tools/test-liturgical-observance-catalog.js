@@ -12,6 +12,10 @@ const roman = rows.filter(([, , calendar])=>calendar==='roman');
 const months = Object.fromEntries(Array.from({length:12},(_,i)=>[String(i+1).padStart(2,'0'),0]));
 const ids = new Set();
 for (const [id,date,calendar,names] of rows) {
+    const [,scope,codeDate] = id.match(/^(roman|particular)-(\d{2}-\d{2})-[a-z0-9]+$/u) || [];
+    assert.equal(scope,calendar==='roman' ? 'roman' : 'particular', id);
+    const expectedDate = id==='particular-00-00-andrewkimclergyvotive' ? '00-00' : date || '00-00';
+    assert.equal(codeDate,expectedDate,id);
     assert(!ids.has(id),id);
     ids.add(id);
     if (date && calendar==='roman') months[date.slice(0,2)]++;
@@ -23,28 +27,32 @@ for (const [id,date,calendar,names] of rows) {
 }
 assert(Object.values(months).every(count=>count>0));
 assert(roman.length>=295);
+assert(ids.has('roman-00-00-wedholyweek'));
+assert(ids.has('particular-01-15-saintitavirgin'));
+assert(ids.has('particular-00-00-thanksgiving'));
+assert.equal(rows.find(([id])=>id==='particular-00-00-andrewkimclergyvotive')[1],'07-05');
 
 for (const [lang,title,expected] of [
-    ['EN','Optional Memorial of St. John Henry Newman, Priest and Doctor of the Church','StJohnNewman'],
-    ['EN','Feast of St. Andrew, Apostle','andrew-apostle'],
-    ['JP','聖ブラジオ司教殉教者〖任意〗','StBlase'],
-    ['JP','日本の信徒発見の聖母（祝日）','our-lady-of-japan-discovery'],
-    ['JP','日本二十六聖人','StsPaulMiki'],
-    ['JP','復活徹夜祭','EasterVigil'],
-    ['ZH','聖油彌撒','HolyThursChrism'],
-    ['KR','성유 축성 미사','HolyThursChrism'],
-    ['VN','CN IV MV Năm B','Advent4'],
-    ['VN','CN XXXIV TN','christ-king'],
-    ['VN','Thánh lễ kính Đức Mẹ La Vang','our-lady-of-la-vang'],
-    ['KR','[백] 설','kr-lunar-new-year'],
-    ['KR','[홍] 한국 성직자들의 수호자 성 김대건 안드레아 사제 순교자 - 신심 미사','kr-andrew-kim-clergy-votive'],
-    ['VN','Thánh lễ Mồng Hai Tết','vn-tet-second-day'],
-    ['VN','Lễ Giao Thừa','vn-tet-eve'],
-    ['IT','S. Tommaso d’Aquino, presbitero e dottore della Chiesa','StThomasAquinas'],
-    ['PT','S. Isabel da Hungria, religiosa','elizabeth-of-hungary'],
-    ['DE','Hl. Franz Xaver Ordenspriester, Glaubensbote','francis-xavier'],
-    ['ES','Nuestra Señora de Guadalupe','guadalupe'],
-    ['LA','In Annuntiatione Domini','Annunciation']
+    ['EN','Optional Memorial of St. John Henry Newman, Priest and Doctor of the Church','roman-10-09-stjohnnewman'],
+    ['EN','Feast of St. Andrew, Apostle','roman-11-30-andrewapostle'],
+    ['JP','聖ブラジオ司教殉教者〖任意〗','roman-02-03-stblase'],
+    ['JP','日本の信徒発見の聖母（祝日）','particular-03-17-ourladyofjapandiscovery'],
+    ['JP','日本二十六聖人','roman-02-06-stspaulmiki'],
+    ['JP','復活徹夜祭','roman-00-00-eastervigil'],
+    ['ZH','聖油彌撒','roman-00-00-holythurschrism'],
+    ['KR','성유 축성 미사','roman-00-00-holythurschrism'],
+    ['VN','CN IV MV Năm B','roman-00-00-advent4'],
+    ['VN','CN XXXIV TN','roman-00-00-christking'],
+    ['VN','Thánh lễ kính Đức Mẹ La Vang','particular-00-00-ourladyoflavang'],
+    ['KR','[백] 설','particular-00-00-lunarnewyear'],
+    ['KR','[홍] 한국 성직자들의 수호자 성 김대건 안드레아 사제 순교자 - 신심 미사','particular-00-00-andrewkimclergyvotive'],
+    ['VN','Thánh lễ Mồng Hai Tết','particular-00-00-tetsecondday'],
+    ['VN','Lễ Giao Thừa','particular-00-00-teteve'],
+    ['IT','S. Tommaso d’Aquino, presbitero e dottore della Chiesa','roman-01-28-stthomasaquinas'],
+    ['PT','S. Isabel da Hungria, religiosa','roman-11-17-elizabethofhungary'],
+    ['DE','Hl. Franz Xaver Ordenspriester, Glaubensbote','roman-12-03-francisxavier'],
+    ['ES','Nuestra Señora de Guadalupe','roman-12-12-guadalupe'],
+    ['LA','In Annuntiatione Domini','roman-03-25-annunciation']
 ]) assert.equal(catalog.identify(title,lang),expected,lang+' '+title);
 for (const [lang,title] of [['EN','St. Mary'],['ES','Memoria. Blanco'],['VN','CN'],['VN','CN IL TN'],['JP','〖祝日〗'],['KR','축일']]) {
     assert.equal(catalog.identify(title,lang),'',title);
@@ -67,16 +75,16 @@ try {
             return [calendarObservanceId(info),primaryCalendarRank(info)];
         });
     })()`);
-    assert.equal(actual[0][0],'Epiphany');
-    assert.equal(actual[1][0],'Annunciation');
-    assert.equal(actual[2][0],'StsPaulMiki');
-    assert.equal(actual[3][0],'StsPaulMiki');
+    assert.equal(actual[0][0],'roman-00-00-epiphany');
+    assert.equal(actual[1][0],'roman-03-25-annunciation');
+    assert.equal(actual[2][0],'roman-02-06-stspaulmiki');
+    assert.equal(actual[3][0],'roman-02-06-stspaulmiki');
     assert.notEqual(actual[2][1],actual[3][1]);
-    assert.equal(actual[4][0],'guadalupe');
-    assert.equal(actual[5][0],'guadalupe');
+    assert.equal(actual[4][0],'roman-12-12-guadalupe');
+    assert.equal(actual[5][0],'roman-12-12-guadalupe');
     assert.equal(actual[4][1],'solemnity');
     assert.equal(actual[5][1],'feast');
-    assert.equal(actual[6][0],'StAndrewKimTaegon');
+    assert.equal(actual[6][0],'roman-09-20-standrewkimtaegon');
     runtime.window.uploadedCountryMassMetadata.AU = {
         jurisdiction:'AU', calendar:{'01-26':[{title:'Australia Day', names:{EN:'Australia Day'}, rank:'optional', color:'white'}]}
     };
