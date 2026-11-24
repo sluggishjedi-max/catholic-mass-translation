@@ -133,7 +133,7 @@
     const dailySourceCache = {};
     const dailySourceRefreshRequests = new Map();
     const eucharistSongMapCache = new WeakMap();
-    const APP_VERSION = 'V31.2-20261124-4';
+    const APP_VERSION = 'V31.2-20261124-5';
     appVersionFooterHtml();
     const STORAGE_PREFIX = `ordoMass:${APP_VERSION}:`;
     const DATE_NAV_LIMIT_DAYS = 7;
@@ -7857,7 +7857,10 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     }
 
     function sourceMetadataTitle(source, lang) {
-        if (!['KR', 'ZH', 'VN'].includes(lang) || !isJinaMarkdownSource(source)) return '';
+        if (!isJinaMarkdownSource(source)) return '';
+        // USCCB's Markdown can start at Reading I and keep the celebration in Title only.
+        const usccb = lang === 'EN' && /^URL Source:[ \t]*https?:\/\/bible\.usccb\.org\/bible\/readings\//mi.test(source);
+        if (!usccb && !['KR', 'ZH', 'VN'].includes(lang)) return '';
         const lines = sourceTextLines(source).map(strictCleanLine).filter(Boolean);
         let title = cleanLiturgyTitle(sourceTitleFromLines(lines));
         if (lang === 'ZH') title = title.replace(/\.pdf$/i, '').replace(/^[ABC](?=[\p{Script=Han}])/u, '');
@@ -10538,7 +10541,7 @@ Lạy Chúa, chúng con vừa lãnh nhận hồng ân Chúa ban, xin cho chúng 
     const scriptureAlignmentKeys = new Set([...strictReadingKeys, 'psalm', 'gospel_accl']);
     const citedVariantSectionIds = new Set([...scriptureAlignmentKeys, 'entrance', 'communion']);
     const strictPrayerKeys = new Set(['collect', 'prayer_offerings', 'prayer_after']);
-    const STRICT_PARSER_CACHE_VERSION = 'strict127-annual-observances';
+    const STRICT_PARSER_CACHE_VERSION = 'strict128-annual-observances';
     const ALL_SOULS_CONFIG_FILE = 'JS%20file/all-souls-config.js';
 
     function cloneDateOnly(date) {

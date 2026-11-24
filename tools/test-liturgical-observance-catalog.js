@@ -52,6 +52,10 @@ for (const [lang,title] of [['EN','St. Mary'],['ES','Memoria. Blanco'],['VN','CN
 
 const runtime = createRuntime({country:'KR',date:'2026-01-04',source:'official'});
 try {
+    const title = 'Saturday of the Third Week of Advent';
+    runtime.window.__markdown = 'Title: '+title+'\n\nURL Source: https://bible.usccb.org/bible/readings/121926.cfm\n\nMarkdown Content:\n### Reading 1\n';
+    assert.equal(runtime.run("sourceMetadataTitle(__markdown,'EN')"),title);
+    assert.equal(runtime.run("sourceMetadataTitle(__markdown.replace('bible.usccb.org','example.com'),'EN')"),'');
     const actual = runtime.run(`(() => {
         const dates = [
             ['KR',2026,1,4], ['KR',2027,4,5],
