@@ -34,6 +34,19 @@ assert.equal(rows.find(([id])=>id==='particular-00-00-andrewkimclergyvotive')[1]
 
 for (const [lang,title,expected] of [
     ['EN','Optional Memorial of St. John Henry Newman, Priest and Doctor of the Church','roman-10-09-stjohnnewman'],
+    ['KR','[녹] 연중 제34주간 목요일','roman-00-00-ordinary34thu'],
+    ['VN','Thứ Năm tuần XXXIV Thường Niên','roman-00-00-ordinary34thu'],
+    ['VN','Thứ Năm tuần 34 thường niên','roman-00-00-ordinary34thu'],
+    ['EN','Thursday of the Thirty-fourth Week in Ordinary Time','roman-00-00-ordinary34thu'],
+    ['EN','Thursday of the 34th Week in Ordinary Time','roman-00-00-ordinary34thu'],
+    ['IT','GIOVEDÌ DELLA XXXIV SETTIMANA DEL TEMPO ORDINARIO (ANNO PARI)','roman-00-00-ordinary34thu'],
+    ['JP','第34木曜日','roman-00-00-ordinary34thu'],
+    ['PT','5ª Feira da 34ª Semana do Tempo Comum','roman-00-00-ordinary34thu'],
+    ['KR','대림 제1주간 월요일','roman-00-00-advent1mon'],
+    ['EN','Thursday after Ash Wednesday','roman-00-00-thuafterashwednesday'],
+    ['EN','Wednesday within the Octave of Easter','roman-00-00-wedoctaveeaster'],
+    ['EN','Friday after Epiphany','roman-00-00-friafterepiphany'],
+    ['KR','성탄 팔일 축제 제5일','roman-12-29-christmasoctave5'],
     ['EN','Feast of St. Andrew, Apostle','roman-11-30-andrewapostle'],
     ['JP','聖ブラジオ司教殉教者〖任意〗','roman-02-03-stblase'],
     ['JP','日本の信徒発見の聖母（祝日）','particular-03-17-ourladyofjapandiscovery'],
@@ -68,7 +81,8 @@ try {
         const dates = [
             ['KR',2026,1,4], ['KR',2027,4,5],
             ['JP',2026,2,5], ['KR',2026,2,6],
-            ['MX',2026,12,12], ['US',2026,12,12], ['KR',2026,9,20]
+            ['MX',2026,12,12], ['US',2026,12,12], ['KR',2026,9,20],
+            ['KR',2026,11,26], ['VN',2026,11,26], ['KR',2026,11,24]
         ];
         return dates.map(([country,year,month,day])=>{
             const info = calendarInfoForCountry(new Date(year,month-1,day,12),country);
@@ -85,6 +99,9 @@ try {
     assert.equal(actual[4][1],'solemnity');
     assert.equal(actual[5][1],'feast');
     assert.equal(actual[6][0],'roman-09-20-standrewkimtaegon');
+    assert.deepEqual(Array.from(actual[7]),['roman-00-00-ordinary34thu','weekday']);
+    assert.deepEqual(Array.from(actual[8]),['roman-00-00-ordinary34thu','weekday']);
+    assert.equal(actual[9][0],'roman-11-24-vietnammartyrs');
     runtime.window.uploadedCountryMassMetadata.AU = {
         jurisdiction:'AU', calendar:{'01-26':[{title:'Australia Day', names:{EN:'Australia Day'}, rank:'optional', color:'white'}]}
     };

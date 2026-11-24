@@ -255,11 +255,13 @@
         ES:/\b(?:san\s+|santos?\s+|santas?\s+|s\.)\s*/giu,
         DE:/\b(?:hl\.|hll\.|heilige[rn]?\s+)\s*/giu
     };
+    const weekdayCycleNote = {IT:/\s*\(\s*anno\s+(?:pari|dispari)\s*\)\s*$/iu};
     const alternateRanks = /\s*[,–—-]\s*((?:memoria|memória|feast|festa|fiesta|solennità|solenidade|memorial|gedenktag)[^,–—-]*)$/iu;
     const brackets = /[\[(【〖（]\s*([^\])】〗）]+?)\s*[\])】〗）]/gu;
 
     function cleanTitle(value, lang) {
         let name = String(value || '').normalize('NFKC').replace(brackets, (text,label)=>rankLabel.test(label) ? ' ' : text).trim();
+        if (weekdayCycleNote[lang]) name = name.replace(weekdayCycleNote[lang], '');
         for (const wrapper of rank[lang] || []) name = name.replace(wrapper, '');
         name = name.replace(alternateRanks, (text,label)=>rankLabel.test(label.trim()) ? '' : text);
         return name.trim().replace(/^the\s+/iu, lang === 'EN' ? '' : '$&');

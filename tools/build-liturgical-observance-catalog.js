@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM } = require('jsdom');
+const { weekdayNames, toRoman, formatSeasonalName } = require('../JS file/liturgical_seasonal_names');
 const { countryMetadataItems } = require('./country-metadata-upload-tool');
 
 const revision = '0eb0504271b0fb4be4103b4dd08cbff135c457ac';
@@ -288,6 +289,78 @@ async function run() {
         for (const [lang,names] of Object.entries(labels)) for (const name of names) addName(row,lang,name);
     }
     for (const [id,names] of Object.entries(sourceEnglishAliases)) for (const name of names) addName(rows.get(id), 'EN', name);
+    // Weekday identities follow the season, week and weekday, independently of the date or reading cycle.
+    const englishOrdinals = new Intl.PluralRules('en',{type:'ordinal'});
+    const seasonalWeeks = { ordinary:[1,34], advent:[1,4], lent:[1,5], easter:[2,7] };
+    const dayCodes = ['', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    const addWeekday = (event, titles) => {
+        const row = addEvent(event, 'roman');
+        for (const [lang,title] of Object.entries(titles)) addName(row,lang,title);
+        return row;
+    };
+    for (const [season,[first,last]] of Object.entries(seasonalWeeks)) {
+        for (let week=first; week<=last; week++) for (let day=1; day<=6; day++) {
+            const names = Object.fromEntries(Object.keys(weekdayNames).map(lang=>
+                [lang,formatSeasonalName(lang,season,week,day)]));
+            const row = addWeekday({event_key:season+week+dayCodes[day]},names);
+            const roman = toRoman(week);
+            const suffix = englishOrdinals.select(week);
+            const ordinal = week+{one:'st',two:'nd',few:'rd',other:'th'}[suffix];
+            addName(row,'EN',names.EN.replace(/the [\w-]+ Week/u,'the '+ordinal+' Week'));
+            addName(row,'VN',names.VN.replace('Tuần '+roman+' Mùa ','tuần '+roman+' '));
+            addName(row,'VN',names.VN.replace('Tuần '+roman+' Mùa ','tuần '+week+' '));
+            if (season==='ordinary') {
+                addName(row,'JP',names.JP.replace(/^年間/u,''));
+                const ptDay = day===6 ? 'Sábado' : (day+1)+'ª feira';
+                addName(row,'PT',ptDay+' da '+week+'ª Semana do Tempo Comum');
+            }
+        }
+    }
+    for (let day=4; day<=6; day++) {
+        addWeekday({event_key:dayCodes[day]+'afterashwednesday'}, {
+            KR:'재의 예식 다음 '+weekdayNames.KR[day], VN:weekdayNames.VN[day]+' sau Lễ Tro',
+            EN:weekdayNames.EN[day]+' after Ash Wednesday', JP:'灰の水曜日後の'+weekdayNames.JP[day],
+            LA:weekdayNames.LA[day]+' post Cineres', ZH:'聖灰禮儀後'+weekdayNames.ZH[day],
+            IT:weekdayNames.IT[day]+' dopo le Ceneri', PT:weekdayNames.PT[day]+' depois das Cinzas',
+            ES:weekdayNames.ES[day]+' después de Ceniza', DE:weekdayNames.DE[day]+' nach Aschermittwoch'
+        });
+    }
+    for (let day=1; day<=6; day++) {
+        for (const relation of ['before','after']) {
+            const before = relation==='before';
+            addWeekday({event_key:dayCodes[day]+relation+'epiphany'}, {
+                KR:'주님 공현 대축일 '+(before?'전 ':'후 ')+weekdayNames.KR[day],
+                VN:weekdayNames.VN[day]+(before?' trước':' sau')+' lễ Hiển Linh',
+                EN:weekdayNames.EN[day]+' '+relation+' Epiphany',
+                JP:'主の公現'+(before?'前':'後')+'の'+weekdayNames.JP[day],
+                LA:weekdayNames.LA[day]+(before?' ante':' post')+' Epiphaniam',
+                ZH:'主顯節'+(before?'前':'後')+weekdayNames.ZH[day],
+                IT:weekdayNames.IT[day]+(before?' prima dell’Epifania':' dopo l’Epifania'),
+                PT:weekdayNames.PT[day]+(before?' antes':' depois')+' da Epifania',
+                ES:weekdayNames.ES[day]+(before?' antes':' después')+' de la Epifanía',
+                DE:weekdayNames.DE[day]+(before?' vor':' nach')+' Erscheinung des Herrn'
+            });
+        }
+        const octave = rows.get(dayCodes[day][0].toUpperCase()+dayCodes[day].slice(1)+'OctaveEaster');
+        addName(octave,'EN',weekdayNames.EN[day]+' within the Octave of Easter');
+        addName(octave,'VN',weekdayNames.VN[day]+' trong Tuần Bát Nhật Phục Sinh');
+    }
+    const octaveOrdinals = {
+        EN:['Fifth','Sixth','Seventh'], VN:['năm','sáu','bảy'], LA:['quinta','sexta','septima'],
+        IT:['Quinto','Sesto','Settimo'], PT:['Quinto','Sexto','Sétimo'], ES:['Quinto','Sexto','Séptimo'],
+        DE:['Fünfter','Sechster','Siebter']
+    };
+    for (let day=29; day<=31; day++) {
+        const number = day-24;
+        const index = day-29;
+        addWeekday({event_key:'christmasoctave'+number,month:12,day}, {
+            KR:'성탄 팔일 축제 제'+number+'일', VN:'Ngày thứ '+octaveOrdinals.VN[index]+' trong Tuần Bát Nhật Giáng Sinh',
+            EN:octaveOrdinals.EN[index]+' Day within the Octave of the Nativity', JP:'主の降誕第'+number+'日',
+            LA:'Die '+octaveOrdinals.LA[index]+' infra octavam Nativitatis Domini', ZH:'聖誕八日慶期第'+number+'日',
+            IT:octaveOrdinals.IT[index]+' giorno fra l’ottava di Natale', PT:octaveOrdinals.PT[index]+' dia da Oitava do Natal',
+            ES:octaveOrdinals.ES[index]+' día dentro de la Octava de Navidad', DE:octaveOrdinals.DE[index]+' Tag der Weihnachtsoktav'
+        });
+    }
     const english = new Map();
     for (const row of rows.values()) for (const title of row.names.EN || []) {
         for (const token of englishKeys(title)) {
